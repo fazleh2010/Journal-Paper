@@ -1,0 +1,64 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base   <http://localhost:8080#> .
+
+:lexicon_en
+    a              lemon:Lexicon ;
+    lemon:language "en" ;
+    lemon:entry    :to_border ;
+    lemon:entry    :by .
+
+:to_border
+    a                    lemon:LexicalEntry ;
+    lexinfo:partOfSpeech lexinfo:verb ;
+    lemon:canonicalForm  :form_border ;
+    lemon:otherForm      :form_borders ;
+    lemon:otherForm      :form_bordered ;
+    lemon:synBehavior    :border_frame_transitive ;
+    lemon:sense          :border_ontomap .
+
+:form_border
+    a                    lemon:Form ;
+    lemon:writtenRep     "border"@en ;
+    lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_borders
+    a                lemon:Form ;
+    lemon:writtenRep "borders"@en ;
+    lexinfo:number   lexinfo:singular ;
+    lexinfo:tense    lexinfo:present ;
+    lexinfo:person   lexinfo:secondPerson .
+
+:form_bordered
+    a                lemon:Form ;
+    lemon:writtenRep "bordered"@en ;
+    lexinfo:tense    lexinfo:past .
+
+:border_frame_transitive
+    a                    lexinfo:TransitiveFrame ;
+    lexinfo:subject      :border_subj ;
+    lexinfo:directObject :border_obj .
+
+:border_ontomap
+    a                 lemon:OntoMap, lemon:LexicalSense ;
+    lemon:ontoMapping :border_ontomap ;
+    lemon:reference   <http://dbpedia.org/ontology/State> ;
+    lemon:subjOfProp  :border_obj ;
+    lemon:objOfProp   :border_subj ;
+    lemon:condition   :border_condition .
+
+:border_condition
+    a                    lemon:condition ;
+    lemon:propertyDomain <http://dbpedia.org/ontology/PopulatedPlace> ;
+    lemon:propertyRange  <http://dbpedia.org/ontology/State> .
+
+:border_obj
+    lemon:marker :by .
+
+:by
+    a                    lemon:SynRoleMarker ;
+    lemon:canonicalForm  [ lemon:writtenRep "by"@en ] ;
+    lexinfo:partOfSpeech lexinfo:preposition .

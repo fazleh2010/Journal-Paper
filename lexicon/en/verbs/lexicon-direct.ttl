@@ -3,80 +3,67 @@
 @prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
 @prefix lemon:   <http://lemon-model.net/lemon#> .
 
-@base            <http://localhost:8080#> .
+@base   <http://localhost:8080#> .
 
-:lexicon_en a    lemon:Lexicon ;
-  lemon:language "en" ;
-  lemon:entry    :to_direct ;
-  lemon:entry    :directed ;
-  lemon:entry    :by .
+:lexicon_en
+    a              lemon:Lexicon ;
+    lemon:language "en" ;
+    lemon:entry    :to_direct ;
+    lemon:entry    :by .
 
-:to_direct a           lemon:LexicalEntry ;
-  lexinfo:partOfSpeech lexinfo:verb ;
-  lemon:canonicalForm  :form_direct ;
-  lemon:otherForm      :form_directs ;
-  lemon:otherForm      :form_directed ;
-  lemon:synBehavior    :direct_frame_transitive ;
-  lemon:sense          :direct_ontomap .
-
-
-:form_direct a         lemon:Form ;
-  lemon:writtenRep     "direct"@en ;
-  lexinfo:verbFormMood lexinfo:infinitive .
-
-:form_directs a    lemon:Form ;
-  lemon:writtenRep "directs"@en ;
-  lexinfo:person   lexinfo:thirdPerson .
-
-:form_directed a   lemon:Form ;
-  lemon:writtenRep "directed"@en ;
-  lexinfo:tense    lexinfo:past .
-
-:direct_frame_transitive a lexinfo:TransitiveFrame ;
-  lexinfo:subject          :direct_subj ;
-  lexinfo:directObject     :direct_obj .
-
-:direct_ontomap a   lemon:OntoMap, lemon:LexicalSense ;
-  lemon:ontoMapping :direct_ontomap ;
-  lemon:reference   <http://dbpedia.org/ontology/director> ;
-  lemon:subjOfProp  :direct_obj ;
-  lemon:objOfProp   :direct_subj ;
-  lemon:condition   :direct_condition .
-
-:direct_condition a    lemon:condition ;
-  lemon:propertyDomain <http://dbpedia.org/ontology/Film> ;
-  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
-
-:directed a            lemon:LexicalEntry ;
-  lexinfo:partOfSpeech lexinfo:adjective ;
-  lemon:canonicalForm  :form_directed_canonical ;
-  lemon:otherForm      :form_directed_by ;
-  lemon:synBehavior    :directed_frame_adjectivepp ;
-  lemon:sense          :directed_ontomap .
-
-:form_directed_canonical a lemon:Form ;
-  lemon:writtenRep         "directed"@en .
-
-:form_directed_by a    lemon:Form ;
-  lemon:writtenRep     "directed"@en ;
-  lexinfo:verbFormMood lexinfo:participle .
+:to_direct
+    a                    lemon:LexicalEntry ;
+    lexinfo:partOfSpeech lexinfo:verb ;
+    lemon:canonicalForm  :form_direct ;
+    lemon:otherForm      :form_directs ;
+    lemon:otherForm      :form_directed ;
+    lemon:synBehavior    :direct_frame_transitive ;
+    lemon:sense          :direct_ontomap .
 
 
-:directed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
-  lexinfo:copulativeSubject    :directed_subj ;
-  lexinfo:prepositionalAdjunct :directed_obj .
+:form_direct
+    a                    lemon:Form ;
+    lemon:writtenRep     "direct"@en ;
+    lexinfo:verbFormMood lexinfo:infinitive .
 
-:directed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
-  lemon:ontoMapping :directed_ontomap ;
-  lemon:reference   <http://dbpedia.org/ontology/director> ;
-  lemon:subjOfProp  :directed_subj ;
-  lemon:objOfProp   :directed_obj ;
-  lemon:condition   :direct_condition .
+:form_directs
+    a                lemon:Form ;
+    lemon:writtenRep "directs"@en ;
+    lexinfo:number   lexinfo:singular ;
+    lexinfo:tense    lexinfo:present ;
+    lexinfo:person   lexinfo:thirdPerson .
 
-:directed_obj lemon:marker :by .
+:form_directed
+    a                lemon:Form ;
+    lemon:writtenRep "directed"@en ;
+    lexinfo:tense    lexinfo:past .
+
+:direct_frame_transitive
+    a                    lexinfo:TransitiveFrame ;
+    lexinfo:subject      :direct_subj ;
+    lexinfo:directObject :direct_obj .
+
+:direct_ontomap
+    a                 lemon:OntoMap, lemon:LexicalSense ;
+    lemon:ontoMapping :direct_ontomap ;
+    lemon:reference   <http://dbpedia.org/ontology/director> ;
+    lemon:subjOfProp  :direct_obj ;
+    lemon:objOfProp   :direct_subj ;
+    lemon:condition   :direct_condition .
+
+:direct_condition
+    a                    lemon:condition ;
+    lemon:propertyDomain <http://dbpedia.org/ontology/Film> ;
+    lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+
+
+:direct_obj
+    lemon:marker :by .
 
 ## Prepositions ##
 
-:by a                  lemon:SynRoleMarker ;
-  lemon:canonicalForm  [ lemon:writtenRep "by"@en ] ;
-  lexinfo:partOfSpeech lexinfo:preposition .
+:by
+    a                    lemon:SynRoleMarker ;
+    lemon:canonicalForm  [ lemon:writtenRep "by"@en ] ;
+    lexinfo:partOfSpeech lexinfo:preposition .

@@ -1,0 +1,74 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base   <http://localhost:8080#> .
+
+:lexicon_en
+    a              lemon:Lexicon ;
+    lemon:language "en" ;
+    lemon:entry    :to_belong ;
+    lemon:entry    :to .
+
+:to_belong
+    a                    lemon:LexicalEntry ;
+    lexinfo:partOfSpeech lexinfo:verb ;
+    lemon:canonicalForm  :form_belong ;
+    lemon:otherForm      :form_belongs ;
+    lemon:otherForm      :form_belong_plural ;
+    lemon:otherForm      :form_belonged ;
+    lemon:synBehavior    :belong_frame ;
+    lemon:sense          :belong_sense1 .
+
+:form_belong
+    a                    lemon:Form ;
+    lemon:writtenRep     "belong"@en ;
+    lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_belongs
+    a                lemon:Form ;
+    lemon:writtenRep "belongs"@en ;
+    lexinfo:number   lexinfo:singular ;
+    lexinfo:person   lexinfo:thirdPerson ;
+    lexinfo:tense    lexinfo:present .
+
+:form_belong_plural
+    a                lemon:Form ;
+    lemon:writtenRep "belong"@en ;
+    lexinfo:number   lexinfo:plural ;
+    lexinfo:person   lexinfo:thirdPerson ;
+    lexinfo:tense    lexinfo:present .
+
+:form_belonged
+    a                lemon:Form ;
+    lemon:writtenRep "belonged"@en ;
+    lexinfo:person   lexinfo:thirdPerson ;
+    lexinfo:tense    lexinfo:past .
+
+:belong_frame
+    a                            lexinfo:IntransitivePPFrame ;
+    lexinfo:subject              :belong_subj ;
+    lexinfo:prepositionalAdjunct :belong_obj .
+
+:belong_sense1
+    a                 lemon:OntoMap, lemon:LexicalSense ;
+    lemon:ontoMapping :belong_sense1 ;
+    lemon:reference   <http://dbpedia.org/ontology/species> ;
+    lemon:subjOfProp  :belong_subj ;
+    lemon:objOfProp   :belong_obj ;
+    lemon:condition   :belong_condition .
+
+:belong_condition
+    a                    lemon:condition ;
+    lemon:propertyDomain <http://dbpedia.org/ontology/Animal> ;
+    lemon:propertyRange  <http://dbpedia.org/property/species> .
+
+
+:belong_obj
+    lemon:marker :to .
+
+:to
+    a                    lemon:SynRoleMarker ;
+    lemon:canonicalForm  [ lemon:writtenRep "to"@en ] ;
+    lexinfo:partOfSpeech lexinfo:preposition .

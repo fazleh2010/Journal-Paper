@@ -4,31 +4,39 @@
 @prefix lemon:   <http://lemon-model.net/lemon#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 
-@base            <http://localhost:8080#> .
+@base   <http://localhost:8080#> .
 
-:lexicon_en a    lemon:Lexicon ;
-  lemon:language "en" ;
-  lemon:entry    :belgian ;
-  lemon:entry    :belgian_res .
+:lexicon_en
+    a              lemon:Lexicon ;
+    lemon:language "en" ;
+    lemon:entry    :belgian ;
+    lemon:entry    :belgian_res .
 
-:belgian a             lemon:LexicalEntry ;
-  lexinfo:partOfSpeech lexinfo:adjective ;
-  lemon:canonicalForm  :belgian_lemma ;
-  lemon:synBehavior    :belgian_attrFrame, :belgian_predFrame ;
-  lemon:sense          :belgian_sense .
+:belgian
+    a                    lemon:LexicalEntry ;
+    lexinfo:partOfSpeech lexinfo:adjective ;
+    lemon:canonicalForm  :belgian_lemma ;
+    lemon:synBehavior    :belgian_attrFrame, :belgian_predFrame ;
+    lemon:sense          :belgian_sense .
 
-:belgian_lemma lemon:writtenRep "Belgian"@en .
+:belgian_lemma
+    lemon:writtenRep "Belgian"@en .
 
-:belgian_predFrame a        lexinfo:AdjectivePredicateFrame ;
-  lexinfo:copulativeSubject :belgian_PredSynArg .
+:belgian_predFrame
+    a                         lexinfo:AdjectivePredicateFrame ;
+    lexinfo:copulativeSubject :belgian_PredSynArg .
 
-:belgian_attrFrame a     lexinfo:AdjectiveAttributiveFrame ;
-  lexinfo:attributiveArg :belgian_AttrSynArg .
+:belgian_attrFrame
+    a                      lexinfo:AdjectiveAttributiveFrame ;
+    lexinfo:attributiveArg :belgian_AttrSynArg .
 
-:belgian_sense a  lemon:LexicalSense ;
-  lemon:reference :belgian_res ;
-  lemon:isA       :belgian_AttrSynArg, :belgian_PredSynArg .
+:belgian_sense
+    a               lemon:LexicalSense ;
+    lemon:reference :belgian_res ;
+    lemon:isA       :belgian_AttrSynArg, :belgian_PredSynArg .
 
-:belgian_res a   owl:Restriction ;
-  owl:onProperty <http://dbpedia.org/ontology/nationality> ;
-  owl:hasValue   <http://dbpedia.org/resource/Belgium> .
+:belgian_res
+    a              owl:Restriction ;
+    owl:onProperty <http://dbpedia.org/ontology/nationality> ;
+    owl:hasValue   <http://dbpedia.org/resource/Belgium> .
+
