@@ -1,6 +1,158 @@
 {
   "grammarEntries" : [ {
-    "id" : "51",
+    "id" : "100",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "RIVER",
+    "returnType" : "COUNTRY",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the source country of the left tributaries of $x?", "Give me the source country of the left tributary of $x?", "Tell me the source country of the left tributaries of $x?", "Tell me the source country of the left tributary of $x?", "What is the source country of the left tributaries of $x?", "What is the source country of the left tributary of $x?", "What was the source country of the left tributaries of $x?", "What was the source country of the left tributary of $x?", "Which country is the source country of the left tributaries of $x?", "Which country is the source country of the left tributary of $x?", "Which country was the source country of the left tributaries of $x?", "Which country was the source country of the left tributary of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/sourceCountry> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/leftTributary> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "101",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "RIVER",
+    "returnType" : "COUNTRY",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the source country of the right tributaries of $x?", "Give me the source country of the right tributary of $x?", "Tell me the source country of the right tributaries of $x?", "Tell me the source country of the right tributary of $x?", "What is the source country of the right tributaries of $x?", "What is the source country of the right tributary of $x?", "What was the source country of the right tributaries of $x?", "What was the source country of the right tributary of $x?", "Which country is the source country of the right tributaries of $x?", "Which country is the source country of the right tributary of $x?", "Which country was the source country of the right tributaries of $x?", "Which country was the source country of the right tributary of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/sourceCountry> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/rightTributary> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "102",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "RIVER",
+    "returnType" : "NUMBER",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the discharge of the left tributaries of $x?", "Give me the discharge of the left tributary of $x?", "Tell me the discharge of the left tributaries of $x?", "Tell me the discharge of the left tributary of $x?", "What is the discharge of the left tributaries of $x?", "What is the discharge of the left tributary of $x?", "What was the discharge of the left tributaries of $x?", "What was the discharge of the left tributary of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/discharge> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/leftTributary> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "103",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "RIVER",
+    "returnType" : "NUMBER",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the discharge of the right tributaries of $x?", "Give me the discharge of the right tributary of $x?", "Tell me the discharge of the right tributaries of $x?", "Tell me the discharge of the right tributary of $x?", "What is the discharge of the right tributaries of $x?", "What is the discharge of the right tributary of $x?", "What was the discharge of the right tributaries of $x?", "What was the discharge of the right tributary of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/discharge> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/rightTributary> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "104",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "RIVER",
+    "returnType" : "RIVER",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the left tributaries of the left tributaries of $x?", "Give me the left tributaries of the left tributary of $x?", "Give me the left tributary of the left tributaries of $x?", "Give me the left tributary of the left tributary of $x?", "List the left tributaries of the left tributaries of $x?", "List the left tributaries of the left tributary of $x?", "Tell me the left tributaries of the left tributaries of $x?", "Tell me the left tributaries of the left tributary of $x?", "Tell me the left tributary of the left tributaries of $x?", "Tell me the left tributary of the left tributary of $x?", "What are the left tributaries of the left tributaries of $x?", "What are the left tributaries of the left tributary of $x?", "What is the left tributary of the left tributaries of $x?", "What is the left tributary of the left tributary of $x?", "What was the left tributary of the left tributaries of $x?", "What was the left tributary of the left tributary of $x?", "What were the left tributaries of the left tributaries of $x?", "What were the left tributaries of the left tributary of $x?", "Which river is the left tributary of the left tributaries of $x?", "Which river is the left tributary of the left tributary of $x?", "Which river was the left tributary of the left tributaries of $x?", "Which river was the left tributary of the left tributary of $x?", "Which rivers are the left tributaries of the left tributaries of $x?", "Which rivers are the left tributaries of the left tributary of $x?", "Which rivers were the left tributaries of the left tributaries of $x?", "Which rivers were the left tributaries of the left tributary of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/leftTributary> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/leftTributary> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "105",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "RIVER",
+    "returnType" : "RIVER",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the left tributaries of the right tributaries of $x?", "Give me the left tributaries of the right tributary of $x?", "Give me the left tributary of the right tributaries of $x?", "Give me the left tributary of the right tributary of $x?", "List the left tributaries of the right tributaries of $x?", "List the left tributaries of the right tributary of $x?", "Tell me the left tributaries of the right tributaries of $x?", "Tell me the left tributaries of the right tributary of $x?", "Tell me the left tributary of the right tributaries of $x?", "Tell me the left tributary of the right tributary of $x?", "What are the left tributaries of the right tributaries of $x?", "What are the left tributaries of the right tributary of $x?", "What is the left tributary of the right tributaries of $x?", "What is the left tributary of the right tributary of $x?", "What was the left tributary of the right tributaries of $x?", "What was the left tributary of the right tributary of $x?", "What were the left tributaries of the right tributaries of $x?", "What were the left tributaries of the right tributary of $x?", "Which river is the left tributary of the right tributaries of $x?", "Which river is the left tributary of the right tributary of $x?", "Which river was the left tributary of the right tributaries of $x?", "Which river was the left tributary of the right tributary of $x?", "Which rivers are the left tributaries of the right tributaries of $x?", "Which rivers are the left tributaries of the right tributary of $x?", "Which rivers were the left tributaries of the right tributaries of $x?", "Which rivers were the left tributaries of the right tributary of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/leftTributary> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/rightTributary> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "106",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "RIVER",
+    "returnType" : "COUNTRY",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the mouth country of the left tributaries of $x?", "Give me the mouth country of the left tributary of $x?", "Tell me the mouth country of the left tributaries of $x?", "Tell me the mouth country of the left tributary of $x?", "What is the mouth country of the left tributaries of $x?", "What is the mouth country of the left tributary of $x?", "What was the mouth country of the left tributaries of $x?", "What was the mouth country of the left tributary of $x?", "Which country is the mouth country of the left tributaries of $x?", "Which country is the mouth country of the left tributary of $x?", "Which country was the mouth country of the left tributaries of $x?", "Which country was the mouth country of the left tributary of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/mouthCountry> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/leftTributary> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "107",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "RIVER",
+    "returnType" : "COUNTRY",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the mouth country of the right tributaries of $x?", "Give me the mouth country of the right tributary of $x?", "Tell me the mouth country of the right tributaries of $x?", "Tell me the mouth country of the right tributary of $x?", "What is the mouth country of the right tributaries of $x?", "What is the mouth country of the right tributary of $x?", "What was the mouth country of the right tributaries of $x?", "What was the mouth country of the right tributary of $x?", "Which country is the mouth country of the right tributaries of $x?", "Which country is the mouth country of the right tributary of $x?", "Which country was the mouth country of the right tributaries of $x?", "Which country was the mouth country of the right tributary of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/mouthCountry> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/rightTributary> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "108",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -17,7 +169,7 @@
     },
     "combination" : true
   }, {
-    "id" : "52",
+    "id" : "109",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -34,7 +186,7 @@
     },
     "combination" : true
   }, {
-    "id" : "53",
+    "id" : "110",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -51,7 +203,7 @@
     },
     "combination" : true
   }, {
-    "id" : "54",
+    "id" : "111",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -68,7 +220,7 @@
     },
     "combination" : true
   }, {
-    "id" : "55",
+    "id" : "112",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -85,7 +237,7 @@
     },
     "combination" : true
   }, {
-    "id" : "56",
+    "id" : "113",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -102,7 +254,7 @@
     },
     "combination" : true
   }, {
-    "id" : "57",
+    "id" : "114",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -119,7 +271,7 @@
     },
     "combination" : true
   }, {
-    "id" : "58",
+    "id" : "115",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -136,7 +288,7 @@
     },
     "combination" : true
   }, {
-    "id" : "59",
+    "id" : "116",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -153,7 +305,7 @@
     },
     "combination" : true
   }, {
-    "id" : "60",
+    "id" : "117",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -170,7 +322,7 @@
     },
     "combination" : true
   }, {
-    "id" : "61",
+    "id" : "118",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -187,7 +339,7 @@
     },
     "combination" : true
   }, {
-    "id" : "62",
+    "id" : "119",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -204,7 +356,7 @@
     },
     "combination" : true
   }, {
-    "id" : "63",
+    "id" : "120",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -221,7 +373,7 @@
     },
     "combination" : true
   }, {
-    "id" : "64",
+    "id" : "121",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -238,7 +390,7 @@
     },
     "combination" : true
   }, {
-    "id" : "65",
+    "id" : "122",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -255,24 +407,7 @@
     },
     "combination" : true
   }, {
-    "id" : "66",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "LOCATION",
-    "frameType" : "NPP",
-    "sentences" : [ "Give me the birth place of a Belgian Christian Bishop?", "Give me the birth place of Belgian Christian Bishops?", "Tell me the birth place of a Belgian Christian Bishop?", "Tell me the birth place of Belgian Christian Bishops?", "What is the birth place of a Belgian Christian Bishop?", "What is the birth place of Belgian Christian Bishops?", "What was the birth place of a Belgian Christian Bishop?", "What was the birth place of Belgian Christian Bishops?", "Which place is the birth place of a Belgian Christian Bishop?", "Which place is the birth place of Belgian Christian Bishops?", "Which place was the birth place of a Belgian Christian Bishop?", "Which place was the birth place of Belgian Christian Bishops?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/ChristianBishop>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "67",
+    "id" : "123",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -289,7 +424,7 @@
     },
     "combination" : true
   }, {
-    "id" : "68",
+    "id" : "124",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -306,7 +441,7 @@
     },
     "combination" : true
   }, {
-    "id" : "69",
+    "id" : "125",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -323,15 +458,15 @@
     },
     "combination" : true
   }, {
-    "id" : "70",
+    "id" : "126",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
     "returnType" : "LOCATION",
     "frameType" : "NPP",
-    "sentences" : [ "Give me the birth place of a Belgian musical artist?", "Give me the birth place of Belgian musical artists?", "Tell me the birth place of a Belgian musical artist?", "Tell me the birth place of Belgian musical artists?", "What is the birth place of a Belgian musical artist?", "What is the birth place of Belgian musical artists?", "What was the birth place of a Belgian musical artist?", "What was the birth place of Belgian musical artists?", "Which place is the birth place of a Belgian musical artist?", "Which place is the birth place of Belgian musical artists?", "Which place was the birth place of a Belgian musical artist?", "Which place was the birth place of Belgian musical artists?" ],
+    "sentences" : [ "Give me the birth place of a Greek boxer?", "Give me the birth place of Greek boxers?", "Tell me the birth place of a Greek boxer?", "Tell me the birth place of Greek boxers?", "What is the birth place of a Greek boxer?", "What is the birth place of Greek boxers?", "What was the birth place of a Greek boxer?", "What was the birth place of Greek boxers?", "Which place is the birth place of a Greek boxer?", "Which place is the birth place of Greek boxers?", "Which place was the birth place of a Greek boxer?", "Which place was the birth place of Greek boxers?" ],
     "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/MusicalArtist>)\n)\n",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Boxer>)\n)\n",
     "sentenceToSparqlParameterMapping" : null,
     "returnVariable" : "objOfProp",
     "sentenceBindings" : {
@@ -340,7 +475,416 @@
     },
     "combination" : true
   }, {
-    "id" : "71",
+    "id" : "127",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the birth place of a Greek cleric?", "Give me the birth place of Greek clerics?", "Tell me the birth place of a Greek cleric?", "Tell me the birth place of Greek clerics?", "What is the birth place of a Greek cleric?", "What is the birth place of Greek clerics?", "What was the birth place of a Greek cleric?", "What was the birth place of Greek clerics?", "Which place is the birth place of a Greek cleric?", "Which place is the birth place of Greek clerics?", "Which place was the birth place of a Greek cleric?", "Which place was the birth place of Greek clerics?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Cleric>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "128",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the birth place of a Greek office holder?", "Give me the birth place of Greek office holders?", "Tell me the birth place of a Greek office holder?", "Tell me the birth place of Greek office holders?", "What is the birth place of a Greek office holder?", "What is the birth place of Greek office holders?", "What was the birth place of a Greek office holder?", "What was the birth place of Greek office holders?", "Which place is the birth place of a Greek office holder?", "Which place is the birth place of Greek office holders?", "Which place was the birth place of a Greek office holder?", "Which place was the birth place of Greek office holders?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/OfficeHolder>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "129",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the birth place of a Greek agent?", "Give me the birth place of Greek agents?", "Tell me the birth place of a Greek agent?", "Tell me the birth place of Greek agents?", "What is the birth place of a Greek agent?", "What is the birth place of Greek agents?", "What was the birth place of a Greek agent?", "What was the birth place of Greek agents?", "Which place is the birth place of a Greek agent?", "Which place is the birth place of Greek agents?", "Which place was the birth place of a Greek agent?", "Which place was the birth place of Greek agents?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Agent>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "130",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the birth place of a Greek fictional character?", "Give me the birth place of Greek fictional characters?", "Tell me the birth place of a Greek fictional character?", "Tell me the birth place of Greek fictional characters?", "What is the birth place of a Greek fictional character?", "What is the birth place of Greek fictional characters?", "What was the birth place of a Greek fictional character?", "What was the birth place of Greek fictional characters?", "Which place is the birth place of a Greek fictional character?", "Which place is the birth place of Greek fictional characters?", "Which place was the birth place of a Greek fictional character?", "Which place was the birth place of Greek fictional characters?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/FictionalCharacter>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "131",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the birth place of a Greek artist?", "Give me the birth place of Greek artists?", "Tell me the birth place of a Greek artist?", "Tell me the birth place of Greek artists?", "What is the birth place of a Greek artist?", "What is the birth place of Greek artists?", "What was the birth place of a Greek artist?", "What was the birth place of Greek artists?", "Which place is the birth place of a Greek artist?", "Which place is the birth place of Greek artists?", "Which place was the birth place of a Greek artist?", "Which place was the birth place of Greek artists?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Artist>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "132",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the birth place of a Greek athlete?", "Give me the birth place of Greek athletes?", "Tell me the birth place of a Greek athlete?", "Tell me the birth place of Greek athletes?", "What is the birth place of a Greek athlete?", "What is the birth place of Greek athletes?", "What was the birth place of a Greek athlete?", "What was the birth place of Greek athletes?", "Which place is the birth place of a Greek athlete?", "Which place is the birth place of Greek athletes?", "Which place was the birth place of a Greek athlete?", "Which place was the birth place of Greek athletes?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Athlete>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "133",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the birth place of a Greek scientist?", "Give me the birth place of Greek scientists?", "Tell me the birth place of a Greek scientist?", "Tell me the birth place of Greek scientists?", "What is the birth place of a Greek scientist?", "What is the birth place of Greek scientists?", "What was the birth place of a Greek scientist?", "What was the birth place of Greek scientists?", "Which place is the birth place of a Greek scientist?", "Which place is the birth place of Greek scientists?", "Which place was the birth place of a Greek scientist?", "Which place was the birth place of Greek scientists?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Scientist>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "134",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the birth place of a Greek politician?", "Give me the birth place of Greek politicians?", "Tell me the birth place of a Greek politician?", "Tell me the birth place of Greek politicians?", "What is the birth place of a Greek politician?", "What is the birth place of Greek politicians?", "What was the birth place of a Greek politician?", "What was the birth place of Greek politicians?", "Which place is the birth place of a Greek politician?", "Which place is the birth place of Greek politicians?", "Which place was the birth place of a Greek politician?", "Which place was the birth place of Greek politicians?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Politician>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "135",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the birth place of a Greek swimmer?", "Give me the birth place of Greek swimmers?", "Tell me the birth place of a Greek swimmer?", "Tell me the birth place of Greek swimmers?", "What is the birth place of a Greek swimmer?", "What is the birth place of Greek swimmers?", "What was the birth place of a Greek swimmer?", "What was the birth place of Greek swimmers?", "Which place is the birth place of a Greek swimmer?", "Which place is the birth place of Greek swimmers?", "Which place was the birth place of a Greek swimmer?", "Which place was the birth place of Greek swimmers?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Swimmer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "136",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the birth place of a Greek volleyball player?", "Give me the birth place of Greek volleyball players?", "Tell me the birth place of a Greek volleyball player?", "Tell me the birth place of Greek volleyball players?", "What is the birth place of a Greek volleyball player?", "What is the birth place of Greek volleyball players?", "What was the birth place of a Greek volleyball player?", "What was the birth place of Greek volleyball players?", "Which place is the birth place of a Greek volleyball player?", "Which place is the birth place of Greek volleyball players?", "Which place was the birth place of a Greek volleyball player?", "Which place was the birth place of Greek volleyball players?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/VolleyballPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "137",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the birth place of a Greek handball player?", "Give me the birth place of Greek handball players?", "Tell me the birth place of a Greek handball player?", "Tell me the birth place of Greek handball players?", "What is the birth place of a Greek handball player?", "What is the birth place of Greek handball players?", "What was the birth place of a Greek handball player?", "What was the birth place of Greek handball players?", "Which place is the birth place of a Greek handball player?", "Which place is the birth place of Greek handball players?", "Which place was the birth place of a Greek handball player?", "Which place was the birth place of Greek handball players?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/HandballPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "138",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the birth place of a Greek person?", "Give me the birth place of Greek persons?", "Tell me the birth place of a Greek person?", "Tell me the birth place of Greek persons?", "What is the birth place of a Greek person?", "What is the birth place of Greek persons?", "What was the birth place of a Greek person?", "What was the birth place of Greek persons?", "Which place is the birth place of a Greek person?", "Which place is the birth place of Greek persons?", "Which place was the birth place of a Greek person?", "Which place was the birth place of Greek persons?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "139",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the birth place of a Greek basketball player?", "Give me the birth place of Greek basketball players?", "Tell me the birth place of a Greek basketball player?", "Tell me the birth place of Greek basketball players?", "What is the birth place of a Greek basketball player?", "What is the birth place of Greek basketball players?", "What was the birth place of a Greek basketball player?", "What was the birth place of Greek basketball players?", "Which place is the birth place of a Greek basketball player?", "Which place is the birth place of Greek basketball players?", "Which place was the birth place of a Greek basketball player?", "Which place was the birth place of Greek basketball players?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/BasketballPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "140",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the birth place of a Greek writer?", "Give me the birth place of Greek writers?", "Tell me the birth place of a Greek writer?", "Tell me the birth place of Greek writers?", "What is the birth place of a Greek writer?", "What is the birth place of Greek writers?", "What was the birth place of a Greek writer?", "What was the birth place of Greek writers?", "Which place is the birth place of a Greek writer?", "Which place is the birth place of Greek writers?", "Which place was the birth place of a Greek writer?", "Which place was the birth place of Greek writers?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Writer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "141",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "RIVER",
+    "returnType" : "NUMBER",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the source elevation of the left tributaries of $x?", "Give me the source elevation of the left tributary of $x?", "Tell me the source elevation of the left tributaries of $x?", "Tell me the source elevation of the left tributary of $x?", "What is the source elevation of the left tributaries of $x?", "What is the source elevation of the left tributary of $x?", "What was the source elevation of the left tributaries of $x?", "What was the source elevation of the left tributary of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/sourceElevation> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/leftTributary> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "142",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "RIVER",
+    "returnType" : "NUMBER",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the source elevation of the right tributaries of $x?", "Give me the source elevation of the right tributary of $x?", "Tell me the source elevation of the right tributaries of $x?", "Tell me the source elevation of the right tributary of $x?", "What is the source elevation of the right tributaries of $x?", "What is the source elevation of the right tributary of $x?", "What was the source elevation of the right tributaries of $x?", "What was the source elevation of the right tributary of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/sourceElevation> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/rightTributary> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "143",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "RIVER",
+    "returnType" : "RIVER",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the right tributaries of the left tributaries of $x?", "Give me the right tributaries of the left tributary of $x?", "Give me the right tributary of the left tributaries of $x?", "Give me the right tributary of the left tributary of $x?", "List the right tributaries of the left tributaries of $x?", "List the right tributaries of the left tributary of $x?", "Tell me the right tributaries of the left tributaries of $x?", "Tell me the right tributaries of the left tributary of $x?", "Tell me the right tributary of the left tributaries of $x?", "Tell me the right tributary of the left tributary of $x?", "What are the right tributaries of the left tributaries of $x?", "What are the right tributaries of the left tributary of $x?", "What is the right tributary of the left tributaries of $x?", "What is the right tributary of the left tributary of $x?", "What was the right tributary of the left tributaries of $x?", "What was the right tributary of the left tributary of $x?", "What were the right tributaries of the left tributaries of $x?", "What were the right tributaries of the left tributary of $x?", "Which river is the right tributary of the left tributaries of $x?", "Which river is the right tributary of the left tributary of $x?", "Which river was the right tributary of the left tributaries of $x?", "Which river was the right tributary of the left tributary of $x?", "Which rivers are the right tributaries of the left tributaries of $x?", "Which rivers are the right tributaries of the left tributary of $x?", "Which rivers were the right tributaries of the left tributaries of $x?", "Which rivers were the right tributaries of the left tributary of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/rightTributary> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/leftTributary> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "144",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "RIVER",
+    "returnType" : "RIVER",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the right tributaries of the right tributaries of $x?", "Give me the right tributaries of the right tributary of $x?", "Give me the right tributary of the right tributaries of $x?", "Give me the right tributary of the right tributary of $x?", "List the right tributaries of the right tributaries of $x?", "List the right tributaries of the right tributary of $x?", "Tell me the right tributaries of the right tributaries of $x?", "Tell me the right tributaries of the right tributary of $x?", "Tell me the right tributary of the right tributaries of $x?", "Tell me the right tributary of the right tributary of $x?", "What are the right tributaries of the right tributaries of $x?", "What are the right tributaries of the right tributary of $x?", "What is the right tributary of the right tributaries of $x?", "What is the right tributary of the right tributary of $x?", "What was the right tributary of the right tributaries of $x?", "What was the right tributary of the right tributary of $x?", "What were the right tributaries of the right tributaries of $x?", "What were the right tributaries of the right tributary of $x?", "Which river is the right tributary of the right tributaries of $x?", "Which river is the right tributary of the right tributary of $x?", "Which river was the right tributary of the right tributaries of $x?", "Which river was the right tributary of the right tributary of $x?", "Which rivers are the right tributaries of the right tributaries of $x?", "Which rivers are the right tributaries of the right tributary of $x?", "Which rivers were the right tributaries of the right tributaries of $x?", "Which rivers were the right tributaries of the right tributary of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/rightTributary> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/rightTributary> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "145",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "RIVER",
+    "returnType" : "NUMBER",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the mouth elevation of the left tributaries of $x?", "Give me the mouth elevation of the left tributary of $x?", "Tell me the mouth elevation of the left tributaries of $x?", "Tell me the mouth elevation of the left tributary of $x?", "What is the mouth elevation of the left tributaries of $x?", "What is the mouth elevation of the left tributary of $x?", "What was the mouth elevation of the left tributaries of $x?", "What was the mouth elevation of the left tributary of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/mouthElevation> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/leftTributary> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "146",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "RIVER",
+    "returnType" : "NUMBER",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the mouth elevation of the right tributaries of $x?", "Give me the mouth elevation of the right tributary of $x?", "Tell me the mouth elevation of the right tributaries of $x?", "Tell me the mouth elevation of the right tributary of $x?", "What is the mouth elevation of the right tributaries of $x?", "What is the mouth elevation of the right tributary of $x?", "What was the mouth elevation of the right tributaries of $x?", "What was the mouth elevation of the right tributary of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/mouthElevation> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/rightTributary> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "147",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "RIVER",
+    "returnType" : "NUMBER",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the length of the left tributaries of $x?", "Give me the length of the left tributary of $x?", "Tell me the length of the left tributaries of $x?", "Tell me the length of the left tributary of $x?", "What is the length of the left tributaries of $x?", "What is the length of the left tributary of $x?", "What was the length of the left tributaries of $x?", "What was the length of the left tributary of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/length> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/leftTributary> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "148",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "RIVER",
+    "returnType" : "NUMBER",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the length of the right tributaries of $x?", "Give me the length of the right tributary of $x?", "Tell me the length of the right tributaries of $x?", "Tell me the length of the right tributary of $x?", "What is the length of the right tributaries of $x?", "What is the length of the right tributary of $x?", "What was the length of the right tributaries of $x?", "What was the length of the right tributary of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/length> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/rightTributary> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "149",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "VP",
+    "sentences" : [ "What composed movies directed by $x?", "What composes movies directed by $x?", "Which person composed movies directed by $x?", "Which person composes movies directed by $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfPropx)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "150",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -356,23 +900,8 @@
     "sentenceBindings" : {
       "bindingVariableName" : "$x",
       "bindingList" : [ {
-        "label" : "Andrzej Wajda",
-        "uri" : "http://dbpedia.org/resource/Andrzej_Wajda"
-      }, {
-        "label" : "Billy Wilder",
-        "uri" : "http://dbpedia.org/resource/Billy_Wilder"
-      }, {
-        "label" : "Blake Edwards",
-        "uri" : "http://dbpedia.org/resource/Blake_Edwards"
-      }, {
-        "label" : "Elia Kazan",
-        "uri" : "http://dbpedia.org/resource/Elia_Kazan"
-      }, {
-        "label" : "Godfrey Reggio",
-        "uri" : "http://dbpedia.org/resource/Godfrey_Reggio"
-      }, {
-        "label" : "John Carpenter",
-        "uri" : "http://dbpedia.org/resource/John_Carpenter"
+        "label" : "Love You Baba",
+        "uri" : "http://dbpedia.org/resource/Love_You_Baba"
       }, {
         "label" : "Luc Besson",
         "uri" : "http://dbpedia.org/resource/Luc_Besson"
@@ -380,286 +909,301 @@
         "label" : "Luchino Visconti",
         "uri" : "http://dbpedia.org/resource/Luchino_Visconti"
       }, {
-        "label" : "Peter Weir",
-        "uri" : "http://dbpedia.org/resource/Peter_Weir"
+        "label" : "Luis César Amadori",
+        "uri" : "http://dbpedia.org/resource/Luis_César_Amadori"
       }, {
-        "label" : "Ted Demme",
-        "uri" : "http://dbpedia.org/resource/Ted_Demme"
+        "label" : "Luke Matheny",
+        "uri" : "http://dbpedia.org/resource/Luke_Matheny"
       }, {
-        "label" : "Terry Gilliam",
-        "uri" : "http://dbpedia.org/resource/Terry_Gilliam"
+        "label" : "Lupino Lane",
+        "uri" : "http://dbpedia.org/resource/Lupino_Lane"
       }, {
-        "label" : "Tod Browning",
-        "uri" : "http://dbpedia.org/resource/Tod_Browning"
+        "label" : "Léo Joannon",
+        "uri" : "http://dbpedia.org/resource/Léo_Joannon"
       }, {
-        "label" : "Tony Richardson",
-        "uri" : "http://dbpedia.org/resource/Tony_Richardson"
+        "label" : "Mai Zetterling",
+        "uri" : "http://dbpedia.org/resource/Mai_Zetterling"
       }, {
-        "label" : "Vittorio De Sica",
-        "uri" : "http://dbpedia.org/resource/Vittorio_De_Sica"
+        "label" : "Ujwal Ghimire",
+        "uri" : "http://dbpedia.org/resource/Ujwal_Ghimire"
       }, {
-        "label" : "Wim Wenders",
-        "uri" : "http://dbpedia.org/resource/Wim_Wenders"
+        "label" : "Umetsugu Inoue",
+        "uri" : "http://dbpedia.org/resource/Umetsugu_Inoue"
       }, {
-        "label" : "Woody Allen",
-        "uri" : "http://dbpedia.org/resource/Woody_Allen"
+        "label" : "Usama Mukwaya",
+        "uri" : "http://dbpedia.org/resource/Usama_Mukwaya"
       }, {
-        "label" : "Marcello Albani",
-        "uri" : "http://dbpedia.org/resource/Marcello_Albani"
+        "label" : "Cătălin Mitulescu",
+        "uri" : "http://dbpedia.org/resource/Cătălin_Mitulescu"
       }, {
-        "label" : "Charles McDougall",
-        "uri" : "http://dbpedia.org/resource/Charles_McDougall"
+        "label" : "Dale Launer",
+        "uri" : "http://dbpedia.org/resource/Dale_Launer"
       }, {
-        "label" : "Griffin Dunne",
-        "uri" : "http://dbpedia.org/resource/Griffin_Dunne"
+        "label" : "Elda Tattoli",
+        "uri" : "http://dbpedia.org/resource/Elda_Tattoli"
       }, {
-        "label" : "Hideo Nakata",
-        "uri" : "http://dbpedia.org/resource/Hideo_Nakata"
+        "label" : "J. Sasikumar",
+        "uri" : "http://dbpedia.org/resource/J._Sasikumar"
       }, {
-        "label" : "James Kirkwood, Sr.",
-        "uri" : "http://dbpedia.org/resource/James_Kirkwood,_Sr."
+        "label" : "S. Ramanathan (film director)",
+        "uri" : "http://dbpedia.org/resource/S._Ramanathan_(film_director)"
       }, {
-        "label" : "John Landis",
-        "uri" : "http://dbpedia.org/resource/John_Landis"
+        "label" : "Sean Garrity (director)",
+        "uri" : "http://dbpedia.org/resource/Sean_Garrity_(director)"
       }, {
-        "label" : "Kimio Yabuki",
-        "uri" : "http://dbpedia.org/resource/Kimio_Yabuki"
+        "label" : "Simon Staho",
+        "uri" : "http://dbpedia.org/resource/Simon_Staho"
       }, {
-        "label" : "Koichi Ishii",
-        "uri" : "http://dbpedia.org/resource/Koichi_Ishii"
+        "label" : "Riingo Banerjee",
+        "uri" : "http://dbpedia.org/resource/Riingo_Banerjee"
       }, {
-        "label" : "Krzysztof Zanussi",
-        "uri" : "http://dbpedia.org/resource/Krzysztof_Zanussi"
+        "label" : "Robert Land",
+        "uri" : "http://dbpedia.org/resource/Robert_Land"
       }, {
-        "label" : "Maher Sabry",
-        "uri" : "http://dbpedia.org/resource/Maher_Sabry"
+        "label" : "Robert Péguy",
+        "uri" : "http://dbpedia.org/resource/Robert_Péguy"
       }, {
-        "label" : "Nanni Moretti",
-        "uri" : "http://dbpedia.org/resource/Nanni_Moretti"
+        "label" : "Thornton Freeland",
+        "uri" : "http://dbpedia.org/resource/Thornton_Freeland"
       }, {
-        "label" : "Paul Lynch (director)",
-        "uri" : "http://dbpedia.org/resource/Paul_Lynch_(director)"
+        "label" : "Billy Wilder",
+        "uri" : "http://dbpedia.org/resource/Billy_Wilder"
       }, {
-        "label" : "Tony Giglio",
-        "uri" : "http://dbpedia.org/resource/Tony_Giglio"
+        "label" : "Blaine Thurier",
+        "uri" : "http://dbpedia.org/resource/Blaine_Thurier"
       }, {
-        "label" : "Walt Becker",
-        "uri" : "http://dbpedia.org/resource/Walt_Becker"
+        "label" : "Bo Widerberg",
+        "uri" : "http://dbpedia.org/resource/Bo_Widerberg"
       }, {
-        "label" : "Walter Grauman",
-        "uri" : "http://dbpedia.org/resource/Walter_Grauman"
+        "label" : "Bobby Burns",
+        "uri" : "http://dbpedia.org/resource/Bobby_Burns"
       }, {
-        "label" : "Oliver Stone",
-        "uri" : "http://dbpedia.org/resource/Oliver_Stone"
+        "label" : "Brad Armstrong (director)",
+        "uri" : "http://dbpedia.org/resource/Brad_Armstrong_(director)"
       }, {
-        "label" : "John Behring",
-        "uri" : "http://dbpedia.org/resource/John_Behring"
+        "label" : "Delbert Mann",
+        "uri" : "http://dbpedia.org/resource/Delbert_Mann"
       }, {
-        "label" : "Bruno Corbucci",
-        "uri" : "http://dbpedia.org/resource/Bruno_Corbucci"
+        "label" : "Dennis Dugan",
+        "uri" : "http://dbpedia.org/resource/Dennis_Dugan"
       }, {
-        "label" : "Dan Riba",
-        "uri" : "http://dbpedia.org/resource/Dan_Riba"
+        "label" : "Dermot Mulroney",
+        "uri" : "http://dbpedia.org/resource/Dermot_Mulroney"
       }, {
-        "label" : "David Zucker (filmmaker)",
-        "uri" : "http://dbpedia.org/resource/David_Zucker_(filmmaker)"
+        "label" : "Dev Anand",
+        "uri" : "http://dbpedia.org/resource/Dev_Anand"
       }, {
-        "label" : "George Sherman",
-        "uri" : "http://dbpedia.org/resource/George_Sherman"
+        "label" : "Dhyan Sreenivasan",
+        "uri" : "http://dbpedia.org/resource/Dhyan_Sreenivasan"
       }, {
-        "label" : "Jan Hřebejk",
-        "uri" : "http://dbpedia.org/resource/Jan_Hřebejk"
+        "label" : "Diane Kurys",
+        "uri" : "http://dbpedia.org/resource/Diane_Kurys"
       }, {
-        "label" : "Karl Brown (cinematographer)",
-        "uri" : "http://dbpedia.org/resource/Karl_Brown_(cinematographer)"
+        "label" : "Dibakar Banerjee",
+        "uri" : "http://dbpedia.org/resource/Dibakar_Banerjee"
       }, {
-        "label" : "Mike Figgis",
-        "uri" : "http://dbpedia.org/resource/Mike_Figgis"
+        "label" : "Dinesh D'Souza",
+        "uri" : "http://dbpedia.org/resource/Dinesh_D'Souza"
       }, {
-        "label" : "Zhao Liang (director)",
-        "uri" : "http://dbpedia.org/resource/Zhao_Liang_(director)"
+        "label" : "Dino Risi",
+        "uri" : "http://dbpedia.org/resource/Dino_Risi"
       }, {
-        "label" : "Stanley Donen",
-        "uri" : "http://dbpedia.org/resource/Stanley_Donen"
+        "label" : "Dipendra K Khanal",
+        "uri" : "http://dbpedia.org/resource/Dipendra_K_Khanal"
       }, {
-        "label" : "George Archainbaud",
-        "uri" : "http://dbpedia.org/resource/George_Archainbaud"
+        "label" : "Doe Ching",
+        "uri" : "http://dbpedia.org/resource/Doe_Ching"
       }, {
-        "label" : "J. Searle Dawley",
-        "uri" : "http://dbpedia.org/resource/J._Searle_Dawley"
+        "label" : "Donald Crisp",
+        "uri" : "http://dbpedia.org/resource/Donald_Crisp"
       }, {
-        "label" : "Michael Grossman",
-        "uri" : "http://dbpedia.org/resource/Michael_Grossman"
+        "label" : "Glenn Jordan",
+        "uri" : "http://dbpedia.org/resource/Glenn_Jordan"
       }, {
-        "label" : "Peter Graham Scott",
-        "uri" : "http://dbpedia.org/resource/Peter_Graham_Scott"
+        "label" : "Greg Berlanti",
+        "uri" : "http://dbpedia.org/resource/Greg_Berlanti"
       }, {
-        "label" : "Brenton Spencer",
-        "uri" : "http://dbpedia.org/resource/Brenton_Spencer"
+        "label" : "Greg Carter (filmmaker)",
+        "uri" : "http://dbpedia.org/resource/Greg_Carter_(filmmaker)"
       }, {
-        "label" : "Paul Alter",
-        "uri" : "http://dbpedia.org/resource/Paul_Alter"
+        "label" : "Gu Changwei",
+        "uri" : "http://dbpedia.org/resource/Gu_Changwei"
       }, {
-        "label" : "Jason Winer",
-        "uri" : "http://dbpedia.org/resource/Jason_Winer"
+        "label" : "Kevin Bacon",
+        "uri" : "http://dbpedia.org/resource/Kevin_Bacon"
       }, {
-        "label" : "Kamalakara Kameswara Rao",
-        "uri" : "http://dbpedia.org/resource/Kamalakara_Kameswara_Rao"
+        "label" : "Kim Ki-young",
+        "uri" : "http://dbpedia.org/resource/Kim_Ki-young"
       }, {
-        "label" : "Lewis Teague",
-        "uri" : "http://dbpedia.org/resource/Lewis_Teague"
+        "label" : "Kim Kyu-tae",
+        "uri" : "http://dbpedia.org/resource/Kim_Kyu-tae"
       }, {
-        "label" : "Donna Deitch",
-        "uri" : "http://dbpedia.org/resource/Donna_Deitch"
+        "label" : "King Baggot",
+        "uri" : "http://dbpedia.org/resource/King_Baggot"
       }, {
-        "label" : "Leslie H. Martinson",
-        "uri" : "http://dbpedia.org/resource/Leslie_H._Martinson"
+        "label" : "King Vidor",
+        "uri" : "http://dbpedia.org/resource/King_Vidor"
       }, {
-        "label" : "Sidney Olcott",
-        "uri" : "http://dbpedia.org/resource/Sidney_Olcott"
+        "label" : "Kinuyo Tanaka",
+        "uri" : "http://dbpedia.org/resource/Kinuyo_Tanaka"
       }, {
-        "label" : "Dan Curtis",
-        "uri" : "http://dbpedia.org/resource/Dan_Curtis"
+        "label" : "Koichi Chigira",
+        "uri" : "http://dbpedia.org/resource/Koichi_Chigira"
       }, {
-        "label" : "Wayne Wang",
-        "uri" : "http://dbpedia.org/resource/Wayne_Wang"
+        "label" : "Kranthi Kumar",
+        "uri" : "http://dbpedia.org/resource/Kranthi_Kumar"
       }, {
-        "label" : "Mehboob Khan",
-        "uri" : "http://dbpedia.org/resource/Mehboob_Khan"
+        "label" : "Kristine Peterson",
+        "uri" : "http://dbpedia.org/resource/Kristine_Peterson"
       }, {
-        "label" : "Lloyd Bacon",
-        "uri" : "http://dbpedia.org/resource/Lloyd_Bacon"
+        "label" : "Kriv Stenders",
+        "uri" : "http://dbpedia.org/resource/Kriv_Stenders"
       }, {
-        "label" : "John Francis Dillon (director)",
-        "uri" : "http://dbpedia.org/resource/John_Francis_Dillon_(director)"
+        "label" : "Prithviraj Sukumaran",
+        "uri" : "http://dbpedia.org/resource/Prithviraj_Sukumaran"
       }, {
-        "label" : "Mac Alejandre",
-        "uri" : "http://dbpedia.org/resource/Mac_Alejandre"
+        "label" : "RZA",
+        "uri" : "http://dbpedia.org/resource/RZA"
       }, {
-        "label" : "Alexander Gruszynski",
-        "uri" : "http://dbpedia.org/resource/Alexander_Gruszynski"
+        "label" : "Rafi Mecartin",
+        "uri" : "http://dbpedia.org/resource/Rafi_Mecartin"
       }, {
-        "label" : "Georgi Djulgerov",
-        "uri" : "http://dbpedia.org/resource/Georgi_Djulgerov"
+        "label" : "Rahul Rawail",
+        "uri" : "http://dbpedia.org/resource/Rahul_Rawail"
       }, {
-        "label" : "Jeff Nichols",
-        "uri" : "http://dbpedia.org/resource/Jeff_Nichols"
+        "label" : "Rajendra Singh Babu",
+        "uri" : "http://dbpedia.org/resource/Rajendra_Singh_Babu"
       }, {
-        "label" : "Antonio Nuić",
-        "uri" : "http://dbpedia.org/resource/Antonio_Nuić"
+        "label" : "Ralph Ince",
+        "uri" : "http://dbpedia.org/resource/Ralph_Ince"
       }, {
-        "label" : "Lev Atamanov",
-        "uri" : "http://dbpedia.org/resource/Lev_Atamanov"
+        "label" : "Gordon Anderson (director)",
+        "uri" : "http://dbpedia.org/resource/Gordon_Anderson_(director)"
       }, {
-        "label" : "Reginald Fogwell",
-        "uri" : "http://dbpedia.org/resource/Reginald_Fogwell"
+        "label" : "Hans-Jürgen Syberberg",
+        "uri" : "http://dbpedia.org/resource/Hans-Jürgen_Syberberg"
       }, {
-        "label" : "Jeffrey Reiner",
-        "uri" : "http://dbpedia.org/resource/Jeffrey_Reiner"
+        "label" : "Hariharan (director)",
+        "uri" : "http://dbpedia.org/resource/Hariharan_(director)"
       }, {
-        "label" : "Tom Terriss",
-        "uri" : "http://dbpedia.org/resource/Tom_Terriss"
+        "label" : "Everett Lewis",
+        "uri" : "http://dbpedia.org/resource/Everett_Lewis"
       }, {
-        "label" : "Ralph Murphy",
-        "uri" : "http://dbpedia.org/resource/Ralph_Murphy"
+        "label" : "Oscar Whitbread",
+        "uri" : "http://dbpedia.org/resource/Oscar_Whitbread"
       }, {
-        "label" : "Barbet Schroeder",
-        "uri" : "http://dbpedia.org/resource/Barbet_Schroeder"
+        "label" : "Dennis Law Sau-Yiu",
+        "uri" : "http://dbpedia.org/resource/Dennis_Law_Sau-Yiu"
       }, {
-        "label" : "Frank Thomas (animator)",
-        "uri" : "http://dbpedia.org/resource/Frank_Thomas_(animator)"
+        "label" : "Aisling Walsh",
+        "uri" : "http://dbpedia.org/resource/Aisling_Walsh"
       }, {
-        "label" : "Henry King (director)",
-        "uri" : "http://dbpedia.org/resource/Henry_King_(director)"
+        "label" : "Aku Louhimies",
+        "uri" : "http://dbpedia.org/resource/Aku_Louhimies"
       }, {
-        "label" : "Matt Piedmont",
-        "uri" : "http://dbpedia.org/resource/Matt_Piedmont"
+        "label" : "Alain Corneau",
+        "uri" : "http://dbpedia.org/resource/Alain_Corneau"
       }, {
-        "label" : "Merian C. Cooper",
-        "uri" : "http://dbpedia.org/resource/Merian_C._Cooper"
+        "label" : "Alain Resnais",
+        "uri" : "http://dbpedia.org/resource/Alain_Resnais"
       }, {
-        "label" : "Michael Moore",
-        "uri" : "http://dbpedia.org/resource/Michael_Moore"
+        "label" : "Alan J. Pakula",
+        "uri" : "http://dbpedia.org/resource/Alan_J._Pakula"
       }, {
-        "label" : "Michael Powell",
-        "uri" : "http://dbpedia.org/resource/Michael_Powell"
+        "label" : "Alan James",
+        "uri" : "http://dbpedia.org/resource/Alan_James"
       }, {
-        "label" : "Richard Kelly (director)",
-        "uri" : "http://dbpedia.org/resource/Richard_Kelly_(director)"
+        "label" : "Alan Rudolph",
+        "uri" : "http://dbpedia.org/resource/Alan_Rudolph"
       }, {
-        "label" : "Richard Lester",
-        "uri" : "http://dbpedia.org/resource/Richard_Lester"
+        "label" : "Albert Ray",
+        "uri" : "http://dbpedia.org/resource/Albert_Ray"
       }, {
-        "label" : "Ringo Lam",
-        "uri" : "http://dbpedia.org/resource/Ringo_Lam"
+        "label" : "Alberto Lattuada",
+        "uri" : "http://dbpedia.org/resource/Alberto_Lattuada"
       }, {
-        "label" : "Robert Zemeckis",
-        "uri" : "http://dbpedia.org/resource/Robert_Zemeckis"
+        "label" : "Alek Keshishian",
+        "uri" : "http://dbpedia.org/resource/Alek_Keshishian"
       }, {
-        "label" : "Roger Donaldson",
-        "uri" : "http://dbpedia.org/resource/Roger_Donaldson"
+        "label" : "Alessandro Blasetti",
+        "uri" : "http://dbpedia.org/resource/Alessandro_Blasetti"
       }, {
-        "label" : "Shigeru Miyamoto",
-        "uri" : "http://dbpedia.org/resource/Shigeru_Miyamoto"
+        "label" : "Alexander Singer",
+        "uri" : "http://dbpedia.org/resource/Alexander_Singer"
       }, {
-        "label" : "Tetsuya Takahashi",
-        "uri" : "http://dbpedia.org/resource/Tetsuya_Takahashi"
+        "label" : "Alfred Cheung",
+        "uri" : "http://dbpedia.org/resource/Alfred_Cheung"
       }, {
-        "label" : "Douglas Sirk",
-        "uri" : "http://dbpedia.org/resource/Douglas_Sirk"
+        "label" : "Alfred L. Werker",
+        "uri" : "http://dbpedia.org/resource/Alfred_L._Werker"
       }, {
-        "label" : "Fred Zinnemann",
-        "uri" : "http://dbpedia.org/resource/Fred_Zinnemann"
+        "label" : "Alfred Vohrer",
+        "uri" : "http://dbpedia.org/resource/Alfred_Vohrer"
       }, {
-        "label" : "John Hughes (filmmaker)",
-        "uri" : "http://dbpedia.org/resource/John_Hughes_(filmmaker)"
+        "label" : "Cesare Zavattini",
+        "uri" : "http://dbpedia.org/resource/Cesare_Zavattini"
       }, {
-        "label" : "Kenneth Branagh",
-        "uri" : "http://dbpedia.org/resource/Kenneth_Branagh"
+        "label" : "Chang Cheh",
+        "uri" : "http://dbpedia.org/resource/Chang_Cheh"
       }, {
-        "label" : "Anurag Basu",
-        "uri" : "http://dbpedia.org/resource/Anurag_Basu"
+        "label" : "Charles Barton (director)",
+        "uri" : "http://dbpedia.org/resource/Charles_Barton_(director)"
       }, {
-        "label" : "Arthur Davis (animator)",
-        "uri" : "http://dbpedia.org/resource/Arthur_Davis_(animator)"
+        "label" : "Charles C. Wilson (actor)",
+        "uri" : "http://dbpedia.org/resource/Charles_C._Wilson_(actor)"
       }, {
-        "label" : "Constantine Makris",
-        "uri" : "http://dbpedia.org/resource/Constantine_Makris"
+        "label" : "Charles Lamont",
+        "uri" : "http://dbpedia.org/resource/Charles_Lamont"
       }, {
-        "label" : "J. P. McGowan",
-        "uri" : "http://dbpedia.org/resource/J._P._McGowan"
+        "label" : "Charles Vidor",
+        "uri" : "http://dbpedia.org/resource/Charles_Vidor"
       }, {
-        "label" : "Michael Kennedy (director)",
-        "uri" : "http://dbpedia.org/resource/Michael_Kennedy_(director)"
+        "label" : "Anand Tiwari",
+        "uri" : "http://dbpedia.org/resource/Anand_Tiwari"
       }, {
-        "label" : "Prakash Raj",
-        "uri" : "http://dbpedia.org/resource/Prakash_Raj"
+        "label" : "Nikolai van der Heyde",
+        "uri" : "http://dbpedia.org/resource/Nikolai_van_der_Heyde"
       }, {
-        "label" : "Robert Z. Leonard",
-        "uri" : "http://dbpedia.org/resource/Robert_Z._Leonard"
+        "label" : "Noah Hawley",
+        "uri" : "http://dbpedia.org/resource/Noah_Hawley"
       }, {
-        "label" : "Ross Bagdasarian, Jr.",
-        "uri" : "http://dbpedia.org/resource/Ross_Bagdasarian,_Jr."
+        "label" : "Nora Ephron",
+        "uri" : "http://dbpedia.org/resource/Nora_Ephron"
       }, {
-        "label" : "Zac Moncrief",
-        "uri" : "http://dbpedia.org/resource/Zac_Moncrief"
+        "label" : "Norman Taurog",
+        "uri" : "http://dbpedia.org/resource/Norman_Taurog"
       }, {
-        "label" : "Frank Borzage",
-        "uri" : "http://dbpedia.org/resource/Frank_Borzage"
+        "label" : "Oddvar Bull Tuhus",
+        "uri" : "http://dbpedia.org/resource/Oddvar_Bull_Tuhus"
       }, {
-        "label" : "Martin and Osa Johnson",
-        "uri" : "http://dbpedia.org/resource/Martin_and_Osa_Johnson"
+        "label" : "Shomu Mukherjee",
+        "uri" : "http://dbpedia.org/resource/Shomu_Mukherjee"
       }, {
-        "label" : "A. Kodandarami Reddy",
-        "uri" : "http://dbpedia.org/resource/A._Kodandarami_Reddy"
+        "label" : "Siva Nageswara Rao",
+        "uri" : "http://dbpedia.org/resource/Siva_Nageswara_Rao"
       }, {
-        "label" : "Adolfo Alix Jr.",
-        "uri" : "http://dbpedia.org/resource/Adolfo_Alix_Jr."
+        "label" : "Roger Young (director)",
+        "uri" : "http://dbpedia.org/resource/Roger_Young_(director)"
+      }, {
+        "label" : "Heidi Ewing",
+        "uri" : "http://dbpedia.org/resource/Heidi_Ewing"
+      }, {
+        "label" : "Malcolm Marmorstein",
+        "uri" : "http://dbpedia.org/resource/Malcolm_Marmorstein"
+      }, {
+        "label" : "B. Jaya",
+        "uri" : "http://dbpedia.org/resource/B._Jaya"
+      }, {
+        "label" : "Barra Grant",
+        "uri" : "http://dbpedia.org/resource/Barra_Grant"
+      }, {
+        "label" : "Basil Dean",
+        "uri" : "http://dbpedia.org/resource/Basil_Dean"
       } ]
     },
     "combination" : true
   }, {
-    "id" : "72",
+    "id" : "151",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -676,7 +1220,7 @@
     },
     "combination" : true
   }, {
-    "id" : "73",
+    "id" : "152",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -693,7 +1237,7 @@
     },
     "combination" : true
   }, {
-    "id" : "74",
+    "id" : "153",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -710,7 +1254,7 @@
     },
     "combination" : true
   }, {
-    "id" : "75",
+    "id" : "154",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -727,7 +1271,7 @@
     },
     "combination" : true
   }, {
-    "id" : "76",
+    "id" : "155",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -744,7 +1288,7 @@
     },
     "combination" : true
   }, {
-    "id" : "77",
+    "id" : "156",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -761,7 +1305,7 @@
     },
     "combination" : true
   }, {
-    "id" : "78",
+    "id" : "157",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -778,7 +1322,7 @@
     },
     "combination" : true
   }, {
-    "id" : "79",
+    "id" : "158",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -795,7 +1339,7 @@
     },
     "combination" : true
   }, {
-    "id" : "80",
+    "id" : "159",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -812,7 +1356,7 @@
     },
     "combination" : true
   }, {
-    "id" : "81",
+    "id" : "160",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -829,7 +1373,7 @@
     },
     "combination" : true
   }, {
-    "id" : "82",
+    "id" : "161",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -846,7 +1390,7 @@
     },
     "combination" : true
   }, {
-    "id" : "83",
+    "id" : "162",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -863,7 +1407,7 @@
     },
     "combination" : true
   }, {
-    "id" : "84",
+    "id" : "163",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -880,7 +1424,7 @@
     },
     "combination" : true
   }, {
-    "id" : "85",
+    "id" : "164",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -897,7 +1441,7 @@
     },
     "combination" : true
   }, {
-    "id" : "86",
+    "id" : "165",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -914,24 +1458,7 @@
     },
     "combination" : true
   }, {
-    "id" : "87",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "FILM",
-    "frameType" : "APP",
-    "sentences" : [ "What is directed by a Belgian Christian Bishop?", "What is directed by Belgian Christian Bishops?", "What was directed by a Belgian Christian Bishop?", "What was directed by Belgian Christian Bishops?", "Which movie is directed by a Belgian Christian Bishop?", "Which movie is directed by Belgian Christian Bishops?", "Which movie was directed by a Belgian Christian Bishop?", "Which movie was directed by Belgian Christian Bishops?", "Which movies are directed by a Belgian Christian Bishop?", "Which movies are directed by Belgian Christian Bishops?", "Which movies were directed by a Belgian Christian Bishop?", "Which movies were directed by Belgian Christian Bishops?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/ChristianBishop>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "88",
+    "id" : "166",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -948,7 +1475,7 @@
     },
     "combination" : true
   }, {
-    "id" : "89",
+    "id" : "167",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -965,7 +1492,7 @@
     },
     "combination" : true
   }, {
-    "id" : "90",
+    "id" : "168",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
@@ -982,20 +1509,1737 @@
     },
     "combination" : true
   }, {
-    "id" : "91",
+    "id" : "169",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "THING",
     "returnType" : "FILM",
     "frameType" : "APP",
-    "sentences" : [ "What is directed by a Belgian musical artist?", "What is directed by Belgian musical artists?", "What was directed by a Belgian musical artist?", "What was directed by Belgian musical artists?", "Which movie is directed by a Belgian musical artist?", "Which movie is directed by Belgian musical artists?", "Which movie was directed by a Belgian musical artist?", "Which movie was directed by Belgian musical artists?", "Which movies are directed by a Belgian musical artist?", "Which movies are directed by Belgian musical artists?", "Which movies were directed by a Belgian musical artist?", "Which movies were directed by Belgian musical artists?" ],
+    "sentences" : [ "What is directed by a Greek boxer?", "What is directed by Greek boxers?", "What was directed by a Greek boxer?", "What was directed by Greek boxers?", "Which movie is directed by a Greek boxer?", "Which movie is directed by Greek boxers?", "Which movie was directed by a Greek boxer?", "Which movie was directed by Greek boxers?", "Which movies are directed by a Greek boxer?", "Which movies are directed by Greek boxers?", "Which movies were directed by a Greek boxer?", "Which movies were directed by Greek boxers?" ],
     "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/MusicalArtist>)\n)\n",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Boxer>)\n)\n",
     "sentenceToSparqlParameterMapping" : null,
     "returnVariable" : "subjOfProp",
     "sentenceBindings" : {
       "bindingVariableName" : "NONE",
       "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "170",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "FILM",
+    "frameType" : "APP",
+    "sentences" : [ "What is directed by a Greek cleric?", "What is directed by Greek clerics?", "What was directed by a Greek cleric?", "What was directed by Greek clerics?", "Which movie is directed by a Greek cleric?", "Which movie is directed by Greek clerics?", "Which movie was directed by a Greek cleric?", "Which movie was directed by Greek clerics?", "Which movies are directed by a Greek cleric?", "Which movies are directed by Greek clerics?", "Which movies were directed by a Greek cleric?", "Which movies were directed by Greek clerics?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Cleric>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "171",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "FILM",
+    "frameType" : "APP",
+    "sentences" : [ "What is directed by a Greek office holder?", "What is directed by Greek office holders?", "What was directed by a Greek office holder?", "What was directed by Greek office holders?", "Which movie is directed by a Greek office holder?", "Which movie is directed by Greek office holders?", "Which movie was directed by a Greek office holder?", "Which movie was directed by Greek office holders?", "Which movies are directed by a Greek office holder?", "Which movies are directed by Greek office holders?", "Which movies were directed by a Greek office holder?", "Which movies were directed by Greek office holders?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/OfficeHolder>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "172",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "FILM",
+    "frameType" : "APP",
+    "sentences" : [ "What is directed by a Greek agent?", "What is directed by Greek agents?", "What was directed by a Greek agent?", "What was directed by Greek agents?", "Which movie is directed by a Greek agent?", "Which movie is directed by Greek agents?", "Which movie was directed by a Greek agent?", "Which movie was directed by Greek agents?", "Which movies are directed by a Greek agent?", "Which movies are directed by Greek agents?", "Which movies were directed by a Greek agent?", "Which movies were directed by Greek agents?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Agent>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "173",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "FILM",
+    "frameType" : "APP",
+    "sentences" : [ "What is directed by a Greek fictional character?", "What is directed by Greek fictional characters?", "What was directed by a Greek fictional character?", "What was directed by Greek fictional characters?", "Which movie is directed by a Greek fictional character?", "Which movie is directed by Greek fictional characters?", "Which movie was directed by a Greek fictional character?", "Which movie was directed by Greek fictional characters?", "Which movies are directed by a Greek fictional character?", "Which movies are directed by Greek fictional characters?", "Which movies were directed by a Greek fictional character?", "Which movies were directed by Greek fictional characters?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/FictionalCharacter>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "174",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "FILM",
+    "frameType" : "APP",
+    "sentences" : [ "What is directed by a Greek artist?", "What is directed by Greek artists?", "What was directed by a Greek artist?", "What was directed by Greek artists?", "Which movie is directed by a Greek artist?", "Which movie is directed by Greek artists?", "Which movie was directed by a Greek artist?", "Which movie was directed by Greek artists?", "Which movies are directed by a Greek artist?", "Which movies are directed by Greek artists?", "Which movies were directed by a Greek artist?", "Which movies were directed by Greek artists?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Artist>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "175",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "FILM",
+    "frameType" : "APP",
+    "sentences" : [ "What is directed by a Greek athlete?", "What is directed by Greek athletes?", "What was directed by a Greek athlete?", "What was directed by Greek athletes?", "Which movie is directed by a Greek athlete?", "Which movie is directed by Greek athletes?", "Which movie was directed by a Greek athlete?", "Which movie was directed by Greek athletes?", "Which movies are directed by a Greek athlete?", "Which movies are directed by Greek athletes?", "Which movies were directed by a Greek athlete?", "Which movies were directed by Greek athletes?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Athlete>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "176",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "FILM",
+    "frameType" : "APP",
+    "sentences" : [ "What is directed by a Greek scientist?", "What is directed by Greek scientists?", "What was directed by a Greek scientist?", "What was directed by Greek scientists?", "Which movie is directed by a Greek scientist?", "Which movie is directed by Greek scientists?", "Which movie was directed by a Greek scientist?", "Which movie was directed by Greek scientists?", "Which movies are directed by a Greek scientist?", "Which movies are directed by Greek scientists?", "Which movies were directed by a Greek scientist?", "Which movies were directed by Greek scientists?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Scientist>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "177",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "FILM",
+    "frameType" : "APP",
+    "sentences" : [ "What is directed by a Greek politician?", "What is directed by Greek politicians?", "What was directed by a Greek politician?", "What was directed by Greek politicians?", "Which movie is directed by a Greek politician?", "Which movie is directed by Greek politicians?", "Which movie was directed by a Greek politician?", "Which movie was directed by Greek politicians?", "Which movies are directed by a Greek politician?", "Which movies are directed by Greek politicians?", "Which movies were directed by a Greek politician?", "Which movies were directed by Greek politicians?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Politician>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "178",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "FILM",
+    "frameType" : "APP",
+    "sentences" : [ "What is directed by a Greek swimmer?", "What is directed by Greek swimmers?", "What was directed by a Greek swimmer?", "What was directed by Greek swimmers?", "Which movie is directed by a Greek swimmer?", "Which movie is directed by Greek swimmers?", "Which movie was directed by a Greek swimmer?", "Which movie was directed by Greek swimmers?", "Which movies are directed by a Greek swimmer?", "Which movies are directed by Greek swimmers?", "Which movies were directed by a Greek swimmer?", "Which movies were directed by Greek swimmers?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Swimmer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "179",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "FILM",
+    "frameType" : "APP",
+    "sentences" : [ "What is directed by a Greek volleyball player?", "What is directed by Greek volleyball players?", "What was directed by a Greek volleyball player?", "What was directed by Greek volleyball players?", "Which movie is directed by a Greek volleyball player?", "Which movie is directed by Greek volleyball players?", "Which movie was directed by a Greek volleyball player?", "Which movie was directed by Greek volleyball players?", "Which movies are directed by a Greek volleyball player?", "Which movies are directed by Greek volleyball players?", "Which movies were directed by a Greek volleyball player?", "Which movies were directed by Greek volleyball players?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/VolleyballPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "180",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "FILM",
+    "frameType" : "APP",
+    "sentences" : [ "What is directed by a Greek handball player?", "What is directed by Greek handball players?", "What was directed by a Greek handball player?", "What was directed by Greek handball players?", "Which movie is directed by a Greek handball player?", "Which movie is directed by Greek handball players?", "Which movie was directed by a Greek handball player?", "Which movie was directed by Greek handball players?", "Which movies are directed by a Greek handball player?", "Which movies are directed by Greek handball players?", "Which movies were directed by a Greek handball player?", "Which movies were directed by Greek handball players?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/HandballPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "181",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "FILM",
+    "frameType" : "APP",
+    "sentences" : [ "What is directed by a Greek person?", "What is directed by Greek persons?", "What was directed by a Greek person?", "What was directed by Greek persons?", "Which movie is directed by a Greek person?", "Which movie is directed by Greek persons?", "Which movie was directed by a Greek person?", "Which movie was directed by Greek persons?", "Which movies are directed by a Greek person?", "Which movies are directed by Greek persons?", "Which movies were directed by a Greek person?", "Which movies were directed by Greek persons?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "182",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "FILM",
+    "frameType" : "APP",
+    "sentences" : [ "What is directed by a Greek basketball player?", "What is directed by Greek basketball players?", "What was directed by a Greek basketball player?", "What was directed by Greek basketball players?", "Which movie is directed by a Greek basketball player?", "Which movie is directed by Greek basketball players?", "Which movie was directed by a Greek basketball player?", "Which movie was directed by Greek basketball players?", "Which movies are directed by a Greek basketball player?", "Which movies are directed by Greek basketball players?", "Which movies were directed by a Greek basketball player?", "Which movies were directed by Greek basketball players?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/BasketballPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "183",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "FILM",
+    "frameType" : "APP",
+    "sentences" : [ "What is directed by a Greek writer?", "What is directed by Greek writers?", "What was directed by a Greek writer?", "What was directed by Greek writers?", "Which movie is directed by a Greek writer?", "Which movie is directed by Greek writers?", "Which movie was directed by a Greek writer?", "Which movie was directed by Greek writers?", "Which movies are directed by a Greek writer?", "Which movies are directed by Greek writers?", "Which movies were directed by a Greek writer?", "Which movies were directed by Greek writers?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Writer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "184",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian cleric died?", "When was the Belgian clerics died?", "When were the a Belgian cleric died?", "When were the Belgian clerics died?", "Which place was the a Belgian cleric died?", "Which place was the Belgian clerics died?", "Which place were the a Belgian cleric died?", "Which place were the Belgian clerics died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Cleric>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "185",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian office holder died?", "When was the Belgian office holders died?", "When were the a Belgian office holder died?", "When were the Belgian office holders died?", "Which place was the a Belgian office holder died?", "Which place was the Belgian office holders died?", "Which place were the a Belgian office holder died?", "Which place were the Belgian office holders died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/OfficeHolder>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "186",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian agent died?", "When was the Belgian agents died?", "When were the a Belgian agent died?", "When were the Belgian agents died?", "Which place was the a Belgian agent died?", "Which place was the Belgian agents died?", "Which place were the a Belgian agent died?", "Which place were the Belgian agents died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Agent>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "187",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian economist died?", "When was the Belgian economists died?", "When were the a Belgian economist died?", "When were the Belgian economists died?", "Which place was the a Belgian economist died?", "Which place was the Belgian economists died?", "Which place were the a Belgian economist died?", "Which place were the Belgian economists died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Economist>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "188",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian motorcycle rider died?", "When was the Belgian motorcycle riders died?", "When were the a Belgian motorcycle rider died?", "When were the Belgian motorcycle riders died?", "Which place was the a Belgian motorcycle rider died?", "Which place was the Belgian motorcycle riders died?", "Which place were the a Belgian motorcycle rider died?", "Which place were the Belgian motorcycle riders died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/MotorcycleRider>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "189",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian artist died?", "When was the Belgian artists died?", "When were the a Belgian artist died?", "When were the Belgian artists died?", "Which place was the a Belgian artist died?", "Which place was the Belgian artists died?", "Which place were the a Belgian artist died?", "Which place were the Belgian artists died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Artist>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "190",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian athlete died?", "When was the Belgian athletes died?", "When were the a Belgian athlete died?", "When were the Belgian athletes died?", "Which place was the a Belgian athlete died?", "Which place was the Belgian athletes died?", "Which place were the a Belgian athlete died?", "Which place were the Belgian athletes died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Athlete>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "191",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian scientist died?", "When was the Belgian scientists died?", "When were the a Belgian scientist died?", "When were the Belgian scientists died?", "Which place was the a Belgian scientist died?", "Which place was the Belgian scientists died?", "Which place were the a Belgian scientist died?", "Which place were the Belgian scientists died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Scientist>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "192",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian architect died?", "When was the Belgian architects died?", "When were the a Belgian architect died?", "When were the Belgian architects died?", "Which place was the a Belgian architect died?", "Which place was the Belgian architects died?", "Which place were the a Belgian architect died?", "Which place were the Belgian architects died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Architect>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "193",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian golf player died?", "When was the Belgian golf players died?", "When were the a Belgian golf player died?", "When were the Belgian golf players died?", "Which place was the a Belgian golf player died?", "Which place was the Belgian golf players died?", "Which place were the a Belgian golf player died?", "Which place were the Belgian golf players died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/GolfPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "194",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian racing driver died?", "When was the Belgian racing drivers died?", "When were the a Belgian racing driver died?", "When were the Belgian racing drivers died?", "Which place was the a Belgian racing driver died?", "Which place was the Belgian racing drivers died?", "Which place were the a Belgian racing driver died?", "Which place were the Belgian racing drivers died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/RacingDriver>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "195",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian politician died?", "When was the Belgian politicians died?", "When were the a Belgian politician died?", "When were the Belgian politicians died?", "Which place was the a Belgian politician died?", "Which place was the Belgian politicians died?", "Which place were the a Belgian politician died?", "Which place were the Belgian politicians died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Politician>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "196",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian swimmer died?", "When was the Belgian swimmers died?", "When were the a Belgian swimmer died?", "When were the Belgian swimmers died?", "Which place was the a Belgian swimmer died?", "Which place was the Belgian swimmers died?", "Which place were the a Belgian swimmer died?", "Which place were the Belgian swimmers died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Swimmer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "197",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian volleyball player died?", "When was the Belgian volleyball players died?", "When were the a Belgian volleyball player died?", "When were the Belgian volleyball players died?", "Which place was the a Belgian volleyball player died?", "Which place was the Belgian volleyball players died?", "Which place were the a Belgian volleyball player died?", "Which place were the Belgian volleyball players died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/VolleyballPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "198",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian person died?", "When was the Belgian persons died?", "When were the a Belgian person died?", "When were the Belgian persons died?", "Which place was the a Belgian person died?", "Which place was the Belgian persons died?", "Which place were the a Belgian person died?", "Which place were the Belgian persons died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "199",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian comics creator died?", "When was the Belgian comics creators died?", "When were the a Belgian comics creator died?", "When were the Belgian comics creators died?", "Which place was the a Belgian comics creator died?", "Which place was the Belgian comics creators died?", "Which place were the a Belgian comics creator died?", "Which place were the Belgian comics creators died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/ComicsCreator>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "200",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian writer died?", "When was the Belgian writers died?", "When were the a Belgian writer died?", "When were the Belgian writers died?", "Which place was the a Belgian writer died?", "Which place was the Belgian writers died?", "Which place were the a Belgian writer died?", "Which place were the Belgian writers died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Writer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "201",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian motorsport racer died?", "When was the Belgian motorsport racers died?", "When were the a Belgian motorsport racer died?", "When were the Belgian motorsport racers died?", "Which place was the a Belgian motorsport racer died?", "Which place was the Belgian motorsport racers died?", "Which place were the a Belgian motorsport racer died?", "Which place were the Belgian motorsport racers died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/MotorsportRacer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "202",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek boxer died?", "When was the Greek boxers died?", "When were the a Greek boxer died?", "When were the Greek boxers died?", "Which place was the a Greek boxer died?", "Which place was the Greek boxers died?", "Which place were the a Greek boxer died?", "Which place were the Greek boxers died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Boxer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "203",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek cleric died?", "When was the Greek clerics died?", "When were the a Greek cleric died?", "When were the Greek clerics died?", "Which place was the a Greek cleric died?", "Which place was the Greek clerics died?", "Which place were the a Greek cleric died?", "Which place were the Greek clerics died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Cleric>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "204",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek office holder died?", "When was the Greek office holders died?", "When were the a Greek office holder died?", "When were the Greek office holders died?", "Which place was the a Greek office holder died?", "Which place was the Greek office holders died?", "Which place were the a Greek office holder died?", "Which place were the Greek office holders died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/OfficeHolder>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "205",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek agent died?", "When was the Greek agents died?", "When were the a Greek agent died?", "When were the Greek agents died?", "Which place was the a Greek agent died?", "Which place was the Greek agents died?", "Which place were the a Greek agent died?", "Which place were the Greek agents died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Agent>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "206",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek fictional character died?", "When was the Greek fictional characters died?", "When were the a Greek fictional character died?", "When were the Greek fictional characters died?", "Which place was the a Greek fictional character died?", "Which place was the Greek fictional characters died?", "Which place were the a Greek fictional character died?", "Which place were the Greek fictional characters died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/FictionalCharacter>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "207",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek artist died?", "When was the Greek artists died?", "When were the a Greek artist died?", "When were the Greek artists died?", "Which place was the a Greek artist died?", "Which place was the Greek artists died?", "Which place were the a Greek artist died?", "Which place were the Greek artists died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Artist>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "208",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek athlete died?", "When was the Greek athletes died?", "When were the a Greek athlete died?", "When were the Greek athletes died?", "Which place was the a Greek athlete died?", "Which place was the Greek athletes died?", "Which place were the a Greek athlete died?", "Which place were the Greek athletes died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Athlete>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "209",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek scientist died?", "When was the Greek scientists died?", "When were the a Greek scientist died?", "When were the Greek scientists died?", "Which place was the a Greek scientist died?", "Which place was the Greek scientists died?", "Which place were the a Greek scientist died?", "Which place were the Greek scientists died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Scientist>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "210",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek politician died?", "When was the Greek politicians died?", "When were the a Greek politician died?", "When were the Greek politicians died?", "Which place was the a Greek politician died?", "Which place was the Greek politicians died?", "Which place were the a Greek politician died?", "Which place were the Greek politicians died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Politician>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "211",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek swimmer died?", "When was the Greek swimmers died?", "When were the a Greek swimmer died?", "When were the Greek swimmers died?", "Which place was the a Greek swimmer died?", "Which place was the Greek swimmers died?", "Which place were the a Greek swimmer died?", "Which place were the Greek swimmers died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Swimmer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "212",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek volleyball player died?", "When was the Greek volleyball players died?", "When were the a Greek volleyball player died?", "When were the Greek volleyball players died?", "Which place was the a Greek volleyball player died?", "Which place was the Greek volleyball players died?", "Which place were the a Greek volleyball player died?", "Which place were the Greek volleyball players died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/VolleyballPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "213",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek handball player died?", "When was the Greek handball players died?", "When were the a Greek handball player died?", "When were the Greek handball players died?", "Which place was the a Greek handball player died?", "Which place was the Greek handball players died?", "Which place were the a Greek handball player died?", "Which place were the Greek handball players died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/HandballPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "214",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek person died?", "When was the Greek persons died?", "When were the a Greek person died?", "When were the Greek persons died?", "Which place was the a Greek person died?", "Which place was the Greek persons died?", "Which place were the a Greek person died?", "Which place were the Greek persons died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "215",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek basketball player died?", "When was the Greek basketball players died?", "When were the a Greek basketball player died?", "When were the Greek basketball players died?", "Which place was the a Greek basketball player died?", "Which place was the Greek basketball players died?", "Which place were the a Greek basketball player died?", "Which place were the Greek basketball players died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/BasketballPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "216",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek writer died?", "When was the Greek writers died?", "When were the a Greek writer died?", "When were the Greek writers died?", "Which place was the a Greek writer died?", "Which place was the Greek writers died?", "Which place were the a Greek writer died?", "Which place were the Greek writers died?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Writer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "217",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian cleric buried?", "When was the Belgian clerics buried?", "When were the a Belgian cleric buried?", "When were the Belgian clerics buried?", "Which city was the a Belgian cleric buried?", "Which city was the Belgian clerics buried?", "Which city were the a Belgian cleric buried?", "Which city were the Belgian clerics buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Cleric>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "218",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian office holder buried?", "When was the Belgian office holders buried?", "When were the a Belgian office holder buried?", "When were the Belgian office holders buried?", "Which city was the a Belgian office holder buried?", "Which city was the Belgian office holders buried?", "Which city were the a Belgian office holder buried?", "Which city were the Belgian office holders buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/OfficeHolder>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "219",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian agent buried?", "When was the Belgian agents buried?", "When were the a Belgian agent buried?", "When were the Belgian agents buried?", "Which city was the a Belgian agent buried?", "Which city was the Belgian agents buried?", "Which city were the a Belgian agent buried?", "Which city were the Belgian agents buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Agent>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "220",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian economist buried?", "When was the Belgian economists buried?", "When were the a Belgian economist buried?", "When were the Belgian economists buried?", "Which city was the a Belgian economist buried?", "Which city was the Belgian economists buried?", "Which city were the a Belgian economist buried?", "Which city were the Belgian economists buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Economist>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "221",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian motorcycle rider buried?", "When was the Belgian motorcycle riders buried?", "When were the a Belgian motorcycle rider buried?", "When were the Belgian motorcycle riders buried?", "Which city was the a Belgian motorcycle rider buried?", "Which city was the Belgian motorcycle riders buried?", "Which city were the a Belgian motorcycle rider buried?", "Which city were the Belgian motorcycle riders buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/MotorcycleRider>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "222",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian artist buried?", "When was the Belgian artists buried?", "When were the a Belgian artist buried?", "When were the Belgian artists buried?", "Which city was the a Belgian artist buried?", "Which city was the Belgian artists buried?", "Which city were the a Belgian artist buried?", "Which city were the Belgian artists buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Artist>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "223",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian athlete buried?", "When was the Belgian athletes buried?", "When were the a Belgian athlete buried?", "When were the Belgian athletes buried?", "Which city was the a Belgian athlete buried?", "Which city was the Belgian athletes buried?", "Which city were the a Belgian athlete buried?", "Which city were the Belgian athletes buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Athlete>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "224",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian scientist buried?", "When was the Belgian scientists buried?", "When were the a Belgian scientist buried?", "When were the Belgian scientists buried?", "Which city was the a Belgian scientist buried?", "Which city was the Belgian scientists buried?", "Which city were the a Belgian scientist buried?", "Which city were the Belgian scientists buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Scientist>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "225",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian architect buried?", "When was the Belgian architects buried?", "When were the a Belgian architect buried?", "When were the Belgian architects buried?", "Which city was the a Belgian architect buried?", "Which city was the Belgian architects buried?", "Which city were the a Belgian architect buried?", "Which city were the Belgian architects buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Architect>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "226",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian golf player buried?", "When was the Belgian golf players buried?", "When were the a Belgian golf player buried?", "When were the Belgian golf players buried?", "Which city was the a Belgian golf player buried?", "Which city was the Belgian golf players buried?", "Which city were the a Belgian golf player buried?", "Which city were the Belgian golf players buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/GolfPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "227",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian racing driver buried?", "When was the Belgian racing drivers buried?", "When were the a Belgian racing driver buried?", "When were the Belgian racing drivers buried?", "Which city was the a Belgian racing driver buried?", "Which city was the Belgian racing drivers buried?", "Which city were the a Belgian racing driver buried?", "Which city were the Belgian racing drivers buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/RacingDriver>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "228",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian politician buried?", "When was the Belgian politicians buried?", "When were the a Belgian politician buried?", "When were the Belgian politicians buried?", "Which city was the a Belgian politician buried?", "Which city was the Belgian politicians buried?", "Which city were the a Belgian politician buried?", "Which city were the Belgian politicians buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Politician>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "229",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian swimmer buried?", "When was the Belgian swimmers buried?", "When were the a Belgian swimmer buried?", "When were the Belgian swimmers buried?", "Which city was the a Belgian swimmer buried?", "Which city was the Belgian swimmers buried?", "Which city were the a Belgian swimmer buried?", "Which city were the Belgian swimmers buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Swimmer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "230",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian volleyball player buried?", "When was the Belgian volleyball players buried?", "When were the a Belgian volleyball player buried?", "When were the Belgian volleyball players buried?", "Which city was the a Belgian volleyball player buried?", "Which city was the Belgian volleyball players buried?", "Which city were the a Belgian volleyball player buried?", "Which city were the Belgian volleyball players buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/VolleyballPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "231",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian person buried?", "When was the Belgian persons buried?", "When were the a Belgian person buried?", "When were the Belgian persons buried?", "Which city was the a Belgian person buried?", "Which city was the Belgian persons buried?", "Which city were the a Belgian person buried?", "Which city were the Belgian persons buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "232",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian comics creator buried?", "When was the Belgian comics creators buried?", "When were the a Belgian comics creator buried?", "When were the Belgian comics creators buried?", "Which city was the a Belgian comics creator buried?", "Which city was the Belgian comics creators buried?", "Which city were the a Belgian comics creator buried?", "Which city were the Belgian comics creators buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/ComicsCreator>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "233",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian writer buried?", "When was the Belgian writers buried?", "When were the a Belgian writer buried?", "When were the Belgian writers buried?", "Which city was the a Belgian writer buried?", "Which city was the Belgian writers buried?", "Which city were the a Belgian writer buried?", "Which city were the Belgian writers buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Writer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "234",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Belgian motorsport racer buried?", "When was the Belgian motorsport racers buried?", "When were the a Belgian motorsport racer buried?", "When were the Belgian motorsport racers buried?", "Which city was the a Belgian motorsport racer buried?", "Which city was the Belgian motorsport racers buried?", "Which city were the a Belgian motorsport racer buried?", "Which city were the Belgian motorsport racers buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Belgium>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/MotorsportRacer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "235",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek boxer buried?", "When was the Greek boxers buried?", "When were the a Greek boxer buried?", "When were the Greek boxers buried?", "Which city was the a Greek boxer buried?", "Which city was the Greek boxers buried?", "Which city were the a Greek boxer buried?", "Which city were the Greek boxers buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Boxer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "236",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek cleric buried?", "When was the Greek clerics buried?", "When were the a Greek cleric buried?", "When were the Greek clerics buried?", "Which city was the a Greek cleric buried?", "Which city was the Greek clerics buried?", "Which city were the a Greek cleric buried?", "Which city were the Greek clerics buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Cleric>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "237",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek office holder buried?", "When was the Greek office holders buried?", "When were the a Greek office holder buried?", "When were the Greek office holders buried?", "Which city was the a Greek office holder buried?", "Which city was the Greek office holders buried?", "Which city were the a Greek office holder buried?", "Which city were the Greek office holders buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/OfficeHolder>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "238",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek agent buried?", "When was the Greek agents buried?", "When were the a Greek agent buried?", "When were the Greek agents buried?", "Which city was the a Greek agent buried?", "Which city was the Greek agents buried?", "Which city were the a Greek agent buried?", "Which city were the Greek agents buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Agent>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "239",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek fictional character buried?", "When was the Greek fictional characters buried?", "When were the a Greek fictional character buried?", "When were the Greek fictional characters buried?", "Which city was the a Greek fictional character buried?", "Which city was the Greek fictional characters buried?", "Which city were the a Greek fictional character buried?", "Which city were the Greek fictional characters buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/FictionalCharacter>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "240",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek artist buried?", "When was the Greek artists buried?", "When were the a Greek artist buried?", "When were the Greek artists buried?", "Which city was the a Greek artist buried?", "Which city was the Greek artists buried?", "Which city were the a Greek artist buried?", "Which city were the Greek artists buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Artist>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "241",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek athlete buried?", "When was the Greek athletes buried?", "When were the a Greek athlete buried?", "When were the Greek athletes buried?", "Which city was the a Greek athlete buried?", "Which city was the Greek athletes buried?", "Which city were the a Greek athlete buried?", "Which city were the Greek athletes buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Athlete>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "242",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek scientist buried?", "When was the Greek scientists buried?", "When were the a Greek scientist buried?", "When were the Greek scientists buried?", "Which city was the a Greek scientist buried?", "Which city was the Greek scientists buried?", "Which city were the a Greek scientist buried?", "Which city were the Greek scientists buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Scientist>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "243",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek politician buried?", "When was the Greek politicians buried?", "When were the a Greek politician buried?", "When were the Greek politicians buried?", "Which city was the a Greek politician buried?", "Which city was the Greek politicians buried?", "Which city were the a Greek politician buried?", "Which city were the Greek politicians buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Politician>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "244",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek swimmer buried?", "When was the Greek swimmers buried?", "When were the a Greek swimmer buried?", "When were the Greek swimmers buried?", "Which city was the a Greek swimmer buried?", "Which city was the Greek swimmers buried?", "Which city were the a Greek swimmer buried?", "Which city were the Greek swimmers buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Swimmer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "245",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek volleyball player buried?", "When was the Greek volleyball players buried?", "When were the a Greek volleyball player buried?", "When were the Greek volleyball players buried?", "Which city was the a Greek volleyball player buried?", "Which city was the Greek volleyball players buried?", "Which city were the a Greek volleyball player buried?", "Which city were the Greek volleyball players buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/VolleyballPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "246",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek handball player buried?", "When was the Greek handball players buried?", "When were the a Greek handball player buried?", "When were the Greek handball players buried?", "Which city was the a Greek handball player buried?", "Which city was the Greek handball players buried?", "Which city were the a Greek handball player buried?", "Which city were the Greek handball players buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/HandballPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "247",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek person buried?", "When was the Greek persons buried?", "When were the a Greek person buried?", "When were the Greek persons buried?", "Which city was the a Greek person buried?", "Which city was the Greek persons buried?", "Which city were the a Greek person buried?", "Which city were the Greek persons buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "248",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek basketball player buried?", "When was the Greek basketball players buried?", "When were the a Greek basketball player buried?", "When were the Greek basketball players buried?", "Which city was the a Greek basketball player buried?", "Which city was the Greek basketball players buried?", "Which city were the a Greek basketball player buried?", "Which city were the Greek basketball players buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/BasketballPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "249",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "CITY",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the a Greek writer buried?", "When was the Greek writers buried?", "When were the a Greek writer buried?", "When were the Greek writers buried?", "Which city was the a Greek writer buried?", "Which city was the Greek writers buried?", "Which city were the a Greek writer buried?", "Which city were the Greek writers buried?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Writer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "250",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "RIVER",
+    "returnType" : "DATE",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the the source country of $x dissolved?", "When were the the source country of $x dissolved?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/dissolutionDate> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/sourceCountry> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "251",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "RIVER",
+    "returnType" : "DATE",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the the mouth country of $x dissolved?", "When were the the mouth country of $x dissolved?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/dissolutionDate> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/mouthCountry> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "252",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "DATE",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the the birth place of $x dissolved?", "When were the the birth place of $x dissolved?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/dissolutionDate> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/birthPlace> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "2016 shooting of Almaty police officers",
+        "uri" : "http://dbpedia.org/resource/2016_shooting_of_Almaty_police_officers"
+      }, {
+        "label" : "2017 New York City truck attack",
+        "uri" : "http://dbpedia.org/resource/2017_New_York_City_truck_attack"
+      }, {
+        "label" : "A. V. Rama Rao",
+        "uri" : "http://dbpedia.org/resource/A._V._Rama_Rao"
+      }, {
+        "label" : "Lovell Wooldridge",
+        "uri" : "http://dbpedia.org/resource/Lovell_Wooldridge"
+      }, {
+        "label" : "Lowell Lo",
+        "uri" : "http://dbpedia.org/resource/Lowell_Lo"
+      }, {
+        "label" : "Lu Jeu Sham",
+        "uri" : "http://dbpedia.org/resource/Lu_Jeu_Sham"
+      }, {
+        "label" : "Lu Yonggen",
+        "uri" : "http://dbpedia.org/resource/Lu_Yonggen"
+      }, {
+        "label" : "Luba Golovina",
+        "uri" : "http://dbpedia.org/resource/Luba_Golovina"
+      }, {
+        "label" : "Lubomyr Ivansky",
+        "uri" : "http://dbpedia.org/resource/Lubomyr_Ivansky"
+      }, {
+        "label" : "Luc Jouret",
+        "uri" : "http://dbpedia.org/resource/Luc_Jouret"
+      }, {
+        "label" : "Lucan",
+        "uri" : "http://dbpedia.org/resource/Lucan"
+      }, {
+        "label" : "Lucas Bögl",
+        "uri" : "http://dbpedia.org/resource/Lucas_Bögl"
+      }, {
+        "label" : "Lucas Jakubczyk",
+        "uri" : "http://dbpedia.org/resource/Lucas_Jakubczyk"
+      }, {
+        "label" : "Lucette Destouches",
+        "uri" : "http://dbpedia.org/resource/Lucette_Destouches"
+      }, {
+        "label" : "Luchino Visconti",
+        "uri" : "http://dbpedia.org/resource/Luchino_Visconti"
+      }, {
+        "label" : "Lucia Siposová",
+        "uri" : "http://dbpedia.org/resource/Lucia_Siposová"
+      }, {
+        "label" : "Lucian",
+        "uri" : "http://dbpedia.org/resource/Lucian"
+      }, {
+        "label" : "Lucian Blaga",
+        "uri" : "http://dbpedia.org/resource/Lucian_Blaga"
+      }, {
+        "label" : "Luciana Paluzzi",
+        "uri" : "http://dbpedia.org/resource/Luciana_Paluzzi"
+      }, {
+        "label" : "Luciano Ceri",
+        "uri" : "http://dbpedia.org/resource/Luciano_Ceri"
+      }, {
+        "label" : "Luciano Guerzoni (born 1938)",
+        "uri" : "http://dbpedia.org/resource/Luciano_Guerzoni_(born_1938)"
+      }, {
+        "label" : "Luciano Pavarotti",
+        "uri" : "http://dbpedia.org/resource/Luciano_Pavarotti"
+      }, {
+        "label" : "Luciano Salce",
+        "uri" : "http://dbpedia.org/resource/Luciano_Salce"
+      }, {
+        "label" : "Luciano Tovoli",
+        "uri" : "http://dbpedia.org/resource/Luciano_Tovoli"
+      }, {
+        "label" : "Luciano Velardi",
+        "uri" : "http://dbpedia.org/resource/Luciano_Velardi"
+      }, {
+        "label" : "Luciano Vincenzoni",
+        "uri" : "http://dbpedia.org/resource/Luciano_Vincenzoni"
+      }, {
+        "label" : "Lucidio Sentimenti",
+        "uri" : "http://dbpedia.org/resource/Lucidio_Sentimenti"
+      }, {
+        "label" : "Lucie Bílá",
+        "uri" : "http://dbpedia.org/resource/Lucie_Bílá"
+      }, {
+        "label" : "Lucie Cheng",
+        "uri" : "http://dbpedia.org/resource/Lucie_Cheng"
+      }, {
+        "label" : "Lucie Chroustovská",
+        "uri" : "http://dbpedia.org/resource/Lucie_Chroustovská"
+      }, {
+        "label" : "Lucien-Anatole Prévost-Paradol",
+        "uri" : "http://dbpedia.org/resource/Lucien-Anatole_Prévost-Paradol"
+      }, {
+        "label" : "Lucien Hervé",
+        "uri" : "http://dbpedia.org/resource/Lucien_Hervé"
+      }, {
+        "label" : "Lucien Xavier Michel-Andrianarahinjaka",
+        "uri" : "http://dbpedia.org/resource/Lucien_Xavier_Michel-Andrianarahinjaka"
+      }, {
+        "label" : "Lucija Mori",
+        "uri" : "http://dbpedia.org/resource/Lucija_Mori"
+      }, {
+        "label" : "Lucija Zaninović",
+        "uri" : "http://dbpedia.org/resource/Lucija_Zaninović"
+      }, {
+        "label" : "Lucija Šerbedžija",
+        "uri" : "http://dbpedia.org/resource/Lucija_Šerbedžija"
+      }, {
+        "label" : "Lucius Aemilius Paullus Macedonicus",
+        "uri" : "http://dbpedia.org/resource/Lucius_Aemilius_Paullus_Macedonicus"
+      }, {
+        "label" : "Lucius Richard O'Brien",
+        "uri" : "http://dbpedia.org/resource/Lucius_Richard_O'Brien"
+      }, {
+        "label" : "Lucjan Żeligowski",
+        "uri" : "http://dbpedia.org/resource/Lucjan_Żeligowski"
+      }, {
+        "label" : "Lucky Luciano",
+        "uri" : "http://dbpedia.org/resource/Lucky_Luciano"
+      }, {
+        "label" : "Lucy Dudko",
+        "uri" : "http://dbpedia.org/resource/Lucy_Dudko"
+      }, {
+        "label" : "Lucy Lawless",
+        "uri" : "http://dbpedia.org/resource/Lucy_Lawless"
+      }, {
+        "label" : "Lucy Rahman",
+        "uri" : "http://dbpedia.org/resource/Lucy_Rahman"
+      }, {
+        "label" : "Ludmila Aslanian",
+        "uri" : "http://dbpedia.org/resource/Ludmila_Aslanian"
+      }, {
+        "label" : "Ludmila Savelyeva",
+        "uri" : "http://dbpedia.org/resource/Ludmila_Savelyeva"
+      }, {
+        "label" : "Ludmila Tsukanova",
+        "uri" : "http://dbpedia.org/resource/Ludmila_Tsukanova"
+      }, {
+        "label" : "Ludmilla Radchenko",
+        "uri" : "http://dbpedia.org/resource/Ludmilla_Radchenko"
+      }, {
+        "label" : "Ludmilla Tourischeva",
+        "uri" : "http://dbpedia.org/resource/Ludmilla_Tourischeva"
+      }, {
+        "label" : "Ludvig Faddeev",
+        "uri" : "http://dbpedia.org/resource/Ludvig_Faddeev"
+      }, {
+        "label" : "Ludwig Alberto",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Alberto"
+      }, {
+        "label" : "Ludwig Aschoff",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Aschoff"
+      }, {
+        "label" : "Ludwig Boltzmann",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Boltzmann"
+      }, {
+        "label" : "Ludwig Fahrenkrog",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Fahrenkrog"
+      }, {
+        "label" : "Ludwig Hans Fischer",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Hans_Fischer"
+      }, {
+        "label" : "Ludwig Jahn",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Jahn"
+      }, {
+        "label" : "Ludwig Kalisch",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Kalisch"
+      }, {
+        "label" : "Ludwig Kögl",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Kögl"
+      }, {
+        "label" : "Ludwig Müller (footballer)",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Müller_(footballer)"
+      }, {
+        "label" : "Ludwig Preis",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Preis"
+      }, {
+        "label" : "Ludwig Tessnow",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Tessnow"
+      }, {
+        "label" : "Ludwig Trepte",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Trepte"
+      }, {
+        "label" : "Ludwig Wolff",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Wolff"
+      }, {
+        "label" : "Ludwig von Graff",
+        "uri" : "http://dbpedia.org/resource/Ludwig_von_Graff"
+      }, {
+        "label" : "Ludwig von Hagemeister",
+        "uri" : "http://dbpedia.org/resource/Ludwig_von_Hagemeister"
+      }, {
+        "label" : "Ludwig von Mises",
+        "uri" : "http://dbpedia.org/resource/Ludwig_von_Mises"
+      }, {
+        "label" : "Ludwig zu Sayn-Wittgenstein-Berleburg",
+        "uri" : "http://dbpedia.org/resource/Ludwig_zu_Sayn-Wittgenstein-Berleburg"
+      }, {
+        "label" : "Ludwik Czachowski",
+        "uri" : "http://dbpedia.org/resource/Ludwik_Czachowski"
+      }, {
+        "label" : "Ludwik Fritsche",
+        "uri" : "http://dbpedia.org/resource/Ludwik_Fritsche"
+      }, {
+        "label" : "Ludwik Turowski",
+        "uri" : "http://dbpedia.org/resource/Ludwik_Turowski"
+      }, {
+        "label" : "Ludwik Łoś",
+        "uri" : "http://dbpedia.org/resource/Ludwik_Łoś"
+      }, {
+        "label" : "Lui Chi Hing",
+        "uri" : "http://dbpedia.org/resource/Lui_Chi_Hing"
+      }, {
+        "label" : "Lui Kit Ming",
+        "uri" : "http://dbpedia.org/resource/Lui_Kit_Ming"
+      }, {
+        "label" : "Lui Man Tik",
+        "uri" : "http://dbpedia.org/resource/Lui_Man_Tik"
+      }, {
+        "label" : "Lui Temelkovski",
+        "uri" : "http://dbpedia.org/resource/Lui_Temelkovski"
+      }, {
+        "label" : "Luidjino Hoyer",
+        "uri" : "http://dbpedia.org/resource/Luidjino_Hoyer"
+      }, {
+        "label" : "Luigi Barbesino",
+        "uri" : "http://dbpedia.org/resource/Luigi_Barbesino"
+      }, {
+        "label" : "Luigi Barzini Jr.",
+        "uri" : "http://dbpedia.org/resource/Luigi_Barzini_Jr."
+      }, {
+        "label" : "Luigi Barzini Sr.",
+        "uri" : "http://dbpedia.org/resource/Luigi_Barzini_Sr."
+      }, {
+        "label" : "Luigi Beltrame Quattrocchi and Maria Corsini",
+        "uri" : "http://dbpedia.org/resource/Luigi_Beltrame_Quattrocchi_and_Maria_Corsini"
+      }, {
+        "label" : "Luigi Boccardo",
+        "uri" : "http://dbpedia.org/resource/Luigi_Boccardo"
+      }, {
+        "label" : "Luigi Bordino",
+        "uri" : "http://dbpedia.org/resource/Luigi_Bordino"
+      }, {
+        "label" : "Luigi Burlando",
+        "uri" : "http://dbpedia.org/resource/Luigi_Burlando"
+      }, {
+        "label" : "Luigi Cennamo",
+        "uri" : "http://dbpedia.org/resource/Luigi_Cennamo"
+      }, {
+        "label" : "Luigi Corioni",
+        "uri" : "http://dbpedia.org/resource/Luigi_Corioni"
+      }, {
+        "label" : "Luigi Cremona",
+        "uri" : "http://dbpedia.org/resource/Luigi_Cremona"
+      }, {
+        "label" : "Luigi Dadaglio",
+        "uri" : "http://dbpedia.org/resource/Luigi_Dadaglio"
+      }, {
+        "label" : "Luigi Efisio Marras",
+        "uri" : "http://dbpedia.org/resource/Luigi_Efisio_Marras"
+      }, {
+        "label" : "Luigi Einaudi",
+        "uri" : "http://dbpedia.org/resource/Luigi_Einaudi"
+      }, {
+        "label" : "Luigi Fabbri",
+        "uri" : "http://dbpedia.org/resource/Luigi_Fabbri"
+      }, {
+        "label" : "Luigi Facta",
+        "uri" : "http://dbpedia.org/resource/Luigi_Facta"
+      }, {
+        "label" : "Luigi Ferraris (footballer)",
+        "uri" : "http://dbpedia.org/resource/Luigi_Ferraris_(footballer)"
+      }, {
+        "label" : "Luigi Lavitrano",
+        "uri" : "http://dbpedia.org/resource/Luigi_Lavitrano"
+      }, {
+        "label" : "Luigi Longo",
+        "uri" : "http://dbpedia.org/resource/Luigi_Longo"
+      }, {
+        "label" : "Luigi Luca Cavalli-Sforza",
+        "uri" : "http://dbpedia.org/resource/Luigi_Luca_Cavalli-Sforza"
+      }, {
+        "label" : "Luigi Lucheni",
+        "uri" : "http://dbpedia.org/resource/Luigi_Lucheni"
+      }, {
+        "label" : "Luigi Luzzatti",
+        "uri" : "http://dbpedia.org/resource/Luigi_Luzzatti"
+      }, {
+        "label" : "Luigi Maglione",
+        "uri" : "http://dbpedia.org/resource/Luigi_Maglione"
+      }, {
+        "label" : "Luigi Menti",
+        "uri" : "http://dbpedia.org/resource/Luigi_Menti"
+      }, {
+        "label" : "Luigi Monza",
+        "uri" : "http://dbpedia.org/resource/Luigi_Monza"
+      }, {
+        "label" : "Luigi Moretti",
+        "uri" : "http://dbpedia.org/resource/Luigi_Moretti"
+      } ]
     },
     "combination" : true
   } ]

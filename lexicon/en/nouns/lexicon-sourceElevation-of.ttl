@@ -1,0 +1,43 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :sourceElevation_of ;
+  lemon:entry    :of .
+
+:sourceElevation_of a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :sourceElevation_form ;
+  lemon:synBehavior    :sourceElevation_of_nounpp ;
+  lemon:sense          :sourceElevation_sense_ontomap .
+
+:sourceElevation_form a       lemon:Form ;
+  lemon:writtenRep "source elevation"@en .
+
+:sourceElevation_of_nounpp a              lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:sourceElevation_sense_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping   :sourceElevation_sense_ontomap ;
+  lemon:reference     <http://dbpedia.org/ontology/sourceElevation> ;
+  lemon:subjOfProp    :arg2 ;
+  lemon:objOfProp     :arg1 ;
+  lemon:condition     :sourceElevation_condition .
+
+:sourceElevation_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/River> ;
+  lemon:propertyRange  <http://www.w3.org/2001/XMLSchema#double> .
+
+:arg2 lemon:marker :of .
+
+## Prepositions ##
+
+:of a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "of"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

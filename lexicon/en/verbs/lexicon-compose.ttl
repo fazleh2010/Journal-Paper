@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :to_compose ;
+  lemon:entry    :composed ;
+  lemon:entry    :by .
+
+:to_compose a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_compose ;
+  lemon:otherForm      :form_composes ;
+  lemon:otherForm      :form_composed ;
+  lemon:synBehavior    :compose_frame_transitive ;
+  lemon:sense          :compose_ontomap .
+
+
+:form_compose a         lemon:Form ;
+  lemon:writtenRep     "compose"@en ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_composes a    lemon:Form ;
+  lemon:writtenRep "composes"@en ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_composed a   lemon:Form ;
+  lemon:writtenRep "composed"@en ;
+  lexinfo:tense    lexinfo:past .
+
+:compose_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :compose_subj ;
+  lexinfo:directObject     :compose_obj .
+
+:compose_ontomap a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :compose_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/musicComposer> ;
+  lemon:subjOfProp  :compose_obj ;
+  lemon:objOfProp   :compose_subj ;
+  lemon:condition   :compose_condition .
+
+:compose_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Work> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:composed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_composed_canonical ;
+  lemon:otherForm      :form_composed_by ;
+  lemon:synBehavior    :composed_frame_adjectivepp ;
+  lemon:sense          :composed_ontomap .
+
+:form_composed_canonical a lemon:Form ;
+  lemon:writtenRep         "composed"@en .
+
+:form_composed_by a    lemon:Form ;
+  lemon:writtenRep     "composed"@en ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+:compose_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :composed_subj ;
+  lexinfo:prepositionalAdjunct :compose_obj .
+
+:composed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :composed_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/director> ;
+  lemon:subjOfProp  :composed_subj ;
+  lemon:objOfProp   :composed_obj ;
+  lemon:condition   :compose_condition .
+
+:composed_obj lemon:marker :by .
+
+## Prepositions ##
+
+:by a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "by"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :to_dissolve ;
+  lemon:entry    :in .
+
+:to_dissolve a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_dissolve ;
+  lemon:otherForm      :form_dissolved ;
+  lemon:synBehavior    :dissolve_frame ;
+  lemon:sense          :dissolve_ontomap .
+
+:form_dissolve a         lemon:Form ;
+  lemon:writtenRep     "dissolve"@en ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_dissolved a   lemon:Form ;
+  lemon:writtenRep "dissolved"@en ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:past .
+
+:dissolve_frame a                  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :dissolve_subj ;
+  lexinfo:prepositionalAdjunct :dissolve_obj .
+
+:dissolve_ontomap a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :dissolve_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/dissolutionDate> ;
+  lemon:subjOfProp  :dissolve_obj ;
+  lemon:objOfProp   :dissolve_subj ;
+  lemon:condition   :dissolve_condition .
+
+
+:dissolve_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/PopulatedPlace> ;
+  lemon:propertyRange  <http://www.w3.org/2001/XMLSchema#date> .
+
+:dissolve_obj lemon:marker :in .
+
+## Prepositions ##
+
+:in a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "in"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
