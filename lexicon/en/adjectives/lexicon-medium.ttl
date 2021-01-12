@@ -1,0 +1,33 @@
+@prefix :        <http://localhost:8080/#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+
+@base            <http://localhost:8080#> .
+
+
+:lexicon_en a    lemon:Lexicon ;
+            lemon:language "en" ;
+            lemon:entry    :medium ;
+            lemon:entry    :medium_res .
+
+:medium a     lemon:LexicalEntry ;
+      lexinfo:partOfSpeech lexinfo:adjective ;
+      lemon:canonicalForm :medium_lemma ;
+      lemon:synBehavior   :medium_predFrame ;
+      lemon:sense         :medium_sense .
+
+:medium_lemma lemon:writtenRep "medium"@en .
+
+:medium_predFrame a   lexinfo:copulativeArg ;
+                lexinfo:copulativeArg   :medium_PredSynArg .
+
+:medium_sense a   lemon:LexicalSense ;
+            lemon:reference :medium_res ;
+            lemon:isA   :medium_PredSynArg .
+
+:medium_red a oils:CovariantScalar ;
+          oils:boundTo <http://dbpedia.org/ontology/elevation> ;
+          oils:degree <http://lemon-model.net/oils#medium> .
+
