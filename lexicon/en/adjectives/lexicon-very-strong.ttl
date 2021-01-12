@@ -1,0 +1,33 @@
+@prefix :        <http://localhost:8080/#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+
+@base            <http://localhost:8080#> .
+
+
+:lexicon_en a    lemon:Lexicon ;
+            lemon:language "en" ;
+            lemon:entry    :veryStrong ;
+            lemon:entry    :veryStrong_res .
+
+:veryStrong a     lemon:LexicalEntry ;
+        lexinfo:partOfSpeech lexinfo:adjective ;
+        lemon:canonicalForm :veryStrong_lemma ;
+        lemon:synBehavior   :veryStrong_predFrame ;
+        lemon:sense         :veryStrong_sense .
+
+:veryStrong_lemma lemon:writtenRep "veryStrong"@en .
+
+:veryStrong_predFrame a   lexinfo:copulativeArg ;
+                  lexinfo:copulativeArg   :veryStrong_PredSynArg .
+
+:veryStrong_sense a   lemon:LexicalSense ;
+              lemon:reference :veryStrong_res ;
+              lemon:isA   :veryStrong_PredSynArg .
+
+:veryStrong_red a oils:CovariantScalar ;
+            oils:boundTo <http://dbpedia.org/ontology/strength> ;
+            oils:degree <http://lemon-model.net/oils#veryStrong> .
+
