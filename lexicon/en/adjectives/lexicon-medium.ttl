@@ -27,7 +27,7 @@
             lemon:reference :medium_res ;
             lemon:isA   :medium_PredSynArg .
 
-:medium_red a oils:CovariantScalar ;
+:medium_res a oils:CovariantScalar ;
           oils:boundTo <http://dbpedia.org/ontology/elevation> ;
           oils:degree <http://lemon-model.net/oils#medium> .
 

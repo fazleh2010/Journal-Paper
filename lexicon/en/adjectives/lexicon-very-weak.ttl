@@ -27,7 +27,7 @@
               lemon:reference :veryWeak_res ;
               lemon:isA   :veryWeak_PredSynArg .
 
-:veryWeak_red a oils:CovariantScalar ;
+:veryWeak_res a oils:ContravariantScalar ;
             oils:boundTo <http://dbpedia.org/ontology/strength> ;
-            oils:degree <http://lemon-model.net/oils#veryWeak> .
+            oils:degree <http://lemon-model.net/oils#veryStrong> .
 

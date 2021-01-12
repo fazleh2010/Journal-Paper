@@ -27,7 +27,7 @@
             lemon:reference :deep_res ;
             lemon:isA   :deep_PredSynArg .
 
-:deep_red a oils:CovariantScalar ;
+:deep_res a oils:CovariantScalar ;
           oils:boundTo <http://dbpedia.org/ontology/depth> ;
           oils:degree <http://lemon-model.net/oils#weak> .
 

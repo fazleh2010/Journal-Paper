@@ -27,7 +27,7 @@
     lemon:reference :high_res ;
     lemon:isA   :high_PredSynArg .
 
-:high_red a oils:CovariantScalar ;
+:high_res a oils:CovariantScalar ;
     oils:boundTo <http://dbpedia.org/ontology/elevation> ;
     oils:degree <http://lemon-model.net/oils#strong> .
 

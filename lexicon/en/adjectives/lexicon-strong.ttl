@@ -27,7 +27,7 @@
             lemon:reference :strong_res ;
             lemon:isA   :strong_PredSynArg .
 
-:strong_red a oils:CovariantScalar ;
+:strong_res a oils:CovariantScalar ;
           oils:boundTo <http://dbpedia.org/ontology/strength> ;
           oils:degree <http://lemon-model.net/oils#strong> .
 
