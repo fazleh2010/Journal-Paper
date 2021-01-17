@@ -1,4 +1,4 @@
-@prefix :        <http://localhost:8080/#> .
+@prefix :        <http://localhost:8080/lexicon#> .
 
 @prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
 @prefix lemon:   <http://lemon-model.net/lemon#> .

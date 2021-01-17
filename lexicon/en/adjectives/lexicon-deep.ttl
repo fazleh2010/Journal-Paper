@@ -1,4 +1,4 @@
-@prefix :        <http://localhost:8080/#> .
+@prefix :        <http://localhost:8080/lexicon#> .
 
 @prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
 @prefix lemon:   <http://lemon-model.net/lemon#> .
@@ -27,7 +27,7 @@
             lemon:reference :deep_res ;
             lemon:isA   :deep_PredSynArg .
 
-:deep_res a oils:CovariantScalar ;
+:deep_res a oils:ContravariantScalar ;
           oils:boundTo <http://dbpedia.org/ontology/depth> ;
           oils:degree <http://lemon-model.net/oils#weak> .
 

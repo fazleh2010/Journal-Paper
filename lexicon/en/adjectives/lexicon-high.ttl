@@ -1,4 +1,4 @@
-@prefix :        <http://localhost:8080/#> .
+@prefix :        <http://localhost:8080/lexicon#> .
 
 @prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
 @prefix lemon:   <http://lemon-model.net/lemon#> .
@@ -21,13 +21,19 @@
 :high_lemma lemon:writtenRep "high"@en .
 
 :high_predFrame a   lexinfo:copulativeArg ;
-    lexinfo:copulativeArg   :high_PredSynArg .
+    lexinfo:copulativeArg   :high_PredArg .
 
-:high_sense a   lemon:LexicalSense ;
-    lemon:reference :high_res ;
-    lemon:isA   :high_PredSynArg .
+:high_sense a lemon:reference [
+        rdfs:subClassOf oils:CovariantScalar ;
+        oils:boundTo dbpedia:elevation ;
+        oils:degree oils:strong ] ;
+    lemon:isA   high:PredArg .
 
-:high_res a oils:CovariantScalar ;
-    oils:boundTo <http://dbpedia.org/ontology/elevation> ;
-    oils:degree <http://lemon-model.net/oils#strong> .
+#:high_sense a   lemon:LexicalSense ;
+#    lemon:reference :high_res ;
+#    lemon:isA   :high_PredArg .
+
+#:high_res a oils:CovariantScalar ;
+#    oils:boundTo <http://dbpedia.org/ontology/elevation> ;
+#    oils:degree <http://lemon-model.net/oils#strong> .
 
