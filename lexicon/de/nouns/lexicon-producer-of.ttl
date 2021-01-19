@@ -19,10 +19,13 @@
   lemon:sense          :produzent_sense_ontomap .
 
 :produzent_form a   lemon:Form ;
-  lemon:writtenRep "Produzent"@de .
+  lemon:writtenRep "Produzent"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular .
 
 :produzenten_form a  lemon:Form ;
   lemon:writtenRep "Produzenten"@de ;
+  lexinfo:gender   lexinfo:masculine ;
   lexinfo:number   lexinfo:plural .
 
 :produzent_von_nounpp a          lexinfo:NounPPFrame ;

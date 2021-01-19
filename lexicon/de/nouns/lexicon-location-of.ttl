@@ -20,7 +20,9 @@
   lemon:sense          :standort_sense3_ontomap .
 
 :standort_form a   lemon:Form ;
-  lemon:writtenRep "Standort"@de .
+  lemon:writtenRep "Standort"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular .
 
 :standort_von_nounpp a          lexinfo:NounPPFrame ;
   lexinfo:copulativeArg        :arg1 ;

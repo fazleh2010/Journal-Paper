@@ -19,10 +19,13 @@
   lemon:sense          :mitglied_sense_ontomap .
 
 :mitglied_form a     lemon:Form ;
-  lemon:writtenRep "Mitglied"@de .
+  lemon:writtenRep "Mitglied"@de ;
+  lexinfo:gender   lexinfo:neuter ;
+  lexinfo:number   lexinfo:singular .
 
 :mitglieder_form a    lemon:Form ;
   lemon:writtenRep "Mitglieder"@de ;
+  lexinfo:gender   lexinfo:neuter ;
   lexinfo:number   lexinfo:plural .
 
 :mitglied_von_nounpp a            lexinfo:NounPPFrame ;

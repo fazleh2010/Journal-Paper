@@ -19,11 +19,14 @@
   lemon:sense          :komponist_sense_ontomap .
 
 :komponist_form a lemon:Form ;
-  lemon:writtenRep    "Komponist"@de .
+  lemon:writtenRep    "Komponist"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular .
 
 :komponisten_form a lemon:Form ;
   lemon:writtenRep     "Komponisten"@de ;
-  lexinfo:number       lexinfo:plural .
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:plural .
 
 :komponist_fuer_nounpp a     lexinfo:NounPPFrame ;
   lexinfo:copulativeArg        :arg1 ;
