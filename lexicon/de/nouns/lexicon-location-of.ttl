@@ -1,0 +1,71 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_de a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :standort_von ;
+  lemon:entry    :von .
+
+:standort_von a         lemon:LexicalEntry ;
+  lemon:language       "de" ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :standort_form ;
+  lemon:synBehavior    :standort_von_nounpp ;
+  lemon:sense          :standort_sense1_ontomap ;
+  lemon:sense          :standort_sense2_ontomap ;
+  lemon:sense          :standort_sense3_ontomap .
+
+:standort_form a   lemon:Form ;
+  lemon:writtenRep "Standort"@de .
+
+:standort_von_nounpp a          lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:standort_sense1_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping       :standort_sense1_ontomap ;
+  lemon:reference         <http://dbpedia.org/ontology/location> ;
+  lemon:subjOfProp        :arg2 ;
+  lemon:objOfProp         :arg1 ;
+  lemon:condition         :standort_condition .
+
+:standort_condition a  lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Place> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Place> .
+
+
+:standort_sense2_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping       :standort_sense2_ontomap ;
+  lemon:reference         <http://dbpedia.org/ontology/location> ;
+  lemon:subjOfProp        :arg2 ;
+  lemon:objOfProp         :arg1 ;
+  lemon:condition         :standort_condition_organisation .
+
+:standort_condition_organisation a  lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Organisation> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Place> .
+
+
+:standort_sense3_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping       :standort_sense3_ontomap ;
+  lemon:reference         <http://dbpedia.org/ontology/location> ;
+  lemon:subjOfProp        :arg2 ;
+  lemon:objOfProp         :arg1 ;
+  lemon:condition         :standort_condition_building .
+
+:standort_condition_building a  lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Building> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Place> .
+
+:arg2 lemon:marker :von .
+
+## Prepositions ##
+
+:von a                 lemon:Word ;
+  lemon:language       "de" ;
+  lemon:canonicalForm  [ lemon:writtenRep "von"@de ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

@@ -1,0 +1,50 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_de a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :mitglied_von ;
+  lemon:entry    :von .
+
+:mitglied_von a           lemon:LexicalEntry ;
+  lemon:language       "de" ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :mitglied_form ;
+  lemon:otherForm      :mitglieder_form ;
+  lemon:synBehavior    :mitglied_von_nounpp ;
+  lemon:sense          :mitglied_sense_ontomap .
+
+:mitglied_form a     lemon:Form ;
+  lemon:writtenRep "Mitglied"@de .
+
+:mitglieder_form a    lemon:Form ;
+  lemon:writtenRep "Mitglieder"@de ;
+  lexinfo:number   lexinfo:plural .
+
+:mitglied_von_nounpp a            lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:mitglied_sense_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping     :mitglied_sense_ontomap ;
+  lemon:reference       <http://dbpedia.org/ontology/bandMember> ;
+  lemon:subjOfProp      :arg2 ;
+  lemon:objOfProp       :arg1 ;
+  lemon:condition       :mitglied_condition .
+
+:mitglied_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Band> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:arg2 lemon:marker :von .
+
+## Prepositions ##
+
+:von a                 lemon:Word ;
+  lemon:language       "de" ;
+  lemon:canonicalForm  [ lemon:writtenRep "von"@de ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
