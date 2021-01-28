@@ -1,0 +1,4150 @@
+{
+  "grammarEntries" : [ {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Was ist der Produzent von ($x | THING_NP)?", "Was sind die Produzenten von ($x | THING_NP)?", "Was war der Produzent von ($x | THING_NP)?", "Was waren die Produzenten von ($x | THING_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Wechselstrommotor",
+        "uri" : "http://dbpedia.org/resource/AC_motor"
+      }, {
+        "label" : "Lufia",
+        "uri" : "http://dbpedia.org/resource/Lufia"
+      }, {
+        "label" : "Bauholz",
+        "uri" : "http://dbpedia.org/resource/Lumber"
+      }, {
+        "label" : "Luxusgut",
+        "uri" : "http://dbpedia.org/resource/Luxury_goods"
+      }, {
+        "label" : "M&M’s",
+        "uri" : "http://dbpedia.org/resource/M&M's"
+      }, {
+        "label" : "M16 (Gewehr)",
+        "uri" : "http://dbpedia.org/resource/M16_rifle"
+      }, {
+        "label" : "M939 (5-Ton-Truck)",
+        "uri" : "http://dbpedia.org/resource/M939_series_5-ton_6x6_truck"
+      }, {
+        "label" : "MAG (Computerspiel)",
+        "uri" : "http://dbpedia.org/resource/MAG_(video_game)"
+      }, {
+        "label" : "Matlab",
+        "uri" : "http://dbpedia.org/resource/MATLAB"
+      }, {
+        "label" : "MDK (Computerspiel)",
+        "uri" : "http://dbpedia.org/resource/MDK_(video_game)"
+      }, {
+        "label" : "MGB (Auto)",
+        "uri" : "http://dbpedia.org/resource/MG_MGB"
+      }, {
+        "label" : "MG Motor UK",
+        "uri" : "http://dbpedia.org/resource/MG_Motor"
+      }, {
+        "label" : "MIPS-Architektur",
+        "uri" : "http://dbpedia.org/resource/MIPS_architecture"
+      }, {
+        "label" : "MODE32",
+        "uri" : "http://dbpedia.org/resource/MODE32"
+      }, {
+        "label" : "MacDraw",
+        "uri" : "http://dbpedia.org/resource/MacDraw"
+      }, {
+        "label" : "MacOS",
+        "uri" : "http://dbpedia.org/resource/MacOS"
+      }, {
+        "label" : "Mac OS",
+        "uri" : "http://dbpedia.org/resource/MacOS"
+      }, {
+        "label" : "MacWrite",
+        "uri" : "http://dbpedia.org/resource/MacWrite"
+      }, {
+        "label" : "Mac OS X Snow Leopard",
+        "uri" : "http://dbpedia.org/resource/Mac_OS_X_Snow_Leopard"
+      }, {
+        "label" : "Macaron",
+        "uri" : "http://dbpedia.org/resource/Macaron"
+      }, {
+        "label" : "Machinarium",
+        "uri" : "http://dbpedia.org/resource/Machinarium"
+      }, {
+        "label" : "Maschinengewehr",
+        "uri" : "http://dbpedia.org/resource/Machine_gun"
+      }, {
+        "label" : "Maschinelles Lernen",
+        "uri" : "http://dbpedia.org/resource/Machine_learning"
+      }, {
+        "label" : "Macintosh",
+        "uri" : "http://dbpedia.org/resource/Macintosh"
+      }, {
+        "label" : "Mad Dog McCree",
+        "uri" : "http://dbpedia.org/resource/Mad_Dog_McCree"
+      }, {
+        "label" : "Madden NFL",
+        "uri" : "http://dbpedia.org/resource/Madden_NFL"
+      }, {
+        "label" : "Madlax",
+        "uri" : "http://dbpedia.org/resource/Madlax"
+      }, {
+        "label" : "Mafia III",
+        "uri" : "http://dbpedia.org/resource/Mafia_III"
+      }, {
+        "label" : "Mage Knight",
+        "uri" : "http://dbpedia.org/resource/Mage_Knight"
+      }, {
+        "label" : "Magic: The Gathering",
+        "uri" : "http://dbpedia.org/resource/Magic:_The_Gathering"
+      }, {
+        "label" : "Mamfies Abenteuer",
+        "uri" : "http://dbpedia.org/resource/Magic_Adventures_of_Mumfie"
+      }, {
+        "label" : "Magic Carpet (Computerspiel)",
+        "uri" : "http://dbpedia.org/resource/Magic_Carpet_(video_game)"
+      }, {
+        "label" : "Magix Music Maker",
+        "uri" : "http://dbpedia.org/resource/Magix_Music_Maker"
+      }, {
+        "label" : "Magnesit",
+        "uri" : "http://dbpedia.org/resource/Magnesite"
+      }, {
+        "label" : "Magnesium",
+        "uri" : "http://dbpedia.org/resource/Magnesium"
+      }, {
+        "label" : "Magnesiumchlorid",
+        "uri" : "http://dbpedia.org/resource/Magnesium_chloride"
+      }, {
+        "label" : "Magnetresonanztomographie",
+        "uri" : "http://dbpedia.org/resource/Magnetic_resonance_imaging"
+      }, {
+        "label" : "Mahan-Klasse",
+        "uri" : "http://dbpedia.org/resource/Mahan-class_destroyer"
+      }, {
+        "label" : "Briefverteilanlage",
+        "uri" : "http://dbpedia.org/resource/Mail_sorter"
+      }, {
+        "label" : "Maine (Loire)",
+        "uri" : "http://dbpedia.org/resource/Maine"
+      }, {
+        "label" : "Maine",
+        "uri" : "http://dbpedia.org/resource/Maine"
+      }, {
+        "label" : "Mais",
+        "uri" : "http://dbpedia.org/resource/Maize"
+      }, {
+        "label" : "Majesty: The Fantasy Kingdom Sim",
+        "uri" : "http://dbpedia.org/resource/Majesty:_The_Fantasy_Kingdom_Sim"
+      }, {
+        "label" : "Teppich",
+        "uri" : "http://dbpedia.org/resource/Carpet"
+      }, {
+        "label" : "Wagen",
+        "uri" : "http://dbpedia.org/resource/Carriage"
+      }, {
+        "label" : "Patrone (Munition)",
+        "uri" : "http://dbpedia.org/resource/Cartridge_(firearms)"
+      }, {
+        "label" : "Etui",
+        "uri" : "http://dbpedia.org/resource/Case_(goods)"
+      }, {
+        "label" : "Fallrecht",
+        "uri" : "http://dbpedia.org/resource/Case_law"
+      }, {
+        "label" : "Casein",
+        "uri" : "http://dbpedia.org/resource/Casein"
+      }, {
+        "label" : "Abholgroßmarkt",
+        "uri" : "http://dbpedia.org/resource/Cash_and_carry_(wholesale)"
+      }, {
+        "label" : "Cash Crops",
+        "uri" : "http://dbpedia.org/resource/Cash_crop"
+      }, {
+        "label" : "Cash Management",
+        "uri" : "http://dbpedia.org/resource/Cash_management"
+      }, {
+        "label" : "Treasury",
+        "uri" : "http://dbpedia.org/resource/Cash_management"
+      }, {
+        "label" : "Registrierkasse",
+        "uri" : "http://dbpedia.org/resource/Cash_register"
+      }, {
+        "label" : "Cashback-System",
+        "uri" : "http://dbpedia.org/resource/Cashback_reward_program"
+      }, {
+        "label" : "Bankscheck",
+        "uri" : "http://dbpedia.org/resource/Cashier's_check"
+      }, {
+        "label" : "Kaschmirwolle",
+        "uri" : "http://dbpedia.org/resource/Cashmere_wool"
+      }, {
+        "label" : "Kassettenrekorder",
+        "uri" : "http://dbpedia.org/resource/Cassette_deck"
+      }, {
+        "label" : "Kassiterit",
+        "uri" : "http://dbpedia.org/resource/Cassiterite"
+      }, {
+        "label" : "Gusseisen",
+        "uri" : "http://dbpedia.org/resource/Cast_iron"
+      }, {
+        "label" : "Gießbarkeit",
+        "uri" : "http://dbpedia.org/resource/Castability"
+      }, {
+        "label" : "Kastagnetten",
+        "uri" : "http://dbpedia.org/resource/Castanets"
+      }, {
+        "label" : "Kastellan",
+        "uri" : "http://dbpedia.org/resource/Castellan"
+      }, {
+        "label" : "Gießen (Urformen)",
+        "uri" : "http://dbpedia.org/resource/Casting"
+      }, {
+        "label" : "Gießen (Metall)",
+        "uri" : "http://dbpedia.org/resource/Casting_(metalworking)"
+      }, {
+        "label" : "Casual Game",
+        "uri" : "http://dbpedia.org/resource/Casual_game"
+      }, {
+        "label" : "Katzenauge",
+        "uri" : "http://dbpedia.org/resource/Cat's_eye_(road)"
+      }, {
+        "label" : "Katalogisierung",
+        "uri" : "http://dbpedia.org/resource/Cataloging"
+      }, {
+        "label" : "Katalysator",
+        "uri" : "http://dbpedia.org/resource/Catalyst"
+      }, {
+        "label" : "Katamaran",
+        "uri" : "http://dbpedia.org/resource/Catamaran"
+      }, {
+        "label" : "Catering",
+        "uri" : "http://dbpedia.org/resource/Catering"
+      }, {
+        "label" : "Pflanzenkläranlage",
+        "uri" : "http://dbpedia.org/resource/Constructed_wetland"
+      }, {
+        "label" : "Verbrauchsmaterial",
+        "uri" : "http://dbpedia.org/resource/Consumables"
+      }, {
+        "label" : "Verbraucher",
+        "uri" : "http://dbpedia.org/resource/Consumer"
+      }, {
+        "label" : "Stimmfühlungslaut",
+        "uri" : "http://dbpedia.org/resource/Contact_call"
+      }, {
+        "label" : "Kontaktlinse",
+        "uri" : "http://dbpedia.org/resource/Contact_lens"
+      }, {
+        "label" : "Kontaktloses Bezahlen",
+        "uri" : "http://dbpedia.org/resource/Contactless_payment"
+      }, {
+        "label" : "Containerbrücke",
+        "uri" : "http://dbpedia.org/resource/Container_crane"
+      }, {
+        "label" : "Contentfilter",
+        "uri" : "http://dbpedia.org/resource/Content-control_software"
+      }, {
+        "label" : "Content Delivery Network",
+        "uri" : "http://dbpedia.org/resource/Content_delivery_network"
+      }, {
+        "label" : "Content-Management",
+        "uri" : "http://dbpedia.org/resource/Content_management"
+      }, {
+        "label" : "Content-Management-System",
+        "uri" : "http://dbpedia.org/resource/Content_management_system"
+      }, {
+        "label" : "Semantisches Targeting",
+        "uri" : "http://dbpedia.org/resource/Contextual_advertising"
+      }, {
+        "label" : "Stufenloses Getriebe",
+        "uri" : "http://dbpedia.org/resource/Continuously_variable_transmission"
+      }, {
+        "label" : "Kontrafagott",
+        "uri" : "http://dbpedia.org/resource/Contrabassoon"
+      }, {
+        "label" : "Differenzkontrakt",
+        "uri" : "http://dbpedia.org/resource/Contract_for_difference"
+      }, {
+        "label" : "Vertragsmanagement",
+        "uri" : "http://dbpedia.org/resource/Contract_management"
+      }, {
+        "label" : "Querlenker",
+        "uri" : "http://dbpedia.org/resource/Control_arm"
+      }, {
+        "label" : "Regelkreis",
+        "uri" : "http://dbpedia.org/resource/Control_system"
+      }, {
+        "label" : "Stellventil",
+        "uri" : "http://dbpedia.org/resource/Control_valve"
+      }, {
+        "label" : "Autobahn",
+        "uri" : "http://dbpedia.org/resource/Controlled-access_highway"
+      }, {
+        "label" : "Convenience Food",
+        "uri" : "http://dbpedia.org/resource/Convenience_food"
+      }, {
+        "label" : "Convenience Shop",
+        "uri" : "http://dbpedia.org/resource/Convenience_store"
+      }, {
+        "label" : "Förderband",
+        "uri" : "http://dbpedia.org/resource/Conveyor_belt"
+      }, {
+        "label" : "Panzerförderer",
+        "uri" : "http://dbpedia.org/resource/Conveyor_chain"
+      }, {
+        "label" : "Kühlmittel",
+        "uri" : "http://dbpedia.org/resource/Coolant"
+      }, {
+        "label" : "Kühlbox",
+        "uri" : "http://dbpedia.org/resource/Cooler"
+      }, {
+        "label" : "Abkühlung",
+        "uri" : "http://dbpedia.org/resource/Cooling"
+      }, {
+        "label" : "Koordinatenmessgerät",
+        "uri" : "http://dbpedia.org/resource/Coordinate-measuring_machine"
+      }, {
+        "label" : "Kupfer",
+        "uri" : "http://dbpedia.org/resource/Copper"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "2",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "der Produzent von $x", "die Produzenten von $x" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Wechselstrommotor",
+        "uri" : "http://dbpedia.org/resource/AC_motor"
+      }, {
+        "label" : "Lufia",
+        "uri" : "http://dbpedia.org/resource/Lufia"
+      }, {
+        "label" : "Bauholz",
+        "uri" : "http://dbpedia.org/resource/Lumber"
+      }, {
+        "label" : "Luxusgut",
+        "uri" : "http://dbpedia.org/resource/Luxury_goods"
+      }, {
+        "label" : "M&M’s",
+        "uri" : "http://dbpedia.org/resource/M&M's"
+      }, {
+        "label" : "M16 (Gewehr)",
+        "uri" : "http://dbpedia.org/resource/M16_rifle"
+      }, {
+        "label" : "M939 (5-Ton-Truck)",
+        "uri" : "http://dbpedia.org/resource/M939_series_5-ton_6x6_truck"
+      }, {
+        "label" : "MAG (Computerspiel)",
+        "uri" : "http://dbpedia.org/resource/MAG_(video_game)"
+      }, {
+        "label" : "Matlab",
+        "uri" : "http://dbpedia.org/resource/MATLAB"
+      }, {
+        "label" : "MDK (Computerspiel)",
+        "uri" : "http://dbpedia.org/resource/MDK_(video_game)"
+      }, {
+        "label" : "MGB (Auto)",
+        "uri" : "http://dbpedia.org/resource/MG_MGB"
+      }, {
+        "label" : "MG Motor UK",
+        "uri" : "http://dbpedia.org/resource/MG_Motor"
+      }, {
+        "label" : "MIPS-Architektur",
+        "uri" : "http://dbpedia.org/resource/MIPS_architecture"
+      }, {
+        "label" : "MODE32",
+        "uri" : "http://dbpedia.org/resource/MODE32"
+      }, {
+        "label" : "MacDraw",
+        "uri" : "http://dbpedia.org/resource/MacDraw"
+      }, {
+        "label" : "MacOS",
+        "uri" : "http://dbpedia.org/resource/MacOS"
+      }, {
+        "label" : "Mac OS",
+        "uri" : "http://dbpedia.org/resource/MacOS"
+      }, {
+        "label" : "MacWrite",
+        "uri" : "http://dbpedia.org/resource/MacWrite"
+      }, {
+        "label" : "Mac OS X Snow Leopard",
+        "uri" : "http://dbpedia.org/resource/Mac_OS_X_Snow_Leopard"
+      }, {
+        "label" : "Macaron",
+        "uri" : "http://dbpedia.org/resource/Macaron"
+      }, {
+        "label" : "Machinarium",
+        "uri" : "http://dbpedia.org/resource/Machinarium"
+      }, {
+        "label" : "Maschinengewehr",
+        "uri" : "http://dbpedia.org/resource/Machine_gun"
+      }, {
+        "label" : "Maschinelles Lernen",
+        "uri" : "http://dbpedia.org/resource/Machine_learning"
+      }, {
+        "label" : "Macintosh",
+        "uri" : "http://dbpedia.org/resource/Macintosh"
+      }, {
+        "label" : "Mad Dog McCree",
+        "uri" : "http://dbpedia.org/resource/Mad_Dog_McCree"
+      }, {
+        "label" : "Madden NFL",
+        "uri" : "http://dbpedia.org/resource/Madden_NFL"
+      }, {
+        "label" : "Madlax",
+        "uri" : "http://dbpedia.org/resource/Madlax"
+      }, {
+        "label" : "Mafia III",
+        "uri" : "http://dbpedia.org/resource/Mafia_III"
+      }, {
+        "label" : "Mage Knight",
+        "uri" : "http://dbpedia.org/resource/Mage_Knight"
+      }, {
+        "label" : "Magic: The Gathering",
+        "uri" : "http://dbpedia.org/resource/Magic:_The_Gathering"
+      }, {
+        "label" : "Mamfies Abenteuer",
+        "uri" : "http://dbpedia.org/resource/Magic_Adventures_of_Mumfie"
+      }, {
+        "label" : "Magic Carpet (Computerspiel)",
+        "uri" : "http://dbpedia.org/resource/Magic_Carpet_(video_game)"
+      }, {
+        "label" : "Magix Music Maker",
+        "uri" : "http://dbpedia.org/resource/Magix_Music_Maker"
+      }, {
+        "label" : "Magnesit",
+        "uri" : "http://dbpedia.org/resource/Magnesite"
+      }, {
+        "label" : "Magnesium",
+        "uri" : "http://dbpedia.org/resource/Magnesium"
+      }, {
+        "label" : "Magnesiumchlorid",
+        "uri" : "http://dbpedia.org/resource/Magnesium_chloride"
+      }, {
+        "label" : "Magnetresonanztomographie",
+        "uri" : "http://dbpedia.org/resource/Magnetic_resonance_imaging"
+      }, {
+        "label" : "Mahan-Klasse",
+        "uri" : "http://dbpedia.org/resource/Mahan-class_destroyer"
+      }, {
+        "label" : "Briefverteilanlage",
+        "uri" : "http://dbpedia.org/resource/Mail_sorter"
+      }, {
+        "label" : "Maine (Loire)",
+        "uri" : "http://dbpedia.org/resource/Maine"
+      }, {
+        "label" : "Maine",
+        "uri" : "http://dbpedia.org/resource/Maine"
+      }, {
+        "label" : "Mais",
+        "uri" : "http://dbpedia.org/resource/Maize"
+      }, {
+        "label" : "Majesty: The Fantasy Kingdom Sim",
+        "uri" : "http://dbpedia.org/resource/Majesty:_The_Fantasy_Kingdom_Sim"
+      }, {
+        "label" : "Teppich",
+        "uri" : "http://dbpedia.org/resource/Carpet"
+      }, {
+        "label" : "Wagen",
+        "uri" : "http://dbpedia.org/resource/Carriage"
+      }, {
+        "label" : "Patrone (Munition)",
+        "uri" : "http://dbpedia.org/resource/Cartridge_(firearms)"
+      }, {
+        "label" : "Etui",
+        "uri" : "http://dbpedia.org/resource/Case_(goods)"
+      }, {
+        "label" : "Fallrecht",
+        "uri" : "http://dbpedia.org/resource/Case_law"
+      }, {
+        "label" : "Casein",
+        "uri" : "http://dbpedia.org/resource/Casein"
+      }, {
+        "label" : "Abholgroßmarkt",
+        "uri" : "http://dbpedia.org/resource/Cash_and_carry_(wholesale)"
+      }, {
+        "label" : "Cash Crops",
+        "uri" : "http://dbpedia.org/resource/Cash_crop"
+      }, {
+        "label" : "Cash Management",
+        "uri" : "http://dbpedia.org/resource/Cash_management"
+      }, {
+        "label" : "Treasury",
+        "uri" : "http://dbpedia.org/resource/Cash_management"
+      }, {
+        "label" : "Registrierkasse",
+        "uri" : "http://dbpedia.org/resource/Cash_register"
+      }, {
+        "label" : "Cashback-System",
+        "uri" : "http://dbpedia.org/resource/Cashback_reward_program"
+      }, {
+        "label" : "Bankscheck",
+        "uri" : "http://dbpedia.org/resource/Cashier's_check"
+      }, {
+        "label" : "Kaschmirwolle",
+        "uri" : "http://dbpedia.org/resource/Cashmere_wool"
+      }, {
+        "label" : "Kassettenrekorder",
+        "uri" : "http://dbpedia.org/resource/Cassette_deck"
+      }, {
+        "label" : "Kassiterit",
+        "uri" : "http://dbpedia.org/resource/Cassiterite"
+      }, {
+        "label" : "Gusseisen",
+        "uri" : "http://dbpedia.org/resource/Cast_iron"
+      }, {
+        "label" : "Gießbarkeit",
+        "uri" : "http://dbpedia.org/resource/Castability"
+      }, {
+        "label" : "Kastagnetten",
+        "uri" : "http://dbpedia.org/resource/Castanets"
+      }, {
+        "label" : "Kastellan",
+        "uri" : "http://dbpedia.org/resource/Castellan"
+      }, {
+        "label" : "Gießen (Urformen)",
+        "uri" : "http://dbpedia.org/resource/Casting"
+      }, {
+        "label" : "Gießen (Metall)",
+        "uri" : "http://dbpedia.org/resource/Casting_(metalworking)"
+      }, {
+        "label" : "Casual Game",
+        "uri" : "http://dbpedia.org/resource/Casual_game"
+      }, {
+        "label" : "Katzenauge",
+        "uri" : "http://dbpedia.org/resource/Cat's_eye_(road)"
+      }, {
+        "label" : "Katalogisierung",
+        "uri" : "http://dbpedia.org/resource/Cataloging"
+      }, {
+        "label" : "Katalysator",
+        "uri" : "http://dbpedia.org/resource/Catalyst"
+      }, {
+        "label" : "Katamaran",
+        "uri" : "http://dbpedia.org/resource/Catamaran"
+      }, {
+        "label" : "Catering",
+        "uri" : "http://dbpedia.org/resource/Catering"
+      }, {
+        "label" : "Pflanzenkläranlage",
+        "uri" : "http://dbpedia.org/resource/Constructed_wetland"
+      }, {
+        "label" : "Verbrauchsmaterial",
+        "uri" : "http://dbpedia.org/resource/Consumables"
+      }, {
+        "label" : "Verbraucher",
+        "uri" : "http://dbpedia.org/resource/Consumer"
+      }, {
+        "label" : "Stimmfühlungslaut",
+        "uri" : "http://dbpedia.org/resource/Contact_call"
+      }, {
+        "label" : "Kontaktlinse",
+        "uri" : "http://dbpedia.org/resource/Contact_lens"
+      }, {
+        "label" : "Kontaktloses Bezahlen",
+        "uri" : "http://dbpedia.org/resource/Contactless_payment"
+      }, {
+        "label" : "Containerbrücke",
+        "uri" : "http://dbpedia.org/resource/Container_crane"
+      }, {
+        "label" : "Contentfilter",
+        "uri" : "http://dbpedia.org/resource/Content-control_software"
+      }, {
+        "label" : "Content Delivery Network",
+        "uri" : "http://dbpedia.org/resource/Content_delivery_network"
+      }, {
+        "label" : "Content-Management",
+        "uri" : "http://dbpedia.org/resource/Content_management"
+      }, {
+        "label" : "Content-Management-System",
+        "uri" : "http://dbpedia.org/resource/Content_management_system"
+      }, {
+        "label" : "Semantisches Targeting",
+        "uri" : "http://dbpedia.org/resource/Contextual_advertising"
+      }, {
+        "label" : "Stufenloses Getriebe",
+        "uri" : "http://dbpedia.org/resource/Continuously_variable_transmission"
+      }, {
+        "label" : "Kontrafagott",
+        "uri" : "http://dbpedia.org/resource/Contrabassoon"
+      }, {
+        "label" : "Differenzkontrakt",
+        "uri" : "http://dbpedia.org/resource/Contract_for_difference"
+      }, {
+        "label" : "Vertragsmanagement",
+        "uri" : "http://dbpedia.org/resource/Contract_management"
+      }, {
+        "label" : "Querlenker",
+        "uri" : "http://dbpedia.org/resource/Control_arm"
+      }, {
+        "label" : "Regelkreis",
+        "uri" : "http://dbpedia.org/resource/Control_system"
+      }, {
+        "label" : "Stellventil",
+        "uri" : "http://dbpedia.org/resource/Control_valve"
+      }, {
+        "label" : "Autobahn",
+        "uri" : "http://dbpedia.org/resource/Controlled-access_highway"
+      }, {
+        "label" : "Convenience Food",
+        "uri" : "http://dbpedia.org/resource/Convenience_food"
+      }, {
+        "label" : "Convenience Shop",
+        "uri" : "http://dbpedia.org/resource/Convenience_store"
+      }, {
+        "label" : "Förderband",
+        "uri" : "http://dbpedia.org/resource/Conveyor_belt"
+      }, {
+        "label" : "Panzerförderer",
+        "uri" : "http://dbpedia.org/resource/Conveyor_chain"
+      }, {
+        "label" : "Kühlmittel",
+        "uri" : "http://dbpedia.org/resource/Coolant"
+      }, {
+        "label" : "Kühlbox",
+        "uri" : "http://dbpedia.org/resource/Cooler"
+      }, {
+        "label" : "Abkühlung",
+        "uri" : "http://dbpedia.org/resource/Cooling"
+      }, {
+        "label" : "Koordinatenmessgerät",
+        "uri" : "http://dbpedia.org/resource/Coordinate-measuring_machine"
+      }, {
+        "label" : "Kupfer",
+        "uri" : "http://dbpedia.org/resource/Copper"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "BAND",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "Was ist das Mitglied von ($x | BAND_NP)?", "Was sind die Mitglieder von ($x | BAND_NP)?", "Was war das Mitglied von ($x | BAND_NP)?", "Was waren die Mitglieder von ($x | BAND_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/bandMember> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "7 Horns 7 Eyes",
+        "uri" : "http://dbpedia.org/resource/7_Horns_7_Eyes"
+      }, {
+        "label" : "7 Seconds",
+        "uri" : "http://dbpedia.org/resource/7_Seconds_(band)"
+      }, {
+        "label" : "7 Year Bitch",
+        "uri" : "http://dbpedia.org/resource/7_Year_Bitch"
+      }, {
+        "label" : "801 (Band)",
+        "uri" : "http://dbpedia.org/resource/801_(band)"
+      }, {
+        "label" : "808 State",
+        "uri" : "http://dbpedia.org/resource/808_State"
+      }, {
+        "label" : "98 Degrees",
+        "uri" : "http://dbpedia.org/resource/98_Degrees"
+      }, {
+        "label" : "A1 (Band)",
+        "uri" : "http://dbpedia.org/resource/A1_(group)"
+      }, {
+        "label" : "AC4",
+        "uri" : "http://dbpedia.org/resource/AC4"
+      }, {
+        "label" : "AMM (Ensemble)",
+        "uri" : "http://dbpedia.org/resource/AMM_(group)"
+      }, {
+        "label" : "Love/Hate (Band)",
+        "uri" : "http://dbpedia.org/resource/Love/Hate_(band)"
+      }, {
+        "label" : "Love (Band)",
+        "uri" : "http://dbpedia.org/resource/Love_(band)"
+      }, {
+        "label" : "Love and Death",
+        "uri" : "http://dbpedia.org/resource/Love_and_Death_(band)"
+      }, {
+        "label" : "Lovebugs",
+        "uri" : "http://dbpedia.org/resource/Lovebugs_(band)"
+      }, {
+        "label" : "Lovelyz",
+        "uri" : "http://dbpedia.org/resource/Lovelyz"
+      }, {
+        "label" : "Loverboy (Band)",
+        "uri" : "http://dbpedia.org/resource/Loverboy"
+      }, {
+        "label" : "Lukas Graham",
+        "uri" : "http://dbpedia.org/resource/Lukas_Graham"
+      }, {
+        "label" : "Ljapis Trubezkoi",
+        "uri" : "http://dbpedia.org/resource/Lyapis_Trubetskoy"
+      }, {
+        "label" : "Lynch Mob",
+        "uri" : "http://dbpedia.org/resource/Lynch_Mob_(band)"
+      }, {
+        "label" : "Lynyrd Skynyrd",
+        "uri" : "http://dbpedia.org/resource/Lynyrd_Skynyrd"
+      }, {
+        "label" : "Lúnasa",
+        "uri" : "http://dbpedia.org/resource/Lúnasa_(band)"
+      }, {
+        "label" : "M.O.D.",
+        "uri" : "http://dbpedia.org/resource/M.O.D."
+      }, {
+        "label" : "MBLAQ",
+        "uri" : "http://dbpedia.org/resource/MBLAQ"
+      }, {
+        "label" : "MGMT",
+        "uri" : "http://dbpedia.org/resource/MGMT"
+      }, {
+        "label" : "MKTO",
+        "uri" : "http://dbpedia.org/resource/MKTO"
+      }, {
+        "label" : "MS MR",
+        "uri" : "http://dbpedia.org/resource/MS_MR"
+      }, {
+        "label" : "MU330",
+        "uri" : "http://dbpedia.org/resource/MU330"
+      }, {
+        "label" : "Machine Head",
+        "uri" : "http://dbpedia.org/resource/Machine_Head_(band)"
+      }, {
+        "label" : "Made Out of Babies",
+        "uri" : "http://dbpedia.org/resource/Made_Out_of_Babies"
+      }, {
+        "label" : "Madness",
+        "uri" : "http://dbpedia.org/resource/Madness_(band)"
+      }, {
+        "label" : "Mae (Band)",
+        "uri" : "http://dbpedia.org/resource/Mae"
+      }, {
+        "label" : "Magic (Band)",
+        "uri" : "http://dbpedia.org/resource/Magic!"
+      }, {
+        "label" : "Magma (Band)",
+        "uri" : "http://dbpedia.org/resource/Magma_(band)"
+      }, {
+        "label" : "Magnetic Man",
+        "uri" : "http://dbpedia.org/resource/Magnetic_Man"
+      }, {
+        "label" : "Magnum (Band)",
+        "uri" : "http://dbpedia.org/resource/Magnum_(band)"
+      }, {
+        "label" : "Kraftwerk Magnum",
+        "uri" : "http://dbpedia.org/resource/Magnum_(band)"
+      }, {
+        "label" : "Malcolm Lincoln",
+        "uri" : "http://dbpedia.org/resource/Malcolm_Lincoln"
+      }, {
+        "label" : "Carpathian Forest",
+        "uri" : "http://dbpedia.org/resource/Carpathian_Forest"
+      }, {
+        "label" : "Cartel (Hip-Hop-Gruppe)",
+        "uri" : "http://dbpedia.org/resource/Cartel_(rap_group)"
+      }, {
+        "label" : "Carter The Unstoppable Sex Machine",
+        "uri" : "http://dbpedia.org/resource/Carter_the_Unstoppable_Sex_Machine"
+      }, {
+        "label" : "Casseurs Flowters",
+        "uri" : "http://dbpedia.org/resource/Casseurs_Flowters"
+      }, {
+        "label" : "Cassino (Latium)",
+        "uri" : "http://dbpedia.org/resource/Cassino_(band)"
+      }, {
+        "label" : "Catacombs (amerikanische Band)",
+        "uri" : "http://dbpedia.org/resource/Catacombs_(band)"
+      }, {
+        "label" : "Catamenia",
+        "uri" : "http://dbpedia.org/resource/Catamenia_(band)"
+      }, {
+        "label" : "Coppelius",
+        "uri" : "http://dbpedia.org/resource/Coppelius"
+      }, {
+        "label" : "Cordelia’s Dad",
+        "uri" : "http://dbpedia.org/resource/Cordelia's_Dad"
+      }, {
+        "label" : "Corona (Band)",
+        "uri" : "http://dbpedia.org/resource/Corona_(band)"
+      }, {
+        "label" : "Ugly Kid Joe",
+        "uri" : "http://dbpedia.org/resource/Ugly_Kid_Joe"
+      }, {
+        "label" : "Ulige Numre",
+        "uri" : "http://dbpedia.org/resource/Ulige_Numre"
+      }, {
+        "label" : "UnSun",
+        "uri" : "http://dbpedia.org/resource/UnSun"
+      }, {
+        "label" : "Underoath",
+        "uri" : "http://dbpedia.org/resource/Underoath"
+      }, {
+        "label" : "Underworld (Band)",
+        "uri" : "http://dbpedia.org/resource/Underworld_(band)"
+      }, {
+        "label" : "Untoten",
+        "uri" : "http://dbpedia.org/resource/Untoten"
+      }, {
+        "label" : "Urban Cookie Collective",
+        "uri" : "http://dbpedia.org/resource/Urban_Cookie_Collective"
+      }, {
+        "label" : "VAST",
+        "uri" : "http://dbpedia.org/resource/VAST"
+      }, {
+        "label" : "VNV Nation",
+        "uri" : "http://dbpedia.org/resource/VNV_Nation"
+      }, {
+        "label" : "Vuur",
+        "uri" : "http://dbpedia.org/resource/VUUR"
+      }, {
+        "label" : "Vallenfyre",
+        "uri" : "http://dbpedia.org/resource/Vallenfyre"
+      }, {
+        "label" : "Vampire Weekend",
+        "uri" : "http://dbpedia.org/resource/Vampire_Weekend"
+      }, {
+        "label" : "Van Halen",
+        "uri" : "http://dbpedia.org/resource/Van_Halen"
+      }, {
+        "label" : "Van She",
+        "uri" : "http://dbpedia.org/resource/Van_She"
+      }, {
+        "label" : "Vandalism",
+        "uri" : "http://dbpedia.org/resource/Vandalism_(duo)"
+      }, {
+        "label" : "Vanilla Fudge",
+        "uri" : "http://dbpedia.org/resource/Vanilla_Fudge"
+      }, {
+        "label" : "Vanilla Ninja",
+        "uri" : "http://dbpedia.org/resource/Vanilla_Ninja"
+      }, {
+        "label" : "Venom (Band)",
+        "uri" : "http://dbpedia.org/resource/Venom_(band)"
+      }, {
+        "label" : "Venomous Concept",
+        "uri" : "http://dbpedia.org/resource/Venomous_Concept"
+      }, {
+        "label" : "Versailles",
+        "uri" : "http://dbpedia.org/resource/Versailles_(band)"
+      }, {
+        "label" : "Versailles (Band)",
+        "uri" : "http://dbpedia.org/resource/Versailles_(band)"
+      }, {
+        "label" : "Vertical Horizon",
+        "uri" : "http://dbpedia.org/resource/Vertical_Horizon"
+      }, {
+        "label" : "Current 93",
+        "uri" : "http://dbpedia.org/resource/Current_93"
+      }, {
+        "label" : "Cursive",
+        "uri" : "http://dbpedia.org/resource/Cursive_(band)"
+      }, {
+        "label" : "Curved Air",
+        "uri" : "http://dbpedia.org/resource/Curved_Air"
+      }, {
+        "label" : "Czerwone Gitary",
+        "uri" : "http://dbpedia.org/resource/Czerwone_Gitary"
+      }, {
+        "label" : "D.D.E.",
+        "uri" : "http://dbpedia.org/resource/D.D.E._(band)"
+      }, {
+        "label" : "D.I.",
+        "uri" : "http://dbpedia.org/resource/D.I._(band)"
+      }, {
+        "label" : "D.O.A. (Band)",
+        "uri" : "http://dbpedia.org/resource/D.O.A._(band)"
+      }, {
+        "label" : "Dc Talk",
+        "uri" : "http://dbpedia.org/resource/DC_Talk"
+      }, {
+        "label" : "DDT (Band)",
+        "uri" : "http://dbpedia.org/resource/DDT_(band)"
+      }, {
+        "label" : "DReam",
+        "uri" : "http://dbpedia.org/resource/D_Ream"
+      }, {
+        "label" : "Da Vinci (Band)",
+        "uri" : "http://dbpedia.org/resource/Da_Vinci_(band)"
+      }, {
+        "label" : "Da Vinci (Mondkrater)",
+        "uri" : "http://dbpedia.org/resource/Da_Vinci_(band)"
+      }, {
+        "label" : "Dadafon",
+        "uri" : "http://dbpedia.org/resource/Dadafon"
+      }, {
+        "label" : "Dag Nasty",
+        "uri" : "http://dbpedia.org/resource/Dag_Nasty"
+      }, {
+        "label" : "Dallas Wind Symphony",
+        "uri" : "http://dbpedia.org/resource/Dallas_Winds"
+      }, {
+        "label" : "Poisonblack",
+        "uri" : "http://dbpedia.org/resource/Poisonblack"
+      }, {
+        "label" : "Rainbow (Band)",
+        "uri" : "http://dbpedia.org/resource/Rainbow_(rock_band)"
+      }, {
+        "label" : "Republica",
+        "uri" : "http://dbpedia.org/resource/Republica"
+      }, {
+        "label" : "Satyricon (Band)",
+        "uri" : "http://dbpedia.org/resource/Satyricon_(band)"
+      }, {
+        "label" : "Serenity (österreichische Band)",
+        "uri" : "http://dbpedia.org/resource/Serenity_(band)"
+      }, {
+        "label" : "Serenity (britische Band)",
+        "uri" : "http://dbpedia.org/resource/Serenity_(band)"
+      }, {
+        "label" : "Sigur Rós",
+        "uri" : "http://dbpedia.org/resource/Sigur_Rós"
+      }, {
+        "label" : "Stray Cats",
+        "uri" : "http://dbpedia.org/resource/Stray_Cats"
+      }, {
+        "label" : "Stream of Passion",
+        "uri" : "http://dbpedia.org/resource/Stream_of_Passion"
+      }, {
+        "label" : "Super Furry Animals",
+        "uri" : "http://dbpedia.org/resource/Super_Furry_Animals"
+      }, {
+        "label" : "Teräsbetoni",
+        "uri" : "http://dbpedia.org/resource/Teräsbetoni"
+      }, {
+        "label" : "The Juan MacLean",
+        "uri" : "http://dbpedia.org/resource/The_Juan_MacLean"
+      }, {
+        "label" : "The Monochrome Set",
+        "uri" : "http://dbpedia.org/resource/The_Monochrome_Set"
+      }, {
+        "label" : "The Veronicas",
+        "uri" : "http://dbpedia.org/resource/The_Veronicas"
+      }, {
+        "label" : "Tocotronic",
+        "uri" : "http://dbpedia.org/resource/Tocotronic"
+      }, {
+        "label" : "Trouble (Band)",
+        "uri" : "http://dbpedia.org/resource/Trouble_(band)"
+      }, {
+        "label" : "Týr",
+        "uri" : "http://dbpedia.org/resource/Týr_(band)"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "4",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "BAND",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "das Mitglied von $x", "die Mitglieder von $x" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/bandMember> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "7 Horns 7 Eyes",
+        "uri" : "http://dbpedia.org/resource/7_Horns_7_Eyes"
+      }, {
+        "label" : "7 Seconds",
+        "uri" : "http://dbpedia.org/resource/7_Seconds_(band)"
+      }, {
+        "label" : "7 Year Bitch",
+        "uri" : "http://dbpedia.org/resource/7_Year_Bitch"
+      }, {
+        "label" : "801 (Band)",
+        "uri" : "http://dbpedia.org/resource/801_(band)"
+      }, {
+        "label" : "808 State",
+        "uri" : "http://dbpedia.org/resource/808_State"
+      }, {
+        "label" : "98 Degrees",
+        "uri" : "http://dbpedia.org/resource/98_Degrees"
+      }, {
+        "label" : "A1 (Band)",
+        "uri" : "http://dbpedia.org/resource/A1_(group)"
+      }, {
+        "label" : "AC4",
+        "uri" : "http://dbpedia.org/resource/AC4"
+      }, {
+        "label" : "AMM (Ensemble)",
+        "uri" : "http://dbpedia.org/resource/AMM_(group)"
+      }, {
+        "label" : "Love/Hate (Band)",
+        "uri" : "http://dbpedia.org/resource/Love/Hate_(band)"
+      }, {
+        "label" : "Love (Band)",
+        "uri" : "http://dbpedia.org/resource/Love_(band)"
+      }, {
+        "label" : "Love and Death",
+        "uri" : "http://dbpedia.org/resource/Love_and_Death_(band)"
+      }, {
+        "label" : "Lovebugs",
+        "uri" : "http://dbpedia.org/resource/Lovebugs_(band)"
+      }, {
+        "label" : "Lovelyz",
+        "uri" : "http://dbpedia.org/resource/Lovelyz"
+      }, {
+        "label" : "Loverboy (Band)",
+        "uri" : "http://dbpedia.org/resource/Loverboy"
+      }, {
+        "label" : "Lukas Graham",
+        "uri" : "http://dbpedia.org/resource/Lukas_Graham"
+      }, {
+        "label" : "Ljapis Trubezkoi",
+        "uri" : "http://dbpedia.org/resource/Lyapis_Trubetskoy"
+      }, {
+        "label" : "Lynch Mob",
+        "uri" : "http://dbpedia.org/resource/Lynch_Mob_(band)"
+      }, {
+        "label" : "Lynyrd Skynyrd",
+        "uri" : "http://dbpedia.org/resource/Lynyrd_Skynyrd"
+      }, {
+        "label" : "Lúnasa",
+        "uri" : "http://dbpedia.org/resource/Lúnasa_(band)"
+      }, {
+        "label" : "M.O.D.",
+        "uri" : "http://dbpedia.org/resource/M.O.D."
+      }, {
+        "label" : "MBLAQ",
+        "uri" : "http://dbpedia.org/resource/MBLAQ"
+      }, {
+        "label" : "MGMT",
+        "uri" : "http://dbpedia.org/resource/MGMT"
+      }, {
+        "label" : "MKTO",
+        "uri" : "http://dbpedia.org/resource/MKTO"
+      }, {
+        "label" : "MS MR",
+        "uri" : "http://dbpedia.org/resource/MS_MR"
+      }, {
+        "label" : "MU330",
+        "uri" : "http://dbpedia.org/resource/MU330"
+      }, {
+        "label" : "Machine Head",
+        "uri" : "http://dbpedia.org/resource/Machine_Head_(band)"
+      }, {
+        "label" : "Made Out of Babies",
+        "uri" : "http://dbpedia.org/resource/Made_Out_of_Babies"
+      }, {
+        "label" : "Madness",
+        "uri" : "http://dbpedia.org/resource/Madness_(band)"
+      }, {
+        "label" : "Mae (Band)",
+        "uri" : "http://dbpedia.org/resource/Mae"
+      }, {
+        "label" : "Magic (Band)",
+        "uri" : "http://dbpedia.org/resource/Magic!"
+      }, {
+        "label" : "Magma (Band)",
+        "uri" : "http://dbpedia.org/resource/Magma_(band)"
+      }, {
+        "label" : "Magnetic Man",
+        "uri" : "http://dbpedia.org/resource/Magnetic_Man"
+      }, {
+        "label" : "Magnum (Band)",
+        "uri" : "http://dbpedia.org/resource/Magnum_(band)"
+      }, {
+        "label" : "Kraftwerk Magnum",
+        "uri" : "http://dbpedia.org/resource/Magnum_(band)"
+      }, {
+        "label" : "Malcolm Lincoln",
+        "uri" : "http://dbpedia.org/resource/Malcolm_Lincoln"
+      }, {
+        "label" : "Carpathian Forest",
+        "uri" : "http://dbpedia.org/resource/Carpathian_Forest"
+      }, {
+        "label" : "Cartel (Hip-Hop-Gruppe)",
+        "uri" : "http://dbpedia.org/resource/Cartel_(rap_group)"
+      }, {
+        "label" : "Carter The Unstoppable Sex Machine",
+        "uri" : "http://dbpedia.org/resource/Carter_the_Unstoppable_Sex_Machine"
+      }, {
+        "label" : "Casseurs Flowters",
+        "uri" : "http://dbpedia.org/resource/Casseurs_Flowters"
+      }, {
+        "label" : "Cassino (Latium)",
+        "uri" : "http://dbpedia.org/resource/Cassino_(band)"
+      }, {
+        "label" : "Catacombs (amerikanische Band)",
+        "uri" : "http://dbpedia.org/resource/Catacombs_(band)"
+      }, {
+        "label" : "Catamenia",
+        "uri" : "http://dbpedia.org/resource/Catamenia_(band)"
+      }, {
+        "label" : "Coppelius",
+        "uri" : "http://dbpedia.org/resource/Coppelius"
+      }, {
+        "label" : "Cordelia’s Dad",
+        "uri" : "http://dbpedia.org/resource/Cordelia's_Dad"
+      }, {
+        "label" : "Corona (Band)",
+        "uri" : "http://dbpedia.org/resource/Corona_(band)"
+      }, {
+        "label" : "Ugly Kid Joe",
+        "uri" : "http://dbpedia.org/resource/Ugly_Kid_Joe"
+      }, {
+        "label" : "Ulige Numre",
+        "uri" : "http://dbpedia.org/resource/Ulige_Numre"
+      }, {
+        "label" : "UnSun",
+        "uri" : "http://dbpedia.org/resource/UnSun"
+      }, {
+        "label" : "Underoath",
+        "uri" : "http://dbpedia.org/resource/Underoath"
+      }, {
+        "label" : "Underworld (Band)",
+        "uri" : "http://dbpedia.org/resource/Underworld_(band)"
+      }, {
+        "label" : "Untoten",
+        "uri" : "http://dbpedia.org/resource/Untoten"
+      }, {
+        "label" : "Urban Cookie Collective",
+        "uri" : "http://dbpedia.org/resource/Urban_Cookie_Collective"
+      }, {
+        "label" : "VAST",
+        "uri" : "http://dbpedia.org/resource/VAST"
+      }, {
+        "label" : "VNV Nation",
+        "uri" : "http://dbpedia.org/resource/VNV_Nation"
+      }, {
+        "label" : "Vuur",
+        "uri" : "http://dbpedia.org/resource/VUUR"
+      }, {
+        "label" : "Vallenfyre",
+        "uri" : "http://dbpedia.org/resource/Vallenfyre"
+      }, {
+        "label" : "Vampire Weekend",
+        "uri" : "http://dbpedia.org/resource/Vampire_Weekend"
+      }, {
+        "label" : "Van Halen",
+        "uri" : "http://dbpedia.org/resource/Van_Halen"
+      }, {
+        "label" : "Van She",
+        "uri" : "http://dbpedia.org/resource/Van_She"
+      }, {
+        "label" : "Vandalism",
+        "uri" : "http://dbpedia.org/resource/Vandalism_(duo)"
+      }, {
+        "label" : "Vanilla Fudge",
+        "uri" : "http://dbpedia.org/resource/Vanilla_Fudge"
+      }, {
+        "label" : "Vanilla Ninja",
+        "uri" : "http://dbpedia.org/resource/Vanilla_Ninja"
+      }, {
+        "label" : "Venom (Band)",
+        "uri" : "http://dbpedia.org/resource/Venom_(band)"
+      }, {
+        "label" : "Venomous Concept",
+        "uri" : "http://dbpedia.org/resource/Venomous_Concept"
+      }, {
+        "label" : "Versailles",
+        "uri" : "http://dbpedia.org/resource/Versailles_(band)"
+      }, {
+        "label" : "Versailles (Band)",
+        "uri" : "http://dbpedia.org/resource/Versailles_(band)"
+      }, {
+        "label" : "Vertical Horizon",
+        "uri" : "http://dbpedia.org/resource/Vertical_Horizon"
+      }, {
+        "label" : "Current 93",
+        "uri" : "http://dbpedia.org/resource/Current_93"
+      }, {
+        "label" : "Cursive",
+        "uri" : "http://dbpedia.org/resource/Cursive_(band)"
+      }, {
+        "label" : "Curved Air",
+        "uri" : "http://dbpedia.org/resource/Curved_Air"
+      }, {
+        "label" : "Czerwone Gitary",
+        "uri" : "http://dbpedia.org/resource/Czerwone_Gitary"
+      }, {
+        "label" : "D.D.E.",
+        "uri" : "http://dbpedia.org/resource/D.D.E._(band)"
+      }, {
+        "label" : "D.I.",
+        "uri" : "http://dbpedia.org/resource/D.I._(band)"
+      }, {
+        "label" : "D.O.A. (Band)",
+        "uri" : "http://dbpedia.org/resource/D.O.A._(band)"
+      }, {
+        "label" : "Dc Talk",
+        "uri" : "http://dbpedia.org/resource/DC_Talk"
+      }, {
+        "label" : "DDT (Band)",
+        "uri" : "http://dbpedia.org/resource/DDT_(band)"
+      }, {
+        "label" : "DReam",
+        "uri" : "http://dbpedia.org/resource/D_Ream"
+      }, {
+        "label" : "Da Vinci (Band)",
+        "uri" : "http://dbpedia.org/resource/Da_Vinci_(band)"
+      }, {
+        "label" : "Da Vinci (Mondkrater)",
+        "uri" : "http://dbpedia.org/resource/Da_Vinci_(band)"
+      }, {
+        "label" : "Dadafon",
+        "uri" : "http://dbpedia.org/resource/Dadafon"
+      }, {
+        "label" : "Dag Nasty",
+        "uri" : "http://dbpedia.org/resource/Dag_Nasty"
+      }, {
+        "label" : "Dallas Wind Symphony",
+        "uri" : "http://dbpedia.org/resource/Dallas_Winds"
+      }, {
+        "label" : "Poisonblack",
+        "uri" : "http://dbpedia.org/resource/Poisonblack"
+      }, {
+        "label" : "Rainbow (Band)",
+        "uri" : "http://dbpedia.org/resource/Rainbow_(rock_band)"
+      }, {
+        "label" : "Republica",
+        "uri" : "http://dbpedia.org/resource/Republica"
+      }, {
+        "label" : "Satyricon (Band)",
+        "uri" : "http://dbpedia.org/resource/Satyricon_(band)"
+      }, {
+        "label" : "Serenity (österreichische Band)",
+        "uri" : "http://dbpedia.org/resource/Serenity_(band)"
+      }, {
+        "label" : "Serenity (britische Band)",
+        "uri" : "http://dbpedia.org/resource/Serenity_(band)"
+      }, {
+        "label" : "Sigur Rós",
+        "uri" : "http://dbpedia.org/resource/Sigur_Rós"
+      }, {
+        "label" : "Stray Cats",
+        "uri" : "http://dbpedia.org/resource/Stray_Cats"
+      }, {
+        "label" : "Stream of Passion",
+        "uri" : "http://dbpedia.org/resource/Stream_of_Passion"
+      }, {
+        "label" : "Super Furry Animals",
+        "uri" : "http://dbpedia.org/resource/Super_Furry_Animals"
+      }, {
+        "label" : "Teräsbetoni",
+        "uri" : "http://dbpedia.org/resource/Teräsbetoni"
+      }, {
+        "label" : "The Juan MacLean",
+        "uri" : "http://dbpedia.org/resource/The_Juan_MacLean"
+      }, {
+        "label" : "The Monochrome Set",
+        "uri" : "http://dbpedia.org/resource/The_Monochrome_Set"
+      }, {
+        "label" : "The Veronicas",
+        "uri" : "http://dbpedia.org/resource/The_Veronicas"
+      }, {
+        "label" : "Tocotronic",
+        "uri" : "http://dbpedia.org/resource/Tocotronic"
+      }, {
+        "label" : "Trouble (Band)",
+        "uri" : "http://dbpedia.org/resource/Trouble_(band)"
+      }, {
+        "label" : "Týr",
+        "uri" : "http://dbpedia.org/resource/Týr_(band)"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "5",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "WORK",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "Was ist der Komponist für ($x | WORK_NP)?", "Was sind die Komponisten für ($x | WORK_NP)?", "Was war der Komponist für ($x | WORK_NP)?", "Was waren die Komponisten für ($x | WORK_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Laurel und Hardy: Die Geheimagenten",
+        "uri" : "http://dbpedia.org/resource/A-Haunting_We_Will_Go_(1942_film)"
+      }, {
+        "label" : "A.D. – Anno Domini",
+        "uri" : "http://dbpedia.org/resource/A.D._(miniseries)"
+      }, {
+        "label" : "Apex (Film)",
+        "uri" : "http://dbpedia.org/resource/A.P.E.X."
+      }, {
+        "label" : "Love, Simon",
+        "uri" : "http://dbpedia.org/resource/Love,_Simon"
+      }, {
+        "label" : "Love, Wedding, Marriage – Ein Plan zum Verlieben",
+        "uri" : "http://dbpedia.org/resource/Love,_Wedding,_Marriage"
+      }, {
+        "label" : "Love & Mercy",
+        "uri" : "http://dbpedia.org/resource/Love_&_Mercy_(film)"
+      }, {
+        "label" : "Love & Sex",
+        "uri" : "http://dbpedia.org/resource/Love_&_Sex"
+      }, {
+        "label" : "Liebe 47",
+        "uri" : "http://dbpedia.org/resource/Love_'47"
+      }, {
+        "label" : "Liebe (1971)",
+        "uri" : "http://dbpedia.org/resource/Love_(1971_film)"
+      }, {
+        "label" : "Love (2011)",
+        "uri" : "http://dbpedia.org/resource/Love_(2011_film)"
+      }, {
+        "label" : "Love (2015)",
+        "uri" : "http://dbpedia.org/resource/Love_(2015_film)"
+      }, {
+        "label" : "Tatsächlich… Liebe",
+        "uri" : "http://dbpedia.org/resource/Love_Actually"
+      }, {
+        "label" : "Ruhelose Liebe",
+        "uri" : "http://dbpedia.org/resource/Love_Affair_(1939_film)"
+      }, {
+        "label" : "Love Bite – Nichts ist safer als Sex",
+        "uri" : "http://dbpedia.org/resource/Love_Bite"
+      }, {
+        "label" : "Wer liebt, lebt gefährlich",
+        "uri" : "http://dbpedia.org/resource/Love_Can_Seriously_Damage_Your_Health"
+      }, {
+        "label" : "Love Express (2011)",
+        "uri" : "http://dbpedia.org/resource/Love_Express"
+      }, {
+        "label" : "Love Happens",
+        "uri" : "http://dbpedia.org/resource/Love_Happens_(2009_film)"
+      }, {
+        "label" : "Love Happy",
+        "uri" : "http://dbpedia.org/resource/Love_Happy"
+      }, {
+        "label" : "Liebe und andere …",
+        "uri" : "http://dbpedia.org/resource/Love_Is_All_There_Is"
+      }, {
+        "label" : "Die süße Falle",
+        "uri" : "http://dbpedia.org/resource/Love_Is_Better_Than_Ever"
+      }, {
+        "label" : "… und ewig bleibt die Liebe",
+        "uri" : "http://dbpedia.org/resource/Love_Is_Forever_(1954_film)"
+      }, {
+        "label" : "Operation Comeback",
+        "uri" : "http://dbpedia.org/resource/Love_Is_Forever_(1982_film)"
+      }, {
+        "label" : "Liebe ist nur ein Wort",
+        "uri" : "http://dbpedia.org/resource/Love_Is_Only_a_Word"
+      }, {
+        "label" : "40 Millionen suchen einen Mann",
+        "uri" : "http://dbpedia.org/resource/Love_Is_a_Ball"
+      }, {
+        "label" : "Alle Herrlichkeit auf Erden",
+        "uri" : "http://dbpedia.org/resource/Love_Is_a_Many-Splendored_Thing_(film)"
+      }, {
+        "label" : "Love Is in the Air (Film)",
+        "uri" : "http://dbpedia.org/resource/Love_Is_in_the_Air_(2005_film)"
+      }, {
+        "label" : "Das verflixte 3. Jahr",
+        "uri" : "http://dbpedia.org/resource/Love_Lasts_Three_Years"
+      }, {
+        "label" : "Love Letter",
+        "uri" : "http://dbpedia.org/resource/Love_Letter_(1995_film)"
+      }, {
+        "label" : "Liebesbriefe (1945)",
+        "uri" : "http://dbpedia.org/resource/Love_Letters_(1945_film)"
+      }, {
+        "label" : "Liebesbriefe aus dem Engadin",
+        "uri" : "http://dbpedia.org/resource/Love_Letters_from_Engadin"
+      }, {
+        "label" : "Liebesbriefe einer portugiesischen Nonne",
+        "uri" : "http://dbpedia.org/resource/Love_Letters_of_a_Portuguese_Nun"
+      }, {
+        "label" : "Liebesleben",
+        "uri" : "http://dbpedia.org/resource/Love_Life_(2007_film)"
+      }, {
+        "label" : "Hab’ mich lieb!",
+        "uri" : "http://dbpedia.org/resource/Love_Me_(1942_film)"
+      }, {
+        "label" : "Liebe mich, wenn du dich traust",
+        "uri" : "http://dbpedia.org/resource/Love_Me_If_You_Dare_(film)"
+      }, {
+        "label" : "Tage oder Stunden",
+        "uri" : "http://dbpedia.org/resource/Love_Me_No_More_(film)"
+      }, {
+        "label" : "Pulverdampf und heiße Lieder",
+        "uri" : "http://dbpedia.org/resource/Love_Me_Tender_(film)"
+      }, {
+        "label" : "Schönste, liebe mich",
+        "uri" : "http://dbpedia.org/resource/Love_Me_Tonight"
+      }, {
+        "label" : "Tyrannische Liebe",
+        "uri" : "http://dbpedia.org/resource/Love_Me_or_Leave_Me_(film)"
+      }, {
+        "label" : "Liebe muß verstanden sein",
+        "uri" : "http://dbpedia.org/resource/Love_Must_Be_Understood"
+      }, {
+        "label" : "Love Potion No. 9 – Der Duft der Liebe",
+        "uri" : "http://dbpedia.org/resource/Love_Potion_No._9_(film)"
+      }, {
+        "label" : "Love Ranch",
+        "uri" : "http://dbpedia.org/resource/Love_Ranch"
+      }, {
+        "label" : "Chanson der Liebe (2007)",
+        "uri" : "http://dbpedia.org/resource/Love_Songs_(2007_film)"
+      }, {
+        "label" : "Love Story (1970)",
+        "uri" : "http://dbpedia.org/resource/Love_Story_(1970_film)"
+      }, {
+        "label" : "Amor Estranho Amor",
+        "uri" : "http://dbpedia.org/resource/Love_Strange_Love"
+      }, {
+        "label" : "Liebe und Zorn",
+        "uri" : "http://dbpedia.org/resource/Love_and_Anger_(film)"
+      }, {
+        "label" : "Ein Mann räumt auf",
+        "uri" : "http://dbpedia.org/resource/Love_and_Bullets_(1979_film)"
+      }, {
+        "label" : "Fürchten und Lieben",
+        "uri" : "http://dbpedia.org/resource/Love_and_Fear_(film)"
+      }, {
+        "label" : "Love and Honor – Bushi no ichibun",
+        "uri" : "http://dbpedia.org/resource/Love_and_Honor_(2006_film)"
+      }, {
+        "label" : "Love and Honor – Liebe ist unbesiegbar",
+        "uri" : "http://dbpedia.org/resource/Love_and_Honor_(2013_film)"
+      }, {
+        "label" : "Love and Other Disasters",
+        "uri" : "http://dbpedia.org/resource/Love_and_Other_Disasters"
+      }, {
+        "label" : "Der Kurschatten (1984)",
+        "uri" : "http://dbpedia.org/resource/Love_and_Pigeons"
+      }, {
+        "label" : "Love and a .45",
+        "uri" : "http://dbpedia.org/resource/Love_and_a_.45"
+      }, {
+        "label" : "Liebe mit zwanzig",
+        "uri" : "http://dbpedia.org/resource/Love_at_Twenty"
+      }, {
+        "label" : "Monpti",
+        "uri" : "http://dbpedia.org/resource/Love_from_Paris"
+      }, {
+        "label" : "9½ Wochen in Paris",
+        "uri" : "http://dbpedia.org/resource/Love_in_Paris"
+      }, {
+        "label" : "Ariane – Liebe am Nachmittag",
+        "uri" : "http://dbpedia.org/resource/Love_in_the_Afternoon_(1957_film)"
+      }, {
+        "label" : "Die Liebe in den Zeiten der Cholera (Film)",
+        "uri" : "http://dbpedia.org/resource/Love_in_the_Time_of_Cholera_(film)"
+      }, {
+        "label" : "Liebe auf Eis",
+        "uri" : "http://dbpedia.org/resource/Love_on_Ice_(film)"
+      }, {
+        "label" : "Love on the Run",
+        "uri" : "http://dbpedia.org/resource/Love_on_the_Run_(1936_film)"
+      }, {
+        "label" : "Liebe auf der Flucht",
+        "uri" : "http://dbpedia.org/resource/Love_on_the_Run_(1979_film)"
+      }, {
+        "label" : "Alle Jahre wieder – Weihnachten mit den Coopers",
+        "uri" : "http://dbpedia.org/resource/Love_the_Coopers"
+      }, {
+        "label" : "Love the Hard Way",
+        "uri" : "http://dbpedia.org/resource/Love_the_Hard_Way"
+      }, {
+        "label" : "Verliebt in einen Fremden",
+        "uri" : "http://dbpedia.org/resource/Love_with_the_Proper_Stranger"
+      }, {
+        "label" : "Lovelace (Film)",
+        "uri" : "http://dbpedia.org/resource/Lovelace_(film)"
+      }, {
+        "label" : "Loveless (Film)",
+        "uri" : "http://dbpedia.org/resource/Loveless_(film)"
+      }, {
+        "label" : "Immer noch Liebe!",
+        "uri" : "http://dbpedia.org/resource/Lovely,_Still"
+      }, {
+        "label" : "Ein Pyjama für zwei",
+        "uri" : "http://dbpedia.org/resource/Lover_Come_Back_(1961_film)"
+      }, {
+        "label" : "Loverboy – Liebe auf Bestellung",
+        "uri" : "http://dbpedia.org/resource/Loverboy_(1989_film)"
+      }, {
+        "label" : "Loverboy (2005)",
+        "uri" : "http://dbpedia.org/resource/Loverboy_(2005_film)"
+      }, {
+        "label" : "Liebhaber und andere Fremde",
+        "uri" : "http://dbpedia.org/resource/Lovers_and_Other_Strangers"
+      }, {
+        "label" : "Die Liebe einer Blondine",
+        "uri" : "http://dbpedia.org/resource/Loves_of_a_Blonde"
+      }, {
+        "label" : "Loving Pablo",
+        "uri" : "http://dbpedia.org/resource/Loving_Pablo"
+      }, {
+        "label" : "Loving Vincent",
+        "uri" : "http://dbpedia.org/resource/Loving_Vincent"
+      }, {
+        "label" : "Gold aus heißer Kehle",
+        "uri" : "http://dbpedia.org/resource/Loving_You_(1957_film)"
+      }, {
+        "label" : "Lucas (Film)",
+        "uri" : "http://dbpedia.org/resource/Lucas_(film)"
+      }, {
+        "label" : "Luce (Film)",
+        "uri" : "http://dbpedia.org/resource/Luce_(film)"
+      }, {
+        "label" : "Lucid Dream (Film)",
+        "uri" : "http://dbpedia.org/resource/Lucid_Dream_(film)"
+      }, {
+        "label" : "Lucie Aubrac (Film)",
+        "uri" : "http://dbpedia.org/resource/Lucie_Aubrac_(film)"
+      }, {
+        "label" : "Luck by Chance – Liebe, Glück und andere Zufälle",
+        "uri" : "http://dbpedia.org/resource/Luck_by_Chance"
+      }, {
+        "label" : "Lucky: No Time for Love",
+        "uri" : "http://dbpedia.org/resource/Lucky:_No_Time_for_Love"
+      }, {
+        "label" : "Lucky (2011)",
+        "uri" : "http://dbpedia.org/resource/Lucky_(2011_film)"
+      }, {
+        "label" : "Glückskinder",
+        "uri" : "http://dbpedia.org/resource/Lucky_Kids"
+      }, {
+        "label" : "Lucky Luciano (Film)",
+        "uri" : "http://dbpedia.org/resource/Lucky_Luciano_(film)"
+      }, {
+        "label" : "Lucky Luke (1991)",
+        "uri" : "http://dbpedia.org/resource/Lucky_Luke_(1991_film)"
+      }, {
+        "label" : "Lucky Luke (2009)",
+        "uri" : "http://dbpedia.org/resource/Lucky_Luke_(2009_film)"
+      }, {
+        "label" : "Lucky Number Slevin",
+        "uri" : "http://dbpedia.org/resource/Lucky_Number_Slevin"
+      }, {
+        "label" : "Lucky Numbers",
+        "uri" : "http://dbpedia.org/resource/Lucky_Numbers"
+      }, {
+        "label" : "Glückspilze (1940)",
+        "uri" : "http://dbpedia.org/resource/Lucky_Partners"
+      }, {
+        "label" : "Der lange Blonde mit den roten Haaren",
+        "uri" : "http://dbpedia.org/resource/Lucky_Pierre_(film)"
+      }, {
+        "label" : "Glück im Spiel",
+        "uri" : "http://dbpedia.org/resource/Lucky_You_(film)"
+      }, {
+        "label" : "Wie herrlich, eine Frau zu sein",
+        "uri" : "http://dbpedia.org/resource/Lucky_to_Be_a_Woman"
+      }, {
+        "label" : "Lucrezia Borgia (1953)",
+        "uri" : "http://dbpedia.org/resource/Lucrèce_Borgia"
+      }, {
+        "label" : "Lucy (2014)",
+        "uri" : "http://dbpedia.org/resource/Lucy_(2014_film)"
+      }, {
+        "label" : "Lucy in the Sky",
+        "uri" : "http://dbpedia.org/resource/Lucy_in_the_Sky"
+      }, {
+        "label" : "Ludwig der Zweite, König von Bayern",
+        "uri" : "http://dbpedia.org/resource/Ludwig_II,_King_of_Bavaria"
+      }, {
+        "label" : "Das Wiegenlied vom Broadway",
+        "uri" : "http://dbpedia.org/resource/Lullaby_of_Broadway_(film)"
+      }, {
+        "label" : "Lulu on the Bridge",
+        "uri" : "http://dbpedia.org/resource/Lulu_on_the_Bridge"
+      }, {
+        "label" : "Lumpacivagabundus (1936)",
+        "uri" : "http://dbpedia.org/resource/Lumpaci_the_Vagabond"
+      }, {
+        "label" : "Luna Papa",
+        "uri" : "http://dbpedia.org/resource/Luna_Papa"
+      }, {
+        "label" : "Luna Park (Film)",
+        "uri" : "http://dbpedia.org/resource/Luna_Park_(1992_film)"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "6",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "WORK",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "der Komponist für $x", "die Komponisten für $x" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Laurel und Hardy: Die Geheimagenten",
+        "uri" : "http://dbpedia.org/resource/A-Haunting_We_Will_Go_(1942_film)"
+      }, {
+        "label" : "A.D. – Anno Domini",
+        "uri" : "http://dbpedia.org/resource/A.D._(miniseries)"
+      }, {
+        "label" : "Apex (Film)",
+        "uri" : "http://dbpedia.org/resource/A.P.E.X."
+      }, {
+        "label" : "Love, Simon",
+        "uri" : "http://dbpedia.org/resource/Love,_Simon"
+      }, {
+        "label" : "Love, Wedding, Marriage – Ein Plan zum Verlieben",
+        "uri" : "http://dbpedia.org/resource/Love,_Wedding,_Marriage"
+      }, {
+        "label" : "Love & Mercy",
+        "uri" : "http://dbpedia.org/resource/Love_&_Mercy_(film)"
+      }, {
+        "label" : "Love & Sex",
+        "uri" : "http://dbpedia.org/resource/Love_&_Sex"
+      }, {
+        "label" : "Liebe 47",
+        "uri" : "http://dbpedia.org/resource/Love_'47"
+      }, {
+        "label" : "Liebe (1971)",
+        "uri" : "http://dbpedia.org/resource/Love_(1971_film)"
+      }, {
+        "label" : "Love (2011)",
+        "uri" : "http://dbpedia.org/resource/Love_(2011_film)"
+      }, {
+        "label" : "Love (2015)",
+        "uri" : "http://dbpedia.org/resource/Love_(2015_film)"
+      }, {
+        "label" : "Tatsächlich… Liebe",
+        "uri" : "http://dbpedia.org/resource/Love_Actually"
+      }, {
+        "label" : "Ruhelose Liebe",
+        "uri" : "http://dbpedia.org/resource/Love_Affair_(1939_film)"
+      }, {
+        "label" : "Love Bite – Nichts ist safer als Sex",
+        "uri" : "http://dbpedia.org/resource/Love_Bite"
+      }, {
+        "label" : "Wer liebt, lebt gefährlich",
+        "uri" : "http://dbpedia.org/resource/Love_Can_Seriously_Damage_Your_Health"
+      }, {
+        "label" : "Love Express (2011)",
+        "uri" : "http://dbpedia.org/resource/Love_Express"
+      }, {
+        "label" : "Love Happens",
+        "uri" : "http://dbpedia.org/resource/Love_Happens_(2009_film)"
+      }, {
+        "label" : "Love Happy",
+        "uri" : "http://dbpedia.org/resource/Love_Happy"
+      }, {
+        "label" : "Liebe und andere …",
+        "uri" : "http://dbpedia.org/resource/Love_Is_All_There_Is"
+      }, {
+        "label" : "Die süße Falle",
+        "uri" : "http://dbpedia.org/resource/Love_Is_Better_Than_Ever"
+      }, {
+        "label" : "… und ewig bleibt die Liebe",
+        "uri" : "http://dbpedia.org/resource/Love_Is_Forever_(1954_film)"
+      }, {
+        "label" : "Operation Comeback",
+        "uri" : "http://dbpedia.org/resource/Love_Is_Forever_(1982_film)"
+      }, {
+        "label" : "Liebe ist nur ein Wort",
+        "uri" : "http://dbpedia.org/resource/Love_Is_Only_a_Word"
+      }, {
+        "label" : "40 Millionen suchen einen Mann",
+        "uri" : "http://dbpedia.org/resource/Love_Is_a_Ball"
+      }, {
+        "label" : "Alle Herrlichkeit auf Erden",
+        "uri" : "http://dbpedia.org/resource/Love_Is_a_Many-Splendored_Thing_(film)"
+      }, {
+        "label" : "Love Is in the Air (Film)",
+        "uri" : "http://dbpedia.org/resource/Love_Is_in_the_Air_(2005_film)"
+      }, {
+        "label" : "Das verflixte 3. Jahr",
+        "uri" : "http://dbpedia.org/resource/Love_Lasts_Three_Years"
+      }, {
+        "label" : "Love Letter",
+        "uri" : "http://dbpedia.org/resource/Love_Letter_(1995_film)"
+      }, {
+        "label" : "Liebesbriefe (1945)",
+        "uri" : "http://dbpedia.org/resource/Love_Letters_(1945_film)"
+      }, {
+        "label" : "Liebesbriefe aus dem Engadin",
+        "uri" : "http://dbpedia.org/resource/Love_Letters_from_Engadin"
+      }, {
+        "label" : "Liebesbriefe einer portugiesischen Nonne",
+        "uri" : "http://dbpedia.org/resource/Love_Letters_of_a_Portuguese_Nun"
+      }, {
+        "label" : "Liebesleben",
+        "uri" : "http://dbpedia.org/resource/Love_Life_(2007_film)"
+      }, {
+        "label" : "Hab’ mich lieb!",
+        "uri" : "http://dbpedia.org/resource/Love_Me_(1942_film)"
+      }, {
+        "label" : "Liebe mich, wenn du dich traust",
+        "uri" : "http://dbpedia.org/resource/Love_Me_If_You_Dare_(film)"
+      }, {
+        "label" : "Tage oder Stunden",
+        "uri" : "http://dbpedia.org/resource/Love_Me_No_More_(film)"
+      }, {
+        "label" : "Pulverdampf und heiße Lieder",
+        "uri" : "http://dbpedia.org/resource/Love_Me_Tender_(film)"
+      }, {
+        "label" : "Schönste, liebe mich",
+        "uri" : "http://dbpedia.org/resource/Love_Me_Tonight"
+      }, {
+        "label" : "Tyrannische Liebe",
+        "uri" : "http://dbpedia.org/resource/Love_Me_or_Leave_Me_(film)"
+      }, {
+        "label" : "Liebe muß verstanden sein",
+        "uri" : "http://dbpedia.org/resource/Love_Must_Be_Understood"
+      }, {
+        "label" : "Love Potion No. 9 – Der Duft der Liebe",
+        "uri" : "http://dbpedia.org/resource/Love_Potion_No._9_(film)"
+      }, {
+        "label" : "Love Ranch",
+        "uri" : "http://dbpedia.org/resource/Love_Ranch"
+      }, {
+        "label" : "Chanson der Liebe (2007)",
+        "uri" : "http://dbpedia.org/resource/Love_Songs_(2007_film)"
+      }, {
+        "label" : "Love Story (1970)",
+        "uri" : "http://dbpedia.org/resource/Love_Story_(1970_film)"
+      }, {
+        "label" : "Amor Estranho Amor",
+        "uri" : "http://dbpedia.org/resource/Love_Strange_Love"
+      }, {
+        "label" : "Liebe und Zorn",
+        "uri" : "http://dbpedia.org/resource/Love_and_Anger_(film)"
+      }, {
+        "label" : "Ein Mann räumt auf",
+        "uri" : "http://dbpedia.org/resource/Love_and_Bullets_(1979_film)"
+      }, {
+        "label" : "Fürchten und Lieben",
+        "uri" : "http://dbpedia.org/resource/Love_and_Fear_(film)"
+      }, {
+        "label" : "Love and Honor – Bushi no ichibun",
+        "uri" : "http://dbpedia.org/resource/Love_and_Honor_(2006_film)"
+      }, {
+        "label" : "Love and Honor – Liebe ist unbesiegbar",
+        "uri" : "http://dbpedia.org/resource/Love_and_Honor_(2013_film)"
+      }, {
+        "label" : "Love and Other Disasters",
+        "uri" : "http://dbpedia.org/resource/Love_and_Other_Disasters"
+      }, {
+        "label" : "Der Kurschatten (1984)",
+        "uri" : "http://dbpedia.org/resource/Love_and_Pigeons"
+      }, {
+        "label" : "Love and a .45",
+        "uri" : "http://dbpedia.org/resource/Love_and_a_.45"
+      }, {
+        "label" : "Liebe mit zwanzig",
+        "uri" : "http://dbpedia.org/resource/Love_at_Twenty"
+      }, {
+        "label" : "Monpti",
+        "uri" : "http://dbpedia.org/resource/Love_from_Paris"
+      }, {
+        "label" : "9½ Wochen in Paris",
+        "uri" : "http://dbpedia.org/resource/Love_in_Paris"
+      }, {
+        "label" : "Ariane – Liebe am Nachmittag",
+        "uri" : "http://dbpedia.org/resource/Love_in_the_Afternoon_(1957_film)"
+      }, {
+        "label" : "Die Liebe in den Zeiten der Cholera (Film)",
+        "uri" : "http://dbpedia.org/resource/Love_in_the_Time_of_Cholera_(film)"
+      }, {
+        "label" : "Liebe auf Eis",
+        "uri" : "http://dbpedia.org/resource/Love_on_Ice_(film)"
+      }, {
+        "label" : "Love on the Run",
+        "uri" : "http://dbpedia.org/resource/Love_on_the_Run_(1936_film)"
+      }, {
+        "label" : "Liebe auf der Flucht",
+        "uri" : "http://dbpedia.org/resource/Love_on_the_Run_(1979_film)"
+      }, {
+        "label" : "Alle Jahre wieder – Weihnachten mit den Coopers",
+        "uri" : "http://dbpedia.org/resource/Love_the_Coopers"
+      }, {
+        "label" : "Love the Hard Way",
+        "uri" : "http://dbpedia.org/resource/Love_the_Hard_Way"
+      }, {
+        "label" : "Verliebt in einen Fremden",
+        "uri" : "http://dbpedia.org/resource/Love_with_the_Proper_Stranger"
+      }, {
+        "label" : "Lovelace (Film)",
+        "uri" : "http://dbpedia.org/resource/Lovelace_(film)"
+      }, {
+        "label" : "Loveless (Film)",
+        "uri" : "http://dbpedia.org/resource/Loveless_(film)"
+      }, {
+        "label" : "Immer noch Liebe!",
+        "uri" : "http://dbpedia.org/resource/Lovely,_Still"
+      }, {
+        "label" : "Ein Pyjama für zwei",
+        "uri" : "http://dbpedia.org/resource/Lover_Come_Back_(1961_film)"
+      }, {
+        "label" : "Loverboy – Liebe auf Bestellung",
+        "uri" : "http://dbpedia.org/resource/Loverboy_(1989_film)"
+      }, {
+        "label" : "Loverboy (2005)",
+        "uri" : "http://dbpedia.org/resource/Loverboy_(2005_film)"
+      }, {
+        "label" : "Liebhaber und andere Fremde",
+        "uri" : "http://dbpedia.org/resource/Lovers_and_Other_Strangers"
+      }, {
+        "label" : "Die Liebe einer Blondine",
+        "uri" : "http://dbpedia.org/resource/Loves_of_a_Blonde"
+      }, {
+        "label" : "Loving Pablo",
+        "uri" : "http://dbpedia.org/resource/Loving_Pablo"
+      }, {
+        "label" : "Loving Vincent",
+        "uri" : "http://dbpedia.org/resource/Loving_Vincent"
+      }, {
+        "label" : "Gold aus heißer Kehle",
+        "uri" : "http://dbpedia.org/resource/Loving_You_(1957_film)"
+      }, {
+        "label" : "Lucas (Film)",
+        "uri" : "http://dbpedia.org/resource/Lucas_(film)"
+      }, {
+        "label" : "Luce (Film)",
+        "uri" : "http://dbpedia.org/resource/Luce_(film)"
+      }, {
+        "label" : "Lucid Dream (Film)",
+        "uri" : "http://dbpedia.org/resource/Lucid_Dream_(film)"
+      }, {
+        "label" : "Lucie Aubrac (Film)",
+        "uri" : "http://dbpedia.org/resource/Lucie_Aubrac_(film)"
+      }, {
+        "label" : "Luck by Chance – Liebe, Glück und andere Zufälle",
+        "uri" : "http://dbpedia.org/resource/Luck_by_Chance"
+      }, {
+        "label" : "Lucky: No Time for Love",
+        "uri" : "http://dbpedia.org/resource/Lucky:_No_Time_for_Love"
+      }, {
+        "label" : "Lucky (2011)",
+        "uri" : "http://dbpedia.org/resource/Lucky_(2011_film)"
+      }, {
+        "label" : "Glückskinder",
+        "uri" : "http://dbpedia.org/resource/Lucky_Kids"
+      }, {
+        "label" : "Lucky Luciano (Film)",
+        "uri" : "http://dbpedia.org/resource/Lucky_Luciano_(film)"
+      }, {
+        "label" : "Lucky Luke (1991)",
+        "uri" : "http://dbpedia.org/resource/Lucky_Luke_(1991_film)"
+      }, {
+        "label" : "Lucky Luke (2009)",
+        "uri" : "http://dbpedia.org/resource/Lucky_Luke_(2009_film)"
+      }, {
+        "label" : "Lucky Number Slevin",
+        "uri" : "http://dbpedia.org/resource/Lucky_Number_Slevin"
+      }, {
+        "label" : "Lucky Numbers",
+        "uri" : "http://dbpedia.org/resource/Lucky_Numbers"
+      }, {
+        "label" : "Glückspilze (1940)",
+        "uri" : "http://dbpedia.org/resource/Lucky_Partners"
+      }, {
+        "label" : "Der lange Blonde mit den roten Haaren",
+        "uri" : "http://dbpedia.org/resource/Lucky_Pierre_(film)"
+      }, {
+        "label" : "Glück im Spiel",
+        "uri" : "http://dbpedia.org/resource/Lucky_You_(film)"
+      }, {
+        "label" : "Wie herrlich, eine Frau zu sein",
+        "uri" : "http://dbpedia.org/resource/Lucky_to_Be_a_Woman"
+      }, {
+        "label" : "Lucrezia Borgia (1953)",
+        "uri" : "http://dbpedia.org/resource/Lucrèce_Borgia"
+      }, {
+        "label" : "Lucy (2014)",
+        "uri" : "http://dbpedia.org/resource/Lucy_(2014_film)"
+      }, {
+        "label" : "Lucy in the Sky",
+        "uri" : "http://dbpedia.org/resource/Lucy_in_the_Sky"
+      }, {
+        "label" : "Ludwig der Zweite, König von Bayern",
+        "uri" : "http://dbpedia.org/resource/Ludwig_II,_King_of_Bavaria"
+      }, {
+        "label" : "Das Wiegenlied vom Broadway",
+        "uri" : "http://dbpedia.org/resource/Lullaby_of_Broadway_(film)"
+      }, {
+        "label" : "Lulu on the Bridge",
+        "uri" : "http://dbpedia.org/resource/Lulu_on_the_Bridge"
+      }, {
+        "label" : "Lumpacivagabundus (1936)",
+        "uri" : "http://dbpedia.org/resource/Lumpaci_the_Vagabond"
+      }, {
+        "label" : "Luna Papa",
+        "uri" : "http://dbpedia.org/resource/Luna_Papa"
+      }, {
+        "label" : "Luna Park (Film)",
+        "uri" : "http://dbpedia.org/resource/Luna_Park_(1992_film)"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "7",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "BUILDING",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Was ist der Standort von ($x | BUILDING_NP)?", "Was war der Standort von ($x | BUILDING_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Großer Preis von Italien 1921",
+        "uri" : "http://dbpedia.org/resource/1921_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Frankreich 1922",
+        "uri" : "http://dbpedia.org/resource/1922_French_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1922",
+        "uri" : "http://dbpedia.org/resource/1922_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Frankreich 1923",
+        "uri" : "http://dbpedia.org/resource/1923_French_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1923",
+        "uri" : "http://dbpedia.org/resource/1923_Italian_Grand_Prix"
+      }, {
+        "label" : "Museum Hürtgenwald 1944",
+        "uri" : "http://dbpedia.org/resource/1944_Hürtgen_Forest_Museum"
+      }, {
+        "label" : "Großer Preis von Italien 1947",
+        "uri" : "http://dbpedia.org/resource/1947_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1948",
+        "uri" : "http://dbpedia.org/resource/1948_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1949",
+        "uri" : "http://dbpedia.org/resource/1949_Italian_Grand_Prix"
+      }, {
+        "label" : "BB&T Atlanta Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BB&T_Atlanta_Open"
+      }, {
+        "label" : "BGL BNP Paribas Luxembourg Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BGL_Luxembourg_Open"
+      }, {
+        "label" : "BH Telecom Indoors 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BH_Telecom_Indoors"
+      }, {
+        "label" : "BMW Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BMW_Open"
+      }, {
+        "label" : "BNP Paribas Katowice Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Katowice_Open"
+      }, {
+        "label" : "BNP Paribas Masters 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Masters"
+      }, {
+        "label" : "BNP Paribas Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Open"
+      }, {
+        "label" : "BNP Paribas Primrose Bordeaux 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Primrose_Bordeaux"
+      }, {
+        "label" : "BRD Arad Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Arad_Challenger"
+      }, {
+        "label" : "BRD Brașov Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Brașov_Challenger"
+      }, {
+        "label" : "BRD Năstase Țiriac Trophy 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Năstase_Țiriac_Trophy"
+      }, {
+        "label" : "BRD Timișoara Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Timișoara_Challenger"
+      }, {
+        "label" : "Großer Preis von Bahrain 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bahrain_Grand_Prix"
+      }, {
+        "label" : "Baku Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Baku_Cup"
+      }, {
+        "label" : "Banja Luka Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Banja_Luka_Challenger"
+      }, {
+        "label" : "Bank of the West Classic 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bank_of_the_West_Classic"
+      }, {
+        "label" : "Barcelona Open Banc Sabadell 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Barcelona_Open_Banco_Sabadell"
+      }, {
+        "label" : "Bauer Watertechnology Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bauer_Watertechnology_Cup"
+      }, {
+        "label" : "Beijing International Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Beijing_International_Challenger"
+      }, {
+        "label" : "Großer Preis von Belgien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Belgian_Grand_Prix"
+      }, {
+        "label" : "Bet-at-home Cup Kitzbühel 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bet-at-home_Cup_Kitzbühel"
+      }, {
+        "label" : "Brasil Tennis Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brasil_Tennis_Cup"
+      }, {
+        "label" : "Großer Preis von Brasilien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brazilian_Grand_Prix"
+      }, {
+        "label" : "Brisbane International 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brisbane_International"
+      }, {
+        "label" : "Großer Preis von Großbritannien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_British_Grand_Prix"
+      }, {
+        "label" : "Brussels Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brussels_Open"
+      }, {
+        "label" : "Budapest Grand Prix 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Budapest_Grand_Prix"
+      }, {
+        "label" : "Busan Open Challenger Tennis 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Busan_Open_Challenger_Tennis"
+      }, {
+        "label" : "Campeonato Internacional de Tênis de Santos 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Campeonato_Internacional_de_Tenis_de_Santos"
+      }, {
+        "label" : "Großer Preis von Kanada 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Canadian_Grand_Prix"
+      }, {
+        "label" : "Challenge Bell 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenge_Bell"
+      }, {
+        "label" : "Challenger Banque Nationale Granby 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_Banque_Nationale_de_Granby"
+      }, {
+        "label" : "Challenger Banque Nationale 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_Banque_Nationale_de_Rimouski"
+      }, {
+        "label" : "Challenger Ciudad de Guayaquil 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_Ciudad_de_Guayaquil"
+      }, {
+        "label" : "Challenger La Manche 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_La_Manche"
+      }, {
+        "label" : "Challenger of Dallas 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_of_Dallas"
+      }, {
+        "label" : "Chang-Sat Bangkok Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Chang-Sat_Bangkok_Open"
+      }, {
+        "label" : "Charles Sturt Adelaide International 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Charles_Sturt_Adelaide_International"
+      }, {
+        "label" : "Charlottesville Men’s Pro Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Charlottesville_Men's_Pro_Challenger"
+      }, {
+        "label" : "China Open 2013 (Tennis)",
+        "uri" : "http://dbpedia.org/resource/2013_China_Open_(tennis)"
+      }, {
+        "label" : "Großer Preis von China 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Chinese_Grand_Prix"
+      }, {
+        "label" : "Citi Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Citi_Open"
+      }, {
+        "label" : "Carta Bcc Città di Caltanissetta 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Città_di_Caltanissetta"
+      }, {
+        "label" : "Città di Como 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Città_di_Como_Challenger"
+      }, {
+        "label" : "Claro Open Colombia 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Claro_Open_Colombia"
+      }, {
+        "label" : "Coleman Vision Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Coleman_Vision_Tennis_Championships"
+      }, {
+        "label" : "Comerica Bank Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Comerica_Bank_Challenger"
+      }, {
+        "label" : "Copa Bionaire 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Bionaire"
+      }, {
+        "label" : "Copa Claro 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Claro"
+      }, {
+        "label" : "XXI Copa Claro Colsanitas 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Colsanitas"
+      }, {
+        "label" : "Copa Internacional de Tenis Total Digest 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Internacional_de_Tenis_Total_Digest"
+      }, {
+        "label" : "Copa San Juan Gobierno 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_San_Juan_Gobierno"
+      }, {
+        "label" : "Copa Sevilla 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Sevilla"
+      }, {
+        "label" : "Copa Topper 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Topper"
+      }, {
+        "label" : "Friuladria Crédit Agricole Tennis Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Credit_Agricole_Friuladria_Tennis_Cup"
+      }, {
+        "label" : "Crédit Agricole Suisse Open Gstaad 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Crédit_Agricole_Suisse_Open_Gstaad"
+      }, {
+        "label" : "Dallas Tennis Classic 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Dallas_Tennis_Classic"
+      }, {
+        "label" : "Delray Beach International Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Delray_Beach_International_Tennis_Championships"
+      }, {
+        "label" : "Distalnet Tennis Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Distalnet_Tennis_Cup"
+      }, {
+        "label" : "Dubai Duty Free Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Dubai_Tennis_Championships"
+      }, {
+        "label" : "Dunlop World Challenge Tennis Tournament 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Dunlop_World_Challenge"
+      }, {
+        "label" : "Empire Slovak Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Empire_Slovak_Open"
+      }, {
+        "label" : "Erste Bank Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Erste_Bank_Open"
+      }, {
+        "label" : "Eskişehir Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Eskişehir_Cup"
+      }, {
+        "label" : "Ethias Trophy 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Ethias_Trophy"
+      }, {
+        "label" : "Tischtennis-Europameisterschaft 2013",
+        "uri" : "http://dbpedia.org/resource/2013_European_Table_Tennis_Championships"
+      }, {
+        "label" : "Family Circle Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Family_Circle_Cup"
+      }, {
+        "label" : "Fergana Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Fergana_Challenger"
+      }, {
+        "label" : "Fifth Third Bank Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Fifth_Third_Bank_Tennis_Championships"
+      }, {
+        "label" : "Franken Challenge 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Franken_Challenge"
+      }, {
+        "label" : "French Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_French_Open"
+      }, {
+        "label" : "Garanti Koza Tournament of Champions 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Garanti_Koza_WTA_Tournament_of_Champions"
+      }, {
+        "label" : "Nürnberger Gastein Ladies 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Gastein_Ladies"
+      }, {
+        "label" : "Generali Ladies Linz 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Generali_Ladies_Linz"
+      }, {
+        "label" : "Geneva Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Geneva_Open_Challenger"
+      }, {
+        "label" : "Großer Preis von Deutschland 2013",
+        "uri" : "http://dbpedia.org/resource/2013_German_Grand_Prix"
+      }, {
+        "label" : "Grand Prix Hassan II 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Grand_Prix_Hassan_II"
+      }, {
+        "label" : "Grand Prix SAR La Princesse Lalla Meryem 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Grand_Prix_SAR_La_Princesse_Lalla_Meryem"
+      }, {
+        "label" : "Guangzhou Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Guangzhou_International_Women's_Open"
+      }, {
+        "label" : "Guimarães Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Guimarães_Open"
+      }, {
+        "label" : "Guzzini Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Guzzini_Challenger"
+      }, {
+        "label" : "HP Japan Women’s Open Tennis 2013",
+        "uri" : "http://dbpedia.org/resource/2013_HP_Open"
+      }, {
+        "label" : "Hall of Fame Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Hall_of_Fame_Tennis_Championships"
+      }, {
+        "label" : "Heineken Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Heineken_Open"
+      }, {
+        "label" : "Hopman Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Hopman_Cup"
+      }, {
+        "label" : "Großer Preis von Ungarn 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Hungarian_Grand_Prix"
+      }, {
+        "label" : "IPP Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_IPP_Open_and_the_Orto-Lääkärit_Open"
+      }, {
+        "label" : "IS Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_IS_Open"
+      }, {
+        "label" : "ITS Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_ITS_Cup"
+      }, {
+        "label" : "If Stockholm Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_If_Stockholm_Open"
+      }, {
+        "label" : "Großer Preis von Indien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Indian_Grand_Prix"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "8",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "BUILDING",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "der Standort von $x" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Großer Preis von Italien 1921",
+        "uri" : "http://dbpedia.org/resource/1921_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Frankreich 1922",
+        "uri" : "http://dbpedia.org/resource/1922_French_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1922",
+        "uri" : "http://dbpedia.org/resource/1922_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Frankreich 1923",
+        "uri" : "http://dbpedia.org/resource/1923_French_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1923",
+        "uri" : "http://dbpedia.org/resource/1923_Italian_Grand_Prix"
+      }, {
+        "label" : "Museum Hürtgenwald 1944",
+        "uri" : "http://dbpedia.org/resource/1944_Hürtgen_Forest_Museum"
+      }, {
+        "label" : "Großer Preis von Italien 1947",
+        "uri" : "http://dbpedia.org/resource/1947_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1948",
+        "uri" : "http://dbpedia.org/resource/1948_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1949",
+        "uri" : "http://dbpedia.org/resource/1949_Italian_Grand_Prix"
+      }, {
+        "label" : "BB&T Atlanta Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BB&T_Atlanta_Open"
+      }, {
+        "label" : "BGL BNP Paribas Luxembourg Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BGL_Luxembourg_Open"
+      }, {
+        "label" : "BH Telecom Indoors 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BH_Telecom_Indoors"
+      }, {
+        "label" : "BMW Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BMW_Open"
+      }, {
+        "label" : "BNP Paribas Katowice Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Katowice_Open"
+      }, {
+        "label" : "BNP Paribas Masters 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Masters"
+      }, {
+        "label" : "BNP Paribas Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Open"
+      }, {
+        "label" : "BNP Paribas Primrose Bordeaux 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Primrose_Bordeaux"
+      }, {
+        "label" : "BRD Arad Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Arad_Challenger"
+      }, {
+        "label" : "BRD Brașov Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Brașov_Challenger"
+      }, {
+        "label" : "BRD Năstase Țiriac Trophy 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Năstase_Țiriac_Trophy"
+      }, {
+        "label" : "BRD Timișoara Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Timișoara_Challenger"
+      }, {
+        "label" : "Großer Preis von Bahrain 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bahrain_Grand_Prix"
+      }, {
+        "label" : "Baku Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Baku_Cup"
+      }, {
+        "label" : "Banja Luka Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Banja_Luka_Challenger"
+      }, {
+        "label" : "Bank of the West Classic 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bank_of_the_West_Classic"
+      }, {
+        "label" : "Barcelona Open Banc Sabadell 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Barcelona_Open_Banco_Sabadell"
+      }, {
+        "label" : "Bauer Watertechnology Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bauer_Watertechnology_Cup"
+      }, {
+        "label" : "Beijing International Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Beijing_International_Challenger"
+      }, {
+        "label" : "Großer Preis von Belgien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Belgian_Grand_Prix"
+      }, {
+        "label" : "Bet-at-home Cup Kitzbühel 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bet-at-home_Cup_Kitzbühel"
+      }, {
+        "label" : "Brasil Tennis Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brasil_Tennis_Cup"
+      }, {
+        "label" : "Großer Preis von Brasilien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brazilian_Grand_Prix"
+      }, {
+        "label" : "Brisbane International 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brisbane_International"
+      }, {
+        "label" : "Großer Preis von Großbritannien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_British_Grand_Prix"
+      }, {
+        "label" : "Brussels Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brussels_Open"
+      }, {
+        "label" : "Budapest Grand Prix 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Budapest_Grand_Prix"
+      }, {
+        "label" : "Busan Open Challenger Tennis 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Busan_Open_Challenger_Tennis"
+      }, {
+        "label" : "Campeonato Internacional de Tênis de Santos 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Campeonato_Internacional_de_Tenis_de_Santos"
+      }, {
+        "label" : "Großer Preis von Kanada 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Canadian_Grand_Prix"
+      }, {
+        "label" : "Challenge Bell 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenge_Bell"
+      }, {
+        "label" : "Challenger Banque Nationale Granby 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_Banque_Nationale_de_Granby"
+      }, {
+        "label" : "Challenger Banque Nationale 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_Banque_Nationale_de_Rimouski"
+      }, {
+        "label" : "Challenger Ciudad de Guayaquil 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_Ciudad_de_Guayaquil"
+      }, {
+        "label" : "Challenger La Manche 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_La_Manche"
+      }, {
+        "label" : "Challenger of Dallas 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_of_Dallas"
+      }, {
+        "label" : "Chang-Sat Bangkok Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Chang-Sat_Bangkok_Open"
+      }, {
+        "label" : "Charles Sturt Adelaide International 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Charles_Sturt_Adelaide_International"
+      }, {
+        "label" : "Charlottesville Men’s Pro Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Charlottesville_Men's_Pro_Challenger"
+      }, {
+        "label" : "China Open 2013 (Tennis)",
+        "uri" : "http://dbpedia.org/resource/2013_China_Open_(tennis)"
+      }, {
+        "label" : "Großer Preis von China 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Chinese_Grand_Prix"
+      }, {
+        "label" : "Citi Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Citi_Open"
+      }, {
+        "label" : "Carta Bcc Città di Caltanissetta 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Città_di_Caltanissetta"
+      }, {
+        "label" : "Città di Como 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Città_di_Como_Challenger"
+      }, {
+        "label" : "Claro Open Colombia 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Claro_Open_Colombia"
+      }, {
+        "label" : "Coleman Vision Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Coleman_Vision_Tennis_Championships"
+      }, {
+        "label" : "Comerica Bank Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Comerica_Bank_Challenger"
+      }, {
+        "label" : "Copa Bionaire 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Bionaire"
+      }, {
+        "label" : "Copa Claro 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Claro"
+      }, {
+        "label" : "XXI Copa Claro Colsanitas 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Colsanitas"
+      }, {
+        "label" : "Copa Internacional de Tenis Total Digest 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Internacional_de_Tenis_Total_Digest"
+      }, {
+        "label" : "Copa San Juan Gobierno 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_San_Juan_Gobierno"
+      }, {
+        "label" : "Copa Sevilla 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Sevilla"
+      }, {
+        "label" : "Copa Topper 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Topper"
+      }, {
+        "label" : "Friuladria Crédit Agricole Tennis Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Credit_Agricole_Friuladria_Tennis_Cup"
+      }, {
+        "label" : "Crédit Agricole Suisse Open Gstaad 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Crédit_Agricole_Suisse_Open_Gstaad"
+      }, {
+        "label" : "Dallas Tennis Classic 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Dallas_Tennis_Classic"
+      }, {
+        "label" : "Delray Beach International Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Delray_Beach_International_Tennis_Championships"
+      }, {
+        "label" : "Distalnet Tennis Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Distalnet_Tennis_Cup"
+      }, {
+        "label" : "Dubai Duty Free Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Dubai_Tennis_Championships"
+      }, {
+        "label" : "Dunlop World Challenge Tennis Tournament 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Dunlop_World_Challenge"
+      }, {
+        "label" : "Empire Slovak Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Empire_Slovak_Open"
+      }, {
+        "label" : "Erste Bank Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Erste_Bank_Open"
+      }, {
+        "label" : "Eskişehir Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Eskişehir_Cup"
+      }, {
+        "label" : "Ethias Trophy 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Ethias_Trophy"
+      }, {
+        "label" : "Tischtennis-Europameisterschaft 2013",
+        "uri" : "http://dbpedia.org/resource/2013_European_Table_Tennis_Championships"
+      }, {
+        "label" : "Family Circle Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Family_Circle_Cup"
+      }, {
+        "label" : "Fergana Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Fergana_Challenger"
+      }, {
+        "label" : "Fifth Third Bank Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Fifth_Third_Bank_Tennis_Championships"
+      }, {
+        "label" : "Franken Challenge 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Franken_Challenge"
+      }, {
+        "label" : "French Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_French_Open"
+      }, {
+        "label" : "Garanti Koza Tournament of Champions 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Garanti_Koza_WTA_Tournament_of_Champions"
+      }, {
+        "label" : "Nürnberger Gastein Ladies 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Gastein_Ladies"
+      }, {
+        "label" : "Generali Ladies Linz 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Generali_Ladies_Linz"
+      }, {
+        "label" : "Geneva Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Geneva_Open_Challenger"
+      }, {
+        "label" : "Großer Preis von Deutschland 2013",
+        "uri" : "http://dbpedia.org/resource/2013_German_Grand_Prix"
+      }, {
+        "label" : "Grand Prix Hassan II 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Grand_Prix_Hassan_II"
+      }, {
+        "label" : "Grand Prix SAR La Princesse Lalla Meryem 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Grand_Prix_SAR_La_Princesse_Lalla_Meryem"
+      }, {
+        "label" : "Guangzhou Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Guangzhou_International_Women's_Open"
+      }, {
+        "label" : "Guimarães Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Guimarães_Open"
+      }, {
+        "label" : "Guzzini Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Guzzini_Challenger"
+      }, {
+        "label" : "HP Japan Women’s Open Tennis 2013",
+        "uri" : "http://dbpedia.org/resource/2013_HP_Open"
+      }, {
+        "label" : "Hall of Fame Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Hall_of_Fame_Tennis_Championships"
+      }, {
+        "label" : "Heineken Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Heineken_Open"
+      }, {
+        "label" : "Hopman Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Hopman_Cup"
+      }, {
+        "label" : "Großer Preis von Ungarn 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Hungarian_Grand_Prix"
+      }, {
+        "label" : "IPP Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_IPP_Open_and_the_Orto-Lääkärit_Open"
+      }, {
+        "label" : "IS Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_IS_Open"
+      }, {
+        "label" : "ITS Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_ITS_Cup"
+      }, {
+        "label" : "If Stockholm Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_If_Stockholm_Open"
+      }, {
+        "label" : "Großer Preis von Indien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Indian_Grand_Prix"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "9",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Was ist der Standort von ($x | LOCATION_NP)?", "Was war der Standort von ($x | LOCATION_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Großer Preis von Italien 1921",
+        "uri" : "http://dbpedia.org/resource/1921_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Frankreich 1922",
+        "uri" : "http://dbpedia.org/resource/1922_French_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1922",
+        "uri" : "http://dbpedia.org/resource/1922_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Frankreich 1923",
+        "uri" : "http://dbpedia.org/resource/1923_French_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1923",
+        "uri" : "http://dbpedia.org/resource/1923_Italian_Grand_Prix"
+      }, {
+        "label" : "Museum Hürtgenwald 1944",
+        "uri" : "http://dbpedia.org/resource/1944_Hürtgen_Forest_Museum"
+      }, {
+        "label" : "Großer Preis von Italien 1947",
+        "uri" : "http://dbpedia.org/resource/1947_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1948",
+        "uri" : "http://dbpedia.org/resource/1948_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1949",
+        "uri" : "http://dbpedia.org/resource/1949_Italian_Grand_Prix"
+      }, {
+        "label" : "BB&T Atlanta Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BB&T_Atlanta_Open"
+      }, {
+        "label" : "BGL BNP Paribas Luxembourg Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BGL_Luxembourg_Open"
+      }, {
+        "label" : "BH Telecom Indoors 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BH_Telecom_Indoors"
+      }, {
+        "label" : "BMW Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BMW_Open"
+      }, {
+        "label" : "BNP Paribas Katowice Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Katowice_Open"
+      }, {
+        "label" : "BNP Paribas Masters 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Masters"
+      }, {
+        "label" : "BNP Paribas Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Open"
+      }, {
+        "label" : "BNP Paribas Primrose Bordeaux 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Primrose_Bordeaux"
+      }, {
+        "label" : "BRD Arad Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Arad_Challenger"
+      }, {
+        "label" : "BRD Brașov Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Brașov_Challenger"
+      }, {
+        "label" : "BRD Năstase Țiriac Trophy 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Năstase_Țiriac_Trophy"
+      }, {
+        "label" : "BRD Timișoara Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Timișoara_Challenger"
+      }, {
+        "label" : "Großer Preis von Bahrain 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bahrain_Grand_Prix"
+      }, {
+        "label" : "Baku Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Baku_Cup"
+      }, {
+        "label" : "Banja Luka Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Banja_Luka_Challenger"
+      }, {
+        "label" : "Bank of the West Classic 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bank_of_the_West_Classic"
+      }, {
+        "label" : "Barcelona Open Banc Sabadell 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Barcelona_Open_Banco_Sabadell"
+      }, {
+        "label" : "Bauer Watertechnology Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bauer_Watertechnology_Cup"
+      }, {
+        "label" : "Beijing International Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Beijing_International_Challenger"
+      }, {
+        "label" : "Großer Preis von Belgien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Belgian_Grand_Prix"
+      }, {
+        "label" : "Bet-at-home Cup Kitzbühel 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bet-at-home_Cup_Kitzbühel"
+      }, {
+        "label" : "Brasil Tennis Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brasil_Tennis_Cup"
+      }, {
+        "label" : "Großer Preis von Brasilien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brazilian_Grand_Prix"
+      }, {
+        "label" : "Brisbane International 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brisbane_International"
+      }, {
+        "label" : "Großer Preis von Großbritannien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_British_Grand_Prix"
+      }, {
+        "label" : "Brussels Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brussels_Open"
+      }, {
+        "label" : "Budapest Grand Prix 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Budapest_Grand_Prix"
+      }, {
+        "label" : "Busan Open Challenger Tennis 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Busan_Open_Challenger_Tennis"
+      }, {
+        "label" : "Campeonato Internacional de Tênis de Santos 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Campeonato_Internacional_de_Tenis_de_Santos"
+      }, {
+        "label" : "Großer Preis von Kanada 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Canadian_Grand_Prix"
+      }, {
+        "label" : "Challenge Bell 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenge_Bell"
+      }, {
+        "label" : "Challenger Banque Nationale Granby 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_Banque_Nationale_de_Granby"
+      }, {
+        "label" : "Challenger Banque Nationale 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_Banque_Nationale_de_Rimouski"
+      }, {
+        "label" : "Challenger Ciudad de Guayaquil 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_Ciudad_de_Guayaquil"
+      }, {
+        "label" : "Challenger La Manche 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_La_Manche"
+      }, {
+        "label" : "Challenger of Dallas 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_of_Dallas"
+      }, {
+        "label" : "Chang-Sat Bangkok Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Chang-Sat_Bangkok_Open"
+      }, {
+        "label" : "Charles Sturt Adelaide International 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Charles_Sturt_Adelaide_International"
+      }, {
+        "label" : "Charlottesville Men’s Pro Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Charlottesville_Men's_Pro_Challenger"
+      }, {
+        "label" : "China Open 2013 (Tennis)",
+        "uri" : "http://dbpedia.org/resource/2013_China_Open_(tennis)"
+      }, {
+        "label" : "Großer Preis von China 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Chinese_Grand_Prix"
+      }, {
+        "label" : "Citi Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Citi_Open"
+      }, {
+        "label" : "Carta Bcc Città di Caltanissetta 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Città_di_Caltanissetta"
+      }, {
+        "label" : "Città di Como 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Città_di_Como_Challenger"
+      }, {
+        "label" : "Claro Open Colombia 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Claro_Open_Colombia"
+      }, {
+        "label" : "Coleman Vision Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Coleman_Vision_Tennis_Championships"
+      }, {
+        "label" : "Comerica Bank Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Comerica_Bank_Challenger"
+      }, {
+        "label" : "Copa Bionaire 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Bionaire"
+      }, {
+        "label" : "Copa Claro 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Claro"
+      }, {
+        "label" : "XXI Copa Claro Colsanitas 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Colsanitas"
+      }, {
+        "label" : "Copa Internacional de Tenis Total Digest 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Internacional_de_Tenis_Total_Digest"
+      }, {
+        "label" : "Copa San Juan Gobierno 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_San_Juan_Gobierno"
+      }, {
+        "label" : "Copa Sevilla 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Sevilla"
+      }, {
+        "label" : "Copa Topper 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Topper"
+      }, {
+        "label" : "Friuladria Crédit Agricole Tennis Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Credit_Agricole_Friuladria_Tennis_Cup"
+      }, {
+        "label" : "Crédit Agricole Suisse Open Gstaad 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Crédit_Agricole_Suisse_Open_Gstaad"
+      }, {
+        "label" : "Dallas Tennis Classic 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Dallas_Tennis_Classic"
+      }, {
+        "label" : "Delray Beach International Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Delray_Beach_International_Tennis_Championships"
+      }, {
+        "label" : "Distalnet Tennis Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Distalnet_Tennis_Cup"
+      }, {
+        "label" : "Dubai Duty Free Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Dubai_Tennis_Championships"
+      }, {
+        "label" : "Dunlop World Challenge Tennis Tournament 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Dunlop_World_Challenge"
+      }, {
+        "label" : "Empire Slovak Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Empire_Slovak_Open"
+      }, {
+        "label" : "Erste Bank Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Erste_Bank_Open"
+      }, {
+        "label" : "Eskişehir Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Eskişehir_Cup"
+      }, {
+        "label" : "Ethias Trophy 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Ethias_Trophy"
+      }, {
+        "label" : "Tischtennis-Europameisterschaft 2013",
+        "uri" : "http://dbpedia.org/resource/2013_European_Table_Tennis_Championships"
+      }, {
+        "label" : "Family Circle Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Family_Circle_Cup"
+      }, {
+        "label" : "Fergana Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Fergana_Challenger"
+      }, {
+        "label" : "Fifth Third Bank Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Fifth_Third_Bank_Tennis_Championships"
+      }, {
+        "label" : "Franken Challenge 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Franken_Challenge"
+      }, {
+        "label" : "French Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_French_Open"
+      }, {
+        "label" : "Garanti Koza Tournament of Champions 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Garanti_Koza_WTA_Tournament_of_Champions"
+      }, {
+        "label" : "Nürnberger Gastein Ladies 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Gastein_Ladies"
+      }, {
+        "label" : "Generali Ladies Linz 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Generali_Ladies_Linz"
+      }, {
+        "label" : "Geneva Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Geneva_Open_Challenger"
+      }, {
+        "label" : "Großer Preis von Deutschland 2013",
+        "uri" : "http://dbpedia.org/resource/2013_German_Grand_Prix"
+      }, {
+        "label" : "Grand Prix Hassan II 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Grand_Prix_Hassan_II"
+      }, {
+        "label" : "Grand Prix SAR La Princesse Lalla Meryem 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Grand_Prix_SAR_La_Princesse_Lalla_Meryem"
+      }, {
+        "label" : "Guangzhou Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Guangzhou_International_Women's_Open"
+      }, {
+        "label" : "Guimarães Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Guimarães_Open"
+      }, {
+        "label" : "Guzzini Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Guzzini_Challenger"
+      }, {
+        "label" : "HP Japan Women’s Open Tennis 2013",
+        "uri" : "http://dbpedia.org/resource/2013_HP_Open"
+      }, {
+        "label" : "Hall of Fame Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Hall_of_Fame_Tennis_Championships"
+      }, {
+        "label" : "Heineken Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Heineken_Open"
+      }, {
+        "label" : "Hopman Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Hopman_Cup"
+      }, {
+        "label" : "Großer Preis von Ungarn 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Hungarian_Grand_Prix"
+      }, {
+        "label" : "IPP Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_IPP_Open_and_the_Orto-Lääkärit_Open"
+      }, {
+        "label" : "IS Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_IS_Open"
+      }, {
+        "label" : "ITS Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_ITS_Cup"
+      }, {
+        "label" : "If Stockholm Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_If_Stockholm_Open"
+      }, {
+        "label" : "Großer Preis von Indien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Indian_Grand_Prix"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "10",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "der Standort von $x" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Großer Preis von Italien 1921",
+        "uri" : "http://dbpedia.org/resource/1921_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Frankreich 1922",
+        "uri" : "http://dbpedia.org/resource/1922_French_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1922",
+        "uri" : "http://dbpedia.org/resource/1922_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Frankreich 1923",
+        "uri" : "http://dbpedia.org/resource/1923_French_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1923",
+        "uri" : "http://dbpedia.org/resource/1923_Italian_Grand_Prix"
+      }, {
+        "label" : "Museum Hürtgenwald 1944",
+        "uri" : "http://dbpedia.org/resource/1944_Hürtgen_Forest_Museum"
+      }, {
+        "label" : "Großer Preis von Italien 1947",
+        "uri" : "http://dbpedia.org/resource/1947_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1948",
+        "uri" : "http://dbpedia.org/resource/1948_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1949",
+        "uri" : "http://dbpedia.org/resource/1949_Italian_Grand_Prix"
+      }, {
+        "label" : "BB&T Atlanta Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BB&T_Atlanta_Open"
+      }, {
+        "label" : "BGL BNP Paribas Luxembourg Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BGL_Luxembourg_Open"
+      }, {
+        "label" : "BH Telecom Indoors 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BH_Telecom_Indoors"
+      }, {
+        "label" : "BMW Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BMW_Open"
+      }, {
+        "label" : "BNP Paribas Katowice Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Katowice_Open"
+      }, {
+        "label" : "BNP Paribas Masters 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Masters"
+      }, {
+        "label" : "BNP Paribas Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Open"
+      }, {
+        "label" : "BNP Paribas Primrose Bordeaux 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Primrose_Bordeaux"
+      }, {
+        "label" : "BRD Arad Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Arad_Challenger"
+      }, {
+        "label" : "BRD Brașov Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Brașov_Challenger"
+      }, {
+        "label" : "BRD Năstase Țiriac Trophy 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Năstase_Țiriac_Trophy"
+      }, {
+        "label" : "BRD Timișoara Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Timișoara_Challenger"
+      }, {
+        "label" : "Großer Preis von Bahrain 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bahrain_Grand_Prix"
+      }, {
+        "label" : "Baku Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Baku_Cup"
+      }, {
+        "label" : "Banja Luka Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Banja_Luka_Challenger"
+      }, {
+        "label" : "Bank of the West Classic 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bank_of_the_West_Classic"
+      }, {
+        "label" : "Barcelona Open Banc Sabadell 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Barcelona_Open_Banco_Sabadell"
+      }, {
+        "label" : "Bauer Watertechnology Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bauer_Watertechnology_Cup"
+      }, {
+        "label" : "Beijing International Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Beijing_International_Challenger"
+      }, {
+        "label" : "Großer Preis von Belgien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Belgian_Grand_Prix"
+      }, {
+        "label" : "Bet-at-home Cup Kitzbühel 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bet-at-home_Cup_Kitzbühel"
+      }, {
+        "label" : "Brasil Tennis Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brasil_Tennis_Cup"
+      }, {
+        "label" : "Großer Preis von Brasilien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brazilian_Grand_Prix"
+      }, {
+        "label" : "Brisbane International 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brisbane_International"
+      }, {
+        "label" : "Großer Preis von Großbritannien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_British_Grand_Prix"
+      }, {
+        "label" : "Brussels Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brussels_Open"
+      }, {
+        "label" : "Budapest Grand Prix 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Budapest_Grand_Prix"
+      }, {
+        "label" : "Busan Open Challenger Tennis 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Busan_Open_Challenger_Tennis"
+      }, {
+        "label" : "Campeonato Internacional de Tênis de Santos 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Campeonato_Internacional_de_Tenis_de_Santos"
+      }, {
+        "label" : "Großer Preis von Kanada 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Canadian_Grand_Prix"
+      }, {
+        "label" : "Challenge Bell 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenge_Bell"
+      }, {
+        "label" : "Challenger Banque Nationale Granby 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_Banque_Nationale_de_Granby"
+      }, {
+        "label" : "Challenger Banque Nationale 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_Banque_Nationale_de_Rimouski"
+      }, {
+        "label" : "Challenger Ciudad de Guayaquil 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_Ciudad_de_Guayaquil"
+      }, {
+        "label" : "Challenger La Manche 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_La_Manche"
+      }, {
+        "label" : "Challenger of Dallas 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_of_Dallas"
+      }, {
+        "label" : "Chang-Sat Bangkok Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Chang-Sat_Bangkok_Open"
+      }, {
+        "label" : "Charles Sturt Adelaide International 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Charles_Sturt_Adelaide_International"
+      }, {
+        "label" : "Charlottesville Men’s Pro Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Charlottesville_Men's_Pro_Challenger"
+      }, {
+        "label" : "China Open 2013 (Tennis)",
+        "uri" : "http://dbpedia.org/resource/2013_China_Open_(tennis)"
+      }, {
+        "label" : "Großer Preis von China 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Chinese_Grand_Prix"
+      }, {
+        "label" : "Citi Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Citi_Open"
+      }, {
+        "label" : "Carta Bcc Città di Caltanissetta 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Città_di_Caltanissetta"
+      }, {
+        "label" : "Città di Como 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Città_di_Como_Challenger"
+      }, {
+        "label" : "Claro Open Colombia 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Claro_Open_Colombia"
+      }, {
+        "label" : "Coleman Vision Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Coleman_Vision_Tennis_Championships"
+      }, {
+        "label" : "Comerica Bank Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Comerica_Bank_Challenger"
+      }, {
+        "label" : "Copa Bionaire 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Bionaire"
+      }, {
+        "label" : "Copa Claro 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Claro"
+      }, {
+        "label" : "XXI Copa Claro Colsanitas 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Colsanitas"
+      }, {
+        "label" : "Copa Internacional de Tenis Total Digest 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Internacional_de_Tenis_Total_Digest"
+      }, {
+        "label" : "Copa San Juan Gobierno 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_San_Juan_Gobierno"
+      }, {
+        "label" : "Copa Sevilla 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Sevilla"
+      }, {
+        "label" : "Copa Topper 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Topper"
+      }, {
+        "label" : "Friuladria Crédit Agricole Tennis Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Credit_Agricole_Friuladria_Tennis_Cup"
+      }, {
+        "label" : "Crédit Agricole Suisse Open Gstaad 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Crédit_Agricole_Suisse_Open_Gstaad"
+      }, {
+        "label" : "Dallas Tennis Classic 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Dallas_Tennis_Classic"
+      }, {
+        "label" : "Delray Beach International Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Delray_Beach_International_Tennis_Championships"
+      }, {
+        "label" : "Distalnet Tennis Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Distalnet_Tennis_Cup"
+      }, {
+        "label" : "Dubai Duty Free Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Dubai_Tennis_Championships"
+      }, {
+        "label" : "Dunlop World Challenge Tennis Tournament 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Dunlop_World_Challenge"
+      }, {
+        "label" : "Empire Slovak Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Empire_Slovak_Open"
+      }, {
+        "label" : "Erste Bank Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Erste_Bank_Open"
+      }, {
+        "label" : "Eskişehir Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Eskişehir_Cup"
+      }, {
+        "label" : "Ethias Trophy 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Ethias_Trophy"
+      }, {
+        "label" : "Tischtennis-Europameisterschaft 2013",
+        "uri" : "http://dbpedia.org/resource/2013_European_Table_Tennis_Championships"
+      }, {
+        "label" : "Family Circle Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Family_Circle_Cup"
+      }, {
+        "label" : "Fergana Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Fergana_Challenger"
+      }, {
+        "label" : "Fifth Third Bank Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Fifth_Third_Bank_Tennis_Championships"
+      }, {
+        "label" : "Franken Challenge 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Franken_Challenge"
+      }, {
+        "label" : "French Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_French_Open"
+      }, {
+        "label" : "Garanti Koza Tournament of Champions 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Garanti_Koza_WTA_Tournament_of_Champions"
+      }, {
+        "label" : "Nürnberger Gastein Ladies 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Gastein_Ladies"
+      }, {
+        "label" : "Generali Ladies Linz 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Generali_Ladies_Linz"
+      }, {
+        "label" : "Geneva Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Geneva_Open_Challenger"
+      }, {
+        "label" : "Großer Preis von Deutschland 2013",
+        "uri" : "http://dbpedia.org/resource/2013_German_Grand_Prix"
+      }, {
+        "label" : "Grand Prix Hassan II 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Grand_Prix_Hassan_II"
+      }, {
+        "label" : "Grand Prix SAR La Princesse Lalla Meryem 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Grand_Prix_SAR_La_Princesse_Lalla_Meryem"
+      }, {
+        "label" : "Guangzhou Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Guangzhou_International_Women's_Open"
+      }, {
+        "label" : "Guimarães Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Guimarães_Open"
+      }, {
+        "label" : "Guzzini Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Guzzini_Challenger"
+      }, {
+        "label" : "HP Japan Women’s Open Tennis 2013",
+        "uri" : "http://dbpedia.org/resource/2013_HP_Open"
+      }, {
+        "label" : "Hall of Fame Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Hall_of_Fame_Tennis_Championships"
+      }, {
+        "label" : "Heineken Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Heineken_Open"
+      }, {
+        "label" : "Hopman Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Hopman_Cup"
+      }, {
+        "label" : "Großer Preis von Ungarn 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Hungarian_Grand_Prix"
+      }, {
+        "label" : "IPP Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_IPP_Open_and_the_Orto-Lääkärit_Open"
+      }, {
+        "label" : "IS Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_IS_Open"
+      }, {
+        "label" : "ITS Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_ITS_Cup"
+      }, {
+        "label" : "If Stockholm Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_If_Stockholm_Open"
+      }, {
+        "label" : "Großer Preis von Indien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Indian_Grand_Prix"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "11",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "ORGANISATION",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Was ist der Standort von ($x | ORGANISATION_NP)?", "Was war der Standort von ($x | ORGANISATION_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Großer Preis von Italien 1921",
+        "uri" : "http://dbpedia.org/resource/1921_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Frankreich 1922",
+        "uri" : "http://dbpedia.org/resource/1922_French_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1922",
+        "uri" : "http://dbpedia.org/resource/1922_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Frankreich 1923",
+        "uri" : "http://dbpedia.org/resource/1923_French_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1923",
+        "uri" : "http://dbpedia.org/resource/1923_Italian_Grand_Prix"
+      }, {
+        "label" : "Museum Hürtgenwald 1944",
+        "uri" : "http://dbpedia.org/resource/1944_Hürtgen_Forest_Museum"
+      }, {
+        "label" : "Großer Preis von Italien 1947",
+        "uri" : "http://dbpedia.org/resource/1947_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1948",
+        "uri" : "http://dbpedia.org/resource/1948_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1949",
+        "uri" : "http://dbpedia.org/resource/1949_Italian_Grand_Prix"
+      }, {
+        "label" : "BB&T Atlanta Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BB&T_Atlanta_Open"
+      }, {
+        "label" : "BGL BNP Paribas Luxembourg Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BGL_Luxembourg_Open"
+      }, {
+        "label" : "BH Telecom Indoors 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BH_Telecom_Indoors"
+      }, {
+        "label" : "BMW Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BMW_Open"
+      }, {
+        "label" : "BNP Paribas Katowice Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Katowice_Open"
+      }, {
+        "label" : "BNP Paribas Masters 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Masters"
+      }, {
+        "label" : "BNP Paribas Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Open"
+      }, {
+        "label" : "BNP Paribas Primrose Bordeaux 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Primrose_Bordeaux"
+      }, {
+        "label" : "BRD Arad Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Arad_Challenger"
+      }, {
+        "label" : "BRD Brașov Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Brașov_Challenger"
+      }, {
+        "label" : "BRD Năstase Țiriac Trophy 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Năstase_Țiriac_Trophy"
+      }, {
+        "label" : "BRD Timișoara Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Timișoara_Challenger"
+      }, {
+        "label" : "Großer Preis von Bahrain 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bahrain_Grand_Prix"
+      }, {
+        "label" : "Baku Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Baku_Cup"
+      }, {
+        "label" : "Banja Luka Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Banja_Luka_Challenger"
+      }, {
+        "label" : "Bank of the West Classic 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bank_of_the_West_Classic"
+      }, {
+        "label" : "Barcelona Open Banc Sabadell 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Barcelona_Open_Banco_Sabadell"
+      }, {
+        "label" : "Bauer Watertechnology Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bauer_Watertechnology_Cup"
+      }, {
+        "label" : "Beijing International Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Beijing_International_Challenger"
+      }, {
+        "label" : "Großer Preis von Belgien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Belgian_Grand_Prix"
+      }, {
+        "label" : "Bet-at-home Cup Kitzbühel 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bet-at-home_Cup_Kitzbühel"
+      }, {
+        "label" : "Brasil Tennis Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brasil_Tennis_Cup"
+      }, {
+        "label" : "Großer Preis von Brasilien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brazilian_Grand_Prix"
+      }, {
+        "label" : "Brisbane International 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brisbane_International"
+      }, {
+        "label" : "Großer Preis von Großbritannien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_British_Grand_Prix"
+      }, {
+        "label" : "Brussels Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brussels_Open"
+      }, {
+        "label" : "Budapest Grand Prix 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Budapest_Grand_Prix"
+      }, {
+        "label" : "Busan Open Challenger Tennis 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Busan_Open_Challenger_Tennis"
+      }, {
+        "label" : "Campeonato Internacional de Tênis de Santos 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Campeonato_Internacional_de_Tenis_de_Santos"
+      }, {
+        "label" : "Großer Preis von Kanada 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Canadian_Grand_Prix"
+      }, {
+        "label" : "Challenge Bell 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenge_Bell"
+      }, {
+        "label" : "Challenger Banque Nationale Granby 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_Banque_Nationale_de_Granby"
+      }, {
+        "label" : "Challenger Banque Nationale 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_Banque_Nationale_de_Rimouski"
+      }, {
+        "label" : "Challenger Ciudad de Guayaquil 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_Ciudad_de_Guayaquil"
+      }, {
+        "label" : "Challenger La Manche 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_La_Manche"
+      }, {
+        "label" : "Challenger of Dallas 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_of_Dallas"
+      }, {
+        "label" : "Chang-Sat Bangkok Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Chang-Sat_Bangkok_Open"
+      }, {
+        "label" : "Charles Sturt Adelaide International 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Charles_Sturt_Adelaide_International"
+      }, {
+        "label" : "Charlottesville Men’s Pro Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Charlottesville_Men's_Pro_Challenger"
+      }, {
+        "label" : "China Open 2013 (Tennis)",
+        "uri" : "http://dbpedia.org/resource/2013_China_Open_(tennis)"
+      }, {
+        "label" : "Großer Preis von China 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Chinese_Grand_Prix"
+      }, {
+        "label" : "Citi Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Citi_Open"
+      }, {
+        "label" : "Carta Bcc Città di Caltanissetta 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Città_di_Caltanissetta"
+      }, {
+        "label" : "Città di Como 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Città_di_Como_Challenger"
+      }, {
+        "label" : "Claro Open Colombia 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Claro_Open_Colombia"
+      }, {
+        "label" : "Coleman Vision Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Coleman_Vision_Tennis_Championships"
+      }, {
+        "label" : "Comerica Bank Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Comerica_Bank_Challenger"
+      }, {
+        "label" : "Copa Bionaire 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Bionaire"
+      }, {
+        "label" : "Copa Claro 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Claro"
+      }, {
+        "label" : "XXI Copa Claro Colsanitas 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Colsanitas"
+      }, {
+        "label" : "Copa Internacional de Tenis Total Digest 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Internacional_de_Tenis_Total_Digest"
+      }, {
+        "label" : "Copa San Juan Gobierno 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_San_Juan_Gobierno"
+      }, {
+        "label" : "Copa Sevilla 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Sevilla"
+      }, {
+        "label" : "Copa Topper 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Topper"
+      }, {
+        "label" : "Friuladria Crédit Agricole Tennis Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Credit_Agricole_Friuladria_Tennis_Cup"
+      }, {
+        "label" : "Crédit Agricole Suisse Open Gstaad 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Crédit_Agricole_Suisse_Open_Gstaad"
+      }, {
+        "label" : "Dallas Tennis Classic 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Dallas_Tennis_Classic"
+      }, {
+        "label" : "Delray Beach International Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Delray_Beach_International_Tennis_Championships"
+      }, {
+        "label" : "Distalnet Tennis Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Distalnet_Tennis_Cup"
+      }, {
+        "label" : "Dubai Duty Free Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Dubai_Tennis_Championships"
+      }, {
+        "label" : "Dunlop World Challenge Tennis Tournament 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Dunlop_World_Challenge"
+      }, {
+        "label" : "Empire Slovak Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Empire_Slovak_Open"
+      }, {
+        "label" : "Erste Bank Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Erste_Bank_Open"
+      }, {
+        "label" : "Eskişehir Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Eskişehir_Cup"
+      }, {
+        "label" : "Ethias Trophy 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Ethias_Trophy"
+      }, {
+        "label" : "Tischtennis-Europameisterschaft 2013",
+        "uri" : "http://dbpedia.org/resource/2013_European_Table_Tennis_Championships"
+      }, {
+        "label" : "Family Circle Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Family_Circle_Cup"
+      }, {
+        "label" : "Fergana Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Fergana_Challenger"
+      }, {
+        "label" : "Fifth Third Bank Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Fifth_Third_Bank_Tennis_Championships"
+      }, {
+        "label" : "Franken Challenge 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Franken_Challenge"
+      }, {
+        "label" : "French Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_French_Open"
+      }, {
+        "label" : "Garanti Koza Tournament of Champions 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Garanti_Koza_WTA_Tournament_of_Champions"
+      }, {
+        "label" : "Nürnberger Gastein Ladies 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Gastein_Ladies"
+      }, {
+        "label" : "Generali Ladies Linz 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Generali_Ladies_Linz"
+      }, {
+        "label" : "Geneva Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Geneva_Open_Challenger"
+      }, {
+        "label" : "Großer Preis von Deutschland 2013",
+        "uri" : "http://dbpedia.org/resource/2013_German_Grand_Prix"
+      }, {
+        "label" : "Grand Prix Hassan II 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Grand_Prix_Hassan_II"
+      }, {
+        "label" : "Grand Prix SAR La Princesse Lalla Meryem 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Grand_Prix_SAR_La_Princesse_Lalla_Meryem"
+      }, {
+        "label" : "Guangzhou Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Guangzhou_International_Women's_Open"
+      }, {
+        "label" : "Guimarães Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Guimarães_Open"
+      }, {
+        "label" : "Guzzini Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Guzzini_Challenger"
+      }, {
+        "label" : "HP Japan Women’s Open Tennis 2013",
+        "uri" : "http://dbpedia.org/resource/2013_HP_Open"
+      }, {
+        "label" : "Hall of Fame Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Hall_of_Fame_Tennis_Championships"
+      }, {
+        "label" : "Heineken Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Heineken_Open"
+      }, {
+        "label" : "Hopman Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Hopman_Cup"
+      }, {
+        "label" : "Großer Preis von Ungarn 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Hungarian_Grand_Prix"
+      }, {
+        "label" : "IPP Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_IPP_Open_and_the_Orto-Lääkärit_Open"
+      }, {
+        "label" : "IS Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_IS_Open"
+      }, {
+        "label" : "ITS Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_ITS_Cup"
+      }, {
+        "label" : "If Stockholm Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_If_Stockholm_Open"
+      }, {
+        "label" : "Großer Preis von Indien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Indian_Grand_Prix"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "12",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "ORGANISATION",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "der Standort von $x" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Großer Preis von Italien 1921",
+        "uri" : "http://dbpedia.org/resource/1921_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Frankreich 1922",
+        "uri" : "http://dbpedia.org/resource/1922_French_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1922",
+        "uri" : "http://dbpedia.org/resource/1922_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Frankreich 1923",
+        "uri" : "http://dbpedia.org/resource/1923_French_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1923",
+        "uri" : "http://dbpedia.org/resource/1923_Italian_Grand_Prix"
+      }, {
+        "label" : "Museum Hürtgenwald 1944",
+        "uri" : "http://dbpedia.org/resource/1944_Hürtgen_Forest_Museum"
+      }, {
+        "label" : "Großer Preis von Italien 1947",
+        "uri" : "http://dbpedia.org/resource/1947_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1948",
+        "uri" : "http://dbpedia.org/resource/1948_Italian_Grand_Prix"
+      }, {
+        "label" : "Großer Preis von Italien 1949",
+        "uri" : "http://dbpedia.org/resource/1949_Italian_Grand_Prix"
+      }, {
+        "label" : "BB&T Atlanta Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BB&T_Atlanta_Open"
+      }, {
+        "label" : "BGL BNP Paribas Luxembourg Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BGL_Luxembourg_Open"
+      }, {
+        "label" : "BH Telecom Indoors 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BH_Telecom_Indoors"
+      }, {
+        "label" : "BMW Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BMW_Open"
+      }, {
+        "label" : "BNP Paribas Katowice Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Katowice_Open"
+      }, {
+        "label" : "BNP Paribas Masters 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Masters"
+      }, {
+        "label" : "BNP Paribas Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Open"
+      }, {
+        "label" : "BNP Paribas Primrose Bordeaux 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BNP_Paribas_Primrose_Bordeaux"
+      }, {
+        "label" : "BRD Arad Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Arad_Challenger"
+      }, {
+        "label" : "BRD Brașov Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Brașov_Challenger"
+      }, {
+        "label" : "BRD Năstase Țiriac Trophy 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Năstase_Țiriac_Trophy"
+      }, {
+        "label" : "BRD Timișoara Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_BRD_Timișoara_Challenger"
+      }, {
+        "label" : "Großer Preis von Bahrain 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bahrain_Grand_Prix"
+      }, {
+        "label" : "Baku Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Baku_Cup"
+      }, {
+        "label" : "Banja Luka Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Banja_Luka_Challenger"
+      }, {
+        "label" : "Bank of the West Classic 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bank_of_the_West_Classic"
+      }, {
+        "label" : "Barcelona Open Banc Sabadell 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Barcelona_Open_Banco_Sabadell"
+      }, {
+        "label" : "Bauer Watertechnology Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bauer_Watertechnology_Cup"
+      }, {
+        "label" : "Beijing International Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Beijing_International_Challenger"
+      }, {
+        "label" : "Großer Preis von Belgien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Belgian_Grand_Prix"
+      }, {
+        "label" : "Bet-at-home Cup Kitzbühel 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Bet-at-home_Cup_Kitzbühel"
+      }, {
+        "label" : "Brasil Tennis Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brasil_Tennis_Cup"
+      }, {
+        "label" : "Großer Preis von Brasilien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brazilian_Grand_Prix"
+      }, {
+        "label" : "Brisbane International 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brisbane_International"
+      }, {
+        "label" : "Großer Preis von Großbritannien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_British_Grand_Prix"
+      }, {
+        "label" : "Brussels Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Brussels_Open"
+      }, {
+        "label" : "Budapest Grand Prix 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Budapest_Grand_Prix"
+      }, {
+        "label" : "Busan Open Challenger Tennis 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Busan_Open_Challenger_Tennis"
+      }, {
+        "label" : "Campeonato Internacional de Tênis de Santos 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Campeonato_Internacional_de_Tenis_de_Santos"
+      }, {
+        "label" : "Großer Preis von Kanada 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Canadian_Grand_Prix"
+      }, {
+        "label" : "Challenge Bell 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenge_Bell"
+      }, {
+        "label" : "Challenger Banque Nationale Granby 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_Banque_Nationale_de_Granby"
+      }, {
+        "label" : "Challenger Banque Nationale 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_Banque_Nationale_de_Rimouski"
+      }, {
+        "label" : "Challenger Ciudad de Guayaquil 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_Ciudad_de_Guayaquil"
+      }, {
+        "label" : "Challenger La Manche 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_La_Manche"
+      }, {
+        "label" : "Challenger of Dallas 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Challenger_of_Dallas"
+      }, {
+        "label" : "Chang-Sat Bangkok Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Chang-Sat_Bangkok_Open"
+      }, {
+        "label" : "Charles Sturt Adelaide International 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Charles_Sturt_Adelaide_International"
+      }, {
+        "label" : "Charlottesville Men’s Pro Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Charlottesville_Men's_Pro_Challenger"
+      }, {
+        "label" : "China Open 2013 (Tennis)",
+        "uri" : "http://dbpedia.org/resource/2013_China_Open_(tennis)"
+      }, {
+        "label" : "Großer Preis von China 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Chinese_Grand_Prix"
+      }, {
+        "label" : "Citi Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Citi_Open"
+      }, {
+        "label" : "Carta Bcc Città di Caltanissetta 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Città_di_Caltanissetta"
+      }, {
+        "label" : "Città di Como 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Città_di_Como_Challenger"
+      }, {
+        "label" : "Claro Open Colombia 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Claro_Open_Colombia"
+      }, {
+        "label" : "Coleman Vision Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Coleman_Vision_Tennis_Championships"
+      }, {
+        "label" : "Comerica Bank Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Comerica_Bank_Challenger"
+      }, {
+        "label" : "Copa Bionaire 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Bionaire"
+      }, {
+        "label" : "Copa Claro 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Claro"
+      }, {
+        "label" : "XXI Copa Claro Colsanitas 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Colsanitas"
+      }, {
+        "label" : "Copa Internacional de Tenis Total Digest 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Internacional_de_Tenis_Total_Digest"
+      }, {
+        "label" : "Copa San Juan Gobierno 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_San_Juan_Gobierno"
+      }, {
+        "label" : "Copa Sevilla 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Sevilla"
+      }, {
+        "label" : "Copa Topper 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Copa_Topper"
+      }, {
+        "label" : "Friuladria Crédit Agricole Tennis Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Credit_Agricole_Friuladria_Tennis_Cup"
+      }, {
+        "label" : "Crédit Agricole Suisse Open Gstaad 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Crédit_Agricole_Suisse_Open_Gstaad"
+      }, {
+        "label" : "Dallas Tennis Classic 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Dallas_Tennis_Classic"
+      }, {
+        "label" : "Delray Beach International Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Delray_Beach_International_Tennis_Championships"
+      }, {
+        "label" : "Distalnet Tennis Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Distalnet_Tennis_Cup"
+      }, {
+        "label" : "Dubai Duty Free Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Dubai_Tennis_Championships"
+      }, {
+        "label" : "Dunlop World Challenge Tennis Tournament 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Dunlop_World_Challenge"
+      }, {
+        "label" : "Empire Slovak Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Empire_Slovak_Open"
+      }, {
+        "label" : "Erste Bank Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Erste_Bank_Open"
+      }, {
+        "label" : "Eskişehir Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Eskişehir_Cup"
+      }, {
+        "label" : "Ethias Trophy 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Ethias_Trophy"
+      }, {
+        "label" : "Tischtennis-Europameisterschaft 2013",
+        "uri" : "http://dbpedia.org/resource/2013_European_Table_Tennis_Championships"
+      }, {
+        "label" : "Family Circle Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Family_Circle_Cup"
+      }, {
+        "label" : "Fergana Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Fergana_Challenger"
+      }, {
+        "label" : "Fifth Third Bank Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Fifth_Third_Bank_Tennis_Championships"
+      }, {
+        "label" : "Franken Challenge 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Franken_Challenge"
+      }, {
+        "label" : "French Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_French_Open"
+      }, {
+        "label" : "Garanti Koza Tournament of Champions 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Garanti_Koza_WTA_Tournament_of_Champions"
+      }, {
+        "label" : "Nürnberger Gastein Ladies 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Gastein_Ladies"
+      }, {
+        "label" : "Generali Ladies Linz 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Generali_Ladies_Linz"
+      }, {
+        "label" : "Geneva Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Geneva_Open_Challenger"
+      }, {
+        "label" : "Großer Preis von Deutschland 2013",
+        "uri" : "http://dbpedia.org/resource/2013_German_Grand_Prix"
+      }, {
+        "label" : "Grand Prix Hassan II 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Grand_Prix_Hassan_II"
+      }, {
+        "label" : "Grand Prix SAR La Princesse Lalla Meryem 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Grand_Prix_SAR_La_Princesse_Lalla_Meryem"
+      }, {
+        "label" : "Guangzhou Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Guangzhou_International_Women's_Open"
+      }, {
+        "label" : "Guimarães Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Guimarães_Open"
+      }, {
+        "label" : "Guzzini Challenger 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Guzzini_Challenger"
+      }, {
+        "label" : "HP Japan Women’s Open Tennis 2013",
+        "uri" : "http://dbpedia.org/resource/2013_HP_Open"
+      }, {
+        "label" : "Hall of Fame Tennis Championships 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Hall_of_Fame_Tennis_Championships"
+      }, {
+        "label" : "Heineken Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Heineken_Open"
+      }, {
+        "label" : "Hopman Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Hopman_Cup"
+      }, {
+        "label" : "Großer Preis von Ungarn 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Hungarian_Grand_Prix"
+      }, {
+        "label" : "IPP Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_IPP_Open_and_the_Orto-Lääkärit_Open"
+      }, {
+        "label" : "IS Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_IS_Open"
+      }, {
+        "label" : "ITS Cup 2013",
+        "uri" : "http://dbpedia.org/resource/2013_ITS_Cup"
+      }, {
+        "label" : "If Stockholm Open 2013",
+        "uri" : "http://dbpedia.org/resource/2013_If_Stockholm_Open"
+      }, {
+        "label" : "Großer Preis von Indien 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Indian_Grand_Prix"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "13",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is $x located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple ?subjOfProp <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Kanton Luxemburg",
+        "uri" : "http://dbpedia.org/resource/Luxembourg_(canton)"
+      }, {
+        "label" : "Luxemburg (Stadt)",
+        "uri" : "http://dbpedia.org/resource/Luxembourg_City"
+      }, {
+        "label" : "Luzonstraße",
+        "uri" : "http://dbpedia.org/resource/Luzon_Strait"
+      }, {
+        "label" : "Maevatanana",
+        "uri" : "http://dbpedia.org/resource/Maevatanana"
+      }, {
+        "label" : "Mahabo",
+        "uri" : "http://dbpedia.org/resource/Mahabo,_Betroka"
+      }, {
+        "label" : "Mahaboboka",
+        "uri" : "http://dbpedia.org/resource/Mahaboboka"
+      }, {
+        "label" : "Mahajanga",
+        "uri" : "http://dbpedia.org/resource/Mahajanga"
+      }, {
+        "label" : "Mahajanga (Provinz)",
+        "uri" : "http://dbpedia.org/resource/Mahajanga_Province"
+      }, {
+        "label" : "Maintirano",
+        "uri" : "http://dbpedia.org/resource/Maintirano"
+      }, {
+        "label" : "Consthum",
+        "uri" : "http://dbpedia.org/resource/Consthum"
+      }, {
+        "label" : "Vakinankaratra",
+        "uri" : "http://dbpedia.org/resource/Vakinankaratra"
+      }, {
+        "label" : "Ernztalgemeinde",
+        "uri" : "http://dbpedia.org/resource/Vallée_de_l'Ernz"
+      }, {
+        "label" : "Vatovavy-Fitovinany",
+        "uri" : "http://dbpedia.org/resource/Vatovavy-Fitovinany"
+      }, {
+        "label" : "Vavatenina",
+        "uri" : "http://dbpedia.org/resource/Vavatenina"
+      }, {
+        "label" : "Folscheid",
+        "uri" : "http://dbpedia.org/resource/Folschette"
+      }, {
+        "label" : "Chodoriw",
+        "uri" : "http://dbpedia.org/resource/Khodoriv"
+      }, {
+        "label" : "Bissen",
+        "uri" : "http://dbpedia.org/resource/Bissen"
+      }, {
+        "label" : "Biwer",
+        "uri" : "http://dbpedia.org/resource/Biwer"
+      }, {
+        "label" : "Boeny",
+        "uri" : "http://dbpedia.org/resource/Boeny"
+      }, {
+        "label" : "Bongolava",
+        "uri" : "http://dbpedia.org/resource/Bongolava"
+      }, {
+        "label" : "Borynja",
+        "uri" : "http://dbpedia.org/resource/Borynia,_Turka_Raion"
+      }, {
+        "label" : "Bauschleiden",
+        "uri" : "http://dbpedia.org/resource/Boulaide"
+      }, {
+        "label" : "Burscheid (Luxemburg)",
+        "uri" : "http://dbpedia.org/resource/Bourscheid,_Luxembourg"
+      }, {
+        "label" : "Bourscheid",
+        "uri" : "http://dbpedia.org/resource/Bourscheid,_Luxembourg"
+      }, {
+        "label" : "Bous (Saar)",
+        "uri" : "http://dbpedia.org/resource/Bous,_Luxembourg"
+      }, {
+        "label" : "Diana (Region)",
+        "uri" : "http://dbpedia.org/resource/Diana_Region"
+      }, {
+        "label" : "Diekirch",
+        "uri" : "http://dbpedia.org/resource/Diekirch"
+      }, {
+        "label" : "Kanton Diekirch",
+        "uri" : "http://dbpedia.org/resource/Diekirch_(canton)"
+      }, {
+        "label" : "Differdingen",
+        "uri" : "http://dbpedia.org/resource/Differdange"
+      }, {
+        "label" : "Dippach (Luxemburg)",
+        "uri" : "http://dbpedia.org/resource/Dippach"
+      }, {
+        "label" : "Dippach am Main",
+        "uri" : "http://dbpedia.org/resource/Dippach"
+      }, {
+        "label" : "Dommeldingen",
+        "uri" : "http://dbpedia.org/resource/Dommeldange"
+      }, {
+        "label" : "Goesdorf",
+        "uri" : "http://dbpedia.org/resource/Goesdorf"
+      }, {
+        "label" : "Grevenmacher",
+        "uri" : "http://dbpedia.org/resource/Grevenmacher"
+      }, {
+        "label" : "Kanton Grevenmacher",
+        "uri" : "http://dbpedia.org/resource/Grevenmacher_(canton)"
+      }, {
+        "label" : "Grosbous",
+        "uri" : "http://dbpedia.org/resource/Grosbous"
+      }, {
+        "label" : "Grund (Luxemburg)",
+        "uri" : "http://dbpedia.org/resource/Grund,_Luxembourg"
+      }, {
+        "label" : "Kiischpelt",
+        "uri" : "http://dbpedia.org/resource/Kiischpelt"
+      }, {
+        "label" : "Kirchberg-Plateau",
+        "uri" : "http://dbpedia.org/resource/Kirchberg,_Luxembourg"
+      }, {
+        "label" : "Koerich",
+        "uri" : "http://dbpedia.org/resource/Koerich"
+      }, {
+        "label" : "Kom el-Hisn",
+        "uri" : "http://dbpedia.org/resource/Kom_el-Hisn"
+      }, {
+        "label" : "Kopstal",
+        "uri" : "http://dbpedia.org/resource/Kopstal"
+      }, {
+        "label" : "Krasnodon",
+        "uri" : "http://dbpedia.org/resource/Krasnodon"
+      }, {
+        "label" : "Préizerdaul",
+        "uri" : "http://dbpedia.org/resource/Préizerdaul"
+      }, {
+        "label" : "Pulvermühle (Luxemburg)",
+        "uri" : "http://dbpedia.org/resource/Pulvermuhl"
+      }, {
+        "label" : "Pütscheid",
+        "uri" : "http://dbpedia.org/resource/Putscheid"
+      }, {
+        "label" : "Petingen",
+        "uri" : "http://dbpedia.org/resource/Pétange"
+      }, {
+        "label" : "Alaotra-Mangoro",
+        "uri" : "http://dbpedia.org/resource/Alaotra-Mangoro"
+      }, {
+        "label" : "Zessingen",
+        "uri" : "http://dbpedia.org/resource/Cessange"
+      }, {
+        "label" : "Fischbach (Luxemburg)",
+        "uri" : "http://dbpedia.org/resource/Fischbach,_Mersch"
+      }, {
+        "label" : "Flaxweiler",
+        "uri" : "http://dbpedia.org/resource/Flaxweiler"
+      }, {
+        "label" : "Ampanihy",
+        "uri" : "http://dbpedia.org/resource/Ampanihy"
+      }, {
+        "label" : "Nommern",
+        "uri" : "http://dbpedia.org/resource/Nommern"
+      }, {
+        "label" : "Bonneweg-Nord",
+        "uri" : "http://dbpedia.org/resource/North_Bonnevoie-Verlorenkost"
+      }, {
+        "label" : "Nosy Hara",
+        "uri" : "http://dbpedia.org/resource/Nosy_Hara"
+      }, {
+        "label" : "Nosy Varika",
+        "uri" : "http://dbpedia.org/resource/Nosy_Varika"
+      }, {
+        "label" : "Oberpallen",
+        "uri" : "http://dbpedia.org/resource/Oberpallen"
+      }, {
+        "label" : "Niederkerschen",
+        "uri" : "http://dbpedia.org/resource/Bascharage"
+      }, {
+        "label" : "Arsdorf",
+        "uri" : "http://dbpedia.org/resource/Arsdorf"
+      }, {
+        "label" : "Lorentzweiler",
+        "uri" : "http://dbpedia.org/resource/Lorentzweiler"
+      }, {
+        "label" : "Kanton Capellen",
+        "uri" : "http://dbpedia.org/resource/Capellen_(canton)"
+      }, {
+        "label" : "Clausen (Luxemburg)",
+        "uri" : "http://dbpedia.org/resource/Clausen,_Luxembourg"
+      }, {
+        "label" : "Küntzig",
+        "uri" : "http://dbpedia.org/resource/Clemency,_Luxembourg"
+      }, {
+        "label" : "Clerf",
+        "uri" : "http://dbpedia.org/resource/Clervaux"
+      }, {
+        "label" : "Kanton Clerf",
+        "uri" : "http://dbpedia.org/resource/Clervaux_(canton)"
+      }, {
+        "label" : "Luxemburg-Bahnhofsviertel",
+        "uri" : "http://dbpedia.org/resource/Gare,_Luxembourg"
+      }, {
+        "label" : "Garnich",
+        "uri" : "http://dbpedia.org/resource/Garnich"
+      }, {
+        "label" : "Gasperich",
+        "uri" : "http://dbpedia.org/resource/Gasperich"
+      }, {
+        "label" : "Nosy Mitsio",
+        "uri" : "http://dbpedia.org/resource/Nosy_Mitsio"
+      }, {
+        "label" : "Manjakandriana (Analamanga)",
+        "uri" : "http://dbpedia.org/resource/Manjakandriana"
+      }, {
+        "label" : "Befort (Luxemburg)",
+        "uri" : "http://dbpedia.org/resource/Beaufort,_Luxembourg"
+      }, {
+        "label" : "Bech (Luxemburg)",
+        "uri" : "http://dbpedia.org/resource/Bech"
+      }, {
+        "label" : "Bech (Waldbröl)",
+        "uri" : "http://dbpedia.org/resource/Bech"
+      }, {
+        "label" : "Behenjy",
+        "uri" : "http://dbpedia.org/resource/Behenjy"
+      }, {
+        "label" : "Bekopaka",
+        "uri" : "http://dbpedia.org/resource/Bekopaka"
+      }, {
+        "label" : "Belair (Luxemburg)",
+        "uri" : "http://dbpedia.org/resource/Belair,_Luxembourg"
+      }, {
+        "label" : "Belo sur Mer",
+        "uri" : "http://dbpedia.org/resource/Belo_sur_Mer"
+      }, {
+        "label" : "Belo sur Tsiribihina (Stadt)",
+        "uri" : "http://dbpedia.org/resource/Belon'i_Tsiribihina"
+      }, {
+        "label" : "Berdorf",
+        "uri" : "http://dbpedia.org/resource/Berdorf"
+      }, {
+        "label" : "Berevo",
+        "uri" : "http://dbpedia.org/resource/Berevo"
+      }, {
+        "label" : "Schloss Berg (Luxemburg)",
+        "uri" : "http://dbpedia.org/resource/Berg_Castle"
+      }, {
+        "label" : "Bartringen",
+        "uri" : "http://dbpedia.org/resource/Bertrange"
+      }, {
+        "label" : "Betafo (Stadt)",
+        "uri" : "http://dbpedia.org/resource/Betafo"
+      }, {
+        "label" : "Betroka (Distrikt)",
+        "uri" : "http://dbpedia.org/resource/Betroka_(district)"
+      }, {
+        "label" : "Betsiboka (Region)",
+        "uri" : "http://dbpedia.org/resource/Betsiboka"
+      }, {
+        "label" : "Bettemburg",
+        "uri" : "http://dbpedia.org/resource/Bettembourg"
+      }, {
+        "label" : "Bettendorf (Luxemburg)",
+        "uri" : "http://dbpedia.org/resource/Bettendorf,_Luxembourg"
+      }, {
+        "label" : "Kayl",
+        "uri" : "http://dbpedia.org/resource/Kayl"
+      }, {
+        "label" : "Kehlen (Meckenbeuren)",
+        "uri" : "http://dbpedia.org/resource/Kehlen"
+      }, {
+        "label" : "Kehlen (Luxemburg)",
+        "uri" : "http://dbpedia.org/resource/Kehlen"
+      }, {
+        "label" : "Kehlen (Schwäbische Alb)",
+        "uri" : "http://dbpedia.org/resource/Kehlen"
+      }, {
+        "label" : "Bastendorf",
+        "uri" : "http://dbpedia.org/resource/Bastendorf"
+      }, {
+        "label" : "Lenningen (Luxemburg)",
+        "uri" : "http://dbpedia.org/resource/Lenningen,_Luxembourg"
+      }, {
+        "label" : "Lenningen",
+        "uri" : "http://dbpedia.org/resource/Lenningen,_Luxembourg"
+      }, {
+        "label" : "Leudelingen",
+        "uri" : "http://dbpedia.org/resource/Leudelange"
+      }, {
+        "label" : "Limpertsberg",
+        "uri" : "http://dbpedia.org/resource/Limpertsberg"
+      }, {
+        "label" : "Lintgen",
+        "uri" : "http://dbpedia.org/resource/Lintgen"
+      }, {
+        "label" : "Bondorf (Rambruch)",
+        "uri" : "http://dbpedia.org/resource/Bigonville"
+      }, {
+        "label" : "Monnerich",
+        "uri" : "http://dbpedia.org/resource/Mondercange"
+      }, {
+        "label" : "Bad Mondorf",
+        "uri" : "http://dbpedia.org/resource/Mondorf-les-Bains"
+      } ]
+    },
+    "combination" : false
+  } ]
+}

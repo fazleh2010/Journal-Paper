@@ -1,0 +1,1279 @@
+{
+  "grammarEntries" : [ {
+    "id" : "14",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "BUILDING",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Was ist der Standort von der Standort von $x?", "Was war der Standort von der Standort von $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/location> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "KGB",
+        "uri" : "http://dbpedia.org/resource/KGB"
+      }, {
+        "label" : "Försvarets radioanstalt",
+        "uri" : "http://dbpedia.org/resource/National_Defence_Radio_Establishment"
+      }, {
+        "label" : "http://dbpedia.org/resource/Founder's_Hall_(Rockefeller_University)",
+        "uri" : "http://dbpedia.org/resource/Founder's_Hall_(Rockefeller_University)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Manhattan_House",
+        "uri" : "http://dbpedia.org/resource/Manhattan_House"
+      }, {
+        "label" : "http://dbpedia.org/resource/826_National",
+        "uri" : "http://dbpedia.org/resource/826_National"
+      }, {
+        "label" : "http://dbpedia.org/resource/1992_Scottish_Challenge_Cup_Final",
+        "uri" : "http://dbpedia.org/resource/1992_Scottish_Challenge_Cup_Final"
+      }, {
+        "label" : "http://dbpedia.org/resource/Black_Hawk_Statue",
+        "uri" : "http://dbpedia.org/resource/Black_Hawk_Statue"
+      }, {
+        "label" : "http://dbpedia.org/resource/CHS_Field",
+        "uri" : "http://dbpedia.org/resource/CHS_Field"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chapel_No._1",
+        "uri" : "http://dbpedia.org/resource/Chapel_No._1"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chapel_of_the_Holy_Trinity,_Lublin_Castle",
+        "uri" : "http://dbpedia.org/resource/Chapel_of_the_Holy_Trinity,_Lublin_Castle"
+      }, {
+        "label" : "http://dbpedia.org/resource/FDIC_International",
+        "uri" : "http://dbpedia.org/resource/FDIC_International"
+      }, {
+        "label" : "Isla-Verde-Straße",
+        "uri" : "http://dbpedia.org/resource/Verde_Island_Passage"
+      }, {
+        "label" : "Chambre des Pairs",
+        "uri" : "http://dbpedia.org/resource/Chamber_of_Peers_(France)"
+      }, {
+        "label" : "Balayan-Bucht",
+        "uri" : "http://dbpedia.org/resource/Balayan_Bay"
+      }, {
+        "label" : "Senat (Frankreich)",
+        "uri" : "http://dbpedia.org/resource/Senate_(France)"
+      }, {
+        "label" : "Bato-See",
+        "uri" : "http://dbpedia.org/resource/Lake_Bato"
+      }, {
+        "label" : "Philippine National Railways",
+        "uri" : "http://dbpedia.org/resource/Philippine_National_Railways"
+      }, {
+        "label" : "Manilabucht",
+        "uri" : "http://dbpedia.org/resource/Manila_Bay"
+      }, {
+        "label" : "http://dbpedia.org/resource/Swedish_Ski_Games",
+        "uri" : "http://dbpedia.org/resource/Swedish_Ski_Games"
+      }, {
+        "label" : "http://dbpedia.org/resource/Supreme_Court_Building_(Puerto_Rico)",
+        "uri" : "http://dbpedia.org/resource/Supreme_Court_Building_(Puerto_Rico)"
+      }, {
+        "label" : "http://dbpedia.org/resource/AN/FSQ-7_Combat_Direction_Central",
+        "uri" : "http://dbpedia.org/resource/AN/FSQ-7_Combat_Direction_Central"
+      }, {
+        "label" : "http://dbpedia.org/resource/1999_Belgian_Super_Cup",
+        "uri" : "http://dbpedia.org/resource/1999_Belgian_Super_Cup"
+      }, {
+        "label" : "http://dbpedia.org/resource/2002_Belgian_Super_Cup",
+        "uri" : "http://dbpedia.org/resource/2002_Belgian_Super_Cup"
+      }, {
+        "label" : "http://dbpedia.org/resource/2019_Belgian_Super_Cup",
+        "uri" : "http://dbpedia.org/resource/2019_Belgian_Super_Cup"
+      }, {
+        "label" : "http://dbpedia.org/resource/William_Wagner_House",
+        "uri" : "http://dbpedia.org/resource/William_Wagner_House"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lum's_Mill_House",
+        "uri" : "http://dbpedia.org/resource/Lum's_Mill_House"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luton_Borough_Council",
+        "uri" : "http://dbpedia.org/resource/Luton_Borough_Council"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luzerne_County_Council",
+        "uri" : "http://dbpedia.org/resource/Luzerne_County_Council"
+      }, {
+        "label" : "http://dbpedia.org/resource/2016_in_Fight_Nights_Global",
+        "uri" : "http://dbpedia.org/resource/2016_in_Fight_Nights_Global"
+      }, {
+        "label" : "http://dbpedia.org/resource/2017_in_Absolute_Championship_Berkut",
+        "uri" : "http://dbpedia.org/resource/2017_in_Absolute_Championship_Berkut"
+      }, {
+        "label" : "http://dbpedia.org/resource/2017_in_Fight_Nights_Global",
+        "uri" : "http://dbpedia.org/resource/2017_in_Fight_Nights_Global"
+      }, {
+        "label" : "http://dbpedia.org/resource/2018_in_Fight_Nights_Global",
+        "uri" : "http://dbpedia.org/resource/2018_in_Fight_Nights_Global"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bataan_Airfield",
+        "uri" : "http://dbpedia.org/resource/Bataan_Airfield"
+      }, {
+        "label" : "http://dbpedia.org/resource/Del_Carmen_Airfield",
+        "uri" : "http://dbpedia.org/resource/Del_Carmen_Airfield"
+      }, {
+        "label" : "http://dbpedia.org/resource/Iba_Airfield",
+        "uri" : "http://dbpedia.org/resource/Iba_Airfield"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lake_Pinatubo",
+        "uri" : "http://dbpedia.org/resource/Lake_Pinatubo"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lake_Tikub",
+        "uri" : "http://dbpedia.org/resource/Lake_Tikub"
+      }, {
+        "label" : "http://dbpedia.org/resource/Paoay_Lake",
+        "uri" : "http://dbpedia.org/resource/Paoay_Lake"
+      }, {
+        "label" : "http://dbpedia.org/resource/Pasaleng_Bay",
+        "uri" : "http://dbpedia.org/resource/Pasaleng_Bay"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nichols_Field",
+        "uri" : "http://dbpedia.org/resource/Nichols_Field"
+      }, {
+        "label" : "Strafkolonie Macquarie Harbour",
+        "uri" : "http://dbpedia.org/resource/Macquarie_Harbour_Penal_Station"
+      }, {
+        "label" : "The Gaslight Cafe",
+        "uri" : "http://dbpedia.org/resource/The_Gaslight_Cafe"
+      }, {
+        "label" : "Delhi",
+        "uri" : "http://dbpedia.org/resource/Municipal_Corporation_of_Delhi"
+      }, {
+        "label" : "Melrose High School (Massachusetts)",
+        "uri" : "http://dbpedia.org/resource/Melrose_High_School_(Massachusetts)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Field_of_Honor_(2014)",
+        "uri" : "http://dbpedia.org/resource/Field_of_Honor_(2014)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Field_of_Honor_(2015)",
+        "uri" : "http://dbpedia.org/resource/Field_of_Honor_(2015)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Field_of_Honor_(2016)",
+        "uri" : "http://dbpedia.org/resource/Field_of_Honor_(2016)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1996)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1996)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1997)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1997)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1998)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1998)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1999)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1999)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(2000)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(2000)"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_91",
+        "uri" : "http://dbpedia.org/resource/UFC_91"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_92",
+        "uri" : "http://dbpedia.org/resource/UFC_92"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_108",
+        "uri" : "http://dbpedia.org/resource/UFC_108"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_114",
+        "uri" : "http://dbpedia.org/resource/UFC_114"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_34",
+        "uri" : "http://dbpedia.org/resource/UFC_34"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_132",
+        "uri" : "http://dbpedia.org/resource/UFC_132"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_141",
+        "uri" : "http://dbpedia.org/resource/UFC_141"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_168",
+        "uri" : "http://dbpedia.org/resource/UFC_168"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_94",
+        "uri" : "http://dbpedia.org/resource/UFC_94"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_146",
+        "uri" : "http://dbpedia.org/resource/UFC_146"
+      }, {
+        "label" : "http://dbpedia.org/resource/Double_or_Nothing_(2019)",
+        "uri" : "http://dbpedia.org/resource/Double_or_Nothing_(2019)"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_130",
+        "uri" : "http://dbpedia.org/resource/UFC_130"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_155",
+        "uri" : "http://dbpedia.org/resource/UFC_155"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_98",
+        "uri" : "http://dbpedia.org/resource/UFC_98"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_173",
+        "uri" : "http://dbpedia.org/resource/UFC_173"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_178",
+        "uri" : "http://dbpedia.org/resource/UFC_178"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_182",
+        "uri" : "http://dbpedia.org/resource/UFC_182"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_183",
+        "uri" : "http://dbpedia.org/resource/UFC_183"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_187",
+        "uri" : "http://dbpedia.org/resource/UFC_187"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_189",
+        "uri" : "http://dbpedia.org/resource/UFC_189"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_191",
+        "uri" : "http://dbpedia.org/resource/UFC_191"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_194",
+        "uri" : "http://dbpedia.org/resource/UFC_194"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_195",
+        "uri" : "http://dbpedia.org/resource/UFC_195"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_196",
+        "uri" : "http://dbpedia.org/resource/UFC_196"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_197",
+        "uri" : "http://dbpedia.org/resource/UFC_197"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_Fight_Night:_Hendricks_vs._Thompson",
+        "uri" : "http://dbpedia.org/resource/UFC_Fight_Night:_Hendricks_vs._Thompson"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_Fight_Night:_dos_Anjos_vs._Alvarez",
+        "uri" : "http://dbpedia.org/resource/UFC_Fight_Night:_dos_Anjos_vs._Alvarez"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_148",
+        "uri" : "http://dbpedia.org/resource/UFC_148"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_167",
+        "uri" : "http://dbpedia.org/resource/UFC_167"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_160",
+        "uri" : "http://dbpedia.org/resource/UFC_160"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_71",
+        "uri" : "http://dbpedia.org/resource/UFC_71"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_125",
+        "uri" : "http://dbpedia.org/resource/UFC_125"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_162",
+        "uri" : "http://dbpedia.org/resource/UFC_162"
+      }, {
+        "label" : "http://dbpedia.org/resource/Double_or_Nothing_(2021)",
+        "uri" : "http://dbpedia.org/resource/Double_or_Nothing_(2021)"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_116",
+        "uri" : "http://dbpedia.org/resource/UFC_116"
+      }, {
+        "label" : "http://dbpedia.org/resource/UWF_Blackjack_Brawl",
+        "uri" : "http://dbpedia.org/resource/UWF_Blackjack_Brawl"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_66",
+        "uri" : "http://dbpedia.org/resource/UFC_66"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_American_Top_Team_vs._Blackzilians__The_Ultimate_Fighter:_American_Top_Team_vs._Blackz__1",
+        "uri" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_American_Top_Team_vs._Blackzilians__The_Ultimate_Fighter:_American_Top_Team_vs._Blackz__1"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__1",
+        "uri" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__1"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_84",
+        "uri" : "http://dbpedia.org/resource/UFC_84"
+      }, {
+        "label" : "http://dbpedia.org/resource/CCC_Kei_Wai_Primary_School_(Ma_Wan)",
+        "uri" : "http://dbpedia.org/resource/CCC_Kei_Wai_Primary_School_(Ma_Wan)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maatsuyker_Island_Lighthouse",
+        "uri" : "http://dbpedia.org/resource/Maatsuyker_Island_Lighthouse"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mabel_Lake_Airport",
+        "uri" : "http://dbpedia.org/resource/Mabel_Lake_Airport"
+      }, {
+        "label" : "http://dbpedia.org/resource/MacDougal–Sullivan_Gardens_Historic_District",
+        "uri" : "http://dbpedia.org/resource/MacDougal–Sullivan_Gardens_Historic_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Brazil_76–0_Timor-Leste",
+        "uri" : "http://dbpedia.org/resource/Brazil_76–0_Timor-Leste"
+      }, {
+        "label" : "http://dbpedia.org/resource/Wayne_State_University_Computer_Science_Department",
+        "uri" : "http://dbpedia.org/resource/Wayne_State_University_Computer_Science_Department"
+      }, {
+        "label" : "http://dbpedia.org/resource/1940_Mandatory_Palestine_v_Lebanon_football_match",
+        "uri" : "http://dbpedia.org/resource/1940_Mandatory_Palestine_v_Lebanon_football_match"
+      }, {
+        "label" : "http://dbpedia.org/resource/Avery_Rock_Light",
+        "uri" : "http://dbpedia.org/resource/Avery_Rock_Light"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "15",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Was ist der Standort von der Standort von $x?", "Was war der Standort von der Standort von $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/location> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "KGB",
+        "uri" : "http://dbpedia.org/resource/KGB"
+      }, {
+        "label" : "Försvarets radioanstalt",
+        "uri" : "http://dbpedia.org/resource/National_Defence_Radio_Establishment"
+      }, {
+        "label" : "http://dbpedia.org/resource/Founder's_Hall_(Rockefeller_University)",
+        "uri" : "http://dbpedia.org/resource/Founder's_Hall_(Rockefeller_University)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Manhattan_House",
+        "uri" : "http://dbpedia.org/resource/Manhattan_House"
+      }, {
+        "label" : "http://dbpedia.org/resource/826_National",
+        "uri" : "http://dbpedia.org/resource/826_National"
+      }, {
+        "label" : "http://dbpedia.org/resource/1992_Scottish_Challenge_Cup_Final",
+        "uri" : "http://dbpedia.org/resource/1992_Scottish_Challenge_Cup_Final"
+      }, {
+        "label" : "http://dbpedia.org/resource/Black_Hawk_Statue",
+        "uri" : "http://dbpedia.org/resource/Black_Hawk_Statue"
+      }, {
+        "label" : "http://dbpedia.org/resource/CHS_Field",
+        "uri" : "http://dbpedia.org/resource/CHS_Field"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chapel_No._1",
+        "uri" : "http://dbpedia.org/resource/Chapel_No._1"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chapel_of_the_Holy_Trinity,_Lublin_Castle",
+        "uri" : "http://dbpedia.org/resource/Chapel_of_the_Holy_Trinity,_Lublin_Castle"
+      }, {
+        "label" : "http://dbpedia.org/resource/FDIC_International",
+        "uri" : "http://dbpedia.org/resource/FDIC_International"
+      }, {
+        "label" : "Isla-Verde-Straße",
+        "uri" : "http://dbpedia.org/resource/Verde_Island_Passage"
+      }, {
+        "label" : "Chambre des Pairs",
+        "uri" : "http://dbpedia.org/resource/Chamber_of_Peers_(France)"
+      }, {
+        "label" : "Balayan-Bucht",
+        "uri" : "http://dbpedia.org/resource/Balayan_Bay"
+      }, {
+        "label" : "Senat (Frankreich)",
+        "uri" : "http://dbpedia.org/resource/Senate_(France)"
+      }, {
+        "label" : "Bato-See",
+        "uri" : "http://dbpedia.org/resource/Lake_Bato"
+      }, {
+        "label" : "Philippine National Railways",
+        "uri" : "http://dbpedia.org/resource/Philippine_National_Railways"
+      }, {
+        "label" : "Manilabucht",
+        "uri" : "http://dbpedia.org/resource/Manila_Bay"
+      }, {
+        "label" : "http://dbpedia.org/resource/Swedish_Ski_Games",
+        "uri" : "http://dbpedia.org/resource/Swedish_Ski_Games"
+      }, {
+        "label" : "http://dbpedia.org/resource/Supreme_Court_Building_(Puerto_Rico)",
+        "uri" : "http://dbpedia.org/resource/Supreme_Court_Building_(Puerto_Rico)"
+      }, {
+        "label" : "http://dbpedia.org/resource/AN/FSQ-7_Combat_Direction_Central",
+        "uri" : "http://dbpedia.org/resource/AN/FSQ-7_Combat_Direction_Central"
+      }, {
+        "label" : "http://dbpedia.org/resource/1999_Belgian_Super_Cup",
+        "uri" : "http://dbpedia.org/resource/1999_Belgian_Super_Cup"
+      }, {
+        "label" : "http://dbpedia.org/resource/2002_Belgian_Super_Cup",
+        "uri" : "http://dbpedia.org/resource/2002_Belgian_Super_Cup"
+      }, {
+        "label" : "http://dbpedia.org/resource/2019_Belgian_Super_Cup",
+        "uri" : "http://dbpedia.org/resource/2019_Belgian_Super_Cup"
+      }, {
+        "label" : "http://dbpedia.org/resource/William_Wagner_House",
+        "uri" : "http://dbpedia.org/resource/William_Wagner_House"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lum's_Mill_House",
+        "uri" : "http://dbpedia.org/resource/Lum's_Mill_House"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luton_Borough_Council",
+        "uri" : "http://dbpedia.org/resource/Luton_Borough_Council"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luzerne_County_Council",
+        "uri" : "http://dbpedia.org/resource/Luzerne_County_Council"
+      }, {
+        "label" : "http://dbpedia.org/resource/2016_in_Fight_Nights_Global",
+        "uri" : "http://dbpedia.org/resource/2016_in_Fight_Nights_Global"
+      }, {
+        "label" : "http://dbpedia.org/resource/2017_in_Absolute_Championship_Berkut",
+        "uri" : "http://dbpedia.org/resource/2017_in_Absolute_Championship_Berkut"
+      }, {
+        "label" : "http://dbpedia.org/resource/2017_in_Fight_Nights_Global",
+        "uri" : "http://dbpedia.org/resource/2017_in_Fight_Nights_Global"
+      }, {
+        "label" : "http://dbpedia.org/resource/2018_in_Fight_Nights_Global",
+        "uri" : "http://dbpedia.org/resource/2018_in_Fight_Nights_Global"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bataan_Airfield",
+        "uri" : "http://dbpedia.org/resource/Bataan_Airfield"
+      }, {
+        "label" : "http://dbpedia.org/resource/Del_Carmen_Airfield",
+        "uri" : "http://dbpedia.org/resource/Del_Carmen_Airfield"
+      }, {
+        "label" : "http://dbpedia.org/resource/Iba_Airfield",
+        "uri" : "http://dbpedia.org/resource/Iba_Airfield"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lake_Pinatubo",
+        "uri" : "http://dbpedia.org/resource/Lake_Pinatubo"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lake_Tikub",
+        "uri" : "http://dbpedia.org/resource/Lake_Tikub"
+      }, {
+        "label" : "http://dbpedia.org/resource/Paoay_Lake",
+        "uri" : "http://dbpedia.org/resource/Paoay_Lake"
+      }, {
+        "label" : "http://dbpedia.org/resource/Pasaleng_Bay",
+        "uri" : "http://dbpedia.org/resource/Pasaleng_Bay"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nichols_Field",
+        "uri" : "http://dbpedia.org/resource/Nichols_Field"
+      }, {
+        "label" : "Strafkolonie Macquarie Harbour",
+        "uri" : "http://dbpedia.org/resource/Macquarie_Harbour_Penal_Station"
+      }, {
+        "label" : "The Gaslight Cafe",
+        "uri" : "http://dbpedia.org/resource/The_Gaslight_Cafe"
+      }, {
+        "label" : "Delhi",
+        "uri" : "http://dbpedia.org/resource/Municipal_Corporation_of_Delhi"
+      }, {
+        "label" : "Melrose High School (Massachusetts)",
+        "uri" : "http://dbpedia.org/resource/Melrose_High_School_(Massachusetts)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Field_of_Honor_(2014)",
+        "uri" : "http://dbpedia.org/resource/Field_of_Honor_(2014)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Field_of_Honor_(2015)",
+        "uri" : "http://dbpedia.org/resource/Field_of_Honor_(2015)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Field_of_Honor_(2016)",
+        "uri" : "http://dbpedia.org/resource/Field_of_Honor_(2016)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1996)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1996)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1997)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1997)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1998)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1998)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1999)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1999)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(2000)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(2000)"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_91",
+        "uri" : "http://dbpedia.org/resource/UFC_91"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_92",
+        "uri" : "http://dbpedia.org/resource/UFC_92"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_108",
+        "uri" : "http://dbpedia.org/resource/UFC_108"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_114",
+        "uri" : "http://dbpedia.org/resource/UFC_114"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_34",
+        "uri" : "http://dbpedia.org/resource/UFC_34"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_132",
+        "uri" : "http://dbpedia.org/resource/UFC_132"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_141",
+        "uri" : "http://dbpedia.org/resource/UFC_141"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_168",
+        "uri" : "http://dbpedia.org/resource/UFC_168"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_94",
+        "uri" : "http://dbpedia.org/resource/UFC_94"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_146",
+        "uri" : "http://dbpedia.org/resource/UFC_146"
+      }, {
+        "label" : "http://dbpedia.org/resource/Double_or_Nothing_(2019)",
+        "uri" : "http://dbpedia.org/resource/Double_or_Nothing_(2019)"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_130",
+        "uri" : "http://dbpedia.org/resource/UFC_130"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_155",
+        "uri" : "http://dbpedia.org/resource/UFC_155"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_98",
+        "uri" : "http://dbpedia.org/resource/UFC_98"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_173",
+        "uri" : "http://dbpedia.org/resource/UFC_173"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_178",
+        "uri" : "http://dbpedia.org/resource/UFC_178"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_182",
+        "uri" : "http://dbpedia.org/resource/UFC_182"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_183",
+        "uri" : "http://dbpedia.org/resource/UFC_183"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_187",
+        "uri" : "http://dbpedia.org/resource/UFC_187"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_189",
+        "uri" : "http://dbpedia.org/resource/UFC_189"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_191",
+        "uri" : "http://dbpedia.org/resource/UFC_191"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_194",
+        "uri" : "http://dbpedia.org/resource/UFC_194"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_195",
+        "uri" : "http://dbpedia.org/resource/UFC_195"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_196",
+        "uri" : "http://dbpedia.org/resource/UFC_196"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_197",
+        "uri" : "http://dbpedia.org/resource/UFC_197"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_Fight_Night:_Hendricks_vs._Thompson",
+        "uri" : "http://dbpedia.org/resource/UFC_Fight_Night:_Hendricks_vs._Thompson"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_Fight_Night:_dos_Anjos_vs._Alvarez",
+        "uri" : "http://dbpedia.org/resource/UFC_Fight_Night:_dos_Anjos_vs._Alvarez"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_148",
+        "uri" : "http://dbpedia.org/resource/UFC_148"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_167",
+        "uri" : "http://dbpedia.org/resource/UFC_167"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_160",
+        "uri" : "http://dbpedia.org/resource/UFC_160"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_71",
+        "uri" : "http://dbpedia.org/resource/UFC_71"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_125",
+        "uri" : "http://dbpedia.org/resource/UFC_125"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_162",
+        "uri" : "http://dbpedia.org/resource/UFC_162"
+      }, {
+        "label" : "http://dbpedia.org/resource/Double_or_Nothing_(2021)",
+        "uri" : "http://dbpedia.org/resource/Double_or_Nothing_(2021)"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_116",
+        "uri" : "http://dbpedia.org/resource/UFC_116"
+      }, {
+        "label" : "http://dbpedia.org/resource/UWF_Blackjack_Brawl",
+        "uri" : "http://dbpedia.org/resource/UWF_Blackjack_Brawl"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_66",
+        "uri" : "http://dbpedia.org/resource/UFC_66"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_American_Top_Team_vs._Blackzilians__The_Ultimate_Fighter:_American_Top_Team_vs._Blackz__1",
+        "uri" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_American_Top_Team_vs._Blackzilians__The_Ultimate_Fighter:_American_Top_Team_vs._Blackz__1"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__1",
+        "uri" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__1"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_84",
+        "uri" : "http://dbpedia.org/resource/UFC_84"
+      }, {
+        "label" : "http://dbpedia.org/resource/CCC_Kei_Wai_Primary_School_(Ma_Wan)",
+        "uri" : "http://dbpedia.org/resource/CCC_Kei_Wai_Primary_School_(Ma_Wan)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maatsuyker_Island_Lighthouse",
+        "uri" : "http://dbpedia.org/resource/Maatsuyker_Island_Lighthouse"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mabel_Lake_Airport",
+        "uri" : "http://dbpedia.org/resource/Mabel_Lake_Airport"
+      }, {
+        "label" : "http://dbpedia.org/resource/MacDougal–Sullivan_Gardens_Historic_District",
+        "uri" : "http://dbpedia.org/resource/MacDougal–Sullivan_Gardens_Historic_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Brazil_76–0_Timor-Leste",
+        "uri" : "http://dbpedia.org/resource/Brazil_76–0_Timor-Leste"
+      }, {
+        "label" : "http://dbpedia.org/resource/Wayne_State_University_Computer_Science_Department",
+        "uri" : "http://dbpedia.org/resource/Wayne_State_University_Computer_Science_Department"
+      }, {
+        "label" : "http://dbpedia.org/resource/1940_Mandatory_Palestine_v_Lebanon_football_match",
+        "uri" : "http://dbpedia.org/resource/1940_Mandatory_Palestine_v_Lebanon_football_match"
+      }, {
+        "label" : "http://dbpedia.org/resource/Avery_Rock_Light",
+        "uri" : "http://dbpedia.org/resource/Avery_Rock_Light"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "16",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "ORGANISATION",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Was ist der Standort von der Standort von $x?", "Was war der Standort von der Standort von $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/location> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "KGB",
+        "uri" : "http://dbpedia.org/resource/KGB"
+      }, {
+        "label" : "Försvarets radioanstalt",
+        "uri" : "http://dbpedia.org/resource/National_Defence_Radio_Establishment"
+      }, {
+        "label" : "http://dbpedia.org/resource/Founder's_Hall_(Rockefeller_University)",
+        "uri" : "http://dbpedia.org/resource/Founder's_Hall_(Rockefeller_University)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Manhattan_House",
+        "uri" : "http://dbpedia.org/resource/Manhattan_House"
+      }, {
+        "label" : "http://dbpedia.org/resource/826_National",
+        "uri" : "http://dbpedia.org/resource/826_National"
+      }, {
+        "label" : "http://dbpedia.org/resource/1992_Scottish_Challenge_Cup_Final",
+        "uri" : "http://dbpedia.org/resource/1992_Scottish_Challenge_Cup_Final"
+      }, {
+        "label" : "http://dbpedia.org/resource/Black_Hawk_Statue",
+        "uri" : "http://dbpedia.org/resource/Black_Hawk_Statue"
+      }, {
+        "label" : "http://dbpedia.org/resource/CHS_Field",
+        "uri" : "http://dbpedia.org/resource/CHS_Field"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chapel_No._1",
+        "uri" : "http://dbpedia.org/resource/Chapel_No._1"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chapel_of_the_Holy_Trinity,_Lublin_Castle",
+        "uri" : "http://dbpedia.org/resource/Chapel_of_the_Holy_Trinity,_Lublin_Castle"
+      }, {
+        "label" : "http://dbpedia.org/resource/FDIC_International",
+        "uri" : "http://dbpedia.org/resource/FDIC_International"
+      }, {
+        "label" : "Isla-Verde-Straße",
+        "uri" : "http://dbpedia.org/resource/Verde_Island_Passage"
+      }, {
+        "label" : "Chambre des Pairs",
+        "uri" : "http://dbpedia.org/resource/Chamber_of_Peers_(France)"
+      }, {
+        "label" : "Balayan-Bucht",
+        "uri" : "http://dbpedia.org/resource/Balayan_Bay"
+      }, {
+        "label" : "Senat (Frankreich)",
+        "uri" : "http://dbpedia.org/resource/Senate_(France)"
+      }, {
+        "label" : "Bato-See",
+        "uri" : "http://dbpedia.org/resource/Lake_Bato"
+      }, {
+        "label" : "Philippine National Railways",
+        "uri" : "http://dbpedia.org/resource/Philippine_National_Railways"
+      }, {
+        "label" : "Manilabucht",
+        "uri" : "http://dbpedia.org/resource/Manila_Bay"
+      }, {
+        "label" : "http://dbpedia.org/resource/Swedish_Ski_Games",
+        "uri" : "http://dbpedia.org/resource/Swedish_Ski_Games"
+      }, {
+        "label" : "http://dbpedia.org/resource/Supreme_Court_Building_(Puerto_Rico)",
+        "uri" : "http://dbpedia.org/resource/Supreme_Court_Building_(Puerto_Rico)"
+      }, {
+        "label" : "http://dbpedia.org/resource/AN/FSQ-7_Combat_Direction_Central",
+        "uri" : "http://dbpedia.org/resource/AN/FSQ-7_Combat_Direction_Central"
+      }, {
+        "label" : "http://dbpedia.org/resource/1999_Belgian_Super_Cup",
+        "uri" : "http://dbpedia.org/resource/1999_Belgian_Super_Cup"
+      }, {
+        "label" : "http://dbpedia.org/resource/2002_Belgian_Super_Cup",
+        "uri" : "http://dbpedia.org/resource/2002_Belgian_Super_Cup"
+      }, {
+        "label" : "http://dbpedia.org/resource/2019_Belgian_Super_Cup",
+        "uri" : "http://dbpedia.org/resource/2019_Belgian_Super_Cup"
+      }, {
+        "label" : "http://dbpedia.org/resource/William_Wagner_House",
+        "uri" : "http://dbpedia.org/resource/William_Wagner_House"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lum's_Mill_House",
+        "uri" : "http://dbpedia.org/resource/Lum's_Mill_House"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luton_Borough_Council",
+        "uri" : "http://dbpedia.org/resource/Luton_Borough_Council"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luzerne_County_Council",
+        "uri" : "http://dbpedia.org/resource/Luzerne_County_Council"
+      }, {
+        "label" : "http://dbpedia.org/resource/2016_in_Fight_Nights_Global",
+        "uri" : "http://dbpedia.org/resource/2016_in_Fight_Nights_Global"
+      }, {
+        "label" : "http://dbpedia.org/resource/2017_in_Absolute_Championship_Berkut",
+        "uri" : "http://dbpedia.org/resource/2017_in_Absolute_Championship_Berkut"
+      }, {
+        "label" : "http://dbpedia.org/resource/2017_in_Fight_Nights_Global",
+        "uri" : "http://dbpedia.org/resource/2017_in_Fight_Nights_Global"
+      }, {
+        "label" : "http://dbpedia.org/resource/2018_in_Fight_Nights_Global",
+        "uri" : "http://dbpedia.org/resource/2018_in_Fight_Nights_Global"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bataan_Airfield",
+        "uri" : "http://dbpedia.org/resource/Bataan_Airfield"
+      }, {
+        "label" : "http://dbpedia.org/resource/Del_Carmen_Airfield",
+        "uri" : "http://dbpedia.org/resource/Del_Carmen_Airfield"
+      }, {
+        "label" : "http://dbpedia.org/resource/Iba_Airfield",
+        "uri" : "http://dbpedia.org/resource/Iba_Airfield"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lake_Pinatubo",
+        "uri" : "http://dbpedia.org/resource/Lake_Pinatubo"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lake_Tikub",
+        "uri" : "http://dbpedia.org/resource/Lake_Tikub"
+      }, {
+        "label" : "http://dbpedia.org/resource/Paoay_Lake",
+        "uri" : "http://dbpedia.org/resource/Paoay_Lake"
+      }, {
+        "label" : "http://dbpedia.org/resource/Pasaleng_Bay",
+        "uri" : "http://dbpedia.org/resource/Pasaleng_Bay"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nichols_Field",
+        "uri" : "http://dbpedia.org/resource/Nichols_Field"
+      }, {
+        "label" : "Strafkolonie Macquarie Harbour",
+        "uri" : "http://dbpedia.org/resource/Macquarie_Harbour_Penal_Station"
+      }, {
+        "label" : "The Gaslight Cafe",
+        "uri" : "http://dbpedia.org/resource/The_Gaslight_Cafe"
+      }, {
+        "label" : "Delhi",
+        "uri" : "http://dbpedia.org/resource/Municipal_Corporation_of_Delhi"
+      }, {
+        "label" : "Melrose High School (Massachusetts)",
+        "uri" : "http://dbpedia.org/resource/Melrose_High_School_(Massachusetts)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Field_of_Honor_(2014)",
+        "uri" : "http://dbpedia.org/resource/Field_of_Honor_(2014)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Field_of_Honor_(2015)",
+        "uri" : "http://dbpedia.org/resource/Field_of_Honor_(2015)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Field_of_Honor_(2016)",
+        "uri" : "http://dbpedia.org/resource/Field_of_Honor_(2016)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1996)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1996)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1997)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1997)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1998)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1998)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1999)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1999)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(2000)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(2000)"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_91",
+        "uri" : "http://dbpedia.org/resource/UFC_91"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_92",
+        "uri" : "http://dbpedia.org/resource/UFC_92"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_108",
+        "uri" : "http://dbpedia.org/resource/UFC_108"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_114",
+        "uri" : "http://dbpedia.org/resource/UFC_114"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_34",
+        "uri" : "http://dbpedia.org/resource/UFC_34"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_132",
+        "uri" : "http://dbpedia.org/resource/UFC_132"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_141",
+        "uri" : "http://dbpedia.org/resource/UFC_141"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_168",
+        "uri" : "http://dbpedia.org/resource/UFC_168"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_94",
+        "uri" : "http://dbpedia.org/resource/UFC_94"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_146",
+        "uri" : "http://dbpedia.org/resource/UFC_146"
+      }, {
+        "label" : "http://dbpedia.org/resource/Double_or_Nothing_(2019)",
+        "uri" : "http://dbpedia.org/resource/Double_or_Nothing_(2019)"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_130",
+        "uri" : "http://dbpedia.org/resource/UFC_130"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_155",
+        "uri" : "http://dbpedia.org/resource/UFC_155"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_98",
+        "uri" : "http://dbpedia.org/resource/UFC_98"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_173",
+        "uri" : "http://dbpedia.org/resource/UFC_173"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_178",
+        "uri" : "http://dbpedia.org/resource/UFC_178"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_182",
+        "uri" : "http://dbpedia.org/resource/UFC_182"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_183",
+        "uri" : "http://dbpedia.org/resource/UFC_183"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_187",
+        "uri" : "http://dbpedia.org/resource/UFC_187"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_189",
+        "uri" : "http://dbpedia.org/resource/UFC_189"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_191",
+        "uri" : "http://dbpedia.org/resource/UFC_191"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_194",
+        "uri" : "http://dbpedia.org/resource/UFC_194"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_195",
+        "uri" : "http://dbpedia.org/resource/UFC_195"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_196",
+        "uri" : "http://dbpedia.org/resource/UFC_196"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_197",
+        "uri" : "http://dbpedia.org/resource/UFC_197"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_Fight_Night:_Hendricks_vs._Thompson",
+        "uri" : "http://dbpedia.org/resource/UFC_Fight_Night:_Hendricks_vs._Thompson"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_Fight_Night:_dos_Anjos_vs._Alvarez",
+        "uri" : "http://dbpedia.org/resource/UFC_Fight_Night:_dos_Anjos_vs._Alvarez"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_148",
+        "uri" : "http://dbpedia.org/resource/UFC_148"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_167",
+        "uri" : "http://dbpedia.org/resource/UFC_167"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_160",
+        "uri" : "http://dbpedia.org/resource/UFC_160"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_71",
+        "uri" : "http://dbpedia.org/resource/UFC_71"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_125",
+        "uri" : "http://dbpedia.org/resource/UFC_125"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_162",
+        "uri" : "http://dbpedia.org/resource/UFC_162"
+      }, {
+        "label" : "http://dbpedia.org/resource/Double_or_Nothing_(2021)",
+        "uri" : "http://dbpedia.org/resource/Double_or_Nothing_(2021)"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_116",
+        "uri" : "http://dbpedia.org/resource/UFC_116"
+      }, {
+        "label" : "http://dbpedia.org/resource/UWF_Blackjack_Brawl",
+        "uri" : "http://dbpedia.org/resource/UWF_Blackjack_Brawl"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_66",
+        "uri" : "http://dbpedia.org/resource/UFC_66"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_American_Top_Team_vs._Blackzilians__The_Ultimate_Fighter:_American_Top_Team_vs._Blackz__1",
+        "uri" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_American_Top_Team_vs._Blackzilians__The_Ultimate_Fighter:_American_Top_Team_vs._Blackz__1"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__1",
+        "uri" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__1"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_84",
+        "uri" : "http://dbpedia.org/resource/UFC_84"
+      }, {
+        "label" : "http://dbpedia.org/resource/CCC_Kei_Wai_Primary_School_(Ma_Wan)",
+        "uri" : "http://dbpedia.org/resource/CCC_Kei_Wai_Primary_School_(Ma_Wan)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maatsuyker_Island_Lighthouse",
+        "uri" : "http://dbpedia.org/resource/Maatsuyker_Island_Lighthouse"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mabel_Lake_Airport",
+        "uri" : "http://dbpedia.org/resource/Mabel_Lake_Airport"
+      }, {
+        "label" : "http://dbpedia.org/resource/MacDougal–Sullivan_Gardens_Historic_District",
+        "uri" : "http://dbpedia.org/resource/MacDougal–Sullivan_Gardens_Historic_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Brazil_76–0_Timor-Leste",
+        "uri" : "http://dbpedia.org/resource/Brazil_76–0_Timor-Leste"
+      }, {
+        "label" : "http://dbpedia.org/resource/Wayne_State_University_Computer_Science_Department",
+        "uri" : "http://dbpedia.org/resource/Wayne_State_University_Computer_Science_Department"
+      }, {
+        "label" : "http://dbpedia.org/resource/1940_Mandatory_Palestine_v_Lebanon_football_match",
+        "uri" : "http://dbpedia.org/resource/1940_Mandatory_Palestine_v_Lebanon_football_match"
+      }, {
+        "label" : "http://dbpedia.org/resource/Avery_Rock_Light",
+        "uri" : "http://dbpedia.org/resource/Avery_Rock_Light"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "17",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Was ist der Standort von der Produzent von $x?", "Was ist der Standort von die Produzenten von $x?", "Was war der Standort von der Produzent von $x?", "Was war der Standort von die Produzenten von $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/product> ?objOfPropx)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Luxusgut",
+        "uri" : "http://dbpedia.org/resource/Luxury_goods"
+      }, {
+        "label" : "Kontaktlinse",
+        "uri" : "http://dbpedia.org/resource/Contact_lens"
+      }, {
+        "label" : "Körperschaft",
+        "uri" : "http://dbpedia.org/resource/Corporation"
+      }, {
+        "label" : "Molkerei",
+        "uri" : "http://dbpedia.org/resource/Dairy"
+      }, {
+        "label" : "Imbiss (Speise)",
+        "uri" : "http://dbpedia.org/resource/Snack"
+      }, {
+        "label" : "Stahl",
+        "uri" : "http://dbpedia.org/resource/Steel"
+      }, {
+        "label" : "Wasseraufbereitungsanlage",
+        "uri" : "http://dbpedia.org/resource/Water_treatment"
+      }, {
+        "label" : "Wolle",
+        "uri" : "http://dbpedia.org/resource/Wool"
+      }, {
+        "label" : "Spamfilter",
+        "uri" : "http://dbpedia.org/resource/Email_filtering"
+      }, {
+        "label" : "Hut",
+        "uri" : "http://dbpedia.org/resource/Hat"
+      }, {
+        "label" : "Scrapbooking",
+        "uri" : "http://dbpedia.org/resource/Scrapbooking"
+      }, {
+        "label" : "Storage Area Network",
+        "uri" : "http://dbpedia.org/resource/Storage_area_network"
+      }, {
+        "label" : "Leasing",
+        "uri" : "http://dbpedia.org/resource/Leasing"
+      }, {
+        "label" : "ATA over Ethernet",
+        "uri" : "http://dbpedia.org/resource/ATA_over_Ethernet"
+      }, {
+        "label" : "Dieselmotor",
+        "uri" : "http://dbpedia.org/resource/Diesel_engine"
+      }, {
+        "label" : "Eigentum",
+        "uri" : "http://dbpedia.org/resource/Property"
+      }, {
+        "label" : "Edition",
+        "uri" : "http://dbpedia.org/resource/Publishing"
+      }, {
+        "label" : "Eisenbahnwagen",
+        "uri" : "http://dbpedia.org/resource/Railroad_car"
+      }, {
+        "label" : "Internetzugang",
+        "uri" : "http://dbpedia.org/resource/Internet_access"
+      }, {
+        "label" : "Netzmanagement",
+        "uri" : "http://dbpedia.org/resource/Network_management"
+      }, {
+        "label" : "Kunststoff",
+        "uri" : "http://dbpedia.org/resource/Plastic"
+      }, {
+        "label" : "Pornofilm",
+        "uri" : "http://dbpedia.org/resource/Pornographic_film"
+      }, {
+        "label" : "Reis",
+        "uri" : "http://dbpedia.org/resource/Rice"
+      }, {
+        "label" : "Feuerwaffe",
+        "uri" : "http://dbpedia.org/resource/Firearm"
+      }, {
+        "label" : "Waffe",
+        "uri" : "http://dbpedia.org/resource/Weapon"
+      }, {
+        "label" : "Schutzbrille",
+        "uri" : "http://dbpedia.org/resource/Goggles"
+      }, {
+        "label" : "Platzwart",
+        "uri" : "http://dbpedia.org/resource/Groundskeeping"
+      }, {
+        "label" : "Autorenwerkzeug",
+        "uri" : "http://dbpedia.org/resource/Help_authoring_tool"
+      }, {
+        "label" : "Absturzsicherung (Mensch)",
+        "uri" : "http://dbpedia.org/resource/Safety_harness"
+      }, {
+        "label" : "Gastgewerbe",
+        "uri" : "http://dbpedia.org/resource/Hospitality_industry"
+      }, {
+        "label" : "Speiseeis",
+        "uri" : "http://dbpedia.org/resource/Ice_cream"
+      }, {
+        "label" : "Versicherung (Kollektiv)",
+        "uri" : "http://dbpedia.org/resource/Insurance"
+      }, {
+        "label" : "Musikinstrument",
+        "uri" : "http://dbpedia.org/resource/Musical_instrument"
+      }, {
+        "label" : "Scheck",
+        "uri" : "http://dbpedia.org/resource/Cheque"
+      }, {
+        "label" : "Finanzen",
+        "uri" : "http://dbpedia.org/resource/Finance"
+      }, {
+        "label" : "Fontographer",
+        "uri" : "http://dbpedia.org/resource/Fontographer"
+      }, {
+        "label" : "Lebensmittel",
+        "uri" : "http://dbpedia.org/resource/Food"
+      }, {
+        "label" : "Schalung (Beton)",
+        "uri" : "http://dbpedia.org/resource/Formwork"
+      }, {
+        "label" : "Brennstoff",
+        "uri" : "http://dbpedia.org/resource/Fuel"
+      }, {
+        "label" : "Terminbörse",
+        "uri" : "http://dbpedia.org/resource/Futures_exchange"
+      }, {
+        "label" : "Hedgefonds",
+        "uri" : "http://dbpedia.org/resource/Hedge_fund"
+      }, {
+        "label" : "Post",
+        "uri" : "http://dbpedia.org/resource/Mail"
+      }, {
+        "label" : "Erdgas",
+        "uri" : "http://dbpedia.org/resource/Natural_gas"
+      }, {
+        "label" : "Blech",
+        "uri" : "http://dbpedia.org/resource/Sheet_metal"
+      }, {
+        "label" : "Schaltanlage",
+        "uri" : "http://dbpedia.org/resource/Switchgear"
+      }, {
+        "label" : "Wein",
+        "uri" : "http://dbpedia.org/resource/Wine"
+      }, {
+        "label" : "Elektronische Beschaffung",
+        "uri" : "http://dbpedia.org/resource/E-procurement"
+      }, {
+        "label" : "Lenkflugkörper",
+        "uri" : "http://dbpedia.org/resource/Missile"
+      }, {
+        "label" : "Geldmarkt",
+        "uri" : "http://dbpedia.org/resource/Money_market"
+      }, {
+        "label" : "Partitur",
+        "uri" : "http://dbpedia.org/resource/Sheet_music"
+      }, {
+        "label" : "Pornografie im Internet",
+        "uri" : "http://dbpedia.org/resource/Internet_pornography"
+      }, {
+        "label" : "Radio",
+        "uri" : "http://dbpedia.org/resource/Radio"
+      }, {
+        "label" : "Resort",
+        "uri" : "http://dbpedia.org/resource/Resort"
+      }, {
+        "label" : "Wagniskapital",
+        "uri" : "http://dbpedia.org/resource/Venture_capital"
+      }, {
+        "label" : "Dünger",
+        "uri" : "http://dbpedia.org/resource/Fertilizer"
+      }, {
+        "label" : "Finanzdienstleistung",
+        "uri" : "http://dbpedia.org/resource/Financial_services"
+      }, {
+        "label" : "Tiefkühlkost",
+        "uri" : "http://dbpedia.org/resource/Frozen_food"
+      }, {
+        "label" : "Dampfturbine",
+        "uri" : "http://dbpedia.org/resource/Steam_turbine"
+      }, {
+        "label" : "Automatisierung",
+        "uri" : "http://dbpedia.org/resource/Automation"
+      }, {
+        "label" : "Bier",
+        "uri" : "http://dbpedia.org/resource/Beer"
+      }, {
+        "label" : "Ferngespräch",
+        "uri" : "http://dbpedia.org/resource/Long-distance_calling"
+      }, {
+        "label" : "Deep Learning",
+        "uri" : "http://dbpedia.org/resource/Deep_learning"
+      }, {
+        "label" : "Feinkost",
+        "uri" : "http://dbpedia.org/resource/Delicatessen"
+      }, {
+        "label" : "Spedition",
+        "uri" : "http://dbpedia.org/resource/Freight_forwarder"
+      }, {
+        "label" : "Electronic Banking",
+        "uri" : "http://dbpedia.org/resource/Online_banking"
+      }, {
+        "label" : "Kalender",
+        "uri" : "http://dbpedia.org/resource/Calendar"
+      }, {
+        "label" : "Spielbank",
+        "uri" : "http://dbpedia.org/resource/Casino"
+      }, {
+        "label" : "Kleidung",
+        "uri" : "http://dbpedia.org/resource/Clothing"
+      }, {
+        "label" : "Private Bank",
+        "uri" : "http://dbpedia.org/resource/Private_bank"
+      }, {
+        "label" : "Pushback (Flugzeug)",
+        "uri" : "http://dbpedia.org/resource/Pushback"
+      }, {
+        "label" : "Unedle Metalle",
+        "uri" : "http://dbpedia.org/resource/Base_metal"
+      }, {
+        "label" : "Standleitung",
+        "uri" : "http://dbpedia.org/resource/Leased_line"
+      }, {
+        "label" : "Platform as a Service",
+        "uri" : "http://dbpedia.org/resource/Platform_as_a_service"
+      }, {
+        "label" : "Öffentlichkeitsarbeit",
+        "uri" : "http://dbpedia.org/resource/Public_relations"
+      }, {
+        "label" : "Einzelhandel",
+        "uri" : "http://dbpedia.org/resource/Retail"
+      }, {
+        "label" : "Werft",
+        "uri" : "http://dbpedia.org/resource/Shipyard"
+      }, {
+        "label" : "Smokeless Tobacco",
+        "uri" : "http://dbpedia.org/resource/Smokeless_tobacco"
+      }, {
+        "label" : "Schnupftabak",
+        "uri" : "http://dbpedia.org/resource/Snuff_(tobacco)"
+      }, {
+        "label" : "Lösung (Chemie)",
+        "uri" : "http://dbpedia.org/resource/Solution"
+      }, {
+        "label" : "Tourismus",
+        "uri" : "http://dbpedia.org/resource/Tourism"
+      }, {
+        "label" : "Sicherheitslücke",
+        "uri" : "http://dbpedia.org/resource/Vulnerability_(computing)"
+      }, {
+        "label" : "Faulgas",
+        "uri" : "http://dbpedia.org/resource/Biogas"
+      }, {
+        "label" : "Biogas",
+        "uri" : "http://dbpedia.org/resource/Biogas"
+      }, {
+        "label" : "Bioremediation",
+        "uri" : "http://dbpedia.org/resource/Bioremediation"
+      }, {
+        "label" : "Mobiltelefon",
+        "uri" : "http://dbpedia.org/resource/Mobile_phone"
+      }, {
+        "label" : "Jackpot",
+        "uri" : "http://dbpedia.org/resource/Progressive_jackpot"
+      }, {
+        "label" : "Verpackung",
+        "uri" : "http://dbpedia.org/resource/Packaging_and_labeling"
+      }, {
+        "label" : "Rasen",
+        "uri" : "http://dbpedia.org/resource/Lawn"
+      }, {
+        "label" : "Spirituose",
+        "uri" : "http://dbpedia.org/resource/Liquor"
+      }, {
+        "label" : "Lotto",
+        "uri" : "http://dbpedia.org/resource/Lottery"
+      }, {
+        "label" : "Fleisch",
+        "uri" : "http://dbpedia.org/resource/Meat"
+      }, {
+        "label" : "Metalle",
+        "uri" : "http://dbpedia.org/resource/Metal"
+      }, {
+        "label" : "Zug (Schienenverkehr)",
+        "uri" : "http://dbpedia.org/resource/Train"
+      }, {
+        "label" : "Malz",
+        "uri" : "http://dbpedia.org/resource/Malt"
+      }, {
+        "label" : "Massenmedien",
+        "uri" : "http://dbpedia.org/resource/Mass_media"
+      }, {
+        "label" : "Gassensor",
+        "uri" : "http://dbpedia.org/resource/Gas_detector"
+      }, {
+        "label" : "Sonnenenergie",
+        "uri" : "http://dbpedia.org/resource/Solar_energy"
+      }, {
+        "label" : "Franchising",
+        "uri" : "http://dbpedia.org/resource/Franchising"
+      }, {
+        "label" : "Möbel",
+        "uri" : "http://dbpedia.org/resource/Furniture"
+      }, {
+        "label" : "Schutzhelm",
+        "uri" : "http://dbpedia.org/resource/Hard_hat"
+      } ]
+    },
+    "combination" : true
+  } ]
+}

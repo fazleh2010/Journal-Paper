@@ -1,10 +1,12 @@
 package grammar.generator.helper;
 
 import eu.monnetproject.lemon.model.LexicalEntry;
+import eu.monnetproject.lemon.model.LexicalForm;
 import eu.monnetproject.lemon.model.PropertyValue;
 import grammar.generator.helper.datasets.sentencetemplates.SentenceTemplateRepository;
 import grammar.generator.helper.parser.SentenceTemplateParser;
 import grammar.generator.helper.parser.SentenceToken;
+import grammar.generator.helper.sentencetemplates.AnnotatedNoun;
 import grammar.generator.helper.sentencetemplates.AnnotatedNounOrQuestionWord;
 import grammar.generator.helper.sentencetemplates.AnnotatedVerb;
 import grammar.structure.component.DomainOrRangeType;
@@ -18,12 +20,7 @@ import org.apache.logging.log4j.Logger;
 import util.exceptions.QueGGMissingFactoryClassException;
 
 import java.net.URI;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 import static grammar.generator.helper.BindingConstants.BINDING_TOKEN_TEMPLATE;
 import static grammar.generator.helper.parser.SentenceTemplateParser.QUESTION_MARK;
@@ -176,11 +173,6 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
 
         // We already know, which sentence tokens to expect, so we search for them to find out where to put our expected AnnotatedWords and Strings
         Optional<SentenceToken> npDeterminer = getNPDeterminer(sentenceTokens);
-        if (npDeterminer.isPresent()) {
-            URI detRef = npDeterminer.get().getLocalReference();
-            LexicalEntry entry = new LexiconSearch(lexicalEntryUtil.getLexicon()).getReferencedResource(detRef);
-            determiner = entry.getCanonicalForm().getWrittenRep().value;
-        }
         Optional<SentenceToken> rootToken = getRootToken(sentenceTokens);
         Optional<SentenceToken> npPreposition = getNPPreposition(sentenceTokens);
         Optional<SentenceToken> npObject = getNPObject(sentenceTokens);
@@ -190,6 +182,22 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
             String[] sentenceArray = new String[sentenceTokens.size()];
             // Get NP for this annotatedNoun
             if (npDeterminer.isPresent()) {
+                URI detRef = npDeterminer.get().getLocalReference();
+                LexicalEntry entry = new LexiconSearch(lexicalEntryUtil.getLexicon()).getReferencedResource(detRef);
+                determiner = entry.getCanonicalForm().getWrittenRep().value;
+                List<AnnotatedNounOrQuestionWord> determiners = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords(entry.getOtherForms());
+                for (AnnotatedNounOrQuestionWord det : determiners) {
+                    if (det.getGrammaticalCase().equals(lexicalEntryUtil.getLexInfo().getPropertyValue("nominativeCase"))
+                            && annotatedNoun.getNumber().equals(det.getNumber())) {
+                        if (det.getNumber().equals(lexicalEntryUtil.getLexInfo().getPropertyValue("singular"))
+                                && annotatedNoun.getGender().equals(det.getGender())) {
+                            determiner = det.getWrittenRepValue();
+                        }
+                        else if (det.getNumber().equals(lexicalEntryUtil.getLexInfo().getPropertyValue("plural"))) {
+                            determiner = det.getWrittenRepValue();
+                        }
+                    }
+                }
                 sentenceArray[npDeterminer.get().getPosition()] = determiner;
             }
             if (conditionLabel.isPresent()
