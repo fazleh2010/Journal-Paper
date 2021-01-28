@@ -1,0 +1,43 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :discharge_of ;
+  lemon:entry    :of .
+
+:discharge_of a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :discharge_form ;
+  lemon:synBehavior    :discharge_of_nounpp ;
+  lemon:sense          :discharge_sense_ontomap .
+
+:discharge_form a       lemon:Form ;
+  lemon:writtenRep "discharge"@en .
+
+:discharge_of_nounpp a              lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:discharge_sense_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping   :discharge_sense_ontomap ;
+  lemon:reference     <http://dbpedia.org/ontology/discharge> ;
+  lemon:subjOfProp    :arg2 ;
+  lemon:objOfProp     :arg1 ;
+  lemon:condition     :discharge_condition .
+
+:discharge_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Stream> ;
+  lemon:propertyRange  <http://www.w3.org/2001/XMLSchema#double> .
+
+:arg2 lemon:marker :of .
+
+## Prepositions ##
+
+:of a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "of"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

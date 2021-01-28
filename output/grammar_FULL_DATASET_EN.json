@@ -4620,7 +4620,7 @@
     "bindingType" : "PERSON",
     "returnType" : "LOCATION",
     "frameType" : "IPP",
-    "sentences" : [ "When was the ($x | PERSON_NP) died?", "When were the ($x | PERSON_NP) died?", "Which place was the ($x | PERSON_NP) died?", "Which place were the ($x | PERSON_NP) died?" ],
+    "sentences" : [ "When was the ($x | PERSON_NP) died?", "When was the ($x | PERSON_NP) dies?", "When were the ($x | PERSON_NP) died?", "When were the ($x | PERSON_NP) dies?", "Which place was the ($x | PERSON_NP) died?", "Which place was the ($x | PERSON_NP) dies?", "Which place were the ($x | PERSON_NP) died?", "Which place were the ($x | PERSON_NP) dies?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -4939,7 +4939,7 @@
     "bindingType" : "LOCATION",
     "returnType" : "PERSON",
     "frameType" : "IPP",
-    "sentences" : [ "What was died in $x?", "What were died in $x?", "Which person was died in $x?", "Which persons were died in $x?" ],
+    "sentences" : [ "What was died in $x?", "What was dies in $x?", "What were died in $x?", "What were dies in $x?", "Which person was died in $x?", "Which person was dies in $x?", "Which persons were died in $x?", "Which persons were dies in $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -5258,7 +5258,7 @@
     "bindingType" : "PERSON",
     "returnType" : "CITY",
     "frameType" : "IPP",
-    "sentences" : [ "When was the ($x | PERSON_NP) buried?", "When were the ($x | PERSON_NP) buried?", "Which city was the ($x | PERSON_NP) buried?", "Which city were the ($x | PERSON_NP) buried?" ],
+    "sentences" : [ "When was the ($x | PERSON_NP) buried?", "When was the ($x | PERSON_NP) buries?", "When were the ($x | PERSON_NP) buried?", "When were the ($x | PERSON_NP) buries?", "Which city was the ($x | PERSON_NP) buried?", "Which city was the ($x | PERSON_NP) buries?", "Which city were the ($x | PERSON_NP) buried?", "Which city were the ($x | PERSON_NP) buries?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -5577,7 +5577,7 @@
     "bindingType" : "CITY",
     "returnType" : "PERSON",
     "frameType" : "IPP",
-    "sentences" : [ "What was buried in $x?", "What were buried in $x?", "Which person was buried in $x?", "Which persons were buried in $x?" ],
+    "sentences" : [ "What was buried in $x?", "What was buries in $x?", "What were buried in $x?", "What were buries in $x?", "Which person was buried in $x?", "Which person was buries in $x?", "Which persons were buried in $x?", "Which persons were buries in $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/property/burialPlace> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -5896,7 +5896,7 @@
     "bindingType" : "LOCATION",
     "returnType" : "DATE",
     "frameType" : "IPP",
-    "sentences" : [ "When was the ($x | LOCATION_NP) dissolved?", "When were the ($x | LOCATION_NP) dissolved?" ],
+    "sentences" : [ "When was the ($x | LOCATION_NP) dissolved?", "When was the ($x | LOCATION_NP) dissolves?", "When were the ($x | LOCATION_NP) dissolved?", "When were the ($x | LOCATION_NP) dissolves?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/dissolutionDate> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -6215,7 +6215,7 @@
     "bindingType" : "DATE",
     "returnType" : "LOCATION",
     "frameType" : "IPP",
-    "sentences" : [ "What was dissolved in $x?", "What were dissolved in $x?" ],
+    "sentences" : [ "What was dissolved in $x?", "What was dissolves in $x?", "What were dissolved in $x?", "What were dissolves in $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/dissolutionDate> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
