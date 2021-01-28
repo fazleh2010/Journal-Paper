@@ -7,16 +7,17 @@
 
 :lexicon_en a    lemon:Lexicon ;
   lemon:language "en" ;
-  lemon:entry    :to_join_transitive ;
-#  lemon:entry    :to_join_intransitive ;
-  lemon:entry    :joined .
+  lemon:entry    :to_join_intransitive ;
+  lemon:entry    :joined ;
+  lemon:entry    :to .
 
-:to_join_transitive a           lemon:LexicalEntry ;
+
+:to_join_intransitive a           lemon:LexicalEntry ;
   lexinfo:partOfSpeech lexinfo:verb ;
   lemon:canonicalForm  :form_join ;
   lemon:otherForm      :form_joins ;
   lemon:otherForm      :form_joined ;
-  lemon:synBehavior    :join_frame_transitive ;
+  lemon:synBehavior    :join_frame_intransitive ;
   lemon:sense          :join_sense1 .
 
 
@@ -32,7 +33,7 @@
   lemon:writtenRep "joined"@en ;
   lexinfo:tense    lexinfo:past .
 
-:join_frame_transitive a lexinfo:TransitiveFrame ;
+:join_frame_intransitive a lexinfo:IntransitiveFrame ;
   lexinfo:subject          :join_subj ;
   lexinfo:directObject     :join_obj .
 
@@ -45,34 +46,9 @@
 
 :join_condition_country a lemon:condition ;
   lemon:propertyDomain  <http://dbpedia.org/ontology/Country> ;
-  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#date> .
+  lemon:propertyRange   <http://dbpedia.org/ontology/date> .
 
 
-#:to_join_intransitive a           lemon:LexicalEntry ;
-#  lexinfo:partOfSpeech lexinfo:verb ;
-#  lemon:canonicalForm  :form_join ;
-#  lemon:otherForm      :form_joined ;
-#  lemon:synBehavior    :join_frame_intransitive ;
-#  lemon:sense          :join_sense1_intransitive ;
-#  lemon:sense          :join_sense2_intransitive .
-
-#:join_frame_intransitive a lexinfo:IntransitiveFrame ;
-#  lexinfo:subject          :join_subj_intransitive ;
-#  lexinfo:directObject     :join_obj_intransitive .
-
-#:join_sense1_intransitive a    lemon:OntoMap, lemon:LexicalSense ;
-#  lemon:ontoMapping :join_sense1_intransitive ;
-#  lemon:reference   <http://dbpedia.org/property/accessioneudate> ;
-#  lemon:subjOfProp  :join_obj_intransitive ;
-#  lemon:objOfProp   :join_subj_intransitive ;
-#  lemon:condition   :join_condition_country .
-
-#:join_sense2_intransitive a    lemon:OntoMap, lemon:LexicalSense ;
-#    lemon:ontoMapping :join_sense2_intransitive ;
-#    lemon:reference   <http://dbpedia.org/property/accessioneudate> ;
-#    lemon:subjOfProp  :join_obj_intransitive ;
-#    lemon:objOfProp   :join_subj_intransitive ;
-#    lemon:condition   :join_condition_time .
 
 :joined a             lemon:LexicalEntry ;
   lexinfo:partOfSpeech lexinfo:adjective ;
@@ -87,9 +63,6 @@
   lemon:writtenRep     "joined"@en ;
   lexinfo:verbFormMood lexinfo:participle .
 
-
-#:joined_frame_adjectivepp a   lexinfo:AdjectivePPFrame ;
-#  lexinfo:copulativeSubject    :joined_subj .
 
 :joined_sense1 a   lemon:OntoMap, lemon:LexicalSense ;
   lemon:ontoMapping :joined_sense1 ;

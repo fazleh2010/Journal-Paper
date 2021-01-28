@@ -13,19 +13,19 @@
             lemon:entry    :high_res .
 
 :high a     lemon:LexicalEntry ;
-            lexinfo:partOfSpeech lexinfo:adjective ;
-            lemon:canonicalForm :high_lemma ;
-            lemon:synBehavior   :high_adjgradFrame ;
-            lemon:sense         :high_sense .
+      lexinfo:partOfSpeech lexinfo:adjective ;
+      lemon:canonicalForm :high_lemma ;
+      lemon:synBehavior   :high_adjgradFrame ;
+      lemon:sense         :high_sense .
 
 :high_lemma lemon:writtenRep "high"@en .
 
 :high_adjgradFrame a   lexinfo:AdjectiveGradableFrame ;
-    lexinfo:copulativeArg   :high_PredSynArg .
+                   lexinfo:copulativeArg   :high_PredSynArg .
 
 :high_sense lemon:reference [
-        rdfs:subClassOf oils:CovariantScalar ;
-        oils:boundTo dbpedia:elevation ;
-        oils:degree oils:high ] ;
-    lemon:isA   high:PredSynArg .
+                                rdfs:subClassOf oils:CovariantScalar ;
+                                oils:boundTo dbpedia:elevation ;
+                                oils:degree oils:high ] ;
+            lemon:isA   high:PredSynArg .
 

@@ -1,0 +1,39 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+
+@base            <http://localhost:8080#> .
+
+
+:lexicon_en a    lemon:Lexicon ;
+    lemon:language "en" ;
+    lemon:entry    :large;
+    lemon:entry    :large_res .
+
+:large a     lemon:LexicalEntry ;
+    lexinfo:partOfSpeech lexinfo:adjective ;
+    lemon:canonicalForm :large_lemma ;
+    lemon:synBehavior   :large_predFrame ;
+    lemon:sense         :large_sense .
+
+:large_lemma lemon:writtenRep "large"@en .
+
+:large_predFrame a   lexinfo:copulativeArg ;
+    lexinfo:copulativeArg   :large_PredArg .
+
+:large_sense lemon:reference [
+        rdfs:subClassOf oils:CovariantScalar ;
+        oils:boundTo dbpedia:size ;
+        oils:degree oils:strong ] ;
+    lemon:isA   large:PredArg .
+
+#:large_sense a   lemon:LexicalSense ;
+#    lemon:reference :large_res ;
+#    lemon:isA   :large_PredArg .
+
+#:large_res a oils:CovariantScalar ;
+#    oils:boundTo <http://dbpedia.org/ontology/size> ;
+#    oils:degree <http://lemon-model.net/oils#strong> .
+

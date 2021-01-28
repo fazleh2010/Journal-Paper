@@ -1,0 +1,73 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+            lemon:language "en" ;
+            lemon:entry    :to_locate_transitive ;
+#1  lemon:entry    :to_locate_intransitive ;
+            lemon:entry    :located .
+
+:to_locate_intransitive a           lemon:LexicalEntry ;
+                        lexinfo:partOfSpeech lexinfo:verb ;
+                        lemon:canonicalForm  :form_locate ;
+                        lemon:otherForm      :form_located ;
+                        lemon:otherForm      :form_locates ;
+                        lemon:synBehavior    :locate_frame_intransitive ;
+                        lemon:sense          :locate_sense1 .
+
+
+:form_locate a         lemon:Form ;
+             lemon:writtenRep     "locate"@en ;
+             lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_locates a         lemon:Form ;
+              lemon:writtenRep     "locates"@en ;
+              lexinfo:verbFormMood lexinfo:secondPerson .
+
+:form_located a    lemon:Form ;
+              lemon:writtenRep "located"@en ;
+              lexinfo:tense    lexinfo:past .
+
+:locate_frame_intransitive a lexinfo:IntransitiveFrame ;
+                           lexinfo:subject          :locate_subj ;
+                           lexinfo:directObject     :locate_obj .
+
+:locate_sense1 a    lemon:OntoMap, lemon:LexicalSense ;
+               lemon:ontoMapping :locate_sense1 ;
+               lemon:reference   <http://dbpedia.org/ontology/location> ;
+               lemon:subjOfProp  :locate_obj ;
+               lemon:objOfProp   :locate_subj ;
+               lemon:condition   :locate_condition_country .
+
+:locate_condition_country a lemon:condition ;
+                          lemon:propertyDomain  <http://dbpedia.org/ontology/City> ;
+                          lemon:propertyRange   <http://dbpedia.org/ontology/Country> .
+
+
+
+:located a             lemon:LexicalEntry ;
+         lexinfo:partOfSpeech lexinfo:adjective ;
+         lemon:canonicalForm  :form_located_canonical ;
+         lemon:otherForm      :form_located ;
+         lemon:synBehavior    :located_frame_adjectivepp ;
+         lemon:sense          :located_sense1 .
+
+:form_located_canonical a lemon:Form ;
+                        lemon:writtenRep        "located"@en .
+
+
+:located_frame_adjectivepp a   lexinfo:AdjectivePPFrame ;
+                           lexinfo:copulativeSubject    :located_subj ;
+                           lexinfo:prepositionalAdjunct :located_obj .
+
+:located_sense1 a   lemon:OntoMap, lemon:LexicalSense ;
+                lemon:ontoMapping :located_sense1 ;
+                lemon:reference   <http://dbpedia.org/ontology/location> ;
+                lemon:subjOfProp  :located_subj ;
+                lemon:objOfProp   :located_obj ;
+                lemon:condition   :locate_condition_country .
+

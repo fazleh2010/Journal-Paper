@@ -13,21 +13,21 @@
             lemon:entry    :strong_res .
 
 :strong a     lemon:LexicalEntry ;
-      lexinfo:partOfSpeech lexinfo:adjective ;
-      lemon:canonicalForm :strong_lemma ;
-      lemon:synBehavior   :strong_adjgradFrame ;
-      lemon:sense         :strong_sense .
+        lexinfo:partOfSpeech lexinfo:adjective ;
+        lemon:canonicalForm :strong_lemma ;
+        lemon:synBehavior   :strong_adjgradFrame ;
+        lemon:sense         :strong_sense .
 
 :strong_lemma lemon:writtenRep "strong"@en .
 
 :strong_adjgradFrame a   lexinfo:AdjectiveGradableFrame ;
-                lexinfo:copulativeArg   :strong_PredSynArg .
+                     lexinfo:copulativeArg   :strong_PredSynArg .
 
 :strong_sense a   lemon:LexicalSense ;
-            lemon:reference :strong_res ;
-            lemon:isA   :strong_PredSynArg .
+              lemon:reference :strong_res ;
+              lemon:isA   :strong_PredSynArg .
 
 :strong_res a oils:DegreeOfScalar ;
-          oils:boundTo <http://dbpedia.org/ontology/strength> ;
-          oils:degree <http://lemon-model.net/oils#strong> .
+            oils:boundTo <http://dbpedia.org/ontology/strength> ;
+            oils:degree <http://lemon-model.net/oils#strong> .
 

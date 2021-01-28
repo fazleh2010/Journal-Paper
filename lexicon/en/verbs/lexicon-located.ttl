@@ -9,15 +9,14 @@
   lemon:language "en" ;
   lemon:entry    :to_locate_transitive ;
 #1  lemon:entry    :to_locate_intransitive ;
-  lemon:entry    :located ;
-  lemon:entry    :in .
+  lemon:entry    :located .
 
-:to_locate_transitive a           lemon:LexicalEntry ;
+:to_locate_intransitive a           lemon:LexicalEntry ;
   lexinfo:partOfSpeech lexinfo:verb ;
   lemon:canonicalForm  :form_locate ;
   lemon:otherForm      :form_located ;
   lemon:otherForm      :form_locates ;
-  lemon:synBehavior    :locate_frame_transitive ;
+  lemon:synBehavior    :locate_frame_intransitive ;
   lemon:sense          :locate_sense1 .
 
 
@@ -33,7 +32,7 @@
   lemon:writtenRep "located"@en ;
   lexinfo:tense    lexinfo:past .
 
-:locate_frame_transitive a lexinfo:TransitiveFrame ;
+:locate_frame_intransitive a lexinfo:IntransitiveFrame ;
   lexinfo:subject          :locate_subj ;
   lexinfo:directObject     :locate_obj .
 
@@ -45,43 +44,20 @@
   lemon:condition   :locate_condition_country .
 
 :locate_condition_country a lemon:condition ;
-  lemon:propertyDomain  <http://dbpedia.org/ontology/Place> ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/City> ;
   lemon:propertyRange   <http://dbpedia.org/ontology/Country> .
 
 
-#:to_locate_intransitive a           lemon:LexicalEntry ;
-#  lexinfo:partOfSpeech lexinfo:verb ;
-#  lemon:canonicalForm  :form_locate ;
-#  lemon:otherForm      :form_located ;
-#  lemon:synBehavior    :locate_frame_intransitive ;
-#  lemon:sense          :locate_sense1_intransitive .
-
-#:locate_frame_intransitive a lexinfo:IntransitiveFrame ;
-#  lexinfo:subject          :locate_subj_intransitive ;
-#  lexinfo:directObject     :locate_obj_intransitive .
-
-#:locate_sense1_intransitive a    lemon:OntoMap, lemon:LexicalSense ;
-#  lemon:ontoMapping :locate_sense1_intransitive ;
-#  lemon:reference   <http://dbpedia.org/ontology/location> ;
-#  lemon:subjOfProp  :locate_obj_intransitive ;
-#  lemon:objOfProp   :locate_subj_intransitive ;
-#  lemon:condition   :locate_condition_country .
-
-#:locate_obj_intransitive lemon:marker :in .
 
 :located a             lemon:LexicalEntry ;
   lexinfo:partOfSpeech lexinfo:adjective ;
   lemon:canonicalForm  :form_located_canonical ;
-  lemon:otherForm      :form_located_in ;
+  lemon:otherForm      :form_located ;
   lemon:synBehavior    :located_frame_adjectivepp ;
   lemon:sense          :located_sense1 .
 
 :form_located_canonical a lemon:Form ;
   lemon:writtenRep        "located"@en .
-
-:form_located_in a     lemon:Form ;
-  lemon:writtenRep     "located"@en ;
-  lexinfo:verbFormMood lexinfo:participle .
 
 
 :located_frame_adjectivepp a   lexinfo:AdjectivePPFrame ;
@@ -95,11 +71,3 @@
   lemon:objOfProp   :located_obj ;
   lemon:condition   :locate_condition_country .
 
-
-:located_obj lemon:marker :in .
-
-## Prepositions ##
-
-:in a                  lemon:SynRoleMarker ;
-  lemon:canonicalForm  [ lemon:writtenRep "in"@en ] ;
-  lexinfo:partOfSpeech lexinfo:preposition .

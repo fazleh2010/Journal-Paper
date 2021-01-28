@@ -19,15 +19,13 @@
 
 :belgian_lemma lemon:writtenRep "Belgian"@en .
 
-:belgian_predFrame a        lexinfo:AdjectivePredicateFrame ;
-  lexinfo:copulativeSubject :belgian_PredSynArg .
 
 :belgian_attrFrame a     lexinfo:AdjectiveAttributiveFrame ;
   lexinfo:attributiveArg :belgian_AttrSynArg .
 
 :belgian_sense a  lemon:LexicalSense ;
   lemon:reference :belgian_res ;
-  lemon:isA       :belgian_AttrSynArg, :belgian_PredSynArg .
+  lemon:isA       :belgian_AttrSynArg .
 
 :belgian_res a   owl:Restriction ;
   owl:onProperty <http://dbpedia.org/ontology/nationality> ;
