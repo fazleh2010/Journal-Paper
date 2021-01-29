@@ -49,25 +49,5 @@
 
 
 
-:located a             lemon:LexicalEntry ;
-         lexinfo:partOfSpeech lexinfo:adjective ;
-         lemon:canonicalForm  :form_located_canonical ;
-         lemon:otherForm      :form_located ;
-         lemon:synBehavior    :located_frame_adjectivepp ;
-         lemon:sense          :located_sense1 .
 
-:form_located_canonical a lemon:Form ;
-                        lemon:writtenRep        "located"@en .
-
-
-:located_frame_adjectivepp a   lexinfo:AdjectivePPFrame ;
-                           lexinfo:copulativeSubject    :located_subj ;
-                           lexinfo:prepositionalAdjunct :located_obj .
-
-:located_sense1 a   lemon:OntoMap, lemon:LexicalSense ;
-                lemon:ontoMapping :located_sense1 ;
-                lemon:reference   <http://dbpedia.org/ontology/location> ;
-                lemon:subjOfProp  :located_subj ;
-                lemon:objOfProp   :located_obj ;
-                lemon:condition   :locate_condition_country .
 

@@ -2,6 +2,7 @@
 
 @prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
 @prefix lemon:   <http://lemon-model.net/lemon#> .
+@prefix oils:    <http://lemon-model.net/oils#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 
 @base            <http://localhost:8080#> .

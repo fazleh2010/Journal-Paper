@@ -2,30 +2,31 @@
 
 @prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
 @prefix lemon:   <http://lemon-model.net/lemon#> .
+@prefix oils:    <http://lemon-model.net/oils#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 
 @base            <http://localhost:8080#> .
 
 
 :lexicon_en a    lemon:Lexicon ;
-            lemon:language "en" ;
-            lemon:entry    :high ;
-            lemon:entry    :high_res .
+    lemon:language "en" ;
+    lemon:entry    :high ;
+    lemon:entry    :high_res .
 
 :high a     lemon:LexicalEntry ;
-      lexinfo:partOfSpeech lexinfo:adjective ;
-      lemon:canonicalForm :high_lemma ;
-      lemon:synBehavior   :high_adjgradFrame ;
-      lemon:sense         :high_sense .
+    lexinfo:partOfSpeech lexinfo:adjective ;
+    lemon:canonicalForm :high_lemma ;
+    lemon:synBehavior   :high_adjgradFrame ;
+    lemon:sense         :high_sense .
 
 :high_lemma lemon:writtenRep "high"@en .
 
 :high_adjgradFrame a   lexinfo:AdjectiveGradableFrame ;
-                   lexinfo:copulativeArg   :high_PredSynArg .
+    lexinfo:copulativeArg   :high_PredSynArg .
 
 :high_sense lemon:reference [
-                                rdfs:subClassOf oils:CovariantScalar ;
-                                oils:boundTo dbpedia:elevation ;
-                                oils:degree oils:high ] ;
-            lemon:isA   high:PredSynArg .
+    rdfs:subClassOf oils:CovariantScalar ;
+                    oils:boundTo dbpedia:elevation ;
+                    oils:degree oils:high ] ;
+    lemon:isA   high:PredSynArg .
 
