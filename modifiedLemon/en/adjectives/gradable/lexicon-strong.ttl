@@ -21,7 +21,7 @@
 
 :strong_lemma lemon:writtenRep "strong"@en .
 
-:strong_adjgradFrame a   lexinfo:AdjectiveGradableFrame ;
+:strong_adjgradFrame a   lexinfo:AdjectiveGradableFrame ; #AdjectiveGradableFrame ; #
                      lexinfo:copulativeArg   :strong_PredSynArg .
 
 :strong_sense a   lemon:LexicalSense ;

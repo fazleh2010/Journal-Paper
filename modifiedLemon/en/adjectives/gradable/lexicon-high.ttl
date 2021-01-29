@@ -4,6 +4,7 @@
 @prefix lemon:   <http://lemon-model.net/lemon#> .
 @prefix oils:    <http://lemon-model.net/oils#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 @base            <http://localhost:8080#> .
 
@@ -21,12 +22,21 @@
 
 :high_lemma lemon:writtenRep "high"@en .
 
-:high_adjgradFrame a   lexinfo:AdjectiveGradableFrame ;
+:high_adjgradFrame a   lexinfo:AdjectiveGradableFrame ; # AdjectiveAttributiveFrame ; #
     lexinfo:copulativeArg   :high_PredSynArg .
 
-:high_sense lemon:reference [
-    rdfs:subClassOf oils:CovariantScalar ;
-                    oils:boundTo dbpedia:elevation ;
-                    oils:degree oils:high ] ;
-    lemon:isA   high:PredSynArg .
+:high_sense a   lemon:LexicalSense ;
+              lemon:reference :high_res ;
+              lemon:isA   :high_PredSynArg .
+
+:high_res a oils:CovariantScalar ;
+            oils:boundTo <http://dbpedia.org/ontology/elevation> ;
+            oils:degree <http://lemon-model.net/oils#high> .
+
+
+#:high_sense lemon:reference [
+#    rdfs:subClassOf oils:CovariantScalar ;
+#                    oils:boundTo dbpedia:elevation ;
+#                    oils:degree oils:high ] ;
+#    lemon:isA   high_PredSynArg .
 
