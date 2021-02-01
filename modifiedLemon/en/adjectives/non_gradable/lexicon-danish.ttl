@@ -14,7 +14,7 @@
 :danish a             lemon:LexicalEntry ;
          lexinfo:partOfSpeech lexinfo:adjective ;
          lemon:canonicalForm  :danish_lemma ;
-         lemon:synBehavior    :danish_attrFrame ;
+         lemon:synBehavior    :danish_attrFrame, :danish_predFrame ;
          lemon:sense          :danish_sense .
 
 :danish_lemma lemon:writtenRep "Danish"@en .
@@ -22,6 +22,9 @@
 
 :danish_attrFrame a     lexinfo:AdjectiveAttributiveFrame ;
                    lexinfo:attributiveArg :danish_AttrSynArg .
+
+:danish_predFrame a        lexinfo:AdjectivePredicateFrame ;
+                   lexinfo:copulativeSubject :danish_PredSynArg .
 
 :danish_sense a  lemon:LexicalSense ;
                lemon:reference :danish_res ;
