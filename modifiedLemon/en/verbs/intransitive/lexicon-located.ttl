@@ -32,7 +32,7 @@
               lemon:writtenRep "located"@en ;
               lexinfo:tense    lexinfo:past .
 
-:locate_frame_intransitive a lexinfo:IntransitiveFrame ;
+:locate_frame_intransitive a lexinfo:InTransitiveFrame ;
                            lexinfo:subject          :locate_subj ;
                            lexinfo:directObject     :locate_obj .
 

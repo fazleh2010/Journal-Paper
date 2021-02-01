@@ -1,0 +1,42 @@
+#@prefix :        <http://localhost:8080/lexicon#> .
+#
+#@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+#@prefix lemon:   <http://lemon-model.net/lemon#> .
+#
+#@base            <http://localhost:8080#> .
+#
+#:lexicon_en a    lemon:Lexicon ;
+#            lemon:language "en" ;
+#            lemon:entry    :to_speak_transitive .
+##  lemon:entry    :to_speak_intransitive ;
+##  lemon:entry    :spoken .
+##  lemon:entry    :in .
+#
+#:to_speak_transitive a           lemon:LexicalEntry ;
+#                     lexinfo:partOfSpeech lexinfo:verb ;
+#                     lemon:canonicalForm  :form_speak ;
+#                     lemon:synBehavior    :speak_frame_transitive ;
+#                     lemon:sense          :speak_sense1 .
+#
+#
+#:form_speak a         lemon:Form ;
+#            lemon:writtenRep     "speak"@en ;
+#            lexinfo:verbFormMood lexinfo:infinitive .
+#
+#
+#:speak_frame_transitive a lexinfo:TransitiveFrame ;
+#                        lexinfo:subject          :speak_subj ;
+#                        lexinfo:directObject     :speak_obj .
+#
+#:speak_sense1 a    lemon:OntoMap, lemon:LexicalSense ;
+#              lemon:ontoMapping :speak_sense1 ;
+#              lemon:reference   <http://dbpedia.org/ontology/spokenIn> ;
+#              lemon:subjOfProp  :speak_obj ;
+#              lemon:objOfProp   :speak_subj ;
+#              lemon:condition   :speak_condition_country .
+#
+#:speak_condition_country a lemon:condition ;
+#                         lemon:propertyDomain  <http://dbpedia.org/ontology/Place> ;
+#                         lemon:propertyRange   <http://dbpedia.org/ontology/Estonian_language> .
+#
+#

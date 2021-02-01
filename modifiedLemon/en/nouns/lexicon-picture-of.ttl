@@ -1,0 +1,43 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+            lemon:language "en" ;
+            lemon:entry    :picture_of ;
+            lemon:entry    :of .
+
+:picture_of a          lemon:LexicalEntry ;
+            lexinfo:partOfSpeech lexinfo:noun ;
+            lemon:canonicalForm  :picture_form ;
+            lemon:synBehavior    :picture_of_nounpp ;
+            lemon:sense          :picture_sense_ontomap .
+
+:picture_form a    lemon:Form ;
+              lemon:writtenRep "picture"@en .
+
+:picture_of_nounpp a           lexinfo:NounPPFrame ;
+                   lexinfo:copulativeArg        :arg1 ;
+                   lexinfo:prepositionalAdjunct :arg2 .
+
+:picture_sense_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+                       lemon:ontoMapping      :picture_sense_ontomap ;
+                       lemon:reference        <http://dbpedia.org/ontology/picture> ;
+                       lemon:subjOfProp       :arg2 ;
+                       lemon:objOfProp        :arg1 ;
+                       lemon:condition        :picture_condition .
+
+:picture_condition a   lemon:condition ;
+                   lemon:propertyDomain <http://dbpedia.org/ontology/Thing> ;
+                   lemon:propertyRange  <http://dbpedia.org/ontology/Thing> .
+
+:arg2 lemon:marker :of .
+
+## Prepositions ##
+
+:of a                  lemon:SynRoleMarker ;
+    lemon:canonicalForm  [ lemon:writtenRep "of"@en ] ;
+    lexinfo:partOfSpeech lexinfo:preposition .

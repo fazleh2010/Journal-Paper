@@ -33,7 +33,7 @@
              lemon:writtenRep "joined"@en ;
              lexinfo:tense    lexinfo:past .
 
-:join_frame_intransitive a lexinfo:IntransitiveFrame ;
+:join_frame_intransitive a lexinfo:InTransitiveFrame ;
                          lexinfo:subject          :join_subj ;
                          lexinfo:directObject     :join_obj .
 

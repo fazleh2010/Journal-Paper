@@ -1,0 +1,43 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+            lemon:language "en" ;
+            lemon:entry    :city_of ;
+            lemon:entry    :of .
+
+:city_of a          lemon:LexicalEntry ;
+         lexinfo:partOfSpeech lexinfo:noun ;
+         lemon:canonicalForm  :city_form ;
+         lemon:synBehavior    :city_of_nounpp ;
+         lemon:sense          :city_sense_ontomap .
+
+:city_form a    lemon:Form ;
+           lemon:writtenRep "city"@en .
+
+:city_of_nounpp a           lexinfo:NounPPFrame ;
+                lexinfo:copulativeArg        :arg1 ;
+                lexinfo:prepositionalAdjunct :arg2 .
+
+:city_sense_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+                    lemon:ontoMapping      :city_sense_ontomap ;
+                    lemon:reference        <http://dbpedia.org/ontology/city> ;
+                    lemon:subjOfProp       :arg2 ;
+                    lemon:objOfProp        :arg1 ;
+                    lemon:condition        :city_condition .
+
+:city_condition a   lemon:condition ;
+                lemon:propertyDomain <http://dbpedia.org/ontology/Country> ;
+                lemon:propertyRange  <http://dbpedia.org/ontology/City> .
+
+:arg2 lemon:marker :of .
+
+## Prepositions ##
+
+:of a                  lemon:SynRoleMarker ;
+    lemon:canonicalForm  [ lemon:writtenRep "of"@en ] ;
+    lexinfo:partOfSpeech lexinfo:preposition .

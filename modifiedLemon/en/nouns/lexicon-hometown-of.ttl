@@ -1,0 +1,43 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+            lemon:language "en" ;
+            lemon:entry    :hometown_of ;
+            lemon:entry    :of .
+
+:hometown_of a          lemon:LexicalEntry ;
+             lexinfo:partOfSpeech lexinfo:noun ;
+             lemon:canonicalForm  :hometown_form ;
+             lemon:synBehavior    :hometown_of_nounpp ;
+             lemon:sense          :hometown_sense_ontomap .
+
+:hometown_form a    lemon:Form ;
+               lemon:writtenRep "hometown"@en .
+
+:hometown_of_nounpp a           lexinfo:NounPPFrame ;
+                    lexinfo:copulativeArg        :arg1 ;
+                    lexinfo:prepositionalAdjunct :arg2 .
+
+:hometown_sense_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+                        lemon:ontoMapping      :hometown_sense_ontomap ;
+                        lemon:reference        <http://dbpedia.org/ontology/hometown> ;
+                        lemon:subjOfProp       :arg2 ;
+                        lemon:objOfProp        :arg1 ;
+                        lemon:condition        :hometown_condition .
+
+:hometown_condition a   lemon:condition ;
+                    lemon:propertyDomain <http://dbpedia.org/ontology/Agent> ;
+                    lemon:propertyRange  <http://dbpedia.org/ontology/Settlement> .
+
+:arg2 lemon:marker :of .
+
+## Prepositions ##
+
+:of a                  lemon:SynRoleMarker ;
+    lemon:canonicalForm  [ lemon:writtenRep "of"@en ] ;
+    lexinfo:partOfSpeech lexinfo:preposition .
