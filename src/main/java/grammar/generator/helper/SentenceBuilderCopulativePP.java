@@ -1,12 +1,10 @@
 package grammar.generator.helper;
 
 import eu.monnetproject.lemon.model.LexicalEntry;
-import eu.monnetproject.lemon.model.LexicalForm;
 import eu.monnetproject.lemon.model.PropertyValue;
 import grammar.generator.helper.datasets.sentencetemplates.SentenceTemplateRepository;
 import grammar.generator.helper.parser.SentenceTemplateParser;
 import grammar.generator.helper.parser.SentenceToken;
-import grammar.generator.helper.sentencetemplates.AnnotatedNoun;
 import grammar.generator.helper.sentencetemplates.AnnotatedNounOrQuestionWord;
 import grammar.generator.helper.sentencetemplates.AnnotatedVerb;
 import grammar.structure.component.DomainOrRangeType;
@@ -52,7 +50,7 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
         List<AnnotatedNounOrQuestionWord> annotatedLexicalEntryNouns = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords();
         AnnotatedNounOrQuestionWord questionWord
                 = // Who / what
-                getAnnotatedQuestionWordBySubjectType(lexicalEntryUtil.getSubjectType(lexicalEntryUtil.getSelectVariable(),DomainOrRangeType.PERSON), getLanguage(), null);
+                                getAnnotatedQuestionWordBySubjectType(lexicalEntryUtil.getSubjectType(lexicalEntryUtil.getSelectVariable(),DomainOrRangeType.PERSON), getLanguage(), null);
         String nounToken = lexicalEntryUtil.getReturnVariableConditionLabel(lexicalEntryUtil.getSelectVariable());
         String object = String.format(
                 BINDING_TOKEN_TEMPLATE,
@@ -105,8 +103,9 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                                 questionWord = getAnnotatedQuestionWordBySubjectType(
                                         SubjectType.INTERROGATIVE_DETERMINER,
                                         getLanguage(),
-                                        null
+                                        annotatedNoun
                                 );
+
                                 // Get noun for determiner token
                                 String determinerToken = getDeterminerTokenByNumber(
                                         toBeVerb.getNumber(),
@@ -178,7 +177,15 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
         Optional<SentenceToken> npObject = getNPObject(sentenceTokens);
         Optional<SentenceToken> conditionLabel = getConditionNounToken(sentenceTokens);
 
+        String grammaticalCase = "nominativeCase";
+        if (rootToken.isPresent()) {
+            grammaticalCase = rootToken.get().getGrammaticalCase();
+        }
+
         for (AnnotatedNounOrQuestionWord annotatedNoun : annotatedLexicalEntryNouns) {
+            if (annotatedNoun.getGrammaticalCase() != null && !annotatedNoun.getGrammaticalCase().equals(lexicalEntryUtil.getLexInfo().getPropertyValue(grammaticalCase))) {
+                continue;
+            }
             String[] sentenceArray = new String[sentenceTokens.size()];
             // Get NP for this annotatedNoun
             if (npDeterminer.isPresent()) {
@@ -187,8 +194,7 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                 determiner = entry.getCanonicalForm().getWrittenRep().value;
                 List<AnnotatedNounOrQuestionWord> determiners = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords(entry.getOtherForms());
                 for (AnnotatedNounOrQuestionWord det : determiners) {
-                    if (det.getGrammaticalCase().equals(lexicalEntryUtil.getLexInfo().getPropertyValue("nominativeCase"))
-                            && annotatedNoun.getNumber().equals(det.getNumber())) {
+                    if (annotatedNoun.getNumber().equals(det.getNumber())) {
                         if (det.getNumber().equals(lexicalEntryUtil.getLexInfo().getPropertyValue("singular"))
                                 && annotatedNoun.getGender().equals(det.getGender())) {
                             determiner = det.getWrittenRepValue();

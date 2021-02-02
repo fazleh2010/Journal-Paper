@@ -6,7 +6,7 @@
     "bindingType" : "BUILDING",
     "returnType" : "LOCATION",
     "frameType" : "NPP",
-    "sentences" : [ "Was ist der Standort von der Standort von $x?", "Was war der Standort von der Standort von $x?" ],
+    "sentences" : [ "Gib mir den Standort von der Standort von $x?", "Was ist der Standort von der Standort von $x?", "Was war der Standort von der Standort von $x?", "Welcher Ort ist der Standort von der Standort von $x?", "Welcher Ort war der Standort von der Standort von $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/location> ?subjOfProp)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -325,7 +325,7 @@
     "bindingType" : "LOCATION",
     "returnType" : "LOCATION",
     "frameType" : "NPP",
-    "sentences" : [ "Was ist der Standort von der Standort von $x?", "Was war der Standort von der Standort von $x?" ],
+    "sentences" : [ "Gib mir den Standort von der Standort von $x?", "Was ist der Standort von der Standort von $x?", "Was war der Standort von der Standort von $x?", "Welcher Ort ist der Standort von der Standort von $x?", "Welcher Ort war der Standort von der Standort von $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/location> ?subjOfProp)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -644,7 +644,7 @@
     "bindingType" : "ORGANISATION",
     "returnType" : "LOCATION",
     "frameType" : "NPP",
-    "sentences" : [ "Was ist der Standort von der Standort von $x?", "Was war der Standort von der Standort von $x?" ],
+    "sentences" : [ "Gib mir den Standort von der Standort von $x?", "Was ist der Standort von der Standort von $x?", "Was war der Standort von der Standort von $x?", "Welcher Ort ist der Standort von der Standort von $x?", "Welcher Ort war der Standort von der Standort von $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/location> ?subjOfProp)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -963,7 +963,7 @@
     "bindingType" : "THING",
     "returnType" : "LOCATION",
     "frameType" : "NPP",
-    "sentences" : [ "Was ist der Standort von der Produzent von $x?", "Was ist der Standort von die Produzenten von $x?", "Was war der Standort von der Produzent von $x?", "Was war der Standort von die Produzenten von $x?" ],
+    "sentences" : [ "Gib mir den Standort von der Produzent von $x?", "Gib mir den Standort von die Produzenten von $x?", "Was ist der Standort von der Produzent von $x?", "Was ist der Standort von die Produzenten von $x?", "Was war der Standort von der Produzent von $x?", "Was war der Standort von die Produzenten von $x?", "Welcher Ort ist der Standort von der Produzent von $x?", "Welcher Ort ist der Standort von die Produzenten von $x?", "Welcher Ort war der Standort von der Produzent von $x?", "Welcher Ort war der Standort von die Produzenten von $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/product> ?objOfPropx)\n)\n",
     "sentenceToSparqlParameterMapping" : {

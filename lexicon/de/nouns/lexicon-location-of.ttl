@@ -13,16 +13,45 @@
 :standort_von a         lemon:LexicalEntry ;
   lemon:language       "de" ;
   lexinfo:partOfSpeech lexinfo:noun ;
-  lemon:canonicalForm  :standort_form ;
+  lemon:canonicalForm  :standort_nominative_form ;
+  lemon:otherForm      :standort_accusative_form ;
+  lemon:otherForm      :standort_dative_form ;
+  lemon:otherForm      :standorts_form ;
+  lemon:otherForm      :standortes_form ;
   lemon:synBehavior    :standort_von_nounpp ;
   lemon:sense          :standort_sense1_ontomap ;
   lemon:sense          :standort_sense2_ontomap ;
   lemon:sense          :standort_sense3_ontomap .
 
-:standort_form a   lemon:Form ;
+:standort_nominative_form a     lemon:Form ;
   lemon:writtenRep "Standort"@de ;
   lexinfo:gender   lexinfo:masculine ;
-  lexinfo:number   lexinfo:singular .
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:nominativeCase.
+
+:standort_accusative_form a     lemon:Form ;
+  lemon:writtenRep "Standort"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:accusativeCase.
+
+:standort_dative_form a     lemon:Form ;
+  lemon:writtenRep "Standort"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:dativeCase.
+
+:standorts_form a     lemon:Form ;
+  lemon:writtenRep "Standorts"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:genitiveCase.
+
+:standortes_form a     lemon:Form ;
+  lemon:writtenRep "Standortes"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:genitiveCase.
 
 :standort_von_nounpp a          lexinfo:NounPPFrame ;
   lexinfo:copulativeArg        :arg1 ;

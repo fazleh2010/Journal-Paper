@@ -13,15 +13,44 @@
 :mitglied_von a           lemon:LexicalEntry ;
   lemon:language       "de" ;
   lexinfo:partOfSpeech lexinfo:noun ;
-  lemon:canonicalForm  :mitglied_form ;
+  lemon:canonicalForm  :mitglied_nominative_form ;
+  lemon:otherForm      :mitglied_accusative_form ;
+  lemon:otherForm      :mitglied_dative_form ;
+  lemon:otherForm      :mitglieds_form ;
+  lemon:otherForm      :mitgliedes_form ;
   lemon:otherForm      :mitglieder_form ;
   lemon:synBehavior    :mitglied_von_nounpp ;
   lemon:sense          :mitglied_sense_ontomap .
 
-:mitglied_form a     lemon:Form ;
+:mitglied_nominative_form a     lemon:Form ;
   lemon:writtenRep "Mitglied"@de ;
   lexinfo:gender   lexinfo:neuter ;
-  lexinfo:number   lexinfo:singular .
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:nominativeCase.
+
+:mitglied_accusative_form a     lemon:Form ;
+  lemon:writtenRep "Mitglied"@de ;
+  lexinfo:gender   lexinfo:neuter ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:accusativeCase.
+
+:mitglied_dative_form a     lemon:Form ;
+  lemon:writtenRep "Mitglied"@de ;
+  lexinfo:gender   lexinfo:neuter ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:dativeCase.
+
+:mitglieds_form a     lemon:Form ;
+  lemon:writtenRep "Mitglieds"@de ;
+  lexinfo:gender   lexinfo:neuter ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:genitiveCase.
+
+:mitgliedes_form a     lemon:Form ;
+  lemon:writtenRep "Mitgliedes"@de ;
+  lexinfo:gender   lexinfo:neuter ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:genitiveCase.
 
 :mitglieder_form a    lemon:Form ;
   lemon:writtenRep "Mitglieder"@de ;

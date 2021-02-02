@@ -6,7 +6,7 @@
     "bindingType" : "THING",
     "returnType" : "ORGANISATION",
     "frameType" : "NPP",
-    "sentences" : [ "Was ist der Produzent von ($x | THING_NP)?", "Was sind die Produzenten von ($x | THING_NP)?", "Was war der Produzent von ($x | THING_NP)?", "Was waren die Produzenten von ($x | THING_NP)?" ],
+    "sentences" : [ "Gib mir den Produzenten von ($x | THING_NP)?", "Gib mir die Produzenten von ($x | THING_NP)?", "Was ist der Produzent von ($x | THING_NP)?", "Was sind die Produzenten von ($x | THING_NP)?", "Was war der Produzent von ($x | THING_NP)?", "Was waren die Produzenten von ($x | THING_NP)?", "Welche Organisations sind die Produzenten von ($x | THING_NP)?", "Welche Organisations waren die Produzenten von ($x | THING_NP)?", "Welcher Organisation ist der Produzent von ($x | THING_NP)?", "Welcher Organisation war der Produzent von ($x | THING_NP)?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -641,648 +641,10 @@
     "id" : "3",
     "language" : "DE",
     "type" : "SENTENCE",
-    "bindingType" : "BAND",
-    "returnType" : "PERSON",
-    "frameType" : "NPP",
-    "sentences" : [ "Was ist das Mitglied von ($x | BAND_NP)?", "Was sind die Mitglieder von ($x | BAND_NP)?", "Was war das Mitglied von ($x | BAND_NP)?", "Was waren die Mitglieder von ($x | BAND_NP)?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/bandMember> ?objOfProp))\n",
-    "sentenceToSparqlParameterMapping" : {
-      "$x" : "subjOfProp"
-    },
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "$x",
-      "bindingList" : [ {
-        "label" : "7 Horns 7 Eyes",
-        "uri" : "http://dbpedia.org/resource/7_Horns_7_Eyes"
-      }, {
-        "label" : "7 Seconds",
-        "uri" : "http://dbpedia.org/resource/7_Seconds_(band)"
-      }, {
-        "label" : "7 Year Bitch",
-        "uri" : "http://dbpedia.org/resource/7_Year_Bitch"
-      }, {
-        "label" : "801 (Band)",
-        "uri" : "http://dbpedia.org/resource/801_(band)"
-      }, {
-        "label" : "808 State",
-        "uri" : "http://dbpedia.org/resource/808_State"
-      }, {
-        "label" : "98 Degrees",
-        "uri" : "http://dbpedia.org/resource/98_Degrees"
-      }, {
-        "label" : "A1 (Band)",
-        "uri" : "http://dbpedia.org/resource/A1_(group)"
-      }, {
-        "label" : "AC4",
-        "uri" : "http://dbpedia.org/resource/AC4"
-      }, {
-        "label" : "AMM (Ensemble)",
-        "uri" : "http://dbpedia.org/resource/AMM_(group)"
-      }, {
-        "label" : "Love/Hate (Band)",
-        "uri" : "http://dbpedia.org/resource/Love/Hate_(band)"
-      }, {
-        "label" : "Love (Band)",
-        "uri" : "http://dbpedia.org/resource/Love_(band)"
-      }, {
-        "label" : "Love and Death",
-        "uri" : "http://dbpedia.org/resource/Love_and_Death_(band)"
-      }, {
-        "label" : "Lovebugs",
-        "uri" : "http://dbpedia.org/resource/Lovebugs_(band)"
-      }, {
-        "label" : "Lovelyz",
-        "uri" : "http://dbpedia.org/resource/Lovelyz"
-      }, {
-        "label" : "Loverboy (Band)",
-        "uri" : "http://dbpedia.org/resource/Loverboy"
-      }, {
-        "label" : "Lukas Graham",
-        "uri" : "http://dbpedia.org/resource/Lukas_Graham"
-      }, {
-        "label" : "Ljapis Trubezkoi",
-        "uri" : "http://dbpedia.org/resource/Lyapis_Trubetskoy"
-      }, {
-        "label" : "Lynch Mob",
-        "uri" : "http://dbpedia.org/resource/Lynch_Mob_(band)"
-      }, {
-        "label" : "Lynyrd Skynyrd",
-        "uri" : "http://dbpedia.org/resource/Lynyrd_Skynyrd"
-      }, {
-        "label" : "Lúnasa",
-        "uri" : "http://dbpedia.org/resource/Lúnasa_(band)"
-      }, {
-        "label" : "M.O.D.",
-        "uri" : "http://dbpedia.org/resource/M.O.D."
-      }, {
-        "label" : "MBLAQ",
-        "uri" : "http://dbpedia.org/resource/MBLAQ"
-      }, {
-        "label" : "MGMT",
-        "uri" : "http://dbpedia.org/resource/MGMT"
-      }, {
-        "label" : "MKTO",
-        "uri" : "http://dbpedia.org/resource/MKTO"
-      }, {
-        "label" : "MS MR",
-        "uri" : "http://dbpedia.org/resource/MS_MR"
-      }, {
-        "label" : "MU330",
-        "uri" : "http://dbpedia.org/resource/MU330"
-      }, {
-        "label" : "Machine Head",
-        "uri" : "http://dbpedia.org/resource/Machine_Head_(band)"
-      }, {
-        "label" : "Made Out of Babies",
-        "uri" : "http://dbpedia.org/resource/Made_Out_of_Babies"
-      }, {
-        "label" : "Madness",
-        "uri" : "http://dbpedia.org/resource/Madness_(band)"
-      }, {
-        "label" : "Mae (Band)",
-        "uri" : "http://dbpedia.org/resource/Mae"
-      }, {
-        "label" : "Magic (Band)",
-        "uri" : "http://dbpedia.org/resource/Magic!"
-      }, {
-        "label" : "Magma (Band)",
-        "uri" : "http://dbpedia.org/resource/Magma_(band)"
-      }, {
-        "label" : "Magnetic Man",
-        "uri" : "http://dbpedia.org/resource/Magnetic_Man"
-      }, {
-        "label" : "Magnum (Band)",
-        "uri" : "http://dbpedia.org/resource/Magnum_(band)"
-      }, {
-        "label" : "Kraftwerk Magnum",
-        "uri" : "http://dbpedia.org/resource/Magnum_(band)"
-      }, {
-        "label" : "Malcolm Lincoln",
-        "uri" : "http://dbpedia.org/resource/Malcolm_Lincoln"
-      }, {
-        "label" : "Carpathian Forest",
-        "uri" : "http://dbpedia.org/resource/Carpathian_Forest"
-      }, {
-        "label" : "Cartel (Hip-Hop-Gruppe)",
-        "uri" : "http://dbpedia.org/resource/Cartel_(rap_group)"
-      }, {
-        "label" : "Carter The Unstoppable Sex Machine",
-        "uri" : "http://dbpedia.org/resource/Carter_the_Unstoppable_Sex_Machine"
-      }, {
-        "label" : "Casseurs Flowters",
-        "uri" : "http://dbpedia.org/resource/Casseurs_Flowters"
-      }, {
-        "label" : "Cassino (Latium)",
-        "uri" : "http://dbpedia.org/resource/Cassino_(band)"
-      }, {
-        "label" : "Catacombs (amerikanische Band)",
-        "uri" : "http://dbpedia.org/resource/Catacombs_(band)"
-      }, {
-        "label" : "Catamenia",
-        "uri" : "http://dbpedia.org/resource/Catamenia_(band)"
-      }, {
-        "label" : "Coppelius",
-        "uri" : "http://dbpedia.org/resource/Coppelius"
-      }, {
-        "label" : "Cordelia’s Dad",
-        "uri" : "http://dbpedia.org/resource/Cordelia's_Dad"
-      }, {
-        "label" : "Corona (Band)",
-        "uri" : "http://dbpedia.org/resource/Corona_(band)"
-      }, {
-        "label" : "Ugly Kid Joe",
-        "uri" : "http://dbpedia.org/resource/Ugly_Kid_Joe"
-      }, {
-        "label" : "Ulige Numre",
-        "uri" : "http://dbpedia.org/resource/Ulige_Numre"
-      }, {
-        "label" : "UnSun",
-        "uri" : "http://dbpedia.org/resource/UnSun"
-      }, {
-        "label" : "Underoath",
-        "uri" : "http://dbpedia.org/resource/Underoath"
-      }, {
-        "label" : "Underworld (Band)",
-        "uri" : "http://dbpedia.org/resource/Underworld_(band)"
-      }, {
-        "label" : "Untoten",
-        "uri" : "http://dbpedia.org/resource/Untoten"
-      }, {
-        "label" : "Urban Cookie Collective",
-        "uri" : "http://dbpedia.org/resource/Urban_Cookie_Collective"
-      }, {
-        "label" : "VAST",
-        "uri" : "http://dbpedia.org/resource/VAST"
-      }, {
-        "label" : "VNV Nation",
-        "uri" : "http://dbpedia.org/resource/VNV_Nation"
-      }, {
-        "label" : "Vuur",
-        "uri" : "http://dbpedia.org/resource/VUUR"
-      }, {
-        "label" : "Vallenfyre",
-        "uri" : "http://dbpedia.org/resource/Vallenfyre"
-      }, {
-        "label" : "Vampire Weekend",
-        "uri" : "http://dbpedia.org/resource/Vampire_Weekend"
-      }, {
-        "label" : "Van Halen",
-        "uri" : "http://dbpedia.org/resource/Van_Halen"
-      }, {
-        "label" : "Van She",
-        "uri" : "http://dbpedia.org/resource/Van_She"
-      }, {
-        "label" : "Vandalism",
-        "uri" : "http://dbpedia.org/resource/Vandalism_(duo)"
-      }, {
-        "label" : "Vanilla Fudge",
-        "uri" : "http://dbpedia.org/resource/Vanilla_Fudge"
-      }, {
-        "label" : "Vanilla Ninja",
-        "uri" : "http://dbpedia.org/resource/Vanilla_Ninja"
-      }, {
-        "label" : "Venom (Band)",
-        "uri" : "http://dbpedia.org/resource/Venom_(band)"
-      }, {
-        "label" : "Venomous Concept",
-        "uri" : "http://dbpedia.org/resource/Venomous_Concept"
-      }, {
-        "label" : "Versailles",
-        "uri" : "http://dbpedia.org/resource/Versailles_(band)"
-      }, {
-        "label" : "Versailles (Band)",
-        "uri" : "http://dbpedia.org/resource/Versailles_(band)"
-      }, {
-        "label" : "Vertical Horizon",
-        "uri" : "http://dbpedia.org/resource/Vertical_Horizon"
-      }, {
-        "label" : "Current 93",
-        "uri" : "http://dbpedia.org/resource/Current_93"
-      }, {
-        "label" : "Cursive",
-        "uri" : "http://dbpedia.org/resource/Cursive_(band)"
-      }, {
-        "label" : "Curved Air",
-        "uri" : "http://dbpedia.org/resource/Curved_Air"
-      }, {
-        "label" : "Czerwone Gitary",
-        "uri" : "http://dbpedia.org/resource/Czerwone_Gitary"
-      }, {
-        "label" : "D.D.E.",
-        "uri" : "http://dbpedia.org/resource/D.D.E._(band)"
-      }, {
-        "label" : "D.I.",
-        "uri" : "http://dbpedia.org/resource/D.I._(band)"
-      }, {
-        "label" : "D.O.A. (Band)",
-        "uri" : "http://dbpedia.org/resource/D.O.A._(band)"
-      }, {
-        "label" : "Dc Talk",
-        "uri" : "http://dbpedia.org/resource/DC_Talk"
-      }, {
-        "label" : "DDT (Band)",
-        "uri" : "http://dbpedia.org/resource/DDT_(band)"
-      }, {
-        "label" : "DReam",
-        "uri" : "http://dbpedia.org/resource/D_Ream"
-      }, {
-        "label" : "Da Vinci (Band)",
-        "uri" : "http://dbpedia.org/resource/Da_Vinci_(band)"
-      }, {
-        "label" : "Da Vinci (Mondkrater)",
-        "uri" : "http://dbpedia.org/resource/Da_Vinci_(band)"
-      }, {
-        "label" : "Dadafon",
-        "uri" : "http://dbpedia.org/resource/Dadafon"
-      }, {
-        "label" : "Dag Nasty",
-        "uri" : "http://dbpedia.org/resource/Dag_Nasty"
-      }, {
-        "label" : "Dallas Wind Symphony",
-        "uri" : "http://dbpedia.org/resource/Dallas_Winds"
-      }, {
-        "label" : "Poisonblack",
-        "uri" : "http://dbpedia.org/resource/Poisonblack"
-      }, {
-        "label" : "Rainbow (Band)",
-        "uri" : "http://dbpedia.org/resource/Rainbow_(rock_band)"
-      }, {
-        "label" : "Republica",
-        "uri" : "http://dbpedia.org/resource/Republica"
-      }, {
-        "label" : "Satyricon (Band)",
-        "uri" : "http://dbpedia.org/resource/Satyricon_(band)"
-      }, {
-        "label" : "Serenity (österreichische Band)",
-        "uri" : "http://dbpedia.org/resource/Serenity_(band)"
-      }, {
-        "label" : "Serenity (britische Band)",
-        "uri" : "http://dbpedia.org/resource/Serenity_(band)"
-      }, {
-        "label" : "Sigur Rós",
-        "uri" : "http://dbpedia.org/resource/Sigur_Rós"
-      }, {
-        "label" : "Stray Cats",
-        "uri" : "http://dbpedia.org/resource/Stray_Cats"
-      }, {
-        "label" : "Stream of Passion",
-        "uri" : "http://dbpedia.org/resource/Stream_of_Passion"
-      }, {
-        "label" : "Super Furry Animals",
-        "uri" : "http://dbpedia.org/resource/Super_Furry_Animals"
-      }, {
-        "label" : "Teräsbetoni",
-        "uri" : "http://dbpedia.org/resource/Teräsbetoni"
-      }, {
-        "label" : "The Juan MacLean",
-        "uri" : "http://dbpedia.org/resource/The_Juan_MacLean"
-      }, {
-        "label" : "The Monochrome Set",
-        "uri" : "http://dbpedia.org/resource/The_Monochrome_Set"
-      }, {
-        "label" : "The Veronicas",
-        "uri" : "http://dbpedia.org/resource/The_Veronicas"
-      }, {
-        "label" : "Tocotronic",
-        "uri" : "http://dbpedia.org/resource/Tocotronic"
-      }, {
-        "label" : "Trouble (Band)",
-        "uri" : "http://dbpedia.org/resource/Trouble_(band)"
-      }, {
-        "label" : "Týr",
-        "uri" : "http://dbpedia.org/resource/Týr_(band)"
-      } ]
-    },
-    "combination" : false
-  }, {
-    "id" : "4",
-    "language" : "DE",
-    "type" : "NP",
-    "bindingType" : "BAND",
-    "returnType" : "PERSON",
-    "frameType" : "NPP",
-    "sentences" : [ "das Mitglied von $x", "die Mitglieder von $x" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/bandMember> ?objOfProp))\n",
-    "sentenceToSparqlParameterMapping" : {
-      "$x" : "subjOfProp"
-    },
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "$x",
-      "bindingList" : [ {
-        "label" : "7 Horns 7 Eyes",
-        "uri" : "http://dbpedia.org/resource/7_Horns_7_Eyes"
-      }, {
-        "label" : "7 Seconds",
-        "uri" : "http://dbpedia.org/resource/7_Seconds_(band)"
-      }, {
-        "label" : "7 Year Bitch",
-        "uri" : "http://dbpedia.org/resource/7_Year_Bitch"
-      }, {
-        "label" : "801 (Band)",
-        "uri" : "http://dbpedia.org/resource/801_(band)"
-      }, {
-        "label" : "808 State",
-        "uri" : "http://dbpedia.org/resource/808_State"
-      }, {
-        "label" : "98 Degrees",
-        "uri" : "http://dbpedia.org/resource/98_Degrees"
-      }, {
-        "label" : "A1 (Band)",
-        "uri" : "http://dbpedia.org/resource/A1_(group)"
-      }, {
-        "label" : "AC4",
-        "uri" : "http://dbpedia.org/resource/AC4"
-      }, {
-        "label" : "AMM (Ensemble)",
-        "uri" : "http://dbpedia.org/resource/AMM_(group)"
-      }, {
-        "label" : "Love/Hate (Band)",
-        "uri" : "http://dbpedia.org/resource/Love/Hate_(band)"
-      }, {
-        "label" : "Love (Band)",
-        "uri" : "http://dbpedia.org/resource/Love_(band)"
-      }, {
-        "label" : "Love and Death",
-        "uri" : "http://dbpedia.org/resource/Love_and_Death_(band)"
-      }, {
-        "label" : "Lovebugs",
-        "uri" : "http://dbpedia.org/resource/Lovebugs_(band)"
-      }, {
-        "label" : "Lovelyz",
-        "uri" : "http://dbpedia.org/resource/Lovelyz"
-      }, {
-        "label" : "Loverboy (Band)",
-        "uri" : "http://dbpedia.org/resource/Loverboy"
-      }, {
-        "label" : "Lukas Graham",
-        "uri" : "http://dbpedia.org/resource/Lukas_Graham"
-      }, {
-        "label" : "Ljapis Trubezkoi",
-        "uri" : "http://dbpedia.org/resource/Lyapis_Trubetskoy"
-      }, {
-        "label" : "Lynch Mob",
-        "uri" : "http://dbpedia.org/resource/Lynch_Mob_(band)"
-      }, {
-        "label" : "Lynyrd Skynyrd",
-        "uri" : "http://dbpedia.org/resource/Lynyrd_Skynyrd"
-      }, {
-        "label" : "Lúnasa",
-        "uri" : "http://dbpedia.org/resource/Lúnasa_(band)"
-      }, {
-        "label" : "M.O.D.",
-        "uri" : "http://dbpedia.org/resource/M.O.D."
-      }, {
-        "label" : "MBLAQ",
-        "uri" : "http://dbpedia.org/resource/MBLAQ"
-      }, {
-        "label" : "MGMT",
-        "uri" : "http://dbpedia.org/resource/MGMT"
-      }, {
-        "label" : "MKTO",
-        "uri" : "http://dbpedia.org/resource/MKTO"
-      }, {
-        "label" : "MS MR",
-        "uri" : "http://dbpedia.org/resource/MS_MR"
-      }, {
-        "label" : "MU330",
-        "uri" : "http://dbpedia.org/resource/MU330"
-      }, {
-        "label" : "Machine Head",
-        "uri" : "http://dbpedia.org/resource/Machine_Head_(band)"
-      }, {
-        "label" : "Made Out of Babies",
-        "uri" : "http://dbpedia.org/resource/Made_Out_of_Babies"
-      }, {
-        "label" : "Madness",
-        "uri" : "http://dbpedia.org/resource/Madness_(band)"
-      }, {
-        "label" : "Mae (Band)",
-        "uri" : "http://dbpedia.org/resource/Mae"
-      }, {
-        "label" : "Magic (Band)",
-        "uri" : "http://dbpedia.org/resource/Magic!"
-      }, {
-        "label" : "Magma (Band)",
-        "uri" : "http://dbpedia.org/resource/Magma_(band)"
-      }, {
-        "label" : "Magnetic Man",
-        "uri" : "http://dbpedia.org/resource/Magnetic_Man"
-      }, {
-        "label" : "Magnum (Band)",
-        "uri" : "http://dbpedia.org/resource/Magnum_(band)"
-      }, {
-        "label" : "Kraftwerk Magnum",
-        "uri" : "http://dbpedia.org/resource/Magnum_(band)"
-      }, {
-        "label" : "Malcolm Lincoln",
-        "uri" : "http://dbpedia.org/resource/Malcolm_Lincoln"
-      }, {
-        "label" : "Carpathian Forest",
-        "uri" : "http://dbpedia.org/resource/Carpathian_Forest"
-      }, {
-        "label" : "Cartel (Hip-Hop-Gruppe)",
-        "uri" : "http://dbpedia.org/resource/Cartel_(rap_group)"
-      }, {
-        "label" : "Carter The Unstoppable Sex Machine",
-        "uri" : "http://dbpedia.org/resource/Carter_the_Unstoppable_Sex_Machine"
-      }, {
-        "label" : "Casseurs Flowters",
-        "uri" : "http://dbpedia.org/resource/Casseurs_Flowters"
-      }, {
-        "label" : "Cassino (Latium)",
-        "uri" : "http://dbpedia.org/resource/Cassino_(band)"
-      }, {
-        "label" : "Catacombs (amerikanische Band)",
-        "uri" : "http://dbpedia.org/resource/Catacombs_(band)"
-      }, {
-        "label" : "Catamenia",
-        "uri" : "http://dbpedia.org/resource/Catamenia_(band)"
-      }, {
-        "label" : "Coppelius",
-        "uri" : "http://dbpedia.org/resource/Coppelius"
-      }, {
-        "label" : "Cordelia’s Dad",
-        "uri" : "http://dbpedia.org/resource/Cordelia's_Dad"
-      }, {
-        "label" : "Corona (Band)",
-        "uri" : "http://dbpedia.org/resource/Corona_(band)"
-      }, {
-        "label" : "Ugly Kid Joe",
-        "uri" : "http://dbpedia.org/resource/Ugly_Kid_Joe"
-      }, {
-        "label" : "Ulige Numre",
-        "uri" : "http://dbpedia.org/resource/Ulige_Numre"
-      }, {
-        "label" : "UnSun",
-        "uri" : "http://dbpedia.org/resource/UnSun"
-      }, {
-        "label" : "Underoath",
-        "uri" : "http://dbpedia.org/resource/Underoath"
-      }, {
-        "label" : "Underworld (Band)",
-        "uri" : "http://dbpedia.org/resource/Underworld_(band)"
-      }, {
-        "label" : "Untoten",
-        "uri" : "http://dbpedia.org/resource/Untoten"
-      }, {
-        "label" : "Urban Cookie Collective",
-        "uri" : "http://dbpedia.org/resource/Urban_Cookie_Collective"
-      }, {
-        "label" : "VAST",
-        "uri" : "http://dbpedia.org/resource/VAST"
-      }, {
-        "label" : "VNV Nation",
-        "uri" : "http://dbpedia.org/resource/VNV_Nation"
-      }, {
-        "label" : "Vuur",
-        "uri" : "http://dbpedia.org/resource/VUUR"
-      }, {
-        "label" : "Vallenfyre",
-        "uri" : "http://dbpedia.org/resource/Vallenfyre"
-      }, {
-        "label" : "Vampire Weekend",
-        "uri" : "http://dbpedia.org/resource/Vampire_Weekend"
-      }, {
-        "label" : "Van Halen",
-        "uri" : "http://dbpedia.org/resource/Van_Halen"
-      }, {
-        "label" : "Van She",
-        "uri" : "http://dbpedia.org/resource/Van_She"
-      }, {
-        "label" : "Vandalism",
-        "uri" : "http://dbpedia.org/resource/Vandalism_(duo)"
-      }, {
-        "label" : "Vanilla Fudge",
-        "uri" : "http://dbpedia.org/resource/Vanilla_Fudge"
-      }, {
-        "label" : "Vanilla Ninja",
-        "uri" : "http://dbpedia.org/resource/Vanilla_Ninja"
-      }, {
-        "label" : "Venom (Band)",
-        "uri" : "http://dbpedia.org/resource/Venom_(band)"
-      }, {
-        "label" : "Venomous Concept",
-        "uri" : "http://dbpedia.org/resource/Venomous_Concept"
-      }, {
-        "label" : "Versailles",
-        "uri" : "http://dbpedia.org/resource/Versailles_(band)"
-      }, {
-        "label" : "Versailles (Band)",
-        "uri" : "http://dbpedia.org/resource/Versailles_(band)"
-      }, {
-        "label" : "Vertical Horizon",
-        "uri" : "http://dbpedia.org/resource/Vertical_Horizon"
-      }, {
-        "label" : "Current 93",
-        "uri" : "http://dbpedia.org/resource/Current_93"
-      }, {
-        "label" : "Cursive",
-        "uri" : "http://dbpedia.org/resource/Cursive_(band)"
-      }, {
-        "label" : "Curved Air",
-        "uri" : "http://dbpedia.org/resource/Curved_Air"
-      }, {
-        "label" : "Czerwone Gitary",
-        "uri" : "http://dbpedia.org/resource/Czerwone_Gitary"
-      }, {
-        "label" : "D.D.E.",
-        "uri" : "http://dbpedia.org/resource/D.D.E._(band)"
-      }, {
-        "label" : "D.I.",
-        "uri" : "http://dbpedia.org/resource/D.I._(band)"
-      }, {
-        "label" : "D.O.A. (Band)",
-        "uri" : "http://dbpedia.org/resource/D.O.A._(band)"
-      }, {
-        "label" : "Dc Talk",
-        "uri" : "http://dbpedia.org/resource/DC_Talk"
-      }, {
-        "label" : "DDT (Band)",
-        "uri" : "http://dbpedia.org/resource/DDT_(band)"
-      }, {
-        "label" : "DReam",
-        "uri" : "http://dbpedia.org/resource/D_Ream"
-      }, {
-        "label" : "Da Vinci (Band)",
-        "uri" : "http://dbpedia.org/resource/Da_Vinci_(band)"
-      }, {
-        "label" : "Da Vinci (Mondkrater)",
-        "uri" : "http://dbpedia.org/resource/Da_Vinci_(band)"
-      }, {
-        "label" : "Dadafon",
-        "uri" : "http://dbpedia.org/resource/Dadafon"
-      }, {
-        "label" : "Dag Nasty",
-        "uri" : "http://dbpedia.org/resource/Dag_Nasty"
-      }, {
-        "label" : "Dallas Wind Symphony",
-        "uri" : "http://dbpedia.org/resource/Dallas_Winds"
-      }, {
-        "label" : "Poisonblack",
-        "uri" : "http://dbpedia.org/resource/Poisonblack"
-      }, {
-        "label" : "Rainbow (Band)",
-        "uri" : "http://dbpedia.org/resource/Rainbow_(rock_band)"
-      }, {
-        "label" : "Republica",
-        "uri" : "http://dbpedia.org/resource/Republica"
-      }, {
-        "label" : "Satyricon (Band)",
-        "uri" : "http://dbpedia.org/resource/Satyricon_(band)"
-      }, {
-        "label" : "Serenity (österreichische Band)",
-        "uri" : "http://dbpedia.org/resource/Serenity_(band)"
-      }, {
-        "label" : "Serenity (britische Band)",
-        "uri" : "http://dbpedia.org/resource/Serenity_(band)"
-      }, {
-        "label" : "Sigur Rós",
-        "uri" : "http://dbpedia.org/resource/Sigur_Rós"
-      }, {
-        "label" : "Stray Cats",
-        "uri" : "http://dbpedia.org/resource/Stray_Cats"
-      }, {
-        "label" : "Stream of Passion",
-        "uri" : "http://dbpedia.org/resource/Stream_of_Passion"
-      }, {
-        "label" : "Super Furry Animals",
-        "uri" : "http://dbpedia.org/resource/Super_Furry_Animals"
-      }, {
-        "label" : "Teräsbetoni",
-        "uri" : "http://dbpedia.org/resource/Teräsbetoni"
-      }, {
-        "label" : "The Juan MacLean",
-        "uri" : "http://dbpedia.org/resource/The_Juan_MacLean"
-      }, {
-        "label" : "The Monochrome Set",
-        "uri" : "http://dbpedia.org/resource/The_Monochrome_Set"
-      }, {
-        "label" : "The Veronicas",
-        "uri" : "http://dbpedia.org/resource/The_Veronicas"
-      }, {
-        "label" : "Tocotronic",
-        "uri" : "http://dbpedia.org/resource/Tocotronic"
-      }, {
-        "label" : "Trouble (Band)",
-        "uri" : "http://dbpedia.org/resource/Trouble_(band)"
-      }, {
-        "label" : "Týr",
-        "uri" : "http://dbpedia.org/resource/Týr_(band)"
-      } ]
-    },
-    "combination" : false
-  }, {
-    "id" : "5",
-    "language" : "DE",
-    "type" : "SENTENCE",
     "bindingType" : "WORK",
     "returnType" : "PERSON",
     "frameType" : "NPP",
-    "sentences" : [ "Was ist der Komponist für ($x | WORK_NP)?", "Was sind die Komponisten für ($x | WORK_NP)?", "Was war der Komponist für ($x | WORK_NP)?", "Was waren die Komponisten für ($x | WORK_NP)?" ],
+    "sentences" : [ "Gib mir den Komponisten für ($x | WORK_NP)?", "Gib mir die Komponisten für ($x | WORK_NP)?", "Welche musikalischer Künstlers sind die Komponisten für ($x | WORK_NP)?", "Welche musikalischer Künstlers waren die Komponisten für ($x | WORK_NP)?", "Welcher musikalischer Künstler ist der Komponist für ($x | WORK_NP)?", "Welcher musikalischer Künstler war der Komponist für ($x | WORK_NP)?", "Wer ist der Komponist für ($x | WORK_NP)?", "Wer sind die Komponisten für ($x | WORK_NP)?", "Wer war der Komponist für ($x | WORK_NP)?", "Wer waren die Komponisten für ($x | WORK_NP)?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1595,7 +957,7 @@
     },
     "combination" : false
   }, {
-    "id" : "6",
+    "id" : "4",
     "language" : "DE",
     "type" : "NP",
     "bindingType" : "WORK",
@@ -1914,13 +1276,651 @@
     },
     "combination" : false
   }, {
+    "id" : "5",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "BAND",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir das Mitglied von ($x | BAND_NP)?", "Gib mir die Mitglieder von ($x | BAND_NP)?", "Welche Persons sind die Mitglieder von ($x | BAND_NP)?", "Welche Persons waren die Mitglieder von ($x | BAND_NP)?", "Welches Person ist das Mitglied von ($x | BAND_NP)?", "Welches Person war das Mitglied von ($x | BAND_NP)?", "Wer ist das Mitglied von ($x | BAND_NP)?", "Wer sind die Mitglieder von ($x | BAND_NP)?", "Wer war das Mitglied von ($x | BAND_NP)?", "Wer waren die Mitglieder von ($x | BAND_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/bandMember> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "7 Horns 7 Eyes",
+        "uri" : "http://dbpedia.org/resource/7_Horns_7_Eyes"
+      }, {
+        "label" : "7 Seconds",
+        "uri" : "http://dbpedia.org/resource/7_Seconds_(band)"
+      }, {
+        "label" : "7 Year Bitch",
+        "uri" : "http://dbpedia.org/resource/7_Year_Bitch"
+      }, {
+        "label" : "801 (Band)",
+        "uri" : "http://dbpedia.org/resource/801_(band)"
+      }, {
+        "label" : "808 State",
+        "uri" : "http://dbpedia.org/resource/808_State"
+      }, {
+        "label" : "98 Degrees",
+        "uri" : "http://dbpedia.org/resource/98_Degrees"
+      }, {
+        "label" : "A1 (Band)",
+        "uri" : "http://dbpedia.org/resource/A1_(group)"
+      }, {
+        "label" : "AC4",
+        "uri" : "http://dbpedia.org/resource/AC4"
+      }, {
+        "label" : "AMM (Ensemble)",
+        "uri" : "http://dbpedia.org/resource/AMM_(group)"
+      }, {
+        "label" : "Love/Hate (Band)",
+        "uri" : "http://dbpedia.org/resource/Love/Hate_(band)"
+      }, {
+        "label" : "Love (Band)",
+        "uri" : "http://dbpedia.org/resource/Love_(band)"
+      }, {
+        "label" : "Love and Death",
+        "uri" : "http://dbpedia.org/resource/Love_and_Death_(band)"
+      }, {
+        "label" : "Lovebugs",
+        "uri" : "http://dbpedia.org/resource/Lovebugs_(band)"
+      }, {
+        "label" : "Lovelyz",
+        "uri" : "http://dbpedia.org/resource/Lovelyz"
+      }, {
+        "label" : "Loverboy (Band)",
+        "uri" : "http://dbpedia.org/resource/Loverboy"
+      }, {
+        "label" : "Lukas Graham",
+        "uri" : "http://dbpedia.org/resource/Lukas_Graham"
+      }, {
+        "label" : "Ljapis Trubezkoi",
+        "uri" : "http://dbpedia.org/resource/Lyapis_Trubetskoy"
+      }, {
+        "label" : "Lynch Mob",
+        "uri" : "http://dbpedia.org/resource/Lynch_Mob_(band)"
+      }, {
+        "label" : "Lynyrd Skynyrd",
+        "uri" : "http://dbpedia.org/resource/Lynyrd_Skynyrd"
+      }, {
+        "label" : "Lúnasa",
+        "uri" : "http://dbpedia.org/resource/Lúnasa_(band)"
+      }, {
+        "label" : "M.O.D.",
+        "uri" : "http://dbpedia.org/resource/M.O.D."
+      }, {
+        "label" : "MBLAQ",
+        "uri" : "http://dbpedia.org/resource/MBLAQ"
+      }, {
+        "label" : "MGMT",
+        "uri" : "http://dbpedia.org/resource/MGMT"
+      }, {
+        "label" : "MKTO",
+        "uri" : "http://dbpedia.org/resource/MKTO"
+      }, {
+        "label" : "MS MR",
+        "uri" : "http://dbpedia.org/resource/MS_MR"
+      }, {
+        "label" : "MU330",
+        "uri" : "http://dbpedia.org/resource/MU330"
+      }, {
+        "label" : "Machine Head",
+        "uri" : "http://dbpedia.org/resource/Machine_Head_(band)"
+      }, {
+        "label" : "Made Out of Babies",
+        "uri" : "http://dbpedia.org/resource/Made_Out_of_Babies"
+      }, {
+        "label" : "Madness",
+        "uri" : "http://dbpedia.org/resource/Madness_(band)"
+      }, {
+        "label" : "Mae (Band)",
+        "uri" : "http://dbpedia.org/resource/Mae"
+      }, {
+        "label" : "Magic (Band)",
+        "uri" : "http://dbpedia.org/resource/Magic!"
+      }, {
+        "label" : "Magma (Band)",
+        "uri" : "http://dbpedia.org/resource/Magma_(band)"
+      }, {
+        "label" : "Magnetic Man",
+        "uri" : "http://dbpedia.org/resource/Magnetic_Man"
+      }, {
+        "label" : "Magnum (Band)",
+        "uri" : "http://dbpedia.org/resource/Magnum_(band)"
+      }, {
+        "label" : "Kraftwerk Magnum",
+        "uri" : "http://dbpedia.org/resource/Magnum_(band)"
+      }, {
+        "label" : "Malcolm Lincoln",
+        "uri" : "http://dbpedia.org/resource/Malcolm_Lincoln"
+      }, {
+        "label" : "Carpathian Forest",
+        "uri" : "http://dbpedia.org/resource/Carpathian_Forest"
+      }, {
+        "label" : "Cartel (Hip-Hop-Gruppe)",
+        "uri" : "http://dbpedia.org/resource/Cartel_(rap_group)"
+      }, {
+        "label" : "Carter The Unstoppable Sex Machine",
+        "uri" : "http://dbpedia.org/resource/Carter_the_Unstoppable_Sex_Machine"
+      }, {
+        "label" : "Casseurs Flowters",
+        "uri" : "http://dbpedia.org/resource/Casseurs_Flowters"
+      }, {
+        "label" : "Cassino (Latium)",
+        "uri" : "http://dbpedia.org/resource/Cassino_(band)"
+      }, {
+        "label" : "Catacombs (amerikanische Band)",
+        "uri" : "http://dbpedia.org/resource/Catacombs_(band)"
+      }, {
+        "label" : "Catamenia",
+        "uri" : "http://dbpedia.org/resource/Catamenia_(band)"
+      }, {
+        "label" : "Coppelius",
+        "uri" : "http://dbpedia.org/resource/Coppelius"
+      }, {
+        "label" : "Cordelia’s Dad",
+        "uri" : "http://dbpedia.org/resource/Cordelia's_Dad"
+      }, {
+        "label" : "Corona (Band)",
+        "uri" : "http://dbpedia.org/resource/Corona_(band)"
+      }, {
+        "label" : "Ugly Kid Joe",
+        "uri" : "http://dbpedia.org/resource/Ugly_Kid_Joe"
+      }, {
+        "label" : "Ulige Numre",
+        "uri" : "http://dbpedia.org/resource/Ulige_Numre"
+      }, {
+        "label" : "UnSun",
+        "uri" : "http://dbpedia.org/resource/UnSun"
+      }, {
+        "label" : "Underoath",
+        "uri" : "http://dbpedia.org/resource/Underoath"
+      }, {
+        "label" : "Underworld (Band)",
+        "uri" : "http://dbpedia.org/resource/Underworld_(band)"
+      }, {
+        "label" : "Untoten",
+        "uri" : "http://dbpedia.org/resource/Untoten"
+      }, {
+        "label" : "Urban Cookie Collective",
+        "uri" : "http://dbpedia.org/resource/Urban_Cookie_Collective"
+      }, {
+        "label" : "VAST",
+        "uri" : "http://dbpedia.org/resource/VAST"
+      }, {
+        "label" : "VNV Nation",
+        "uri" : "http://dbpedia.org/resource/VNV_Nation"
+      }, {
+        "label" : "Vuur",
+        "uri" : "http://dbpedia.org/resource/VUUR"
+      }, {
+        "label" : "Vallenfyre",
+        "uri" : "http://dbpedia.org/resource/Vallenfyre"
+      }, {
+        "label" : "Vampire Weekend",
+        "uri" : "http://dbpedia.org/resource/Vampire_Weekend"
+      }, {
+        "label" : "Van Halen",
+        "uri" : "http://dbpedia.org/resource/Van_Halen"
+      }, {
+        "label" : "Van She",
+        "uri" : "http://dbpedia.org/resource/Van_She"
+      }, {
+        "label" : "Vandalism",
+        "uri" : "http://dbpedia.org/resource/Vandalism_(duo)"
+      }, {
+        "label" : "Vanilla Fudge",
+        "uri" : "http://dbpedia.org/resource/Vanilla_Fudge"
+      }, {
+        "label" : "Vanilla Ninja",
+        "uri" : "http://dbpedia.org/resource/Vanilla_Ninja"
+      }, {
+        "label" : "Venom (Band)",
+        "uri" : "http://dbpedia.org/resource/Venom_(band)"
+      }, {
+        "label" : "Venomous Concept",
+        "uri" : "http://dbpedia.org/resource/Venomous_Concept"
+      }, {
+        "label" : "Versailles",
+        "uri" : "http://dbpedia.org/resource/Versailles_(band)"
+      }, {
+        "label" : "Versailles (Band)",
+        "uri" : "http://dbpedia.org/resource/Versailles_(band)"
+      }, {
+        "label" : "Vertical Horizon",
+        "uri" : "http://dbpedia.org/resource/Vertical_Horizon"
+      }, {
+        "label" : "Current 93",
+        "uri" : "http://dbpedia.org/resource/Current_93"
+      }, {
+        "label" : "Cursive",
+        "uri" : "http://dbpedia.org/resource/Cursive_(band)"
+      }, {
+        "label" : "Curved Air",
+        "uri" : "http://dbpedia.org/resource/Curved_Air"
+      }, {
+        "label" : "Czerwone Gitary",
+        "uri" : "http://dbpedia.org/resource/Czerwone_Gitary"
+      }, {
+        "label" : "D.D.E.",
+        "uri" : "http://dbpedia.org/resource/D.D.E._(band)"
+      }, {
+        "label" : "D.I.",
+        "uri" : "http://dbpedia.org/resource/D.I._(band)"
+      }, {
+        "label" : "D.O.A. (Band)",
+        "uri" : "http://dbpedia.org/resource/D.O.A._(band)"
+      }, {
+        "label" : "Dc Talk",
+        "uri" : "http://dbpedia.org/resource/DC_Talk"
+      }, {
+        "label" : "DDT (Band)",
+        "uri" : "http://dbpedia.org/resource/DDT_(band)"
+      }, {
+        "label" : "DReam",
+        "uri" : "http://dbpedia.org/resource/D_Ream"
+      }, {
+        "label" : "Da Vinci (Band)",
+        "uri" : "http://dbpedia.org/resource/Da_Vinci_(band)"
+      }, {
+        "label" : "Da Vinci (Mondkrater)",
+        "uri" : "http://dbpedia.org/resource/Da_Vinci_(band)"
+      }, {
+        "label" : "Dadafon",
+        "uri" : "http://dbpedia.org/resource/Dadafon"
+      }, {
+        "label" : "Dag Nasty",
+        "uri" : "http://dbpedia.org/resource/Dag_Nasty"
+      }, {
+        "label" : "Dallas Wind Symphony",
+        "uri" : "http://dbpedia.org/resource/Dallas_Winds"
+      }, {
+        "label" : "Poisonblack",
+        "uri" : "http://dbpedia.org/resource/Poisonblack"
+      }, {
+        "label" : "Rainbow (Band)",
+        "uri" : "http://dbpedia.org/resource/Rainbow_(rock_band)"
+      }, {
+        "label" : "Republica",
+        "uri" : "http://dbpedia.org/resource/Republica"
+      }, {
+        "label" : "Satyricon (Band)",
+        "uri" : "http://dbpedia.org/resource/Satyricon_(band)"
+      }, {
+        "label" : "Serenity (österreichische Band)",
+        "uri" : "http://dbpedia.org/resource/Serenity_(band)"
+      }, {
+        "label" : "Serenity (britische Band)",
+        "uri" : "http://dbpedia.org/resource/Serenity_(band)"
+      }, {
+        "label" : "Sigur Rós",
+        "uri" : "http://dbpedia.org/resource/Sigur_Rós"
+      }, {
+        "label" : "Stray Cats",
+        "uri" : "http://dbpedia.org/resource/Stray_Cats"
+      }, {
+        "label" : "Stream of Passion",
+        "uri" : "http://dbpedia.org/resource/Stream_of_Passion"
+      }, {
+        "label" : "Super Furry Animals",
+        "uri" : "http://dbpedia.org/resource/Super_Furry_Animals"
+      }, {
+        "label" : "Teräsbetoni",
+        "uri" : "http://dbpedia.org/resource/Teräsbetoni"
+      }, {
+        "label" : "The Juan MacLean",
+        "uri" : "http://dbpedia.org/resource/The_Juan_MacLean"
+      }, {
+        "label" : "The Monochrome Set",
+        "uri" : "http://dbpedia.org/resource/The_Monochrome_Set"
+      }, {
+        "label" : "The Veronicas",
+        "uri" : "http://dbpedia.org/resource/The_Veronicas"
+      }, {
+        "label" : "Tocotronic",
+        "uri" : "http://dbpedia.org/resource/Tocotronic"
+      }, {
+        "label" : "Trouble (Band)",
+        "uri" : "http://dbpedia.org/resource/Trouble_(band)"
+      }, {
+        "label" : "Týr",
+        "uri" : "http://dbpedia.org/resource/Týr_(band)"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "6",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "BAND",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "das Mitglied von $x", "die Mitglieder von $x" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/bandMember> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "7 Horns 7 Eyes",
+        "uri" : "http://dbpedia.org/resource/7_Horns_7_Eyes"
+      }, {
+        "label" : "7 Seconds",
+        "uri" : "http://dbpedia.org/resource/7_Seconds_(band)"
+      }, {
+        "label" : "7 Year Bitch",
+        "uri" : "http://dbpedia.org/resource/7_Year_Bitch"
+      }, {
+        "label" : "801 (Band)",
+        "uri" : "http://dbpedia.org/resource/801_(band)"
+      }, {
+        "label" : "808 State",
+        "uri" : "http://dbpedia.org/resource/808_State"
+      }, {
+        "label" : "98 Degrees",
+        "uri" : "http://dbpedia.org/resource/98_Degrees"
+      }, {
+        "label" : "A1 (Band)",
+        "uri" : "http://dbpedia.org/resource/A1_(group)"
+      }, {
+        "label" : "AC4",
+        "uri" : "http://dbpedia.org/resource/AC4"
+      }, {
+        "label" : "AMM (Ensemble)",
+        "uri" : "http://dbpedia.org/resource/AMM_(group)"
+      }, {
+        "label" : "Love/Hate (Band)",
+        "uri" : "http://dbpedia.org/resource/Love/Hate_(band)"
+      }, {
+        "label" : "Love (Band)",
+        "uri" : "http://dbpedia.org/resource/Love_(band)"
+      }, {
+        "label" : "Love and Death",
+        "uri" : "http://dbpedia.org/resource/Love_and_Death_(band)"
+      }, {
+        "label" : "Lovebugs",
+        "uri" : "http://dbpedia.org/resource/Lovebugs_(band)"
+      }, {
+        "label" : "Lovelyz",
+        "uri" : "http://dbpedia.org/resource/Lovelyz"
+      }, {
+        "label" : "Loverboy (Band)",
+        "uri" : "http://dbpedia.org/resource/Loverboy"
+      }, {
+        "label" : "Lukas Graham",
+        "uri" : "http://dbpedia.org/resource/Lukas_Graham"
+      }, {
+        "label" : "Ljapis Trubezkoi",
+        "uri" : "http://dbpedia.org/resource/Lyapis_Trubetskoy"
+      }, {
+        "label" : "Lynch Mob",
+        "uri" : "http://dbpedia.org/resource/Lynch_Mob_(band)"
+      }, {
+        "label" : "Lynyrd Skynyrd",
+        "uri" : "http://dbpedia.org/resource/Lynyrd_Skynyrd"
+      }, {
+        "label" : "Lúnasa",
+        "uri" : "http://dbpedia.org/resource/Lúnasa_(band)"
+      }, {
+        "label" : "M.O.D.",
+        "uri" : "http://dbpedia.org/resource/M.O.D."
+      }, {
+        "label" : "MBLAQ",
+        "uri" : "http://dbpedia.org/resource/MBLAQ"
+      }, {
+        "label" : "MGMT",
+        "uri" : "http://dbpedia.org/resource/MGMT"
+      }, {
+        "label" : "MKTO",
+        "uri" : "http://dbpedia.org/resource/MKTO"
+      }, {
+        "label" : "MS MR",
+        "uri" : "http://dbpedia.org/resource/MS_MR"
+      }, {
+        "label" : "MU330",
+        "uri" : "http://dbpedia.org/resource/MU330"
+      }, {
+        "label" : "Machine Head",
+        "uri" : "http://dbpedia.org/resource/Machine_Head_(band)"
+      }, {
+        "label" : "Made Out of Babies",
+        "uri" : "http://dbpedia.org/resource/Made_Out_of_Babies"
+      }, {
+        "label" : "Madness",
+        "uri" : "http://dbpedia.org/resource/Madness_(band)"
+      }, {
+        "label" : "Mae (Band)",
+        "uri" : "http://dbpedia.org/resource/Mae"
+      }, {
+        "label" : "Magic (Band)",
+        "uri" : "http://dbpedia.org/resource/Magic!"
+      }, {
+        "label" : "Magma (Band)",
+        "uri" : "http://dbpedia.org/resource/Magma_(band)"
+      }, {
+        "label" : "Magnetic Man",
+        "uri" : "http://dbpedia.org/resource/Magnetic_Man"
+      }, {
+        "label" : "Magnum (Band)",
+        "uri" : "http://dbpedia.org/resource/Magnum_(band)"
+      }, {
+        "label" : "Kraftwerk Magnum",
+        "uri" : "http://dbpedia.org/resource/Magnum_(band)"
+      }, {
+        "label" : "Malcolm Lincoln",
+        "uri" : "http://dbpedia.org/resource/Malcolm_Lincoln"
+      }, {
+        "label" : "Carpathian Forest",
+        "uri" : "http://dbpedia.org/resource/Carpathian_Forest"
+      }, {
+        "label" : "Cartel (Hip-Hop-Gruppe)",
+        "uri" : "http://dbpedia.org/resource/Cartel_(rap_group)"
+      }, {
+        "label" : "Carter The Unstoppable Sex Machine",
+        "uri" : "http://dbpedia.org/resource/Carter_the_Unstoppable_Sex_Machine"
+      }, {
+        "label" : "Casseurs Flowters",
+        "uri" : "http://dbpedia.org/resource/Casseurs_Flowters"
+      }, {
+        "label" : "Cassino (Latium)",
+        "uri" : "http://dbpedia.org/resource/Cassino_(band)"
+      }, {
+        "label" : "Catacombs (amerikanische Band)",
+        "uri" : "http://dbpedia.org/resource/Catacombs_(band)"
+      }, {
+        "label" : "Catamenia",
+        "uri" : "http://dbpedia.org/resource/Catamenia_(band)"
+      }, {
+        "label" : "Coppelius",
+        "uri" : "http://dbpedia.org/resource/Coppelius"
+      }, {
+        "label" : "Cordelia’s Dad",
+        "uri" : "http://dbpedia.org/resource/Cordelia's_Dad"
+      }, {
+        "label" : "Corona (Band)",
+        "uri" : "http://dbpedia.org/resource/Corona_(band)"
+      }, {
+        "label" : "Ugly Kid Joe",
+        "uri" : "http://dbpedia.org/resource/Ugly_Kid_Joe"
+      }, {
+        "label" : "Ulige Numre",
+        "uri" : "http://dbpedia.org/resource/Ulige_Numre"
+      }, {
+        "label" : "UnSun",
+        "uri" : "http://dbpedia.org/resource/UnSun"
+      }, {
+        "label" : "Underoath",
+        "uri" : "http://dbpedia.org/resource/Underoath"
+      }, {
+        "label" : "Underworld (Band)",
+        "uri" : "http://dbpedia.org/resource/Underworld_(band)"
+      }, {
+        "label" : "Untoten",
+        "uri" : "http://dbpedia.org/resource/Untoten"
+      }, {
+        "label" : "Urban Cookie Collective",
+        "uri" : "http://dbpedia.org/resource/Urban_Cookie_Collective"
+      }, {
+        "label" : "VAST",
+        "uri" : "http://dbpedia.org/resource/VAST"
+      }, {
+        "label" : "VNV Nation",
+        "uri" : "http://dbpedia.org/resource/VNV_Nation"
+      }, {
+        "label" : "Vuur",
+        "uri" : "http://dbpedia.org/resource/VUUR"
+      }, {
+        "label" : "Vallenfyre",
+        "uri" : "http://dbpedia.org/resource/Vallenfyre"
+      }, {
+        "label" : "Vampire Weekend",
+        "uri" : "http://dbpedia.org/resource/Vampire_Weekend"
+      }, {
+        "label" : "Van Halen",
+        "uri" : "http://dbpedia.org/resource/Van_Halen"
+      }, {
+        "label" : "Van She",
+        "uri" : "http://dbpedia.org/resource/Van_She"
+      }, {
+        "label" : "Vandalism",
+        "uri" : "http://dbpedia.org/resource/Vandalism_(duo)"
+      }, {
+        "label" : "Vanilla Fudge",
+        "uri" : "http://dbpedia.org/resource/Vanilla_Fudge"
+      }, {
+        "label" : "Vanilla Ninja",
+        "uri" : "http://dbpedia.org/resource/Vanilla_Ninja"
+      }, {
+        "label" : "Venom (Band)",
+        "uri" : "http://dbpedia.org/resource/Venom_(band)"
+      }, {
+        "label" : "Venomous Concept",
+        "uri" : "http://dbpedia.org/resource/Venomous_Concept"
+      }, {
+        "label" : "Versailles",
+        "uri" : "http://dbpedia.org/resource/Versailles_(band)"
+      }, {
+        "label" : "Versailles (Band)",
+        "uri" : "http://dbpedia.org/resource/Versailles_(band)"
+      }, {
+        "label" : "Vertical Horizon",
+        "uri" : "http://dbpedia.org/resource/Vertical_Horizon"
+      }, {
+        "label" : "Current 93",
+        "uri" : "http://dbpedia.org/resource/Current_93"
+      }, {
+        "label" : "Cursive",
+        "uri" : "http://dbpedia.org/resource/Cursive_(band)"
+      }, {
+        "label" : "Curved Air",
+        "uri" : "http://dbpedia.org/resource/Curved_Air"
+      }, {
+        "label" : "Czerwone Gitary",
+        "uri" : "http://dbpedia.org/resource/Czerwone_Gitary"
+      }, {
+        "label" : "D.D.E.",
+        "uri" : "http://dbpedia.org/resource/D.D.E._(band)"
+      }, {
+        "label" : "D.I.",
+        "uri" : "http://dbpedia.org/resource/D.I._(band)"
+      }, {
+        "label" : "D.O.A. (Band)",
+        "uri" : "http://dbpedia.org/resource/D.O.A._(band)"
+      }, {
+        "label" : "Dc Talk",
+        "uri" : "http://dbpedia.org/resource/DC_Talk"
+      }, {
+        "label" : "DDT (Band)",
+        "uri" : "http://dbpedia.org/resource/DDT_(band)"
+      }, {
+        "label" : "DReam",
+        "uri" : "http://dbpedia.org/resource/D_Ream"
+      }, {
+        "label" : "Da Vinci (Band)",
+        "uri" : "http://dbpedia.org/resource/Da_Vinci_(band)"
+      }, {
+        "label" : "Da Vinci (Mondkrater)",
+        "uri" : "http://dbpedia.org/resource/Da_Vinci_(band)"
+      }, {
+        "label" : "Dadafon",
+        "uri" : "http://dbpedia.org/resource/Dadafon"
+      }, {
+        "label" : "Dag Nasty",
+        "uri" : "http://dbpedia.org/resource/Dag_Nasty"
+      }, {
+        "label" : "Dallas Wind Symphony",
+        "uri" : "http://dbpedia.org/resource/Dallas_Winds"
+      }, {
+        "label" : "Poisonblack",
+        "uri" : "http://dbpedia.org/resource/Poisonblack"
+      }, {
+        "label" : "Rainbow (Band)",
+        "uri" : "http://dbpedia.org/resource/Rainbow_(rock_band)"
+      }, {
+        "label" : "Republica",
+        "uri" : "http://dbpedia.org/resource/Republica"
+      }, {
+        "label" : "Satyricon (Band)",
+        "uri" : "http://dbpedia.org/resource/Satyricon_(band)"
+      }, {
+        "label" : "Serenity (österreichische Band)",
+        "uri" : "http://dbpedia.org/resource/Serenity_(band)"
+      }, {
+        "label" : "Serenity (britische Band)",
+        "uri" : "http://dbpedia.org/resource/Serenity_(band)"
+      }, {
+        "label" : "Sigur Rós",
+        "uri" : "http://dbpedia.org/resource/Sigur_Rós"
+      }, {
+        "label" : "Stray Cats",
+        "uri" : "http://dbpedia.org/resource/Stray_Cats"
+      }, {
+        "label" : "Stream of Passion",
+        "uri" : "http://dbpedia.org/resource/Stream_of_Passion"
+      }, {
+        "label" : "Super Furry Animals",
+        "uri" : "http://dbpedia.org/resource/Super_Furry_Animals"
+      }, {
+        "label" : "Teräsbetoni",
+        "uri" : "http://dbpedia.org/resource/Teräsbetoni"
+      }, {
+        "label" : "The Juan MacLean",
+        "uri" : "http://dbpedia.org/resource/The_Juan_MacLean"
+      }, {
+        "label" : "The Monochrome Set",
+        "uri" : "http://dbpedia.org/resource/The_Monochrome_Set"
+      }, {
+        "label" : "The Veronicas",
+        "uri" : "http://dbpedia.org/resource/The_Veronicas"
+      }, {
+        "label" : "Tocotronic",
+        "uri" : "http://dbpedia.org/resource/Tocotronic"
+      }, {
+        "label" : "Trouble (Band)",
+        "uri" : "http://dbpedia.org/resource/Trouble_(band)"
+      }, {
+        "label" : "Týr",
+        "uri" : "http://dbpedia.org/resource/Týr_(band)"
+      } ]
+    },
+    "combination" : false
+  }, {
     "id" : "7",
     "language" : "DE",
     "type" : "SENTENCE",
     "bindingType" : "BUILDING",
     "returnType" : "LOCATION",
     "frameType" : "NPP",
-    "sentences" : [ "Was ist der Standort von ($x | BUILDING_NP)?", "Was war der Standort von ($x | BUILDING_NP)?" ],
+    "sentences" : [ "Gib mir den Standort von ($x | BUILDING_NP)?", "Was ist der Standort von ($x | BUILDING_NP)?", "Was war der Standort von ($x | BUILDING_NP)?", "Welcher Ort ist der Standort von ($x | BUILDING_NP)?", "Welcher Ort war der Standort von ($x | BUILDING_NP)?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -2558,7 +2558,7 @@
     "bindingType" : "LOCATION",
     "returnType" : "LOCATION",
     "frameType" : "NPP",
-    "sentences" : [ "Was ist der Standort von ($x | LOCATION_NP)?", "Was war der Standort von ($x | LOCATION_NP)?" ],
+    "sentences" : [ "Gib mir den Standort von ($x | LOCATION_NP)?", "Was ist der Standort von ($x | LOCATION_NP)?", "Was war der Standort von ($x | LOCATION_NP)?", "Welcher Ort ist der Standort von ($x | LOCATION_NP)?", "Welcher Ort war der Standort von ($x | LOCATION_NP)?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -3196,7 +3196,7 @@
     "bindingType" : "ORGANISATION",
     "returnType" : "LOCATION",
     "frameType" : "NPP",
-    "sentences" : [ "Was ist der Standort von ($x | ORGANISATION_NP)?", "Was war der Standort von ($x | ORGANISATION_NP)?" ],
+    "sentences" : [ "Gib mir den Standort von ($x | ORGANISATION_NP)?", "Was ist der Standort von ($x | ORGANISATION_NP)?", "Was war der Standort von ($x | ORGANISATION_NP)?", "Welcher Ort ist der Standort von ($x | ORGANISATION_NP)?", "Welcher Ort war der Standort von ($x | ORGANISATION_NP)?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {

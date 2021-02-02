@@ -133,6 +133,15 @@ class SentenceTokenImpl implements SentenceToken {
     return synArg;
   }
 
+  @Override
+  public String getGrammaticalCase() {
+    String[] bracketTokens = getBracketContentTokens();
+    if (bracketTokens.length == 2 && bracketTokens[0].equals("root")) {
+      return bracketTokens[1];
+    }
+    return "nominativeCase";
+  }
+
   private boolean isTokenX(String tokenName) {
     boolean isTokenX = false;
     String[] bracketTokens = getBracketContentTokens();

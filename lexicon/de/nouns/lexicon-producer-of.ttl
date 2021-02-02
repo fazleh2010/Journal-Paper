@@ -14,16 +14,38 @@
   lemon:language       "de" ;
   lexinfo:partOfSpeech lexinfo:noun ;
   lemon:canonicalForm  :produzent_form ;
-  lemon:otherForm      :produzenten_form ;
+  lemon:otherForm      :produzenten_accusative_form ;
+  lemon:otherForm      :produzenten_dative_form ;
+  lemon:otherForm      :produzenten_genitive_form ;
+  lemon:otherForm      :produzenten_plural_form ;
   lemon:synBehavior    :produzent_von_nounpp ;
   lemon:sense          :produzent_sense_ontomap .
 
 :produzent_form a   lemon:Form ;
   lemon:writtenRep "Produzent"@de ;
   lexinfo:gender   lexinfo:masculine ;
-  lexinfo:number   lexinfo:singular .
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:nominativeCase.
 
-:produzenten_form a  lemon:Form ;
+:produzenten_accusative_form a   lemon:Form ;
+  lemon:writtenRep "Produzenten"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:accusativeCase.
+
+:produzenten_genitive_form a   lemon:Form ;
+  lemon:writtenRep "Produzenten"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:genitiveCase.
+
+:produzenten_dative_form a   lemon:Form ;
+  lemon:writtenRep "Produzenten"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:dativeCase.
+
+:produzenten_plural_form a  lemon:Form ;
   lemon:writtenRep "Produzenten"@de ;
   lexinfo:gender   lexinfo:masculine ;
   lexinfo:number   lexinfo:plural .

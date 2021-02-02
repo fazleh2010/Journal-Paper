@@ -360,7 +360,7 @@ public class LexicalEntryUtil {
         // check for label instead of uri.... Q215627 is person as well...
         
         //many things are hard coded currently, this is temporary code to solve the problem, it will be refactored later on.
-        domainOrRangeResponse = "https://www.w3.org/2001/XMLSchema#gYear";
+        //domainOrRangeResponse = "https://www.w3.org/2001/XMLSchema#gYear";
         //System.out.println(mapsToWho.toString());
         for (String key : mapsToWho) {
             if (key.contains("Year")) {

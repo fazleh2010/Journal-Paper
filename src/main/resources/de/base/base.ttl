@@ -8,7 +8,12 @@
 :lexicon_de a    lemon:Lexicon ;
   lemon:language "de" ;
   lemon:entry    :component_be ;
-  lemon:entry    :component_the ;
+  lemon:entry    :component_imperative_transitive ;
+  lemon:entry    :object_pronoun;
+  lemon:entry    :component_the_nominative ;
+  lemon:entry    :component_the_accusative;
+  lemon:entry    :component_the_dative;
+  lemon:entry    :component_the_genitive;
   lemon:entry    :fuer ;
   lemon:entry    :von .
 
@@ -33,9 +38,22 @@
   lexinfo:number                          lexinfo:plural ] ;
   lexinfo:partOfSpeech lexinfo:verb .
 
+:component_imperative_transitive a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "Gib"@de ;
+  lexinfo:verbFormMood                    lexinfo:infinitive ] ;
+  lemon:otherForm      [ lemon:writtenRep "Gib"@de ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "Gib"@de ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
 ## Determiners ##
 
-:component_the a       lemon:LexicalEntry ;
+:component_the_nominative a       lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "der"@de ] ;
   lemon:otherForm      [ lemon:writtenRep "der"@de ;
   lexinfo:gender                          lexinfo:masculine ;
@@ -49,6 +67,13 @@
   lexinfo:gender                          lexinfo:neuter ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "die"@de ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+:component_the_accusative a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "der"@de ] ;
   lemon:otherForm      [ lemon:writtenRep "den"@de ;
   lexinfo:gender                          lexinfo:masculine ;
   lexinfo:case                            lexinfo:accusativeCase ;
@@ -61,39 +86,44 @@
   lexinfo:gender                          lexinfo:neuter ;
   lexinfo:case                            lexinfo:accusativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "dem"@de ;
-  lexinfo:gender                          lexinfo:masculine ;
-  lexinfo:case                            lexinfo:dativeCase ;
-  lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "der"@de ;
-  lexinfo:gender                          lexinfo:feminine ;
-  lexinfo:case                            lexinfo:dativeCase ;
-  lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "dem"@de ;
-  lexinfo:gender                          lexinfo:neuter ;
-  lexinfo:case                            lexinfo:dativeCase ;
-  lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "des"@de ;
-  lexinfo:gender                          lexinfo:masculine ;
-  lexinfo:case                            lexinfo:genitiveCase ;
-  lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "der"@de ;
-  lexinfo:gender                          lexinfo:feminine ;
-  lexinfo:case                            lexinfo:genitiveCase ;
-  lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "des"@de ;
-  lexinfo:gender                          lexinfo:neuter ;
-  lexinfo:case                            lexinfo:genitiveCase ;
-  lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "die"@de ;
-  lexinfo:case                            lexinfo:nominativeCase ;
-  lexinfo:number                          lexinfo:plural ] ;
   lemon:otherForm      [ lemon:writtenRep "die"@de ;
   lexinfo:case                            lexinfo:accusativeCase ;
   lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+:component_the_dative a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "der"@de ] ;
+  lemon:otherForm      [ lemon:writtenRep "dem"@de ;
+  lexinfo:gender                          lexinfo:masculine ;
+  lexinfo:case                            lexinfo:dativeCase ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "der"@de ;
+  lexinfo:gender                          lexinfo:feminine ;
+  lexinfo:case                            lexinfo:dativeCase ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "dem"@de ;
+  lexinfo:gender                          lexinfo:neuter ;
+  lexinfo:case                            lexinfo:dativeCase ;
+  lexinfo:number                          lexinfo:singular ] ;
   lemon:otherForm      [ lemon:writtenRep "den"@de ;
   lexinfo:case                            lexinfo:dativeCase ;
   lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+:component_the_genitive a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "der"@de ] ;
+  lemon:otherForm      [ lemon:writtenRep "des"@de ;
+  lexinfo:gender                          lexinfo:masculine ;
+  lexinfo:case                            lexinfo:genitiveCase ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "der"@de ;
+  lexinfo:gender                          lexinfo:feminine ;
+  lexinfo:case                            lexinfo:genitiveCase ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "des"@de ;
+  lexinfo:gender                          lexinfo:neuter ;
+  lexinfo:case                            lexinfo:genitiveCase ;
+  lexinfo:number                          lexinfo:singular ] ;
   lemon:otherForm      [ lemon:writtenRep "der"@de ;
   lexinfo:case                            lexinfo:genitiveCase ;
   lexinfo:number                          lexinfo:plural ] ;
@@ -108,3 +138,9 @@
 :von a                  lemon:SynRoleMarker ;
   lemon:canonicalForm  [ lemon:writtenRep "von"@de ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
+
+## Pronouns ##
+
+:object_pronoun a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "mir"@de ] ;
+  lexinfo:partOfSpeech lexinfo:pronoun .

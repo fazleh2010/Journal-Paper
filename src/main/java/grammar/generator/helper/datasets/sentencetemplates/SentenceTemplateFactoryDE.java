@@ -5,8 +5,8 @@ import grammar.structure.component.Language;
 
 import java.util.List;
 
-import static grammar.generator.helper.datasets.sentencetemplates.SentenceTemplate.createNPTemplate;
-import static grammar.generator.helper.datasets.sentencetemplates.SentenceTemplate.createSentenceTemplate;
+import static grammar.generator.helper.datasets.sentencetemplates.SentenceTemplate.*;
+import static grammar.generator.helper.datasets.sentencetemplates.SentenceTemplate.createVPTemplate;
 
 class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository> {
 
@@ -33,8 +33,13 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository> {
       createSentenceTemplate(
         language,
         List.of(
-          "interrogativePronoun verb(reference:component_be) NP(prepositionalAdjunct)?"
-        ),
+          //Welche Person ist das Mitglied von...?
+          "interrogativeDeterminer noun(condition:copulativeArg) verb(reference:component_be) NP(prepositionalAdjunct)?",
+          //Wer ist das Mitglied von...?
+          "interrogativePronoun verb(reference:component_be) NP(prepositionalAdjunct)?",
+          //Gib mir das Mitglied von...?
+          "verb(reference:component_imperative_transitive) pronoun(reference:object_pronoun) determiner(reference:component_the_accusative) noun(root:accusativeCase) preposition prepositionalAdjunct"
+          ),
         "copulativeArg",
         "prepositionalAdjunct"
       )
@@ -44,10 +49,61 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository> {
       createNPTemplate(
         language,
         List.of(
-          "determiner(reference:component_the) noun(root) preposition prepositionalAdjunct"
+          //das Mitglied von...
+          "determiner(reference:component_the_nominative) noun(root:nominativeCase) preposition prepositionalAdjunct"
+        ),
+        "prepositionalAdjunct"
+      )
+    );/*
+    // IntransitivePPFrame
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+          //Welcher Fluss fließt durch...?
+          "interrogativeDeterminer noun(condition:subject) VP(prepositionalAdjunct)?",
+          //Was fließt durch...?
+          "interrogativePronoun VP(prepositionalAdjunct)?"
+        ),
+        "subject",
+        "prepositionalAdjunct"
+      )
+    );
+    // VP(prepositionalAdjunct)
+    sentenceTemplateRepository.add(
+      createVPTemplate(
+        language,
+        List.of(
+          //fließt durch...
+          "verb(root) preposition prepositionalAdjunct"
         ),
         "prepositionalAdjunct"
       )
     );
+    // TransitiveFrame
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+          //Welche Person entwickelte...?
+          "interrogativeDeterminer noun(condition:subject) VP(directObject)?",
+          //Wer entwickelte...?
+          "interrogativePronoun VP(directObject)?"
+        ),
+        "subject",
+        "directObject"
+      )
+    );
+    // VP(directObject)
+    sentenceTemplateRepository.add(
+      createVPTemplate(
+        language,
+        List.of(
+          //entwickelte...
+          "verb(root) directObject"
+        ),
+        "directObject"
+      )
+    );*/
   }
 }

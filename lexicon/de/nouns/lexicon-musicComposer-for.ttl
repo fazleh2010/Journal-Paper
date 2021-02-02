@@ -14,16 +14,38 @@
   lemon:language       "de" ;
   lexinfo:partOfSpeech lexinfo:noun ;
   lemon:canonicalForm  :komponist_form ;
-  lemon:otherForm      :komponisten_form ;
+  lemon:otherForm      :komponisten_accusative_form ;
+  lemon:otherForm      :komponisten_dative_form ;
+  lemon:otherForm      :komponisten_genitive_form ;
+  lemon:otherForm      :komponisten_plural_form ;
   lemon:synBehavior    :komponist_fuer_nounpp ;
   lemon:sense          :komponist_sense_ontomap .
 
 :komponist_form a lemon:Form ;
   lemon:writtenRep    "Komponist"@de ;
   lexinfo:gender   lexinfo:masculine ;
-  lexinfo:number   lexinfo:singular .
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:nominativeCase.
 
-:komponisten_form a lemon:Form ;
+:komponisten_accusative_form a lemon:Form ;
+  lemon:writtenRep     "Komponisten"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:accusativeCase.
+
+:komponisten_dative_form a lemon:Form ;
+  lemon:writtenRep     "Komponisten"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:dativeCase.
+
+:komponisten_genitive_form a lemon:Form ;
+  lemon:writtenRep     "Komponisten"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:genitiveCase.
+
+:komponisten_plural_form a lemon:Form ;
   lemon:writtenRep     "Komponisten"@de ;
   lexinfo:gender   lexinfo:masculine ;
   lexinfo:number   lexinfo:plural .
