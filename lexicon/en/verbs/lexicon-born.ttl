@@ -1,0 +1,61 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :born_in ;
+  lemon:entry    :in .
+
+:born_in a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_born_canonical ;
+  lemon:otherForm      :form_born_in;
+  lemon:synBehavior    :born_frame ;
+  lemon:sense          :born_sense1_ontomap ;
+  lemon:sense          :born_sense2_ontomap .
+
+:form_born_canonical a lemon:Form ;
+  lemon:writtenRep         "born"@en .
+
+:form_born_in a    lemon:Form ;
+  lemon:writtenRep     "born"@en ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+:born_frame a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :born_subj ;
+  lexinfo:prepositionalAdjunct :born_obj .
+
+:born_sense1_ontomap a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :born_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/birthDate> ;
+  lemon:subjOfProp  :born_obj ;
+  lemon:objOfProp   :born_subj ;
+  lemon:condition   :born_date_condition .
+
+:born_date_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Person> ;
+  lemon:propertyRange  <http://www.w3.org/2001/XMLSchema#date> .
+
+:born_sense2_ontomap a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :complete_sense1_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/birthPlace> ;
+  lemon:subjOfProp  :born_obj ;
+  lemon:objOfProp   :born_subj ;
+  lemon:condition   :born_place_condition .
+
+:born_place_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/City> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:born_obj lemon:marker :in .
+
+## Prepositions ##
+
+:in a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "in"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

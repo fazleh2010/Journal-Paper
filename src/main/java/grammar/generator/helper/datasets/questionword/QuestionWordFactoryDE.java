@@ -65,7 +65,21 @@ class QuestionWordFactoryDE implements Factory<QuestionWordRepository> {
       new QuestionWord(
         language,
         SubjectType.INTERROGATIVE_DETERMINER,
-        new AnnotatedInterrogativeDeterminer("Welche", "plural", "commonGender", language)
+        new AnnotatedInterrogativeDeterminer("Welche", "plural", "masculine", language)
+      )
+    );
+    questionWordRepository.add(
+      new QuestionWord(
+        language,
+        SubjectType.INTERROGATIVE_DETERMINER,
+        new AnnotatedInterrogativeDeterminer("Welche", "plural", "feminine", language)
+      )
+    );
+    questionWordRepository.add(
+      new QuestionWord(
+        language,
+        SubjectType.INTERROGATIVE_DETERMINER,
+        new AnnotatedInterrogativeDeterminer("Welche", "plural", "neuter", language)
       )
     );
   }

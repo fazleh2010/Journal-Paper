@@ -46,11 +46,14 @@ public class GrammarRuleGeneratorRootImpl extends GrammarRuleGeneratorRoot {
     return null;
   }
 
+  /* Only for creating hard coded grammar entries
   @Override
   public List<GrammarEntry> generate(Lexicon lexicon) {
-    List<GrammarEntry> grammarEntries;
+    List<GrammarEntry> grammarEntries = new ArrayList<>();
 
-    grammarEntries = buildHardCodedGrammarEntries();
+    if (getLanguage().equals(Language.EN)) {
+      grammarEntries = buildHardCodedGrammarEntries();
+    }
 
     return grammarEntries;
   }
@@ -133,5 +136,5 @@ public class GrammarRuleGeneratorRootImpl extends GrammarRuleGeneratorRoot {
     elementGroup.addTriplePattern(bindingCondition);
 
     return Algebra.compile(elementGroup).toString();
-  }
+  } */
 }

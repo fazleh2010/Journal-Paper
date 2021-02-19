@@ -50,7 +50,7 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
         List<AnnotatedNounOrQuestionWord> annotatedLexicalEntryNouns = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords();
         AnnotatedNounOrQuestionWord questionWord
                 = // Who / what
-                                getAnnotatedQuestionWordBySubjectType(lexicalEntryUtil.getSubjectType(lexicalEntryUtil.getSelectVariable(),DomainOrRangeType.PERSON), getLanguage(), null);
+                getAnnotatedQuestionWordBySubjectTypeAndNumber(lexicalEntryUtil.getSubjectType(lexicalEntryUtil.getSelectVariable(),DomainOrRangeType.PERSON), getLanguage(), lexicalEntryUtil, getLexInfo().getPropertyValue("singular"),  null);
         String nounToken = lexicalEntryUtil.getReturnVariableConditionLabel(lexicalEntryUtil.getSelectVariable());
         String object = String.format(
                 BINDING_TOKEN_TEMPLATE,
@@ -100,10 +100,12 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                                     lexicalEntryUtil
                                             .getSelectVariable())) { // check if there is any noun with a condition
                                 // must be determiner token
-                                questionWord = getAnnotatedQuestionWordBySubjectType(
+                                questionWord = getAnnotatedQuestionWordBySubjectTypeAndNumber(
                                         SubjectType.INTERROGATIVE_DETERMINER,
                                         getLanguage(),
-                                        annotatedNoun
+                                        lexicalEntryUtil,
+                                        toBeVerb.getNumber(),
+                                        null
                                 );
 
                                 // Get noun for determiner token

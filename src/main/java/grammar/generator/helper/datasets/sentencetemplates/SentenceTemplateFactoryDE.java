@@ -28,6 +28,7 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository> {
   }
 
   private void initDE(Language language) {
+
     //NounPPFrame
     sentenceTemplateRepository.add(
       createSentenceTemplate(
@@ -54,7 +55,67 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository> {
         ),
         "prepositionalAdjunct"
       )
-    );/*
+    );
+    /*
+    // NP(attributiveArg)
+    sentenceTemplateRepository.add(
+      createNPTemplate(
+        language,
+        List.of(
+          "determiner adjective(root) attributiveArg(number:singular)",
+          "adjective(root) attributiveArg(number:plural)"
+        ),
+        "attributiveArg"
+      )
+    );
+    // AdjectiveAttributiveFrame
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+          "interrogativePronoun verb(reference:component_be) NP(attributiveArg)?"
+        ),
+        "attributiveArg"
+      )
+    );*/
+    // AdjectivePPFrame
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+          //Welches Kunstwerk wird ausgestellt von...
+          "interrogativeDeterminer noun(condition:copulativeSubject) verb(reference:component_be_passive) AP(prepositionalAdjunct)?",
+          //Was wird ausgestellt von...
+          "interrogativePronoun verb(reference:component_be_passive) AP(prepositionalAdjunct)?"
+        ),
+        "copulativeSubject",
+        "prepositionalAdjunct"
+      )
+    );
+    // AdjectivePPFrame NP
+    sentenceTemplateRepository.add(
+      createNPTemplate(
+        language,
+        List.of(
+          //Kunstwerke ausgestellt von...
+          "noun(condition:copulativeSubject,number:plural) AP(prepositionalAdjunct)"
+        ),
+        "copulativeSubject",
+        "prepositionalAdjunct"
+      )
+    );
+    // AP(prepositionalAdjunct)
+    sentenceTemplateRepository.add(
+      createAPTemplate(
+        language,
+        List.of(
+          //ausgestellt von...
+          "verb(root,verbFormMood:participle) preposition prepositionalAdjunct"
+        ),
+        "prepositionalAdjunct"
+      )
+    );
+    /*
     // IntransitivePPFrame
     sentenceTemplateRepository.add(
       createSentenceTemplate(
@@ -80,6 +141,16 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository> {
         "prepositionalAdjunct"
       )
     );
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+          "TemporalDeterminer noun(condition:subject) VP(temporalAdjunct)?"
+        ),
+        "subject",
+        "temporalAdjunct"
+      )
+    );*/
     // TransitiveFrame
     sentenceTemplateRepository.add(
       createSentenceTemplate(
@@ -104,6 +175,6 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository> {
         ),
         "directObject"
       )
-    );*/
+    );
   }
 }

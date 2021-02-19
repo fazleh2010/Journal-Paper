@@ -6,7 +6,7 @@
     "bindingType" : "THING",
     "returnType" : "ORGANISATION",
     "frameType" : "NPP",
-    "sentences" : [ "Gib mir den Produzenten von ($x | THING_NP)?", "Gib mir die Produzenten von ($x | THING_NP)?", "Was ist der Produzent von ($x | THING_NP)?", "Was sind die Produzenten von ($x | THING_NP)?", "Was war der Produzent von ($x | THING_NP)?", "Was waren die Produzenten von ($x | THING_NP)?", "Welche Organisations sind die Produzenten von ($x | THING_NP)?", "Welche Organisations waren die Produzenten von ($x | THING_NP)?", "Welcher Organisation ist der Produzent von ($x | THING_NP)?", "Welcher Organisation war der Produzent von ($x | THING_NP)?" ],
+    "sentences" : [ "Gib mir den Produzenten von ($x | THING_NP)?", "Gib mir die Produzenten von ($x | THING_NP)?", "Was ist der Produzent von ($x | THING_NP)?", "Was sind die Produzenten von ($x | THING_NP)?", "Was war der Produzent von ($x | THING_NP)?", "Was waren die Produzenten von ($x | THING_NP)?", "Welche Organisation ist der Produzent von ($x | THING_NP)?", "Welche Organisation war der Produzent von ($x | THING_NP)?", "Welche Organisations sind die Produzenten von ($x | THING_NP)?", "Welche Organisations waren die Produzenten von ($x | THING_NP)?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1282,7 +1282,7 @@
     "bindingType" : "BAND",
     "returnType" : "PERSON",
     "frameType" : "NPP",
-    "sentences" : [ "Gib mir das Mitglied von ($x | BAND_NP)?", "Gib mir die Mitglieder von ($x | BAND_NP)?", "Welche Persons sind die Mitglieder von ($x | BAND_NP)?", "Welche Persons waren die Mitglieder von ($x | BAND_NP)?", "Welches Person ist das Mitglied von ($x | BAND_NP)?", "Welches Person war das Mitglied von ($x | BAND_NP)?", "Wer ist das Mitglied von ($x | BAND_NP)?", "Wer sind die Mitglieder von ($x | BAND_NP)?", "Wer war das Mitglied von ($x | BAND_NP)?", "Wer waren die Mitglieder von ($x | BAND_NP)?" ],
+    "sentences" : [ "Gib mir das Mitglied von ($x | BAND_NP)?", "Gib mir die Mitglieder von ($x | BAND_NP)?", "Welche Person ist das Mitglied von ($x | BAND_NP)?", "Welche Person war das Mitglied von ($x | BAND_NP)?", "Welche Persons sind die Mitglieder von ($x | BAND_NP)?", "Welche Persons waren die Mitglieder von ($x | BAND_NP)?", "Wer ist das Mitglied von ($x | BAND_NP)?", "Wer sind die Mitglieder von ($x | BAND_NP)?", "Wer war das Mitglied von ($x | BAND_NP)?", "Wer waren die Mitglieder von ($x | BAND_NP)?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/bandMember> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -3831,12 +3831,12 @@
     "id" : "13",
     "language" : "DE",
     "type" : "SENTENCE",
-    "bindingType" : "LOCATION",
-    "returnType" : "LOCATION",
-    "frameType" : "FULL_DATASET",
-    "sentences" : [ "Where is $x located?" ],
+    "bindingType" : "WORK",
+    "returnType" : "PERSON",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Agent entwickelt ($x | WORK_NP)?", "Welcher Agent entwickelte ($x | WORK_NP)?", "Wer entwickelt ($x | WORK_NP)?", "Wer entwickelte ($x | WORK_NP)?" ],
     "queryType" : "SELECT",
-    "sparqlQuery" : "(join\n  (union\n    (bgp (triple ?subjOfProp <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
       "$x" : "subjOfProp"
     },
@@ -3844,305 +3844,3814 @@
     "sentenceBindings" : {
       "bindingVariableName" : "$x",
       "bindingList" : [ {
-        "label" : "Kanton Luxemburg",
-        "uri" : "http://dbpedia.org/resource/Luxembourg_(canton)"
+        "label" : "1943: The Battle of Midway",
+        "uri" : "http://dbpedia.org/resource/1943:_The_Battle_of_Midway"
       }, {
-        "label" : "Luxemburg (Stadt)",
-        "uri" : "http://dbpedia.org/resource/Luxembourg_City"
+        "label" : "ADO.NET",
+        "uri" : "http://dbpedia.org/resource/ADO.NET"
       }, {
-        "label" : "Luzonstraße",
-        "uri" : "http://dbpedia.org/resource/Luzon_Strait"
+        "label" : "ADX (Audio)",
+        "uri" : "http://dbpedia.org/resource/ADX_(file_format)"
       }, {
-        "label" : "Maevatanana",
-        "uri" : "http://dbpedia.org/resource/Maevatanana"
+        "label" : "AIMMS",
+        "uri" : "http://dbpedia.org/resource/AIMMS"
       }, {
-        "label" : "Mahabo",
-        "uri" : "http://dbpedia.org/resource/Mahabo,_Betroka"
+        "label" : "AMD-700-Serie",
+        "uri" : "http://dbpedia.org/resource/AMD_700_chipset_series"
       }, {
-        "label" : "Mahaboboka",
-        "uri" : "http://dbpedia.org/resource/Mahaboboka"
+        "label" : "Love & Lies",
+        "uri" : "http://dbpedia.org/resource/Love_&_Lies"
       }, {
-        "label" : "Mahajanga",
-        "uri" : "http://dbpedia.org/resource/Mahajanga"
+        "label" : "Love Alarm",
+        "uri" : "http://dbpedia.org/resource/Love_Alarm"
       }, {
-        "label" : "Mahajanga (Provinz)",
-        "uri" : "http://dbpedia.org/resource/Mahajanga_Province"
+        "label" : "Love in the Moonlight",
+        "uri" : "http://dbpedia.org/resource/Love_in_the_Moonlight"
       }, {
-        "label" : "Maintirano",
-        "uri" : "http://dbpedia.org/resource/Maintirano"
+        "label" : "Lucifer (Fernsehserie)",
+        "uri" : "http://dbpedia.org/resource/Lucifer_(TV_series)"
       }, {
-        "label" : "Consthum",
-        "uri" : "http://dbpedia.org/resource/Consthum"
+        "label" : "Luigi’s Mansion",
+        "uri" : "http://dbpedia.org/resource/Luigi's_Mansion"
       }, {
-        "label" : "Vakinankaratra",
-        "uri" : "http://dbpedia.org/resource/Vakinankaratra"
+        "label" : "Luigi’s Mansion 2",
+        "uri" : "http://dbpedia.org/resource/Luigi's_Mansion:_Dark_Moon"
       }, {
-        "label" : "Ernztalgemeinde",
-        "uri" : "http://dbpedia.org/resource/Vallée_de_l'Ernz"
+        "label" : "Luigi’s Mansion 3",
+        "uri" : "http://dbpedia.org/resource/Luigi's_Mansion_3"
       }, {
-        "label" : "Vatovavy-Fitovinany",
-        "uri" : "http://dbpedia.org/resource/Vatovavy-Fitovinany"
+        "label" : "Lupin (Fernsehserie)",
+        "uri" : "http://dbpedia.org/resource/Lupin_(Philippine_TV_series)"
       }, {
-        "label" : "Vavatenina",
-        "uri" : "http://dbpedia.org/resource/Vavatenina"
+        "label" : "Lutris",
+        "uri" : "http://dbpedia.org/resource/Lutris"
       }, {
-        "label" : "Folscheid",
-        "uri" : "http://dbpedia.org/resource/Folschette"
+        "label" : "M*A*S*H (Fernsehserie)",
+        "uri" : "http://dbpedia.org/resource/M*A*S*H_(TV_series)"
       }, {
-        "label" : "Chodoriw",
-        "uri" : "http://dbpedia.org/resource/Khodoriv"
+        "label" : "M.U.L.E.",
+        "uri" : "http://dbpedia.org/resource/M.U.L.E."
       }, {
-        "label" : "Bissen",
-        "uri" : "http://dbpedia.org/resource/Bissen"
+        "label" : "MAG (Computerspiel)",
+        "uri" : "http://dbpedia.org/resource/MAG_(video_game)"
       }, {
-        "label" : "Biwer",
-        "uri" : "http://dbpedia.org/resource/Biwer"
+        "label" : "MAME",
+        "uri" : "http://dbpedia.org/resource/MAME"
       }, {
-        "label" : "Boeny",
-        "uri" : "http://dbpedia.org/resource/Boeny"
+        "label" : "Matlab",
+        "uri" : "http://dbpedia.org/resource/MATLAB"
       }, {
-        "label" : "Bongolava",
-        "uri" : "http://dbpedia.org/resource/Bongolava"
+        "label" : "MBASIC",
+        "uri" : "http://dbpedia.org/resource/MBASIC"
       }, {
-        "label" : "Borynja",
-        "uri" : "http://dbpedia.org/resource/Borynia,_Turka_Raion"
+        "label" : "MDK (Computerspiel)",
+        "uri" : "http://dbpedia.org/resource/MDK_(video_game)"
       }, {
-        "label" : "Bauschleiden",
-        "uri" : "http://dbpedia.org/resource/Boulaide"
+        "label" : "MEDINA (Software)",
+        "uri" : "http://dbpedia.org/resource/MEDINA"
       }, {
-        "label" : "Burscheid (Luxemburg)",
-        "uri" : "http://dbpedia.org/resource/Bourscheid,_Luxembourg"
+        "label" : "MEDUSA",
+        "uri" : "http://dbpedia.org/resource/MEDUSA"
       }, {
-        "label" : "Bourscheid",
-        "uri" : "http://dbpedia.org/resource/Bourscheid,_Luxembourg"
+        "label" : "Minix (Betriebssystem)",
+        "uri" : "http://dbpedia.org/resource/MINIX"
       }, {
-        "label" : "Bous (Saar)",
-        "uri" : "http://dbpedia.org/resource/Bous,_Luxembourg"
+        "label" : "MIUI",
+        "uri" : "http://dbpedia.org/resource/MIUI"
       }, {
-        "label" : "Diana (Region)",
-        "uri" : "http://dbpedia.org/resource/Diana_Region"
+        "label" : "MODE32",
+        "uri" : "http://dbpedia.org/resource/MODE32"
       }, {
-        "label" : "Diekirch",
-        "uri" : "http://dbpedia.org/resource/Diekirch"
+        "label" : "MP/M",
+        "uri" : "http://dbpedia.org/resource/MP/M"
       }, {
-        "label" : "Kanton Diekirch",
-        "uri" : "http://dbpedia.org/resource/Diekirch_(canton)"
+        "label" : "MPDS",
+        "uri" : "http://dbpedia.org/resource/MPDS4"
       }, {
-        "label" : "Differdingen",
-        "uri" : "http://dbpedia.org/resource/Differdange"
+        "label" : "MS-DOS",
+        "uri" : "http://dbpedia.org/resource/MS-DOS"
       }, {
-        "label" : "Dippach (Luxemburg)",
-        "uri" : "http://dbpedia.org/resource/Dippach"
+        "label" : "MS-DOS 4.0 (Multitasking-Betriebssystem)",
+        "uri" : "http://dbpedia.org/resource/MS-DOS_4.0_(multitasking)"
       }, {
-        "label" : "Dippach am Main",
-        "uri" : "http://dbpedia.org/resource/Dippach"
+        "label" : "MS-DOS Editor",
+        "uri" : "http://dbpedia.org/resource/MS-DOS_Editor"
       }, {
-        "label" : "Dommeldingen",
-        "uri" : "http://dbpedia.org/resource/Dommeldange"
+        "label" : "MSBuild",
+        "uri" : "http://dbpedia.org/resource/MSBuild"
       }, {
-        "label" : "Goesdorf",
-        "uri" : "http://dbpedia.org/resource/Goesdorf"
+        "label" : "MSCDEX.EXE",
+        "uri" : "http://dbpedia.org/resource/MSCDEX"
       }, {
-        "label" : "Grevenmacher",
-        "uri" : "http://dbpedia.org/resource/Grevenmacher"
+        "label" : "Multiple Virtual Storage",
+        "uri" : "http://dbpedia.org/resource/MVS"
       }, {
-        "label" : "Kanton Grevenmacher",
-        "uri" : "http://dbpedia.org/resource/Grevenmacher_(canton)"
+        "label" : "MX vs. ATV Unleashed",
+        "uri" : "http://dbpedia.org/resource/MX_vs._ATV_Unleashed"
       }, {
-        "label" : "Grosbous",
-        "uri" : "http://dbpedia.org/resource/Grosbous"
+        "label" : "MacDraw",
+        "uri" : "http://dbpedia.org/resource/MacDraw"
       }, {
-        "label" : "Grund (Luxemburg)",
-        "uri" : "http://dbpedia.org/resource/Grund,_Luxembourg"
+        "label" : "MacGyver (2016)",
+        "uri" : "http://dbpedia.org/resource/MacGyver_(2016_TV_series)"
       }, {
-        "label" : "Kiischpelt",
-        "uri" : "http://dbpedia.org/resource/Kiischpelt"
+        "label" : "MacOS",
+        "uri" : "http://dbpedia.org/resource/MacOS"
       }, {
-        "label" : "Kirchberg-Plateau",
-        "uri" : "http://dbpedia.org/resource/Kirchberg,_Luxembourg"
+        "label" : "Mac OS",
+        "uri" : "http://dbpedia.org/resource/MacOS"
       }, {
-        "label" : "Koerich",
-        "uri" : "http://dbpedia.org/resource/Koerich"
+        "label" : "MacOS Catalina",
+        "uri" : "http://dbpedia.org/resource/MacOS_Catalina"
       }, {
-        "label" : "Kom el-Hisn",
-        "uri" : "http://dbpedia.org/resource/Kom_el-Hisn"
+        "label" : "MacOS Mojave",
+        "uri" : "http://dbpedia.org/resource/MacOS_Mojave"
       }, {
-        "label" : "Kopstal",
-        "uri" : "http://dbpedia.org/resource/Kopstal"
+        "label" : "MacOS Server",
+        "uri" : "http://dbpedia.org/resource/MacOS_Server"
       }, {
-        "label" : "Krasnodon",
-        "uri" : "http://dbpedia.org/resource/Krasnodon"
+        "label" : "MacOS Sierra",
+        "uri" : "http://dbpedia.org/resource/MacOS_Sierra"
       }, {
-        "label" : "Préizerdaul",
-        "uri" : "http://dbpedia.org/resource/Préizerdaul"
+        "label" : "MacWWW",
+        "uri" : "http://dbpedia.org/resource/MacWWW"
       }, {
-        "label" : "Pulvermühle (Luxemburg)",
-        "uri" : "http://dbpedia.org/resource/Pulvermuhl"
+        "label" : "MacWrite",
+        "uri" : "http://dbpedia.org/resource/MacWrite"
       }, {
-        "label" : "Pütscheid",
-        "uri" : "http://dbpedia.org/resource/Putscheid"
+        "label" : "Mac OS 8",
+        "uri" : "http://dbpedia.org/resource/Mac_OS_8"
       }, {
-        "label" : "Petingen",
-        "uri" : "http://dbpedia.org/resource/Pétange"
+        "label" : "Mac OS 9",
+        "uri" : "http://dbpedia.org/resource/Mac_OS_9"
       }, {
-        "label" : "Alaotra-Mangoro",
-        "uri" : "http://dbpedia.org/resource/Alaotra-Mangoro"
+        "label" : "Mac OS X 10.0",
+        "uri" : "http://dbpedia.org/resource/Mac_OS_X_10.0"
       }, {
-        "label" : "Zessingen",
-        "uri" : "http://dbpedia.org/resource/Cessange"
+        "label" : "Mac OS X 10.1",
+        "uri" : "http://dbpedia.org/resource/Mac_OS_X_10.1"
       }, {
-        "label" : "Fischbach (Luxemburg)",
-        "uri" : "http://dbpedia.org/resource/Fischbach,_Mersch"
+        "label" : "Mac OS X Leopard",
+        "uri" : "http://dbpedia.org/resource/Mac_OS_X_Leopard"
       }, {
-        "label" : "Flaxweiler",
-        "uri" : "http://dbpedia.org/resource/Flaxweiler"
+        "label" : "Mac OS X Lion",
+        "uri" : "http://dbpedia.org/resource/Mac_OS_X_Lion"
       }, {
-        "label" : "Ampanihy",
-        "uri" : "http://dbpedia.org/resource/Ampanihy"
+        "label" : "Mac OS X Panther",
+        "uri" : "http://dbpedia.org/resource/Mac_OS_X_Panther"
       }, {
-        "label" : "Nommern",
-        "uri" : "http://dbpedia.org/resource/Nommern"
+        "label" : "Mac OS X Public Beta",
+        "uri" : "http://dbpedia.org/resource/Mac_OS_X_Public_Beta"
       }, {
-        "label" : "Bonneweg-Nord",
-        "uri" : "http://dbpedia.org/resource/North_Bonnevoie-Verlorenkost"
+        "label" : "Mac OS X Snow Leopard",
+        "uri" : "http://dbpedia.org/resource/Mac_OS_X_Snow_Leopard"
       }, {
-        "label" : "Nosy Hara",
-        "uri" : "http://dbpedia.org/resource/Nosy_Hara"
+        "label" : "Mac OS X Tiger",
+        "uri" : "http://dbpedia.org/resource/Mac_OS_X_Tiger"
       }, {
-        "label" : "Nosy Varika",
-        "uri" : "http://dbpedia.org/resource/Nosy_Varika"
+        "label" : "Machinarium",
+        "uri" : "http://dbpedia.org/resource/Machinarium"
       }, {
-        "label" : "Oberpallen",
-        "uri" : "http://dbpedia.org/resource/Oberpallen"
+        "label" : "Maclisp",
+        "uri" : "http://dbpedia.org/resource/Maclisp"
       }, {
-        "label" : "Niederkerschen",
-        "uri" : "http://dbpedia.org/resource/Bascharage"
+        "label" : "Macromedia HomeSite",
+        "uri" : "http://dbpedia.org/resource/Macromedia_HomeSite"
       }, {
-        "label" : "Arsdorf",
-        "uri" : "http://dbpedia.org/resource/Arsdorf"
+        "label" : "MadWorld",
+        "uri" : "http://dbpedia.org/resource/MadWorld"
       }, {
-        "label" : "Lorentzweiler",
-        "uri" : "http://dbpedia.org/resource/Lorentzweiler"
+        "label" : "Mad (Fernsehserie)",
+        "uri" : "http://dbpedia.org/resource/Mad_(TV_series)"
       }, {
-        "label" : "Kanton Capellen",
-        "uri" : "http://dbpedia.org/resource/Capellen_(canton)"
+        "label" : "Verrückt nach dir",
+        "uri" : "http://dbpedia.org/resource/Mad_About_You"
       }, {
-        "label" : "Clausen (Luxemburg)",
-        "uri" : "http://dbpedia.org/resource/Clausen,_Luxembourg"
+        "label" : "Mad Dog McCree",
+        "uri" : "http://dbpedia.org/resource/Mad_Dog_McCree"
       }, {
-        "label" : "Küntzig",
-        "uri" : "http://dbpedia.org/resource/Clemency,_Luxembourg"
+        "label" : "Mad TV",
+        "uri" : "http://dbpedia.org/resource/Mad_TV_(video_game)"
       }, {
-        "label" : "Clerf",
-        "uri" : "http://dbpedia.org/resource/Clervaux"
+        "label" : "Mad Tracks",
+        "uri" : "http://dbpedia.org/resource/Mad_Tracks"
       }, {
-        "label" : "Kanton Clerf",
-        "uri" : "http://dbpedia.org/resource/Clervaux_(canton)"
+        "label" : "Maemo",
+        "uri" : "http://dbpedia.org/resource/Maemo"
       }, {
-        "label" : "Luxemburg-Bahnhofsviertel",
-        "uri" : "http://dbpedia.org/resource/Gare,_Luxembourg"
+        "label" : "Mafia (Computerspiel)",
+        "uri" : "http://dbpedia.org/resource/Mafia_(video_game)"
       }, {
-        "label" : "Garnich",
-        "uri" : "http://dbpedia.org/resource/Garnich"
+        "label" : "Mafia II",
+        "uri" : "http://dbpedia.org/resource/Mafia_II"
       }, {
-        "label" : "Gasperich",
-        "uri" : "http://dbpedia.org/resource/Gasperich"
+        "label" : "Mafia III",
+        "uri" : "http://dbpedia.org/resource/Mafia_III"
       }, {
-        "label" : "Nosy Mitsio",
-        "uri" : "http://dbpedia.org/resource/Nosy_Mitsio"
+        "label" : "Magic Carpet (Computerspiel)",
+        "uri" : "http://dbpedia.org/resource/Magic_Carpet_(video_game)"
       }, {
-        "label" : "Manjakandriana (Analamanga)",
-        "uri" : "http://dbpedia.org/resource/Manjakandriana"
+        "label" : "Magic Carpet 2",
+        "uri" : "http://dbpedia.org/resource/Magic_Carpet_2"
       }, {
-        "label" : "Befort (Luxemburg)",
-        "uri" : "http://dbpedia.org/resource/Beaufort,_Luxembourg"
+        "label" : "Magicka",
+        "uri" : "http://dbpedia.org/resource/Magicka"
       }, {
-        "label" : "Bech (Luxemburg)",
-        "uri" : "http://dbpedia.org/resource/Bech"
+        "label" : "Magix Music Maker",
+        "uri" : "http://dbpedia.org/resource/Magix_Music_Maker"
       }, {
-        "label" : "Bech (Waldbröl)",
-        "uri" : "http://dbpedia.org/resource/Bech"
+        "label" : "Puzz Loop",
+        "uri" : "http://dbpedia.org/resource/Magnetica"
       }, {
-        "label" : "Behenjy",
-        "uri" : "http://dbpedia.org/resource/Behenjy"
+        "label" : "Magnum P.I. (2018)",
+        "uri" : "http://dbpedia.org/resource/Magnum_P.I._(2018_TV_series)"
       }, {
-        "label" : "Bekopaka",
-        "uri" : "http://dbpedia.org/resource/Bekopaka"
+        "label" : "ZETA",
+        "uri" : "http://dbpedia.org/resource/Magnussoft_ZETA"
       }, {
-        "label" : "Belair (Luxemburg)",
-        "uri" : "http://dbpedia.org/resource/Belair,_Luxembourg"
+        "label" : "Mail (Unix)",
+        "uri" : "http://dbpedia.org/resource/Mail_(Unix)"
       }, {
-        "label" : "Belo sur Mer",
-        "uri" : "http://dbpedia.org/resource/Belo_sur_Mer"
+        "label" : "Mailbox (App)",
+        "uri" : "http://dbpedia.org/resource/Mailbox_(application)"
       }, {
-        "label" : "Belo sur Tsiribihina (Stadt)",
-        "uri" : "http://dbpedia.org/resource/Belon'i_Tsiribihina"
+        "label" : "Majesty: The Fantasy Kingdom Sim",
+        "uri" : "http://dbpedia.org/resource/Majesty:_The_Fantasy_Kingdom_Sim"
       }, {
-        "label" : "Berdorf",
-        "uri" : "http://dbpedia.org/resource/Berdorf"
+        "label" : "Major Dad",
+        "uri" : "http://dbpedia.org/resource/Major_Dad"
       }, {
-        "label" : "Berevo",
-        "uri" : "http://dbpedia.org/resource/Berevo"
+        "label" : "Coral (Netzwerk)",
+        "uri" : "http://dbpedia.org/resource/Coral_Content_Distribution_Network"
       }, {
-        "label" : "Schloss Berg (Luxemburg)",
-        "uri" : "http://dbpedia.org/resource/Berg_Castle"
+        "label" : "Core War",
+        "uri" : "http://dbpedia.org/resource/Core_War"
       }, {
-        "label" : "Bartringen",
-        "uri" : "http://dbpedia.org/resource/Bertrange"
+        "label" : "Corel Presentations",
+        "uri" : "http://dbpedia.org/resource/Corel_Presentations"
       }, {
-        "label" : "Betafo (Stadt)",
-        "uri" : "http://dbpedia.org/resource/Betafo"
+        "label" : "Unix to Unix Copy",
+        "uri" : "http://dbpedia.org/resource/UUCP"
       }, {
-        "label" : "Betroka (Distrikt)",
-        "uri" : "http://dbpedia.org/resource/Betroka_(district)"
+        "label" : "Ubuntu",
+        "uri" : "http://dbpedia.org/resource/Ubuntu"
       }, {
-        "label" : "Betsiboka (Region)",
-        "uri" : "http://dbpedia.org/resource/Betsiboka"
+        "label" : "Ubuntu Kylin",
+        "uri" : "http://dbpedia.org/resource/Ubuntu_Kylin"
       }, {
-        "label" : "Bettemburg",
-        "uri" : "http://dbpedia.org/resource/Bettembourg"
+        "label" : "Ubuntu One",
+        "uri" : "http://dbpedia.org/resource/Ubuntu_One"
       }, {
-        "label" : "Bettendorf (Luxemburg)",
-        "uri" : "http://dbpedia.org/resource/Bettendorf,_Luxembourg"
+        "label" : "Ubuntu Touch",
+        "uri" : "http://dbpedia.org/resource/Ubuntu_Touch"
       }, {
-        "label" : "Kayl",
-        "uri" : "http://dbpedia.org/resource/Kayl"
+        "label" : "Udev",
+        "uri" : "http://dbpedia.org/resource/Udev"
       }, {
-        "label" : "Kehlen (Meckenbeuren)",
-        "uri" : "http://dbpedia.org/resource/Kehlen"
+        "label" : "Ugly Americans",
+        "uri" : "http://dbpedia.org/resource/Ugly_Americans_(TV_series)"
       }, {
-        "label" : "Kehlen (Luxemburg)",
-        "uri" : "http://dbpedia.org/resource/Kehlen"
+        "label" : "Ugly Betty",
+        "uri" : "http://dbpedia.org/resource/Ugly_Betty"
       }, {
-        "label" : "Kehlen (Schwäbische Alb)",
-        "uri" : "http://dbpedia.org/resource/Kehlen"
+        "label" : "Ulead MediaStudio Pro",
+        "uri" : "http://dbpedia.org/resource/Ulead_MediaStudio_Pro"
       }, {
-        "label" : "Bastendorf",
-        "uri" : "http://dbpedia.org/resource/Bastendorf"
+        "label" : "Ultima IX: Ascension",
+        "uri" : "http://dbpedia.org/resource/Ultima_IX:_Ascension"
       }, {
-        "label" : "Lenningen (Luxemburg)",
-        "uri" : "http://dbpedia.org/resource/Lenningen,_Luxembourg"
+        "label" : "Ultima Underworld: The Stygian Abyss",
+        "uri" : "http://dbpedia.org/resource/Ultima_Underworld:_The_Stygian_Abyss"
       }, {
-        "label" : "Lenningen",
-        "uri" : "http://dbpedia.org/resource/Lenningen,_Luxembourg"
+        "label" : "Ultima VI: The False Prophet",
+        "uri" : "http://dbpedia.org/resource/Ultima_VI:_The_False_Prophet"
       }, {
-        "label" : "Leudelingen",
-        "uri" : "http://dbpedia.org/resource/Leudelange"
+        "label" : "Ultima VII: The Black Gate",
+        "uri" : "http://dbpedia.org/resource/Ultima_VII:_The_Black_Gate"
       }, {
-        "label" : "Limpertsberg",
-        "uri" : "http://dbpedia.org/resource/Limpertsberg"
+        "label" : "Der ultimative Spider-Man (Fernsehserie)",
+        "uri" : "http://dbpedia.org/resource/Ultimate_Spider-Man_(TV_series)"
       }, {
-        "label" : "Lintgen",
-        "uri" : "http://dbpedia.org/resource/Lintgen"
+        "label" : "Ultra Street Fighter II: The Final Challengers",
+        "uri" : "http://dbpedia.org/resource/Ultra_Street_Fighter_II:_The_Final_Challengers"
       }, {
-        "label" : "Bondorf (Rambruch)",
-        "uri" : "http://dbpedia.org/resource/Bigonville"
+        "label" : "Ultrix",
+        "uri" : "http://dbpedia.org/resource/Ultrix"
       }, {
-        "label" : "Monnerich",
-        "uri" : "http://dbpedia.org/resource/Mondercange"
+        "label" : "Uncharted: Drakes Schicksal",
+        "uri" : "http://dbpedia.org/resource/Uncharted:_Drake's_Fortune"
       }, {
-        "label" : "Bad Mondorf",
-        "uri" : "http://dbpedia.org/resource/Mondorf-les-Bains"
+        "label" : "Uncharted: The Lost Legacy",
+        "uri" : "http://dbpedia.org/resource/Uncharted:_The_Lost_Legacy"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "14",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "VP",
+    "sentences" : [ "Welche Person heiratete ($x | PERSON_NP)?", "Wer heiratete ($x | PERSON_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Filmjahr 1912",
+        "uri" : "http://dbpedia.org/resource/1912_in_film"
+      }, {
+        "label" : "Filmjahr 1917",
+        "uri" : "http://dbpedia.org/resource/1917_in_film"
+      }, {
+        "label" : "Filmjahr 1942",
+        "uri" : "http://dbpedia.org/resource/1942_in_film"
+      }, {
+        "label" : "Filmjahr 1943",
+        "uri" : "http://dbpedia.org/resource/1943_in_film"
+      }, {
+        "label" : "Filmjahr 1945",
+        "uri" : "http://dbpedia.org/resource/1945_in_film"
+      }, {
+        "label" : "Filmjahr 1947",
+        "uri" : "http://dbpedia.org/resource/1947_in_film"
+      }, {
+        "label" : "NFL 1950",
+        "uri" : "http://dbpedia.org/resource/1950_NFL_season"
+      }, {
+        "label" : "Filmjahr 1950",
+        "uri" : "http://dbpedia.org/resource/1950_in_film"
+      }, {
+        "label" : "Filmjahr 1951",
+        "uri" : "http://dbpedia.org/resource/1951_in_film"
+      }, {
+        "label" : "Filmjahr 1953",
+        "uri" : "http://dbpedia.org/resource/1953_in_film"
+      }, {
+        "label" : "Filmjahr 1959",
+        "uri" : "http://dbpedia.org/resource/1959_in_film"
+      }, {
+        "label" : "Automobil-Weltmeisterschaft 1960",
+        "uri" : "http://dbpedia.org/resource/1960_Formula_One_season"
+      }, {
+        "label" : "NFL 1960",
+        "uri" : "http://dbpedia.org/resource/1960_NFL_season"
+      }, {
+        "label" : "Filmjahr 1960",
+        "uri" : "http://dbpedia.org/resource/1960_in_film"
+      }, {
+        "label" : "Präsidentschaftswahl in Venezuela 2013",
+        "uri" : "http://dbpedia.org/resource/2013_Venezuelan_presidential_election"
+      }, {
+        "label" : "Olympische Sommerspiele 2016",
+        "uri" : "http://dbpedia.org/resource/2016_Summer_Olympics"
+      }, {
+        "label" : "Britische Unterhauswahl 2017",
+        "uri" : "http://dbpedia.org/resource/2017_United_Kingdom_general_election"
+      }, {
+        "label" : "Grammy Awards 1963",
+        "uri" : "http://dbpedia.org/resource/5th_Annual_Grammy_Awards"
+      }, {
+        "label" : "Oscarverleihung 1989",
+        "uri" : "http://dbpedia.org/resource/61st_Academy_Awards"
+      }, {
+        "label" : "Golden Globe Awards 2006",
+        "uri" : "http://dbpedia.org/resource/63rd_Golden_Globe_Awards"
+      }, {
+        "label" : "Oscarverleihung 1992",
+        "uri" : "http://dbpedia.org/resource/64th_Academy_Awards"
+      }, {
+        "label" : "Oscarverleihung 1994",
+        "uri" : "http://dbpedia.org/resource/66th_Academy_Awards"
+      }, {
+        "label" : "Golden Globe Awards 2010",
+        "uri" : "http://dbpedia.org/resource/67th_Golden_Globe_Awards"
+      }, {
+        "label" : "Primetime-Emmy-Verleihung 2019",
+        "uri" : "http://dbpedia.org/resource/71st_Primetime_Emmy_Awards"
+      }, {
+        "label" : "Oscarverleihung 2000",
+        "uri" : "http://dbpedia.org/resource/72nd_Academy_Awards"
+      }, {
+        "label" : "Oscarverleihung 2004",
+        "uri" : "http://dbpedia.org/resource/76th_Academy_Awards"
+      }, {
+        "label" : "Oscarverleihung 2016",
+        "uri" : "http://dbpedia.org/resource/88th_Academy_Awards"
+      }, {
+        "label" : "Primetime-Emmy-Verleihung 1956",
+        "uri" : "http://dbpedia.org/resource/8th_Primetime_Emmy_Awards"
+      }, {
+        "label" : "Oscarverleihung 1937",
+        "uri" : "http://dbpedia.org/resource/9th_Academy_Awards"
+      }, {
+        "label" : "Lowell Sherman",
+        "uri" : "http://dbpedia.org/resource/Lowell_Sherman"
+      }, {
+        "label" : "Loïc Le Meur",
+        "uri" : "http://dbpedia.org/resource/Loïc_Le_Meur"
+      }, {
+        "label" : "Lu Xun",
+        "uri" : "http://dbpedia.org/resource/Lu_Xun"
+      }, {
+        "label" : "Luana Patten",
+        "uri" : "http://dbpedia.org/resource/Luana_Patten"
+      }, {
+        "label" : "Luang Prabang",
+        "uri" : "http://dbpedia.org/resource/Luang_Prabang"
+      }, {
+        "label" : "Luc Besson",
+        "uri" : "http://dbpedia.org/resource/Luc_Besson"
+      }, {
+        "label" : "Luc Tuymans",
+        "uri" : "http://dbpedia.org/resource/Luc_Tuymans"
+      }, {
+        "label" : "Lucas Neff",
+        "uri" : "http://dbpedia.org/resource/Lucas_Neff"
+      }, {
+        "label" : "Lucia Migliaccio",
+        "uri" : "http://dbpedia.org/resource/Lucia_Migliaccio"
+      }, {
+        "label" : "Lucia Moholy",
+        "uri" : "http://dbpedia.org/resource/Lucia_Moholy"
+      }, {
+        "label" : "Lucia St. Clair Robson",
+        "uri" : "http://dbpedia.org/resource/Lucia_St._Clair_Robson"
+      }, {
+        "label" : "Lucian Freud",
+        "uri" : "http://dbpedia.org/resource/Lucian_Freud"
+      }, {
+        "label" : "Luciana Paluzzi",
+        "uri" : "http://dbpedia.org/resource/Luciana_Paluzzi"
+      }, {
+        "label" : "Luciano Ercoli",
+        "uri" : "http://dbpedia.org/resource/Luciano_Ercoli"
+      }, {
+        "label" : "Luciano Martino",
+        "uri" : "http://dbpedia.org/resource/Luciano_Martino"
+      }, {
+        "label" : "Lucie Arnaz",
+        "uri" : "http://dbpedia.org/resource/Lucie_Arnaz"
+      }, {
+        "label" : "Lucie Aubrac",
+        "uri" : "http://dbpedia.org/resource/Lucie_Aubrac"
+      }, {
+        "label" : "Lucie Mannheim",
+        "uri" : "http://dbpedia.org/resource/Lucie_Mannheim"
+      }, {
+        "label" : "Lucien Ballard",
+        "uri" : "http://dbpedia.org/resource/Lucien_Ballard"
+      }, {
+        "label" : "Lucien Bonaparte",
+        "uri" : "http://dbpedia.org/resource/Lucien_Bonaparte"
+      }, {
+        "label" : "Lucien Goldmann",
+        "uri" : "http://dbpedia.org/resource/Lucien_Goldmann"
+      }, {
+        "label" : "Lucien Pissarro",
+        "uri" : "http://dbpedia.org/resource/Lucien_Pissarro"
+      }, {
+        "label" : "Lucienne Day",
+        "uri" : "http://dbpedia.org/resource/Lucienne_Day"
+      }, {
+        "label" : "Lucienne von Rochefort",
+        "uri" : "http://dbpedia.org/resource/Lucienne_de_Rochefort"
+      }, {
+        "label" : "Lucile Browne",
+        "uri" : "http://dbpedia.org/resource/Lucile_Browne"
+      }, {
+        "label" : "Lucile Hadzihalilovic",
+        "uri" : "http://dbpedia.org/resource/Lucile_Hadžihalilović"
+      }, {
+        "label" : "Lucile Watson",
+        "uri" : "http://dbpedia.org/resource/Lucile_Watson"
+      }, {
+        "label" : "Lucilla",
+        "uri" : "http://dbpedia.org/resource/Lucilla"
+      }, {
+        "label" : "Lucille Ball",
+        "uri" : "http://dbpedia.org/resource/Lucille_Ball"
+      }, {
+        "label" : "Lucina da Costa Gomez-Matheeuws",
+        "uri" : "http://dbpedia.org/resource/Lucina_da_Costa_Gomez-Matheeuws"
+      }, {
+        "label" : "Lucinda Jenney",
+        "uri" : "http://dbpedia.org/resource/Lucinda_Jenney"
+      }, {
+        "label" : "Paullus Aemilius Lepidus",
+        "uri" : "http://dbpedia.org/resource/Lucius_Aemilius_Lepidus_Paullus_(consul_34_BC)"
+      }, {
+        "label" : "Lucius Aemilius Paullus (Konsul 1)",
+        "uri" : "http://dbpedia.org/resource/Lucius_Aemilius_Paullus_(consul_1)"
+      }, {
+        "label" : "Lucius Cornelius Cinna (Prätor 44 v. Chr.)",
+        "uri" : "http://dbpedia.org/resource/Lucius_Cornelius_Cinna_(suffect_consul)"
+      }, {
+        "label" : "Lucius Domitius Ahenobarbus (Konsul 54 v. Chr.)",
+        "uri" : "http://dbpedia.org/resource/Lucius_Domitius_Ahenobarbus_(consul_54_BC)"
+      }, {
+        "label" : "Lucius Marcius Philippus (Konsul 56 v. Chr.)",
+        "uri" : "http://dbpedia.org/resource/Lucius_Marcius_Philippus_(consul_56_BC)"
+      }, {
+        "label" : "Lucius Tarquinius Superbus",
+        "uri" : "http://dbpedia.org/resource/Lucius_Tarquinius_Superbus"
+      }, {
+        "label" : "Lucius Verus",
+        "uri" : "http://dbpedia.org/resource/Lucius_Verus"
+      }, {
+        "label" : "Lucretia Garfield",
+        "uri" : "http://dbpedia.org/resource/Lucretia_Garfield"
+      }, {
+        "label" : "Lucrezia Borgia",
+        "uri" : "http://dbpedia.org/resource/Lucrezia_Borgia"
+      }, {
+        "label" : "Lucrezia Tornabuoni",
+        "uri" : "http://dbpedia.org/resource/Lucrezia_Tornabuoni"
+      }, {
+        "label" : "Lucius Licinius Lucullus",
+        "uri" : "http://dbpedia.org/resource/Lucullus"
+      }, {
+        "label" : "Lucy Christiana Duff Gordon",
+        "uri" : "http://dbpedia.org/resource/Lucy,_Lady_Duff-Gordon"
+      }, {
+        "label" : "Lucy-Jo Hudson",
+        "uri" : "http://dbpedia.org/resource/Lucy-Jo_Hudson"
+      }, {
+        "label" : "Lucy Aharish",
+        "uri" : "http://dbpedia.org/resource/Lucy_Aharish"
+      }, {
+        "label" : "Lucy Baxley",
+        "uri" : "http://dbpedia.org/resource/Lucy_Baxley"
+      }, {
+        "label" : "Lucy Brown",
+        "uri" : "http://dbpedia.org/resource/Lucy_Brown"
+      }, {
+        "label" : "Lucy Cohu",
+        "uri" : "http://dbpedia.org/resource/Lucy_Cohu"
+      }, {
+        "label" : "Lucy Davis (Schauspielerin)",
+        "uri" : "http://dbpedia.org/resource/Lucy_Davis"
+      }, {
+        "label" : "Lucy Doraine",
+        "uri" : "http://dbpedia.org/resource/Lucy_Doraine"
+      }, {
+        "label" : "Lucy Gaskell",
+        "uri" : "http://dbpedia.org/resource/Lucy_Gaskell"
+      }, {
+        "label" : "Lucy Lawless",
+        "uri" : "http://dbpedia.org/resource/Lucy_Lawless"
+      }, {
+        "label" : "Lucy Mercer",
+        "uri" : "http://dbpedia.org/resource/Lucy_Mercer_Rutherfurd"
+      }, {
+        "label" : "Lucy Parsons",
+        "uri" : "http://dbpedia.org/resource/Lucy_Parsons"
+      }, {
+        "label" : "Lucy Scott",
+        "uri" : "http://dbpedia.org/resource/Lucy_Scott"
+      }, {
+        "label" : "Lucy Shapiro",
+        "uri" : "http://dbpedia.org/resource/Lucy_Shapiro"
+      }, {
+        "label" : "Lucy Stone",
+        "uri" : "http://dbpedia.org/resource/Lucy_Stone"
+      }, {
+        "label" : "Lucy Hayes",
+        "uri" : "http://dbpedia.org/resource/Lucy_Webb_Hayes"
+      }, {
+        "label" : "Ludger Stühlmeyer",
+        "uri" : "http://dbpedia.org/resource/Ludger_Stühlmeyer"
+      }, {
+        "label" : "Ludmila Mikaël",
+        "uri" : "http://dbpedia.org/resource/Ludmila_Mikaël"
+      }, {
+        "label" : "Ludmilla von Böhmen",
+        "uri" : "http://dbpedia.org/resource/Ludmila_of_Bohemia"
+      }, {
+        "label" : "Ludmilla von Podiebrad",
+        "uri" : "http://dbpedia.org/resource/Ludmila_of_Poděbrady"
+      }, {
+        "label" : "Ljudmila Iwanowna Turischtschewa",
+        "uri" : "http://dbpedia.org/resource/Ludmilla_Tourischeva"
+      }, {
+        "label" : "Ludmilla von Böhmen (um 1170)",
+        "uri" : "http://dbpedia.org/resource/Ludmilla_of_Bohemia"
+      }, {
+        "label" : "Ludovic Kennedy",
+        "uri" : "http://dbpedia.org/resource/Ludovic_Kennedy"
+      }, {
+        "label" : "Ludovico III. Gonzaga",
+        "uri" : "http://dbpedia.org/resource/Ludovico_III_Gonzaga,_Marquis_of_Mantua"
+      }, {
+        "label" : "Ludovico Sforza",
+        "uri" : "http://dbpedia.org/resource/Ludovico_Sforza"
+      }, {
+        "label" : "Ludovica Margaretha von Zweibrücken-Bitsch",
+        "uri" : "http://dbpedia.org/resource/Ludowika_Margaretha_of_Zweibrücken-Bitsch"
+      }, {
+        "label" : "Ludwig Erdwin Seyler",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Erdwin_Seyler"
+      }, {
+        "label" : "Ludwig III. (Bayern)",
+        "uri" : "http://dbpedia.org/resource/Ludwig_III_of_Bavaria"
+      }, {
+        "label" : "Ludwig Adolf Friedrich zu Sayn-Wittgenstein-Sayn",
+        "uri" : "http://dbpedia.org/resource/Ludwig_zu_Sayn-Wittgenstein-Berleburg"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "15",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "VP",
+    "sentences" : [ "Welche Person spielt ($x | PERSON_NP)?", "Welche Person spielte ($x | PERSON_NP)?", "Wer spielt ($x | PERSON_NP)?", "Wer spielte ($x | PERSON_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Ronald McDonald",
+        "uri" : "http://dbpedia.org/resource/Ronald_McDonald"
+      }, {
+        "label" : "George Smiley",
+        "uri" : "http://dbpedia.org/resource/George_Smiley"
+      }, {
+        "label" : "Bowser (Computerspielfigur)",
+        "uri" : "http://dbpedia.org/resource/Bowser_(character)"
+      }, {
+        "label" : "Leia Organa",
+        "uri" : "http://dbpedia.org/resource/Princess_Leia"
+      }, {
+        "label" : "Hannibal Lecter",
+        "uri" : "http://dbpedia.org/resource/Hannibal_Lecter"
+      }, {
+        "label" : "Horatio Hornblower",
+        "uri" : "http://dbpedia.org/resource/Horatio_Hornblower"
+      }, {
+        "label" : "Obi-Wan Kenobi",
+        "uri" : "http://dbpedia.org/resource/Obi-Wan_Kenobi"
+      }, {
+        "label" : "Francis Underwood",
+        "uri" : "http://dbpedia.org/resource/Frank_Underwood_(House_of_Cards)"
+      }, {
+        "label" : "Fu Manchu",
+        "uri" : "http://dbpedia.org/resource/Fu_Manchu"
+      }, {
+        "label" : "Ginny Weasley",
+        "uri" : "http://dbpedia.org/resource/Ginny_Weasley"
+      }, {
+        "label" : "Minerva McGonagall",
+        "uri" : "http://dbpedia.org/resource/Minerva_McGonagall"
+      }, {
+        "label" : "Nancy Drew",
+        "uri" : "http://dbpedia.org/resource/Nancy_Drew"
+      }, {
+        "label" : "Q (James Bond)",
+        "uri" : "http://dbpedia.org/resource/Q_(James_Bond)"
+      }, {
+        "label" : "Robin Hood",
+        "uri" : "http://dbpedia.org/resource/Robin_Hood"
+      }, {
+        "label" : "Figuren und magische Gegenstände in der Unendlichen Geschichte",
+        "uri" : "http://dbpedia.org/resource/List_of_The_Neverending_Story_characters"
+      }, {
+        "label" : "Liste der Figuren aus Navy CIS",
+        "uri" : "http://dbpedia.org/resource/List_of_NCIS_characters"
+      }, {
+        "label" : "Jay und Silent Bob",
+        "uri" : "http://dbpedia.org/resource/Jay_and_Silent_Bob"
+      }, {
+        "label" : "Reginald Jeeves",
+        "uri" : "http://dbpedia.org/resource/Jeeves"
+      }, {
+        "label" : "John Carter vom Mars",
+        "uri" : "http://dbpedia.org/resource/John_Carter_of_Mars"
+      }, {
+        "label" : "Kurt Wallander",
+        "uri" : "http://dbpedia.org/resource/Kurt_Wallander"
+      }, {
+        "label" : "Vesper Lynd",
+        "uri" : "http://dbpedia.org/resource/Vesper_Lynd"
+      }, {
+        "label" : "Miss Marple",
+        "uri" : "http://dbpedia.org/resource/Miss_Marple"
+      }, {
+        "label" : "Mister Magoo",
+        "uri" : "http://dbpedia.org/resource/Mr._Magoo"
+      }, {
+        "label" : "Iago",
+        "uri" : "http://dbpedia.org/resource/Iago"
+      }, {
+        "label" : "Jason Voorhees",
+        "uri" : "http://dbpedia.org/resource/Jason_Voorhees"
+      }, {
+        "label" : "Saul Goodman",
+        "uri" : "http://dbpedia.org/resource/Saul_Goodman"
+      }, {
+        "label" : "George Edward Challenger",
+        "uri" : "http://dbpedia.org/resource/Professor_Challenger"
+      }, {
+        "label" : "Tom Ripley",
+        "uri" : "http://dbpedia.org/resource/Tom_Ripley"
+      }, {
+        "label" : "Arthur Hastings",
+        "uri" : "http://dbpedia.org/resource/Arthur_Hastings"
+      }, {
+        "label" : "Barbara Jeziorkowska",
+        "uri" : "http://dbpedia.org/resource/Barbara_Jeziorkowska"
+      }, {
+        "label" : "Paul Temple",
+        "uri" : "http://dbpedia.org/resource/Paul_Temple"
+      }, {
+        "label" : "Anakin Skywalker",
+        "uri" : "http://dbpedia.org/resource/Darth_Vader"
+      }, {
+        "label" : "Darth Vader",
+        "uri" : "http://dbpedia.org/resource/Darth_Vader"
+      }, {
+        "label" : "Perry Mason",
+        "uri" : "http://dbpedia.org/resource/Perry_Mason"
+      }, {
+        "label" : "Janice Rand",
+        "uri" : "http://dbpedia.org/resource/Janice_Rand"
+      }, {
+        "label" : "Richter Di",
+        "uri" : "http://dbpedia.org/resource/Judge_Dee"
+      }, {
+        "label" : "Elmo (Sesamstraße)",
+        "uri" : "http://dbpedia.org/resource/Elmo"
+      }, {
+        "label" : "Fagin (Charles Dickens)",
+        "uri" : "http://dbpedia.org/resource/Fagin"
+      }, {
+        "label" : "Ender Wiggin",
+        "uri" : "http://dbpedia.org/resource/Ender_Wiggin"
+      }, {
+        "label" : "Hercule Poirot",
+        "uri" : "http://dbpedia.org/resource/Hercule_Poirot"
+      }, {
+        "label" : "Zefram Cochrane",
+        "uri" : "http://dbpedia.org/resource/Zefram_Cochrane"
+      }, {
+        "label" : "Philip Marlowe",
+        "uri" : "http://dbpedia.org/resource/Philip_Marlowe"
+      }, {
+        "label" : "Sweeney Todd",
+        "uri" : "http://dbpedia.org/resource/Sweeney_Todd"
+      }, {
+        "label" : "Simon Templar",
+        "uri" : "http://dbpedia.org/resource/The_Saint_(Simon_Templar)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Claud_Eustace_Teal",
+        "uri" : "http://dbpedia.org/resource/Claud_Eustace_Teal"
+      }, {
+        "label" : "http://dbpedia.org/resource/Salvo_Montalbano",
+        "uri" : "http://dbpedia.org/resource/Salvo_Montalbano"
+      }, {
+        "label" : "http://dbpedia.org/resource/List_of_NCIS:_New_Orleans_characters",
+        "uri" : "http://dbpedia.org/resource/List_of_NCIS:_New_Orleans_characters"
+      }, {
+        "label" : "http://dbpedia.org/resource/List_of_High_School_Musical_characters",
+        "uri" : "http://dbpedia.org/resource/List_of_High_School_Musical_characters"
+      }, {
+        "label" : "http://dbpedia.org/resource/Gilbert_Blythe",
+        "uri" : "http://dbpedia.org/resource/Gilbert_Blythe"
+      }, {
+        "label" : "http://dbpedia.org/resource/Anatole_Kuragin",
+        "uri" : "http://dbpedia.org/resource/Anatole_Kuragin"
+      }, {
+        "label" : "http://dbpedia.org/resource/MacGyver",
+        "uri" : "http://dbpedia.org/resource/MacGyver"
+      }, {
+        "label" : "http://dbpedia.org/resource/Louanne_Katraine",
+        "uri" : "http://dbpedia.org/resource/Louanne_Katraine"
+      }, {
+        "label" : "http://dbpedia.org/resource/Pablo_Catáneo",
+        "uri" : "http://dbpedia.org/resource/Pablo_Catáneo"
+      }, {
+        "label" : "http://dbpedia.org/resource/List_of_Coronation_Street_characters_(2009)",
+        "uri" : "http://dbpedia.org/resource/List_of_Coronation_Street_characters_(2009)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lucy_and_Ricky_Ricardo",
+        "uri" : "http://dbpedia.org/resource/Lucy_and_Ricky_Ricardo"
+      }, {
+        "label" : "http://dbpedia.org/resource/List_of_General_Hospital_characters_(1960s)",
+        "uri" : "http://dbpedia.org/resource/List_of_General_Hospital_characters_(1960s)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Elizabeth_Swann",
+        "uri" : "http://dbpedia.org/resource/Elizabeth_Swann"
+      }, {
+        "label" : "http://dbpedia.org/resource/Jasmine_Burrows",
+        "uri" : "http://dbpedia.org/resource/Jasmine_Burrows"
+      }, {
+        "label" : "http://dbpedia.org/resource/List_of_Coronation_Street_characters_(2002)",
+        "uri" : "http://dbpedia.org/resource/List_of_Coronation_Street_characters_(2002)"
+      }, {
+        "label" : "http://dbpedia.org/resource/List_of_Hollyoaks_characters_(2018)",
+        "uri" : "http://dbpedia.org/resource/List_of_Hollyoaks_characters_(2018)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lisa_Fowler",
+        "uri" : "http://dbpedia.org/resource/Lisa_Fowler"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nyssa_(Doctor_Who)",
+        "uri" : "http://dbpedia.org/resource/Nyssa_(Doctor_Who)"
+      }, {
+        "label" : "http://dbpedia.org/resource/List_of_Primeval_characters",
+        "uri" : "http://dbpedia.org/resource/List_of_Primeval_characters"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hilda_Spellman",
+        "uri" : "http://dbpedia.org/resource/Hilda_Spellman"
+      }, {
+        "label" : "http://dbpedia.org/resource/Dawn_Tinsley",
+        "uri" : "http://dbpedia.org/resource/Dawn_Tinsley"
+      }, {
+        "label" : "http://dbpedia.org/resource/List_of_Trailer_Park_Boys_characters",
+        "uri" : "http://dbpedia.org/resource/List_of_Trailer_Park_Boys_characters"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lily_Walsh",
+        "uri" : "http://dbpedia.org/resource/Lily_Walsh"
+      }, {
+        "label" : "http://dbpedia.org/resource/Tilly_Evans",
+        "uri" : "http://dbpedia.org/resource/Tilly_Evans"
+      }, {
+        "label" : "http://dbpedia.org/resource/List_of_Neighbours_characters_(2020)",
+        "uri" : "http://dbpedia.org/resource/List_of_Neighbours_characters_(2020)"
+      }, {
+        "label" : "http://dbpedia.org/resource/List_of_Hollyoaks_characters_(2004)",
+        "uri" : "http://dbpedia.org/resource/List_of_Hollyoaks_characters_(2004)"
+      }, {
+        "label" : "http://dbpedia.org/resource/List_of_Coronation_Street_characters_(2007)",
+        "uri" : "http://dbpedia.org/resource/List_of_Coronation_Street_characters_(2007)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bethany_Platt",
+        "uri" : "http://dbpedia.org/resource/Bethany_Platt"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kirsty_Clements",
+        "uri" : "http://dbpedia.org/resource/Kirsty_Clements"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lady_Marian",
+        "uri" : "http://dbpedia.org/resource/Lady_Marian"
+      }, {
+        "label" : "http://dbpedia.org/resource/List_of_Robin_Hood_(2006_TV_series)_characters",
+        "uri" : "http://dbpedia.org/resource/List_of_Robin_Hood_(2006_TV_series)_characters"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maid_Marian",
+        "uri" : "http://dbpedia.org/resource/Maid_Marian"
+      }, {
+        "label" : "http://dbpedia.org/resource/Aria_Montgomery",
+        "uri" : "http://dbpedia.org/resource/Aria_Montgomery"
+      }, {
+        "label" : "http://dbpedia.org/resource/Katy_Keene",
+        "uri" : "http://dbpedia.org/resource/Katy_Keene"
+      }, {
+        "label" : "http://dbpedia.org/resource/Number_Three_(Battlestar_Galactica)",
+        "uri" : "http://dbpedia.org/resource/Number_Three_(Battlestar_Galactica)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Xena",
+        "uri" : "http://dbpedia.org/resource/Xena"
+      }, {
+        "label" : "http://dbpedia.org/resource/Countess_Palatine_Ingrid_von_Marburg",
+        "uri" : "http://dbpedia.org/resource/Countess_Palatine_Ingrid_von_Marburg"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ling_Woo",
+        "uri" : "http://dbpedia.org/resource/Ling_Woo"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chas_Dingle",
+        "uri" : "http://dbpedia.org/resource/Chas_Dingle"
+      }, {
+        "label" : "http://dbpedia.org/resource/List_of_The_Bill_characters_(M–P)",
+        "uri" : "http://dbpedia.org/resource/List_of_The_Bill_characters_(M–P)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Natalie_Evans",
+        "uri" : "http://dbpedia.org/resource/Natalie_Evans"
+      }, {
+        "label" : "http://dbpedia.org/resource/Zack_Taylor",
+        "uri" : "http://dbpedia.org/resource/Zack_Taylor"
+      }, {
+        "label" : "http://dbpedia.org/resource/Liu_Kang",
+        "uri" : "http://dbpedia.org/resource/Liu_Kang"
+      }, {
+        "label" : "http://dbpedia.org/resource/Tinker_Bell",
+        "uri" : "http://dbpedia.org/resource/Tinker_Bell"
+      }, {
+        "label" : "http://dbpedia.org/resource/Tina_Carter",
+        "uri" : "http://dbpedia.org/resource/Tina_Carter"
+      }, {
+        "label" : "http://dbpedia.org/resource/List_of_Home_and_Away_characters_(2009)",
+        "uri" : "http://dbpedia.org/resource/List_of_Home_and_Away_characters_(2009)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Gaston_(Beauty_and_the_Beast)",
+        "uri" : "http://dbpedia.org/resource/Gaston_(Beauty_and_the_Beast)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Angelo_Rosetta",
+        "uri" : "http://dbpedia.org/resource/Angelo_Rosetta"
+      }, {
+        "label" : "http://dbpedia.org/resource/List_of_Hollyoaks_characters_(2016)",
+        "uri" : "http://dbpedia.org/resource/List_of_Hollyoaks_characters_(2016)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Noah_Newman",
+        "uri" : "http://dbpedia.org/resource/Noah_Newman"
+      }, {
+        "label" : "http://dbpedia.org/resource/Scotty_Wandell",
+        "uri" : "http://dbpedia.org/resource/Scotty_Wandell"
+      }, {
+        "label" : "http://dbpedia.org/resource/List_of_Neighbours_characters_(2008)",
+        "uri" : "http://dbpedia.org/resource/List_of_Neighbours_characters_(2008)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Romeo_Smith",
+        "uri" : "http://dbpedia.org/resource/Romeo_Smith"
+      }, {
+        "label" : "http://dbpedia.org/resource/Freddie_McClair",
+        "uri" : "http://dbpedia.org/resource/Freddie_McClair"
+      }, {
+        "label" : "http://dbpedia.org/resource/William_Adama",
+        "uri" : "http://dbpedia.org/resource/William_Adama"
+      }, {
+        "label" : "http://dbpedia.org/resource/List_of_Neighbours_characters_(2011)",
+        "uri" : "http://dbpedia.org/resource/List_of_Neighbours_characters_(2011)"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "16",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "WORK",
+    "returnType" : "MUSEUM",
+    "frameType" : "VP",
+    "sentences" : [ "Was stellt aus ($x | WORK_NP)?", "Was stellte aus ($x | WORK_NP)?", "Welches Museum stellt aus ($x | WORK_NP)?", "Welches Museum stellte aus ($x | WORK_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/museum> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Luzifer (Stuck)",
+        "uri" : "http://dbpedia.org/resource/Lucifer_(Stuck)"
+      }, {
+        "label" : "Das Frühstück der Ruderer",
+        "uri" : "http://dbpedia.org/resource/Luncheon_of_the_Boating_Party"
+      }, {
+        "label" : "Madonna Litta",
+        "uri" : "http://dbpedia.org/resource/Madonna_Litta"
+      }, {
+        "label" : "Brügger Madonna",
+        "uri" : "http://dbpedia.org/resource/Madonna_of_Bruges"
+      }, {
+        "label" : "Madonna mit der Spindel",
+        "uri" : "http://dbpedia.org/resource/Madonna_of_the_Yarnwinder"
+      }, {
+        "label" : "Caspar David Friedrich in seinem Atelier",
+        "uri" : "http://dbpedia.org/resource/Caspar_David_Friedrich_in_his_Studio"
+      }, {
+        "label" : "Ildefonso-Gruppe",
+        "uri" : "http://dbpedia.org/resource/Castor_and_Pollux_(Prado)"
+      }, {
+        "label" : "Konstellationen",
+        "uri" : "http://dbpedia.org/resource/Constellations_(Miró)"
+      }, {
+        "label" : "Die Bekehrung des Paulus",
+        "uri" : "http://dbpedia.org/resource/Conversion_of_Paul_(Bruegel)"
+      }, {
+        "label" : "Lubliner Union (Gemälde)",
+        "uri" : "http://dbpedia.org/resource/Union_of_Lublin_(painting)"
+      }, {
+        "label" : "Venus von Milo",
+        "uri" : "http://dbpedia.org/resource/Venus_de_Milo"
+      }, {
+        "label" : "Venus von Urbino",
+        "uri" : "http://dbpedia.org/resource/Venus_of_Urbino"
+      }, {
+        "label" : "Skargas Predigt",
+        "uri" : "http://dbpedia.org/resource/Sermon_of_Piotr_Skarga"
+      }, {
+        "label" : "Salome (Franz von Stuck)",
+        "uri" : "http://dbpedia.org/resource/Salome_(Stuck)"
+      }, {
+        "label" : "Salon des Refusés",
+        "uri" : "http://dbpedia.org/resource/Salon_des_Refusés"
+      }, {
+        "label" : "Altar der sieben Sakramente (Rogier van der Weyden)",
+        "uri" : "http://dbpedia.org/resource/Seven_Sacraments_Altarpiece"
+      }, {
+        "label" : "Der Schrei",
+        "uri" : "http://dbpedia.org/resource/The_Scream"
+      }, {
+        "label" : "Le Sacre de Napoléon",
+        "uri" : "http://dbpedia.org/resource/The_Coronation_of_Napoleon"
+      }, {
+        "label" : "Madonna mit dem langen Hals",
+        "uri" : "http://dbpedia.org/resource/Madonna_with_the_Long_Neck"
+      }, {
+        "label" : "The Blue Boy",
+        "uri" : "http://dbpedia.org/resource/The_Blue_Boy"
+      }, {
+        "label" : "Der Mönch am Meer",
+        "uri" : "http://dbpedia.org/resource/The_Monk_by_the_Sea"
+      }, {
+        "label" : "Der Jurist",
+        "uri" : "http://dbpedia.org/resource/The_Jurist_(painting)"
+      }, {
+        "label" : "Der Nestausnehmer",
+        "uri" : "http://dbpedia.org/resource/The_Peasant_and_the_Nest_Robber"
+      }, {
+        "label" : "Mann mit dem Handschuh",
+        "uri" : "http://dbpedia.org/resource/Man_with_a_Glove"
+      }, {
+        "label" : "La carícia d’un ocell",
+        "uri" : "http://dbpedia.org/resource/The_Caress_of_a_Bird"
+      }, {
+        "label" : "Die Klinik Gross",
+        "uri" : "http://dbpedia.org/resource/The_Gross_Clinic"
+      }, {
+        "label" : "Der letzte Tag von Pompeji (Gemälde)",
+        "uri" : "http://dbpedia.org/resource/The_Last_Day_of_Pompeii"
+      }, {
+        "label" : "Blick auf Toledo",
+        "uri" : "http://dbpedia.org/resource/View_of_Toledo"
+      }, {
+        "label" : "Bar in den Folies Bergère",
+        "uri" : "http://dbpedia.org/resource/A_Bar_at_the_Folies-Bergère"
+      }, {
+        "label" : "Ein Begräbnis in Ornans",
+        "uri" : "http://dbpedia.org/resource/A_Burial_At_Ornans"
+      }, {
+        "label" : "Eine bekehrte Britenfamilie verbirgt einen Missionar vor der Verfolgung durch die Druiden",
+        "uri" : "http://dbpedia.org/resource/A_Converted_British_Family_Sheltering_a_Christian_Missionary_from_the_Persecution_of_the_Druids"
+      }, {
+        "label" : "Das Baumwollkontor in New Orleans",
+        "uri" : "http://dbpedia.org/resource/A_Cotton_Office_in_New_Orleans"
+      }, {
+        "label" : "Schlafendes Mädchen",
+        "uri" : "http://dbpedia.org/resource/A_Girl_Asleep"
+      }, {
+        "label" : "Der Spargel (Manet)",
+        "uri" : "http://dbpedia.org/resource/A_Sprig_of_Asparagus"
+      }, {
+        "label" : "Un atelier aux Batignolles",
+        "uri" : "http://dbpedia.org/resource/A_Studio_at_Les_Batignolles"
+      }, {
+        "label" : "Ein Sonntagnachmittag auf der Insel La Grande Jatte",
+        "uri" : "http://dbpedia.org/resource/A_Sunday_Afternoon_on_the_Island_of_La_Grande_Jatte"
+      }, {
+        "label" : "Frau mit Bohnenkorb im Gemüsegärtchen",
+        "uri" : "http://dbpedia.org/resource/A_Woman_with_a_Basket_of_Beans_in_a_Garden"
+      }, {
+        "label" : "Die große Nacht im Eimer",
+        "uri" : "http://dbpedia.org/resource/Die_große_Nacht_im_Eimer"
+      }, {
+        "label" : "Das große Rasenstück",
+        "uri" : "http://dbpedia.org/resource/Great_Piece_of_Turf"
+      }, {
+        "label" : "Preußische Huldigung (Gemälde)",
+        "uri" : "http://dbpedia.org/resource/Prussian_Homage_(painting)"
+      }, {
+        "label" : "Die Heilige Nacht (Correggio)",
+        "uri" : "http://dbpedia.org/resource/Nativity_(Correggio)"
+      }, {
+        "label" : "Die Gesandten",
+        "uri" : "http://dbpedia.org/resource/The_Ambassadors_(Holbein)"
+      }, {
+        "label" : "Der Falschspieler mit dem Karo-Ass",
+        "uri" : "http://dbpedia.org/resource/The_Card_Sharp_with_the_Ace_of_Diamonds"
+      }, {
+        "label" : "Das Frühstück im Grünen (Manet)",
+        "uri" : "http://dbpedia.org/resource/Le_Déjeuner_sur_l'herbe"
+      }, {
+        "label" : "Taufe Christi (Verrocchio)",
+        "uri" : "http://dbpedia.org/resource/The_Baptism_of_Christ_(Verrocchio_and_Leonardo)"
+      }, {
+        "label" : "Grablegung Christi (Pala Baglioni)",
+        "uri" : "http://dbpedia.org/resource/The_Deposition_(Raphael)"
+      }, {
+        "label" : "Guernica (Bild)",
+        "uri" : "http://dbpedia.org/resource/Guernica_(Picasso)"
+      }, {
+        "label" : "Rain, Steam and Speed – The Great Western Railway",
+        "uri" : "http://dbpedia.org/resource/Rain,_Steam_and_Speed_–_The_Great_Western_Railway"
+      }, {
+        "label" : "Dreifaltigkeit (Masaccio)",
+        "uri" : "http://dbpedia.org/resource/Holy_Trinity_(Masaccio)"
+      }, {
+        "label" : "Impression, Sonnenaufgang",
+        "uri" : "http://dbpedia.org/resource/Impression,_Sunrise"
+      }, {
+        "label" : "Elk-Foot of the Taos Tribe",
+        "uri" : "http://dbpedia.org/resource/Elk-Foot_of_the_Taos_Tribe"
+      }, {
+        "label" : "Paradiesgärtlein",
+        "uri" : "http://dbpedia.org/resource/Paradiesgärtlein"
+      }, {
+        "label" : "M-Maybe",
+        "uri" : "http://dbpedia.org/resource/M-Maybe"
+      }, {
+        "label" : "Pala Colonna",
+        "uri" : "http://dbpedia.org/resource/Madonna_and_Child_Enthroned_with_Saints_(Raphael)"
+      }, {
+        "label" : "Madonna von Veveří",
+        "uri" : "http://dbpedia.org/resource/Madonna_of_Veveri"
+      }, {
+        "label" : "Die Pflaume (Manet)",
+        "uri" : "http://dbpedia.org/resource/Plum_Brandy"
+      }, {
+        "label" : "Stele des Avile Tite",
+        "uri" : "http://dbpedia.org/resource/Stele_of_Avile_Tite"
+      }, {
+        "label" : "Fleischstein",
+        "uri" : "http://dbpedia.org/resource/Meat-shaped_Stone"
+      }, {
+        "label" : "Die Mühle von Wijk bij Duurstede",
+        "uri" : "http://dbpedia.org/resource/Windmill_at_Wijk_bij_Duurstede"
+      }, {
+        "label" : "Senecio (Paul Klee)",
+        "uri" : "http://dbpedia.org/resource/Senecio_(Klee)"
+      }, {
+        "label" : "Alamo (Skulptur)",
+        "uri" : "http://dbpedia.org/resource/Alamo_(sculpture)"
+      }, {
+        "label" : "Qingming-Rolle",
+        "uri" : "http://dbpedia.org/resource/Along_the_River_During_the_Qingming_Festival"
+      }, {
+        "label" : "Saliera",
+        "uri" : "http://dbpedia.org/resource/Cellini_Salt_Cellar"
+      }, {
+        "label" : "Cathedra Petri (Kunstwerk)",
+        "uri" : "http://dbpedia.org/resource/Chair_of_Saint_Peter"
+      }, {
+        "label" : "Chandos-Porträt",
+        "uri" : "http://dbpedia.org/resource/Chandos_portrait"
+      }, {
+        "label" : "Akt mit grünen Blättern und Büste",
+        "uri" : "http://dbpedia.org/resource/Nude,_Green_Leaves_and_Bust"
+      }, {
+        "label" : "Ognissanti-Madonna",
+        "uri" : "http://dbpedia.org/resource/Ognissanti_Madonna"
+      }, {
+        "label" : "Diana und Actaeon (Tizian)",
+        "uri" : "http://dbpedia.org/resource/Diana_and_Actaeon_(Titian)"
+      }, {
+        "label" : "Diana mit ihren Gefährtinnen",
+        "uri" : "http://dbpedia.org/resource/Diana_and_Her_Companions"
+      }, {
+        "label" : "Die Geißelung Christi (Piero della Francesca)",
+        "uri" : "http://dbpedia.org/resource/Flagellation_of_Christ_(Piero_della_Francesca)"
+      }, {
+        "label" : "For the Love of God",
+        "uri" : "http://dbpedia.org/resource/For_the_Love_of_God"
+      }, {
+        "label" : "Gassed",
+        "uri" : "http://dbpedia.org/resource/Gassed_(painting)"
+      }, {
+        "label" : "Ruhe auf der Flucht nach Ägypten (Caravaggio)",
+        "uri" : "http://dbpedia.org/resource/Rest_on_the_Flight_into_Egypt_(Caravaggio)"
+      }, {
+        "label" : "Der vierte Stand",
+        "uri" : "http://dbpedia.org/resource/The_Fourth_Estate_(painting)"
+      }, {
+        "label" : "Dynamik eines Radfahrers",
+        "uri" : "http://dbpedia.org/resource/Dynamism_of_a_Cyclist"
+      }, {
+        "label" : "Rhinocerus",
+        "uri" : "http://dbpedia.org/resource/Dürer's_Rhinoceros"
+      }, {
+        "label" : "Midvinterblot",
+        "uri" : "http://dbpedia.org/resource/Midvinterblot"
+      }, {
+        "label" : "Nana (Manet)",
+        "uri" : "http://dbpedia.org/resource/Nana_(Manet)"
+      }, {
+        "label" : "Geburt der Jungfrau (Pietro Lorenzetti)",
+        "uri" : "http://dbpedia.org/resource/Nativity_of_the_Virgin_(Pietro_Lorenzetti)"
+      }, {
+        "label" : "Die Musikstunde (Vermeer)",
+        "uri" : "http://dbpedia.org/resource/The_Music_Lesson"
+      }, {
+        "label" : "Mr. und Mrs. Andrews",
+        "uri" : "http://dbpedia.org/resource/Mr_and_Mrs_Andrews"
+      }, {
+        "label" : "Straße in Paris an einem regnerischen Tag",
+        "uri" : "http://dbpedia.org/resource/Paris_Street;_Rainy_Day"
+      }, {
+        "label" : "Der Hase",
+        "uri" : "http://dbpedia.org/resource/The_Rabbit_(Manet_1881)"
+      }, {
+        "label" : "Der Heuwagen",
+        "uri" : "http://dbpedia.org/resource/The_Haywain_Triptych"
+      }, {
+        "label" : "Maria der Verkündigung (Antonello da Messina)",
+        "uri" : "http://dbpedia.org/resource/Virgin_Annunciate_(Antonello_da_Messina,_Palermo)"
+      }, {
+        "label" : "Der Schwur der Horatier",
+        "uri" : "http://dbpedia.org/resource/Oath_of_the_Horatii"
+      }, {
+        "label" : "Felsgrottenmadonna",
+        "uri" : "http://dbpedia.org/resource/Virgin_of_the_Rocks"
+      }, {
+        "label" : "Sunlight and Shadow: The Newbury Marshes",
+        "uri" : "http://dbpedia.org/resource/Sunlight_and_Shadow:_The_Newbury_Marshes"
+      }, {
+        "label" : "Scheibenfibel von Tangendorf",
+        "uri" : "http://dbpedia.org/resource/Tangendorf_disc_brooch"
+      }, {
+        "label" : "Miss Amelia Van Buren",
+        "uri" : "http://dbpedia.org/resource/Miss_Amelia_Van_Buren"
+      }, {
+        "label" : "Allegorie der Liebe",
+        "uri" : "http://dbpedia.org/resource/Venus,_Cupid,_Folly_and_Time"
+      }, {
+        "label" : "Feszty-Panorama",
+        "uri" : "http://dbpedia.org/resource/Arrival_of_the_Hungarians"
+      }, {
+        "label" : "Beauty Revealed",
+        "uri" : "http://dbpedia.org/resource/Beauty_Revealed"
+      }, {
+        "label" : "Der Tanz (Gemälde)",
+        "uri" : "http://dbpedia.org/resource/Dance_(Matisse)"
+      }, {
+        "label" : "Tanz auf dem Land",
+        "uri" : "http://dbpedia.org/resource/Dance_in_the_Country"
+      }, {
+        "label" : "Schlüsselübergabe (Perugino)",
+        "uri" : "http://dbpedia.org/resource/Delivery_of_the_Keys_(Perugino)"
+      }, {
+        "label" : "Kaiser Karl V. nach der Schlacht bei Mühlberg",
+        "uri" : "http://dbpedia.org/resource/Equestrian_Portrait_of_Charles_V"
+      }, {
+        "label" : "Flötenkonzert Friedrichs des Großen in Sanssouci",
+        "uri" : "http://dbpedia.org/resource/Frederick_the_Great_Playing_the_Flute_at_Sanssouci"
+      }, {
+        "label" : "Im Garten des Todes",
+        "uri" : "http://dbpedia.org/resource/The_Garden_of_Death"
+      }, {
+        "label" : "Jakobssegen (Rembrandt)",
+        "uri" : "http://dbpedia.org/resource/Jacob_Blessing_the_Sons_of_Joseph"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "17",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "WORK",
+    "frameType" : "APP",
+    "sentences" : [ "Was wird entwickelt von ($x | PERSON_NP)?", "Was wurde entwickelt von ($x | PERSON_NP)?", "Welche Werks werden entwickelt von ($x | PERSON_NP)?", "Welche Werks wurden entwickelt von ($x | PERSON_NP)?", "Welches Werk wird entwickelt von ($x | PERSON_NP)?", "Welches Werk wurde entwickelt von ($x | PERSON_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "5th Cell",
+        "uri" : "http://dbpedia.org/resource/5th_Cell"
+      }, {
+        "label" : "7th Level",
+        "uri" : "http://dbpedia.org/resource/7th_Level"
+      }, {
+        "label" : "Varianten der Programmiersprache C",
+        "uri" : "http://dbpedia.org/resource/ANSI_C"
+      }, {
+        "label" : "LucasArts",
+        "uri" : "http://dbpedia.org/resource/LucasArts"
+      }, {
+        "label" : "Ludwig-Maximilians-Universität München",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Maximilian_University_of_Munich"
+      }, {
+        "label" : "Luke Davies",
+        "uri" : "http://dbpedia.org/resource/Luke_Davies"
+      }, {
+        "label" : "Luke Pearson",
+        "uri" : "http://dbpedia.org/resource/Luke_Pearson"
+      }, {
+        "label" : "Universität Lund",
+        "uri" : "http://dbpedia.org/resource/Lund_University"
+      }, {
+        "label" : "László Németh",
+        "uri" : "http://dbpedia.org/resource/László_Németh"
+      }, {
+        "label" : "MGM Resorts International",
+        "uri" : "http://dbpedia.org/resource/MGM_Resorts_International"
+      }, {
+        "label" : "MIPS Technologies",
+        "uri" : "http://dbpedia.org/resource/MIPS_Technologies"
+      }, {
+        "label" : "MIT Computer Science and Artificial Intelligence Laboratory",
+        "uri" : "http://dbpedia.org/resource/MIT_Computer_Science_and_Artificial_Intelligence_Laboratory"
+      }, {
+        "label" : "MIT Media Lab",
+        "uri" : "http://dbpedia.org/resource/MIT_Media_Lab"
+      }, {
+        "label" : "MLB Network",
+        "uri" : "http://dbpedia.org/resource/MLB_Network"
+      }, {
+        "label" : "MOL",
+        "uri" : "http://dbpedia.org/resource/MOL_(company)"
+      }, {
+        "label" : "MS-DOS",
+        "uri" : "http://dbpedia.org/resource/MS-DOS"
+      }, {
+        "label" : "MTR Corporation",
+        "uri" : "http://dbpedia.org/resource/MTR_Corporation"
+      }, {
+        "label" : "MTV",
+        "uri" : "http://dbpedia.org/resource/MTV"
+      }, {
+        "label" : "MVRDV",
+        "uri" : "http://dbpedia.org/resource/MVRDV"
+      }, {
+        "label" : "Mabrouk El Mechri",
+        "uri" : "http://dbpedia.org/resource/Mabrouk_El_Mechri"
+      }, {
+        "label" : "MacSoft",
+        "uri" : "http://dbpedia.org/resource/MacSoft"
+      }, {
+        "label" : "Makedonska Radio-Televizija",
+        "uri" : "http://dbpedia.org/resource/Macedonian_Radio_Television"
+      }, {
+        "label" : "MachineGames",
+        "uri" : "http://dbpedia.org/resource/MachineGames"
+      }, {
+        "label" : "Macromedia",
+        "uri" : "http://dbpedia.org/resource/Macromedia"
+      }, {
+        "label" : "Maemo",
+        "uri" : "http://dbpedia.org/resource/Maemo"
+      }, {
+        "label" : "Magnavox",
+        "uri" : "http://dbpedia.org/resource/Magnavox"
+      }, {
+        "label" : "Magnus Manske",
+        "uri" : "http://dbpedia.org/resource/Magnus_Manske"
+      }, {
+        "label" : "Mainz",
+        "uri" : "http://dbpedia.org/resource/Mainz"
+      }, {
+        "label" : "Majesco Entertainment",
+        "uri" : "http://dbpedia.org/resource/Majesco_Entertainment"
+      }, {
+        "label" : "Malibu Comics",
+        "uri" : "http://dbpedia.org/resource/Malibu_Comics"
+      }, {
+        "label" : "Control Data Corporation",
+        "uri" : "http://dbpedia.org/resource/Control_Data_Corporation"
+      }, {
+        "label" : "Convergent Technologies",
+        "uri" : "http://dbpedia.org/resource/Convergent_Technologies"
+      }, {
+        "label" : "Corinne Brinkerhoff",
+        "uri" : "http://dbpedia.org/resource/Corinne_Brinkerhoff"
+      }, {
+        "label" : "Ignition Entertainment",
+        "uri" : "http://dbpedia.org/resource/UTV_Ignition_Games"
+      }, {
+        "label" : "Uber (Unternehmen)",
+        "uri" : "http://dbpedia.org/resource/Uber"
+      }, {
+        "label" : "Ubisoft",
+        "uri" : "http://dbpedia.org/resource/Ubisoft"
+      }, {
+        "label" : "Ubisoft Romania",
+        "uri" : "http://dbpedia.org/resource/Ubisoft_Bucharest"
+      }, {
+        "label" : "Ubisoft Montreal",
+        "uri" : "http://dbpedia.org/resource/Ubisoft_Montreal"
+      }, {
+        "label" : "Ubisoft Paris",
+        "uri" : "http://dbpedia.org/resource/Ubisoft_Paris"
+      }, {
+        "label" : "Ubisoft Quebec",
+        "uri" : "http://dbpedia.org/resource/Ubisoft_Quebec"
+      }, {
+        "label" : "Ubisoft Reflections",
+        "uri" : "http://dbpedia.org/resource/Ubisoft_Reflections"
+      }, {
+        "label" : "Ubisoft Toronto",
+        "uri" : "http://dbpedia.org/resource/Ubisoft_Toronto"
+      }, {
+        "label" : "Ukrainische Sozialistische Sowjetrepublik",
+        "uri" : "http://dbpedia.org/resource/Ukraine"
+      }, {
+        "label" : "Ukraine",
+        "uri" : "http://dbpedia.org/resource/Ukraine"
+      }, {
+        "label" : "Under Armour",
+        "uri" : "http://dbpedia.org/resource/Under_Armour"
+      }, {
+        "label" : "Unicode-Konsortium",
+        "uri" : "http://dbpedia.org/resource/Unicode_Consortium"
+      }, {
+        "label" : "United States Army im Sezessionskrieg",
+        "uri" : "http://dbpedia.org/resource/Union_Army"
+      }, {
+        "label" : "Unisys",
+        "uri" : "http://dbpedia.org/resource/Unisys"
+      }, {
+        "label" : "Vereinigte Arabische Emirate",
+        "uri" : "http://dbpedia.org/resource/United_Arab_Emirates"
+      }, {
+        "label" : "Schardscha",
+        "uri" : "http://dbpedia.org/resource/United_Arab_Emirates"
+      }, {
+        "label" : "Hoher Flüchtlingskommissar der Vereinten Nationen",
+        "uri" : "http://dbpedia.org/resource/United_Nations_High_Commissioner_for_Refugees"
+      }, {
+        "label" : "United Overseas Bank",
+        "uri" : "http://dbpedia.org/resource/United_Overseas_Bank"
+      }, {
+        "label" : "Streitkräfte der Vereinigten Staaten",
+        "uri" : "http://dbpedia.org/resource/United_States_Armed_Forces"
+      }, {
+        "label" : "United States Army",
+        "uri" : "http://dbpedia.org/resource/United_States_Army"
+      }, {
+        "label" : "Environmental Protection Agency",
+        "uri" : "http://dbpedia.org/resource/United_States_Environmental_Protection_Agency"
+      }, {
+        "label" : "University College Dublin",
+        "uri" : "http://dbpedia.org/resource/University_College_Dublin"
+      }, {
+        "label" : "University College London",
+        "uri" : "http://dbpedia.org/resource/University_College_London"
+      }, {
+        "label" : "Universität Antwerpen",
+        "uri" : "http://dbpedia.org/resource/University_of_Antwerp"
+      }, {
+        "label" : "University of Auckland",
+        "uri" : "http://dbpedia.org/resource/University_of_Auckland"
+      }, {
+        "label" : "Universität Barcelona",
+        "uri" : "http://dbpedia.org/resource/University_of_Barcelona"
+      }, {
+        "label" : "University of Bath",
+        "uri" : "http://dbpedia.org/resource/University_of_Bath"
+      }, {
+        "label" : "Universität Bordeaux",
+        "uri" : "http://dbpedia.org/resource/University_of_Bordeaux"
+      }, {
+        "label" : "University of Bristol",
+        "uri" : "http://dbpedia.org/resource/University_of_Bristol"
+      }, {
+        "label" : "University of British Columbia",
+        "uri" : "http://dbpedia.org/resource/University_of_British_Columbia"
+      }, {
+        "label" : "University of California, Berkeley",
+        "uri" : "http://dbpedia.org/resource/University_of_California,_Berkeley"
+      }, {
+        "label" : "University of California, San Diego",
+        "uri" : "http://dbpedia.org/resource/University_of_California,_San_Diego"
+      }, {
+        "label" : "University of California, San Francisco",
+        "uri" : "http://dbpedia.org/resource/University_of_California,_San_Francisco"
+      }, {
+        "label" : "University of California, Santa Barbara",
+        "uri" : "http://dbpedia.org/resource/University_of_California,_Santa_Barbara"
+      }, {
+        "label" : "University of California, Santa Cruz",
+        "uri" : "http://dbpedia.org/resource/University_of_California,_Santa_Cruz"
+      }, {
+        "label" : "University of Cambridge",
+        "uri" : "http://dbpedia.org/resource/University_of_Cambridge"
+      }, {
+        "label" : "University of Chicago",
+        "uri" : "http://dbpedia.org/resource/University_of_Chicago"
+      }, {
+        "label" : "Universität Kopenhagen",
+        "uri" : "http://dbpedia.org/resource/University_of_Copenhagen"
+      }, {
+        "label" : "University of Delaware",
+        "uri" : "http://dbpedia.org/resource/University_of_Delaware"
+      }, {
+        "label" : "University of Dundee",
+        "uri" : "http://dbpedia.org/resource/University_of_Dundee"
+      }, {
+        "label" : "The University of Edinburgh",
+        "uri" : "http://dbpedia.org/resource/University_of_Edinburgh"
+      }, {
+        "label" : "Universität Florenz",
+        "uri" : "http://dbpedia.org/resource/University_of_Florence"
+      }, {
+        "label" : "University of Florida",
+        "uri" : "http://dbpedia.org/resource/University_of_Florida"
+      }, {
+        "label" : "Albert-Ludwigs-Universität Freiburg",
+        "uri" : "http://dbpedia.org/resource/University_of_Freiburg"
+      }, {
+        "label" : "University of Glasgow",
+        "uri" : "http://dbpedia.org/resource/University_of_Glasgow"
+      }, {
+        "label" : "Universität Granada",
+        "uri" : "http://dbpedia.org/resource/University_of_Granada"
+      }, {
+        "label" : "Reichsuniversität Groningen",
+        "uri" : "http://dbpedia.org/resource/University_of_Groningen"
+      }, {
+        "label" : "Universität Hamburg",
+        "uri" : "http://dbpedia.org/resource/University_of_Hamburg"
+      }, {
+        "label" : "University of Illinois at Urbana-Champaign",
+        "uri" : "http://dbpedia.org/resource/University_of_Illinois_at_Urbana–Champaign"
+      }, {
+        "label" : "University of Kent",
+        "uri" : "http://dbpedia.org/resource/University_of_Kent"
+      }, {
+        "label" : "Universität Las Palmas de Gran Canaria",
+        "uri" : "http://dbpedia.org/resource/University_of_Las_Palmas_de_Gran_Canaria"
+      }, {
+        "label" : "University of Leeds",
+        "uri" : "http://dbpedia.org/resource/University_of_Leeds"
+      }, {
+        "label" : "University of Liverpool",
+        "uri" : "http://dbpedia.org/resource/University_of_Liverpool"
+      }, {
+        "label" : "Universität Ljubljana",
+        "uri" : "http://dbpedia.org/resource/University_of_Ljubljana"
+      }, {
+        "label" : "University of Manchester",
+        "uri" : "http://dbpedia.org/resource/University_of_Manchester"
+      }, {
+        "label" : "Universität Mannheim",
+        "uri" : "http://dbpedia.org/resource/University_of_Mannheim"
+      }, {
+        "label" : "University of Maryland, College Park",
+        "uri" : "http://dbpedia.org/resource/University_of_Maryland,_College_Park"
+      }, {
+        "label" : "Universität Melbourne",
+        "uri" : "http://dbpedia.org/resource/University_of_Melbourne"
+      }, {
+        "label" : "University of Michigan",
+        "uri" : "http://dbpedia.org/resource/University_of_Michigan"
+      }, {
+        "label" : "University of New Mexico",
+        "uri" : "http://dbpedia.org/resource/University_of_New_Mexico"
+      }, {
+        "label" : "University of North Carolina at Chapel Hill",
+        "uri" : "http://dbpedia.org/resource/University_of_North_Carolina_at_Chapel_Hill"
+      }, {
+        "label" : "University of Oxford",
+        "uri" : "http://dbpedia.org/resource/University_of_Oxford"
+      }, {
+        "label" : "University of Rochester",
+        "uri" : "http://dbpedia.org/resource/University_of_Rochester"
+      }, {
+        "label" : "University of South Florida",
+        "uri" : "http://dbpedia.org/resource/University_of_South_Florida"
+      }, {
+        "label" : "University of Southampton",
+        "uri" : "http://dbpedia.org/resource/University_of_Southampton"
+      }, {
+        "label" : "University of St Andrews",
+        "uri" : "http://dbpedia.org/resource/University_of_St_Andrews"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "18",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "PERSON",
+    "returnType" : "WORK",
+    "frameType" : "APP",
+    "sentences" : [ "Werks entwickelt von $x" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "5th Cell",
+        "uri" : "http://dbpedia.org/resource/5th_Cell"
+      }, {
+        "label" : "7th Level",
+        "uri" : "http://dbpedia.org/resource/7th_Level"
+      }, {
+        "label" : "Varianten der Programmiersprache C",
+        "uri" : "http://dbpedia.org/resource/ANSI_C"
+      }, {
+        "label" : "LucasArts",
+        "uri" : "http://dbpedia.org/resource/LucasArts"
+      }, {
+        "label" : "Ludwig-Maximilians-Universität München",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Maximilian_University_of_Munich"
+      }, {
+        "label" : "Luke Davies",
+        "uri" : "http://dbpedia.org/resource/Luke_Davies"
+      }, {
+        "label" : "Luke Pearson",
+        "uri" : "http://dbpedia.org/resource/Luke_Pearson"
+      }, {
+        "label" : "Universität Lund",
+        "uri" : "http://dbpedia.org/resource/Lund_University"
+      }, {
+        "label" : "László Németh",
+        "uri" : "http://dbpedia.org/resource/László_Németh"
+      }, {
+        "label" : "MGM Resorts International",
+        "uri" : "http://dbpedia.org/resource/MGM_Resorts_International"
+      }, {
+        "label" : "MIPS Technologies",
+        "uri" : "http://dbpedia.org/resource/MIPS_Technologies"
+      }, {
+        "label" : "MIT Computer Science and Artificial Intelligence Laboratory",
+        "uri" : "http://dbpedia.org/resource/MIT_Computer_Science_and_Artificial_Intelligence_Laboratory"
+      }, {
+        "label" : "MIT Media Lab",
+        "uri" : "http://dbpedia.org/resource/MIT_Media_Lab"
+      }, {
+        "label" : "MLB Network",
+        "uri" : "http://dbpedia.org/resource/MLB_Network"
+      }, {
+        "label" : "MOL",
+        "uri" : "http://dbpedia.org/resource/MOL_(company)"
+      }, {
+        "label" : "MS-DOS",
+        "uri" : "http://dbpedia.org/resource/MS-DOS"
+      }, {
+        "label" : "MTR Corporation",
+        "uri" : "http://dbpedia.org/resource/MTR_Corporation"
+      }, {
+        "label" : "MTV",
+        "uri" : "http://dbpedia.org/resource/MTV"
+      }, {
+        "label" : "MVRDV",
+        "uri" : "http://dbpedia.org/resource/MVRDV"
+      }, {
+        "label" : "Mabrouk El Mechri",
+        "uri" : "http://dbpedia.org/resource/Mabrouk_El_Mechri"
+      }, {
+        "label" : "MacSoft",
+        "uri" : "http://dbpedia.org/resource/MacSoft"
+      }, {
+        "label" : "Makedonska Radio-Televizija",
+        "uri" : "http://dbpedia.org/resource/Macedonian_Radio_Television"
+      }, {
+        "label" : "MachineGames",
+        "uri" : "http://dbpedia.org/resource/MachineGames"
+      }, {
+        "label" : "Macromedia",
+        "uri" : "http://dbpedia.org/resource/Macromedia"
+      }, {
+        "label" : "Maemo",
+        "uri" : "http://dbpedia.org/resource/Maemo"
+      }, {
+        "label" : "Magnavox",
+        "uri" : "http://dbpedia.org/resource/Magnavox"
+      }, {
+        "label" : "Magnus Manske",
+        "uri" : "http://dbpedia.org/resource/Magnus_Manske"
+      }, {
+        "label" : "Mainz",
+        "uri" : "http://dbpedia.org/resource/Mainz"
+      }, {
+        "label" : "Majesco Entertainment",
+        "uri" : "http://dbpedia.org/resource/Majesco_Entertainment"
+      }, {
+        "label" : "Malibu Comics",
+        "uri" : "http://dbpedia.org/resource/Malibu_Comics"
+      }, {
+        "label" : "Control Data Corporation",
+        "uri" : "http://dbpedia.org/resource/Control_Data_Corporation"
+      }, {
+        "label" : "Convergent Technologies",
+        "uri" : "http://dbpedia.org/resource/Convergent_Technologies"
+      }, {
+        "label" : "Corinne Brinkerhoff",
+        "uri" : "http://dbpedia.org/resource/Corinne_Brinkerhoff"
+      }, {
+        "label" : "Ignition Entertainment",
+        "uri" : "http://dbpedia.org/resource/UTV_Ignition_Games"
+      }, {
+        "label" : "Uber (Unternehmen)",
+        "uri" : "http://dbpedia.org/resource/Uber"
+      }, {
+        "label" : "Ubisoft",
+        "uri" : "http://dbpedia.org/resource/Ubisoft"
+      }, {
+        "label" : "Ubisoft Romania",
+        "uri" : "http://dbpedia.org/resource/Ubisoft_Bucharest"
+      }, {
+        "label" : "Ubisoft Montreal",
+        "uri" : "http://dbpedia.org/resource/Ubisoft_Montreal"
+      }, {
+        "label" : "Ubisoft Paris",
+        "uri" : "http://dbpedia.org/resource/Ubisoft_Paris"
+      }, {
+        "label" : "Ubisoft Quebec",
+        "uri" : "http://dbpedia.org/resource/Ubisoft_Quebec"
+      }, {
+        "label" : "Ubisoft Reflections",
+        "uri" : "http://dbpedia.org/resource/Ubisoft_Reflections"
+      }, {
+        "label" : "Ubisoft Toronto",
+        "uri" : "http://dbpedia.org/resource/Ubisoft_Toronto"
+      }, {
+        "label" : "Ukrainische Sozialistische Sowjetrepublik",
+        "uri" : "http://dbpedia.org/resource/Ukraine"
+      }, {
+        "label" : "Ukraine",
+        "uri" : "http://dbpedia.org/resource/Ukraine"
+      }, {
+        "label" : "Under Armour",
+        "uri" : "http://dbpedia.org/resource/Under_Armour"
+      }, {
+        "label" : "Unicode-Konsortium",
+        "uri" : "http://dbpedia.org/resource/Unicode_Consortium"
+      }, {
+        "label" : "United States Army im Sezessionskrieg",
+        "uri" : "http://dbpedia.org/resource/Union_Army"
+      }, {
+        "label" : "Unisys",
+        "uri" : "http://dbpedia.org/resource/Unisys"
+      }, {
+        "label" : "Vereinigte Arabische Emirate",
+        "uri" : "http://dbpedia.org/resource/United_Arab_Emirates"
+      }, {
+        "label" : "Schardscha",
+        "uri" : "http://dbpedia.org/resource/United_Arab_Emirates"
+      }, {
+        "label" : "Hoher Flüchtlingskommissar der Vereinten Nationen",
+        "uri" : "http://dbpedia.org/resource/United_Nations_High_Commissioner_for_Refugees"
+      }, {
+        "label" : "United Overseas Bank",
+        "uri" : "http://dbpedia.org/resource/United_Overseas_Bank"
+      }, {
+        "label" : "Streitkräfte der Vereinigten Staaten",
+        "uri" : "http://dbpedia.org/resource/United_States_Armed_Forces"
+      }, {
+        "label" : "United States Army",
+        "uri" : "http://dbpedia.org/resource/United_States_Army"
+      }, {
+        "label" : "Environmental Protection Agency",
+        "uri" : "http://dbpedia.org/resource/United_States_Environmental_Protection_Agency"
+      }, {
+        "label" : "University College Dublin",
+        "uri" : "http://dbpedia.org/resource/University_College_Dublin"
+      }, {
+        "label" : "University College London",
+        "uri" : "http://dbpedia.org/resource/University_College_London"
+      }, {
+        "label" : "Universität Antwerpen",
+        "uri" : "http://dbpedia.org/resource/University_of_Antwerp"
+      }, {
+        "label" : "University of Auckland",
+        "uri" : "http://dbpedia.org/resource/University_of_Auckland"
+      }, {
+        "label" : "Universität Barcelona",
+        "uri" : "http://dbpedia.org/resource/University_of_Barcelona"
+      }, {
+        "label" : "University of Bath",
+        "uri" : "http://dbpedia.org/resource/University_of_Bath"
+      }, {
+        "label" : "Universität Bordeaux",
+        "uri" : "http://dbpedia.org/resource/University_of_Bordeaux"
+      }, {
+        "label" : "University of Bristol",
+        "uri" : "http://dbpedia.org/resource/University_of_Bristol"
+      }, {
+        "label" : "University of British Columbia",
+        "uri" : "http://dbpedia.org/resource/University_of_British_Columbia"
+      }, {
+        "label" : "University of California, Berkeley",
+        "uri" : "http://dbpedia.org/resource/University_of_California,_Berkeley"
+      }, {
+        "label" : "University of California, San Diego",
+        "uri" : "http://dbpedia.org/resource/University_of_California,_San_Diego"
+      }, {
+        "label" : "University of California, San Francisco",
+        "uri" : "http://dbpedia.org/resource/University_of_California,_San_Francisco"
+      }, {
+        "label" : "University of California, Santa Barbara",
+        "uri" : "http://dbpedia.org/resource/University_of_California,_Santa_Barbara"
+      }, {
+        "label" : "University of California, Santa Cruz",
+        "uri" : "http://dbpedia.org/resource/University_of_California,_Santa_Cruz"
+      }, {
+        "label" : "University of Cambridge",
+        "uri" : "http://dbpedia.org/resource/University_of_Cambridge"
+      }, {
+        "label" : "University of Chicago",
+        "uri" : "http://dbpedia.org/resource/University_of_Chicago"
+      }, {
+        "label" : "Universität Kopenhagen",
+        "uri" : "http://dbpedia.org/resource/University_of_Copenhagen"
+      }, {
+        "label" : "University of Delaware",
+        "uri" : "http://dbpedia.org/resource/University_of_Delaware"
+      }, {
+        "label" : "University of Dundee",
+        "uri" : "http://dbpedia.org/resource/University_of_Dundee"
+      }, {
+        "label" : "The University of Edinburgh",
+        "uri" : "http://dbpedia.org/resource/University_of_Edinburgh"
+      }, {
+        "label" : "Universität Florenz",
+        "uri" : "http://dbpedia.org/resource/University_of_Florence"
+      }, {
+        "label" : "University of Florida",
+        "uri" : "http://dbpedia.org/resource/University_of_Florida"
+      }, {
+        "label" : "Albert-Ludwigs-Universität Freiburg",
+        "uri" : "http://dbpedia.org/resource/University_of_Freiburg"
+      }, {
+        "label" : "University of Glasgow",
+        "uri" : "http://dbpedia.org/resource/University_of_Glasgow"
+      }, {
+        "label" : "Universität Granada",
+        "uri" : "http://dbpedia.org/resource/University_of_Granada"
+      }, {
+        "label" : "Reichsuniversität Groningen",
+        "uri" : "http://dbpedia.org/resource/University_of_Groningen"
+      }, {
+        "label" : "Universität Hamburg",
+        "uri" : "http://dbpedia.org/resource/University_of_Hamburg"
+      }, {
+        "label" : "University of Illinois at Urbana-Champaign",
+        "uri" : "http://dbpedia.org/resource/University_of_Illinois_at_Urbana–Champaign"
+      }, {
+        "label" : "University of Kent",
+        "uri" : "http://dbpedia.org/resource/University_of_Kent"
+      }, {
+        "label" : "Universität Las Palmas de Gran Canaria",
+        "uri" : "http://dbpedia.org/resource/University_of_Las_Palmas_de_Gran_Canaria"
+      }, {
+        "label" : "University of Leeds",
+        "uri" : "http://dbpedia.org/resource/University_of_Leeds"
+      }, {
+        "label" : "University of Liverpool",
+        "uri" : "http://dbpedia.org/resource/University_of_Liverpool"
+      }, {
+        "label" : "Universität Ljubljana",
+        "uri" : "http://dbpedia.org/resource/University_of_Ljubljana"
+      }, {
+        "label" : "University of Manchester",
+        "uri" : "http://dbpedia.org/resource/University_of_Manchester"
+      }, {
+        "label" : "Universität Mannheim",
+        "uri" : "http://dbpedia.org/resource/University_of_Mannheim"
+      }, {
+        "label" : "University of Maryland, College Park",
+        "uri" : "http://dbpedia.org/resource/University_of_Maryland,_College_Park"
+      }, {
+        "label" : "Universität Melbourne",
+        "uri" : "http://dbpedia.org/resource/University_of_Melbourne"
+      }, {
+        "label" : "University of Michigan",
+        "uri" : "http://dbpedia.org/resource/University_of_Michigan"
+      }, {
+        "label" : "University of New Mexico",
+        "uri" : "http://dbpedia.org/resource/University_of_New_Mexico"
+      }, {
+        "label" : "University of North Carolina at Chapel Hill",
+        "uri" : "http://dbpedia.org/resource/University_of_North_Carolina_at_Chapel_Hill"
+      }, {
+        "label" : "University of Oxford",
+        "uri" : "http://dbpedia.org/resource/University_of_Oxford"
+      }, {
+        "label" : "University of Rochester",
+        "uri" : "http://dbpedia.org/resource/University_of_Rochester"
+      }, {
+        "label" : "University of South Florida",
+        "uri" : "http://dbpedia.org/resource/University_of_South_Florida"
+      }, {
+        "label" : "University of Southampton",
+        "uri" : "http://dbpedia.org/resource/University_of_Southampton"
+      }, {
+        "label" : "University of St Andrews",
+        "uri" : "http://dbpedia.org/resource/University_of_St_Andrews"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "19",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "MUSEUM",
+    "returnType" : "WORK",
+    "frameType" : "APP",
+    "sentences" : [ "Was wird ausgestellt von ($x | MUSEUM_NP)?", "Was wurde ausgestellt von ($x | MUSEUM_NP)?", "Welche Kunstwerks werden ausgestellt von ($x | MUSEUM_NP)?", "Welche Kunstwerks wurden ausgestellt von ($x | MUSEUM_NP)?", "Welches Kunstwerk wird ausgestellt von ($x | MUSEUM_NP)?", "Welches Kunstwerk wurde ausgestellt von ($x | MUSEUM_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/museum> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Madrid",
+        "uri" : "http://dbpedia.org/resource/Madrid"
+      }, {
+        "label" : "Mali Lošinj",
+        "uri" : "http://dbpedia.org/resource/Mali_Lošinj"
+      }, {
+        "label" : "Casa Buonarroti",
+        "uri" : "http://dbpedia.org/resource/Casa_Buonarroti"
+      }, {
+        "label" : "Cathedral Square (Christchurch)",
+        "uri" : "http://dbpedia.org/resource/Cathedral_Square,_Christchurch"
+      }, {
+        "label" : "San Domenico (Fiesole)",
+        "uri" : "http://dbpedia.org/resource/Convent_of_San_Domenico,_Fiesole"
+      }, {
+        "label" : "Uffizien",
+        "uri" : "http://dbpedia.org/resource/Uffizi"
+      }, {
+        "label" : "Union Buildings",
+        "uri" : "http://dbpedia.org/resource/Union_Buildings"
+      }, {
+        "label" : "Generalversammlung der Vereinten Nationen",
+        "uri" : "http://dbpedia.org/resource/United_Nations_General_Assembly"
+      }, {
+        "label" : "Vereinigte Staaten",
+        "uri" : "http://dbpedia.org/resource/United_States"
+      }, {
+        "label" : "Kapitol (Washington)",
+        "uri" : "http://dbpedia.org/resource/United_States_Capitol"
+      }, {
+        "label" : "United States Naval Academy",
+        "uri" : "http://dbpedia.org/resource/United_States_Naval_Academy"
+      }, {
+        "label" : "United States Navy Memorial",
+        "uri" : "http://dbpedia.org/resource/United_States_Navy_Memorial"
+      }, {
+        "label" : "University at Buffalo",
+        "uri" : "http://dbpedia.org/resource/University_at_Buffalo"
+      }, {
+        "label" : "University of Chicago",
+        "uri" : "http://dbpedia.org/resource/University_of_Chicago"
+      }, {
+        "label" : "Universität von Ghana",
+        "uri" : "http://dbpedia.org/resource/University_of_Ghana"
+      }, {
+        "label" : "University of Houston",
+        "uri" : "http://dbpedia.org/resource/University_of_Houston"
+      }, {
+        "label" : "University of Michigan Museum of Art",
+        "uri" : "http://dbpedia.org/resource/University_of_Michigan_Museum_of_Art"
+      }, {
+        "label" : "University of Notre Dame",
+        "uri" : "http://dbpedia.org/resource/University_of_Notre_Dame"
+      }, {
+        "label" : "University of Otago",
+        "uri" : "http://dbpedia.org/resource/University_of_Otago"
+      }, {
+        "label" : "University of Pennsylvania",
+        "uri" : "http://dbpedia.org/resource/University_of_Pennsylvania"
+      }, {
+        "label" : "Universität Sydney",
+        "uri" : "http://dbpedia.org/resource/University_of_Sydney"
+      }, {
+        "label" : "Universität Twente",
+        "uri" : "http://dbpedia.org/resource/University_of_Twente"
+      }, {
+        "label" : "Eberhard Karls Universität Tübingen",
+        "uri" : "http://dbpedia.org/resource/University_of_Tübingen"
+      }, {
+        "label" : "Utah Valley University",
+        "uri" : "http://dbpedia.org/resource/Utah_Valley_University"
+      }, {
+        "label" : "Valletta",
+        "uri" : "http://dbpedia.org/resource/Valletta"
+      }, {
+        "label" : "Van Abbemuseum",
+        "uri" : "http://dbpedia.org/resource/Van_Abbemuseum"
+      }, {
+        "label" : "Van Gogh Museum",
+        "uri" : "http://dbpedia.org/resource/Van_Gogh_Museum"
+      }, {
+        "label" : "Vancouver Art Gallery",
+        "uri" : "http://dbpedia.org/resource/Vancouver_Art_Gallery"
+      }, {
+        "label" : "Vatikanstadt",
+        "uri" : "http://dbpedia.org/resource/Vatican_City"
+      }, {
+        "label" : "Vatikanische Museen",
+        "uri" : "http://dbpedia.org/resource/Vatican_Museums"
+      }, {
+        "label" : "Venedig",
+        "uri" : "http://dbpedia.org/resource/Venice"
+      }, {
+        "label" : "Czartoryski-Museum",
+        "uri" : "http://dbpedia.org/resource/Czartoryski_Museum"
+      }, {
+        "label" : "Daitoku-ji",
+        "uri" : "http://dbpedia.org/resource/Daitoku-ji"
+      }, {
+        "label" : "Dallas Museum of Art",
+        "uri" : "http://dbpedia.org/resource/Dallas_Museum_of_Art"
+      }, {
+        "label" : "Sanssouci",
+        "uri" : "http://dbpedia.org/resource/Sanssouci"
+      }, {
+        "label" : "Santa Maria di Loreto (Rom)",
+        "uri" : "http://dbpedia.org/resource/Santa_Maria_di_Loreto,_Rome"
+      }, {
+        "label" : "Musée Goya",
+        "uri" : "http://dbpedia.org/resource/Goya_Museum"
+      }, {
+        "label" : "Santa Bibiana",
+        "uri" : "http://dbpedia.org/resource/Santa_Bibiana"
+      }, {
+        "label" : "Statens Museum for Kunst",
+        "uri" : "http://dbpedia.org/resource/National_Gallery_of_Denmark"
+      }, {
+        "label" : "Biblioteca Reale",
+        "uri" : "http://dbpedia.org/resource/Royal_Library_of_Turin"
+      }, {
+        "label" : "San Domenico (Arezzo)",
+        "uri" : "http://dbpedia.org/resource/San_Domenico,_Arezzo"
+      }, {
+        "label" : "San Sebastiano fuori le mura",
+        "uri" : "http://dbpedia.org/resource/San_Sebastiano_fuori_le_mura"
+      }, {
+        "label" : "Santa Maria Gloriosa dei Frari",
+        "uri" : "http://dbpedia.org/resource/Santa_Maria_Gloriosa_dei_Frari"
+      }, {
+        "label" : "San Zanipolo",
+        "uri" : "http://dbpedia.org/resource/Santi_Giovanni_e_Paolo,_Venice"
+      }, {
+        "label" : "Santissima Annunziata (Florenz)",
+        "uri" : "http://dbpedia.org/resource/Santissima_Annunziata,_Florence"
+      }, {
+        "label" : "Scuola di San Giorgio degli Schiavoni",
+        "uri" : "http://dbpedia.org/resource/Scuola_di_San_Giorgio_degli_Schiavoni"
+      }, {
+        "label" : "Slowakische Nationalgalerie",
+        "uri" : "http://dbpedia.org/resource/Slovak_National_Gallery"
+      }, {
+        "label" : "Rotunde des United States Capitol",
+        "uri" : "http://dbpedia.org/resource/United_States_Capitol_rotunda"
+      }, {
+        "label" : "Fondation Maeght",
+        "uri" : "http://dbpedia.org/resource/Fondation_Maeght"
+      }, {
+        "label" : "Slowenische Nationalgalerie",
+        "uri" : "http://dbpedia.org/resource/National_Gallery_of_Slovenia"
+      }, {
+        "label" : "Museum Moderner Kunst Stiftung Ludwig Wien",
+        "uri" : "http://dbpedia.org/resource/Mumok"
+      }, {
+        "label" : "Ospedale degli Innocenti",
+        "uri" : "http://dbpedia.org/resource/Ospedale_degli_Innocenti"
+      }, {
+        "label" : "Menil Collection",
+        "uri" : "http://dbpedia.org/resource/Menil_Collection"
+      }, {
+        "label" : "Pinacoteca Giovanni e Marella Agnelli",
+        "uri" : "http://dbpedia.org/resource/Pinacoteca_Giovanni_e_Marella_Agnelli"
+      }, {
+        "label" : "Birmingham Museum of Art",
+        "uri" : "http://dbpedia.org/resource/Birmingham_Museum_of_Art"
+      }, {
+        "label" : "Bletchley Park",
+        "uri" : "http://dbpedia.org/resource/Bletchley_Park"
+      }, {
+        "label" : "Bode-Museum",
+        "uri" : "http://dbpedia.org/resource/Bode_Museum"
+      }, {
+        "label" : "Bonnefantenmuseum",
+        "uri" : "http://dbpedia.org/resource/Bonnefantenmuseum"
+      }, {
+        "label" : "Boston",
+        "uri" : "http://dbpedia.org/resource/Boston"
+      }, {
+        "label" : "Delaware Art Museum",
+        "uri" : "http://dbpedia.org/resource/Delaware_Art_Museum"
+      }, {
+        "label" : "Denver Art Museum",
+        "uri" : "http://dbpedia.org/resource/Denver_Art_Museum"
+      }, {
+        "label" : "Denver International Airport",
+        "uri" : "http://dbpedia.org/resource/Denver_International_Airport"
+      }, {
+        "label" : "Derby Museum and Art Gallery",
+        "uri" : "http://dbpedia.org/resource/Derby_Museum_and_Art_Gallery"
+      }, {
+        "label" : "Des Moines Art Center",
+        "uri" : "http://dbpedia.org/resource/Des_Moines_Art_Center"
+      }, {
+        "label" : "Detroit",
+        "uri" : "http://dbpedia.org/resource/Detroit"
+      }, {
+        "label" : "Detroit Institute of Arts",
+        "uri" : "http://dbpedia.org/resource/Detroit_Institute_of_Arts"
+      }, {
+        "label" : "Dia Art Foundation",
+        "uri" : "http://dbpedia.org/resource/Dia_Art_Foundation"
+      }, {
+        "label" : "Dogenpalast",
+        "uri" : "http://dbpedia.org/resource/Doge's_Palace"
+      }, {
+        "label" : "Golden Gate Park",
+        "uri" : "http://dbpedia.org/resource/Golden_Gate_Park"
+      }, {
+        "label" : "Golestanpalast",
+        "uri" : "http://dbpedia.org/resource/Golestan_Palace"
+      }, {
+        "label" : "Großer Palast (Bangkok)",
+        "uri" : "http://dbpedia.org/resource/Grand_Palace"
+      }, {
+        "label" : "Grant Park",
+        "uri" : "http://dbpedia.org/resource/Grant_Park_(Chicago)"
+      }, {
+        "label" : "Great American Ball Park",
+        "uri" : "http://dbpedia.org/resource/Great_American_Ball_Park"
+      }, {
+        "label" : "Greenwich (London)",
+        "uri" : "http://dbpedia.org/resource/Greenwich"
+      }, {
+        "label" : "Groninger Museum",
+        "uri" : "http://dbpedia.org/resource/Groninger_Museum"
+      }, {
+        "label" : "Guildhall (London)",
+        "uri" : "http://dbpedia.org/resource/Guildhall,_London"
+      }, {
+        "label" : "Kenwood House",
+        "uri" : "http://dbpedia.org/resource/Kenwood_House"
+      }, {
+        "label" : "Kimbell Art Museum",
+        "uri" : "http://dbpedia.org/resource/Kimbell_Art_Museum"
+      }, {
+        "label" : "King’s College Chapel (Cambridge)",
+        "uri" : "http://dbpedia.org/resource/King's_College_Chapel,_Cambridge"
+      }, {
+        "label" : "Nationale Universität Krywyj Rih",
+        "uri" : "http://dbpedia.org/resource/Kryvyi_Rih_National_University"
+      }, {
+        "label" : "Kröller-Müller Museum",
+        "uri" : "http://dbpedia.org/resource/Kröller-Müller_Museum"
+      }, {
+        "label" : "Puschkin-Museum",
+        "uri" : "http://dbpedia.org/resource/Pushkin_Museum"
+      }, {
+        "label" : "Père Lachaise",
+        "uri" : "http://dbpedia.org/resource/Père_Lachaise_Cemetery"
+      }, {
+        "label" : "Queen’s House",
+        "uri" : "http://dbpedia.org/resource/Queen's_House"
+      }, {
+        "label" : "Kunstmuseum Basel",
+        "uri" : "http://dbpedia.org/resource/Kunstmuseum_Basel"
+      }, {
+        "label" : "Kunsthaus Zürich",
+        "uri" : "http://dbpedia.org/resource/Kunstmuseum_Basel"
+      }, {
+        "label" : "Royal Greenwich Observatory",
+        "uri" : "http://dbpedia.org/resource/Royal_Observatory,_Greenwich"
+      }, {
+        "label" : "Palazzo Pitti",
+        "uri" : "http://dbpedia.org/resource/Palazzo_Pitti"
+      }, {
+        "label" : "San Marco (Florenz)",
+        "uri" : "http://dbpedia.org/resource/San_Marco,_Florence"
+      }, {
+        "label" : "Horse Guards Parade",
+        "uri" : "http://dbpedia.org/resource/Horse_Guards_Parade"
+      }, {
+        "label" : "University of the West Indies",
+        "uri" : "http://dbpedia.org/resource/University_of_the_West_Indies"
+      }, {
+        "label" : "Pera-Museum",
+        "uri" : "http://dbpedia.org/resource/Pera_Museum"
+      }, {
+        "label" : "Villa Stuck",
+        "uri" : "http://dbpedia.org/resource/Villa_Stuck"
+      }, {
+        "label" : "Konservatorenpalast",
+        "uri" : "http://dbpedia.org/resource/Palazzo_dei_Conservatori"
+      }, {
+        "label" : "Albertina (Wien)",
+        "uri" : "http://dbpedia.org/resource/Albertina"
+      }, {
+        "label" : "Albright-Knox Art Gallery",
+        "uri" : "http://dbpedia.org/resource/Albright–Knox_Art_Gallery"
+      }, {
+        "label" : "Alnwick Castle",
+        "uri" : "http://dbpedia.org/resource/Alnwick_Castle"
+      }, {
+        "label" : "Alte Nationalgalerie",
+        "uri" : "http://dbpedia.org/resource/Alte_Nationalgalerie"
+      }, {
+        "label" : "Alte Pinakothek",
+        "uri" : "http://dbpedia.org/resource/Alte_Pinakothek"
+      }, {
+        "label" : "Sophienkathedrale (Nowgorod)",
+        "uri" : "http://dbpedia.org/resource/Cathedral_of_St._Sophia,_Novgorod"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "20",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "MUSEUM",
+    "returnType" : "WORK",
+    "frameType" : "APP",
+    "sentences" : [ "Kunstwerks ausgestellt von $x" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/museum> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Madrid",
+        "uri" : "http://dbpedia.org/resource/Madrid"
+      }, {
+        "label" : "Mali Lošinj",
+        "uri" : "http://dbpedia.org/resource/Mali_Lošinj"
+      }, {
+        "label" : "Casa Buonarroti",
+        "uri" : "http://dbpedia.org/resource/Casa_Buonarroti"
+      }, {
+        "label" : "Cathedral Square (Christchurch)",
+        "uri" : "http://dbpedia.org/resource/Cathedral_Square,_Christchurch"
+      }, {
+        "label" : "San Domenico (Fiesole)",
+        "uri" : "http://dbpedia.org/resource/Convent_of_San_Domenico,_Fiesole"
+      }, {
+        "label" : "Uffizien",
+        "uri" : "http://dbpedia.org/resource/Uffizi"
+      }, {
+        "label" : "Union Buildings",
+        "uri" : "http://dbpedia.org/resource/Union_Buildings"
+      }, {
+        "label" : "Generalversammlung der Vereinten Nationen",
+        "uri" : "http://dbpedia.org/resource/United_Nations_General_Assembly"
+      }, {
+        "label" : "Vereinigte Staaten",
+        "uri" : "http://dbpedia.org/resource/United_States"
+      }, {
+        "label" : "Kapitol (Washington)",
+        "uri" : "http://dbpedia.org/resource/United_States_Capitol"
+      }, {
+        "label" : "United States Naval Academy",
+        "uri" : "http://dbpedia.org/resource/United_States_Naval_Academy"
+      }, {
+        "label" : "United States Navy Memorial",
+        "uri" : "http://dbpedia.org/resource/United_States_Navy_Memorial"
+      }, {
+        "label" : "University at Buffalo",
+        "uri" : "http://dbpedia.org/resource/University_at_Buffalo"
+      }, {
+        "label" : "University of Chicago",
+        "uri" : "http://dbpedia.org/resource/University_of_Chicago"
+      }, {
+        "label" : "Universität von Ghana",
+        "uri" : "http://dbpedia.org/resource/University_of_Ghana"
+      }, {
+        "label" : "University of Houston",
+        "uri" : "http://dbpedia.org/resource/University_of_Houston"
+      }, {
+        "label" : "University of Michigan Museum of Art",
+        "uri" : "http://dbpedia.org/resource/University_of_Michigan_Museum_of_Art"
+      }, {
+        "label" : "University of Notre Dame",
+        "uri" : "http://dbpedia.org/resource/University_of_Notre_Dame"
+      }, {
+        "label" : "University of Otago",
+        "uri" : "http://dbpedia.org/resource/University_of_Otago"
+      }, {
+        "label" : "University of Pennsylvania",
+        "uri" : "http://dbpedia.org/resource/University_of_Pennsylvania"
+      }, {
+        "label" : "Universität Sydney",
+        "uri" : "http://dbpedia.org/resource/University_of_Sydney"
+      }, {
+        "label" : "Universität Twente",
+        "uri" : "http://dbpedia.org/resource/University_of_Twente"
+      }, {
+        "label" : "Eberhard Karls Universität Tübingen",
+        "uri" : "http://dbpedia.org/resource/University_of_Tübingen"
+      }, {
+        "label" : "Utah Valley University",
+        "uri" : "http://dbpedia.org/resource/Utah_Valley_University"
+      }, {
+        "label" : "Valletta",
+        "uri" : "http://dbpedia.org/resource/Valletta"
+      }, {
+        "label" : "Van Abbemuseum",
+        "uri" : "http://dbpedia.org/resource/Van_Abbemuseum"
+      }, {
+        "label" : "Van Gogh Museum",
+        "uri" : "http://dbpedia.org/resource/Van_Gogh_Museum"
+      }, {
+        "label" : "Vancouver Art Gallery",
+        "uri" : "http://dbpedia.org/resource/Vancouver_Art_Gallery"
+      }, {
+        "label" : "Vatikanstadt",
+        "uri" : "http://dbpedia.org/resource/Vatican_City"
+      }, {
+        "label" : "Vatikanische Museen",
+        "uri" : "http://dbpedia.org/resource/Vatican_Museums"
+      }, {
+        "label" : "Venedig",
+        "uri" : "http://dbpedia.org/resource/Venice"
+      }, {
+        "label" : "Czartoryski-Museum",
+        "uri" : "http://dbpedia.org/resource/Czartoryski_Museum"
+      }, {
+        "label" : "Daitoku-ji",
+        "uri" : "http://dbpedia.org/resource/Daitoku-ji"
+      }, {
+        "label" : "Dallas Museum of Art",
+        "uri" : "http://dbpedia.org/resource/Dallas_Museum_of_Art"
+      }, {
+        "label" : "Sanssouci",
+        "uri" : "http://dbpedia.org/resource/Sanssouci"
+      }, {
+        "label" : "Santa Maria di Loreto (Rom)",
+        "uri" : "http://dbpedia.org/resource/Santa_Maria_di_Loreto,_Rome"
+      }, {
+        "label" : "Musée Goya",
+        "uri" : "http://dbpedia.org/resource/Goya_Museum"
+      }, {
+        "label" : "Santa Bibiana",
+        "uri" : "http://dbpedia.org/resource/Santa_Bibiana"
+      }, {
+        "label" : "Statens Museum for Kunst",
+        "uri" : "http://dbpedia.org/resource/National_Gallery_of_Denmark"
+      }, {
+        "label" : "Biblioteca Reale",
+        "uri" : "http://dbpedia.org/resource/Royal_Library_of_Turin"
+      }, {
+        "label" : "San Domenico (Arezzo)",
+        "uri" : "http://dbpedia.org/resource/San_Domenico,_Arezzo"
+      }, {
+        "label" : "San Sebastiano fuori le mura",
+        "uri" : "http://dbpedia.org/resource/San_Sebastiano_fuori_le_mura"
+      }, {
+        "label" : "Santa Maria Gloriosa dei Frari",
+        "uri" : "http://dbpedia.org/resource/Santa_Maria_Gloriosa_dei_Frari"
+      }, {
+        "label" : "San Zanipolo",
+        "uri" : "http://dbpedia.org/resource/Santi_Giovanni_e_Paolo,_Venice"
+      }, {
+        "label" : "Santissima Annunziata (Florenz)",
+        "uri" : "http://dbpedia.org/resource/Santissima_Annunziata,_Florence"
+      }, {
+        "label" : "Scuola di San Giorgio degli Schiavoni",
+        "uri" : "http://dbpedia.org/resource/Scuola_di_San_Giorgio_degli_Schiavoni"
+      }, {
+        "label" : "Slowakische Nationalgalerie",
+        "uri" : "http://dbpedia.org/resource/Slovak_National_Gallery"
+      }, {
+        "label" : "Rotunde des United States Capitol",
+        "uri" : "http://dbpedia.org/resource/United_States_Capitol_rotunda"
+      }, {
+        "label" : "Fondation Maeght",
+        "uri" : "http://dbpedia.org/resource/Fondation_Maeght"
+      }, {
+        "label" : "Slowenische Nationalgalerie",
+        "uri" : "http://dbpedia.org/resource/National_Gallery_of_Slovenia"
+      }, {
+        "label" : "Museum Moderner Kunst Stiftung Ludwig Wien",
+        "uri" : "http://dbpedia.org/resource/Mumok"
+      }, {
+        "label" : "Ospedale degli Innocenti",
+        "uri" : "http://dbpedia.org/resource/Ospedale_degli_Innocenti"
+      }, {
+        "label" : "Menil Collection",
+        "uri" : "http://dbpedia.org/resource/Menil_Collection"
+      }, {
+        "label" : "Pinacoteca Giovanni e Marella Agnelli",
+        "uri" : "http://dbpedia.org/resource/Pinacoteca_Giovanni_e_Marella_Agnelli"
+      }, {
+        "label" : "Birmingham Museum of Art",
+        "uri" : "http://dbpedia.org/resource/Birmingham_Museum_of_Art"
+      }, {
+        "label" : "Bletchley Park",
+        "uri" : "http://dbpedia.org/resource/Bletchley_Park"
+      }, {
+        "label" : "Bode-Museum",
+        "uri" : "http://dbpedia.org/resource/Bode_Museum"
+      }, {
+        "label" : "Bonnefantenmuseum",
+        "uri" : "http://dbpedia.org/resource/Bonnefantenmuseum"
+      }, {
+        "label" : "Boston",
+        "uri" : "http://dbpedia.org/resource/Boston"
+      }, {
+        "label" : "Delaware Art Museum",
+        "uri" : "http://dbpedia.org/resource/Delaware_Art_Museum"
+      }, {
+        "label" : "Denver Art Museum",
+        "uri" : "http://dbpedia.org/resource/Denver_Art_Museum"
+      }, {
+        "label" : "Denver International Airport",
+        "uri" : "http://dbpedia.org/resource/Denver_International_Airport"
+      }, {
+        "label" : "Derby Museum and Art Gallery",
+        "uri" : "http://dbpedia.org/resource/Derby_Museum_and_Art_Gallery"
+      }, {
+        "label" : "Des Moines Art Center",
+        "uri" : "http://dbpedia.org/resource/Des_Moines_Art_Center"
+      }, {
+        "label" : "Detroit",
+        "uri" : "http://dbpedia.org/resource/Detroit"
+      }, {
+        "label" : "Detroit Institute of Arts",
+        "uri" : "http://dbpedia.org/resource/Detroit_Institute_of_Arts"
+      }, {
+        "label" : "Dia Art Foundation",
+        "uri" : "http://dbpedia.org/resource/Dia_Art_Foundation"
+      }, {
+        "label" : "Dogenpalast",
+        "uri" : "http://dbpedia.org/resource/Doge's_Palace"
+      }, {
+        "label" : "Golden Gate Park",
+        "uri" : "http://dbpedia.org/resource/Golden_Gate_Park"
+      }, {
+        "label" : "Golestanpalast",
+        "uri" : "http://dbpedia.org/resource/Golestan_Palace"
+      }, {
+        "label" : "Großer Palast (Bangkok)",
+        "uri" : "http://dbpedia.org/resource/Grand_Palace"
+      }, {
+        "label" : "Grant Park",
+        "uri" : "http://dbpedia.org/resource/Grant_Park_(Chicago)"
+      }, {
+        "label" : "Great American Ball Park",
+        "uri" : "http://dbpedia.org/resource/Great_American_Ball_Park"
+      }, {
+        "label" : "Greenwich (London)",
+        "uri" : "http://dbpedia.org/resource/Greenwich"
+      }, {
+        "label" : "Groninger Museum",
+        "uri" : "http://dbpedia.org/resource/Groninger_Museum"
+      }, {
+        "label" : "Guildhall (London)",
+        "uri" : "http://dbpedia.org/resource/Guildhall,_London"
+      }, {
+        "label" : "Kenwood House",
+        "uri" : "http://dbpedia.org/resource/Kenwood_House"
+      }, {
+        "label" : "Kimbell Art Museum",
+        "uri" : "http://dbpedia.org/resource/Kimbell_Art_Museum"
+      }, {
+        "label" : "King’s College Chapel (Cambridge)",
+        "uri" : "http://dbpedia.org/resource/King's_College_Chapel,_Cambridge"
+      }, {
+        "label" : "Nationale Universität Krywyj Rih",
+        "uri" : "http://dbpedia.org/resource/Kryvyi_Rih_National_University"
+      }, {
+        "label" : "Kröller-Müller Museum",
+        "uri" : "http://dbpedia.org/resource/Kröller-Müller_Museum"
+      }, {
+        "label" : "Puschkin-Museum",
+        "uri" : "http://dbpedia.org/resource/Pushkin_Museum"
+      }, {
+        "label" : "Père Lachaise",
+        "uri" : "http://dbpedia.org/resource/Père_Lachaise_Cemetery"
+      }, {
+        "label" : "Queen’s House",
+        "uri" : "http://dbpedia.org/resource/Queen's_House"
+      }, {
+        "label" : "Kunstmuseum Basel",
+        "uri" : "http://dbpedia.org/resource/Kunstmuseum_Basel"
+      }, {
+        "label" : "Kunsthaus Zürich",
+        "uri" : "http://dbpedia.org/resource/Kunstmuseum_Basel"
+      }, {
+        "label" : "Royal Greenwich Observatory",
+        "uri" : "http://dbpedia.org/resource/Royal_Observatory,_Greenwich"
+      }, {
+        "label" : "Palazzo Pitti",
+        "uri" : "http://dbpedia.org/resource/Palazzo_Pitti"
+      }, {
+        "label" : "San Marco (Florenz)",
+        "uri" : "http://dbpedia.org/resource/San_Marco,_Florence"
+      }, {
+        "label" : "Horse Guards Parade",
+        "uri" : "http://dbpedia.org/resource/Horse_Guards_Parade"
+      }, {
+        "label" : "University of the West Indies",
+        "uri" : "http://dbpedia.org/resource/University_of_the_West_Indies"
+      }, {
+        "label" : "Pera-Museum",
+        "uri" : "http://dbpedia.org/resource/Pera_Museum"
+      }, {
+        "label" : "Villa Stuck",
+        "uri" : "http://dbpedia.org/resource/Villa_Stuck"
+      }, {
+        "label" : "Konservatorenpalast",
+        "uri" : "http://dbpedia.org/resource/Palazzo_dei_Conservatori"
+      }, {
+        "label" : "Albertina (Wien)",
+        "uri" : "http://dbpedia.org/resource/Albertina"
+      }, {
+        "label" : "Albright-Knox Art Gallery",
+        "uri" : "http://dbpedia.org/resource/Albright–Knox_Art_Gallery"
+      }, {
+        "label" : "Alnwick Castle",
+        "uri" : "http://dbpedia.org/resource/Alnwick_Castle"
+      }, {
+        "label" : "Alte Nationalgalerie",
+        "uri" : "http://dbpedia.org/resource/Alte_Nationalgalerie"
+      }, {
+        "label" : "Alte Pinakothek",
+        "uri" : "http://dbpedia.org/resource/Alte_Pinakothek"
+      }, {
+        "label" : "Sophienkathedrale (Nowgorod)",
+        "uri" : "http://dbpedia.org/resource/Cathedral_of_St._Sophia,_Novgorod"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "21",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "APP",
+    "sentences" : [ "Welche Person wird verheiratet mit ($x | PERSON_NP)?", "Welche Person wurde verheiratet mit ($x | PERSON_NP)?", "Welche Persons werden verheiratet mit ($x | PERSON_NP)?", "Welche Persons wurden verheiratet mit ($x | PERSON_NP)?", "Wer wird verheiratet mit ($x | PERSON_NP)?", "Wer wurde verheiratet mit ($x | PERSON_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Lowell Bergman",
+        "uri" : "http://dbpedia.org/resource/Lowell_Bergman"
+      }, {
+        "label" : "Lowell Sherman",
+        "uri" : "http://dbpedia.org/resource/Lowell_Sherman"
+      }, {
+        "label" : "Lu Chuan",
+        "uri" : "http://dbpedia.org/resource/Lu_Chuan"
+      }, {
+        "label" : "Lu Kang",
+        "uri" : "http://dbpedia.org/resource/Lu_Kang_(Three_Kingdoms)"
+      }, {
+        "label" : "Lu Xun",
+        "uri" : "http://dbpedia.org/resource/Lu_Xun"
+      }, {
+        "label" : "Lu Xun (Drei Reiche)",
+        "uri" : "http://dbpedia.org/resource/Lu_Xun_(Three_Kingdoms)"
+      }, {
+        "label" : "Luana Patten",
+        "uri" : "http://dbpedia.org/resource/Luana_Patten"
+      }, {
+        "label" : "Luc Besson",
+        "uri" : "http://dbpedia.org/resource/Luc_Besson"
+      }, {
+        "label" : "Luc Tuymans",
+        "uri" : "http://dbpedia.org/resource/Luc_Tuymans"
+      }, {
+        "label" : "Lucas Monteverde",
+        "uri" : "http://dbpedia.org/resource/Lucas_Monteverde"
+      }, {
+        "label" : "Lucas Neff",
+        "uri" : "http://dbpedia.org/resource/Lucas_Neff"
+      }, {
+        "label" : "Lucette Lagnado",
+        "uri" : "http://dbpedia.org/resource/Lucette_Lagnado"
+      }, {
+        "label" : "Lucia Bosè",
+        "uri" : "http://dbpedia.org/resource/Lucia_Bosè"
+      }, {
+        "label" : "Lucia Migliaccio",
+        "uri" : "http://dbpedia.org/resource/Lucia_Migliaccio"
+      }, {
+        "label" : "Lucia Moholy",
+        "uri" : "http://dbpedia.org/resource/Lucia_Moholy"
+      }, {
+        "label" : "Lucia Popp",
+        "uri" : "http://dbpedia.org/resource/Lucia_Popp"
+      }, {
+        "label" : "Lucian Freud",
+        "uri" : "http://dbpedia.org/resource/Lucian_Freud"
+      }, {
+        "label" : "Luciana Castellina",
+        "uri" : "http://dbpedia.org/resource/Luciana_Castellina"
+      }, {
+        "label" : "Luciana Paluzzi",
+        "uri" : "http://dbpedia.org/resource/Luciana_Paluzzi"
+      }, {
+        "label" : "Luciana Pedraza",
+        "uri" : "http://dbpedia.org/resource/Luciana_Pedraza"
+      }, {
+        "label" : "Luciano Ercoli",
+        "uri" : "http://dbpedia.org/resource/Luciano_Ercoli"
+      }, {
+        "label" : "Luciano Martino",
+        "uri" : "http://dbpedia.org/resource/Luciano_Martino"
+      }, {
+        "label" : "Lucie Arnaz",
+        "uri" : "http://dbpedia.org/resource/Lucie_Arnaz"
+      }, {
+        "label" : "Lucie Aubrac",
+        "uri" : "http://dbpedia.org/resource/Lucie_Aubrac"
+      }, {
+        "label" : "Lucie Mannheim",
+        "uri" : "http://dbpedia.org/resource/Lucie_Mannheim"
+      }, {
+        "label" : "Lucien E. Blackwell",
+        "uri" : "http://dbpedia.org/resource/Lucien_Blackwell"
+      }, {
+        "label" : "Lucien Bonaparte",
+        "uri" : "http://dbpedia.org/resource/Lucien_Bonaparte"
+      }, {
+        "label" : "Lucien Pissarro",
+        "uri" : "http://dbpedia.org/resource/Lucien_Pissarro"
+      }, {
+        "label" : "Lucienne Boyer",
+        "uri" : "http://dbpedia.org/resource/Lucienne_Boyer"
+      }, {
+        "label" : "Lucienne Day",
+        "uri" : "http://dbpedia.org/resource/Lucienne_Day"
+      }, {
+        "label" : "Lucile Browne",
+        "uri" : "http://dbpedia.org/resource/Lucile_Browne"
+      }, {
+        "label" : "Lucile Hadzihalilovic",
+        "uri" : "http://dbpedia.org/resource/Lucile_Hadžihalilović"
+      }, {
+        "label" : "Lucile Watson",
+        "uri" : "http://dbpedia.org/resource/Lucile_Watson"
+      }, {
+        "label" : "Lucilla",
+        "uri" : "http://dbpedia.org/resource/Lucilla"
+      }, {
+        "label" : "Lucille Ball",
+        "uri" : "http://dbpedia.org/resource/Lucille_Ball"
+      }, {
+        "label" : "Lucina da Costa Gomez-Matheeuws",
+        "uri" : "http://dbpedia.org/resource/Lucina_da_Costa_Gomez-Matheeuws"
+      }, {
+        "label" : "Lucinda Jenney",
+        "uri" : "http://dbpedia.org/resource/Lucinda_Jenney"
+      }, {
+        "label" : "Lucius Aelius Caesar",
+        "uri" : "http://dbpedia.org/resource/Lucius_Aelius"
+      }, {
+        "label" : "Lucius Marcius Philippus (Suffektkonsul 38 v. Chr.)",
+        "uri" : "http://dbpedia.org/resource/Lucius_Marcius_Philippus_(consul_38_BC)"
+      }, {
+        "label" : "Lucius Marcius Philippus (Konsul 56 v. Chr.)",
+        "uri" : "http://dbpedia.org/resource/Lucius_Marcius_Philippus_(consul_56_BC)"
+      }, {
+        "label" : "Lucius Tarquinius Superbus",
+        "uri" : "http://dbpedia.org/resource/Lucius_Tarquinius_Superbus"
+      }, {
+        "label" : "Lucius Verus",
+        "uri" : "http://dbpedia.org/resource/Lucius_Verus"
+      }, {
+        "label" : "Lucius Volusius Saturninus (Suffektkonsul 12 v. Chr.)",
+        "uri" : "http://dbpedia.org/resource/Lucius_Volusius_Saturninus_(suffect_consul_12_BC)"
+      }, {
+        "label" : "Lucretia Garfield",
+        "uri" : "http://dbpedia.org/resource/Lucretia_Garfield"
+      }, {
+        "label" : "Lucretia Mott",
+        "uri" : "http://dbpedia.org/resource/Lucretia_Mott"
+      }, {
+        "label" : "Lucrezia Borgia",
+        "uri" : "http://dbpedia.org/resource/Lucrezia_Borgia"
+      }, {
+        "label" : "Lucrezia Tornabuoni",
+        "uri" : "http://dbpedia.org/resource/Lucrezia_Tornabuoni"
+      }, {
+        "label" : "Lucrezia di Cosimo de’ Medici",
+        "uri" : "http://dbpedia.org/resource/Lucrezia_de'_Medici,_Duchess_of_Ferrara"
+      }, {
+        "label" : "Lucrezia di Lorenzo de’ Medici",
+        "uri" : "http://dbpedia.org/resource/Lucrezia_de'_Medici_(1470–1553)"
+      }, {
+        "label" : "Lucius Licinius Lucullus",
+        "uri" : "http://dbpedia.org/resource/Lucullus"
+      }, {
+        "label" : "Lucy Christiana Duff Gordon",
+        "uri" : "http://dbpedia.org/resource/Lucy,_Lady_Duff-Gordon"
+      }, {
+        "label" : "Lucy-Jo Hudson",
+        "uri" : "http://dbpedia.org/resource/Lucy-Jo_Hudson"
+      }, {
+        "label" : "Lucy Aharish",
+        "uri" : "http://dbpedia.org/resource/Lucy_Aharish"
+      }, {
+        "label" : "Lucy Akhurst",
+        "uri" : "http://dbpedia.org/resource/Lucy_Akhurst"
+      }, {
+        "label" : "Lucy Baxley",
+        "uri" : "http://dbpedia.org/resource/Lucy_Baxley"
+      }, {
+        "label" : "Lucy Brown",
+        "uri" : "http://dbpedia.org/resource/Lucy_Brown"
+      }, {
+        "label" : "Lucy Cohu",
+        "uri" : "http://dbpedia.org/resource/Lucy_Cohu"
+      }, {
+        "label" : "Lucy Davis (Schauspielerin)",
+        "uri" : "http://dbpedia.org/resource/Lucy_Davis"
+      }, {
+        "label" : "Lucy Doraine",
+        "uri" : "http://dbpedia.org/resource/Lucy_Doraine"
+      }, {
+        "label" : "Lucy Ellmann",
+        "uri" : "http://dbpedia.org/resource/Lucy_Ellmann"
+      }, {
+        "label" : "Lucy Gaskell",
+        "uri" : "http://dbpedia.org/resource/Lucy_Gaskell"
+      }, {
+        "label" : "Lucy Kellaway",
+        "uri" : "http://dbpedia.org/resource/Lucy_Kellaway"
+      }, {
+        "label" : "Lucy Lawless",
+        "uri" : "http://dbpedia.org/resource/Lucy_Lawless"
+      }, {
+        "label" : "Lucy Madox Brown",
+        "uri" : "http://dbpedia.org/resource/Lucy_Madox_Brown"
+      }, {
+        "label" : "Lucy Mercer",
+        "uri" : "http://dbpedia.org/resource/Lucy_Mercer_Rutherfurd"
+      }, {
+        "label" : "Lucy Nethsingha",
+        "uri" : "http://dbpedia.org/resource/Lucy_Nethsingha"
+      }, {
+        "label" : "Lucy Neville-Rolfe, Baroness Neville-Rolfe",
+        "uri" : "http://dbpedia.org/resource/Lucy_Neville-Rolfe"
+      }, {
+        "label" : "Lucy Parsons",
+        "uri" : "http://dbpedia.org/resource/Lucy_Parsons"
+      }, {
+        "label" : "Lucy Scott",
+        "uri" : "http://dbpedia.org/resource/Lucy_Scott"
+      }, {
+        "label" : "Lucy Shapiro",
+        "uri" : "http://dbpedia.org/resource/Lucy_Shapiro"
+      }, {
+        "label" : "Lucy Stone",
+        "uri" : "http://dbpedia.org/resource/Lucy_Stone"
+      }, {
+        "label" : "Lucy Hayes",
+        "uri" : "http://dbpedia.org/resource/Lucy_Webb_Hayes"
+      }, {
+        "label" : "Lucía Topolansky",
+        "uri" : "http://dbpedia.org/resource/Lucía_Topolansky"
+      }, {
+        "label" : "Ludger Stühlmeyer",
+        "uri" : "http://dbpedia.org/resource/Ludger_Stühlmeyer"
+      }, {
+        "label" : "Ludmila Mikaël",
+        "uri" : "http://dbpedia.org/resource/Ludmila_Mikaël"
+      }, {
+        "label" : "Ludmilla von Podiebrad",
+        "uri" : "http://dbpedia.org/resource/Ludmila_of_Poděbrady"
+      }, {
+        "label" : "Ludmilla von Böhmen (um 1170)",
+        "uri" : "http://dbpedia.org/resource/Ludmilla_of_Bohemia"
+      }, {
+        "label" : "Ludovic Kennedy",
+        "uri" : "http://dbpedia.org/resource/Ludovic_Kennedy"
+      }, {
+        "label" : "Ludovico III. Gonzaga",
+        "uri" : "http://dbpedia.org/resource/Ludovico_III_Gonzaga,_Marquis_of_Mantua"
+      }, {
+        "label" : "Ludovico Manin",
+        "uri" : "http://dbpedia.org/resource/Ludovico_Manin"
+      }, {
+        "label" : "Ludovico Sforza",
+        "uri" : "http://dbpedia.org/resource/Ludovico_Sforza"
+      }, {
+        "label" : "Ludovica Margaretha von Zweibrücken-Bitsch",
+        "uri" : "http://dbpedia.org/resource/Ludowika_Margaretha_of_Zweibrücken-Bitsch"
+      }, {
+        "label" : "Ludwig Bemelmans",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Bemelmans"
+      }, {
+        "label" : "Ludwig Erhard",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Erhard"
+      }, {
+        "label" : "Ludwig III. (Bayern)",
+        "uri" : "http://dbpedia.org/resource/Ludwig_III_of_Bavaria"
+      }, {
+        "label" : "Ludwig I. (Bayern)",
+        "uri" : "http://dbpedia.org/resource/Ludwig_I_of_Bavaria"
+      }, {
+        "label" : "Luise Charlotte Radziwill",
+        "uri" : "http://dbpedia.org/resource/Ludwika_Karolina_Radziwiłł"
+      }, {
+        "label" : "Ludwika Paleta",
+        "uri" : "http://dbpedia.org/resource/Ludwika_Paleta"
+      }, {
+        "label" : "Luděk Munzar",
+        "uri" : "http://dbpedia.org/resource/Luděk_Munzar"
+      }, {
+        "label" : "Aurélien-Marie Lugné-Poe",
+        "uri" : "http://dbpedia.org/resource/Lugné-Poe"
+      }, {
+        "label" : "Luis A. Ferré",
+        "uri" : "http://dbpedia.org/resource/Luis_A._Ferré"
+      }, {
+        "label" : "Luis Adolfo Siles Salinas",
+        "uri" : "http://dbpedia.org/resource/Luis_Adolfo_Siles_Salinas"
+      }, {
+        "label" : "Luis Alberto Lacalle Herrera",
+        "uri" : "http://dbpedia.org/resource/Luis_Alberto_Lacalle"
+      }, {
+        "label" : "Luis Alberto Monge Álvarez",
+        "uri" : "http://dbpedia.org/resource/Luis_Alberto_Monge"
+      }, {
+        "label" : "Luis Alcoriza",
+        "uri" : "http://dbpedia.org/resource/Luis_Alcoriza"
+      }, {
+        "label" : "Luis Batlle Berres",
+        "uri" : "http://dbpedia.org/resource/Luis_Batlle_Berres"
+      }, {
+        "label" : "Luis Buñuel",
+        "uri" : "http://dbpedia.org/resource/Luis_Buñuel"
+      }, {
+        "label" : "Luis Camnitzer",
+        "uri" : "http://dbpedia.org/resource/Luis_Camnitzer"
+      }, {
+        "label" : "Luis Donaldo Colosio",
+        "uri" : "http://dbpedia.org/resource/Luis_Donaldo_Colosio"
+      }, {
+        "label" : "Luis Fonsi",
+        "uri" : "http://dbpedia.org/resource/Luis_Fonsi"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "22",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "APP",
+    "sentences" : [ "Persons verheiratet mit $x" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Lowell Bergman",
+        "uri" : "http://dbpedia.org/resource/Lowell_Bergman"
+      }, {
+        "label" : "Lowell Sherman",
+        "uri" : "http://dbpedia.org/resource/Lowell_Sherman"
+      }, {
+        "label" : "Lu Chuan",
+        "uri" : "http://dbpedia.org/resource/Lu_Chuan"
+      }, {
+        "label" : "Lu Kang",
+        "uri" : "http://dbpedia.org/resource/Lu_Kang_(Three_Kingdoms)"
+      }, {
+        "label" : "Lu Xun",
+        "uri" : "http://dbpedia.org/resource/Lu_Xun"
+      }, {
+        "label" : "Lu Xun (Drei Reiche)",
+        "uri" : "http://dbpedia.org/resource/Lu_Xun_(Three_Kingdoms)"
+      }, {
+        "label" : "Luana Patten",
+        "uri" : "http://dbpedia.org/resource/Luana_Patten"
+      }, {
+        "label" : "Luc Besson",
+        "uri" : "http://dbpedia.org/resource/Luc_Besson"
+      }, {
+        "label" : "Luc Tuymans",
+        "uri" : "http://dbpedia.org/resource/Luc_Tuymans"
+      }, {
+        "label" : "Lucas Monteverde",
+        "uri" : "http://dbpedia.org/resource/Lucas_Monteverde"
+      }, {
+        "label" : "Lucas Neff",
+        "uri" : "http://dbpedia.org/resource/Lucas_Neff"
+      }, {
+        "label" : "Lucette Lagnado",
+        "uri" : "http://dbpedia.org/resource/Lucette_Lagnado"
+      }, {
+        "label" : "Lucia Bosè",
+        "uri" : "http://dbpedia.org/resource/Lucia_Bosè"
+      }, {
+        "label" : "Lucia Migliaccio",
+        "uri" : "http://dbpedia.org/resource/Lucia_Migliaccio"
+      }, {
+        "label" : "Lucia Moholy",
+        "uri" : "http://dbpedia.org/resource/Lucia_Moholy"
+      }, {
+        "label" : "Lucia Popp",
+        "uri" : "http://dbpedia.org/resource/Lucia_Popp"
+      }, {
+        "label" : "Lucian Freud",
+        "uri" : "http://dbpedia.org/resource/Lucian_Freud"
+      }, {
+        "label" : "Luciana Castellina",
+        "uri" : "http://dbpedia.org/resource/Luciana_Castellina"
+      }, {
+        "label" : "Luciana Paluzzi",
+        "uri" : "http://dbpedia.org/resource/Luciana_Paluzzi"
+      }, {
+        "label" : "Luciana Pedraza",
+        "uri" : "http://dbpedia.org/resource/Luciana_Pedraza"
+      }, {
+        "label" : "Luciano Ercoli",
+        "uri" : "http://dbpedia.org/resource/Luciano_Ercoli"
+      }, {
+        "label" : "Luciano Martino",
+        "uri" : "http://dbpedia.org/resource/Luciano_Martino"
+      }, {
+        "label" : "Lucie Arnaz",
+        "uri" : "http://dbpedia.org/resource/Lucie_Arnaz"
+      }, {
+        "label" : "Lucie Aubrac",
+        "uri" : "http://dbpedia.org/resource/Lucie_Aubrac"
+      }, {
+        "label" : "Lucie Mannheim",
+        "uri" : "http://dbpedia.org/resource/Lucie_Mannheim"
+      }, {
+        "label" : "Lucien E. Blackwell",
+        "uri" : "http://dbpedia.org/resource/Lucien_Blackwell"
+      }, {
+        "label" : "Lucien Bonaparte",
+        "uri" : "http://dbpedia.org/resource/Lucien_Bonaparte"
+      }, {
+        "label" : "Lucien Pissarro",
+        "uri" : "http://dbpedia.org/resource/Lucien_Pissarro"
+      }, {
+        "label" : "Lucienne Boyer",
+        "uri" : "http://dbpedia.org/resource/Lucienne_Boyer"
+      }, {
+        "label" : "Lucienne Day",
+        "uri" : "http://dbpedia.org/resource/Lucienne_Day"
+      }, {
+        "label" : "Lucile Browne",
+        "uri" : "http://dbpedia.org/resource/Lucile_Browne"
+      }, {
+        "label" : "Lucile Hadzihalilovic",
+        "uri" : "http://dbpedia.org/resource/Lucile_Hadžihalilović"
+      }, {
+        "label" : "Lucile Watson",
+        "uri" : "http://dbpedia.org/resource/Lucile_Watson"
+      }, {
+        "label" : "Lucilla",
+        "uri" : "http://dbpedia.org/resource/Lucilla"
+      }, {
+        "label" : "Lucille Ball",
+        "uri" : "http://dbpedia.org/resource/Lucille_Ball"
+      }, {
+        "label" : "Lucina da Costa Gomez-Matheeuws",
+        "uri" : "http://dbpedia.org/resource/Lucina_da_Costa_Gomez-Matheeuws"
+      }, {
+        "label" : "Lucinda Jenney",
+        "uri" : "http://dbpedia.org/resource/Lucinda_Jenney"
+      }, {
+        "label" : "Lucius Aelius Caesar",
+        "uri" : "http://dbpedia.org/resource/Lucius_Aelius"
+      }, {
+        "label" : "Lucius Marcius Philippus (Suffektkonsul 38 v. Chr.)",
+        "uri" : "http://dbpedia.org/resource/Lucius_Marcius_Philippus_(consul_38_BC)"
+      }, {
+        "label" : "Lucius Marcius Philippus (Konsul 56 v. Chr.)",
+        "uri" : "http://dbpedia.org/resource/Lucius_Marcius_Philippus_(consul_56_BC)"
+      }, {
+        "label" : "Lucius Tarquinius Superbus",
+        "uri" : "http://dbpedia.org/resource/Lucius_Tarquinius_Superbus"
+      }, {
+        "label" : "Lucius Verus",
+        "uri" : "http://dbpedia.org/resource/Lucius_Verus"
+      }, {
+        "label" : "Lucius Volusius Saturninus (Suffektkonsul 12 v. Chr.)",
+        "uri" : "http://dbpedia.org/resource/Lucius_Volusius_Saturninus_(suffect_consul_12_BC)"
+      }, {
+        "label" : "Lucretia Garfield",
+        "uri" : "http://dbpedia.org/resource/Lucretia_Garfield"
+      }, {
+        "label" : "Lucretia Mott",
+        "uri" : "http://dbpedia.org/resource/Lucretia_Mott"
+      }, {
+        "label" : "Lucrezia Borgia",
+        "uri" : "http://dbpedia.org/resource/Lucrezia_Borgia"
+      }, {
+        "label" : "Lucrezia Tornabuoni",
+        "uri" : "http://dbpedia.org/resource/Lucrezia_Tornabuoni"
+      }, {
+        "label" : "Lucrezia di Cosimo de’ Medici",
+        "uri" : "http://dbpedia.org/resource/Lucrezia_de'_Medici,_Duchess_of_Ferrara"
+      }, {
+        "label" : "Lucrezia di Lorenzo de’ Medici",
+        "uri" : "http://dbpedia.org/resource/Lucrezia_de'_Medici_(1470–1553)"
+      }, {
+        "label" : "Lucius Licinius Lucullus",
+        "uri" : "http://dbpedia.org/resource/Lucullus"
+      }, {
+        "label" : "Lucy Christiana Duff Gordon",
+        "uri" : "http://dbpedia.org/resource/Lucy,_Lady_Duff-Gordon"
+      }, {
+        "label" : "Lucy-Jo Hudson",
+        "uri" : "http://dbpedia.org/resource/Lucy-Jo_Hudson"
+      }, {
+        "label" : "Lucy Aharish",
+        "uri" : "http://dbpedia.org/resource/Lucy_Aharish"
+      }, {
+        "label" : "Lucy Akhurst",
+        "uri" : "http://dbpedia.org/resource/Lucy_Akhurst"
+      }, {
+        "label" : "Lucy Baxley",
+        "uri" : "http://dbpedia.org/resource/Lucy_Baxley"
+      }, {
+        "label" : "Lucy Brown",
+        "uri" : "http://dbpedia.org/resource/Lucy_Brown"
+      }, {
+        "label" : "Lucy Cohu",
+        "uri" : "http://dbpedia.org/resource/Lucy_Cohu"
+      }, {
+        "label" : "Lucy Davis (Schauspielerin)",
+        "uri" : "http://dbpedia.org/resource/Lucy_Davis"
+      }, {
+        "label" : "Lucy Doraine",
+        "uri" : "http://dbpedia.org/resource/Lucy_Doraine"
+      }, {
+        "label" : "Lucy Ellmann",
+        "uri" : "http://dbpedia.org/resource/Lucy_Ellmann"
+      }, {
+        "label" : "Lucy Gaskell",
+        "uri" : "http://dbpedia.org/resource/Lucy_Gaskell"
+      }, {
+        "label" : "Lucy Kellaway",
+        "uri" : "http://dbpedia.org/resource/Lucy_Kellaway"
+      }, {
+        "label" : "Lucy Lawless",
+        "uri" : "http://dbpedia.org/resource/Lucy_Lawless"
+      }, {
+        "label" : "Lucy Madox Brown",
+        "uri" : "http://dbpedia.org/resource/Lucy_Madox_Brown"
+      }, {
+        "label" : "Lucy Mercer",
+        "uri" : "http://dbpedia.org/resource/Lucy_Mercer_Rutherfurd"
+      }, {
+        "label" : "Lucy Nethsingha",
+        "uri" : "http://dbpedia.org/resource/Lucy_Nethsingha"
+      }, {
+        "label" : "Lucy Neville-Rolfe, Baroness Neville-Rolfe",
+        "uri" : "http://dbpedia.org/resource/Lucy_Neville-Rolfe"
+      }, {
+        "label" : "Lucy Parsons",
+        "uri" : "http://dbpedia.org/resource/Lucy_Parsons"
+      }, {
+        "label" : "Lucy Scott",
+        "uri" : "http://dbpedia.org/resource/Lucy_Scott"
+      }, {
+        "label" : "Lucy Shapiro",
+        "uri" : "http://dbpedia.org/resource/Lucy_Shapiro"
+      }, {
+        "label" : "Lucy Stone",
+        "uri" : "http://dbpedia.org/resource/Lucy_Stone"
+      }, {
+        "label" : "Lucy Hayes",
+        "uri" : "http://dbpedia.org/resource/Lucy_Webb_Hayes"
+      }, {
+        "label" : "Lucía Topolansky",
+        "uri" : "http://dbpedia.org/resource/Lucía_Topolansky"
+      }, {
+        "label" : "Ludger Stühlmeyer",
+        "uri" : "http://dbpedia.org/resource/Ludger_Stühlmeyer"
+      }, {
+        "label" : "Ludmila Mikaël",
+        "uri" : "http://dbpedia.org/resource/Ludmila_Mikaël"
+      }, {
+        "label" : "Ludmilla von Podiebrad",
+        "uri" : "http://dbpedia.org/resource/Ludmila_of_Poděbrady"
+      }, {
+        "label" : "Ludmilla von Böhmen (um 1170)",
+        "uri" : "http://dbpedia.org/resource/Ludmilla_of_Bohemia"
+      }, {
+        "label" : "Ludovic Kennedy",
+        "uri" : "http://dbpedia.org/resource/Ludovic_Kennedy"
+      }, {
+        "label" : "Ludovico III. Gonzaga",
+        "uri" : "http://dbpedia.org/resource/Ludovico_III_Gonzaga,_Marquis_of_Mantua"
+      }, {
+        "label" : "Ludovico Manin",
+        "uri" : "http://dbpedia.org/resource/Ludovico_Manin"
+      }, {
+        "label" : "Ludovico Sforza",
+        "uri" : "http://dbpedia.org/resource/Ludovico_Sforza"
+      }, {
+        "label" : "Ludovica Margaretha von Zweibrücken-Bitsch",
+        "uri" : "http://dbpedia.org/resource/Ludowika_Margaretha_of_Zweibrücken-Bitsch"
+      }, {
+        "label" : "Ludwig Bemelmans",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Bemelmans"
+      }, {
+        "label" : "Ludwig Erhard",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Erhard"
+      }, {
+        "label" : "Ludwig III. (Bayern)",
+        "uri" : "http://dbpedia.org/resource/Ludwig_III_of_Bavaria"
+      }, {
+        "label" : "Ludwig I. (Bayern)",
+        "uri" : "http://dbpedia.org/resource/Ludwig_I_of_Bavaria"
+      }, {
+        "label" : "Luise Charlotte Radziwill",
+        "uri" : "http://dbpedia.org/resource/Ludwika_Karolina_Radziwiłł"
+      }, {
+        "label" : "Ludwika Paleta",
+        "uri" : "http://dbpedia.org/resource/Ludwika_Paleta"
+      }, {
+        "label" : "Luděk Munzar",
+        "uri" : "http://dbpedia.org/resource/Luděk_Munzar"
+      }, {
+        "label" : "Aurélien-Marie Lugné-Poe",
+        "uri" : "http://dbpedia.org/resource/Lugné-Poe"
+      }, {
+        "label" : "Luis A. Ferré",
+        "uri" : "http://dbpedia.org/resource/Luis_A._Ferré"
+      }, {
+        "label" : "Luis Adolfo Siles Salinas",
+        "uri" : "http://dbpedia.org/resource/Luis_Adolfo_Siles_Salinas"
+      }, {
+        "label" : "Luis Alberto Lacalle Herrera",
+        "uri" : "http://dbpedia.org/resource/Luis_Alberto_Lacalle"
+      }, {
+        "label" : "Luis Alberto Monge Álvarez",
+        "uri" : "http://dbpedia.org/resource/Luis_Alberto_Monge"
+      }, {
+        "label" : "Luis Alcoriza",
+        "uri" : "http://dbpedia.org/resource/Luis_Alcoriza"
+      }, {
+        "label" : "Luis Batlle Berres",
+        "uri" : "http://dbpedia.org/resource/Luis_Batlle_Berres"
+      }, {
+        "label" : "Luis Buñuel",
+        "uri" : "http://dbpedia.org/resource/Luis_Buñuel"
+      }, {
+        "label" : "Luis Camnitzer",
+        "uri" : "http://dbpedia.org/resource/Luis_Camnitzer"
+      }, {
+        "label" : "Luis Donaldo Colosio",
+        "uri" : "http://dbpedia.org/resource/Luis_Donaldo_Colosio"
+      }, {
+        "label" : "Luis Fonsi",
+        "uri" : "http://dbpedia.org/resource/Luis_Fonsi"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "23",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "APP",
+    "sentences" : [ "Welche fiktiver Charakters werden gespielt von ($x | PERSON_NP)?", "Welche fiktiver Charakters wurden gespielt von ($x | PERSON_NP)?", "Welcher fiktiver Charakter wird gespielt von ($x | PERSON_NP)?", "Welcher fiktiver Charakter wurde gespielt von ($x | PERSON_NP)?", "Wer wird gespielt von ($x | PERSON_NP)?", "Wer wurde gespielt von ($x | PERSON_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Lucas Black",
+        "uri" : "http://dbpedia.org/resource/Lucas_Black"
+      }, {
+        "label" : "Lucas Grabeel",
+        "uri" : "http://dbpedia.org/resource/Lucas_Grabeel"
+      }, {
+        "label" : "Lucas Jade Zumann",
+        "uri" : "http://dbpedia.org/resource/Lucas_Jade_Zumann"
+      }, {
+        "label" : "Lucas Till",
+        "uri" : "http://dbpedia.org/resource/Lucas_Till"
+      }, {
+        "label" : "Lucian Msamati",
+        "uri" : "http://dbpedia.org/resource/Lucian_Msamati"
+      }, {
+        "label" : "Luciana Carro",
+        "uri" : "http://dbpedia.org/resource/Luciana_Carro"
+      }, {
+        "label" : "Lucille Ball",
+        "uri" : "http://dbpedia.org/resource/Lucille_Ball"
+      }, {
+        "label" : "Lucy-Jo Hudson",
+        "uri" : "http://dbpedia.org/resource/Lucy-Jo_Hudson"
+      }, {
+        "label" : "Lucy Brown",
+        "uri" : "http://dbpedia.org/resource/Lucy_Brown"
+      }, {
+        "label" : "Lucy Davis (Schauspielerin)",
+        "uri" : "http://dbpedia.org/resource/Lucy_Davis"
+      }, {
+        "label" : "Lucy Gaskell",
+        "uri" : "http://dbpedia.org/resource/Lucy_Gaskell"
+      }, {
+        "label" : "Lucy Griffiths (Schauspielerin, 1986)",
+        "uri" : "http://dbpedia.org/resource/Lucy_Griffiths_(actress,_born_1986)"
+      }, {
+        "label" : "Lucy Hale",
+        "uri" : "http://dbpedia.org/resource/Lucy_Hale"
+      }, {
+        "label" : "Lucy Lawless",
+        "uri" : "http://dbpedia.org/resource/Lucy_Lawless"
+      }, {
+        "label" : "Lucy Liu",
+        "uri" : "http://dbpedia.org/resource/Lucy_Liu"
+      }, {
+        "label" : "Ludi Lin",
+        "uri" : "http://dbpedia.org/resource/Ludi_Lin"
+      }, {
+        "label" : "Ludivine Sagnier",
+        "uri" : "http://dbpedia.org/resource/Ludivine_Sagnier"
+      }, {
+        "label" : "Luke Evans",
+        "uri" : "http://dbpedia.org/resource/Luke_Evans"
+      }, {
+        "label" : "Luke Kleintank",
+        "uri" : "http://dbpedia.org/resource/Luke_Kleintank"
+      }, {
+        "label" : "Luke Macfarlane",
+        "uri" : "http://dbpedia.org/resource/Luke_Macfarlane"
+      }, {
+        "label" : "Luke Mitchell",
+        "uri" : "http://dbpedia.org/resource/Luke_Mitchell"
+      }, {
+        "label" : "Luke Pasqualino",
+        "uri" : "http://dbpedia.org/resource/Luke_Pasqualino"
+      }, {
+        "label" : "Luke Perry",
+        "uri" : "http://dbpedia.org/resource/Luke_Perry"
+      }, {
+        "label" : "Luke Roberts (Schauspieler)",
+        "uri" : "http://dbpedia.org/resource/Luke_Roberts_(actor)"
+      }, {
+        "label" : "Lulu (Sängerin)",
+        "uri" : "http://dbpedia.org/resource/Lulu_(singer)"
+      }, {
+        "label" : "Lupita Nyong’o",
+        "uri" : "http://dbpedia.org/resource/Lupita_Nyong'o"
+      }, {
+        "label" : "Lydia Wilson",
+        "uri" : "http://dbpedia.org/resource/Lydia_Wilson"
+      }, {
+        "label" : "Lyndsy Fonseca",
+        "uri" : "http://dbpedia.org/resource/Lyndsy_Fonseca"
+      }, {
+        "label" : "Lynn Redgrave",
+        "uri" : "http://dbpedia.org/resource/Lynn_Redgrave"
+      }, {
+        "label" : "Lynne Perrie",
+        "uri" : "http://dbpedia.org/resource/Lynne_Perrie"
+      }, {
+        "label" : "Lynsey Bartilson",
+        "uri" : "http://dbpedia.org/resource/Lynsey_Bartilson"
+      }, {
+        "label" : "Lysette Anthony",
+        "uri" : "http://dbpedia.org/resource/Lysette_Anthony"
+      }, {
+        "label" : "M*A*S*H (Fernsehserie)",
+        "uri" : "http://dbpedia.org/resource/M*A*S*H_(TV_series)"
+      }, {
+        "label" : "M. C. Gainey",
+        "uri" : "http://dbpedia.org/resource/M._C._Gainey"
+      }, {
+        "label" : "M. Pokora",
+        "uri" : "http://dbpedia.org/resource/M._Pokora"
+      }, {
+        "label" : "MASH (Film)",
+        "uri" : "http://dbpedia.org/resource/MASH_(film)"
+      }, {
+        "label" : "MacKenzie Mauzy",
+        "uri" : "http://dbpedia.org/resource/MacKenzie_Mauzy"
+      }, {
+        "label" : "Macdonald Carey",
+        "uri" : "http://dbpedia.org/resource/Macdonald_Carey"
+      }, {
+        "label" : "Mackenzie Crook",
+        "uri" : "http://dbpedia.org/resource/Mackenzie_Crook"
+      }, {
+        "label" : "Mad Max II – Der Vollstrecker",
+        "uri" : "http://dbpedia.org/resource/Mad_Max_2"
+      }, {
+        "label" : "Mad Max – Jenseits der Donnerkuppel",
+        "uri" : "http://dbpedia.org/resource/Mad_Max_Beyond_Thunderdome"
+      }, {
+        "label" : "Madelaine Petsch",
+        "uri" : "http://dbpedia.org/resource/Madelaine_Petsch"
+      }, {
+        "label" : "Madeleine West",
+        "uri" : "http://dbpedia.org/resource/Madeleine_West"
+      }, {
+        "label" : "Madeline Kahn",
+        "uri" : "http://dbpedia.org/resource/Madeline_Kahn"
+      }, {
+        "label" : "Madhuri Dixit",
+        "uri" : "http://dbpedia.org/resource/Madhuri_Dixit"
+      }, {
+        "label" : "Madison Davenport",
+        "uri" : "http://dbpedia.org/resource/Madison_Davenport"
+      }, {
+        "label" : "Madison Square Garden",
+        "uri" : "http://dbpedia.org/resource/Madison_Square_Garden"
+      }, {
+        "label" : "Mads Mikkelsen",
+        "uri" : "http://dbpedia.org/resource/Mads_Mikkelsen"
+      }, {
+        "label" : "Mae Clarke",
+        "uri" : "http://dbpedia.org/resource/Mae_Clarke"
+      }, {
+        "label" : "Mae Questel",
+        "uri" : "http://dbpedia.org/resource/Mae_Questel"
+      }, {
+        "label" : "Magda Szubanski",
+        "uri" : "http://dbpedia.org/resource/Magda_Szubanski"
+      }, {
+        "label" : "Maggie Grace",
+        "uri" : "http://dbpedia.org/resource/Maggie_Grace"
+      }, {
+        "label" : "Maggie Gyllenhaal",
+        "uri" : "http://dbpedia.org/resource/Maggie_Gyllenhaal"
+      }, {
+        "label" : "Maggie Lawson",
+        "uri" : "http://dbpedia.org/resource/Maggie_Lawson"
+      }, {
+        "label" : "Maggie Q",
+        "uri" : "http://dbpedia.org/resource/Maggie_Q"
+      }, {
+        "label" : "Maggie Smith",
+        "uri" : "http://dbpedia.org/resource/Maggie_Smith"
+      }, {
+        "label" : "Achille Fould",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Adolf Pichler",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Adolf Sandberger",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Adolphe Noël des Vergers",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Adolphe Sax",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Alan Garner",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Albert Schreiner (Geologe)",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Alexander Haggerty Krappe",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Alexandra von Dänemark",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Alexei Nikolajewitsch Tolstoi",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Alfred Francis Přibram",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Alfred Hillebrandt",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Alfred M. Freudenthal",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Alfredo Jaar",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Alphonse Jeannet",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Amanda Brugel",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Andreas Cellarius (Astronom)",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "André Masséna",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Annedore Kleist",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Anton Seder",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Antonello Manacorda",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Antonio Orbe",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Armand de Caulaincourt",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "August Stöber",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Baldus de Ubaldis",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Barbara Hammer (Filmemacherin)",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Barbara Wolff (Fotografin)",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Bartel Leendert van der Waerden",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Benny Barth",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Bernhard Sigmund Schultze",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Beth Carvalho",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Bora Ćosić",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Bruno Nicolai",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Carlo Pellion di Persano",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Carlos Lyra",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Cate Shortland",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Charles Edmond Kayser",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Charles Gounod",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Charles Klein (Regisseur)",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Charles Louis Fleury Panckoucke",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Charles Motte",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Charles Perrault",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Chilperich II.",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Christian Friedrich Richter",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "24",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "APP",
+    "sentences" : [ "fiktiver Charakters gespielt von $x" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Lucas Black",
+        "uri" : "http://dbpedia.org/resource/Lucas_Black"
+      }, {
+        "label" : "Lucas Grabeel",
+        "uri" : "http://dbpedia.org/resource/Lucas_Grabeel"
+      }, {
+        "label" : "Lucas Jade Zumann",
+        "uri" : "http://dbpedia.org/resource/Lucas_Jade_Zumann"
+      }, {
+        "label" : "Lucas Till",
+        "uri" : "http://dbpedia.org/resource/Lucas_Till"
+      }, {
+        "label" : "Lucian Msamati",
+        "uri" : "http://dbpedia.org/resource/Lucian_Msamati"
+      }, {
+        "label" : "Luciana Carro",
+        "uri" : "http://dbpedia.org/resource/Luciana_Carro"
+      }, {
+        "label" : "Lucille Ball",
+        "uri" : "http://dbpedia.org/resource/Lucille_Ball"
+      }, {
+        "label" : "Lucy-Jo Hudson",
+        "uri" : "http://dbpedia.org/resource/Lucy-Jo_Hudson"
+      }, {
+        "label" : "Lucy Brown",
+        "uri" : "http://dbpedia.org/resource/Lucy_Brown"
+      }, {
+        "label" : "Lucy Davis (Schauspielerin)",
+        "uri" : "http://dbpedia.org/resource/Lucy_Davis"
+      }, {
+        "label" : "Lucy Gaskell",
+        "uri" : "http://dbpedia.org/resource/Lucy_Gaskell"
+      }, {
+        "label" : "Lucy Griffiths (Schauspielerin, 1986)",
+        "uri" : "http://dbpedia.org/resource/Lucy_Griffiths_(actress,_born_1986)"
+      }, {
+        "label" : "Lucy Hale",
+        "uri" : "http://dbpedia.org/resource/Lucy_Hale"
+      }, {
+        "label" : "Lucy Lawless",
+        "uri" : "http://dbpedia.org/resource/Lucy_Lawless"
+      }, {
+        "label" : "Lucy Liu",
+        "uri" : "http://dbpedia.org/resource/Lucy_Liu"
+      }, {
+        "label" : "Ludi Lin",
+        "uri" : "http://dbpedia.org/resource/Ludi_Lin"
+      }, {
+        "label" : "Ludivine Sagnier",
+        "uri" : "http://dbpedia.org/resource/Ludivine_Sagnier"
+      }, {
+        "label" : "Luke Evans",
+        "uri" : "http://dbpedia.org/resource/Luke_Evans"
+      }, {
+        "label" : "Luke Kleintank",
+        "uri" : "http://dbpedia.org/resource/Luke_Kleintank"
+      }, {
+        "label" : "Luke Macfarlane",
+        "uri" : "http://dbpedia.org/resource/Luke_Macfarlane"
+      }, {
+        "label" : "Luke Mitchell",
+        "uri" : "http://dbpedia.org/resource/Luke_Mitchell"
+      }, {
+        "label" : "Luke Pasqualino",
+        "uri" : "http://dbpedia.org/resource/Luke_Pasqualino"
+      }, {
+        "label" : "Luke Perry",
+        "uri" : "http://dbpedia.org/resource/Luke_Perry"
+      }, {
+        "label" : "Luke Roberts (Schauspieler)",
+        "uri" : "http://dbpedia.org/resource/Luke_Roberts_(actor)"
+      }, {
+        "label" : "Lulu (Sängerin)",
+        "uri" : "http://dbpedia.org/resource/Lulu_(singer)"
+      }, {
+        "label" : "Lupita Nyong’o",
+        "uri" : "http://dbpedia.org/resource/Lupita_Nyong'o"
+      }, {
+        "label" : "Lydia Wilson",
+        "uri" : "http://dbpedia.org/resource/Lydia_Wilson"
+      }, {
+        "label" : "Lyndsy Fonseca",
+        "uri" : "http://dbpedia.org/resource/Lyndsy_Fonseca"
+      }, {
+        "label" : "Lynn Redgrave",
+        "uri" : "http://dbpedia.org/resource/Lynn_Redgrave"
+      }, {
+        "label" : "Lynne Perrie",
+        "uri" : "http://dbpedia.org/resource/Lynne_Perrie"
+      }, {
+        "label" : "Lynsey Bartilson",
+        "uri" : "http://dbpedia.org/resource/Lynsey_Bartilson"
+      }, {
+        "label" : "Lysette Anthony",
+        "uri" : "http://dbpedia.org/resource/Lysette_Anthony"
+      }, {
+        "label" : "M*A*S*H (Fernsehserie)",
+        "uri" : "http://dbpedia.org/resource/M*A*S*H_(TV_series)"
+      }, {
+        "label" : "M. C. Gainey",
+        "uri" : "http://dbpedia.org/resource/M._C._Gainey"
+      }, {
+        "label" : "M. Pokora",
+        "uri" : "http://dbpedia.org/resource/M._Pokora"
+      }, {
+        "label" : "MASH (Film)",
+        "uri" : "http://dbpedia.org/resource/MASH_(film)"
+      }, {
+        "label" : "MacKenzie Mauzy",
+        "uri" : "http://dbpedia.org/resource/MacKenzie_Mauzy"
+      }, {
+        "label" : "Macdonald Carey",
+        "uri" : "http://dbpedia.org/resource/Macdonald_Carey"
+      }, {
+        "label" : "Mackenzie Crook",
+        "uri" : "http://dbpedia.org/resource/Mackenzie_Crook"
+      }, {
+        "label" : "Mad Max II – Der Vollstrecker",
+        "uri" : "http://dbpedia.org/resource/Mad_Max_2"
+      }, {
+        "label" : "Mad Max – Jenseits der Donnerkuppel",
+        "uri" : "http://dbpedia.org/resource/Mad_Max_Beyond_Thunderdome"
+      }, {
+        "label" : "Madelaine Petsch",
+        "uri" : "http://dbpedia.org/resource/Madelaine_Petsch"
+      }, {
+        "label" : "Madeleine West",
+        "uri" : "http://dbpedia.org/resource/Madeleine_West"
+      }, {
+        "label" : "Madeline Kahn",
+        "uri" : "http://dbpedia.org/resource/Madeline_Kahn"
+      }, {
+        "label" : "Madhuri Dixit",
+        "uri" : "http://dbpedia.org/resource/Madhuri_Dixit"
+      }, {
+        "label" : "Madison Davenport",
+        "uri" : "http://dbpedia.org/resource/Madison_Davenport"
+      }, {
+        "label" : "Madison Square Garden",
+        "uri" : "http://dbpedia.org/resource/Madison_Square_Garden"
+      }, {
+        "label" : "Mads Mikkelsen",
+        "uri" : "http://dbpedia.org/resource/Mads_Mikkelsen"
+      }, {
+        "label" : "Mae Clarke",
+        "uri" : "http://dbpedia.org/resource/Mae_Clarke"
+      }, {
+        "label" : "Mae Questel",
+        "uri" : "http://dbpedia.org/resource/Mae_Questel"
+      }, {
+        "label" : "Magda Szubanski",
+        "uri" : "http://dbpedia.org/resource/Magda_Szubanski"
+      }, {
+        "label" : "Maggie Grace",
+        "uri" : "http://dbpedia.org/resource/Maggie_Grace"
+      }, {
+        "label" : "Maggie Gyllenhaal",
+        "uri" : "http://dbpedia.org/resource/Maggie_Gyllenhaal"
+      }, {
+        "label" : "Maggie Lawson",
+        "uri" : "http://dbpedia.org/resource/Maggie_Lawson"
+      }, {
+        "label" : "Maggie Q",
+        "uri" : "http://dbpedia.org/resource/Maggie_Q"
+      }, {
+        "label" : "Maggie Smith",
+        "uri" : "http://dbpedia.org/resource/Maggie_Smith"
+      }, {
+        "label" : "Achille Fould",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Adolf Pichler",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Adolf Sandberger",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Adolphe Noël des Vergers",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Adolphe Sax",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Alan Garner",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Albert Schreiner (Geologe)",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Alexander Haggerty Krappe",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Alexandra von Dänemark",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Alexei Nikolajewitsch Tolstoi",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Alfred Francis Přibram",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Alfred Hillebrandt",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Alfred M. Freudenthal",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Alfredo Jaar",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Alphonse Jeannet",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Amanda Brugel",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Andreas Cellarius (Astronom)",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "André Masséna",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Annedore Kleist",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Anton Seder",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Antonello Manacorda",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Antonio Orbe",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Armand de Caulaincourt",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "August Stöber",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Baldus de Ubaldis",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Barbara Hammer (Filmemacherin)",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Barbara Wolff (Fotografin)",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Bartel Leendert van der Waerden",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Benny Barth",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Bernhard Sigmund Schultze",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Beth Carvalho",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Bora Ćosić",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Bruno Nicolai",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Carlo Pellion di Persano",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Carlos Lyra",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Cate Shortland",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Charles Edmond Kayser",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Charles Gounod",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Charles Klein (Regisseur)",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Charles Louis Fleury Panckoucke",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Charles Motte",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Charles Perrault",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Chilperich II.",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
+      }, {
+        "label" : "Christian Friedrich Richter",
+        "uri" : "http://dbpedia.org/resource/Mahershala_Ali"
       } ]
     },
     "combination" : false

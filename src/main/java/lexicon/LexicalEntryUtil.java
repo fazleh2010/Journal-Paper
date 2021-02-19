@@ -22,6 +22,7 @@ import grammar.generator.helper.sentencetemplates.AnnotatedVerb;
 import grammar.sparql.Prefix;
 import grammar.sparql.SPARQLRequest;
 import grammar.sparql.SelectVariable;
+import grammar.structure.component.DomainOrRangeMorphologicalProperties;
 import grammar.structure.component.DomainOrRangeType;
 import grammar.structure.component.FrameType;
 import grammar.structure.component.Language;
@@ -40,15 +41,11 @@ import org.apache.logging.log4j.Logger;
 import util.exceptions.QueGGMissingFactoryClassException;
 
 import java.net.URI;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static grammar.sparql.Prefix.DBPEDIA;
 import static grammar.sparql.SPARQLRequest.SPARQL_ENDPOINT_URL;
-import java.util.NoSuchElementException;
 import static java.util.Objects.isNull;
 
 @Getter
@@ -98,6 +95,7 @@ public class LexicalEntryUtil {
      * @param subjectType the {@link SubjectType} of the current lexical entry
      * and sense.
      * @param language the current language
+     * @param number the current number (singular or plural)
      * @param annotatedNounOrQuestionWord
      * <p>
      * a noun or descendent class word that the output word should match to (by
@@ -107,9 +105,10 @@ public class LexicalEntryUtil {
      * @return the string representation of a {@link SubjectType} matching by
      * language and (if provided) by a noun's gender and number.
      */
-    public String getSubjectBySubjectType(
+    public String getSubjectBySubjectTypeAndNumber(
             SubjectType subjectType,
             Language language,
+            PropertyValue number,
             AnnotatedNounOrQuestionWord annotatedNounOrQuestionWord
     ) throws QueGGMissingFactoryClassException {
         String sbjType = "";
@@ -117,12 +116,21 @@ public class LexicalEntryUtil {
         List<AnnotatedNounOrQuestionWord> questionWords;
         questionWords = questionWordRepository
                 .findByLanguageAndSubjectType(language, subjectType);
+        if (questionWords.size() != 1 && language.equals(Language.DE)) {
+            questionWords = questionWordRepository
+                    .findByLanguageAndSubjectTypeAndNumberAndGender(
+                            language,
+                            subjectType,
+                            number,
+                            lexInfo.getPropertyValue(DomainOrRangeMorphologicalProperties.getMatchingGender(getConditionUriBySelectVariable(getSelectVariable())).toString().toLowerCase())
+                    );
+        }
         if (questionWords.size() != 1) {
             questionWords = questionWordRepository
                     .findByLanguageAndSubjectTypeAndNumberAndGender(
                             language,
                             subjectType,
-                            lexInfo.getPropertyValue("singular"),
+                            number,
                             lexInfo.getPropertyValue("commonGender")
                     );
         }

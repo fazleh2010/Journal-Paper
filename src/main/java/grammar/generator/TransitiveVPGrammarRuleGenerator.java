@@ -33,7 +33,7 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
     List<String> generatedSentences = new ArrayList<>();
 
     SubjectType subjectType = lexicalEntryUtil.getSubjectType(lexicalEntryUtil.getSelectVariable(),DomainOrRangeType.PERSON);
-    String qWord = lexicalEntryUtil.getSubjectBySubjectType(subjectType, getLanguage(), null);
+    String qWord = lexicalEntryUtil.getSubjectBySubjectTypeAndNumber(subjectType, getLanguage(), new LexInfo().getPropertyValue("singular"), null);
 
     List<AnnotatedVerb> annotatedVerbs = lexicalEntryUtil.parseLexicalEntryToAnnotatedVerbs();
     for (AnnotatedVerb annotatedVerb : annotatedVerbs) {
@@ -62,9 +62,10 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
       if (lexicalEntryUtil.hasInvalidDeterminerToken(lexicalEntryUtil.getSelectVariable())) {
         continue;
       }
-      String determiner = lexicalEntryUtil.getSubjectBySubjectType(
+      String determiner = lexicalEntryUtil.getSubjectBySubjectTypeAndNumber(
         SubjectType.INTERROGATIVE_DETERMINER,
         getLanguage(),
+        annotatedVerb.getNumber(),
         null
       );
       String determinerToken = getDeterminerTokenByNumber(annotatedVerb.getNumber(), conditionLabel, determiner);

@@ -1,0 +1,82 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_de a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :entwickeln ;
+  lemon:entry    :entwickelt ;
+  lemon:entry    :von .
+
+:entwickeln a          lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_entwickeln ;
+  lemon:otherForm      :form_entwickelt ;
+  lemon:otherForm      :form_entwickelte ;
+  lemon:synBehavior    :entwickeln_frame_transitive ;
+  lemon:sense          :entwickeln_ontomap .
+
+:form_entwickeln a        lemon:Form ;
+  lemon:writtenRep     "entwickeln"@de ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_entwickelt a   lemon:Form ;
+  lemon:writtenRep "entwickelt"@de ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_entwickelte a  lemon:Form ;
+  lemon:writtenRep "entwickelte"@de ;
+  lexinfo:tense    lexinfo:past .
+
+:entwickeln_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject           :entwickeln_subj ;
+  lexinfo:directObject      :entwickeln_obj .
+
+:entwickeln_ontomap a  lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :entwickeln_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/developer> ;
+  lemon:subjOfProp  :entwickeln_obj ;
+  lemon:objOfProp   :entwickeln_subj ;
+  lemon:condition   :entwickeln_condition .
+
+:entwickeln_condition a   lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Work> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Agent> .
+
+#see https://lemon-model.net/lemon-cookbook/node17.html
+
+:entwickelt a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_entwickelt_canonical ;
+  lemon:otherForm      :form_entwickelt_von ;
+  lemon:synBehavior    :entwickelt_frame_adjectivepp ;
+  lemon:sense          :entwickelt_ontomap .
+
+:form_entwickelt_canonical a lemon:Form ;
+  lemon:writtenRep          "entwickelt"@de .
+
+:form_entwickelt_von a   lemon:Form ;
+  lemon:writtenRep     "entwickelt"@de ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+:entwickelt_frame_adjectivepp a lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :entwickelt_subj ;
+  lexinfo:prepositionalAdjunct :entwickelt_obj .
+
+:entwickelt_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping  :entwickelt_ontomap ;
+  lemon:reference    <http://dbpedia.org/ontology/developer> ;
+  lemon:subjOfProp   :entwickelt_subj ;
+  lemon:objOfProp    :entwickelt_obj ;
+  lemon:condition    :entwickeln_condition .
+
+:entwickelt_obj lemon:marker :von .
+
+## Prepositions ##
+
+:von a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "von"@de ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

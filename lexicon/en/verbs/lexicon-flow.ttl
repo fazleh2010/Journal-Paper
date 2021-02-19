@@ -1,0 +1,70 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :to_flow ;
+  lemon:entry    :through .
+
+:to_flow a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_flow ;
+  lemon:otherForm      :form_flows ;
+  lemon:otherForm      :form_flow_plural ;
+  lemon:synBehavior    :flow_frame ;
+  lemon:sense          :flow_sense1 ;
+  lemon:sense          :flow_sense2 .
+
+:form_flow a           lemon:Form ;
+  lemon:writtenRep     "flow"@en ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_flows a      lemon:Form ;
+  lemon:writtenRep "flows"@en ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:form_flow_plural a lemon:Form ;
+  lemon:writtenRep  "flow"@en ;
+  lexinfo:number    lexinfo:plural ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:present .
+
+:flow_frame a                  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :flow_subj ;
+  lexinfo:prepositionalAdjunct :flow_obj .
+
+:flow_sense1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :flow_sense1 ;
+  lemon:reference   <http://dbpedia.org/ontology/city> ;
+  lemon:subjOfProp  :flow_subj ;
+  lemon:objOfProp   :flow_obj ;
+  lemon:condition   :flow_condition_city .
+
+:flow_condition_city a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/River> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/City> .
+
+:flow_sense2 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :flow_sense2 ;
+  lemon:reference   <http://dbpedia.org/ontology/country> ;
+  lemon:subjOfProp  :flow_subj ;
+  lemon:objOfProp   :flow_obj ;
+  lemon:condition   :flow_condition_country .
+
+:flow_condition_country a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/River> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Country> .
+
+:flow_obj lemon:marker :through .
+
+## Prepositions ##
+
+:through a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "through"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
