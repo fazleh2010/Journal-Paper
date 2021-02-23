@@ -1,0 +1,82 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+            lemon:language "en" ;
+            lemon:entry    :to_live_in;
+            lemon:entry    :lived_in ;
+            lemon:entry    :by .
+
+:to_live_in a           lemon:LexicalEntry ;
+             lexinfo:partOfSpeech lexinfo:verb ;
+             lemon:canonicalForm  :form_live_in;
+             lemon:otherForm      :form_lives_in ;
+             lemon:otherForm      :form_lived_in ;
+             lemon:synBehavior    :live_in_frame_transitive ;
+             lemon:sense          :live_in_ontomap .
+
+
+:form_live_in a         lemon:Form ;
+               lemon:writtenRep     "live_in"@en ;
+               lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_lives_in a    lemon:Form ;
+                 lemon:writtenRep "lives_in"@en ;
+                 lexinfo:person   lexinfo:thirdPerson .
+
+:form_lived_in a   lemon:Form ;
+                 lemon:writtenRep "lived_in"@en ;
+                 lexinfo:tense    lexinfo:past .
+
+:live_in_frame_transitive a lexinfo:TransitiveFrame ;
+                           lexinfo:subject          :live_in_subj ;
+                           lexinfo:live_inObject     :live_in_obj .
+
+:live_in_ontomap a   lemon:OntoMap, lemon:LexicalSense ;
+                  lemon:ontoMapping :live_in_ontomap ;
+                  lemon:reference   <http://dbpedia.org/ontology/populationTotal> ;
+                  lemon:subjOfProp  :live_in_obj ;
+                  lemon:objOfProp   :live_in_subj ;
+                  lemon:condition   :live_in_condition .
+
+:live_in_condition a    lemon:condition ;
+                    lemon:propertyDomain <http://dbpedia.org/ontology/Place> ;
+                    lemon:propertyRange  <http://dbpedia.org/ontology/number> .
+
+:lived_in a            lemon:LexicalEntry ;
+            lexinfo:partOfSpeech lexinfo:adjective ;
+            lemon:canonicalForm  :form_lived_in_canonical ;
+            lemon:otherForm      :form_lived_in_by ;
+            lemon:synBehavior    :lived_in_frame_adjectivepp ;
+            lemon:sense          :lived_in_ontomap .
+
+:form_lived_in_canonical a lemon:Form ;
+                           lemon:writtenRep         "lived_in"@en .
+
+:form_lived_in_by a    lemon:Form ;
+                    lemon:writtenRep     "lived_in"@en ;
+                    lexinfo:verbFormMood lexinfo:participle .
+
+
+:lived_in_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+                              lexinfo:copulativeSubject    :lived_in_subj ;
+                              lexinfo:prepositionalAdjunct :lived_in_obj .
+
+:lived_in_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+                    lemon:ontoMapping :lived_in_ontomap ;
+                    lemon:reference   <http://dbpedia.org/ontology/populationTotal> ;
+                    lemon:subjOfProp  :lived_in_subj ;
+                    lemon:objOfProp   :lived_in_obj ;
+                    lemon:condition   :live_in_condition .
+
+:lived_in_obj lemon:marker :by .
+
+## Prepositions ##
+
+:by a                  lemon:SynRoleMarker ;
+    lemon:canonicalForm  [ lemon:writtenRep "by"@en ] ;
+    lexinfo:partOfSpeech lexinfo:preposition .

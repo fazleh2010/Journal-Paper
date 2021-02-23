@@ -1,0 +1,82 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+            lemon:language "en" ;
+            lemon:entry    :to_marry_to;
+            lemon:entry    :married_to ;
+            lemon:entry    :by .
+
+:to_marry_to a           lemon:LexicalEntry ;
+             lexinfo:partOfSpeech lexinfo:verb ;
+             lemon:canonicalForm  :form_marry_to;
+             lemon:otherForm      :form_marries_to ;
+             lemon:otherForm      :form_married_to ;
+             lemon:synBehavior    :marry_to_frame_transitive ;
+             lemon:sense          :marry_to_ontomap .
+
+
+:form_marry_to a         lemon:Form ;
+               lemon:writtenRep     "marry_to"@en ;
+               lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_marries_to a    lemon:Form ;
+                lemon:writtenRep "marries_to"@en ;
+                lexinfo:person   lexinfo:thirdPerson .
+
+:form_married_to a   lemon:Form ;
+                 lemon:writtenRep "married_to"@en ;
+                 lexinfo:tense    lexinfo:past .
+
+:marry_to_frame_transitive a lexinfo:TransitiveFrame ;
+                           lexinfo:subject          :marry_to_subj ;
+                           lexinfo:marry_toObject     :marry_to_obj .
+
+:marry_to_ontomap a   lemon:OntoMap, lemon:LexicalSense ;
+                  lemon:ontoMapping :marry_to_ontomap ;
+                  lemon:reference   <http://dbpedia.org/ontology/spouse> ;
+                  lemon:subjOfProp  :marry_to_obj ;
+                  lemon:objOfProp   :marry_to_subj ;
+                  lemon:condition   :marry_to_condition .
+
+:marry_to_condition a    lemon:condition ;
+                    lemon:propertyDomain <http://dbpedia.org/ontology/Person> ;
+                    lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:married_to a            lemon:LexicalEntry ;
+            lexinfo:partOfSpeech lexinfo:adjective ;
+            lemon:canonicalForm  :form_married_to_canonical ;
+            lemon:otherForm      :form_married_to_by ;
+            lemon:synBehavior    :married_to_frame_adjectivepp ;
+            lemon:sense          :married_to_ontomap .
+
+:form_married_to_canonical a lemon:Form ;
+                           lemon:writtenRep         "married_to"@en .
+
+:form_married_to_by a    lemon:Form ;
+                    lemon:writtenRep     "married_to"@en ;
+                    lexinfo:verbFormMood lexinfo:participle .
+
+
+:married_to_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+                              lexinfo:copulativeSubject    :married_to_subj ;
+                              lexinfo:prepositionalAdjunct :married_to_obj .
+
+:married_to_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+                    lemon:ontoMapping :married_to_ontomap ;
+                    lemon:reference   <http://dbpedia.org/ontology/spouse> ;
+                    lemon:subjOfProp  :married_to_subj ;
+                    lemon:objOfProp   :married_to_obj ;
+                    lemon:condition   :marry_to_condition .
+
+:married_to_obj lemon:marker :by .
+
+## Prepositions ##
+
+:by a                  lemon:SynRoleMarker ;
+    lemon:canonicalForm  [ lemon:writtenRep "by"@en ] ;
+    lexinfo:partOfSpeech lexinfo:preposition .

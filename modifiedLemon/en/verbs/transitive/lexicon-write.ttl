@@ -1,0 +1,82 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+            lemon:language "en" ;
+            lemon:entry    :to_write;
+            lemon:entry    :wrote ;
+            lemon:entry    :by .
+
+:to_write a           lemon:LexicalEntry ;
+            lexinfo:partOfSpeech lexinfo:verb ;
+            lemon:canonicalForm  :form_write;
+            lemon:otherForm      :form_writes ;
+            lemon:otherForm      :form_wrote ;
+            lemon:synBehavior    :write_frame_transitive ;
+            lemon:sense          :write_ontomap .
+
+
+:form_write a         lemon:Form ;
+              lemon:writtenRep     "write"@en ;
+              lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_writes a    lemon:Form ;
+                lemon:writtenRep "writes"@en ;
+                lexinfo:person   lexinfo:thirdPerson .
+
+:form_wrote a   lemon:Form ;
+                lemon:writtenRep "wrote"@en ;
+                lexinfo:tense    lexinfo:past .
+
+:write_frame_transitive a lexinfo:TransitiveFrame ;
+                          lexinfo:subject          :write_subj ;
+                          lexinfo:writeObject     :write_obj .
+
+:write_ontomap a   lemon:OntoMap, lemon:LexicalSense ;
+                 lemon:ontoMapping :write_ontomap ;
+                 lemon:reference   <http://dbpedia.org/ontology/author> ;
+                 lemon:subjOfProp  :write_obj ;
+                 lemon:objOfProp   :write_subj ;
+                 lemon:condition   :write_condition .
+
+:write_condition a    lemon:condition ;
+                   lemon:propertyDomain <http://dbpedia.org/ontology/Book> ;
+                   lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:wrote a            lemon:LexicalEntry ;
+           lexinfo:partOfSpeech lexinfo:adjective ;
+           lemon:canonicalForm  :form_writed_canonical ;
+           lemon:otherForm      :form_writed_by ;
+           lemon:synBehavior    :writed_frame_adjectivepp ;
+           lemon:sense          :writed_ontomap .
+
+:form_wrote_canonical a lemon:Form ;
+                          lemon:writtenRep         "wrote"@en .
+
+:form_wrote_by a    lemon:Form ;
+                   lemon:writtenRep     "wrote"@en ;
+                   lexinfo:verbFormMood lexinfo:participle .
+
+
+:wrote_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+                             lexinfo:copulativeSubject    :writed_subj ;
+                             lexinfo:prepositionalAdjunct :writed_obj .
+
+:wrote_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+                   lemon:ontoMapping :writed_ontomap ;
+                   lemon:reference   <http://dbpedia.org/ontology/author> ;
+                   lemon:subjOfProp  :writed_subj ;
+                   lemon:objOfProp   :writed_obj ;
+                   lemon:condition   :write_condition .
+
+:wrote_obj lemon:marker :by .
+
+## Prepositions ##
+
+:by a                  lemon:SynRoleMarker ;
+    lemon:canonicalForm  [ lemon:writtenRep "by"@en ] ;
+    lexinfo:partOfSpeech lexinfo:preposition .

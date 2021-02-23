@@ -1,0 +1,82 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+            lemon:language "en" ;
+            lemon:entry    :to_star;
+            lemon:entry    :starred ;
+            lemon:entry    :by .
+
+:to_star a           lemon:LexicalEntry ;
+            lexinfo:partOfSpeech lexinfo:verb ;
+            lemon:canonicalForm  :form_star;
+            lemon:otherForm      :form_stars ;
+            lemon:otherForm      :form_starred ;
+            lemon:synBehavior    :star_frame_transitive ;
+            lemon:sense          :star_ontomap .
+
+
+:form_star a         lemon:Form ;
+              lemon:writtenRep     "star"@en ;
+              lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_stars a    lemon:Form ;
+               lemon:writtenRep "stars"@en ;
+               lexinfo:person   lexinfo:thirdPerson .
+
+:form_starred a   lemon:Form ;
+                lemon:writtenRep "starred"@en ;
+                lexinfo:tense    lexinfo:past .
+
+:star_frame_transitive a lexinfo:TransitiveFrame ;
+                          lexinfo:subject          :star_subj ;
+                          lexinfo:starObject     :star_obj .
+
+:star_ontomap a   lemon:OntoMap, lemon:LexicalSense ;
+                 lemon:ontoMapping :star_ontomap ;
+                 lemon:reference   <http://dbpedia.org/ontology/starring> ;
+                 lemon:subjOfProp  :star_obj ;
+                 lemon:objOfProp   :star_subj ;
+                 lemon:condition   :star_condition .
+
+:star_condition a    lemon:condition ;
+                   lemon:propertyDomain <http://dbpedia.org/ontology/Work> ;
+                   lemon:propertyRange  <http://dbpedia.org/ontology/Actor> .
+
+:starred a            lemon:LexicalEntry ;
+           lexinfo:partOfSpeech lexinfo:adjective ;
+           lemon:canonicalForm  :form_stard_canonical ;
+           lemon:otherForm      :form_stard_by ;
+           lemon:synBehavior    :stard_frame_adjectivepp ;
+           lemon:sense          :stard_ontomap .
+
+:form_starred_canonical a lemon:Form ;
+                          lemon:writtenRep         "starred"@en .
+
+:form_starred_by a    lemon:Form ;
+                   lemon:writtenRep     "starred"@en ;
+                   lexinfo:verbFormMood lexinfo:participle .
+
+
+:starred_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+                             lexinfo:copulativeSubject    :stard_subj ;
+                             lexinfo:prepositionalAdjunct :stard_obj .
+
+:starred_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+                   lemon:ontoMapping :stard_ontomap ;
+                   lemon:reference   <http://dbpedia.org/ontology/starring> ;
+                   lemon:subjOfProp  :stard_subj ;
+                   lemon:objOfProp   :stard_obj ;
+                   lemon:condition   :star_condition .
+
+:starred_obj lemon:marker :by .
+
+## Prepositions ##
+
+:by a                  lemon:SynRoleMarker ;
+    lemon:canonicalForm  [ lemon:writtenRep "by"@en ] ;
+    lexinfo:partOfSpeech lexinfo:preposition .

@@ -1,0 +1,82 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+            lemon:language "en" ;
+            lemon:entry    :to_succeed;
+            lemon:entry    :succeeded ;
+            lemon:entry    :by .
+
+:to_succeed a           lemon:LexicalEntry ;
+            lexinfo:partOfSpeech lexinfo:verb ;
+            lemon:canonicalForm  :form_succeed;
+            lemon:otherForm      :form_succeeds ;
+            lemon:otherForm      :form_succeeded ;
+            lemon:synBehavior    :succeed_frame_transitive ;
+            lemon:sense          :succeed_ontomap .
+
+
+:form_succeed a         lemon:Form ;
+              lemon:writtenRep     "succeed"@en ;
+              lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_succeeds a    lemon:Form ;
+                lemon:writtenRep "succeeds"@en ;
+                lexinfo:person   lexinfo:thirdPerson .
+
+:form_succeeded a   lemon:Form ;
+                lemon:writtenRep "succeeded"@en ;
+                lexinfo:tense    lexinfo:past .
+
+:succeed_frame_transitive a lexinfo:TransitiveFrame ;
+                          lexinfo:subject          :succeed_subj ;
+                          lexinfo:succeedObject     :succeed_obj .
+
+:succeed_ontomap a   lemon:OntoMap, lemon:LexicalSense ;
+                 lemon:ontoMapping :succeed_ontomap ;
+                 lemon:reference   <http://dbpedia.org/ontology/successor> ;
+                 lemon:subjOfProp  :succeed_obj ;
+                 lemon:objOfProp   :succeed_subj ;
+                 lemon:condition   :succeed_condition .
+
+:succeed_condition a    lemon:condition ;
+                   lemon:propertyDomain <http://dbpedia.org/ontology/Person> ;
+                   lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:succeeded a            lemon:LexicalEntry ;
+           lexinfo:partOfSpeech lexinfo:adjective ;
+           lemon:canonicalForm  :form_succeedd_canonical ;
+           lemon:otherForm      :form_succeedd_by ;
+           lemon:synBehavior    :succeedd_frame_adjectivepp ;
+           lemon:sense          :succeedd_ontomap .
+
+:form_succeeded_canonical a lemon:Form ;
+                          lemon:writtenRep         "succeeded"@en .
+
+:form_succeeded_by a    lemon:Form ;
+                   lemon:writtenRep     "succeeded"@en ;
+                   lexinfo:verbFormMood lexinfo:participle .
+
+
+:succeeded_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+                             lexinfo:copulativeSubject    :succeedd_subj ;
+                             lexinfo:prepositionalAdjunct :succeedd_obj .
+
+:succeeded_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+                   lemon:ontoMapping :succeedd_ontomap ;
+                   lemon:reference   <http://dbpedia.org/ontology/successor> ;
+                   lemon:subjOfProp  :succeedd_subj ;
+                   lemon:objOfProp   :succeedd_obj ;
+                   lemon:condition   :succeed_condition .
+
+:succeeded_obj lemon:marker :by .
+
+## Prepositions ##
+
+:by a                  lemon:SynRoleMarker ;
+    lemon:canonicalForm  [ lemon:writtenRep "by"@en ] ;
+    lexinfo:partOfSpeech lexinfo:preposition .

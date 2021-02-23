@@ -1,0 +1,82 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+            lemon:language "en" ;
+            lemon:entry    :to_produce;
+            lemon:entry    :produced ;
+            lemon:entry    :by .
+
+:to_produce a           lemon:LexicalEntry ;
+             lexinfo:partOfSpeech lexinfo:verb ;
+             lemon:canonicalForm  :form_produce;
+             lemon:otherForm      :form_produces ;
+             lemon:otherForm      :form_produced ;
+             lemon:synBehavior    :produce_frame_transitive ;
+             lemon:sense          :produce_ontomap .
+
+
+:form_produce a         lemon:Form ;
+               lemon:writtenRep     "produce"@en ;
+               lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_produces a    lemon:Form ;
+                 lemon:writtenRep "produces"@en ;
+                 lexinfo:person   lexinfo:thirdPerson .
+
+:form_produced a   lemon:Form ;
+                 lemon:writtenRep "produced"@en ;
+                 lexinfo:tense    lexinfo:past .
+
+:produce_frame_transitive a lexinfo:TransitiveFrame ;
+                           lexinfo:subject          :produce_subj ;
+                           lexinfo:produceObject     :produce_obj .
+
+:produce_ontomap a   lemon:OntoMap, lemon:LexicalSense ;
+                  lemon:ontoMapping :produce_ontomap ;
+                  lemon:reference   <http://dbpedia.org/ontology/producer> ;
+                  lemon:subjOfProp  :produce_obj ;
+                  lemon:objOfProp   :produce_subj ;
+                  lemon:condition   :produce_condition .
+
+:produce_condition a    lemon:condition ;
+                    lemon:propertyDomain <http://dbpedia.org/ontology/Work> ;
+                    lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:produced a            lemon:LexicalEntry ;
+            lexinfo:partOfSpeech lexinfo:adjective ;
+            lemon:canonicalForm  :form_produced_canonical ;
+            lemon:otherForm      :form_produced_by ;
+            lemon:synBehavior    :produced_frame_adjectivepp ;
+            lemon:sense          :produced_ontomap .
+
+:form_produced_canonical a lemon:Form ;
+                           lemon:writtenRep         "produced"@en .
+
+:form_produced_by a    lemon:Form ;
+                    lemon:writtenRep     "produced"@en ;
+                    lexinfo:verbFormMood lexinfo:participle .
+
+
+:produced_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+                              lexinfo:copulativeSubject    :produced_subj ;
+                              lexinfo:prepositionalAdjunct :produced_obj .
+
+:produced_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+                    lemon:ontoMapping :produced_ontomap ;
+                    lemon:reference   <http://dbpedia.org/ontology/producer> ;
+                    lemon:subjOfProp  :produced_subj ;
+                    lemon:objOfProp   :produced_obj ;
+                    lemon:condition   :produce_condition .
+
+:produced_obj lemon:marker :by .
+
+## Prepositions ##
+
+:by a                  lemon:SynRoleMarker ;
+    lemon:canonicalForm  [ lemon:writtenRep "by"@en ] ;
+    lexinfo:partOfSpeech lexinfo:preposition .
