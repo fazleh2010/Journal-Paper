@@ -12,12 +12,20 @@
   lemon:entry    :component_imperative_transitive ;
   lemon:entry    :object_pronoun;
   lemon:entry    :component_the_nominative ;
-  lemon:entry    :component_the_accusative;
-  lemon:entry    :component_the_dative;
-  lemon:entry    :component_the_genitive;
+  lemon:entry    :component_the_accusative ;
+  lemon:entry    :component_the_dative ;
+  lemon:entry    :component_the_genitive ;
+  lemon:entry    :aus ;
   lemon:entry    :fuer ;
   lemon:entry    :von ;
-  lemon:entry    :mit .
+  lemon:entry    :mit ;
+  lemon:entry    :fiktiver_charakter_weak ;
+  lemon:entry    :fiktiver_charakter_strong ;
+  lemon:entry    :person ;
+  lemon:entry    :werk ;
+  lemon:entry    :agent ;
+  lemon:entry    :museum ;
+  lemon:entry    :kunstwerk .
 
 :component_be a        lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "sein"@de ;
@@ -152,6 +160,12 @@
   lexinfo:number                          lexinfo:plural ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
+## Particles ##
+
+:aus a                 lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "aus"@de ] ;
+  lexinfo:partOfSpeech lexinfo:particle .
+
 ## Prepositions ##
 
 :fuer a                 lemon:SynRoleMarker ;
@@ -171,3 +185,89 @@
 :object_pronoun a        lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "mir"@de ] ;
   lexinfo:partOfSpeech lexinfo:pronoun .
+
+## Domain and range inflections ##
+
+:fiktiver_charakter_weak a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "fiktiver Charakter"@de ] ;
+  lemon:otherForm      [ lemon:writtenRep "fiktive Charakter"@de ;
+  lexinfo:gender                          lexinfo:masculine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "fiktiven Charaktere"@de ;
+  lexinfo:gender                          lexinfo:masculine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+:fiktiver_charakter_strong a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "fiktiver Charakter"@de ] ;
+  lemon:otherForm      [ lemon:writtenRep "fiktiver Charakter"@de ;
+  lexinfo:gender                          lexinfo:masculine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "fiktive Charaktere"@de ;
+  lexinfo:gender                          lexinfo:masculine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+:person a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "Person"@de ] ;
+  lemon:otherForm      [ lemon:writtenRep "Person"@de ;
+  lexinfo:gender                          lexinfo:feminine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "Personen"@de ;
+  lexinfo:gender                          lexinfo:feminine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+:werk a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "Werk"@de ] ;
+  lemon:otherForm      [ lemon:writtenRep "Werk"@de ;
+  lexinfo:gender                          lexinfo:neuter ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "Werke"@de ;
+  lexinfo:gender                          lexinfo:neuter ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+:agent a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "Agent"@de ] ;
+  lemon:otherForm      [ lemon:writtenRep "Agent"@de ;
+  lexinfo:gender                          lexinfo:masculine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "Agenten"@de ;
+  lexinfo:gender                          lexinfo:masculine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+:museum a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "Museum"@de ] ;
+  lemon:otherForm      [ lemon:writtenRep "Museum"@de ;
+  lexinfo:gender                          lexinfo:neuter ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "Museen"@de ;
+  lexinfo:gender                          lexinfo:neuter ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+:kunstwerk a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "Kunstwerk"@de ] ;
+  lemon:otherForm      [ lemon:writtenRep "Kunstwerk"@de ;
+  lexinfo:gender                          lexinfo:neuter ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "Kunstwerke"@de ;
+  lexinfo:gender                          lexinfo:neuter ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun .

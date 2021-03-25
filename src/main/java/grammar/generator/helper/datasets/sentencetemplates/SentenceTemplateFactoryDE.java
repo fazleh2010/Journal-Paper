@@ -56,7 +56,7 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository> {
         "prepositionalAdjunct"
       )
     );
-    /*
+    /* Not working yet
     // NP(attributiveArg)
     sentenceTemplateRepository.add(
       createNPTemplate(
@@ -83,9 +83,9 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository> {
       createSentenceTemplate(
         language,
         List.of(
-          //Welches Kunstwerk wird ausgestellt von...
+          //Welches Kunstwerk wird von ... ausgestellt
           "interrogativeDeterminer noun(condition:copulativeSubject) verb(reference:component_be_passive) AP(prepositionalAdjunct)?",
-          //Was wird ausgestellt von...
+          //Was wird von ... ausgestellt
           "interrogativePronoun verb(reference:component_be_passive) AP(prepositionalAdjunct)?"
         ),
         "copulativeSubject",
@@ -98,7 +98,7 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository> {
         language,
         List.of(
           //Kunstwerke ausgestellt von...
-          "noun(condition:copulativeSubject,number:plural) AP(prepositionalAdjunct)"
+          "noun(condition:copulativeSubject,number:plural) verb(root,verbFormMood:participle) preposition prepositionalAdjunct"
         ),
         "copulativeSubject",
         "prepositionalAdjunct"
@@ -109,13 +109,13 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository> {
       createAPTemplate(
         language,
         List.of(
-          //ausgestellt von...
-          "verb(root,verbFormMood:participle) preposition prepositionalAdjunct"
+          //von ... ausgestellt
+          "preposition prepositionalAdjunct verb(root,verbFormMood:participle)"
         ),
         "prepositionalAdjunct"
       )
     );
-    /*
+    /* Not working yet
     // IntransitivePPFrame
     sentenceTemplateRepository.add(
       createSentenceTemplate(

@@ -73,7 +73,8 @@ public class SentenceBuilderAdjectiveAttributiveEN implements SentenceBuilder {
         stringBuilder.append(getDeterminerTokenByNumber(
           number,
           bindingVar,
-          this.lexicalEntryUtil.getLexicalEntry().getCanonicalForm().getWrittenRep().value
+          this.lexicalEntryUtil.getLexicalEntry().getCanonicalForm().getWrittenRep().value,
+          language
         ));
       }
       String sentence = stringBuilder.toString();

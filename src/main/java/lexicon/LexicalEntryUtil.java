@@ -173,11 +173,13 @@ public class LexicalEntryUtil {
      * based on the number of a verb. E.g. "Which cities"
      */
     public static String getDeterminerTokenByNumber(
-            PropertyValue number, String conditionLabel,
-            String determiner
+            PropertyValue number,
+            String conditionLabel,
+            String determiner,
+            Language language
     ) {
         String determinerToken;
-        if (number.equals(new LexInfo().getPropertyValue("plural"))) {
+        if (language.equals(Language.EN) && number.equals(new LexInfo().getPropertyValue("plural"))) {
             conditionLabel = getPluralFormEn(conditionLabel);
         }
         determinerToken = compileDeterminerToken(conditionLabel, determiner);
@@ -185,21 +187,25 @@ public class LexicalEntryUtil {
     }
     
     public static Pair<String, String> getDeterminerTokenByNumberNew(
-            PropertyValue number, String conditionLabel,
-            String determiner
+            PropertyValue number,
+            String conditionLabel,
+            String determiner,
+            Language language
     ) {
         String determinerToken;
 
         if (number.equals(new LexInfo().getPropertyValue("plural"))) {
-            conditionLabel = getPluralFormEn(conditionLabel);
-              determinerToken = compileDeterminerToken(conditionLabel, determiner);
-              return new Pair<String, String>(determinerToken.trim(),"plural");
+            if (language.equals(Language.EN)) {
+                conditionLabel = getPluralFormEn(conditionLabel);
+            } else if (language.equals(Language.DE)) {
+                conditionLabel = getPluralFormDe(conditionLabel);
+            }
+            determinerToken = compileDeterminerToken(conditionLabel, determiner);
+            return new Pair<String, String>(determinerToken.trim(),"plural");
         } else {
             determinerToken = compileDeterminerToken(conditionLabel, determiner);
             return new Pair<String, String>(determinerToken.trim(), "singular");
         }
-            
-      
     }
 
     private static String getPluralFormEn(String noun) {
@@ -208,6 +214,12 @@ public class LexicalEntryUtil {
                 : noun.endsWith("s")
                 ? noun.concat("es")
                 : noun.concat("s");
+    }
+
+    private static String getPluralFormDe(String noun) {
+
+
+        return noun;
     }
 
     private static String compileDeterminerToken(String returnVariableConditionLabel, String determiner) {
@@ -567,4 +579,31 @@ public class LexicalEntryUtil {
 
         return preposition;
     }
+
+    public String getVerbParticle() {
+        String particle = null;
+        SynArg directObject = lexInfo.getSynArg("directObject");
+        Property POS = lexInfo.getProperty("partOfSpeech");
+        PropertyValue POSParticle = lexInfo.getPropertyValue("particle");
+        Frame frame = getFrameByGrammarType();
+
+        //this is a temporary code for solving the problem. this code will be refactored in some point.
+        try {
+            if (!isNull(frame)) {
+                SyntacticRoleMarker synRoleMarker = frame.getSynArg(directObject).iterator().next().getMarker();
+                if (synRoleMarker == null) return "";
+                PropertyValue POSValue = synRoleMarker.getProperty(POS).iterator().next();
+                if (POSValue.equals(POSParticle)) {
+                    particle = ((LexicalEntryImpl) synRoleMarker).getCanonicalForm().getWrittenRep().value;
+                    return particle;
+                }
+            }
+
+        } catch (NoSuchElementException noSuchExp) {
+            System.err.println("Particle is not found!!"+noSuchExp.getMessage());
+
+        }
+        return particle;
+    }
+
 }

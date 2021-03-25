@@ -26,13 +26,13 @@ class GrammarRuleGeneratorRootTest {
 
   @Test
   void testGetDeterminerTokenByToBeVerbNumber_withPluralAndEnding_Y() {
-    String result = getDeterminerTokenByNumber(annotatedVerb.getNumber(), "city", "Which");
+    String result = getDeterminerTokenByNumber(annotatedVerb.getNumber(), "city", "Which", Language.EN);
     assertEquals("Which cities", result);
   }
 
   @Test
   void testGetDeterminerTokenByToBeVerbNumber_withPluralAndEnding_S() {
-    String result = getDeterminerTokenByNumber(annotatedVerb.getNumber(), "boss", "Which");
+    String result = getDeterminerTokenByNumber(annotatedVerb.getNumber(), "boss", "Which", Language.EN);
     assertEquals("Which bosses", result);
   }
 }

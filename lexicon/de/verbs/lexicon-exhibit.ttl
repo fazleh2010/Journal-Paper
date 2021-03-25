@@ -9,13 +9,16 @@
   lemon:language "de" ;
   lemon:entry    :ausstellen ;
   lemon:entry    :ausgestellt ;
+  lemon:entry    :aus ;
   lemon:entry    :von .
 
 :ausstellen a          lemon:LexicalEntry ;
   lexinfo:partOfSpeech lexinfo:verb ;
   lemon:canonicalForm  :form_ausstellen ;
   lemon:otherForm      :form_stellt_aus ;
+  lemon:otherForm      :form_stellen_aus ;
   lemon:otherForm      :form_stellte_aus ;
+  lemon:otherForm      :form_stellten_aus ;
   lemon:synBehavior    :ausstellen_frame_transitive ;
   lemon:sense          :ausstellen_ontomap .
 
@@ -24,12 +27,25 @@
   lexinfo:verbFormMood lexinfo:infinitive .
 
 :form_stellt_aus a   lemon:Form ;
-  lemon:writtenRep "stellt aus"@de ;
+  lemon:writtenRep "stellt"@de ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:tense    lexinfo:present ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_stellen_aus a   lemon:Form ;
+  lemon:writtenRep "stellen"@de ;
+  lexinfo:number   lexinfo:plural ;
   lexinfo:tense    lexinfo:present ;
   lexinfo:person   lexinfo:thirdPerson .
 
 :form_stellte_aus a  lemon:Form ;
-  lemon:writtenRep "stellte aus"@en ;
+  lemon:writtenRep "stellte"@de ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:tense    lexinfo:past .
+
+:form_stellten_aus a  lemon:Form ;
+  lemon:writtenRep "stellten"@de ;
+  lexinfo:number   lexinfo:plural ;
   lexinfo:tense    lexinfo:past .
 
 :ausstellen_frame_transitive a lexinfo:TransitiveFrame ;
@@ -46,6 +62,8 @@
 :ausstellen_condition a   lemon:condition ;
   lemon:propertyDomain <http://dbpedia.org/ontology/Artwork> ;
   lemon:propertyRange  <http://dbpedia.org/ontology/Museum> .
+
+:ausstellen_obj lemon:marker :aus .
 
 # see https://lemon-model.net/lemon-cookbook/node17.html
 
@@ -75,6 +93,12 @@
   lemon:condition    :ausstellen_condition .
 
 :ausgestellt_obj lemon:marker :von .
+
+## Particles ##
+
+:aus a                 lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "aus"@de ] ;
+  lexinfo:partOfSpeech lexinfo:particle .
 
 ## Prepositions ##
 

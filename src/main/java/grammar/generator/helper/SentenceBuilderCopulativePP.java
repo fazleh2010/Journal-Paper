@@ -109,11 +109,39 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                                 );
 
                                 // Get noun for determiner token
-                                String determinerToken = getDeterminerTokenByNumber(
-                                        toBeVerb.getNumber(),
-                                        nounToken,
-                                        questionWord.getWrittenRepValue()
-                                );
+                                String determinerToken;
+
+                                if (getLanguage().equals(Language.DE)) {
+                                    URI nounRef;
+                                    if (nounToken.contains(" ")) {
+                                        nounRef = URI.create(LexiconSearch.LEXICON_BASE_URI + nounToken.replace(' ', '_').toLowerCase() + "_weak");
+                                    } else {
+                                        nounRef = URI.create(LexiconSearch.LEXICON_BASE_URI + nounToken.toLowerCase());
+                                    }
+                                    LexicalEntry entry = new LexiconSearch(lexicalEntryUtil.getLexicon()).getReferencedResource(nounRef);
+                                    String questionNoun = entry.getCanonicalForm().getWrittenRep().value;
+                                    List<AnnotatedNounOrQuestionWord> questionWordNoun = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords(entry.getOtherForms());
+
+                                    for (AnnotatedNounOrQuestionWord noun : questionWordNoun) {
+                                        if (noun.getNumber().equals(toBeVerb.getNumber())) {
+                                            questionNoun = noun.getWrittenRepValue();
+                                        }
+                                    }
+
+                                    determinerToken = getDeterminerTokenByNumber(
+                                            toBeVerb.getNumber(),
+                                            questionNoun,
+                                            questionWord.getWrittenRepValue(),
+                                            getLanguage()
+                                    );
+                                } else {
+                                    determinerToken = getDeterminerTokenByNumber(
+                                            toBeVerb.getNumber(),
+                                            nounToken,
+                                            questionWord.getWrittenRepValue(),
+                                            getLanguage()
+                                    );
+                                }
                                 sentenceArray[questionWordToken.get().getPosition()] = determinerToken;
                             } else if (isValidAdjectiveForm(rootToken.get())
                                     && toBeVerb.getNumber().equals(getLexInfo().getPropertyValue("plural"))) {
@@ -210,10 +238,42 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
             }
             if (conditionLabel.isPresent()
                     && conditionLabel.get().getPropertyMap().containsKey(getLexInfo().getProperty("number"))) {
-                sentenceArray[conditionLabel.get().getPosition()] = getDeterminerTokenByNumber(
-                        conditionLabel.get().getPropertyMap().get(getLexInfo().getProperty("number")), nounToken,
-                        ""
-                );
+                // Get noun for determiner token
+                String determinerToken;
+
+                if (getLanguage().equals(Language.DE)) {
+                    URI nounRef;
+                    if (nounToken.contains(" ")) {
+                        nounRef = URI.create(LexiconSearch.LEXICON_BASE_URI + nounToken.replace(' ', '_').toLowerCase() + "_strong");
+                    } else {
+                        nounRef = URI.create(LexiconSearch.LEXICON_BASE_URI + nounToken.toLowerCase());
+                    }
+                    LexicalEntry entry = new LexiconSearch(lexicalEntryUtil.getLexicon()).getReferencedResource(nounRef);
+                    String questionNoun = entry.getCanonicalForm().getWrittenRep().value;
+                    List<AnnotatedNounOrQuestionWord> questionWordNoun = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords(entry.getOtherForms());
+
+                    for (AnnotatedNounOrQuestionWord noun : questionWordNoun) {
+                        if (noun.getNumber().equals(lexicalEntryUtil.getLexInfo().getPropertyValue("plural"))) {
+                            questionNoun = noun.getWrittenRepValue();
+                        }
+                    }
+
+                    determinerToken = getDeterminerTokenByNumber(
+                            lexicalEntryUtil.getLexInfo().getPropertyValue("plural"),
+                            questionNoun,
+                            "",
+                            getLanguage()
+                    );
+                } else {
+                    determinerToken = getDeterminerTokenByNumber(
+                            lexicalEntryUtil.getLexInfo().getPropertyValue("plural"),
+                            nounToken,
+                            "",
+                            getLanguage()
+                    );
+                }
+
+                sentenceArray[conditionLabel.get().getPosition()] = determinerToken;
             }
             if (rootToken.isPresent() && npPreposition.isPresent() && npObject.isPresent()) {
                 sentenceArray[rootToken.get().getPosition()] = annotatedNoun.getWrittenRepValue();

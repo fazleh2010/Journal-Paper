@@ -13,22 +13,38 @@
 
 :entwickeln a          lemon:LexicalEntry ;
   lexinfo:partOfSpeech lexinfo:verb ;
-  lemon:canonicalForm  :form_entwickeln ;
+  lemon:canonicalForm  :form_entwickeln_inf ;
   lemon:otherForm      :form_entwickelt ;
+  lemon:otherForm      :form_entwickeln ;
   lemon:otherForm      :form_entwickelte ;
+  lemon:otherForm      :form_entwickelten ;
   lemon:synBehavior    :entwickeln_frame_transitive ;
   lemon:sense          :entwickeln_ontomap .
 
-:form_entwickeln a        lemon:Form ;
+:form_entwickeln_inf a        lemon:Form ;
   lemon:writtenRep     "entwickeln"@de ;
   lexinfo:verbFormMood lexinfo:infinitive .
 
 :form_entwickelt a   lemon:Form ;
   lemon:writtenRep "entwickelt"@de ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:tense    lexinfo:present ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_entwickeln a   lemon:Form ;
+  lemon:writtenRep "entwickeln"@de ;
+  lexinfo:number   lexinfo:plural ;
+  lexinfo:tense    lexinfo:present ;
   lexinfo:person   lexinfo:thirdPerson .
 
 :form_entwickelte a  lemon:Form ;
   lemon:writtenRep "entwickelte"@de ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:tense    lexinfo:past .
+
+:form_entwickelten a  lemon:Form ;
+  lemon:writtenRep "entwickelten"@de ;
+  lexinfo:number   lexinfo:plural ;
   lexinfo:tense    lexinfo:past .
 
 :entwickeln_frame_transitive a lexinfo:TransitiveFrame ;

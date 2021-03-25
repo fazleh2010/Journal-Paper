@@ -13,23 +13,38 @@
 
 :spielen a             lemon:LexicalEntry ;
   lexinfo:partOfSpeech lexinfo:verb ;
-  lemon:canonicalForm  :form_spielen ;
+  lemon:canonicalForm  :form_spielen_inf ;
   lemon:otherForm      :form_spielt ;
+  lemon:otherForm      :form_spielen ;
   lemon:otherForm      :form_spielte ;
+  lemon:otherForm      :form_spielten ;
   lemon:synBehavior    :spielen_frame_transitive ;
   lemon:sense          :spielen_ontomap .
 
-:form_spielen a           lemon:Form ;
+:form_spielen_inf a           lemon:Form ;
   lemon:writtenRep     "spielen"@de ;
   lexinfo:verbFormMood lexinfo:infinitive .
 
 :form_spielt a      lemon:Form ;
   lemon:writtenRep "spielt"@de ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:tense    lexinfo:present ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_spielen a      lemon:Form ;
+  lemon:writtenRep "spielen"@de ;
+  lexinfo:number   lexinfo:plural ;
   lexinfo:tense    lexinfo:present ;
   lexinfo:person   lexinfo:thirdPerson .
 
 :form_spielte a     lemon:Form ;
   lemon:writtenRep "spielte"@de ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:tense    lexinfo:past .
+
+:form_spielten a     lemon:Form ;
+  lemon:writtenRep "spielten"@de ;
+  lexinfo:number   lexinfo:plural ;
   lexinfo:tense    lexinfo:past .
 
 :spielen_frame_transitive a lexinfo:TransitiveFrame ;

@@ -8,23 +8,44 @@
 :lexicon_de a    lemon:Lexicon ;
   lemon:language "de" ;
   lemon:entry    :heiraten ;
-  lemon:entry    :verheiratet ;
-  lemon:entry    :mit .
+  lemon:entry    :geheiratet ;
+  lemon:entry    :von .
 
 :heiraten a            lemon:LexicalEntry ;
   lexinfo:partOfSpeech lexinfo:verb ;
-  lemon:canonicalForm  :form_heiraten ;
+  lemon:canonicalForm  :form_heiraten_inf ;
+  lemon:otherForm      :form_heiratet ;
+  lemon:otherForm      :form_heiraten ;
   lemon:otherForm      :form_heiratete ;
+  lemon:otherForm      :form_heirateten ;
   lemon:synBehavior    :heiraten_frame_transitive ;
   lemon:sense          :heiraten_ontomap .
 
-:form_heiraten a          lemon:Form ;
+:form_heiraten_inf a          lemon:Form ;
   lemon:writtenRep     "heiraten"@de ;
   lexinfo:verbFormMood lexinfo:infinitive .
 
+:form_heiratet a    lemon:Form ;
+  lemon:writtenRep "heiratet"@de ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:tense    lexinfo:present ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_heiraten a    lemon:Form ;
+  lemon:writtenRep "heiraten"@de ;
+  lexinfo:number   lexinfo:plural ;
+  lexinfo:tense    lexinfo:present ;
+  lexinfo:person   lexinfo:thirdPerson .
+
 :form_heiratete a    lemon:Form ;
   lemon:writtenRep "heiratete"@de ;
+  lexinfo:number   lexinfo:singular ;
   lexinfo:tense    lexinfo:past .
+
+:form_heirateten a   lemon:Form ;
+  lemon:writtenRep "heirateten"@de ;
+  lexinfo:number   lexinfo:plural ;
+  lexinfo:tense    lexinfo:past.
 
 :heiraten_frame_transitive a lexinfo:TransitiveFrame ;
   lexinfo:subject         :heiraten_subj ;
@@ -43,35 +64,35 @@
 
 #see https://lemon-model.net/lemon-cookbook/node17.html
 
-:verheiratet a             lemon:LexicalEntry ;
+:geheiratet a             lemon:LexicalEntry ;
   lexinfo:partOfSpeech lexinfo:adjective ;
-  lemon:canonicalForm  :form_verheiratet_canonical ;
-  lemon:otherForm      :form_verheiratet_mit ;
-  lemon:synBehavior    :verheiratet_frame_adjectivepp ;
-  lemon:sense          :verheiratet_ontomap .
+  lemon:canonicalForm  :form_geheiratet_canonical ;
+  lemon:otherForm      :form_geheiratet_von ;
+  lemon:synBehavior    :geheiratet_frame_adjectivepp ;
+  lemon:sense          :geheiratet_ontomap .
 
-:form_verheiratet_canonical a lemon:Form ;
-  lemon:writtenRep        "verheiratet"@de .
+:form_geheiratet_canonical a lemon:Form ;
+  lemon:writtenRep        "geheiratet"@de .
 
-:form_verheiratet_mit a     lemon:Form ;
-  lemon:writtenRep     "verheiratet"@de ;
+:form_geheiratet_von a     lemon:Form ;
+  lemon:writtenRep     "geheiratet"@de ;
   lexinfo:verbFormMood lexinfo:participle .
 
-:verheiratet_frame_adjectivepp a   lexinfo:AdjectivePPFrame ;
-  lexinfo:copulativeSubject    :verheiratet_subj ;
-  lexinfo:prepositionalAdjunct :verheiratet_obj .
+:geheiratet_frame_adjectivepp a   lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :geheiratet_subj ;
+  lexinfo:prepositionalAdjunct :geheiratet_obj .
 
-:verheiratet_ontomap a  lemon:OntoMap, lemon:LexicalSense ;
-  lemon:ontoMapping :verheiratet_ontomap ;
+:geheiratet_ontomap a  lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :geheiratet_ontomap ;
   lemon:reference   <http://dbpedia.org/ontology/spouse> ;
-  lemon:subjOfProp  :verheiratet_obj ;
-  lemon:objOfProp   :verheiratet_subj ;
+  lemon:subjOfProp  :geheiratet_obj ;
+  lemon:objOfProp   :geheiratet_subj ;
   lemon:condition   :heiraten_condition .
 
-:verheiratet_obj lemon:marker :mit .
+:geheiratet_obj lemon:marker :von .
 
 ## Prepositions ##
 
-:mit a                  lemon:SynRoleMarker ;
-  lemon:canonicalForm  [ lemon:writtenRep "mit"@de ] ;
+:von a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "von"@de ] ;
   lexinfo:partOfSpeech lexinfo:preposition .

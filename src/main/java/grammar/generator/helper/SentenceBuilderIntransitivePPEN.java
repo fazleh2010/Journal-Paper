@@ -134,7 +134,7 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder {
                         annotatedVerb.getNumber(),
                         null
                 );
-                String determinerToken = getDeterminerTokenByNumber(annotatedVerb.getNumber(), conditionLabel, determiner);
+                String determinerToken = getDeterminerTokenByNumber(annotatedVerb.getNumber(), conditionLabel, determiner, language);
                 String bindingString = DomainOrRangeType.getMatchingType(this.lexicalEntryUtil.getConditionUriBySelectVariable(
                         LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable())
                 )).name();
@@ -287,7 +287,7 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder {
                             number,
                             null
                     );
-                    Pair<String, String> determinerTokenPair = getDeterminerTokenByNumberNew(number, conditionLabel, determiner);
+                    Pair<String, String> determinerTokenPair = getDeterminerTokenByNumberNew(number, conditionLabel, determiner, language);
                     String determinerToken = determinerTokenPair.component1();
                     String determinerTokenNumber = determinerTokenPair.component2();
                     for (String  key : auxilaries.keySet()) {
