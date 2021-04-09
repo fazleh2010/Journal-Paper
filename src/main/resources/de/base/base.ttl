@@ -21,11 +21,15 @@
   lemon:entry    :mit ;
   lemon:entry    :fiktiver_charakter_weak ;
   lemon:entry    :fiktiver_charakter_strong ;
+  lemon:entry    :musikalischer_künstler_weak ;
+  lemon:entry    :musikalischer_künstler_strong ;
   lemon:entry    :person ;
   lemon:entry    :werk ;
   lemon:entry    :agent ;
   lemon:entry    :museum ;
-  lemon:entry    :kunstwerk .
+  lemon:entry    :kunstwerk ;
+  lemon:entry    :organisation ;
+  lemon:entry    :ort.
 
 :component_be a        lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "sein"@de ;
@@ -212,6 +216,31 @@
   lexinfo:number                          lexinfo:plural ] ;
   lexinfo:partOfSpeech lexinfo:noun .
 
+:musikalischer_künstler_weak a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "musikalischer Künstler"@de ] ;
+  lemon:otherForm      [ lemon:writtenRep "musikalische Künstler"@de ;
+  lexinfo:gender                          lexinfo:masculine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "musikalischen Künstler"@de ;
+  lexinfo:gender                          lexinfo:masculine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+:musikalischer_künstler_strong a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "musikalischer Künstler"@de ] ;
+  lemon:otherForm      [ lemon:writtenRep "musikalischer Künstler"@de ;
+  lexinfo:gender                          lexinfo:masculine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "musikalische Künstler"@de ;
+  lexinfo:gender                          lexinfo:masculine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+
 :person a       lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "Person"@de ] ;
   lemon:otherForm      [ lemon:writtenRep "Person"@de ;
@@ -268,6 +297,30 @@
   lexinfo:number                          lexinfo:singular ] ;
   lemon:otherForm      [ lemon:writtenRep "Kunstwerke"@de ;
   lexinfo:gender                          lexinfo:neuter ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+:organisation a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "Organisation"@de ] ;
+  lemon:otherForm      [ lemon:writtenRep "Organisation"@de ;
+  lexinfo:gender                          lexinfo:feminine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "Organisationen"@de ;
+  lexinfo:gender                          lexinfo:feminine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+:ort a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "Ort"@de ] ;
+  lemon:otherForm      [ lemon:writtenRep "Ort"@de ;
+  lexinfo:gender                          lexinfo:masculine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "Orte"@de ;
+  lexinfo:gender                          lexinfo:masculine ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:plural ] ;
   lexinfo:partOfSpeech lexinfo:noun .

@@ -1,6 +1,1958 @@
 {
   "grammarEntries" : [ {
-    "id" : "13",
+    "id" : "25",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Komponisten für Werke entwickelt von $x?", "Gib mir die Komponisten für Werke entwickelt von $x?", "Welche musikalischen Künstler sind die Komponisten für Werke entwickelt von $x?", "Welche musikalischen Künstler waren die Komponisten für Werke entwickelt von $x?", "Welcher musikalische Künstler ist der Komponist für Werke entwickelt von $x?", "Welcher musikalische Künstler war der Komponist für Werke entwickelt von $x?", "Wer ist der Komponist für Werke entwickelt von $x?", "Wer sind die Komponisten für Werke entwickelt von $x?", "Wer war der Komponist für Werke entwickelt von $x?", "Wer waren die Komponisten für Werke entwickelt von $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfPropx)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "26",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "MUSEUM",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Komponisten für Kunstwerke ausgestellt von $x?", "Gib mir die Komponisten für Kunstwerke ausgestellt von $x?", "Welche musikalischen Künstler sind die Komponisten für Kunstwerke ausgestellt von $x?", "Welche musikalischen Künstler waren die Komponisten für Kunstwerke ausgestellt von $x?", "Welcher musikalische Künstler ist der Komponist für Kunstwerke ausgestellt von $x?", "Welcher musikalische Künstler war der Komponist für Kunstwerke ausgestellt von $x?", "Wer ist der Komponist für Kunstwerke ausgestellt von $x?", "Wer sind die Komponisten für Kunstwerke ausgestellt von $x?", "Wer war der Komponist für Kunstwerke ausgestellt von $x?", "Wer waren die Komponisten für Kunstwerke ausgestellt von $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/museum> ?objOfPropx)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "27",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "BUILDING",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Standort von der Standort von $x?", "Was ist der Standort von der Standort von $x?", "Was war der Standort von der Standort von $x?", "Welcher Ort ist der Standort von der Standort von $x?", "Welcher Ort war der Standort von der Standort von $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/location> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "KGB",
+        "uri" : "http://dbpedia.org/resource/KGB"
+      }, {
+        "label" : "Försvarets radioanstalt",
+        "uri" : "http://dbpedia.org/resource/National_Defence_Radio_Establishment"
+      }, {
+        "label" : "http://dbpedia.org/resource/Founder's_Hall_(Rockefeller_University)",
+        "uri" : "http://dbpedia.org/resource/Founder's_Hall_(Rockefeller_University)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Manhattan_House",
+        "uri" : "http://dbpedia.org/resource/Manhattan_House"
+      }, {
+        "label" : "http://dbpedia.org/resource/826_National",
+        "uri" : "http://dbpedia.org/resource/826_National"
+      }, {
+        "label" : "http://dbpedia.org/resource/1992_Scottish_Challenge_Cup_Final",
+        "uri" : "http://dbpedia.org/resource/1992_Scottish_Challenge_Cup_Final"
+      }, {
+        "label" : "http://dbpedia.org/resource/Black_Hawk_Statue",
+        "uri" : "http://dbpedia.org/resource/Black_Hawk_Statue"
+      }, {
+        "label" : "http://dbpedia.org/resource/CHS_Field",
+        "uri" : "http://dbpedia.org/resource/CHS_Field"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chapel_No._1",
+        "uri" : "http://dbpedia.org/resource/Chapel_No._1"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chapel_of_the_Holy_Trinity,_Lublin_Castle",
+        "uri" : "http://dbpedia.org/resource/Chapel_of_the_Holy_Trinity,_Lublin_Castle"
+      }, {
+        "label" : "http://dbpedia.org/resource/FDIC_International",
+        "uri" : "http://dbpedia.org/resource/FDIC_International"
+      }, {
+        "label" : "Isla-Verde-Straße",
+        "uri" : "http://dbpedia.org/resource/Verde_Island_Passage"
+      }, {
+        "label" : "Chambre des Pairs",
+        "uri" : "http://dbpedia.org/resource/Chamber_of_Peers_(France)"
+      }, {
+        "label" : "Balayan-Bucht",
+        "uri" : "http://dbpedia.org/resource/Balayan_Bay"
+      }, {
+        "label" : "Senat (Frankreich)",
+        "uri" : "http://dbpedia.org/resource/Senate_(France)"
+      }, {
+        "label" : "Bato-See",
+        "uri" : "http://dbpedia.org/resource/Lake_Bato"
+      }, {
+        "label" : "Philippine National Railways",
+        "uri" : "http://dbpedia.org/resource/Philippine_National_Railways"
+      }, {
+        "label" : "Manilabucht",
+        "uri" : "http://dbpedia.org/resource/Manila_Bay"
+      }, {
+        "label" : "http://dbpedia.org/resource/Swedish_Ski_Games",
+        "uri" : "http://dbpedia.org/resource/Swedish_Ski_Games"
+      }, {
+        "label" : "http://dbpedia.org/resource/Supreme_Court_Building_(Puerto_Rico)",
+        "uri" : "http://dbpedia.org/resource/Supreme_Court_Building_(Puerto_Rico)"
+      }, {
+        "label" : "http://dbpedia.org/resource/AN/FSQ-7_Combat_Direction_Central",
+        "uri" : "http://dbpedia.org/resource/AN/FSQ-7_Combat_Direction_Central"
+      }, {
+        "label" : "http://dbpedia.org/resource/1999_Belgian_Super_Cup",
+        "uri" : "http://dbpedia.org/resource/1999_Belgian_Super_Cup"
+      }, {
+        "label" : "http://dbpedia.org/resource/2002_Belgian_Super_Cup",
+        "uri" : "http://dbpedia.org/resource/2002_Belgian_Super_Cup"
+      }, {
+        "label" : "http://dbpedia.org/resource/2019_Belgian_Super_Cup",
+        "uri" : "http://dbpedia.org/resource/2019_Belgian_Super_Cup"
+      }, {
+        "label" : "http://dbpedia.org/resource/William_Wagner_House",
+        "uri" : "http://dbpedia.org/resource/William_Wagner_House"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lum's_Mill_House",
+        "uri" : "http://dbpedia.org/resource/Lum's_Mill_House"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luton_Borough_Council",
+        "uri" : "http://dbpedia.org/resource/Luton_Borough_Council"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luzerne_County_Council",
+        "uri" : "http://dbpedia.org/resource/Luzerne_County_Council"
+      }, {
+        "label" : "http://dbpedia.org/resource/2016_in_Fight_Nights_Global",
+        "uri" : "http://dbpedia.org/resource/2016_in_Fight_Nights_Global"
+      }, {
+        "label" : "http://dbpedia.org/resource/2017_in_Absolute_Championship_Berkut",
+        "uri" : "http://dbpedia.org/resource/2017_in_Absolute_Championship_Berkut"
+      }, {
+        "label" : "http://dbpedia.org/resource/2017_in_Fight_Nights_Global",
+        "uri" : "http://dbpedia.org/resource/2017_in_Fight_Nights_Global"
+      }, {
+        "label" : "http://dbpedia.org/resource/2018_in_Fight_Nights_Global",
+        "uri" : "http://dbpedia.org/resource/2018_in_Fight_Nights_Global"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bataan_Airfield",
+        "uri" : "http://dbpedia.org/resource/Bataan_Airfield"
+      }, {
+        "label" : "http://dbpedia.org/resource/Del_Carmen_Airfield",
+        "uri" : "http://dbpedia.org/resource/Del_Carmen_Airfield"
+      }, {
+        "label" : "http://dbpedia.org/resource/Iba_Airfield",
+        "uri" : "http://dbpedia.org/resource/Iba_Airfield"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lake_Pinatubo",
+        "uri" : "http://dbpedia.org/resource/Lake_Pinatubo"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lake_Tikub",
+        "uri" : "http://dbpedia.org/resource/Lake_Tikub"
+      }, {
+        "label" : "http://dbpedia.org/resource/Paoay_Lake",
+        "uri" : "http://dbpedia.org/resource/Paoay_Lake"
+      }, {
+        "label" : "http://dbpedia.org/resource/Pasaleng_Bay",
+        "uri" : "http://dbpedia.org/resource/Pasaleng_Bay"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nichols_Field",
+        "uri" : "http://dbpedia.org/resource/Nichols_Field"
+      }, {
+        "label" : "Strafkolonie Macquarie Harbour",
+        "uri" : "http://dbpedia.org/resource/Macquarie_Harbour_Penal_Station"
+      }, {
+        "label" : "The Gaslight Cafe",
+        "uri" : "http://dbpedia.org/resource/The_Gaslight_Cafe"
+      }, {
+        "label" : "Delhi",
+        "uri" : "http://dbpedia.org/resource/Municipal_Corporation_of_Delhi"
+      }, {
+        "label" : "Melrose High School (Massachusetts)",
+        "uri" : "http://dbpedia.org/resource/Melrose_High_School_(Massachusetts)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Field_of_Honor_(2014)",
+        "uri" : "http://dbpedia.org/resource/Field_of_Honor_(2014)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Field_of_Honor_(2015)",
+        "uri" : "http://dbpedia.org/resource/Field_of_Honor_(2015)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Field_of_Honor_(2016)",
+        "uri" : "http://dbpedia.org/resource/Field_of_Honor_(2016)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1996)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1996)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1997)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1997)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1998)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1998)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1999)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1999)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(2000)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(2000)"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_91",
+        "uri" : "http://dbpedia.org/resource/UFC_91"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_92",
+        "uri" : "http://dbpedia.org/resource/UFC_92"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_108",
+        "uri" : "http://dbpedia.org/resource/UFC_108"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_114",
+        "uri" : "http://dbpedia.org/resource/UFC_114"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_34",
+        "uri" : "http://dbpedia.org/resource/UFC_34"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_132",
+        "uri" : "http://dbpedia.org/resource/UFC_132"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_141",
+        "uri" : "http://dbpedia.org/resource/UFC_141"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_168",
+        "uri" : "http://dbpedia.org/resource/UFC_168"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_94",
+        "uri" : "http://dbpedia.org/resource/UFC_94"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_146",
+        "uri" : "http://dbpedia.org/resource/UFC_146"
+      }, {
+        "label" : "http://dbpedia.org/resource/Double_or_Nothing_(2019)",
+        "uri" : "http://dbpedia.org/resource/Double_or_Nothing_(2019)"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_130",
+        "uri" : "http://dbpedia.org/resource/UFC_130"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_155",
+        "uri" : "http://dbpedia.org/resource/UFC_155"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_98",
+        "uri" : "http://dbpedia.org/resource/UFC_98"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_173",
+        "uri" : "http://dbpedia.org/resource/UFC_173"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_178",
+        "uri" : "http://dbpedia.org/resource/UFC_178"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_182",
+        "uri" : "http://dbpedia.org/resource/UFC_182"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_183",
+        "uri" : "http://dbpedia.org/resource/UFC_183"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_187",
+        "uri" : "http://dbpedia.org/resource/UFC_187"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_189",
+        "uri" : "http://dbpedia.org/resource/UFC_189"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_191",
+        "uri" : "http://dbpedia.org/resource/UFC_191"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_194",
+        "uri" : "http://dbpedia.org/resource/UFC_194"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_195",
+        "uri" : "http://dbpedia.org/resource/UFC_195"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_196",
+        "uri" : "http://dbpedia.org/resource/UFC_196"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_197",
+        "uri" : "http://dbpedia.org/resource/UFC_197"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_Fight_Night:_Hendricks_vs._Thompson",
+        "uri" : "http://dbpedia.org/resource/UFC_Fight_Night:_Hendricks_vs._Thompson"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_Fight_Night:_dos_Anjos_vs._Alvarez",
+        "uri" : "http://dbpedia.org/resource/UFC_Fight_Night:_dos_Anjos_vs._Alvarez"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_148",
+        "uri" : "http://dbpedia.org/resource/UFC_148"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_167",
+        "uri" : "http://dbpedia.org/resource/UFC_167"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_160",
+        "uri" : "http://dbpedia.org/resource/UFC_160"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_71",
+        "uri" : "http://dbpedia.org/resource/UFC_71"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_125",
+        "uri" : "http://dbpedia.org/resource/UFC_125"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_162",
+        "uri" : "http://dbpedia.org/resource/UFC_162"
+      }, {
+        "label" : "http://dbpedia.org/resource/Double_or_Nothing_(2021)",
+        "uri" : "http://dbpedia.org/resource/Double_or_Nothing_(2021)"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_116",
+        "uri" : "http://dbpedia.org/resource/UFC_116"
+      }, {
+        "label" : "http://dbpedia.org/resource/UWF_Blackjack_Brawl",
+        "uri" : "http://dbpedia.org/resource/UWF_Blackjack_Brawl"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_66",
+        "uri" : "http://dbpedia.org/resource/UFC_66"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_American_Top_Team_vs._Blackzilians__The_Ultimate_Fighter:_American_Top_Team_vs._Blackz__1",
+        "uri" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_American_Top_Team_vs._Blackzilians__The_Ultimate_Fighter:_American_Top_Team_vs._Blackz__1"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__1",
+        "uri" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__1"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_84",
+        "uri" : "http://dbpedia.org/resource/UFC_84"
+      }, {
+        "label" : "http://dbpedia.org/resource/CCC_Kei_Wai_Primary_School_(Ma_Wan)",
+        "uri" : "http://dbpedia.org/resource/CCC_Kei_Wai_Primary_School_(Ma_Wan)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maatsuyker_Island_Lighthouse",
+        "uri" : "http://dbpedia.org/resource/Maatsuyker_Island_Lighthouse"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mabel_Lake_Airport",
+        "uri" : "http://dbpedia.org/resource/Mabel_Lake_Airport"
+      }, {
+        "label" : "http://dbpedia.org/resource/MacDougal–Sullivan_Gardens_Historic_District",
+        "uri" : "http://dbpedia.org/resource/MacDougal–Sullivan_Gardens_Historic_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Brazil_76–0_Timor-Leste",
+        "uri" : "http://dbpedia.org/resource/Brazil_76–0_Timor-Leste"
+      }, {
+        "label" : "http://dbpedia.org/resource/Wayne_State_University_Computer_Science_Department",
+        "uri" : "http://dbpedia.org/resource/Wayne_State_University_Computer_Science_Department"
+      }, {
+        "label" : "http://dbpedia.org/resource/1940_Mandatory_Palestine_v_Lebanon_football_match",
+        "uri" : "http://dbpedia.org/resource/1940_Mandatory_Palestine_v_Lebanon_football_match"
+      }, {
+        "label" : "http://dbpedia.org/resource/Avery_Rock_Light",
+        "uri" : "http://dbpedia.org/resource/Avery_Rock_Light"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "28",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Standort von der Standort von $x?", "Was ist der Standort von der Standort von $x?", "Was war der Standort von der Standort von $x?", "Welcher Ort ist der Standort von der Standort von $x?", "Welcher Ort war der Standort von der Standort von $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/location> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "KGB",
+        "uri" : "http://dbpedia.org/resource/KGB"
+      }, {
+        "label" : "Försvarets radioanstalt",
+        "uri" : "http://dbpedia.org/resource/National_Defence_Radio_Establishment"
+      }, {
+        "label" : "http://dbpedia.org/resource/Founder's_Hall_(Rockefeller_University)",
+        "uri" : "http://dbpedia.org/resource/Founder's_Hall_(Rockefeller_University)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Manhattan_House",
+        "uri" : "http://dbpedia.org/resource/Manhattan_House"
+      }, {
+        "label" : "http://dbpedia.org/resource/826_National",
+        "uri" : "http://dbpedia.org/resource/826_National"
+      }, {
+        "label" : "http://dbpedia.org/resource/1992_Scottish_Challenge_Cup_Final",
+        "uri" : "http://dbpedia.org/resource/1992_Scottish_Challenge_Cup_Final"
+      }, {
+        "label" : "http://dbpedia.org/resource/Black_Hawk_Statue",
+        "uri" : "http://dbpedia.org/resource/Black_Hawk_Statue"
+      }, {
+        "label" : "http://dbpedia.org/resource/CHS_Field",
+        "uri" : "http://dbpedia.org/resource/CHS_Field"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chapel_No._1",
+        "uri" : "http://dbpedia.org/resource/Chapel_No._1"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chapel_of_the_Holy_Trinity,_Lublin_Castle",
+        "uri" : "http://dbpedia.org/resource/Chapel_of_the_Holy_Trinity,_Lublin_Castle"
+      }, {
+        "label" : "http://dbpedia.org/resource/FDIC_International",
+        "uri" : "http://dbpedia.org/resource/FDIC_International"
+      }, {
+        "label" : "Isla-Verde-Straße",
+        "uri" : "http://dbpedia.org/resource/Verde_Island_Passage"
+      }, {
+        "label" : "Chambre des Pairs",
+        "uri" : "http://dbpedia.org/resource/Chamber_of_Peers_(France)"
+      }, {
+        "label" : "Balayan-Bucht",
+        "uri" : "http://dbpedia.org/resource/Balayan_Bay"
+      }, {
+        "label" : "Senat (Frankreich)",
+        "uri" : "http://dbpedia.org/resource/Senate_(France)"
+      }, {
+        "label" : "Bato-See",
+        "uri" : "http://dbpedia.org/resource/Lake_Bato"
+      }, {
+        "label" : "Philippine National Railways",
+        "uri" : "http://dbpedia.org/resource/Philippine_National_Railways"
+      }, {
+        "label" : "Manilabucht",
+        "uri" : "http://dbpedia.org/resource/Manila_Bay"
+      }, {
+        "label" : "http://dbpedia.org/resource/Swedish_Ski_Games",
+        "uri" : "http://dbpedia.org/resource/Swedish_Ski_Games"
+      }, {
+        "label" : "http://dbpedia.org/resource/Supreme_Court_Building_(Puerto_Rico)",
+        "uri" : "http://dbpedia.org/resource/Supreme_Court_Building_(Puerto_Rico)"
+      }, {
+        "label" : "http://dbpedia.org/resource/AN/FSQ-7_Combat_Direction_Central",
+        "uri" : "http://dbpedia.org/resource/AN/FSQ-7_Combat_Direction_Central"
+      }, {
+        "label" : "http://dbpedia.org/resource/1999_Belgian_Super_Cup",
+        "uri" : "http://dbpedia.org/resource/1999_Belgian_Super_Cup"
+      }, {
+        "label" : "http://dbpedia.org/resource/2002_Belgian_Super_Cup",
+        "uri" : "http://dbpedia.org/resource/2002_Belgian_Super_Cup"
+      }, {
+        "label" : "http://dbpedia.org/resource/2019_Belgian_Super_Cup",
+        "uri" : "http://dbpedia.org/resource/2019_Belgian_Super_Cup"
+      }, {
+        "label" : "http://dbpedia.org/resource/William_Wagner_House",
+        "uri" : "http://dbpedia.org/resource/William_Wagner_House"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lum's_Mill_House",
+        "uri" : "http://dbpedia.org/resource/Lum's_Mill_House"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luton_Borough_Council",
+        "uri" : "http://dbpedia.org/resource/Luton_Borough_Council"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luzerne_County_Council",
+        "uri" : "http://dbpedia.org/resource/Luzerne_County_Council"
+      }, {
+        "label" : "http://dbpedia.org/resource/2016_in_Fight_Nights_Global",
+        "uri" : "http://dbpedia.org/resource/2016_in_Fight_Nights_Global"
+      }, {
+        "label" : "http://dbpedia.org/resource/2017_in_Absolute_Championship_Berkut",
+        "uri" : "http://dbpedia.org/resource/2017_in_Absolute_Championship_Berkut"
+      }, {
+        "label" : "http://dbpedia.org/resource/2017_in_Fight_Nights_Global",
+        "uri" : "http://dbpedia.org/resource/2017_in_Fight_Nights_Global"
+      }, {
+        "label" : "http://dbpedia.org/resource/2018_in_Fight_Nights_Global",
+        "uri" : "http://dbpedia.org/resource/2018_in_Fight_Nights_Global"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bataan_Airfield",
+        "uri" : "http://dbpedia.org/resource/Bataan_Airfield"
+      }, {
+        "label" : "http://dbpedia.org/resource/Del_Carmen_Airfield",
+        "uri" : "http://dbpedia.org/resource/Del_Carmen_Airfield"
+      }, {
+        "label" : "http://dbpedia.org/resource/Iba_Airfield",
+        "uri" : "http://dbpedia.org/resource/Iba_Airfield"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lake_Pinatubo",
+        "uri" : "http://dbpedia.org/resource/Lake_Pinatubo"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lake_Tikub",
+        "uri" : "http://dbpedia.org/resource/Lake_Tikub"
+      }, {
+        "label" : "http://dbpedia.org/resource/Paoay_Lake",
+        "uri" : "http://dbpedia.org/resource/Paoay_Lake"
+      }, {
+        "label" : "http://dbpedia.org/resource/Pasaleng_Bay",
+        "uri" : "http://dbpedia.org/resource/Pasaleng_Bay"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nichols_Field",
+        "uri" : "http://dbpedia.org/resource/Nichols_Field"
+      }, {
+        "label" : "Strafkolonie Macquarie Harbour",
+        "uri" : "http://dbpedia.org/resource/Macquarie_Harbour_Penal_Station"
+      }, {
+        "label" : "The Gaslight Cafe",
+        "uri" : "http://dbpedia.org/resource/The_Gaslight_Cafe"
+      }, {
+        "label" : "Delhi",
+        "uri" : "http://dbpedia.org/resource/Municipal_Corporation_of_Delhi"
+      }, {
+        "label" : "Melrose High School (Massachusetts)",
+        "uri" : "http://dbpedia.org/resource/Melrose_High_School_(Massachusetts)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Field_of_Honor_(2014)",
+        "uri" : "http://dbpedia.org/resource/Field_of_Honor_(2014)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Field_of_Honor_(2015)",
+        "uri" : "http://dbpedia.org/resource/Field_of_Honor_(2015)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Field_of_Honor_(2016)",
+        "uri" : "http://dbpedia.org/resource/Field_of_Honor_(2016)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1996)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1996)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1997)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1997)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1998)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1998)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1999)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1999)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(2000)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(2000)"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_91",
+        "uri" : "http://dbpedia.org/resource/UFC_91"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_92",
+        "uri" : "http://dbpedia.org/resource/UFC_92"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_108",
+        "uri" : "http://dbpedia.org/resource/UFC_108"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_114",
+        "uri" : "http://dbpedia.org/resource/UFC_114"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_34",
+        "uri" : "http://dbpedia.org/resource/UFC_34"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_132",
+        "uri" : "http://dbpedia.org/resource/UFC_132"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_141",
+        "uri" : "http://dbpedia.org/resource/UFC_141"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_168",
+        "uri" : "http://dbpedia.org/resource/UFC_168"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_94",
+        "uri" : "http://dbpedia.org/resource/UFC_94"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_146",
+        "uri" : "http://dbpedia.org/resource/UFC_146"
+      }, {
+        "label" : "http://dbpedia.org/resource/Double_or_Nothing_(2019)",
+        "uri" : "http://dbpedia.org/resource/Double_or_Nothing_(2019)"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_130",
+        "uri" : "http://dbpedia.org/resource/UFC_130"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_155",
+        "uri" : "http://dbpedia.org/resource/UFC_155"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_98",
+        "uri" : "http://dbpedia.org/resource/UFC_98"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_173",
+        "uri" : "http://dbpedia.org/resource/UFC_173"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_178",
+        "uri" : "http://dbpedia.org/resource/UFC_178"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_182",
+        "uri" : "http://dbpedia.org/resource/UFC_182"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_183",
+        "uri" : "http://dbpedia.org/resource/UFC_183"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_187",
+        "uri" : "http://dbpedia.org/resource/UFC_187"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_189",
+        "uri" : "http://dbpedia.org/resource/UFC_189"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_191",
+        "uri" : "http://dbpedia.org/resource/UFC_191"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_194",
+        "uri" : "http://dbpedia.org/resource/UFC_194"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_195",
+        "uri" : "http://dbpedia.org/resource/UFC_195"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_196",
+        "uri" : "http://dbpedia.org/resource/UFC_196"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_197",
+        "uri" : "http://dbpedia.org/resource/UFC_197"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_Fight_Night:_Hendricks_vs._Thompson",
+        "uri" : "http://dbpedia.org/resource/UFC_Fight_Night:_Hendricks_vs._Thompson"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_Fight_Night:_dos_Anjos_vs._Alvarez",
+        "uri" : "http://dbpedia.org/resource/UFC_Fight_Night:_dos_Anjos_vs._Alvarez"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_148",
+        "uri" : "http://dbpedia.org/resource/UFC_148"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_167",
+        "uri" : "http://dbpedia.org/resource/UFC_167"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_160",
+        "uri" : "http://dbpedia.org/resource/UFC_160"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_71",
+        "uri" : "http://dbpedia.org/resource/UFC_71"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_125",
+        "uri" : "http://dbpedia.org/resource/UFC_125"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_162",
+        "uri" : "http://dbpedia.org/resource/UFC_162"
+      }, {
+        "label" : "http://dbpedia.org/resource/Double_or_Nothing_(2021)",
+        "uri" : "http://dbpedia.org/resource/Double_or_Nothing_(2021)"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_116",
+        "uri" : "http://dbpedia.org/resource/UFC_116"
+      }, {
+        "label" : "http://dbpedia.org/resource/UWF_Blackjack_Brawl",
+        "uri" : "http://dbpedia.org/resource/UWF_Blackjack_Brawl"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_66",
+        "uri" : "http://dbpedia.org/resource/UFC_66"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_American_Top_Team_vs._Blackzilians__The_Ultimate_Fighter:_American_Top_Team_vs._Blackz__1",
+        "uri" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_American_Top_Team_vs._Blackzilians__The_Ultimate_Fighter:_American_Top_Team_vs._Blackz__1"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__1",
+        "uri" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__1"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_84",
+        "uri" : "http://dbpedia.org/resource/UFC_84"
+      }, {
+        "label" : "http://dbpedia.org/resource/CCC_Kei_Wai_Primary_School_(Ma_Wan)",
+        "uri" : "http://dbpedia.org/resource/CCC_Kei_Wai_Primary_School_(Ma_Wan)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maatsuyker_Island_Lighthouse",
+        "uri" : "http://dbpedia.org/resource/Maatsuyker_Island_Lighthouse"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mabel_Lake_Airport",
+        "uri" : "http://dbpedia.org/resource/Mabel_Lake_Airport"
+      }, {
+        "label" : "http://dbpedia.org/resource/MacDougal–Sullivan_Gardens_Historic_District",
+        "uri" : "http://dbpedia.org/resource/MacDougal–Sullivan_Gardens_Historic_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Brazil_76–0_Timor-Leste",
+        "uri" : "http://dbpedia.org/resource/Brazil_76–0_Timor-Leste"
+      }, {
+        "label" : "http://dbpedia.org/resource/Wayne_State_University_Computer_Science_Department",
+        "uri" : "http://dbpedia.org/resource/Wayne_State_University_Computer_Science_Department"
+      }, {
+        "label" : "http://dbpedia.org/resource/1940_Mandatory_Palestine_v_Lebanon_football_match",
+        "uri" : "http://dbpedia.org/resource/1940_Mandatory_Palestine_v_Lebanon_football_match"
+      }, {
+        "label" : "http://dbpedia.org/resource/Avery_Rock_Light",
+        "uri" : "http://dbpedia.org/resource/Avery_Rock_Light"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "29",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "ORGANISATION",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Standort von der Standort von $x?", "Was ist der Standort von der Standort von $x?", "Was war der Standort von der Standort von $x?", "Welcher Ort ist der Standort von der Standort von $x?", "Welcher Ort war der Standort von der Standort von $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/location> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "KGB",
+        "uri" : "http://dbpedia.org/resource/KGB"
+      }, {
+        "label" : "Försvarets radioanstalt",
+        "uri" : "http://dbpedia.org/resource/National_Defence_Radio_Establishment"
+      }, {
+        "label" : "http://dbpedia.org/resource/Founder's_Hall_(Rockefeller_University)",
+        "uri" : "http://dbpedia.org/resource/Founder's_Hall_(Rockefeller_University)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Manhattan_House",
+        "uri" : "http://dbpedia.org/resource/Manhattan_House"
+      }, {
+        "label" : "http://dbpedia.org/resource/826_National",
+        "uri" : "http://dbpedia.org/resource/826_National"
+      }, {
+        "label" : "http://dbpedia.org/resource/1992_Scottish_Challenge_Cup_Final",
+        "uri" : "http://dbpedia.org/resource/1992_Scottish_Challenge_Cup_Final"
+      }, {
+        "label" : "http://dbpedia.org/resource/Black_Hawk_Statue",
+        "uri" : "http://dbpedia.org/resource/Black_Hawk_Statue"
+      }, {
+        "label" : "http://dbpedia.org/resource/CHS_Field",
+        "uri" : "http://dbpedia.org/resource/CHS_Field"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chapel_No._1",
+        "uri" : "http://dbpedia.org/resource/Chapel_No._1"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chapel_of_the_Holy_Trinity,_Lublin_Castle",
+        "uri" : "http://dbpedia.org/resource/Chapel_of_the_Holy_Trinity,_Lublin_Castle"
+      }, {
+        "label" : "http://dbpedia.org/resource/FDIC_International",
+        "uri" : "http://dbpedia.org/resource/FDIC_International"
+      }, {
+        "label" : "Isla-Verde-Straße",
+        "uri" : "http://dbpedia.org/resource/Verde_Island_Passage"
+      }, {
+        "label" : "Chambre des Pairs",
+        "uri" : "http://dbpedia.org/resource/Chamber_of_Peers_(France)"
+      }, {
+        "label" : "Balayan-Bucht",
+        "uri" : "http://dbpedia.org/resource/Balayan_Bay"
+      }, {
+        "label" : "Senat (Frankreich)",
+        "uri" : "http://dbpedia.org/resource/Senate_(France)"
+      }, {
+        "label" : "Bato-See",
+        "uri" : "http://dbpedia.org/resource/Lake_Bato"
+      }, {
+        "label" : "Philippine National Railways",
+        "uri" : "http://dbpedia.org/resource/Philippine_National_Railways"
+      }, {
+        "label" : "Manilabucht",
+        "uri" : "http://dbpedia.org/resource/Manila_Bay"
+      }, {
+        "label" : "http://dbpedia.org/resource/Swedish_Ski_Games",
+        "uri" : "http://dbpedia.org/resource/Swedish_Ski_Games"
+      }, {
+        "label" : "http://dbpedia.org/resource/Supreme_Court_Building_(Puerto_Rico)",
+        "uri" : "http://dbpedia.org/resource/Supreme_Court_Building_(Puerto_Rico)"
+      }, {
+        "label" : "http://dbpedia.org/resource/AN/FSQ-7_Combat_Direction_Central",
+        "uri" : "http://dbpedia.org/resource/AN/FSQ-7_Combat_Direction_Central"
+      }, {
+        "label" : "http://dbpedia.org/resource/1999_Belgian_Super_Cup",
+        "uri" : "http://dbpedia.org/resource/1999_Belgian_Super_Cup"
+      }, {
+        "label" : "http://dbpedia.org/resource/2002_Belgian_Super_Cup",
+        "uri" : "http://dbpedia.org/resource/2002_Belgian_Super_Cup"
+      }, {
+        "label" : "http://dbpedia.org/resource/2019_Belgian_Super_Cup",
+        "uri" : "http://dbpedia.org/resource/2019_Belgian_Super_Cup"
+      }, {
+        "label" : "http://dbpedia.org/resource/William_Wagner_House",
+        "uri" : "http://dbpedia.org/resource/William_Wagner_House"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lum's_Mill_House",
+        "uri" : "http://dbpedia.org/resource/Lum's_Mill_House"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luton_Borough_Council",
+        "uri" : "http://dbpedia.org/resource/Luton_Borough_Council"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luzerne_County_Council",
+        "uri" : "http://dbpedia.org/resource/Luzerne_County_Council"
+      }, {
+        "label" : "http://dbpedia.org/resource/2016_in_Fight_Nights_Global",
+        "uri" : "http://dbpedia.org/resource/2016_in_Fight_Nights_Global"
+      }, {
+        "label" : "http://dbpedia.org/resource/2017_in_Absolute_Championship_Berkut",
+        "uri" : "http://dbpedia.org/resource/2017_in_Absolute_Championship_Berkut"
+      }, {
+        "label" : "http://dbpedia.org/resource/2017_in_Fight_Nights_Global",
+        "uri" : "http://dbpedia.org/resource/2017_in_Fight_Nights_Global"
+      }, {
+        "label" : "http://dbpedia.org/resource/2018_in_Fight_Nights_Global",
+        "uri" : "http://dbpedia.org/resource/2018_in_Fight_Nights_Global"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bataan_Airfield",
+        "uri" : "http://dbpedia.org/resource/Bataan_Airfield"
+      }, {
+        "label" : "http://dbpedia.org/resource/Del_Carmen_Airfield",
+        "uri" : "http://dbpedia.org/resource/Del_Carmen_Airfield"
+      }, {
+        "label" : "http://dbpedia.org/resource/Iba_Airfield",
+        "uri" : "http://dbpedia.org/resource/Iba_Airfield"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lake_Pinatubo",
+        "uri" : "http://dbpedia.org/resource/Lake_Pinatubo"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lake_Tikub",
+        "uri" : "http://dbpedia.org/resource/Lake_Tikub"
+      }, {
+        "label" : "http://dbpedia.org/resource/Paoay_Lake",
+        "uri" : "http://dbpedia.org/resource/Paoay_Lake"
+      }, {
+        "label" : "http://dbpedia.org/resource/Pasaleng_Bay",
+        "uri" : "http://dbpedia.org/resource/Pasaleng_Bay"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nichols_Field",
+        "uri" : "http://dbpedia.org/resource/Nichols_Field"
+      }, {
+        "label" : "Strafkolonie Macquarie Harbour",
+        "uri" : "http://dbpedia.org/resource/Macquarie_Harbour_Penal_Station"
+      }, {
+        "label" : "The Gaslight Cafe",
+        "uri" : "http://dbpedia.org/resource/The_Gaslight_Cafe"
+      }, {
+        "label" : "Delhi",
+        "uri" : "http://dbpedia.org/resource/Municipal_Corporation_of_Delhi"
+      }, {
+        "label" : "Melrose High School (Massachusetts)",
+        "uri" : "http://dbpedia.org/resource/Melrose_High_School_(Massachusetts)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Field_of_Honor_(2014)",
+        "uri" : "http://dbpedia.org/resource/Field_of_Honor_(2014)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Field_of_Honor_(2015)",
+        "uri" : "http://dbpedia.org/resource/Field_of_Honor_(2015)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Field_of_Honor_(2016)",
+        "uri" : "http://dbpedia.org/resource/Field_of_Honor_(2016)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1996)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1996)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1997)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1997)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1998)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1998)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(1999)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(1999)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Halloween_Havoc_(2000)",
+        "uri" : "http://dbpedia.org/resource/Halloween_Havoc_(2000)"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_91",
+        "uri" : "http://dbpedia.org/resource/UFC_91"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_92",
+        "uri" : "http://dbpedia.org/resource/UFC_92"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_108",
+        "uri" : "http://dbpedia.org/resource/UFC_108"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_114",
+        "uri" : "http://dbpedia.org/resource/UFC_114"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_34",
+        "uri" : "http://dbpedia.org/resource/UFC_34"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_132",
+        "uri" : "http://dbpedia.org/resource/UFC_132"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_141",
+        "uri" : "http://dbpedia.org/resource/UFC_141"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_168",
+        "uri" : "http://dbpedia.org/resource/UFC_168"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_94",
+        "uri" : "http://dbpedia.org/resource/UFC_94"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_146",
+        "uri" : "http://dbpedia.org/resource/UFC_146"
+      }, {
+        "label" : "http://dbpedia.org/resource/Double_or_Nothing_(2019)",
+        "uri" : "http://dbpedia.org/resource/Double_or_Nothing_(2019)"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_130",
+        "uri" : "http://dbpedia.org/resource/UFC_130"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_155",
+        "uri" : "http://dbpedia.org/resource/UFC_155"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_98",
+        "uri" : "http://dbpedia.org/resource/UFC_98"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_173",
+        "uri" : "http://dbpedia.org/resource/UFC_173"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_178",
+        "uri" : "http://dbpedia.org/resource/UFC_178"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_182",
+        "uri" : "http://dbpedia.org/resource/UFC_182"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_183",
+        "uri" : "http://dbpedia.org/resource/UFC_183"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_187",
+        "uri" : "http://dbpedia.org/resource/UFC_187"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_189",
+        "uri" : "http://dbpedia.org/resource/UFC_189"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_191",
+        "uri" : "http://dbpedia.org/resource/UFC_191"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_194",
+        "uri" : "http://dbpedia.org/resource/UFC_194"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_195",
+        "uri" : "http://dbpedia.org/resource/UFC_195"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_196",
+        "uri" : "http://dbpedia.org/resource/UFC_196"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_197",
+        "uri" : "http://dbpedia.org/resource/UFC_197"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_Fight_Night:_Hendricks_vs._Thompson",
+        "uri" : "http://dbpedia.org/resource/UFC_Fight_Night:_Hendricks_vs._Thompson"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_Fight_Night:_dos_Anjos_vs._Alvarez",
+        "uri" : "http://dbpedia.org/resource/UFC_Fight_Night:_dos_Anjos_vs._Alvarez"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_148",
+        "uri" : "http://dbpedia.org/resource/UFC_148"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_167",
+        "uri" : "http://dbpedia.org/resource/UFC_167"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_160",
+        "uri" : "http://dbpedia.org/resource/UFC_160"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_71",
+        "uri" : "http://dbpedia.org/resource/UFC_71"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_125",
+        "uri" : "http://dbpedia.org/resource/UFC_125"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_162",
+        "uri" : "http://dbpedia.org/resource/UFC_162"
+      }, {
+        "label" : "http://dbpedia.org/resource/Double_or_Nothing_(2021)",
+        "uri" : "http://dbpedia.org/resource/Double_or_Nothing_(2021)"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_116",
+        "uri" : "http://dbpedia.org/resource/UFC_116"
+      }, {
+        "label" : "http://dbpedia.org/resource/UWF_Blackjack_Brawl",
+        "uri" : "http://dbpedia.org/resource/UWF_Blackjack_Brawl"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_66",
+        "uri" : "http://dbpedia.org/resource/UFC_66"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_American_Top_Team_vs._Blackzilians__The_Ultimate_Fighter:_American_Top_Team_vs._Blackz__1",
+        "uri" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_American_Top_Team_vs._Blackzilians__The_Ultimate_Fighter:_American_Top_Team_vs._Blackz__1"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__1",
+        "uri" : "http://dbpedia.org/resource/The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__The_Ultimate_Fighter:_Team_Joanna_vs._Team_Cláudia__1"
+      }, {
+        "label" : "http://dbpedia.org/resource/UFC_84",
+        "uri" : "http://dbpedia.org/resource/UFC_84"
+      }, {
+        "label" : "http://dbpedia.org/resource/CCC_Kei_Wai_Primary_School_(Ma_Wan)",
+        "uri" : "http://dbpedia.org/resource/CCC_Kei_Wai_Primary_School_(Ma_Wan)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maatsuyker_Island_Lighthouse",
+        "uri" : "http://dbpedia.org/resource/Maatsuyker_Island_Lighthouse"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mabel_Lake_Airport",
+        "uri" : "http://dbpedia.org/resource/Mabel_Lake_Airport"
+      }, {
+        "label" : "http://dbpedia.org/resource/MacDougal–Sullivan_Gardens_Historic_District",
+        "uri" : "http://dbpedia.org/resource/MacDougal–Sullivan_Gardens_Historic_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Brazil_76–0_Timor-Leste",
+        "uri" : "http://dbpedia.org/resource/Brazil_76–0_Timor-Leste"
+      }, {
+        "label" : "http://dbpedia.org/resource/Wayne_State_University_Computer_Science_Department",
+        "uri" : "http://dbpedia.org/resource/Wayne_State_University_Computer_Science_Department"
+      }, {
+        "label" : "http://dbpedia.org/resource/1940_Mandatory_Palestine_v_Lebanon_football_match",
+        "uri" : "http://dbpedia.org/resource/1940_Mandatory_Palestine_v_Lebanon_football_match"
+      }, {
+        "label" : "http://dbpedia.org/resource/Avery_Rock_Light",
+        "uri" : "http://dbpedia.org/resource/Avery_Rock_Light"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "30",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Standort von der Produzent von $x?", "Gib mir den Standort von die Produzenten von $x?", "Was ist der Standort von der Produzent von $x?", "Was ist der Standort von die Produzenten von $x?", "Was war der Standort von der Produzent von $x?", "Was war der Standort von die Produzenten von $x?", "Welcher Ort ist der Standort von der Produzent von $x?", "Welcher Ort ist der Standort von die Produzenten von $x?", "Welcher Ort war der Standort von der Produzent von $x?", "Welcher Ort war der Standort von die Produzenten von $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/product> ?objOfPropx)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Lufia",
+        "uri" : "http://dbpedia.org/resource/Lufia"
+      }, {
+        "label" : "Bauholz",
+        "uri" : "http://dbpedia.org/resource/Lumber"
+      }, {
+        "label" : "Luxusgut",
+        "uri" : "http://dbpedia.org/resource/Luxury_goods"
+      }, {
+        "label" : "M&M’s",
+        "uri" : "http://dbpedia.org/resource/M&M's"
+      }, {
+        "label" : "MAG (Computerspiel)",
+        "uri" : "http://dbpedia.org/resource/MAG_(video_game)"
+      }, {
+        "label" : "MGB (Auto)",
+        "uri" : "http://dbpedia.org/resource/MG_MGB"
+      }, {
+        "label" : "MG Motor UK",
+        "uri" : "http://dbpedia.org/resource/MG_Motor"
+      }, {
+        "label" : "MIPS-Architektur",
+        "uri" : "http://dbpedia.org/resource/MIPS_architecture"
+      }, {
+        "label" : "MacDraw",
+        "uri" : "http://dbpedia.org/resource/MacDraw"
+      }, {
+        "label" : "MacOS",
+        "uri" : "http://dbpedia.org/resource/MacOS"
+      }, {
+        "label" : "Mac OS",
+        "uri" : "http://dbpedia.org/resource/MacOS"
+      }, {
+        "label" : "MacWrite",
+        "uri" : "http://dbpedia.org/resource/MacWrite"
+      }, {
+        "label" : "Mac OS X Snow Leopard",
+        "uri" : "http://dbpedia.org/resource/Mac_OS_X_Snow_Leopard"
+      }, {
+        "label" : "Maschinengewehr",
+        "uri" : "http://dbpedia.org/resource/Machine_gun"
+      }, {
+        "label" : "Maschinelles Lernen",
+        "uri" : "http://dbpedia.org/resource/Machine_learning"
+      }, {
+        "label" : "Mad Dog McCree",
+        "uri" : "http://dbpedia.org/resource/Mad_Dog_McCree"
+      }, {
+        "label" : "Magic: The Gathering",
+        "uri" : "http://dbpedia.org/resource/Magic:_The_Gathering"
+      }, {
+        "label" : "Magnesit",
+        "uri" : "http://dbpedia.org/resource/Magnesite"
+      }, {
+        "label" : "Magnesium",
+        "uri" : "http://dbpedia.org/resource/Magnesium"
+      }, {
+        "label" : "Maine (Loire)",
+        "uri" : "http://dbpedia.org/resource/Maine"
+      }, {
+        "label" : "Maine",
+        "uri" : "http://dbpedia.org/resource/Maine"
+      }, {
+        "label" : "Mais",
+        "uri" : "http://dbpedia.org/resource/Maize"
+      }, {
+        "label" : "Majesty: The Fantasy Kingdom Sim",
+        "uri" : "http://dbpedia.org/resource/Majesty:_The_Fantasy_Kingdom_Sim"
+      }, {
+        "label" : "Teppich",
+        "uri" : "http://dbpedia.org/resource/Carpet"
+      }, {
+        "label" : "Wagen",
+        "uri" : "http://dbpedia.org/resource/Carriage"
+      }, {
+        "label" : "Etui",
+        "uri" : "http://dbpedia.org/resource/Case_(goods)"
+      }, {
+        "label" : "Casein",
+        "uri" : "http://dbpedia.org/resource/Casein"
+      }, {
+        "label" : "Abholgroßmarkt",
+        "uri" : "http://dbpedia.org/resource/Cash_and_carry_(wholesale)"
+      }, {
+        "label" : "Cash Management",
+        "uri" : "http://dbpedia.org/resource/Cash_management"
+      }, {
+        "label" : "Treasury",
+        "uri" : "http://dbpedia.org/resource/Cash_management"
+      }, {
+        "label" : "Registrierkasse",
+        "uri" : "http://dbpedia.org/resource/Cash_register"
+      }, {
+        "label" : "Bankscheck",
+        "uri" : "http://dbpedia.org/resource/Cashier's_check"
+      }, {
+        "label" : "Gusseisen",
+        "uri" : "http://dbpedia.org/resource/Cast_iron"
+      }, {
+        "label" : "Kastellan",
+        "uri" : "http://dbpedia.org/resource/Castellan"
+      }, {
+        "label" : "Gießen (Urformen)",
+        "uri" : "http://dbpedia.org/resource/Casting"
+      }, {
+        "label" : "Gießen (Metall)",
+        "uri" : "http://dbpedia.org/resource/Casting_(metalworking)"
+      }, {
+        "label" : "Katzenauge",
+        "uri" : "http://dbpedia.org/resource/Cat's_eye_(road)"
+      }, {
+        "label" : "Katalysator",
+        "uri" : "http://dbpedia.org/resource/Catalyst"
+      }, {
+        "label" : "Katamaran",
+        "uri" : "http://dbpedia.org/resource/Catamaran"
+      }, {
+        "label" : "Catering",
+        "uri" : "http://dbpedia.org/resource/Catering"
+      }, {
+        "label" : "Verbrauchsmaterial",
+        "uri" : "http://dbpedia.org/resource/Consumables"
+      }, {
+        "label" : "Verbraucher",
+        "uri" : "http://dbpedia.org/resource/Consumer"
+      }, {
+        "label" : "Stimmfühlungslaut",
+        "uri" : "http://dbpedia.org/resource/Contact_call"
+      }, {
+        "label" : "Kontaktlinse",
+        "uri" : "http://dbpedia.org/resource/Contact_lens"
+      }, {
+        "label" : "Kontaktloses Bezahlen",
+        "uri" : "http://dbpedia.org/resource/Contactless_payment"
+      }, {
+        "label" : "Contentfilter",
+        "uri" : "http://dbpedia.org/resource/Content-control_software"
+      }, {
+        "label" : "Content Delivery Network",
+        "uri" : "http://dbpedia.org/resource/Content_delivery_network"
+      }, {
+        "label" : "Content-Management",
+        "uri" : "http://dbpedia.org/resource/Content_management"
+      }, {
+        "label" : "Regelkreis",
+        "uri" : "http://dbpedia.org/resource/Control_system"
+      }, {
+        "label" : "Stellventil",
+        "uri" : "http://dbpedia.org/resource/Control_valve"
+      }, {
+        "label" : "Autobahn",
+        "uri" : "http://dbpedia.org/resource/Controlled-access_highway"
+      }, {
+        "label" : "Convenience Food",
+        "uri" : "http://dbpedia.org/resource/Convenience_food"
+      }, {
+        "label" : "Convenience Shop",
+        "uri" : "http://dbpedia.org/resource/Convenience_store"
+      }, {
+        "label" : "Förderband",
+        "uri" : "http://dbpedia.org/resource/Conveyor_belt"
+      }, {
+        "label" : "Kühlmittel",
+        "uri" : "http://dbpedia.org/resource/Coolant"
+      }, {
+        "label" : "Kühlbox",
+        "uri" : "http://dbpedia.org/resource/Cooler"
+      }, {
+        "label" : "Abkühlung",
+        "uri" : "http://dbpedia.org/resource/Cooling"
+      }, {
+        "label" : "Koordinatenmessgerät",
+        "uri" : "http://dbpedia.org/resource/Coordinate-measuring_machine"
+      }, {
+        "label" : "Kupfer",
+        "uri" : "http://dbpedia.org/resource/Copper"
+      }, {
+        "label" : "Cord (Gewebe)",
+        "uri" : "http://dbpedia.org/resource/Corduroy"
+      }, {
+        "label" : "Maiskeimöl",
+        "uri" : "http://dbpedia.org/resource/Corn_oil"
+      }, {
+        "label" : "Maissirup",
+        "uri" : "http://dbpedia.org/resource/Corn_syrup"
+      }, {
+        "label" : "Corned Beef",
+        "uri" : "http://dbpedia.org/resource/Corned_beef"
+      }, {
+        "label" : "Unternehmensanleihe",
+        "uri" : "http://dbpedia.org/resource/Corporate_bond"
+      }, {
+        "label" : "Corporate Finance",
+        "uri" : "http://dbpedia.org/resource/Corporate_finance"
+      }, {
+        "label" : "Körperschaft",
+        "uri" : "http://dbpedia.org/resource/Corporation"
+      }, {
+        "label" : "Ultra HD Blu-ray",
+        "uri" : "http://dbpedia.org/resource/Ultra_HD_Blu-ray"
+      }, {
+        "label" : "Ultraman",
+        "uri" : "http://dbpedia.org/resource/Ultraman_(1966_TV_series)"
+      }, {
+        "label" : "Umineko no Naku Koro ni",
+        "uri" : "http://dbpedia.org/resource/Umineko_When_They_Cry"
+      }, {
+        "label" : "Unbreakable Kimmy Schmidt",
+        "uri" : "http://dbpedia.org/resource/Unbreakable_Kimmy_Schmidt"
+      }, {
+        "label" : "Uncle Ben’s",
+        "uri" : "http://dbpedia.org/resource/Uncle_Ben's"
+      }, {
+        "label" : "Unterbrechungsfreie Stromversorgung",
+        "uri" : "http://dbpedia.org/resource/Uninterruptible_power_supply"
+      }, {
+        "label" : "Großbritannien (Insel)",
+        "uri" : "http://dbpedia.org/resource/United_Kingdom"
+      }, {
+        "label" : "Vereinigtes Königreich",
+        "uri" : "http://dbpedia.org/resource/United_Kingdom"
+      }, {
+        "label" : "Vereinigtes Königreich Großbritannien und Irland",
+        "uri" : "http://dbpedia.org/resource/United_Kingdom"
+      }, {
+        "label" : "Vereinigte Staaten",
+        "uri" : "http://dbpedia.org/resource/United_States"
+      }, {
+        "label" : "US-Dollar",
+        "uri" : "http://dbpedia.org/resource/United_States_dollar"
+      }, {
+        "label" : "UnixWare",
+        "uri" : "http://dbpedia.org/resource/UnixWare"
+      }, {
+        "label" : "Uplink (Computerspiel)",
+        "uri" : "http://dbpedia.org/resource/Uplink_(video_game)"
+      }, {
+        "label" : "Harnstoff",
+        "uri" : "http://dbpedia.org/resource/Urea"
+      }, {
+        "label" : "Ustekinumab",
+        "uri" : "http://dbpedia.org/resource/Ustekinumab"
+      }, {
+        "label" : "V8 (Markenname)",
+        "uri" : "http://dbpedia.org/resource/V8_(beverage)"
+      }, {
+        "label" : "Virtual Address eXtension",
+        "uri" : "http://dbpedia.org/resource/VAX"
+      }, {
+        "label" : "Video Home System",
+        "uri" : "http://dbpedia.org/resource/VHS"
+      }, {
+        "label" : "Impfstoff",
+        "uri" : "http://dbpedia.org/resource/Vaccine"
+      }, {
+        "label" : "Elektronenröhre",
+        "uri" : "http://dbpedia.org/resource/Vacuum_tube"
+      }, {
+        "label" : "Armatur",
+        "uri" : "http://dbpedia.org/resource/Valve"
+      }, {
+        "label" : "Vampire: The Masquerade – Bloodlines",
+        "uri" : "http://dbpedia.org/resource/Vampire:_The_Masquerade_–_Bloodlines"
+      }, {
+        "label" : "Vampire: Die Maskerade – Redemption",
+        "uri" : "http://dbpedia.org/resource/Vampire:_The_Masquerade_–_Redemption"
+      }, {
+        "label" : "Vancomycin",
+        "uri" : "http://dbpedia.org/resource/Vancomycin"
+      }, {
+        "label" : "Vaporizer",
+        "uri" : "http://dbpedia.org/resource/Vaporizer_(inhalation_device)"
+      }, {
+        "label" : "Frequenzumrichter",
+        "uri" : "http://dbpedia.org/resource/Variable-frequency_drive"
+      }, {
+        "label" : "Vector (Rakete)",
+        "uri" : "http://dbpedia.org/resource/Vector-R"
+      }, {
+        "label" : "Gemüse",
+        "uri" : "http://dbpedia.org/resource/Vegetable"
+      }, {
+        "label" : "Venetoclax",
+        "uri" : "http://dbpedia.org/resource/Venetoclax"
+      }, {
+        "label" : "Wirbelsäule",
+        "uri" : "http://dbpedia.org/resource/Vertebral_column"
+      }, {
+        "label" : "Tasse",
+        "uri" : "http://dbpedia.org/resource/Cup"
+      }, {
+        "label" : "Curry (Gericht)",
+        "uri" : "http://dbpedia.org/resource/Curry"
+      }, {
+        "label" : "Custard (Süßspeise)",
+        "uri" : "http://dbpedia.org/resource/Custard"
+      }, {
+        "label" : "Verwahrstelle",
+        "uri" : "http://dbpedia.org/resource/Custodian_bank"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "31",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "WORK",
+    "returnType" : "PERSON",
+    "frameType" : "VP",
+    "sentences" : [ "Welche Person heiratet der Komponist für $x ?", "Welche Person heiratet die Komponisten für $x ?", "Welche Person heiratete der Komponist für $x ?", "Welche Person heiratete die Komponisten für $x ?", "Welche Personen heiraten der Komponist für $x ?", "Welche Personen heiraten die Komponisten für $x ?", "Welche Personen heirateten der Komponist für $x ?", "Welche Personen heirateten die Komponisten für $x ?", "Wer heiratet der Komponist für $x ?", "Wer heiratet die Komponisten für $x ?", "Wer heiratete der Komponist für $x ?", "Wer heiratete die Komponisten für $x ?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/musicComposer> ?objOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "In Bed with Madonna",
+        "uri" : "http://dbpedia.org/resource/Madonna:_Truth_or_Dare"
+      }, {
+        "label" : "Raajakumara",
+        "uri" : "http://dbpedia.org/resource/Raajakumara"
+      }, {
+        "label" : "Dr. T and the Women",
+        "uri" : "http://dbpedia.org/resource/Dr._T_&_the_Women"
+      }, {
+        "label" : "Die Söhne der drei Musketiere",
+        "uri" : "http://dbpedia.org/resource/At_Sword's_Point"
+      }, {
+        "label" : "Dheere Rana Vikrama",
+        "uri" : "http://dbpedia.org/resource/Rana_Vikrama"
+      }, {
+        "label" : "Ring frei für Stoker Thompson",
+        "uri" : "http://dbpedia.org/resource/The_Set-Up_(1949_film)"
+      }, {
+        "label" : "Days of Glory (1944)",
+        "uri" : "http://dbpedia.org/resource/Days_of_Glory_(1944_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Come_Back,_Africa",
+        "uri" : "http://dbpedia.org/resource/Come_Back,_Africa"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ladrones_(2015_film)",
+        "uri" : "http://dbpedia.org/resource/Ladrones_(2015_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Looking_for_Leonard",
+        "uri" : "http://dbpedia.org/resource/Looking_for_Leonard"
+      }, {
+        "label" : "http://dbpedia.org/resource/Who_Loves_the_Sun",
+        "uri" : "http://dbpedia.org/resource/Who_Loves_the_Sun"
+      }, {
+        "label" : "http://dbpedia.org/resource/Variety_Time",
+        "uri" : "http://dbpedia.org/resource/Variety_Time"
+      }, {
+        "label" : "http://dbpedia.org/resource/Government_Girl",
+        "uri" : "http://dbpedia.org/resource/Government_Girl"
+      }, {
+        "label" : "http://dbpedia.org/resource/Radio_Stars_on_Parade",
+        "uri" : "http://dbpedia.org/resource/Radio_Stars_on_Parade"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bad_Men_of_Tombstone",
+        "uri" : "http://dbpedia.org/resource/Bad_Men_of_Tombstone"
+      }, {
+        "label" : "http://dbpedia.org/resource/Gildersleeve's_Bad_Day",
+        "uri" : "http://dbpedia.org/resource/Gildersleeve's_Bad_Day"
+      }, {
+        "label" : "http://dbpedia.org/resource/Gildersleeve's_Ghost",
+        "uri" : "http://dbpedia.org/resource/Gildersleeve's_Ghost"
+      }, {
+        "label" : "http://dbpedia.org/resource/Gildersleeve_on_Broadway",
+        "uri" : "http://dbpedia.org/resource/Gildersleeve_on_Broadway"
+      }, {
+        "label" : "http://dbpedia.org/resource/Below_the_Sahara",
+        "uri" : "http://dbpedia.org/resource/Below_the_Sahara"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ten_Cents_a_Dance_(1931_film)",
+        "uri" : "http://dbpedia.org/resource/Ten_Cents_a_Dance_(1931_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Saddle_Legion",
+        "uri" : "http://dbpedia.org/resource/Saddle_Legion"
+      }, {
+        "label" : "http://dbpedia.org/resource/Double_Deal_(1950_film)",
+        "uri" : "http://dbpedia.org/resource/Double_Deal_(1950_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Footlight_Varieties",
+        "uri" : "http://dbpedia.org/resource/Footlight_Varieties"
+      }, {
+        "label" : "http://dbpedia.org/resource/Around_the_World_(1943_film)",
+        "uri" : "http://dbpedia.org/resource/Around_the_World_(1943_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Outrage_(1950_film)",
+        "uri" : "http://dbpedia.org/resource/Outrage_(1950_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Overland_Telegraph_(film)",
+        "uri" : "http://dbpedia.org/resource/Overland_Telegraph_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Pan-Americana",
+        "uri" : "http://dbpedia.org/resource/Pan-Americana"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Boy_with_Green_Hair",
+        "uri" : "http://dbpedia.org/resource/The_Boy_with_Green_Hair"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Falcon_Takes_Over",
+        "uri" : "http://dbpedia.org/resource/The_Falcon_Takes_Over"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Falcon_and_the_Co-eds",
+        "uri" : "http://dbpedia.org/resource/The_Falcon_and_the_Co-eds"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Falcon_in_Hollywood",
+        "uri" : "http://dbpedia.org/resource/The_Falcon_in_Hollywood"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Falcon_in_Mexico",
+        "uri" : "http://dbpedia.org/resource/The_Falcon_in_Mexico"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Great_Gildersleeve_(film)",
+        "uri" : "http://dbpedia.org/resource/The_Great_Gildersleeve_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Rookies_in_Burma",
+        "uri" : "http://dbpedia.org/resource/Rookies_in_Burma"
+      }, {
+        "label" : "http://dbpedia.org/resource/Seven_Keys_to_Baldpate_(1947_film)",
+        "uri" : "http://dbpedia.org/resource/Seven_Keys_to_Baldpate_(1947_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Every_Girl_Should_Be_Married",
+        "uri" : "http://dbpedia.org/resource/Every_Girl_Should_Be_Married"
+      }, {
+        "label" : "http://dbpedia.org/resource/Fighting_Father_Dunne",
+        "uri" : "http://dbpedia.org/resource/Fighting_Father_Dunne"
+      }, {
+        "label" : "http://dbpedia.org/resource/Petticoat_Larceny",
+        "uri" : "http://dbpedia.org/resource/Petticoat_Larceny"
+      }, {
+        "label" : "http://dbpedia.org/resource/Sunset_Pass_(1946_film)",
+        "uri" : "http://dbpedia.org/resource/Sunset_Pass_(1946_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Here_We_Go_Again_(film)",
+        "uri" : "http://dbpedia.org/resource/Here_We_Go_Again_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Higher_and_Higher_(film)",
+        "uri" : "http://dbpedia.org/resource/Higher_and_Higher_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Highways_by_Night",
+        "uri" : "http://dbpedia.org/resource/Highways_by_Night"
+      }, {
+        "label" : "http://dbpedia.org/resource/My_Pal_Wolf",
+        "uri" : "http://dbpedia.org/resource/My_Pal_Wolf"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mexican_Spitfire's_Blessed_Event",
+        "uri" : "http://dbpedia.org/resource/Mexican_Spitfire's_Blessed_Event"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mexican_Spitfire's_Elephant",
+        "uri" : "http://dbpedia.org/resource/Mexican_Spitfire's_Elephant"
+      }, {
+        "label" : "http://dbpedia.org/resource/Saat_Hindustani",
+        "uri" : "http://dbpedia.org/resource/Saat_Hindustani"
+      }, {
+        "label" : "http://dbpedia.org/resource/On_Board_(film)",
+        "uri" : "http://dbpedia.org/resource/On_Board_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/A_Madonna_in_Laleli",
+        "uri" : "http://dbpedia.org/resource/A_Madonna_in_Laleli"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maduveya_Mamatheya_Kareyole",
+        "uri" : "http://dbpedia.org/resource/Maduveya_Mamatheya_Kareyole"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maleyali_Jotheyali",
+        "uri" : "http://dbpedia.org/resource/Maleyali_Jotheyali"
+      }, {
+        "label" : "http://dbpedia.org/resource/Uppina_Kagada",
+        "uri" : "http://dbpedia.org/resource/Uppina_Kagada"
+      }, {
+        "label" : "http://dbpedia.org/resource/Vaastu_Prakaara",
+        "uri" : "http://dbpedia.org/resource/Vaastu_Prakaara"
+      }, {
+        "label" : "http://dbpedia.org/resource/Vayuputra",
+        "uri" : "http://dbpedia.org/resource/Vayuputra"
+      }, {
+        "label" : "http://dbpedia.org/resource/Veera_Bahu_(film)",
+        "uri" : "http://dbpedia.org/resource/Veera_Bahu_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Boss_(2011_film)",
+        "uri" : "http://dbpedia.org/resource/Boss_(2011_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Boxer_(2015_film)",
+        "uri" : "http://dbpedia.org/resource/Boxer_(2015_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Dhool_(2011_film)",
+        "uri" : "http://dbpedia.org/resource/Dhool_(2011_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Doddmane_Hudga",
+        "uri" : "http://dbpedia.org/resource/Doddmane_Hudga"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kiccha_Huccha",
+        "uri" : "http://dbpedia.org/resource/Kiccha_Huccha"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kiss_(2019_film)",
+        "uri" : "http://dbpedia.org/resource/Kiss_(2019_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kool...Sakkath_Hot_Maga",
+        "uri" : "http://dbpedia.org/resource/Kool...Sakkath_Hot_Maga"
+      }, {
+        "label" : "http://dbpedia.org/resource/Prince_(2011_film)",
+        "uri" : "http://dbpedia.org/resource/Prince_(2011_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Raaj_the_Showman",
+        "uri" : "http://dbpedia.org/resource/Raaj_the_Showman"
+      }, {
+        "label" : "http://dbpedia.org/resource/Raam_(2009_film)",
+        "uri" : "http://dbpedia.org/resource/Raam_(2009_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Rajakumari_(2009_film)",
+        "uri" : "http://dbpedia.org/resource/Rajakumari_(2009_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ajith_(film)",
+        "uri" : "http://dbpedia.org/resource/Ajith_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Cheluveye_Ninne_Nodalu",
+        "uri" : "http://dbpedia.org/resource/Cheluveye_Ninne_Nodalu"
+      }, {
+        "label" : "http://dbpedia.org/resource/Odeya_(film)",
+        "uri" : "http://dbpedia.org/resource/Odeya_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bachchan_(2013_film)",
+        "uri" : "http://dbpedia.org/resource/Bachchan_(2013_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bahaddur",
+        "uri" : "http://dbpedia.org/resource/Bahaddur"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bangara_s/o_Bangarada_Manushya",
+        "uri" : "http://dbpedia.org/resource/Bangara_s/o_Bangarada_Manushya"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chingari_(2012_film)",
+        "uri" : "http://dbpedia.org/resource/Chingari_(2012_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chowka",
+        "uri" : "http://dbpedia.org/resource/Chowka"
+      }, {
+        "label" : "http://dbpedia.org/resource/Jogayya",
+        "uri" : "http://dbpedia.org/resource/Jogayya"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bharjari",
+        "uri" : "http://dbpedia.org/resource/Bharjari"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bhoopathi_(2007_film)",
+        "uri" : "http://dbpedia.org/resource/Bhoopathi_(2007_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kaddipudi",
+        "uri" : "http://dbpedia.org/resource/Kaddipudi"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kalpana_(2012_film)",
+        "uri" : "http://dbpedia.org/resource/Kalpana_(2012_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Katari_Veera_Surasundarangi",
+        "uri" : "http://dbpedia.org/resource/Katari_Veera_Surasundarangi"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kendasampige",
+        "uri" : "http://dbpedia.org/resource/Kendasampige"
+      }, {
+        "label" : "http://dbpedia.org/resource/Life_Jothe_Ondh_Selfie",
+        "uri" : "http://dbpedia.org/resource/Life_Jothe_Ondh_Selfie"
+      }, {
+        "label" : "http://dbpedia.org/resource/Minchagi_Nee_Baralu",
+        "uri" : "http://dbpedia.org/resource/Minchagi_Nee_Baralu"
+      }, {
+        "label" : "http://dbpedia.org/resource/Modalasala",
+        "uri" : "http://dbpedia.org/resource/Modalasala"
+      }, {
+        "label" : "http://dbpedia.org/resource/Rudra_Tandava",
+        "uri" : "http://dbpedia.org/resource/Rudra_Tandava"
+      }, {
+        "label" : "http://dbpedia.org/resource/Saarathi",
+        "uri" : "http://dbpedia.org/resource/Saarathi"
+      }, {
+        "label" : "http://dbpedia.org/resource/Saheba_(film)",
+        "uri" : "http://dbpedia.org/resource/Saheba_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Sakkare",
+        "uri" : "http://dbpedia.org/resource/Sakkare"
+      }, {
+        "label" : "http://dbpedia.org/resource/Krishna_(2007_film)",
+        "uri" : "http://dbpedia.org/resource/Krishna_(2007_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Snehana_Preethina",
+        "uri" : "http://dbpedia.org/resource/Snehana_Preethina"
+      }, {
+        "label" : "http://dbpedia.org/resource/Snehitaru",
+        "uri" : "http://dbpedia.org/resource/Snehitaru"
+      }, {
+        "label" : "http://dbpedia.org/resource/Drama_(2012_film)",
+        "uri" : "http://dbpedia.org/resource/Drama_(2012_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Gaalipata",
+        "uri" : "http://dbpedia.org/resource/Gaalipata"
+      }, {
+        "label" : "http://dbpedia.org/resource/Gaja_(film)",
+        "uri" : "http://dbpedia.org/resource/Gaja_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Gajakesari",
+        "uri" : "http://dbpedia.org/resource/Gajakesari"
+      }, {
+        "label" : "http://dbpedia.org/resource/Happy_Birthday_(2016_Indian_film)",
+        "uri" : "http://dbpedia.org/resource/Happy_Birthday_(2016_Indian_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hoo_(film)",
+        "uri" : "http://dbpedia.org/resource/Hoo_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hudugaru",
+        "uri" : "http://dbpedia.org/resource/Hudugaru"
+      }, {
+        "label" : "http://dbpedia.org/resource/Indra_(2008_film)",
+        "uri" : "http://dbpedia.org/resource/Indra_(2008_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Jaanu",
+        "uri" : "http://dbpedia.org/resource/Jaanu"
+      }, {
+        "label" : "http://dbpedia.org/resource/Jackie_(2010_film)",
+        "uri" : "http://dbpedia.org/resource/Jackie_(2010_film)"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "32",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "BAND",
+    "returnType" : "PERSON",
+    "frameType" : "VP",
+    "sentences" : [ "Welche Person heiratet das Mitglied von $x ?", "Welche Person heiratet die Mitglieder von $x ?", "Welche Person heiratete das Mitglied von $x ?", "Welche Person heiratete die Mitglieder von $x ?", "Welche Personen heiraten das Mitglied von $x ?", "Welche Personen heiraten die Mitglieder von $x ?", "Welche Personen heirateten das Mitglied von $x ?", "Welche Personen heirateten die Mitglieder von $x ?", "Wer heiratet das Mitglied von $x ?", "Wer heiratet die Mitglieder von $x ?", "Wer heiratete das Mitglied von $x ?", "Wer heiratete die Mitglieder von $x ?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/bandMember> ?objOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "The Boomtown Rats",
+        "uri" : "http://dbpedia.org/resource/The_Boomtown_Rats"
+      }, {
+        "label" : "New Edition",
+        "uri" : "http://dbpedia.org/resource/New_Edition"
+      }, {
+        "label" : "Band From TV",
+        "uri" : "http://dbpedia.org/resource/Band_from_TV"
+      }, {
+        "label" : "The Saturdays",
+        "uri" : "http://dbpedia.org/resource/The_Saturdays"
+      }, {
+        "label" : "ABBA",
+        "uri" : "http://dbpedia.org/resource/ABBA"
+      }, {
+        "label" : "U2 (Band)",
+        "uri" : "http://dbpedia.org/resource/U2"
+      }, {
+        "label" : "Tight Fit",
+        "uri" : "http://dbpedia.org/resource/Tight_Fit"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Halo_Method",
+        "uri" : "http://dbpedia.org/resource/The_Halo_Method"
+      }, {
+        "label" : "http://dbpedia.org/resource/Portastatic",
+        "uri" : "http://dbpedia.org/resource/Portastatic"
+      }, {
+        "label" : "http://dbpedia.org/resource/Superchunk",
+        "uri" : "http://dbpedia.org/resource/Superchunk"
+      }, {
+        "label" : "http://dbpedia.org/resource/T_with_the_Maggies",
+        "uri" : "http://dbpedia.org/resource/T_with_the_Maggies"
+      }, {
+        "label" : "http://dbpedia.org/resource/Skara_Brae_(band)",
+        "uri" : "http://dbpedia.org/resource/Skara_Brae_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Boxmasters",
+        "uri" : "http://dbpedia.org/resource/The_Boxmasters"
+      }, {
+        "label" : "http://dbpedia.org/resource/Billy_Joel_Band",
+        "uri" : "http://dbpedia.org/resource/Billy_Joel_Band"
+      }, {
+        "label" : "http://dbpedia.org/resource/Brother_Clyde",
+        "uri" : "http://dbpedia.org/resource/Brother_Clyde"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Rhythm_Boys",
+        "uri" : "http://dbpedia.org/resource/The_Rhythm_Boys"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bombaj_Štampa",
+        "uri" : "http://dbpedia.org/resource/Bombaj_Štampa"
+      }, {
+        "label" : "http://dbpedia.org/resource/Crystal_Skulls",
+        "uri" : "http://dbpedia.org/resource/Crystal_Skulls"
+      }, {
+        "label" : "http://dbpedia.org/resource/Beachwood_Sparks",
+        "uri" : "http://dbpedia.org/resource/Beachwood_Sparks"
+      }, {
+        "label" : "Army of Lovers",
+        "uri" : "http://dbpedia.org/resource/Army_of_Lovers"
+      }, {
+        "label" : "The Ordinary Boys",
+        "uri" : "http://dbpedia.org/resource/The_Ordinary_Boys"
+      }, {
+        "label" : "Alcatrazz",
+        "uri" : "http://dbpedia.org/resource/Alcatrazz"
+      }, {
+        "label" : "The Marbles",
+        "uri" : "http://dbpedia.org/resource/The_Marbles_(duo)"
+      }, {
+        "label" : "Sum 41",
+        "uri" : "http://dbpedia.org/resource/Sum_41"
+      }, {
+        "label" : "Jonas Brothers",
+        "uri" : "http://dbpedia.org/resource/Jonas_Brothers"
+      }, {
+        "label" : "Prayers",
+        "uri" : "http://dbpedia.org/resource/Prayers_(duo)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Foreign_Objects_(band)",
+        "uri" : "http://dbpedia.org/resource/Foreign_Objects_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/World_Under_Blood",
+        "uri" : "http://dbpedia.org/resource/World_Under_Blood"
+      }, {
+        "label" : "http://dbpedia.org/resource/Weep_(band)",
+        "uri" : "http://dbpedia.org/resource/Weep_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Jal_(band)",
+        "uri" : "http://dbpedia.org/resource/Jal_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/A-Studio",
+        "uri" : "http://dbpedia.org/resource/A-Studio"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Bacon_Brothers",
+        "uri" : "http://dbpedia.org/resource/The_Bacon_Brothers"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hiroshi_Uchiyamada_and_Cool_Five",
+        "uri" : "http://dbpedia.org/resource/Hiroshi_Uchiyamada_and_Cool_Five"
+      }, {
+        "label" : "http://dbpedia.org/resource/London_Philharmonic_Choir",
+        "uri" : "http://dbpedia.org/resource/London_Philharmonic_Choir"
+      }, {
+        "label" : "http://dbpedia.org/resource/Push_Push_(band)",
+        "uri" : "http://dbpedia.org/resource/Push_Push_(band)"
+      }, {
+        "label" : "Teriyaki Boyz",
+        "uri" : "http://dbpedia.org/resource/Teriyaki_Boyz"
+      }, {
+        "label" : "Migos",
+        "uri" : "http://dbpedia.org/resource/Migos"
+      }, {
+        "label" : "Sixx:A.M.",
+        "uri" : "http://dbpedia.org/resource/Sixx:A.M."
+      }, {
+        "label" : "The Lonely Island",
+        "uri" : "http://dbpedia.org/resource/The_Lonely_Island"
+      }, {
+        "label" : "Al Bano & Romina Power",
+        "uri" : "http://dbpedia.org/resource/Al_Bano_and_Romina_Power"
+      }, {
+        "label" : "Twins (Band)",
+        "uri" : "http://dbpedia.org/resource/Twins_(group)"
+      }, {
+        "label" : "Crime & the City Solution",
+        "uri" : "http://dbpedia.org/resource/Crime_&_the_City_Solution"
+      }, {
+        "label" : "Deadsy",
+        "uri" : "http://dbpedia.org/resource/Deadsy"
+      }, {
+        "label" : "Rouge (brasilianische Band)",
+        "uri" : "http://dbpedia.org/resource/Rouge_(group)"
+      }, {
+        "label" : "Exile (japanische Band)",
+        "uri" : "http://dbpedia.org/resource/Exile_(Japanese_band)"
+      }, {
+        "label" : "Exile (US-amerikanische Band)",
+        "uri" : "http://dbpedia.org/resource/Exile_(Japanese_band)"
+      }, {
+        "label" : "Exposé (Band)",
+        "uri" : "http://dbpedia.org/resource/Exposé_(group)"
+      }, {
+        "label" : "New Found Glory",
+        "uri" : "http://dbpedia.org/resource/New_Found_Glory"
+      }, {
+        "label" : "Nickelback",
+        "uri" : "http://dbpedia.org/resource/Nickelback"
+      }, {
+        "label" : "Nico Vega",
+        "uri" : "http://dbpedia.org/resource/Nico_Vega"
+      }, {
+        "label" : "Einstürzende Neubauten",
+        "uri" : "http://dbpedia.org/resource/Einstürzende_Neubauten"
+      }, {
+        "label" : "Mötley Crüe",
+        "uri" : "http://dbpedia.org/resource/Mötley_Crüe"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_White_Mandingos",
+        "uri" : "http://dbpedia.org/resource/The_White_Mandingos"
+      }, {
+        "label" : "http://dbpedia.org/resource/Egyptian_(band)",
+        "uri" : "http://dbpedia.org/resource/Egyptian_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Exile_The_Second",
+        "uri" : "http://dbpedia.org/resource/Exile_The_Second"
+      }, {
+        "label" : "http://dbpedia.org/resource/Vodka_Collins",
+        "uri" : "http://dbpedia.org/resource/Vodka_Collins"
+      }, {
+        "label" : "http://dbpedia.org/resource/Sentidos_Opuestos",
+        "uri" : "http://dbpedia.org/resource/Sentidos_Opuestos"
+      }, {
+        "label" : "http://dbpedia.org/resource/Leyla_The_Band",
+        "uri" : "http://dbpedia.org/resource/Leyla_The_Band"
+      }, {
+        "label" : "http://dbpedia.org/resource/CRX_(band)",
+        "uri" : "http://dbpedia.org/resource/CRX_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Honest_Boyz",
+        "uri" : "http://dbpedia.org/resource/Honest_Boyz"
+      }, {
+        "label" : "http://dbpedia.org/resource/Triad_(band)",
+        "uri" : "http://dbpedia.org/resource/Triad_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/GES_(band)",
+        "uri" : "http://dbpedia.org/resource/GES_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hujan",
+        "uri" : "http://dbpedia.org/resource/Hujan"
+      }, {
+        "label" : "http://dbpedia.org/resource/Shonentai",
+        "uri" : "http://dbpedia.org/resource/Shonentai"
+      }, {
+        "label" : "http://dbpedia.org/resource/Cabin_(band)",
+        "uri" : "http://dbpedia.org/resource/Cabin_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Alexander_Jean",
+        "uri" : "http://dbpedia.org/resource/Alexander_Jean"
+      }, {
+        "label" : "http://dbpedia.org/resource/Gnarkill",
+        "uri" : "http://dbpedia.org/resource/Gnarkill"
+      }, {
+        "label" : "http://dbpedia.org/resource/Dalchhut",
+        "uri" : "http://dbpedia.org/resource/Dalchhut"
+      }, {
+        "label" : "Kiss (Band)",
+        "uri" : "http://dbpedia.org/resource/Kiss_(band)"
+      }, {
+        "label" : "Coldplay",
+        "uri" : "http://dbpedia.org/resource/Coldplay"
+      }, {
+        "label" : "Bluesbreakers",
+        "uri" : "http://dbpedia.org/resource/John_Mayall_&_the_Bluesbreakers"
+      }, {
+        "label" : "The Prize Fighter Inferno",
+        "uri" : "http://dbpedia.org/resource/The_Prize_Fighter_Inferno"
+      }, {
+        "label" : "Spice Girls",
+        "uri" : "http://dbpedia.org/resource/Spice_Girls"
+      }, {
+        "label" : "Spin Doctors",
+        "uri" : "http://dbpedia.org/resource/Spin_Doctors"
+      }, {
+        "label" : "Jane’s Addiction",
+        "uri" : "http://dbpedia.org/resource/Jane's_Addiction"
+      }, {
+        "label" : "The Black Crowes",
+        "uri" : "http://dbpedia.org/resource/The_Black_Crowes"
+      }, {
+        "label" : "Coheed and Cambria",
+        "uri" : "http://dbpedia.org/resource/Coheed_and_Cambria"
+      }, {
+        "label" : "Bush (Band)",
+        "uri" : "http://dbpedia.org/resource/Bush_(British_band)"
+      }, {
+        "label" : "Nickel Creek",
+        "uri" : "http://dbpedia.org/resource/Nickel_Creek"
+      }, {
+        "label" : "Rogue Traders",
+        "uri" : "http://dbpedia.org/resource/Rogue_Traders"
+      }, {
+        "label" : "Wilson Phillips",
+        "uri" : "http://dbpedia.org/resource/Wilson_Phillips"
+      }, {
+        "label" : "Punch Brothers",
+        "uri" : "http://dbpedia.org/resource/Punch_Brothers"
+      }, {
+        "label" : "These New Puritans",
+        "uri" : "http://dbpedia.org/resource/These_New_Puritans"
+      }, {
+        "label" : "http://dbpedia.org/resource/Spartan_Fidelity",
+        "uri" : "http://dbpedia.org/resource/Spartan_Fidelity"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Growl",
+        "uri" : "http://dbpedia.org/resource/The_Growl"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Simon_Sisters",
+        "uri" : "http://dbpedia.org/resource/The_Simon_Sisters"
+      }, {
+        "label" : "http://dbpedia.org/resource/Parokya_ni_Edgar",
+        "uri" : "http://dbpedia.org/resource/Parokya_ni_Edgar"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Panic_Channel",
+        "uri" : "http://dbpedia.org/resource/The_Panic_Channel"
+      }, {
+        "label" : "http://dbpedia.org/resource/Camp_Freddy",
+        "uri" : "http://dbpedia.org/resource/Camp_Freddy"
+      }, {
+        "label" : "http://dbpedia.org/resource/Taylor_Hawkins_and_the_Coattail_Riders",
+        "uri" : "http://dbpedia.org/resource/Taylor_Hawkins_and_the_Coattail_Riders"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mutual_Admiration_Society_(collaboration)",
+        "uri" : "http://dbpedia.org/resource/Mutual_Admiration_Society_(collaboration)"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Beyman_Bros",
+        "uri" : "http://dbpedia.org/resource/The_Beyman_Bros"
+      }, {
+        "label" : "http://dbpedia.org/resource/Team_Unicorn",
+        "uri" : "http://dbpedia.org/resource/Team_Unicorn"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Nolans",
+        "uri" : "http://dbpedia.org/resource/The_Nolans"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Decemberists",
+        "uri" : "http://dbpedia.org/resource/The_Decemberists"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lt._Dan_Band",
+        "uri" : "http://dbpedia.org/resource/Lt._Dan_Band"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Southland_(band)",
+        "uri" : "http://dbpedia.org/resource/The_Southland_(band)"
+      }, {
+        "label" : "Good Charlotte",
+        "uri" : "http://dbpedia.org/resource/Good_Charlotte"
+      }, {
+        "label" : "The Blues Brothers",
+        "uri" : "http://dbpedia.org/resource/The_Blues_Brothers"
+      }, {
+        "label" : "Fleetwood Mac",
+        "uri" : "http://dbpedia.org/resource/Fleetwood_Mac"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "33",
     "language" : "DE",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -319,7 +2271,7 @@
     },
     "combination" : true
   }, {
-    "id" : "14",
+    "id" : "34",
     "language" : "DE",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -638,7 +2590,7 @@
     },
     "combination" : true
   }, {
-    "id" : "15",
+    "id" : "35",
     "language" : "DE",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -957,7 +2909,7 @@
     },
     "combination" : true
   }, {
-    "id" : "16",
+    "id" : "36",
     "language" : "DE",
     "type" : "SENTENCE",
     "bindingType" : "MUSEUM",
@@ -976,7 +2928,66 @@
     },
     "combination" : true
   }, {
-    "id" : "17",
+    "id" : "37",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "WORK",
+    "returnType" : "PERSON",
+    "frameType" : "VP",
+    "sentences" : [ "Welche Person spielt der Komponist für $x ?", "Welche Person spielt die Komponisten für $x ?", "Welche Person spielte der Komponist für $x ?", "Welche Person spielte die Komponisten für $x ?", "Welche Personen spielen der Komponist für $x ?", "Welche Personen spielen die Komponisten für $x ?", "Welche Personen spielten der Komponist für $x ?", "Welche Personen spielten die Komponisten für $x ?", "Wer spielt der Komponist für $x ?", "Wer spielt die Komponisten für $x ?", "Wer spielte der Komponist für $x ?", "Wer spielte die Komponisten für $x ?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/musicComposer> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "http://dbpedia.org/resource/Under_California_Stars",
+        "uri" : "http://dbpedia.org/resource/Under_California_Stars"
+      }, {
+        "label" : "http://dbpedia.org/resource/Calendar_Girl_(1947_film)",
+        "uri" : "http://dbpedia.org/resource/Calendar_Girl_(1947_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Springtime_in_the_Sierras",
+        "uri" : "http://dbpedia.org/resource/Springtime_in_the_Sierras"
+      }, {
+        "label" : "http://dbpedia.org/resource/Susanna_Pass",
+        "uri" : "http://dbpedia.org/resource/Susanna_Pass"
+      }, {
+        "label" : "http://dbpedia.org/resource/Night_Time_in_Nevada",
+        "uri" : "http://dbpedia.org/resource/Night_Time_in_Nevada"
+      }, {
+        "label" : "http://dbpedia.org/resource/Woh_Lamhe...",
+        "uri" : "http://dbpedia.org/resource/Woh_Lamhe..."
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "38",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "BAND",
+    "returnType" : "PERSON",
+    "frameType" : "VP",
+    "sentences" : [ "Welche Person spielt das Mitglied von $x ?", "Welche Person spielt die Mitglieder von $x ?", "Welche Person spielte das Mitglied von $x ?", "Welche Person spielte die Mitglieder von $x ?", "Welche Personen spielen das Mitglied von $x ?", "Welche Personen spielen die Mitglieder von $x ?", "Welche Personen spielten das Mitglied von $x ?", "Welche Personen spielten die Mitglieder von $x ?", "Wer spielt das Mitglied von $x ?", "Wer spielt die Mitglieder von $x ?", "Wer spielte das Mitglied von $x ?", "Wer spielte die Mitglieder von $x ?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/bandMember> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "http://dbpedia.org/resource/Monsta_Island_Czars",
+        "uri" : "http://dbpedia.org/resource/Monsta_Island_Czars"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "39",
     "language" : "DE",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -1295,7 +3306,7 @@
     },
     "combination" : true
   }, {
-    "id" : "18",
+    "id" : "40",
     "language" : "DE",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -1614,7 +3625,7 @@
     },
     "combination" : true
   }, {
-    "id" : "19",
+    "id" : "41",
     "language" : "DE",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -1633,7 +3644,7 @@
     },
     "combination" : true
   }, {
-    "id" : "20",
+    "id" : "42",
     "language" : "DE",
     "type" : "SENTENCE",
     "bindingType" : "MUSEUM",
@@ -1952,7 +3963,501 @@
     },
     "combination" : true
   }, {
-    "id" : "21",
+    "id" : "43",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "WORK",
+    "returnType" : "WORK",
+    "frameType" : "APP",
+    "sentences" : [ "Was wird von der Komponist für $x entwickelt?", "Was wird von die Komponisten für $x entwickelt?", "Was wurde von der Komponist für $x entwickelt?", "Was wurde von die Komponisten für $x entwickelt?", "Welche Werke werden von der Komponist für $x entwickelt?", "Welche Werke werden von die Komponisten für $x entwickelt?", "Welche Werke wurden von der Komponist für $x entwickelt?", "Welche Werke wurden von die Komponisten für $x entwickelt?", "Welches Werk wird von der Komponist für $x entwickelt?", "Welches Werk wird von die Komponisten für $x entwickelt?", "Welches Werk wurde von der Komponist für $x entwickelt?", "Welches Werk wurde von die Komponisten für $x entwickelt?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/musicComposer> ?objOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "http://dbpedia.org/resource/Renai_Bakumatsu_Kareshi",
+        "uri" : "http://dbpedia.org/resource/Renai_Bakumatsu_Kareshi"
+      }, {
+        "label" : "http://dbpedia.org/resource/Strawberry_Shortcake:_The_Sweet_Dreams_Movie",
+        "uri" : "http://dbpedia.org/resource/Strawberry_Shortcake:_The_Sweet_Dreams_Movie"
+      }, {
+        "label" : "Das schönste Freudenhaus in Texas",
+        "uri" : "http://dbpedia.org/resource/The_Best_Little_Whorehouse_in_Texas_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Jab_Harry_Met_Sejal",
+        "uri" : "http://dbpedia.org/resource/Jab_Harry_Met_Sejal"
+      }, {
+        "label" : "http://dbpedia.org/resource/Rhinestone_(film)",
+        "uri" : "http://dbpedia.org/resource/Rhinestone_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Straight_Talk",
+        "uri" : "http://dbpedia.org/resource/Straight_Talk"
+      }, {
+        "label" : "Moderne Zeiten",
+        "uri" : "http://dbpedia.org/resource/Modern_Times_(film)"
+      }, {
+        "label" : "Lichter der Großstadt",
+        "uri" : "http://dbpedia.org/resource/City_Lights"
+      }, {
+        "label" : "Rampenlicht (Film)",
+        "uri" : "http://dbpedia.org/resource/Limelight_(1952_film)"
+      }, {
+        "label" : "Goldrausch (Chaplin)",
+        "uri" : "http://dbpedia.org/resource/The_Gold_Rush"
+      }, {
+        "label" : "Der große Diktator",
+        "uri" : "http://dbpedia.org/resource/The_Great_Dictator"
+      }, {
+        "label" : "Die Gräfin von Hongkong",
+        "uri" : "http://dbpedia.org/resource/A_Countess_from_Hong_Kong"
+      }, {
+        "label" : "Ein König in New York",
+        "uri" : "http://dbpedia.org/resource/A_King_in_New_York"
+      }, {
+        "label" : "Monsieur Verdoux – Der Frauenmörder von Paris",
+        "uri" : "http://dbpedia.org/resource/Monsieur_Verdoux"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Circus_(1928_film)",
+        "uri" : "http://dbpedia.org/resource/The_Circus_(1928_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Stalin's_Funeral",
+        "uri" : "http://dbpedia.org/resource/Stalin's_Funeral"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ys_(anime)",
+        "uri" : "http://dbpedia.org/resource/Ys_(anime)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Trouble_Chocolate",
+        "uri" : "http://dbpedia.org/resource/Trouble_Chocolate"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ladybug_&_Cat_Noir_Awakening",
+        "uri" : "http://dbpedia.org/resource/Ladybug_&_Cat_Noir_Awakening"
+      }, {
+        "label" : "Timerider – Das Abenteuer des Lyle Swann",
+        "uri" : "http://dbpedia.org/resource/Timerider:_The_Adventure_of_Lyle_Swann"
+      }, {
+        "label" : "http://dbpedia.org/resource/Northville_Cemetery_Massacre",
+        "uri" : "http://dbpedia.org/resource/Northville_Cemetery_Massacre"
+      }, {
+        "label" : "Eine starke Nummer",
+        "uri" : "http://dbpedia.org/resource/No_Small_Affair"
+      }, {
+        "label" : "The Killing Fields – Schreiendes Land",
+        "uri" : "http://dbpedia.org/resource/The_Killing_Fields_(film)"
+      }, {
+        "label" : "Memories Within Miss Aggie",
+        "uri" : "http://dbpedia.org/resource/Memories_Within_Miss_Aggie"
+      }, {
+        "label" : "http://dbpedia.org/resource/Charlotte_(1974_film)",
+        "uri" : "http://dbpedia.org/resource/Charlotte_(1974_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Space_Movie",
+        "uri" : "http://dbpedia.org/resource/The_Space_Movie"
+      }, {
+        "label" : "Digimon (Anime)",
+        "uri" : "http://dbpedia.org/resource/Digimon_Adventure"
+      }, {
+        "label" : "Die geheimnisvollen Städte des Goldes",
+        "uri" : "http://dbpedia.org/resource/The_Mysterious_Cities_of_Gold"
+      }, {
+        "label" : "Münchhausens Abenteuer auf dem Mond",
+        "uri" : "http://dbpedia.org/resource/The_Secret_of_the_Selenites"
+      }, {
+        "label" : "Das Geheimnis des Zauberschwertes",
+        "uri" : "http://dbpedia.org/resource/The_Secret_of_the_Sword"
+      }, {
+        "label" : "http://dbpedia.org/resource/Person_to_Bunny",
+        "uri" : "http://dbpedia.org/resource/Person_to_Bunny"
+      }, {
+        "label" : "http://dbpedia.org/resource/Rainbow_Brite_and_the_Star_Stealer",
+        "uri" : "http://dbpedia.org/resource/Rainbow_Brite_and_the_Star_Stealer"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ox_Tales",
+        "uri" : "http://dbpedia.org/resource/Ox_Tales"
+      }, {
+        "label" : "http://dbpedia.org/resource/Heathcliff:_The_Movie",
+        "uri" : "http://dbpedia.org/resource/Heathcliff:_The_Movie"
+      }, {
+        "label" : "http://dbpedia.org/resource/Here_Come_the_Littles",
+        "uri" : "http://dbpedia.org/resource/Here_Come_the_Littles"
+      }, {
+        "label" : "Wie das Leben so spielt",
+        "uri" : "http://dbpedia.org/resource/Funny_People"
+      }, {
+        "label" : "http://dbpedia.org/resource/Goats_(film)",
+        "uri" : "http://dbpedia.org/resource/Goats_(film)"
+      }, {
+        "label" : "Clean (Film)",
+        "uri" : "http://dbpedia.org/resource/Clean_(film)"
+      }, {
+        "label" : "Der Wüstenplanet (Film)",
+        "uri" : "http://dbpedia.org/resource/Dune_(1984_film)"
+      }, {
+        "label" : "Sebastiane",
+        "uri" : "http://dbpedia.org/resource/Sebastiane"
+      }, {
+        "label" : "The Jacket",
+        "uri" : "http://dbpedia.org/resource/The_Jacket"
+      }, {
+        "label" : "In meinem Himmel",
+        "uri" : "http://dbpedia.org/resource/The_Lovely_Bones_(film)"
+      }, {
+        "label" : "The Million Dollar Hotel",
+        "uri" : "http://dbpedia.org/resource/The_Million_Dollar_Hotel"
+      }, {
+        "label" : "The Pervert’s Guide to Cinema",
+        "uri" : "http://dbpedia.org/resource/The_Pervert's_Guide_to_Cinema"
+      }, {
+        "label" : "Die Bettlektüre",
+        "uri" : "http://dbpedia.org/resource/The_Pillow_Book_(film)"
+      }, {
+        "label" : "Daft Punk’s Electroma",
+        "uri" : "http://dbpedia.org/resource/Daft_Punk's_Electroma"
+      }, {
+        "label" : "Ich und Earl und das Mädchen (Film)",
+        "uri" : "http://dbpedia.org/resource/Me_and_Earl_and_the_Dying_Girl_(film)"
+      }, {
+        "label" : "Blue (1993)",
+        "uri" : "http://dbpedia.org/resource/Blue_(1993_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Boarding_Gate",
+        "uri" : "http://dbpedia.org/resource/Boarding_Gate"
+      }, {
+        "label" : "http://dbpedia.org/resource/Linear_(film)",
+        "uri" : "http://dbpedia.org/resource/Linear_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Jubilee_(1978_film)",
+        "uri" : "http://dbpedia.org/resource/Jubilee_(1978_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/For_All_Mankind",
+        "uri" : "http://dbpedia.org/resource/For_All_Mankind"
+      }, {
+        "label" : "http://dbpedia.org/resource/Rams_(2018_film)",
+        "uri" : "http://dbpedia.org/resource/Rams_(2018_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ride,_Rise,_Roar",
+        "uri" : "http://dbpedia.org/resource/Ride,_Rise,_Roar"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Pervert's_Guide_to_Ideology",
+        "uri" : "http://dbpedia.org/resource/The_Pervert's_Guide_to_Ideology"
+      }, {
+        "label" : "http://dbpedia.org/resource/Buddy_Boy",
+        "uri" : "http://dbpedia.org/resource/Buddy_Boy"
+      }, {
+        "label" : "http://dbpedia.org/resource/Land_of_the_Minotaur",
+        "uri" : "http://dbpedia.org/resource/Land_of_the_Minotaur"
+      }, {
+        "label" : "http://dbpedia.org/resource/Fear_X",
+        "uri" : "http://dbpedia.org/resource/Fear_X"
+      }, {
+        "label" : "http://dbpedia.org/resource/We_Are_Many_(film)",
+        "uri" : "http://dbpedia.org/resource/We_Are_Many_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Eno_(film)",
+        "uri" : "http://dbpedia.org/resource/Eno_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Egon_Schiele_–_Exzess_und_Bestrafung",
+        "uri" : "http://dbpedia.org/resource/Egon_Schiele_–_Exzess_und_Bestrafung"
+      }, {
+        "label" : "http://dbpedia.org/resource/Immigrants_(2008_film)",
+        "uri" : "http://dbpedia.org/resource/Immigrants_(2008_film)"
+      }, {
+        "label" : "Grindhouse (Film)",
+        "uri" : "http://dbpedia.org/resource/Grindhouse_(film)"
+      }, {
+        "label" : "Kill Bill – Volume 2",
+        "uri" : "http://dbpedia.org/resource/Kill_Bill:_Volume_2"
+      }, {
+        "label" : "Bedhead",
+        "uri" : "http://dbpedia.org/resource/Bedhead_(film)"
+      }, {
+        "label" : "Spy Kids – Alle Zeit der Welt",
+        "uri" : "http://dbpedia.org/resource/Spy_Kids:_All_the_Time_in_the_World"
+      }, {
+        "label" : "Spy Kids 2 – Die Rückkehr der Superspione",
+        "uri" : "http://dbpedia.org/resource/Spy_Kids_2:_The_Island_of_Lost_Dreams"
+      }, {
+        "label" : "Mission 3D",
+        "uri" : "http://dbpedia.org/resource/Spy_Kids_3-D:_Game_Over"
+      }, {
+        "label" : "Irgendwann in Mexico",
+        "uri" : "http://dbpedia.org/resource/Once_Upon_a_Time_in_Mexico"
+      }, {
+        "label" : "Die Abenteuer von Sharkboy und Lavagirl in 3-D",
+        "uri" : "http://dbpedia.org/resource/The_Adventures_of_Sharkboy_and_Lavagirl_in_3-D"
+      }, {
+        "label" : "Das Geheimnis des Regenbogensteins",
+        "uri" : "http://dbpedia.org/resource/Shorts_(2009_film)"
+      }, {
+        "label" : "Sin City 2: A Dame to Kill For",
+        "uri" : "http://dbpedia.org/resource/Sin_City:_A_Dame_to_Kill_For"
+      }, {
+        "label" : "Sin City (Film)",
+        "uri" : "http://dbpedia.org/resource/Sin_City_(film)"
+      }, {
+        "label" : "Planet Terror",
+        "uri" : "http://dbpedia.org/resource/Planet_Terror"
+      }, {
+        "label" : "Spy Kids",
+        "uri" : "http://dbpedia.org/resource/Spy_Kids"
+      }, {
+        "label" : "http://dbpedia.org/resource/From_Bedrooms_to_Billions",
+        "uri" : "http://dbpedia.org/resource/From_Bedrooms_to_Billions"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mexico_Trilogy",
+        "uri" : "http://dbpedia.org/resource/Mexico_Trilogy"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Life_of_Larry_and_Larry_&_Steve",
+        "uri" : "http://dbpedia.org/resource/The_Life_of_Larry_and_Larry_&_Steve"
+      }, {
+        "label" : "http://dbpedia.org/resource/Remote_Control_(1992_film)",
+        "uri" : "http://dbpedia.org/resource/Remote_Control_(1992_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Jonah:_A_VeggieTales_Movie",
+        "uri" : "http://dbpedia.org/resource/Jonah:_A_VeggieTales_Movie"
+      }, {
+        "label" : "http://dbpedia.org/resource/Monthly_Girls'_Nozaki-kun__TV_series__1",
+        "uri" : "http://dbpedia.org/resource/Monthly_Girls'_Nozaki-kun__TV_series__1"
+      }, {
+        "label" : "Lebenslänglich (Film)",
+        "uri" : "http://dbpedia.org/resource/Life_(1999_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Love_Jones_(film)",
+        "uri" : "http://dbpedia.org/resource/Love_Jones_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Venus_and_Serena_(film)",
+        "uri" : "http://dbpedia.org/resource/Venus_and_Serena_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Agronomist",
+        "uri" : "http://dbpedia.org/resource/The_Agronomist"
+      }, {
+        "label" : "http://dbpedia.org/resource/A_Place_in_Time",
+        "uri" : "http://dbpedia.org/resource/A_Place_in_Time"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "44",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "BAND",
+    "returnType" : "WORK",
+    "frameType" : "APP",
+    "sentences" : [ "Was wird von das Mitglied von $x entwickelt?", "Was wird von die Mitglieder von $x entwickelt?", "Was wurde von das Mitglied von $x entwickelt?", "Was wurde von die Mitglieder von $x entwickelt?", "Welche Werke werden von das Mitglied von $x entwickelt?", "Welche Werke werden von die Mitglieder von $x entwickelt?", "Welche Werke wurden von das Mitglied von $x entwickelt?", "Welche Werke wurden von die Mitglieder von $x entwickelt?", "Welches Werk wird von das Mitglied von $x entwickelt?", "Welches Werk wird von die Mitglieder von $x entwickelt?", "Welches Werk wurde von das Mitglied von $x entwickelt?", "Welches Werk wurde von die Mitglieder von $x entwickelt?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/bandMember> ?objOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "http://dbpedia.org/resource/PFFR",
+        "uri" : "http://dbpedia.org/resource/PFFR"
+      }, {
+        "label" : "Run the Jewels",
+        "uri" : "http://dbpedia.org/resource/Run_the_Jewels"
+      }, {
+        "label" : "Major Lazer",
+        "uri" : "http://dbpedia.org/resource/Major_Lazer"
+      }, {
+        "label" : "Jack Ü",
+        "uri" : "http://dbpedia.org/resource/Jack_Ü"
+      }, {
+        "label" : "Dungeon Family",
+        "uri" : "http://dbpedia.org/resource/Dungeon_Family"
+      }, {
+        "label" : "LSD (Musikgruppe)",
+        "uri" : "http://dbpedia.org/resource/LSD_(group)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Silk_City_(duo)",
+        "uri" : "http://dbpedia.org/resource/Silk_City_(duo)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Purple_Ribbon_All-Stars",
+        "uri" : "http://dbpedia.org/resource/Purple_Ribbon_All-Stars"
+      }, {
+        "label" : "Bakkushan",
+        "uri" : "http://dbpedia.org/resource/Bakkushan"
+      }, {
+        "label" : "Culcha Candela",
+        "uri" : "http://dbpedia.org/resource/Culcha_Candela"
+      }, {
+        "label" : "The Monkees",
+        "uri" : "http://dbpedia.org/resource/The_Monkees"
+      }, {
+        "label" : "Powerman 5000",
+        "uri" : "http://dbpedia.org/resource/Powerman_5000"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Timeout_Drawer",
+        "uri" : "http://dbpedia.org/resource/The_Timeout_Drawer"
+      }, {
+        "label" : "801 (Band)",
+        "uri" : "http://dbpedia.org/resource/801_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Fripp_&_Eno",
+        "uri" : "http://dbpedia.org/resource/Fripp_&_Eno"
+      }, {
+        "label" : "Chingon",
+        "uri" : "http://dbpedia.org/resource/Chingon_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/HAM_(band)",
+        "uri" : "http://dbpedia.org/resource/HAM_(band)"
+      }, {
+        "label" : "Vocal Spectrum",
+        "uri" : "http://dbpedia.org/resource/Vocal_Spectrum"
+      }, {
+        "label" : "Max Q (Band)",
+        "uri" : "http://dbpedia.org/resource/Max_Q_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Masterpiece_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Masterpiece_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Rapscallions",
+        "uri" : "http://dbpedia.org/resource/The_Rapscallions"
+      }, {
+        "label" : "http://dbpedia.org/resource/Grandma's_Boys",
+        "uri" : "http://dbpedia.org/resource/Grandma's_Boys"
+      }, {
+        "label" : "http://dbpedia.org/resource/Second_Edition_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Second_Edition_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Yesteryear_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Yesteryear_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Side_Street_Ramblers",
+        "uri" : "http://dbpedia.org/resource/Side_Street_Ramblers"
+      }, {
+        "label" : "http://dbpedia.org/resource/Platinum_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Platinum_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Happiness_Emporium",
+        "uri" : "http://dbpedia.org/resource/Happiness_Emporium"
+      }, {
+        "label" : "http://dbpedia.org/resource/Four_Voices",
+        "uri" : "http://dbpedia.org/resource/Four_Voices"
+      }, {
+        "label" : "http://dbpedia.org/resource/Forefront_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Forefront_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Classic_Collection",
+        "uri" : "http://dbpedia.org/resource/Classic_Collection"
+      }, {
+        "label" : "http://dbpedia.org/resource/MARK_IV_(Barbershop)",
+        "uri" : "http://dbpedia.org/resource/MARK_IV_(Barbershop)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Storm_Front_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Storm_Front_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Old_School_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Old_School_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Musical_Island_Boys",
+        "uri" : "http://dbpedia.org/resource/Musical_Island_Boys"
+      }, {
+        "label" : "http://dbpedia.org/resource/Revival_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Revival_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Crossroads_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Crossroads_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Marquis_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Marquis_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Gotcha!_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Gotcha!_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Interstate_Rivals",
+        "uri" : "http://dbpedia.org/resource/Interstate_Rivals"
+      }, {
+        "label" : "http://dbpedia.org/resource/Joker's_Wild_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Joker's_Wild_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Oriole_Four",
+        "uri" : "http://dbpedia.org/resource/Oriole_Four"
+      }, {
+        "label" : "http://dbpedia.org/resource/Four_Bettys",
+        "uri" : "http://dbpedia.org/resource/Four_Bettys"
+      }, {
+        "label" : "http://dbpedia.org/resource/SALT_(quartet)",
+        "uri" : "http://dbpedia.org/resource/SALT_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Boston_Common_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Boston_Common_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nightlife_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Nightlife_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/OC_Times",
+        "uri" : "http://dbpedia.org/resource/OC_Times"
+      }, {
+        "label" : "http://dbpedia.org/resource/Moxie_Ladies",
+        "uri" : "http://dbpedia.org/resource/Moxie_Ladies"
+      }, {
+        "label" : "http://dbpedia.org/resource/Main_Street_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Main_Street_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Instant_Classic",
+        "uri" : "http://dbpedia.org/resource/Instant_Classic"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Ritz_(quartet)",
+        "uri" : "http://dbpedia.org/resource/The_Ritz_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Rural_Route_4",
+        "uri" : "http://dbpedia.org/resource/Rural_Route_4"
+      }, {
+        "label" : "http://dbpedia.org/resource/Zing_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Zing_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/MAXX_Factor",
+        "uri" : "http://dbpedia.org/resource/MAXX_Factor"
+      }, {
+        "label" : "http://dbpedia.org/resource/Power_Play_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Power_Play_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_New_Tradition",
+        "uri" : "http://dbpedia.org/resource/The_New_Tradition"
+      }, {
+        "label" : "http://dbpedia.org/resource/Acoustix",
+        "uri" : "http://dbpedia.org/resource/Acoustix"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ringmasters_(barbershop_quartet)",
+        "uri" : "http://dbpedia.org/resource/Ringmasters_(barbershop_quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/FRED_(quartet)",
+        "uri" : "http://dbpedia.org/resource/FRED_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Martini_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Martini_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Finest_Hour_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Finest_Hour_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Four_Statesmen",
+        "uri" : "http://dbpedia.org/resource/Four_Statesmen"
+      }, {
+        "label" : "http://dbpedia.org/resource/Michigan_Jake",
+        "uri" : "http://dbpedia.org/resource/Michigan_Jake"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chiefs_of_Staff_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Chiefs_of_Staff_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Realtime_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Realtime_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Keepsake_(quartet)",
+        "uri" : "http://dbpedia.org/resource/Keepsake_(quartet)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Trondheim_Jazz_Orchestra",
+        "uri" : "http://dbpedia.org/resource/Trondheim_Jazz_Orchestra"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "45",
     "language" : "DE",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -1971,7 +4476,7 @@
     },
     "combination" : true
   }, {
-    "id" : "22",
+    "id" : "46",
     "language" : "DE",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -2290,7 +4795,645 @@
     },
     "combination" : true
   }, {
-    "id" : "23",
+    "id" : "47",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "WORK",
+    "returnType" : "PERSON",
+    "frameType" : "APP",
+    "sentences" : [ "Welche fiktiven Charaktere werden von der Komponist für $x gespielt?", "Welche fiktiven Charaktere werden von die Komponisten für $x gespielt?", "Welche fiktiven Charaktere wurden von der Komponist für $x gespielt?", "Welche fiktiven Charaktere wurden von die Komponisten für $x gespielt?", "Welcher fiktive Charakter wird von der Komponist für $x gespielt?", "Welcher fiktive Charakter wird von die Komponisten für $x gespielt?", "Welcher fiktive Charakter wurde von der Komponist für $x gespielt?", "Welcher fiktive Charakter wurde von die Komponisten für $x gespielt?", "Wer wird von der Komponist für $x gespielt?", "Wer wird von die Komponisten für $x gespielt?", "Wer wurde von der Komponist für $x gespielt?", "Wer wurde von die Komponisten für $x gespielt?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/musicComposer> ?objOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "http://dbpedia.org/resource/Come_Back,_Africa",
+        "uri" : "http://dbpedia.org/resource/Come_Back,_Africa"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Fourth_Dimension_(film)",
+        "uri" : "http://dbpedia.org/resource/The_Fourth_Dimension_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Clapping_for_the_Wrong_Reasons",
+        "uri" : "http://dbpedia.org/resource/Clapping_for_the_Wrong_Reasons"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mystery_Team",
+        "uri" : "http://dbpedia.org/resource/Mystery_Team"
+      }, {
+        "label" : "http://dbpedia.org/resource/Sons_of_Provo",
+        "uri" : "http://dbpedia.org/resource/Sons_of_Provo"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Magic_7",
+        "uri" : "http://dbpedia.org/resource/The_Magic_7"
+      }, {
+        "label" : "Moderne Zeiten",
+        "uri" : "http://dbpedia.org/resource/Modern_Times_(film)"
+      }, {
+        "label" : "Lichter der Großstadt",
+        "uri" : "http://dbpedia.org/resource/City_Lights"
+      }, {
+        "label" : "Rampenlicht (Film)",
+        "uri" : "http://dbpedia.org/resource/Limelight_(1952_film)"
+      }, {
+        "label" : "Goldrausch (Chaplin)",
+        "uri" : "http://dbpedia.org/resource/The_Gold_Rush"
+      }, {
+        "label" : "Der große Diktator",
+        "uri" : "http://dbpedia.org/resource/The_Great_Dictator"
+      }, {
+        "label" : "Die Gräfin von Hongkong",
+        "uri" : "http://dbpedia.org/resource/A_Countess_from_Hong_Kong"
+      }, {
+        "label" : "Ein König in New York",
+        "uri" : "http://dbpedia.org/resource/A_King_in_New_York"
+      }, {
+        "label" : "Monsieur Verdoux – Der Frauenmörder von Paris",
+        "uri" : "http://dbpedia.org/resource/Monsieur_Verdoux"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Circus_(1928_film)",
+        "uri" : "http://dbpedia.org/resource/The_Circus_(1928_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Stalin's_Funeral",
+        "uri" : "http://dbpedia.org/resource/Stalin's_Funeral"
+      }, {
+        "label" : "http://dbpedia.org/resource/Paper_Heart_(film)",
+        "uri" : "http://dbpedia.org/resource/Paper_Heart_(film)"
+      }, {
+        "label" : "Die Zeit ohne Grace",
+        "uri" : "http://dbpedia.org/resource/Grace_Is_Gone"
+      }, {
+        "label" : "Der fremde Sohn",
+        "uri" : "http://dbpedia.org/resource/Changeling_(film)"
+      }, {
+        "label" : "Flags of Our Fathers",
+        "uri" : "http://dbpedia.org/resource/Flags_of_Our_Fathers_(film)"
+      }, {
+        "label" : "Million Dollar Baby",
+        "uri" : "http://dbpedia.org/resource/Million_Dollar_Baby"
+      }, {
+        "label" : "J. Edgar",
+        "uri" : "http://dbpedia.org/resource/J._Edgar"
+      }, {
+        "label" : "Swan Song",
+        "uri" : "http://dbpedia.org/resource/Swan_Song_(1992_film)"
+      }, {
+        "label" : "Hereafter – Das Leben danach",
+        "uri" : "http://dbpedia.org/resource/Hereafter_(film)"
+      }, {
+        "label" : "Mystic River (Film)",
+        "uri" : "http://dbpedia.org/resource/Mystic_River_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Second_Time_Lucky",
+        "uri" : "http://dbpedia.org/resource/Second_Time_Lucky"
+      }, {
+        "label" : "http://dbpedia.org/resource/Scene_of_the_Crime_(1996_film)",
+        "uri" : "http://dbpedia.org/resource/Scene_of_the_Crime_(1996_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/In_the_Bleak_Midwinter_(film)",
+        "uri" : "http://dbpedia.org/resource/In_the_Bleak_Midwinter_(film)"
+      }, {
+        "label" : "All Over Me",
+        "uri" : "http://dbpedia.org/resource/All_Over_Me_(film)"
+      }, {
+        "label" : "Monty Pythons wunderbare Welt der Schwerkraft",
+        "uri" : "http://dbpedia.org/resource/And_Now_for_Something_Completely_Different"
+      }, {
+        "label" : "Monty Python Live at the Hollywood Bowl",
+        "uri" : "http://dbpedia.org/resource/Monty_Python_Live_at_the_Hollywood_Bowl"
+      }, {
+        "label" : "http://dbpedia.org/resource/Balekempa",
+        "uri" : "http://dbpedia.org/resource/Balekempa"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bill_Cosby:_Himself",
+        "uri" : "http://dbpedia.org/resource/Bill_Cosby:_Himself"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Mini-Affair",
+        "uri" : "http://dbpedia.org/resource/The_Mini-Affair"
+      }, {
+        "label" : "http://dbpedia.org/resource/What's_Good_for_the_Goose",
+        "uri" : "http://dbpedia.org/resource/What's_Good_for_the_Goose"
+      }, {
+        "label" : "Thriller (Musikvideo)",
+        "uri" : "http://dbpedia.org/resource/Michael_Jackson's_Thriller_(music_video)"
+      }, {
+        "label" : "Hannah Montana & Miley Cyrus: Best of Both Worlds Concert",
+        "uri" : "http://dbpedia.org/resource/Hannah_Montana_and_Miley_Cyrus:_Best_of_Both_Worlds_Concert"
+      }, {
+        "label" : "Ein Fetzen Leben",
+        "uri" : "http://dbpedia.org/resource/The_Bold_and_the_Brave"
+      }, {
+        "label" : "Last Days (2005)",
+        "uri" : "http://dbpedia.org/resource/Last_Days_(2005_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Demon_Hunter_(film)",
+        "uri" : "http://dbpedia.org/resource/Demon_Hunter_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Game_of_Life_(film)",
+        "uri" : "http://dbpedia.org/resource/Game_of_Life_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Angel_Wars",
+        "uri" : "http://dbpedia.org/resource/Angel_Wars"
+      }, {
+        "label" : "http://dbpedia.org/resource/Waiting_for_Guffman",
+        "uri" : "http://dbpedia.org/resource/Waiting_for_Guffman"
+      }, {
+        "label" : "http://dbpedia.org/resource/This_Is_Spinal_Tap",
+        "uri" : "http://dbpedia.org/resource/This_Is_Spinal_Tap"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Honky_Problem",
+        "uri" : "http://dbpedia.org/resource/The_Honky_Problem"
+      }, {
+        "label" : "http://dbpedia.org/resource/Oresama",
+        "uri" : "http://dbpedia.org/resource/Oresama"
+      }, {
+        "label" : "Secret",
+        "uri" : "http://dbpedia.org/resource/Secret_(2007_film)"
+      }, {
+        "label" : "SherryBaby",
+        "uri" : "http://dbpedia.org/resource/Sherrybaby"
+      }, {
+        "label" : "Thunderbolt (1995)",
+        "uri" : "http://dbpedia.org/resource/Thunderbolt_(1995_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Yaarana_(2015_film)",
+        "uri" : "http://dbpedia.org/resource/Yaarana_(2015_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Corrupt_(1999_film)",
+        "uri" : "http://dbpedia.org/resource/Corrupt_(1999_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/CZ12",
+        "uri" : "http://dbpedia.org/resource/CZ12"
+      }, {
+        "label" : "http://dbpedia.org/resource/In_the_King_of_Prussia",
+        "uri" : "http://dbpedia.org/resource/In_the_King_of_Prussia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Girlfriend_(2010_film)",
+        "uri" : "http://dbpedia.org/resource/Girlfriend_(2010_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Horseshoe_Theory",
+        "uri" : "http://dbpedia.org/resource/Horseshoe_Theory"
+      }, {
+        "label" : "http://dbpedia.org/resource/My_Own_Private_River",
+        "uri" : "http://dbpedia.org/resource/My_Own_Private_River"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Rooftop_(film)",
+        "uri" : "http://dbpedia.org/resource/The_Rooftop_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kung_Fu_Dunk",
+        "uri" : "http://dbpedia.org/resource/Kung_Fu_Dunk"
+      }, {
+        "label" : "http://dbpedia.org/resource/Sarah_Silverman:_Jesus_Is_Magic",
+        "uri" : "http://dbpedia.org/resource/Sarah_Silverman:_Jesus_Is_Magic"
+      }, {
+        "label" : "Private School – Die Superanmacher",
+        "uri" : "http://dbpedia.org/resource/Private_School_(film)"
+      }, {
+        "label" : "Slipstream (2007)",
+        "uri" : "http://dbpedia.org/resource/Slipstream_(2007_film)"
+      }, {
+        "label" : "Aretha Franklin: Amazing Grace",
+        "uri" : "http://dbpedia.org/resource/Amazing_Grace_(2018_film)"
+      }, {
+        "label" : "Charlie und die Schokoladenfabrik (1971)",
+        "uri" : "http://dbpedia.org/resource/Willy_Wonka_&_the_Chocolate_Factory"
+      }, {
+        "label" : "http://dbpedia.org/resource/Wild_League_(film)",
+        "uri" : "http://dbpedia.org/resource/Wild_League_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/102_Not_Out",
+        "uri" : "http://dbpedia.org/resource/102_Not_Out"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Lost_City_(2005_film)",
+        "uri" : "http://dbpedia.org/resource/The_Lost_City_(2005_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/August_(1996_film)",
+        "uri" : "http://dbpedia.org/resource/August_(1996_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Stations_of_the_Elevated",
+        "uri" : "http://dbpedia.org/resource/Stations_of_the_Elevated"
+      }, {
+        "label" : "http://dbpedia.org/resource/Black_Joy_(1977_film)",
+        "uri" : "http://dbpedia.org/resource/Black_Joy_(1977_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Been_So_Long_(film)",
+        "uri" : "http://dbpedia.org/resource/Been_So_Long_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Uncle_Was_a_Vampire",
+        "uri" : "http://dbpedia.org/resource/Uncle_Was_a_Vampire"
+      }, {
+        "label" : "http://dbpedia.org/resource/Rascel-Fifì",
+        "uri" : "http://dbpedia.org/resource/Rascel-Fifì"
+      }, {
+        "label" : "http://dbpedia.org/resource/Commissariato_di_notturna",
+        "uri" : "http://dbpedia.org/resource/Commissariato_di_notturna"
+      }, {
+        "label" : "http://dbpedia.org/resource/Substitute_Teacher_(film)",
+        "uri" : "http://dbpedia.org/resource/Substitute_Teacher_(film)"
+      }, {
+        "label" : "Dr. Detroit",
+        "uri" : "http://dbpedia.org/resource/Doctor_Detroit"
+      }, {
+        "label" : "http://dbpedia.org/resource/I_Love_Your_Work",
+        "uri" : "http://dbpedia.org/resource/I_Love_Your_Work"
+      }, {
+        "label" : "http://dbpedia.org/resource/Beat_Girl",
+        "uri" : "http://dbpedia.org/resource/Beat_Girl"
+      }, {
+        "label" : "http://dbpedia.org/resource/Diary_of_a_Mad_Black_Woman",
+        "uri" : "http://dbpedia.org/resource/Diary_of_a_Mad_Black_Woman"
+      }, {
+        "label" : "http://dbpedia.org/resource/Dream_a_Little_Dream_2",
+        "uri" : "http://dbpedia.org/resource/Dream_a_Little_Dream_2"
+      }, {
+        "label" : "Casper – Verzauberte Weihnachten",
+        "uri" : "http://dbpedia.org/resource/Casper's_Haunted_Christmas"
+      }, {
+        "label" : "Christiane F. – Wir Kinder vom Bahnhof Zoo",
+        "uri" : "http://dbpedia.org/resource/Christiane_F._(film)"
+      }, {
+        "label" : "Die Liebenden von Pont-Neuf",
+        "uri" : "http://dbpedia.org/resource/Les_Amants_du_Pont-Neuf"
+      }, {
+        "label" : "Ziggy Stardust and the Spiders from Mars (Film)",
+        "uri" : "http://dbpedia.org/resource/Ziggy_Stardust_and_the_Spiders_from_Mars_(film)"
+      }, {
+        "label" : "Lautlos im Weltraum",
+        "uri" : "http://dbpedia.org/resource/Silent_Running"
+      }, {
+        "label" : "Imperium – Zwei Welten prallen aufeinander",
+        "uri" : "http://dbpedia.org/resource/Empire_(2002_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/David_Bowie:_Black_Tie_White_Noise_(film)",
+        "uri" : "http://dbpedia.org/resource/David_Bowie:_Black_Tie_White_Noise_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Jazzin'_for_Blue_Jean",
+        "uri" : "http://dbpedia.org/resource/Jazzin'_for_Blue_Jean"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ricochet_(documentary)",
+        "uri" : "http://dbpedia.org/resource/Ricochet_(documentary)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Cracked_Actor",
+        "uri" : "http://dbpedia.org/resource/Cracked_Actor"
+      }, {
+        "label" : "http://dbpedia.org/resource/David_Bowie:_Sound_and_Vision_(documentary)",
+        "uri" : "http://dbpedia.org/resource/David_Bowie:_Sound_and_Vision_(documentary)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mauvais_Sang",
+        "uri" : "http://dbpedia.org/resource/Mauvais_Sang"
+      }, {
+        "label" : "http://dbpedia.org/resource/A_Glimpse_of_Tiger__A_Glimpse_of_Tiger__1",
+        "uri" : "http://dbpedia.org/resource/A_Glimpse_of_Tiger__A_Glimpse_of_Tiger__1"
+      }, {
+        "label" : "http://dbpedia.org/resource/Silver_Dream_Racer",
+        "uri" : "http://dbpedia.org/resource/Silver_Dream_Racer"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Adventure_of_Faustus_Bidgood",
+        "uri" : "http://dbpedia.org/resource/The_Adventure_of_Faustus_Bidgood"
+      }, {
+        "label" : "http://dbpedia.org/resource/McVicar_(film)",
+        "uri" : "http://dbpedia.org/resource/McVicar_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Q&A_(film)",
+        "uri" : "http://dbpedia.org/resource/Q&A_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ruben_Blades_Is_Not_My_Name",
+        "uri" : "http://dbpedia.org/resource/Ruben_Blades_Is_Not_My_Name"
+      }, {
+        "label" : "http://dbpedia.org/resource/When_the_Mountains_Tremble",
+        "uri" : "http://dbpedia.org/resource/When_the_Mountains_Tremble"
+      }, {
+        "label" : "The Naked Brothers Band: Der Film",
+        "uri" : "http://dbpedia.org/resource/The_Naked_Brothers_Band:_The_Movie"
+      }, {
+        "label" : "Multi-Facial",
+        "uri" : "http://dbpedia.org/resource/Multi-Facial"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "48",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "BAND",
+    "returnType" : "PERSON",
+    "frameType" : "APP",
+    "sentences" : [ "Welche fiktiven Charaktere werden von das Mitglied von $x gespielt?", "Welche fiktiven Charaktere werden von die Mitglieder von $x gespielt?", "Welche fiktiven Charaktere wurden von das Mitglied von $x gespielt?", "Welche fiktiven Charaktere wurden von die Mitglieder von $x gespielt?", "Welcher fiktive Charakter wird von das Mitglied von $x gespielt?", "Welcher fiktive Charakter wird von die Mitglieder von $x gespielt?", "Welcher fiktive Charakter wurde von das Mitglied von $x gespielt?", "Welcher fiktive Charakter wurde von die Mitglieder von $x gespielt?", "Wer wird von das Mitglied von $x gespielt?", "Wer wird von die Mitglieder von $x gespielt?", "Wer wurde von das Mitglied von $x gespielt?", "Wer wurde von die Mitglieder von $x gespielt?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/bandMember> ?objOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "MKTO",
+        "uri" : "http://dbpedia.org/resource/MKTO"
+      }, {
+        "label" : "Native Tongues Posse",
+        "uri" : "http://dbpedia.org/resource/Native_Tongues"
+      }, {
+        "label" : "Band From TV",
+        "uri" : "http://dbpedia.org/resource/Band_from_TV"
+      }, {
+        "label" : "Kevin Costner & Modern West",
+        "uri" : "http://dbpedia.org/resource/Kevin_Costner_&_Modern_West"
+      }, {
+        "label" : "http://dbpedia.org/resource/Linkup",
+        "uri" : "http://dbpedia.org/resource/Linkup"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Boxmasters",
+        "uri" : "http://dbpedia.org/resource/The_Boxmasters"
+      }, {
+        "label" : "http://dbpedia.org/resource/Billy_Joel_Band",
+        "uri" : "http://dbpedia.org/resource/Billy_Joel_Band"
+      }, {
+        "label" : "http://dbpedia.org/resource/Brother_Clyde",
+        "uri" : "http://dbpedia.org/resource/Brother_Clyde"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Dalton_Academy_Warblers",
+        "uri" : "http://dbpedia.org/resource/The_Dalton_Academy_Warblers"
+      }, {
+        "label" : "http://dbpedia.org/resource/Zip_Code_Rapists",
+        "uri" : "http://dbpedia.org/resource/Zip_Code_Rapists"
+      }, {
+        "label" : "http://dbpedia.org/resource/Analog_Brothers",
+        "uri" : "http://dbpedia.org/resource/Analog_Brothers"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ultramagnetic_MCs",
+        "uri" : "http://dbpedia.org/resource/Ultramagnetic_MCs"
+      }, {
+        "label" : "http://dbpedia.org/resource/Thee_Undatakerz",
+        "uri" : "http://dbpedia.org/resource/Thee_Undatakerz"
+      }, {
+        "label" : "All Angels",
+        "uri" : "http://dbpedia.org/resource/All_Angels"
+      }, {
+        "label" : "The Whip (Band)",
+        "uri" : "http://dbpedia.org/resource/The_Whip_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Oddities_(rap_group)",
+        "uri" : "http://dbpedia.org/resource/The_Oddities_(rap_group)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Waiting_Room_(band)",
+        "uri" : "http://dbpedia.org/resource/Waiting_Room_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hepcat_(band)",
+        "uri" : "http://dbpedia.org/resource/Hepcat_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chantoozies",
+        "uri" : "http://dbpedia.org/resource/Chantoozies"
+      }, {
+        "label" : "http://dbpedia.org/resource/Imajin",
+        "uri" : "http://dbpedia.org/resource/Imajin"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ringside_(band)",
+        "uri" : "http://dbpedia.org/resource/Ringside_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/8_Flavahz",
+        "uri" : "http://dbpedia.org/resource/8_Flavahz"
+      }, {
+        "label" : "The Aquabats",
+        "uri" : "http://dbpedia.org/resource/The_Aquabats"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Long_Goodbye_(band)",
+        "uri" : "http://dbpedia.org/resource/The_Long_Goodbye_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Teatro_(band)",
+        "uri" : "http://dbpedia.org/resource/Teatro_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lt._Dan_Band",
+        "uri" : "http://dbpedia.org/resource/Lt._Dan_Band"
+      }, {
+        "label" : "http://dbpedia.org/resource/Make_Out_Monday",
+        "uri" : "http://dbpedia.org/resource/Make_Out_Monday"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Dawn_(band)",
+        "uri" : "http://dbpedia.org/resource/The_Dawn_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Pattern-Seeking_Animals",
+        "uri" : "http://dbpedia.org/resource/Pattern-Seeking_Animals"
+      }, {
+        "label" : "The Blues Brothers",
+        "uri" : "http://dbpedia.org/resource/The_Blues_Brothers"
+      }, {
+        "label" : "Sweeney’s Men",
+        "uri" : "http://dbpedia.org/resource/Sweeney's_Men"
+      }, {
+        "label" : "Arashi",
+        "uri" : "http://dbpedia.org/resource/Arashi"
+      }, {
+        "label" : "She & Him",
+        "uri" : "http://dbpedia.org/resource/She_&_Him"
+      }, {
+        "label" : "http://dbpedia.org/resource/Panjo_5",
+        "uri" : "http://dbpedia.org/resource/Panjo_5"
+      }, {
+        "label" : "http://dbpedia.org/resource/Blue_(English_band)",
+        "uri" : "http://dbpedia.org/resource/Blue_(English_band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Uh_Huh_Her_(band)",
+        "uri" : "http://dbpedia.org/resource/Uh_Huh_Her_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/WaT",
+        "uri" : "http://dbpedia.org/resource/WaT"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Woods_Band",
+        "uri" : "http://dbpedia.org/resource/The_Woods_Band"
+      }, {
+        "label" : "The Left Banke",
+        "uri" : "http://dbpedia.org/resource/The_Left_Banke"
+      }, {
+        "label" : "Pagoda",
+        "uri" : "http://dbpedia.org/resource/Pagoda_(band)"
+      }, {
+        "label" : "Skin (japanische Band)",
+        "uri" : "http://dbpedia.org/resource/Skin_(Japanese_band)"
+      }, {
+        "label" : "Dead Man’s Bones",
+        "uri" : "http://dbpedia.org/resource/Dead_Man's_Bones"
+      }, {
+        "label" : "New Kids on the Block",
+        "uri" : "http://dbpedia.org/resource/New_Kids_on_the_Block"
+      }, {
+        "label" : "The Woolpackers",
+        "uri" : "http://dbpedia.org/resource/The_Woolpackers"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lolawolf",
+        "uri" : "http://dbpedia.org/resource/Lolawolf"
+      }, {
+        "label" : "http://dbpedia.org/resource/Corporal_(band)",
+        "uri" : "http://dbpedia.org/resource/Corporal_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hey!_Say!_JUMP",
+        "uri" : "http://dbpedia.org/resource/Hey!_Say!_JUMP"
+      }, {
+        "label" : "http://dbpedia.org/resource/NYC_(band)",
+        "uri" : "http://dbpedia.org/resource/NYC_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Wallows",
+        "uri" : "http://dbpedia.org/resource/Wallows"
+      }, {
+        "label" : "http://dbpedia.org/resource/3Deep",
+        "uri" : "http://dbpedia.org/resource/3Deep"
+      }, {
+        "label" : "Body Count (Band)",
+        "uri" : "http://dbpedia.org/resource/Body_Count_(band)"
+      }, {
+        "label" : "100 Monkeys",
+        "uri" : "http://dbpedia.org/resource/100_Monkeys"
+      }, {
+        "label" : "Ghost of the Robot",
+        "uri" : "http://dbpedia.org/resource/Ghost_of_the_Robot"
+      }, {
+        "label" : "Rixton",
+        "uri" : "http://dbpedia.org/resource/Push_Baby"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hugh_Dillon_Redemption_Choir",
+        "uri" : "http://dbpedia.org/resource/Hugh_Dillon_Redemption_Choir"
+      }, {
+        "label" : "http://dbpedia.org/resource/Headstones_(band)",
+        "uri" : "http://dbpedia.org/resource/Headstones_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Wicked_Wisdom",
+        "uri" : "http://dbpedia.org/resource/Wicked_Wisdom"
+      }, {
+        "label" : "http://dbpedia.org/resource/Counterfeit_(band)",
+        "uri" : "http://dbpedia.org/resource/Counterfeit_(band)"
+      }, {
+        "label" : "78violet",
+        "uri" : "http://dbpedia.org/resource/Aly_&_AJ"
+      }, {
+        "label" : "The Lonely Island",
+        "uri" : "http://dbpedia.org/resource/The_Lonely_Island"
+      }, {
+        "label" : "http://dbpedia.org/resource/Blue_County_(music_group)",
+        "uri" : "http://dbpedia.org/resource/Blue_County_(music_group)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Damnocracy",
+        "uri" : "http://dbpedia.org/resource/Damnocracy"
+      }, {
+        "label" : "http://dbpedia.org/resource/Leading_Ladies_(group)",
+        "uri" : "http://dbpedia.org/resource/Leading_Ladies_(group)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Allstars_(band)",
+        "uri" : "http://dbpedia.org/resource/Allstars_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Peth",
+        "uri" : "http://dbpedia.org/resource/The_Peth"
+      }, {
+        "label" : "http://dbpedia.org/resource/David_and_the_Giants",
+        "uri" : "http://dbpedia.org/resource/David_and_the_Giants"
+      }, {
+        "label" : "Garfunkel and Oates",
+        "uri" : "http://dbpedia.org/resource/Garfunkel_and_Oates"
+      }, {
+        "label" : "Big Japan",
+        "uri" : "http://dbpedia.org/resource/Big_Japan"
+      }, {
+        "label" : "Celtic Thunder",
+        "uri" : "http://dbpedia.org/resource/Celtic_Thunder"
+      }, {
+        "label" : "http://dbpedia.org/resource/Queen_+_Adam_Lambert",
+        "uri" : "http://dbpedia.org/resource/Queen_+_Adam_Lambert"
+      }, {
+        "label" : "http://dbpedia.org/resource/Winslow_(band)",
+        "uri" : "http://dbpedia.org/resource/Winslow_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kylie_and_Garibay",
+        "uri" : "http://dbpedia.org/resource/Kylie_and_Garibay"
+      }, {
+        "label" : "Fania All-Stars",
+        "uri" : "http://dbpedia.org/resource/Fania_All-Stars"
+      }, {
+        "label" : "The Who",
+        "uri" : "http://dbpedia.org/resource/The_Who"
+      }, {
+        "label" : "Player (Band)",
+        "uri" : "http://dbpedia.org/resource/Player_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Naked_Trucker_and_T-Bones_Show",
+        "uri" : "http://dbpedia.org/resource/The_Naked_Trucker_and_T-Bones_Show"
+      }, {
+        "label" : "http://dbpedia.org/resource/Swing_on_This",
+        "uri" : "http://dbpedia.org/resource/Swing_on_This"
+      }, {
+        "label" : "http://dbpedia.org/resource/MOTHXR",
+        "uri" : "http://dbpedia.org/resource/MOTHXR"
+      }, {
+        "label" : "http://dbpedia.org/resource/Girls@Play",
+        "uri" : "http://dbpedia.org/resource/Girls@Play"
+      }, {
+        "label" : "http://dbpedia.org/resource/Swet_Shop_Boys",
+        "uri" : "http://dbpedia.org/resource/Swet_Shop_Boys"
+      }, {
+        "label" : "http://dbpedia.org/resource/No_Plan_B_(band)",
+        "uri" : "http://dbpedia.org/resource/No_Plan_B_(band)"
+      }, {
+        "label" : "Angelfish",
+        "uri" : "http://dbpedia.org/resource/Angelfish_(band)"
+      }, {
+        "label" : "Garbage",
+        "uri" : "http://dbpedia.org/resource/Garbage_(band)"
+      }, {
+        "label" : "Genesis (Band)",
+        "uri" : "http://dbpedia.org/resource/Genesis_(band)"
+      }, {
+        "label" : "Goodbye Mr. Mackenzie",
+        "uri" : "http://dbpedia.org/resource/Goodbye_Mr_Mackenzie"
+      }, {
+        "label" : "The Pretty Reckless",
+        "uri" : "http://dbpedia.org/resource/The_Pretty_Reckless"
+      }, {
+        "label" : "Rogue Traders",
+        "uri" : "http://dbpedia.org/resource/Rogue_Traders"
+      }, {
+        "label" : "Jonas Brothers",
+        "uri" : "http://dbpedia.org/resource/Jonas_Brothers"
+      }, {
+        "label" : "http://dbpedia.org/resource/Black_Eyed_Peas",
+        "uri" : "http://dbpedia.org/resource/Black_Eyed_Peas"
+      }, {
+        "label" : "http://dbpedia.org/resource/Boomkat",
+        "uri" : "http://dbpedia.org/resource/Boomkat"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nat_and_Alex_Wolff",
+        "uri" : "http://dbpedia.org/resource/Nat_and_Alex_Wolff"
+      }, {
+        "label" : "E Street Band",
+        "uri" : "http://dbpedia.org/resource/E_Street_Band"
+      }, {
+        "label" : "God (Band)",
+        "uri" : "http://dbpedia.org/resource/G.o.d"
+      }, {
+        "label" : "Hollywood Vampires",
+        "uri" : "http://dbpedia.org/resource/Hollywood_Vampires_(band)"
+      }, {
+        "label" : "Black Star (Band)",
+        "uri" : "http://dbpedia.org/resource/Black_Star_(rap_duo)"
+      }, {
+        "label" : "Black Star (Bildagentur)",
+        "uri" : "http://dbpedia.org/resource/Black_Star_(rap_duo)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Gary_Ruley_and_Mule_Train",
+        "uri" : "http://dbpedia.org/resource/Gary_Ruley_and_Mule_Train"
+      }, {
+        "label" : "http://dbpedia.org/resource/Fear_of_Pop",
+        "uri" : "http://dbpedia.org/resource/Fear_of_Pop"
+      }, {
+        "label" : "http://dbpedia.org/resource/V6_(band)",
+        "uri" : "http://dbpedia.org/resource/V6_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Dec_99th",
+        "uri" : "http://dbpedia.org/resource/Dec_99th"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "49",
     "language" : "DE",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -2363,7 +5506,7 @@
     },
     "combination" : true
   }, {
-    "id" : "24",
+    "id" : "50",
     "language" : "DE",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -2682,7 +5825,645 @@
     },
     "combination" : true
   }, {
-    "id" : "25",
+    "id" : "51",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "WORK",
+    "returnType" : "PERSON",
+    "frameType" : "APP",
+    "sentences" : [ "Welche Person wird von der Komponist für $x geheiratet?", "Welche Person wird von die Komponisten für $x geheiratet?", "Welche Person wurde von der Komponist für $x geheiratet?", "Welche Person wurde von die Komponisten für $x geheiratet?", "Welche Personen werden von der Komponist für $x geheiratet?", "Welche Personen werden von die Komponisten für $x geheiratet?", "Welche Personen wurden von der Komponist für $x geheiratet?", "Welche Personen wurden von die Komponisten für $x geheiratet?", "Wer wird von der Komponist für $x geheiratet?", "Wer wird von die Komponisten für $x geheiratet?", "Wer wurde von der Komponist für $x geheiratet?", "Wer wurde von die Komponisten für $x geheiratet?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/musicComposer> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Das goldene Zeitalter",
+        "uri" : "http://dbpedia.org/resource/L'Age_d'Or"
+      }, {
+        "label" : "http://dbpedia.org/resource/Sakada_(1976_film)",
+        "uri" : "http://dbpedia.org/resource/Sakada_(1976_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Come_Back,_Africa",
+        "uri" : "http://dbpedia.org/resource/Come_Back,_Africa"
+      }, {
+        "label" : "In Bed with Madonna",
+        "uri" : "http://dbpedia.org/resource/Madonna:_Truth_or_Dare"
+      }, {
+        "label" : "http://dbpedia.org/resource/Saat_Hindustani",
+        "uri" : "http://dbpedia.org/resource/Saat_Hindustani"
+      }, {
+        "label" : "http://dbpedia.org/resource/On_Board_(film)",
+        "uri" : "http://dbpedia.org/resource/On_Board_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/A_Madonna_in_Laleli",
+        "uri" : "http://dbpedia.org/resource/A_Madonna_in_Laleli"
+      }, {
+        "label" : "http://dbpedia.org/resource/Manjina_Hani",
+        "uri" : "http://dbpedia.org/resource/Manjina_Hani"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kodanda_Rama",
+        "uri" : "http://dbpedia.org/resource/Kodanda_Rama"
+      }, {
+        "label" : "http://dbpedia.org/resource/Naanu_Nanna_Hendthiru",
+        "uri" : "http://dbpedia.org/resource/Naanu_Nanna_Hendthiru"
+      }, {
+        "label" : "http://dbpedia.org/resource/O_Nanna_Nalle",
+        "uri" : "http://dbpedia.org/resource/O_Nanna_Nalle"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ayya_(2005_Kannada_film)",
+        "uri" : "http://dbpedia.org/resource/Ayya_(2005_Kannada_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/O_Premave",
+        "uri" : "http://dbpedia.org/resource/O_Premave"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chora_Chittha_Chora",
+        "uri" : "http://dbpedia.org/resource/Chora_Chittha_Chora"
+      }, {
+        "label" : "http://dbpedia.org/resource/Sneha_(film)",
+        "uri" : "http://dbpedia.org/resource/Sneha_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hatavadi",
+        "uri" : "http://dbpedia.org/resource/Hatavadi"
+      }, {
+        "label" : "http://dbpedia.org/resource/Apoorva_(2016_film)",
+        "uri" : "http://dbpedia.org/resource/Apoorva_(2016_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Pandu_Ranga_Vittala",
+        "uri" : "http://dbpedia.org/resource/Pandu_Ranga_Vittala"
+      }, {
+        "label" : "http://dbpedia.org/resource/Aham_Premasmi",
+        "uri" : "http://dbpedia.org/resource/Aham_Premasmi"
+      }, {
+        "label" : "http://dbpedia.org/resource/Crazy_Star_(film)",
+        "uri" : "http://dbpedia.org/resource/Crazy_Star_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Neelakanta_(film)",
+        "uri" : "http://dbpedia.org/resource/Neelakanta_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Preethsu_Thappenilla",
+        "uri" : "http://dbpedia.org/resource/Preethsu_Thappenilla"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ekangi",
+        "uri" : "http://dbpedia.org/resource/Ekangi"
+      }, {
+        "label" : "http://dbpedia.org/resource/Naariya_Seere_Kadda",
+        "uri" : "http://dbpedia.org/resource/Naariya_Seere_Kadda"
+      }, {
+        "label" : "http://dbpedia.org/resource/Malla_(film)",
+        "uri" : "http://dbpedia.org/resource/Malla_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Fourth_Dimension_(film)",
+        "uri" : "http://dbpedia.org/resource/The_Fourth_Dimension_(film)"
+      }, {
+        "label" : "Der Jazzkönig",
+        "uri" : "http://dbpedia.org/resource/King_of_Jazz"
+      }, {
+        "label" : "Jenseits der Wolken",
+        "uri" : "http://dbpedia.org/resource/Beyond_the_Clouds_(1995_film)"
+      }, {
+        "label" : "Dont Look Back",
+        "uri" : "http://dbpedia.org/resource/Dont_Look_Back"
+      }, {
+        "label" : "Eat the Document",
+        "uri" : "http://dbpedia.org/resource/Eat_the_Document"
+      }, {
+        "label" : "Schlagerpiraten",
+        "uri" : "http://dbpedia.org/resource/The_Girl_Can't_Help_It"
+      }, {
+        "label" : "The Million Dollar Hotel",
+        "uri" : "http://dbpedia.org/resource/The_Million_Dollar_Hotel"
+      }, {
+        "label" : "ABBA – Der Film",
+        "uri" : "http://dbpedia.org/resource/ABBA:_The_Movie"
+      }, {
+        "label" : "Pat Garrett jagt Billy the Kid",
+        "uri" : "http://dbpedia.org/resource/Pat_Garrett_and_Billy_the_Kid"
+      }, {
+        "label" : "Vill så gärna tro",
+        "uri" : "http://dbpedia.org/resource/Want_So_Much_To_Believe"
+      }, {
+        "label" : "Runaway Girl",
+        "uri" : "http://dbpedia.org/resource/Hick_(film)"
+      }, {
+        "label" : "Masked and Anonymous",
+        "uri" : "http://dbpedia.org/resource/Masked_and_Anonymous"
+      }, {
+        "label" : "http://dbpedia.org/resource/Pinocchio_(1976_TV_program)",
+        "uri" : "http://dbpedia.org/resource/Pinocchio_(1976_TV_program)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Be_Yourself!",
+        "uri" : "http://dbpedia.org/resource/Be_Yourself!"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hit_the_Deck_(1955_film)",
+        "uri" : "http://dbpedia.org/resource/Hit_the_Deck_(1955_film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Say_It_with_Songs",
+        "uri" : "http://dbpedia.org/resource/Say_It_with_Songs"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chess_Moves",
+        "uri" : "http://dbpedia.org/resource/Chess_Moves"
+      }, {
+        "label" : "http://dbpedia.org/resource/A_Piece_of_My_Heart_(film)",
+        "uri" : "http://dbpedia.org/resource/A_Piece_of_My_Heart_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bombay_Beach_(film)",
+        "uri" : "http://dbpedia.org/resource/Bombay_Beach_(film)"
+      }, {
+        "label" : "http://dbpedia.org/resource/65_Revisited",
+        "uri" : "http://dbpedia.org/resource/65_Revisited"
+      }, {
+        "label" : "http://dbpedia.org/resource/One_Bright_Shining_Moment:_The_Forgotten_Summer_of_George_McGovern",
+        "uri" : "http://dbpedia.org/resource/One_Bright_Shining_Moment:_The_Forgotten_Summer_of_George_McGovern"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mavis!",
+        "uri" : "http://dbpedia.org/resource/Mavis!"
+      }, {
+        "label" : "http://dbpedia.org/resource/Revenge_of_the_Stolen_Stars",
+        "uri" : "http://dbpedia.org/resource/Revenge_of_the_Stolen_Stars"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Night_the_Lights_Went_Out_in_Georgia_(film)",
+        "uri" : "http://dbpedia.org/resource/The_Night_the_Lights_Went_Out_in_Georgia_(film)"
+      }, {
+        "label" : "Glückspilze (1940)",
+        "uri" : "http://dbpedia.org/resource/Lucky_Partners"
+      }, {
+        "label" : "Mad Love (1935)",
+        "uri" : "http://dbpedia.org/resource/Mad_Love_(1935_film)"
+      }, {
+        "label" : "Dieter – Der Film",
+        "uri" : "http://dbpedia.org/resource/Dieter:_Der_Film"
+      }, {
+        "label" : "Jagd auf Dillinger (1945)",
+        "uri" : "http://dbpedia.org/resource/Dillinger_(1945_film)"
+      }, {
+        "label" : "Zwei rechnen ab",
+        "uri" : "http://dbpedia.org/resource/Gunfight_at_the_O.K._Corral_(film)"
+      }, {
+        "label" : "Alice im Wunderland (1933)",
+        "uri" : "http://dbpedia.org/resource/Alice_in_Wonderland_(1933_film)"
+      }, {
+        "label" : "Zwischen Frauen und Seilen",
+        "uri" : "http://dbpedia.org/resource/Champion_(1949_film)"
+      }, {
+        "label" : "Die Uhr ist abgelaufen",
+        "uri" : "http://dbpedia.org/resource/Night_Passage_(film)"
+      }, {
+        "label" : "In den Fesseln von Shangri-La",
+        "uri" : "http://dbpedia.org/resource/Lost_Horizon_(1937_film)"
+      }, {
+        "label" : "Circus-Welt",
+        "uri" : "http://dbpedia.org/resource/Circus_World_(film)"
+      }, {
+        "label" : "Giganten",
+        "uri" : "http://dbpedia.org/resource/Giant_(1956_film)"
+      }, {
+        "label" : "36 Stunden",
+        "uri" : "http://dbpedia.org/resource/36_Hours_(1965_film)"
+      }, {
+        "label" : "Piraten in Alaska",
+        "uri" : "http://dbpedia.org/resource/Spawn_of_the_North"
+      }, {
+        "label" : "Duell in der Sonne",
+        "uri" : "http://dbpedia.org/resource/Duel_in_the_Sun_(film)"
+      }, {
+        "label" : "Lockende Versuchung",
+        "uri" : "http://dbpedia.org/resource/Friendly_Persuasion_(1956_film)"
+      }, {
+        "label" : "Wo die Liebe hinfällt (1935)",
+        "uri" : "http://dbpedia.org/resource/I_Live_My_Life"
+      }, {
+        "label" : "Ist das Leben nicht schön?",
+        "uri" : "http://dbpedia.org/resource/It's_a_Wonderful_Life"
+      }, {
+        "label" : "Engelsgesicht",
+        "uri" : "http://dbpedia.org/resource/Angel_Face_(1953_film)"
+      }, {
+        "label" : "S.O.S. Feuer an Bord",
+        "uri" : "http://dbpedia.org/resource/Only_Angels_Have_Wings"
+      }, {
+        "label" : "Red River (1948)",
+        "uri" : "http://dbpedia.org/resource/Red_River_(1948_film)"
+      }, {
+        "label" : "Report from the Aleutians",
+        "uri" : "http://dbpedia.org/resource/Report_from_the_Aleutians"
+      }, {
+        "label" : "Rückkehr ins Paradies",
+        "uri" : "http://dbpedia.org/resource/Return_to_Paradise_(1953_film)"
+      }, {
+        "label" : "Alamo (1960)",
+        "uri" : "http://dbpedia.org/resource/The_Alamo_(1960_film)"
+      }, {
+        "label" : "The Battle of Russia",
+        "uri" : "http://dbpedia.org/resource/The_Battle_of_Russia"
+      }, {
+        "label" : "The Big Sky – Der weite Himmel",
+        "uri" : "http://dbpedia.org/resource/The_Big_Sky_(film)"
+      }, {
+        "label" : "The Bridge of San Luis Rey (1944)",
+        "uri" : "http://dbpedia.org/resource/The_Bridge_of_San_Luis_Rey_(1944_film)"
+      }, {
+        "label" : "Die siebente Nacht",
+        "uri" : "http://dbpedia.org/resource/The_Command_(1954_film)"
+      }, {
+        "label" : "Blutrache (1941)",
+        "uri" : "http://dbpedia.org/resource/The_Corsican_Brothers_(1941_film)"
+      }, {
+        "label" : "Verdammt zum Schweigen",
+        "uri" : "http://dbpedia.org/resource/The_Court-Martial_of_Billy_Mitchell"
+      }, {
+        "label" : "Der Untergang des Römischen Reiches",
+        "uri" : "http://dbpedia.org/resource/The_Fall_of_the_Roman_Empire_(film)"
+      }, {
+        "label" : "Der große Walzer (1938)",
+        "uri" : "http://dbpedia.org/resource/The_Great_Waltz_(1938_film)"
+      }, {
+        "label" : "Die Kanonen von Navarone",
+        "uri" : "http://dbpedia.org/resource/The_Guns_of_Navarone_(film)"
+      }, {
+        "label" : "Es wird immer wieder Tag",
+        "uri" : "http://dbpedia.org/resource/The_High_and_the_Mighty_(film)"
+      }, {
+        "label" : "Die Männer",
+        "uri" : "http://dbpedia.org/resource/The_Men_(film)"
+      }, {
+        "label" : "Der Besessene von Tahiti",
+        "uri" : "http://dbpedia.org/resource/The_Moon_and_Sixpence_(film)"
+      }, {
+        "label" : "Der alte Mann und das Meer (1958)",
+        "uri" : "http://dbpedia.org/resource/The_Old_Man_and_the_Sea_(1958_film)"
+      }, {
+        "label" : "Banditenlied",
+        "uri" : "http://dbpedia.org/resource/The_Rogue_Song"
+      }, {
+        "label" : "Der endlose Horizont",
+        "uri" : "http://dbpedia.org/resource/The_Sundowners_(1960_film)"
+      }, {
+        "label" : "Das Ding aus einer anderen Welt (1951)",
+        "uri" : "http://dbpedia.org/resource/The_Thing_from_Another_World"
+      }, {
+        "label" : "Das Ding aus einer anderen Welt (1982)",
+        "uri" : "http://dbpedia.org/resource/The_Thing_from_Another_World"
+      }, {
+        "label" : "Denen man nicht vergibt",
+        "uri" : "http://dbpedia.org/resource/The_Unforgiven_(1960_film)"
+      }, {
+        "label" : "Die Gewaltigen",
+        "uri" : "http://dbpedia.org/resource/The_War_Wagon"
+      }, {
+        "label" : "55 Tage in Peking",
+        "uri" : "http://dbpedia.org/resource/55_Days_at_Peking"
+      }, {
+        "label" : "Stadt ohne Mitleid",
+        "uri" : "http://dbpedia.org/resource/Town_Without_Pity"
+      }, {
+        "label" : "Der letzte Musketier",
+        "uri" : "http://dbpedia.org/resource/Cyrano_de_Bergerac_(1950_film)"
+      }, {
+        "label" : "Land der Pharaonen",
+        "uri" : "http://dbpedia.org/resource/Land_of_the_Pharaohs"
+      }, {
+        "label" : "Der letzte Zug von Gun Hill",
+        "uri" : "http://dbpedia.org/resource/Last_Train_from_Gun_Hill"
+      }, {
+        "label" : "Rio Bravo",
+        "uri" : "http://dbpedia.org/resource/Rio_Bravo_(film)"
+      }, {
+        "label" : "Im Schatten des Zweifels",
+        "uri" : "http://dbpedia.org/resource/Shadow_of_a_Doubt"
+      }, {
+        "label" : "Sprung auf, marsch, marsch!",
+        "uri" : "http://dbpedia.org/resource/Take_the_High_Ground!"
+      }, {
+        "label" : "Tarzan in Gefahr",
+        "uri" : "http://dbpedia.org/resource/Tarzan_and_the_Mermaids"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "52",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "BAND",
+    "returnType" : "PERSON",
+    "frameType" : "APP",
+    "sentences" : [ "Welche Person wird von das Mitglied von $x geheiratet?", "Welche Person wird von die Mitglieder von $x geheiratet?", "Welche Person wurde von das Mitglied von $x geheiratet?", "Welche Person wurde von die Mitglieder von $x geheiratet?", "Welche Personen werden von das Mitglied von $x geheiratet?", "Welche Personen werden von die Mitglieder von $x geheiratet?", "Welche Personen wurden von das Mitglied von $x geheiratet?", "Welche Personen wurden von die Mitglieder von $x geheiratet?", "Wer wird von das Mitglied von $x geheiratet?", "Wer wird von die Mitglieder von $x geheiratet?", "Wer wurde von das Mitglied von $x geheiratet?", "Wer wurde von die Mitglieder von $x geheiratet?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/bandMember> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "New Edition",
+        "uri" : "http://dbpedia.org/resource/New_Edition"
+      }, {
+        "label" : "Band From TV",
+        "uri" : "http://dbpedia.org/resource/Band_from_TV"
+      }, {
+        "label" : "ABBA",
+        "uri" : "http://dbpedia.org/resource/ABBA"
+      }, {
+        "label" : "U2 (Band)",
+        "uri" : "http://dbpedia.org/resource/U2"
+      }, {
+        "label" : "Tight Fit",
+        "uri" : "http://dbpedia.org/resource/Tight_Fit"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ocean's_7",
+        "uri" : "http://dbpedia.org/resource/Ocean's_7"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Boxmasters",
+        "uri" : "http://dbpedia.org/resource/The_Boxmasters"
+      }, {
+        "label" : "http://dbpedia.org/resource/Brother_Clyde",
+        "uri" : "http://dbpedia.org/resource/Brother_Clyde"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Rhythm_Boys",
+        "uri" : "http://dbpedia.org/resource/The_Rhythm_Boys"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bombaj_Štampa",
+        "uri" : "http://dbpedia.org/resource/Bombaj_Štampa"
+      }, {
+        "label" : "Virgin (Band)",
+        "uri" : "http://dbpedia.org/resource/Virgin_(band)"
+      }, {
+        "label" : "Sum 41",
+        "uri" : "http://dbpedia.org/resource/Sum_41"
+      }, {
+        "label" : "Jonas Brothers",
+        "uri" : "http://dbpedia.org/resource/Jonas_Brothers"
+      }, {
+        "label" : "Prayers",
+        "uri" : "http://dbpedia.org/resource/Prayers_(duo)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Weep_(band)",
+        "uri" : "http://dbpedia.org/resource/Weep_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Bacon_Brothers",
+        "uri" : "http://dbpedia.org/resource/The_Bacon_Brothers"
+      }, {
+        "label" : "http://dbpedia.org/resource/Body/Head",
+        "uri" : "http://dbpedia.org/resource/Body/Head"
+      }, {
+        "label" : "http://dbpedia.org/resource/Glitterbust",
+        "uri" : "http://dbpedia.org/resource/Glitterbust"
+      }, {
+        "label" : "http://dbpedia.org/resource/Free_Kitten",
+        "uri" : "http://dbpedia.org/resource/Free_Kitten"
+      }, {
+        "label" : "http://dbpedia.org/resource/London_Philharmonic_Choir",
+        "uri" : "http://dbpedia.org/resource/London_Philharmonic_Choir"
+      }, {
+        "label" : "Migos",
+        "uri" : "http://dbpedia.org/resource/Migos"
+      }, {
+        "label" : "The Lonely Island",
+        "uri" : "http://dbpedia.org/resource/The_Lonely_Island"
+      }, {
+        "label" : "Twins (Band)",
+        "uri" : "http://dbpedia.org/resource/Twins_(group)"
+      }, {
+        "label" : "Deadsy",
+        "uri" : "http://dbpedia.org/resource/Deadsy"
+      }, {
+        "label" : "Rouge (brasilianische Band)",
+        "uri" : "http://dbpedia.org/resource/Rouge_(group)"
+      }, {
+        "label" : "Exile (japanische Band)",
+        "uri" : "http://dbpedia.org/resource/Exile_(Japanese_band)"
+      }, {
+        "label" : "Exile (US-amerikanische Band)",
+        "uri" : "http://dbpedia.org/resource/Exile_(Japanese_band)"
+      }, {
+        "label" : "Fangoria (Band)",
+        "uri" : "http://dbpedia.org/resource/Fangoria_(band)"
+      }, {
+        "label" : "New Found Glory",
+        "uri" : "http://dbpedia.org/resource/New_Found_Glory"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_White_Mandingos",
+        "uri" : "http://dbpedia.org/resource/The_White_Mandingos"
+      }, {
+        "label" : "http://dbpedia.org/resource/Exile_The_Second",
+        "uri" : "http://dbpedia.org/resource/Exile_The_Second"
+      }, {
+        "label" : "http://dbpedia.org/resource/Waiting_Room_(band)",
+        "uri" : "http://dbpedia.org/resource/Waiting_Room_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Sentidos_Opuestos",
+        "uri" : "http://dbpedia.org/resource/Sentidos_Opuestos"
+      }, {
+        "label" : "http://dbpedia.org/resource/Leyla_The_Band",
+        "uri" : "http://dbpedia.org/resource/Leyla_The_Band"
+      }, {
+        "label" : "http://dbpedia.org/resource/Roseaux_(band)",
+        "uri" : "http://dbpedia.org/resource/Roseaux_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Emanon",
+        "uri" : "http://dbpedia.org/resource/Emanon"
+      }, {
+        "label" : "http://dbpedia.org/resource/Grievous_Angels",
+        "uri" : "http://dbpedia.org/resource/Grievous_Angels"
+      }, {
+        "label" : "http://dbpedia.org/resource/CRX_(band)",
+        "uri" : "http://dbpedia.org/resource/CRX_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hujan",
+        "uri" : "http://dbpedia.org/resource/Hujan"
+      }, {
+        "label" : "http://dbpedia.org/resource/Shonentai",
+        "uri" : "http://dbpedia.org/resource/Shonentai"
+      }, {
+        "label" : "http://dbpedia.org/resource/Z-1_(band)",
+        "uri" : "http://dbpedia.org/resource/Z-1_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Gnarkill",
+        "uri" : "http://dbpedia.org/resource/Gnarkill"
+      }, {
+        "label" : "Fleetwood Mac",
+        "uri" : "http://dbpedia.org/resource/Fleetwood_Mac"
+      }, {
+        "label" : "Coldplay",
+        "uri" : "http://dbpedia.org/resource/Coldplay"
+      }, {
+        "label" : "The Prize Fighter Inferno",
+        "uri" : "http://dbpedia.org/resource/The_Prize_Fighter_Inferno"
+      }, {
+        "label" : "Spice Girls",
+        "uri" : "http://dbpedia.org/resource/Spice_Girls"
+      }, {
+        "label" : "Coheed and Cambria",
+        "uri" : "http://dbpedia.org/resource/Coheed_and_Cambria"
+      }, {
+        "label" : "Bush (Band)",
+        "uri" : "http://dbpedia.org/resource/Bush_(British_band)"
+      }, {
+        "label" : "Wilson Phillips",
+        "uri" : "http://dbpedia.org/resource/Wilson_Phillips"
+      }, {
+        "label" : "Sweet Dreams (Band)",
+        "uri" : "http://dbpedia.org/resource/Sweet_Dreams_(band)"
+      }, {
+        "label" : "The Flesh Eaters",
+        "uri" : "http://dbpedia.org/resource/The_Flesh_Eaters"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Simon_Sisters",
+        "uri" : "http://dbpedia.org/resource/The_Simon_Sisters"
+      }, {
+        "label" : "http://dbpedia.org/resource/Parokya_ni_Edgar",
+        "uri" : "http://dbpedia.org/resource/Parokya_ni_Edgar"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Beyman_Bros",
+        "uri" : "http://dbpedia.org/resource/The_Beyman_Bros"
+      }, {
+        "label" : "http://dbpedia.org/resource/Team_Unicorn",
+        "uri" : "http://dbpedia.org/resource/Team_Unicorn"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lt._Dan_Band",
+        "uri" : "http://dbpedia.org/resource/Lt._Dan_Band"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Southland_(band)",
+        "uri" : "http://dbpedia.org/resource/The_Southland_(band)"
+      }, {
+        "label" : "The Blues Brothers",
+        "uri" : "http://dbpedia.org/resource/The_Blues_Brothers"
+      }, {
+        "label" : "Flight of the Conchords",
+        "uri" : "http://dbpedia.org/resource/Flight_of_the_Conchords"
+      }, {
+        "label" : "For King & Country",
+        "uri" : "http://dbpedia.org/resource/For_King_&_Country_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Seven_Princesses_of_Mediacorp",
+        "uri" : "http://dbpedia.org/resource/Seven_Princesses_of_Mediacorp"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lands_(band)",
+        "uri" : "http://dbpedia.org/resource/Lands_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Pleased",
+        "uri" : "http://dbpedia.org/resource/The_Pleased"
+      }, {
+        "label" : "Hot Boys",
+        "uri" : "http://dbpedia.org/resource/Hot_Boys"
+      }, {
+        "label" : "B*Witched",
+        "uri" : "http://dbpedia.org/resource/B*Witched"
+      }, {
+        "label" : "Garfunkel and Oates",
+        "uri" : "http://dbpedia.org/resource/Garfunkel_and_Oates"
+      }, {
+        "label" : "Bikini Kill",
+        "uri" : "http://dbpedia.org/resource/Bikini_Kill"
+      }, {
+        "label" : "The Carters",
+        "uri" : "http://dbpedia.org/resource/The_Carters"
+      }, {
+        "label" : "The Grace",
+        "uri" : "http://dbpedia.org/resource/The_Grace_(group)"
+      }, {
+        "label" : "The Rolling Stones",
+        "uri" : "http://dbpedia.org/resource/The_Rolling_Stones"
+      }, {
+        "label" : "Death Cab for Cutie",
+        "uri" : "http://dbpedia.org/resource/Death_Cab_for_Cutie"
+      }, {
+        "label" : "W-inds.",
+        "uri" : "http://dbpedia.org/resource/W-inds"
+      }, {
+        "label" : "Sunday Service Choir",
+        "uri" : "http://dbpedia.org/resource/Sunday_Service_Choir"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bad_Boy_Records__The_Hitmen__1",
+        "uri" : "http://dbpedia.org/resource/Bad_Boy_Records__The_Hitmen__1"
+      }, {
+        "label" : "http://dbpedia.org/resource/Fovea_Hex",
+        "uri" : "http://dbpedia.org/resource/Fovea_Hex"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Julie_Ruin",
+        "uri" : "http://dbpedia.org/resource/The_Julie_Ruin"
+      }, {
+        "label" : "http://dbpedia.org/resource/Keith_&_Kristyn_Getty",
+        "uri" : "http://dbpedia.org/resource/Keith_&_Kristyn_Getty"
+      }, {
+        "label" : "http://dbpedia.org/resource/Pyg",
+        "uri" : "http://dbpedia.org/resource/Pyg"
+      }, {
+        "label" : "http://dbpedia.org/resource/Sqad_Up",
+        "uri" : "http://dbpedia.org/resource/Sqad_Up"
+      }, {
+        "label" : "http://dbpedia.org/resource/Deep_Dark_Robot",
+        "uri" : "http://dbpedia.org/resource/Deep_Dark_Robot"
+      }, {
+        "label" : "http://dbpedia.org/resource/No_Plan_(owarai)",
+        "uri" : "http://dbpedia.org/resource/No_Plan_(owarai)"
+      }, {
+        "label" : "The Left Banke",
+        "uri" : "http://dbpedia.org/resource/The_Left_Banke"
+      }, {
+        "label" : "Two-Mix",
+        "uri" : "http://dbpedia.org/resource/Two-Mix"
+      }, {
+        "label" : "She & Him",
+        "uri" : "http://dbpedia.org/resource/She_&_Him"
+      }, {
+        "label" : "SuperHeavy",
+        "uri" : "http://dbpedia.org/resource/SuperHeavy"
+      }, {
+        "label" : "http://dbpedia.org/resource/Five_Tiger_Generals_of_TVB",
+        "uri" : "http://dbpedia.org/resource/Five_Tiger_Generals_of_TVB"
+      }, {
+        "label" : "http://dbpedia.org/resource/Operator_Generator",
+        "uri" : "http://dbpedia.org/resource/Operator_Generator"
+      }, {
+        "label" : "http://dbpedia.org/resource/Corporal_(band)",
+        "uri" : "http://dbpedia.org/resource/Corporal_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ich_Troje",
+        "uri" : "http://dbpedia.org/resource/Ich_Troje"
+      }, {
+        "label" : "http://dbpedia.org/resource/Capitol_Offense_(band)",
+        "uri" : "http://dbpedia.org/resource/Capitol_Offense_(band)"
+      }, {
+        "label" : "http://dbpedia.org/resource/ROM-4",
+        "uri" : "http://dbpedia.org/resource/ROM-4"
+      }, {
+        "label" : "http://dbpedia.org/resource/The_Blue_(musical_duo)",
+        "uri" : "http://dbpedia.org/resource/The_Blue_(musical_duo)"
+      }, {
+        "label" : "No Doubt",
+        "uri" : "http://dbpedia.org/resource/No_Doubt"
+      }, {
+        "label" : "The Saturdays",
+        "uri" : "http://dbpedia.org/resource/The_Saturdays"
+      }, {
+        "label" : "Pearl Jam",
+        "uri" : "http://dbpedia.org/resource/Pearl_Jam"
+      }, {
+        "label" : "New Kids on the Block",
+        "uri" : "http://dbpedia.org/resource/New_Kids_on_the_Block"
+      }, {
+        "label" : "http://dbpedia.org/resource/3Deep",
+        "uri" : "http://dbpedia.org/resource/3Deep"
+      }, {
+        "label" : "http://dbpedia.org/resource/RGP_(duo)",
+        "uri" : "http://dbpedia.org/resource/RGP_(duo)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Running_Man_Brothers",
+        "uri" : "http://dbpedia.org/resource/Running_Man_Brothers"
+      }, {
+        "label" : "http://dbpedia.org/resource/Coolboys_and_the_Frontman",
+        "uri" : "http://dbpedia.org/resource/Coolboys_and_the_Frontman"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "53",
     "language" : "DE",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -3001,7 +6782,7 @@
     },
     "combination" : true
   }, {
-    "id" : "26",
+    "id" : "54",
     "language" : "DE",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
