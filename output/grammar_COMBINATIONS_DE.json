@@ -6,7 +6,7 @@
     "bindingType" : "PERSON",
     "returnType" : "PERSON",
     "frameType" : "NPP",
-    "sentences" : [ "Gib mir den Komponisten für Werke entwickelt von $x?", "Gib mir die Komponisten für Werke entwickelt von $x?", "Welche musikalischen Künstler sind die Komponisten für Werke entwickelt von $x?", "Welche musikalischen Künstler waren die Komponisten für Werke entwickelt von $x?", "Welcher musikalische Künstler ist der Komponist für Werke entwickelt von $x?", "Welcher musikalische Künstler war der Komponist für Werke entwickelt von $x?", "Wer ist der Komponist für Werke entwickelt von $x?", "Wer sind die Komponisten für Werke entwickelt von $x?", "Wer war der Komponist für Werke entwickelt von $x?", "Wer waren die Komponisten für Werke entwickelt von $x?" ],
+    "sentences" : [ "Gib mir den Komponisten für Werke entwickelt von $x", "Gib mir die Komponisten für Werke entwickelt von $x", "Welche musikalischen Künstler sind die Komponisten für Werke entwickelt von $x?", "Welche musikalischen Künstler waren die Komponisten für Werke entwickelt von $x?", "Welcher musikalische Künstler ist der Komponist für Werke entwickelt von $x?", "Welcher musikalische Künstler war der Komponist für Werke entwickelt von $x?", "Wer ist der Komponist für Werke entwickelt von $x?", "Wer sind die Komponisten für Werke entwickelt von $x?", "Wer war der Komponist für Werke entwickelt von $x?", "Wer waren die Komponisten für Werke entwickelt von $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfPropx)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -25,7 +25,7 @@
     "bindingType" : "MUSEUM",
     "returnType" : "PERSON",
     "frameType" : "NPP",
-    "sentences" : [ "Gib mir den Komponisten für Kunstwerke ausgestellt von $x?", "Gib mir die Komponisten für Kunstwerke ausgestellt von $x?", "Welche musikalischen Künstler sind die Komponisten für Kunstwerke ausgestellt von $x?", "Welche musikalischen Künstler waren die Komponisten für Kunstwerke ausgestellt von $x?", "Welcher musikalische Künstler ist der Komponist für Kunstwerke ausgestellt von $x?", "Welcher musikalische Künstler war der Komponist für Kunstwerke ausgestellt von $x?", "Wer ist der Komponist für Kunstwerke ausgestellt von $x?", "Wer sind die Komponisten für Kunstwerke ausgestellt von $x?", "Wer war der Komponist für Kunstwerke ausgestellt von $x?", "Wer waren die Komponisten für Kunstwerke ausgestellt von $x?" ],
+    "sentences" : [ "Gib mir den Komponisten für Kunstwerke ausgestellt von $x", "Gib mir die Komponisten für Kunstwerke ausgestellt von $x", "Welche musikalischen Künstler sind die Komponisten für Kunstwerke ausgestellt von $x?", "Welche musikalischen Künstler waren die Komponisten für Kunstwerke ausgestellt von $x?", "Welcher musikalische Künstler ist der Komponist für Kunstwerke ausgestellt von $x?", "Welcher musikalische Künstler war der Komponist für Kunstwerke ausgestellt von $x?", "Wer ist der Komponist für Kunstwerke ausgestellt von $x?", "Wer sind die Komponisten für Kunstwerke ausgestellt von $x?", "Wer war der Komponist für Kunstwerke ausgestellt von $x?", "Wer waren die Komponisten für Kunstwerke ausgestellt von $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/museum> ?objOfPropx)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -44,7 +44,7 @@
     "bindingType" : "BUILDING",
     "returnType" : "LOCATION",
     "frameType" : "NPP",
-    "sentences" : [ "Gib mir den Standort von der Standort von $x?", "Was ist der Standort von der Standort von $x?", "Was war der Standort von der Standort von $x?", "Welcher Ort ist der Standort von der Standort von $x?", "Welcher Ort war der Standort von der Standort von $x?" ],
+    "sentences" : [ "Gib mir den Standort von der Standort von $x", "Was ist der Standort von der Standort von $x?", "Was war der Standort von der Standort von $x?", "Welcher Ort ist der Standort von der Standort von $x?", "Welcher Ort war der Standort von der Standort von $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/location> ?subjOfProp)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -363,7 +363,7 @@
     "bindingType" : "LOCATION",
     "returnType" : "LOCATION",
     "frameType" : "NPP",
-    "sentences" : [ "Gib mir den Standort von der Standort von $x?", "Was ist der Standort von der Standort von $x?", "Was war der Standort von der Standort von $x?", "Welcher Ort ist der Standort von der Standort von $x?", "Welcher Ort war der Standort von der Standort von $x?" ],
+    "sentences" : [ "Gib mir den Standort von der Standort von $x", "Was ist der Standort von der Standort von $x?", "Was war der Standort von der Standort von $x?", "Welcher Ort ist der Standort von der Standort von $x?", "Welcher Ort war der Standort von der Standort von $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/location> ?subjOfProp)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -682,7 +682,7 @@
     "bindingType" : "ORGANISATION",
     "returnType" : "LOCATION",
     "frameType" : "NPP",
-    "sentences" : [ "Gib mir den Standort von der Standort von $x?", "Was ist der Standort von der Standort von $x?", "Was war der Standort von der Standort von $x?", "Welcher Ort ist der Standort von der Standort von $x?", "Welcher Ort war der Standort von der Standort von $x?" ],
+    "sentences" : [ "Gib mir den Standort von der Standort von $x", "Was ist der Standort von der Standort von $x?", "Was war der Standort von der Standort von $x?", "Welcher Ort ist der Standort von der Standort von $x?", "Welcher Ort war der Standort von der Standort von $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/location> ?subjOfProp)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1001,7 +1001,7 @@
     "bindingType" : "THING",
     "returnType" : "LOCATION",
     "frameType" : "NPP",
-    "sentences" : [ "Gib mir den Standort von der Produzent von $x?", "Gib mir den Standort von die Produzenten von $x?", "Was ist der Standort von der Produzent von $x?", "Was ist der Standort von die Produzenten von $x?", "Was war der Standort von der Produzent von $x?", "Was war der Standort von die Produzenten von $x?", "Welcher Ort ist der Standort von der Produzent von $x?", "Welcher Ort ist der Standort von die Produzenten von $x?", "Welcher Ort war der Standort von der Produzent von $x?", "Welcher Ort war der Standort von die Produzenten von $x?" ],
+    "sentences" : [ "Gib mir den Standort von der Produzent von $x", "Gib mir den Standort von die Produzenten von $x", "Was ist der Standort von der Produzent von $x?", "Was ist der Standort von die Produzenten von $x?", "Was war der Standort von der Produzent von $x?", "Was war der Standort von die Produzenten von $x?", "Welcher Ort ist der Standort von der Produzent von $x?", "Welcher Ort ist der Standort von die Produzenten von $x?", "Welcher Ort war der Standort von der Produzent von $x?", "Welcher Ort war der Standort von die Produzenten von $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/product> ?objOfPropx)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1011,305 +1011,305 @@
     "sentenceBindings" : {
       "bindingVariableName" : "$x",
       "bindingList" : [ {
-        "label" : "Lufia",
-        "uri" : "http://dbpedia.org/resource/Lufia"
-      }, {
-        "label" : "Bauholz",
-        "uri" : "http://dbpedia.org/resource/Lumber"
-      }, {
         "label" : "Luxusgut",
         "uri" : "http://dbpedia.org/resource/Luxury_goods"
-      }, {
-        "label" : "M&M’s",
-        "uri" : "http://dbpedia.org/resource/M&M's"
-      }, {
-        "label" : "MAG (Computerspiel)",
-        "uri" : "http://dbpedia.org/resource/MAG_(video_game)"
-      }, {
-        "label" : "MGB (Auto)",
-        "uri" : "http://dbpedia.org/resource/MG_MGB"
-      }, {
-        "label" : "MG Motor UK",
-        "uri" : "http://dbpedia.org/resource/MG_Motor"
-      }, {
-        "label" : "MIPS-Architektur",
-        "uri" : "http://dbpedia.org/resource/MIPS_architecture"
-      }, {
-        "label" : "MacDraw",
-        "uri" : "http://dbpedia.org/resource/MacDraw"
-      }, {
-        "label" : "MacOS",
-        "uri" : "http://dbpedia.org/resource/MacOS"
-      }, {
-        "label" : "Mac OS",
-        "uri" : "http://dbpedia.org/resource/MacOS"
-      }, {
-        "label" : "MacWrite",
-        "uri" : "http://dbpedia.org/resource/MacWrite"
-      }, {
-        "label" : "Mac OS X Snow Leopard",
-        "uri" : "http://dbpedia.org/resource/Mac_OS_X_Snow_Leopard"
-      }, {
-        "label" : "Maschinengewehr",
-        "uri" : "http://dbpedia.org/resource/Machine_gun"
-      }, {
-        "label" : "Maschinelles Lernen",
-        "uri" : "http://dbpedia.org/resource/Machine_learning"
-      }, {
-        "label" : "Mad Dog McCree",
-        "uri" : "http://dbpedia.org/resource/Mad_Dog_McCree"
-      }, {
-        "label" : "Magic: The Gathering",
-        "uri" : "http://dbpedia.org/resource/Magic:_The_Gathering"
-      }, {
-        "label" : "Magnesit",
-        "uri" : "http://dbpedia.org/resource/Magnesite"
-      }, {
-        "label" : "Magnesium",
-        "uri" : "http://dbpedia.org/resource/Magnesium"
-      }, {
-        "label" : "Maine (Loire)",
-        "uri" : "http://dbpedia.org/resource/Maine"
-      }, {
-        "label" : "Maine",
-        "uri" : "http://dbpedia.org/resource/Maine"
-      }, {
-        "label" : "Mais",
-        "uri" : "http://dbpedia.org/resource/Maize"
-      }, {
-        "label" : "Majesty: The Fantasy Kingdom Sim",
-        "uri" : "http://dbpedia.org/resource/Majesty:_The_Fantasy_Kingdom_Sim"
-      }, {
-        "label" : "Teppich",
-        "uri" : "http://dbpedia.org/resource/Carpet"
-      }, {
-        "label" : "Wagen",
-        "uri" : "http://dbpedia.org/resource/Carriage"
-      }, {
-        "label" : "Etui",
-        "uri" : "http://dbpedia.org/resource/Case_(goods)"
-      }, {
-        "label" : "Casein",
-        "uri" : "http://dbpedia.org/resource/Casein"
-      }, {
-        "label" : "Abholgroßmarkt",
-        "uri" : "http://dbpedia.org/resource/Cash_and_carry_(wholesale)"
-      }, {
-        "label" : "Cash Management",
-        "uri" : "http://dbpedia.org/resource/Cash_management"
-      }, {
-        "label" : "Treasury",
-        "uri" : "http://dbpedia.org/resource/Cash_management"
-      }, {
-        "label" : "Registrierkasse",
-        "uri" : "http://dbpedia.org/resource/Cash_register"
-      }, {
-        "label" : "Bankscheck",
-        "uri" : "http://dbpedia.org/resource/Cashier's_check"
-      }, {
-        "label" : "Gusseisen",
-        "uri" : "http://dbpedia.org/resource/Cast_iron"
-      }, {
-        "label" : "Kastellan",
-        "uri" : "http://dbpedia.org/resource/Castellan"
-      }, {
-        "label" : "Gießen (Urformen)",
-        "uri" : "http://dbpedia.org/resource/Casting"
-      }, {
-        "label" : "Gießen (Metall)",
-        "uri" : "http://dbpedia.org/resource/Casting_(metalworking)"
-      }, {
-        "label" : "Katzenauge",
-        "uri" : "http://dbpedia.org/resource/Cat's_eye_(road)"
-      }, {
-        "label" : "Katalysator",
-        "uri" : "http://dbpedia.org/resource/Catalyst"
-      }, {
-        "label" : "Katamaran",
-        "uri" : "http://dbpedia.org/resource/Catamaran"
-      }, {
-        "label" : "Catering",
-        "uri" : "http://dbpedia.org/resource/Catering"
-      }, {
-        "label" : "Verbrauchsmaterial",
-        "uri" : "http://dbpedia.org/resource/Consumables"
-      }, {
-        "label" : "Verbraucher",
-        "uri" : "http://dbpedia.org/resource/Consumer"
-      }, {
-        "label" : "Stimmfühlungslaut",
-        "uri" : "http://dbpedia.org/resource/Contact_call"
       }, {
         "label" : "Kontaktlinse",
         "uri" : "http://dbpedia.org/resource/Contact_lens"
       }, {
-        "label" : "Kontaktloses Bezahlen",
-        "uri" : "http://dbpedia.org/resource/Contactless_payment"
-      }, {
-        "label" : "Contentfilter",
-        "uri" : "http://dbpedia.org/resource/Content-control_software"
-      }, {
-        "label" : "Content Delivery Network",
-        "uri" : "http://dbpedia.org/resource/Content_delivery_network"
-      }, {
-        "label" : "Content-Management",
-        "uri" : "http://dbpedia.org/resource/Content_management"
-      }, {
-        "label" : "Regelkreis",
-        "uri" : "http://dbpedia.org/resource/Control_system"
-      }, {
-        "label" : "Stellventil",
-        "uri" : "http://dbpedia.org/resource/Control_valve"
-      }, {
-        "label" : "Autobahn",
-        "uri" : "http://dbpedia.org/resource/Controlled-access_highway"
-      }, {
-        "label" : "Convenience Food",
-        "uri" : "http://dbpedia.org/resource/Convenience_food"
-      }, {
-        "label" : "Convenience Shop",
-        "uri" : "http://dbpedia.org/resource/Convenience_store"
-      }, {
-        "label" : "Förderband",
-        "uri" : "http://dbpedia.org/resource/Conveyor_belt"
-      }, {
-        "label" : "Kühlmittel",
-        "uri" : "http://dbpedia.org/resource/Coolant"
-      }, {
-        "label" : "Kühlbox",
-        "uri" : "http://dbpedia.org/resource/Cooler"
-      }, {
-        "label" : "Abkühlung",
-        "uri" : "http://dbpedia.org/resource/Cooling"
-      }, {
-        "label" : "Koordinatenmessgerät",
-        "uri" : "http://dbpedia.org/resource/Coordinate-measuring_machine"
-      }, {
-        "label" : "Kupfer",
-        "uri" : "http://dbpedia.org/resource/Copper"
-      }, {
-        "label" : "Cord (Gewebe)",
-        "uri" : "http://dbpedia.org/resource/Corduroy"
-      }, {
-        "label" : "Maiskeimöl",
-        "uri" : "http://dbpedia.org/resource/Corn_oil"
-      }, {
-        "label" : "Maissirup",
-        "uri" : "http://dbpedia.org/resource/Corn_syrup"
-      }, {
-        "label" : "Corned Beef",
-        "uri" : "http://dbpedia.org/resource/Corned_beef"
-      }, {
-        "label" : "Unternehmensanleihe",
-        "uri" : "http://dbpedia.org/resource/Corporate_bond"
-      }, {
-        "label" : "Corporate Finance",
-        "uri" : "http://dbpedia.org/resource/Corporate_finance"
-      }, {
         "label" : "Körperschaft",
         "uri" : "http://dbpedia.org/resource/Corporation"
       }, {
-        "label" : "Ultra HD Blu-ray",
-        "uri" : "http://dbpedia.org/resource/Ultra_HD_Blu-ray"
+        "label" : "Molkerei",
+        "uri" : "http://dbpedia.org/resource/Dairy"
       }, {
-        "label" : "Ultraman",
-        "uri" : "http://dbpedia.org/resource/Ultraman_(1966_TV_series)"
+        "label" : "Imbiss (Speise)",
+        "uri" : "http://dbpedia.org/resource/Snack"
       }, {
-        "label" : "Umineko no Naku Koro ni",
-        "uri" : "http://dbpedia.org/resource/Umineko_When_They_Cry"
+        "label" : "Stahl",
+        "uri" : "http://dbpedia.org/resource/Steel"
       }, {
-        "label" : "Unbreakable Kimmy Schmidt",
-        "uri" : "http://dbpedia.org/resource/Unbreakable_Kimmy_Schmidt"
+        "label" : "Wasseraufbereitungsanlage",
+        "uri" : "http://dbpedia.org/resource/Water_treatment"
       }, {
-        "label" : "Uncle Ben’s",
-        "uri" : "http://dbpedia.org/resource/Uncle_Ben's"
+        "label" : "Wolle",
+        "uri" : "http://dbpedia.org/resource/Wool"
       }, {
-        "label" : "Unterbrechungsfreie Stromversorgung",
-        "uri" : "http://dbpedia.org/resource/Uninterruptible_power_supply"
+        "label" : "Spamfilter",
+        "uri" : "http://dbpedia.org/resource/Email_filtering"
       }, {
-        "label" : "Großbritannien (Insel)",
-        "uri" : "http://dbpedia.org/resource/United_Kingdom"
+        "label" : "Hut",
+        "uri" : "http://dbpedia.org/resource/Hat"
       }, {
-        "label" : "Vereinigtes Königreich",
-        "uri" : "http://dbpedia.org/resource/United_Kingdom"
+        "label" : "Scrapbooking",
+        "uri" : "http://dbpedia.org/resource/Scrapbooking"
       }, {
-        "label" : "Vereinigtes Königreich Großbritannien und Irland",
-        "uri" : "http://dbpedia.org/resource/United_Kingdom"
+        "label" : "Storage Area Network",
+        "uri" : "http://dbpedia.org/resource/Storage_area_network"
       }, {
-        "label" : "Vereinigte Staaten",
-        "uri" : "http://dbpedia.org/resource/United_States"
+        "label" : "Leasing",
+        "uri" : "http://dbpedia.org/resource/Leasing"
       }, {
-        "label" : "US-Dollar",
-        "uri" : "http://dbpedia.org/resource/United_States_dollar"
+        "label" : "ATA over Ethernet",
+        "uri" : "http://dbpedia.org/resource/ATA_over_Ethernet"
       }, {
-        "label" : "UnixWare",
-        "uri" : "http://dbpedia.org/resource/UnixWare"
+        "label" : "Dieselmotor",
+        "uri" : "http://dbpedia.org/resource/Diesel_engine"
       }, {
-        "label" : "Uplink (Computerspiel)",
-        "uri" : "http://dbpedia.org/resource/Uplink_(video_game)"
+        "label" : "Eigentum",
+        "uri" : "http://dbpedia.org/resource/Property"
       }, {
-        "label" : "Harnstoff",
-        "uri" : "http://dbpedia.org/resource/Urea"
+        "label" : "Edition",
+        "uri" : "http://dbpedia.org/resource/Publishing"
       }, {
-        "label" : "Ustekinumab",
-        "uri" : "http://dbpedia.org/resource/Ustekinumab"
+        "label" : "Eisenbahnwagen",
+        "uri" : "http://dbpedia.org/resource/Railroad_car"
       }, {
-        "label" : "V8 (Markenname)",
-        "uri" : "http://dbpedia.org/resource/V8_(beverage)"
+        "label" : "Internetzugang",
+        "uri" : "http://dbpedia.org/resource/Internet_access"
       }, {
-        "label" : "Virtual Address eXtension",
-        "uri" : "http://dbpedia.org/resource/VAX"
+        "label" : "Netzmanagement",
+        "uri" : "http://dbpedia.org/resource/Network_management"
       }, {
-        "label" : "Video Home System",
-        "uri" : "http://dbpedia.org/resource/VHS"
+        "label" : "Kunststoff",
+        "uri" : "http://dbpedia.org/resource/Plastic"
       }, {
-        "label" : "Impfstoff",
-        "uri" : "http://dbpedia.org/resource/Vaccine"
+        "label" : "Pornofilm",
+        "uri" : "http://dbpedia.org/resource/Pornographic_film"
       }, {
-        "label" : "Elektronenröhre",
-        "uri" : "http://dbpedia.org/resource/Vacuum_tube"
+        "label" : "Reis",
+        "uri" : "http://dbpedia.org/resource/Rice"
       }, {
-        "label" : "Armatur",
-        "uri" : "http://dbpedia.org/resource/Valve"
+        "label" : "Feuerwaffe",
+        "uri" : "http://dbpedia.org/resource/Firearm"
       }, {
-        "label" : "Vampire: The Masquerade – Bloodlines",
-        "uri" : "http://dbpedia.org/resource/Vampire:_The_Masquerade_–_Bloodlines"
+        "label" : "Waffe",
+        "uri" : "http://dbpedia.org/resource/Weapon"
       }, {
-        "label" : "Vampire: Die Maskerade – Redemption",
-        "uri" : "http://dbpedia.org/resource/Vampire:_The_Masquerade_–_Redemption"
+        "label" : "Schutzbrille",
+        "uri" : "http://dbpedia.org/resource/Goggles"
       }, {
-        "label" : "Vancomycin",
-        "uri" : "http://dbpedia.org/resource/Vancomycin"
+        "label" : "Platzwart",
+        "uri" : "http://dbpedia.org/resource/Groundskeeping"
       }, {
-        "label" : "Vaporizer",
-        "uri" : "http://dbpedia.org/resource/Vaporizer_(inhalation_device)"
+        "label" : "Autorenwerkzeug",
+        "uri" : "http://dbpedia.org/resource/Help_authoring_tool"
       }, {
-        "label" : "Frequenzumrichter",
-        "uri" : "http://dbpedia.org/resource/Variable-frequency_drive"
+        "label" : "Absturzsicherung (Mensch)",
+        "uri" : "http://dbpedia.org/resource/Safety_harness"
       }, {
-        "label" : "Vector (Rakete)",
-        "uri" : "http://dbpedia.org/resource/Vector-R"
+        "label" : "Gastgewerbe",
+        "uri" : "http://dbpedia.org/resource/Hospitality_industry"
       }, {
-        "label" : "Gemüse",
-        "uri" : "http://dbpedia.org/resource/Vegetable"
+        "label" : "Speiseeis",
+        "uri" : "http://dbpedia.org/resource/Ice_cream"
       }, {
-        "label" : "Venetoclax",
-        "uri" : "http://dbpedia.org/resource/Venetoclax"
+        "label" : "Versicherung (Kollektiv)",
+        "uri" : "http://dbpedia.org/resource/Insurance"
       }, {
-        "label" : "Wirbelsäule",
-        "uri" : "http://dbpedia.org/resource/Vertebral_column"
+        "label" : "Musikinstrument",
+        "uri" : "http://dbpedia.org/resource/Musical_instrument"
       }, {
-        "label" : "Tasse",
-        "uri" : "http://dbpedia.org/resource/Cup"
+        "label" : "Scheck",
+        "uri" : "http://dbpedia.org/resource/Cheque"
       }, {
-        "label" : "Curry (Gericht)",
-        "uri" : "http://dbpedia.org/resource/Curry"
+        "label" : "Finanzen",
+        "uri" : "http://dbpedia.org/resource/Finance"
       }, {
-        "label" : "Custard (Süßspeise)",
-        "uri" : "http://dbpedia.org/resource/Custard"
+        "label" : "Fontographer",
+        "uri" : "http://dbpedia.org/resource/Fontographer"
       }, {
-        "label" : "Verwahrstelle",
-        "uri" : "http://dbpedia.org/resource/Custodian_bank"
+        "label" : "Lebensmittel",
+        "uri" : "http://dbpedia.org/resource/Food"
+      }, {
+        "label" : "Schalung (Beton)",
+        "uri" : "http://dbpedia.org/resource/Formwork"
+      }, {
+        "label" : "Brennstoff",
+        "uri" : "http://dbpedia.org/resource/Fuel"
+      }, {
+        "label" : "Terminbörse",
+        "uri" : "http://dbpedia.org/resource/Futures_exchange"
+      }, {
+        "label" : "Hedgefonds",
+        "uri" : "http://dbpedia.org/resource/Hedge_fund"
+      }, {
+        "label" : "Post",
+        "uri" : "http://dbpedia.org/resource/Mail"
+      }, {
+        "label" : "Erdgas",
+        "uri" : "http://dbpedia.org/resource/Natural_gas"
+      }, {
+        "label" : "Blech",
+        "uri" : "http://dbpedia.org/resource/Sheet_metal"
+      }, {
+        "label" : "Schaltanlage",
+        "uri" : "http://dbpedia.org/resource/Switchgear"
+      }, {
+        "label" : "Wein",
+        "uri" : "http://dbpedia.org/resource/Wine"
+      }, {
+        "label" : "Elektronische Beschaffung",
+        "uri" : "http://dbpedia.org/resource/E-procurement"
+      }, {
+        "label" : "Lenkflugkörper",
+        "uri" : "http://dbpedia.org/resource/Missile"
+      }, {
+        "label" : "Geldmarkt",
+        "uri" : "http://dbpedia.org/resource/Money_market"
+      }, {
+        "label" : "Partitur",
+        "uri" : "http://dbpedia.org/resource/Sheet_music"
+      }, {
+        "label" : "Pornografie im Internet",
+        "uri" : "http://dbpedia.org/resource/Internet_pornography"
+      }, {
+        "label" : "Radio",
+        "uri" : "http://dbpedia.org/resource/Radio"
+      }, {
+        "label" : "Resort",
+        "uri" : "http://dbpedia.org/resource/Resort"
+      }, {
+        "label" : "Wagniskapital",
+        "uri" : "http://dbpedia.org/resource/Venture_capital"
+      }, {
+        "label" : "Dünger",
+        "uri" : "http://dbpedia.org/resource/Fertilizer"
+      }, {
+        "label" : "Finanzdienstleistung",
+        "uri" : "http://dbpedia.org/resource/Financial_services"
+      }, {
+        "label" : "Tiefkühlkost",
+        "uri" : "http://dbpedia.org/resource/Frozen_food"
+      }, {
+        "label" : "Dampfturbine",
+        "uri" : "http://dbpedia.org/resource/Steam_turbine"
+      }, {
+        "label" : "Automatisierung",
+        "uri" : "http://dbpedia.org/resource/Automation"
+      }, {
+        "label" : "Bier",
+        "uri" : "http://dbpedia.org/resource/Beer"
+      }, {
+        "label" : "Ferngespräch",
+        "uri" : "http://dbpedia.org/resource/Long-distance_calling"
+      }, {
+        "label" : "Deep Learning",
+        "uri" : "http://dbpedia.org/resource/Deep_learning"
+      }, {
+        "label" : "Feinkost",
+        "uri" : "http://dbpedia.org/resource/Delicatessen"
+      }, {
+        "label" : "Spedition",
+        "uri" : "http://dbpedia.org/resource/Freight_forwarder"
+      }, {
+        "label" : "Electronic Banking",
+        "uri" : "http://dbpedia.org/resource/Online_banking"
+      }, {
+        "label" : "Kalender",
+        "uri" : "http://dbpedia.org/resource/Calendar"
+      }, {
+        "label" : "Spielbank",
+        "uri" : "http://dbpedia.org/resource/Casino"
+      }, {
+        "label" : "Kleidung",
+        "uri" : "http://dbpedia.org/resource/Clothing"
+      }, {
+        "label" : "Private Bank",
+        "uri" : "http://dbpedia.org/resource/Private_bank"
+      }, {
+        "label" : "Pushback (Flugzeug)",
+        "uri" : "http://dbpedia.org/resource/Pushback"
+      }, {
+        "label" : "Unedle Metalle",
+        "uri" : "http://dbpedia.org/resource/Base_metal"
+      }, {
+        "label" : "Standleitung",
+        "uri" : "http://dbpedia.org/resource/Leased_line"
+      }, {
+        "label" : "Platform as a Service",
+        "uri" : "http://dbpedia.org/resource/Platform_as_a_service"
+      }, {
+        "label" : "Öffentlichkeitsarbeit",
+        "uri" : "http://dbpedia.org/resource/Public_relations"
+      }, {
+        "label" : "Einzelhandel",
+        "uri" : "http://dbpedia.org/resource/Retail"
+      }, {
+        "label" : "Werft",
+        "uri" : "http://dbpedia.org/resource/Shipyard"
+      }, {
+        "label" : "Smokeless Tobacco",
+        "uri" : "http://dbpedia.org/resource/Smokeless_tobacco"
+      }, {
+        "label" : "Schnupftabak",
+        "uri" : "http://dbpedia.org/resource/Snuff_(tobacco)"
+      }, {
+        "label" : "Lösung (Chemie)",
+        "uri" : "http://dbpedia.org/resource/Solution"
+      }, {
+        "label" : "Tourismus",
+        "uri" : "http://dbpedia.org/resource/Tourism"
+      }, {
+        "label" : "Sicherheitslücke",
+        "uri" : "http://dbpedia.org/resource/Vulnerability_(computing)"
+      }, {
+        "label" : "Faulgas",
+        "uri" : "http://dbpedia.org/resource/Biogas"
+      }, {
+        "label" : "Biogas",
+        "uri" : "http://dbpedia.org/resource/Biogas"
+      }, {
+        "label" : "Bioremediation",
+        "uri" : "http://dbpedia.org/resource/Bioremediation"
+      }, {
+        "label" : "Mobiltelefon",
+        "uri" : "http://dbpedia.org/resource/Mobile_phone"
+      }, {
+        "label" : "Jackpot",
+        "uri" : "http://dbpedia.org/resource/Progressive_jackpot"
+      }, {
+        "label" : "Verpackung",
+        "uri" : "http://dbpedia.org/resource/Packaging_and_labeling"
+      }, {
+        "label" : "Rasen",
+        "uri" : "http://dbpedia.org/resource/Lawn"
+      }, {
+        "label" : "Spirituose",
+        "uri" : "http://dbpedia.org/resource/Liquor"
+      }, {
+        "label" : "Lotto",
+        "uri" : "http://dbpedia.org/resource/Lottery"
+      }, {
+        "label" : "Fleisch",
+        "uri" : "http://dbpedia.org/resource/Meat"
+      }, {
+        "label" : "Metalle",
+        "uri" : "http://dbpedia.org/resource/Metal"
+      }, {
+        "label" : "Zug (Schienenverkehr)",
+        "uri" : "http://dbpedia.org/resource/Train"
+      }, {
+        "label" : "Malz",
+        "uri" : "http://dbpedia.org/resource/Malt"
+      }, {
+        "label" : "Massenmedien",
+        "uri" : "http://dbpedia.org/resource/Mass_media"
+      }, {
+        "label" : "Gassensor",
+        "uri" : "http://dbpedia.org/resource/Gas_detector"
+      }, {
+        "label" : "Sonnenenergie",
+        "uri" : "http://dbpedia.org/resource/Solar_energy"
+      }, {
+        "label" : "Franchising",
+        "uri" : "http://dbpedia.org/resource/Franchising"
+      }, {
+        "label" : "Möbel",
+        "uri" : "http://dbpedia.org/resource/Furniture"
+      }, {
+        "label" : "Schutzhelm",
+        "uri" : "http://dbpedia.org/resource/Hard_hat"
       } ]
     },
     "combination" : true
@@ -1320,7 +1320,7 @@
     "bindingType" : "WORK",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Welche Person heiratet der Komponist für $x ?", "Welche Person heiratet die Komponisten für $x ?", "Welche Person heiratete der Komponist für $x ?", "Welche Person heiratete die Komponisten für $x ?", "Welche Personen heiraten der Komponist für $x ?", "Welche Personen heiraten die Komponisten für $x ?", "Welche Personen heirateten der Komponist für $x ?", "Welche Personen heirateten die Komponisten für $x ?", "Wer heiratet der Komponist für $x ?", "Wer heiratet die Komponisten für $x ?", "Wer heiratete der Komponist für $x ?", "Wer heiratete die Komponisten für $x ?" ],
+    "sentences" : [ "Welche Person heiratet der Komponist für $x?", "Welche Person heiratet die Komponisten für $x?", "Welche Person heiratete der Komponist für $x?", "Welche Person heiratete die Komponisten für $x?", "Welche Personen heiraten der Komponist für $x?", "Welche Personen heiraten die Komponisten für $x?", "Welche Personen heirateten der Komponist für $x?", "Welche Personen heirateten die Komponisten für $x?", "Wer heiratet der Komponist für $x?", "Wer heiratet die Komponisten für $x?", "Wer heiratete der Komponist für $x?", "Wer heiratete die Komponisten für $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/musicComposer> ?objOfProp)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1639,7 +1639,7 @@
     "bindingType" : "BAND",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Welche Person heiratet das Mitglied von $x ?", "Welche Person heiratet die Mitglieder von $x ?", "Welche Person heiratete das Mitglied von $x ?", "Welche Person heiratete die Mitglieder von $x ?", "Welche Personen heiraten das Mitglied von $x ?", "Welche Personen heiraten die Mitglieder von $x ?", "Welche Personen heirateten das Mitglied von $x ?", "Welche Personen heirateten die Mitglieder von $x ?", "Wer heiratet das Mitglied von $x ?", "Wer heiratet die Mitglieder von $x ?", "Wer heiratete das Mitglied von $x ?", "Wer heiratete die Mitglieder von $x ?" ],
+    "sentences" : [ "Welche Person heiratet das Mitglied von $x?", "Welche Person heiratet die Mitglieder von $x?", "Welche Person heiratete das Mitglied von $x?", "Welche Person heiratete die Mitglieder von $x?", "Welche Personen heiraten das Mitglied von $x?", "Welche Personen heiraten die Mitglieder von $x?", "Welche Personen heirateten das Mitglied von $x?", "Welche Personen heirateten die Mitglieder von $x?", "Wer heiratet das Mitglied von $x?", "Wer heiratet die Mitglieder von $x?", "Wer heiratete das Mitglied von $x?", "Wer heiratete die Mitglieder von $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/bandMember> ?objOfProp)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1958,7 +1958,7 @@
     "bindingType" : "PERSON",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Welche Person heiratet fiktive Charaktere gespielt von $x ?", "Welche Person heiratete fiktive Charaktere gespielt von $x ?", "Welche Personen heiraten fiktive Charaktere gespielt von $x ?", "Welche Personen heirateten fiktive Charaktere gespielt von $x ?", "Wer heiratet fiktive Charaktere gespielt von $x ?", "Wer heiratete fiktive Charaktere gespielt von $x ?" ],
+    "sentences" : [ "Welche Person heiratet fiktive Charaktere gespielt von $x?", "Welche Person heiratete fiktive Charaktere gespielt von $x?", "Welche Personen heiraten fiktive Charaktere gespielt von $x?", "Welche Personen heirateten fiktive Charaktere gespielt von $x?", "Wer heiratet fiktive Charaktere gespielt von $x?", "Wer heiratete fiktive Charaktere gespielt von $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/portrayer> ?objOfPropx)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -2277,7 +2277,7 @@
     "bindingType" : "PERSON",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Welche Person heiratet Personen geheiratet von $x ?", "Welche Person heiratete Personen geheiratet von $x ?", "Welche Personen heiraten Personen geheiratet von $x ?", "Welche Personen heirateten Personen geheiratet von $x ?", "Wer heiratet Personen geheiratet von $x ?", "Wer heiratete Personen geheiratet von $x ?" ],
+    "sentences" : [ "Welche Person heiratet Personen geheiratet von $x?", "Welche Person heiratete Personen geheiratet von $x?", "Welche Personen heiraten Personen geheiratet von $x?", "Welche Personen heirateten Personen geheiratet von $x?", "Wer heiratet Personen geheiratet von $x?", "Wer heiratete Personen geheiratet von $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/spouse> ?objOfProp)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -2596,7 +2596,7 @@
     "bindingType" : "PERSON",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Welche Agenten entwickeln Werke entwickelt von $x ?", "Welche Agenten entwickelten Werke entwickelt von $x ?", "Welcher Agent entwickelt Werke entwickelt von $x ?", "Welcher Agent entwickelte Werke entwickelt von $x ?", "Wer entwickelt Werke entwickelt von $x ?", "Wer entwickelte Werke entwickelt von $x ?" ],
+    "sentences" : [ "Welche Agenten entwickeln Werke entwickelt von $x?", "Welche Agenten entwickelten Werke entwickelt von $x?", "Welcher Agent entwickelt Werke entwickelt von $x?", "Welcher Agent entwickelte Werke entwickelt von $x?", "Wer entwickelt Werke entwickelt von $x?", "Wer entwickelte Werke entwickelt von $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfPropx)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -2915,7 +2915,7 @@
     "bindingType" : "MUSEUM",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Welche Agenten entwickeln Kunstwerke ausgestellt von $x ?", "Welche Agenten entwickelten Kunstwerke ausgestellt von $x ?", "Welcher Agent entwickelt Kunstwerke ausgestellt von $x ?", "Welcher Agent entwickelte Kunstwerke ausgestellt von $x ?", "Wer entwickelt Kunstwerke ausgestellt von $x ?", "Wer entwickelte Kunstwerke ausgestellt von $x ?" ],
+    "sentences" : [ "Welche Agenten entwickeln Kunstwerke ausgestellt von $x?", "Welche Agenten entwickelten Kunstwerke ausgestellt von $x?", "Welcher Agent entwickelt Kunstwerke ausgestellt von $x?", "Welcher Agent entwickelte Kunstwerke ausgestellt von $x?", "Wer entwickelt Kunstwerke ausgestellt von $x?", "Wer entwickelte Kunstwerke ausgestellt von $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/museum> ?objOfPropx)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -2934,7 +2934,7 @@
     "bindingType" : "WORK",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Welche Person spielt der Komponist für $x ?", "Welche Person spielt die Komponisten für $x ?", "Welche Person spielte der Komponist für $x ?", "Welche Person spielte die Komponisten für $x ?", "Welche Personen spielen der Komponist für $x ?", "Welche Personen spielen die Komponisten für $x ?", "Welche Personen spielten der Komponist für $x ?", "Welche Personen spielten die Komponisten für $x ?", "Wer spielt der Komponist für $x ?", "Wer spielt die Komponisten für $x ?", "Wer spielte der Komponist für $x ?", "Wer spielte die Komponisten für $x ?" ],
+    "sentences" : [ "Welche Person spielt der Komponist für $x?", "Welche Person spielt die Komponisten für $x?", "Welche Person spielte der Komponist für $x?", "Welche Person spielte die Komponisten für $x?", "Welche Personen spielen der Komponist für $x?", "Welche Personen spielen die Komponisten für $x?", "Welche Personen spielten der Komponist für $x?", "Welche Personen spielten die Komponisten für $x?", "Wer spielt der Komponist für $x?", "Wer spielt die Komponisten für $x?", "Wer spielte der Komponist für $x?", "Wer spielte die Komponisten für $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/musicComposer> ?subjOfProp)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -2971,7 +2971,7 @@
     "bindingType" : "BAND",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Welche Person spielt das Mitglied von $x ?", "Welche Person spielt die Mitglieder von $x ?", "Welche Person spielte das Mitglied von $x ?", "Welche Person spielte die Mitglieder von $x ?", "Welche Personen spielen das Mitglied von $x ?", "Welche Personen spielen die Mitglieder von $x ?", "Welche Personen spielten das Mitglied von $x ?", "Welche Personen spielten die Mitglieder von $x ?", "Wer spielt das Mitglied von $x ?", "Wer spielt die Mitglieder von $x ?", "Wer spielte das Mitglied von $x ?", "Wer spielte die Mitglieder von $x ?" ],
+    "sentences" : [ "Welche Person spielt das Mitglied von $x?", "Welche Person spielt die Mitglieder von $x?", "Welche Person spielte das Mitglied von $x?", "Welche Person spielte die Mitglieder von $x?", "Welche Personen spielen das Mitglied von $x?", "Welche Personen spielen die Mitglieder von $x?", "Welche Personen spielten das Mitglied von $x?", "Welche Personen spielten die Mitglieder von $x?", "Wer spielt das Mitglied von $x?", "Wer spielt die Mitglieder von $x?", "Wer spielte das Mitglied von $x?", "Wer spielte die Mitglieder von $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/bandMember> ?subjOfProp)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -2993,7 +2993,7 @@
     "bindingType" : "PERSON",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Welche Person spielt fiktive Charaktere gespielt von $x ?", "Welche Person spielte fiktive Charaktere gespielt von $x ?", "Welche Personen spielen fiktive Charaktere gespielt von $x ?", "Welche Personen spielten fiktive Charaktere gespielt von $x ?", "Wer spielt fiktive Charaktere gespielt von $x ?", "Wer spielte fiktive Charaktere gespielt von $x ?" ],
+    "sentences" : [ "Welche Person spielt fiktive Charaktere gespielt von $x?", "Welche Person spielte fiktive Charaktere gespielt von $x?", "Welche Personen spielen fiktive Charaktere gespielt von $x?", "Welche Personen spielten fiktive Charaktere gespielt von $x?", "Wer spielt fiktive Charaktere gespielt von $x?", "Wer spielte fiktive Charaktere gespielt von $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfPropx)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -3312,7 +3312,7 @@
     "bindingType" : "PERSON",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Welche Person spielt Personen geheiratet von $x ?", "Welche Person spielte Personen geheiratet von $x ?", "Welche Personen spielen Personen geheiratet von $x ?", "Welche Personen spielten Personen geheiratet von $x ?", "Wer spielt Personen geheiratet von $x ?", "Wer spielte Personen geheiratet von $x ?" ],
+    "sentences" : [ "Welche Person spielt Personen geheiratet von $x?", "Welche Person spielte Personen geheiratet von $x?", "Welche Personen spielen Personen geheiratet von $x?", "Welche Personen spielten Personen geheiratet von $x?", "Wer spielt Personen geheiratet von $x?", "Wer spielte Personen geheiratet von $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/spouse> ?subjOfProp)\n)\n",
     "sentenceToSparqlParameterMapping" : {

@@ -6,7 +6,7 @@
     "bindingType" : "THING",
     "returnType" : "ORGANISATION",
     "frameType" : "NPP",
-    "sentences" : [ "Gib mir den Produzenten von ($x | THING_NP)?", "Gib mir die Produzenten von ($x | THING_NP)?", "Was ist der Produzent von ($x | THING_NP)?", "Was sind die Produzenten von ($x | THING_NP)?", "Was war der Produzent von ($x | THING_NP)?", "Was waren die Produzenten von ($x | THING_NP)?", "Welche Organisation ist der Produzent von ($x | THING_NP)?", "Welche Organisation war der Produzent von ($x | THING_NP)?", "Welche Organisationen sind die Produzenten von ($x | THING_NP)?", "Welche Organisationen waren die Produzenten von ($x | THING_NP)?" ],
+    "sentences" : [ "Gib mir den Produzenten von ($x | THING_NP)", "Gib mir die Produzenten von ($x | THING_NP)", "Was ist der Produzent von ($x | THING_NP)?", "Was sind die Produzenten von ($x | THING_NP)?", "Was war der Produzent von ($x | THING_NP)?", "Was waren die Produzenten von ($x | THING_NP)?", "Welche Organisation ist der Produzent von ($x | THING_NP)?", "Welche Organisation war der Produzent von ($x | THING_NP)?", "Welche Organisationen sind die Produzenten von ($x | THING_NP)?", "Welche Organisationen waren die Produzenten von ($x | THING_NP)?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -644,7 +644,7 @@
     "bindingType" : "WORK",
     "returnType" : "PERSON",
     "frameType" : "NPP",
-    "sentences" : [ "Gib mir den Komponisten für ($x | WORK_NP)?", "Gib mir die Komponisten für ($x | WORK_NP)?", "Welche musikalischen Künstler sind die Komponisten für ($x | WORK_NP)?", "Welche musikalischen Künstler waren die Komponisten für ($x | WORK_NP)?", "Welcher musikalische Künstler ist der Komponist für ($x | WORK_NP)?", "Welcher musikalische Künstler war der Komponist für ($x | WORK_NP)?", "Wer ist der Komponist für ($x | WORK_NP)?", "Wer sind die Komponisten für ($x | WORK_NP)?", "Wer war der Komponist für ($x | WORK_NP)?", "Wer waren die Komponisten für ($x | WORK_NP)?" ],
+    "sentences" : [ "Gib mir den Komponisten für ($x | WORK_NP)", "Gib mir die Komponisten für ($x | WORK_NP)", "Welche musikalischen Künstler sind die Komponisten für ($x | WORK_NP)?", "Welche musikalischen Künstler waren die Komponisten für ($x | WORK_NP)?", "Welcher musikalische Künstler ist der Komponist für ($x | WORK_NP)?", "Welcher musikalische Künstler war der Komponist für ($x | WORK_NP)?", "Wer ist der Komponist für ($x | WORK_NP)?", "Wer sind die Komponisten für ($x | WORK_NP)?", "Wer war der Komponist für ($x | WORK_NP)?", "Wer waren die Komponisten für ($x | WORK_NP)?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1282,7 +1282,7 @@
     "bindingType" : "BAND",
     "returnType" : "PERSON",
     "frameType" : "NPP",
-    "sentences" : [ "Gib mir das Mitglied von ($x | BAND_NP)?", "Gib mir die Mitglieder von ($x | BAND_NP)?", "Welche Person ist das Mitglied von ($x | BAND_NP)?", "Welche Person war das Mitglied von ($x | BAND_NP)?", "Welche Personen sind die Mitglieder von ($x | BAND_NP)?", "Welche Personen waren die Mitglieder von ($x | BAND_NP)?", "Wer ist das Mitglied von ($x | BAND_NP)?", "Wer sind die Mitglieder von ($x | BAND_NP)?", "Wer war das Mitglied von ($x | BAND_NP)?", "Wer waren die Mitglieder von ($x | BAND_NP)?" ],
+    "sentences" : [ "Gib mir das Mitglied von ($x | BAND_NP)", "Gib mir die Mitglieder von ($x | BAND_NP)", "Welche Person ist das Mitglied von ($x | BAND_NP)?", "Welche Person war das Mitglied von ($x | BAND_NP)?", "Welche Personen sind die Mitglieder von ($x | BAND_NP)?", "Welche Personen waren die Mitglieder von ($x | BAND_NP)?", "Wer ist das Mitglied von ($x | BAND_NP)?", "Wer sind die Mitglieder von ($x | BAND_NP)?", "Wer war das Mitglied von ($x | BAND_NP)?", "Wer waren die Mitglieder von ($x | BAND_NP)?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/bandMember> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1920,7 +1920,7 @@
     "bindingType" : "BUILDING",
     "returnType" : "LOCATION",
     "frameType" : "NPP",
-    "sentences" : [ "Gib mir den Standort von ($x | BUILDING_NP)?", "Was ist der Standort von ($x | BUILDING_NP)?", "Was war der Standort von ($x | BUILDING_NP)?", "Welcher Ort ist der Standort von ($x | BUILDING_NP)?", "Welcher Ort war der Standort von ($x | BUILDING_NP)?" ],
+    "sentences" : [ "Gib mir den Standort von ($x | BUILDING_NP)", "Was ist der Standort von ($x | BUILDING_NP)?", "Was war der Standort von ($x | BUILDING_NP)?", "Welcher Ort ist der Standort von ($x | BUILDING_NP)?", "Welcher Ort war der Standort von ($x | BUILDING_NP)?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -2558,7 +2558,7 @@
     "bindingType" : "LOCATION",
     "returnType" : "LOCATION",
     "frameType" : "NPP",
-    "sentences" : [ "Gib mir den Standort von ($x | LOCATION_NP)?", "Was ist der Standort von ($x | LOCATION_NP)?", "Was war der Standort von ($x | LOCATION_NP)?", "Welcher Ort ist der Standort von ($x | LOCATION_NP)?", "Welcher Ort war der Standort von ($x | LOCATION_NP)?" ],
+    "sentences" : [ "Gib mir den Standort von ($x | LOCATION_NP)", "Was ist der Standort von ($x | LOCATION_NP)?", "Was war der Standort von ($x | LOCATION_NP)?", "Welcher Ort ist der Standort von ($x | LOCATION_NP)?", "Welcher Ort war der Standort von ($x | LOCATION_NP)?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -3196,7 +3196,7 @@
     "bindingType" : "ORGANISATION",
     "returnType" : "LOCATION",
     "frameType" : "NPP",
-    "sentences" : [ "Gib mir den Standort von ($x | ORGANISATION_NP)?", "Was ist der Standort von ($x | ORGANISATION_NP)?", "Was war der Standort von ($x | ORGANISATION_NP)?", "Welcher Ort ist der Standort von ($x | ORGANISATION_NP)?", "Welcher Ort war der Standort von ($x | ORGANISATION_NP)?" ],
+    "sentences" : [ "Gib mir den Standort von ($x | ORGANISATION_NP)", "Was ist der Standort von ($x | ORGANISATION_NP)?", "Was war der Standort von ($x | ORGANISATION_NP)?", "Welcher Ort ist der Standort von ($x | ORGANISATION_NP)?", "Welcher Ort war der Standort von ($x | ORGANISATION_NP)?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -3834,7 +3834,7 @@
     "bindingType" : "PERSON",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Welche Person heiratet ($x | PERSON_NP) ?", "Welche Person heiratete ($x | PERSON_NP) ?", "Welche Personen heiraten ($x | PERSON_NP) ?", "Welche Personen heirateten ($x | PERSON_NP) ?", "Wer heiratet ($x | PERSON_NP) ?", "Wer heiratete ($x | PERSON_NP) ?" ],
+    "sentences" : [ "Welche Person heiratet ($x | PERSON_NP)?", "Welche Person heiratete ($x | PERSON_NP)?", "Welche Personen heiraten ($x | PERSON_NP)?", "Welche Personen heirateten ($x | PERSON_NP)?", "Wer heiratet ($x | PERSON_NP)?", "Wer heiratete ($x | PERSON_NP)?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -4153,7 +4153,7 @@
     "bindingType" : "WORK",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Welche Agenten entwickeln ($x | WORK_NP) ?", "Welche Agenten entwickelten ($x | WORK_NP) ?", "Welcher Agent entwickelt ($x | WORK_NP) ?", "Welcher Agent entwickelte ($x | WORK_NP) ?", "Wer entwickelt ($x | WORK_NP) ?", "Wer entwickelte ($x | WORK_NP) ?" ],
+    "sentences" : [ "Welche Agenten entwickeln ($x | WORK_NP)?", "Welche Agenten entwickelten ($x | WORK_NP)?", "Welcher Agent entwickelt ($x | WORK_NP)?", "Welcher Agent entwickelte ($x | WORK_NP)?", "Wer entwickelt ($x | WORK_NP)?", "Wer entwickelte ($x | WORK_NP)?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -4472,7 +4472,7 @@
     "bindingType" : "PERSON",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Welche Person spielt ($x | PERSON_NP) ?", "Welche Person spielte ($x | PERSON_NP) ?", "Welche Personen spielen ($x | PERSON_NP) ?", "Welche Personen spielten ($x | PERSON_NP) ?", "Wer spielt ($x | PERSON_NP) ?", "Wer spielte ($x | PERSON_NP) ?" ],
+    "sentences" : [ "Welche Person spielt ($x | PERSON_NP)?", "Welche Person spielte ($x | PERSON_NP)?", "Welche Personen spielen ($x | PERSON_NP)?", "Welche Personen spielten ($x | PERSON_NP)?", "Wer spielt ($x | PERSON_NP)?", "Wer spielte ($x | PERSON_NP)?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {

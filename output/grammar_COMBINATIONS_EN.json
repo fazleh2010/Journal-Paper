@@ -1,12 +1,12 @@
 {
   "grammarEntries" : [ {
-    "id" : "55",
+    "id" : "21",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Which agent developed works developed by $x ?", "Which agent develops works developed by $x ?", "Who developed works developed by $x ?", "Who develops works developed by $x ?" ],
+    "sentences" : [ "Which agent developed works developed by $x?", "Which agent develops works developed by $x?", "Who developed works developed by $x?", "Who develops works developed by $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfPropx)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -319,13 +319,13 @@
     },
     "combination" : true
   }, {
-    "id" : "56",
+    "id" : "22",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "MUSEUM",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Which agent developed artworks exhibited by $x ?", "Which agent develops artworks exhibited by $x ?", "Who developed artworks exhibited by $x ?", "Who develops artworks exhibited by $x ?" ],
+    "sentences" : [ "Which agent developed artworks exhibited by $x?", "Which agent develops artworks exhibited by $x?", "Who developed artworks exhibited by $x?", "Who develops artworks exhibited by $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/museum> ?objOfPropx)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -338,13 +338,13 @@
     },
     "combination" : true
   }, {
-    "id" : "57",
+    "id" : "23",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
     "returnType" : "MUSEUM",
     "frameType" : "VP",
-    "sentences" : [ "What exhibited works developed by $x ?", "What exhibits works developed by $x ?", "Which museum exhibited works developed by $x ?", "Which museum exhibits works developed by $x ?" ],
+    "sentences" : [ "What exhibited works developed by $x?", "What exhibits works developed by $x?", "Which museum exhibited works developed by $x?", "Which museum exhibits works developed by $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/museum> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfPropx)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -357,13 +357,13 @@
     },
     "combination" : true
   }, {
-    "id" : "58",
+    "id" : "24",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "MUSEUM",
     "returnType" : "MUSEUM",
     "frameType" : "VP",
-    "sentences" : [ "What exhibited artworks exhibited by $x ?", "What exhibits artworks exhibited by $x ?", "Which museum exhibited artworks exhibited by $x ?", "Which museum exhibits artworks exhibited by $x ?" ],
+    "sentences" : [ "What exhibited artworks exhibited by $x?", "What exhibits artworks exhibited by $x?", "Which museum exhibited artworks exhibited by $x?", "Which museum exhibits artworks exhibited by $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/museum> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/museum> ?objOfPropx)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -676,268 +676,13 @@
     },
     "combination" : true
   }, {
-    "id" : "59",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person married a Greek boxer ?", "Which person married Greek boxers ?", "Who married a Greek boxer ?", "Who married Greek boxers ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Boxer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "60",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person married a Greek cleric ?", "Which person married Greek clerics ?", "Who married a Greek cleric ?", "Who married Greek clerics ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Cleric>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "61",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person married a Greek office holder ?", "Which person married Greek office holders ?", "Who married a Greek office holder ?", "Who married Greek office holders ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/OfficeHolder>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "62",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person married a Greek agent ?", "Which person married Greek agents ?", "Who married a Greek agent ?", "Who married Greek agents ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Agent>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "63",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person married a Greek fictional character ?", "Which person married Greek fictional characters ?", "Who married a Greek fictional character ?", "Who married Greek fictional characters ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/FictionalCharacter>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "64",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person married a Greek artist ?", "Which person married Greek artists ?", "Who married a Greek artist ?", "Who married Greek artists ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Artist>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "65",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person married a Greek athlete ?", "Which person married Greek athletes ?", "Who married a Greek athlete ?", "Who married Greek athletes ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Athlete>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "66",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person married a Greek scientist ?", "Which person married Greek scientists ?", "Who married a Greek scientist ?", "Who married Greek scientists ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Scientist>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "67",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person married a Greek politician ?", "Which person married Greek politicians ?", "Who married a Greek politician ?", "Who married Greek politicians ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Politician>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "68",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person married a Greek swimmer ?", "Which person married Greek swimmers ?", "Who married a Greek swimmer ?", "Who married Greek swimmers ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Swimmer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "69",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person married a Greek volleyball player ?", "Which person married Greek volleyball players ?", "Who married a Greek volleyball player ?", "Who married Greek volleyball players ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/VolleyballPlayer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "70",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person married a Greek handball player ?", "Which person married Greek handball players ?", "Who married a Greek handball player ?", "Who married Greek handball players ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/HandballPlayer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "71",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person married a Greek person ?", "Which person married Greek persons ?", "Who married a Greek person ?", "Who married Greek persons ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "72",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person married a Greek basketball player ?", "Which person married Greek basketball players ?", "Who married a Greek basketball player ?", "Who married Greek basketball players ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/BasketballPlayer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "73",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person married a Greek writer ?", "Which person married Greek writers ?", "Who married a Greek writer ?", "Who married Greek writers ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Writer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "74",
+    "id" : "25",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Which person married fictional characters played by $x ?", "Who married fictional characters played by $x ?" ],
+    "sentences" : [ "Which person married fictional characters played by $x?", "Who married fictional characters played by $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/portrayer> ?objOfPropx)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1250,13 +995,13 @@
     },
     "combination" : true
   }, {
-    "id" : "75",
+    "id" : "26",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Which person married persons married to $x ?", "Who married persons married to $x ?" ],
+    "sentences" : [ "Which person married persons married to $x?", "Who married persons married to $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/spouse> ?objOfProp)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1569,13 +1314,13 @@
     },
     "combination" : true
   }, {
-    "id" : "76",
+    "id" : "27",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "CITY",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Which person married persons born in $x ?", "Who married persons born in $x ?" ],
+    "sentences" : [ "Which person married persons born in $x?", "Who married persons born in $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1888,268 +1633,13 @@
     },
     "combination" : true
   }, {
-    "id" : "77",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person played a Greek boxer ?", "Which person played Greek boxers ?", "Which person plays a Greek boxer ?", "Which person plays Greek boxers ?", "Who played a Greek boxer ?", "Who played Greek boxers ?", "Who plays a Greek boxer ?", "Who plays Greek boxers ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Boxer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "78",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person played a Greek cleric ?", "Which person played Greek clerics ?", "Which person plays a Greek cleric ?", "Which person plays Greek clerics ?", "Who played a Greek cleric ?", "Who played Greek clerics ?", "Who plays a Greek cleric ?", "Who plays Greek clerics ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Cleric>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "79",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person played a Greek office holder ?", "Which person played Greek office holders ?", "Which person plays a Greek office holder ?", "Which person plays Greek office holders ?", "Who played a Greek office holder ?", "Who played Greek office holders ?", "Who plays a Greek office holder ?", "Who plays Greek office holders ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/OfficeHolder>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "80",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person played a Greek agent ?", "Which person played Greek agents ?", "Which person plays a Greek agent ?", "Which person plays Greek agents ?", "Who played a Greek agent ?", "Who played Greek agents ?", "Who plays a Greek agent ?", "Who plays Greek agents ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Agent>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "81",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person played a Greek fictional character ?", "Which person played Greek fictional characters ?", "Which person plays a Greek fictional character ?", "Which person plays Greek fictional characters ?", "Who played a Greek fictional character ?", "Who played Greek fictional characters ?", "Who plays a Greek fictional character ?", "Who plays Greek fictional characters ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/FictionalCharacter>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "82",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person played a Greek artist ?", "Which person played Greek artists ?", "Which person plays a Greek artist ?", "Which person plays Greek artists ?", "Who played a Greek artist ?", "Who played Greek artists ?", "Who plays a Greek artist ?", "Who plays Greek artists ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Artist>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "83",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person played a Greek athlete ?", "Which person played Greek athletes ?", "Which person plays a Greek athlete ?", "Which person plays Greek athletes ?", "Who played a Greek athlete ?", "Who played Greek athletes ?", "Who plays a Greek athlete ?", "Who plays Greek athletes ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Athlete>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "84",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person played a Greek scientist ?", "Which person played Greek scientists ?", "Which person plays a Greek scientist ?", "Which person plays Greek scientists ?", "Who played a Greek scientist ?", "Who played Greek scientists ?", "Who plays a Greek scientist ?", "Who plays Greek scientists ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Scientist>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "85",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person played a Greek politician ?", "Which person played Greek politicians ?", "Which person plays a Greek politician ?", "Which person plays Greek politicians ?", "Who played a Greek politician ?", "Who played Greek politicians ?", "Who plays a Greek politician ?", "Who plays Greek politicians ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Politician>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "86",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person played a Greek swimmer ?", "Which person played Greek swimmers ?", "Which person plays a Greek swimmer ?", "Which person plays Greek swimmers ?", "Who played a Greek swimmer ?", "Who played Greek swimmers ?", "Who plays a Greek swimmer ?", "Who plays Greek swimmers ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Swimmer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "87",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person played a Greek volleyball player ?", "Which person played Greek volleyball players ?", "Which person plays a Greek volleyball player ?", "Which person plays Greek volleyball players ?", "Who played a Greek volleyball player ?", "Who played Greek volleyball players ?", "Who plays a Greek volleyball player ?", "Who plays Greek volleyball players ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/VolleyballPlayer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "88",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person played a Greek handball player ?", "Which person played Greek handball players ?", "Which person plays a Greek handball player ?", "Which person plays Greek handball players ?", "Who played a Greek handball player ?", "Who played Greek handball players ?", "Who plays a Greek handball player ?", "Who plays Greek handball players ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/HandballPlayer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "89",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person played a Greek person ?", "Which person played Greek persons ?", "Which person plays a Greek person ?", "Which person plays Greek persons ?", "Who played a Greek person ?", "Who played Greek persons ?", "Who plays a Greek person ?", "Who plays Greek persons ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "90",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person played a Greek basketball player ?", "Which person played Greek basketball players ?", "Which person plays a Greek basketball player ?", "Which person plays Greek basketball players ?", "Who played a Greek basketball player ?", "Who played Greek basketball players ?", "Who plays a Greek basketball player ?", "Who plays Greek basketball players ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/BasketballPlayer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "91",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "VP",
-    "sentences" : [ "Which person played a Greek writer ?", "Which person played Greek writers ?", "Which person plays a Greek writer ?", "Which person plays Greek writers ?", "Who played a Greek writer ?", "Who played Greek writers ?", "Who plays a Greek writer ?", "Who plays Greek writers ?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Writer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "92",
+    "id" : "28",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Which person played fictional characters played by $x ?", "Which person plays fictional characters played by $x ?", "Who played fictional characters played by $x ?", "Who plays fictional characters played by $x ?" ],
+    "sentences" : [ "Which person played fictional characters played by $x?", "Which person plays fictional characters played by $x?", "Who played fictional characters played by $x?", "Who plays fictional characters played by $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfPropx)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -2462,13 +1952,13 @@
     },
     "combination" : true
   }, {
-    "id" : "93",
+    "id" : "29",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Which person played persons married to $x ?", "Which person plays persons married to $x ?", "Who played persons married to $x ?", "Who plays persons married to $x ?" ],
+    "sentences" : [ "Which person played persons married to $x?", "Which person plays persons married to $x?", "Who played persons married to $x?", "Who plays persons married to $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/spouse> ?subjOfProp)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -2781,13 +2271,13 @@
     },
     "combination" : true
   }, {
-    "id" : "94",
+    "id" : "30",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "CITY",
     "returnType" : "PERSON",
     "frameType" : "VP",
-    "sentences" : [ "Which person played persons born in $x ?", "Which person plays persons born in $x ?", "Who played persons born in $x ?", "Who plays persons born in $x ?" ],
+    "sentences" : [ "Which person played persons born in $x?", "Which person plays persons born in $x?", "Who played persons born in $x?", "Who plays persons born in $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/birthPlace> ?subjOfProp)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -2800,262 +2290,7 @@
     },
     "combination" : true
   }, {
-    "id" : "95",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which fictional character is played by a Greek boxer?", "Which fictional character is played by Greek boxers?", "Which fictional character was played by a Greek boxer?", "Which fictional character was played by Greek boxers?", "Which fictional characters are played by a Greek boxer?", "Which fictional characters are played by Greek boxers?", "Which fictional characters were played by a Greek boxer?", "Which fictional characters were played by Greek boxers?", "Who is played by a Greek boxer?", "Who is played by Greek boxers?", "Who was played by a Greek boxer?", "Who was played by Greek boxers?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Boxer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "96",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which fictional character is played by a Greek cleric?", "Which fictional character is played by Greek clerics?", "Which fictional character was played by a Greek cleric?", "Which fictional character was played by Greek clerics?", "Which fictional characters are played by a Greek cleric?", "Which fictional characters are played by Greek clerics?", "Which fictional characters were played by a Greek cleric?", "Which fictional characters were played by Greek clerics?", "Who is played by a Greek cleric?", "Who is played by Greek clerics?", "Who was played by a Greek cleric?", "Who was played by Greek clerics?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Cleric>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "97",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which fictional character is played by a Greek office holder?", "Which fictional character is played by Greek office holders?", "Which fictional character was played by a Greek office holder?", "Which fictional character was played by Greek office holders?", "Which fictional characters are played by a Greek office holder?", "Which fictional characters are played by Greek office holders?", "Which fictional characters were played by a Greek office holder?", "Which fictional characters were played by Greek office holders?", "Who is played by a Greek office holder?", "Who is played by Greek office holders?", "Who was played by a Greek office holder?", "Who was played by Greek office holders?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/OfficeHolder>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "98",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which fictional character is played by a Greek agent?", "Which fictional character is played by Greek agents?", "Which fictional character was played by a Greek agent?", "Which fictional character was played by Greek agents?", "Which fictional characters are played by a Greek agent?", "Which fictional characters are played by Greek agents?", "Which fictional characters were played by a Greek agent?", "Which fictional characters were played by Greek agents?", "Who is played by a Greek agent?", "Who is played by Greek agents?", "Who was played by a Greek agent?", "Who was played by Greek agents?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Agent>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "99",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which fictional character is played by a Greek fictional character?", "Which fictional character is played by Greek fictional characters?", "Which fictional character was played by a Greek fictional character?", "Which fictional character was played by Greek fictional characters?", "Which fictional characters are played by a Greek fictional character?", "Which fictional characters are played by Greek fictional characters?", "Which fictional characters were played by a Greek fictional character?", "Which fictional characters were played by Greek fictional characters?", "Who is played by a Greek fictional character?", "Who is played by Greek fictional characters?", "Who was played by a Greek fictional character?", "Who was played by Greek fictional characters?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/FictionalCharacter>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "100",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which fictional character is played by a Greek artist?", "Which fictional character is played by Greek artists?", "Which fictional character was played by a Greek artist?", "Which fictional character was played by Greek artists?", "Which fictional characters are played by a Greek artist?", "Which fictional characters are played by Greek artists?", "Which fictional characters were played by a Greek artist?", "Which fictional characters were played by Greek artists?", "Who is played by a Greek artist?", "Who is played by Greek artists?", "Who was played by a Greek artist?", "Who was played by Greek artists?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Artist>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "101",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which fictional character is played by a Greek athlete?", "Which fictional character is played by Greek athletes?", "Which fictional character was played by a Greek athlete?", "Which fictional character was played by Greek athletes?", "Which fictional characters are played by a Greek athlete?", "Which fictional characters are played by Greek athletes?", "Which fictional characters were played by a Greek athlete?", "Which fictional characters were played by Greek athletes?", "Who is played by a Greek athlete?", "Who is played by Greek athletes?", "Who was played by a Greek athlete?", "Who was played by Greek athletes?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Athlete>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "102",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which fictional character is played by a Greek scientist?", "Which fictional character is played by Greek scientists?", "Which fictional character was played by a Greek scientist?", "Which fictional character was played by Greek scientists?", "Which fictional characters are played by a Greek scientist?", "Which fictional characters are played by Greek scientists?", "Which fictional characters were played by a Greek scientist?", "Which fictional characters were played by Greek scientists?", "Who is played by a Greek scientist?", "Who is played by Greek scientists?", "Who was played by a Greek scientist?", "Who was played by Greek scientists?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Scientist>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "103",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which fictional character is played by a Greek politician?", "Which fictional character is played by Greek politicians?", "Which fictional character was played by a Greek politician?", "Which fictional character was played by Greek politicians?", "Which fictional characters are played by a Greek politician?", "Which fictional characters are played by Greek politicians?", "Which fictional characters were played by a Greek politician?", "Which fictional characters were played by Greek politicians?", "Who is played by a Greek politician?", "Who is played by Greek politicians?", "Who was played by a Greek politician?", "Who was played by Greek politicians?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Politician>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "104",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which fictional character is played by a Greek swimmer?", "Which fictional character is played by Greek swimmers?", "Which fictional character was played by a Greek swimmer?", "Which fictional character was played by Greek swimmers?", "Which fictional characters are played by a Greek swimmer?", "Which fictional characters are played by Greek swimmers?", "Which fictional characters were played by a Greek swimmer?", "Which fictional characters were played by Greek swimmers?", "Who is played by a Greek swimmer?", "Who is played by Greek swimmers?", "Who was played by a Greek swimmer?", "Who was played by Greek swimmers?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Swimmer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "105",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which fictional character is played by a Greek volleyball player?", "Which fictional character is played by Greek volleyball players?", "Which fictional character was played by a Greek volleyball player?", "Which fictional character was played by Greek volleyball players?", "Which fictional characters are played by a Greek volleyball player?", "Which fictional characters are played by Greek volleyball players?", "Which fictional characters were played by a Greek volleyball player?", "Which fictional characters were played by Greek volleyball players?", "Who is played by a Greek volleyball player?", "Who is played by Greek volleyball players?", "Who was played by a Greek volleyball player?", "Who was played by Greek volleyball players?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/VolleyballPlayer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "106",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which fictional character is played by a Greek handball player?", "Which fictional character is played by Greek handball players?", "Which fictional character was played by a Greek handball player?", "Which fictional character was played by Greek handball players?", "Which fictional characters are played by a Greek handball player?", "Which fictional characters are played by Greek handball players?", "Which fictional characters were played by a Greek handball player?", "Which fictional characters were played by Greek handball players?", "Who is played by a Greek handball player?", "Who is played by Greek handball players?", "Who was played by a Greek handball player?", "Who was played by Greek handball players?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/HandballPlayer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "107",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which fictional character is played by a Greek person?", "Which fictional character is played by Greek persons?", "Which fictional character was played by a Greek person?", "Which fictional character was played by Greek persons?", "Which fictional characters are played by a Greek person?", "Which fictional characters are played by Greek persons?", "Which fictional characters were played by a Greek person?", "Which fictional characters were played by Greek persons?", "Who is played by a Greek person?", "Who is played by Greek persons?", "Who was played by a Greek person?", "Who was played by Greek persons?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "108",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which fictional character is played by a Greek basketball player?", "Which fictional character is played by Greek basketball players?", "Which fictional character was played by a Greek basketball player?", "Which fictional character was played by Greek basketball players?", "Which fictional characters are played by a Greek basketball player?", "Which fictional characters are played by Greek basketball players?", "Which fictional characters were played by a Greek basketball player?", "Which fictional characters were played by Greek basketball players?", "Who is played by a Greek basketball player?", "Who is played by Greek basketball players?", "Who was played by a Greek basketball player?", "Who was played by Greek basketball players?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/BasketballPlayer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "109",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which fictional character is played by a Greek writer?", "Which fictional character is played by Greek writers?", "Which fictional character was played by a Greek writer?", "Which fictional character was played by Greek writers?", "Which fictional characters are played by a Greek writer?", "Which fictional characters are played by Greek writers?", "Which fictional characters were played by a Greek writer?", "Which fictional characters were played by Greek writers?", "Who is played by a Greek writer?", "Who is played by Greek writers?", "Who was played by a Greek writer?", "Who was played by Greek writers?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Writer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "110",
+    "id" : "31",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -3128,7 +2363,7 @@
     },
     "combination" : true
   }, {
-    "id" : "111",
+    "id" : "32",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -3447,7 +2682,7 @@
     },
     "combination" : true
   }, {
-    "id" : "112",
+    "id" : "33",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "CITY",
@@ -3766,262 +3001,7 @@
     },
     "combination" : true
   }, {
-    "id" : "113",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which person is married to a Greek boxer?", "Which person is married to Greek boxers?", "Which person was married to a Greek boxer?", "Which person was married to Greek boxers?", "Which persons are married to a Greek boxer?", "Which persons are married to Greek boxers?", "Which persons were married to a Greek boxer?", "Which persons were married to Greek boxers?", "Who is married to a Greek boxer?", "Who is married to Greek boxers?", "Who was married to a Greek boxer?", "Who was married to Greek boxers?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Boxer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "114",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which person is married to a Greek cleric?", "Which person is married to Greek clerics?", "Which person was married to a Greek cleric?", "Which person was married to Greek clerics?", "Which persons are married to a Greek cleric?", "Which persons are married to Greek clerics?", "Which persons were married to a Greek cleric?", "Which persons were married to Greek clerics?", "Who is married to a Greek cleric?", "Who is married to Greek clerics?", "Who was married to a Greek cleric?", "Who was married to Greek clerics?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Cleric>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "115",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which person is married to a Greek office holder?", "Which person is married to Greek office holders?", "Which person was married to a Greek office holder?", "Which person was married to Greek office holders?", "Which persons are married to a Greek office holder?", "Which persons are married to Greek office holders?", "Which persons were married to a Greek office holder?", "Which persons were married to Greek office holders?", "Who is married to a Greek office holder?", "Who is married to Greek office holders?", "Who was married to a Greek office holder?", "Who was married to Greek office holders?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/OfficeHolder>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "116",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which person is married to a Greek agent?", "Which person is married to Greek agents?", "Which person was married to a Greek agent?", "Which person was married to Greek agents?", "Which persons are married to a Greek agent?", "Which persons are married to Greek agents?", "Which persons were married to a Greek agent?", "Which persons were married to Greek agents?", "Who is married to a Greek agent?", "Who is married to Greek agents?", "Who was married to a Greek agent?", "Who was married to Greek agents?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Agent>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "117",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which person is married to a Greek fictional character?", "Which person is married to Greek fictional characters?", "Which person was married to a Greek fictional character?", "Which person was married to Greek fictional characters?", "Which persons are married to a Greek fictional character?", "Which persons are married to Greek fictional characters?", "Which persons were married to a Greek fictional character?", "Which persons were married to Greek fictional characters?", "Who is married to a Greek fictional character?", "Who is married to Greek fictional characters?", "Who was married to a Greek fictional character?", "Who was married to Greek fictional characters?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/FictionalCharacter>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "118",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which person is married to a Greek artist?", "Which person is married to Greek artists?", "Which person was married to a Greek artist?", "Which person was married to Greek artists?", "Which persons are married to a Greek artist?", "Which persons are married to Greek artists?", "Which persons were married to a Greek artist?", "Which persons were married to Greek artists?", "Who is married to a Greek artist?", "Who is married to Greek artists?", "Who was married to a Greek artist?", "Who was married to Greek artists?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Artist>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "119",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which person is married to a Greek athlete?", "Which person is married to Greek athletes?", "Which person was married to a Greek athlete?", "Which person was married to Greek athletes?", "Which persons are married to a Greek athlete?", "Which persons are married to Greek athletes?", "Which persons were married to a Greek athlete?", "Which persons were married to Greek athletes?", "Who is married to a Greek athlete?", "Who is married to Greek athletes?", "Who was married to a Greek athlete?", "Who was married to Greek athletes?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Athlete>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "120",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which person is married to a Greek scientist?", "Which person is married to Greek scientists?", "Which person was married to a Greek scientist?", "Which person was married to Greek scientists?", "Which persons are married to a Greek scientist?", "Which persons are married to Greek scientists?", "Which persons were married to a Greek scientist?", "Which persons were married to Greek scientists?", "Who is married to a Greek scientist?", "Who is married to Greek scientists?", "Who was married to a Greek scientist?", "Who was married to Greek scientists?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Scientist>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "121",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which person is married to a Greek politician?", "Which person is married to Greek politicians?", "Which person was married to a Greek politician?", "Which person was married to Greek politicians?", "Which persons are married to a Greek politician?", "Which persons are married to Greek politicians?", "Which persons were married to a Greek politician?", "Which persons were married to Greek politicians?", "Who is married to a Greek politician?", "Who is married to Greek politicians?", "Who was married to a Greek politician?", "Who was married to Greek politicians?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Politician>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "122",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which person is married to a Greek swimmer?", "Which person is married to Greek swimmers?", "Which person was married to a Greek swimmer?", "Which person was married to Greek swimmers?", "Which persons are married to a Greek swimmer?", "Which persons are married to Greek swimmers?", "Which persons were married to a Greek swimmer?", "Which persons were married to Greek swimmers?", "Who is married to a Greek swimmer?", "Who is married to Greek swimmers?", "Who was married to a Greek swimmer?", "Who was married to Greek swimmers?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Swimmer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "123",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which person is married to a Greek volleyball player?", "Which person is married to Greek volleyball players?", "Which person was married to a Greek volleyball player?", "Which person was married to Greek volleyball players?", "Which persons are married to a Greek volleyball player?", "Which persons are married to Greek volleyball players?", "Which persons were married to a Greek volleyball player?", "Which persons were married to Greek volleyball players?", "Who is married to a Greek volleyball player?", "Who is married to Greek volleyball players?", "Who was married to a Greek volleyball player?", "Who was married to Greek volleyball players?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/VolleyballPlayer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "124",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which person is married to a Greek handball player?", "Which person is married to Greek handball players?", "Which person was married to a Greek handball player?", "Which person was married to Greek handball players?", "Which persons are married to a Greek handball player?", "Which persons are married to Greek handball players?", "Which persons were married to a Greek handball player?", "Which persons were married to Greek handball players?", "Who is married to a Greek handball player?", "Who is married to Greek handball players?", "Who was married to a Greek handball player?", "Who was married to Greek handball players?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/HandballPlayer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "125",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which person is married to a Greek person?", "Which person is married to Greek persons?", "Which person was married to a Greek person?", "Which person was married to Greek persons?", "Which persons are married to a Greek person?", "Which persons are married to Greek persons?", "Which persons were married to a Greek person?", "Which persons were married to Greek persons?", "Who is married to a Greek person?", "Who is married to Greek persons?", "Who was married to a Greek person?", "Who was married to Greek persons?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "126",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which person is married to a Greek basketball player?", "Which person is married to Greek basketball players?", "Which person was married to a Greek basketball player?", "Which person was married to Greek basketball players?", "Which persons are married to a Greek basketball player?", "Which persons are married to Greek basketball players?", "Which persons were married to a Greek basketball player?", "Which persons were married to Greek basketball players?", "Who is married to a Greek basketball player?", "Who is married to Greek basketball players?", "Who was married to a Greek basketball player?", "Who was married to Greek basketball players?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/BasketballPlayer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "127",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "PERSON",
-    "frameType" : "APP",
-    "sentences" : [ "Which person is married to a Greek writer?", "Which person is married to Greek writers?", "Which person was married to a Greek writer?", "Which person was married to Greek writers?", "Which persons are married to a Greek writer?", "Which persons are married to Greek writers?", "Which persons were married to a Greek writer?", "Which persons were married to Greek writers?", "Who is married to a Greek writer?", "Who is married to Greek writers?", "Who was married to a Greek writer?", "Who was married to Greek writers?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Writer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "128",
+    "id" : "34",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -4340,7 +3320,7 @@
     },
     "combination" : true
   }, {
-    "id" : "129",
+    "id" : "35",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -4659,7 +3639,7 @@
     },
     "combination" : true
   }, {
-    "id" : "130",
+    "id" : "36",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "CITY",
@@ -4693,262 +3673,7 @@
     },
     "combination" : true
   }, {
-    "id" : "131",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "DATE",
-    "frameType" : "APP",
-    "sentences" : [ "What is born in a Greek boxer?", "What is born in Greek boxers?", "What was born in a Greek boxer?", "What was born in Greek boxers?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthDate> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Boxer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "132",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "DATE",
-    "frameType" : "APP",
-    "sentences" : [ "What is born in a Greek cleric?", "What is born in Greek clerics?", "What was born in a Greek cleric?", "What was born in Greek clerics?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthDate> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Cleric>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "133",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "DATE",
-    "frameType" : "APP",
-    "sentences" : [ "What is born in a Greek office holder?", "What is born in Greek office holders?", "What was born in a Greek office holder?", "What was born in Greek office holders?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthDate> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/OfficeHolder>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "134",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "DATE",
-    "frameType" : "APP",
-    "sentences" : [ "What is born in a Greek agent?", "What is born in Greek agents?", "What was born in a Greek agent?", "What was born in Greek agents?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthDate> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Agent>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "135",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "DATE",
-    "frameType" : "APP",
-    "sentences" : [ "What is born in a Greek fictional character?", "What is born in Greek fictional characters?", "What was born in a Greek fictional character?", "What was born in Greek fictional characters?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthDate> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/FictionalCharacter>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "136",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "DATE",
-    "frameType" : "APP",
-    "sentences" : [ "What is born in a Greek artist?", "What is born in Greek artists?", "What was born in a Greek artist?", "What was born in Greek artists?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthDate> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Artist>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "137",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "DATE",
-    "frameType" : "APP",
-    "sentences" : [ "What is born in a Greek athlete?", "What is born in Greek athletes?", "What was born in a Greek athlete?", "What was born in Greek athletes?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthDate> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Athlete>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "138",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "DATE",
-    "frameType" : "APP",
-    "sentences" : [ "What is born in a Greek scientist?", "What is born in Greek scientists?", "What was born in a Greek scientist?", "What was born in Greek scientists?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthDate> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Scientist>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "139",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "DATE",
-    "frameType" : "APP",
-    "sentences" : [ "What is born in a Greek politician?", "What is born in Greek politicians?", "What was born in a Greek politician?", "What was born in Greek politicians?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthDate> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Politician>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "140",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "DATE",
-    "frameType" : "APP",
-    "sentences" : [ "What is born in a Greek swimmer?", "What is born in Greek swimmers?", "What was born in a Greek swimmer?", "What was born in Greek swimmers?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthDate> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Swimmer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "141",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "DATE",
-    "frameType" : "APP",
-    "sentences" : [ "What is born in a Greek volleyball player?", "What is born in Greek volleyball players?", "What was born in a Greek volleyball player?", "What was born in Greek volleyball players?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthDate> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/VolleyballPlayer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "142",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "DATE",
-    "frameType" : "APP",
-    "sentences" : [ "What is born in a Greek handball player?", "What is born in Greek handball players?", "What was born in a Greek handball player?", "What was born in Greek handball players?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthDate> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/HandballPlayer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "143",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "DATE",
-    "frameType" : "APP",
-    "sentences" : [ "What is born in a Greek person?", "What is born in Greek persons?", "What was born in a Greek person?", "What was born in Greek persons?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthDate> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "144",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "DATE",
-    "frameType" : "APP",
-    "sentences" : [ "What is born in a Greek basketball player?", "What is born in Greek basketball players?", "What was born in a Greek basketball player?", "What was born in Greek basketball players?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthDate> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/BasketballPlayer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "145",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "DATE",
-    "frameType" : "APP",
-    "sentences" : [ "What is born in a Greek writer?", "What is born in Greek writers?", "What was born in a Greek writer?", "What was born in Greek writers?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthDate> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Writer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "146",
+    "id" : "37",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -4967,7 +3692,7 @@
     },
     "combination" : true
   }, {
-    "id" : "147",
+    "id" : "38",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -5286,7 +4011,7 @@
     },
     "combination" : true
   }, {
-    "id" : "148",
+    "id" : "39",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "CITY",
@@ -5383,262 +4108,7 @@
     },
     "combination" : true
   }, {
-    "id" : "149",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "WORK",
-    "frameType" : "APP",
-    "sentences" : [ "What is developed by a Greek boxer?", "What is developed by Greek boxers?", "What was developed by a Greek boxer?", "What was developed by Greek boxers?", "Which work is developed by a Greek boxer?", "Which work is developed by Greek boxers?", "Which work was developed by a Greek boxer?", "Which work was developed by Greek boxers?", "Which works are developed by a Greek boxer?", "Which works are developed by Greek boxers?", "Which works were developed by a Greek boxer?", "Which works were developed by Greek boxers?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Boxer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "150",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "WORK",
-    "frameType" : "APP",
-    "sentences" : [ "What is developed by a Greek cleric?", "What is developed by Greek clerics?", "What was developed by a Greek cleric?", "What was developed by Greek clerics?", "Which work is developed by a Greek cleric?", "Which work is developed by Greek clerics?", "Which work was developed by a Greek cleric?", "Which work was developed by Greek clerics?", "Which works are developed by a Greek cleric?", "Which works are developed by Greek clerics?", "Which works were developed by a Greek cleric?", "Which works were developed by Greek clerics?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Cleric>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "151",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "WORK",
-    "frameType" : "APP",
-    "sentences" : [ "What is developed by a Greek office holder?", "What is developed by Greek office holders?", "What was developed by a Greek office holder?", "What was developed by Greek office holders?", "Which work is developed by a Greek office holder?", "Which work is developed by Greek office holders?", "Which work was developed by a Greek office holder?", "Which work was developed by Greek office holders?", "Which works are developed by a Greek office holder?", "Which works are developed by Greek office holders?", "Which works were developed by a Greek office holder?", "Which works were developed by Greek office holders?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/OfficeHolder>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "152",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "WORK",
-    "frameType" : "APP",
-    "sentences" : [ "What is developed by a Greek agent?", "What is developed by Greek agents?", "What was developed by a Greek agent?", "What was developed by Greek agents?", "Which work is developed by a Greek agent?", "Which work is developed by Greek agents?", "Which work was developed by a Greek agent?", "Which work was developed by Greek agents?", "Which works are developed by a Greek agent?", "Which works are developed by Greek agents?", "Which works were developed by a Greek agent?", "Which works were developed by Greek agents?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Agent>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "153",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "WORK",
-    "frameType" : "APP",
-    "sentences" : [ "What is developed by a Greek fictional character?", "What is developed by Greek fictional characters?", "What was developed by a Greek fictional character?", "What was developed by Greek fictional characters?", "Which work is developed by a Greek fictional character?", "Which work is developed by Greek fictional characters?", "Which work was developed by a Greek fictional character?", "Which work was developed by Greek fictional characters?", "Which works are developed by a Greek fictional character?", "Which works are developed by Greek fictional characters?", "Which works were developed by a Greek fictional character?", "Which works were developed by Greek fictional characters?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/FictionalCharacter>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "154",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "WORK",
-    "frameType" : "APP",
-    "sentences" : [ "What is developed by a Greek artist?", "What is developed by Greek artists?", "What was developed by a Greek artist?", "What was developed by Greek artists?", "Which work is developed by a Greek artist?", "Which work is developed by Greek artists?", "Which work was developed by a Greek artist?", "Which work was developed by Greek artists?", "Which works are developed by a Greek artist?", "Which works are developed by Greek artists?", "Which works were developed by a Greek artist?", "Which works were developed by Greek artists?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Artist>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "155",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "WORK",
-    "frameType" : "APP",
-    "sentences" : [ "What is developed by a Greek athlete?", "What is developed by Greek athletes?", "What was developed by a Greek athlete?", "What was developed by Greek athletes?", "Which work is developed by a Greek athlete?", "Which work is developed by Greek athletes?", "Which work was developed by a Greek athlete?", "Which work was developed by Greek athletes?", "Which works are developed by a Greek athlete?", "Which works are developed by Greek athletes?", "Which works were developed by a Greek athlete?", "Which works were developed by Greek athletes?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Athlete>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "156",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "WORK",
-    "frameType" : "APP",
-    "sentences" : [ "What is developed by a Greek scientist?", "What is developed by Greek scientists?", "What was developed by a Greek scientist?", "What was developed by Greek scientists?", "Which work is developed by a Greek scientist?", "Which work is developed by Greek scientists?", "Which work was developed by a Greek scientist?", "Which work was developed by Greek scientists?", "Which works are developed by a Greek scientist?", "Which works are developed by Greek scientists?", "Which works were developed by a Greek scientist?", "Which works were developed by Greek scientists?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Scientist>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "157",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "WORK",
-    "frameType" : "APP",
-    "sentences" : [ "What is developed by a Greek politician?", "What is developed by Greek politicians?", "What was developed by a Greek politician?", "What was developed by Greek politicians?", "Which work is developed by a Greek politician?", "Which work is developed by Greek politicians?", "Which work was developed by a Greek politician?", "Which work was developed by Greek politicians?", "Which works are developed by a Greek politician?", "Which works are developed by Greek politicians?", "Which works were developed by a Greek politician?", "Which works were developed by Greek politicians?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Politician>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "158",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "WORK",
-    "frameType" : "APP",
-    "sentences" : [ "What is developed by a Greek swimmer?", "What is developed by Greek swimmers?", "What was developed by a Greek swimmer?", "What was developed by Greek swimmers?", "Which work is developed by a Greek swimmer?", "Which work is developed by Greek swimmers?", "Which work was developed by a Greek swimmer?", "Which work was developed by Greek swimmers?", "Which works are developed by a Greek swimmer?", "Which works are developed by Greek swimmers?", "Which works were developed by a Greek swimmer?", "Which works were developed by Greek swimmers?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Swimmer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "159",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "WORK",
-    "frameType" : "APP",
-    "sentences" : [ "What is developed by a Greek volleyball player?", "What is developed by Greek volleyball players?", "What was developed by a Greek volleyball player?", "What was developed by Greek volleyball players?", "Which work is developed by a Greek volleyball player?", "Which work is developed by Greek volleyball players?", "Which work was developed by a Greek volleyball player?", "Which work was developed by Greek volleyball players?", "Which works are developed by a Greek volleyball player?", "Which works are developed by Greek volleyball players?", "Which works were developed by a Greek volleyball player?", "Which works were developed by Greek volleyball players?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/VolleyballPlayer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "160",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "WORK",
-    "frameType" : "APP",
-    "sentences" : [ "What is developed by a Greek handball player?", "What is developed by Greek handball players?", "What was developed by a Greek handball player?", "What was developed by Greek handball players?", "Which work is developed by a Greek handball player?", "Which work is developed by Greek handball players?", "Which work was developed by a Greek handball player?", "Which work was developed by Greek handball players?", "Which works are developed by a Greek handball player?", "Which works are developed by Greek handball players?", "Which works were developed by a Greek handball player?", "Which works were developed by Greek handball players?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/HandballPlayer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "161",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "WORK",
-    "frameType" : "APP",
-    "sentences" : [ "What is developed by a Greek person?", "What is developed by Greek persons?", "What was developed by a Greek person?", "What was developed by Greek persons?", "Which work is developed by a Greek person?", "Which work is developed by Greek persons?", "Which work was developed by a Greek person?", "Which work was developed by Greek persons?", "Which works are developed by a Greek person?", "Which works are developed by Greek persons?", "Which works were developed by a Greek person?", "Which works were developed by Greek persons?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "162",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "WORK",
-    "frameType" : "APP",
-    "sentences" : [ "What is developed by a Greek basketball player?", "What is developed by Greek basketball players?", "What was developed by a Greek basketball player?", "What was developed by Greek basketball players?", "Which work is developed by a Greek basketball player?", "Which work is developed by Greek basketball players?", "Which work was developed by a Greek basketball player?", "Which work was developed by Greek basketball players?", "Which works are developed by a Greek basketball player?", "Which works are developed by Greek basketball players?", "Which works were developed by a Greek basketball player?", "Which works were developed by Greek basketball players?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/BasketballPlayer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "163",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "THING",
-    "returnType" : "WORK",
-    "frameType" : "APP",
-    "sentences" : [ "What is developed by a Greek writer?", "What is developed by Greek writers?", "What was developed by a Greek writer?", "What was developed by Greek writers?", "Which work is developed by a Greek writer?", "Which work is developed by Greek writers?", "Which work was developed by a Greek writer?", "Which work was developed by Greek writers?", "Which works are developed by a Greek writer?", "Which works are developed by Greek writers?", "Which works were developed by a Greek writer?", "Which works were developed by Greek writers?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Greece>)\n  (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Writer>)\n)\n",
-    "sentenceToSparqlParameterMapping" : null,
-    "returnVariable" : "subjOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "NONE",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "164",
+    "id" : "40",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -5657,7 +4127,7 @@
     },
     "combination" : true
   }, {
-    "id" : "165",
+    "id" : "41",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -5976,7 +4446,7 @@
     },
     "combination" : true
   }, {
-    "id" : "166",
+    "id" : "42",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "CITY",

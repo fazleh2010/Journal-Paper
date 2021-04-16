@@ -151,7 +151,10 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                                 sentenceArray[questionWordToken.get().getPosition()] = questionWord.getWrittenRepValue();
                             }
                         }
-                        String sentence = buildSentence(Arrays.asList(sentenceArray)).concat(QUESTION_MARK);
+                        String sentence = buildSentence(Arrays.asList(sentenceArray));
+                        if (!pronounObjectToken.isPresent()) {
+                            sentence = sentence.concat(QUESTION_MARK);
+                        }
                         if (!generatedSentences.contains(sentence)) {
                             generatedSentences.add(sentence);
                         }

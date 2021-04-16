@@ -21,7 +21,7 @@ public class SentenceBuilderTransitiveVPEN {
 
   // Who writes $x?
   private String sentenceSubjOfPropActive() {
-    if (particle == null) {
+    if (particle.equals("")) {
       return String.format("%s %s %s?", subject, verb, object);
     } else {
       return String.format("%s %s %s %s?", subject, verb, object, particle);
