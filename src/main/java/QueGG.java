@@ -31,6 +31,7 @@ import util.io.TurtleCreation;
 
 
 
+
 @NoArgsConstructor
 public class QueGG {
 
@@ -71,12 +72,12 @@ public class QueGG {
             else
               throw new Exception("No file type is mentioned!!");
 
-               /* List<File> fileList = FileUtils.getFiles(outputDir+"/", "grammar_FULL_DATASET_EN", ".json");
+                List<File> fileList = FileUtils.getFiles(outputDir+"/", "grammar_FULL_DATASET_EN", ".json");
                 if (fileList.isEmpty()) {
                     throw new Exception("No files to process for question answering system!!");
                 }
                 ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile,maxNumberOfEntities);
-                readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir);*/
+                readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir);
 
             LOG.warn("To get optimal combinations of sentences please add the following types to {}\n{}",
                     DomainOrRangeType.class.getName(), DomainOrRangeType.MISSING_TYPES.toString()
