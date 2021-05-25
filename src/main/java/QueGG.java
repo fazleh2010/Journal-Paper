@@ -27,6 +27,8 @@ import java.util.logging.Level;
 import util.io.CsvFile;
 import util.io.FileUtils;
 import util.io.TurtleCreation;
+import util.io.ExecJar;
+
 
 
 
@@ -43,6 +45,14 @@ public class QueGG {
     //private static String QUESTION_ANSWER_LOCATION =  "/tmp/";
     private static String QUESTION_ANSWER_CSV_FILE = "questions.csv";
     private static String entityLabelDir = "src/main/resources/entityLabels/";
+    private static String javaLoc="/home/elahi/grammar/hackthon/fork/QueGG-web/target/";
+    private static String jarFile="quegg-web-0.0.1-SNAPSHOT.jar";
+    
+
+    /*public static void mainT(String[] args) throws Exception {
+      queGG.callInterface(javaLoc,jarFile);
+    }*/
+
    
     public static void main(String[] args) throws Exception {
         String search=GENERATE_JSON+CREATE_CSV;
@@ -78,6 +88,10 @@ public class QueGG {
                 }
                 ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile,maxNumberOfEntities);
                 readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir);
+
+                ExecJar.callInterface(javaLoc,jarFile);
+                System.out.println("the interface at localhost:8080");
+
 
             LOG.warn("To get optimal combinations of sentences please add the following types to {}\n{}",
                     DomainOrRangeType.class.getName(), DomainOrRangeType.MISSING_TYPES.toString()
