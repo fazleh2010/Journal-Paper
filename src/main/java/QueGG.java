@@ -89,8 +89,9 @@ public class QueGG {
                 ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile,maxNumberOfEntities);
                 readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir);
 
-                ExecJar.callInterface(javaLoc,jarFile);
-                System.out.println("the interface at localhost:8080");
+                //temporary close of QA system generation
+                //ExecJar.callInterface(javaLoc,jarFile);
+                System.out.println("csv file generation successful!!");
 
 
             LOG.warn("To get optimal combinations of sentences please add the following types to {}\n{}",
@@ -113,13 +114,13 @@ public class QueGG {
     }
 
     public void generateTurtle(String inputDir) throws IOException {
+               String lemonEntry=null;
                File f = new File(inputDir);
                String[]pathnames = f.list();
                for (String pathname : pathnames) {
                     String[]files = new File(inputDir+File.separatorChar+pathname).list(); 
 
                     for (String file : files) {
-                          System.out.println("file:"+file);
                           if(!file.contains(".csv"))
                              continue;
                           CsvFile csvFile = new CsvFile();
@@ -127,17 +128,22 @@ public class QueGG {
                            String directory=inputDir+"/"+pathname+"/";
                           List<String[]> rows = csvFile.getRows(new File(directory+file));
                           Integer index = 0;
+                          TurtleCreation nounPPFrameXsl =null;
                         for (String[] row : rows) {
+                             String syntacticType=row[5];
                             if (index == 0) {
                                 ;
                             } 
                             else {
-                               TurtleCreation nounPPFrameXsl = new TurtleCreation(row);
-                               String lemonEntry=nounPPFrameXsl.getLemonEntry();
+                                if(syntacticType.contains("NounPPFrame")){
+                                  nounPPFrameXsl = new TurtleCreation(row);
+                                  lemonEntry=nounPPFrameXsl.getLemonEntry();
+                                  }
+                               
                                lemonEntry=lemonEntry.replace("/", "");
-                               String fileName = "lexicon" + "-" + lemonEntry + ".ttl";
+                               String fileName = syntacticType+"-lexicon" + "-" + lemonEntry + ".ttl";
                                String tutleString = nounPPFrameXsl.nounPPFrameTurtle();
-                               System.out.println("directory::"+directory);
+                               //System.out.println("directory::"+directory);
                                FileUtils.stringToFile(tutleString, directory + fileName);
                             }
                             index=index+1;
@@ -146,9 +152,7 @@ public class QueGG {
 
                     }
                     
-                }
-            
-    
+                }   
     }
 
 

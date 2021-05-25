@@ -31,6 +31,7 @@ public class TurtleCreation {
     private String reference = "dbo:birthPlace";
     private String domain = "dbo:Person";
     private String range = "dbo:Place";
+    private String []verbForms=new String[3];
 
     public TurtleCreation(String[] row) {
 
@@ -196,6 +197,107 @@ public class TurtleCreation {
                 + ":of a                  lemon:SynRoleMarker ;\n"
                 + "  lemon:canonicalForm  [ lemon:writtenRep \""+preposition+"\"@en ] ;\n"
                 + "  lexinfo:partOfSpeech lexinfo:preposition .";
+        return template;
+
+    }
+
+    public String transitiveTurtleSense1() {
+        this.reference=this.setReference(reference);
+        this.domain=this.setReference(domain);
+        this.range=this.setReference(range);
+       
+        
+        String template = "@prefix :        <http://localhost:8080/lexicon#> .\n" +
+"\n" +
+"@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n" +
+"@prefix lemon:   <http://lemon-model.net/lemon#> .\n" +
+"\n" +
+"@base            <http://localhost:8080#> .\n" +
+"\n" +
+":lexicon_en a    lemon:Lexicon ;\n" +
+"  lemon:language \"en\" ;\n" +
+"  lemon:entry    :to_cross ;\n" +
+"  lemon:entry    :crossed ;\n" +
+"  lemon:entry    :by .\n" +
+"\n" +
+":to_cross a            lemon:LexicalEntry ;\n" +
+"  lexinfo:partOfSpeech lexinfo:verb ;\n" +
+"  lemon:canonicalForm  :form_cross ;\n" +
+"  lemon:otherForm      :form_crosss ;\n" +
+"  lemon:otherForm      :form_crossed ;\n" +
+"  lemon:synBehavior    :cross_frame_transitive ;\n" +
+"  lemon:sense          :cross_ontomap .\n" +
+"\n" +
+"\n" +
+":form_cross a          lemon:Form ;\n" +
+"  lemon:writtenRep     \""+verbForms[0]+"\"@en ;\n" +
+"  lexinfo:tense        lexinfo:present ;\n" +
+"  lexinfo:person       lexinfo:firstPerson ;\n" +
+"  lexinfo:verbFormMood lexinfo:infinitive .\n" +
+"\n" +
+":form_crosss a     lemon:Form ;\n" +
+"  lemon:writtenRep \""+verbForms[1]+"\"@en ;\n" +
+"  lexinfo:tense    lexinfo:present ;\n" +
+"  lexinfo:person   lexinfo:secondPerson .\n" +
+"\n" +
+":form_crossed a    lemon:Form ;\n" +
+"  lemon:writtenRep \""+verbForms[2]+"\"@en ;\n" +
+"  lexinfo:tense    lexinfo:past .\n" +
+"\n" +
+"\n" +
+":cross_frame_transitive a lexinfo:TransitiveFrame ;\n" +
+"  lexinfo:subject         :cross_subj ;\n" +
+"  lexinfo:directObject    :cross_obj .\n" +
+"\n" +
+":cross_ontomap a    lemon:OntoMap, lemon:LexicalSense ;\n" +
+"  lemon:ontoMapping :cross_ontomap ;\n" +
+"  lemon:reference   <http://dbpedia.org/ontology/"+reference+"> ;\n" +
+"  lemon:subjOfProp  :cross_subj ;\n" +
+"  lemon:objOfProp   :cross_obj ;\n" +
+"  lemon:condition   :cross_condition .\n" +
+"\n" +
+":cross_condition a     lemon:condition ;\n" +
+"  lemon:propertyDomain <http://dbpedia.org/ontology/"+domain+"> ;\n" +
+"  lemon:propertyRange  <http://dbpedia.org/ontology/"+range+"> .\n" +
+"\n" +
+"\n" +
+"# see https://lemon-model.net/lemon-cookbook/node17.html\n" +
+"\n" +
+":crossed a             lemon:LexicalEntry ;\n" +
+"  lexinfo:partOfSpeech lexinfo:adjective ;\n" +
+"  lemon:canonicalForm  :form_crossed_canonical ;\n" +
+"  lemon:otherForm      :form_crossed_by ;\n" +
+"  lemon:synBehavior    :crossed_frame_adjectivepp ;\n" +
+"  lemon:sense          :crossed_ontomap .\n" +
+"\n" +
+":form_crossed_canonical a lemon:Form ;\n" +
+"  lemon:writtenRep        \""+verbForms[2]+"\"@en .\n" +
+"\n" +
+":form_crossed_by a     lemon:Form ;\n" +
+"  lemon:writtenRep     \""+verbForms[2]+"\"@en ;\n" +
+"  lexinfo:verbFormMood lexinfo:participle .\n" +
+"\n" +
+"\n" +
+":crossed_frame_adjectivepp a   lexinfo:AdjectivePPFrame ;\n" +
+"  lexinfo:copulativeSubject    :crossed_subj ;\n" +
+"  lexinfo:prepositionalAdjunct :crossed_obj .\n" +
+"\n" +
+":crossed_ontomap a  lemon:OntoMap, lemon:LexicalSense ;\n" +
+"  lemon:ontoMapping :crossed_ontomap ;\n" +
+"  lemon:reference   <http://dbpedia.org/ontology/"+reference+"> ;\n" +
+"  lemon:subjOfProp  :crossed_obj ;\n" +
+"  lemon:objOfProp   :crossed_subj ;\n" +
+"  lemon:condition   :cross_condition .\n" +
+"\n" +
+":crossed_obj lemon:marker :by .\n" +
+"\n" +
+"## Prepositions ##\n" +
+"\n" +
+":by a                  lemon:SynRoleMarker ;\n" +
+"  lemon:canonicalForm  [ lemon:writtenRep \""+preposition+"\"@en ] ;\n" +
+"  lexinfo:partOfSpeech lexinfo:preposition .\n" +
+"\n" +
+"";
         return template;
 
     }
