@@ -128,25 +128,30 @@ public class QueGG {
                            String directory=inputDir+"/"+pathname+"/";
                           List<String[]> rows = csvFile.getRows(new File(directory+file));
                           Integer index = 0;
-                          TurtleCreation nounPPFrameXsl =null;
+                          TurtleCreation nounPPFrameXsl =null;String fileName=null,tutleString=null,syntacticType=null;
+
+                          if(file.contains("TransitiveFrame")){
+                              syntacticType="TransitiveFrame";
+                             }
+                          else if(file.contains("NounPPFrame")){
+                              syntacticType="NounPPFrame";
+                           }
+
+
                         for (String[] row : rows) {
-                             String syntacticType=row[5];
                             if (index == 0) {
-                                ;
+                                index=index+1;
+                                continue;
                             } 
-                            else {
-                                if(syntacticType.contains("NounPPFrame")){
-                                  nounPPFrameXsl = new TurtleCreation(row);
-                                  lemonEntry=nounPPFrameXsl.getLemonEntry();
-                                  }
-                               
+
+                            if(syntacticType.contains("TransitiveFrame")||syntacticType.contains("NounPPFrame")){
+                               nounPPFrameXsl = new TurtleCreation(row);
+                               lemonEntry=nounPPFrameXsl.getLemonEntry();
                                lemonEntry=lemonEntry.replace("/", "");
-                               String fileName = syntacticType+"-lexicon" + "-" + lemonEntry + ".ttl";
-                               String tutleString = nounPPFrameXsl.nounPPFrameTurtle();
-                               //System.out.println("directory::"+directory);
+                               fileName = syntacticType+"-lexicon" + "-" + lemonEntry + ".ttl";
+                               tutleString = nounPPFrameXsl.nounPPFrameTurtle();
                                FileUtils.stringToFile(tutleString, directory + fileName);
-                            }
-                            index=index+1;
+                               }
                     
                         }
 
