@@ -51,7 +51,7 @@ public class TurtleCreation {
             this.reference = row[GoogleXslSheet.NounPPFrame.referenceIndex];
             this.domain = row[GoogleXslSheet.NounPPFrame.domainIndex];
             this.range = row[GoogleXslSheet.NounPPFrame.rangeIndex];
-            this.tutleString=nounPPFrameTurtle();
+            this.nounPPFrameTurtle();
             this.tutleFileName = getFileName(syntacticFrame) ;
     }
 
@@ -65,7 +65,7 @@ public class TurtleCreation {
             this.reference = row[GoogleXslSheet.TransitFrame.referenceIndex];
             this.domain = row[GoogleXslSheet.TransitFrame.domainIndex];
             this.range = row[GoogleXslSheet.TransitFrame.rangeIndex];
-            this.tutleString=transitiveTurtleSense1();
+            this.transitiveTurtleSense1();
             this.tutleFileName = getFileName(syntacticFrame) ;
     }
 
@@ -77,25 +77,8 @@ public class TurtleCreation {
       return syntacticFrame+"-lexicon" + "-" + lemonEntry.replace("/", "") + ".ttl";
 
     }
-
-    public String getWrittenFormInfinitive() {
-        return writtenFormInfinitive;
-    }
-
-    public String getWrittenForm3rdPerson() {
-        return writtenForm3rdPerson;
-    }
-
-    public String getWrittenFormPast() {
-        return writtenFormPast;
-    }
-
-    public String getRange() {
-        return range;
-    }
-
-    public String getTutleString() {
-        return tutleString;
+     public String getTutleString() {
+         return this.tutleString;
     }
 
     public TurtleCreation(String[] row) {
@@ -105,46 +88,12 @@ public class TurtleCreation {
     public TurtleCreation() {
     }
 
-    public String getLemonEntry() {
-        return lemonEntry;
-    }
-
-    public String getPartOfSpeech() {
-        return partOfSpeech;
-    }
-
-    public String getWrittenForm_singular() {
-        return writtenForm_singular;
-    }
-
-    public String getWrittenForm_plural() {
-        return writtenForm_plural;
-    }
-
-    public String getPreposition() {
-        return preposition;
-    }
-
-    public String getSense() {
-        return sense;
-    }
-
-    public String getReference() {
-        return reference;
-    }
-
-    public String getDomain() {
-        return domain;
-    }
-
-    
-
-    public String nounPPFrameTurtle() {
+    public void nounPPFrameTurtle() {
         this.reference = this.setReference(reference);
         this.domain = this.setReference(domain);
         this.range = this.setReference(range);
 
-        String template = "@prefix :        <http://localhost:8080/lexicon#> .\n"
+        this.tutleString = "@prefix :        <http://localhost:8080/lexicon#> .\n"
                 + "\n"
                 + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
                 + "@prefix lemon:   <http://lemon-model.net/lemon#> .\n"
@@ -187,16 +136,15 @@ public class TurtleCreation {
                 + ":of a                  lemon:SynRoleMarker ;\n"
                 + "  lemon:canonicalForm  [ lemon:writtenRep \"" + preposition + "\"@en ] ;\n"
                 + "  lexinfo:partOfSpeech lexinfo:preposition .";
-        return template;
 
     }
 
-    public String transitiveTurtleSense1() {
+    public void transitiveTurtleSense1() {
         this.reference = this.setReference(reference);
         this.domain = this.setReference(domain);
         this.range = this.setReference(range);
 
-        String template = "@prefix :        <http://localhost:8080/lexicon#> .\n"
+        this.tutleString =  "@prefix :        <http://localhost:8080/lexicon#> .\n"
                 + "\n"
                 + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
                 + "@prefix lemon:   <http://lemon-model.net/lemon#> .\n"
@@ -287,7 +235,6 @@ public class TurtleCreation {
                 + "  lexinfo:partOfSpeech lexinfo:preposition .\n"
                 + "\n"
                 + "";
-        return template;
 
     }
 
@@ -299,5 +246,7 @@ public class TurtleCreation {
         }
         return reference.strip().trim();
     }
+
+   
 
 }
