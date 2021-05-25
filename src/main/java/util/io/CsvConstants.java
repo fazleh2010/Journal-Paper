@@ -42,16 +42,7 @@ public interface CsvConstants {
     public static Integer questionIndex = 5;
 
     
-    //currently unknown
-     public static Integer subjectIndex = -1;
-    
-    
-    public static Integer CosineIndex = 1;
-    public static Integer CoherenceIndex = 2;
-    public static Integer AllConfIndex = 3;
-    public static Integer MaxConfIndex = 4;
-    public static Integer IRIndex = 5;
-    public static Integer KulczynskiIndex = 6;
+   
 
 
     public static String[] qaldHeader = {WORD, ID, OBJECT, PROPERTY, QUESTION, SPARQL};

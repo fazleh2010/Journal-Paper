@@ -86,8 +86,8 @@ public class QueGG {
                 if (fileList.isEmpty()) {
                     throw new Exception("No files to process for question answering system!!");
                 }
-                ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile,maxNumberOfEntities);
-                readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir);
+                //ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile,maxNumberOfEntities);
+                //readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir);
 
                 //temporary close of QA system generation
                 //ExecJar.callInterface(javaLoc,jarFile);
@@ -128,7 +128,8 @@ public class QueGG {
                            String directory=inputDir+"/"+pathname+"/";
                           List<String[]> rows = csvFile.getRows(new File(directory+file));
                           Integer index = 0;
-                          TurtleCreation nounPPFrameXsl =null;String fileName=null,tutleString=null,syntacticType=null;
+                          TurtleCreation nounPPFrameXsl =null;
+                          String fileName=null,tutleString=null,syntacticType=null;
 
                           if(file.contains("TransitiveFrame")){
                               syntacticType="TransitiveFrame";
@@ -136,6 +137,8 @@ public class QueGG {
                           else if(file.contains("NounPPFrame")){
                               syntacticType="NounPPFrame";
                            }
+                          else 
+                             continue;
 
 
                         for (String[] row : rows) {
@@ -144,13 +147,9 @@ public class QueGG {
                                 continue;
                             } 
 
-                            if(syntacticType.contains("TransitiveFrame")||syntacticType.contains("NounPPFrame")){
-                               nounPPFrameXsl = new TurtleCreation(row);
-                               lemonEntry=nounPPFrameXsl.getLemonEntry();
-                               lemonEntry=lemonEntry.replace("/", "");
-                               fileName = syntacticType+"-lexicon" + "-" + lemonEntry + ".ttl";
-                               tutleString = nounPPFrameXsl.nounPPFrameTurtle();
-                               FileUtils.stringToFile(tutleString, directory + fileName);
+                            if(syntacticType.contains("NounPPFrame")){
+                               nounPPFrameXsl = new TurtleCreation(row,syntacticType);
+                               FileUtils.stringToFile(nounPPFrameXsl.getTutleString(), directory + nounPPFrameXsl.getTutleFileName());
                                }
                     
                         }
