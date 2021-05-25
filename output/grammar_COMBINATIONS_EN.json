@@ -1,3 +1,341 @@
 {
-  "grammarEntries" : [ ]
+  "grammarEntries" : [ {
+    "id" : "7",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "VP",
+    "sentences" : [ "What discovered the birth place of $x?", "What discovers the birth place of $x?", "Which person discovered the birth place of $x?", "Which person discovers the birth place of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/discoverer> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/birthPlace> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "8",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "VP",
+    "sentences" : [ "What discovered places discovered by $x?", "What discovers places discovered by $x?", "Which person discovered places discovered by $x?", "Which person discovers places discovered by $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/discoverer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/discoverer> ?objOfPropx)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Luboš Kohoutek",
+        "uri" : "http://dbpedia.org/resource/Luboš_Kohoutek"
+      }, {
+        "label" : "Catalina Sky Survey",
+        "uri" : "http://dbpedia.org/resource/Catalina_Sky_Survey"
+      }, {
+        "label" : "University of Chile",
+        "uri" : "http://dbpedia.org/resource/University_of_Chile"
+      }, {
+        "label" : "Uppsala-ESO Survey of Asteroids and Comets",
+        "uri" : "http://dbpedia.org/resource/Uppsala-ESO_Survey_of_Asteroids_and_Comets"
+      }, {
+        "label" : "Hans Scholl (astronomer)",
+        "uri" : "http://dbpedia.org/resource/Hans_Scholl_(astronomer)"
+      }, {
+        "label" : "List of observatory codes",
+        "uri" : "http://dbpedia.org/resource/List_of_observatory_codes"
+      }, {
+        "label" : "Space Surveillance Telescope",
+        "uri" : "http://dbpedia.org/resource/Space_Surveillance_Telescope"
+      }, {
+        "label" : "Jeff T. Alu",
+        "uri" : "http://dbpedia.org/resource/Jeff_T._Alu"
+      }, {
+        "label" : "Didier Queloz",
+        "uri" : "http://dbpedia.org/resource/Didier_Queloz"
+      }, {
+        "label" : "Andrew W. Puckett",
+        "uri" : "http://dbpedia.org/resource/Andrew_W._Puckett"
+      }, {
+        "label" : "Glenn Smith",
+        "uri" : "http://dbpedia.org/resource/Glenn_Smith"
+      }, {
+        "label" : "Kenzo Suzuki (astronomer)",
+        "uri" : "http://dbpedia.org/resource/Kenzo_Suzuki_(astronomer)"
+      }, {
+        "label" : "Kepler (spacecraft)",
+        "uri" : "http://dbpedia.org/resource/Kepler_(spacecraft)"
+      }, {
+        "label" : "Edward Bowell",
+        "uri" : "http://dbpedia.org/resource/Edward_Bowell"
+      }, {
+        "label" : "Alfred Bohrmann",
+        "uri" : "http://dbpedia.org/resource/Alfred_Bohrmann"
+      }, {
+        "label" : "Chad Trujillo",
+        "uri" : "http://dbpedia.org/resource/Chad_Trujillo"
+      }, {
+        "label" : "Ames Research Center",
+        "uri" : "http://dbpedia.org/resource/Ames_Research_Center"
+      }, {
+        "label" : "EURONEAR",
+        "uri" : "http://dbpedia.org/resource/EURONEAR"
+      }, {
+        "label" : "Microlensing Observations in Astrophysics",
+        "uri" : "http://dbpedia.org/resource/Microlensing_Observations_in_Astrophysics"
+      }, {
+        "label" : "Mikko Tuomi",
+        "uri" : "http://dbpedia.org/resource/Mikko_Tuomi"
+      }, {
+        "label" : "Korado Korlević",
+        "uri" : "http://dbpedia.org/resource/Korado_Korlević"
+      }, {
+        "label" : "Arnold Richard Klemola",
+        "uri" : "http://dbpedia.org/resource/Arnold_Richard_Klemola"
+      }, {
+        "label" : "K. Berney",
+        "uri" : "http://dbpedia.org/resource/K._Berney"
+      }, {
+        "label" : "Campo Imperatore Near-Earth Object Survey",
+        "uri" : "http://dbpedia.org/resource/Campo_Imperatore_Near-Earth_Object_Survey"
+      }, {
+        "label" : "Alex R. Gibbs",
+        "uri" : "http://dbpedia.org/resource/Alex_R._Gibbs"
+      }, {
+        "label" : "Andrew C. Becker",
+        "uri" : "http://dbpedia.org/resource/Andrew_C._Becker"
+      }, {
+        "label" : "Gennadiy Borisov",
+        "uri" : "http://dbpedia.org/resource/Gennadiy_Borisov"
+      }, {
+        "label" : "Geoffrey Marcy",
+        "uri" : "http://dbpedia.org/resource/Geoffrey_Marcy"
+      }, {
+        "label" : "Giovanni Domenico Cassini",
+        "uri" : "http://dbpedia.org/resource/Giovanni_Domenico_Cassini"
+      }, {
+        "label" : "Giuseppe Piazzi",
+        "uri" : "http://dbpedia.org/resource/Giuseppe_Piazzi"
+      }, {
+        "label" : "John J. Kavelaars",
+        "uri" : "http://dbpedia.org/resource/John_J._Kavelaars"
+      }, {
+        "label" : "Donal O'Ceallaigh",
+        "uri" : "http://dbpedia.org/resource/Donal_O'Ceallaigh"
+      }, {
+        "label" : "Beijing Schmidt CCD Asteroid Program",
+        "uri" : "http://dbpedia.org/resource/Beijing_Schmidt_CCD_Asteroid_Program"
+      }, {
+        "label" : "Črni Vrh Observatory",
+        "uri" : "http://dbpedia.org/resource/Črni_Vrh_Observatory"
+      }, {
+        "label" : "Optical Gravitational Lensing Experiment",
+        "uri" : "http://dbpedia.org/resource/Optical_Gravitational_Lensing_Experiment"
+      }, {
+        "label" : "Palomar Observatory",
+        "uri" : "http://dbpedia.org/resource/Palomar_Observatory"
+      }, {
+        "label" : "Roque de los Muchachos Observatory",
+        "uri" : "http://dbpedia.org/resource/Roque_de_los_Muchachos_Observatory"
+      }, {
+        "label" : "Henri Debehogne",
+        "uri" : "http://dbpedia.org/resource/Henri_Debehogne"
+      }, {
+        "label" : "Lincoln Near-Earth Asteroid Research",
+        "uri" : "http://dbpedia.org/resource/Lincoln_Near-Earth_Asteroid_Research"
+      }, {
+        "label" : "Mount Lemmon Survey",
+        "uri" : "http://dbpedia.org/resource/Mount_Lemmon_Survey"
+      }, {
+        "label" : "Outer Solar System Origins Survey",
+        "uri" : "http://dbpedia.org/resource/Outer_Solar_System_Origins_Survey"
+      }, {
+        "label" : "Michel Mayor",
+        "uri" : "http://dbpedia.org/resource/Michel_Mayor"
+      }, {
+        "label" : "Carl A. Wirtanen",
+        "uri" : "http://dbpedia.org/resource/Carl_A._Wirtanen"
+      }, {
+        "label" : "Cerro Tololo Inter-American Observatory",
+        "uri" : "http://dbpedia.org/resource/Cerro_Tololo_Inter-American_Observatory"
+      }, {
+        "label" : "Mario Jurić",
+        "uri" : "http://dbpedia.org/resource/Mario_Jurić"
+      }, {
+        "label" : "Las Campanas Observatory",
+        "uri" : "http://dbpedia.org/resource/Las_Campanas_Observatory"
+      }, {
+        "label" : "Richard Kowalski",
+        "uri" : "http://dbpedia.org/resource/Richard_Kowalski"
+      }, {
+        "label" : "Jack J. Lissauer",
+        "uri" : "http://dbpedia.org/resource/Jack_J._Lissauer"
+      }, {
+        "label" : "Mauna Kea Observatories",
+        "uri" : "http://dbpedia.org/resource/Mauna_Kea_Observatories"
+      }, {
+        "label" : "Nichole M. Danzl",
+        "uri" : "http://dbpedia.org/resource/Nichole_M._Danzl"
+      }, {
+        "label" : "Nick Kaiser",
+        "uri" : "http://dbpedia.org/resource/Nick_Kaiser"
+      }, {
+        "label" : "Audrey C. Delsanti",
+        "uri" : "http://dbpedia.org/resource/Audrey_C._Delsanti"
+      }, {
+        "label" : "James V. Scotti",
+        "uri" : "http://dbpedia.org/resource/James_V._Scotti"
+      }, {
+        "label" : "J. J. Kavelaars",
+        "uri" : "http://dbpedia.org/resource/J._J._Kavelaars"
+      }, {
+        "label" : "Lowell Observatory Near-Earth Object Search",
+        "uri" : "http://dbpedia.org/resource/Lowell_Observatory_Near-Earth_Object_Search"
+      }, {
+        "label" : "Robert McNaught",
+        "uri" : "http://dbpedia.org/resource/Robert_McNaught"
+      }, {
+        "label" : "Robotic Telescope Network",
+        "uri" : "http://dbpedia.org/resource/Robotic_Telescope_Network"
+      }, {
+        "label" : "Hubble Space Telescope",
+        "uri" : "http://dbpedia.org/resource/Hubble_Space_Telescope"
+      }, {
+        "label" : "James W. Christy",
+        "uri" : "http://dbpedia.org/resource/James_W._Christy"
+      }, {
+        "label" : "Jane Luu",
+        "uri" : "http://dbpedia.org/resource/Jane_Luu"
+      }, {
+        "label" : "Jason Steffen",
+        "uri" : "http://dbpedia.org/resource/Jason_Steffen"
+      }, {
+        "label" : "Sarah Ballard",
+        "uri" : "http://dbpedia.org/resource/Sarah_Ballard"
+      }, {
+        "label" : "Scott S. Sheppard",
+        "uri" : "http://dbpedia.org/resource/Scott_S._Sheppard"
+      }, {
+        "label" : "Palomar Distant Solar System Survey",
+        "uri" : "http://dbpedia.org/resource/Palomar_Distant_Solar_System_Survey"
+      }, {
+        "label" : "Jean-Marc Petit",
+        "uri" : "http://dbpedia.org/resource/Jean-Marc_Petit"
+      }, {
+        "label" : "Jean-Marie Lopez",
+        "uri" : "http://dbpedia.org/resource/Jean-Marie_Lopez"
+      }, {
+        "label" : "Jeffrey A. Larsen",
+        "uri" : "http://dbpedia.org/resource/Jeffrey_A._Larsen"
+      }, {
+        "label" : "John L. Tonry",
+        "uri" : "http://dbpedia.org/resource/John_L._Tonry"
+      }, {
+        "label" : "Maciej Konacki",
+        "uri" : "http://dbpedia.org/resource/Maciej_Konacki"
+      }, {
+        "label" : "Andrzej Udalski",
+        "uri" : "http://dbpedia.org/resource/Andrzej_Udalski"
+      }, {
+        "label" : "Apache Point Observatory",
+        "uri" : "http://dbpedia.org/resource/Apache_Point_Observatory"
+      }, {
+        "label" : "Asaph Hall",
+        "uri" : "http://dbpedia.org/resource/Asaph_Hall"
+      }, {
+        "label" : "Asteroid Terrestrial-impact Last Alert System",
+        "uri" : "http://dbpedia.org/resource/Asteroid_Terrestrial-impact_Last_Alert_System"
+      }, {
+        "label" : "Astronomical Observatory of Mallorca",
+        "uri" : "http://dbpedia.org/resource/Astronomical_Observatory_of_Mallorca"
+      }, {
+        "label" : "Pan-STARRS",
+        "uri" : "http://dbpedia.org/resource/Pan-STARRS"
+      }, {
+        "label" : "Stephen Singer-Brewster",
+        "uri" : "http://dbpedia.org/resource/Stephen_Singer-Brewster"
+      }, {
+        "label" : "Lowell Observatory Near-Earth-Object Search",
+        "uri" : "http://dbpedia.org/resource/Lowell_Observatory_Near-Earth-Object_Search"
+      }, {
+        "label" : "Alan Fitzsimmons",
+        "uri" : "http://dbpedia.org/resource/Alan_Fitzsimmons"
+      }, {
+        "label" : "Charles W. Juels",
+        "uri" : "http://dbpedia.org/resource/Charles_W._Juels"
+      }, {
+        "label" : "Reflecting telescope",
+        "uri" : "http://dbpedia.org/resource/Reflecting_telescope"
+      }, {
+        "label" : "Probing Lensing Anomalies Network",
+        "uri" : "http://dbpedia.org/resource/Probing_Lensing_Anomalies_Network"
+      }, {
+        "label" : "Brett J. Gladman",
+        "uri" : "http://dbpedia.org/resource/Brett_J._Gladman"
+      }, {
+        "label" : "LINEAR",
+        "uri" : "http://dbpedia.org/resource/LINEAR"
+      }, {
+        "label" : "Laurance Doyle",
+        "uri" : "http://dbpedia.org/resource/Laurance_Doyle"
+      }, {
+        "label" : "Claudine Rinner",
+        "uri" : "http://dbpedia.org/resource/Claudine_Rinner"
+      }, {
+        "label" : "Dark Energy Camera",
+        "uri" : "http://dbpedia.org/resource/Dark_Energy_Camera"
+      }, {
+        "label" : "Dark Energy Survey",
+        "uri" : "http://dbpedia.org/resource/Dark_Energy_Survey"
+      }, {
+        "label" : "David C. Jewitt",
+        "uri" : "http://dbpedia.org/resource/David_C._Jewitt"
+      }, {
+        "label" : "David Charbonneau",
+        "uri" : "http://dbpedia.org/resource/David_Charbonneau"
+      }, {
+        "label" : "David J. Tholen",
+        "uri" : "http://dbpedia.org/resource/David_J._Tholen"
+      }, {
+        "label" : "David L. Rabinowitz",
+        "uri" : "http://dbpedia.org/resource/David_L._Rabinowitz"
+      }, {
+        "label" : "Deep Ecliptic Survey",
+        "uri" : "http://dbpedia.org/resource/Deep_Ecliptic_Survey"
+      }, {
+        "label" : "Arianna E. Gleason",
+        "uri" : "http://dbpedia.org/resource/Arianna_E._Gleason"
+      }, {
+        "label" : "Canada–France–Hawaii Telescope",
+        "uri" : "http://dbpedia.org/resource/Canada–France–Hawaii_Telescope"
+      }, {
+        "label" : "Seth Barnes Nicholson",
+        "uri" : "http://dbpedia.org/resource/Seth_Barnes_Nicholson"
+      }, {
+        "label" : "Siding Spring Survey",
+        "uri" : "http://dbpedia.org/resource/Siding_Spring_Survey"
+      }, {
+        "label" : "Suzanne W. Tourtellotte",
+        "uri" : "http://dbpedia.org/resource/Suzanne_W._Tourtellotte"
+      }, {
+        "label" : "Takeshi Urata",
+        "uri" : "http://dbpedia.org/resource/Takeshi_Urata"
+      }, {
+        "label" : "Voyager 1",
+        "uri" : "http://dbpedia.org/resource/Voyager_1"
+      }, {
+        "label" : "Voyager 2",
+        "uri" : "http://dbpedia.org/resource/Voyager_2"
+      } ]
+    },
+    "combination" : true
+  } ]
 }

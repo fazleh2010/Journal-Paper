@@ -99,4 +99,20 @@ public class FileUtils {
         return uriLabels;
     }
 
+    /*public static void deleteFiles(String inputDir, String extension) {
+        File f = new File(inputDir);
+        String[] pathnames = f.list();
+        for (String pathname : pathnames) {
+            System.out.println("pathname::"+inputDir + File.separatorChar + pathname);
+            String[] files = new File(inputDir + pathname).list();
+            for (String file : files) {
+                System.out.println("file::"+file);
+               
+
+            }
+
+        }
+
+    }*/
+
 }

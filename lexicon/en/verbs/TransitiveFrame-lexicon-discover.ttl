@@ -7,84 +7,78 @@
 
 :lexicon_en a    lemon:Lexicon ;
   lemon:language "en" ;
-  lemon:entry    :to_cross ;
-  lemon:entry    :crossed ;
+  lemon:entry    :to_design ;
+  lemon:entry    :designed ;
   lemon:entry    :by .
 
-:to_cross a            lemon:LexicalEntry ;
+:to_design a           lemon:LexicalEntry ;
   lexinfo:partOfSpeech lexinfo:verb ;
-  lemon:canonicalForm  :form_cross ;
-  lemon:otherForm      :form_crosss ;
-  lemon:otherForm      :form_crossed ;
-  lemon:synBehavior    :cross_frame_transitive ;
-  lemon:sense          :cross_ontomap .
+  lemon:canonicalForm  :form_design ;
+  lemon:otherForm      :form_designs ;
+  lemon:otherForm      :form_designed ;
+  lemon:synBehavior    :design_frame_transitive ;
+  lemon:sense          :design_ontomap .
 
 
-:form_cross a          lemon:Form ;
+:form_design a         lemon:Form ;
   lemon:writtenRep     "discover"@en ;
-  lexinfo:tense        lexinfo:present ;
-  lexinfo:person       lexinfo:firstPerson ;
   lexinfo:verbFormMood lexinfo:infinitive .
 
-:form_crosss a     lemon:Form ;
+:form_designs a    lemon:Form ;
   lemon:writtenRep "discovers"@en ;
-  lexinfo:tense    lexinfo:present ;
   lexinfo:person   lexinfo:secondPerson .
 
-:form_crossed a    lemon:Form ;
+:form_designed a   lemon:Form ;
   lemon:writtenRep "discovered"@en ;
   lexinfo:tense    lexinfo:past .
 
+:design_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :design_subj ;
+  lexinfo:directObject     :design_obj .
 
-:cross_frame_transitive a lexinfo:TransitiveFrame ;
-  lexinfo:subject         :cross_subj ;
-  lexinfo:directObject    :cross_obj .
-
-:cross_ontomap a    lemon:OntoMap, lemon:LexicalSense ;
-  lemon:ontoMapping :cross_ontomap ;
+:design_ontomap a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :design_ontomap ;
   lemon:reference   <http://dbpedia.org/ontology/discoverer> ;
-  lemon:subjOfProp  :cross_subj ;
-  lemon:objOfProp   :cross_obj ;
-  lemon:condition   :cross_condition .
+  lemon:subjOfProp  :design_obj ;
+  lemon:objOfProp   :design_subj ;
+  lemon:condition   :design_condition .
 
-:cross_condition a     lemon:condition ;
+
+:design_condition a    lemon:condition ;
   lemon:propertyDomain <http://dbpedia.org/ontology/Place> ;
   lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
 
 
-# see https://lemon-model.net/lemon-cookbook/node17.html
-
-:crossed a             lemon:LexicalEntry ;
+:designed a            lemon:LexicalEntry ;
   lexinfo:partOfSpeech lexinfo:adjective ;
-  lemon:canonicalForm  :form_crossed_canonical ;
-  lemon:otherForm      :form_crossed_by ;
-  lemon:synBehavior    :crossed_frame_adjectivepp ;
-  lemon:sense          :crossed_ontomap .
+  lemon:canonicalForm  :form_designed_canonical ;
+  lemon:otherForm      :form_designed_by ;
+  lemon:synBehavior    :designed_frame_adjectivepp ;
+  lemon:sense          :designed_ontomap .
 
-:form_crossed_canonical a lemon:Form ;
-  lemon:writtenRep        "discovers"@en .
+:form_designed_canonical a lemon:Form ;
+  lemon:writtenRep         "discovered"@en .
 
-:form_crossed_by a     lemon:Form ;
-  lemon:writtenRep     "discovers"@en ;
+:form_designed_by a    lemon:Form ;
+  lemon:writtenRep     "discovered"@en ;
   lexinfo:verbFormMood lexinfo:participle .
 
 
-:crossed_frame_adjectivepp a   lexinfo:AdjectivePPFrame ;
-  lexinfo:copulativeSubject    :crossed_subj ;
-  lexinfo:prepositionalAdjunct :crossed_obj .
+:designed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :designed_subj ;
+  lexinfo:prepositionalAdjunct :designed_obj .
 
-:crossed_ontomap a  lemon:OntoMap, lemon:LexicalSense ;
-  lemon:ontoMapping :crossed_ontomap ;
+:designed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :designed_ontomap ;
   lemon:reference   <http://dbpedia.org/ontology/discoverer> ;
-  lemon:subjOfProp  :crossed_obj ;
-  lemon:objOfProp   :crossed_subj ;
-  lemon:condition   :cross_condition .
+  lemon:subjOfProp  :designed_subj ;
+  lemon:objOfProp   :designed_obj ;
+  lemon:condition   :design_condition .
 
-:crossed_obj lemon:marker :by .
+:designed_obj lemon:marker :by .
 
 ## Prepositions ##
 
 :by a                  lemon:SynRoleMarker ;
-  lemon:canonicalForm  [ lemon:writtenRep "of"@en ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "by"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
-

@@ -77,17 +77,18 @@ public class QueGG {
                queGG.init(language, inputDir, outputDir);
                 }
             else if(fileType.contains("csv")){
-              queGG.generateTurtle(inputDir);
+               queGG.generateTurtle(inputDir);
             }
             else
               throw new Exception("No file type is mentioned!!");
 
+                queGG.init(language, inputDir, outputDir);
                 List<File> fileList = FileUtils.getFiles(outputDir+"/", "grammar_FULL_DATASET_EN", ".json");
                 if (fileList.isEmpty()) {
                     throw new Exception("No files to process for question answering system!!");
                 }
-                //ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile,maxNumberOfEntities);
-                //readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir);
+                ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile,maxNumberOfEntities);
+                readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir);
 
                 //temporary close of QA system generation
                 //ExecJar.callInterface(javaLoc,jarFile);
@@ -114,6 +115,8 @@ public class QueGG {
     }
 
     public void generateTurtle(String inputDir) throws IOException {
+            //FileUtils.deleteFiles(inputDir,".ttl");
+        
                String lemonEntry=null;
                File f = new File(inputDir);
                String[]pathnames = f.list();
@@ -129,14 +132,14 @@ public class QueGG {
                           List<String[]> rows = csvFile.getRows(new File(directory+file));
                           Integer index = 0;
                           TurtleCreation nounPPFrameXsl =null;
-                          String fileName=null,tutleString=null,syntacticType=null;
+                          String syntacticType=null;
 
                           if(file.contains("TransitiveFrame")){
                               syntacticType="TransitiveFrame";
                              }
-                          /*else if(file.contains("NounPPFrame")){
+                          else if(file.contains("NounPPFrame")){
                               syntacticType="NounPPFrame";
-                           }*/
+                           }
                           else 
                              continue;
 

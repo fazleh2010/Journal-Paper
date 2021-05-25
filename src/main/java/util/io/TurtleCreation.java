@@ -34,7 +34,7 @@ public class TurtleCreation {
 
     public TurtleCreation(String[] row, String syntacticFrame) {
         if (syntacticFrame.contains("NounPPFrame")) {
-           setNounPPFrame(row, syntacticFrame);
+            setNounPPFrame(row, syntacticFrame);
         } else if (syntacticFrame.contains("TransitiveFrame")) {
             setTransitiveFrame(row, syntacticFrame);
         }
@@ -42,43 +42,44 @@ public class TurtleCreation {
     }
 
     private void setNounPPFrame(String[] row, String syntacticFrame) {
-            this.lemonEntry = row[GoogleXslSheet.lemonEntryIndex];
-            this.partOfSpeech = row[GoogleXslSheet.NounPPFrame.partOfSpeechIndex];
-            this.writtenForm_singular = row[GoogleXslSheet.NounPPFrame.writtenFormSingularIndex];
-            this.writtenForm_plural = row[GoogleXslSheet.NounPPFrame.writtenFormPluralIndex];
-            this.preposition = row[GoogleXslSheet.NounPPFrame.prepositionIndex];
-            this.sense = row[GoogleXslSheet.NounPPFrame.senseIndex];
-            this.reference = row[GoogleXslSheet.NounPPFrame.referenceIndex];
-            this.domain = row[GoogleXslSheet.NounPPFrame.domainIndex];
-            this.range = row[GoogleXslSheet.NounPPFrame.rangeIndex];
-            this.nounPPFrameTurtle();
-            this.tutleFileName = getFileName(syntacticFrame) ;
+        this.lemonEntry = row[GoogleXslSheet.lemonEntryIndex];
+        this.partOfSpeech = row[GoogleXslSheet.NounPPFrame.partOfSpeechIndex];
+        this.writtenForm_singular = row[GoogleXslSheet.NounPPFrame.writtenFormSingularIndex];
+        this.writtenForm_plural = row[GoogleXslSheet.NounPPFrame.writtenFormPluralIndex];
+        this.preposition = row[GoogleXslSheet.NounPPFrame.prepositionIndex];
+        this.sense = row[GoogleXslSheet.NounPPFrame.senseIndex];
+        this.reference = row[GoogleXslSheet.NounPPFrame.referenceIndex];
+        this.domain = row[GoogleXslSheet.NounPPFrame.domainIndex];
+        this.range = row[GoogleXslSheet.NounPPFrame.rangeIndex];
+        this.nounPPFrameTurtle();
+        this.tutleFileName = getFileName(syntacticFrame);
     }
 
     private void setTransitiveFrame(String[] row, String syntacticFrame) {
-            this.lemonEntry = row[GoogleXslSheet.lemonEntryIndex];
-            this.partOfSpeech = row[GoogleXslSheet.TransitFrame.partOfSpeechIndex];
-            this.writtenFormInfinitive = row[GoogleXslSheet.TransitFrame.writtenFormInfinitive];
-            this.writtenForm3rdPerson = row[GoogleXslSheet.TransitFrame.writtenForm3rdPerson];
-            this.writtenFormPast = row[GoogleXslSheet.TransitFrame.writtenFormPast];
-            this.sense = row[GoogleXslSheet.TransitFrame.senseIndex];
-            this.reference = row[GoogleXslSheet.TransitFrame.referenceIndex];
-            this.domain = row[GoogleXslSheet.TransitFrame.domainIndex];
-            this.range = row[GoogleXslSheet.TransitFrame.rangeIndex];
-            this.transitiveTurtleSense1();
-            this.tutleFileName = getFileName(syntacticFrame) ;
+        this.lemonEntry = row[GoogleXslSheet.lemonEntryIndex];
+        this.partOfSpeech = row[GoogleXslSheet.TransitFrame.partOfSpeechIndex];
+        this.writtenFormInfinitive = row[GoogleXslSheet.TransitFrame.writtenFormInfinitive];
+        this.writtenForm3rdPerson = row[GoogleXslSheet.TransitFrame.writtenForm3rdPerson];
+        this.writtenFormPast = row[GoogleXslSheet.TransitFrame.writtenFormPast];
+        this.sense = row[GoogleXslSheet.TransitFrame.senseIndex];
+        this.reference = row[GoogleXslSheet.TransitFrame.referenceIndex];
+        this.domain = row[GoogleXslSheet.TransitFrame.domainIndex];
+        this.range = row[GoogleXslSheet.TransitFrame.rangeIndex];
+        this.transitiveTurtleSense1();
+        this.tutleFileName = getFileName(syntacticFrame);
     }
 
     public String getTutleFileName() {
         return tutleFileName;
     }
-    
+
     private String getFileName(String syntacticFrame) {
-      return syntacticFrame+"-lexicon" + "-" + lemonEntry.replace("/", "") + ".ttl";
+        return syntacticFrame + "-lexicon" + "-" + lemonEntry.replace("/", "") + ".ttl";
 
     }
-     public String getTutleString() {
-         return this.tutleString;
+
+    public String getTutleString() {
+        return this.tutleString;
     }
 
     public TurtleCreation(String[] row) {
@@ -140,6 +141,100 @@ public class TurtleCreation {
     }
 
     public void transitiveTurtleSense1() {
+        this.reference = this.setReference(reference);
+        this.domain = this.setReference(domain);
+        this.range = this.setReference(range);
+
+        this.tutleString = 
+                "@prefix :        <http://localhost:8080/lexicon#> .\n"
+                + "\n"
+                + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
+                + "@prefix lemon:   <http://lemon-model.net/lemon#> .\n"
+                + "\n"
+                + "@base            <http://localhost:8080#> .\n"
+                + "\n"
+                + ":lexicon_en a    lemon:Lexicon ;\n"
+                + "  lemon:language \"en\" ;\n"
+                + "  lemon:entry    :to_design ;\n"
+                + "  lemon:entry    :designed ;\n"
+                + "  lemon:entry    :by .\n"
+                + "\n"
+                + ":to_design a           lemon:LexicalEntry ;\n"
+                + "  lexinfo:partOfSpeech lexinfo:verb ;\n"
+                + "  lemon:canonicalForm  :form_design ;\n"
+                + "  lemon:otherForm      :form_designs ;\n"
+                + "  lemon:otherForm      :form_designed ;\n"
+                + "  lemon:synBehavior    :design_frame_transitive ;\n"
+                + "  lemon:sense          :design_ontomap .\n"
+                + "\n"
+                + "\n"
+                + ":form_design a         lemon:Form ;\n"
+                + "  lemon:writtenRep     \""+this.writtenFormInfinitive+"\"@en ;\n"
+                + "  lexinfo:verbFormMood lexinfo:infinitive .\n"
+                + "\n"
+                + ":form_designs a    lemon:Form ;\n"
+                + "  lemon:writtenRep \""+this.writtenForm3rdPerson+"\"@en ;\n"
+                + "  lexinfo:person   lexinfo:secondPerson .\n"
+                + "\n"
+                + ":form_designed a   lemon:Form ;\n"
+                + "  lemon:writtenRep \""+this.writtenFormPast+"\"@en ;\n"
+                + "  lexinfo:tense    lexinfo:past .\n"
+                + "\n"
+                + ":design_frame_transitive a lexinfo:TransitiveFrame ;\n"
+                + "  lexinfo:subject          :design_subj ;\n"
+                + "  lexinfo:directObject     :design_obj .\n"
+                + "\n"
+                + ":design_ontomap a   lemon:OntoMap, lemon:LexicalSense ;\n"
+                + "  lemon:ontoMapping :design_ontomap ;\n"
+                + "  lemon:reference   <http://dbpedia.org/ontology/"+this.reference+"> ;\n"
+                + "  lemon:subjOfProp  :design_obj ;\n"
+                + "  lemon:objOfProp   :design_subj ;\n"
+                + "  lemon:condition   :design_condition .\n"
+                + "\n"
+                + "\n"
+                + ":design_condition a    lemon:condition ;\n"
+                + "  lemon:propertyDomain <http://dbpedia.org/ontology/"+this.domain+"> ;\n"
+                + "  lemon:propertyRange  <http://dbpedia.org/ontology/"+this.range+"> .\n"
+                + "\n"
+                + "\n"
+                + ":designed a            lemon:LexicalEntry ;\n"
+                + "  lexinfo:partOfSpeech lexinfo:adjective ;\n"
+                + "  lemon:canonicalForm  :form_designed_canonical ;\n"
+                + "  lemon:otherForm      :form_designed_by ;\n"
+                + "  lemon:synBehavior    :designed_frame_adjectivepp ;\n"
+                + "  lemon:sense          :designed_ontomap .\n"
+                + "\n"
+                + ":form_designed_canonical a lemon:Form ;\n"
+                + "  lemon:writtenRep         \""+this.writtenFormPast+"\"@en .\n"
+                + "\n"
+                + ":form_designed_by a    lemon:Form ;\n"
+                + "  lemon:writtenRep     \""+this.writtenFormPast+"\"@en ;\n"
+                + "  lexinfo:verbFormMood lexinfo:participle .\n"
+                + "\n"
+                + "\n"
+                + ":designed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;\n"
+                + "  lexinfo:copulativeSubject    :designed_subj ;\n"
+                + "  lexinfo:prepositionalAdjunct :designed_obj .\n"
+                + "\n"
+                + ":designed_ontomap a lemon:OntoMap, lemon:LexicalSense ;\n"
+                + "  lemon:ontoMapping :designed_ontomap ;\n"
+                + "  lemon:reference   <http://dbpedia.org/ontology/"+reference+"> ;\n"
+                + "  lemon:subjOfProp  :designed_subj ;\n"
+                + "  lemon:objOfProp   :designed_obj ;\n"
+                + "  lemon:condition   :design_condition .\n"
+                + "\n"
+                + ":designed_obj lemon:marker :by .\n"
+                + "\n"
+                + "## Prepositions ##\n"
+                + "\n"
+                + ":by a                  lemon:SynRoleMarker ;\n"
+                + "  lemon:canonicalForm  [ lemon:writtenRep \"by\"@en ] ;\n"
+                + "  lexinfo:partOfSpeech lexinfo:preposition .\n"
+                + "";
+
+    }
+
+    /*public void inTransitiveTurtleSense1() {
         this.reference = this.setReference(reference);
         this.domain = this.setReference(domain);
         this.range = this.setReference(range);
@@ -236,8 +331,7 @@ public class TurtleCreation {
                 + "\n"
                 + "";
 
-    }
-
+    }*/
     private String setReference(String reference) {
         if (reference.contains(":")) {
             String[] info = reference.split(":");
@@ -246,7 +340,5 @@ public class TurtleCreation {
         }
         return reference.strip().trim();
     }
-
-   
 
 }
