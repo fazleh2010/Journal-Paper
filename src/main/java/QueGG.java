@@ -134,11 +134,14 @@ public class QueGG {
                           TurtleCreation nounPPFrameXsl =null;
                           String syntacticType=null;
 
-                          if(file.contains("TransitiveFrame")){
-                              syntacticType="TransitiveFrame";
+                          if(file.contains("IntransitivePPFrame")){
+                              syntacticType="IntransitivePPFrame";
                              }
-                          else if(file.contains("NounPPFrame")){
+                           else if(file.contains("NounPPFrame")){
                               syntacticType="NounPPFrame";
+                           }
+                           else if(file.contains("TransitiveFrame")){
+                              syntacticType="TransitiveFrame";
                            }
                           else 
                              continue;

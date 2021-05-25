@@ -1,0 +1,58 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :to_grow ;
+  lemon:entry    :in .
+
+:to_grow a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_grow ;
+  lemon:otherForm      :form_grows ;
+  lemon:otherForm      :form_grow_plural ;
+  lemon:synBehavior    :grow_frame ;
+  lemon:sense          :grow_ontomap .
+
+:form_grow a           lemon:Form ;
+  lemon:writtenRep     "grow"@en ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_grows a      lemon:Form ;
+  lemon:writtenRep "grows"@en ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:form_grow_plural a lemon:Form ;
+  lemon:writtenRep  "grow"@en ;
+  lexinfo:number    lexinfo:plural ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:present .
+
+:grow_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/WineRegion> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Grape> .
+
+:grow_frame a                  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :grow_subj ;
+  lexinfo:prepositionalAdjunct :grow_obj .
+
+:grow_ontomap a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :grow_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/growingGrape> ;
+  lemon:subjOfProp  :grow_obj ;
+  lemon:objOfProp   :grow_subj ;
+  lemon:condition   :grow_condition .
+
+:grow_obj lemon:marker :in .
+
+## Prepositions ##
+
+:in a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "in"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

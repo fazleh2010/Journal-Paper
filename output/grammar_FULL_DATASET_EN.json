@@ -1598,6 +1598,644 @@
     "id" : "6",
     "language" : "EN",
     "type" : "SENTENCE",
+    "bindingType" : "WINEREGION",
+    "returnType" : "GRAPE",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the ($x | WINEREGION_NP) grows?", "When were the ($x | WINEREGION_NP) grows?", "Which grape was the ($x | WINEREGION_NP) grows?", "Which grape were the ($x | WINEREGION_NP) grows?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/growingGrape> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Madera AVA",
+        "uri" : "http://dbpedia.org/resource/Madera_AVA"
+      }, {
+        "label" : "Maine wine",
+        "uri" : "http://dbpedia.org/resource/Maine_wine"
+      }, {
+        "label" : "Malibu-Newton Canyon AVA",
+        "uri" : "http://dbpedia.org/resource/Malibu-Newton_Canyon_AVA"
+      }, {
+        "label" : "Cornas AOC",
+        "uri" : "http://dbpedia.org/resource/Cornas_AOC"
+      }, {
+        "label" : "Upper Hiwassee Highlands AVA",
+        "uri" : "http://dbpedia.org/resource/Upper_Hiwassee_Highlands_AVA"
+      }, {
+        "label" : "Utah wine",
+        "uri" : "http://dbpedia.org/resource/Utah_wine"
+      }, {
+        "label" : "Vacqueyras AOC",
+        "uri" : "http://dbpedia.org/resource/Vacqueyras_AOC"
+      }, {
+        "label" : "Vermont wine",
+        "uri" : "http://dbpedia.org/resource/Vermont_wine"
+      }, {
+        "label" : "Côtes du Rhône AOC",
+        "uri" : "http://dbpedia.org/resource/Côtes_du_Rhône_AOC"
+      }, {
+        "label" : "Rasteau AOC",
+        "uri" : "http://dbpedia.org/resource/Rasteau_AOC"
+      }, {
+        "label" : "Ventoux AOC",
+        "uri" : "http://dbpedia.org/resource/Ventoux_AOC"
+      }, {
+        "label" : "Vinsobres AOC",
+        "uri" : "http://dbpedia.org/resource/Vinsobres_AOC"
+      }, {
+        "label" : "San Antonio Valley AVA",
+        "uri" : "http://dbpedia.org/resource/San_Antonio_Valley_AVA"
+      }, {
+        "label" : "Santorini (wine)",
+        "uri" : "http://dbpedia.org/resource/Santorini_(wine)"
+      }, {
+        "label" : "Pouilly-Fuissé",
+        "uri" : "http://dbpedia.org/resource/Pouilly-Fuissé"
+      }, {
+        "label" : "Nistreana (wine)",
+        "uri" : "http://dbpedia.org/resource/Nistreana_(wine)"
+      }, {
+        "label" : "Borden Ranch AVA",
+        "uri" : "http://dbpedia.org/resource/Borden_Ranch_AVA"
+      }, {
+        "label" : "Delaware wine",
+        "uri" : "http://dbpedia.org/resource/Delaware_wine"
+      }, {
+        "label" : "Diablo Grande AVA",
+        "uri" : "http://dbpedia.org/resource/Diablo_Grande_AVA"
+      }, {
+        "label" : "Grand River Valley AVA",
+        "uri" : "http://dbpedia.org/resource/Grand_River_Valley_AVA"
+      }, {
+        "label" : "Grand Valley AVA",
+        "uri" : "http://dbpedia.org/resource/Grand_Valley_AVA"
+      }, {
+        "label" : "Green Valley of Russian River Valley AVA",
+        "uri" : "http://dbpedia.org/resource/Green_Valley_of_Russian_River_Valley_AVA"
+      }, {
+        "label" : "Guenoc Valley AVA",
+        "uri" : "http://dbpedia.org/resource/Guenoc_Valley_AVA"
+      }, {
+        "label" : "Knights Valley AVA",
+        "uri" : "http://dbpedia.org/resource/Knights_Valley_AVA"
+      }, {
+        "label" : "Puget Sound AVA",
+        "uri" : "http://dbpedia.org/resource/Puget_Sound_AVA"
+      }, {
+        "label" : "Puligny-Montrachet wine",
+        "uri" : "http://dbpedia.org/resource/Puligny-Montrachet_wine"
+      }, {
+        "label" : "Grignan-Les Adhemar AOC",
+        "uri" : "http://dbpedia.org/resource/Grignan-Les_Adhemar_AOC"
+      }, {
+        "label" : "Grampians (wine)",
+        "uri" : "http://dbpedia.org/resource/Grampians_(wine)"
+      }, {
+        "label" : "Ajaccio AOC",
+        "uri" : "http://dbpedia.org/resource/Ajaccio_AOC"
+      }, {
+        "label" : "Alabama wine",
+        "uri" : "http://dbpedia.org/resource/Alabama_wine"
+      }, {
+        "label" : "Alexander Valley AVA",
+        "uri" : "http://dbpedia.org/resource/Alexander_Valley_AVA"
+      }, {
+        "label" : "Alta Mesa AVA",
+        "uri" : "http://dbpedia.org/resource/Alta_Mesa_AVA"
+      }, {
+        "label" : "Altus AVA",
+        "uri" : "http://dbpedia.org/resource/Altus_AVA"
+      }, {
+        "label" : "Catoctin AVA",
+        "uri" : "http://dbpedia.org/resource/Catoctin_AVA"
+      }, {
+        "label" : "Central Coast AVA",
+        "uri" : "http://dbpedia.org/resource/Central_Coast_AVA"
+      }, {
+        "label" : "Central Otago wine region",
+        "uri" : "http://dbpedia.org/resource/Central_Otago_wine_region"
+      }, {
+        "label" : "Chalk Hill AVA",
+        "uri" : "http://dbpedia.org/resource/Chalk_Hill_AVA"
+      }, {
+        "label" : "Chalone AVA",
+        "uri" : "http://dbpedia.org/resource/Chalone_AVA"
+      }, {
+        "label" : "Finger Lakes AVA",
+        "uri" : "http://dbpedia.org/resource/Finger_Lakes_AVA"
+      }, {
+        "label" : "North Carolina wine",
+        "uri" : "http://dbpedia.org/resource/North_Carolina_wine"
+      }, {
+        "label" : "North Coast AVA",
+        "uri" : "http://dbpedia.org/resource/North_Coast_AVA"
+      }, {
+        "label" : "North Fork of Long Island AVA",
+        "uri" : "http://dbpedia.org/resource/North_Fork_of_Long_Island_AVA"
+      }, {
+        "label" : "North Yuba AVA",
+        "uri" : "http://dbpedia.org/resource/North_Yuba_AVA"
+      }, {
+        "label" : "Northern Sonoma AVA",
+        "uri" : "http://dbpedia.org/resource/Northern_Sonoma_AVA"
+      }, {
+        "label" : "Oakville AVA",
+        "uri" : "http://dbpedia.org/resource/Oakville_AVA"
+      }, {
+        "label" : "Ohio River Valley AVA",
+        "uri" : "http://dbpedia.org/resource/Ohio_River_Valley_AVA"
+      }, {
+        "label" : "Ohio wine",
+        "uri" : "http://dbpedia.org/resource/Ohio_wine"
+      }, {
+        "label" : "Oklahoma wine",
+        "uri" : "http://dbpedia.org/resource/Oklahoma_wine"
+      }, {
+        "label" : "Dão DOC",
+        "uri" : "http://dbpedia.org/resource/Dão_DOC"
+      }, {
+        "label" : "Redwood Valley AVA",
+        "uri" : "http://dbpedia.org/resource/Redwood_Valley_AVA"
+      }, {
+        "label" : "Saint-Joseph AOC",
+        "uri" : "http://dbpedia.org/resource/Saint-Joseph_AOC"
+      }, {
+        "label" : "Banyuls AOC",
+        "uri" : "http://dbpedia.org/resource/Banyuls_AOC"
+      }, {
+        "label" : "Bardolino DOC",
+        "uri" : "http://dbpedia.org/resource/Bardolino_DOC"
+      }, {
+        "label" : "Beaujolais",
+        "uri" : "http://dbpedia.org/resource/Beaujolais"
+      }, {
+        "label" : "Lodi AVA",
+        "uri" : "http://dbpedia.org/resource/Lodi_AVA"
+      }, {
+        "label" : "Loire Valley (wine)",
+        "uri" : "http://dbpedia.org/resource/Loire_Valley_(wine)"
+      }, {
+        "label" : "Long Island AVA",
+        "uri" : "http://dbpedia.org/resource/Long_Island_AVA"
+      }, {
+        "label" : "Louisiana wine",
+        "uri" : "http://dbpedia.org/resource/Louisiana_wine"
+      }, {
+        "label" : "Cairanne AOC",
+        "uri" : "http://dbpedia.org/resource/Cairanne_AOC"
+      }, {
+        "label" : "California Shenandoah Valley AVA",
+        "uri" : "http://dbpedia.org/resource/California_Shenandoah_Valley_AVA"
+      }, {
+        "label" : "California wine",
+        "uri" : "http://dbpedia.org/resource/California_wine"
+      }, {
+        "label" : "Capay Valley AVA",
+        "uri" : "http://dbpedia.org/resource/Capay_Valley_AVA"
+      }, {
+        "label" : "Carmel Valley AVA",
+        "uri" : "http://dbpedia.org/resource/Carmel_Valley_AVA"
+      }, {
+        "label" : "Clarksburg AVA",
+        "uri" : "http://dbpedia.org/resource/Clarksburg_AVA"
+      }, {
+        "label" : "Clear Lake AVA",
+        "uri" : "http://dbpedia.org/resource/Clear_Lake_AVA"
+      }, {
+        "label" : "Clements Hills AVA",
+        "uri" : "http://dbpedia.org/resource/Clements_Hills_AVA"
+      }, {
+        "label" : "Ancient Lakes of the Columbia Valley AVA",
+        "uri" : "http://dbpedia.org/resource/Ancient_Lakes_of_the_Columbia_Valley_AVA"
+      }, {
+        "label" : "Anderson Valley AVA",
+        "uri" : "http://dbpedia.org/resource/Anderson_Valley_AVA"
+      }, {
+        "label" : "Georgia (U.S. state) wine",
+        "uri" : "http://dbpedia.org/resource/Georgia_(U.S._state)_wine"
+      }, {
+        "label" : "Balatonboglár wine region",
+        "uri" : "http://dbpedia.org/resource/Balatonboglár_wine_region"
+      }, {
+        "label" : "Bell Mountain AVA",
+        "uri" : "http://dbpedia.org/resource/Bell_Mountain_AVA"
+      }, {
+        "label" : "Ben Lomond Mountain AVA",
+        "uri" : "http://dbpedia.org/resource/Ben_Lomond_Mountain_AVA"
+      }, {
+        "label" : "Bennett Valley AVA",
+        "uri" : "http://dbpedia.org/resource/Bennett_Valley_AVA"
+      }, {
+        "label" : "Bergerac wine",
+        "uri" : "http://dbpedia.org/resource/Bergerac_wine"
+      }, {
+        "label" : "Kansas wine",
+        "uri" : "http://dbpedia.org/resource/Kansas_wine"
+      }, {
+        "label" : "Kentucky wine",
+        "uri" : "http://dbpedia.org/resource/Kentucky_wine"
+      }, {
+        "label" : "Leelanau Peninsula AVA",
+        "uri" : "http://dbpedia.org/resource/Leelanau_Peninsula_AVA"
+      }, {
+        "label" : "Leona Valley AVA",
+        "uri" : "http://dbpedia.org/resource/Leona_Valley_AVA"
+      }, {
+        "label" : "Lime Kiln Valley AVA",
+        "uri" : "http://dbpedia.org/resource/Lime_Kiln_Valley_AVA"
+      }, {
+        "label" : "Linganore AVA",
+        "uri" : "http://dbpedia.org/resource/Linganore_AVA"
+      }, {
+        "label" : "Tennessee wine",
+        "uri" : "http://dbpedia.org/resource/Tennessee_wine"
+      }, {
+        "label" : "North Fork of Roanoke AVA",
+        "uri" : "http://dbpedia.org/resource/North_Fork_of_Roanoke_AVA"
+      }, {
+        "label" : "Michigan wine",
+        "uri" : "http://dbpedia.org/resource/Michigan_wine"
+      }, {
+        "label" : "Mimbres Valley AVA",
+        "uri" : "http://dbpedia.org/resource/Mimbres_Valley_AVA"
+      }, {
+        "label" : "Minnesota wine",
+        "uri" : "http://dbpedia.org/resource/Minnesota_wine"
+      }, {
+        "label" : "Mississippi Delta AVA",
+        "uri" : "http://dbpedia.org/resource/Mississippi_Delta_AVA"
+      }, {
+        "label" : "Mississippi wine",
+        "uri" : "http://dbpedia.org/resource/Mississippi_wine"
+      }, {
+        "label" : "Missouri wine",
+        "uri" : "http://dbpedia.org/resource/Missouri_wine"
+      }, {
+        "label" : "Mokelumne River AVA",
+        "uri" : "http://dbpedia.org/resource/Mokelumne_River_AVA"
+      }, {
+        "label" : "Russian River Valley AVA",
+        "uri" : "http://dbpedia.org/resource/Russian_River_Valley_AVA"
+      }, {
+        "label" : "Saint-Estèphe AOC",
+        "uri" : "http://dbpedia.org/resource/Saint-Estèphe_AOC"
+      }, {
+        "label" : "Saint-Julien AOC",
+        "uri" : "http://dbpedia.org/resource/Saint-Julien_AOC"
+      }, {
+        "label" : "Saint-Véran AOC",
+        "uri" : "http://dbpedia.org/resource/Saint-Véran_AOC"
+      }, {
+        "label" : "Salado Creek AVA",
+        "uri" : "http://dbpedia.org/resource/Salado_Creek_AVA"
+      }, {
+        "label" : "Livermore Valley AVA",
+        "uri" : "http://dbpedia.org/resource/Livermore_Valley_AVA"
+      }, {
+        "label" : "Mendocino AVA",
+        "uri" : "http://dbpedia.org/resource/Mendocino_AVA"
+      }, {
+        "label" : "Sussex wine",
+        "uri" : "http://dbpedia.org/resource/Sussex_wine"
+      }, {
+        "label" : "Sloughhouse AVA",
+        "uri" : "http://dbpedia.org/resource/Sloughhouse_AVA"
+      }, {
+        "label" : "Snake River Valley AVA",
+        "uri" : "http://dbpedia.org/resource/Snake_River_Valley_AVA"
+      }, {
+        "label" : "Snipes Mountain AVA",
+        "uri" : "http://dbpedia.org/resource/Snipes_Mountain_AVA"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "7",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "GRAPE",
+    "returnType" : "WINEREGION",
+    "frameType" : "IPP",
+    "sentences" : [ "What was grow in $x?", "What was grows in $x?", "What were grow in $x?", "What were grows in $x?", "Which wine region was grow in $x?", "Which wine region was grows in $x?", "Which wine regions were grow in $x?", "Which wine regions were grows in $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/growingGrape> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Alvarelhao",
+        "uri" : "http://dbpedia.org/resource/Alvarelhao"
+      }, {
+        "label" : "Catawba (grape)",
+        "uri" : "http://dbpedia.org/resource/Catawba_(grape)"
+      }, {
+        "label" : "Corot noir",
+        "uri" : "http://dbpedia.org/resource/Corot_noir"
+      }, {
+        "label" : "Vitis vinifera",
+        "uri" : "http://dbpedia.org/resource/Vitis_vinifera"
+      }, {
+        "label" : "Dolcetto",
+        "uri" : "http://dbpedia.org/resource/Dolcetto"
+      }, {
+        "label" : "Melon de Bourgogne",
+        "uri" : "http://dbpedia.org/resource/Melon_de_Bourgogne"
+      }, {
+        "label" : "Merlot",
+        "uri" : "http://dbpedia.org/resource/Merlot"
+      }, {
+        "label" : "Trebbiano",
+        "uri" : "http://dbpedia.org/resource/Trebbiano"
+      }, {
+        "label" : "Sauvignon gris",
+        "uri" : "http://dbpedia.org/resource/Sauvignon_gris"
+      }, {
+        "label" : "Sangiovese",
+        "uri" : "http://dbpedia.org/resource/Sangiovese"
+      }, {
+        "label" : "Scheurebe",
+        "uri" : "http://dbpedia.org/resource/Scheurebe"
+      }, {
+        "label" : "Refosco",
+        "uri" : "http://dbpedia.org/resource/Refosco"
+      }, {
+        "label" : "Molinara (grape)",
+        "uri" : "http://dbpedia.org/resource/Molinara_(grape)"
+      }, {
+        "label" : "Lagrein",
+        "uri" : "http://dbpedia.org/resource/Lagrein"
+      }, {
+        "label" : "Traminette",
+        "uri" : "http://dbpedia.org/resource/Traminette"
+      }, {
+        "label" : "Cayuga (grape)",
+        "uri" : "http://dbpedia.org/resource/Cayuga_(grape)"
+      }, {
+        "label" : "Shiraz (grape)",
+        "uri" : "http://dbpedia.org/resource/Shiraz_(grape)"
+      }, {
+        "label" : "Grenache",
+        "uri" : "http://dbpedia.org/resource/Grenache"
+      }, {
+        "label" : "Gruner Veltliner",
+        "uri" : "http://dbpedia.org/resource/Gruner_Veltliner"
+      }, {
+        "label" : "Mondeuse noire",
+        "uri" : "http://dbpedia.org/resource/Mondeuse_noire"
+      }, {
+        "label" : "Rkatsiteli",
+        "uri" : "http://dbpedia.org/resource/Rkatsiteli"
+      }, {
+        "label" : "Trousseau (grape)",
+        "uri" : "http://dbpedia.org/resource/Trousseau_(grape)"
+      }, {
+        "label" : "Grechetto",
+        "uri" : "http://dbpedia.org/resource/Grechetto"
+      }, {
+        "label" : "Grüner Veltliner",
+        "uri" : "http://dbpedia.org/resource/Grüner_Veltliner"
+      }, {
+        "label" : "Hybrid grape",
+        "uri" : "http://dbpedia.org/resource/Hybrid_grape"
+      }, {
+        "label" : "Ondenc",
+        "uri" : "http://dbpedia.org/resource/Ondenc"
+      }, {
+        "label" : "Siegerrebe",
+        "uri" : "http://dbpedia.org/resource/Siegerrebe"
+      }, {
+        "label" : "Királyleányka",
+        "uri" : "http://dbpedia.org/resource/Királyleányka"
+      }, {
+        "label" : "Picpoul",
+        "uri" : "http://dbpedia.org/resource/Picpoul"
+      }, {
+        "label" : "Picpoul Blanc",
+        "uri" : "http://dbpedia.org/resource/Picpoul_Blanc"
+      }, {
+        "label" : "Chasselas",
+        "uri" : "http://dbpedia.org/resource/Chasselas"
+      }, {
+        "label" : "Chelois",
+        "uri" : "http://dbpedia.org/resource/Chelois"
+      }, {
+        "label" : "Chenin blanc",
+        "uri" : "http://dbpedia.org/resource/Chenin_blanc"
+      }, {
+        "label" : "Diamond (grape)",
+        "uri" : "http://dbpedia.org/resource/Diamond_(grape)"
+      }, {
+        "label" : "Flora (grape)",
+        "uri" : "http://dbpedia.org/resource/Flora_(grape)"
+      }, {
+        "label" : "Frontenac (grape)",
+        "uri" : "http://dbpedia.org/resource/Frontenac_(grape)"
+      }, {
+        "label" : "Gewürztraminer",
+        "uri" : "http://dbpedia.org/resource/Gewürztraminer"
+      }, {
+        "label" : "Grenache blanc",
+        "uri" : "http://dbpedia.org/resource/Grenache_blanc"
+      }, {
+        "label" : "Marechal Foch (grape)",
+        "uri" : "http://dbpedia.org/resource/Marechal_Foch_(grape)"
+      }, {
+        "label" : "Palomino (grape)",
+        "uri" : "http://dbpedia.org/resource/Palomino_(grape)"
+      }, {
+        "label" : "Peloursin",
+        "uri" : "http://dbpedia.org/resource/Peloursin"
+      }, {
+        "label" : "Sauvignon vert",
+        "uri" : "http://dbpedia.org/resource/Sauvignon_vert"
+      }, {
+        "label" : "Furmint",
+        "uri" : "http://dbpedia.org/resource/Furmint"
+      }, {
+        "label" : "Léon Millot",
+        "uri" : "http://dbpedia.org/resource/Léon_Millot"
+      }, {
+        "label" : "Mission (grape)",
+        "uri" : "http://dbpedia.org/resource/Mission_(grape)"
+      }, {
+        "label" : "Montepulciano (grape)",
+        "uri" : "http://dbpedia.org/resource/Montepulciano_(grape)"
+      }, {
+        "label" : "Muscat (grape)",
+        "uri" : "http://dbpedia.org/resource/Muscat_(grape)"
+      }, {
+        "label" : "Müller-Thurgau",
+        "uri" : "http://dbpedia.org/resource/Müller-Thurgau"
+      }, {
+        "label" : "Vitis mustangensis",
+        "uri" : "http://dbpedia.org/resource/Vitis_mustangensis"
+      }, {
+        "label" : "Regent (grape)",
+        "uri" : "http://dbpedia.org/resource/Regent_(grape)"
+      }, {
+        "label" : "St. Laurent (grape)",
+        "uri" : "http://dbpedia.org/resource/St._Laurent_(grape)"
+      }, {
+        "label" : "Vidal blanc",
+        "uri" : "http://dbpedia.org/resource/Vidal_blanc"
+      }, {
+        "label" : "Vignoles (grape)",
+        "uri" : "http://dbpedia.org/resource/Vignoles_(grape)"
+      }, {
+        "label" : "Tinta Cão",
+        "uri" : "http://dbpedia.org/resource/Tinta_Cão"
+      }, {
+        "label" : "Touriga Francesa",
+        "uri" : "http://dbpedia.org/resource/Touriga_Francesa"
+      }, {
+        "label" : "Arneis",
+        "uri" : "http://dbpedia.org/resource/Arneis"
+      }, {
+        "label" : "Albarino",
+        "uri" : "http://dbpedia.org/resource/Albarino"
+      }, {
+        "label" : "Delaware (grape)",
+        "uri" : "http://dbpedia.org/resource/Delaware_(grape)"
+      }, {
+        "label" : "Freisa",
+        "uri" : "http://dbpedia.org/resource/Freisa"
+      }, {
+        "label" : "Kay Gray",
+        "uri" : "http://dbpedia.org/resource/Kay_Gray"
+      }, {
+        "label" : "Pinot blanc",
+        "uri" : "http://dbpedia.org/resource/Pinot_blanc"
+      }, {
+        "label" : "Pinotage",
+        "uri" : "http://dbpedia.org/resource/Pinotage"
+      }, {
+        "label" : "St. Pepin (grape)",
+        "uri" : "http://dbpedia.org/resource/St._Pepin_(grape)"
+      }, {
+        "label" : "Albariño",
+        "uri" : "http://dbpedia.org/resource/Albariño"
+      }, {
+        "label" : "Aleatico",
+        "uri" : "http://dbpedia.org/resource/Aleatico"
+      }, {
+        "label" : "Gewurztraminer",
+        "uri" : "http://dbpedia.org/resource/Gewurztraminer"
+      }, {
+        "label" : "Dornfelder",
+        "uri" : "http://dbpedia.org/resource/Dornfelder"
+      }, {
+        "label" : "French Colombard",
+        "uri" : "http://dbpedia.org/resource/French_Colombard"
+      }, {
+        "label" : "Marsanne (grape)",
+        "uri" : "http://dbpedia.org/resource/Marsanne_(grape)"
+      }, {
+        "label" : "Mouvedre",
+        "uri" : "http://dbpedia.org/resource/Mouvedre"
+      }, {
+        "label" : "Bianca",
+        "uri" : "http://dbpedia.org/resource/Bianca"
+      }, {
+        "label" : "Blaufrankisch",
+        "uri" : "http://dbpedia.org/resource/Blaufrankisch"
+      }, {
+        "label" : "Muscat Ottonel",
+        "uri" : "http://dbpedia.org/resource/Muscat_Ottonel"
+      }, {
+        "label" : "Muscat of Alexandria",
+        "uri" : "http://dbpedia.org/resource/Muscat_of_Alexandria"
+      }, {
+        "label" : "Niagara (grape)",
+        "uri" : "http://dbpedia.org/resource/Niagara_(grape)"
+      }, {
+        "label" : "Norton (grape)",
+        "uri" : "http://dbpedia.org/resource/Norton_(grape)"
+      }, {
+        "label" : "Palomino",
+        "uri" : "http://dbpedia.org/resource/Palomino"
+      }, {
+        "label" : "Severny (grape)",
+        "uri" : "http://dbpedia.org/resource/Severny_(grape)"
+      }, {
+        "label" : "St. Croix (grape)",
+        "uri" : "http://dbpedia.org/resource/St._Croix_(grape)"
+      }, {
+        "label" : "Syrah",
+        "uri" : "http://dbpedia.org/resource/Syrah"
+      }, {
+        "label" : "Tannat",
+        "uri" : "http://dbpedia.org/resource/Tannat"
+      }, {
+        "label" : "Sémillon",
+        "uri" : "http://dbpedia.org/resource/Sémillon"
+      }, {
+        "label" : "Petit Bouschet",
+        "uri" : "http://dbpedia.org/resource/Petit_Bouschet"
+      }, {
+        "label" : "Tempranillo",
+        "uri" : "http://dbpedia.org/resource/Tempranillo"
+      }, {
+        "label" : "http://dbpedia.org/resource/Oraniensteiner",
+        "uri" : "http://dbpedia.org/resource/Oraniensteiner"
+      }, {
+        "label" : "http://dbpedia.org/resource/Colobel",
+        "uri" : "http://dbpedia.org/resource/Colobel"
+      }, {
+        "label" : "http://dbpedia.org/resource/Geisenheim_(grape)",
+        "uri" : "http://dbpedia.org/resource/Geisenheim_(grape)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Fredonia_(grape)",
+        "uri" : "http://dbpedia.org/resource/Fredonia_(grape)"
+      }, {
+        "label" : "http://dbpedia.org/resource/LaCrescent",
+        "uri" : "http://dbpedia.org/resource/LaCrescent"
+      }, {
+        "label" : "Carignan",
+        "uri" : "http://dbpedia.org/resource/Carignan"
+      }, {
+        "label" : "Carménère",
+        "uri" : "http://dbpedia.org/resource/Carménère"
+      }, {
+        "label" : "Cayuga White",
+        "uri" : "http://dbpedia.org/resource/Cayuga_White"
+      }, {
+        "label" : "Chambourcin",
+        "uri" : "http://dbpedia.org/resource/Chambourcin"
+      }, {
+        "label" : "Champanel (grape)",
+        "uri" : "http://dbpedia.org/resource/Champanel_(grape)"
+      }, {
+        "label" : "Chancellor",
+        "uri" : "http://dbpedia.org/resource/Chancellor"
+      }, {
+        "label" : "Chancellor (grape)",
+        "uri" : "http://dbpedia.org/resource/Chancellor_(grape)"
+      }, {
+        "label" : "Chardonel",
+        "uri" : "http://dbpedia.org/resource/Chardonel"
+      }, {
+        "label" : "Chardonnay",
+        "uri" : "http://dbpedia.org/resource/Chardonnay"
+      }, {
+        "label" : "Isabella (grape)",
+        "uri" : "http://dbpedia.org/resource/Isabella_(grape)"
+      }, {
+        "label" : "Ives noir",
+        "uri" : "http://dbpedia.org/resource/Ives_noir"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "8",
+    "language" : "EN",
+    "type" : "SENTENCE",
     "bindingType" : "LOCATION",
     "returnType" : "LOCATION",
     "frameType" : "FULL_DATASET",

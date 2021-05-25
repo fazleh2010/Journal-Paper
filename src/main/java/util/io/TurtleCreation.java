@@ -19,7 +19,6 @@ public class TurtleCreation {
 
     private String lemonEntry = "birthPlace_of";
     private String partOfSpeech = "noun";
-    private String writtenForm_singular = "birth place";
     private String writtenForm_plural = "-";
     private String writtenFormInfinitive = "";
     private String writtenForm3rdPerson = "";
@@ -37,14 +36,16 @@ public class TurtleCreation {
             setNounPPFrame(row, syntacticFrame);
         } else if (syntacticFrame.contains("TransitiveFrame")) {
             setTransitiveFrame(row, syntacticFrame);
+        } else if (syntacticFrame.contains("IntransitivePPFrame")) {
+            setIntransitivePPFrame(row, syntacticFrame);
         }
 
     }
 
     private void setNounPPFrame(String[] row, String syntacticFrame) {
         this.lemonEntry = row[GoogleXslSheet.lemonEntryIndex];
-        this.partOfSpeech = row[GoogleXslSheet.NounPPFrame.partOfSpeechIndex];
-        this.writtenForm_singular = row[GoogleXslSheet.NounPPFrame.writtenFormSingularIndex];
+        this.partOfSpeech = row[GoogleXslSheet.partOfSpeechIndex];
+        this.writtenFormInfinitive = row[GoogleXslSheet.writtenFormInfinitive];
         this.writtenForm_plural = row[GoogleXslSheet.NounPPFrame.writtenFormPluralIndex];
         this.preposition = row[GoogleXslSheet.NounPPFrame.prepositionIndex];
         this.sense = row[GoogleXslSheet.NounPPFrame.senseIndex];
@@ -57,8 +58,8 @@ public class TurtleCreation {
 
     private void setTransitiveFrame(String[] row, String syntacticFrame) {
         this.lemonEntry = row[GoogleXslSheet.lemonEntryIndex];
-        this.partOfSpeech = row[GoogleXslSheet.TransitFrame.partOfSpeechIndex];
-        this.writtenFormInfinitive = row[GoogleXslSheet.TransitFrame.writtenFormInfinitive];
+        this.partOfSpeech = row[GoogleXslSheet.partOfSpeechIndex];
+        this.writtenFormInfinitive = row[GoogleXslSheet.writtenFormInfinitive];
         this.writtenForm3rdPerson = row[GoogleXslSheet.TransitFrame.writtenForm3rdPerson];
         this.writtenFormPast = row[GoogleXslSheet.TransitFrame.writtenFormPast];
         this.sense = row[GoogleXslSheet.TransitFrame.senseIndex];
@@ -66,6 +67,20 @@ public class TurtleCreation {
         this.domain = row[GoogleXslSheet.TransitFrame.domainIndex];
         this.range = row[GoogleXslSheet.TransitFrame.rangeIndex];
         this.transitiveTurtleSense1();
+        this.tutleFileName = getFileName(syntacticFrame);
+    }
+
+    private void setIntransitivePPFrame(String[] row, String syntacticFrame) {
+        this.lemonEntry = row[GoogleXslSheet.lemonEntryIndex];
+        this.partOfSpeech = row[GoogleXslSheet.partOfSpeechIndex];
+        this.writtenFormInfinitive = row[GoogleXslSheet.writtenFormInfinitive];
+        this.writtenForm3rdPerson = row[GoogleXslSheet.InTransitFrame.writtenForm3rdPerson];
+        this.writtenFormPast = row[GoogleXslSheet.InTransitFrame.writtenFormPast];
+        this.sense = row[GoogleXslSheet.InTransitFrame.senseIndex];
+        this.reference = row[GoogleXslSheet.InTransitFrame.referenceIndex];
+        this.domain = row[GoogleXslSheet.InTransitFrame.domainIndex];
+        this.range = row[GoogleXslSheet.InTransitFrame.rangeIndex];
+        this.inTransitiveTurtleSense1();
         this.tutleFileName = getFileName(syntacticFrame);
     }
 
@@ -113,7 +128,7 @@ public class TurtleCreation {
                 + "  lemon:sense          :birthPlace_sense_ontomap .\n"
                 + "\n"
                 + ":birthPlace_form a lemon:Form ;\n"
-                + "  lemon:writtenRep \"" + writtenForm_singular + "\"@en .\n"
+                + "  lemon:writtenRep \"" + this.writtenFormInfinitive + "\"@en .\n"
                 + "\n"
                 + ":birthPlace_of_nounpp a        lexinfo:NounPPFrame ;\n"
                 + "  lexinfo:copulativeArg        :arg1 ;\n"
@@ -145,8 +160,8 @@ public class TurtleCreation {
         this.domain = this.setReference(domain);
         this.range = this.setReference(range);
 
-        this.tutleString = 
-                "@prefix :        <http://localhost:8080/lexicon#> .\n"
+        this.tutleString
+                = "@prefix :        <http://localhost:8080/lexicon#> .\n"
                 + "\n"
                 + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
                 + "@prefix lemon:   <http://lemon-model.net/lemon#> .\n"
@@ -169,15 +184,15 @@ public class TurtleCreation {
                 + "\n"
                 + "\n"
                 + ":form_design a         lemon:Form ;\n"
-                + "  lemon:writtenRep     \""+this.writtenFormInfinitive+"\"@en ;\n"
+                + "  lemon:writtenRep     \"" + this.writtenFormInfinitive + "\"@en ;\n"
                 + "  lexinfo:verbFormMood lexinfo:infinitive .\n"
                 + "\n"
                 + ":form_designs a    lemon:Form ;\n"
-                + "  lemon:writtenRep \""+this.writtenForm3rdPerson+"\"@en ;\n"
+                + "  lemon:writtenRep \"" + this.writtenForm3rdPerson + "\"@en ;\n"
                 + "  lexinfo:person   lexinfo:secondPerson .\n"
                 + "\n"
                 + ":form_designed a   lemon:Form ;\n"
-                + "  lemon:writtenRep \""+this.writtenFormPast+"\"@en ;\n"
+                + "  lemon:writtenRep \"" + this.writtenFormPast + "\"@en ;\n"
                 + "  lexinfo:tense    lexinfo:past .\n"
                 + "\n"
                 + ":design_frame_transitive a lexinfo:TransitiveFrame ;\n"
@@ -186,15 +201,15 @@ public class TurtleCreation {
                 + "\n"
                 + ":design_ontomap a   lemon:OntoMap, lemon:LexicalSense ;\n"
                 + "  lemon:ontoMapping :design_ontomap ;\n"
-                + "  lemon:reference   <http://dbpedia.org/ontology/"+this.reference+"> ;\n"
+                + "  lemon:reference   <http://dbpedia.org/ontology/" + this.reference + "> ;\n"
                 + "  lemon:subjOfProp  :design_obj ;\n"
                 + "  lemon:objOfProp   :design_subj ;\n"
                 + "  lemon:condition   :design_condition .\n"
                 + "\n"
                 + "\n"
                 + ":design_condition a    lemon:condition ;\n"
-                + "  lemon:propertyDomain <http://dbpedia.org/ontology/"+this.domain+"> ;\n"
-                + "  lemon:propertyRange  <http://dbpedia.org/ontology/"+this.range+"> .\n"
+                + "  lemon:propertyDomain <http://dbpedia.org/ontology/" + this.domain + "> ;\n"
+                + "  lemon:propertyRange  <http://dbpedia.org/ontology/" + this.range + "> .\n"
                 + "\n"
                 + "\n"
                 + ":designed a            lemon:LexicalEntry ;\n"
@@ -205,10 +220,10 @@ public class TurtleCreation {
                 + "  lemon:sense          :designed_ontomap .\n"
                 + "\n"
                 + ":form_designed_canonical a lemon:Form ;\n"
-                + "  lemon:writtenRep         \""+this.writtenFormPast+"\"@en .\n"
+                + "  lemon:writtenRep         \"" + this.writtenFormPast + "\"@en .\n"
                 + "\n"
                 + ":form_designed_by a    lemon:Form ;\n"
-                + "  lemon:writtenRep     \""+this.writtenFormPast+"\"@en ;\n"
+                + "  lemon:writtenRep     \"" + this.writtenFormPast + "\"@en ;\n"
                 + "  lexinfo:verbFormMood lexinfo:participle .\n"
                 + "\n"
                 + "\n"
@@ -218,7 +233,7 @@ public class TurtleCreation {
                 + "\n"
                 + ":designed_ontomap a lemon:OntoMap, lemon:LexicalSense ;\n"
                 + "  lemon:ontoMapping :designed_ontomap ;\n"
-                + "  lemon:reference   <http://dbpedia.org/ontology/"+reference+"> ;\n"
+                + "  lemon:reference   <http://dbpedia.org/ontology/" + reference + "> ;\n"
                 + "  lemon:subjOfProp  :designed_subj ;\n"
                 + "  lemon:objOfProp   :designed_obj ;\n"
                 + "  lemon:condition   :design_condition .\n"
@@ -234,12 +249,12 @@ public class TurtleCreation {
 
     }
 
-    /*public void inTransitiveTurtleSense1() {
+    public void inTransitiveTurtleSense1() {
         this.reference = this.setReference(reference);
         this.domain = this.setReference(domain);
         this.range = this.setReference(range);
 
-        this.tutleString =  "@prefix :        <http://localhost:8080/lexicon#> .\n"
+        this.tutleString = "@prefix :        <http://localhost:8080/lexicon#> .\n"
                 + "\n"
                 + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
                 + "@prefix lemon:   <http://lemon-model.net/lemon#> .\n"
@@ -248,90 +263,59 @@ public class TurtleCreation {
                 + "\n"
                 + ":lexicon_en a    lemon:Lexicon ;\n"
                 + "  lemon:language \"en\" ;\n"
-                + "  lemon:entry    :to_cross ;\n"
-                + "  lemon:entry    :crossed ;\n"
-                + "  lemon:entry    :by .\n"
+                + "  lemon:entry    :to_grow ;\n"
+                + "  lemon:entry    :in .\n"
                 + "\n"
-                + ":to_cross a            lemon:LexicalEntry ;\n"
+                + ":to_grow a             lemon:LexicalEntry ;\n"
                 + "  lexinfo:partOfSpeech lexinfo:verb ;\n"
-                + "  lemon:canonicalForm  :form_cross ;\n"
-                + "  lemon:otherForm      :form_crosss ;\n"
-                + "  lemon:otherForm      :form_crossed ;\n"
-                + "  lemon:synBehavior    :cross_frame_transitive ;\n"
-                + "  lemon:sense          :cross_ontomap .\n"
+                + "  lemon:canonicalForm  :form_grow ;\n"
+                + "  lemon:otherForm      :form_grows ;\n"
+                + "  lemon:otherForm      :form_grow_plural ;\n"
+                + "  lemon:synBehavior    :grow_frame ;\n"
+                + "  lemon:sense          :grow_ontomap .\n"
                 + "\n"
-                + "\n"
-                + ":form_cross a          lemon:Form ;\n"
-                + "  lemon:writtenRep     \"" + this.writtenFormInfinitive + "\"@en ;\n"
-                + "  lexinfo:tense        lexinfo:present ;\n"
-                + "  lexinfo:person       lexinfo:firstPerson ;\n"
+                + ":form_grow a           lemon:Form ;\n"
+                + "  lemon:writtenRep     \""+this.writtenFormInfinitive+"\"@en ;\n"
                 + "  lexinfo:verbFormMood lexinfo:infinitive .\n"
                 + "\n"
-                + ":form_crosss a     lemon:Form ;\n"
-                + "  lemon:writtenRep \"" + this.writtenForm3rdPerson + "\"@en ;\n"
-                + "  lexinfo:tense    lexinfo:present ;\n"
-                + "  lexinfo:person   lexinfo:secondPerson .\n"
+                + ":form_grows a      lemon:Form ;\n"
+                + "  lemon:writtenRep \""+this.writtenForm3rdPerson+"\"@en ;\n"
+                + "  lexinfo:number   lexinfo:singular ;\n"
+                + "  lexinfo:person   lexinfo:thirdPerson ;\n"
+                + "  lexinfo:tense    lexinfo:present .\n"
                 + "\n"
-                + ":form_crossed a    lemon:Form ;\n"
-                + "  lemon:writtenRep \"" +this.writtenFormPast + "\"@en ;\n"
-                + "  lexinfo:tense    lexinfo:past .\n"
+                + ":form_grow_plural a lemon:Form ;\n"
+                + "  lemon:writtenRep  \""+this.writtenFormInfinitive+"\"@en ;\n"
+                + "  lexinfo:number    lexinfo:plural ;\n"
+                + "  lexinfo:person    lexinfo:thirdPerson ;\n"
+                + "  lexinfo:tense     lexinfo:present .\n"
                 + "\n"
+                + ":grow_condition a      lemon:condition ;\n"
+                + "  lemon:propertyDomain <http://dbpedia.org/ontology/"+this.domain+"> ;\n"
+                + "  lemon:propertyRange  <http://dbpedia.org/ontology/"+this.range+"> .\n"
                 + "\n"
-                + ":cross_frame_transitive a lexinfo:TransitiveFrame ;\n"
-                + "  lexinfo:subject         :cross_subj ;\n"
-                + "  lexinfo:directObject    :cross_obj .\n"
+                + ":grow_frame a                  lexinfo:IntransitivePPFrame ;\n"
+                + "  lexinfo:subject              :grow_subj ;\n"
+                + "  lexinfo:prepositionalAdjunct :grow_obj .\n"
                 + "\n"
-                + ":cross_ontomap a    lemon:OntoMap, lemon:LexicalSense ;\n"
-                + "  lemon:ontoMapping :cross_ontomap ;\n"
-                + "  lemon:reference   <http://dbpedia.org/ontology/" + reference + "> ;\n"
-                + "  lemon:subjOfProp  :cross_subj ;\n"
-                + "  lemon:objOfProp   :cross_obj ;\n"
-                + "  lemon:condition   :cross_condition .\n"
+                + ":grow_ontomap a     lemon:OntoMap, lemon:LexicalSense ;\n"
+                + "  lemon:ontoMapping :grow_ontomap ;\n"
+                + "  lemon:reference   <http://dbpedia.org/ontology/"+this.reference+"> ;\n"
+                + "  lemon:subjOfProp  :grow_obj ;\n"
+                + "  lemon:objOfProp   :grow_subj ;\n"
+                + "  lemon:condition   :grow_condition .\n"
                 + "\n"
-                + ":cross_condition a     lemon:condition ;\n"
-                + "  lemon:propertyDomain <http://dbpedia.org/ontology/" + domain + "> ;\n"
-                + "  lemon:propertyRange  <http://dbpedia.org/ontology/" + range + "> .\n"
-                + "\n"
-                + "\n"
-                + "# see https://lemon-model.net/lemon-cookbook/node17.html\n"
-                + "\n"
-                + ":crossed a             lemon:LexicalEntry ;\n"
-                + "  lexinfo:partOfSpeech lexinfo:adjective ;\n"
-                + "  lemon:canonicalForm  :form_crossed_canonical ;\n"
-                + "  lemon:otherForm      :form_crossed_by ;\n"
-                + "  lemon:synBehavior    :crossed_frame_adjectivepp ;\n"
-                + "  lemon:sense          :crossed_ontomap .\n"
-                + "\n"
-                + ":form_crossed_canonical a lemon:Form ;\n"
-                + "  lemon:writtenRep        \"" + this.writtenForm3rdPerson + "\"@en .\n"
-                + "\n"
-                + ":form_crossed_by a     lemon:Form ;\n"
-                + "  lemon:writtenRep     \"" +this.writtenForm3rdPerson + "\"@en ;\n"
-                + "  lexinfo:verbFormMood lexinfo:participle .\n"
-                + "\n"
-                + "\n"
-                + ":crossed_frame_adjectivepp a   lexinfo:AdjectivePPFrame ;\n"
-                + "  lexinfo:copulativeSubject    :crossed_subj ;\n"
-                + "  lexinfo:prepositionalAdjunct :crossed_obj .\n"
-                + "\n"
-                + ":crossed_ontomap a  lemon:OntoMap, lemon:LexicalSense ;\n"
-                + "  lemon:ontoMapping :crossed_ontomap ;\n"
-                + "  lemon:reference   <http://dbpedia.org/ontology/" + reference + "> ;\n"
-                + "  lemon:subjOfProp  :crossed_obj ;\n"
-                + "  lemon:objOfProp   :crossed_subj ;\n"
-                + "  lemon:condition   :cross_condition .\n"
-                + "\n"
-                + ":crossed_obj lemon:marker :by .\n"
+                + ":grow_obj lemon:marker :in .\n"
                 + "\n"
                 + "## Prepositions ##\n"
                 + "\n"
-                + ":by a                  lemon:SynRoleMarker ;\n"
-                + "  lemon:canonicalForm  [ lemon:writtenRep \"" + preposition + "\"@en ] ;\n"
+                + ":in a                  lemon:SynRoleMarker ;\n"
+                + "  lemon:canonicalForm  [ lemon:writtenRep \""+"in"+"\"@en ] ;\n"
                 + "  lexinfo:partOfSpeech lexinfo:preposition .\n"
-                + "\n"
                 + "";
 
-    }*/
+    }
+
     private String setReference(String reference) {
         if (reference.contains(":")) {
             String[] info = reference.split(":");
