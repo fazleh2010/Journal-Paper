@@ -1,0 +1,90 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :to_cross ;
+  lemon:entry    :crossed ;
+  lemon:entry    :by .
+
+:to_cross a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_cross ;
+  lemon:otherForm      :form_crosss ;
+  lemon:otherForm      :form_crossed ;
+  lemon:synBehavior    :cross_frame_transitive ;
+  lemon:sense          :cross_ontomap .
+
+
+:form_cross a          lemon:Form ;
+  lemon:writtenRep     "create"@en ;
+  lexinfo:tense        lexinfo:present ;
+  lexinfo:person       lexinfo:firstPerson ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_crosss a     lemon:Form ;
+  lemon:writtenRep "creates"@en ;
+  lexinfo:tense    lexinfo:present ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_crossed a    lemon:Form ;
+  lemon:writtenRep "created"@en ;
+  lexinfo:tense    lexinfo:past .
+
+
+:cross_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject         :cross_subj ;
+  lexinfo:directObject    :cross_obj .
+
+:cross_ontomap a    lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :cross_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/notableWork> ;
+  lemon:subjOfProp  :cross_subj ;
+  lemon:objOfProp   :cross_obj ;
+  lemon:condition   :cross_condition .
+
+:cross_condition a     lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Work> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+
+# see https://lemon-model.net/lemon-cookbook/node17.html
+
+:crossed a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_crossed_canonical ;
+  lemon:otherForm      :form_crossed_by ;
+  lemon:synBehavior    :crossed_frame_adjectivepp ;
+  lemon:sense          :crossed_ontomap .
+
+:form_crossed_canonical a lemon:Form ;
+  lemon:writtenRep        "creates"@en .
+
+:form_crossed_by a     lemon:Form ;
+  lemon:writtenRep     "creates"@en ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:crossed_frame_adjectivepp a   lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :crossed_subj ;
+  lexinfo:prepositionalAdjunct :crossed_obj .
+
+:crossed_ontomap a  lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :crossed_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/notableWork> ;
+  lemon:subjOfProp  :crossed_obj ;
+  lemon:objOfProp   :crossed_subj ;
+  lemon:condition   :cross_condition .
+
+:crossed_obj lemon:marker :by .
+
+## Prepositions ##
+
+:by a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "of"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

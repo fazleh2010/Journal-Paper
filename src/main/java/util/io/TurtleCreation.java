@@ -34,6 +34,14 @@ public class TurtleCreation {
 
     public TurtleCreation(String[] row, String syntacticFrame) {
         if (syntacticFrame.contains("NounPPFrame")) {
+           setNounPPFrame(row, syntacticFrame);
+        } else if (syntacticFrame.contains("TransitiveFrame")) {
+            setTransitiveFrame(row, syntacticFrame);
+        }
+
+    }
+
+    private void setNounPPFrame(String[] row, String syntacticFrame) {
             this.lemonEntry = row[GoogleXslSheet.lemonEntryIndex];
             this.partOfSpeech = row[GoogleXslSheet.NounPPFrame.partOfSpeechIndex];
             this.writtenForm_singular = row[GoogleXslSheet.NounPPFrame.writtenFormSingularIndex];
@@ -45,7 +53,9 @@ public class TurtleCreation {
             this.range = row[GoogleXslSheet.NounPPFrame.rangeIndex];
             this.tutleString=nounPPFrameTurtle();
             this.tutleFileName = getFileName(syntacticFrame) ;
-        } else if (syntacticFrame.contains("TransitiveFrame")) {
+    }
+
+    private void setTransitiveFrame(String[] row, String syntacticFrame) {
             this.lemonEntry = row[GoogleXslSheet.lemonEntryIndex];
             this.partOfSpeech = row[GoogleXslSheet.TransitFrame.partOfSpeechIndex];
             this.writtenFormInfinitive = row[GoogleXslSheet.TransitFrame.writtenFormInfinitive];
@@ -57,8 +67,6 @@ public class TurtleCreation {
             this.range = row[GoogleXslSheet.TransitFrame.rangeIndex];
             this.tutleString=transitiveTurtleSense1();
             this.tutleFileName = getFileName(syntacticFrame) ;
-        }
-
     }
 
     public String getTutleFileName() {
@@ -129,49 +137,7 @@ public class TurtleCreation {
         return domain;
     }
 
-    public static void main(String args[]) throws IOException {
-
-        String mainResources = "src/main/resources/lexicon/";
-        String csvDir = "csv/";
-        String inputDir = mainResources + csvDir;
-        String outputDir = null;
-        String testResources = "src/test/resources/lexicon/";
-
-        Set<String> frames = new HashSet<String>();
-        frames.add("NounPPFrame");
-
-        for (String frame : frames) {
-            List<File> files = FileUtils.getFiles(inputDir, frame, ".csv");
-            if (frame.contains("NounPPFrame")) {
-                outputDir = testResources + "en/" + "nouns/";
-            }
-            for (File file : files) {
-                CsvFile csvFile = new CsvFile();
-                List<String[]> rows = csvFile.getRows(file);
-                Integer index = 0;
-                for (String[] row : rows) {
-                    if (index == 0) {
-                        ;
-                    } else {
-                        TurtleCreation nounPPFrameXsl = new TurtleCreation(row);
-                        String lemonEntry = nounPPFrameXsl.getLemonEntry();
-                        lemonEntry = lemonEntry.replace("/", "");
-                        String fileName = "z-csv-lexicon" + "-" + lemonEntry + ".ttl";
-                        String tutleString = nounPPFrameXsl.nounPPFrameTurtle();
-                        FileUtils.stringToFile(tutleString, outputDir + fileName);
-                    }
-                    index = index + 1;
-
-                }
-
-            }
-        }
-
-        /*NounPPFrameXsl nounPPFrameXsl = new NounPPFrameXsl(LemonEntry, partOfSpeech, writtenForm_singular, writtenForm_plural,
-                preposition, SyntacticFrame, copulativeArg, prepositionalAdjunct,
-                sense, reference, domain);*/
-        //System.out.println(tutleString);
-    }
+    
 
     public String nounPPFrameTurtle() {
         this.reference = this.setReference(reference);

@@ -134,9 +134,9 @@ public class QueGG {
                           if(file.contains("TransitiveFrame")){
                               syntacticType="TransitiveFrame";
                              }
-                          else if(file.contains("NounPPFrame")){
+                          /*else if(file.contains("NounPPFrame")){
                               syntacticType="NounPPFrame";
-                           }
+                           }*/
                           else 
                              continue;
 
@@ -146,11 +146,9 @@ public class QueGG {
                                 index=index+1;
                                 continue;
                             } 
-
-                            if(syntacticType.contains("NounPPFrame")){
-                               nounPPFrameXsl = new TurtleCreation(row,syntacticType);
-                               FileUtils.stringToFile(nounPPFrameXsl.getTutleString(), directory + nounPPFrameXsl.getTutleFileName());
-                               }
+                            nounPPFrameXsl = new TurtleCreation(row,syntacticType);
+                            FileUtils.stringToFile(nounPPFrameXsl.getTutleString(), directory + nounPPFrameXsl.getTutleFileName());
+                               
                     
                         }
 
