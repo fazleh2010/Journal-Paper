@@ -43,15 +43,6 @@ The following <em>LexInfo</em> frames are available in QueGG:
 - AdjectivePPFrame
 - IntransitivePPFrame
 
-The property `lemon:sense` determines how the generated SPARQL query will look like.
-It is also responsible for any sentence combinations that will be generated.
-
-Every `lemon:sense` needs a `lemon:condition` to ensure correct mappings during sentence combination and to enable sentences like `Which city is the capital of $x?` in addition to `What is the capital of $x?`.
-
-All lexical entries *(including their prepositions)* need to be defined in a `lemon:Lexicon` otherwise the references to those entries can't be resolved.
-All entries from all input files will be added to one lexicon at the end of input file loading.
-
-QueGG includes an english [base lexicon file](src/main/resources/en/base/base.ttl) that contains some entries for common sentence components like forms of 'to be' ('is', 'are', 'were'...) and determiners ('a', 'an', 'the').
 
 ### Output File Explanation
 Using the information from the file above, QueGG can generate a grammar entry that looks like this:
@@ -122,31 +113,3 @@ sentenceBindings.bindingList.label | The language specific label that was retrie
 sentenceBindings.bindingList.uri | The DBPedia ontology reference URI, will be identical to label for literals - can be used to insert into the SPARQL query 
 combination | A flag that shows if this grammar entry is a combination of multiple grammar entries or a base entry
 
-QueGG produces the following output:
-`grammar_FULL_DATASET_<LANGUAGE>.json`
-> Contains all base grammar entries (SentenceType: SENTENCE and NP)
-
-## Parsing Grammar Entries
-
-Any of the JSON files can be parsed using the <em>Jackson ObjectMapper</em> like this:
-```java
-File grammarEntriesFile = new File("grammar_FULL_DATASET_EN.json");
-ObjectMapper objectMapper = new ObjectMapper();
-GrammarWrapper grammarWrapper = objectMapper.readValue(grammarEntriesFile, GrammarWrapper.class);
-List<GrammarEntry> grammarEntries = grammarWrapper.getGrammarEntries();
-```
-
-An elaborate example on how to parse the above output files and compile the algebraic SPARQL queries to an executable <em>Jena Query</em> can be found [here](src/test/java/util/sparql/RequestCompilerTest.java).
-
-## Used Frameworks And Libraries
-
-- Lemon API: QueGG uses the Lemon API to parse and access the properties of the turtle lexicon files. The API and more information on the Lemon API can be found here: https://github.com/monnetproject/lemon.api
-- DBPedia: QueGG uses the [DBPedia](https://wiki.dbpedia.org) [SPARQL endpoint](http://dbpedia.org/sparql) to access the DBPedia Ontology.
-All URIs in the SPARQL query and the binding list point to entities in the DBPedia Ontology.
-- Jena: QueGG uses [Jena](https://github.com/apache/jena) to create, parse and execute SPARQL queries.
-- Jackson Databind:QueGG uses [Jackson Databind](https://github.com/FasterXML/jackson-databind) to write and read the grammar entry JSON files.
-- Lombok: QueGG uses [Lombok](https://github.com/rzwitserloot/lombok) to... well save time and skip writing those getters and setters!
-- OpenCSV:QueGG uses [OpenCSV](https://github.com/loretoparisi/opencsv) to write the CSV file for the evaluation.
-- QALD: QueGG uses a file from the [QALD](https://github.com/ag-sc/QALD/blob/master/7/data/qald-7-train-multilingual.json) dataset to evaluate the generated sentences and SPARQL queries.
-- Log4J 2: QueGG uses [Log4J 2](https://github.com/apache/logging-log4j2) for logging.
-- JUnit Jupiter:QueGG uses JUnit Jupiter for testing.
