@@ -19,7 +19,10 @@ Run the system:
 
 ````shell script
 java -jar <jar file> <language> <input_directory> <output_director> <number of entities> <input type>
-java -jar target/QuestionGrammarGenerator.jar EN lexicon/en output 10 ttl
+create QA system given csv files
+java -jar target/QuestionGrammarGenerator.jar EN lexicon/en output 10 csv
+create QA system given lemon
+java -jar target/QuestionGrammarGenerator.jar EN lexicon/en output 10 ttl                                                                 
 
 ````
 ## Functionality And Examples
