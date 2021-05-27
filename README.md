@@ -26,3 +26,6 @@ java -jar target/QuestionGrammarGenerator.jar EN lexicon/en output 10 csv
 ````  
 go to the (http://localhost:8089/quegg/)
 
+### Input examples
+A valid csv input file can be found  (https://github.com/fazleh2010/question-grammar-generator/blob/extension/examples/input/lexicon/en/nouns/NounPPFrame%20-%20QALD%20Train%20-%20not%20solved.csv). 
+A valid ttl file can be found (https://github.com/fazleh2010/question-grammar-generator/blob/extension/examples/input/lexicon/en/nouns/NounPPFrame%20-%20QALD%20Train%20-%20not%20solved.csv).     
