@@ -31,49 +31,9 @@ QueGG reads turtle files that contain lexical entries.
 
 The lexical entries are defined using the Lexicon Model for Ontologies [Lemon](https://lemon-model.net/) and the data category ontology [LexInfo](https://lexinfo.net/).
 
-A valid file can look like this:
-```turtle
-@prefix :        <http://localhost:8080/lexicon#> .
-@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
-@prefix lemon:   <http://lemon-model.net/lemon#> .
-@base            <http://localhost:8080#> .
+A valid csv file can be seen from [here] (https://github.com/fazleh2010/question-grammar-generator/blob/extension/examples/input/lexicon/en/nouns/NounPPFrame%20-%20QALD%20Train%20-%20not%20solved.csv)
 
-:lexicon_en a    lemon:Lexicon ;
-  lemon:language "en" ;
-  lemon:entry    :capital_of ;
-  lemon:entry    :of .
-
-:capital_of a          lemon:LexicalEntry ;
-  lexinfo:partOfSpeech lexinfo:noun ;
-  lemon:canonicalForm  :capital_form ;
-  lemon:synBehavior    :capital_of_nounpp ;
-  lemon:sense          :capital_sense_ontomap .
-
-:capital_form a    lemon:Form ;
-  lemon:writtenRep "capital"@en .
-
-:capital_of_nounpp a           lexinfo:NounPPFrame ;
-  lexinfo:copulativeArg        :arg1 ;
-  lexinfo:prepositionalAdjunct :arg2 .
-
-:capital_sense_ontomap a lemon:LexicalSense ;
-  lemon:reference        <http://dbpedia.org/ontology/capital> ;
-  lemon:subjOfProp       :arg2 ;
-  lemon:objOfProp        :arg1 ;
-  lemon:condition        :capital_condition .
-
-:capital_condition a   lemon:condition ;
-  lemon:propertyDomain <http://dbpedia.org/ontology/Country> ;
-  lemon:propertyRange  <http://dbpedia.org/ontology/City> .
-
-:arg2 lemon:marker :of .
-
-:of a                  lemon:SynRoleMarker ;
-  lemon:canonicalForm  [ lemon:writtenRep "of"@en ] ;
-  lexinfo:partOfSpeech lexinfo:preposition .
-```
-
-The property `lemon:synBehavior` determines which generation methods (especially for sentences) will be used.
+A valid tt file can be seen from  [here] (https://github.com/fazleh2010/question-grammar-generator/blob/extension/examples/input/lexicon/en/nouns/lexicon-birthPlace_of.ttl)
 
 The following <em>LexInfo</em> frames are available in QueGG:
 
