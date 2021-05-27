@@ -16,9 +16,10 @@ Run the system:
 - language: `EN` or `DE`
 - input_directory: The directory that contains lemon (the turtle files) or csv files  that will be processed by QueGG. If csv file then the program will first create lemon and then generate grammar entry files. If lemon then it will generate grammar entry files. 
 - output_director: The output directory for the json grammar entry files that are produced by QueGG
+- number_of_entities: The number of entities in binding list. For example, what is the birthplace of (X|Person) (X is entity such as res:Donald_Trump, res:Angela_Merkel, etc.). If the parameter is 10 then the maximum number of binding list is 10. 
 
 ````shell script
-java -jar <jar file> <language> <input_directory> <output_director> <number of entities> <input type>
+java -jar <jar file> <language> <input_directory> <output_director> <number_of_entities> <input_type>
 create QA system given csv files
 java -jar target/QuestionGrammarGenerator.jar EN lexicon/en output 10 csv
 create QA system given lemon
