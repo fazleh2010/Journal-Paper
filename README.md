@@ -1,24 +1,26 @@
 # QueGG
-A question grammar generator based on Lemon turtle lexica and DBPedia ontology.
+The project creates QA system given a lemon lexica or Csv file (contains information Syntactic Frame such NounPPframe, TransitiveFrame, etc. )
 
 ## Compile And Run
 <p>The source code can be compiled and run using <em>Java 11</em> and <em>Maven</em>.</p>
 
 ```shell script
-mvn clean install
+git clone https://github.com/fazleh2010/question-grammar-generator.git -b extension
 ```
 build the jar file
 ```shell script
+mvn clean install
 mvn clean package
 ```
 Run the system:
 - language: `EN` or `DE`
-- input_directory: The directory that contains the turtle lexicon files that will be processed by QueGG
+- input_directory: The directory that contains lemon (the turtle files) or csv files  that will be processed by QueGG. If csv file then the program will first create lemon and then generate grammar entry files. If lemon then it will generate grammar entry files. 
 - output_director: The output directory for the json grammar entry files that are produced by QueGG
 
 ````shell script
-java -jar <jar file> <language> <input_directory> <output_director>
-java -jar target/QuestionGrammarGenerator.jar EN lexicon/en output
+java -jar <jar file> <language> <input_directory> <output_director> <number of entities> <input type>
+java -jar target/QuestionGrammarGenerator.jar EN lexicon/en output 10 ttl
+
 ````
 ## Functionality And Examples
 
