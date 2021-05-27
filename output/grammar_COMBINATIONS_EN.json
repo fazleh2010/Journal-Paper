@@ -1,6 +1,6 @@
 {
   "grammarEntries" : [ {
-    "id" : "9",
+    "id" : "7",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -19,7 +19,7 @@
     },
     "combination" : true
   }, {
-    "id" : "10",
+    "id" : "8",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
@@ -335,44 +335,6 @@
         "label" : "Voyager 2",
         "uri" : "http://dbpedia.org/resource/Voyager_2"
       } ]
-    },
-    "combination" : true
-  }, {
-    "id" : "11",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "PERSON",
-    "returnType" : "GRAPE",
-    "frameType" : "IPP",
-    "sentences" : [ "When was the the birth place of $x grows?", "When were the the birth place of $x grows?", "Which grape was the the birth place of $x grows?", "Which grape were the the birth place of $x grows?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/growingGrape> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/birthPlace> ?subjOfProp)\n)\n",
-    "sentenceToSparqlParameterMapping" : {
-      "$x" : "subjOfPropx"
-    },
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "$x",
-      "bindingList" : [ ]
-    },
-    "combination" : true
-  }, {
-    "id" : "12",
-    "language" : "EN",
-    "type" : "SENTENCE",
-    "bindingType" : "PERSON",
-    "returnType" : "GRAPE",
-    "frameType" : "IPP",
-    "sentences" : [ "When was the places discovered by $x grows?", "When were the places discovered by $x grows?", "Which grape was the places discovered by $x grows?", "Which grape were the places discovered by $x grows?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/growingGrape> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/discoverer> ?objOfPropx)\n)\n",
-    "sentenceToSparqlParameterMapping" : {
-      "$x" : "objOfPropx"
-    },
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "$x",
-      "bindingList" : [ ]
     },
     "combination" : true
   } ]

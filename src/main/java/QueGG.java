@@ -46,7 +46,7 @@ public class QueGG {
     private static String QUESTION_ANSWER_CSV_FILE = "questions.csv";
     private static String entityLabelDir = "src/main/resources/entityLabels/";
     //private static String javaLoc="/home/elahi/grammar/hackthon/fork/QueGG-web/target/";
-    private static String javaLoc="QueGG-web/";
+    private static String javaLoc="QueGG-webCopy/";
     private static String jarFile="quegg-web-0.0.1-SNAPSHOT.jar";
     
 
