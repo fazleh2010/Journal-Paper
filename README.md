@@ -23,7 +23,9 @@ Run the system:
 java -jar <jar file> <language> <input_directory> <output_director> <number_of_entities> <input_type>
 java -jar target/QuestionGrammarGenerator.jar EN lexicon/en output 10 csv                                                                 
 
-````
+```
+go to the (http://localhost:8089/quegg/)
+
 ## Functionality And Examples
 
 ### Input File Definition

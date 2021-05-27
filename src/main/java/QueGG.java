@@ -41,11 +41,11 @@ public class QueGG {
     private static String GENERATE_JSON = "generate";
     private static String CREATE_CSV = "CREATE_CSV";
     private static String BaseDir = "";
-    private static String QUESTION_ANSWER_LOCATION = BaseDir + "questions/";
-    //private static String QUESTION_ANSWER_LOCATION =  "/tmp/";
+    //private static String QUESTION_ANSWER_LOCATION = BaseDir + "questions/";
+    private static String QUESTION_ANSWER_LOCATION =  "/tmp/";
     private static String QUESTION_ANSWER_CSV_FILE = "questions.csv";
     private static String entityLabelDir = "src/main/resources/entityLabels/";
-    private static String javaLoc="QueGG-web/target/";
+    private static String javaLoc="/home/elahi/grammar/hackthon/fork/QueGG-web/target/";
     private static String jarFile="quegg-web-0.0.1-SNAPSHOT.jar";
     
 
@@ -91,7 +91,7 @@ public class QueGG {
                 readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir);
 
                 //temporary close of QA system generation
-                //ExecJar.callInterface(javaLoc,jarFile);
+                ExecJar.callInterface(javaLoc,jarFile);
                 System.out.println("csv file generation successful!!");
 
 
