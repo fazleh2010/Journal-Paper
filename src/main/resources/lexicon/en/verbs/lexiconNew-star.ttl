@@ -1,0 +1,88 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :to_star_transitive ;
+  lemon:entry    :to_star_intransitive ;
+  lemon:entry    :in .
+
+:to_star_transitive a  lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_star ;
+  lemon:otherForm      :form_stars ;
+  lemon:otherForm      :form_starred ;
+  lemon:otherForm      :form_starred_plural ;
+  lemon:synBehavior    :star_frame_transitive ;
+  lemon:sense          :star_ontomap .
+
+
+:form_star a           lemon:Form ;
+  lemon:writtenRep     "star"@en ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_stars a      lemon:Form ;
+  lemon:writtenRep "stars"@en ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:form_starred a    lemon:Form ;
+  lemon:writtenRep "starred"@en ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:past .
+
+:form_starred_plural a lemon:Form ;
+  lemon:writtenRep     "starred"@en ;
+  lexinfo:number       lexinfo:plural ;
+  lexinfo:person       lexinfo:thirdPerson ;
+  lexinfo:tense        lexinfo:past .
+
+:star_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject        :star_subj ;
+  lexinfo:directObject   :star_obj .
+
+:star_ontomap a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :star_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/starring> ;
+  lemon:subjOfProp  :star_subj ;
+  lemon:objOfProp   :star_obj ;
+  lemon:condition   :star_condition .
+
+:star_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Film> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Actor> .
+
+
+:to_star_intransitive a lemon:LexicalEntry ;
+  lexinfo:partOfSpeech  lexinfo:verb ;
+  lemon:canonicalForm   :form_star ;
+  lemon:otherForm       :form_stars ;
+  lemon:otherForm       :form_starred ;
+  lemon:otherForm       :form_starred_plural ;
+  lemon:synBehavior     :star_frame_intransitive ;
+  lemon:sense           :star_intransitive_ontomap .
+
+:star_frame_intransitive a     lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :star_subj_intransitive ;
+  lexinfo:prepositionalAdjunct :star_obj_intransitive .
+
+:star_intransitive_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping          :star_intransitive_ontomap ;
+  lemon:reference            <http://dbpedia.org/ontology/starring> ;
+  lemon:subjOfProp           :star_obj_intransitive ;
+  lemon:objOfProp            :star_subj_intransitive ;
+  lemon:condition            :star_condition .
+
+:star_obj_intransitive lemon:marker :in .
+
+## Prepositions ##
+
+:in a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "in"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
