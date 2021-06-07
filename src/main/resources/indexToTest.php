@@ -6,15 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="https://gmpg.org/xfn/11">
 
-<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
-<title>Hackthon on multilingual Question Answering over linked data (QueGG)</title>
-<style>
+<!--script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Hackthon on multilingual Question Answering over linked data (QueGG) &#8211; EMBEDDIA</title>
+<style-->
 #wpadminbar #wp-admin-bar-vtrts_free_top_button .ab-icon:before {
 	content: "\f185";
 	color: #1DAE22;
 	top: 3px;
 }
-</style><meta name='robots' content='max-image-preview:large' />
+</style>
+<meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
 <link rel='dns-prefetch' href='//s.w.org' />
 <link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
@@ -37,7 +38,7 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
-<link rel='stylesheet' id='sdm-styles-css'  href='http://embeddia.eu/wp-content/plugins/simple-download-monitor/css/sdm_wp_styles.css?ver=5.7.2' media='all' />
+	<link rel='stylesheet' id='sdm-styles-css'  href='http://embeddia.eu/wp-content/plugins/simple-download-monitor/css/sdm_wp_styles.css?ver=5.7.2' media='all' />
 <link rel='stylesheet' id='wp-block-library-css'  href='http://embeddia.eu/wp-includes/css/dist/block-library/style.min.css?ver=5.7.2' media='all' />
 <link rel='stylesheet' id='wp-block-library-theme-css'  href='http://embeddia.eu/wp-includes/css/dist/block-library/theme.min.css?ver=5.7.2' media='all' />
 <link rel='stylesheet' id='wpt-twitter-feed-css'  href='http://embeddia.eu/wp-content/plugins/wp-to-twitter/css/twitter-feed.css?ver=5.7.2' media='all' />
@@ -69,12 +70,13 @@ var sdm_ajax_script = {"ajaxurl":"http:\/\/embeddia.eu\/wp-admin\/admin-ajax.php
 <link rel="alternate" type="text/xml+oembed" href="http://embeddia.eu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fembeddia.eu%2Fhackashop2021%2F&#038;format=xml" />
 <!-- Analytics by WP-Statistics v13.0.8 - https://wp-statistics.com/ -->
 <meta name="twitter:widgets:link-color" content="#000000"><meta name="twitter:widgets:border-color" content="#000000"><meta name="twitter:partner" content="tfwp"><link rel="icon" href="http://embeddia.eu/wp-content/uploads/2019/01/cropped-embeddia-small-1-32x32.png" sizes="32x32" />
-<!--link rel="icon" href="http://embeddia.eu/wp-content/uploads/2019/01/cropped-embeddia-small-1-192x192.png" sizes="192x192" /-->
-<!--link rel="apple-touch-icon" href="http://embeddia.eu/wp-content/uploads/2019/01/cropped-embeddia-small-1-180x180.png" /-->
+<link rel="icon" href="http://embeddia.eu/wp-content/uploads/2019/01/cropped-embeddia-small-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="http://embeddia.eu/wp-content/uploads/2019/01/cropped-embeddia-small-1-180x180.png" />
 <meta name="msapplication-TileImage" content="http://embeddia.eu/wp-content/uploads/2019/01/cropped-embeddia-small-1-270x270.png" />
 
 <meta name="twitter:card" content="summary"><meta name="twitter:title" content="EACL Hackashop on News Media Content Analysis and Automated Report Generation"><meta name="twitter:site" content="@embeddiaproject">
-		<style id="wp-custom-css">
+
+<style id="wp-custom-css">
 			div.partnerlist {
 	display: block;
 }
@@ -132,13 +134,16 @@ section#custom_html-4 {
 	<div class="site-branding">
 	<div class="wrap">
 
-		<a href="http://" class="custom-logo-link" rel="home"><img width="250" height="250" src=".png" class="custom-logo" alt="QueGG" srcset="http:/.png 250w, http://.png 150w, http::.png 100w" sizes="100vw" /></a>
-		<div class="site-branding-text">
-							<p class="site-title"><a href="http://" rel="home">QueGG</a></p>
-			
-							<p class="site-description">Hackthon on Multi-lingula Question Answering System over link data</p>
-					</div><!-- .site-branding-text -->
-
+		<a href="https://hackathon.semanticcomputing.de" class="custom-logo-link" rel="home">
+<img width="250" height="250" src="https://hackathon.semanticcomputing.de/images/prett.png" class="custom-logo" alt="EMBEDDIA" 
+srcset="https://hackathon.semanticcomputing.de/images/prett.png 250w, 
+https://hackathon.semanticcomputing.de/images/prett.png-150x150.png 150w, 
+https://hackathon.semanticcomputing.de/images/prett.png-100x100.png 100w" 
+sizes="100vw" /></a>		
+<div class="site-branding-text">
+<p class="site-title"><a href="https://hackathon.semanticcomputing.de" rel="home">QueGG-Hackthon</a></p>
+<p class="site-description">Hackthon on multilingual Question Answering over linked data (QueGG)</p>					
+</div><!-- .site-branding-text -->
 		
 	</div><!-- .wrap -->
 </div><!-- .site-branding -->
@@ -151,16 +156,16 @@ section#custom_html-4 {
 	<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">
 		<svg class="icon icon-bars" aria-hidden="true" role="img"> <use href="#icon-bars" xlink:href="#icon-bars"></use> </svg><svg class="icon icon-close" aria-hidden="true" role="img"> <use href="#icon-close" xlink:href="#icon-close"></use> </svg>Menu	</button>
 
-	<div class="menu-main-container"><ul id="top-menu" class="menu"><li id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-32"><a href="http://embeddia.eu">Home</a></li>
-<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="http:">Partners</a></li>
-<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="http:">Events</a></li>
-<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61"><a href="http:">Outputs</a></li>
-<!--li id="menu-item-134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134"><a href="http:">Media</a></li-->
-<li id="menu-item-204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a href="http:">Links</a></li>
-<li id="menu-item-480" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-480"><a href="http:">Contact</a></li>
-<!--li id="menu-item-128" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="http:">Intranet</a></li-->
-<!--li id="menu-item-965" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-864 current_page_item menu-item-965"><a href="http://embeddia.eu/hackashop2021/" aria-current="page">Hackashop</a></li-->
-</ul></div>
+<!--div class="menu-main-container"><ul id="top-menu" class="menu"><li id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-32"><a href="http://embeddia.eu">Home</a></li>
+<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="http://embeddia.eu/partners/">Partners</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="http://embeddia.eu/events/">Events</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61"><a href="http://embeddia.eu/outputs/">Outputs</a></li>
+<li id="menu-item-134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134"><a href="http://embeddia.eu/media/">Media</a></li>
+<li id="menu-item-204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a href="http://embeddia.eu/links/">Links</a></li>
+<li id="menu-item-480" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-480"><a href="http://embeddia.eu/contact/">Contact</a></li>
+<li id="menu-item-128" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="http://embeddia.eu/intranet/">Intranet</a></li>
+<li id="menu-item-965" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-864 current_page_item menu-item-965"><a href="http://embeddia.eu/hackashop2021/" aria-current="page">Hackashop</a></li>
+</ul></div-->
 	</nav><!-- #site-navigation -->
 				</div><!-- .wrap -->
 			</div><!-- .navigation-top -->
@@ -180,17 +185,25 @@ section#custom_html-4 {
 		<h1 class="entry-title">Hackashop on multilingual Question Answering over linked data</h1>			</header><!-- .entry-header -->
 	<div class="entry-content">
 		
-<p>text text ..</p>
+<!--p><em>Workshop + hackathon in conjunction with <a href="https://2021.eacl.org">EACL 2021</a>.</em></p-->
 
 
+<h6>Hackashop description</h6>
+
+
+
+<p>Many question answering systems over RDF that are induced from pairs of questions and answers using some machine learning technique suffer from a lack of controllability, making the governance and incremental improvement of the system challenging, not to mention the initial effort of collecting and providing training data. As an alternative, we present a model-based approach to question answering that uses an ontology lexicon in lemon format and automatically generates a lexicalized grammar that can be used to interpret and parse questions into SPARQL queries. The approach gives maximum control over the QA system to the developer of the system as every lexicon entry added to the lexicon increases the coverage of the grammar, and thus of the QA system, in a predictable way. </p>
+
+<p>The hackathon aims to improve the QA system on the combination of semantic web and language technologies. There are several possibilities to extend the system such as(i) <a href="http://localhost/tutorial/coverage.php">Extend grammar coverage</a> (ii) <a href="http://localhost/tutorial/dataset.php">Extend the system for a new dataset</a>, (iii) <a href="http://localhost/tutorial/language.php">Extend QA system for a language </a>, (iv) <a href="http://localhost/tutorial/interface.php">improve user interface</a>. We also will be very glad to know the creative ideas and directions from the participants.We welcome cross-disciplinary collaborations of computer scientists, computational linguistics and related fields to participate and contribute any level of their interest. To participate please register from <a href="https://forms.gle/rTYj75FFUekWcWfM9">here</a></p>
+
+<h6>Link: <a href="https://scdemo.techfak.uni-bielefeld.de/quegg/" data-type="URL" data-id="https://scdemo.techfak.uni-bielefeld.de/quegg/">QA system user interface</h6>
 
 <h6>Link: <a href="https://github.com/fazleh2010/question-grammar-generator/">GitHub project</a></h6>
 
+<p style="padding-left: 40px;">The source code of question grammar generator based on Lemon turtle lexica and DBPedia ontology.</p>
 
 
-<h6>Link: <a href="http://ceur-ws.org/Vol-2722/nliwod2020-paper-2.pdf" data-type="URL" data-id="http://ceur-ws.org/Vol-2722/nliwod2020-paper-2.pdf">Generating Grammars from lemon lexica for Questions Answering over Linked Data: a Preliminary Analysis</a></h6>
-
-
+<h6>Link: <a href="http://ceur-ws.org/Vol-2722/nliwod2020-paper-2.pdf" data-type="URL" data-id="http://ceur-ws.org/Vol-2722/nliwod2020-paper-2.pdf">Generating Grammars from lemon lexica for QA system</a></h6>
 
 <div class="wp-block-group"><div class="wp-block-group__inner-container">
 <p Benz, V., Cimiano, P., Elahi, M.F., Ell, B.: Generating Grammars from lemon lexica
@@ -198,148 +211,114 @@ for Questions Answering over Linked Data: a Preliminary Analysis. In: NLIWOD
 workshop at ISWC. vol. 2722, pp. 40–55. CEUR-WS.org (2020)</p>
 <p style="padding-left: 40px;">Benz, V., Cimiano, P., Elahi, M.F., Ell, B.: Generating Grammars from lemon lexica
 for Questions Answering over Linked Data: a Preliminary Analysis. In: NLIWOD
-workshop at ISWC. vol. 2722, pp. 40–55. CEUR-WS.org (2020) </p>
-
+workshop at ISWC. vol. 2722, pp. 40–55. CEUR-WS.org (2020). </p>
 
 <p></p>
 </div></div>
 
 
+<?php
+/*// define variables and set to empty values
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$firstName = $lastName = $university = $comment = $website = "";
 
-<h6>Hackashop description</h6>
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["FNAME"])) {
+    $nameErr = "Name is required";
+  } else {
+	  $firstName = test_input($_POST["FNAME"]);
+	  echo "first name".$firstName;
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$firstName)) {
+      $nameErr = "Only letters and white space allowed";
+    }
+  }
+
+  if (empty($_POST["LNAME"])) {
+    $nameErr = "Name is required";
+  } else {
+    $lastName = test_input($_POST["LNAME"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$lastName)) {
+      $nameErr = "Only letters and white space allowed";
+    }
+  }
+
+  if (empty($_POST["MMERGE6"])) {
+    $nameErr = "Name is required";
+  } else {
+    $university = test_input($_POST["MMERGE6"]);
+  }
 
 
 
-<p>text text .... </p>
+  if (empty($_POST["email"])) {
+    $emailErr = "Email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format";
+    }
+  }
+}
 
-
-<p></p>
-
-
-<p>Text text text...</p>
-
-
-<p>text text ...</p>
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+*/
+?>
 
 
 <h6>Organizing team</h6>
 
 
 
-<p>Philipp Ciminao (University of Bielefeld, Germany), Chair<br>Name 1 (University)<br>Name2<br>Name3<br></p>
+<p>Philipp Cimiano (CITEC - University Bielefeld, Germany), Chair<br>Mohammad Fazleh Elahi (CITEC - University Bielefeld, Germany)<br>Frank Grimm (CITEC - University Bielefeld, Germany)<br>Basil Ell (CITEC - University Bielefeld, Germany and Department of Informatics, University of Oslo, Norway)<br></p>
 
 
-
-<!--div class="wp-block-buttons aligncenter">
-<div class="wp-block-button"><a class="wp-block-button__link has-text-color has-background" href="http://embeddia.eu/hackashop2021-call-for-workshop-papers/" style="border-radius:2px;background-color:#ba0c49;color:#fffffa" target="_blank" rel="noreferrer noopener">Workshop call for papers</a></div>
-
-
-
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-text-color" href="http://embeddia.eu/hackashop2021-call-for-hackathon-participation/" style="border-radius:2px;color:#ba0c49" target="_blank" rel="noreferrer noopener">Hackathon call for participation</a></div>
-</div>
 	</div><!-- .entry-content -->
 </article><!-- #post-864 -->
 		</main>
-	</div-->
+	</div>
 	
-<!--aside id="secondary" class="widget-area" role="complementary" aria-label="Blog Sidebar">
-	
-		<section id="recent-posts-4" class="widget widget_recent_entries">
-		<h2 class="widget-title">News</h2><nav role="navigation" aria-label="News">
-		<ul>
-											<li>
-					<a href="http://embeddia.eu/2021/05/03/embeddia-hackashop-a-recapitulation/">EMBEDDIA Hackashop, a recapitulation</a>
-											<span class="post-date">2021-05-03</span>
-									</li>
-											<li>
-					<a href="http://embeddia.eu/2021/04/01/eacl-hackashop-on-19-april-2021-programme-and-proceedings-now-available/">EACL Hackashop on 19 April 2021: programme and proceedings now available</a>
-											<span class="post-date">2021-04-01</span>
-									</li>
-											<li>
-					<a href="http://embeddia.eu/2021/02/22/embeddia-hackathon-wrap-up/">EMBEDDIA Hackathon wrap-up</a>
-											<span class="post-date">2021-02-22</span>
-									</li>
-											<li>
-					<a href="http://embeddia.eu/2021/02/10/embeddia-hackashop-hackathon-halfway-get-together/">EMBEDDIA Hackashop: Hackathon halfway get-together</a>
-											<span class="post-date">2021-02-10</span>
-									</li>
-											<li>
-					<a href="http://embeddia.eu/2021/02/01/kick-off-of-the-hackashop-on-news-media-content-analysis-and-automated-report-generation/">Kick-off of the Hackashop on news media content analysis and automated report generation</a>
-											<span class="post-date">2021-02-01</span>
-									</li>
-					</ul>
+<aside id="secondary" class="widget-area" role="complementary" aria-label="Blog Sidebar">
 
-		</nav></section><section id="custom_html-3" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget">(for older news see <a href="/news-archive/">archive</a>)</div></section><section id="mc4wp_form_widget-2" class="widget widget_mc4wp_form_widget"><h2 class="widget-title">Sign up for our Newsletter</h2><script>(function() {
-	window.mc4wp = window.mc4wp || {
-		listeners: [],
-		forms: {
-			on: function(evt, cb) {
-				window.mc4wp.listeners.push(
-					{
-						event   : evt,
-						callback: cb
-					}
-				);
-			}
-		}
-	}
+	<section id="mc4wp_form_widget-2" class="widget widget_mc4wp_form_widget">
+		<!--h2 class="widget-title"><br><br><a href="https://forms.gle/rTYj75FFUekWcWfM9">Registration</a></h2-->
+                <h4><br><br><a href="https://forms.gle/rTYj75FFUekWcWfM9">Registration</a></h4>
+	<script>(function() {
+        window.mc4wp = window.mc4wp || {
+                listeners: [],
+                forms: {
+                        on: function(evt, cb) {
+                                window.mc4wp.listeners.push(
+                                        {
+                                                event   : evt,
+                                                callback: cb
+                                        }
+                                );
+                        }
+                }
+        }
 })();
-</script-->
-<!-- Mailchimp for WordPress v4.8.4 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
-<h6>Registration</h6>
-<form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-572" method="post" data-id="572" data-name="Website signup form" ><div class="mc4wp-form-fields"><p>
-    <label>First Name:</label>
-    <input type="text" name="FNAME" placeholder="Your first name" required="1">
-</p>
-<p>
-    <label>Last Name:</label>
-    <input type="text" name="LNAME" placeholder="Your last name"
-    required="">
-</p>
-<p>
-    <label>Institution</label>
-    <input type="text" name="MMERGE6" placeholder="Your institution"
-    required="">
-</p>
-
-<p>
-	<label>Email address: 
-		<input type="email" name="EMAIL" placeholder="Your e-mail address" required />
-</label>
-</p>
-
-<p>
-<input type="submit" value="Sign up" />
-
-		<script>
-			<!--
-			var sc_project=12007826;
-			var sc_security="6ef51357";
-			      var sc_invisible=1;
-			var scJsHost = (("https:" == document.location.protocol) ?
-				"https://secure." : "http://www.");
-			//-->
-					</script>
-		
-<script type="text/javascript"
-				src="https://secure.statcounter.com/counter/counter.js"
-				async></script>		<noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/"><img class="statcounter" src="https://c.statcounter.com/12007826/0/6ef51357/1/" alt="web analytics" /></a></div></noscript>
-		<!-- End of StatCounter Code -->
-		<script>(function() {function maybePrefixUrlField() {
-	if (this.value.trim() !== '' && this.value.indexOf('http') !== 0) {
-		this.value = "http://" + this.value;
-	}
-}
-
-var urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]');
-if (urlFields) {
-	for (var j=0; j < urlFields.length; j++) {
-		urlFields[j].addEventListener('blur', maybePrefixUrlField);
-	}
-}
-})();</script><script id='twentyseventeen-skip-link-focus-fix-js-extra'>
-var twentyseventeenScreenReaderText = {"quote":"<svg class=\"icon icon-quote-right\" aria-hidden=\"true\" role=\"img\"> <use href=\"#icon-quote-right\" xlink:href=\"#icon-quote-right\"><\/use> <\/svg>","expand":"Expand child menu","collapse":"Collapse child menu","icon":"<svg class=\"icon icon-angle-down\" aria-hidden=\"true\" role=\"img\"> <use href=\"#icon-angle-down\" xlink:href=\"#icon-angle-down\"><\/use> <span class=\"svg-fallback icon-angle-down\"><\/span><\/svg>"};
 </script>
+
+
+<section id="recent-posts-4" class="widget widget_recent_entries">
+                <h6>Recipe</h6><nav role="navigation" aria-label="News">
+                <ul>
+<li><a href="http://localhost/tutorial/coverage.php">Extend grammar coverage</a></li>
+<li><a href="http://localhost/tutorial/dataset.php">Extend the system for a new dataset</a></li>
+<li><a href="http://localhost/tutorial/language.php">Extend QA system for a language </a></li>
+<li><a href="http://localhost/tutorial/interface.php">Improve QA user interface</a> </li>
+<li><a href="http://localhost/tutorial/other.php">Other extension</a></li>
+               </ul>
+         </nav>
+</section>
 
 </body>
 </html>
