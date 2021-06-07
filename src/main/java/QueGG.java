@@ -41,8 +41,9 @@ public class QueGG {
     private static String GENERATE_JSON = "generate";
     private static String CREATE_CSV = "CREATE_CSV";
     private static String BaseDir = "";
-    //private static String QUESTION_ANSWER_LOCATION = BaseDir + "questions/";
-    private static String QUESTION_ANSWER_LOCATION =  "/tmp/";
+    private static String QUESTION_ANSWER_LOCATION = BaseDir + "questions/";
+    //tmp location
+    //private static String QUESTION_ANSWER_LOCATION =  "/tmp/";
     private static String QUESTION_ANSWER_CSV_FILE = "questions.csv";
     private static String entityLabelDir = "src/main/resources/entityLabels/";
     //private static String javaLoc="/home/elahi/grammar/hackthon/fork/QueGG-web/target/";
