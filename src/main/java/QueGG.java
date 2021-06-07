@@ -92,8 +92,8 @@ public class QueGG {
                 readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir);
 
                 //temporary close of QA system generation
-                ExecJar.callInterface(javaLoc,jarFile);
-                System.out.println("csv file generation successful!!");
+                //ExecJar.callInterface(javaLoc,jarFile);
+                //System.out.println("csv file generation successful!!");
 
 
             LOG.warn("To get optimal combinations of sentences please add the following types to {}\n{}",
