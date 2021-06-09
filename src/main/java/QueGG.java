@@ -50,7 +50,7 @@ public class QueGG {
     //private static String javaLoc="/home/elahi/grammar/hackthon/fork/QueGG-web/target/";
     private static String javaLoc="QueGG-webCopy/";
     private static String jarFile="quegg-web-0.0.1-SNAPSHOT.jar";
-    
+    private static Boolean externalEntittyListflag=false;
 
     /*public static void mainT(String[] args) throws Exception {
       queGG.callInterface(javaLoc,jarFile);
@@ -94,7 +94,7 @@ public class QueGG {
                 }
                 questionAnswerFile =  outputDir+ File.separator + QUESTION_ANSWER_CSV_FILE;
                 ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile,maxNumberOfEntities);
-                readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir);
+                readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir,externalEntittyListflag);
 
                 //temporary close of QA system generation
                 //ExecJar.callInterface(javaLoc,jarFile);

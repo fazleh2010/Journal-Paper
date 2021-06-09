@@ -49,7 +49,7 @@ public class ReadAndWriteQuestions {
        this.maxNumberOfEntities=maxNumberOfEntities;
     }
 
-    public void readQuestionAnswers(List<File> fileList,String entityDir) throws Exception {
+    public void readQuestionAnswers(List<File> fileList,String entityDir, Boolean externalEntittyListflag) throws Exception {
         String sparql = null;
         Integer index = 0;
 
@@ -74,10 +74,17 @@ public class ReadAndWriteQuestions {
                 sparql = grammarEntryUnit.getSparqlQuery();
                 String returnVairable = grammarEntryUnit.getReturnVariable();
                 String retunrStr=grammarEntryUnit.getBindingType();
-                String entityFileName=entityDir+"ENTITY_LABEL_LIST"+"_"+retunrStr.toLowerCase()+".txt";
                 String syntacticFrame=grammarEntryUnit.getFrameType();
-                File entityFile=new File(entityFileName);
-                List<UriLabel> bindingList=this.getExtendedBindingList(grammarEntryUnit.getBindingList(),entityFile);
+                List<UriLabel> bindingList=new ArrayList<UriLabel>();
+                
+                if (externalEntittyListflag) {
+                    String entityFileName = entityDir + "ENTITY_LABEL_LIST" + "_" + retunrStr.toLowerCase() + ".txt";
+                    File entityFile = new File(entityFileName);
+                    bindingList = this.getExtendedBindingList(grammarEntryUnit.getBindingList(), entityFile);
+
+                } else
+                    bindingList = grammarEntryUnit.getBindingList();
+                    
                 noIndex =this.replaceVariables(bindingList, sparql, returnVairable,grammarEntryUnit.getSentences(),syntacticFrame,noIndex);
                 noIndex = noIndex + 1;
                 System.out.println("index:" + index + " Id:" + grammarEntryUnit.getId() + " total:" + total + " example:" + grammarEntryUnit.getSentences().iterator().next());
