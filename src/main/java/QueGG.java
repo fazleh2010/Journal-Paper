@@ -14,6 +14,7 @@ import lexicon.LexiconImporter;
 import lombok.NoArgsConstructor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.jena.sys.JenaSystem;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -57,6 +58,8 @@ public class QueGG {
 
    
     public static void main(String[] args) throws Exception {
+        JenaSystem.init();
+
         String search=GENERATE_JSON+CREATE_CSV;
         String questionAnswerFile = QUESTION_ANSWER_LOCATION + File.separator + QUESTION_ANSWER_CSV_FILE;
 
@@ -89,7 +92,6 @@ public class QueGG {
                 if (fileList.isEmpty()) {
                     throw new Exception("No files to process for question answering system!!");
                 }
-                questionAnswerFile = outputDir + File.separator + QUESTION_ANSWER_CSV_FILE;
                 ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile,maxNumberOfEntities);
                 readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir);
 
