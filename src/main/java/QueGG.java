@@ -133,20 +133,6 @@ public class QueGG {
                            String directory=inputDir+"/"+pathname+"/";
                           List<String[]> rows = csvFile.getRows(new File(directory+file));
                           Integer index = 0;
-                          TurtleCreation nounPPFrameXsl =null;
-                          String syntacticType=null;
-
-                          if(file.contains("IntransitivePPFrame")){
-                              syntacticType="IntransitivePPFrame";
-                             }
-                           else if(file.contains("NounPPFrame")){
-                              syntacticType="NounPPFrame";
-                           }
-                           else if(file.contains("TransitiveFrame")){
-                              syntacticType="TransitiveFrame";
-                           }
-                          else 
-                             continue;
 
 
                         for (String[] row : rows) {
@@ -154,7 +140,7 @@ public class QueGG {
                                 index=index+1;
                                 continue;
                             } 
-                            nounPPFrameXsl = new TurtleCreation(row,syntacticType);
+                            TurtleCreation nounPPFrameXsl = new TurtleCreation(row);
                             FileUtils.stringToFile(nounPPFrameXsl.getTutleString(), directory + nounPPFrameXsl.getTutleFileName());
                                
                     

@@ -30,14 +30,19 @@ public class TurtleCreation {
     private String range = "dbo:Place";
     private String tutleString = "";
     private String tutleFileName = "";
+   
 
-    public TurtleCreation(String[] row, String syntacticFrame) {
-        if (syntacticFrame.contains("NounPPFrame")) {
+    public TurtleCreation(String[] row) {
+        String syntacticFrame = findSyntacticFrame(row);
+
+        if (syntacticFrame.contains(GoogleXslSheet.NounPPFrameStr)) {
             setNounPPFrame(row, syntacticFrame);
-        } else if (syntacticFrame.contains("TransitiveFrame")) {
+        } else if (syntacticFrame.contains(GoogleXslSheet.TransitiveFrameStr)) {
             setTransitiveFrame(row, syntacticFrame);
-        } else if (syntacticFrame.contains("IntransitivePPFrame")) {
+        } else if (syntacticFrame.contains(GoogleXslSheet.IntransitivePPFrameStr)) {
             setIntransitivePPFrame(row, syntacticFrame);
+        } else {
+            syntacticFrame = row[GoogleXslSheet.TransitFrameSyntacticFrameIndex];
         }
 
     }
@@ -97,13 +102,7 @@ public class TurtleCreation {
         return this.tutleString;
     }
 
-    public TurtleCreation(String[] row) {
-
-    }
-
-    public TurtleCreation() {
-    }
-
+  
     public void nounPPFrameTurtle() {
         this.reference = this.setReference(reference);
         this.domain = this.setReference(domain);
@@ -323,6 +322,32 @@ public class TurtleCreation {
 
         }
         return reference.strip().trim();
+    }
+
+    private String findSyntacticFrame(String[] row) {
+        String syntacticFrame = row[GoogleXslSheet.NounPPFrameSyntacticFrameIndex];
+
+        if (isSyntacticFrame(syntacticFrame)) {
+            return syntacticFrame;
+        } else {
+            syntacticFrame = row[GoogleXslSheet.InTransitFrameSyntacticFrameIndex];
+            if (isSyntacticFrame(syntacticFrame)) {
+                return syntacticFrame;
+            } else {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.   
+            }
+        }
+
+    }
+    
+    private Boolean isSyntacticFrame(String syntacticFrame) {
+        if (syntacticFrame.contains(GoogleXslSheet.NounPPFrameStr)
+                || syntacticFrame.contains(GoogleXslSheet.TransitiveFrameStr)
+                || syntacticFrame.contains(GoogleXslSheet.IntransitivePPFrameStr)) {
+            return true;
+        }
+        return false;
+
     }
 
 }

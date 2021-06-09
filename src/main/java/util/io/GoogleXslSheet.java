@@ -14,6 +14,13 @@ public class GoogleXslSheet {
     public static Integer lemonEntryIndex = 0;
     public static Integer partOfSpeechIndex = 1;
     public static Integer writtenFormInfinitive = 2;
+    public static Integer NounPPFrameSyntacticFrameIndex = 5;
+    public static Integer TransitFrameSyntacticFrameIndex = 5;
+    public static Integer InTransitFrameSyntacticFrameIndex = 6;
+    public static String NounPPFrameStr = "NounPPFrame";
+    public static String TransitiveFrameStr = "TransitiveFrame";
+    public static String IntransitivePPFrameStr = "IntransitivePPFrame";
+
 
     public static class NounPPFrame {
         //LemonEntry	partOfSpeech	writtenForm (singular)	writtenForm (plural)	preposition	SyntacticFrame	copulativeArg	prepositionalAdjunct	sense	reference	domain	range	GrammarRule1:question1	SPARQL	GrammarRule1: question2	SPARQL Question 2	GrammarRule 1: questions	SPARQL 	NP (Grammar Rule 2)		grammar rules	numberOfQuestions
@@ -28,6 +35,7 @@ public class GoogleXslSheet {
         public static Integer referenceIndex = 9;
         public static Integer domainIndex = 10;
         public static Integer rangeIndex = 11;
+        
 
     }
 
