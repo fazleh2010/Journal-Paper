@@ -61,7 +61,7 @@ public class QueGG {
         JenaSystem.init();
 
         String search=GENERATE_JSON+CREATE_CSV;
-        String questionAnswerFile = QUESTION_ANSWER_LOCATION + File.separator + QUESTION_ANSWER_CSV_FILE;
+        String questionAnswerFile = null;
 
         try {
             if (args.length < 5) {
