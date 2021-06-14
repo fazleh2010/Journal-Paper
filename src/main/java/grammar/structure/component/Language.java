@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 public enum Language {
   EN,
-  DE;
+  DE,
+  BN;
 
   /**
    * Find the matching enum value for languageString or return EN as default
@@ -17,4 +18,6 @@ public enum Language {
       language -> language.name().toLowerCase().equals(languageString.toLowerCase())
     ).findAny().orElse(EN);
   }
+  
+  
 }

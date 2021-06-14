@@ -45,12 +45,13 @@ public class QueGG {
     private static String QUESTION_ANSWER_LOCATION = BaseDir + "questions/";
     //tmp location
     //private static String QUESTION_ANSWER_LOCATION =  "/tmp/";
-    private static String QUESTION_ANSWER_CSV_FILE = "questions.csv";
+    private static String QUESTION_ANSWER_FILE = "questions";
     private static String entityLabelDir = "src/main/resources/entityLabels/";
     //private static String javaLoc="/home/elahi/grammar/hackthon/fork/QueGG-web/target/";
     private static String javaLoc="QueGG-webCopy/";
     private static String jarFile="quegg-web-0.0.1-SNAPSHOT.jar";
     private static Boolean externalEntittyListflag=false;
+    private static String outputFileName="grammar_FULL_DATASET";
 
     /*public static void mainT(String[] args) throws Exception {
       queGG.callInterface(javaLoc,jarFile);
@@ -88,11 +89,12 @@ public class QueGG {
               throw new Exception("No file type is mentioned!!");
 
                 queGG.init(language, inputDir, outputDir);
-                List<File> fileList = FileUtils.getFiles(outputDir+"/", "grammar_FULL_DATASET_EN", ".json");
+                System.out.println("outputFileName+language::"+outputFileName+"_"+language);
+                List<File> fileList = FileUtils.getFiles(outputDir+"/", outputFileName+"_"+language, ".json");
                 if (fileList.isEmpty()) {
                     throw new Exception("No files to process for question answering system!!");
                 }
-                questionAnswerFile =  outputDir+ File.separator + QUESTION_ANSWER_CSV_FILE;
+                questionAnswerFile =  outputDir+ File.separator + QUESTION_ANSWER_FILE+"_"+language+".csv";
                 ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile,maxNumberOfEntities);
                 readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir,externalEntittyListflag);
 

@@ -6,7 +6,7 @@
     "bindingType" : "PERSON",
     "returnType" : "LOCATION",
     "frameType" : "NPP",
-    "sentences" : [ "Give me the birth place of ($x | PERSON_NP)?", "Tell me the birth place of ($x | PERSON_NP)?", "What is the birth place of ($x | PERSON_NP)?", "What was the birth place of ($x | PERSON_NP)?", "Which place is the birth place of ($x | PERSON_NP)?", "Which place was the birth place of ($x | PERSON_NP)?" ],
+    "sentences" : [ "Give me the birth place of ($x | PERSON_NP)", "Tell me the birth place of ($x | PERSON_NP)", "What is the birth place of ($x | PERSON_NP)?", "What was the birth place of ($x | PERSON_NP)?", "Which place is the birth place of ($x | PERSON_NP)?", "Which place was the birth place of ($x | PERSON_NP)?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {

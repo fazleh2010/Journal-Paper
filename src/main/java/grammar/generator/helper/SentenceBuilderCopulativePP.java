@@ -43,7 +43,7 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
         super(language, frameType, sentenceTemplateRepository, sentenceTemplateParser);
     }
 
-    protected List<String> interpretSentenceToken(
+    /*protected List<String> interpretSentenceToken(
             List<SentenceToken> sentenceTokens,
             String bindingVar,
             LexicalEntryUtil lexicalEntryUtil
@@ -136,6 +136,135 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
             }
         }
         return generatedSentences;
+    }*/
+    
+    protected List<String> interpretSentenceToken(
+            List<SentenceToken> sentenceTokens,
+            String bindingVar,
+            LexicalEntryUtil lexicalEntryUtil
+    ) throws
+            QueGGMissingFactoryClassException {
+        List<String> generatedSentences = new ArrayList<>();
+        // We already know how to find the matching AnnotatedWords or String tokens than need to be added to the sentence
+        // Load all forms of this lexical entry
+        List<AnnotatedNounOrQuestionWord> annotatedLexicalEntryNouns = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords();
+        AnnotatedNounOrQuestionWord questionWord
+                = // Who / what
+                getAnnotatedQuestionWordBySubjectTypeAndNumber(lexicalEntryUtil.getSubjectType(lexicalEntryUtil.getSelectVariable(), DomainOrRangeType.PERSON), getLanguage(), lexicalEntryUtil, getLexInfo().getPropertyValue("singular"), null);
+        String nounToken = lexicalEntryUtil.getReturnVariableConditionLabel(lexicalEntryUtil.getSelectVariable());
+        String object = String.format(
+                BINDING_TOKEN_TEMPLATE,
+                bindingVar,
+                DomainOrRangeType.getMatchingType(lexicalEntryUtil.getConditionUriBySelectVariable(
+                        LexicalEntryUtil.getOppositeSelectVariable(lexicalEntryUtil.getSelectVariable())
+                )).name(),
+                SentenceType.NP.toString()
+        );
+
+        // We already know, which sentence tokens to expect, so we search for them to find out where to put our expected AnnotatedWords and Strings
+        Optional<SentenceToken> questionWordToken = getQuestionWordToken(sentenceTokens); // interrogativeDeterminer/-Pronoun
+        Optional<SentenceToken> questionWordNounToken = getConditionNounToken(sentenceTokens); // noun(condition:copulativeArg)
+        Optional<SentenceToken> rootToken = getRootToken(sentenceTokens);
+        Optional<SentenceToken> pronounObjectToken = getObjectPronounToken(sentenceTokens);
+
+        // Load a list of to be forms to make every possible sentence combination
+        Optional<SentenceToken> copulaToken = getCopulaToken(sentenceTokens); // verb(reference:component_be)
+        List<AnnotatedVerb> toBeVerbs = new ArrayList<>();
+        if (copulaToken.isPresent()) {
+            URI copulaRef = copulaToken.get().getLocalReference();
+            LexicalEntry entry = new LexiconSearch(lexicalEntryUtil.getLexicon()).getReferencedResource(copulaRef);
+            toBeVerbs = lexicalEntryUtil.parseLexicalEntryToAnnotatedVerbs(entry.getOtherForms());
+        }
+
+        for (AnnotatedNounOrQuestionWord annotatedNoun : annotatedLexicalEntryNouns) {
+            String[] sentenceArray = new String[sentenceTokens.size()];
+            // Get NP for this annotatedNoun
+            for (AnnotatedVerb toBeVerb : toBeVerbs) {
+                if (annotatedNoun.getNumber().equals(toBeVerb.getNumber())
+                        || (rootToken.isPresent() && isValidAdjectiveForm(rootToken.get()))) {
+                    if (isNPPPresent(sentenceTokens) && rootToken.isPresent()) {
+                        String np = generateNPOrAP(sentenceTokens, object, lexicalEntryUtil).get(annotatedNoun.getNumber());
+                        sentenceArray[rootToken.get().getPosition()] = np;
+                        copulaToken.ifPresent(sentenceToken -> sentenceArray[sentenceToken.getPosition()] = toBeVerb.getWrittenRepValue());
+                        // Get interrogative determiner or pronoun for this sentence
+                        if (pronounObjectToken.isPresent()) {
+                            URI detRef = pronounObjectToken.get().getLocalReference();
+                            LexicalEntry entry = new LexiconSearch(lexicalEntryUtil.getLexicon()).getReferencedResource(detRef);
+                            String object_pronoun = entry.getCanonicalForm().getWrittenRep().value;
+                            sentenceArray[pronounObjectToken.get().getPosition()] = object_pronoun;
+                        }
+
+                        if (questionWordToken.isPresent()) {
+                            // Get determiner token
+                            if (questionWordNounToken.isPresent() && !lexicalEntryUtil.hasInvalidDeterminerToken(
+                                    lexicalEntryUtil
+                                            .getSelectVariable())) { // check if there is any noun with a condition
+                                // must be determiner token
+                                questionWord = getAnnotatedQuestionWordBySubjectTypeAndNumber(
+                                        SubjectType.INTERROGATIVE_DETERMINER,
+                                        getLanguage(),
+                                        lexicalEntryUtil,
+                                        toBeVerb.getNumber(),
+                                        null
+                                );
+
+                                // Get noun for determiner token
+                                String determinerToken;
+
+                                if (getLanguage().equals(Language.DE)) {
+                                    URI nounRef;
+                                    if (nounToken.contains(" ")) {
+                                        nounRef = URI.create(LexiconSearch.LEXICON_BASE_URI + nounToken.replace(' ', '_').toLowerCase() + "_weak");
+                                    } else {
+                                        nounRef = URI.create(LexiconSearch.LEXICON_BASE_URI + nounToken.toLowerCase());
+                                    }
+                                    LexicalEntry entry = new LexiconSearch(lexicalEntryUtil.getLexicon()).getReferencedResource(nounRef);
+                                    String questionNoun = entry.getCanonicalForm().getWrittenRep().value;
+                                    List<AnnotatedNounOrQuestionWord> questionWordNoun = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords(entry.getOtherForms());
+
+                                    for (AnnotatedNounOrQuestionWord noun : questionWordNoun) {
+                                        if (noun.getNumber().equals(toBeVerb.getNumber())) {
+                                            questionNoun = noun.getWrittenRepValue();
+                                        }
+                                    }
+
+                                    determinerToken = getDeterminerTokenByNumber(
+                                            toBeVerb.getNumber(),
+                                            questionNoun,
+                                            questionWord.getWrittenRepValue(),
+                                            getLanguage()
+                                    );
+                                } else {
+                                    determinerToken = getDeterminerTokenByNumber(
+                                            toBeVerb.getNumber(),
+                                            nounToken,
+                                            questionWord.getWrittenRepValue(),
+                                            getLanguage()
+                                    );
+                                }
+                                sentenceArray[questionWordToken.get().getPosition()] = determinerToken;
+                            } else if (isValidAdjectiveForm(rootToken.get())
+                                    && toBeVerb.getNumber().equals(getLexInfo().getPropertyValue("plural"))) {
+                                // skip plural copula for interrogative pronoun if adjective / participle
+                                continue;
+                            } else {
+                                sentenceArray[questionWordToken.get().getPosition()] = questionWord.getWrittenRepValue();
+                            }
+                        }
+                        String sentence = buildSentence(Arrays.asList(sentenceArray));
+                        if (!pronounObjectToken.isPresent()) {
+                            sentence = sentence.concat(QUESTION_MARK);
+                        }
+                        if (!generatedSentences.contains(sentence)) {
+                            generatedSentences.add(sentence);
+                        }
+                    } else {
+                        LOG.error("Please add the tag 'root' to every possible sentence template for this class!");
+                    }
+                }
+            }
+        }
+        return generatedSentences;
     }
 
     private boolean isValidAdjectiveForm(SentenceToken rootToken) {
@@ -160,7 +289,7 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
         return generateNPOrAP(sentenceTokens, bindingVar, lexicalEntryUtil);
     }
 
-    private Map<PropertyValue, String> generateNPOrAP(
+    /*private Map<PropertyValue, String> generateNPOrAP(
             List<SentenceToken> sentenceTokens,
             String bindingVar,
             LexicalEntryUtil lexicalEntryUtil
@@ -198,6 +327,112 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                         conditionLabel.get().getPropertyMap().get(getLexInfo().getProperty("number")), nounToken,
                         ""
                 );
+            }
+            if (rootToken.isPresent() && npPreposition.isPresent() && npObject.isPresent()) {
+                sentenceArray[rootToken.get().getPosition()] = annotatedNoun.getWrittenRepValue();
+                sentenceArray[npPreposition.get().getPosition()] = preposition;
+                sentenceArray[npObject.get().getPosition()] = object;
+                String sentence = buildSentence(Arrays.asList(sentenceArray));
+                if (!generatedSentences.containsValue(sentence)) {
+                    generatedSentences.put(annotatedNoun.getNumber(), sentence);
+                }
+            }
+        }
+        return generatedSentences;
+    }*/
+    
+     private Map<PropertyValue, String> generateNPOrAP(
+            List<SentenceToken> sentenceTokens,
+            String bindingVar,
+            LexicalEntryUtil lexicalEntryUtil
+    ) {
+        Map<PropertyValue, String> generatedSentences = new HashMap<>();
+        // We already know how to find the matching AnnotatedWords or String tokens than need to be added to the sentence
+        // Load all forms of this lexical entry
+        List<AnnotatedNounOrQuestionWord> annotatedLexicalEntryNouns = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords();
+        String determiner = "";
+        String preposition = lexicalEntryUtil.getPreposition();
+        String object = String.format("%s", bindingVar);
+        String nounToken = lexicalEntryUtil.getReturnVariableConditionLabel(lexicalEntryUtil.getSelectVariable());
+        //System.out.println("lexicalEntryUtil::"+lexicalEntryUtil);
+       
+
+        // We already know, which sentence tokens to expect, so we search for them to find out where to put our expected AnnotatedWords and Strings
+        Optional<SentenceToken> npDeterminer = getNPDeterminer(sentenceTokens);
+        Optional<SentenceToken> rootToken = getRootToken(sentenceTokens);
+        Optional<SentenceToken> npPreposition = getNPPreposition(sentenceTokens);
+        Optional<SentenceToken> npObject = getNPObject(sentenceTokens);
+        Optional<SentenceToken> conditionLabel = getConditionNounToken(sentenceTokens);
+
+        String grammaticalCase = "nominativeCase";
+        if (rootToken.isPresent()) {
+            grammaticalCase = rootToken.get().getGrammaticalCase();
+        }
+
+        for (AnnotatedNounOrQuestionWord annotatedNoun : annotatedLexicalEntryNouns) {
+            if (annotatedNoun.getGrammaticalCase() != null && !annotatedNoun.getGrammaticalCase().equals(lexicalEntryUtil.getLexInfo().getPropertyValue(grammaticalCase))) {
+                continue;
+            }
+            String[] sentenceArray = new String[sentenceTokens.size()];
+            // Get NP for this annotatedNoun
+            if (npDeterminer.isPresent()) {
+                URI detRef = npDeterminer.get().getLocalReference();
+                LexicalEntry entry = new LexiconSearch(lexicalEntryUtil.getLexicon()).getReferencedResource(detRef);
+                //System.out.println("lexicalEntryUtil.getLexicon()::"+lexicalEntryUtil.getLexicon());
+                //System.out.println("entry::"+entry);
+                determiner = entry.getCanonicalForm().getWrittenRep().value;
+                List<AnnotatedNounOrQuestionWord> determiners = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords(entry.getOtherForms());
+                for (AnnotatedNounOrQuestionWord det : determiners) {
+                    if (annotatedNoun.getNumber().equals(det.getNumber())) {
+                        if (det.getNumber().equals(lexicalEntryUtil.getLexInfo().getPropertyValue("singular"))
+                                && annotatedNoun.getGender().equals(det.getGender())) {
+                            determiner = det.getWrittenRepValue();
+                        }
+                        else if (det.getNumber().equals(lexicalEntryUtil.getLexInfo().getPropertyValue("plural"))) {
+                            determiner = det.getWrittenRepValue();
+                        }
+                    }
+                }
+                sentenceArray[npDeterminer.get().getPosition()] = determiner;
+            }
+            if (conditionLabel.isPresent()
+                    && conditionLabel.get().getPropertyMap().containsKey(getLexInfo().getProperty("number"))) {
+                // Get noun for determiner token
+                String determinerToken;
+
+                if (getLanguage().equals(Language.DE)) {
+                    URI nounRef;
+                    if (nounToken.contains(" ")) {
+                        nounRef = URI.create(LexiconSearch.LEXICON_BASE_URI + nounToken.replace(' ', '_').toLowerCase() + "_strong");
+                    } else {
+                        nounRef = URI.create(LexiconSearch.LEXICON_BASE_URI + nounToken.toLowerCase());
+                    }
+                    LexicalEntry entry = new LexiconSearch(lexicalEntryUtil.getLexicon()).getReferencedResource(nounRef);
+                    String questionNoun = entry.getCanonicalForm().getWrittenRep().value;
+                    List<AnnotatedNounOrQuestionWord> questionWordNoun = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords(entry.getOtherForms());
+
+                    for (AnnotatedNounOrQuestionWord noun : questionWordNoun) {
+                        if (noun.getNumber().equals(lexicalEntryUtil.getLexInfo().getPropertyValue("plural"))) {
+                            questionNoun = noun.getWrittenRepValue();
+                        }
+                    }
+
+                    determinerToken = getDeterminerTokenByNumber(
+                            lexicalEntryUtil.getLexInfo().getPropertyValue("plural"),
+                            questionNoun,
+                            "",
+                            getLanguage()
+                    );
+                } else {
+                    determinerToken = getDeterminerTokenByNumber(
+                            lexicalEntryUtil.getLexInfo().getPropertyValue("plural"),
+                            nounToken,
+                            "",
+                            getLanguage()
+                    );
+                }
+
+                sentenceArray[conditionLabel.get().getPosition()] = determinerToken;
             }
             if (rootToken.isPresent() && npPreposition.isPresent() && npObject.isPresent()) {
                 sentenceArray[rootToken.get().getPosition()] = annotatedNoun.getWrittenRepValue();

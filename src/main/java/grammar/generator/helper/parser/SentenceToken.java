@@ -9,31 +9,35 @@ import java.net.URI;
 import java.util.Map;
 
 public interface SentenceToken {
-  void setPosition(int position);
 
-  int getPosition();
+    void setPosition(int position);
 
-  PropertyValue getPartOfSpeechValue();
+    int getPosition();
 
-  boolean isRootToken();
+    PropertyValue getPartOfSpeechValue();
 
-  Map<Property, PropertyValue> getPropertyMap();
+    boolean isRootToken();
 
-  URI getLocalReference();
+    Map<Property, PropertyValue> getPropertyMap();
 
-  boolean isConditionLabel();
+    URI getLocalReference();
 
-  SynArg getSynArgForCondition();
+    boolean isConditionLabel();
 
-  boolean isNestedSentenceTemplate();
+    SynArg getSynArgForCondition();
 
-  NestedSentenceTemplateData getNestedSentenceTemplateData();
+    boolean isNestedSentenceTemplate();
 
-  SynArg getSynArgValue();
+    NestedSentenceTemplateData getNestedSentenceTemplateData();
 
-  interface NestedSentenceTemplateData {
-    SentenceType getType();
+    SynArg getSynArgValue();
+    
+    String getGrammaticalCase();
 
-    String[] getArguments();
-  }
+    interface NestedSentenceTemplateData {
+
+        SentenceType getType();
+
+        String[] getArguments();
+    }
 }
