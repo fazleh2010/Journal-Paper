@@ -14,13 +14,13 @@ import grammar.structure.component.Language;
  *
  * @author elahi
  */
-public class QuestionWordFactoryBN {
+public class QuestionWordFactoryDE {
 
     private final QuestionWordRepository questionWordRepository;
     private final Language language;
 
-    QuestionWordFactoryBN() {
-        this.language = Language.BN;
+    QuestionWordFactoryDE() {
+        this.language = Language.DE;
         this.questionWordRepository = new QuestionWordDataset();
     }
 

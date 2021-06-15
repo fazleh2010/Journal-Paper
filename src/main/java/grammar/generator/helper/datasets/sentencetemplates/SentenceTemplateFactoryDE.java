@@ -6,13 +6,13 @@ import static grammar.generator.helper.datasets.sentencetemplates.SentenceTempla
 import grammar.structure.component.Language;
 import java.util.List;
 
-class SentenceTemplateFactoryBN implements Factory<SentenceTemplateRepository> {
+class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository> {
 
     private final SentenceTemplateRepository sentenceTemplateRepository;
     private final Language language;
 
-    SentenceTemplateFactoryBN() {
-        this.language = Language.BN;
+    SentenceTemplateFactoryDE() {
+        this.language = Language.DE;
         this.sentenceTemplateRepository = new SentenceTemplateDataset();
     }
 

@@ -1,0 +1,3803 @@
+{
+  "grammarEntries" : [ {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Wechselstrommotor", "Gib mir die Produzenten von Wechselstrommotor", "Was ist der Produzent von Wechselstrommotor?", "Was sind die Produzenten von Wechselstrommotor?", "Was war der Produzent von Wechselstrommotor?", "Was waren die Produzenten von Wechselstrommotor?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/AC_motor>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Lufia", "Gib mir die Produzenten von Lufia", "Was ist der Produzent von Lufia?", "Was sind die Produzenten von Lufia?", "Was war der Produzent von Lufia?", "Was waren die Produzenten von Lufia?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Lufia>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Bauholz", "Gib mir die Produzenten von Bauholz", "Was ist der Produzent von Bauholz?", "Was sind die Produzenten von Bauholz?", "Was war der Produzent von Bauholz?", "Was waren die Produzenten von Bauholz?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Lumber>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Luxusgut", "Gib mir die Produzenten von Luxusgut", "Was ist der Produzent von Luxusgut?", "Was sind die Produzenten von Luxusgut?", "Was war der Produzent von Luxusgut?", "Was waren die Produzenten von Luxusgut?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Luxury_goods>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von M&M’s", "Gib mir die Produzenten von M&M’s", "Was ist der Produzent von M&M’s?", "Was sind die Produzenten von M&M’s?", "Was war der Produzent von M&M’s?", "Was waren die Produzenten von M&M’s?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/M&M's>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von M16 (Gewehr)", "Gib mir die Produzenten von M16 (Gewehr)", "Was ist der Produzent von M16 (Gewehr)?", "Was sind die Produzenten von M16 (Gewehr)?", "Was war der Produzent von M16 (Gewehr)?", "Was waren die Produzenten von M16 (Gewehr)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/M16_rifle>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von M939 (5-Ton-Truck)", "Gib mir die Produzenten von M939 (5-Ton-Truck)", "Was ist der Produzent von M939 (5-Ton-Truck)?", "Was sind die Produzenten von M939 (5-Ton-Truck)?", "Was war der Produzent von M939 (5-Ton-Truck)?", "Was waren die Produzenten von M939 (5-Ton-Truck)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/M939_series_5-ton_6x6_truck>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von MAG (Computerspiel)", "Gib mir die Produzenten von MAG (Computerspiel)", "Was ist der Produzent von MAG (Computerspiel)?", "Was sind die Produzenten von MAG (Computerspiel)?", "Was war der Produzent von MAG (Computerspiel)?", "Was waren die Produzenten von MAG (Computerspiel)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/MAG_(video_game)>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Matlab", "Gib mir die Produzenten von Matlab", "Was ist der Produzent von Matlab?", "Was sind die Produzenten von Matlab?", "Was war der Produzent von Matlab?", "Was waren die Produzenten von Matlab?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/MATLAB>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von MDK (Computerspiel)", "Gib mir die Produzenten von MDK (Computerspiel)", "Was ist der Produzent von MDK (Computerspiel)?", "Was sind die Produzenten von MDK (Computerspiel)?", "Was war der Produzent von MDK (Computerspiel)?", "Was waren die Produzenten von MDK (Computerspiel)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/MDK_(video_game)>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von MGB (Auto)", "Gib mir die Produzenten von MGB (Auto)", "Was ist der Produzent von MGB (Auto)?", "Was sind die Produzenten von MGB (Auto)?", "Was war der Produzent von MGB (Auto)?", "Was waren die Produzenten von MGB (Auto)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/MG_MGB>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von MG Motor UK", "Gib mir die Produzenten von MG Motor UK", "Was ist der Produzent von MG Motor UK?", "Was sind die Produzenten von MG Motor UK?", "Was war der Produzent von MG Motor UK?", "Was waren die Produzenten von MG Motor UK?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/MG_Motor>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von MIPS-Architektur", "Gib mir die Produzenten von MIPS-Architektur", "Was ist der Produzent von MIPS-Architektur?", "Was sind die Produzenten von MIPS-Architektur?", "Was war der Produzent von MIPS-Architektur?", "Was waren die Produzenten von MIPS-Architektur?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/MIPS_architecture>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von MODE32", "Gib mir die Produzenten von MODE32", "Was ist der Produzent von MODE32?", "Was sind die Produzenten von MODE32?", "Was war der Produzent von MODE32?", "Was waren die Produzenten von MODE32?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/MODE32>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von MacDraw", "Gib mir die Produzenten von MacDraw", "Was ist der Produzent von MacDraw?", "Was sind die Produzenten von MacDraw?", "Was war der Produzent von MacDraw?", "Was waren die Produzenten von MacDraw?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/MacDraw>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von MacOS", "Gib mir die Produzenten von MacOS", "Was ist der Produzent von MacOS?", "Was sind die Produzenten von MacOS?", "Was war der Produzent von MacOS?", "Was waren die Produzenten von MacOS?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/MacOS>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Mac OS", "Gib mir die Produzenten von Mac OS", "Was ist der Produzent von Mac OS?", "Was sind die Produzenten von Mac OS?", "Was war der Produzent von Mac OS?", "Was waren die Produzenten von Mac OS?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/MacOS>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von MacWrite", "Gib mir die Produzenten von MacWrite", "Was ist der Produzent von MacWrite?", "Was sind die Produzenten von MacWrite?", "Was war der Produzent von MacWrite?", "Was waren die Produzenten von MacWrite?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/MacWrite>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Mac OS X Snow Leopard", "Gib mir die Produzenten von Mac OS X Snow Leopard", "Was ist der Produzent von Mac OS X Snow Leopard?", "Was sind die Produzenten von Mac OS X Snow Leopard?", "Was war der Produzent von Mac OS X Snow Leopard?", "Was waren die Produzenten von Mac OS X Snow Leopard?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Mac_OS_X_Snow_Leopard>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Macaron", "Gib mir die Produzenten von Macaron", "Was ist der Produzent von Macaron?", "Was sind die Produzenten von Macaron?", "Was war der Produzent von Macaron?", "Was waren die Produzenten von Macaron?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Macaron>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Machinarium", "Gib mir die Produzenten von Machinarium", "Was ist der Produzent von Machinarium?", "Was sind die Produzenten von Machinarium?", "Was war der Produzent von Machinarium?", "Was waren die Produzenten von Machinarium?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Machinarium>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Maschinengewehr", "Gib mir die Produzenten von Maschinengewehr", "Was ist der Produzent von Maschinengewehr?", "Was sind die Produzenten von Maschinengewehr?", "Was war der Produzent von Maschinengewehr?", "Was waren die Produzenten von Maschinengewehr?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Machine_gun>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Maschinelles Lernen", "Gib mir die Produzenten von Maschinelles Lernen", "Was ist der Produzent von Maschinelles Lernen?", "Was sind die Produzenten von Maschinelles Lernen?", "Was war der Produzent von Maschinelles Lernen?", "Was waren die Produzenten von Maschinelles Lernen?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Machine_learning>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Macintosh", "Gib mir die Produzenten von Macintosh", "Was ist der Produzent von Macintosh?", "Was sind die Produzenten von Macintosh?", "Was war der Produzent von Macintosh?", "Was waren die Produzenten von Macintosh?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Macintosh>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Mad Dog McCree", "Gib mir die Produzenten von Mad Dog McCree", "Was ist der Produzent von Mad Dog McCree?", "Was sind die Produzenten von Mad Dog McCree?", "Was war der Produzent von Mad Dog McCree?", "Was waren die Produzenten von Mad Dog McCree?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Mad_Dog_McCree>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Madden NFL", "Gib mir die Produzenten von Madden NFL", "Was ist der Produzent von Madden NFL?", "Was sind die Produzenten von Madden NFL?", "Was war der Produzent von Madden NFL?", "Was waren die Produzenten von Madden NFL?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Madden_NFL>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Madlax", "Gib mir die Produzenten von Madlax", "Was ist der Produzent von Madlax?", "Was sind die Produzenten von Madlax?", "Was war der Produzent von Madlax?", "Was waren die Produzenten von Madlax?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Madlax>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Mafia III", "Gib mir die Produzenten von Mafia III", "Was ist der Produzent von Mafia III?", "Was sind die Produzenten von Mafia III?", "Was war der Produzent von Mafia III?", "Was waren die Produzenten von Mafia III?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Mafia_III>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Mage Knight", "Gib mir die Produzenten von Mage Knight", "Was ist der Produzent von Mage Knight?", "Was sind die Produzenten von Mage Knight?", "Was war der Produzent von Mage Knight?", "Was waren die Produzenten von Mage Knight?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Mage_Knight>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Magic: The Gathering", "Gib mir die Produzenten von Magic: The Gathering", "Was ist der Produzent von Magic: The Gathering?", "Was sind die Produzenten von Magic: The Gathering?", "Was war der Produzent von Magic: The Gathering?", "Was waren die Produzenten von Magic: The Gathering?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Magic:_The_Gathering>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Mamfies Abenteuer", "Gib mir die Produzenten von Mamfies Abenteuer", "Was ist der Produzent von Mamfies Abenteuer?", "Was sind die Produzenten von Mamfies Abenteuer?", "Was war der Produzent von Mamfies Abenteuer?", "Was waren die Produzenten von Mamfies Abenteuer?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Magic_Adventures_of_Mumfie>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Magic Carpet (Computerspiel)", "Gib mir die Produzenten von Magic Carpet (Computerspiel)", "Was ist der Produzent von Magic Carpet (Computerspiel)?", "Was sind die Produzenten von Magic Carpet (Computerspiel)?", "Was war der Produzent von Magic Carpet (Computerspiel)?", "Was waren die Produzenten von Magic Carpet (Computerspiel)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Magic_Carpet_(video_game)>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Magix Music Maker", "Gib mir die Produzenten von Magix Music Maker", "Was ist der Produzent von Magix Music Maker?", "Was sind die Produzenten von Magix Music Maker?", "Was war der Produzent von Magix Music Maker?", "Was waren die Produzenten von Magix Music Maker?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Magix_Music_Maker>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Magnesit", "Gib mir die Produzenten von Magnesit", "Was ist der Produzent von Magnesit?", "Was sind die Produzenten von Magnesit?", "Was war der Produzent von Magnesit?", "Was waren die Produzenten von Magnesit?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Magnesite>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Magnesium", "Gib mir die Produzenten von Magnesium", "Was ist der Produzent von Magnesium?", "Was sind die Produzenten von Magnesium?", "Was war der Produzent von Magnesium?", "Was waren die Produzenten von Magnesium?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Magnesium>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Magnesiumchlorid", "Gib mir die Produzenten von Magnesiumchlorid", "Was ist der Produzent von Magnesiumchlorid?", "Was sind die Produzenten von Magnesiumchlorid?", "Was war der Produzent von Magnesiumchlorid?", "Was waren die Produzenten von Magnesiumchlorid?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Magnesium_chloride>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Magnetresonanztomographie", "Gib mir die Produzenten von Magnetresonanztomographie", "Was ist der Produzent von Magnetresonanztomographie?", "Was sind die Produzenten von Magnetresonanztomographie?", "Was war der Produzent von Magnetresonanztomographie?", "Was waren die Produzenten von Magnetresonanztomographie?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Magnetic_resonance_imaging>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Mahan-Klasse", "Gib mir die Produzenten von Mahan-Klasse", "Was ist der Produzent von Mahan-Klasse?", "Was sind die Produzenten von Mahan-Klasse?", "Was war der Produzent von Mahan-Klasse?", "Was waren die Produzenten von Mahan-Klasse?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Mahan-class_destroyer>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Briefverteilanlage", "Gib mir die Produzenten von Briefverteilanlage", "Was ist der Produzent von Briefverteilanlage?", "Was sind die Produzenten von Briefverteilanlage?", "Was war der Produzent von Briefverteilanlage?", "Was waren die Produzenten von Briefverteilanlage?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Mail_sorter>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Maine (Loire)", "Gib mir die Produzenten von Maine (Loire)", "Was ist der Produzent von Maine (Loire)?", "Was sind die Produzenten von Maine (Loire)?", "Was war der Produzent von Maine (Loire)?", "Was waren die Produzenten von Maine (Loire)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Maine>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Maine", "Gib mir die Produzenten von Maine", "Was ist der Produzent von Maine?", "Was sind die Produzenten von Maine?", "Was war der Produzent von Maine?", "Was waren die Produzenten von Maine?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Maine>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Mais", "Gib mir die Produzenten von Mais", "Was ist der Produzent von Mais?", "Was sind die Produzenten von Mais?", "Was war der Produzent von Mais?", "Was waren die Produzenten von Mais?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Maize>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Majesty: The Fantasy Kingdom Sim", "Gib mir die Produzenten von Majesty: The Fantasy Kingdom Sim", "Was ist der Produzent von Majesty: The Fantasy Kingdom Sim?", "Was sind die Produzenten von Majesty: The Fantasy Kingdom Sim?", "Was war der Produzent von Majesty: The Fantasy Kingdom Sim?", "Was waren die Produzenten von Majesty: The Fantasy Kingdom Sim?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Majesty:_The_Fantasy_Kingdom_Sim>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Teppich", "Gib mir die Produzenten von Teppich", "Was ist der Produzent von Teppich?", "Was sind die Produzenten von Teppich?", "Was war der Produzent von Teppich?", "Was waren die Produzenten von Teppich?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Carpet>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Wagen", "Gib mir die Produzenten von Wagen", "Was ist der Produzent von Wagen?", "Was sind die Produzenten von Wagen?", "Was war der Produzent von Wagen?", "Was waren die Produzenten von Wagen?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Carriage>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Patrone (Munition)", "Gib mir die Produzenten von Patrone (Munition)", "Was ist der Produzent von Patrone (Munition)?", "Was sind die Produzenten von Patrone (Munition)?", "Was war der Produzent von Patrone (Munition)?", "Was waren die Produzenten von Patrone (Munition)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Cartridge_(firearms)>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Etui", "Gib mir die Produzenten von Etui", "Was ist der Produzent von Etui?", "Was sind die Produzenten von Etui?", "Was war der Produzent von Etui?", "Was waren die Produzenten von Etui?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Case_(goods)>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Fallrecht", "Gib mir die Produzenten von Fallrecht", "Was ist der Produzent von Fallrecht?", "Was sind die Produzenten von Fallrecht?", "Was war der Produzent von Fallrecht?", "Was waren die Produzenten von Fallrecht?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Case_law>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Casein", "Gib mir die Produzenten von Casein", "Was ist der Produzent von Casein?", "Was sind die Produzenten von Casein?", "Was war der Produzent von Casein?", "Was waren die Produzenten von Casein?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Casein>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Abholgroßmarkt", "Gib mir die Produzenten von Abholgroßmarkt", "Was ist der Produzent von Abholgroßmarkt?", "Was sind die Produzenten von Abholgroßmarkt?", "Was war der Produzent von Abholgroßmarkt?", "Was waren die Produzenten von Abholgroßmarkt?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Cash_and_carry_(wholesale)>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Cash Crops", "Gib mir die Produzenten von Cash Crops", "Was ist der Produzent von Cash Crops?", "Was sind die Produzenten von Cash Crops?", "Was war der Produzent von Cash Crops?", "Was waren die Produzenten von Cash Crops?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Cash_crop>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Cash Management", "Gib mir die Produzenten von Cash Management", "Was ist der Produzent von Cash Management?", "Was sind die Produzenten von Cash Management?", "Was war der Produzent von Cash Management?", "Was waren die Produzenten von Cash Management?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Cash_management>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Treasury", "Gib mir die Produzenten von Treasury", "Was ist der Produzent von Treasury?", "Was sind die Produzenten von Treasury?", "Was war der Produzent von Treasury?", "Was waren die Produzenten von Treasury?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Cash_management>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Registrierkasse", "Gib mir die Produzenten von Registrierkasse", "Was ist der Produzent von Registrierkasse?", "Was sind die Produzenten von Registrierkasse?", "Was war der Produzent von Registrierkasse?", "Was waren die Produzenten von Registrierkasse?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Cash_register>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Cashback-System", "Gib mir die Produzenten von Cashback-System", "Was ist der Produzent von Cashback-System?", "Was sind die Produzenten von Cashback-System?", "Was war der Produzent von Cashback-System?", "Was waren die Produzenten von Cashback-System?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Cashback_reward_program>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Bankscheck", "Gib mir die Produzenten von Bankscheck", "Was ist der Produzent von Bankscheck?", "Was sind die Produzenten von Bankscheck?", "Was war der Produzent von Bankscheck?", "Was waren die Produzenten von Bankscheck?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Cashier's_check>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Kaschmirwolle", "Gib mir die Produzenten von Kaschmirwolle", "Was ist der Produzent von Kaschmirwolle?", "Was sind die Produzenten von Kaschmirwolle?", "Was war der Produzent von Kaschmirwolle?", "Was waren die Produzenten von Kaschmirwolle?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Cashmere_wool>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Kassettenrekorder", "Gib mir die Produzenten von Kassettenrekorder", "Was ist der Produzent von Kassettenrekorder?", "Was sind die Produzenten von Kassettenrekorder?", "Was war der Produzent von Kassettenrekorder?", "Was waren die Produzenten von Kassettenrekorder?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Cassette_deck>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Kassiterit", "Gib mir die Produzenten von Kassiterit", "Was ist der Produzent von Kassiterit?", "Was sind die Produzenten von Kassiterit?", "Was war der Produzent von Kassiterit?", "Was waren die Produzenten von Kassiterit?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Cassiterite>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Gusseisen", "Gib mir die Produzenten von Gusseisen", "Was ist der Produzent von Gusseisen?", "Was sind die Produzenten von Gusseisen?", "Was war der Produzent von Gusseisen?", "Was waren die Produzenten von Gusseisen?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Cast_iron>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Gießbarkeit", "Gib mir die Produzenten von Gießbarkeit", "Was ist der Produzent von Gießbarkeit?", "Was sind die Produzenten von Gießbarkeit?", "Was war der Produzent von Gießbarkeit?", "Was waren die Produzenten von Gießbarkeit?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Castability>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Kastagnetten", "Gib mir die Produzenten von Kastagnetten", "Was ist der Produzent von Kastagnetten?", "Was sind die Produzenten von Kastagnetten?", "Was war der Produzent von Kastagnetten?", "Was waren die Produzenten von Kastagnetten?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Castanets>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Kastellan", "Gib mir die Produzenten von Kastellan", "Was ist der Produzent von Kastellan?", "Was sind die Produzenten von Kastellan?", "Was war der Produzent von Kastellan?", "Was waren die Produzenten von Kastellan?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Castellan>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Gießen (Urformen)", "Gib mir die Produzenten von Gießen (Urformen)", "Was ist der Produzent von Gießen (Urformen)?", "Was sind die Produzenten von Gießen (Urformen)?", "Was war der Produzent von Gießen (Urformen)?", "Was waren die Produzenten von Gießen (Urformen)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Casting>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Gießen (Metall)", "Gib mir die Produzenten von Gießen (Metall)", "Was ist der Produzent von Gießen (Metall)?", "Was sind die Produzenten von Gießen (Metall)?", "Was war der Produzent von Gießen (Metall)?", "Was waren die Produzenten von Gießen (Metall)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Casting_(metalworking)>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Casual Game", "Gib mir die Produzenten von Casual Game", "Was ist der Produzent von Casual Game?", "Was sind die Produzenten von Casual Game?", "Was war der Produzent von Casual Game?", "Was waren die Produzenten von Casual Game?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Casual_game>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Katzenauge", "Gib mir die Produzenten von Katzenauge", "Was ist der Produzent von Katzenauge?", "Was sind die Produzenten von Katzenauge?", "Was war der Produzent von Katzenauge?", "Was waren die Produzenten von Katzenauge?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Cat's_eye_(road)>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Katalogisierung", "Gib mir die Produzenten von Katalogisierung", "Was ist der Produzent von Katalogisierung?", "Was sind die Produzenten von Katalogisierung?", "Was war der Produzent von Katalogisierung?", "Was waren die Produzenten von Katalogisierung?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Cataloging>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Katalysator", "Gib mir die Produzenten von Katalysator", "Was ist der Produzent von Katalysator?", "Was sind die Produzenten von Katalysator?", "Was war der Produzent von Katalysator?", "Was waren die Produzenten von Katalysator?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Catalyst>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Katamaran", "Gib mir die Produzenten von Katamaran", "Was ist der Produzent von Katamaran?", "Was sind die Produzenten von Katamaran?", "Was war der Produzent von Katamaran?", "Was waren die Produzenten von Katamaran?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Catamaran>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Catering", "Gib mir die Produzenten von Catering", "Was ist der Produzent von Catering?", "Was sind die Produzenten von Catering?", "Was war der Produzent von Catering?", "Was waren die Produzenten von Catering?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Catering>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Pflanzenkläranlage", "Gib mir die Produzenten von Pflanzenkläranlage", "Was ist der Produzent von Pflanzenkläranlage?", "Was sind die Produzenten von Pflanzenkläranlage?", "Was war der Produzent von Pflanzenkläranlage?", "Was waren die Produzenten von Pflanzenkläranlage?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Constructed_wetland>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Verbrauchsmaterial", "Gib mir die Produzenten von Verbrauchsmaterial", "Was ist der Produzent von Verbrauchsmaterial?", "Was sind die Produzenten von Verbrauchsmaterial?", "Was war der Produzent von Verbrauchsmaterial?", "Was waren die Produzenten von Verbrauchsmaterial?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Consumables>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Verbraucher", "Gib mir die Produzenten von Verbraucher", "Was ist der Produzent von Verbraucher?", "Was sind die Produzenten von Verbraucher?", "Was war der Produzent von Verbraucher?", "Was waren die Produzenten von Verbraucher?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Consumer>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Stimmfühlungslaut", "Gib mir die Produzenten von Stimmfühlungslaut", "Was ist der Produzent von Stimmfühlungslaut?", "Was sind die Produzenten von Stimmfühlungslaut?", "Was war der Produzent von Stimmfühlungslaut?", "Was waren die Produzenten von Stimmfühlungslaut?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Contact_call>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Kontaktlinse", "Gib mir die Produzenten von Kontaktlinse", "Was ist der Produzent von Kontaktlinse?", "Was sind die Produzenten von Kontaktlinse?", "Was war der Produzent von Kontaktlinse?", "Was waren die Produzenten von Kontaktlinse?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Contact_lens>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Kontaktloses Bezahlen", "Gib mir die Produzenten von Kontaktloses Bezahlen", "Was ist der Produzent von Kontaktloses Bezahlen?", "Was sind die Produzenten von Kontaktloses Bezahlen?", "Was war der Produzent von Kontaktloses Bezahlen?", "Was waren die Produzenten von Kontaktloses Bezahlen?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Contactless_payment>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Containerbrücke", "Gib mir die Produzenten von Containerbrücke", "Was ist der Produzent von Containerbrücke?", "Was sind die Produzenten von Containerbrücke?", "Was war der Produzent von Containerbrücke?", "Was waren die Produzenten von Containerbrücke?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Container_crane>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Contentfilter", "Gib mir die Produzenten von Contentfilter", "Was ist der Produzent von Contentfilter?", "Was sind die Produzenten von Contentfilter?", "Was war der Produzent von Contentfilter?", "Was waren die Produzenten von Contentfilter?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Content-control_software>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Content Delivery Network", "Gib mir die Produzenten von Content Delivery Network", "Was ist der Produzent von Content Delivery Network?", "Was sind die Produzenten von Content Delivery Network?", "Was war der Produzent von Content Delivery Network?", "Was waren die Produzenten von Content Delivery Network?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Content_delivery_network>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Content-Management", "Gib mir die Produzenten von Content-Management", "Was ist der Produzent von Content-Management?", "Was sind die Produzenten von Content-Management?", "Was war der Produzent von Content-Management?", "Was waren die Produzenten von Content-Management?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Content_management>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Content-Management-System", "Gib mir die Produzenten von Content-Management-System", "Was ist der Produzent von Content-Management-System?", "Was sind die Produzenten von Content-Management-System?", "Was war der Produzent von Content-Management-System?", "Was waren die Produzenten von Content-Management-System?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Content_management_system>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Semantisches Targeting", "Gib mir die Produzenten von Semantisches Targeting", "Was ist der Produzent von Semantisches Targeting?", "Was sind die Produzenten von Semantisches Targeting?", "Was war der Produzent von Semantisches Targeting?", "Was waren die Produzenten von Semantisches Targeting?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Contextual_advertising>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Stufenloses Getriebe", "Gib mir die Produzenten von Stufenloses Getriebe", "Was ist der Produzent von Stufenloses Getriebe?", "Was sind die Produzenten von Stufenloses Getriebe?", "Was war der Produzent von Stufenloses Getriebe?", "Was waren die Produzenten von Stufenloses Getriebe?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Continuously_variable_transmission>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Kontrafagott", "Gib mir die Produzenten von Kontrafagott", "Was ist der Produzent von Kontrafagott?", "Was sind die Produzenten von Kontrafagott?", "Was war der Produzent von Kontrafagott?", "Was waren die Produzenten von Kontrafagott?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Contrabassoon>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Differenzkontrakt", "Gib mir die Produzenten von Differenzkontrakt", "Was ist der Produzent von Differenzkontrakt?", "Was sind die Produzenten von Differenzkontrakt?", "Was war der Produzent von Differenzkontrakt?", "Was waren die Produzenten von Differenzkontrakt?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Contract_for_difference>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Vertragsmanagement", "Gib mir die Produzenten von Vertragsmanagement", "Was ist der Produzent von Vertragsmanagement?", "Was sind die Produzenten von Vertragsmanagement?", "Was war der Produzent von Vertragsmanagement?", "Was waren die Produzenten von Vertragsmanagement?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Contract_management>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Querlenker", "Gib mir die Produzenten von Querlenker", "Was ist der Produzent von Querlenker?", "Was sind die Produzenten von Querlenker?", "Was war der Produzent von Querlenker?", "Was waren die Produzenten von Querlenker?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Control_arm>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Regelkreis", "Gib mir die Produzenten von Regelkreis", "Was ist der Produzent von Regelkreis?", "Was sind die Produzenten von Regelkreis?", "Was war der Produzent von Regelkreis?", "Was waren die Produzenten von Regelkreis?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Control_system>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Stellventil", "Gib mir die Produzenten von Stellventil", "Was ist der Produzent von Stellventil?", "Was sind die Produzenten von Stellventil?", "Was war der Produzent von Stellventil?", "Was waren die Produzenten von Stellventil?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Control_valve>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Autobahn", "Gib mir die Produzenten von Autobahn", "Was ist der Produzent von Autobahn?", "Was sind die Produzenten von Autobahn?", "Was war der Produzent von Autobahn?", "Was waren die Produzenten von Autobahn?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Controlled-access_highway>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Convenience Food", "Gib mir die Produzenten von Convenience Food", "Was ist der Produzent von Convenience Food?", "Was sind die Produzenten von Convenience Food?", "Was war der Produzent von Convenience Food?", "Was waren die Produzenten von Convenience Food?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Convenience_food>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Convenience Shop", "Gib mir die Produzenten von Convenience Shop", "Was ist der Produzent von Convenience Shop?", "Was sind die Produzenten von Convenience Shop?", "Was war der Produzent von Convenience Shop?", "Was waren die Produzenten von Convenience Shop?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Convenience_store>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Förderband", "Gib mir die Produzenten von Förderband", "Was ist der Produzent von Förderband?", "Was sind die Produzenten von Förderband?", "Was war der Produzent von Förderband?", "Was waren die Produzenten von Förderband?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Conveyor_belt>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Panzerförderer", "Gib mir die Produzenten von Panzerförderer", "Was ist der Produzent von Panzerförderer?", "Was sind die Produzenten von Panzerförderer?", "Was war der Produzent von Panzerförderer?", "Was waren die Produzenten von Panzerförderer?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Conveyor_chain>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Kühlmittel", "Gib mir die Produzenten von Kühlmittel", "Was ist der Produzent von Kühlmittel?", "Was sind die Produzenten von Kühlmittel?", "Was war der Produzent von Kühlmittel?", "Was waren die Produzenten von Kühlmittel?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Coolant>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Kühlbox", "Gib mir die Produzenten von Kühlbox", "Was ist der Produzent von Kühlbox?", "Was sind die Produzenten von Kühlbox?", "Was war der Produzent von Kühlbox?", "Was waren die Produzenten von Kühlbox?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Cooler>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Abkühlung", "Gib mir die Produzenten von Abkühlung", "Was ist der Produzent von Abkühlung?", "Was sind die Produzenten von Abkühlung?", "Was war der Produzent von Abkühlung?", "Was waren die Produzenten von Abkühlung?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Cooling>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Koordinatenmessgerät", "Gib mir die Produzenten von Koordinatenmessgerät", "Was ist der Produzent von Koordinatenmessgerät?", "Was sind die Produzenten von Koordinatenmessgerät?", "Was war der Produzent von Koordinatenmessgerät?", "Was waren die Produzenten von Koordinatenmessgerät?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Coordinate-measuring_machine>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "ORGANISATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Gib mir den Produzenten von Kupfer", "Gib mir die Produzenten von Kupfer", "Was ist der Produzent von Kupfer?", "Was sind die Produzenten von Kupfer?", "Was war der Produzent von Kupfer?", "Was waren die Produzenten von Kupfer?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Copper>))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Kanton Luxemburg located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Luxembourg_(canton)> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Luxembourg_(canton)> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Luxembourg_(canton)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Luxemburg (Stadt) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Luxembourg_City> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Luxembourg_City> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Luxembourg_City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Luzonstraße located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Luzon_Strait> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Luzon_Strait> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Luzon_Strait> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Maevatanana located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Maevatanana> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Maevatanana> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Maevatanana> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Mahabo located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahabo,_Betroka> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahabo,_Betroka> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahabo,_Betroka> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Mahaboboka located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahaboboka> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahaboboka> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahaboboka> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Mahajanga located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahajanga> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahajanga> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahajanga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Mahajanga (Provinz) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahajanga_Province> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahajanga_Province> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahajanga_Province> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Maintirano located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Maintirano> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Maintirano> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Maintirano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Consthum located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Consthum> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Consthum> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Consthum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Vakinankaratra located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Vakinankaratra> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Vakinankaratra> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Vakinankaratra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Ernztalgemeinde located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Vallée_de_l'Ernz> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Vallée_de_l'Ernz> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Vallée_de_l'Ernz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Vatovavy-Fitovinany located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Vatovavy-Fitovinany> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Vatovavy-Fitovinany> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Vatovavy-Fitovinany> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Vavatenina located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Vavatenina> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Vavatenina> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Vavatenina> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Folscheid located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Folschette> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Folschette> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Folschette> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Chodoriw located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Khodoriv> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Khodoriv> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Khodoriv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Bissen located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bissen> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bissen> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bissen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Biwer located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Biwer> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Biwer> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Biwer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Boeny located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Boeny> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Boeny> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Boeny> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Bongolava located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bongolava> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bongolava> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bongolava> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Borynja located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Borynia,_Turka_Raion> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Borynia,_Turka_Raion> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Borynia,_Turka_Raion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Bauschleiden located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Boulaide> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Boulaide> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Boulaide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Burscheid (Luxemburg) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bourscheid,_Luxembourg> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bourscheid,_Luxembourg> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bourscheid,_Luxembourg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Bourscheid located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bourscheid,_Luxembourg> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bourscheid,_Luxembourg> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bourscheid,_Luxembourg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Bous (Saar) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bous,_Luxembourg> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bous,_Luxembourg> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bous,_Luxembourg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Diana (Region) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Diana_Region> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Diana_Region> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Diana_Region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Diekirch located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Diekirch> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Diekirch> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Diekirch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Kanton Diekirch located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Diekirch_(canton)> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Diekirch_(canton)> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Diekirch_(canton)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Differdingen located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Differdange> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Differdange> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Differdange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Dippach (Luxemburg) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Dippach> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Dippach> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Dippach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Dippach am Main located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Dippach> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Dippach> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Dippach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Dommeldingen located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Dommeldange> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Dommeldange> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Dommeldange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Goesdorf located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Goesdorf> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Goesdorf> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Goesdorf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Grevenmacher located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Grevenmacher> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Grevenmacher> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Grevenmacher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Kanton Grevenmacher located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Grevenmacher_(canton)> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Grevenmacher_(canton)> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Grevenmacher_(canton)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Grosbous located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Grosbous> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Grosbous> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Grosbous> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Grund (Luxemburg) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Grund,_Luxembourg> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Grund,_Luxembourg> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Grund,_Luxembourg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Kiischpelt located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Kiischpelt> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Kiischpelt> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Kiischpelt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Kirchberg-Plateau located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Kirchberg,_Luxembourg> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Kirchberg,_Luxembourg> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Kirchberg,_Luxembourg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Koerich located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Koerich> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Koerich> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Koerich> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Kom el-Hisn located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Kom_el-Hisn> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Kom_el-Hisn> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Kom_el-Hisn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Kopstal located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Kopstal> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Kopstal> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Kopstal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Krasnodon located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Krasnodon> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Krasnodon> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Krasnodon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Préizerdaul located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Préizerdaul> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Préizerdaul> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Préizerdaul> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Pulvermühle (Luxemburg) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Pulvermuhl> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Pulvermuhl> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Pulvermuhl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Pütscheid located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Putscheid> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Putscheid> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Putscheid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Petingen located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Pétange> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Pétange> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Pétange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Alaotra-Mangoro located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Alaotra-Mangoro> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Alaotra-Mangoro> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Alaotra-Mangoro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Zessingen located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Cessange> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Cessange> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Cessange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Fischbach (Luxemburg) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Fischbach,_Mersch> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Fischbach,_Mersch> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Fischbach,_Mersch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Flaxweiler located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Flaxweiler> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Flaxweiler> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Flaxweiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Ampanihy located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Ampanihy> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Ampanihy> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Ampanihy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Nommern located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Nommern> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Nommern> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Nommern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Bonneweg-Nord located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/North_Bonnevoie-Verlorenkost> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/North_Bonnevoie-Verlorenkost> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/North_Bonnevoie-Verlorenkost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Nosy Hara located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Nosy_Hara> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Nosy_Hara> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Nosy_Hara> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Nosy Varika located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Nosy_Varika> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Nosy_Varika> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Nosy_Varika> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Oberpallen located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Oberpallen> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Oberpallen> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Oberpallen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Niederkerschen located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bascharage> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bascharage> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bascharage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Arsdorf located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Arsdorf> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Arsdorf> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Arsdorf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Lorentzweiler located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Lorentzweiler> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Lorentzweiler> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Lorentzweiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Kanton Capellen located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Capellen_(canton)> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Capellen_(canton)> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Capellen_(canton)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Clausen (Luxemburg) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Clausen,_Luxembourg> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Clausen,_Luxembourg> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Clausen,_Luxembourg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Küntzig located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Clemency,_Luxembourg> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Clemency,_Luxembourg> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Clemency,_Luxembourg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Clerf located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Clervaux> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Clervaux> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Clervaux> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Kanton Clerf located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Clervaux_(canton)> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Clervaux_(canton)> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Clervaux_(canton)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Luxemburg-Bahnhofsviertel located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Gare,_Luxembourg> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Gare,_Luxembourg> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Gare,_Luxembourg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Garnich located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Garnich> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Garnich> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Garnich> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Gasperich located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Gasperich> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Gasperich> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Gasperich> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Nosy Mitsio located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Nosy_Mitsio> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Nosy_Mitsio> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Nosy_Mitsio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Manjakandriana (Analamanga) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Manjakandriana> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Manjakandriana> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Manjakandriana> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Befort (Luxemburg) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Beaufort,_Luxembourg> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Beaufort,_Luxembourg> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Beaufort,_Luxembourg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Bech (Luxemburg) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bech> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bech> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bech> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Bech (Waldbröl) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bech> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bech> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bech> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Behenjy located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Behenjy> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Behenjy> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Behenjy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Bekopaka located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bekopaka> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bekopaka> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bekopaka> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Belair (Luxemburg) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Belair,_Luxembourg> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Belair,_Luxembourg> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Belair,_Luxembourg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Belo sur Mer located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Belo_sur_Mer> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Belo_sur_Mer> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Belo_sur_Mer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Belo sur Tsiribihina (Stadt) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Belon'i_Tsiribihina> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Belon'i_Tsiribihina> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Belon'i_Tsiribihina> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Berdorf located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Berdorf> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Berdorf> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Berdorf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Berevo located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Berevo> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Berevo> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Berevo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Schloss Berg (Luxemburg) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Berg_Castle> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Berg_Castle> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Berg_Castle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Bartringen located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bertrange> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bertrange> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bertrange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Betafo (Stadt) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Betafo> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Betafo> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Betafo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Betroka (Distrikt) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Betroka_(district)> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Betroka_(district)> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Betroka_(district)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Betsiboka (Region) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Betsiboka> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Betsiboka> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Betsiboka> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Bettemburg located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bettembourg> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bettembourg> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bettembourg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Bettendorf (Luxemburg) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bettendorf,_Luxembourg> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bettendorf,_Luxembourg> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bettendorf,_Luxembourg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Kayl located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Kayl> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Kayl> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Kayl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Kehlen (Meckenbeuren) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Kehlen> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Kehlen> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Kehlen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Kehlen (Luxemburg) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Kehlen> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Kehlen> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Kehlen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Kehlen (Schwäbische Alb) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Kehlen> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Kehlen> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Kehlen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Bastendorf located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bastendorf> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bastendorf> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bastendorf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Lenningen (Luxemburg) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Lenningen,_Luxembourg> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Lenningen,_Luxembourg> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Lenningen,_Luxembourg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Lenningen located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Lenningen,_Luxembourg> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Lenningen,_Luxembourg> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Lenningen,_Luxembourg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Leudelingen located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Leudelange> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Leudelange> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Leudelange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Limpertsberg located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Limpertsberg> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Limpertsberg> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Limpertsberg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Lintgen located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Lintgen> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Lintgen> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Lintgen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Bondorf (Rambruch) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bigonville> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bigonville> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bigonville> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Monnerich located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mondercange> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mondercange> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mondercange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Bad Mondorf located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mondorf-les-Bains> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mondorf-les-Bains> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mondorf-les-Bains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  } ]
+}
