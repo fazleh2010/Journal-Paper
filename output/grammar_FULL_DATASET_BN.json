@@ -6,7 +6,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "($x | COUNTRY_NP) এর রাজধানী এর নাম বলো?", "is ($x | COUNTRY_NP) এর রাজধানী?", "was ($x | COUNTRY_NP) এর রাজধানী?" ],
+    "sentences" : [ "($x | COUNTRY_NP) এর রাজধানী এর কোথায়?", "($x | COUNTRY_NP) এর রাজধানী এর নাম কি?", "($x | COUNTRY_NP) এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {

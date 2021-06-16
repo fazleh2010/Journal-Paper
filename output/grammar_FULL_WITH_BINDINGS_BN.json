@@ -6,7 +6,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Lower_Canada এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Lower_Canada এর রাজধানী?", "was http://dbpedia.org/resource/Lower_Canada এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Lower_Canada এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Lower_Canada এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Lower_Canada এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lower_Canada> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -25,7 +25,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Lower_Danube_Circle এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Lower_Danube_Circle এর রাজধানী?", "was http://dbpedia.org/resource/Lower_Danube_Circle এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Lower_Danube_Circle এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Lower_Danube_Circle এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Lower_Danube_Circle এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lower_Danube_Circle> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -44,7 +44,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Lower_Egypt এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Lower_Egypt এর রাজধানী?", "was http://dbpedia.org/resource/Lower_Egypt এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Lower_Egypt এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Lower_Egypt এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Lower_Egypt এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lower_Egypt> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -63,7 +63,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Lower_Yafa এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Lower_Yafa এর রাজধানী?", "was http://dbpedia.org/resource/Lower_Yafa এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Lower_Yafa এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Lower_Yafa এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Lower_Yafa এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lower_Yafa> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -82,7 +82,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Lu_(state) এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Lu_(state) এর রাজধানী?", "was http://dbpedia.org/resource/Lu_(state) এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Lu_(state) এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Lu_(state) এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Lu_(state) এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lu_(state)> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -101,7 +101,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Luhansk_People's_Republic এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Luhansk_People's_Republic এর রাজধানী?", "was http://dbpedia.org/resource/Luhansk_People's_Republic এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Luhansk_People's_Republic এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Luhansk_People's_Republic এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Luhansk_People's_Republic এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Luhansk_People's_Republic> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -120,7 +120,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Luhuti এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Luhuti এর রাজধানী?", "was http://dbpedia.org/resource/Luhuti এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Luhuti এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Luhuti এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Luhuti এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Luhuti> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -139,7 +139,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Luo_(state) এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Luo_(state) এর রাজধানী?", "was http://dbpedia.org/resource/Luo_(state) এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Luo_(state) এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Luo_(state) এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Luo_(state) এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Luo_(state)> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -158,7 +158,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Lupaca এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Lupaca এর রাজধানী?", "was http://dbpedia.org/resource/Lupaca এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Lupaca এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Lupaca এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Lupaca এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lupaca> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -177,7 +177,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Lupah_Sug এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Lupah_Sug এর রাজধানী?", "was http://dbpedia.org/resource/Lupah_Sug এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Lupah_Sug এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Lupah_Sug এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Lupah_Sug এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lupah_Sug> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -196,7 +196,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Lusitania এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Lusitania এর রাজধানী?", "was http://dbpedia.org/resource/Lusitania এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Lusitania এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Lusitania এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Lusitania এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lusitania> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -215,7 +215,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Lutici এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Lutici এর রাজধানী?", "was http://dbpedia.org/resource/Lutici এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Lutici এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Lutici এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Lutici এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lutici> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -234,7 +234,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Luwu এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Luwu এর রাজধানী?", "was http://dbpedia.org/resource/Luwu এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Luwu এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Luwu এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Luwu এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Luwu> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -253,7 +253,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Luxembourg এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Luxembourg এর রাজধানী?", "was http://dbpedia.org/resource/Luxembourg এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Luxembourg এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Luxembourg এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Luxembourg এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Luxembourg> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -272,7 +272,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Lycia_et_Pamphylia এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Lycia_et_Pamphylia এর রাজধানী?", "was http://dbpedia.org/resource/Lycia_et_Pamphylia এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Lycia_et_Pamphylia এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Lycia_et_Pamphylia এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Lycia_et_Pamphylia এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lycia_et_Pamphylia> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -291,7 +291,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Lê_dynasty এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Lê_dynasty এর রাজধানী?", "was http://dbpedia.org/resource/Lê_dynasty এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Lê_dynasty এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Lê_dynasty এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Lê_dynasty এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lê_dynasty> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -310,7 +310,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Lü_(state) এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Lü_(state) এর রাজধানী?", "was http://dbpedia.org/resource/Lü_(state) এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Lü_(state) এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Lü_(state) এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Lü_(state) এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lü_(state)> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -329,7 +329,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Ma-i এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Ma-i এর রাজধানী?", "was http://dbpedia.org/resource/Ma-i এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Ma-i এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Ma-i এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Ma-i এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ma-i> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -348,7 +348,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Ma_Chu এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Ma_Chu এর রাজধানী?", "was http://dbpedia.org/resource/Ma_Chu এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Ma_Chu এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Ma_Chu এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Ma_Chu এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ma_Chu> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -367,7 +367,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Macedonia_(Roman_province) এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Macedonia_(Roman_province) এর রাজধানী?", "was http://dbpedia.org/resource/Macedonia_(Roman_province) এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Macedonia_(Roman_province) এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Macedonia_(Roman_province) এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Macedonia_(Roman_province) এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Macedonia_(Roman_province)> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -386,7 +386,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Macedonia_(ancient_kingdom) এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Macedonia_(ancient_kingdom) এর রাজধানী?", "was http://dbpedia.org/resource/Macedonia_(ancient_kingdom) এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Macedonia_(ancient_kingdom) এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Macedonia_(ancient_kingdom) এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Macedonia_(ancient_kingdom) এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Macedonia_(ancient_kingdom)> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -405,7 +405,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Macedonia_(theme) এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Macedonia_(theme) এর রাজধানী?", "was http://dbpedia.org/resource/Macedonia_(theme) এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Macedonia_(theme) এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Macedonia_(theme) এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Macedonia_(theme) এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Macedonia_(theme)> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -424,7 +424,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Madagascar এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Madagascar এর রাজধানী?", "was http://dbpedia.org/resource/Madagascar এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Madagascar এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Madagascar এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Madagascar এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Madagascar> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -443,7 +443,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Madrid_Defense_Council এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Madrid_Defense_Council এর রাজধানী?", "was http://dbpedia.org/resource/Madrid_Defense_Council এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Madrid_Defense_Council এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Madrid_Defense_Council এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Madrid_Defense_Council এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Madrid_Defense_Council> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -462,7 +462,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Magadha এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Magadha এর রাজধানী?", "was http://dbpedia.org/resource/Magadha এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Magadha এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Magadha এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Magadha এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Magadha> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -481,7 +481,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Magyar_Autonomous_Region এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Magyar_Autonomous_Region এর রাজধানী?", "was http://dbpedia.org/resource/Magyar_Autonomous_Region এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Magyar_Autonomous_Region এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Magyar_Autonomous_Region এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Magyar_Autonomous_Region এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Magyar_Autonomous_Region> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -500,7 +500,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Mahdist_State এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Mahdist_State এর রাজধানী?", "was http://dbpedia.org/resource/Mahdist_State এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Mahdist_State এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Mahdist_State এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Mahdist_State এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Mahdist_State> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -519,7 +519,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Mahra_Sultanate এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Mahra_Sultanate এর রাজধানী?", "was http://dbpedia.org/resource/Mahra_Sultanate এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Mahra_Sultanate এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Mahra_Sultanate এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Mahra_Sultanate এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Mahra_Sultanate> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -538,7 +538,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Maine এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Maine এর রাজধানী?", "was http://dbpedia.org/resource/Maine এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Maine এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Maine এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Maine এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Maine> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -557,7 +557,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Mainkreis_(Bavaria) এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Mainkreis_(Bavaria) এর রাজধানী?", "was http://dbpedia.org/resource/Mainkreis_(Bavaria) এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Mainkreis_(Bavaria) এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Mainkreis_(Bavaria) এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Mainkreis_(Bavaria) এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Mainkreis_(Bavaria)> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -576,7 +576,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Maitraka_dynasty এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Maitraka_dynasty এর রাজধানী?", "was http://dbpedia.org/resource/Maitraka_dynasty এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Maitraka_dynasty এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Maitraka_dynasty এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Maitraka_dynasty এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Maitraka_dynasty> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -595,7 +595,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Majapahit এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Majapahit এর রাজধানী?", "was http://dbpedia.org/resource/Majapahit এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Majapahit এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Majapahit এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Majapahit এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Majapahit> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -614,7 +614,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Majeerteen_Sultanate এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Majeerteen_Sultanate এর রাজধানী?", "was http://dbpedia.org/resource/Majeerteen_Sultanate এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Majeerteen_Sultanate এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Majeerteen_Sultanate এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Majeerteen_Sultanate এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Majeerteen_Sultanate> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -633,7 +633,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Makhnovia এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Makhnovia এর রাজধানী?", "was http://dbpedia.org/resource/Makhnovia এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Makhnovia এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Makhnovia এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Makhnovia এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Makhnovia> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -652,7 +652,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Makuria এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Makuria এর রাজধানী?", "was http://dbpedia.org/resource/Makuria এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Makuria এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Makuria এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Makuria এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Makuria> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -671,7 +671,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Malacca_Sultanate এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Malacca_Sultanate এর রাজধানী?", "was http://dbpedia.org/resource/Malacca_Sultanate এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Malacca_Sultanate এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Malacca_Sultanate এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Malacca_Sultanate এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Malacca_Sultanate> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -690,7 +690,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Malagasy_Republic এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Malagasy_Republic এর রাজধানী?", "was http://dbpedia.org/resource/Malagasy_Republic এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Malagasy_Republic এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Malagasy_Republic এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Malagasy_Republic এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Malagasy_Republic> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -709,7 +709,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Malawi এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Malawi এর রাজধানী?", "was http://dbpedia.org/resource/Malawi এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Malawi এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Malawi এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Malawi এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Malawi> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -728,7 +728,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Malayan_Union এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Malayan_Union এর রাজধানী?", "was http://dbpedia.org/resource/Malayan_Union এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Malayan_Union এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Malayan_Union এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Malayan_Union এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Malayan_Union> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -747,7 +747,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Malaysia এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Malaysia এর রাজধানী?", "was http://dbpedia.org/resource/Malaysia এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Malaysia এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Malaysia এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Malaysia এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Malaysia> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -766,7 +766,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Maldives এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Maldives এর রাজধানী?", "was http://dbpedia.org/resource/Maldives এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Maldives এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Maldives এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Maldives এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Maldives> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -785,7 +785,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Malerkotla_State এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Malerkotla_State এর রাজধানী?", "was http://dbpedia.org/resource/Malerkotla_State এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Malerkotla_State এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Malerkotla_State এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Malerkotla_State এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Malerkotla_State> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -804,7 +804,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Mali এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Mali এর রাজধানী?", "was http://dbpedia.org/resource/Mali এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Mali এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Mali এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Mali এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Mali> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -823,7 +823,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Mali_Empire এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Mali_Empire এর রাজধানী?", "was http://dbpedia.org/resource/Mali_Empire এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Mali_Empire এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Mali_Empire এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Mali_Empire এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Mali_Empire> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -842,7 +842,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Mali_Federation এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Mali_Federation এর রাজধানী?", "was http://dbpedia.org/resource/Mali_Federation এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Mali_Federation এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Mali_Federation এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Mali_Federation এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Mali_Federation> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -861,7 +861,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Catepanate_of_Ras এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Catepanate_of_Ras এর রাজধানী?", "was http://dbpedia.org/resource/Catepanate_of_Ras এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Catepanate_of_Ras এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Catepanate_of_Ras এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Catepanate_of_Ras এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Catepanate_of_Ras> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -880,7 +880,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Cook_Islands_Federation এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Cook_Islands_Federation এর রাজধানী?", "was http://dbpedia.org/resource/Cook_Islands_Federation এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Cook_Islands_Federation এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Cook_Islands_Federation এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Cook_Islands_Federation এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Cook_Islands_Federation> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -899,7 +899,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Uawa_County এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Uawa_County এর রাজধানী?", "was http://dbpedia.org/resource/Uawa_County এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Uawa_County এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Uawa_County এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Uawa_County এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Uawa_County> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -918,7 +918,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Ueda_Domain এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Ueda_Domain এর রাজধানী?", "was http://dbpedia.org/resource/Ueda_Domain এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Ueda_Domain এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Ueda_Domain এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Ueda_Domain এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ueda_Domain> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -937,7 +937,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Uganda এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Uganda এর রাজধানী?", "was http://dbpedia.org/resource/Uganda এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Uganda এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Uganda এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Uganda এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Uganda> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -956,7 +956,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Uganda_Protectorate এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Uganda_Protectorate এর রাজধানী?", "was http://dbpedia.org/resource/Uganda_Protectorate এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Uganda_Protectorate এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Uganda_Protectorate এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Uganda_Protectorate এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Uganda_Protectorate> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -975,7 +975,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Ugocsa_County এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Ugocsa_County এর রাজধানী?", "was http://dbpedia.org/resource/Ugocsa_County এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Ugocsa_County এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Ugocsa_County এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Ugocsa_County এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ugocsa_County> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -994,7 +994,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Ukraine এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Ukraine এর রাজধানী?", "was http://dbpedia.org/resource/Ukraine এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Ukraine এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Ukraine এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Ukraine এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ukraine> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1013,7 +1013,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Ukrainian_People's_Republic এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Ukrainian_People's_Republic এর রাজধানী?", "was http://dbpedia.org/resource/Ukrainian_People's_Republic এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Ukrainian_People's_Republic এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Ukrainian_People's_Republic এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Ukrainian_People's_Republic এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ukrainian_People's_Republic> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1032,7 +1032,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Ukrainian_People's_Republic_of_Soviets এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Ukrainian_People's_Republic_of_Soviets এর রাজধানী?", "was http://dbpedia.org/resource/Ukrainian_People's_Republic_of_Soviets এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Ukrainian_People's_Republic_of_Soviets এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Ukrainian_People's_Republic_of_Soviets এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Ukrainian_People's_Republic_of_Soviets এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ukrainian_People's_Republic_of_Soviets> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1051,7 +1051,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Ukrainian_Soviet_Republic এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Ukrainian_Soviet_Republic এর রাজধানী?", "was http://dbpedia.org/resource/Ukrainian_Soviet_Republic এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Ukrainian_Soviet_Republic এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Ukrainian_Soviet_Republic এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Ukrainian_Soviet_Republic এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ukrainian_Soviet_Republic> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1070,7 +1070,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Ukrainian_Soviet_Socialist_Republic এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Ukrainian_Soviet_Socialist_Republic এর রাজধানী?", "was http://dbpedia.org/resource/Ukrainian_Soviet_Socialist_Republic এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Ukrainian_Soviet_Socialist_Republic এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Ukrainian_Soviet_Socialist_Republic এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Ukrainian_Soviet_Socialist_Republic এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ukrainian_Soviet_Socialist_Republic> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1089,7 +1089,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Ukrainian_State এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Ukrainian_State এর রাজধানী?", "was http://dbpedia.org/resource/Ukrainian_State এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Ukrainian_State এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Ukrainian_State এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Ukrainian_State এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ukrainian_State> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1108,7 +1108,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Ukrainian_national_government_(1941) এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Ukrainian_national_government_(1941) এর রাজধানী?", "was http://dbpedia.org/resource/Ukrainian_national_government_(1941) এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Ukrainian_national_government_(1941) এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Ukrainian_national_government_(1941) এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Ukrainian_national_government_(1941) এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ukrainian_national_government_(1941)> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1127,7 +1127,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Umayyad_Caliphate এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Umayyad_Caliphate এর রাজধানী?", "was http://dbpedia.org/resource/Umayyad_Caliphate এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Umayyad_Caliphate এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Umayyad_Caliphate এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Umayyad_Caliphate এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Umayyad_Caliphate> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1146,7 +1146,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Unification_of_Norway এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Unification_of_Norway এর রাজধানী?", "was http://dbpedia.org/resource/Unification_of_Norway এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Unification_of_Norway এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Unification_of_Norway এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Unification_of_Norway এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Unification_of_Norway> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1165,7 +1165,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Union_between_Sweden_and_Norway এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Union_between_Sweden_and_Norway এর রাজধানী?", "was http://dbpedia.org/resource/Union_between_Sweden_and_Norway এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Union_between_Sweden_and_Norway এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Union_between_Sweden_and_Norway এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Union_between_Sweden_and_Norway এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Union_between_Sweden_and_Norway> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1184,7 +1184,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Union_of_South_Africa এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Union_of_South_Africa এর রাজধানী?", "was http://dbpedia.org/resource/Union_of_South_Africa এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Union_of_South_Africa এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Union_of_South_Africa এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Union_of_South_Africa এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Union_of_South_Africa> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1203,7 +1203,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_Arab_Emirates এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_Arab_Emirates এর রাজধানী?", "was http://dbpedia.org/resource/United_Arab_Emirates এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_Arab_Emirates এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_Arab_Emirates এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_Arab_Emirates এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Arab_Emirates> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1222,7 +1222,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_Arab_Republic এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_Arab_Republic এর রাজধানী?", "was http://dbpedia.org/resource/United_Arab_Republic এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_Arab_Republic এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_Arab_Republic এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_Arab_Republic এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Arab_Republic> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1241,7 +1241,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_Arab_States এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_Arab_States এর রাজধানী?", "was http://dbpedia.org/resource/United_Arab_States এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_Arab_States এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_Arab_States এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_Arab_States এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Arab_States> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1260,7 +1260,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_Kingdom এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_Kingdom এর রাজধানী?", "was http://dbpedia.org/resource/United_Kingdom এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_Kingdom এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_Kingdom এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_Kingdom এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Kingdom> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1279,7 +1279,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland এর রাজধানী?", "was http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1298,7 +1298,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves এর রাজধানী?", "was http://dbpedia.org/resource/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1317,7 +1317,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_Kingdom_of_the_Netherlands এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_Kingdom_of_the_Netherlands এর রাজধানী?", "was http://dbpedia.org/resource/United_Kingdom_of_the_Netherlands এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_Kingdom_of_the_Netherlands এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_Kingdom_of_the_Netherlands এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_Kingdom_of_the_Netherlands এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Kingdom_of_the_Netherlands> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1336,7 +1336,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_Nations_Temporary_Executive_Authority এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_Nations_Temporary_Executive_Authority এর রাজধানী?", "was http://dbpedia.org/resource/United_Nations_Temporary_Executive_Authority এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_Nations_Temporary_Executive_Authority এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_Nations_Temporary_Executive_Authority এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_Nations_Temporary_Executive_Authority এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Nations_Temporary_Executive_Authority> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1355,7 +1355,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_Nations_Transitional_Administration_in_East_Timor এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_Nations_Transitional_Administration_in_East_Timor এর রাজধানী?", "was http://dbpedia.org/resource/United_Nations_Transitional_Administration_in_East_Timor এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_Nations_Transitional_Administration_in_East_Timor এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_Nations_Transitional_Administration_in_East_Timor এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_Nations_Transitional_Administration_in_East_Timor এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Nations_Transitional_Administration_in_East_Timor> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1374,7 +1374,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_Nations_Transitional_Authority_in_Cambodia এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_Nations_Transitional_Authority_in_Cambodia এর রাজধানী?", "was http://dbpedia.org/resource/United_Nations_Transitional_Authority_in_Cambodia এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_Nations_Transitional_Authority_in_Cambodia এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_Nations_Transitional_Authority_in_Cambodia এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_Nations_Transitional_Authority_in_Cambodia এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Nations_Transitional_Authority_in_Cambodia> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1393,7 +1393,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_Provinces_of_Central_Italy এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_Provinces_of_Central_Italy এর রাজধানী?", "was http://dbpedia.org/resource/United_Provinces_of_Central_Italy এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_Provinces_of_Central_Italy এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_Provinces_of_Central_Italy এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_Provinces_of_Central_Italy এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Provinces_of_Central_Italy> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1412,7 +1412,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_Provinces_of_the_Rio_de_la_Plata এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_Provinces_of_the_Rio_de_la_Plata এর রাজধানী?", "was http://dbpedia.org/resource/United_Provinces_of_the_Rio_de_la_Plata এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_Provinces_of_the_Rio_de_la_Plata এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_Provinces_of_the_Rio_de_la_Plata এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_Provinces_of_the_Rio_de_la_Plata এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Provinces_of_the_Rio_de_la_Plata> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1431,7 +1431,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_States এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_States এর রাজধানী?", "was http://dbpedia.org/resource/United_States এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_States এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_States এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_States এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_States> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1450,7 +1450,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_States_Civil_Administration_of_the_Ryukyu_Islands এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_States_Civil_Administration_of_the_Ryukyu_Islands এর রাজধানী?", "was http://dbpedia.org/resource/United_States_Civil_Administration_of_the_Ryukyu_Islands এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_States_Civil_Administration_of_the_Ryukyu_Islands এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_States_Civil_Administration_of_the_Ryukyu_Islands এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_States_Civil_Administration_of_the_Ryukyu_Islands এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_States_Civil_Administration_of_the_Ryukyu_Islands> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1469,7 +1469,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_States_Military_Government_in_Cuba এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_States_Military_Government_in_Cuba এর রাজধানী?", "was http://dbpedia.org/resource/United_States_Military_Government_in_Cuba এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_States_Military_Government_in_Cuba এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_States_Military_Government_in_Cuba এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_States_Military_Government_in_Cuba এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_States_Military_Government_in_Cuba> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1488,7 +1488,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_States_Military_Government_of_the_Philippine_Islands এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_States_Military_Government_of_the_Philippine_Islands এর রাজধানী?", "was http://dbpedia.org/resource/United_States_Military_Government_of_the_Philippine_Islands এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_States_Military_Government_of_the_Philippine_Islands এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_States_Military_Government_of_the_Philippine_Islands এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_States_Military_Government_of_the_Philippine_Islands এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_States_Military_Government_of_the_Philippine_Islands> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1507,7 +1507,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_States_Military_Government_of_the_Ryukyu_Islands এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_States_Military_Government_of_the_Ryukyu_Islands এর রাজধানী?", "was http://dbpedia.org/resource/United_States_Military_Government_of_the_Ryukyu_Islands এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_States_Military_Government_of_the_Ryukyu_Islands এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_States_Military_Government_of_the_Ryukyu_Islands এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_States_Military_Government_of_the_Ryukyu_Islands এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_States_Military_Government_of_the_Ryukyu_Islands> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1526,7 +1526,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_States_occupation_of_Haiti এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_States_occupation_of_Haiti এর রাজধানী?", "was http://dbpedia.org/resource/United_States_occupation_of_Haiti এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_States_occupation_of_Haiti এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_States_occupation_of_Haiti এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_States_occupation_of_Haiti এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_States_occupation_of_Haiti> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1545,7 +1545,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_States_of_Colombia এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_States_of_Colombia এর রাজধানী?", "was http://dbpedia.org/resource/United_States_of_Colombia এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_States_of_Colombia এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_States_of_Colombia এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_States_of_Colombia এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_States_of_Colombia> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1564,7 +1564,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_States_of_Indonesia এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_States_of_Indonesia এর রাজধানী?", "was http://dbpedia.org/resource/United_States_of_Indonesia এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_States_of_Indonesia এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_States_of_Indonesia এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_States_of_Indonesia এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_States_of_Indonesia> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1583,7 +1583,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_States_of_Venezuela এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_States_of_Venezuela এর রাজধানী?", "was http://dbpedia.org/resource/United_States_of_Venezuela এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_States_of_Venezuela এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_States_of_Venezuela এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_States_of_Venezuela এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_States_of_Venezuela> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1602,7 +1602,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_States_of_the_Ionian_Islands এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_States_of_the_Ionian_Islands এর রাজধানী?", "was http://dbpedia.org/resource/United_States_of_the_Ionian_Islands এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_States_of_the_Ionian_Islands এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_States_of_the_Ionian_Islands এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_States_of_the_Ionian_Islands এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_States_of_the_Ionian_Islands> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1621,7 +1621,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_Suvadive_Republic এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_Suvadive_Republic এর রাজধানী?", "was http://dbpedia.org/resource/United_Suvadive_Republic এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_Suvadive_Republic এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_Suvadive_Republic এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_Suvadive_Republic এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Suvadive_Republic> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1640,7 +1640,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/United_Tribes_of_New_Zealand এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/United_Tribes_of_New_Zealand এর রাজধানী?", "was http://dbpedia.org/resource/United_Tribes_of_New_Zealand এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/United_Tribes_of_New_Zealand এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/United_Tribes_of_New_Zealand এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/United_Tribes_of_New_Zealand এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Tribes_of_New_Zealand> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1659,7 +1659,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Unterelsaß এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Unterelsaß এর রাজধানী?", "was http://dbpedia.org/resource/Unterelsaß এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Unterelsaß এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Unterelsaß এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Unterelsaß এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Unterelsaß> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1678,7 +1678,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Untermainkreis এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Untermainkreis এর রাজধানী?", "was http://dbpedia.org/resource/Untermainkreis এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Untermainkreis এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Untermainkreis এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Untermainkreis এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Untermainkreis> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1697,7 +1697,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Upper_Canada এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Upper_Canada এর রাজধানী?", "was http://dbpedia.org/resource/Upper_Canada এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Upper_Canada এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Upper_Canada এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Upper_Canada এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Upper_Canada> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1716,7 +1716,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Upper_Egypt এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Upper_Egypt এর রাজধানী?", "was http://dbpedia.org/resource/Upper_Egypt এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Upper_Egypt এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Upper_Egypt এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Upper_Egypt এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Upper_Egypt> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1735,7 +1735,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Upper_Senegal_and_Niger এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Upper_Senegal_and_Niger এর রাজধানী?", "was http://dbpedia.org/resource/Upper_Senegal_and_Niger এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Upper_Senegal_and_Niger এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Upper_Senegal_and_Niger এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Upper_Senegal_and_Niger এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Upper_Senegal_and_Niger> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1754,7 +1754,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Ural_Oblast এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Ural_Oblast এর রাজধানী?", "was http://dbpedia.org/resource/Ural_Oblast এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Ural_Oblast এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Ural_Oblast এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Ural_Oblast এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ural_Oblast> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1773,7 +1773,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Urartu এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Urartu এর রাজধানী?", "was http://dbpedia.org/resource/Urartu এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Urartu এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Urartu এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Urartu এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Urartu> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1792,7 +1792,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Urfa_Sanjak এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Urfa_Sanjak এর রাজধানী?", "was http://dbpedia.org/resource/Urfa_Sanjak এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Urfa_Sanjak এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Urfa_Sanjak এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Urfa_Sanjak এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Urfa_Sanjak> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1811,7 +1811,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Uruguay এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Uruguay এর রাজধানী?", "was http://dbpedia.org/resource/Uruguay এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Uruguay এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Uruguay এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Uruguay এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Uruguay> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1830,7 +1830,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Utik এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Utik এর রাজধানী?", "was http://dbpedia.org/resource/Utik এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Utik এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Utik এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Utik এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Utik> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1849,7 +1849,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Uyghur_Khaganate এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Uyghur_Khaganate এর রাজধানী?", "was http://dbpedia.org/resource/Uyghur_Khaganate এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Uyghur_Khaganate এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Uyghur_Khaganate এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Uyghur_Khaganate এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Uyghur_Khaganate> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1868,7 +1868,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Uyvar_Eyalet এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Uyvar_Eyalet এর রাজধানী?", "was http://dbpedia.org/resource/Uyvar_Eyalet এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Uyvar_Eyalet এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Uyvar_Eyalet এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Uyvar_Eyalet এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Uyvar_Eyalet> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -1887,7 +1887,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "http://dbpedia.org/resource/Uzbek_Soviet_Socialist_Republic এর রাজধানী এর নাম বলো?", "is http://dbpedia.org/resource/Uzbek_Soviet_Socialist_Republic এর রাজধানী?", "was http://dbpedia.org/resource/Uzbek_Soviet_Socialist_Republic এর রাজধানী?" ],
+    "sentences" : [ "http://dbpedia.org/resource/Uzbek_Soviet_Socialist_Republic এর রাজধানী এর কোথায়?", "http://dbpedia.org/resource/Uzbek_Soviet_Socialist_Republic এর রাজধানী এর নাম কি?", "http://dbpedia.org/resource/Uzbek_Soviet_Socialist_Republic এর রাজধানী এর নাম বলো?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Uzbek_Soviet_Socialist_Republic> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {

@@ -167,6 +167,10 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
         Optional<SentenceToken> questionWordNounToken = getConditionNounToken(sentenceTokens); // noun(condition:copulativeArg)
         Optional<SentenceToken> rootToken = getRootToken(sentenceTokens);
         Optional<SentenceToken> pronounObjectToken = getObjectPronounToken(sentenceTokens);
+        System.out.println("questionWordToken::"+questionWordToken);
+         System.out.println("questionWordNounToken::"+questionWordNounToken);
+           System.out.println("rootToken::"+rootToken);
+           System.out.println("pronounObjectToken::"+pronounObjectToken);
 
         // Load a list of to be forms to make every possible sentence combination
         Optional<SentenceToken> copulaToken = getCopulaToken(sentenceTokens); // verb(reference:component_be)
