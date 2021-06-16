@@ -68,9 +68,24 @@ public class GrammarRuleGeneratorRootImpl extends GrammarRuleGeneratorRoot {
     grammarEntry.setFrameType(getFrameType());
     grammarEntry.setBindingType(DomainOrRangeType.LOCATION);
     grammarEntry.setReturnType(DomainOrRangeType.LOCATION);
+    
+    String sentence= null;
+    
+    if(Language.EN.toString().contains(language.toString())){
+        sentence= "Where is %s located?";
+    }
+    else if(Language.DE.toString().contains(language.toString())){
+        sentence= "Wo liegt %s?";
+    }
+    else if(Language.BN.toString().contains(language.toString())){
+        sentence= "%s কোথায় অবস্থিত?";
+    }
+    else
+        sentence= "Where is %s located?";
+    
     grammarEntry.getSentences().add(
       String.format(
-        "Where is %s located?",
+        sentence,
         getBindingVariable()
       )
     );

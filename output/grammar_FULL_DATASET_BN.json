@@ -6,7 +6,7 @@
     "bindingType" : "COUNTRY",
     "returnType" : "CITY",
     "frameType" : "NPP",
-    "sentences" : [ "($x | COUNTRY_NP) এর রাজধানী এর নাম বলো?" ],
+    "sentences" : [ "($x | COUNTRY_NP) এর রাজধানী এর নাম বলো?", "is ($x | COUNTRY_NP) এর রাজধানী?", "was ($x | COUNTRY_NP) এর রাজধানী?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -644,7 +644,7 @@
     "bindingType" : "LOCATION",
     "returnType" : "LOCATION",
     "frameType" : "FULL_DATASET",
-    "sentences" : [ "Where is $x located?" ],
+    "sentences" : [ "$x কোথায় অবস্থিত?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(join\n  (union\n    (bgp (triple ?subjOfProp <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
     "sentenceToSparqlParameterMapping" : {

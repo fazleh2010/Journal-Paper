@@ -33,6 +33,7 @@ class SentenceTemplateFactoryBN implements Factory<SentenceTemplateRepository> {
       createSentenceTemplate(
         language,
         List.of(
+          "interrogativePronoun verb(reference:component_be) NP(prepositionalAdjunct)?",
           "prepositionalAdjunct preposition noun(root) determiner(reference:component_the_2) verb(reference:component_imperative_transitive)"
         ),
         "copulativeArg",
