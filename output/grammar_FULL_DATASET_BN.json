@@ -1,0 +1,960 @@
+{
+  "grammarEntries" : [ {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "($x | COUNTRY_NP) এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "http://dbpedia.org/resource/Lower_Canada",
+        "uri" : "http://dbpedia.org/resource/Lower_Canada"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lower_Danube_Circle",
+        "uri" : "http://dbpedia.org/resource/Lower_Danube_Circle"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lower_Egypt",
+        "uri" : "http://dbpedia.org/resource/Lower_Egypt"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lower_Yafa",
+        "uri" : "http://dbpedia.org/resource/Lower_Yafa"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lu_(state)",
+        "uri" : "http://dbpedia.org/resource/Lu_(state)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luhansk_People's_Republic",
+        "uri" : "http://dbpedia.org/resource/Luhansk_People's_Republic"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luhuti",
+        "uri" : "http://dbpedia.org/resource/Luhuti"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luo_(state)",
+        "uri" : "http://dbpedia.org/resource/Luo_(state)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lupaca",
+        "uri" : "http://dbpedia.org/resource/Lupaca"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lupah_Sug",
+        "uri" : "http://dbpedia.org/resource/Lupah_Sug"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lusitania",
+        "uri" : "http://dbpedia.org/resource/Lusitania"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lutici",
+        "uri" : "http://dbpedia.org/resource/Lutici"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luwu",
+        "uri" : "http://dbpedia.org/resource/Luwu"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luxembourg",
+        "uri" : "http://dbpedia.org/resource/Luxembourg"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lycia_et_Pamphylia",
+        "uri" : "http://dbpedia.org/resource/Lycia_et_Pamphylia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lê_dynasty",
+        "uri" : "http://dbpedia.org/resource/Lê_dynasty"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lü_(state)",
+        "uri" : "http://dbpedia.org/resource/Lü_(state)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ma-i",
+        "uri" : "http://dbpedia.org/resource/Ma-i"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ma_Chu",
+        "uri" : "http://dbpedia.org/resource/Ma_Chu"
+      }, {
+        "label" : "http://dbpedia.org/resource/Macedonia_(Roman_province)",
+        "uri" : "http://dbpedia.org/resource/Macedonia_(Roman_province)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Macedonia_(ancient_kingdom)",
+        "uri" : "http://dbpedia.org/resource/Macedonia_(ancient_kingdom)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Macedonia_(theme)",
+        "uri" : "http://dbpedia.org/resource/Macedonia_(theme)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Madagascar",
+        "uri" : "http://dbpedia.org/resource/Madagascar"
+      }, {
+        "label" : "http://dbpedia.org/resource/Madrid_Defense_Council",
+        "uri" : "http://dbpedia.org/resource/Madrid_Defense_Council"
+      }, {
+        "label" : "http://dbpedia.org/resource/Magadha",
+        "uri" : "http://dbpedia.org/resource/Magadha"
+      }, {
+        "label" : "http://dbpedia.org/resource/Magyar_Autonomous_Region",
+        "uri" : "http://dbpedia.org/resource/Magyar_Autonomous_Region"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahdist_State",
+        "uri" : "http://dbpedia.org/resource/Mahdist_State"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahra_Sultanate",
+        "uri" : "http://dbpedia.org/resource/Mahra_Sultanate"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maine",
+        "uri" : "http://dbpedia.org/resource/Maine"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mainkreis_(Bavaria)",
+        "uri" : "http://dbpedia.org/resource/Mainkreis_(Bavaria)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maitraka_dynasty",
+        "uri" : "http://dbpedia.org/resource/Maitraka_dynasty"
+      }, {
+        "label" : "http://dbpedia.org/resource/Majapahit",
+        "uri" : "http://dbpedia.org/resource/Majapahit"
+      }, {
+        "label" : "http://dbpedia.org/resource/Majeerteen_Sultanate",
+        "uri" : "http://dbpedia.org/resource/Majeerteen_Sultanate"
+      }, {
+        "label" : "http://dbpedia.org/resource/Makhnovia",
+        "uri" : "http://dbpedia.org/resource/Makhnovia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Makuria",
+        "uri" : "http://dbpedia.org/resource/Makuria"
+      }, {
+        "label" : "http://dbpedia.org/resource/Malacca_Sultanate",
+        "uri" : "http://dbpedia.org/resource/Malacca_Sultanate"
+      }, {
+        "label" : "http://dbpedia.org/resource/Malagasy_Republic",
+        "uri" : "http://dbpedia.org/resource/Malagasy_Republic"
+      }, {
+        "label" : "http://dbpedia.org/resource/Malawi",
+        "uri" : "http://dbpedia.org/resource/Malawi"
+      }, {
+        "label" : "http://dbpedia.org/resource/Malayan_Union",
+        "uri" : "http://dbpedia.org/resource/Malayan_Union"
+      }, {
+        "label" : "http://dbpedia.org/resource/Malaysia",
+        "uri" : "http://dbpedia.org/resource/Malaysia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maldives",
+        "uri" : "http://dbpedia.org/resource/Maldives"
+      }, {
+        "label" : "http://dbpedia.org/resource/Malerkotla_State",
+        "uri" : "http://dbpedia.org/resource/Malerkotla_State"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mali",
+        "uri" : "http://dbpedia.org/resource/Mali"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mali_Empire",
+        "uri" : "http://dbpedia.org/resource/Mali_Empire"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mali_Federation",
+        "uri" : "http://dbpedia.org/resource/Mali_Federation"
+      }, {
+        "label" : "http://dbpedia.org/resource/Catepanate_of_Ras",
+        "uri" : "http://dbpedia.org/resource/Catepanate_of_Ras"
+      }, {
+        "label" : "http://dbpedia.org/resource/Cook_Islands_Federation",
+        "uri" : "http://dbpedia.org/resource/Cook_Islands_Federation"
+      }, {
+        "label" : "http://dbpedia.org/resource/Uawa_County",
+        "uri" : "http://dbpedia.org/resource/Uawa_County"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ueda_Domain",
+        "uri" : "http://dbpedia.org/resource/Ueda_Domain"
+      }, {
+        "label" : "http://dbpedia.org/resource/Uganda",
+        "uri" : "http://dbpedia.org/resource/Uganda"
+      }, {
+        "label" : "http://dbpedia.org/resource/Uganda_Protectorate",
+        "uri" : "http://dbpedia.org/resource/Uganda_Protectorate"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ugocsa_County",
+        "uri" : "http://dbpedia.org/resource/Ugocsa_County"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ukraine",
+        "uri" : "http://dbpedia.org/resource/Ukraine"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ukrainian_People's_Republic",
+        "uri" : "http://dbpedia.org/resource/Ukrainian_People's_Republic"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ukrainian_People's_Republic_of_Soviets",
+        "uri" : "http://dbpedia.org/resource/Ukrainian_People's_Republic_of_Soviets"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ukrainian_Soviet_Republic",
+        "uri" : "http://dbpedia.org/resource/Ukrainian_Soviet_Republic"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ukrainian_Soviet_Socialist_Republic",
+        "uri" : "http://dbpedia.org/resource/Ukrainian_Soviet_Socialist_Republic"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ukrainian_State",
+        "uri" : "http://dbpedia.org/resource/Ukrainian_State"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ukrainian_national_government_(1941)",
+        "uri" : "http://dbpedia.org/resource/Ukrainian_national_government_(1941)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Umayyad_Caliphate",
+        "uri" : "http://dbpedia.org/resource/Umayyad_Caliphate"
+      }, {
+        "label" : "http://dbpedia.org/resource/Unification_of_Norway",
+        "uri" : "http://dbpedia.org/resource/Unification_of_Norway"
+      }, {
+        "label" : "http://dbpedia.org/resource/Union_between_Sweden_and_Norway",
+        "uri" : "http://dbpedia.org/resource/Union_between_Sweden_and_Norway"
+      }, {
+        "label" : "http://dbpedia.org/resource/Union_of_South_Africa",
+        "uri" : "http://dbpedia.org/resource/Union_of_South_Africa"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Arab_Emirates",
+        "uri" : "http://dbpedia.org/resource/United_Arab_Emirates"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Arab_Republic",
+        "uri" : "http://dbpedia.org/resource/United_Arab_Republic"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Arab_States",
+        "uri" : "http://dbpedia.org/resource/United_Arab_States"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Kingdom",
+        "uri" : "http://dbpedia.org/resource/United_Kingdom"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland",
+        "uri" : "http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves",
+        "uri" : "http://dbpedia.org/resource/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Kingdom_of_the_Netherlands",
+        "uri" : "http://dbpedia.org/resource/United_Kingdom_of_the_Netherlands"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Nations_Temporary_Executive_Authority",
+        "uri" : "http://dbpedia.org/resource/United_Nations_Temporary_Executive_Authority"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Nations_Transitional_Administration_in_East_Timor",
+        "uri" : "http://dbpedia.org/resource/United_Nations_Transitional_Administration_in_East_Timor"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Nations_Transitional_Authority_in_Cambodia",
+        "uri" : "http://dbpedia.org/resource/United_Nations_Transitional_Authority_in_Cambodia"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Provinces_of_Central_Italy",
+        "uri" : "http://dbpedia.org/resource/United_Provinces_of_Central_Italy"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Provinces_of_the_Rio_de_la_Plata",
+        "uri" : "http://dbpedia.org/resource/United_Provinces_of_the_Rio_de_la_Plata"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States",
+        "uri" : "http://dbpedia.org/resource/United_States"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States_Civil_Administration_of_the_Ryukyu_Islands",
+        "uri" : "http://dbpedia.org/resource/United_States_Civil_Administration_of_the_Ryukyu_Islands"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States_Military_Government_in_Cuba",
+        "uri" : "http://dbpedia.org/resource/United_States_Military_Government_in_Cuba"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States_Military_Government_of_the_Philippine_Islands",
+        "uri" : "http://dbpedia.org/resource/United_States_Military_Government_of_the_Philippine_Islands"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States_Military_Government_of_the_Ryukyu_Islands",
+        "uri" : "http://dbpedia.org/resource/United_States_Military_Government_of_the_Ryukyu_Islands"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States_occupation_of_Haiti",
+        "uri" : "http://dbpedia.org/resource/United_States_occupation_of_Haiti"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States_of_Colombia",
+        "uri" : "http://dbpedia.org/resource/United_States_of_Colombia"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States_of_Indonesia",
+        "uri" : "http://dbpedia.org/resource/United_States_of_Indonesia"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States_of_Venezuela",
+        "uri" : "http://dbpedia.org/resource/United_States_of_Venezuela"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States_of_the_Ionian_Islands",
+        "uri" : "http://dbpedia.org/resource/United_States_of_the_Ionian_Islands"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Suvadive_Republic",
+        "uri" : "http://dbpedia.org/resource/United_Suvadive_Republic"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Tribes_of_New_Zealand",
+        "uri" : "http://dbpedia.org/resource/United_Tribes_of_New_Zealand"
+      }, {
+        "label" : "http://dbpedia.org/resource/Unterelsaß",
+        "uri" : "http://dbpedia.org/resource/Unterelsaß"
+      }, {
+        "label" : "http://dbpedia.org/resource/Untermainkreis",
+        "uri" : "http://dbpedia.org/resource/Untermainkreis"
+      }, {
+        "label" : "http://dbpedia.org/resource/Upper_Canada",
+        "uri" : "http://dbpedia.org/resource/Upper_Canada"
+      }, {
+        "label" : "http://dbpedia.org/resource/Upper_Egypt",
+        "uri" : "http://dbpedia.org/resource/Upper_Egypt"
+      }, {
+        "label" : "http://dbpedia.org/resource/Upper_Senegal_and_Niger",
+        "uri" : "http://dbpedia.org/resource/Upper_Senegal_and_Niger"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ural_Oblast",
+        "uri" : "http://dbpedia.org/resource/Ural_Oblast"
+      }, {
+        "label" : "http://dbpedia.org/resource/Urartu",
+        "uri" : "http://dbpedia.org/resource/Urartu"
+      }, {
+        "label" : "http://dbpedia.org/resource/Urfa_Sanjak",
+        "uri" : "http://dbpedia.org/resource/Urfa_Sanjak"
+      }, {
+        "label" : "http://dbpedia.org/resource/Uruguay",
+        "uri" : "http://dbpedia.org/resource/Uruguay"
+      }, {
+        "label" : "http://dbpedia.org/resource/Utik",
+        "uri" : "http://dbpedia.org/resource/Utik"
+      }, {
+        "label" : "http://dbpedia.org/resource/Uyghur_Khaganate",
+        "uri" : "http://dbpedia.org/resource/Uyghur_Khaganate"
+      }, {
+        "label" : "http://dbpedia.org/resource/Uyvar_Eyalet",
+        "uri" : "http://dbpedia.org/resource/Uyvar_Eyalet"
+      }, {
+        "label" : "http://dbpedia.org/resource/Uzbek_Soviet_Socialist_Republic",
+        "uri" : "http://dbpedia.org/resource/Uzbek_Soviet_Socialist_Republic"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "2",
+    "language" : "BN",
+    "type" : "NP",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "$x এর রাজধানী" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "http://dbpedia.org/resource/Lower_Canada",
+        "uri" : "http://dbpedia.org/resource/Lower_Canada"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lower_Danube_Circle",
+        "uri" : "http://dbpedia.org/resource/Lower_Danube_Circle"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lower_Egypt",
+        "uri" : "http://dbpedia.org/resource/Lower_Egypt"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lower_Yafa",
+        "uri" : "http://dbpedia.org/resource/Lower_Yafa"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lu_(state)",
+        "uri" : "http://dbpedia.org/resource/Lu_(state)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luhansk_People's_Republic",
+        "uri" : "http://dbpedia.org/resource/Luhansk_People's_Republic"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luhuti",
+        "uri" : "http://dbpedia.org/resource/Luhuti"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luo_(state)",
+        "uri" : "http://dbpedia.org/resource/Luo_(state)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lupaca",
+        "uri" : "http://dbpedia.org/resource/Lupaca"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lupah_Sug",
+        "uri" : "http://dbpedia.org/resource/Lupah_Sug"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lusitania",
+        "uri" : "http://dbpedia.org/resource/Lusitania"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lutici",
+        "uri" : "http://dbpedia.org/resource/Lutici"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luwu",
+        "uri" : "http://dbpedia.org/resource/Luwu"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luxembourg",
+        "uri" : "http://dbpedia.org/resource/Luxembourg"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lycia_et_Pamphylia",
+        "uri" : "http://dbpedia.org/resource/Lycia_et_Pamphylia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lê_dynasty",
+        "uri" : "http://dbpedia.org/resource/Lê_dynasty"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lü_(state)",
+        "uri" : "http://dbpedia.org/resource/Lü_(state)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ma-i",
+        "uri" : "http://dbpedia.org/resource/Ma-i"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ma_Chu",
+        "uri" : "http://dbpedia.org/resource/Ma_Chu"
+      }, {
+        "label" : "http://dbpedia.org/resource/Macedonia_(Roman_province)",
+        "uri" : "http://dbpedia.org/resource/Macedonia_(Roman_province)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Macedonia_(ancient_kingdom)",
+        "uri" : "http://dbpedia.org/resource/Macedonia_(ancient_kingdom)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Macedonia_(theme)",
+        "uri" : "http://dbpedia.org/resource/Macedonia_(theme)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Madagascar",
+        "uri" : "http://dbpedia.org/resource/Madagascar"
+      }, {
+        "label" : "http://dbpedia.org/resource/Madrid_Defense_Council",
+        "uri" : "http://dbpedia.org/resource/Madrid_Defense_Council"
+      }, {
+        "label" : "http://dbpedia.org/resource/Magadha",
+        "uri" : "http://dbpedia.org/resource/Magadha"
+      }, {
+        "label" : "http://dbpedia.org/resource/Magyar_Autonomous_Region",
+        "uri" : "http://dbpedia.org/resource/Magyar_Autonomous_Region"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahdist_State",
+        "uri" : "http://dbpedia.org/resource/Mahdist_State"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahra_Sultanate",
+        "uri" : "http://dbpedia.org/resource/Mahra_Sultanate"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maine",
+        "uri" : "http://dbpedia.org/resource/Maine"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mainkreis_(Bavaria)",
+        "uri" : "http://dbpedia.org/resource/Mainkreis_(Bavaria)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maitraka_dynasty",
+        "uri" : "http://dbpedia.org/resource/Maitraka_dynasty"
+      }, {
+        "label" : "http://dbpedia.org/resource/Majapahit",
+        "uri" : "http://dbpedia.org/resource/Majapahit"
+      }, {
+        "label" : "http://dbpedia.org/resource/Majeerteen_Sultanate",
+        "uri" : "http://dbpedia.org/resource/Majeerteen_Sultanate"
+      }, {
+        "label" : "http://dbpedia.org/resource/Makhnovia",
+        "uri" : "http://dbpedia.org/resource/Makhnovia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Makuria",
+        "uri" : "http://dbpedia.org/resource/Makuria"
+      }, {
+        "label" : "http://dbpedia.org/resource/Malacca_Sultanate",
+        "uri" : "http://dbpedia.org/resource/Malacca_Sultanate"
+      }, {
+        "label" : "http://dbpedia.org/resource/Malagasy_Republic",
+        "uri" : "http://dbpedia.org/resource/Malagasy_Republic"
+      }, {
+        "label" : "http://dbpedia.org/resource/Malawi",
+        "uri" : "http://dbpedia.org/resource/Malawi"
+      }, {
+        "label" : "http://dbpedia.org/resource/Malayan_Union",
+        "uri" : "http://dbpedia.org/resource/Malayan_Union"
+      }, {
+        "label" : "http://dbpedia.org/resource/Malaysia",
+        "uri" : "http://dbpedia.org/resource/Malaysia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maldives",
+        "uri" : "http://dbpedia.org/resource/Maldives"
+      }, {
+        "label" : "http://dbpedia.org/resource/Malerkotla_State",
+        "uri" : "http://dbpedia.org/resource/Malerkotla_State"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mali",
+        "uri" : "http://dbpedia.org/resource/Mali"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mali_Empire",
+        "uri" : "http://dbpedia.org/resource/Mali_Empire"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mali_Federation",
+        "uri" : "http://dbpedia.org/resource/Mali_Federation"
+      }, {
+        "label" : "http://dbpedia.org/resource/Catepanate_of_Ras",
+        "uri" : "http://dbpedia.org/resource/Catepanate_of_Ras"
+      }, {
+        "label" : "http://dbpedia.org/resource/Cook_Islands_Federation",
+        "uri" : "http://dbpedia.org/resource/Cook_Islands_Federation"
+      }, {
+        "label" : "http://dbpedia.org/resource/Uawa_County",
+        "uri" : "http://dbpedia.org/resource/Uawa_County"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ueda_Domain",
+        "uri" : "http://dbpedia.org/resource/Ueda_Domain"
+      }, {
+        "label" : "http://dbpedia.org/resource/Uganda",
+        "uri" : "http://dbpedia.org/resource/Uganda"
+      }, {
+        "label" : "http://dbpedia.org/resource/Uganda_Protectorate",
+        "uri" : "http://dbpedia.org/resource/Uganda_Protectorate"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ugocsa_County",
+        "uri" : "http://dbpedia.org/resource/Ugocsa_County"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ukraine",
+        "uri" : "http://dbpedia.org/resource/Ukraine"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ukrainian_People's_Republic",
+        "uri" : "http://dbpedia.org/resource/Ukrainian_People's_Republic"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ukrainian_People's_Republic_of_Soviets",
+        "uri" : "http://dbpedia.org/resource/Ukrainian_People's_Republic_of_Soviets"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ukrainian_Soviet_Republic",
+        "uri" : "http://dbpedia.org/resource/Ukrainian_Soviet_Republic"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ukrainian_Soviet_Socialist_Republic",
+        "uri" : "http://dbpedia.org/resource/Ukrainian_Soviet_Socialist_Republic"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ukrainian_State",
+        "uri" : "http://dbpedia.org/resource/Ukrainian_State"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ukrainian_national_government_(1941)",
+        "uri" : "http://dbpedia.org/resource/Ukrainian_national_government_(1941)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Umayyad_Caliphate",
+        "uri" : "http://dbpedia.org/resource/Umayyad_Caliphate"
+      }, {
+        "label" : "http://dbpedia.org/resource/Unification_of_Norway",
+        "uri" : "http://dbpedia.org/resource/Unification_of_Norway"
+      }, {
+        "label" : "http://dbpedia.org/resource/Union_between_Sweden_and_Norway",
+        "uri" : "http://dbpedia.org/resource/Union_between_Sweden_and_Norway"
+      }, {
+        "label" : "http://dbpedia.org/resource/Union_of_South_Africa",
+        "uri" : "http://dbpedia.org/resource/Union_of_South_Africa"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Arab_Emirates",
+        "uri" : "http://dbpedia.org/resource/United_Arab_Emirates"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Arab_Republic",
+        "uri" : "http://dbpedia.org/resource/United_Arab_Republic"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Arab_States",
+        "uri" : "http://dbpedia.org/resource/United_Arab_States"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Kingdom",
+        "uri" : "http://dbpedia.org/resource/United_Kingdom"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland",
+        "uri" : "http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves",
+        "uri" : "http://dbpedia.org/resource/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Kingdom_of_the_Netherlands",
+        "uri" : "http://dbpedia.org/resource/United_Kingdom_of_the_Netherlands"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Nations_Temporary_Executive_Authority",
+        "uri" : "http://dbpedia.org/resource/United_Nations_Temporary_Executive_Authority"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Nations_Transitional_Administration_in_East_Timor",
+        "uri" : "http://dbpedia.org/resource/United_Nations_Transitional_Administration_in_East_Timor"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Nations_Transitional_Authority_in_Cambodia",
+        "uri" : "http://dbpedia.org/resource/United_Nations_Transitional_Authority_in_Cambodia"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Provinces_of_Central_Italy",
+        "uri" : "http://dbpedia.org/resource/United_Provinces_of_Central_Italy"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Provinces_of_the_Rio_de_la_Plata",
+        "uri" : "http://dbpedia.org/resource/United_Provinces_of_the_Rio_de_la_Plata"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States",
+        "uri" : "http://dbpedia.org/resource/United_States"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States_Civil_Administration_of_the_Ryukyu_Islands",
+        "uri" : "http://dbpedia.org/resource/United_States_Civil_Administration_of_the_Ryukyu_Islands"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States_Military_Government_in_Cuba",
+        "uri" : "http://dbpedia.org/resource/United_States_Military_Government_in_Cuba"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States_Military_Government_of_the_Philippine_Islands",
+        "uri" : "http://dbpedia.org/resource/United_States_Military_Government_of_the_Philippine_Islands"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States_Military_Government_of_the_Ryukyu_Islands",
+        "uri" : "http://dbpedia.org/resource/United_States_Military_Government_of_the_Ryukyu_Islands"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States_occupation_of_Haiti",
+        "uri" : "http://dbpedia.org/resource/United_States_occupation_of_Haiti"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States_of_Colombia",
+        "uri" : "http://dbpedia.org/resource/United_States_of_Colombia"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States_of_Indonesia",
+        "uri" : "http://dbpedia.org/resource/United_States_of_Indonesia"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States_of_Venezuela",
+        "uri" : "http://dbpedia.org/resource/United_States_of_Venezuela"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States_of_the_Ionian_Islands",
+        "uri" : "http://dbpedia.org/resource/United_States_of_the_Ionian_Islands"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Suvadive_Republic",
+        "uri" : "http://dbpedia.org/resource/United_Suvadive_Republic"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_Tribes_of_New_Zealand",
+        "uri" : "http://dbpedia.org/resource/United_Tribes_of_New_Zealand"
+      }, {
+        "label" : "http://dbpedia.org/resource/Unterelsaß",
+        "uri" : "http://dbpedia.org/resource/Unterelsaß"
+      }, {
+        "label" : "http://dbpedia.org/resource/Untermainkreis",
+        "uri" : "http://dbpedia.org/resource/Untermainkreis"
+      }, {
+        "label" : "http://dbpedia.org/resource/Upper_Canada",
+        "uri" : "http://dbpedia.org/resource/Upper_Canada"
+      }, {
+        "label" : "http://dbpedia.org/resource/Upper_Egypt",
+        "uri" : "http://dbpedia.org/resource/Upper_Egypt"
+      }, {
+        "label" : "http://dbpedia.org/resource/Upper_Senegal_and_Niger",
+        "uri" : "http://dbpedia.org/resource/Upper_Senegal_and_Niger"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ural_Oblast",
+        "uri" : "http://dbpedia.org/resource/Ural_Oblast"
+      }, {
+        "label" : "http://dbpedia.org/resource/Urartu",
+        "uri" : "http://dbpedia.org/resource/Urartu"
+      }, {
+        "label" : "http://dbpedia.org/resource/Urfa_Sanjak",
+        "uri" : "http://dbpedia.org/resource/Urfa_Sanjak"
+      }, {
+        "label" : "http://dbpedia.org/resource/Uruguay",
+        "uri" : "http://dbpedia.org/resource/Uruguay"
+      }, {
+        "label" : "http://dbpedia.org/resource/Utik",
+        "uri" : "http://dbpedia.org/resource/Utik"
+      }, {
+        "label" : "http://dbpedia.org/resource/Uyghur_Khaganate",
+        "uri" : "http://dbpedia.org/resource/Uyghur_Khaganate"
+      }, {
+        "label" : "http://dbpedia.org/resource/Uyvar_Eyalet",
+        "uri" : "http://dbpedia.org/resource/Uyvar_Eyalet"
+      }, {
+        "label" : "http://dbpedia.org/resource/Uzbek_Soviet_Socialist_Republic",
+        "uri" : "http://dbpedia.org/resource/Uzbek_Soviet_Socialist_Republic"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is $x located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple ?subjOfProp <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "http://dbpedia.org/resource/Luxembourg_(canton)",
+        "uri" : "http://dbpedia.org/resource/Luxembourg_(canton)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luxembourg_City",
+        "uri" : "http://dbpedia.org/resource/Luxembourg_City"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luzon_Strait",
+        "uri" : "http://dbpedia.org/resource/Luzon_Strait"
+      }, {
+        "label" : "http://dbpedia.org/resource/Madiromirafy",
+        "uri" : "http://dbpedia.org/resource/Madiromirafy"
+      }, {
+        "label" : "http://dbpedia.org/resource/Madirovalo",
+        "uri" : "http://dbpedia.org/resource/Madirovalo"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maevaranohely",
+        "uri" : "http://dbpedia.org/resource/Maevaranohely"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maevatanana",
+        "uri" : "http://dbpedia.org/resource/Maevatanana"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maevatanana_(district)",
+        "uri" : "http://dbpedia.org/resource/Maevatanana_(district)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maevatanana_II",
+        "uri" : "http://dbpedia.org/resource/Maevatanana_II"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mafaijijo",
+        "uri" : "http://dbpedia.org/resource/Mafaijijo"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahabako",
+        "uri" : "http://dbpedia.org/resource/Mahabako"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahabe",
+        "uri" : "http://dbpedia.org/resource/Mahabe"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahabo,_Betroka",
+        "uri" : "http://dbpedia.org/resource/Mahabo,_Betroka"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahabo,_Vohipeno",
+        "uri" : "http://dbpedia.org/resource/Mahabo,_Vohipeno"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahabo_(district)",
+        "uri" : "http://dbpedia.org/resource/Mahabo_(district)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahabo_Mananivo",
+        "uri" : "http://dbpedia.org/resource/Mahabo_Mananivo"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahaboboka",
+        "uri" : "http://dbpedia.org/resource/Mahaboboka"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahaditra",
+        "uri" : "http://dbpedia.org/resource/Mahaditra"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahadrodroka",
+        "uri" : "http://dbpedia.org/resource/Mahadrodroka"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahaela",
+        "uri" : "http://dbpedia.org/resource/Mahaela"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahafasa_Centre",
+        "uri" : "http://dbpedia.org/resource/Mahafasa_Centre"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahaiza",
+        "uri" : "http://dbpedia.org/resource/Mahaiza"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahajamba_Usine",
+        "uri" : "http://dbpedia.org/resource/Mahajamba_Usine"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahajanga",
+        "uri" : "http://dbpedia.org/resource/Mahajanga"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahajanga_II_(district)",
+        "uri" : "http://dbpedia.org/resource/Mahajanga_II_(district)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahajanga_Province",
+        "uri" : "http://dbpedia.org/resource/Mahajanga_Province"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahalaza-Fanimana",
+        "uri" : "http://dbpedia.org/resource/Mahalaza-Fanimana"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahalina",
+        "uri" : "http://dbpedia.org/resource/Mahalina"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahaly",
+        "uri" : "http://dbpedia.org/resource/Mahaly"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahamaibe",
+        "uri" : "http://dbpedia.org/resource/Mahamaibe"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahambo",
+        "uri" : "http://dbpedia.org/resource/Mahambo"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahanoro",
+        "uri" : "http://dbpedia.org/resource/Mahanoro"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahanoro_(district)",
+        "uri" : "http://dbpedia.org/resource/Mahanoro_(district)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahasoa",
+        "uri" : "http://dbpedia.org/resource/Mahasoa"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahasoa_Est",
+        "uri" : "http://dbpedia.org/resource/Mahasoa_Est"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahasoabe,_Fianarantsoa_II",
+        "uri" : "http://dbpedia.org/resource/Mahasoabe,_Fianarantsoa_II"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahasoabe,_Vohipeno",
+        "uri" : "http://dbpedia.org/resource/Mahasoabe,_Vohipeno"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahasolo",
+        "uri" : "http://dbpedia.org/resource/Mahasolo"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahatalaky",
+        "uri" : "http://dbpedia.org/resource/Mahatalaky"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahatsara_Iefaka",
+        "uri" : "http://dbpedia.org/resource/Mahatsara_Iefaka"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahatsara_Sud",
+        "uri" : "http://dbpedia.org/resource/Mahatsara_Sud"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahatsinjo,_Maevatanana",
+        "uri" : "http://dbpedia.org/resource/Mahatsinjo,_Maevatanana"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahatsinjo,_Vondrozo",
+        "uri" : "http://dbpedia.org/resource/Mahatsinjo,_Vondrozo"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahatsinjo_Est",
+        "uri" : "http://dbpedia.org/resource/Mahatsinjo_Est"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahatsinjony",
+        "uri" : "http://dbpedia.org/resource/Mahatsinjony"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahavanona",
+        "uri" : "http://dbpedia.org/resource/Mahavanona"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahavelo,_Farafangana",
+        "uri" : "http://dbpedia.org/resource/Mahavelo,_Farafangana"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahavelo,_Vondrozo",
+        "uri" : "http://dbpedia.org/resource/Mahavelo,_Vondrozo"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahavelona",
+        "uri" : "http://dbpedia.org/resource/Mahavelona"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahavelona,_Soavinandriana",
+        "uri" : "http://dbpedia.org/resource/Mahavelona,_Soavinandriana"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahavoky_Nord",
+        "uri" : "http://dbpedia.org/resource/Mahavoky_Nord"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahazina_Ambohipierenana",
+        "uri" : "http://dbpedia.org/resource/Mahazina_Ambohipierenana"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahazoarivo,_Fandriana",
+        "uri" : "http://dbpedia.org/resource/Mahazoarivo,_Fandriana"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahazoarivo,_Fianarantsoa_II",
+        "uri" : "http://dbpedia.org/resource/Mahazoarivo,_Fianarantsoa_II"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahazoarivo,_Vohipeno",
+        "uri" : "http://dbpedia.org/resource/Mahazoarivo,_Vohipeno"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahazoarivo,_Vondrozo",
+        "uri" : "http://dbpedia.org/resource/Mahazoarivo,_Vondrozo"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahazoma",
+        "uri" : "http://dbpedia.org/resource/Mahazoma"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mahazony",
+        "uri" : "http://dbpedia.org/resource/Mahazony"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maheriraty",
+        "uri" : "http://dbpedia.org/resource/Maheriraty"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maherivaratra",
+        "uri" : "http://dbpedia.org/resource/Maherivaratra"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maintinandry",
+        "uri" : "http://dbpedia.org/resource/Maintinandry"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maintirano",
+        "uri" : "http://dbpedia.org/resource/Maintirano"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maintirano_District",
+        "uri" : "http://dbpedia.org/resource/Maintirano_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maintsokely",
+        "uri" : "http://dbpedia.org/resource/Maintsokely"
+      }, {
+        "label" : "http://dbpedia.org/resource/Malaimbandy",
+        "uri" : "http://dbpedia.org/resource/Malaimbandy"
+      }, {
+        "label" : "http://dbpedia.org/resource/Consthum",
+        "uri" : "http://dbpedia.org/resource/Consthum"
+      }, {
+        "label" : "http://dbpedia.org/resource/Useldange",
+        "uri" : "http://dbpedia.org/resource/Useldange"
+      }, {
+        "label" : "http://dbpedia.org/resource/Vakinankaratra",
+        "uri" : "http://dbpedia.org/resource/Vakinankaratra"
+      }, {
+        "label" : "http://dbpedia.org/resource/Valabetokana",
+        "uri" : "http://dbpedia.org/resource/Valabetokana"
+      }, {
+        "label" : "http://dbpedia.org/resource/Vallée_de_l'Ernz",
+        "uri" : "http://dbpedia.org/resource/Vallée_de_l'Ernz"
+      }, {
+        "label" : "http://dbpedia.org/resource/Vangaindrano_(district)",
+        "uri" : "http://dbpedia.org/resource/Vangaindrano_(district)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Vanono",
+        "uri" : "http://dbpedia.org/resource/Vanono"
+      }, {
+        "label" : "http://dbpedia.org/resource/Vasiana",
+        "uri" : "http://dbpedia.org/resource/Vasiana"
+      }, {
+        "label" : "http://dbpedia.org/resource/Vatana,_Madagascar",
+        "uri" : "http://dbpedia.org/resource/Vatana,_Madagascar"
+      }, {
+        "label" : "http://dbpedia.org/resource/Vatanato",
+        "uri" : "http://dbpedia.org/resource/Vatanato"
+      }, {
+        "label" : "http://dbpedia.org/resource/Vatohandrina",
+        "uri" : "http://dbpedia.org/resource/Vatohandrina"
+      }, {
+        "label" : "http://dbpedia.org/resource/Vatolatsaka",
+        "uri" : "http://dbpedia.org/resource/Vatolatsaka"
+      }, {
+        "label" : "http://dbpedia.org/resource/Vatomandry",
+        "uri" : "http://dbpedia.org/resource/Vatomandry"
+      }, {
+        "label" : "http://dbpedia.org/resource/Vatomandry_(district)",
+        "uri" : "http://dbpedia.org/resource/Vatomandry_(district)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Vatovavy-Fitovinany",
+        "uri" : "http://dbpedia.org/resource/Vatovavy-Fitovinany"
+      }, {
+        "label" : "http://dbpedia.org/resource/Vavatenina",
+        "uri" : "http://dbpedia.org/resource/Vavatenina"
+      }, {
+        "label" : "http://dbpedia.org/resource/Vavatenina_District",
+        "uri" : "http://dbpedia.org/resource/Vavatenina_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Veromanga",
+        "uri" : "http://dbpedia.org/resource/Veromanga"
+      }, {
+        "label" : "http://dbpedia.org/resource/Folschette",
+        "uri" : "http://dbpedia.org/resource/Folschette"
+      }, {
+        "label" : "http://dbpedia.org/resource/Khodoriv",
+        "uri" : "http://dbpedia.org/resource/Khodoriv"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bissen",
+        "uri" : "http://dbpedia.org/resource/Bissen"
+      }, {
+        "label" : "http://dbpedia.org/resource/Biwer",
+        "uri" : "http://dbpedia.org/resource/Biwer"
+      }, {
+        "label" : "http://dbpedia.org/resource/Boanamary",
+        "uri" : "http://dbpedia.org/resource/Boanamary"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bobakindro",
+        "uri" : "http://dbpedia.org/resource/Bobakindro"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bobasakoa",
+        "uri" : "http://dbpedia.org/resource/Bobasakoa"
+      }, {
+        "label" : "http://dbpedia.org/resource/Boeny",
+        "uri" : "http://dbpedia.org/resource/Boeny"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bongolava",
+        "uri" : "http://dbpedia.org/resource/Bongolava"
+      }, {
+        "label" : "http://dbpedia.org/resource/Boriziny-Vaovao_(district)",
+        "uri" : "http://dbpedia.org/resource/Boriziny-Vaovao_(district)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Borynia,_Turka_Raion",
+        "uri" : "http://dbpedia.org/resource/Borynia,_Turka_Raion"
+      }, {
+        "label" : "http://dbpedia.org/resource/Boulaide",
+        "uri" : "http://dbpedia.org/resource/Boulaide"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bourscheid,_Luxembourg",
+        "uri" : "http://dbpedia.org/resource/Bourscheid,_Luxembourg"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bous,_Luxembourg",
+        "uri" : "http://dbpedia.org/resource/Bous,_Luxembourg"
+      }, {
+        "label" : "http://dbpedia.org/resource/Diana_Region",
+        "uri" : "http://dbpedia.org/resource/Diana_Region"
+      }, {
+        "label" : "http://dbpedia.org/resource/Didy",
+        "uri" : "http://dbpedia.org/resource/Didy"
+      }, {
+        "label" : "http://dbpedia.org/resource/Diekirch",
+        "uri" : "http://dbpedia.org/resource/Diekirch"
+      } ]
+    },
+    "combination" : false
+  } ]
+}

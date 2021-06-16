@@ -1,0 +1,3803 @@
+{
+  "grammarEntries" : [ {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Lower_Canada এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lower_Canada> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Lower_Danube_Circle এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lower_Danube_Circle> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Lower_Egypt এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lower_Egypt> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Lower_Yafa এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lower_Yafa> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Lu_(state) এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lu_(state)> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Luhansk_People's_Republic এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Luhansk_People's_Republic> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Luhuti এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Luhuti> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Luo_(state) এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Luo_(state)> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Lupaca এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lupaca> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Lupah_Sug এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lupah_Sug> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Lusitania এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lusitania> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Lutici এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lutici> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Luwu এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Luwu> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Luxembourg এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Luxembourg> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Lycia_et_Pamphylia এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lycia_et_Pamphylia> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Lê_dynasty এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lê_dynasty> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Lü_(state) এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Lü_(state)> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Ma-i এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ma-i> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Ma_Chu এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ma_Chu> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Macedonia_(Roman_province) এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Macedonia_(Roman_province)> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Macedonia_(ancient_kingdom) এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Macedonia_(ancient_kingdom)> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Macedonia_(theme) এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Macedonia_(theme)> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Madagascar এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Madagascar> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Madrid_Defense_Council এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Madrid_Defense_Council> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Magadha এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Magadha> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Magyar_Autonomous_Region এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Magyar_Autonomous_Region> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Mahdist_State এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Mahdist_State> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Mahra_Sultanate এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Mahra_Sultanate> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Maine এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Maine> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Mainkreis_(Bavaria) এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Mainkreis_(Bavaria)> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Maitraka_dynasty এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Maitraka_dynasty> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Majapahit এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Majapahit> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Majeerteen_Sultanate এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Majeerteen_Sultanate> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Makhnovia এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Makhnovia> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Makuria এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Makuria> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Malacca_Sultanate এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Malacca_Sultanate> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Malagasy_Republic এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Malagasy_Republic> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Malawi এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Malawi> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Malayan_Union এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Malayan_Union> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Malaysia এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Malaysia> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Maldives এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Maldives> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Malerkotla_State এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Malerkotla_State> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Mali এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Mali> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Mali_Empire এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Mali_Empire> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Mali_Federation এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Mali_Federation> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Catepanate_of_Ras এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Catepanate_of_Ras> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Cook_Islands_Federation এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Cook_Islands_Federation> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Uawa_County এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Uawa_County> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Ueda_Domain এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ueda_Domain> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Uganda এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Uganda> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Uganda_Protectorate এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Uganda_Protectorate> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Ugocsa_County এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ugocsa_County> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Ukraine এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ukraine> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Ukrainian_People's_Republic এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ukrainian_People's_Republic> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Ukrainian_People's_Republic_of_Soviets এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ukrainian_People's_Republic_of_Soviets> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Ukrainian_Soviet_Republic এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ukrainian_Soviet_Republic> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Ukrainian_Soviet_Socialist_Republic এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ukrainian_Soviet_Socialist_Republic> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Ukrainian_State এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ukrainian_State> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Ukrainian_national_government_(1941) এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ukrainian_national_government_(1941)> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Umayyad_Caliphate এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Umayyad_Caliphate> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Unification_of_Norway এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Unification_of_Norway> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Union_between_Sweden_and_Norway এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Union_between_Sweden_and_Norway> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Union_of_South_Africa এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Union_of_South_Africa> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_Arab_Emirates এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Arab_Emirates> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_Arab_Republic এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Arab_Republic> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_Arab_States এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Arab_States> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_Kingdom এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Kingdom> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_Kingdom_of_the_Netherlands এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Kingdom_of_the_Netherlands> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_Nations_Temporary_Executive_Authority এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Nations_Temporary_Executive_Authority> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_Nations_Transitional_Administration_in_East_Timor এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Nations_Transitional_Administration_in_East_Timor> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_Nations_Transitional_Authority_in_Cambodia এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Nations_Transitional_Authority_in_Cambodia> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_Provinces_of_Central_Italy এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Provinces_of_Central_Italy> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_Provinces_of_the_Rio_de_la_Plata এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Provinces_of_the_Rio_de_la_Plata> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_States এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_States> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_States_Civil_Administration_of_the_Ryukyu_Islands এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_States_Civil_Administration_of_the_Ryukyu_Islands> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_States_Military_Government_in_Cuba এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_States_Military_Government_in_Cuba> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_States_Military_Government_of_the_Philippine_Islands এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_States_Military_Government_of_the_Philippine_Islands> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_States_Military_Government_of_the_Ryukyu_Islands এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_States_Military_Government_of_the_Ryukyu_Islands> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_States_occupation_of_Haiti এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_States_occupation_of_Haiti> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_States_of_Colombia এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_States_of_Colombia> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_States_of_Indonesia এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_States_of_Indonesia> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_States_of_Venezuela এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_States_of_Venezuela> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_States_of_the_Ionian_Islands এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_States_of_the_Ionian_Islands> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_Suvadive_Republic এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Suvadive_Republic> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/United_Tribes_of_New_Zealand এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/United_Tribes_of_New_Zealand> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Unterelsaß এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Unterelsaß> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Untermainkreis এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Untermainkreis> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Upper_Canada এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Upper_Canada> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Upper_Egypt এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Upper_Egypt> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Upper_Senegal_and_Niger এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Upper_Senegal_and_Niger> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Ural_Oblast এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Ural_Oblast> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Urartu এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Urartu> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Urfa_Sanjak এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Urfa_Sanjak> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Uruguay এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Uruguay> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Utik এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Utik> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Uyghur_Khaganate এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Uyghur_Khaganate> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Uyvar_Eyalet এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Uyvar_Eyalet> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "1",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "COUNTRY",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "http://dbpedia.org/resource/Uzbek_Soviet_Socialist_Republic এর রাজধানী এর নাম বলো?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple <http://dbpedia.org/resource/Uzbek_Soviet_Socialist_Republic> <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Luxembourg_(canton) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Luxembourg_(canton)> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Luxembourg_(canton)> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Luxembourg_(canton)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Luxembourg_City located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Luxembourg_City> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Luxembourg_City> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Luxembourg_City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Luzon_Strait located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Luzon_Strait> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Luzon_Strait> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Luzon_Strait> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Madiromirafy located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Madiromirafy> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Madiromirafy> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Madiromirafy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Madirovalo located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Madirovalo> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Madirovalo> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Madirovalo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Maevaranohely located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Maevaranohely> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Maevaranohely> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Maevaranohely> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Maevatanana located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Maevatanana> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Maevatanana> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Maevatanana> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Maevatanana_(district) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Maevatanana_(district)> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Maevatanana_(district)> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Maevatanana_(district)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Maevatanana_II located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Maevatanana_II> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Maevatanana_II> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Maevatanana_II> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mafaijijo located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mafaijijo> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mafaijijo> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mafaijijo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahabako located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahabako> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahabako> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahabako> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahabe located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahabe> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahabe> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahabe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahabo,_Betroka located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahabo,_Betroka> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahabo,_Betroka> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahabo,_Betroka> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahabo,_Vohipeno located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahabo,_Vohipeno> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahabo,_Vohipeno> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahabo,_Vohipeno> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahabo_(district) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahabo_(district)> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahabo_(district)> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahabo_(district)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahabo_Mananivo located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahabo_Mananivo> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahabo_Mananivo> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahabo_Mananivo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahaboboka located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahaboboka> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahaboboka> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahaboboka> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahaditra located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahaditra> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahaditra> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahaditra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahadrodroka located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahadrodroka> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahadrodroka> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahadrodroka> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahaela located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahaela> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahaela> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahaela> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahafasa_Centre located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahafasa_Centre> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahafasa_Centre> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahafasa_Centre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahaiza located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahaiza> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahaiza> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahaiza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahajamba_Usine located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahajamba_Usine> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahajamba_Usine> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahajamba_Usine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahajanga located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahajanga> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahajanga> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahajanga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahajanga_II_(district) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahajanga_II_(district)> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahajanga_II_(district)> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahajanga_II_(district)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahajanga_Province located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahajanga_Province> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahajanga_Province> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahajanga_Province> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahalaza-Fanimana located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahalaza-Fanimana> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahalaza-Fanimana> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahalaza-Fanimana> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahalina located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahalina> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahalina> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahalina> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahaly located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahaly> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahaly> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahaly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahamaibe located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahamaibe> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahamaibe> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahamaibe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahambo located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahambo> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahambo> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahambo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahanoro located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahanoro> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahanoro> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahanoro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahanoro_(district) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahanoro_(district)> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahanoro_(district)> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahanoro_(district)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahasoa located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahasoa> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahasoa> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahasoa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahasoa_Est located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahasoa_Est> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahasoa_Est> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahasoa_Est> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahasoabe,_Fianarantsoa_II located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahasoabe,_Fianarantsoa_II> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahasoabe,_Fianarantsoa_II> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahasoabe,_Fianarantsoa_II> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahasoabe,_Vohipeno located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahasoabe,_Vohipeno> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahasoabe,_Vohipeno> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahasoabe,_Vohipeno> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahasolo located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahasolo> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahasolo> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahasolo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahatalaky located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahatalaky> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahatalaky> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahatalaky> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahatsara_Iefaka located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahatsara_Iefaka> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahatsara_Iefaka> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahatsara_Iefaka> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahatsara_Sud located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahatsara_Sud> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahatsara_Sud> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahatsara_Sud> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahatsinjo,_Maevatanana located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahatsinjo,_Maevatanana> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahatsinjo,_Maevatanana> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahatsinjo,_Maevatanana> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahatsinjo,_Vondrozo located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahatsinjo,_Vondrozo> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahatsinjo,_Vondrozo> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahatsinjo,_Vondrozo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahatsinjo_Est located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahatsinjo_Est> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahatsinjo_Est> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahatsinjo_Est> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahatsinjony located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahatsinjony> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahatsinjony> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahatsinjony> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahavanona located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahavanona> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahavanona> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahavanona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahavelo,_Farafangana located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahavelo,_Farafangana> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahavelo,_Farafangana> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahavelo,_Farafangana> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahavelo,_Vondrozo located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahavelo,_Vondrozo> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahavelo,_Vondrozo> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahavelo,_Vondrozo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahavelona located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahavelona> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahavelona> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahavelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahavelona,_Soavinandriana located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahavelona,_Soavinandriana> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahavelona,_Soavinandriana> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahavelona,_Soavinandriana> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahavoky_Nord located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahavoky_Nord> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahavoky_Nord> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahavoky_Nord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahazina_Ambohipierenana located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahazina_Ambohipierenana> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahazina_Ambohipierenana> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahazina_Ambohipierenana> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahazoarivo,_Fandriana located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahazoarivo,_Fandriana> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahazoarivo,_Fandriana> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahazoarivo,_Fandriana> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahazoarivo,_Fianarantsoa_II located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahazoarivo,_Fianarantsoa_II> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahazoarivo,_Fianarantsoa_II> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahazoarivo,_Fianarantsoa_II> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahazoarivo,_Vohipeno located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahazoarivo,_Vohipeno> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahazoarivo,_Vohipeno> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahazoarivo,_Vohipeno> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahazoarivo,_Vondrozo located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahazoarivo,_Vondrozo> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahazoarivo,_Vondrozo> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahazoarivo,_Vondrozo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahazoma located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahazoma> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahazoma> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahazoma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Mahazony located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahazony> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahazony> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahazony> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Maheriraty located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Maheriraty> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Maheriraty> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Maheriraty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Maherivaratra located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Maherivaratra> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Maherivaratra> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Maherivaratra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Maintinandry located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Maintinandry> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Maintinandry> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Maintinandry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Maintirano located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Maintirano> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Maintirano> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Maintirano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Maintirano_District located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Maintirano_District> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Maintirano_District> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Maintirano_District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Maintsokely located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Maintsokely> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Maintsokely> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Maintsokely> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Malaimbandy located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Malaimbandy> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Malaimbandy> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Malaimbandy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Consthum located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Consthum> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Consthum> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Consthum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Useldange located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Useldange> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Useldange> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Useldange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Vakinankaratra located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Vakinankaratra> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Vakinankaratra> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Vakinankaratra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Valabetokana located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Valabetokana> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Valabetokana> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Valabetokana> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Vallée_de_l'Ernz located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Vallée_de_l'Ernz> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Vallée_de_l'Ernz> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Vallée_de_l'Ernz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Vangaindrano_(district) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Vangaindrano_(district)> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Vangaindrano_(district)> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Vangaindrano_(district)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Vanono located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Vanono> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Vanono> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Vanono> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Vasiana located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Vasiana> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Vasiana> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Vasiana> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Vatana,_Madagascar located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Vatana,_Madagascar> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Vatana,_Madagascar> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Vatana,_Madagascar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Vatanato located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Vatanato> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Vatanato> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Vatanato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Vatohandrina located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Vatohandrina> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Vatohandrina> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Vatohandrina> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Vatolatsaka located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Vatolatsaka> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Vatolatsaka> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Vatolatsaka> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Vatomandry located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Vatomandry> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Vatomandry> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Vatomandry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Vatomandry_(district) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Vatomandry_(district)> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Vatomandry_(district)> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Vatomandry_(district)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Vatovavy-Fitovinany located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Vatovavy-Fitovinany> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Vatovavy-Fitovinany> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Vatovavy-Fitovinany> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Vavatenina located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Vavatenina> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Vavatenina> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Vavatenina> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Vavatenina_District located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Vavatenina_District> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Vavatenina_District> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Vavatenina_District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Veromanga located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Veromanga> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Veromanga> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Veromanga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Folschette located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Folschette> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Folschette> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Folschette> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Khodoriv located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Khodoriv> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Khodoriv> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Khodoriv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Bissen located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bissen> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bissen> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bissen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Biwer located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Biwer> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Biwer> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Biwer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Boanamary located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Boanamary> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Boanamary> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Boanamary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Bobakindro located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bobakindro> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bobakindro> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bobakindro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Bobasakoa located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bobasakoa> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bobasakoa> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bobasakoa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Boeny located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Boeny> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Boeny> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Boeny> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Bongolava located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bongolava> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bongolava> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bongolava> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Boriziny-Vaovao_(district) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Boriziny-Vaovao_(district)> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Boriziny-Vaovao_(district)> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Boriziny-Vaovao_(district)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Borynia,_Turka_Raion located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Borynia,_Turka_Raion> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Borynia,_Turka_Raion> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Borynia,_Turka_Raion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Boulaide located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Boulaide> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Boulaide> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Boulaide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Bourscheid,_Luxembourg located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bourscheid,_Luxembourg> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bourscheid,_Luxembourg> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bourscheid,_Luxembourg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Bous,_Luxembourg located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bous,_Luxembourg> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bous,_Luxembourg> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bous,_Luxembourg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Diana_Region located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Diana_Region> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Diana_Region> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Diana_Region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Didy located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Didy> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Didy> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Didy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "language" : "BN",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is http://dbpedia.org/resource/Diekirch located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Diekirch> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Diekirch> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Diekirch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  } ]
+}
