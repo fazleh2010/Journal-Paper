@@ -20,7 +20,7 @@ Run the system:
 - input_type:  The input file indicator. `csv` or  `ttl`.If `csv` then the lexical entires are given in the form of rows in csv. If  `ttl` then the lexical entries are given in lemon format.                                         
 ````shell script
 java -jar <jar file> <language> <input_directory> <output_director> <number_of_entities> <input_type>
-java -jar target/QuestionGrammarGenerator.jar EN lexicon/en output 10 csv                                                                 
+java -jar target/QuestionGrammarGenerator.jar BN lexicon/bn output 10 ttl                                                                 
 ````  
 go to the (http://localhost:8089/quegg/)
 
