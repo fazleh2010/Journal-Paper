@@ -6,7 +6,7 @@
 @base            <http://localhost:8080#> .
 
 :lexicon_en a    lemon:Lexicon ;
-  lemon:language "en" ;
+  lemon:language "bn" ;
   lemon:entry    :producer_of ;
   lemon:entry    :of .
 
@@ -21,7 +21,7 @@
   lemon:writtenRep "সুরকার"@en .
 
 :producers_form a  lemon:Form ;
-  lemon:writtenRep "সুরকার"@en ;
+  lemon:writtenRep "সুরকারদের"@en ;
   lexinfo:number   lexinfo:plural .
 
 :producer_of_nounpp a          lexinfo:NounPPFrame ;
@@ -46,4 +46,3 @@
 :of a                  lemon:SynRoleMarker ;
   lemon:canonicalForm  [ lemon:writtenRep "এর"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
-

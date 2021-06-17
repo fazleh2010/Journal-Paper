@@ -17,7 +17,7 @@
   lemon:sense          :author_sense_ontomap .
 
 :author_form a lemon:Form ;
-  lemon:writtenRep  "পরিবেশক"@en .
+  lemon:writtenRep  "লেখক"@en .
 
 :author_of_nounpp a       lexinfo:NounPPFrame ;
   lexinfo:copulativeArg        :arg1 ;
@@ -25,14 +25,14 @@
 
 :author_sense_ontomap a lemon:OntoMap, lemon:LexicalSense ;
   lemon:ontoMapping          :author_sense_ontomap ;
-  lemon:reference            <http://dbpedia.org/ontology/distributor> ;
+  lemon:reference            <http://dbpedia.org/ontology/author> ;
   lemon:subjOfProp           :arg2 ;
   lemon:objOfProp            :arg1 ;
   lemon:condition            :author_condition .
 
 :author_condition a lemon:condition ;
-  lemon:propertyDomain   <http://dbpedia.org/ontology/Film> ;
-  lemon:propertyRange    <http://dbpedia.org/ontology/Organisation> .
+  lemon:propertyDomain   <http://dbpedia.org/ontology/Work> ;
+  lemon:propertyRange    <http://dbpedia.org/ontology/Person> .
 
 :arg2 lemon:marker :of .
 

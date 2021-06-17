@@ -41,4 +41,3 @@
 :of a                  lemon:SynRoleMarker ;
   lemon:canonicalForm  [ lemon:writtenRep "এর"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
-

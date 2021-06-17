@@ -42,4 +42,3 @@
 :of a                  lemon:SynRoleMarker ;
   lemon:canonicalForm  [ lemon:writtenRep "of"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
-

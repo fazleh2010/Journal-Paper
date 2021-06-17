@@ -1,0 +1,3 @@
+LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,GrammarRule1:question1,SPARQL,GrammarRule1: question2,SPARQL Question 2,GrammarRule 1: questions,SPARQL ,NP (Grammar Rule 2),,grammar rules,numberOfQuestions
+father_of,noun,পিতা ,-,of,NounPPFrame,range,domain,1,dbo:father,dbo:Person,dbo:Person,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,,2,
+capital-of,noun,পিতা ,-,of,NounPPFrame,range,domain,1,dbo:capital,dbo:Country,dbo:City,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,,2,
