@@ -175,6 +175,7 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
           GrammarEntry grammarEntry = new GrammarEntry();
           grammarEntry.setFrameType(frameType);
           grammarEntry.setLanguage(getLanguage());
+          grammarEntry.setLexicalEntryUri(lexicalEntryUtil.getLexicalEntry().getURI());
 
           // generate SPARQL query
           grammarEntry.setQueryType(QueryType.SELECT);

@@ -7,32 +7,32 @@
 
 :lexicon_en a    lemon:Lexicon ;
   lemon:language "en" ;
-  lemon:entry    :deathPlace_of ;
+  lemon:entry    :Tfather_of ;
   lemon:entry    :of .
 
-:deathPlace_of a       lemon:LexicalEntry ;
+:Tfather_of a       lemon:LexicalEntry ;
   lexinfo:partOfSpeech lexinfo:noun ;
-  lemon:canonicalForm  :deathPlace_of_form ;
-  lemon:synBehavior    :deathPlace_of_nounpp ;
-  lemon:sense          :deathPlace_of_sense_ontomap .
+  lemon:canonicalForm  :Tfather_of_form ;
+  lemon:synBehavior    :Tfather_of_nounpp ;
+  lemon:sense          :Tfather_of_sense_ontomap .
 
-:deathPlace_of_form a lemon:Form ;
-  lemon:writtenRep "death place"@en .
+:Tfather_of_form a lemon:Form ;
+  lemon:writtenRep "father"@en .
 
-:deathPlace_of_nounpp a        lexinfo:NounPPFrame ;
+:Tfather_of_nounpp a        lexinfo:NounPPFrame ;
   lexinfo:copulativeArg        :arg1 ;
   lexinfo:prepositionalAdjunct :arg2 .
 
-:deathPlace_of_sense_ontomap a lemon:OntoMap, lemon:LexicalSense ;
-  lemon:ontoMapping         :deathPlace_of_sense_ontomap ;
-  lemon:reference           <http://dbpedia.org/ontology/deathPlace> ;
+:Tfather_of_sense_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :Tfather_of_sense_ontomap ;
+  lemon:reference           <http://dbpedia.org/ontology/father> ;
   lemon:subjOfProp          :arg2 ;
   lemon:objOfProp           :arg1 ;
-  lemon:condition           :deathPlace_of_condition .
+  lemon:condition           :Tfather_of_condition .
 
-:deathPlace_of_condition a lemon:condition ;
+:Tfather_of_condition a lemon:condition ;
   lemon:propertyDomain  <http://dbpedia.org/ontology/Person> ;
-  lemon:propertyRange   <http://dbpedia.org/ontology/Place> .
+  lemon:propertyRange   <http://dbpedia.org/ontology/Person> .
 
 :arg2 lemon:marker :of .
 

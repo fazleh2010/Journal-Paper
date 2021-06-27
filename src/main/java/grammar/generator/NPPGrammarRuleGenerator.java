@@ -42,6 +42,8 @@ public class NPPGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
   ) throws QueGGMissingFactoryClassException {
     GrammarEntry fragmentEntry = copyGrammarEntry(grammarEntry);
     fragmentEntry.setType(SentenceType.NP);
+     fragmentEntry.setLexicalEntryUri(lexicalEntryUtil.getLexicalEntry().getURI());
+
 
     SentenceBuilder sentenceBuilder = new SentenceBuilderCopulativePP(
       getLanguage(),
