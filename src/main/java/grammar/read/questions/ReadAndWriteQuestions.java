@@ -5,6 +5,7 @@ package grammar.read.questions;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 import util.io.FileUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.andrewoma.dexx.collection.Pair;
@@ -25,6 +26,76 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.apache.commons.lang3.StringUtils;
 
+import com.google.gdata.util.ServiceException;
+import eu.monnetproject.lemon.LemonFactory;
+import eu.monnetproject.lemon.LemonModel;
+import eu.monnetproject.lemon.LemonModels;
+import eu.monnetproject.lemon.LemonSerializer;
+import eu.monnetproject.lemon.LinguisticOntology;
+import eu.monnetproject.lemon.model.LexicalEntry;
+import eu.monnetproject.lemon.model.LexicalForm;
+import eu.monnetproject.lemon.model.Lexicon;
+import eu.monnetproject.lemon.model.Text;
+import grammar.generator.BindingResolver;
+import grammar.generator.GrammarRuleGeneratorRoot;
+import grammar.generator.GrammarRuleGeneratorRootImpl;
+import grammar.read.questions.ReadAndWriteQuestions;
+import grammar.structure.component.DomainOrRangeType;
+import grammar.structure.component.FrameType;
+import grammar.structure.component.GrammarEntry;
+import grammar.structure.component.GrammarWrapper;
+import grammar.structure.component.Language;
+import java.io.File;
+import lexicon.LexiconImporter;
+import lombok.NoArgsConstructor;
+import org.apache.logging.log4j.LogManager;
+import org.apache.jena.sys.JenaSystem;
+
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.net.URISyntaxException;
+import java.nio.file.Path;
+import java.util.*;
+import java.util.List;
+import java.util.stream.Collectors;
+import static java.util.Objects.isNull;
+import java.util.logging.Level;
+import util.io.CsvFile;
+import util.io.FileUtils;
+import util.io.TurtleCreation;
+import util.io.ExecJar;
+
+import java.lang.*;
+import java.io.*;
+import java.net.URI;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import net.lexinfo.LexInfo;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import com.google.api.client.auth.oauth2.Credential;
+import com.google.api.client.extensions.java6.auth.oauth2.AuthorizationCodeInstalledApp;
+import com.google.api.client.extensions.jetty.auth.oauth2.LocalServerReceiver;
+import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow;
+import com.google.api.client.googleapis.auth.oauth2.GoogleClientSecrets;
+import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
+import com.google.api.client.http.javanet.NetHttpTransport;
+import com.google.api.client.json.JsonFactory;
+import com.google.api.client.json.jackson2.JacksonFactory;
+import com.google.api.client.util.store.FileDataStoreFactory;
+
+import com.google.api.services.sheets.v4.SheetsScopes;
+import com.google.api.services.sheets.v4.model.AppendValuesResponse;
+import com.google.api.services.sheets.v4.model.ValueRange;
+
+import java.io.*;
+import java.security.GeneralSecurityException;
+import java.util.*;
+
+
 /**
  *
  * @author elahi
@@ -42,6 +113,8 @@ public class ReadAndWriteQuestions {
     public String questionAnswerFile=null;
     private Set<String> excludes=new HashSet<String>();
     private Integer maxNumberOfEntities=100;
+    private static final org.apache.logging.log4j.Logger LOG = LogManager.getLogger(ReadAndWriteQuestions.class);
+
    
     public ReadAndWriteQuestions(String questionAnswerFile, Integer maxNumberOfEntities) {
        this.initialExcluded();
@@ -57,6 +130,7 @@ public class ReadAndWriteQuestions {
             //this.csvWriter = new CSVWriter(new FileWriter(questionAnswerFile, true));
             this.csvWriter.writeNext(header);
         
+         LOG.info("Number of Files!!'", fileList.size());
 
         for (File file : fileList) {
             index = index + 1;
@@ -64,6 +138,7 @@ public class ReadAndWriteQuestions {
             GrammarEntries grammarEntries = mapper.readValue(file, GrammarEntries.class);
             Integer total = grammarEntries.getGrammarEntries().size();
             Integer idIndex = 0, noIndex = 0;
+            LOG.info("running file'", file.getName());
             for (GrammarEntryUnit grammarEntryUnit : grammarEntries.getGrammarEntries()) {
                  /*if (idIndex > 1) {
                     break;
@@ -87,7 +162,8 @@ public class ReadAndWriteQuestions {
                     
                 noIndex =this.replaceVariables(bindingList, sparql, returnVairable,grammarEntryUnit.getSentences(),syntacticFrame,noIndex);
                 noIndex = noIndex + 1;
-                System.out.println("index:" + index + " Id:" + grammarEntryUnit.getId() + " total:" + total + " example:" + grammarEntryUnit.getSentences().iterator().next());
+                //LOG.info("index:" + index + " Id:" + grammarEntryUnit.getId() + " total:" + total + " example:" + grammarEntryUnit.getSentences().iterator().next());
+                //System.out.println("index:" + index + " Id:" + grammarEntryUnit.getId() + " total:" + total + " example:" + grammarEntryUnit.getSentences().iterator().next());
                 idIndex = idIndex + 1;
             }
         }
@@ -113,7 +189,7 @@ public class ReadAndWriteQuestions {
             index = index + 1;
             sparql=this.modifySparql(sparql);
             
-            System.out.println("index::" + index + " uriLabel::" + uriLabel.getLabel() + " questionForShow::" + questionForShow + " sparql::" + sparql + " answer::" + answer+ " syntacticFrame:"+syntacticFrame);
+            //System.out.println("index::" + index + " uriLabel::" + uriLabel.getLabel() + " questionForShow::" + questionForShow + " sparql::" + sparql + " answer::" + answer+ " syntacticFrame:"+syntacticFrame);
             
          
             

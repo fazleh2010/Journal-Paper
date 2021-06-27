@@ -28,6 +28,7 @@ import java.util.Optional;
 import static grammar.generator.helper.BindingConstants.BINDING_TOKEN_TEMPLATE;
 import static grammar.generator.helper.parser.SentenceTemplateParser.QUESTION_MARK;
 import static java.util.Objects.isNull;
+import java.util.logging.Level;
 import static lexicon.LexicalEntryUtil.getDeterminerTokenByNumber;
 
 public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
@@ -183,8 +184,15 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                 if (annotatedNoun.getNumber().equals(toBeVerb.getNumber())
                         || (rootToken.isPresent() && isValidAdjectiveForm(rootToken.get()))) {
                     if (isNPPPresent(sentenceTokens) && rootToken.isPresent()) {
-                        String np = generateNPOrAP(sentenceTokens, object, lexicalEntryUtil).get(annotatedNoun.getNumber());
-                        sentenceArray[rootToken.get().getPosition()] = np;
+                        String np;
+                        try {
+                            np = generateNPOrAP(sentenceTokens, object, lexicalEntryUtil).get(annotatedNoun.getNumber());
+                            sentenceArray[rootToken.get().getPosition()] = np;
+                        } catch (Exception ex) {
+                            System.out.println("failed to generate Noun Phrase"+ ex.getMessage());
+                            java.util.logging.Logger.getLogger(SentenceBuilderCopulativePP.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        
                         copulaToken.ifPresent(sentenceToken -> sentenceArray[sentenceToken.getPosition()] = toBeVerb.getWrittenRepValue());
                         // Get interrogative determiner or pronoun for this sentence
                         if (pronounObjectToken.isPresent()) {
@@ -286,7 +294,12 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
             String bindingVar,
             LexicalEntryUtil lexicalEntryUtil
     ) {
-        return generateNPOrAP(sentenceTokens, bindingVar, lexicalEntryUtil);
+        try {
+            return generateNPOrAP(sentenceTokens, bindingVar, lexicalEntryUtil);
+        } catch (Exception ex) {
+            java.util.logging.Logger.getLogger(SentenceBuilderCopulativePP.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
     }
 
     /*private Map<PropertyValue, String> generateNPOrAP(
@@ -345,7 +358,7 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
             List<SentenceToken> sentenceTokens,
             String bindingVar,
             LexicalEntryUtil lexicalEntryUtil
-    ) {
+    ) throws Exception {
         Map<PropertyValue, String> generatedSentences = new HashMap<>();
         // We already know how to find the matching AnnotatedWords or String tokens than need to be added to the sentence
         // Load all forms of this lexical entry
@@ -368,6 +381,7 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
         if (rootToken.isPresent()) {
             grammaticalCase = rootToken.get().getGrammaticalCase();
         }
+        
 
         for (AnnotatedNounOrQuestionWord annotatedNoun : annotatedLexicalEntryNouns) {
             if (annotatedNoun.getGrammaticalCase() != null && !annotatedNoun.getGrammaticalCase().equals(lexicalEntryUtil.getLexInfo().getPropertyValue(grammaticalCase))) {
@@ -378,9 +392,16 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
             if (npDeterminer.isPresent()) {
                 URI detRef = npDeterminer.get().getLocalReference();
                 LexicalEntry entry = new LexiconSearch(lexicalEntryUtil.getLexicon()).getReferencedResource(detRef);
-                //System.out.println("lexicalEntryUtil.getLexicon()::"+lexicalEntryUtil.getLexicon());
-                //System.out.println("entry::"+entry);
-                determiner = entry.getCanonicalForm().getWrittenRep().value;
+                try{
+                    System.out.println("lexicalEntryUtil.getLexicon()::" + lexicalEntryUtil.getLexicon());
+                    System.out.println("entry::" + entry);
+                    System.out.println("detRef::" + detRef);
+                    determiner = entry.getCanonicalForm().getWrittenRep().value;
+                }
+                catch(Exception ex){
+                    throw new Exception("some value of lemon not found::"+ex.getMessage());
+                }
+               
                 List<AnnotatedNounOrQuestionWord> determiners = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords(entry.getOtherForms());
                 for (AnnotatedNounOrQuestionWord det : determiners) {
                     if (annotatedNoun.getNumber().equals(det.getNumber())) {

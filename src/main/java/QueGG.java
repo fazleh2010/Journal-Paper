@@ -1,5 +1,14 @@
 
+import com.google.gdata.util.ServiceException;
+import eu.monnetproject.lemon.LemonFactory;
 import eu.monnetproject.lemon.LemonModel;
+import eu.monnetproject.lemon.LemonModels;
+import eu.monnetproject.lemon.LemonSerializer;
+import eu.monnetproject.lemon.LinguisticOntology;
+import eu.monnetproject.lemon.model.LexicalEntry;
+import eu.monnetproject.lemon.model.LexicalForm;
+import eu.monnetproject.lemon.model.Lexicon;
+import eu.monnetproject.lemon.model.Text;
 import grammar.generator.BindingResolver;
 import grammar.generator.GrammarRuleGeneratorRoot;
 import grammar.generator.GrammarRuleGeneratorRootImpl;
@@ -30,10 +39,35 @@ import util.io.FileUtils;
 import util.io.TurtleCreation;
 import util.io.ExecJar;
 
+import java.lang.*;
+import java.io.*;
+import java.net.URI;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import net.lexinfo.LexInfo;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 
+import com.google.api.client.auth.oauth2.Credential;
+import com.google.api.client.extensions.java6.auth.oauth2.AuthorizationCodeInstalledApp;
+import com.google.api.client.extensions.jetty.auth.oauth2.LocalServerReceiver;
+import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow;
+import com.google.api.client.googleapis.auth.oauth2.GoogleClientSecrets;
+import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
+import com.google.api.client.http.javanet.NetHttpTransport;
+import com.google.api.client.json.JsonFactory;
+import com.google.api.client.json.jackson2.JacksonFactory;
+import com.google.api.client.util.store.FileDataStoreFactory;
 
+import com.google.api.services.sheets.v4.SheetsScopes;
+import com.google.api.services.sheets.v4.model.AppendValuesResponse;
+import com.google.api.services.sheets.v4.model.ValueRange;
 
+import java.io.*;
+import java.security.GeneralSecurityException;
+import java.util.*;
 
 @NoArgsConstructor
 public class QueGG {
@@ -48,20 +82,15 @@ public class QueGG {
     private static String QUESTION_ANSWER_FILE = "questions";
     private static String entityLabelDir = "src/main/resources/entityLabels/";
     //private static String javaLoc="/home/elahi/grammar/hackthon/fork/QueGG-web/target/";
-    private static String javaLoc="QueGG-webCopy/";
-    private static String jarFile="quegg-web-0.0.1-SNAPSHOT.jar";
-    private static Boolean externalEntittyListflag=false;
-    private static String outputFileName="grammar_FULL_DATASET";
+    private static String javaLoc = "QueGG-webCopy/";
+    private static String jarFile = "quegg-web-0.0.1-SNAPSHOT.jar";
+    private static Boolean externalEntittyListflag = false;
+    private static String outputFileName = "grammar_FULL_DATASET";
 
-    /*public static void mainT(String[] args) throws Exception {
-      queGG.callInterface(javaLoc,jarFile);
-    }*/
-
-   
     public static void main(String[] args) throws Exception {
         JenaSystem.init();
 
-        String search=GENERATE_JSON+CREATE_CSV;
+        String search = GENERATE_JSON + CREATE_CSV;
         String questionAnswerFile = null;
 
         try {
@@ -76,33 +105,29 @@ public class QueGG {
             language = Language.stringToLanguage(args[0]);
             String inputDir = Path.of(args[1]).toString();
             String outputDir = Path.of(args[2]).toString();
-            String numberOfEntitiesString=Path.of(args[3]).toString();
-            Integer maxNumberOfEntities=Integer.parseInt(numberOfEntitiesString);
-            String fileType=args[4];
-            if(fileType.contains("ttl")){
-               queGG.init(language, inputDir, outputDir);
-                }
-            else if(fileType.contains("csv")){
-               queGG.generateTurtle(inputDir);
-            }
-            else
-              throw new Exception("No file type is mentioned!!");
-
+            String numberOfEntitiesString = Path.of(args[3]).toString();
+            Integer maxNumberOfEntities = Integer.parseInt(numberOfEntitiesString);
+            String fileType = args[4];
+            if (fileType.contains("ttl")) {
                 queGG.init(language, inputDir, outputDir);
-                System.out.println("outputFileName+language::"+outputFileName+"_"+language);
-                List<File> fileList = FileUtils.getFiles(outputDir+"/", outputFileName+"_"+language, ".json");
-                if (fileList.isEmpty()) {
-                    throw new Exception("No files to process for question answering system!!");
-                }
-                questionAnswerFile =  outputDir+ File.separator + QUESTION_ANSWER_FILE+"_"+language+".csv";
-                ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile,maxNumberOfEntities);
-                readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir,externalEntittyListflag);
+            } else if (fileType.contains("csv")) {
+                queGG.generateTurtle(inputDir);
+            } else {
+                throw new Exception("No file type is mentioned!!");
+            }
 
-                //temporary close of QA system generation
-                //ExecJar.callInterface(javaLoc,jarFile);
-                //System.out.println("csv file generation successful!!");
+            queGG.init(language, inputDir, outputDir);
+            List<File> fileList = FileUtils.getFiles(outputDir + "/", outputFileName + "_" + language, ".json");
+            if (fileList.isEmpty()) {
+                throw new Exception("No files to process for question answering system!!");
+            }
+            questionAnswerFile = outputDir + File.separator + QUESTION_ANSWER_FILE + "_" + language + ".csv";
+            ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, maxNumberOfEntities);
+            readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir, externalEntittyListflag);
 
-
+            //temporary close of QA system generation
+            //ExecJar.callInterface(javaLoc,jarFile);
+            //System.out.println("csv file generation successful!!");
             LOG.warn("To get optimal combinations of sentences please add the following types to {}\n{}",
                     DomainOrRangeType.class.getName(), DomainOrRangeType.MISSING_TYPES.toString()
             );
@@ -111,8 +136,6 @@ public class QueGG {
             System.err.printf("Usage: <%s> <input directory> <output directory>%n", Arrays.toString(Language.values()));
         }
     }
-
-   
 
     public void init(Language language, String inputDir, String outputDir) throws IOException {
         try {
@@ -123,42 +146,38 @@ public class QueGG {
     }
 
     public void generateTurtle(String inputDir) throws IOException {
-            //FileUtils.deleteFiles(inputDir,".ttl");
-        
-               String lemonEntry=null;
-               File f = new File(inputDir);
-               String[]pathnames = f.list();
-               for (String pathname : pathnames) {
-                    String[]files = new File(inputDir+File.separatorChar+pathname).list(); 
+        //FileUtils.deleteFiles(inputDir,".ttl");
 
-                    for (String file : files) {
-                          if(!file.contains(".csv"))
-                             continue;
-                          CsvFile csvFile = new CsvFile();
-                           System.out.println(inputDir+"/"+pathname+"/"+file);
-                           String directory=inputDir+"/"+pathname+"/";
-                          List<String[]> rows = csvFile.getRows(new File(directory+file));
-                          Integer index = 0;
+        String lemonEntry = null;
+        File f = new File(inputDir);
+        String[] pathnames = f.list();
+        for (String pathname : pathnames) {
+            String[] files = new File(inputDir + File.separatorChar + pathname).list();
 
+            for (String file : files) {
+                if (!file.contains(".csv")) {
+                    continue;
+                }
+                CsvFile csvFile = new CsvFile();
+                //System.out.println(inputDir + "/" + pathname + "/" + file);
+                String directory = inputDir + "/" + pathname + "/";
+                List<String[]> rows = csvFile.getRows(new File(directory + file));
+                Integer index = 0;
 
-                        for (String[] row : rows) {
-                            if (index == 0) {
-                                index=index+1;
-                                continue;
-                            } 
-                            TurtleCreation nounPPFrameXsl = new TurtleCreation(row);
-                            FileUtils.stringToFile(nounPPFrameXsl.getTutleString(), directory + nounPPFrameXsl.getTutleFileName());
-                               
-                    
-                        }
-
+                for (String[] row : rows) {
+                    if (index == 0) {
+                        index = index + 1;
+                        continue;
                     }
-                    
-                }   
+                    TurtleCreation nounPPFrameXsl = new TurtleCreation(row);
+                    FileUtils.stringToFile(nounPPFrameXsl.getTutleString(), directory + nounPPFrameXsl.getTutleFileName());
+
+                }
+
+            }
+
+        }
     }
-
-
-
 
     private void loadInputAndGenerate(Language lang, String inputDir, String outputDir) throws
             IOException,
@@ -282,6 +301,72 @@ public class QueGG {
         return grammarWrapper;
     }
 
- 
+    /*public static void mainT(String[] args) throws Exception {
+        String fileName="/home/elahi/grammar/hackthon/extension/question-grammar-generator/nounppframe.xlsx";
+        
+        
+        
+        
+        
+        
+        // File initialFile = new File(fileName);
+         //InputStream inputStream = new FileInputStream(initialFile);
+         
+        Workbook workbook = null;
+        File file = new File(fileName);
+        if (!file.exists()) {
+            if (file.toString().endsWith(".xlsx")) {
+                workbook = new XSSFWorkbook();
+            } else {
+                workbook = new HSSFWorkbook();
+            }
+        } else {
+            System.out.println("test test");
+        }*/
+    // Get the workbook instance for XLS file
+    //Workbook workbook = new HSSFWorkbook(inputStream);
+    // Get the specific sheet from the workbook
+    /* Sheet sheet = workbook.getSheetAt(0);
+        Iterator<Row> rowIterator = sheet.iterator();
+        while (rowIterator.hasNext()) {
+            Row row = rowIterator.next();
+        }
 
+        
+        
+        /*File myFile = new File("/home/elahi/grammar/hackthon/extension/question-grammar-generator/nounppframe.xlsx");
+        FileInputStream fis = new FileInputStream(myFile);
+        //Finds the workbook instance for XLSX file 
+        XSSFWorkbook myWorkBook = new XSSFWorkbook(fis);
+
+        // Return first sheet from the XLSX workbook 
+        XSSFSheet mySheet = myWorkBook.getSheetAt(0);
+
+        // Get iterator to all the rows in current sheet 
+        Iterator<Row> rowIterator = mySheet.iterator();
+
+        // Traversing over each row of XLSX file 
+        while (rowIterator.hasNext()) {
+            Row row = rowIterator.next();
+        // For each row, iterate through each columns 
+            Iterator<Cell> cellIterator = row.cellIterator();
+            while (cellIterator.hasNext()) {
+                Cell cell = cellIterator.next();
+                switch (cell.getCellType()) {
+                    case Cell.CELL_TYPE_STRING:
+                        System.out.print(cell.getStringCellValue() + "\t");
+                        break;
+                    case Cell.CELL_TYPE_NUMERIC:
+                        System.out.print(cell.getNumericCellValue() + "\t");
+                        break;
+                    case Cell.CELL_TYPE_BOOLEAN:
+                        System.out.print(cell.getBooleanCellValue() + "\t");
+                        break;
+                    default:
+                }
+            }
+            System.out.println("");
+        }
+
+    }*/
 }

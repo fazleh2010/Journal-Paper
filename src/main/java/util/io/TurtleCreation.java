@@ -17,17 +17,17 @@ import java.util.Set;
  */
 public class TurtleCreation {
 
-    private String lemonEntry = "birthPlace_of";
-    private String partOfSpeech = "noun";
-    private String writtenForm_plural = "-";
+    private String lemonEntry = "";
+    private String partOfSpeech = "";
+    private String writtenForm_plural = "";
     private String writtenFormInfinitive = "";
     private String writtenForm3rdPerson = "";
     private String writtenFormPast = "";
-    private String preposition = "of";
-    private String sense = "1";
-    private String reference = "dbo:birthPlace";
-    private String domain = "dbo:Person";
-    private String range = "dbo:Place";
+    private String preposition = "";
+    private String sense = "";
+    private String reference = "";
+    private String domain = "";
+    private String range = "";
     private String tutleString = "";
     private String tutleFileName = "";
    
@@ -107,7 +107,7 @@ public class TurtleCreation {
         this.reference = this.setReference(reference);
         this.domain = this.setReference(domain);
         this.range = this.setReference(range);
-
+        
         this.tutleString = "@prefix :        <http://localhost:8080/lexicon#> .\n"
                 + "\n"
                 + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
@@ -117,30 +117,30 @@ public class TurtleCreation {
                 + "\n"
                 + ":lexicon_en a    lemon:Lexicon ;\n"
                 + "  lemon:language \"en\" ;\n"
-                + "  lemon:entry    :birthPlace_of ;\n"
+                + "  lemon:entry    :"+this.lemonEntry+" ;\n"
                 + "  lemon:entry    :of .\n"
                 + "\n"
-                + ":birthPlace_of a       lemon:LexicalEntry ;\n"
+                + ":"+this.lemonEntry+" a       lemon:LexicalEntry ;\n"
                 + "  lexinfo:partOfSpeech lexinfo:noun ;\n"
-                + "  lemon:canonicalForm  :birthPlace_form ;\n"
-                + "  lemon:synBehavior    :birthPlace_of_nounpp ;\n"
-                + "  lemon:sense          :birthPlace_sense_ontomap .\n"
+                + "  lemon:canonicalForm  :"+this.lemonEntry+"_form ;\n"
+                + "  lemon:synBehavior    :"+this.lemonEntry+"_nounpp ;\n"
+                + "  lemon:sense          :"+this.lemonEntry+"_sense_ontomap .\n"
                 + "\n"
-                + ":birthPlace_form a lemon:Form ;\n"
+                + ":"+this.lemonEntry+"_form a lemon:Form ;\n"
                 + "  lemon:writtenRep \"" + this.writtenFormInfinitive + "\"@en .\n"
                 + "\n"
-                + ":birthPlace_of_nounpp a        lexinfo:NounPPFrame ;\n"
+                + ":"+this.lemonEntry+"_nounpp a        lexinfo:NounPPFrame ;\n"
                 + "  lexinfo:copulativeArg        :arg1 ;\n"
                 + "  lexinfo:prepositionalAdjunct :arg2 .\n"
                 + "\n"
-                + ":birthPlace_sense_ontomap a lemon:OntoMap, lemon:LexicalSense ;\n"
-                + "  lemon:ontoMapping         :birthPlace_sense_ontomap ;\n"
+                + ":"+this.lemonEntry+"_sense_ontomap a lemon:OntoMap, lemon:LexicalSense ;\n"
+                + "  lemon:ontoMapping         :"+this.lemonEntry+"_sense_ontomap ;\n"
                 + "  lemon:reference           <http://dbpedia.org/ontology/" + reference + "> ;\n"
                 + "  lemon:subjOfProp          :arg2 ;\n"
                 + "  lemon:objOfProp           :arg1 ;\n"
-                + "  lemon:condition           :birthPlace_condition .\n"
+                + "  lemon:condition           :"+this.lemonEntry+"_condition .\n"
                 + "\n"
-                + ":birthPlace_condition a lemon:condition ;\n"
+                + ":"+this.lemonEntry+"_condition a lemon:condition ;\n"
                 + "  lemon:propertyDomain  <http://dbpedia.org/ontology/" + domain + "> ;\n"
                 + "  lemon:propertyRange   <http://dbpedia.org/ontology/" + range + "> .\n"
                 + "\n"
@@ -151,6 +151,51 @@ public class TurtleCreation {
                 + ":of a                  lemon:SynRoleMarker ;\n"
                 + "  lemon:canonicalForm  [ lemon:writtenRep \"" + preposition + "\"@en ] ;\n"
                 + "  lexinfo:partOfSpeech lexinfo:preposition .";
+        
+
+        /*this.tutleString = "@prefix :        <http://localhost:8080/lexicon#> .\n"
+                + "\n"
+                + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
+                + "@prefix lemon:   <http://lemon-model.net/lemon#> .\n"
+                + "\n"
+                + "@base            <http://localhost:8080#> .\n"
+                + "\n"
+                + ":lexicon_en a    lemon:Lexicon ;\n"
+                + "  lemon:language \"en\" ;\n"
+                + "  lemon:entry    :"+this.lemonEntry+" ;\n"
+                + "  lemon:entry    :of .\n"
+                + "\n"
+                + ":"+this.lemonEntry+" a       lemon:LexicalEntry ;\n"
+                + "  lexinfo:partOfSpeech lexinfo:noun ;\n"
+                + "  lemon:canonicalForm  :"+birthPlace+"_form ;\n"
+                + "  lemon:synBehavior    :"+this.lemonEntry+"_nounpp ;\n"
+                + "  lemon:sense          :"+birthPlace+"_sense_ontomap .\n"
+                + "\n"
+                + ":"+birthPlace+"_form a lemon:Form ;\n"
+                + "  lemon:writtenRep \"" + this.writtenFormInfinitive + "\"@en .\n"
+                + "\n"
+                + ":"+this.lemonEntry+"_nounpp a        lexinfo:NounPPFrame ;\n"
+                + "  lexinfo:copulativeArg        :arg1 ;\n"
+                + "  lexinfo:prepositionalAdjunct :arg2 .\n"
+                + "\n"
+                + ":"+birthPlace+"_sense_ontomap a lemon:OntoMap, lemon:LexicalSense ;\n"
+                + "  lemon:ontoMapping         :"+birthPlace+"_sense_ontomap ;\n"
+                + "  lemon:reference           <http://dbpedia.org/ontology/" + reference + "> ;\n"
+                + "  lemon:subjOfProp          :arg2 ;\n"
+                + "  lemon:objOfProp           :arg1 ;\n"
+                + "  lemon:condition           :"+birthPlace+"_condition .\n"
+                + "\n"
+                + ":"+birthPlace+"_condition a lemon:condition ;\n"
+                + "  lemon:propertyDomain  <http://dbpedia.org/ontology/" + domain + "> ;\n"
+                + "  lemon:propertyRange   <http://dbpedia.org/ontology/" + range + "> .\n"
+                + "\n"
+                + ":arg2 lemon:marker :of .\n"
+                + "\n"
+                + "## Prepositions ##\n"
+                + "\n"
+                + ":of a                  lemon:SynRoleMarker ;\n"
+                + "  lemon:canonicalForm  [ lemon:writtenRep \"" + preposition + "\"@en ] ;\n"
+                + "  lexinfo:partOfSpeech lexinfo:preposition .";*/
 
     }
 
