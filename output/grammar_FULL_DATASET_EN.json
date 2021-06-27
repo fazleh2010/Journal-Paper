@@ -1,15 +1,15 @@
 {
   "grammarEntries" : [ {
     "id" : "1",
-    "lexicalEntryUri" : "http://localhost:8080#deathPlace_of",
+    "lexicalEntryUri" : "http://localhost:8080#develop",
     "language" : "EN",
     "type" : "SENTENCE",
-    "bindingType" : "PERSON",
-    "returnType" : "LOCATION",
-    "frameType" : "NPP",
-    "sentences" : [ "Give me the death place of ($x | PERSON_NP)", "Tell me the death place of ($x | PERSON_NP)", "What is the death place of ($x | PERSON_NP)?", "What was the death place of ($x | PERSON_NP)?", "Which place is the death place of ($x | PERSON_NP)?", "Which place was the death place of ($x | PERSON_NP)?" ],
+    "bindingType" : "WORK",
+    "returnType" : "PERSON",
+    "frameType" : "VP",
+    "sentences" : [ "What developed ($x | WORK_NP)?", "What develops ($x | WORK_NP)?", "Which agent developed ($x | WORK_NP)?", "Which agent develops ($x | WORK_NP)?" ],
     "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp))\n",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
       "$x" : "subjOfProp"
     },
@@ -17,319 +17,319 @@
     "sentenceBindings" : {
       "bindingVariableName" : "$x",
       "bindingList" : [ {
-        "label" : "2013 Hialeah shooting",
-        "uri" : "http://dbpedia.org/resource/2013_Hialeah_shooting"
+        "label" : "1943: The Battle of Midway",
+        "uri" : "http://dbpedia.org/resource/1943:_The_Battle_of_Midway"
       }, {
-        "label" : "2013 Santa Monica shooting",
-        "uri" : "http://dbpedia.org/resource/2013_Santa_Monica_shooting"
+        "label" : "2014 FIFA World Cup Brazil (video game)",
+        "uri" : "http://dbpedia.org/resource/2014_FIFA_World_Cup_Brazil_(video_game)"
       }, {
-        "label" : "2014 Fort Hood shooting",
-        "uri" : "http://dbpedia.org/resource/2014_Fort_Hood_shooting"
+        "label" : "750cc Grand Prix",
+        "uri" : "http://dbpedia.org/resource/750cc_Grand_Prix"
       }, {
-        "label" : "2014 Isla Vista killings",
-        "uri" : "http://dbpedia.org/resource/2014_Isla_Vista_killings"
+        "label" : "7 Mages",
+        "uri" : "http://dbpedia.org/resource/7_Mages"
       }, {
-        "label" : "2014 Las Vegas shootings",
-        "uri" : "http://dbpedia.org/resource/2014_Las_Vegas_shootings"
+        "label" : "7 dní a 7 nocí",
+        "uri" : "http://dbpedia.org/resource/7_dní_a_7_nocí"
       }, {
-        "label" : "2014 Queens hatchet attack",
-        "uri" : "http://dbpedia.org/resource/2014_Queens_hatchet_attack"
+        "label" : "8-Bit Armies",
+        "uri" : "http://dbpedia.org/resource/8-Bit_Armies"
       }, {
-        "label" : "2014 killings of NYPD officers",
-        "uri" : "http://dbpedia.org/resource/2014_killings_of_NYPD_officers"
+        "label" : "8-Bit Hordes",
+        "uri" : "http://dbpedia.org/resource/8-Bit_Hordes"
       }, {
-        "label" : "2014 shootings at Parliament Hill, Ottawa",
-        "uri" : "http://dbpedia.org/resource/2014_shootings_at_Parliament_Hill,_Ottawa"
+        "label" : "8-Bit Rebellion!",
+        "uri" : "http://dbpedia.org/resource/8-Bit_Rebellion!"
       }, {
-        "label" : "2015 Chattanooga shootings",
-        "uri" : "http://dbpedia.org/resource/2015_Chattanooga_shootings"
+        "label" : "8Realms",
+        "uri" : "http://dbpedia.org/resource/8Realms"
       }, {
-        "label" : "2015 Lafayette shooting",
-        "uri" : "http://dbpedia.org/resource/2015_Lafayette_shooting"
+        "label" : "9:05",
+        "uri" : "http://dbpedia.org/resource/9:05"
       }, {
-        "label" : "2015 Parramatta shooting",
-        "uri" : "http://dbpedia.org/resource/2015_Parramatta_shooting"
+        "label" : "9 Elefants",
+        "uri" : "http://dbpedia.org/resource/9_Elefants"
       }, {
-        "label" : "2015 Sousse attacks",
-        "uri" : "http://dbpedia.org/resource/2015_Sousse_attacks"
+        "label" : "A320 Airbus (video game)",
+        "uri" : "http://dbpedia.org/resource/A320_Airbus_(video_game)"
       }, {
-        "label" : "2015 Tyrone shooting",
-        "uri" : "http://dbpedia.org/resource/2015_Tyrone_shooting"
+        "label" : "ABC Sports Indy Racing",
+        "uri" : "http://dbpedia.org/resource/ABC_Sports_Indy_Racing"
       }, {
-        "label" : "2016 Berlin truck attack",
-        "uri" : "http://dbpedia.org/resource/2016_Berlin_truck_attack"
+        "label" : "ABPA Backgammon",
+        "uri" : "http://dbpedia.org/resource/ABPA_Backgammon"
       }, {
-        "label" : "2016 Munich shooting",
-        "uri" : "http://dbpedia.org/resource/2016_Munich_shooting"
+        "label" : "ACD/ChemSketch",
+        "uri" : "http://dbpedia.org/resource/ACD/ChemSketch"
       }, {
-        "label" : "2016 UCLA shooting",
-        "uri" : "http://dbpedia.org/resource/2016_UCLA_shooting"
+        "label" : "ACIS",
+        "uri" : "http://dbpedia.org/resource/ACIS"
       }, {
-        "label" : "2016 shooting of Baton Rouge police officers",
-        "uri" : "http://dbpedia.org/resource/2016_shooting_of_Baton_Rouge_police_officers"
+        "label" : "AD&D Masterpiece Collection",
+        "uri" : "http://dbpedia.org/resource/AD&D_Masterpiece_Collection"
       }, {
-        "label" : "2016 shooting of Dallas police officers",
-        "uri" : "http://dbpedia.org/resource/2016_shooting_of_Dallas_police_officers"
+        "label" : "ADO.NET",
+        "uri" : "http://dbpedia.org/resource/ADO.NET"
       }, {
-        "label" : "2017 Resorts World Manila attack",
-        "uri" : "http://dbpedia.org/resource/2017_Resorts_World_Manila_attack"
+        "label" : "ADX (file format)",
+        "uri" : "http://dbpedia.org/resource/ADX_(file_format)"
       }, {
-        "label" : "A.L. Monsohn Lithography",
-        "uri" : "http://dbpedia.org/resource/A.L._Monsohn_Lithography"
+        "label" : "AFL Evolution",
+        "uri" : "http://dbpedia.org/resource/AFL_Evolution"
       }, {
-        "label" : "A.M. Parkin",
-        "uri" : "http://dbpedia.org/resource/A.M._Parkin"
+        "label" : "AFL Live 2",
+        "uri" : "http://dbpedia.org/resource/AFL_Live_2"
       }, {
-        "label" : "A. A. H. Tuttle",
-        "uri" : "http://dbpedia.org/resource/A._A._H._Tuttle"
+        "label" : "AGON",
+        "uri" : "http://dbpedia.org/resource/AGON"
       }, {
-        "label" : "A. B. Colton",
-        "uri" : "http://dbpedia.org/resource/A._B._Colton"
+        "label" : "AIMMS",
+        "uri" : "http://dbpedia.org/resource/AIMMS"
       }, {
-        "label" : "A. B. Guthrie Jr.",
-        "uri" : "http://dbpedia.org/resource/A._B._Guthrie_Jr."
+        "label" : "AIM Phoneline",
+        "uri" : "http://dbpedia.org/resource/AIM_Phoneline"
       }, {
-        "label" : "A. B. Imeson",
-        "uri" : "http://dbpedia.org/resource/A._B._Imeson"
+        "label" : "AI War: Fleet Command",
+        "uri" : "http://dbpedia.org/resource/AI_War:_Fleet_Command"
       }, {
-        "label" : "A. B. Lull",
-        "uri" : "http://dbpedia.org/resource/A._B._Lull"
+        "label" : "ALL-IN-1",
+        "uri" : "http://dbpedia.org/resource/ALL-IN-1"
       }, {
-        "label" : "A. Bernard Ackerman",
-        "uri" : "http://dbpedia.org/resource/A._Bernard_Ackerman"
+        "label" : "ALTRAN",
+        "uri" : "http://dbpedia.org/resource/ALTRAN"
       }, {
-        "label" : "A. C. Lyons",
-        "uri" : "http://dbpedia.org/resource/A._C._Lyons"
+        "label" : "AMAP",
+        "uri" : "http://dbpedia.org/resource/AMAP"
       }, {
-        "label" : "A. Duncan Carse",
-        "uri" : "http://dbpedia.org/resource/A._Duncan_Carse"
+        "label" : "AMD 700 chipset series",
+        "uri" : "http://dbpedia.org/resource/AMD_700_chipset_series"
       }, {
-        "label" : "A. E. Coleby",
-        "uri" : "http://dbpedia.org/resource/A._E._Coleby"
+        "label" : "AMD CodeAnalyst",
+        "uri" : "http://dbpedia.org/resource/AMD_CodeAnalyst"
       }, {
-        "label" : "A. Gordon Wetmore",
-        "uri" : "http://dbpedia.org/resource/A._Gordon_Wetmore"
+        "label" : "AMPHORA",
+        "uri" : "http://dbpedia.org/resource/AMPHORA"
       }, {
-        "label" : "A. H. Hornby",
-        "uri" : "http://dbpedia.org/resource/A._H._Hornby"
+        "label" : "ANGLE (software)",
+        "uri" : "http://dbpedia.org/resource/ANGLE_(software)"
       }, {
-        "label" : "A. K. Brohi",
-        "uri" : "http://dbpedia.org/resource/A._K._Brohi"
+        "label" : "ANTIGONE",
+        "uri" : "http://dbpedia.org/resource/ANTIGONE"
       }, {
-        "label" : "A. K. Veerasami",
-        "uri" : "http://dbpedia.org/resource/A._K._Veerasami"
+        "label" : "APB (1987 video game)",
+        "uri" : "http://dbpedia.org/resource/APB_(1987_video_game)"
       }, {
-        "label" : "A. L. Narayan",
-        "uri" : "http://dbpedia.org/resource/A._L._Narayan"
+        "label" : "AQUA@home",
+        "uri" : "http://dbpedia.org/resource/AQUA@home"
       }, {
-        "label" : "A. L. Raghavan",
-        "uri" : "http://dbpedia.org/resource/A._L._Raghavan"
+        "label" : "LovePlus",
+        "uri" : "http://dbpedia.org/resource/LovePlus"
       }, {
-        "label" : "A. Lakshmanaswami Mudaliar",
-        "uri" : "http://dbpedia.org/resource/A._Lakshmanaswami_Mudaliar"
+        "label" : "Love & Destroy",
+        "uri" : "http://dbpedia.org/resource/Love_&_Destroy"
       }, {
-        "label" : "A. N. Gopal",
-        "uri" : "http://dbpedia.org/resource/A._N._Gopal"
+        "label" : "Love & Lies",
+        "uri" : "http://dbpedia.org/resource/Love_&_Lies"
       }, {
-        "label" : "A. P. Mda",
-        "uri" : "http://dbpedia.org/resource/A._P._Mda"
+        "label" : "Love Alarm",
+        "uri" : "http://dbpedia.org/resource/Love_Alarm"
       }, {
-        "label" : "A. Q. M. Jainul Abedin",
-        "uri" : "http://dbpedia.org/resource/A._Q._M._Jainul_Abedin"
+        "label" : "Love Boat: The Next Wave",
+        "uri" : "http://dbpedia.org/resource/Love_Boat:_The_Next_Wave"
       }, {
-        "label" : "A. R. Krishnashastry",
-        "uri" : "http://dbpedia.org/resource/A._R._Krishnashastry"
+        "label" : "Love Live! School Idol Festival",
+        "uri" : "http://dbpedia.org/resource/Love_Live!_School_Idol_Festival"
       }, {
-        "label" : "A. R. Manu",
-        "uri" : "http://dbpedia.org/resource/A._R._Manu"
+        "label" : "Love Me India",
+        "uri" : "http://dbpedia.org/resource/Love_Me_India"
       }, {
-        "label" : "A. R. Sahu Khan",
-        "uri" : "http://dbpedia.org/resource/A._R._Sahu_Khan"
+        "label" : "Love Story (video game)",
+        "uri" : "http://dbpedia.org/resource/Love_Story_(video_game)"
       }, {
-        "label" : "A. Rangaswami Iyengar",
-        "uri" : "http://dbpedia.org/resource/A._Rangaswami_Iyengar"
+        "label" : "Love and Berry: Dress Up and Dance!",
+        "uri" : "http://dbpedia.org/resource/Love_and_Berry:_Dress_Up_and_Dance!"
       }, {
-        "label" : "A. S. Baylinson",
-        "uri" : "http://dbpedia.org/resource/A._S._Baylinson"
+        "label" : "Love in the Moonlight",
+        "uri" : "http://dbpedia.org/resource/Love_in_the_Moonlight"
       }, {
-        "label" : "A. S. Rao",
-        "uri" : "http://dbpedia.org/resource/A._S._Rao"
+        "label" : "Lovebooks Presents",
+        "uri" : "http://dbpedia.org/resource/Lovebooks_Presents"
       }, {
-        "label" : "A. S. W. Rosenbach",
-        "uri" : "http://dbpedia.org/resource/A._S._W._Rosenbach"
+        "label" : "Lovecraft Country (TV series)",
+        "uri" : "http://dbpedia.org/resource/Lovecraft_Country_(TV_series)"
       }, {
-        "label" : "A. Subbarayalu Reddiar",
-        "uri" : "http://dbpedia.org/resource/A._Subbarayalu_Reddiar"
+        "label" : "Low G Man: The Low Gravity Man",
+        "uri" : "http://dbpedia.org/resource/Low_G_Man:_The_Low_Gravity_Man"
       }, {
-        "label" : "A. T. Hill",
-        "uri" : "http://dbpedia.org/resource/A._T._Hill"
+        "label" : "Lucha Libre AAA: Héroes del Ring",
+        "uri" : "http://dbpedia.org/resource/Lucha_Libre_AAA:_Héroes_del_Ring"
       }, {
-        "label" : "A. T. M. Wilson",
-        "uri" : "http://dbpedia.org/resource/A._T._M._Wilson"
+        "label" : "Lucidchart",
+        "uri" : "http://dbpedia.org/resource/Lucidchart"
       }, {
-        "label" : "A. V. Bramble",
-        "uri" : "http://dbpedia.org/resource/A._V._Bramble"
+        "label" : "Lucidity (video game)",
+        "uri" : "http://dbpedia.org/resource/Lucidity_(video_game)"
       }, {
-        "label" : "A. Veerappan",
-        "uri" : "http://dbpedia.org/resource/A._Veerappan"
+        "label" : "Lucidpress",
+        "uri" : "http://dbpedia.org/resource/Lucidpress"
       }, {
-        "label" : "A. W. Baskcomb",
-        "uri" : "http://dbpedia.org/resource/A._W._Baskcomb"
+        "label" : "Lucienne's Quest",
+        "uri" : "http://dbpedia.org/resource/Lucienne's_Quest"
       }, {
-        "label" : "A. W. Martin",
-        "uri" : "http://dbpedia.org/resource/A._W._Martin"
+        "label" : "Lucifer (TV series)",
+        "uri" : "http://dbpedia.org/resource/Lucifer_(TV_series)"
       }, {
-        "label" : "ABM Abul Kashem",
-        "uri" : "http://dbpedia.org/resource/ABM_Abul_Kashem"
+        "label" : "Lucifox",
+        "uri" : "http://dbpedia.org/resource/Lucifox"
       }, {
-        "label" : "AKM Gouach Uddin",
-        "uri" : "http://dbpedia.org/resource/AKM_Gouach_Uddin"
+        "label" : "Lucius (video game)",
+        "uri" : "http://dbpedia.org/resource/Lucius_(video_game)"
       }, {
-        "label" : "Love Gantt",
-        "uri" : "http://dbpedia.org/resource/Love_Gantt"
+        "label" : "Lucky & Wild",
+        "uri" : "http://dbpedia.org/resource/Lucky_&_Wild"
       }, {
-        "label" : "Lovebug Starski",
-        "uri" : "http://dbpedia.org/resource/Lovebug_Starski"
+        "label" : "Lucky 7 (TV series)",
+        "uri" : "http://dbpedia.org/resource/Lucky_7_(TV_series)"
       }, {
-        "label" : "Lovelace Watkins",
-        "uri" : "http://dbpedia.org/resource/Lovelace_Watkins"
+        "label" : "Lucky Dime Caper",
+        "uri" : "http://dbpedia.org/resource/Lucky_Dime_Caper"
       }, {
-        "label" : "Lovell Coleman",
-        "uri" : "http://dbpedia.org/resource/Lovell_Coleman"
+        "label" : "Lufia: Curse of the Sinistrals",
+        "uri" : "http://dbpedia.org/resource/Lufia:_Curse_of_the_Sinistrals"
       }, {
-        "label" : "Lovell Rousseau",
-        "uri" : "http://dbpedia.org/resource/Lovell_Rousseau"
+        "label" : "Lufia: The Legend Returns",
+        "uri" : "http://dbpedia.org/resource/Lufia:_The_Legend_Returns"
       }, {
-        "label" : "Lovell Wooldridge",
-        "uri" : "http://dbpedia.org/resource/Lovell_Wooldridge"
+        "label" : "Lufia & the Fortress of Doom",
+        "uri" : "http://dbpedia.org/resource/Lufia_&_the_Fortress_of_Doom"
       }, {
-        "label" : "Loveman Noa",
-        "uri" : "http://dbpedia.org/resource/Loveman_Noa"
+        "label" : "Lufia II: Rise of the Sinistrals",
+        "uri" : "http://dbpedia.org/resource/Lufia_II:_Rise_of_the_Sinistrals"
       }, {
-        "label" : "Lovick Pierce Thomas, I",
-        "uri" : "http://dbpedia.org/resource/Lovick_Pierce_Thomas,_I"
+        "label" : "Luftrausers",
+        "uri" : "http://dbpedia.org/resource/Luftrausers"
       }, {
-        "label" : "Lovie Austin",
-        "uri" : "http://dbpedia.org/resource/Lovie_Austin"
+        "label" : "Luigi's Mansion",
+        "uri" : "http://dbpedia.org/resource/Luigi's_Mansion"
       }, {
-        "label" : "Lovie Lee",
-        "uri" : "http://dbpedia.org/resource/Lovie_Lee"
+        "label" : "Luigi's Mansion: Dark Moon",
+        "uri" : "http://dbpedia.org/resource/Luigi's_Mansion:_Dark_Moon"
       }, {
-        "label" : "Lowdon Heller",
-        "uri" : "http://dbpedia.org/resource/Lowdon_Heller"
+        "label" : "Luigi's Mansion 3",
+        "uri" : "http://dbpedia.org/resource/Luigi's_Mansion_3"
       }, {
-        "label" : "Lowell A. Reed Jr.",
-        "uri" : "http://dbpedia.org/resource/Lowell_A._Reed_Jr."
+        "label" : "Lula: The Sexy Empire",
+        "uri" : "http://dbpedia.org/resource/Lula:_The_Sexy_Empire"
       }, {
-        "label" : "Lowell Blair Nesbitt",
-        "uri" : "http://dbpedia.org/resource/Lowell_Blair_Nesbitt"
+        "label" : "Lula (series)",
+        "uri" : "http://dbpedia.org/resource/Lula_(series)"
       }, {
-        "label" : "Lowell Fulson",
-        "uri" : "http://dbpedia.org/resource/Lowell_Fulson"
+        "label" : "Lula 3D",
+        "uri" : "http://dbpedia.org/resource/Lula_3D"
       }, {
-        "label" : "Lowell Galloway",
-        "uri" : "http://dbpedia.org/resource/Lowell_Galloway"
+        "label" : "Lumen (software)",
+        "uri" : "http://dbpedia.org/resource/Lumen_(software)"
       }, {
-        "label" : "Lowell George",
-        "uri" : "http://dbpedia.org/resource/Lowell_George"
+        "label" : "Lumiere (skyscraper)",
+        "uri" : "http://dbpedia.org/resource/Lumiere_(skyscraper)"
       }, {
-        "label" : "Lowell Gilmore",
-        "uri" : "http://dbpedia.org/resource/Lowell_Gilmore"
+        "label" : "Lumines: Electronic Symphony",
+        "uri" : "http://dbpedia.org/resource/Lumines:_Electronic_Symphony"
       }, {
-        "label" : "Lowell Johnston",
-        "uri" : "http://dbpedia.org/resource/Lowell_Johnston"
+        "label" : "Lumines: Puzzle Fusion",
+        "uri" : "http://dbpedia.org/resource/Lumines:_Puzzle_Fusion"
       }, {
-        "label" : "Lowell K. Bridwell",
-        "uri" : "http://dbpedia.org/resource/Lowell_K._Bridwell"
+        "label" : "Lumines II",
+        "uri" : "http://dbpedia.org/resource/Lumines_II"
       }, {
-        "label" : "Lowell Lee Andrews",
-        "uri" : "http://dbpedia.org/resource/Lowell_Lee_Andrews"
+        "label" : "Lumines Live!",
+        "uri" : "http://dbpedia.org/resource/Lumines_Live!"
       }, {
-        "label" : "Lowell Peterson",
-        "uri" : "http://dbpedia.org/resource/Lowell_Peterson"
+        "label" : "Lumines Supernova",
+        "uri" : "http://dbpedia.org/resource/Lumines_Supernova"
       }, {
-        "label" : "Lowell Reed",
-        "uri" : "http://dbpedia.org/resource/Lowell_Reed"
+        "label" : "Luminous Arc",
+        "uri" : "http://dbpedia.org/resource/Luminous_Arc"
       }, {
-        "label" : "Lowell Sherman",
-        "uri" : "http://dbpedia.org/resource/Lowell_Sherman"
+        "label" : "Luminous Arc 2",
+        "uri" : "http://dbpedia.org/resource/Luminous_Arc_2"
       }, {
-        "label" : "Lowell Stockman",
-        "uri" : "http://dbpedia.org/resource/Lowell_Stockman"
+        "label" : "Luminous Arc 3",
+        "uri" : "http://dbpedia.org/resource/Luminous_Arc_3"
       }, {
-        "label" : "Lowell Thomas",
-        "uri" : "http://dbpedia.org/resource/Lowell_Thomas"
+        "label" : "Luminous Arc Infinity",
+        "uri" : "http://dbpedia.org/resource/Luminous_Arc_Infinity"
       }, {
-        "label" : "Lowell Thomas Jr.",
-        "uri" : "http://dbpedia.org/resource/Lowell_Thomas_Jr."
+        "label" : "Luminous Engine",
+        "uri" : "http://dbpedia.org/resource/Luminous_Engine"
       }, {
-        "label" : "Lowrie Warrener",
-        "uri" : "http://dbpedia.org/resource/Lowrie_Warrener"
+        "label" : "Luna Online",
+        "uri" : "http://dbpedia.org/resource/Luna_Online"
       }, {
-        "label" : "Loy Allen Bowlin",
-        "uri" : "http://dbpedia.org/resource/Loy_Allen_Bowlin"
+        "label" : "Lunacy (video game)",
+        "uri" : "http://dbpedia.org/resource/Lunacy_(video_game)"
       }, {
-        "label" : "Loy Hanning",
-        "uri" : "http://dbpedia.org/resource/Loy_Hanning"
+        "label" : "Lunar: Eternal Blue",
+        "uri" : "http://dbpedia.org/resource/Lunar:_Eternal_Blue"
       }, {
-        "label" : "Loy W. Henderson",
-        "uri" : "http://dbpedia.org/resource/Loy_W._Henderson"
+        "label" : "Lunar: Sanposuru Gakuen",
+        "uri" : "http://dbpedia.org/resource/Lunar:_Sanposuru_Gakuen"
       }, {
-        "label" : "Loyal Blaine Aldrich",
-        "uri" : "http://dbpedia.org/resource/Loyal_Blaine_Aldrich"
+        "label" : "Lunar: Silver Star Harmony",
+        "uri" : "http://dbpedia.org/resource/Lunar:_Silver_Star_Harmony"
       }, {
-        "label" : "Loyal Edwin Knappen",
-        "uri" : "http://dbpedia.org/resource/Loyal_Edwin_Knappen"
+        "label" : "Lunar: Silver Star Story Complete",
+        "uri" : "http://dbpedia.org/resource/Lunar:_Silver_Star_Story_Complete"
       }, {
-        "label" : "Loyal Griggs",
-        "uri" : "http://dbpedia.org/resource/Loyal_Griggs"
+        "label" : "Lunar: The Silver Star",
+        "uri" : "http://dbpedia.org/resource/Lunar:_The_Silver_Star"
       }, {
-        "label" : "Loyce Houlton",
-        "uri" : "http://dbpedia.org/resource/Loyce_Houlton"
+        "label" : "Lunar Jetman",
+        "uri" : "http://dbpedia.org/resource/Lunar_Jetman"
       }, {
-        "label" : "Loyd Arms",
-        "uri" : "http://dbpedia.org/resource/Loyd_Arms"
+        "label" : "Lunar Knights",
+        "uri" : "http://dbpedia.org/resource/Lunar_Knights"
       }, {
-        "label" : "Loyd Christopher",
-        "uri" : "http://dbpedia.org/resource/Loyd_Christopher"
+        "label" : "Lunar Lander (1979 video game)",
+        "uri" : "http://dbpedia.org/resource/Lunar_Lander_(1979_video_game)"
       }, {
-        "label" : "Loyd Jowers",
-        "uri" : "http://dbpedia.org/resource/Loyd_Jowers"
+        "label" : "Lunar Pool",
+        "uri" : "http://dbpedia.org/resource/Lunar_Pool"
       }, {
-        "label" : "Loye H. Miller",
-        "uri" : "http://dbpedia.org/resource/Loye_H._Miller"
+        "label" : "Lunch Break (Philippine TV program)",
+        "uri" : "http://dbpedia.org/resource/Lunch_Break_(Philippine_TV_program)"
       }, {
-        "label" : "Loyola O'Connor",
-        "uri" : "http://dbpedia.org/resource/Loyola_O'Connor"
+        "label" : "Lunicus",
+        "uri" : "http://dbpedia.org/resource/Lunicus"
       }, {
-        "label" : "Loyola de Palacio",
-        "uri" : "http://dbpedia.org/resource/Loyola_de_Palacio"
+        "label" : "Lupin (Philippine TV series)",
+        "uri" : "http://dbpedia.org/resource/Lupin_(Philippine_TV_series)"
       }, {
-        "label" : "Loïc Bouvard",
-        "uri" : "http://dbpedia.org/resource/Loïc_Bouvard"
+        "label" : "Lupin the 3rd: Treasure of the Sorcerer King",
+        "uri" : "http://dbpedia.org/resource/Lupin_the_3rd:_Treasure_of_the_Sorcerer_King"
       }, {
-        "label" : "Loïc Leferme",
-        "uri" : "http://dbpedia.org/resource/Loïc_Leferme"
+        "label" : "Lupin the Third: Lupin Is Dead, Zenigata Is in Love",
+        "uri" : "http://dbpedia.org/resource/Lupin_the_Third:_Lupin_Is_Dead,_Zenigata_Is_in_Love"
       }, {
-        "label" : "Lu'ay al-Atassi",
-        "uri" : "http://dbpedia.org/resource/Lu'ay_al-Atassi"
+        "label" : "Lutris",
+        "uri" : "http://dbpedia.org/resource/Lutris"
       }, {
-        "label" : "Lu Ann Meredith",
-        "uri" : "http://dbpedia.org/resource/Lu_Ann_Meredith"
+        "label" : "Luxor: Quest for the Afterlife",
+        "uri" : "http://dbpedia.org/resource/Luxor:_Quest_for_the_Afterlife"
       } ]
     },
     "combination" : false
   }, {
     "id" : "2",
-    "lexicalEntryUri" : "http://localhost:8080#deathPlace_of",
+    "lexicalEntryUri" : "http://localhost:8080#play",
     "language" : "EN",
-    "type" : "NP",
+    "type" : "SENTENCE",
     "bindingType" : "PERSON",
-    "returnType" : "LOCATION",
-    "frameType" : "NPP",
-    "sentences" : [ "the death place of $x" ],
+    "returnType" : "PERSON",
+    "frameType" : "VP",
+    "sentences" : [ "What played ($x | PERSON_NP)?", "What playes ($x | PERSON_NP)?", "Which person played ($x | PERSON_NP)?", "Which person playes ($x | PERSON_NP)?" ],
     "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp))\n",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
       "$x" : "subjOfProp"
     },
@@ -337,950 +337,1590 @@
     "sentenceBindings" : {
       "bindingVariableName" : "$x",
       "bindingList" : [ {
-        "label" : "2013 Hialeah shooting",
-        "uri" : "http://dbpedia.org/resource/2013_Hialeah_shooting"
+        "label" : "Lucas Johnson",
+        "uri" : "http://dbpedia.org/resource/Lucas_Johnson"
       }, {
-        "label" : "2013 Santa Monica shooting",
-        "uri" : "http://dbpedia.org/resource/2013_Santa_Monica_shooting"
+        "label" : "Lucky Spencer",
+        "uri" : "http://dbpedia.org/resource/Lucky_Spencer"
       }, {
-        "label" : "2014 Fort Hood shooting",
-        "uri" : "http://dbpedia.org/resource/2014_Fort_Hood_shooting"
+        "label" : "Lucy Barker",
+        "uri" : "http://dbpedia.org/resource/Lucy_Barker"
       }, {
-        "label" : "2014 Isla Vista killings",
-        "uri" : "http://dbpedia.org/resource/2014_Isla_Vista_killings"
+        "label" : "Lucy Coe",
+        "uri" : "http://dbpedia.org/resource/Lucy_Coe"
       }, {
-        "label" : "2014 Las Vegas shootings",
-        "uri" : "http://dbpedia.org/resource/2014_Las_Vegas_shootings"
+        "label" : "Luka Kovač",
+        "uri" : "http://dbpedia.org/resource/Luka_Kovač"
       }, {
-        "label" : "2014 Queens hatchet attack",
-        "uri" : "http://dbpedia.org/resource/2014_Queens_hatchet_attack"
+        "label" : "Luke Snyder",
+        "uri" : "http://dbpedia.org/resource/Luke_Snyder"
       }, {
-        "label" : "2014 killings of NYPD officers",
-        "uri" : "http://dbpedia.org/resource/2014_killings_of_NYPD_officers"
+        "label" : "Macy Alexander",
+        "uri" : "http://dbpedia.org/resource/Macy_Alexander"
       }, {
-        "label" : "2014 shootings at Parliament Hill, Ottawa",
-        "uri" : "http://dbpedia.org/resource/2014_shootings_at_Parliament_Hill,_Ottawa"
+        "label" : "Maggie Astoni",
+        "uri" : "http://dbpedia.org/resource/Maggie_Astoni"
       }, {
-        "label" : "2015 Chattanooga shootings",
-        "uri" : "http://dbpedia.org/resource/2015_Chattanooga_shootings"
+        "label" : "Mai Shiranui",
+        "uri" : "http://dbpedia.org/resource/Mai_Shiranui"
       }, {
-        "label" : "2015 Lafayette shooting",
-        "uri" : "http://dbpedia.org/resource/2015_Lafayette_shooting"
+        "label" : "Maleficent",
+        "uri" : "http://dbpedia.org/resource/Maleficent"
       }, {
-        "label" : "2015 Parramatta shooting",
-        "uri" : "http://dbpedia.org/resource/2015_Parramatta_shooting"
+        "label" : "Carrie White",
+        "uri" : "http://dbpedia.org/resource/Carrie_White"
       }, {
-        "label" : "2015 Sousse attacks",
-        "uri" : "http://dbpedia.org/resource/2015_Sousse_attacks"
+        "label" : "Casey Novak",
+        "uri" : "http://dbpedia.org/resource/Casey_Novak"
       }, {
-        "label" : "2015 Tyrone shooting",
-        "uri" : "http://dbpedia.org/resource/2015_Tyrone_shooting"
+        "label" : "Cassian Andor",
+        "uri" : "http://dbpedia.org/resource/Cassian_Andor"
       }, {
-        "label" : "2016 Berlin truck attack",
-        "uri" : "http://dbpedia.org/resource/2016_Berlin_truck_attack"
+        "label" : "Cordelia Gray",
+        "uri" : "http://dbpedia.org/resource/Cordelia_Gray"
       }, {
-        "label" : "2016 Munich shooting",
-        "uri" : "http://dbpedia.org/resource/2016_Munich_shooting"
+        "label" : "Ursula (The Little Mermaid)",
+        "uri" : "http://dbpedia.org/resource/Ursula_(The_Little_Mermaid)"
       }, {
-        "label" : "2016 UCLA shooting",
-        "uri" : "http://dbpedia.org/resource/2016_UCLA_shooting"
+        "label" : "Valerie Grant",
+        "uri" : "http://dbpedia.org/resource/Valerie_Grant"
       }, {
-        "label" : "2016 shooting of Baton Rouge police officers",
-        "uri" : "http://dbpedia.org/resource/2016_shooting_of_Baton_Rouge_police_officers"
+        "label" : "Veronica Mars (character)",
+        "uri" : "http://dbpedia.org/resource/Veronica_Mars_(character)"
       }, {
-        "label" : "2016 shooting of Dallas police officers",
-        "uri" : "http://dbpedia.org/resource/2016_shooting_of_Dallas_police_officers"
+        "label" : "Curly Watts",
+        "uri" : "http://dbpedia.org/resource/Curly_Watts"
       }, {
-        "label" : "2017 Resorts World Manila attack",
-        "uri" : "http://dbpedia.org/resource/2017_Resorts_World_Manila_attack"
+        "label" : "D'Hoffryn",
+        "uri" : "http://dbpedia.org/resource/D'Hoffryn"
       }, {
-        "label" : "A.L. Monsohn Lithography",
-        "uri" : "http://dbpedia.org/resource/A.L._Monsohn_Lithography"
+        "label" : "Damian Spinelli",
+        "uri" : "http://dbpedia.org/resource/Damian_Spinelli"
       }, {
-        "label" : "A.M. Parkin",
-        "uri" : "http://dbpedia.org/resource/A.M._Parkin"
+        "label" : "First Evil",
+        "uri" : "http://dbpedia.org/resource/First_Evil"
       }, {
-        "label" : "A. A. H. Tuttle",
-        "uri" : "http://dbpedia.org/resource/A._A._H._Tuttle"
+        "label" : "Frank Booth (Blue Velvet)",
+        "uri" : "http://dbpedia.org/resource/Frank_Booth_(Blue_Velvet)"
       }, {
-        "label" : "A. B. Colton",
-        "uri" : "http://dbpedia.org/resource/A._B._Colton"
+        "label" : "Hannah Baxter",
+        "uri" : "http://dbpedia.org/resource/Hannah_Baxter"
       }, {
-        "label" : "A. B. Guthrie Jr.",
-        "uri" : "http://dbpedia.org/resource/A._B._Guthrie_Jr."
+        "label" : "List of Chaos Walking characters",
+        "uri" : "http://dbpedia.org/resource/List_of_Chaos_Walking_characters"
       }, {
-        "label" : "A. B. Imeson",
-        "uri" : "http://dbpedia.org/resource/A._B._Imeson"
+        "label" : "List of Community characters",
+        "uri" : "http://dbpedia.org/resource/List_of_Community_characters"
       }, {
-        "label" : "A. B. Lull",
-        "uri" : "http://dbpedia.org/resource/A._B._Lull"
+        "label" : "List of Emmerdale characters (2004)",
+        "uri" : "http://dbpedia.org/resource/List_of_Emmerdale_characters_(2004)"
       }, {
-        "label" : "A. Bernard Ackerman",
-        "uri" : "http://dbpedia.org/resource/A._Bernard_Ackerman"
+        "label" : "List of My Family characters",
+        "uri" : "http://dbpedia.org/resource/List_of_My_Family_characters"
       }, {
-        "label" : "A. C. Lyons",
-        "uri" : "http://dbpedia.org/resource/A._C._Lyons"
+        "label" : "List of Neighbours characters (1990)",
+        "uri" : "http://dbpedia.org/resource/List_of_Neighbours_characters_(1990)"
       }, {
-        "label" : "A. Duncan Carse",
-        "uri" : "http://dbpedia.org/resource/A._Duncan_Carse"
+        "label" : "List of New Tricks characters",
+        "uri" : "http://dbpedia.org/resource/List_of_New_Tricks_characters"
       }, {
-        "label" : "A. E. Coleby",
-        "uri" : "http://dbpedia.org/resource/A._E._Coleby"
+        "label" : "List of Shortland Street characters (1993)",
+        "uri" : "http://dbpedia.org/resource/List_of_Shortland_Street_characters_(1993)"
       }, {
-        "label" : "A. Gordon Wetmore",
-        "uri" : "http://dbpedia.org/resource/A._Gordon_Wetmore"
+        "label" : "Professor Bobo",
+        "uri" : "http://dbpedia.org/resource/Professor_Bobo"
       }, {
-        "label" : "A. H. Hornby",
-        "uri" : "http://dbpedia.org/resource/A._H._Hornby"
+        "label" : "The Blue Racer",
+        "uri" : "http://dbpedia.org/resource/The_Blue_Racer"
       }, {
-        "label" : "A. K. Brohi",
-        "uri" : "http://dbpedia.org/resource/A._K._Brohi"
+        "label" : "The Bride (Kill Bill)",
+        "uri" : "http://dbpedia.org/resource/The_Bride_(Kill_Bill)"
       }, {
-        "label" : "A. K. Veerasami",
-        "uri" : "http://dbpedia.org/resource/A._K._Veerasami"
+        "label" : "Petya Rostov",
+        "uri" : "http://dbpedia.org/resource/Petya_Rostov"
       }, {
-        "label" : "A. L. Narayan",
-        "uri" : "http://dbpedia.org/resource/A._L._Narayan"
+        "label" : "Ronald McDonald",
+        "uri" : "http://dbpedia.org/resource/Ronald_McDonald"
       }, {
-        "label" : "A. L. Raghavan",
-        "uri" : "http://dbpedia.org/resource/A._L._Raghavan"
+        "label" : "Rudy Huxtable",
+        "uri" : "http://dbpedia.org/resource/Rudy_Huxtable"
       }, {
-        "label" : "A. Lakshmanaswami Mudaliar",
-        "uri" : "http://dbpedia.org/resource/A._Lakshmanaswami_Mudaliar"
+        "label" : "Samantha Jones (Sex and the City)",
+        "uri" : "http://dbpedia.org/resource/Samantha_Jones_(Sex_and_the_City)"
       }, {
-        "label" : "A. N. Gopal",
-        "uri" : "http://dbpedia.org/resource/A._N._Gopal"
+        "label" : "Savely Govorkov",
+        "uri" : "http://dbpedia.org/resource/Savely_Govorkov"
       }, {
-        "label" : "A. P. Mda",
-        "uri" : "http://dbpedia.org/resource/A._P._Mda"
+        "label" : "Scarecrow (Oz)",
+        "uri" : "http://dbpedia.org/resource/Scarecrow_(Oz)"
       }, {
-        "label" : "A. Q. M. Jainul Abedin",
-        "uri" : "http://dbpedia.org/resource/A._Q._M._Jainul_Abedin"
+        "label" : "Scott Hunter (Home and Away)",
+        "uri" : "http://dbpedia.org/resource/Scott_Hunter_(Home_and_Away)"
       }, {
-        "label" : "A. R. Krishnashastry",
-        "uri" : "http://dbpedia.org/resource/A._R._Krishnashastry"
+        "label" : "Scotty Wandell",
+        "uri" : "http://dbpedia.org/resource/Scotty_Wandell"
       }, {
-        "label" : "A. R. Manu",
-        "uri" : "http://dbpedia.org/resource/A._R._Manu"
+        "label" : "George Smiley",
+        "uri" : "http://dbpedia.org/resource/George_Smiley"
       }, {
-        "label" : "A. R. Sahu Khan",
-        "uri" : "http://dbpedia.org/resource/A._R._Sahu_Khan"
+        "label" : "Patty Hewes",
+        "uri" : "http://dbpedia.org/resource/Patty_Hewes"
       }, {
-        "label" : "A. Rangaswami Iyengar",
-        "uri" : "http://dbpedia.org/resource/A._Rangaswami_Iyengar"
+        "label" : "Ste Hay",
+        "uri" : "http://dbpedia.org/resource/Ste_Hay"
       }, {
-        "label" : "A. S. Baylinson",
-        "uri" : "http://dbpedia.org/resource/A._S._Baylinson"
+        "label" : "Justus Ward",
+        "uri" : "http://dbpedia.org/resource/Justus_Ward"
       }, {
-        "label" : "A. S. Rao",
-        "uri" : "http://dbpedia.org/resource/A._S._Rao"
+        "label" : "Jake Hanson",
+        "uri" : "http://dbpedia.org/resource/Jake_Hanson"
       }, {
-        "label" : "A. S. W. Rosenbach",
-        "uri" : "http://dbpedia.org/resource/A._S._W._Rosenbach"
+        "label" : "Sybil Fawlty",
+        "uri" : "http://dbpedia.org/resource/Sybil_Fawlty"
       }, {
-        "label" : "A. Subbarayalu Reddiar",
-        "uri" : "http://dbpedia.org/resource/A._Subbarayalu_Reddiar"
+        "label" : "Natalie Barnes",
+        "uri" : "http://dbpedia.org/resource/Natalie_Barnes"
       }, {
-        "label" : "A. T. Hill",
-        "uri" : "http://dbpedia.org/resource/A._T._Hill"
+        "label" : "Vinnie Kruse",
+        "uri" : "http://dbpedia.org/resource/Vinnie_Kruse"
       }, {
-        "label" : "A. T. M. Wilson",
-        "uri" : "http://dbpedia.org/resource/A._T._M._Wilson"
+        "label" : "Mindy Lewis",
+        "uri" : "http://dbpedia.org/resource/Mindy_Lewis"
       }, {
-        "label" : "A. V. Bramble",
-        "uri" : "http://dbpedia.org/resource/A._V._Bramble"
+        "label" : "Professor Chronotis",
+        "uri" : "http://dbpedia.org/resource/Professor_Chronotis"
       }, {
-        "label" : "A. Veerappan",
-        "uri" : "http://dbpedia.org/resource/A._Veerappan"
+        "label" : "Olenna Tyrell",
+        "uri" : "http://dbpedia.org/resource/Olenna_Tyrell"
       }, {
-        "label" : "A. W. Baskcomb",
-        "uri" : "http://dbpedia.org/resource/A._W._Baskcomb"
+        "label" : "Billie Jackson",
+        "uri" : "http://dbpedia.org/resource/Billie_Jackson"
       }, {
-        "label" : "A. W. Martin",
-        "uri" : "http://dbpedia.org/resource/A._W._Martin"
+        "label" : "Billie Reed",
+        "uri" : "http://dbpedia.org/resource/Billie_Reed"
       }, {
-        "label" : "ABM Abul Kashem",
-        "uri" : "http://dbpedia.org/resource/ABM_Abul_Kashem"
+        "label" : "Billy (Black Christmas)",
+        "uri" : "http://dbpedia.org/resource/Billy_(Black_Christmas)"
       }, {
-        "label" : "AKM Gouach Uddin",
-        "uri" : "http://dbpedia.org/resource/AKM_Gouach_Uddin"
+        "label" : "Billy Abbott",
+        "uri" : "http://dbpedia.org/resource/Billy_Abbott"
       }, {
-        "label" : "Love Gantt",
-        "uri" : "http://dbpedia.org/resource/Love_Gantt"
+        "label" : "Billy Cranston",
+        "uri" : "http://dbpedia.org/resource/Billy_Cranston"
       }, {
-        "label" : "Lovebug Starski",
-        "uri" : "http://dbpedia.org/resource/Lovebug_Starski"
+        "label" : "Blanche Hunt",
+        "uri" : "http://dbpedia.org/resource/Blanche_Hunt"
       }, {
-        "label" : "Lovelace Watkins",
-        "uri" : "http://dbpedia.org/resource/Lovelace_Watkins"
+        "label" : "Bob Hughes",
+        "uri" : "http://dbpedia.org/resource/Bob_Hughes"
       }, {
-        "label" : "Lovell Coleman",
-        "uri" : "http://dbpedia.org/resource/Lovell_Coleman"
+        "label" : "Boba Fett",
+        "uri" : "http://dbpedia.org/resource/Boba_Fett"
       }, {
-        "label" : "Lovell Rousseau",
-        "uri" : "http://dbpedia.org/resource/Lovell_Rousseau"
+        "label" : "Bowser (character)",
+        "uri" : "http://dbpedia.org/resource/Bowser_(character)"
       }, {
-        "label" : "Lovell Wooldridge",
-        "uri" : "http://dbpedia.org/resource/Lovell_Wooldridge"
+        "label" : "Brad Carlton",
+        "uri" : "http://dbpedia.org/resource/Brad_Carlton"
       }, {
-        "label" : "Loveman Noa",
-        "uri" : "http://dbpedia.org/resource/Loveman_Noa"
+        "label" : "Denise Fox",
+        "uri" : "http://dbpedia.org/resource/Denise_Fox"
       }, {
-        "label" : "Lovick Pierce Thomas, I",
-        "uri" : "http://dbpedia.org/resource/Lovick_Pierce_Thomas,_I"
+        "label" : "Desdemona",
+        "uri" : "http://dbpedia.org/resource/Desdemona"
       }, {
-        "label" : "Lovie Austin",
-        "uri" : "http://dbpedia.org/resource/Lovie_Austin"
+        "label" : "Dominique Deveraux",
+        "uri" : "http://dbpedia.org/resource/Dominique_Deveraux"
       }, {
-        "label" : "Lovie Lee",
-        "uri" : "http://dbpedia.org/resource/Lovie_Lee"
+        "label" : "Domino Vitali",
+        "uri" : "http://dbpedia.org/resource/Domino_Vitali"
       }, {
-        "label" : "Lowdon Heller",
-        "uri" : "http://dbpedia.org/resource/Lowdon_Heller"
+        "label" : "Andy Sipowicz",
+        "uri" : "http://dbpedia.org/resource/Andy_Sipowicz"
       }, {
-        "label" : "Lowell A. Reed Jr.",
-        "uri" : "http://dbpedia.org/resource/Lowell_A._Reed_Jr."
+        "label" : "Angelique Bouchard Collins",
+        "uri" : "http://dbpedia.org/resource/Angelique_Bouchard_Collins"
       }, {
-        "label" : "Lowell Blair Nesbitt",
-        "uri" : "http://dbpedia.org/resource/Lowell_Blair_Nesbitt"
+        "label" : "Glenda Mitchell",
+        "uri" : "http://dbpedia.org/resource/Glenda_Mitchell"
       }, {
-        "label" : "Lowell Fulson",
-        "uri" : "http://dbpedia.org/resource/Lowell_Fulson"
+        "label" : "Kevin Fisher (The Young and the Restless)",
+        "uri" : "http://dbpedia.org/resource/Kevin_Fisher_(The_Young_and_the_Restless)"
       }, {
-        "label" : "Lowell Galloway",
-        "uri" : "http://dbpedia.org/resource/Lowell_Galloway"
+        "label" : "Kiki Jerome",
+        "uri" : "http://dbpedia.org/resource/Kiki_Jerome"
       }, {
-        "label" : "Lowell George",
-        "uri" : "http://dbpedia.org/resource/Lowell_George"
+        "label" : "King Ezekiel",
+        "uri" : "http://dbpedia.org/resource/King_Ezekiel"
       }, {
-        "label" : "Lowell Gilmore",
-        "uri" : "http://dbpedia.org/resource/Lowell_Gilmore"
+        "label" : "Kirby Anders",
+        "uri" : "http://dbpedia.org/resource/Kirby_Anders"
       }, {
-        "label" : "Lowell Johnston",
-        "uri" : "http://dbpedia.org/resource/Lowell_Johnston"
+        "label" : "Kiriti Roy",
+        "uri" : "http://dbpedia.org/resource/Kiriti_Roy"
       }, {
-        "label" : "Lowell K. Bridwell",
-        "uri" : "http://dbpedia.org/resource/Lowell_K._Bridwell"
+        "label" : "Princess Leia",
+        "uri" : "http://dbpedia.org/resource/Princess_Leia"
       }, {
-        "label" : "Lowell Lee Andrews",
-        "uri" : "http://dbpedia.org/resource/Lowell_Lee_Andrews"
+        "label" : "Rachel Gannon",
+        "uri" : "http://dbpedia.org/resource/Rachel_Gannon"
       }, {
-        "label" : "Lowell Peterson",
-        "uri" : "http://dbpedia.org/resource/Lowell_Peterson"
+        "label" : "List of Andromeda characters",
+        "uri" : "http://dbpedia.org/resource/List_of_Andromeda_characters"
       }, {
-        "label" : "Lowell Reed",
-        "uri" : "http://dbpedia.org/resource/Lowell_Reed"
+        "label" : "List of Coronation Street characters (1969)",
+        "uri" : "http://dbpedia.org/resource/List_of_Coronation_Street_characters_(1969)"
       }, {
-        "label" : "Lowell Sherman",
-        "uri" : "http://dbpedia.org/resource/Lowell_Sherman"
+        "label" : "List of ER characters",
+        "uri" : "http://dbpedia.org/resource/List_of_ER_characters"
       }, {
-        "label" : "Lowell Stockman",
-        "uri" : "http://dbpedia.org/resource/Lowell_Stockman"
+        "label" : "List of EastEnders characters (2006)",
+        "uri" : "http://dbpedia.org/resource/List_of_EastEnders_characters_(2006)"
       }, {
-        "label" : "Lowell Thomas",
-        "uri" : "http://dbpedia.org/resource/Lowell_Thomas"
+        "label" : "List of EastEnders characters (2007)",
+        "uri" : "http://dbpedia.org/resource/List_of_EastEnders_characters_(2007)"
       }, {
-        "label" : "Lowell Thomas Jr.",
-        "uri" : "http://dbpedia.org/resource/Lowell_Thomas_Jr."
+        "label" : "List of Emmerdale characters (2006)",
+        "uri" : "http://dbpedia.org/resource/List_of_Emmerdale_characters_(2006)"
       }, {
-        "label" : "Lowrie Warrener",
-        "uri" : "http://dbpedia.org/resource/Lowrie_Warrener"
+        "label" : "List of Hollyoaks characters (2009)",
+        "uri" : "http://dbpedia.org/resource/List_of_Hollyoaks_characters_(2009)"
       }, {
-        "label" : "Loy Allen Bowlin",
-        "uri" : "http://dbpedia.org/resource/Loy_Allen_Bowlin"
+        "label" : "List of Neighbours characters (2008)",
+        "uri" : "http://dbpedia.org/resource/List_of_Neighbours_characters_(2008)"
       }, {
-        "label" : "Loy Hanning",
-        "uri" : "http://dbpedia.org/resource/Loy_Hanning"
+        "label" : "List of Primeval characters",
+        "uri" : "http://dbpedia.org/resource/List_of_Primeval_characters"
       }, {
-        "label" : "Loy W. Henderson",
-        "uri" : "http://dbpedia.org/resource/Loy_W._Henderson"
+        "label" : "List of The Inbetweeners characters",
+        "uri" : "http://dbpedia.org/resource/List_of_The_Inbetweeners_characters"
       }, {
-        "label" : "Loyal Blaine Aldrich",
-        "uri" : "http://dbpedia.org/resource/Loyal_Blaine_Aldrich"
+        "label" : "General Hux",
+        "uri" : "http://dbpedia.org/resource/General_Hux"
       }, {
-        "label" : "Loyal Edwin Knappen",
-        "uri" : "http://dbpedia.org/resource/Loyal_Edwin_Knappen"
+        "label" : "List of A Series of Unfortunate Events characters",
+        "uri" : "http://dbpedia.org/resource/List_of_A_Series_of_Unfortunate_Events_characters"
       }, {
-        "label" : "Loyal Griggs",
-        "uri" : "http://dbpedia.org/resource/Loyal_Griggs"
+        "label" : "List of Coronation Street characters (2002)",
+        "uri" : "http://dbpedia.org/resource/List_of_Coronation_Street_characters_(2002)"
       }, {
-        "label" : "Loyce Houlton",
-        "uri" : "http://dbpedia.org/resource/Loyce_Houlton"
+        "label" : "List of EastEnders characters (2016)",
+        "uri" : "http://dbpedia.org/resource/List_of_EastEnders_characters_(2016)"
       }, {
-        "label" : "Loyd Arms",
-        "uri" : "http://dbpedia.org/resource/Loyd_Arms"
+        "label" : "List of Emmerdale characters (2007)",
+        "uri" : "http://dbpedia.org/resource/List_of_Emmerdale_characters_(2007)"
       }, {
-        "label" : "Loyd Christopher",
-        "uri" : "http://dbpedia.org/resource/Loyd_Christopher"
+        "label" : "List of Hollyoaks characters (2013)",
+        "uri" : "http://dbpedia.org/resource/List_of_Hollyoaks_characters_(2013)"
       }, {
-        "label" : "Loyd Jowers",
-        "uri" : "http://dbpedia.org/resource/Loyd_Jowers"
+        "label" : "List of Hollyoaks characters (2015)",
+        "uri" : "http://dbpedia.org/resource/List_of_Hollyoaks_characters_(2015)"
       }, {
-        "label" : "Loye H. Miller",
-        "uri" : "http://dbpedia.org/resource/Loye_H._Miller"
+        "label" : "List of Star Trek: Voyager characters",
+        "uri" : "http://dbpedia.org/resource/List_of_Star_Trek:_Voyager_characters"
       }, {
-        "label" : "Loyola O'Connor",
-        "uri" : "http://dbpedia.org/resource/Loyola_O'Connor"
+        "label" : "List of The Shield characters",
+        "uri" : "http://dbpedia.org/resource/List_of_The_Shield_characters"
       }, {
-        "label" : "Loyola de Palacio",
-        "uri" : "http://dbpedia.org/resource/Loyola_de_Palacio"
+        "label" : "Norman Bates",
+        "uri" : "http://dbpedia.org/resource/Norman_Bates"
       }, {
-        "label" : "Loïc Bouvard",
-        "uri" : "http://dbpedia.org/resource/Loïc_Bouvard"
+        "label" : "Tony Gordon",
+        "uri" : "http://dbpedia.org/resource/Tony_Gordon"
       }, {
-        "label" : "Loïc Leferme",
-        "uri" : "http://dbpedia.org/resource/Loïc_Leferme"
+        "label" : "Glinda the Good Witch",
+        "uri" : "http://dbpedia.org/resource/Glinda_the_Good_Witch"
       }, {
-        "label" : "Lu'ay al-Atassi",
-        "uri" : "http://dbpedia.org/resource/Lu'ay_al-Atassi"
+        "label" : "Grandmama (The Addams Family)",
+        "uri" : "http://dbpedia.org/resource/Grandmama_(The_Addams_Family)"
       }, {
-        "label" : "Lu Ann Meredith",
-        "uri" : "http://dbpedia.org/resource/Lu_Ann_Meredith"
+        "label" : "Gyp Rosetti",
+        "uri" : "http://dbpedia.org/resource/Gyp_Rosetti"
       } ]
     },
     "combination" : false
   }, {
     "id" : "3",
-    "lexicalEntryUri" : "http://localhost:8080#father_of",
+    "lexicalEntryUri" : "http://localhost:8080#played",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "PERSON",
     "returnType" : "PERSON",
-    "frameType" : "NPP",
-    "sentences" : [ "Give me the father of ($x | PERSON_NP)", "Tell me the father of ($x | PERSON_NP)", "What is the father of ($x | PERSON_NP)?", "What was the father of ($x | PERSON_NP)?", "Which person is the father of ($x | PERSON_NP)?", "Which person was the father of ($x | PERSON_NP)?" ],
+    "frameType" : "APP",
+    "sentences" : [ "What is played by ($x | PERSON_NP)?", "What was played by ($x | PERSON_NP)?", "Which fictional character is played by ($x | PERSON_NP)?", "Which fictional character was played by ($x | PERSON_NP)?", "Which fictional characters are played by ($x | PERSON_NP)?", "Which fictional characters were played by ($x | PERSON_NP)?" ],
     "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/father> ?objOfProp))\n",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
-      "$x" : "subjOfProp"
+      "$x" : "objOfProp"
     },
-    "returnVariable" : "objOfProp",
+    "returnVariable" : "subjOfProp",
     "sentenceBindings" : {
       "bindingVariableName" : "$x",
       "bindingList" : [ {
-        "label" : "A. J. Mohammad Ali",
-        "uri" : "http://dbpedia.org/resource/A._J._Mohammad_Ali"
+        "label" : "Alun Armstrong (actor)",
+        "uri" : "http://dbpedia.org/resource/Alun_Armstrong_(actor)"
       }, {
-        "label" : "Lu Ji (Gongji)",
-        "uri" : "http://dbpedia.org/resource/Lu_Ji_(Gongji)"
+        "label" : "Luca Zingaretti",
+        "uri" : "http://dbpedia.org/resource/Luca_Zingaretti"
       }, {
-        "label" : "Lu Jing",
-        "uri" : "http://dbpedia.org/resource/Lu_Jing"
+        "label" : "Lucas Black",
+        "uri" : "http://dbpedia.org/resource/Lucas_Black"
       }, {
-        "label" : "Lu Kang (Three Kingdoms)",
-        "uri" : "http://dbpedia.org/resource/Lu_Kang_(Three_Kingdoms)"
+        "label" : "Lucas Grabeel",
+        "uri" : "http://dbpedia.org/resource/Lucas_Grabeel"
       }, {
-        "label" : "Lubna Khalid Al Qasimi",
-        "uri" : "http://dbpedia.org/resource/Lubna_Khalid_Al_Qasimi"
+        "label" : "Lucas Jade Zumann",
+        "uri" : "http://dbpedia.org/resource/Lucas_Jade_Zumann"
       }, {
-        "label" : "Luciana Genro",
-        "uri" : "http://dbpedia.org/resource/Luciana_Genro"
+        "label" : "Lucas Steele",
+        "uri" : "http://dbpedia.org/resource/Lucas_Steele"
       }, {
-        "label" : "Lucius Fairchild",
-        "uri" : "http://dbpedia.org/resource/Lucius_Fairchild"
+        "label" : "Lucas Till",
+        "uri" : "http://dbpedia.org/resource/Lucas_Till"
       }, {
-        "label" : "Lucius Quintus Cincinnatus Lamar",
-        "uri" : "http://dbpedia.org/resource/Lucius_Quintus_Cincinnatus_Lamar"
+        "label" : "Lucian Msamati",
+        "uri" : "http://dbpedia.org/resource/Lucian_Msamati"
       }, {
-        "label" : "Ludwig Adamovich Jr.",
-        "uri" : "http://dbpedia.org/resource/Ludwig_Adamovich_Jr."
+        "label" : "Luciana Carro",
+        "uri" : "http://dbpedia.org/resource/Luciana_Carro"
       }, {
-        "label" : "Luis A. Eguiguren",
-        "uri" : "http://dbpedia.org/resource/Luis_A._Eguiguren"
+        "label" : "Luciano Cáceres",
+        "uri" : "http://dbpedia.org/resource/Luciano_Cáceres"
       }, {
-        "label" : "Luis Abinader",
-        "uri" : "http://dbpedia.org/resource/Luis_Abinader"
+        "label" : "Lucien Laviscount",
+        "uri" : "http://dbpedia.org/resource/Lucien_Laviscount"
       }, {
-        "label" : "Lü Ju",
-        "uri" : "http://dbpedia.org/resource/Lü_Ju"
+        "label" : "Lucille Ball",
+        "uri" : "http://dbpedia.org/resource/Lucille_Ball"
       }, {
-        "label" : "Ma Chao",
-        "uri" : "http://dbpedia.org/resource/Ma_Chao"
+        "label" : "Lucille Wall",
+        "uri" : "http://dbpedia.org/resource/Lucille_Wall"
       }, {
-        "label" : "Maci (politician)",
-        "uri" : "http://dbpedia.org/resource/Maci_(politician)"
+        "label" : "Lucinda Dryzek",
+        "uri" : "http://dbpedia.org/resource/Lucinda_Dryzek"
       }, {
-        "label" : "Madina Abilqasymova",
-        "uri" : "http://dbpedia.org/resource/Madina_Abilqasymova"
+        "label" : "Lucy-Jo Hudson",
+        "uri" : "http://dbpedia.org/resource/Lucy-Jo_Hudson"
       }, {
-        "label" : "Maeda Toshiie",
-        "uri" : "http://dbpedia.org/resource/Maeda_Toshiie"
+        "label" : "Lucy Benjamin",
+        "uri" : "http://dbpedia.org/resource/Lucy_Benjamin"
       }, {
-        "label" : "Maeda Toshinaga",
-        "uri" : "http://dbpedia.org/resource/Maeda_Toshinaga"
+        "label" : "Lucy Brown",
+        "uri" : "http://dbpedia.org/resource/Lucy_Brown"
       }, {
-        "label" : "Maeda Toshitsune",
-        "uri" : "http://dbpedia.org/resource/Maeda_Toshitsune"
+        "label" : "Lucy Davis",
+        "uri" : "http://dbpedia.org/resource/Lucy_Davis"
       }, {
-        "label" : "Mahendra Bishnoi",
-        "uri" : "http://dbpedia.org/resource/Mahendra_Bishnoi"
+        "label" : "Lucy DeCoutere",
+        "uri" : "http://dbpedia.org/resource/Lucy_DeCoutere"
       }, {
-        "label" : "Mahendra Singh Yadav",
-        "uri" : "http://dbpedia.org/resource/Mahendra_Singh_Yadav"
+        "label" : "Lucy Deakins",
+        "uri" : "http://dbpedia.org/resource/Lucy_Deakins"
       }, {
-        "label" : "Mahfuzur Rahaman",
-        "uri" : "http://dbpedia.org/resource/Mahfuzur_Rahaman"
+        "label" : "Lucy Dixon",
+        "uri" : "http://dbpedia.org/resource/Lucy_Dixon"
       }, {
-        "label" : "Mahi B. Chowdhury",
-        "uri" : "http://dbpedia.org/resource/Mahi_B._Chowdhury"
+        "label" : "Lucy Durack",
+        "uri" : "http://dbpedia.org/resource/Lucy_Durack"
       }, {
-        "label" : "Mahjabeen Khaled",
-        "uri" : "http://dbpedia.org/resource/Mahjabeen_Khaled"
+        "label" : "Lucy Evans",
+        "uri" : "http://dbpedia.org/resource/Lucy_Evans"
       }, {
-        "label" : "Mahmood Madani",
-        "uri" : "http://dbpedia.org/resource/Mahmood_Madani"
+        "label" : "Lucy Fallon",
+        "uri" : "http://dbpedia.org/resource/Lucy_Fallon"
       }, {
-        "label" : "Maksim Vučinić",
-        "uri" : "http://dbpedia.org/resource/Maksim_Vučinić"
+        "label" : "Lucy Gaskell",
+        "uri" : "http://dbpedia.org/resource/Lucy_Gaskell"
       }, {
-        "label" : "Maktoum bin Rashid Al Maktoum",
-        "uri" : "http://dbpedia.org/resource/Maktoum_bin_Rashid_Al_Maktoum"
+        "label" : "Lucy Griffiths (actress, born 1986)",
+        "uri" : "http://dbpedia.org/resource/Lucy_Griffiths_(actress,_born_1986)"
       }, {
-        "label" : "Caroline Le Couteur",
-        "uri" : "http://dbpedia.org/resource/Caroline_Le_Couteur"
+        "label" : "Lucy Hale",
+        "uri" : "http://dbpedia.org/resource/Lucy_Hale"
       }, {
-        "label" : "Uddhav Thackeray",
-        "uri" : "http://dbpedia.org/resource/Uddhav_Thackeray"
+        "label" : "Lucy Lawless",
+        "uri" : "http://dbpedia.org/resource/Lucy_Lawless"
       }, {
-        "label" : "Uesugi Harunori",
-        "uri" : "http://dbpedia.org/resource/Uesugi_Harunori"
+        "label" : "Lucy Liu",
+        "uri" : "http://dbpedia.org/resource/Lucy_Liu"
       }, {
-        "label" : "Uesugi Kagekatsu",
-        "uri" : "http://dbpedia.org/resource/Uesugi_Kagekatsu"
+        "label" : "Lucy Pargeter",
+        "uri" : "http://dbpedia.org/resource/Lucy_Pargeter"
       }, {
-        "label" : "Uesugi Narinori",
-        "uri" : "http://dbpedia.org/resource/Uesugi_Narinori"
+        "label" : "Lucy Speed",
+        "uri" : "http://dbpedia.org/resource/Lucy_Speed"
       }, {
-        "label" : "Uesugi Tsunakatsu",
-        "uri" : "http://dbpedia.org/resource/Uesugi_Tsunakatsu"
+        "label" : "Ludi Lin",
+        "uri" : "http://dbpedia.org/resource/Ludi_Lin"
       }, {
-        "label" : "Uhuru Kenyatta",
-        "uri" : "http://dbpedia.org/resource/Uhuru_Kenyatta"
+        "label" : "Ludivine Sagnier",
+        "uri" : "http://dbpedia.org/resource/Ludivine_Sagnier"
       }, {
-        "label" : "Ujir Singh Thapa",
-        "uri" : "http://dbpedia.org/resource/Ujir_Singh_Thapa"
+        "label" : "Luisa Bradshaw-White",
+        "uri" : "http://dbpedia.org/resource/Luisa_Bradshaw-White"
       }, {
-        "label" : "Umesh Nandkumar Patel",
-        "uri" : "http://dbpedia.org/resource/Umesh_Nandkumar_Patel"
+        "label" : "Luke Bracey",
+        "uri" : "http://dbpedia.org/resource/Luke_Bracey"
       }, {
-        "label" : "V. Parameswaran Nayar",
-        "uri" : "http://dbpedia.org/resource/V._Parameswaran_Nayar"
+        "label" : "Luke Evans",
+        "uri" : "http://dbpedia.org/resource/Luke_Evans"
       }, {
-        "label" : "Vahideh Taleghani",
-        "uri" : "http://dbpedia.org/resource/Vahideh_Taleghani"
+        "label" : "Luke Jacobz",
+        "uri" : "http://dbpedia.org/resource/Luke_Jacobz"
       }, {
-        "label" : "Varsha Gaikwad",
-        "uri" : "http://dbpedia.org/resource/Varsha_Gaikwad"
+        "label" : "Luke Jerdy",
+        "uri" : "http://dbpedia.org/resource/Luke_Jerdy"
       }, {
-        "label" : "Varun Gandhi",
-        "uri" : "http://dbpedia.org/resource/Varun_Gandhi"
+        "label" : "Luke Kleintank",
+        "uri" : "http://dbpedia.org/resource/Luke_Kleintank"
       }, {
-        "label" : "Vasco Fernandes Coutinho, captain of Espírito Santo",
-        "uri" : "http://dbpedia.org/resource/Vasco_Fernandes_Coutinho,_captain_of_Espírito_Santo"
+        "label" : "Luke Macfarlane",
+        "uri" : "http://dbpedia.org/resource/Luke_Macfarlane"
       }, {
-        "label" : "Vasco da Gama",
-        "uri" : "http://dbpedia.org/resource/Vasco_da_Gama"
+        "label" : "Luke Mitchell",
+        "uri" : "http://dbpedia.org/resource/Luke_Mitchell"
       }, {
-        "label" : "Dal Singh (politician)",
-        "uri" : "http://dbpedia.org/resource/Dal_Singh_(politician)"
+        "label" : "Luke Pasqualino",
+        "uri" : "http://dbpedia.org/resource/Luke_Pasqualino"
       }, {
-        "label" : "Ukita Hideie",
-        "uri" : "http://dbpedia.org/resource/Ukita_Hideie"
+        "label" : "Luke Pegler",
+        "uri" : "http://dbpedia.org/resource/Luke_Pegler"
       }, {
-        "label" : "Han Chan Piet",
-        "uri" : "http://dbpedia.org/resource/Han_Chan_Piet"
+        "label" : "Luke Perry",
+        "uri" : "http://dbpedia.org/resource/Luke_Perry"
       }, {
-        "label" : "Han Kik Ko",
-        "uri" : "http://dbpedia.org/resource/Han_Kik_Ko"
+        "label" : "Luke Roberts (actor)",
+        "uri" : "http://dbpedia.org/resource/Luke_Roberts_(actor)"
       }, {
-        "label" : "Muhammad ibn Abi Hudhayfa",
-        "uri" : "http://dbpedia.org/resource/Muhammad_ibn_Abi_Hudhayfa"
+        "label" : "Luke Roskell",
+        "uri" : "http://dbpedia.org/resource/Luke_Roskell"
       }, {
-        "label" : "Rida Khan",
-        "uri" : "http://dbpedia.org/resource/Rida_Khan"
+        "label" : "Luke Tarsitano",
+        "uri" : "http://dbpedia.org/resource/Luke_Tarsitano"
       }, {
-        "label" : "Krishnarao Pant Pratinidhi",
-        "uri" : "http://dbpedia.org/resource/Krishnarao_Pant_Pratinidhi"
+        "label" : "Luke Tittensor",
+        "uri" : "http://dbpedia.org/resource/Luke_Tittensor"
       }, {
-        "label" : "Majeed Ullah Khan Farhat",
-        "uri" : "http://dbpedia.org/resource/Majeed_Ullah_Khan_Farhat"
+        "label" : "Luke Youngblood",
+        "uri" : "http://dbpedia.org/resource/Luke_Youngblood"
       }, {
-        "label" : "Mansur al-Atrash",
-        "uri" : "http://dbpedia.org/resource/Mansur_al-Atrash"
+        "label" : "Lulu (singer)",
+        "uri" : "http://dbpedia.org/resource/Lulu_(singer)"
       }, {
-        "label" : "Minamoto no Yoritomo",
-        "uri" : "http://dbpedia.org/resource/Minamoto_no_Yoritomo"
+        "label" : "Lupita Nyong'o",
+        "uri" : "http://dbpedia.org/resource/Lupita_Nyong'o"
       }, {
-        "label" : "Moinul Islam Khan",
-        "uri" : "http://dbpedia.org/resource/Moinul_Islam_Khan"
+        "label" : "Lydia Lloyd-Henry",
+        "uri" : "http://dbpedia.org/resource/Lydia_Lloyd-Henry"
       }, {
-        "label" : "Sardar Riaz Mehmood Khan Mazari",
-        "uri" : "http://dbpedia.org/resource/Sardar_Riaz_Mehmood_Khan_Mazari"
+        "label" : "Lydia Wilson",
+        "uri" : "http://dbpedia.org/resource/Lydia_Wilson"
       }, {
-        "label" : "Bill Workman",
-        "uri" : "http://dbpedia.org/resource/Bill_Workman"
+        "label" : "Lyn Collingwood",
+        "uri" : "http://dbpedia.org/resource/Lyn_Collingwood"
       }, {
-        "label" : "Billy McLean (politician)",
-        "uri" : "http://dbpedia.org/resource/Billy_McLean_(politician)"
+        "label" : "Lyn Paul",
+        "uri" : "http://dbpedia.org/resource/Lyn_Paul"
       }, {
-        "label" : "Bimalendra Nidhi",
-        "uri" : "http://dbpedia.org/resource/Bimalendra_Nidhi"
+        "label" : "Lynda Baron",
+        "uri" : "http://dbpedia.org/resource/Lynda_Baron"
       }, {
-        "label" : "Bir Keshar Pande",
-        "uri" : "http://dbpedia.org/resource/Bir_Keshar_Pande"
+        "label" : "Lyndon Ogbourne",
+        "uri" : "http://dbpedia.org/resource/Lyndon_Ogbourne"
       }, {
-        "label" : "Blanche Cavendish, Countess of Burlington",
-        "uri" : "http://dbpedia.org/resource/Blanche_Cavendish,_Countess_of_Burlington"
+        "label" : "Lyndsy Fonseca",
+        "uri" : "http://dbpedia.org/resource/Lyndsy_Fonseca"
       }, {
-        "label" : "Boris Tadić",
-        "uri" : "http://dbpedia.org/resource/Boris_Tadić"
+        "label" : "Lynn Dalby",
+        "uri" : "http://dbpedia.org/resource/Lynn_Dalby"
       }, {
-        "label" : "Abbasqoli Mo'tamad-dawla Javanshir",
-        "uri" : "http://dbpedia.org/resource/Abbasqoli_Mo'tamad-dawla_Javanshir"
+        "label" : "Lynn Farleigh",
+        "uri" : "http://dbpedia.org/resource/Lynn_Farleigh"
       }, {
-        "label" : "Deepender Singh Hooda",
-        "uri" : "http://dbpedia.org/resource/Deepender_Singh_Hooda"
+        "label" : "Lynn Herring",
+        "uri" : "http://dbpedia.org/resource/Lynn_Herring"
       }, {
-        "label" : "Derek Bok",
-        "uri" : "http://dbpedia.org/resource/Derek_Bok"
+        "label" : "Lynn Redgrave",
+        "uri" : "http://dbpedia.org/resource/Lynn_Redgrave"
       }, {
-        "label" : "Dharmendra Pradhan",
-        "uri" : "http://dbpedia.org/resource/Dharmendra_Pradhan"
+        "label" : "Lynne Carol",
+        "uri" : "http://dbpedia.org/resource/Lynne_Carol"
       }, {
-        "label" : "Dhir Shamsher Rana",
-        "uri" : "http://dbpedia.org/resource/Dhir_Shamsher_Rana"
+        "label" : "Lynne McGranger",
+        "uri" : "http://dbpedia.org/resource/Lynne_McGranger"
       }, {
-        "label" : "Dhiraj Deshmukh",
-        "uri" : "http://dbpedia.org/resource/Dhiraj_Deshmukh"
+        "label" : "Lynne Miller",
+        "uri" : "http://dbpedia.org/resource/Lynne_Miller"
       }, {
-        "label" : "Dhokal Singh Basnyat",
-        "uri" : "http://dbpedia.org/resource/Dhokal_Singh_Basnyat"
+        "label" : "Lynne Perrie",
+        "uri" : "http://dbpedia.org/resource/Lynne_Perrie"
       }, {
-        "label" : "Dido Harding",
-        "uri" : "http://dbpedia.org/resource/Dido_Harding"
+        "label" : "Lynnie Greene",
+        "uri" : "http://dbpedia.org/resource/Lynnie_Greene"
       }, {
-        "label" : "Dilip Babasaheb Bhosale",
-        "uri" : "http://dbpedia.org/resource/Dilip_Babasaheb_Bhosale"
+        "label" : "Lynsey Bartilson",
+        "uri" : "http://dbpedia.org/resource/Lynsey_Bartilson"
       }, {
-        "label" : "Dipu Moni",
-        "uri" : "http://dbpedia.org/resource/Dipu_Moni"
+        "label" : "Lysette Anthony",
+        "uri" : "http://dbpedia.org/resource/Lysette_Anthony"
       }, {
-        "label" : "Dirk Gysbert van Breda",
-        "uri" : "http://dbpedia.org/resource/Dirk_Gysbert_van_Breda"
+        "label" : "M'fundo Morrison",
+        "uri" : "http://dbpedia.org/resource/M'fundo_Morrison"
       }, {
-        "label" : "Diya Kumari",
-        "uri" : "http://dbpedia.org/resource/Diya_Kumari"
+        "label" : "M*A*S*H (TV series)",
+        "uri" : "http://dbpedia.org/resource/M*A*S*H_(TV_series)"
       }, {
-        "label" : "Dominic Asquith",
-        "uri" : "http://dbpedia.org/resource/Dominic_Asquith"
+        "label" : "M. C. Gainey",
+        "uri" : "http://dbpedia.org/resource/M._C._Gainey"
       }, {
-        "label" : "Dominic Hubbard, 6th Baron Addington",
-        "uri" : "http://dbpedia.org/resource/Dominic_Hubbard,_6th_Baron_Addington"
+        "label" : "M. Pokora",
+        "uri" : "http://dbpedia.org/resource/M._Pokora"
       }, {
-        "label" : "Gongsun Gong",
-        "uri" : "http://dbpedia.org/resource/Gongsun_Gong"
+        "label" : "MASH (film)",
+        "uri" : "http://dbpedia.org/resource/MASH_(film)"
       }, {
-        "label" : "Gongsun Kang",
-        "uri" : "http://dbpedia.org/resource/Gongsun_Kang"
+        "label" : "Mabel Ballin",
+        "uri" : "http://dbpedia.org/resource/Mabel_Ballin"
       }, {
-        "label" : "Gopal Sharan Nath Shahdeo",
-        "uri" : "http://dbpedia.org/resource/Gopal_Sharan_Nath_Shahdeo"
+        "label" : "Mabel King",
+        "uri" : "http://dbpedia.org/resource/Mabel_King"
       }, {
-        "label" : "Gottfried Höch",
-        "uri" : "http://dbpedia.org/resource/Gottfried_Höch"
+        "label" : "MacDonald Carey",
+        "uri" : "http://dbpedia.org/resource/MacDonald_Carey"
       }, {
-        "label" : "Govind Singh Thakur",
-        "uri" : "http://dbpedia.org/resource/Govind_Singh_Thakur"
+        "label" : "MacKenzie Mauzy",
+        "uri" : "http://dbpedia.org/resource/MacKenzie_Mauzy"
       }, {
-        "label" : "Grace Meng",
-        "uri" : "http://dbpedia.org/resource/Grace_Meng"
+        "label" : "Macdonald Carey",
+        "uri" : "http://dbpedia.org/resource/Macdonald_Carey"
       }, {
-        "label" : "Greta Neubauer",
-        "uri" : "http://dbpedia.org/resource/Greta_Neubauer"
+        "label" : "Machiko Soga",
+        "uri" : "http://dbpedia.org/resource/Machiko_Soga"
       }, {
-        "label" : "Grigory Potemkin",
-        "uri" : "http://dbpedia.org/resource/Grigory_Potemkin"
+        "label" : "Mackenyu",
+        "uri" : "http://dbpedia.org/resource/Mackenyu"
       }, {
-        "label" : "Gu Cheng (Three Kingdoms)",
-        "uri" : "http://dbpedia.org/resource/Gu_Cheng_(Three_Kingdoms)"
+        "label" : "Mackenzie Astin",
+        "uri" : "http://dbpedia.org/resource/Mackenzie_Astin"
       }, {
-        "label" : "Gu Shao",
-        "uri" : "http://dbpedia.org/resource/Gu_Shao"
+        "label" : "Mackenzie Crook",
+        "uri" : "http://dbpedia.org/resource/Mackenzie_Crook"
       }, {
-        "label" : "Gu Tan",
-        "uri" : "http://dbpedia.org/resource/Gu_Tan"
+        "label" : "Mad Max 2",
+        "uri" : "http://dbpedia.org/resource/Mad_Max_2"
       }, {
-        "label" : "Gulabrao Jedhe",
-        "uri" : "http://dbpedia.org/resource/Gulabrao_Jedhe"
+        "label" : "Mad Max Beyond Thunderdome",
+        "uri" : "http://dbpedia.org/resource/Mad_Max_Beyond_Thunderdome"
       }, {
-        "label" : "Gulnara Karimova",
-        "uri" : "http://dbpedia.org/resource/Gulnara_Karimova"
+        "label" : "Maddison Brown",
+        "uri" : "http://dbpedia.org/resource/Maddison_Brown"
       }, {
-        "label" : "Khadga Shamsher Jang Bahadur Rana",
-        "uri" : "http://dbpedia.org/resource/Khadga_Shamsher_Jang_Bahadur_Rana"
+        "label" : "Maddy Hill",
+        "uri" : "http://dbpedia.org/resource/Maddy_Hill"
       }, {
-        "label" : "Khalifa bin Salman Al Khalifa",
-        "uri" : "http://dbpedia.org/resource/Khalifa_bin_Salman_Al_Khalifa"
+        "label" : "Madelaine Petsch",
+        "uri" : "http://dbpedia.org/resource/Madelaine_Petsch"
       }, {
-        "label" : "Khawaja Muhammad Asif",
-        "uri" : "http://dbpedia.org/resource/Khawaja_Muhammad_Asif"
+        "label" : "Madeleine Howard",
+        "uri" : "http://dbpedia.org/resource/Madeleine_Howard"
       }, {
-        "label" : "Khurram Dastgir Khan",
-        "uri" : "http://dbpedia.org/resource/Khurram_Dastgir_Khan"
+        "label" : "Madeleine West",
+        "uri" : "http://dbpedia.org/resource/Madeleine_West"
       }, {
-        "label" : "Khurshid Mahmud Kasuri",
-        "uri" : "http://dbpedia.org/resource/Khurshid_Mahmud_Kasuri"
+        "label" : "Madeline Duggan",
+        "uri" : "http://dbpedia.org/resource/Madeline_Duggan"
       }, {
-        "label" : "Kikkawa Hiroie",
-        "uri" : "http://dbpedia.org/resource/Kikkawa_Hiroie"
+        "label" : "Madeline Kahn",
+        "uri" : "http://dbpedia.org/resource/Madeline_Kahn"
       }, {
-        "label" : "Kimbrough Stone",
-        "uri" : "http://dbpedia.org/resource/Kimbrough_Stone"
+        "label" : "Madge Hindle",
+        "uri" : "http://dbpedia.org/resource/Madge_Hindle"
       }, {
-        "label" : "Kiran Shamsher Rana",
-        "uri" : "http://dbpedia.org/resource/Kiran_Shamsher_Rana"
+        "label" : "Madge Kennedy",
+        "uri" : "http://dbpedia.org/resource/Madge_Kennedy"
       }, {
-        "label" : "Kirti Azad",
-        "uri" : "http://dbpedia.org/resource/Kirti_Azad"
+        "label" : "Madhuri Dixit",
+        "uri" : "http://dbpedia.org/resource/Madhuri_Dixit"
       }, {
-        "label" : "Kirtiman Singh Basnyat",
-        "uri" : "http://dbpedia.org/resource/Kirtiman_Singh_Basnyat"
+        "label" : "Madison Davenport",
+        "uri" : "http://dbpedia.org/resource/Madison_Davenport"
       }, {
-        "label" : "Kiuchi Kyō",
-        "uri" : "http://dbpedia.org/resource/Kiuchi_Kyō"
+        "label" : "Madison Lintz",
+        "uri" : "http://dbpedia.org/resource/Madison_Lintz"
       }, {
-        "label" : "Kolusu Parthasarathy",
-        "uri" : "http://dbpedia.org/resource/Kolusu_Parthasarathy"
+        "label" : "Madison Square Garden",
+        "uri" : "http://dbpedia.org/resource/Madison_Square_Garden"
       }, {
-        "label" : "Preston Love Jr.",
-        "uri" : "http://dbpedia.org/resource/Preston_Love_Jr."
+        "label" : "Mads Mikkelsen",
+        "uri" : "http://dbpedia.org/resource/Mads_Mikkelsen"
       }, {
-        "label" : "Prince Dmitri Alexandrovich of Russia",
-        "uri" : "http://dbpedia.org/resource/Prince_Dmitri_Alexandrovich_of_Russia"
+        "label" : "Mae Clarke",
+        "uri" : "http://dbpedia.org/resource/Mae_Clarke"
       } ]
     },
     "combination" : false
   }, {
     "id" : "4",
-    "lexicalEntryUri" : "http://localhost:8080#father_of",
+    "lexicalEntryUri" : "http://localhost:8080#played",
     "language" : "EN",
     "type" : "NP",
     "bindingType" : "PERSON",
     "returnType" : "PERSON",
-    "frameType" : "NPP",
-    "sentences" : [ "the father of $x" ],
+    "frameType" : "APP",
+    "sentences" : [ "fictional characters played by $x" ],
     "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/father> ?objOfProp))\n",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
-      "$x" : "subjOfProp"
+      "$x" : "objOfProp"
     },
-    "returnVariable" : "objOfProp",
+    "returnVariable" : "subjOfProp",
     "sentenceBindings" : {
       "bindingVariableName" : "$x",
       "bindingList" : [ {
-        "label" : "A. J. Mohammad Ali",
-        "uri" : "http://dbpedia.org/resource/A._J._Mohammad_Ali"
+        "label" : "Alun Armstrong (actor)",
+        "uri" : "http://dbpedia.org/resource/Alun_Armstrong_(actor)"
       }, {
-        "label" : "Lu Ji (Gongji)",
-        "uri" : "http://dbpedia.org/resource/Lu_Ji_(Gongji)"
+        "label" : "Luca Zingaretti",
+        "uri" : "http://dbpedia.org/resource/Luca_Zingaretti"
       }, {
-        "label" : "Lu Jing",
-        "uri" : "http://dbpedia.org/resource/Lu_Jing"
+        "label" : "Lucas Black",
+        "uri" : "http://dbpedia.org/resource/Lucas_Black"
       }, {
-        "label" : "Lu Kang (Three Kingdoms)",
-        "uri" : "http://dbpedia.org/resource/Lu_Kang_(Three_Kingdoms)"
+        "label" : "Lucas Grabeel",
+        "uri" : "http://dbpedia.org/resource/Lucas_Grabeel"
       }, {
-        "label" : "Lubna Khalid Al Qasimi",
-        "uri" : "http://dbpedia.org/resource/Lubna_Khalid_Al_Qasimi"
+        "label" : "Lucas Jade Zumann",
+        "uri" : "http://dbpedia.org/resource/Lucas_Jade_Zumann"
       }, {
-        "label" : "Luciana Genro",
-        "uri" : "http://dbpedia.org/resource/Luciana_Genro"
+        "label" : "Lucas Steele",
+        "uri" : "http://dbpedia.org/resource/Lucas_Steele"
       }, {
-        "label" : "Lucius Fairchild",
-        "uri" : "http://dbpedia.org/resource/Lucius_Fairchild"
+        "label" : "Lucas Till",
+        "uri" : "http://dbpedia.org/resource/Lucas_Till"
       }, {
-        "label" : "Lucius Quintus Cincinnatus Lamar",
-        "uri" : "http://dbpedia.org/resource/Lucius_Quintus_Cincinnatus_Lamar"
+        "label" : "Lucian Msamati",
+        "uri" : "http://dbpedia.org/resource/Lucian_Msamati"
       }, {
-        "label" : "Ludwig Adamovich Jr.",
-        "uri" : "http://dbpedia.org/resource/Ludwig_Adamovich_Jr."
+        "label" : "Luciana Carro",
+        "uri" : "http://dbpedia.org/resource/Luciana_Carro"
       }, {
-        "label" : "Luis A. Eguiguren",
-        "uri" : "http://dbpedia.org/resource/Luis_A._Eguiguren"
+        "label" : "Luciano Cáceres",
+        "uri" : "http://dbpedia.org/resource/Luciano_Cáceres"
       }, {
-        "label" : "Luis Abinader",
-        "uri" : "http://dbpedia.org/resource/Luis_Abinader"
+        "label" : "Lucien Laviscount",
+        "uri" : "http://dbpedia.org/resource/Lucien_Laviscount"
       }, {
-        "label" : "Lü Ju",
-        "uri" : "http://dbpedia.org/resource/Lü_Ju"
+        "label" : "Lucille Ball",
+        "uri" : "http://dbpedia.org/resource/Lucille_Ball"
       }, {
-        "label" : "Ma Chao",
-        "uri" : "http://dbpedia.org/resource/Ma_Chao"
+        "label" : "Lucille Wall",
+        "uri" : "http://dbpedia.org/resource/Lucille_Wall"
       }, {
-        "label" : "Maci (politician)",
-        "uri" : "http://dbpedia.org/resource/Maci_(politician)"
+        "label" : "Lucinda Dryzek",
+        "uri" : "http://dbpedia.org/resource/Lucinda_Dryzek"
       }, {
-        "label" : "Madina Abilqasymova",
-        "uri" : "http://dbpedia.org/resource/Madina_Abilqasymova"
+        "label" : "Lucy-Jo Hudson",
+        "uri" : "http://dbpedia.org/resource/Lucy-Jo_Hudson"
       }, {
-        "label" : "Maeda Toshiie",
-        "uri" : "http://dbpedia.org/resource/Maeda_Toshiie"
+        "label" : "Lucy Benjamin",
+        "uri" : "http://dbpedia.org/resource/Lucy_Benjamin"
       }, {
-        "label" : "Maeda Toshinaga",
-        "uri" : "http://dbpedia.org/resource/Maeda_Toshinaga"
+        "label" : "Lucy Brown",
+        "uri" : "http://dbpedia.org/resource/Lucy_Brown"
       }, {
-        "label" : "Maeda Toshitsune",
-        "uri" : "http://dbpedia.org/resource/Maeda_Toshitsune"
+        "label" : "Lucy Davis",
+        "uri" : "http://dbpedia.org/resource/Lucy_Davis"
       }, {
-        "label" : "Mahendra Bishnoi",
-        "uri" : "http://dbpedia.org/resource/Mahendra_Bishnoi"
+        "label" : "Lucy DeCoutere",
+        "uri" : "http://dbpedia.org/resource/Lucy_DeCoutere"
       }, {
-        "label" : "Mahendra Singh Yadav",
-        "uri" : "http://dbpedia.org/resource/Mahendra_Singh_Yadav"
+        "label" : "Lucy Deakins",
+        "uri" : "http://dbpedia.org/resource/Lucy_Deakins"
       }, {
-        "label" : "Mahfuzur Rahaman",
-        "uri" : "http://dbpedia.org/resource/Mahfuzur_Rahaman"
+        "label" : "Lucy Dixon",
+        "uri" : "http://dbpedia.org/resource/Lucy_Dixon"
       }, {
-        "label" : "Mahi B. Chowdhury",
-        "uri" : "http://dbpedia.org/resource/Mahi_B._Chowdhury"
+        "label" : "Lucy Durack",
+        "uri" : "http://dbpedia.org/resource/Lucy_Durack"
       }, {
-        "label" : "Mahjabeen Khaled",
-        "uri" : "http://dbpedia.org/resource/Mahjabeen_Khaled"
+        "label" : "Lucy Evans",
+        "uri" : "http://dbpedia.org/resource/Lucy_Evans"
       }, {
-        "label" : "Mahmood Madani",
-        "uri" : "http://dbpedia.org/resource/Mahmood_Madani"
+        "label" : "Lucy Fallon",
+        "uri" : "http://dbpedia.org/resource/Lucy_Fallon"
       }, {
-        "label" : "Maksim Vučinić",
-        "uri" : "http://dbpedia.org/resource/Maksim_Vučinić"
+        "label" : "Lucy Gaskell",
+        "uri" : "http://dbpedia.org/resource/Lucy_Gaskell"
       }, {
-        "label" : "Maktoum bin Rashid Al Maktoum",
-        "uri" : "http://dbpedia.org/resource/Maktoum_bin_Rashid_Al_Maktoum"
+        "label" : "Lucy Griffiths (actress, born 1986)",
+        "uri" : "http://dbpedia.org/resource/Lucy_Griffiths_(actress,_born_1986)"
       }, {
-        "label" : "Caroline Le Couteur",
-        "uri" : "http://dbpedia.org/resource/Caroline_Le_Couteur"
+        "label" : "Lucy Hale",
+        "uri" : "http://dbpedia.org/resource/Lucy_Hale"
       }, {
-        "label" : "Uddhav Thackeray",
-        "uri" : "http://dbpedia.org/resource/Uddhav_Thackeray"
+        "label" : "Lucy Lawless",
+        "uri" : "http://dbpedia.org/resource/Lucy_Lawless"
       }, {
-        "label" : "Uesugi Harunori",
-        "uri" : "http://dbpedia.org/resource/Uesugi_Harunori"
+        "label" : "Lucy Liu",
+        "uri" : "http://dbpedia.org/resource/Lucy_Liu"
       }, {
-        "label" : "Uesugi Kagekatsu",
-        "uri" : "http://dbpedia.org/resource/Uesugi_Kagekatsu"
+        "label" : "Lucy Pargeter",
+        "uri" : "http://dbpedia.org/resource/Lucy_Pargeter"
       }, {
-        "label" : "Uesugi Narinori",
-        "uri" : "http://dbpedia.org/resource/Uesugi_Narinori"
+        "label" : "Lucy Speed",
+        "uri" : "http://dbpedia.org/resource/Lucy_Speed"
       }, {
-        "label" : "Uesugi Tsunakatsu",
-        "uri" : "http://dbpedia.org/resource/Uesugi_Tsunakatsu"
+        "label" : "Ludi Lin",
+        "uri" : "http://dbpedia.org/resource/Ludi_Lin"
       }, {
-        "label" : "Uhuru Kenyatta",
-        "uri" : "http://dbpedia.org/resource/Uhuru_Kenyatta"
+        "label" : "Ludivine Sagnier",
+        "uri" : "http://dbpedia.org/resource/Ludivine_Sagnier"
       }, {
-        "label" : "Ujir Singh Thapa",
-        "uri" : "http://dbpedia.org/resource/Ujir_Singh_Thapa"
+        "label" : "Luisa Bradshaw-White",
+        "uri" : "http://dbpedia.org/resource/Luisa_Bradshaw-White"
       }, {
-        "label" : "Umesh Nandkumar Patel",
-        "uri" : "http://dbpedia.org/resource/Umesh_Nandkumar_Patel"
+        "label" : "Luke Bracey",
+        "uri" : "http://dbpedia.org/resource/Luke_Bracey"
       }, {
-        "label" : "V. Parameswaran Nayar",
-        "uri" : "http://dbpedia.org/resource/V._Parameswaran_Nayar"
+        "label" : "Luke Evans",
+        "uri" : "http://dbpedia.org/resource/Luke_Evans"
       }, {
-        "label" : "Vahideh Taleghani",
-        "uri" : "http://dbpedia.org/resource/Vahideh_Taleghani"
+        "label" : "Luke Jacobz",
+        "uri" : "http://dbpedia.org/resource/Luke_Jacobz"
       }, {
-        "label" : "Varsha Gaikwad",
-        "uri" : "http://dbpedia.org/resource/Varsha_Gaikwad"
+        "label" : "Luke Jerdy",
+        "uri" : "http://dbpedia.org/resource/Luke_Jerdy"
       }, {
-        "label" : "Varun Gandhi",
-        "uri" : "http://dbpedia.org/resource/Varun_Gandhi"
+        "label" : "Luke Kleintank",
+        "uri" : "http://dbpedia.org/resource/Luke_Kleintank"
       }, {
-        "label" : "Vasco Fernandes Coutinho, captain of Espírito Santo",
-        "uri" : "http://dbpedia.org/resource/Vasco_Fernandes_Coutinho,_captain_of_Espírito_Santo"
+        "label" : "Luke Macfarlane",
+        "uri" : "http://dbpedia.org/resource/Luke_Macfarlane"
       }, {
-        "label" : "Vasco da Gama",
-        "uri" : "http://dbpedia.org/resource/Vasco_da_Gama"
+        "label" : "Luke Mitchell",
+        "uri" : "http://dbpedia.org/resource/Luke_Mitchell"
       }, {
-        "label" : "Dal Singh (politician)",
-        "uri" : "http://dbpedia.org/resource/Dal_Singh_(politician)"
+        "label" : "Luke Pasqualino",
+        "uri" : "http://dbpedia.org/resource/Luke_Pasqualino"
       }, {
-        "label" : "Ukita Hideie",
-        "uri" : "http://dbpedia.org/resource/Ukita_Hideie"
+        "label" : "Luke Pegler",
+        "uri" : "http://dbpedia.org/resource/Luke_Pegler"
       }, {
-        "label" : "Han Chan Piet",
-        "uri" : "http://dbpedia.org/resource/Han_Chan_Piet"
+        "label" : "Luke Perry",
+        "uri" : "http://dbpedia.org/resource/Luke_Perry"
       }, {
-        "label" : "Han Kik Ko",
-        "uri" : "http://dbpedia.org/resource/Han_Kik_Ko"
+        "label" : "Luke Roberts (actor)",
+        "uri" : "http://dbpedia.org/resource/Luke_Roberts_(actor)"
       }, {
-        "label" : "Muhammad ibn Abi Hudhayfa",
-        "uri" : "http://dbpedia.org/resource/Muhammad_ibn_Abi_Hudhayfa"
+        "label" : "Luke Roskell",
+        "uri" : "http://dbpedia.org/resource/Luke_Roskell"
       }, {
-        "label" : "Rida Khan",
-        "uri" : "http://dbpedia.org/resource/Rida_Khan"
+        "label" : "Luke Tarsitano",
+        "uri" : "http://dbpedia.org/resource/Luke_Tarsitano"
       }, {
-        "label" : "Krishnarao Pant Pratinidhi",
-        "uri" : "http://dbpedia.org/resource/Krishnarao_Pant_Pratinidhi"
+        "label" : "Luke Tittensor",
+        "uri" : "http://dbpedia.org/resource/Luke_Tittensor"
       }, {
-        "label" : "Majeed Ullah Khan Farhat",
-        "uri" : "http://dbpedia.org/resource/Majeed_Ullah_Khan_Farhat"
+        "label" : "Luke Youngblood",
+        "uri" : "http://dbpedia.org/resource/Luke_Youngblood"
       }, {
-        "label" : "Mansur al-Atrash",
-        "uri" : "http://dbpedia.org/resource/Mansur_al-Atrash"
+        "label" : "Lulu (singer)",
+        "uri" : "http://dbpedia.org/resource/Lulu_(singer)"
       }, {
-        "label" : "Minamoto no Yoritomo",
-        "uri" : "http://dbpedia.org/resource/Minamoto_no_Yoritomo"
+        "label" : "Lupita Nyong'o",
+        "uri" : "http://dbpedia.org/resource/Lupita_Nyong'o"
       }, {
-        "label" : "Moinul Islam Khan",
-        "uri" : "http://dbpedia.org/resource/Moinul_Islam_Khan"
+        "label" : "Lydia Lloyd-Henry",
+        "uri" : "http://dbpedia.org/resource/Lydia_Lloyd-Henry"
       }, {
-        "label" : "Sardar Riaz Mehmood Khan Mazari",
-        "uri" : "http://dbpedia.org/resource/Sardar_Riaz_Mehmood_Khan_Mazari"
+        "label" : "Lydia Wilson",
+        "uri" : "http://dbpedia.org/resource/Lydia_Wilson"
       }, {
-        "label" : "Bill Workman",
-        "uri" : "http://dbpedia.org/resource/Bill_Workman"
+        "label" : "Lyn Collingwood",
+        "uri" : "http://dbpedia.org/resource/Lyn_Collingwood"
       }, {
-        "label" : "Billy McLean (politician)",
-        "uri" : "http://dbpedia.org/resource/Billy_McLean_(politician)"
+        "label" : "Lyn Paul",
+        "uri" : "http://dbpedia.org/resource/Lyn_Paul"
       }, {
-        "label" : "Bimalendra Nidhi",
-        "uri" : "http://dbpedia.org/resource/Bimalendra_Nidhi"
+        "label" : "Lynda Baron",
+        "uri" : "http://dbpedia.org/resource/Lynda_Baron"
       }, {
-        "label" : "Bir Keshar Pande",
-        "uri" : "http://dbpedia.org/resource/Bir_Keshar_Pande"
+        "label" : "Lyndon Ogbourne",
+        "uri" : "http://dbpedia.org/resource/Lyndon_Ogbourne"
       }, {
-        "label" : "Blanche Cavendish, Countess of Burlington",
-        "uri" : "http://dbpedia.org/resource/Blanche_Cavendish,_Countess_of_Burlington"
+        "label" : "Lyndsy Fonseca",
+        "uri" : "http://dbpedia.org/resource/Lyndsy_Fonseca"
       }, {
-        "label" : "Boris Tadić",
-        "uri" : "http://dbpedia.org/resource/Boris_Tadić"
+        "label" : "Lynn Dalby",
+        "uri" : "http://dbpedia.org/resource/Lynn_Dalby"
       }, {
-        "label" : "Abbasqoli Mo'tamad-dawla Javanshir",
-        "uri" : "http://dbpedia.org/resource/Abbasqoli_Mo'tamad-dawla_Javanshir"
+        "label" : "Lynn Farleigh",
+        "uri" : "http://dbpedia.org/resource/Lynn_Farleigh"
       }, {
-        "label" : "Deepender Singh Hooda",
-        "uri" : "http://dbpedia.org/resource/Deepender_Singh_Hooda"
+        "label" : "Lynn Herring",
+        "uri" : "http://dbpedia.org/resource/Lynn_Herring"
       }, {
-        "label" : "Derek Bok",
-        "uri" : "http://dbpedia.org/resource/Derek_Bok"
+        "label" : "Lynn Redgrave",
+        "uri" : "http://dbpedia.org/resource/Lynn_Redgrave"
       }, {
-        "label" : "Dharmendra Pradhan",
-        "uri" : "http://dbpedia.org/resource/Dharmendra_Pradhan"
+        "label" : "Lynne Carol",
+        "uri" : "http://dbpedia.org/resource/Lynne_Carol"
       }, {
-        "label" : "Dhir Shamsher Rana",
-        "uri" : "http://dbpedia.org/resource/Dhir_Shamsher_Rana"
+        "label" : "Lynne McGranger",
+        "uri" : "http://dbpedia.org/resource/Lynne_McGranger"
       }, {
-        "label" : "Dhiraj Deshmukh",
-        "uri" : "http://dbpedia.org/resource/Dhiraj_Deshmukh"
+        "label" : "Lynne Miller",
+        "uri" : "http://dbpedia.org/resource/Lynne_Miller"
       }, {
-        "label" : "Dhokal Singh Basnyat",
-        "uri" : "http://dbpedia.org/resource/Dhokal_Singh_Basnyat"
+        "label" : "Lynne Perrie",
+        "uri" : "http://dbpedia.org/resource/Lynne_Perrie"
       }, {
-        "label" : "Dido Harding",
-        "uri" : "http://dbpedia.org/resource/Dido_Harding"
+        "label" : "Lynnie Greene",
+        "uri" : "http://dbpedia.org/resource/Lynnie_Greene"
       }, {
-        "label" : "Dilip Babasaheb Bhosale",
-        "uri" : "http://dbpedia.org/resource/Dilip_Babasaheb_Bhosale"
+        "label" : "Lynsey Bartilson",
+        "uri" : "http://dbpedia.org/resource/Lynsey_Bartilson"
       }, {
-        "label" : "Dipu Moni",
-        "uri" : "http://dbpedia.org/resource/Dipu_Moni"
+        "label" : "Lysette Anthony",
+        "uri" : "http://dbpedia.org/resource/Lysette_Anthony"
       }, {
-        "label" : "Dirk Gysbert van Breda",
-        "uri" : "http://dbpedia.org/resource/Dirk_Gysbert_van_Breda"
+        "label" : "M'fundo Morrison",
+        "uri" : "http://dbpedia.org/resource/M'fundo_Morrison"
       }, {
-        "label" : "Diya Kumari",
-        "uri" : "http://dbpedia.org/resource/Diya_Kumari"
+        "label" : "M*A*S*H (TV series)",
+        "uri" : "http://dbpedia.org/resource/M*A*S*H_(TV_series)"
       }, {
-        "label" : "Dominic Asquith",
-        "uri" : "http://dbpedia.org/resource/Dominic_Asquith"
+        "label" : "M. C. Gainey",
+        "uri" : "http://dbpedia.org/resource/M._C._Gainey"
       }, {
-        "label" : "Dominic Hubbard, 6th Baron Addington",
-        "uri" : "http://dbpedia.org/resource/Dominic_Hubbard,_6th_Baron_Addington"
+        "label" : "M. Pokora",
+        "uri" : "http://dbpedia.org/resource/M._Pokora"
       }, {
-        "label" : "Gongsun Gong",
-        "uri" : "http://dbpedia.org/resource/Gongsun_Gong"
+        "label" : "MASH (film)",
+        "uri" : "http://dbpedia.org/resource/MASH_(film)"
       }, {
-        "label" : "Gongsun Kang",
-        "uri" : "http://dbpedia.org/resource/Gongsun_Kang"
+        "label" : "Mabel Ballin",
+        "uri" : "http://dbpedia.org/resource/Mabel_Ballin"
       }, {
-        "label" : "Gopal Sharan Nath Shahdeo",
-        "uri" : "http://dbpedia.org/resource/Gopal_Sharan_Nath_Shahdeo"
+        "label" : "Mabel King",
+        "uri" : "http://dbpedia.org/resource/Mabel_King"
       }, {
-        "label" : "Gottfried Höch",
-        "uri" : "http://dbpedia.org/resource/Gottfried_Höch"
+        "label" : "MacDonald Carey",
+        "uri" : "http://dbpedia.org/resource/MacDonald_Carey"
       }, {
-        "label" : "Govind Singh Thakur",
-        "uri" : "http://dbpedia.org/resource/Govind_Singh_Thakur"
+        "label" : "MacKenzie Mauzy",
+        "uri" : "http://dbpedia.org/resource/MacKenzie_Mauzy"
       }, {
-        "label" : "Grace Meng",
-        "uri" : "http://dbpedia.org/resource/Grace_Meng"
+        "label" : "Macdonald Carey",
+        "uri" : "http://dbpedia.org/resource/Macdonald_Carey"
       }, {
-        "label" : "Greta Neubauer",
-        "uri" : "http://dbpedia.org/resource/Greta_Neubauer"
+        "label" : "Machiko Soga",
+        "uri" : "http://dbpedia.org/resource/Machiko_Soga"
       }, {
-        "label" : "Grigory Potemkin",
-        "uri" : "http://dbpedia.org/resource/Grigory_Potemkin"
+        "label" : "Mackenyu",
+        "uri" : "http://dbpedia.org/resource/Mackenyu"
       }, {
-        "label" : "Gu Cheng (Three Kingdoms)",
-        "uri" : "http://dbpedia.org/resource/Gu_Cheng_(Three_Kingdoms)"
+        "label" : "Mackenzie Astin",
+        "uri" : "http://dbpedia.org/resource/Mackenzie_Astin"
       }, {
-        "label" : "Gu Shao",
-        "uri" : "http://dbpedia.org/resource/Gu_Shao"
+        "label" : "Mackenzie Crook",
+        "uri" : "http://dbpedia.org/resource/Mackenzie_Crook"
       }, {
-        "label" : "Gu Tan",
-        "uri" : "http://dbpedia.org/resource/Gu_Tan"
+        "label" : "Mad Max 2",
+        "uri" : "http://dbpedia.org/resource/Mad_Max_2"
       }, {
-        "label" : "Gulabrao Jedhe",
-        "uri" : "http://dbpedia.org/resource/Gulabrao_Jedhe"
+        "label" : "Mad Max Beyond Thunderdome",
+        "uri" : "http://dbpedia.org/resource/Mad_Max_Beyond_Thunderdome"
       }, {
-        "label" : "Gulnara Karimova",
-        "uri" : "http://dbpedia.org/resource/Gulnara_Karimova"
+        "label" : "Maddison Brown",
+        "uri" : "http://dbpedia.org/resource/Maddison_Brown"
       }, {
-        "label" : "Khadga Shamsher Jang Bahadur Rana",
-        "uri" : "http://dbpedia.org/resource/Khadga_Shamsher_Jang_Bahadur_Rana"
+        "label" : "Maddy Hill",
+        "uri" : "http://dbpedia.org/resource/Maddy_Hill"
       }, {
-        "label" : "Khalifa bin Salman Al Khalifa",
-        "uri" : "http://dbpedia.org/resource/Khalifa_bin_Salman_Al_Khalifa"
+        "label" : "Madelaine Petsch",
+        "uri" : "http://dbpedia.org/resource/Madelaine_Petsch"
       }, {
-        "label" : "Khawaja Muhammad Asif",
-        "uri" : "http://dbpedia.org/resource/Khawaja_Muhammad_Asif"
+        "label" : "Madeleine Howard",
+        "uri" : "http://dbpedia.org/resource/Madeleine_Howard"
       }, {
-        "label" : "Khurram Dastgir Khan",
-        "uri" : "http://dbpedia.org/resource/Khurram_Dastgir_Khan"
+        "label" : "Madeleine West",
+        "uri" : "http://dbpedia.org/resource/Madeleine_West"
       }, {
-        "label" : "Khurshid Mahmud Kasuri",
-        "uri" : "http://dbpedia.org/resource/Khurshid_Mahmud_Kasuri"
+        "label" : "Madeline Duggan",
+        "uri" : "http://dbpedia.org/resource/Madeline_Duggan"
       }, {
-        "label" : "Kikkawa Hiroie",
-        "uri" : "http://dbpedia.org/resource/Kikkawa_Hiroie"
+        "label" : "Madeline Kahn",
+        "uri" : "http://dbpedia.org/resource/Madeline_Kahn"
       }, {
-        "label" : "Kimbrough Stone",
-        "uri" : "http://dbpedia.org/resource/Kimbrough_Stone"
+        "label" : "Madge Hindle",
+        "uri" : "http://dbpedia.org/resource/Madge_Hindle"
       }, {
-        "label" : "Kiran Shamsher Rana",
-        "uri" : "http://dbpedia.org/resource/Kiran_Shamsher_Rana"
+        "label" : "Madge Kennedy",
+        "uri" : "http://dbpedia.org/resource/Madge_Kennedy"
       }, {
-        "label" : "Kirti Azad",
-        "uri" : "http://dbpedia.org/resource/Kirti_Azad"
+        "label" : "Madhuri Dixit",
+        "uri" : "http://dbpedia.org/resource/Madhuri_Dixit"
       }, {
-        "label" : "Kirtiman Singh Basnyat",
-        "uri" : "http://dbpedia.org/resource/Kirtiman_Singh_Basnyat"
+        "label" : "Madison Davenport",
+        "uri" : "http://dbpedia.org/resource/Madison_Davenport"
       }, {
-        "label" : "Kiuchi Kyō",
-        "uri" : "http://dbpedia.org/resource/Kiuchi_Kyō"
+        "label" : "Madison Lintz",
+        "uri" : "http://dbpedia.org/resource/Madison_Lintz"
       }, {
-        "label" : "Kolusu Parthasarathy",
-        "uri" : "http://dbpedia.org/resource/Kolusu_Parthasarathy"
+        "label" : "Madison Square Garden",
+        "uri" : "http://dbpedia.org/resource/Madison_Square_Garden"
       }, {
-        "label" : "Preston Love Jr.",
-        "uri" : "http://dbpedia.org/resource/Preston_Love_Jr."
+        "label" : "Mads Mikkelsen",
+        "uri" : "http://dbpedia.org/resource/Mads_Mikkelsen"
       }, {
-        "label" : "Prince Dmitri Alexandrovich of Russia",
-        "uri" : "http://dbpedia.org/resource/Prince_Dmitri_Alexandrovich_of_Russia"
+        "label" : "Mae Clarke",
+        "uri" : "http://dbpedia.org/resource/Mae_Clarke"
       } ]
     },
     "combination" : false
   }, {
     "id" : "5",
+    "lexicalEntryUri" : "http://localhost:8080#developed",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "WORK",
+    "frameType" : "APP",
+    "sentences" : [ "What is developed by ($x | PERSON_NP)?", "What was developed by ($x | PERSON_NP)?", "Which work is developed by ($x | PERSON_NP)?", "Which work was developed by ($x | PERSON_NP)?", "Which works are developed by ($x | PERSON_NP)?", "Which works were developed by ($x | PERSON_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "OpenLink Software",
+        "uri" : "http://dbpedia.org/resource/OpenLink_Software"
+      }, {
+        "label" : "5th Cell",
+        "uri" : "http://dbpedia.org/resource/5th_Cell"
+      }, {
+        "label" : "7th Level",
+        "uri" : "http://dbpedia.org/resource/7th_Level"
+      }, {
+        "label" : "7th Sky Entertainment",
+        "uri" : "http://dbpedia.org/resource/7th_Sky_Entertainment"
+      }, {
+        "label" : "989 Studios",
+        "uri" : "http://dbpedia.org/resource/989_Studios"
+      }, {
+        "label" : "A2A Simulations",
+        "uri" : "http://dbpedia.org/resource/A2A_Simulations"
+      }, {
+        "label" : "ABS-CBN News and Current Affairs",
+        "uri" : "http://dbpedia.org/resource/ABS-CBN_News_and_Current_Affairs"
+      }, {
+        "label" : "ADK (company)",
+        "uri" : "http://dbpedia.org/resource/ADK_(company)"
+      }, {
+        "label" : "AH-Software",
+        "uri" : "http://dbpedia.org/resource/AH-Software"
+      }, {
+        "label" : "AIG/Lincoln",
+        "uri" : "http://dbpedia.org/resource/AIG/Lincoln"
+      }, {
+        "label" : "ALcot",
+        "uri" : "http://dbpedia.org/resource/ALcot"
+      }, {
+        "label" : "ANSI C",
+        "uri" : "http://dbpedia.org/resource/ANSI_C"
+      }, {
+        "label" : "Luc Bernard",
+        "uri" : "http://dbpedia.org/resource/Luc_Bernard"
+      }, {
+        "label" : "LucasArts",
+        "uri" : "http://dbpedia.org/resource/LucasArts"
+      }, {
+        "label" : "Lucas Learning",
+        "uri" : "http://dbpedia.org/resource/Lucas_Learning"
+      }, {
+        "label" : "Lucas Pope",
+        "uri" : "http://dbpedia.org/resource/Lucas_Pope"
+      }, {
+        "label" : "Lucee",
+        "uri" : "http://dbpedia.org/resource/Lucee"
+      }, {
+        "label" : "Lucid Games",
+        "uri" : "http://dbpedia.org/resource/Lucid_Games"
+      }, {
+        "label" : "Lucy Cousins",
+        "uri" : "http://dbpedia.org/resource/Lucy_Cousins"
+      }, {
+        "label" : "Ludwig Maximilian University of Munich",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Maximilian_University_of_Munich"
+      }, {
+        "label" : "Luiz Fernando Carvalho",
+        "uri" : "http://dbpedia.org/resource/Luiz_Fernando_Carvalho"
+      }, {
+        "label" : "Luke Davies",
+        "uri" : "http://dbpedia.org/resource/Luke_Davies"
+      }, {
+        "label" : "Luke Pearson",
+        "uri" : "http://dbpedia.org/resource/Luke_Pearson"
+      }, {
+        "label" : "Luminous Productions",
+        "uri" : "http://dbpedia.org/resource/Luminous_Productions"
+      }, {
+        "label" : "Lund University",
+        "uri" : "http://dbpedia.org/resource/Lund_University"
+      }, {
+        "label" : "Lycos",
+        "uri" : "http://dbpedia.org/resource/Lycos"
+      }, {
+        "label" : "Lynne Jolitz",
+        "uri" : "http://dbpedia.org/resource/Lynne_Jolitz"
+      }, {
+        "label" : "László Németh",
+        "uri" : "http://dbpedia.org/resource/László_Németh"
+      }, {
+        "label" : "M-Net",
+        "uri" : "http://dbpedia.org/resource/M-Net"
+      }, {
+        "label" : "M.A. Fortin",
+        "uri" : "http://dbpedia.org/resource/M.A._Fortin"
+      }, {
+        "label" : "M2 (game developer)",
+        "uri" : "http://dbpedia.org/resource/M2_(game_developer)"
+      }, {
+        "label" : "MAG Interactive",
+        "uri" : "http://dbpedia.org/resource/MAG_Interactive"
+      }, {
+        "label" : "MAXON Computer GmbH",
+        "uri" : "http://dbpedia.org/resource/MAXON_Computer_GmbH"
+      }, {
+        "label" : "MC2-Microïds",
+        "uri" : "http://dbpedia.org/resource/MC2-Microïds"
+      }, {
+        "label" : "MC2 France",
+        "uri" : "http://dbpedia.org/resource/MC2_France"
+      }, {
+        "label" : "MD Productions",
+        "uri" : "http://dbpedia.org/resource/MD_Productions"
+      }, {
+        "label" : "MECC",
+        "uri" : "http://dbpedia.org/resource/MECC"
+      }, {
+        "label" : "MGM Resorts International",
+        "uri" : "http://dbpedia.org/resource/MGM_Resorts_International"
+      }, {
+        "label" : "MGM Television",
+        "uri" : "http://dbpedia.org/resource/MGM_Television"
+      }, {
+        "label" : "MIPS Technologies",
+        "uri" : "http://dbpedia.org/resource/MIPS_Technologies"
+      }, {
+        "label" : "MIT",
+        "uri" : "http://dbpedia.org/resource/MIT"
+      }, {
+        "label" : "MIT Computer Science and Artificial Intelligence Laboratory",
+        "uri" : "http://dbpedia.org/resource/MIT_Computer_Science_and_Artificial_Intelligence_Laboratory"
+      }, {
+        "label" : "MIT Media Lab",
+        "uri" : "http://dbpedia.org/resource/MIT_Media_Lab"
+      }, {
+        "label" : "MLB Network",
+        "uri" : "http://dbpedia.org/resource/MLB_Network"
+      }, {
+        "label" : "MOL (company)",
+        "uri" : "http://dbpedia.org/resource/MOL_(company)"
+      }, {
+        "label" : "MPL Communications",
+        "uri" : "http://dbpedia.org/resource/MPL_Communications"
+      }, {
+        "label" : "MS-DOS",
+        "uri" : "http://dbpedia.org/resource/MS-DOS"
+      }, {
+        "label" : "MSP360",
+        "uri" : "http://dbpedia.org/resource/MSP360"
+      }, {
+        "label" : "MSX2",
+        "uri" : "http://dbpedia.org/resource/MSX2"
+      }, {
+        "label" : "MTO (video game company)",
+        "uri" : "http://dbpedia.org/resource/MTO_(video_game_company)"
+      }, {
+        "label" : "MTR Corporation",
+        "uri" : "http://dbpedia.org/resource/MTR_Corporation"
+      }, {
+        "label" : "MTV",
+        "uri" : "http://dbpedia.org/resource/MTV"
+      }, {
+        "label" : "MVRDV",
+        "uri" : "http://dbpedia.org/resource/MVRDV"
+      }, {
+        "label" : "Mabrouk El Mechri",
+        "uri" : "http://dbpedia.org/resource/Mabrouk_El_Mechri"
+      }, {
+        "label" : "MacPlay",
+        "uri" : "http://dbpedia.org/resource/MacPlay"
+      }, {
+        "label" : "MacSoft",
+        "uri" : "http://dbpedia.org/resource/MacSoft"
+      }, {
+        "label" : "Mac OS X",
+        "uri" : "http://dbpedia.org/resource/Mac_OS_X"
+      }, {
+        "label" : "Macedonian Radio Television",
+        "uri" : "http://dbpedia.org/resource/Macedonian_Radio_Television"
+      }, {
+        "label" : "MachineGames",
+        "uri" : "http://dbpedia.org/resource/MachineGames"
+      }, {
+        "label" : "Machine Shop co.",
+        "uri" : "http://dbpedia.org/resource/Machine_Shop_co."
+      }, {
+        "label" : "Machine Zone",
+        "uri" : "http://dbpedia.org/resource/Machine_Zone"
+      }, {
+        "label" : "Maciej Stachowiak",
+        "uri" : "http://dbpedia.org/resource/Maciej_Stachowiak"
+      }, {
+        "label" : "Mackinac Center for Public Policy",
+        "uri" : "http://dbpedia.org/resource/Mackinac_Center_for_Public_Policy"
+      }, {
+        "label" : "Macromedia",
+        "uri" : "http://dbpedia.org/resource/Macromedia"
+      }, {
+        "label" : "Macrospace",
+        "uri" : "http://dbpedia.org/resource/Macrospace"
+      }, {
+        "label" : "Mad Catz",
+        "uri" : "http://dbpedia.org/resource/Mad_Catz"
+      }, {
+        "label" : "Mad Doc Software",
+        "uri" : "http://dbpedia.org/resource/Mad_Doc_Software"
+      }, {
+        "label" : "Madfinger Games",
+        "uri" : "http://dbpedia.org/resource/Madfinger_Games"
+      }, {
+        "label" : "Maemo",
+        "uri" : "http://dbpedia.org/resource/Maemo"
+      }, {
+        "label" : "Mages (company)",
+        "uri" : "http://dbpedia.org/resource/Mages_(company)"
+      }, {
+        "label" : "Magix Software",
+        "uri" : "http://dbpedia.org/resource/Magix_Software"
+      }, {
+        "label" : "Magix Software GmbH",
+        "uri" : "http://dbpedia.org/resource/Magix_Software_GmbH"
+      }, {
+        "label" : "Magnavox",
+        "uri" : "http://dbpedia.org/resource/Magnavox"
+      }, {
+        "label" : "Magnus Manske",
+        "uri" : "http://dbpedia.org/resource/Magnus_Manske"
+      }, {
+        "label" : "Mainsoft",
+        "uri" : "http://dbpedia.org/resource/Mainsoft"
+      }, {
+        "label" : "Mainz",
+        "uri" : "http://dbpedia.org/resource/Mainz"
+      }, {
+        "label" : "Majesco Entertainment",
+        "uri" : "http://dbpedia.org/resource/Majesco_Entertainment"
+      }, {
+        "label" : "Mak Wilson",
+        "uri" : "http://dbpedia.org/resource/Mak_Wilson"
+      }, {
+        "label" : "Malaysian Highway Authority",
+        "uri" : "http://dbpedia.org/resource/Malaysian_Highway_Authority"
+      }, {
+        "label" : "Malaysian Public Works Department",
+        "uri" : "http://dbpedia.org/resource/Malaysian_Public_Works_Department"
+      }, {
+        "label" : "Malibu Comics",
+        "uri" : "http://dbpedia.org/resource/Malibu_Comics"
+      }, {
+        "label" : "Caroli Group",
+        "uri" : "http://dbpedia.org/resource/Caroli_Group"
+      }, {
+        "label" : "Caroline Dries",
+        "uri" : "http://dbpedia.org/resource/Caroline_Dries"
+      }, {
+        "label" : "Carry Lab",
+        "uri" : "http://dbpedia.org/resource/Carry_Lab"
+      }, {
+        "label" : "Carter Covington",
+        "uri" : "http://dbpedia.org/resource/Carter_Covington"
+      }, {
+        "label" : "Castaway Entertainment",
+        "uri" : "http://dbpedia.org/resource/Castaway_Entertainment"
+      }, {
+        "label" : "Bandai Namco Games",
+        "uri" : "http://dbpedia.org/resource/Bandai_Namco_Games"
+      }, {
+        "label" : "Behdad Sami Interactive",
+        "uri" : "http://dbpedia.org/resource/Behdad_Sami_Interactive"
+      }, {
+        "label" : "Behold Studios",
+        "uri" : "http://dbpedia.org/resource/Behold_Studios"
+      }, {
+        "label" : "Ben Richards",
+        "uri" : "http://dbpedia.org/resource/Ben_Richards"
+      }, {
+        "label" : "Boeing Computer Services Co.",
+        "uri" : "http://dbpedia.org/resource/Boeing_Computer_Services_Co."
+      }, {
+        "label" : "Boinx",
+        "uri" : "http://dbpedia.org/resource/Boinx"
+      }, {
+        "label" : "Constantin Sotiropoulos",
+        "uri" : "http://dbpedia.org/resource/Constantin_Sotiropoulos"
+      }, {
+        "label" : "Contrail (company)",
+        "uri" : "http://dbpedia.org/resource/Contrail_(company)"
+      }, {
+        "label" : "Control Data Corporation",
+        "uri" : "http://dbpedia.org/resource/Control_Data_Corporation"
+      }, {
+        "label" : "Convergent Technologies",
+        "uri" : "http://dbpedia.org/resource/Convergent_Technologies"
+      }, {
+        "label" : "Cooking Mama Limited",
+        "uri" : "http://dbpedia.org/resource/Cooking_Mama_Limited"
+      }, {
+        "label" : "Cope-Com",
+        "uri" : "http://dbpedia.org/resource/Cope-Com"
+      }, {
+        "label" : "Coresoft",
+        "uri" : "http://dbpedia.org/resource/Coresoft"
+      }, {
+        "label" : "Corinne Brinkerhoff",
+        "uri" : "http://dbpedia.org/resource/Corinne_Brinkerhoff"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "6",
+    "lexicalEntryUri" : "http://localhost:8080#developed",
+    "language" : "EN",
+    "type" : "NP",
+    "bindingType" : "PERSON",
+    "returnType" : "WORK",
+    "frameType" : "APP",
+    "sentences" : [ "works developed by $x" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "OpenLink Software",
+        "uri" : "http://dbpedia.org/resource/OpenLink_Software"
+      }, {
+        "label" : "5th Cell",
+        "uri" : "http://dbpedia.org/resource/5th_Cell"
+      }, {
+        "label" : "7th Level",
+        "uri" : "http://dbpedia.org/resource/7th_Level"
+      }, {
+        "label" : "7th Sky Entertainment",
+        "uri" : "http://dbpedia.org/resource/7th_Sky_Entertainment"
+      }, {
+        "label" : "989 Studios",
+        "uri" : "http://dbpedia.org/resource/989_Studios"
+      }, {
+        "label" : "A2A Simulations",
+        "uri" : "http://dbpedia.org/resource/A2A_Simulations"
+      }, {
+        "label" : "ABS-CBN News and Current Affairs",
+        "uri" : "http://dbpedia.org/resource/ABS-CBN_News_and_Current_Affairs"
+      }, {
+        "label" : "ADK (company)",
+        "uri" : "http://dbpedia.org/resource/ADK_(company)"
+      }, {
+        "label" : "AH-Software",
+        "uri" : "http://dbpedia.org/resource/AH-Software"
+      }, {
+        "label" : "AIG/Lincoln",
+        "uri" : "http://dbpedia.org/resource/AIG/Lincoln"
+      }, {
+        "label" : "ALcot",
+        "uri" : "http://dbpedia.org/resource/ALcot"
+      }, {
+        "label" : "ANSI C",
+        "uri" : "http://dbpedia.org/resource/ANSI_C"
+      }, {
+        "label" : "Luc Bernard",
+        "uri" : "http://dbpedia.org/resource/Luc_Bernard"
+      }, {
+        "label" : "LucasArts",
+        "uri" : "http://dbpedia.org/resource/LucasArts"
+      }, {
+        "label" : "Lucas Learning",
+        "uri" : "http://dbpedia.org/resource/Lucas_Learning"
+      }, {
+        "label" : "Lucas Pope",
+        "uri" : "http://dbpedia.org/resource/Lucas_Pope"
+      }, {
+        "label" : "Lucee",
+        "uri" : "http://dbpedia.org/resource/Lucee"
+      }, {
+        "label" : "Lucid Games",
+        "uri" : "http://dbpedia.org/resource/Lucid_Games"
+      }, {
+        "label" : "Lucy Cousins",
+        "uri" : "http://dbpedia.org/resource/Lucy_Cousins"
+      }, {
+        "label" : "Ludwig Maximilian University of Munich",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Maximilian_University_of_Munich"
+      }, {
+        "label" : "Luiz Fernando Carvalho",
+        "uri" : "http://dbpedia.org/resource/Luiz_Fernando_Carvalho"
+      }, {
+        "label" : "Luke Davies",
+        "uri" : "http://dbpedia.org/resource/Luke_Davies"
+      }, {
+        "label" : "Luke Pearson",
+        "uri" : "http://dbpedia.org/resource/Luke_Pearson"
+      }, {
+        "label" : "Luminous Productions",
+        "uri" : "http://dbpedia.org/resource/Luminous_Productions"
+      }, {
+        "label" : "Lund University",
+        "uri" : "http://dbpedia.org/resource/Lund_University"
+      }, {
+        "label" : "Lycos",
+        "uri" : "http://dbpedia.org/resource/Lycos"
+      }, {
+        "label" : "Lynne Jolitz",
+        "uri" : "http://dbpedia.org/resource/Lynne_Jolitz"
+      }, {
+        "label" : "László Németh",
+        "uri" : "http://dbpedia.org/resource/László_Németh"
+      }, {
+        "label" : "M-Net",
+        "uri" : "http://dbpedia.org/resource/M-Net"
+      }, {
+        "label" : "M.A. Fortin",
+        "uri" : "http://dbpedia.org/resource/M.A._Fortin"
+      }, {
+        "label" : "M2 (game developer)",
+        "uri" : "http://dbpedia.org/resource/M2_(game_developer)"
+      }, {
+        "label" : "MAG Interactive",
+        "uri" : "http://dbpedia.org/resource/MAG_Interactive"
+      }, {
+        "label" : "MAXON Computer GmbH",
+        "uri" : "http://dbpedia.org/resource/MAXON_Computer_GmbH"
+      }, {
+        "label" : "MC2-Microïds",
+        "uri" : "http://dbpedia.org/resource/MC2-Microïds"
+      }, {
+        "label" : "MC2 France",
+        "uri" : "http://dbpedia.org/resource/MC2_France"
+      }, {
+        "label" : "MD Productions",
+        "uri" : "http://dbpedia.org/resource/MD_Productions"
+      }, {
+        "label" : "MECC",
+        "uri" : "http://dbpedia.org/resource/MECC"
+      }, {
+        "label" : "MGM Resorts International",
+        "uri" : "http://dbpedia.org/resource/MGM_Resorts_International"
+      }, {
+        "label" : "MGM Television",
+        "uri" : "http://dbpedia.org/resource/MGM_Television"
+      }, {
+        "label" : "MIPS Technologies",
+        "uri" : "http://dbpedia.org/resource/MIPS_Technologies"
+      }, {
+        "label" : "MIT",
+        "uri" : "http://dbpedia.org/resource/MIT"
+      }, {
+        "label" : "MIT Computer Science and Artificial Intelligence Laboratory",
+        "uri" : "http://dbpedia.org/resource/MIT_Computer_Science_and_Artificial_Intelligence_Laboratory"
+      }, {
+        "label" : "MIT Media Lab",
+        "uri" : "http://dbpedia.org/resource/MIT_Media_Lab"
+      }, {
+        "label" : "MLB Network",
+        "uri" : "http://dbpedia.org/resource/MLB_Network"
+      }, {
+        "label" : "MOL (company)",
+        "uri" : "http://dbpedia.org/resource/MOL_(company)"
+      }, {
+        "label" : "MPL Communications",
+        "uri" : "http://dbpedia.org/resource/MPL_Communications"
+      }, {
+        "label" : "MS-DOS",
+        "uri" : "http://dbpedia.org/resource/MS-DOS"
+      }, {
+        "label" : "MSP360",
+        "uri" : "http://dbpedia.org/resource/MSP360"
+      }, {
+        "label" : "MSX2",
+        "uri" : "http://dbpedia.org/resource/MSX2"
+      }, {
+        "label" : "MTO (video game company)",
+        "uri" : "http://dbpedia.org/resource/MTO_(video_game_company)"
+      }, {
+        "label" : "MTR Corporation",
+        "uri" : "http://dbpedia.org/resource/MTR_Corporation"
+      }, {
+        "label" : "MTV",
+        "uri" : "http://dbpedia.org/resource/MTV"
+      }, {
+        "label" : "MVRDV",
+        "uri" : "http://dbpedia.org/resource/MVRDV"
+      }, {
+        "label" : "Mabrouk El Mechri",
+        "uri" : "http://dbpedia.org/resource/Mabrouk_El_Mechri"
+      }, {
+        "label" : "MacPlay",
+        "uri" : "http://dbpedia.org/resource/MacPlay"
+      }, {
+        "label" : "MacSoft",
+        "uri" : "http://dbpedia.org/resource/MacSoft"
+      }, {
+        "label" : "Mac OS X",
+        "uri" : "http://dbpedia.org/resource/Mac_OS_X"
+      }, {
+        "label" : "Macedonian Radio Television",
+        "uri" : "http://dbpedia.org/resource/Macedonian_Radio_Television"
+      }, {
+        "label" : "MachineGames",
+        "uri" : "http://dbpedia.org/resource/MachineGames"
+      }, {
+        "label" : "Machine Shop co.",
+        "uri" : "http://dbpedia.org/resource/Machine_Shop_co."
+      }, {
+        "label" : "Machine Zone",
+        "uri" : "http://dbpedia.org/resource/Machine_Zone"
+      }, {
+        "label" : "Maciej Stachowiak",
+        "uri" : "http://dbpedia.org/resource/Maciej_Stachowiak"
+      }, {
+        "label" : "Mackinac Center for Public Policy",
+        "uri" : "http://dbpedia.org/resource/Mackinac_Center_for_Public_Policy"
+      }, {
+        "label" : "Macromedia",
+        "uri" : "http://dbpedia.org/resource/Macromedia"
+      }, {
+        "label" : "Macrospace",
+        "uri" : "http://dbpedia.org/resource/Macrospace"
+      }, {
+        "label" : "Mad Catz",
+        "uri" : "http://dbpedia.org/resource/Mad_Catz"
+      }, {
+        "label" : "Mad Doc Software",
+        "uri" : "http://dbpedia.org/resource/Mad_Doc_Software"
+      }, {
+        "label" : "Madfinger Games",
+        "uri" : "http://dbpedia.org/resource/Madfinger_Games"
+      }, {
+        "label" : "Maemo",
+        "uri" : "http://dbpedia.org/resource/Maemo"
+      }, {
+        "label" : "Mages (company)",
+        "uri" : "http://dbpedia.org/resource/Mages_(company)"
+      }, {
+        "label" : "Magix Software",
+        "uri" : "http://dbpedia.org/resource/Magix_Software"
+      }, {
+        "label" : "Magix Software GmbH",
+        "uri" : "http://dbpedia.org/resource/Magix_Software_GmbH"
+      }, {
+        "label" : "Magnavox",
+        "uri" : "http://dbpedia.org/resource/Magnavox"
+      }, {
+        "label" : "Magnus Manske",
+        "uri" : "http://dbpedia.org/resource/Magnus_Manske"
+      }, {
+        "label" : "Mainsoft",
+        "uri" : "http://dbpedia.org/resource/Mainsoft"
+      }, {
+        "label" : "Mainz",
+        "uri" : "http://dbpedia.org/resource/Mainz"
+      }, {
+        "label" : "Majesco Entertainment",
+        "uri" : "http://dbpedia.org/resource/Majesco_Entertainment"
+      }, {
+        "label" : "Mak Wilson",
+        "uri" : "http://dbpedia.org/resource/Mak_Wilson"
+      }, {
+        "label" : "Malaysian Highway Authority",
+        "uri" : "http://dbpedia.org/resource/Malaysian_Highway_Authority"
+      }, {
+        "label" : "Malaysian Public Works Department",
+        "uri" : "http://dbpedia.org/resource/Malaysian_Public_Works_Department"
+      }, {
+        "label" : "Malibu Comics",
+        "uri" : "http://dbpedia.org/resource/Malibu_Comics"
+      }, {
+        "label" : "Caroli Group",
+        "uri" : "http://dbpedia.org/resource/Caroli_Group"
+      }, {
+        "label" : "Caroline Dries",
+        "uri" : "http://dbpedia.org/resource/Caroline_Dries"
+      }, {
+        "label" : "Carry Lab",
+        "uri" : "http://dbpedia.org/resource/Carry_Lab"
+      }, {
+        "label" : "Carter Covington",
+        "uri" : "http://dbpedia.org/resource/Carter_Covington"
+      }, {
+        "label" : "Castaway Entertainment",
+        "uri" : "http://dbpedia.org/resource/Castaway_Entertainment"
+      }, {
+        "label" : "Bandai Namco Games",
+        "uri" : "http://dbpedia.org/resource/Bandai_Namco_Games"
+      }, {
+        "label" : "Behdad Sami Interactive",
+        "uri" : "http://dbpedia.org/resource/Behdad_Sami_Interactive"
+      }, {
+        "label" : "Behold Studios",
+        "uri" : "http://dbpedia.org/resource/Behold_Studios"
+      }, {
+        "label" : "Ben Richards",
+        "uri" : "http://dbpedia.org/resource/Ben_Richards"
+      }, {
+        "label" : "Boeing Computer Services Co.",
+        "uri" : "http://dbpedia.org/resource/Boeing_Computer_Services_Co."
+      }, {
+        "label" : "Boinx",
+        "uri" : "http://dbpedia.org/resource/Boinx"
+      }, {
+        "label" : "Constantin Sotiropoulos",
+        "uri" : "http://dbpedia.org/resource/Constantin_Sotiropoulos"
+      }, {
+        "label" : "Contrail (company)",
+        "uri" : "http://dbpedia.org/resource/Contrail_(company)"
+      }, {
+        "label" : "Control Data Corporation",
+        "uri" : "http://dbpedia.org/resource/Control_Data_Corporation"
+      }, {
+        "label" : "Convergent Technologies",
+        "uri" : "http://dbpedia.org/resource/Convergent_Technologies"
+      }, {
+        "label" : "Cooking Mama Limited",
+        "uri" : "http://dbpedia.org/resource/Cooking_Mama_Limited"
+      }, {
+        "label" : "Cope-Com",
+        "uri" : "http://dbpedia.org/resource/Cope-Com"
+      }, {
+        "label" : "Coresoft",
+        "uri" : "http://dbpedia.org/resource/Coresoft"
+      }, {
+        "label" : "Corinne Brinkerhoff",
+        "uri" : "http://dbpedia.org/resource/Corinne_Brinkerhoff"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "7",
     "lexicalEntryUri" : null,
     "language" : "EN",
     "type" : "SENTENCE",

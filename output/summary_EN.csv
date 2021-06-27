@@ -1,3 +1,5 @@
 "lexicalEntry","numberOfGrammarRules","numberOfQuestions","frameType"
-"http://localhost:8080#deathPlace_of","2","65","NPP"
-"http://localhost:8080#father_of","2","116","NPP"
+"http://localhost:8080#develop","1","25","VP"
+"http://localhost:8080#developed","2","188","APP"
+"http://localhost:8080#play","1","58","VP"
+"http://localhost:8080#played","2","123","APP"
