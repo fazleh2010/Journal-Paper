@@ -249,7 +249,7 @@ public class QueGG {
         grammarWrapper.getGrammarEntries().addAll(generatorRoot.generateCombinations(grammarWrapper.getGrammarEntries()));
 
         for (GrammarEntry grammarEntry : grammarWrapper.getGrammarEntries()) {
-            System.out.println("grammarEntry::"+grammarEntry);
+            //System.out.println("grammarEntry::"+grammarEntry);
             grammarEntry.setId(String.valueOf(grammarWrapper.getGrammarEntries().indexOf(grammarEntry) + 1));
         }
 
@@ -323,7 +323,7 @@ public class QueGG {
                 workbook = new HSSFWorkbook();
             }
         } else {
-            System.out.println("test test");
+            //System.out.println("test test");
         }*/
     // Get the workbook instance for XLS file
     //Workbook workbook = new HSSFWorkbook(inputStream);
@@ -367,7 +367,7 @@ public class QueGG {
                     default:
                 }
             }
-            System.out.println("");
+            //System.out.println("");
         }
 
     }*/

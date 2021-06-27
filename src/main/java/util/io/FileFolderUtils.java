@@ -93,7 +93,7 @@ public class FileFolderUtils {
             }
 
         } catch (Exception exp) {
-            System.out.println("file not found!!");
+            System.err.println("file not found!!");
             return new ArrayList<File>();
         }
 
@@ -111,7 +111,7 @@ public class FileFolderUtils {
             }
 
         } catch (Exception exp) {
-            System.out.println("file not found!!");
+            System.err.println("file not found!!");
             return new ArrayList<File>();
         }
 
@@ -155,7 +155,7 @@ public class FileFolderUtils {
                 }
             }
         } catch (Exception exp) {
-            System.out.println("file not found!!");
+            System.err.println("file not found!!");
             return new ArrayList<String>();
         }
         return selectedFiles;
@@ -278,7 +278,7 @@ public class FileFolderUtils {
             }
             reader.close();
         } catch (IOException e) {
-            System.out.println("the file " + fileName + " does not exist" + e.getMessage());
+            System.err.println("the file " + fileName + " does not exist" + e.getMessage());
             e.printStackTrace();
         }
         return selectedWords;
@@ -325,8 +325,8 @@ public class FileFolderUtils {
             }
             size = size + 1;
         }
-        System.out.println("finalWords:" + finalWords.size());
-        System.out.println("finalWords:" + finalWords);
+        //System.out.println("finalWords:" + finalWords.size());
+        //System.out.println("finalWords:" + finalWords);
 
         return finalWords;
     }
@@ -347,7 +347,7 @@ public class FileFolderUtils {
         }
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
-            System.out.println(str);
+            //System.out.println(str);
             writer.write(str);
             writer.close();
         } catch (IOException ex) {
@@ -411,7 +411,7 @@ public class FileFolderUtils {
                             }
 
                             index = index + 1;
-                            System.out.println(index + "line= " + line);
+                            //System.out.println(index + "line= " + line);
                             //anchor=anchor.toLowerCase().replaceAll(" ", "_").strip();
                             //kb=kb.strip();
                             anchor = anchor.stripLeading();
@@ -421,7 +421,7 @@ public class FileFolderUtils {
                     }
                 }
             }
-            System.out.println("total= " + index);
+            //System.out.println("total= " + index);
             reader.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -446,7 +446,7 @@ public class FileFolderUtils {
         FileFolderUtils.createDirectory(location);
         for (String word : interestingEntitities.keySet()) {
             String finalFileName = location + word + ".json";
-            System.out.println("finalFileName:" + finalFileName);
+            //System.out.println("finalFileName:" + finalFileName);
             List<String> entityList = interestingEntitities.get(word);
             ObjectMapper mapper = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT);
             mapper.writeValue(Paths.get(finalFileName).toFile(), entityList);
@@ -473,16 +473,7 @@ public class FileFolderUtils {
         mapper.writeValue(Paths.get(fileName).toFile(), units);
     }
 
-    public static void deleteFiles(List<File> files) {
-        for (File file : files) {
-            if (file.delete()) {
-                System.out.println("File deleted successfully");
-            } else {
-                System.out.println("Failed to delete the file");
-            }
-        }
-
-    }
+    
 
     public static String urlUnicodeToString(String url) throws Exception {
         URI uri = new URI(url);
@@ -545,7 +536,7 @@ public class FileFolderUtils {
             if (fileType.contains("mb")) {
                 Double fileSizeNumber = Double.parseDouble(info[0]);
                 if (fileSizeNumber > limit) {
-                    System.out.println("fileSize:::::::" + fileSize);
+                    //System.out.println("fileSize:::::::" + fileSize);
                     return true;
                 }
             } else {

@@ -68,25 +68,25 @@ public class CsvFile implements CsvConstants {
 
     public void writeToCSV(List<String[]> csvData) {
         if (csvData.isEmpty()) {
-            System.out.println("writing csv file failed!!!");
+            System.err.println("writing csv file failed!!!");
             return;
         }
         try ( CSVWriter writer = new CSVWriter(new FileWriter(this.filename))) {
             writer.writeAll(csvData);
         } catch (IOException ex) {
-            System.out.println("writing csv file failed!!!" + ex.getMessage());
+            System.err.println("writing csv file failed!!!" + ex.getMessage());
         }
     }
 
     public void writeToCSV(File newQaldFile, List<String[]> csvData) {
         if (csvData.isEmpty()) {
-            System.out.println("writing csv file failed!!!");
+            System.err.println("writing csv file failed!!!");
             return;
         }
         try ( CSVWriter writer = new CSVWriter(new FileWriter(newQaldFile))) {
             writer.writeAll(csvData);
         } catch (IOException ex) {
-            System.out.println("writing csv file failed!!!" + ex.getMessage());
+            System.err.println("writing csv file failed!!!" + ex.getMessage());
         }
     }
 
@@ -118,7 +118,7 @@ public class CsvFile implements CsvConstants {
             
             if (FileFolderUtils.isFileBig(qaldFile, limit)) {
                 rows = generateLinebyLine(qaldFile,lineLimit);
-                System.out.println("@@@@@@@@@@@@@@@@@@@@@@" + qaldFile.getName()+" size:"+rows.size());
+                //System.out.println("@@@@@@@@@@@@@@@@@@@@@@" + qaldFile.getName()+" size:"+rows.size());
             } else {
                 reader = new CSVReader(new FileReader(qaldFile));
                 rows = reader.readAll();
@@ -147,7 +147,7 @@ public class CsvFile implements CsvConstants {
         List<String[]> rows = new ArrayList<String[]>();
 
         /*if (FileFolderUtils.isFileSizeManageable(qaldFile, 40.0)) {
-            System.out.println("..........." + qaldFile.getName());
+            //System.out.println("..........." + qaldFile.getName());
             return rows;
         }*/
         Stack<String> stack = new Stack<String>();
@@ -155,7 +155,7 @@ public class CsvFile implements CsvConstants {
         try {
             /*if (!FileFolderUtils.isFileBig(qaldFile, 100.0)) {
                 rows = generateLinebyLine(qaldFile);
-                 System.out.println("@@@@@@@@@@@@@@@@@@@@@@" + qaldFile.getName()+" size:"+rows.size());
+                 //System.out.println("@@@@@@@@@@@@@@@@@@@@@@" + qaldFile.getName()+" size:"+rows.size());
             } else*/ {
                 reader = new CSVReader(new FileReader(qaldFile));
                 rows = reader.readAll();

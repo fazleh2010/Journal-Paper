@@ -93,7 +93,7 @@ import com.google.api.services.sheets.v4.model.ValueRange;
 import java.io.*;
 import java.security.GeneralSecurityException;
 import java.util.*;
-import util.io.Summary;
+import util.io.Statistics;
 
 /**
  *
@@ -119,7 +119,7 @@ public class ReadAndWriteQuestions {
     public String questionAnswerFile = null;
     public String questionSummaryFile = null;
     private Set<String> excludes = new HashSet<String>();
-    private Map<String, Summary> summary = new TreeMap<String, Summary>();
+    private Map<String, Statistics> summary = new TreeMap<String, Statistics>();
 
     private Integer maxNumberOfEntities = 100;
     private static final org.apache.logging.log4j.Logger LOG = LogManager.getLogger(ReadAndWriteQuestions.class);
@@ -180,10 +180,10 @@ public class ReadAndWriteQuestions {
                     String uri = grammarEntryUnit.getLexicalEntryUri().toString();
 
                     if (this.summary.containsKey(uri)) {
-                        Summary summary = this.summary.get(uri);
-                        this.summary.put(uri, new Summary(grammarEntryUnit.getFrameType(), summary.getNumberOfGrammarRules() + 1, noIndex));
+                        Statistics summary = this.summary.get(uri);
+                        this.summary.put(uri, new Statistics(grammarEntryUnit.getFrameType(), summary.getNumberOfGrammarRules() + 1, noIndex));
                     } else {
-                        Summary summary = new Summary(grammarEntryUnit.getFrameType(), 1, noIndex);
+                        Statistics summary = new Statistics(grammarEntryUnit.getFrameType(), 1, noIndex);
                         this.summary.put(uri, summary);
                     }
                 }
@@ -191,7 +191,7 @@ public class ReadAndWriteQuestions {
             }
         }
         this.writeSummary(this.summary);
-        System.out.println("this.summary::" + this.summary);
+        //System.out.println("this.summary::" + this.summary);
         this.csvWriterQuestions.close();
         this.csvWriterSummary.close();
 
@@ -206,8 +206,8 @@ public class ReadAndWriteQuestions {
             }
             //System.out.println("index: " + index + " size:" + uriLabels.size() + " uriLabel:::" + uriLabel.getUri() + " labe::" + uriLabel.getLabel());
             String questionForShow = questions.iterator().next();
-            /*if(questionForShow.contains("Where is $x located?"))
-                continue;*/
+            if(questionForShow.contains("Where is $x located?"))
+                continue;
 
             Pair<String, String> pair = this.getAnswerFromWikipedia(uriLabel.getUri(), sparqlOrg, frameType);
             String sparql = pair.component1();
@@ -224,6 +224,7 @@ public class ReadAndWriteQuestions {
                         break;
                     }
                     for (String question : questions) {
+                        //System.out.println(question);
                         if (question.contains("(") && question.contains(")")) {
                             String result = StringUtils.substringBetween(question, "(", ")");
                             question = question.replace(result, "X");
@@ -341,7 +342,7 @@ public class ReadAndWriteQuestions {
                 questionT = questionT.stripLeading().trim();
                 String sparql = row[1];
                 String answer = row[2];
-                //System.out.println("id::" + id + " uriLabel::" + uriLabel + " question::" + questionT + " sparql::" + sparql + " answer::" + answer);
+                System.out.println("id::" + id + " uriLabel::" + uriLabel + " question::" + questionT + " sparql::" + sparql + " answer::" + answer);
                 String[] record = {id, questionT, sparql, answer};
                 this.csvWriterQuestions.writeNext(record);
                 rowIndex = rowIndex + 1;
@@ -369,12 +370,12 @@ public class ReadAndWriteQuestions {
         return sparql;
     }
 
-    private void writeSummary(Map<String, Summary> summary) {
+    private void writeSummary(Map<String, Statistics> summary) {
         if (summary.isEmpty()) {
             return;
         }
         for (String key : summary.keySet()) {
-            Summary element = summary.get(key);
+            Statistics element = summary.get(key);
             String[] record = {key,element.getNumberOfGrammarRules().toString(), element.getNumberOfQuestions().toString(), element.getFrameType()};
             this.csvWriterSummary.writeNext(record);
 

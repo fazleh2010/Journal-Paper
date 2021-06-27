@@ -9,12 +9,12 @@ package util.io;
  *
  * @author elahi
  */
-public class Summary {
+public class Statistics {
     private String frameType=null;
     private Integer numberOfGrammarRules=null;
     private Integer numberOfQuestions=null;
     
-    public Summary(String frameType,Integer numberOfGrammarRules,Integer numberOfQuestions){
+    public Statistics(String frameType,Integer numberOfGrammarRules,Integer numberOfQuestions){
        this.frameType=frameType;
        this.numberOfGrammarRules=numberOfGrammarRules;
        this.numberOfQuestions=numberOfQuestions;

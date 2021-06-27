@@ -189,7 +189,7 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                             np = generateNPOrAP(sentenceTokens, object, lexicalEntryUtil).get(annotatedNoun.getNumber());
                             sentenceArray[rootToken.get().getPosition()] = np;
                         } catch (Exception ex) {
-                            System.out.println("failed to generate Noun Phrase"+ ex.getMessage());
+                            System.err.println("failed to generate Noun Phrase"+ ex.getMessage());
                             java.util.logging.Logger.getLogger(SentenceBuilderCopulativePP.class.getName()).log(Level.SEVERE, null, ex);
                         }
                         
@@ -393,9 +393,9 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                 URI detRef = npDeterminer.get().getLocalReference();
                 LexicalEntry entry = new LexiconSearch(lexicalEntryUtil.getLexicon()).getReferencedResource(detRef);
                 try{
-                    System.out.println("lexicalEntryUtil.getLexicon()::" + lexicalEntryUtil.getLexicon());
-                    System.out.println("entry::" + entry);
-                    System.out.println("detRef::" + detRef);
+                    //System.out.println("lexicalEntryUtil.getLexicon()::" + lexicalEntryUtil.getLexicon());
+                    //System.out.println("entry::" + entry);
+                    //System.out.println("detRef::" + detRef);
                     determiner = entry.getCanonicalForm().getWrittenRep().value;
                 }
                 catch(Exception ex){

@@ -19,7 +19,7 @@ public class GoogleXslSheet {
     public static Integer InTransitFrameSyntacticFrameIndex = 6;
     public static String NounPPFrameStr = "NounPPFrame";
     public static String TransitiveFrameStr = "TransitiveFrame";
-    public static String IntransitivePPFrameStr = "IntransitivePPFrame";
+    public static String IntransitivePPFrameStr = "InTransitiveFrame";
 
 
     public static class NounPPFrame {

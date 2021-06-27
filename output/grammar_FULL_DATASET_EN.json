@@ -1,6 +1,1286 @@
 {
   "grammarEntries" : [ {
     "id" : "1",
+    "lexicalEntryUri" : "http://localhost:8080#father_of",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the father of ($x | PERSON_NP)", "Tell me the father of ($x | PERSON_NP)", "What is the father of ($x | PERSON_NP)?", "What was the father of ($x | PERSON_NP)?", "Which person is the father of ($x | PERSON_NP)?", "Which person was the father of ($x | PERSON_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/father> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "A. J. Mohammad Ali",
+        "uri" : "http://dbpedia.org/resource/A._J._Mohammad_Ali"
+      }, {
+        "label" : "Lu Ji (Gongji)",
+        "uri" : "http://dbpedia.org/resource/Lu_Ji_(Gongji)"
+      }, {
+        "label" : "Lu Jing",
+        "uri" : "http://dbpedia.org/resource/Lu_Jing"
+      }, {
+        "label" : "Lu Kang (Three Kingdoms)",
+        "uri" : "http://dbpedia.org/resource/Lu_Kang_(Three_Kingdoms)"
+      }, {
+        "label" : "Lubna Khalid Al Qasimi",
+        "uri" : "http://dbpedia.org/resource/Lubna_Khalid_Al_Qasimi"
+      }, {
+        "label" : "Luciana Genro",
+        "uri" : "http://dbpedia.org/resource/Luciana_Genro"
+      }, {
+        "label" : "Lucius Fairchild",
+        "uri" : "http://dbpedia.org/resource/Lucius_Fairchild"
+      }, {
+        "label" : "Lucius Quintus Cincinnatus Lamar",
+        "uri" : "http://dbpedia.org/resource/Lucius_Quintus_Cincinnatus_Lamar"
+      }, {
+        "label" : "Ludwig Adamovich Jr.",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Adamovich_Jr."
+      }, {
+        "label" : "Luis A. Eguiguren",
+        "uri" : "http://dbpedia.org/resource/Luis_A._Eguiguren"
+      }, {
+        "label" : "Luis Abinader",
+        "uri" : "http://dbpedia.org/resource/Luis_Abinader"
+      }, {
+        "label" : "Lü Ju",
+        "uri" : "http://dbpedia.org/resource/Lü_Ju"
+      }, {
+        "label" : "Ma Chao",
+        "uri" : "http://dbpedia.org/resource/Ma_Chao"
+      }, {
+        "label" : "Maci (politician)",
+        "uri" : "http://dbpedia.org/resource/Maci_(politician)"
+      }, {
+        "label" : "Madina Abilqasymova",
+        "uri" : "http://dbpedia.org/resource/Madina_Abilqasymova"
+      }, {
+        "label" : "Maeda Toshiie",
+        "uri" : "http://dbpedia.org/resource/Maeda_Toshiie"
+      }, {
+        "label" : "Maeda Toshinaga",
+        "uri" : "http://dbpedia.org/resource/Maeda_Toshinaga"
+      }, {
+        "label" : "Maeda Toshitsune",
+        "uri" : "http://dbpedia.org/resource/Maeda_Toshitsune"
+      }, {
+        "label" : "Mahendra Bishnoi",
+        "uri" : "http://dbpedia.org/resource/Mahendra_Bishnoi"
+      }, {
+        "label" : "Mahendra Singh Yadav",
+        "uri" : "http://dbpedia.org/resource/Mahendra_Singh_Yadav"
+      }, {
+        "label" : "Mahfuzur Rahaman",
+        "uri" : "http://dbpedia.org/resource/Mahfuzur_Rahaman"
+      }, {
+        "label" : "Mahi B. Chowdhury",
+        "uri" : "http://dbpedia.org/resource/Mahi_B._Chowdhury"
+      }, {
+        "label" : "Mahjabeen Khaled",
+        "uri" : "http://dbpedia.org/resource/Mahjabeen_Khaled"
+      }, {
+        "label" : "Mahmood Madani",
+        "uri" : "http://dbpedia.org/resource/Mahmood_Madani"
+      }, {
+        "label" : "Maksim Vučinić",
+        "uri" : "http://dbpedia.org/resource/Maksim_Vučinić"
+      }, {
+        "label" : "Maktoum bin Rashid Al Maktoum",
+        "uri" : "http://dbpedia.org/resource/Maktoum_bin_Rashid_Al_Maktoum"
+      }, {
+        "label" : "Caroline Le Couteur",
+        "uri" : "http://dbpedia.org/resource/Caroline_Le_Couteur"
+      }, {
+        "label" : "Uddhav Thackeray",
+        "uri" : "http://dbpedia.org/resource/Uddhav_Thackeray"
+      }, {
+        "label" : "Uesugi Harunori",
+        "uri" : "http://dbpedia.org/resource/Uesugi_Harunori"
+      }, {
+        "label" : "Uesugi Kagekatsu",
+        "uri" : "http://dbpedia.org/resource/Uesugi_Kagekatsu"
+      }, {
+        "label" : "Uesugi Narinori",
+        "uri" : "http://dbpedia.org/resource/Uesugi_Narinori"
+      }, {
+        "label" : "Uesugi Tsunakatsu",
+        "uri" : "http://dbpedia.org/resource/Uesugi_Tsunakatsu"
+      }, {
+        "label" : "Uhuru Kenyatta",
+        "uri" : "http://dbpedia.org/resource/Uhuru_Kenyatta"
+      }, {
+        "label" : "Ujir Singh Thapa",
+        "uri" : "http://dbpedia.org/resource/Ujir_Singh_Thapa"
+      }, {
+        "label" : "Umesh Nandkumar Patel",
+        "uri" : "http://dbpedia.org/resource/Umesh_Nandkumar_Patel"
+      }, {
+        "label" : "V. Parameswaran Nayar",
+        "uri" : "http://dbpedia.org/resource/V._Parameswaran_Nayar"
+      }, {
+        "label" : "Vahideh Taleghani",
+        "uri" : "http://dbpedia.org/resource/Vahideh_Taleghani"
+      }, {
+        "label" : "Varsha Gaikwad",
+        "uri" : "http://dbpedia.org/resource/Varsha_Gaikwad"
+      }, {
+        "label" : "Varun Gandhi",
+        "uri" : "http://dbpedia.org/resource/Varun_Gandhi"
+      }, {
+        "label" : "Vasco Fernandes Coutinho, captain of Espírito Santo",
+        "uri" : "http://dbpedia.org/resource/Vasco_Fernandes_Coutinho,_captain_of_Espírito_Santo"
+      }, {
+        "label" : "Vasco da Gama",
+        "uri" : "http://dbpedia.org/resource/Vasco_da_Gama"
+      }, {
+        "label" : "Dal Singh (politician)",
+        "uri" : "http://dbpedia.org/resource/Dal_Singh_(politician)"
+      }, {
+        "label" : "Ukita Hideie",
+        "uri" : "http://dbpedia.org/resource/Ukita_Hideie"
+      }, {
+        "label" : "Han Chan Piet",
+        "uri" : "http://dbpedia.org/resource/Han_Chan_Piet"
+      }, {
+        "label" : "Han Kik Ko",
+        "uri" : "http://dbpedia.org/resource/Han_Kik_Ko"
+      }, {
+        "label" : "Muhammad ibn Abi Hudhayfa",
+        "uri" : "http://dbpedia.org/resource/Muhammad_ibn_Abi_Hudhayfa"
+      }, {
+        "label" : "Rida Khan",
+        "uri" : "http://dbpedia.org/resource/Rida_Khan"
+      }, {
+        "label" : "Krishnarao Pant Pratinidhi",
+        "uri" : "http://dbpedia.org/resource/Krishnarao_Pant_Pratinidhi"
+      }, {
+        "label" : "Majeed Ullah Khan Farhat",
+        "uri" : "http://dbpedia.org/resource/Majeed_Ullah_Khan_Farhat"
+      }, {
+        "label" : "Mansur al-Atrash",
+        "uri" : "http://dbpedia.org/resource/Mansur_al-Atrash"
+      }, {
+        "label" : "Minamoto no Yoritomo",
+        "uri" : "http://dbpedia.org/resource/Minamoto_no_Yoritomo"
+      }, {
+        "label" : "Moinul Islam Khan",
+        "uri" : "http://dbpedia.org/resource/Moinul_Islam_Khan"
+      }, {
+        "label" : "Sardar Riaz Mehmood Khan Mazari",
+        "uri" : "http://dbpedia.org/resource/Sardar_Riaz_Mehmood_Khan_Mazari"
+      }, {
+        "label" : "Bill Workman",
+        "uri" : "http://dbpedia.org/resource/Bill_Workman"
+      }, {
+        "label" : "Billy McLean (politician)",
+        "uri" : "http://dbpedia.org/resource/Billy_McLean_(politician)"
+      }, {
+        "label" : "Bimalendra Nidhi",
+        "uri" : "http://dbpedia.org/resource/Bimalendra_Nidhi"
+      }, {
+        "label" : "Bir Keshar Pande",
+        "uri" : "http://dbpedia.org/resource/Bir_Keshar_Pande"
+      }, {
+        "label" : "Blanche Cavendish, Countess of Burlington",
+        "uri" : "http://dbpedia.org/resource/Blanche_Cavendish,_Countess_of_Burlington"
+      }, {
+        "label" : "Boris Tadić",
+        "uri" : "http://dbpedia.org/resource/Boris_Tadić"
+      }, {
+        "label" : "Abbasqoli Mo'tamad-dawla Javanshir",
+        "uri" : "http://dbpedia.org/resource/Abbasqoli_Mo'tamad-dawla_Javanshir"
+      }, {
+        "label" : "Deepender Singh Hooda",
+        "uri" : "http://dbpedia.org/resource/Deepender_Singh_Hooda"
+      }, {
+        "label" : "Derek Bok",
+        "uri" : "http://dbpedia.org/resource/Derek_Bok"
+      }, {
+        "label" : "Dharmendra Pradhan",
+        "uri" : "http://dbpedia.org/resource/Dharmendra_Pradhan"
+      }, {
+        "label" : "Dhir Shamsher Rana",
+        "uri" : "http://dbpedia.org/resource/Dhir_Shamsher_Rana"
+      }, {
+        "label" : "Dhiraj Deshmukh",
+        "uri" : "http://dbpedia.org/resource/Dhiraj_Deshmukh"
+      }, {
+        "label" : "Dhokal Singh Basnyat",
+        "uri" : "http://dbpedia.org/resource/Dhokal_Singh_Basnyat"
+      }, {
+        "label" : "Dido Harding",
+        "uri" : "http://dbpedia.org/resource/Dido_Harding"
+      }, {
+        "label" : "Dilip Babasaheb Bhosale",
+        "uri" : "http://dbpedia.org/resource/Dilip_Babasaheb_Bhosale"
+      }, {
+        "label" : "Dipu Moni",
+        "uri" : "http://dbpedia.org/resource/Dipu_Moni"
+      }, {
+        "label" : "Dirk Gysbert van Breda",
+        "uri" : "http://dbpedia.org/resource/Dirk_Gysbert_van_Breda"
+      }, {
+        "label" : "Diya Kumari",
+        "uri" : "http://dbpedia.org/resource/Diya_Kumari"
+      }, {
+        "label" : "Dominic Asquith",
+        "uri" : "http://dbpedia.org/resource/Dominic_Asquith"
+      }, {
+        "label" : "Dominic Hubbard, 6th Baron Addington",
+        "uri" : "http://dbpedia.org/resource/Dominic_Hubbard,_6th_Baron_Addington"
+      }, {
+        "label" : "Gongsun Gong",
+        "uri" : "http://dbpedia.org/resource/Gongsun_Gong"
+      }, {
+        "label" : "Gongsun Kang",
+        "uri" : "http://dbpedia.org/resource/Gongsun_Kang"
+      }, {
+        "label" : "Gopal Sharan Nath Shahdeo",
+        "uri" : "http://dbpedia.org/resource/Gopal_Sharan_Nath_Shahdeo"
+      }, {
+        "label" : "Gottfried Höch",
+        "uri" : "http://dbpedia.org/resource/Gottfried_Höch"
+      }, {
+        "label" : "Govind Singh Thakur",
+        "uri" : "http://dbpedia.org/resource/Govind_Singh_Thakur"
+      }, {
+        "label" : "Grace Meng",
+        "uri" : "http://dbpedia.org/resource/Grace_Meng"
+      }, {
+        "label" : "Greta Neubauer",
+        "uri" : "http://dbpedia.org/resource/Greta_Neubauer"
+      }, {
+        "label" : "Grigory Potemkin",
+        "uri" : "http://dbpedia.org/resource/Grigory_Potemkin"
+      }, {
+        "label" : "Gu Cheng (Three Kingdoms)",
+        "uri" : "http://dbpedia.org/resource/Gu_Cheng_(Three_Kingdoms)"
+      }, {
+        "label" : "Gu Shao",
+        "uri" : "http://dbpedia.org/resource/Gu_Shao"
+      }, {
+        "label" : "Gu Tan",
+        "uri" : "http://dbpedia.org/resource/Gu_Tan"
+      }, {
+        "label" : "Gulabrao Jedhe",
+        "uri" : "http://dbpedia.org/resource/Gulabrao_Jedhe"
+      }, {
+        "label" : "Gulnara Karimova",
+        "uri" : "http://dbpedia.org/resource/Gulnara_Karimova"
+      }, {
+        "label" : "Khadga Shamsher Jang Bahadur Rana",
+        "uri" : "http://dbpedia.org/resource/Khadga_Shamsher_Jang_Bahadur_Rana"
+      }, {
+        "label" : "Khalifa bin Salman Al Khalifa",
+        "uri" : "http://dbpedia.org/resource/Khalifa_bin_Salman_Al_Khalifa"
+      }, {
+        "label" : "Khawaja Muhammad Asif",
+        "uri" : "http://dbpedia.org/resource/Khawaja_Muhammad_Asif"
+      }, {
+        "label" : "Khurram Dastgir Khan",
+        "uri" : "http://dbpedia.org/resource/Khurram_Dastgir_Khan"
+      }, {
+        "label" : "Khurshid Mahmud Kasuri",
+        "uri" : "http://dbpedia.org/resource/Khurshid_Mahmud_Kasuri"
+      }, {
+        "label" : "Kikkawa Hiroie",
+        "uri" : "http://dbpedia.org/resource/Kikkawa_Hiroie"
+      }, {
+        "label" : "Kimbrough Stone",
+        "uri" : "http://dbpedia.org/resource/Kimbrough_Stone"
+      }, {
+        "label" : "Kiran Shamsher Rana",
+        "uri" : "http://dbpedia.org/resource/Kiran_Shamsher_Rana"
+      }, {
+        "label" : "Kirti Azad",
+        "uri" : "http://dbpedia.org/resource/Kirti_Azad"
+      }, {
+        "label" : "Kirtiman Singh Basnyat",
+        "uri" : "http://dbpedia.org/resource/Kirtiman_Singh_Basnyat"
+      }, {
+        "label" : "Kiuchi Kyō",
+        "uri" : "http://dbpedia.org/resource/Kiuchi_Kyō"
+      }, {
+        "label" : "Kolusu Parthasarathy",
+        "uri" : "http://dbpedia.org/resource/Kolusu_Parthasarathy"
+      }, {
+        "label" : "Preston Love Jr.",
+        "uri" : "http://dbpedia.org/resource/Preston_Love_Jr."
+      }, {
+        "label" : "Prince Dmitri Alexandrovich of Russia",
+        "uri" : "http://dbpedia.org/resource/Prince_Dmitri_Alexandrovich_of_Russia"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "2",
+    "lexicalEntryUri" : "http://localhost:8080#father_of",
+    "language" : "EN",
+    "type" : "NP",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "the father of $x" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/father> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "A. J. Mohammad Ali",
+        "uri" : "http://dbpedia.org/resource/A._J._Mohammad_Ali"
+      }, {
+        "label" : "Lu Ji (Gongji)",
+        "uri" : "http://dbpedia.org/resource/Lu_Ji_(Gongji)"
+      }, {
+        "label" : "Lu Jing",
+        "uri" : "http://dbpedia.org/resource/Lu_Jing"
+      }, {
+        "label" : "Lu Kang (Three Kingdoms)",
+        "uri" : "http://dbpedia.org/resource/Lu_Kang_(Three_Kingdoms)"
+      }, {
+        "label" : "Lubna Khalid Al Qasimi",
+        "uri" : "http://dbpedia.org/resource/Lubna_Khalid_Al_Qasimi"
+      }, {
+        "label" : "Luciana Genro",
+        "uri" : "http://dbpedia.org/resource/Luciana_Genro"
+      }, {
+        "label" : "Lucius Fairchild",
+        "uri" : "http://dbpedia.org/resource/Lucius_Fairchild"
+      }, {
+        "label" : "Lucius Quintus Cincinnatus Lamar",
+        "uri" : "http://dbpedia.org/resource/Lucius_Quintus_Cincinnatus_Lamar"
+      }, {
+        "label" : "Ludwig Adamovich Jr.",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Adamovich_Jr."
+      }, {
+        "label" : "Luis A. Eguiguren",
+        "uri" : "http://dbpedia.org/resource/Luis_A._Eguiguren"
+      }, {
+        "label" : "Luis Abinader",
+        "uri" : "http://dbpedia.org/resource/Luis_Abinader"
+      }, {
+        "label" : "Lü Ju",
+        "uri" : "http://dbpedia.org/resource/Lü_Ju"
+      }, {
+        "label" : "Ma Chao",
+        "uri" : "http://dbpedia.org/resource/Ma_Chao"
+      }, {
+        "label" : "Maci (politician)",
+        "uri" : "http://dbpedia.org/resource/Maci_(politician)"
+      }, {
+        "label" : "Madina Abilqasymova",
+        "uri" : "http://dbpedia.org/resource/Madina_Abilqasymova"
+      }, {
+        "label" : "Maeda Toshiie",
+        "uri" : "http://dbpedia.org/resource/Maeda_Toshiie"
+      }, {
+        "label" : "Maeda Toshinaga",
+        "uri" : "http://dbpedia.org/resource/Maeda_Toshinaga"
+      }, {
+        "label" : "Maeda Toshitsune",
+        "uri" : "http://dbpedia.org/resource/Maeda_Toshitsune"
+      }, {
+        "label" : "Mahendra Bishnoi",
+        "uri" : "http://dbpedia.org/resource/Mahendra_Bishnoi"
+      }, {
+        "label" : "Mahendra Singh Yadav",
+        "uri" : "http://dbpedia.org/resource/Mahendra_Singh_Yadav"
+      }, {
+        "label" : "Mahfuzur Rahaman",
+        "uri" : "http://dbpedia.org/resource/Mahfuzur_Rahaman"
+      }, {
+        "label" : "Mahi B. Chowdhury",
+        "uri" : "http://dbpedia.org/resource/Mahi_B._Chowdhury"
+      }, {
+        "label" : "Mahjabeen Khaled",
+        "uri" : "http://dbpedia.org/resource/Mahjabeen_Khaled"
+      }, {
+        "label" : "Mahmood Madani",
+        "uri" : "http://dbpedia.org/resource/Mahmood_Madani"
+      }, {
+        "label" : "Maksim Vučinić",
+        "uri" : "http://dbpedia.org/resource/Maksim_Vučinić"
+      }, {
+        "label" : "Maktoum bin Rashid Al Maktoum",
+        "uri" : "http://dbpedia.org/resource/Maktoum_bin_Rashid_Al_Maktoum"
+      }, {
+        "label" : "Caroline Le Couteur",
+        "uri" : "http://dbpedia.org/resource/Caroline_Le_Couteur"
+      }, {
+        "label" : "Uddhav Thackeray",
+        "uri" : "http://dbpedia.org/resource/Uddhav_Thackeray"
+      }, {
+        "label" : "Uesugi Harunori",
+        "uri" : "http://dbpedia.org/resource/Uesugi_Harunori"
+      }, {
+        "label" : "Uesugi Kagekatsu",
+        "uri" : "http://dbpedia.org/resource/Uesugi_Kagekatsu"
+      }, {
+        "label" : "Uesugi Narinori",
+        "uri" : "http://dbpedia.org/resource/Uesugi_Narinori"
+      }, {
+        "label" : "Uesugi Tsunakatsu",
+        "uri" : "http://dbpedia.org/resource/Uesugi_Tsunakatsu"
+      }, {
+        "label" : "Uhuru Kenyatta",
+        "uri" : "http://dbpedia.org/resource/Uhuru_Kenyatta"
+      }, {
+        "label" : "Ujir Singh Thapa",
+        "uri" : "http://dbpedia.org/resource/Ujir_Singh_Thapa"
+      }, {
+        "label" : "Umesh Nandkumar Patel",
+        "uri" : "http://dbpedia.org/resource/Umesh_Nandkumar_Patel"
+      }, {
+        "label" : "V. Parameswaran Nayar",
+        "uri" : "http://dbpedia.org/resource/V._Parameswaran_Nayar"
+      }, {
+        "label" : "Vahideh Taleghani",
+        "uri" : "http://dbpedia.org/resource/Vahideh_Taleghani"
+      }, {
+        "label" : "Varsha Gaikwad",
+        "uri" : "http://dbpedia.org/resource/Varsha_Gaikwad"
+      }, {
+        "label" : "Varun Gandhi",
+        "uri" : "http://dbpedia.org/resource/Varun_Gandhi"
+      }, {
+        "label" : "Vasco Fernandes Coutinho, captain of Espírito Santo",
+        "uri" : "http://dbpedia.org/resource/Vasco_Fernandes_Coutinho,_captain_of_Espírito_Santo"
+      }, {
+        "label" : "Vasco da Gama",
+        "uri" : "http://dbpedia.org/resource/Vasco_da_Gama"
+      }, {
+        "label" : "Dal Singh (politician)",
+        "uri" : "http://dbpedia.org/resource/Dal_Singh_(politician)"
+      }, {
+        "label" : "Ukita Hideie",
+        "uri" : "http://dbpedia.org/resource/Ukita_Hideie"
+      }, {
+        "label" : "Han Chan Piet",
+        "uri" : "http://dbpedia.org/resource/Han_Chan_Piet"
+      }, {
+        "label" : "Han Kik Ko",
+        "uri" : "http://dbpedia.org/resource/Han_Kik_Ko"
+      }, {
+        "label" : "Muhammad ibn Abi Hudhayfa",
+        "uri" : "http://dbpedia.org/resource/Muhammad_ibn_Abi_Hudhayfa"
+      }, {
+        "label" : "Rida Khan",
+        "uri" : "http://dbpedia.org/resource/Rida_Khan"
+      }, {
+        "label" : "Krishnarao Pant Pratinidhi",
+        "uri" : "http://dbpedia.org/resource/Krishnarao_Pant_Pratinidhi"
+      }, {
+        "label" : "Majeed Ullah Khan Farhat",
+        "uri" : "http://dbpedia.org/resource/Majeed_Ullah_Khan_Farhat"
+      }, {
+        "label" : "Mansur al-Atrash",
+        "uri" : "http://dbpedia.org/resource/Mansur_al-Atrash"
+      }, {
+        "label" : "Minamoto no Yoritomo",
+        "uri" : "http://dbpedia.org/resource/Minamoto_no_Yoritomo"
+      }, {
+        "label" : "Moinul Islam Khan",
+        "uri" : "http://dbpedia.org/resource/Moinul_Islam_Khan"
+      }, {
+        "label" : "Sardar Riaz Mehmood Khan Mazari",
+        "uri" : "http://dbpedia.org/resource/Sardar_Riaz_Mehmood_Khan_Mazari"
+      }, {
+        "label" : "Bill Workman",
+        "uri" : "http://dbpedia.org/resource/Bill_Workman"
+      }, {
+        "label" : "Billy McLean (politician)",
+        "uri" : "http://dbpedia.org/resource/Billy_McLean_(politician)"
+      }, {
+        "label" : "Bimalendra Nidhi",
+        "uri" : "http://dbpedia.org/resource/Bimalendra_Nidhi"
+      }, {
+        "label" : "Bir Keshar Pande",
+        "uri" : "http://dbpedia.org/resource/Bir_Keshar_Pande"
+      }, {
+        "label" : "Blanche Cavendish, Countess of Burlington",
+        "uri" : "http://dbpedia.org/resource/Blanche_Cavendish,_Countess_of_Burlington"
+      }, {
+        "label" : "Boris Tadić",
+        "uri" : "http://dbpedia.org/resource/Boris_Tadić"
+      }, {
+        "label" : "Abbasqoli Mo'tamad-dawla Javanshir",
+        "uri" : "http://dbpedia.org/resource/Abbasqoli_Mo'tamad-dawla_Javanshir"
+      }, {
+        "label" : "Deepender Singh Hooda",
+        "uri" : "http://dbpedia.org/resource/Deepender_Singh_Hooda"
+      }, {
+        "label" : "Derek Bok",
+        "uri" : "http://dbpedia.org/resource/Derek_Bok"
+      }, {
+        "label" : "Dharmendra Pradhan",
+        "uri" : "http://dbpedia.org/resource/Dharmendra_Pradhan"
+      }, {
+        "label" : "Dhir Shamsher Rana",
+        "uri" : "http://dbpedia.org/resource/Dhir_Shamsher_Rana"
+      }, {
+        "label" : "Dhiraj Deshmukh",
+        "uri" : "http://dbpedia.org/resource/Dhiraj_Deshmukh"
+      }, {
+        "label" : "Dhokal Singh Basnyat",
+        "uri" : "http://dbpedia.org/resource/Dhokal_Singh_Basnyat"
+      }, {
+        "label" : "Dido Harding",
+        "uri" : "http://dbpedia.org/resource/Dido_Harding"
+      }, {
+        "label" : "Dilip Babasaheb Bhosale",
+        "uri" : "http://dbpedia.org/resource/Dilip_Babasaheb_Bhosale"
+      }, {
+        "label" : "Dipu Moni",
+        "uri" : "http://dbpedia.org/resource/Dipu_Moni"
+      }, {
+        "label" : "Dirk Gysbert van Breda",
+        "uri" : "http://dbpedia.org/resource/Dirk_Gysbert_van_Breda"
+      }, {
+        "label" : "Diya Kumari",
+        "uri" : "http://dbpedia.org/resource/Diya_Kumari"
+      }, {
+        "label" : "Dominic Asquith",
+        "uri" : "http://dbpedia.org/resource/Dominic_Asquith"
+      }, {
+        "label" : "Dominic Hubbard, 6th Baron Addington",
+        "uri" : "http://dbpedia.org/resource/Dominic_Hubbard,_6th_Baron_Addington"
+      }, {
+        "label" : "Gongsun Gong",
+        "uri" : "http://dbpedia.org/resource/Gongsun_Gong"
+      }, {
+        "label" : "Gongsun Kang",
+        "uri" : "http://dbpedia.org/resource/Gongsun_Kang"
+      }, {
+        "label" : "Gopal Sharan Nath Shahdeo",
+        "uri" : "http://dbpedia.org/resource/Gopal_Sharan_Nath_Shahdeo"
+      }, {
+        "label" : "Gottfried Höch",
+        "uri" : "http://dbpedia.org/resource/Gottfried_Höch"
+      }, {
+        "label" : "Govind Singh Thakur",
+        "uri" : "http://dbpedia.org/resource/Govind_Singh_Thakur"
+      }, {
+        "label" : "Grace Meng",
+        "uri" : "http://dbpedia.org/resource/Grace_Meng"
+      }, {
+        "label" : "Greta Neubauer",
+        "uri" : "http://dbpedia.org/resource/Greta_Neubauer"
+      }, {
+        "label" : "Grigory Potemkin",
+        "uri" : "http://dbpedia.org/resource/Grigory_Potemkin"
+      }, {
+        "label" : "Gu Cheng (Three Kingdoms)",
+        "uri" : "http://dbpedia.org/resource/Gu_Cheng_(Three_Kingdoms)"
+      }, {
+        "label" : "Gu Shao",
+        "uri" : "http://dbpedia.org/resource/Gu_Shao"
+      }, {
+        "label" : "Gu Tan",
+        "uri" : "http://dbpedia.org/resource/Gu_Tan"
+      }, {
+        "label" : "Gulabrao Jedhe",
+        "uri" : "http://dbpedia.org/resource/Gulabrao_Jedhe"
+      }, {
+        "label" : "Gulnara Karimova",
+        "uri" : "http://dbpedia.org/resource/Gulnara_Karimova"
+      }, {
+        "label" : "Khadga Shamsher Jang Bahadur Rana",
+        "uri" : "http://dbpedia.org/resource/Khadga_Shamsher_Jang_Bahadur_Rana"
+      }, {
+        "label" : "Khalifa bin Salman Al Khalifa",
+        "uri" : "http://dbpedia.org/resource/Khalifa_bin_Salman_Al_Khalifa"
+      }, {
+        "label" : "Khawaja Muhammad Asif",
+        "uri" : "http://dbpedia.org/resource/Khawaja_Muhammad_Asif"
+      }, {
+        "label" : "Khurram Dastgir Khan",
+        "uri" : "http://dbpedia.org/resource/Khurram_Dastgir_Khan"
+      }, {
+        "label" : "Khurshid Mahmud Kasuri",
+        "uri" : "http://dbpedia.org/resource/Khurshid_Mahmud_Kasuri"
+      }, {
+        "label" : "Kikkawa Hiroie",
+        "uri" : "http://dbpedia.org/resource/Kikkawa_Hiroie"
+      }, {
+        "label" : "Kimbrough Stone",
+        "uri" : "http://dbpedia.org/resource/Kimbrough_Stone"
+      }, {
+        "label" : "Kiran Shamsher Rana",
+        "uri" : "http://dbpedia.org/resource/Kiran_Shamsher_Rana"
+      }, {
+        "label" : "Kirti Azad",
+        "uri" : "http://dbpedia.org/resource/Kirti_Azad"
+      }, {
+        "label" : "Kirtiman Singh Basnyat",
+        "uri" : "http://dbpedia.org/resource/Kirtiman_Singh_Basnyat"
+      }, {
+        "label" : "Kiuchi Kyō",
+        "uri" : "http://dbpedia.org/resource/Kiuchi_Kyō"
+      }, {
+        "label" : "Kolusu Parthasarathy",
+        "uri" : "http://dbpedia.org/resource/Kolusu_Parthasarathy"
+      }, {
+        "label" : "Preston Love Jr.",
+        "uri" : "http://dbpedia.org/resource/Preston_Love_Jr."
+      }, {
+        "label" : "Prince Dmitri Alexandrovich of Russia",
+        "uri" : "http://dbpedia.org/resource/Prince_Dmitri_Alexandrovich_of_Russia"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "lexicalEntryUri" : "http://localhost:8080#deathPlace_of",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the death place of ($x | PERSON_NP)", "Tell me the death place of ($x | PERSON_NP)", "What is the death place of ($x | PERSON_NP)?", "What was the death place of ($x | PERSON_NP)?", "Which place is the death place of ($x | PERSON_NP)?", "Which place was the death place of ($x | PERSON_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "2013 Hialeah shooting",
+        "uri" : "http://dbpedia.org/resource/2013_Hialeah_shooting"
+      }, {
+        "label" : "2013 Santa Monica shooting",
+        "uri" : "http://dbpedia.org/resource/2013_Santa_Monica_shooting"
+      }, {
+        "label" : "2014 Fort Hood shooting",
+        "uri" : "http://dbpedia.org/resource/2014_Fort_Hood_shooting"
+      }, {
+        "label" : "2014 Isla Vista killings",
+        "uri" : "http://dbpedia.org/resource/2014_Isla_Vista_killings"
+      }, {
+        "label" : "2014 Las Vegas shootings",
+        "uri" : "http://dbpedia.org/resource/2014_Las_Vegas_shootings"
+      }, {
+        "label" : "2014 Queens hatchet attack",
+        "uri" : "http://dbpedia.org/resource/2014_Queens_hatchet_attack"
+      }, {
+        "label" : "2014 killings of NYPD officers",
+        "uri" : "http://dbpedia.org/resource/2014_killings_of_NYPD_officers"
+      }, {
+        "label" : "2014 shootings at Parliament Hill, Ottawa",
+        "uri" : "http://dbpedia.org/resource/2014_shootings_at_Parliament_Hill,_Ottawa"
+      }, {
+        "label" : "2015 Chattanooga shootings",
+        "uri" : "http://dbpedia.org/resource/2015_Chattanooga_shootings"
+      }, {
+        "label" : "2015 Lafayette shooting",
+        "uri" : "http://dbpedia.org/resource/2015_Lafayette_shooting"
+      }, {
+        "label" : "2015 Parramatta shooting",
+        "uri" : "http://dbpedia.org/resource/2015_Parramatta_shooting"
+      }, {
+        "label" : "2015 Sousse attacks",
+        "uri" : "http://dbpedia.org/resource/2015_Sousse_attacks"
+      }, {
+        "label" : "2015 Tyrone shooting",
+        "uri" : "http://dbpedia.org/resource/2015_Tyrone_shooting"
+      }, {
+        "label" : "2016 Berlin truck attack",
+        "uri" : "http://dbpedia.org/resource/2016_Berlin_truck_attack"
+      }, {
+        "label" : "2016 Munich shooting",
+        "uri" : "http://dbpedia.org/resource/2016_Munich_shooting"
+      }, {
+        "label" : "2016 UCLA shooting",
+        "uri" : "http://dbpedia.org/resource/2016_UCLA_shooting"
+      }, {
+        "label" : "2016 shooting of Baton Rouge police officers",
+        "uri" : "http://dbpedia.org/resource/2016_shooting_of_Baton_Rouge_police_officers"
+      }, {
+        "label" : "2016 shooting of Dallas police officers",
+        "uri" : "http://dbpedia.org/resource/2016_shooting_of_Dallas_police_officers"
+      }, {
+        "label" : "2017 Resorts World Manila attack",
+        "uri" : "http://dbpedia.org/resource/2017_Resorts_World_Manila_attack"
+      }, {
+        "label" : "A.L. Monsohn Lithography",
+        "uri" : "http://dbpedia.org/resource/A.L._Monsohn_Lithography"
+      }, {
+        "label" : "A.M. Parkin",
+        "uri" : "http://dbpedia.org/resource/A.M._Parkin"
+      }, {
+        "label" : "A. A. H. Tuttle",
+        "uri" : "http://dbpedia.org/resource/A._A._H._Tuttle"
+      }, {
+        "label" : "A. B. Colton",
+        "uri" : "http://dbpedia.org/resource/A._B._Colton"
+      }, {
+        "label" : "A. B. Guthrie Jr.",
+        "uri" : "http://dbpedia.org/resource/A._B._Guthrie_Jr."
+      }, {
+        "label" : "A. B. Imeson",
+        "uri" : "http://dbpedia.org/resource/A._B._Imeson"
+      }, {
+        "label" : "A. B. Lull",
+        "uri" : "http://dbpedia.org/resource/A._B._Lull"
+      }, {
+        "label" : "A. Bernard Ackerman",
+        "uri" : "http://dbpedia.org/resource/A._Bernard_Ackerman"
+      }, {
+        "label" : "A. C. Lyons",
+        "uri" : "http://dbpedia.org/resource/A._C._Lyons"
+      }, {
+        "label" : "A. Duncan Carse",
+        "uri" : "http://dbpedia.org/resource/A._Duncan_Carse"
+      }, {
+        "label" : "A. E. Coleby",
+        "uri" : "http://dbpedia.org/resource/A._E._Coleby"
+      }, {
+        "label" : "A. Gordon Wetmore",
+        "uri" : "http://dbpedia.org/resource/A._Gordon_Wetmore"
+      }, {
+        "label" : "A. H. Hornby",
+        "uri" : "http://dbpedia.org/resource/A._H._Hornby"
+      }, {
+        "label" : "A. K. Brohi",
+        "uri" : "http://dbpedia.org/resource/A._K._Brohi"
+      }, {
+        "label" : "A. K. Veerasami",
+        "uri" : "http://dbpedia.org/resource/A._K._Veerasami"
+      }, {
+        "label" : "A. L. Narayan",
+        "uri" : "http://dbpedia.org/resource/A._L._Narayan"
+      }, {
+        "label" : "A. L. Raghavan",
+        "uri" : "http://dbpedia.org/resource/A._L._Raghavan"
+      }, {
+        "label" : "A. Lakshmanaswami Mudaliar",
+        "uri" : "http://dbpedia.org/resource/A._Lakshmanaswami_Mudaliar"
+      }, {
+        "label" : "A. N. Gopal",
+        "uri" : "http://dbpedia.org/resource/A._N._Gopal"
+      }, {
+        "label" : "A. P. Mda",
+        "uri" : "http://dbpedia.org/resource/A._P._Mda"
+      }, {
+        "label" : "A. Q. M. Jainul Abedin",
+        "uri" : "http://dbpedia.org/resource/A._Q._M._Jainul_Abedin"
+      }, {
+        "label" : "A. R. Krishnashastry",
+        "uri" : "http://dbpedia.org/resource/A._R._Krishnashastry"
+      }, {
+        "label" : "A. R. Manu",
+        "uri" : "http://dbpedia.org/resource/A._R._Manu"
+      }, {
+        "label" : "A. R. Sahu Khan",
+        "uri" : "http://dbpedia.org/resource/A._R._Sahu_Khan"
+      }, {
+        "label" : "A. Rangaswami Iyengar",
+        "uri" : "http://dbpedia.org/resource/A._Rangaswami_Iyengar"
+      }, {
+        "label" : "A. S. Baylinson",
+        "uri" : "http://dbpedia.org/resource/A._S._Baylinson"
+      }, {
+        "label" : "A. S. Rao",
+        "uri" : "http://dbpedia.org/resource/A._S._Rao"
+      }, {
+        "label" : "A. S. W. Rosenbach",
+        "uri" : "http://dbpedia.org/resource/A._S._W._Rosenbach"
+      }, {
+        "label" : "A. Subbarayalu Reddiar",
+        "uri" : "http://dbpedia.org/resource/A._Subbarayalu_Reddiar"
+      }, {
+        "label" : "A. T. Hill",
+        "uri" : "http://dbpedia.org/resource/A._T._Hill"
+      }, {
+        "label" : "A. T. M. Wilson",
+        "uri" : "http://dbpedia.org/resource/A._T._M._Wilson"
+      }, {
+        "label" : "A. V. Bramble",
+        "uri" : "http://dbpedia.org/resource/A._V._Bramble"
+      }, {
+        "label" : "A. Veerappan",
+        "uri" : "http://dbpedia.org/resource/A._Veerappan"
+      }, {
+        "label" : "A. W. Baskcomb",
+        "uri" : "http://dbpedia.org/resource/A._W._Baskcomb"
+      }, {
+        "label" : "A. W. Martin",
+        "uri" : "http://dbpedia.org/resource/A._W._Martin"
+      }, {
+        "label" : "ABM Abul Kashem",
+        "uri" : "http://dbpedia.org/resource/ABM_Abul_Kashem"
+      }, {
+        "label" : "AKM Gouach Uddin",
+        "uri" : "http://dbpedia.org/resource/AKM_Gouach_Uddin"
+      }, {
+        "label" : "Love Gantt",
+        "uri" : "http://dbpedia.org/resource/Love_Gantt"
+      }, {
+        "label" : "Lovebug Starski",
+        "uri" : "http://dbpedia.org/resource/Lovebug_Starski"
+      }, {
+        "label" : "Lovelace Watkins",
+        "uri" : "http://dbpedia.org/resource/Lovelace_Watkins"
+      }, {
+        "label" : "Lovell Coleman",
+        "uri" : "http://dbpedia.org/resource/Lovell_Coleman"
+      }, {
+        "label" : "Lovell Rousseau",
+        "uri" : "http://dbpedia.org/resource/Lovell_Rousseau"
+      }, {
+        "label" : "Lovell Wooldridge",
+        "uri" : "http://dbpedia.org/resource/Lovell_Wooldridge"
+      }, {
+        "label" : "Loveman Noa",
+        "uri" : "http://dbpedia.org/resource/Loveman_Noa"
+      }, {
+        "label" : "Lovick Pierce Thomas, I",
+        "uri" : "http://dbpedia.org/resource/Lovick_Pierce_Thomas,_I"
+      }, {
+        "label" : "Lovie Austin",
+        "uri" : "http://dbpedia.org/resource/Lovie_Austin"
+      }, {
+        "label" : "Lovie Lee",
+        "uri" : "http://dbpedia.org/resource/Lovie_Lee"
+      }, {
+        "label" : "Lowdon Heller",
+        "uri" : "http://dbpedia.org/resource/Lowdon_Heller"
+      }, {
+        "label" : "Lowell A. Reed Jr.",
+        "uri" : "http://dbpedia.org/resource/Lowell_A._Reed_Jr."
+      }, {
+        "label" : "Lowell Blair Nesbitt",
+        "uri" : "http://dbpedia.org/resource/Lowell_Blair_Nesbitt"
+      }, {
+        "label" : "Lowell Fulson",
+        "uri" : "http://dbpedia.org/resource/Lowell_Fulson"
+      }, {
+        "label" : "Lowell Galloway",
+        "uri" : "http://dbpedia.org/resource/Lowell_Galloway"
+      }, {
+        "label" : "Lowell George",
+        "uri" : "http://dbpedia.org/resource/Lowell_George"
+      }, {
+        "label" : "Lowell Gilmore",
+        "uri" : "http://dbpedia.org/resource/Lowell_Gilmore"
+      }, {
+        "label" : "Lowell Johnston",
+        "uri" : "http://dbpedia.org/resource/Lowell_Johnston"
+      }, {
+        "label" : "Lowell K. Bridwell",
+        "uri" : "http://dbpedia.org/resource/Lowell_K._Bridwell"
+      }, {
+        "label" : "Lowell Lee Andrews",
+        "uri" : "http://dbpedia.org/resource/Lowell_Lee_Andrews"
+      }, {
+        "label" : "Lowell Peterson",
+        "uri" : "http://dbpedia.org/resource/Lowell_Peterson"
+      }, {
+        "label" : "Lowell Reed",
+        "uri" : "http://dbpedia.org/resource/Lowell_Reed"
+      }, {
+        "label" : "Lowell Sherman",
+        "uri" : "http://dbpedia.org/resource/Lowell_Sherman"
+      }, {
+        "label" : "Lowell Stockman",
+        "uri" : "http://dbpedia.org/resource/Lowell_Stockman"
+      }, {
+        "label" : "Lowell Thomas",
+        "uri" : "http://dbpedia.org/resource/Lowell_Thomas"
+      }, {
+        "label" : "Lowell Thomas Jr.",
+        "uri" : "http://dbpedia.org/resource/Lowell_Thomas_Jr."
+      }, {
+        "label" : "Lowrie Warrener",
+        "uri" : "http://dbpedia.org/resource/Lowrie_Warrener"
+      }, {
+        "label" : "Loy Allen Bowlin",
+        "uri" : "http://dbpedia.org/resource/Loy_Allen_Bowlin"
+      }, {
+        "label" : "Loy Hanning",
+        "uri" : "http://dbpedia.org/resource/Loy_Hanning"
+      }, {
+        "label" : "Loy W. Henderson",
+        "uri" : "http://dbpedia.org/resource/Loy_W._Henderson"
+      }, {
+        "label" : "Loyal Blaine Aldrich",
+        "uri" : "http://dbpedia.org/resource/Loyal_Blaine_Aldrich"
+      }, {
+        "label" : "Loyal Edwin Knappen",
+        "uri" : "http://dbpedia.org/resource/Loyal_Edwin_Knappen"
+      }, {
+        "label" : "Loyal Griggs",
+        "uri" : "http://dbpedia.org/resource/Loyal_Griggs"
+      }, {
+        "label" : "Loyce Houlton",
+        "uri" : "http://dbpedia.org/resource/Loyce_Houlton"
+      }, {
+        "label" : "Loyd Arms",
+        "uri" : "http://dbpedia.org/resource/Loyd_Arms"
+      }, {
+        "label" : "Loyd Christopher",
+        "uri" : "http://dbpedia.org/resource/Loyd_Christopher"
+      }, {
+        "label" : "Loyd Jowers",
+        "uri" : "http://dbpedia.org/resource/Loyd_Jowers"
+      }, {
+        "label" : "Loye H. Miller",
+        "uri" : "http://dbpedia.org/resource/Loye_H._Miller"
+      }, {
+        "label" : "Loyola O'Connor",
+        "uri" : "http://dbpedia.org/resource/Loyola_O'Connor"
+      }, {
+        "label" : "Loyola de Palacio",
+        "uri" : "http://dbpedia.org/resource/Loyola_de_Palacio"
+      }, {
+        "label" : "Loïc Bouvard",
+        "uri" : "http://dbpedia.org/resource/Loïc_Bouvard"
+      }, {
+        "label" : "Loïc Leferme",
+        "uri" : "http://dbpedia.org/resource/Loïc_Leferme"
+      }, {
+        "label" : "Lu'ay al-Atassi",
+        "uri" : "http://dbpedia.org/resource/Lu'ay_al-Atassi"
+      }, {
+        "label" : "Lu Ann Meredith",
+        "uri" : "http://dbpedia.org/resource/Lu_Ann_Meredith"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "4",
+    "lexicalEntryUri" : "http://localhost:8080#deathPlace_of",
+    "language" : "EN",
+    "type" : "NP",
+    "bindingType" : "PERSON",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "the death place of $x" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "2013 Hialeah shooting",
+        "uri" : "http://dbpedia.org/resource/2013_Hialeah_shooting"
+      }, {
+        "label" : "2013 Santa Monica shooting",
+        "uri" : "http://dbpedia.org/resource/2013_Santa_Monica_shooting"
+      }, {
+        "label" : "2014 Fort Hood shooting",
+        "uri" : "http://dbpedia.org/resource/2014_Fort_Hood_shooting"
+      }, {
+        "label" : "2014 Isla Vista killings",
+        "uri" : "http://dbpedia.org/resource/2014_Isla_Vista_killings"
+      }, {
+        "label" : "2014 Las Vegas shootings",
+        "uri" : "http://dbpedia.org/resource/2014_Las_Vegas_shootings"
+      }, {
+        "label" : "2014 Queens hatchet attack",
+        "uri" : "http://dbpedia.org/resource/2014_Queens_hatchet_attack"
+      }, {
+        "label" : "2014 killings of NYPD officers",
+        "uri" : "http://dbpedia.org/resource/2014_killings_of_NYPD_officers"
+      }, {
+        "label" : "2014 shootings at Parliament Hill, Ottawa",
+        "uri" : "http://dbpedia.org/resource/2014_shootings_at_Parliament_Hill,_Ottawa"
+      }, {
+        "label" : "2015 Chattanooga shootings",
+        "uri" : "http://dbpedia.org/resource/2015_Chattanooga_shootings"
+      }, {
+        "label" : "2015 Lafayette shooting",
+        "uri" : "http://dbpedia.org/resource/2015_Lafayette_shooting"
+      }, {
+        "label" : "2015 Parramatta shooting",
+        "uri" : "http://dbpedia.org/resource/2015_Parramatta_shooting"
+      }, {
+        "label" : "2015 Sousse attacks",
+        "uri" : "http://dbpedia.org/resource/2015_Sousse_attacks"
+      }, {
+        "label" : "2015 Tyrone shooting",
+        "uri" : "http://dbpedia.org/resource/2015_Tyrone_shooting"
+      }, {
+        "label" : "2016 Berlin truck attack",
+        "uri" : "http://dbpedia.org/resource/2016_Berlin_truck_attack"
+      }, {
+        "label" : "2016 Munich shooting",
+        "uri" : "http://dbpedia.org/resource/2016_Munich_shooting"
+      }, {
+        "label" : "2016 UCLA shooting",
+        "uri" : "http://dbpedia.org/resource/2016_UCLA_shooting"
+      }, {
+        "label" : "2016 shooting of Baton Rouge police officers",
+        "uri" : "http://dbpedia.org/resource/2016_shooting_of_Baton_Rouge_police_officers"
+      }, {
+        "label" : "2016 shooting of Dallas police officers",
+        "uri" : "http://dbpedia.org/resource/2016_shooting_of_Dallas_police_officers"
+      }, {
+        "label" : "2017 Resorts World Manila attack",
+        "uri" : "http://dbpedia.org/resource/2017_Resorts_World_Manila_attack"
+      }, {
+        "label" : "A.L. Monsohn Lithography",
+        "uri" : "http://dbpedia.org/resource/A.L._Monsohn_Lithography"
+      }, {
+        "label" : "A.M. Parkin",
+        "uri" : "http://dbpedia.org/resource/A.M._Parkin"
+      }, {
+        "label" : "A. A. H. Tuttle",
+        "uri" : "http://dbpedia.org/resource/A._A._H._Tuttle"
+      }, {
+        "label" : "A. B. Colton",
+        "uri" : "http://dbpedia.org/resource/A._B._Colton"
+      }, {
+        "label" : "A. B. Guthrie Jr.",
+        "uri" : "http://dbpedia.org/resource/A._B._Guthrie_Jr."
+      }, {
+        "label" : "A. B. Imeson",
+        "uri" : "http://dbpedia.org/resource/A._B._Imeson"
+      }, {
+        "label" : "A. B. Lull",
+        "uri" : "http://dbpedia.org/resource/A._B._Lull"
+      }, {
+        "label" : "A. Bernard Ackerman",
+        "uri" : "http://dbpedia.org/resource/A._Bernard_Ackerman"
+      }, {
+        "label" : "A. C. Lyons",
+        "uri" : "http://dbpedia.org/resource/A._C._Lyons"
+      }, {
+        "label" : "A. Duncan Carse",
+        "uri" : "http://dbpedia.org/resource/A._Duncan_Carse"
+      }, {
+        "label" : "A. E. Coleby",
+        "uri" : "http://dbpedia.org/resource/A._E._Coleby"
+      }, {
+        "label" : "A. Gordon Wetmore",
+        "uri" : "http://dbpedia.org/resource/A._Gordon_Wetmore"
+      }, {
+        "label" : "A. H. Hornby",
+        "uri" : "http://dbpedia.org/resource/A._H._Hornby"
+      }, {
+        "label" : "A. K. Brohi",
+        "uri" : "http://dbpedia.org/resource/A._K._Brohi"
+      }, {
+        "label" : "A. K. Veerasami",
+        "uri" : "http://dbpedia.org/resource/A._K._Veerasami"
+      }, {
+        "label" : "A. L. Narayan",
+        "uri" : "http://dbpedia.org/resource/A._L._Narayan"
+      }, {
+        "label" : "A. L. Raghavan",
+        "uri" : "http://dbpedia.org/resource/A._L._Raghavan"
+      }, {
+        "label" : "A. Lakshmanaswami Mudaliar",
+        "uri" : "http://dbpedia.org/resource/A._Lakshmanaswami_Mudaliar"
+      }, {
+        "label" : "A. N. Gopal",
+        "uri" : "http://dbpedia.org/resource/A._N._Gopal"
+      }, {
+        "label" : "A. P. Mda",
+        "uri" : "http://dbpedia.org/resource/A._P._Mda"
+      }, {
+        "label" : "A. Q. M. Jainul Abedin",
+        "uri" : "http://dbpedia.org/resource/A._Q._M._Jainul_Abedin"
+      }, {
+        "label" : "A. R. Krishnashastry",
+        "uri" : "http://dbpedia.org/resource/A._R._Krishnashastry"
+      }, {
+        "label" : "A. R. Manu",
+        "uri" : "http://dbpedia.org/resource/A._R._Manu"
+      }, {
+        "label" : "A. R. Sahu Khan",
+        "uri" : "http://dbpedia.org/resource/A._R._Sahu_Khan"
+      }, {
+        "label" : "A. Rangaswami Iyengar",
+        "uri" : "http://dbpedia.org/resource/A._Rangaswami_Iyengar"
+      }, {
+        "label" : "A. S. Baylinson",
+        "uri" : "http://dbpedia.org/resource/A._S._Baylinson"
+      }, {
+        "label" : "A. S. Rao",
+        "uri" : "http://dbpedia.org/resource/A._S._Rao"
+      }, {
+        "label" : "A. S. W. Rosenbach",
+        "uri" : "http://dbpedia.org/resource/A._S._W._Rosenbach"
+      }, {
+        "label" : "A. Subbarayalu Reddiar",
+        "uri" : "http://dbpedia.org/resource/A._Subbarayalu_Reddiar"
+      }, {
+        "label" : "A. T. Hill",
+        "uri" : "http://dbpedia.org/resource/A._T._Hill"
+      }, {
+        "label" : "A. T. M. Wilson",
+        "uri" : "http://dbpedia.org/resource/A._T._M._Wilson"
+      }, {
+        "label" : "A. V. Bramble",
+        "uri" : "http://dbpedia.org/resource/A._V._Bramble"
+      }, {
+        "label" : "A. Veerappan",
+        "uri" : "http://dbpedia.org/resource/A._Veerappan"
+      }, {
+        "label" : "A. W. Baskcomb",
+        "uri" : "http://dbpedia.org/resource/A._W._Baskcomb"
+      }, {
+        "label" : "A. W. Martin",
+        "uri" : "http://dbpedia.org/resource/A._W._Martin"
+      }, {
+        "label" : "ABM Abul Kashem",
+        "uri" : "http://dbpedia.org/resource/ABM_Abul_Kashem"
+      }, {
+        "label" : "AKM Gouach Uddin",
+        "uri" : "http://dbpedia.org/resource/AKM_Gouach_Uddin"
+      }, {
+        "label" : "Love Gantt",
+        "uri" : "http://dbpedia.org/resource/Love_Gantt"
+      }, {
+        "label" : "Lovebug Starski",
+        "uri" : "http://dbpedia.org/resource/Lovebug_Starski"
+      }, {
+        "label" : "Lovelace Watkins",
+        "uri" : "http://dbpedia.org/resource/Lovelace_Watkins"
+      }, {
+        "label" : "Lovell Coleman",
+        "uri" : "http://dbpedia.org/resource/Lovell_Coleman"
+      }, {
+        "label" : "Lovell Rousseau",
+        "uri" : "http://dbpedia.org/resource/Lovell_Rousseau"
+      }, {
+        "label" : "Lovell Wooldridge",
+        "uri" : "http://dbpedia.org/resource/Lovell_Wooldridge"
+      }, {
+        "label" : "Loveman Noa",
+        "uri" : "http://dbpedia.org/resource/Loveman_Noa"
+      }, {
+        "label" : "Lovick Pierce Thomas, I",
+        "uri" : "http://dbpedia.org/resource/Lovick_Pierce_Thomas,_I"
+      }, {
+        "label" : "Lovie Austin",
+        "uri" : "http://dbpedia.org/resource/Lovie_Austin"
+      }, {
+        "label" : "Lovie Lee",
+        "uri" : "http://dbpedia.org/resource/Lovie_Lee"
+      }, {
+        "label" : "Lowdon Heller",
+        "uri" : "http://dbpedia.org/resource/Lowdon_Heller"
+      }, {
+        "label" : "Lowell A. Reed Jr.",
+        "uri" : "http://dbpedia.org/resource/Lowell_A._Reed_Jr."
+      }, {
+        "label" : "Lowell Blair Nesbitt",
+        "uri" : "http://dbpedia.org/resource/Lowell_Blair_Nesbitt"
+      }, {
+        "label" : "Lowell Fulson",
+        "uri" : "http://dbpedia.org/resource/Lowell_Fulson"
+      }, {
+        "label" : "Lowell Galloway",
+        "uri" : "http://dbpedia.org/resource/Lowell_Galloway"
+      }, {
+        "label" : "Lowell George",
+        "uri" : "http://dbpedia.org/resource/Lowell_George"
+      }, {
+        "label" : "Lowell Gilmore",
+        "uri" : "http://dbpedia.org/resource/Lowell_Gilmore"
+      }, {
+        "label" : "Lowell Johnston",
+        "uri" : "http://dbpedia.org/resource/Lowell_Johnston"
+      }, {
+        "label" : "Lowell K. Bridwell",
+        "uri" : "http://dbpedia.org/resource/Lowell_K._Bridwell"
+      }, {
+        "label" : "Lowell Lee Andrews",
+        "uri" : "http://dbpedia.org/resource/Lowell_Lee_Andrews"
+      }, {
+        "label" : "Lowell Peterson",
+        "uri" : "http://dbpedia.org/resource/Lowell_Peterson"
+      }, {
+        "label" : "Lowell Reed",
+        "uri" : "http://dbpedia.org/resource/Lowell_Reed"
+      }, {
+        "label" : "Lowell Sherman",
+        "uri" : "http://dbpedia.org/resource/Lowell_Sherman"
+      }, {
+        "label" : "Lowell Stockman",
+        "uri" : "http://dbpedia.org/resource/Lowell_Stockman"
+      }, {
+        "label" : "Lowell Thomas",
+        "uri" : "http://dbpedia.org/resource/Lowell_Thomas"
+      }, {
+        "label" : "Lowell Thomas Jr.",
+        "uri" : "http://dbpedia.org/resource/Lowell_Thomas_Jr."
+      }, {
+        "label" : "Lowrie Warrener",
+        "uri" : "http://dbpedia.org/resource/Lowrie_Warrener"
+      }, {
+        "label" : "Loy Allen Bowlin",
+        "uri" : "http://dbpedia.org/resource/Loy_Allen_Bowlin"
+      }, {
+        "label" : "Loy Hanning",
+        "uri" : "http://dbpedia.org/resource/Loy_Hanning"
+      }, {
+        "label" : "Loy W. Henderson",
+        "uri" : "http://dbpedia.org/resource/Loy_W._Henderson"
+      }, {
+        "label" : "Loyal Blaine Aldrich",
+        "uri" : "http://dbpedia.org/resource/Loyal_Blaine_Aldrich"
+      }, {
+        "label" : "Loyal Edwin Knappen",
+        "uri" : "http://dbpedia.org/resource/Loyal_Edwin_Knappen"
+      }, {
+        "label" : "Loyal Griggs",
+        "uri" : "http://dbpedia.org/resource/Loyal_Griggs"
+      }, {
+        "label" : "Loyce Houlton",
+        "uri" : "http://dbpedia.org/resource/Loyce_Houlton"
+      }, {
+        "label" : "Loyd Arms",
+        "uri" : "http://dbpedia.org/resource/Loyd_Arms"
+      }, {
+        "label" : "Loyd Christopher",
+        "uri" : "http://dbpedia.org/resource/Loyd_Christopher"
+      }, {
+        "label" : "Loyd Jowers",
+        "uri" : "http://dbpedia.org/resource/Loyd_Jowers"
+      }, {
+        "label" : "Loye H. Miller",
+        "uri" : "http://dbpedia.org/resource/Loye_H._Miller"
+      }, {
+        "label" : "Loyola O'Connor",
+        "uri" : "http://dbpedia.org/resource/Loyola_O'Connor"
+      }, {
+        "label" : "Loyola de Palacio",
+        "uri" : "http://dbpedia.org/resource/Loyola_de_Palacio"
+      }, {
+        "label" : "Loïc Bouvard",
+        "uri" : "http://dbpedia.org/resource/Loïc_Bouvard"
+      }, {
+        "label" : "Loïc Leferme",
+        "uri" : "http://dbpedia.org/resource/Loïc_Leferme"
+      }, {
+        "label" : "Lu'ay al-Atassi",
+        "uri" : "http://dbpedia.org/resource/Lu'ay_al-Atassi"
+      }, {
+        "label" : "Lu Ann Meredith",
+        "uri" : "http://dbpedia.org/resource/Lu_Ann_Meredith"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "5",
     "lexicalEntryUri" : "http://localhost:8080#develop",
     "language" : "EN",
     "type" : "SENTENCE",
@@ -320,7 +1600,7 @@
     },
     "combination" : false
   }, {
-    "id" : "2",
+    "id" : "6",
     "lexicalEntryUri" : "http://localhost:8080#play",
     "language" : "EN",
     "type" : "SENTENCE",
@@ -640,7 +1920,7 @@
     },
     "combination" : false
   }, {
-    "id" : "3",
+    "id" : "7",
     "lexicalEntryUri" : "http://localhost:8080#played",
     "language" : "EN",
     "type" : "SENTENCE",
@@ -960,7 +2240,7 @@
     },
     "combination" : false
   }, {
-    "id" : "4",
+    "id" : "8",
     "lexicalEntryUri" : "http://localhost:8080#played",
     "language" : "EN",
     "type" : "NP",
@@ -1280,7 +2560,7 @@
     },
     "combination" : false
   }, {
-    "id" : "5",
+    "id" : "9",
     "lexicalEntryUri" : "http://localhost:8080#developed",
     "language" : "EN",
     "type" : "SENTENCE",
@@ -1600,7 +2880,7 @@
     },
     "combination" : false
   }, {
-    "id" : "6",
+    "id" : "10",
     "lexicalEntryUri" : "http://localhost:8080#developed",
     "language" : "EN",
     "type" : "NP",
@@ -1920,7 +3200,647 @@
     },
     "combination" : false
   }, {
-    "id" : "7",
+    "id" : "11",
+    "lexicalEntryUri" : "http://localhost:8080#to_complete_on",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "SONG",
+    "returnType" : "DATE",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the ($x | SONG_NP) released?", "When were the ($x | SONG_NP) released?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/releaseDate> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "1920 (film)",
+        "uri" : "http://dbpedia.org/resource/1920_(film)"
+      }, {
+        "label" : "1945 (Gingrich and Forstchen novel)",
+        "uri" : "http://dbpedia.org/resource/1945_(Gingrich_and_Forstchen_novel)"
+      }, {
+        "label" : "1958 (film)",
+        "uri" : "http://dbpedia.org/resource/1958_(film)"
+      }, {
+        "label" : "1959 (John Anderson song)",
+        "uri" : "http://dbpedia.org/resource/1959_(John_Anderson_song)"
+      }, {
+        "label" : "2013 Viña del Mar International Song Festival",
+        "uri" : "http://dbpedia.org/resource/2013_Viña_del_Mar_International_Song_Festival"
+      }, {
+        "label" : "2014 FIFA World Cup Brazil (video game)",
+        "uri" : "http://dbpedia.org/resource/2014_FIFA_World_Cup_Brazil_(video_game)"
+      }, {
+        "label" : "2015 Idol Star Athletics Basketball Futsal Archery Championships",
+        "uri" : "http://dbpedia.org/resource/2015_Idol_Star_Athletics_Basketball_Futsal_Archery_Championships"
+      }, {
+        "label" : "2015 Idol Star Athletics Ssireum Basketball Futsal Archery Championships",
+        "uri" : "http://dbpedia.org/resource/2015_Idol_Star_Athletics_Ssireum_Basketball_Futsal_Archery_Championships"
+      }, {
+        "label" : "2015 Viña del Mar International Song Festival",
+        "uri" : "http://dbpedia.org/resource/2015_Viña_del_Mar_International_Song_Festival"
+      }, {
+        "label" : "2016 Idol Star Athletics Rhythmic Gymnastics Futsal Archery Championships",
+        "uri" : "http://dbpedia.org/resource/2016_Idol_Star_Athletics_Rhythmic_Gymnastics_Futsal_Archery_Championships"
+      }, {
+        "label" : "2016 Idol Star Athletics Ssireum Futsal Archery Championships",
+        "uri" : "http://dbpedia.org/resource/2016_Idol_Star_Athletics_Ssireum_Futsal_Archery_Championships"
+      }, {
+        "label" : "2016 Viña del Mar International Song Festival",
+        "uri" : "http://dbpedia.org/resource/2016_Viña_del_Mar_International_Song_Festival"
+      }, {
+        "label" : "2017 Idol Star Athletics Archery Rhythmic Gymnastics Aerobics Championships",
+        "uri" : "http://dbpedia.org/resource/2017_Idol_Star_Athletics_Archery_Rhythmic_Gymnastics_Aerobics_Championships"
+      }, {
+        "label" : "2017 KBS Song Festival",
+        "uri" : "http://dbpedia.org/resource/2017_KBS_Song_Festival"
+      }, {
+        "label" : "2017 Viña del Mar International Song Festival",
+        "uri" : "http://dbpedia.org/resource/2017_Viña_del_Mar_International_Song_Festival"
+      }, {
+        "label" : "5 O'Clock (Nonchalant song)",
+        "uri" : "http://dbpedia.org/resource/5_O'Clock_(Nonchalant_song)"
+      }, {
+        "label" : "5 Rebbecca's",
+        "uri" : "http://dbpedia.org/resource/5_Rebbecca's"
+      }, {
+        "label" : "5 Star (Yo Gotti song)",
+        "uri" : "http://dbpedia.org/resource/5_Star_(Yo_Gotti_song)"
+      }, {
+        "label" : "5 minutes avec toi",
+        "uri" : "http://dbpedia.org/resource/5_minutes_avec_toi"
+      }, {
+        "label" : "6-5=2 (2014 film)",
+        "uri" : "http://dbpedia.org/resource/6-5=2_(2014_film)"
+      }, {
+        "label" : "600,000 Francs a Month (1926 film)",
+        "uri" : "http://dbpedia.org/resource/600,000_Francs_a_Month_(1926_film)"
+      }, {
+        "label" : "600,000 Francs a Month (1933 film)",
+        "uri" : "http://dbpedia.org/resource/600,000_Francs_a_Month_(1933_film)"
+      }, {
+        "label" : "6180 the moon",
+        "uri" : "http://dbpedia.org/resource/6180_the_moon"
+      }, {
+        "label" : "61 Garpar Lane",
+        "uri" : "http://dbpedia.org/resource/61_Garpar_Lane"
+      }, {
+        "label" : "64 Mayam",
+        "uri" : "http://dbpedia.org/resource/64_Mayam"
+      }, {
+        "label" : "66 (Lil Yachty song)",
+        "uri" : "http://dbpedia.org/resource/66_(Lil_Yachty_song)"
+      }, {
+        "label" : "6 Feet Underground",
+        "uri" : "http://dbpedia.org/resource/6_Feet_Underground"
+      }, {
+        "label" : "6 Minutes of Pleasure",
+        "uri" : "http://dbpedia.org/resource/6_Minutes_of_Pleasure"
+      }, {
+        "label" : "6 Words",
+        "uri" : "http://dbpedia.org/resource/6_Words"
+      }, {
+        "label" : "7554",
+        "uri" : "http://dbpedia.org/resource/7554"
+      }, {
+        "label" : "77 Rue Chalgrin",
+        "uri" : "http://dbpedia.org/resource/77_Rue_Chalgrin"
+      }, {
+        "label" : "787 (song)",
+        "uri" : "http://dbpedia.org/resource/787_(song)"
+      }, {
+        "label" : "7 Mages",
+        "uri" : "http://dbpedia.org/resource/7_Mages"
+      }, {
+        "label" : "7 Minutes (song)",
+        "uri" : "http://dbpedia.org/resource/7_Minutes_(song)"
+      }, {
+        "label" : "7 Rooms of Gloom",
+        "uri" : "http://dbpedia.org/resource/7_Rooms_of_Gloom"
+      }, {
+        "label" : "7 Weeks",
+        "uri" : "http://dbpedia.org/resource/7_Weeks"
+      }, {
+        "label" : "8-Bit Armies",
+        "uri" : "http://dbpedia.org/resource/8-Bit_Armies"
+      }, {
+        "label" : "8-Bit Hordes",
+        "uri" : "http://dbpedia.org/resource/8-Bit_Hordes"
+      }, {
+        "label" : "8-Bit Rebellion!",
+        "uri" : "http://dbpedia.org/resource/8-Bit_Rebellion!"
+      }, {
+        "label" : "80's Ladies (song)",
+        "uri" : "http://dbpedia.org/resource/80's_Ladies_(song)"
+      }, {
+        "label" : "808 (Blaque song)",
+        "uri" : "http://dbpedia.org/resource/808_(Blaque_song)"
+      }, {
+        "label" : "80 Million Women Want–?",
+        "uri" : "http://dbpedia.org/resource/80_Million_Women_Want–%3F"
+      }, {
+        "label" : "8Realms",
+        "uri" : "http://dbpedia.org/resource/8Realms"
+      }, {
+        "label" : "8th of November (song)",
+        "uri" : "http://dbpedia.org/resource/8th_of_November_(song)"
+      }, {
+        "label" : "90 Days (film)",
+        "uri" : "http://dbpedia.org/resource/90_Days_(film)"
+      }, {
+        "label" : "911 Operator (video game)",
+        "uri" : "http://dbpedia.org/resource/911_Operator_(video_game)"
+      }, {
+        "label" : "93 Million Miles",
+        "uri" : "http://dbpedia.org/resource/93_Million_Miles"
+      }, {
+        "label" : "99.9% Sure (I've Never Been Here Before)",
+        "uri" : "http://dbpedia.org/resource/99.9%25_Sure_(I've_Never_Been_Here_Before)"
+      }, {
+        "label" : "999-9999",
+        "uri" : "http://dbpedia.org/resource/999-9999"
+      }, {
+        "label" : "999: What's Your Emergency?",
+        "uri" : "http://dbpedia.org/resource/999:_What's_Your_Emergency%3F"
+      }, {
+        "label" : "99 (song)",
+        "uri" : "http://dbpedia.org/resource/99_(song)"
+      }, {
+        "label" : "99 Bricks Wizard Academy",
+        "uri" : "http://dbpedia.org/resource/99_Bricks_Wizard_Academy"
+      }, {
+        "label" : "99 Percenters",
+        "uri" : "http://dbpedia.org/resource/99_Percenters"
+      }, {
+        "label" : "9: The Last Resort",
+        "uri" : "http://dbpedia.org/resource/9:_The_Last_Resort"
+      }, {
+        "label" : "9 Crimes",
+        "uri" : "http://dbpedia.org/resource/9_Crimes"
+      }, {
+        "label" : "9 Elefants",
+        "uri" : "http://dbpedia.org/resource/9_Elefants"
+      }, {
+        "label" : "9 Nelalu",
+        "uri" : "http://dbpedia.org/resource/9_Nelalu"
+      }, {
+        "label" : "9 Shots",
+        "uri" : "http://dbpedia.org/resource/9_Shots"
+      }, {
+        "label" : "9 millimeter",
+        "uri" : "http://dbpedia.org/resource/9_millimeter"
+      }, {
+        "label" : "9th Inning",
+        "uri" : "http://dbpedia.org/resource/9th_Inning"
+      }, {
+        "label" : "A+E (song)",
+        "uri" : "http://dbpedia.org/resource/A+E_(song)"
+      }, {
+        "label" : "A-Haunting We Will Go (1942 film)",
+        "uri" : "http://dbpedia.org/resource/A-Haunting_We_Will_Go_(1942_film)"
+      }, {
+        "label" : "A-Haunting We Will Go (1966 film)",
+        "uri" : "http://dbpedia.org/resource/A-Haunting_We_Will_Go_(1966_film)"
+      }, {
+        "label" : "A-Yo (Method Man & Redman song)",
+        "uri" : "http://dbpedia.org/resource/A-Yo_(Method_Man_&_Redman_song)"
+      }, {
+        "label" : "A.D.I.D.A.S. (Korn song)",
+        "uri" : "http://dbpedia.org/resource/A.D.I.D.A.S._(Korn_song)"
+      }, {
+        "label" : "A.D. 2044",
+        "uri" : "http://dbpedia.org/resource/A.D._2044"
+      }, {
+        "label" : "A.M. 180",
+        "uri" : "http://dbpedia.org/resource/A.M._180"
+      }, {
+        "label" : "A/k/a Tommy Chong",
+        "uri" : "http://dbpedia.org/resource/A/k/a_Tommy_Chong"
+      }, {
+        "label" : "ABCD (film)",
+        "uri" : "http://dbpedia.org/resource/ABCD_(film)"
+      }, {
+        "label" : "ABC (The Jackson 5 song)",
+        "uri" : "http://dbpedia.org/resource/ABC_(The_Jackson_5_song)"
+      }, {
+        "label" : "ADHD (Blood Red Shoes song)",
+        "uri" : "http://dbpedia.org/resource/ADHD_(Blood_Red_Shoes_song)"
+      }, {
+        "label" : "AFL Evolution",
+        "uri" : "http://dbpedia.org/resource/AFL_Evolution"
+      }, {
+        "label" : "AFL Live 2",
+        "uri" : "http://dbpedia.org/resource/AFL_Live_2"
+      }, {
+        "label" : "AFR (film)",
+        "uri" : "http://dbpedia.org/resource/AFR_(film)"
+      }, {
+        "label" : "AI Freaks Me Out",
+        "uri" : "http://dbpedia.org/resource/AI_Freaks_Me_Out"
+      }, {
+        "label" : "AI Superpowers",
+        "uri" : "http://dbpedia.org/resource/AI_Superpowers"
+      }, {
+        "label" : "AI War: Fleet Command",
+        "uri" : "http://dbpedia.org/resource/AI_War:_Fleet_Command"
+      }, {
+        "label" : "AKA Cartoon Network",
+        "uri" : "http://dbpedia.org/resource/AKA_Cartoon_Network"
+      }, {
+        "label" : "AOV (song)",
+        "uri" : "http://dbpedia.org/resource/AOV_(song)"
+      }, {
+        "label" : "APOX",
+        "uri" : "http://dbpedia.org/resource/APOX"
+      }, {
+        "label" : "Love, Peace And Happiness",
+        "uri" : "http://dbpedia.org/resource/Love,_Peace_And_Happiness"
+      }, {
+        "label" : "Love, Sidney",
+        "uri" : "http://dbpedia.org/resource/Love,_Sidney"
+      }, {
+        "label" : "Love, Timeless",
+        "uri" : "http://dbpedia.org/resource/Love,_Timeless"
+      }, {
+        "label" : "Love-Hate-Sex-Pain",
+        "uri" : "http://dbpedia.org/resource/Love-Hate-Sex-Pain"
+      }, {
+        "label" : "Love/Hate (TV series)",
+        "uri" : "http://dbpedia.org/resource/Love/Hate_(TV_series)"
+      }, {
+        "label" : "Love2Clutch",
+        "uri" : "http://dbpedia.org/resource/Love2Clutch"
+      }, {
+        "label" : "LoveGame",
+        "uri" : "http://dbpedia.org/resource/LoveGame"
+      }, {
+        "label" : "LoveHate Thing",
+        "uri" : "http://dbpedia.org/resource/LoveHate_Thing"
+      }, {
+        "label" : "LovePlus",
+        "uri" : "http://dbpedia.org/resource/LovePlus"
+      }, {
+        "label" : "LoveStoned",
+        "uri" : "http://dbpedia.org/resource/LoveStoned"
+      }, {
+        "label" : "LoveWave",
+        "uri" : "http://dbpedia.org/resource/LoveWave"
+      }, {
+        "label" : "Love & Destroy",
+        "uri" : "http://dbpedia.org/resource/Love_&_Destroy"
+      }, {
+        "label" : "Love & Girls",
+        "uri" : "http://dbpedia.org/resource/Love_&_Girls"
+      }, {
+        "label" : "Love & Hip Hop: Atlanta",
+        "uri" : "http://dbpedia.org/resource/Love_&_Hip_Hop:_Atlanta"
+      }, {
+        "label" : "Love & Hip Hop: Hollywood",
+        "uri" : "http://dbpedia.org/resource/Love_&_Hip_Hop:_Hollywood"
+      }, {
+        "label" : "Love & Hip Hop: Miami",
+        "uri" : "http://dbpedia.org/resource/Love_&_Hip_Hop:_Miami"
+      }, {
+        "label" : "Love & Hip Hop: New York",
+        "uri" : "http://dbpedia.org/resource/Love_&_Hip_Hop:_New_York"
+      }, {
+        "label" : "Love & History",
+        "uri" : "http://dbpedia.org/resource/Love_&_History"
+      }, {
+        "label" : "Love & Lies",
+        "uri" : "http://dbpedia.org/resource/Love_&_Lies"
+      }, {
+        "label" : "Love & Money",
+        "uri" : "http://dbpedia.org/resource/Love_&_Money"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "12",
+    "lexicalEntryUri" : null,
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "DATE",
+    "returnType" : "SONG",
+    "frameType" : "IPP",
+    "sentences" : [ "What was released on $x?", "What were released on $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/releaseDate> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "0003-03-03",
+        "uri" : "0003-03-03"
+      }, {
+        "label" : "0006-04-01",
+        "uri" : "0006-04-01"
+      }, {
+        "label" : "0023-12-21",
+        "uri" : "0023-12-21"
+      }, {
+        "label" : "1557-05-23",
+        "uri" : "1557-05-23"
+      }, {
+        "label" : "1578-12-02",
+        "uri" : "1578-12-02"
+      }, {
+        "label" : "1688-11-10",
+        "uri" : "1688-11-10"
+      }, {
+        "label" : "1719-04-25",
+        "uri" : "1719-04-25"
+      }, {
+        "label" : "1726-10-28",
+        "uri" : "1726-10-28"
+      }, {
+        "label" : "1728-03-16",
+        "uri" : "1728-03-16"
+      }, {
+        "label" : "1729-10-08",
+        "uri" : "1729-10-08"
+      }, {
+        "label" : "1741-04-04",
+        "uri" : "1741-04-04"
+      }, {
+        "label" : "1748-11-21",
+        "uri" : "1748-11-21"
+      }, {
+        "label" : "1749-02-28",
+        "uri" : "1749-02-28"
+      }, {
+        "label" : "1755-04-15",
+        "uri" : "1755-04-15"
+      }, {
+        "label" : "1766-12-14",
+        "uri" : "1766-12-14"
+      }, {
+        "label" : "1767-03-31",
+        "uri" : "1767-03-31"
+      }, {
+        "label" : "1771-06-17",
+        "uri" : "1771-06-17"
+      }, {
+        "label" : "1781-09-24",
+        "uri" : "1781-09-24"
+      }, {
+        "label" : "1782-03-23",
+        "uri" : "1782-03-23"
+      }, {
+        "label" : "1785-01-30",
+        "uri" : "1785-01-30"
+      }, {
+        "label" : "1788-02-10",
+        "uri" : "1788-02-10"
+      }, {
+        "label" : "1791-08-03",
+        "uri" : "1791-08-03"
+      }, {
+        "label" : "1794-05-08",
+        "uri" : "1794-05-08"
+      }, {
+        "label" : "1813-01-28",
+        "uri" : "1813-01-28"
+      }, {
+        "label" : "1819-06-23",
+        "uri" : "1819-06-23"
+      }, {
+        "label" : "1823-11-17",
+        "uri" : "1823-11-17"
+      }, {
+        "label" : "1831-12-01",
+        "uri" : "1831-12-01"
+      }, {
+        "label" : "1838-10-02",
+        "uri" : "1838-10-02"
+      }, {
+        "label" : "1842-10-19",
+        "uri" : "1842-10-19"
+      }, {
+        "label" : "1843-05-16",
+        "uri" : "1843-05-16"
+      }, {
+        "label" : "1843-10-16",
+        "uri" : "1843-10-16"
+      }, {
+        "label" : "1843-11-10",
+        "uri" : "1843-11-10"
+      }, {
+        "label" : "1843-12-06",
+        "uri" : "1843-12-06"
+      }, {
+        "label" : "1844-03-05",
+        "uri" : "1844-03-05"
+      }, {
+        "label" : "1844-06-08",
+        "uri" : "1844-06-08"
+      }, {
+        "label" : "1844-06-13",
+        "uri" : "1844-06-13"
+      }, {
+        "label" : "1844-06-17",
+        "uri" : "1844-06-17"
+      }, {
+        "label" : "1844-08-31",
+        "uri" : "1844-08-31"
+      }, {
+        "label" : "1845-04-30",
+        "uri" : "1845-04-30"
+      }, {
+        "label" : "1845-12-20",
+        "uri" : "1845-12-20"
+      }, {
+        "label" : "1847-10-16",
+        "uri" : "1847-10-16"
+      }, {
+        "label" : "1848-12-19",
+        "uri" : "1848-12-19"
+      }, {
+        "label" : "1851-10-18",
+        "uri" : "1851-10-18"
+      }, {
+        "label" : "1851-11-14",
+        "uri" : "1851-11-14"
+      }, {
+        "label" : "1855-01-05",
+        "uri" : "1855-01-05"
+      }, {
+        "label" : "1855-07-04",
+        "uri" : "1855-07-04"
+      }, {
+        "label" : "1856-12-27",
+        "uri" : "1856-12-27"
+      }, {
+        "label" : "1859-11-26",
+        "uri" : "1859-11-26"
+      }, {
+        "label" : "1860-05-10",
+        "uri" : "1860-05-10"
+      }, {
+        "label" : "1864-11-25",
+        "uri" : "1864-11-25"
+      }, {
+        "label" : "1865-05-15",
+        "uri" : "1865-05-15"
+      }, {
+        "label" : "1865-11-26",
+        "uri" : "1865-11-26"
+      }, {
+        "label" : "1866-12-01",
+        "uri" : "1866-12-01"
+      }, {
+        "label" : "1868-01-30",
+        "uri" : "1868-01-30"
+      }, {
+        "label" : "1868-05-05",
+        "uri" : "1868-05-05"
+      }, {
+        "label" : "1871-02-24",
+        "uri" : "1871-02-24"
+      }, {
+        "label" : "1871-12-27",
+        "uri" : "1871-12-27"
+      }, {
+        "label" : "1873-01-30",
+        "uri" : "1873-01-30"
+      }, {
+        "label" : "1873-07-19",
+        "uri" : "1873-07-19"
+      }, {
+        "label" : "1875-11-20",
+        "uri" : "1875-11-20"
+      }, {
+        "label" : "1876-03-29",
+        "uri" : "1876-03-29"
+      }, {
+        "label" : "1877-05-05",
+        "uri" : "1877-05-05"
+      }, {
+        "label" : "1877-11-24",
+        "uri" : "1877-11-24"
+      }, {
+        "label" : "1878-05-29",
+        "uri" : "1878-05-29"
+      }, {
+        "label" : "1878-09-18",
+        "uri" : "1878-09-18"
+      }, {
+        "label" : "1878-10-12",
+        "uri" : "1878-10-12"
+      }, {
+        "label" : "1878-12-15",
+        "uri" : "1878-12-15"
+      }, {
+        "label" : "1879-10-04",
+        "uri" : "1879-10-04"
+      }, {
+        "label" : "1879-12-10",
+        "uri" : "1879-12-10"
+      }, {
+        "label" : "1880-02-07",
+        "uri" : "1880-02-07"
+      }, {
+        "label" : "1880-11-12",
+        "uri" : "1880-11-12"
+      }, {
+        "label" : "1880-12-01",
+        "uri" : "1880-12-01"
+      }, {
+        "label" : "1881-10-29",
+        "uri" : "1881-10-29"
+      }, {
+        "label" : "1881-11-16",
+        "uri" : "1881-11-16"
+      }, {
+        "label" : "1884-09-05",
+        "uri" : "1884-09-05"
+      }, {
+        "label" : "1884-12-10",
+        "uri" : "1884-12-10"
+      }, {
+        "label" : "1885-11-01",
+        "uri" : "1885-11-01"
+      }, {
+        "label" : "1886-01-05",
+        "uri" : "1886-01-05"
+      }, {
+        "label" : "1886-02-16",
+        "uri" : "1886-02-16"
+      }, {
+        "label" : "1886-10-22",
+        "uri" : "1886-10-22"
+      }, {
+        "label" : "1888-05-08",
+        "uri" : "1888-05-08"
+      }, {
+        "label" : "1888-06-05",
+        "uri" : "1888-06-05"
+      }, {
+        "label" : "1888-09-03",
+        "uri" : "1888-09-03"
+      }, {
+        "label" : "1888-09-29",
+        "uri" : "1888-09-29"
+      }, {
+        "label" : "1888-10-14",
+        "uri" : "1888-10-14"
+      }, {
+        "label" : "1888-11-10",
+        "uri" : "1888-11-10"
+      }, {
+        "label" : "1889-12-09",
+        "uri" : "1889-12-09"
+      }, {
+        "label" : "1890-06-07",
+        "uri" : "1890-06-07"
+      }, {
+        "label" : "1890-06-28",
+        "uri" : "1890-06-28"
+      }, {
+        "label" : "1893-01-10",
+        "uri" : "1893-01-10"
+      }, {
+        "label" : "1893-06-02",
+        "uri" : "1893-06-02"
+      }, {
+        "label" : "1894-06-09",
+        "uri" : "1894-06-09"
+      }, {
+        "label" : "1895-03-22",
+        "uri" : "1895-03-22"
+      }, {
+        "label" : "1895-05-15",
+        "uri" : "1895-05-15"
+      }, {
+        "label" : "1895-06-10",
+        "uri" : "1895-06-10"
+      }, {
+        "label" : "1895-06-12",
+        "uri" : "1895-06-12"
+      }, {
+        "label" : "1895-06-18",
+        "uri" : "1895-06-18"
+      }, {
+        "label" : "1895-08-28",
+        "uri" : "1895-08-28"
+      }, {
+        "label" : "1896-01-28",
+        "uri" : "1896-01-28"
+      }, {
+        "label" : "1896-02-20",
+        "uri" : "1896-02-20"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "13",
     "lexicalEntryUri" : null,
     "language" : "EN",
     "type" : "SENTENCE",

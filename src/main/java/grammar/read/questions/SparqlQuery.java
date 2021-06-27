@@ -49,6 +49,7 @@ public class SparqlQuery {
         } else if (type.contains(FIND_LABEL)) {
             sparqlQuery = this.setSparqlQueryForLabel(entityUrl);
         }
+        //System.out.print("sparqlQuery::"+sparqlQuery);
         this.resultSparql = executeSparqlQuery(sparqlQuery);
         parseResult(resultSparql);
     }
@@ -68,7 +69,7 @@ public class SparqlQuery {
             //System.out.print(command);
         } catch (Exception ex) {
             Logger.getLogger(SparqlQuery.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("error in unicode in sparql query!" + ex.getMessage());
+            System.err.println("error in unicode in sparql query!" + ex.getMessage());
             ex.printStackTrace();
         }
 
@@ -83,7 +84,7 @@ public class SparqlQuery {
             result = builder.toString();
         } catch (IOException ex) {
             Logger.getLogger(SparqlQuery.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("error in reading sparql query!" + ex.getMessage());
+            System.err.println("error in reading sparql query!" + ex.getMessage());
             ex.printStackTrace();
         }
         return result;
@@ -98,7 +99,7 @@ public class SparqlQuery {
             this.parseResult(builder, xmlStr);
         } catch (Exception ex) {
             Logger.getLogger(SparqlQuery.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("error in parsing sparql in XML!" + ex.getMessage());
+            System.err.println("error in parsing sparql in XML!" + ex.getMessage());
             ex.printStackTrace();
         }
     }
@@ -135,11 +136,11 @@ public class SparqlQuery {
             }
         } catch (SAXException ex) {
             Logger.getLogger(SparqlQuery.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("no result after sparql query!" + ex.getMessage());
+            System.err.println("no result after sparql query!" + ex.getMessage());
             return;
         } catch (IOException ex) {
             Logger.getLogger(SparqlQuery.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("no result after sparql query!" + ex.getMessage());
+            System.err.println("no result after sparql query!" + ex.getMessage());
             return;
         }
 
@@ -276,11 +277,11 @@ public class SparqlQuery {
         String object = "http://dbpedia.org/resource/Russia";
 
         SparqlQuery sparqlQuery = new SparqlQuery(subject, objectUrl, FIND_ANY_ANSWER, RETURN_TYPE_OBJECT);
-        System.out.println(sparqlQuery.getSparqlQuery());
+        //System.out.println(sparqlQuery.getSparqlQuery());
         
         String sparql=sparqlQuery.setSparqlQueryForLabel(object);
         //System.out.println(sparqlQuery.getResultSparql());
-         System.out.println(sparql);
+         //System.out.println(sparql);
 
         /*String entitieSparql = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n"
                + "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
@@ -294,8 +295,8 @@ public class SparqlQuery {
         /*SparqlQuery sparql=new SparqlQuery();
        String sparqlStr=SparqlQuery.setSparqlQueryPropertyWithSubjectFilter(objectUrl, propertyUrl);
        String resultSparql = sparql.executeSparqlQuery(entitieSparql);
-       System.out.println("sparql:"+resultSparql);
-       System.out.println("sparql:"+sparql.getObject());
+       //System.out.println("sparql:"+resultSparql);
+       //System.out.println("sparql:"+sparql.getObject());
          */
     }
 

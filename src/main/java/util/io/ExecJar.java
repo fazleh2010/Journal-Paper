@@ -20,7 +20,7 @@ public static void callInterface(String jarLocation, String jarFile) throws Exce
         java.io.InputStream is=ps.getInputStream();
         byte b[]=new byte[is.available()];
         is.read(b,0,b.length);
-        System.out.println(new String(b));
+        //System.out.println(new String(b));
     }
    
 

@@ -59,7 +59,7 @@ public class FileUtils {
     }
 
     public static List<File> getFiles(String fileDir, String category, String extension) {
-        System.out.println("fileDir:"+fileDir);
+        //System.out.println("fileDir:"+fileDir);
         String[] files = new File(fileDir).list();
         List<File> selectedFiles = new ArrayList<File>();
         for (String fileName : files) {
@@ -103,10 +103,10 @@ public class FileUtils {
         File f = new File(inputDir);
         String[] pathnames = f.list();
         for (String pathname : pathnames) {
-            System.out.println("pathname::"+inputDir + File.separatorChar + pathname);
+            //System.out.println("pathname::"+inputDir + File.separatorChar + pathname);
             String[] files = new File(inputDir + pathname).list();
             for (String file : files) {
-                System.out.println("file::"+file);
+                //System.out.println("file::"+file);
                
 
             }

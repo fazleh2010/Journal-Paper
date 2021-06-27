@@ -1,6 +1,686 @@
 {
   "grammarEntries" : [ {
-    "id" : "8",
+    "id" : "14",
+    "lexicalEntryUri" : null,
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the father of the father of $x", "Tell me the father of the father of $x", "What is the father of the father of $x?", "What was the father of the father of $x?", "Which person is the father of the father of $x?", "Which person was the father of the father of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/father> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/father> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Lu Jing",
+        "uri" : "http://dbpedia.org/resource/Lu_Jing"
+      }, {
+        "label" : "Maeda Toshinaga",
+        "uri" : "http://dbpedia.org/resource/Maeda_Toshinaga"
+      }, {
+        "label" : "Maeda Toshitsune",
+        "uri" : "http://dbpedia.org/resource/Maeda_Toshitsune"
+      }, {
+        "label" : "Mahi B. Chowdhury",
+        "uri" : "http://dbpedia.org/resource/Mahi_B._Chowdhury"
+      }, {
+        "label" : "Uddhav Thackeray",
+        "uri" : "http://dbpedia.org/resource/Uddhav_Thackeray"
+      }, {
+        "label" : "Ujir Singh Thapa",
+        "uri" : "http://dbpedia.org/resource/Ujir_Singh_Thapa"
+      }, {
+        "label" : "Han Chan Piet",
+        "uri" : "http://dbpedia.org/resource/Han_Chan_Piet"
+      }, {
+        "label" : "Han Kik Ko",
+        "uri" : "http://dbpedia.org/resource/Han_Kik_Ko"
+      }, {
+        "label" : "Deepender Singh Hooda",
+        "uri" : "http://dbpedia.org/resource/Deepender_Singh_Hooda"
+      }, {
+        "label" : "Dhir Shamsher Rana",
+        "uri" : "http://dbpedia.org/resource/Dhir_Shamsher_Rana"
+      }, {
+        "label" : "Gu Cheng (Three Kingdoms)",
+        "uri" : "http://dbpedia.org/resource/Gu_Cheng_(Three_Kingdoms)"
+      }, {
+        "label" : "Gu Tan",
+        "uri" : "http://dbpedia.org/resource/Gu_Tan"
+      }, {
+        "label" : "Khadga Shamsher Jang Bahadur Rana",
+        "uri" : "http://dbpedia.org/resource/Khadga_Shamsher_Jang_Bahadur_Rana"
+      }, {
+        "label" : "Ajay Singh Chautala",
+        "uri" : "http://dbpedia.org/resource/Ajay_Singh_Chautala"
+      }, {
+        "label" : "Alexander Baring, 6th Baron Ashburton",
+        "uri" : "http://dbpedia.org/resource/Alexander_Baring,_6th_Baron_Ashburton"
+      }, {
+        "label" : "Alfred Lamb (Australian politician)",
+        "uri" : "http://dbpedia.org/resource/Alfred_Lamb_(Australian_politician)"
+      }, {
+        "label" : "Chen Qun",
+        "uri" : "http://dbpedia.org/resource/Chen_Qun"
+      }, {
+        "label" : "Chen Tai",
+        "uri" : "http://dbpedia.org/resource/Chen_Tai"
+      }, {
+        "label" : "Niwa Nagahiro",
+        "uri" : "http://dbpedia.org/resource/Niwa_Nagahiro"
+      }, {
+        "label" : "Niwa Nagakuni",
+        "uri" : "http://dbpedia.org/resource/Niwa_Nagakuni"
+      }, {
+        "label" : "Niwa Nagatomi",
+        "uri" : "http://dbpedia.org/resource/Niwa_Nagatomi"
+      }, {
+        "label" : "Oda Nobukatsu",
+        "uri" : "http://dbpedia.org/resource/Oda_Nobukatsu"
+      }, {
+        "label" : "Chaudhry Farrukh Altaf",
+        "uri" : "http://dbpedia.org/resource/Chaudhry_Farrukh_Altaf"
+      }, {
+        "label" : "Richard Byron, 2nd Baron Byron",
+        "uri" : "http://dbpedia.org/resource/Richard_Byron,_2nd_Baron_Byron"
+      }, {
+        "label" : "Bakhtawar Singh Thapa",
+        "uri" : "http://dbpedia.org/resource/Bakhtawar_Singh_Thapa"
+      }, {
+        "label" : "Choe Hang (military official)",
+        "uri" : "http://dbpedia.org/resource/Choe_Hang_(military_official)"
+      }, {
+        "label" : "Choe U",
+        "uri" : "http://dbpedia.org/resource/Choe_U"
+      }, {
+        "label" : "Choe Ui",
+        "uri" : "http://dbpedia.org/resource/Choe_Ui"
+      }, {
+        "label" : "George Beauclerk, 3rd Duke of St Albans",
+        "uri" : "http://dbpedia.org/resource/George_Beauclerk,_3rd_Duke_of_St_Albans"
+      }, {
+        "label" : "Bal Narsingh Kunwar",
+        "uri" : "http://dbpedia.org/resource/Bal_Narsingh_Kunwar"
+      }, {
+        "label" : "Bhimsen Thapa",
+        "uri" : "http://dbpedia.org/resource/Bhimsen_Thapa"
+      }, {
+        "label" : "Bill Green IV",
+        "uri" : "http://dbpedia.org/resource/Bill_Green_IV"
+      }, {
+        "label" : "Karbir Pande",
+        "uri" : "http://dbpedia.org/resource/Karbir_Pande"
+      }, {
+        "label" : "Bir Shumsher Jang Bahadur Rana",
+        "uri" : "http://dbpedia.org/resource/Bir_Shumsher_Jang_Bahadur_Rana"
+      }, {
+        "label" : "Mizuno Tadahiro",
+        "uri" : "http://dbpedia.org/resource/Mizuno_Tadahiro"
+      }, {
+        "label" : "Sadat Mansoor Naderi",
+        "uri" : "http://dbpedia.org/resource/Sadat_Mansoor_Naderi"
+      }, {
+        "label" : "Sambhaji Angre",
+        "uri" : "http://dbpedia.org/resource/Sambhaji_Angre"
+      }, {
+        "label" : "Chandroji Angre",
+        "uri" : "http://dbpedia.org/resource/Chandroji_Angre"
+      }, {
+        "label" : "Chaophraya Thiphakorawong",
+        "uri" : "http://dbpedia.org/resource/Chaophraya_Thiphakorawong"
+      }, {
+        "label" : "Soero Adinegoro",
+        "uri" : "http://dbpedia.org/resource/Soero_Adinegoro"
+      }, {
+        "label" : "Somdet Chaophraya Sri Suriwongse",
+        "uri" : "http://dbpedia.org/resource/Somdet_Chaophraya_Sri_Suriwongse"
+      }, {
+        "label" : "Dushyant Chautala",
+        "uri" : "http://dbpedia.org/resource/Dushyant_Chautala"
+      }, {
+        "label" : "Francis Needham, 4th Earl of Kilmorey",
+        "uri" : "http://dbpedia.org/resource/Francis_Needham,_4th_Earl_of_Kilmorey"
+      }, {
+        "label" : "Huan Shiqian",
+        "uri" : "http://dbpedia.org/resource/Huan_Shiqian"
+      }, {
+        "label" : "Jam Kamal Khan",
+        "uri" : "http://dbpedia.org/resource/Jam_Kamal_Khan"
+      }, {
+        "label" : "Samuel Whitbread (Liberal politician)",
+        "uri" : "http://dbpedia.org/resource/Samuel_Whitbread_(Liberal_politician)"
+      }, {
+        "label" : "Sandy Street",
+        "uri" : "http://dbpedia.org/resource/Sandy_Street"
+      }, {
+        "label" : "Satake Yoshiatsu",
+        "uri" : "http://dbpedia.org/resource/Satake_Yoshiatsu"
+      }, {
+        "label" : "Satake Yoshichika",
+        "uri" : "http://dbpedia.org/resource/Satake_Yoshichika"
+      }, {
+        "label" : "Satake Yoshihiro",
+        "uri" : "http://dbpedia.org/resource/Satake_Yoshihiro"
+      }, {
+        "label" : "Satake Yoshimasa (1775-1815)",
+        "uri" : "http://dbpedia.org/resource/Satake_Yoshimasa_(1775-1815)"
+      }, {
+        "label" : "Satake Yoshitada (1695-1715)",
+        "uri" : "http://dbpedia.org/resource/Satake_Yoshitada_(1695-1715)"
+      }, {
+        "label" : "Satake Yoshizumi",
+        "uri" : "http://dbpedia.org/resource/Satake_Yoshizumi"
+      }, {
+        "label" : "Sayed Jafar Naderi",
+        "uri" : "http://dbpedia.org/resource/Sayed_Jafar_Naderi"
+      }, {
+        "label" : "Makhdoom Jamil Zaman",
+        "uri" : "http://dbpedia.org/resource/Makhdoom_Jamil_Zaman"
+      }, {
+        "label" : "Amin (Qing dynasty)",
+        "uri" : "http://dbpedia.org/resource/Amin_(Qing_dynasty)"
+      }, {
+        "label" : "Archibald Acheson, 6th Earl of Gosford",
+        "uri" : "http://dbpedia.org/resource/Archibald_Acheson,_6th_Earl_of_Gosford"
+      }, {
+        "label" : "Arthur MacArthur III",
+        "uri" : "http://dbpedia.org/resource/Arthur_MacArthur_III"
+      }, {
+        "label" : "Ove Bjelke",
+        "uri" : "http://dbpedia.org/resource/Ove_Bjelke"
+      }, {
+        "label" : "Ranabir Singh Thapa",
+        "uri" : "http://dbpedia.org/resource/Ranabir_Singh_Thapa"
+      }, {
+        "label" : "Aaditya Thackeray",
+        "uri" : "http://dbpedia.org/resource/Aaditya_Thackeray"
+      }, {
+        "label" : "Abd al-Malik ibn Salih",
+        "uri" : "http://dbpedia.org/resource/Abd_al-Malik_ibn_Salih"
+      }, {
+        "label" : "Abhay Singh Chautala",
+        "uri" : "http://dbpedia.org/resource/Abhay_Singh_Chautala"
+      }, {
+        "label" : "Ahmed Al-Fahad Al-Ahmed Al-Sabah",
+        "uri" : "http://dbpedia.org/resource/Ahmed_Al-Fahad_Al-Ahmed_Al-Sabah"
+      }, {
+        "label" : "Al-Fadl ibn Salih",
+        "uri" : "http://dbpedia.org/resource/Al-Fadl_ibn_Salih"
+      }, {
+        "label" : "William Byron, 3rd Baron Byron",
+        "uri" : "http://dbpedia.org/resource/William_Byron,_3rd_Baron_Byron"
+      }, {
+        "label" : "William Byron, 4th Baron Byron",
+        "uri" : "http://dbpedia.org/resource/William_Byron,_4th_Baron_Byron"
+      }, {
+        "label" : "Zhuge Shang",
+        "uri" : "http://dbpedia.org/resource/Zhuge_Shang"
+      }, {
+        "label" : "Ali Mirza Safavi",
+        "uri" : "http://dbpedia.org/resource/Ali_Mirza_Safavi"
+      }, {
+        "label" : "Ali Zahid",
+        "uri" : "http://dbpedia.org/resource/Ali_Zahid"
+      }, {
+        "label" : "Date Chikamune",
+        "uri" : "http://dbpedia.org/resource/Date_Chikamune"
+      }, {
+        "label" : "Date Munemoto",
+        "uri" : "http://dbpedia.org/resource/Date_Munemoto"
+      }, {
+        "label" : "Date Narimune",
+        "uri" : "http://dbpedia.org/resource/Date_Narimune"
+      }, {
+        "label" : "Date Narimura",
+        "uri" : "http://dbpedia.org/resource/Date_Narimura"
+      }, {
+        "label" : "Date Shigemura",
+        "uri" : "http://dbpedia.org/resource/Date_Shigemura"
+      }, {
+        "label" : "Date Tadamune",
+        "uri" : "http://dbpedia.org/resource/Date_Tadamune"
+      }, {
+        "label" : "Date Tsunamune",
+        "uri" : "http://dbpedia.org/resource/Date_Tsunamune"
+      }, {
+        "label" : "Date Tsunamura",
+        "uri" : "http://dbpedia.org/resource/Date_Tsunamura"
+      }, {
+        "label" : "Date Yoshikuni",
+        "uri" : "http://dbpedia.org/resource/Date_Yoshikuni"
+      }, {
+        "label" : "Asad Mehmood",
+        "uri" : "http://dbpedia.org/resource/Asad_Mehmood"
+      }, {
+        "label" : "Robert Todd Lincoln",
+        "uri" : "http://dbpedia.org/resource/Robert_Todd_Lincoln"
+      }, {
+        "label" : "Sima Liang",
+        "uri" : "http://dbpedia.org/resource/Sima_Liang"
+      }, {
+        "label" : "Tanvir Shakil Joy",
+        "uri" : "http://dbpedia.org/resource/Tanvir_Shakil_Joy"
+      }, {
+        "label" : "Walter J. Kohler Jr.",
+        "uri" : "http://dbpedia.org/resource/Walter_J._Kohler_Jr."
+      }, {
+        "label" : "Walter Lamb",
+        "uri" : "http://dbpedia.org/resource/Walter_Lamb"
+      }, {
+        "label" : "Farkhunda Zahra Naderi",
+        "uri" : "http://dbpedia.org/resource/Farkhunda_Zahra_Naderi"
+      }, {
+        "label" : "Nanbu Toshiyuki",
+        "uri" : "http://dbpedia.org/resource/Nanbu_Toshiyuki"
+      }, {
+        "label" : "Pratik Prakashbapu Patil",
+        "uri" : "http://dbpedia.org/resource/Pratik_Prakashbapu_Patil"
+      }, {
+        "label" : "Sun Ce",
+        "uri" : "http://dbpedia.org/resource/Sun_Ce"
+      }, {
+        "label" : "Sun Yi",
+        "uri" : "http://dbpedia.org/resource/Sun_Yi"
+      }, {
+        "label" : "William Byron, 5th Baron Byron",
+        "uri" : "http://dbpedia.org/resource/William_Byron,_5th_Baron_Byron"
+      }, {
+        "label" : "William Henry Harrison III",
+        "uri" : "http://dbpedia.org/resource/William_Henry_Harrison_III"
+      }, {
+        "label" : "William Milliken",
+        "uri" : "http://dbpedia.org/resource/William_Milliken"
+      }, {
+        "label" : "Serniabat Sadiq Abdullah",
+        "uri" : "http://dbpedia.org/resource/Serniabat_Sadiq_Abdullah"
+      }, {
+        "label" : "Edward Lamb (politician)",
+        "uri" : "http://dbpedia.org/resource/Edward_Lamb_(politician)"
+      }, {
+        "label" : "Joseph Hopkinson",
+        "uri" : "http://dbpedia.org/resource/Joseph_Hopkinson"
+      }, {
+        "label" : "Mathabarsingh Thapa",
+        "uri" : "http://dbpedia.org/resource/Mathabarsingh_Thapa"
+      }, {
+        "label" : "Yashwant Ambedkar",
+        "uri" : "http://dbpedia.org/resource/Yashwant_Ambedkar"
+      }, {
+        "label" : "Isma'il ibn Salih ibn Ali al-Hashimi",
+        "uri" : "http://dbpedia.org/resource/Isma'il_ibn_Salih_ibn_Ali_al-Hashimi"
+      }, {
+        "label" : "Kirtiman Singh Basnyat",
+        "uri" : "http://dbpedia.org/resource/Kirtiman_Singh_Basnyat"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "15",
+    "lexicalEntryUri" : null,
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the father of fictional characters played by $x", "Tell me the father of fictional characters played by $x", "What is the father of fictional characters played by $x?", "What was the father of fictional characters played by $x?", "Which person is the father of fictional characters played by $x?", "Which person was the father of fictional characters played by $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/father> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfPropx)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "16",
+    "lexicalEntryUri" : null,
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the death place of the father of $x", "Tell me the death place of the father of $x", "What is the death place of the father of $x?", "What was the death place of the father of $x?", "Which place is the death place of the father of $x?", "Which place was the death place of the father of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/father> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Lu Ji (Gongji)",
+        "uri" : "http://dbpedia.org/resource/Lu_Ji_(Gongji)"
+      }, {
+        "label" : "Lu Kang (Three Kingdoms)",
+        "uri" : "http://dbpedia.org/resource/Lu_Kang_(Three_Kingdoms)"
+      }, {
+        "label" : "Lucius Fairchild",
+        "uri" : "http://dbpedia.org/resource/Lucius_Fairchild"
+      }, {
+        "label" : "Ma Chao",
+        "uri" : "http://dbpedia.org/resource/Ma_Chao"
+      }, {
+        "label" : "Mahfuzur Rahaman",
+        "uri" : "http://dbpedia.org/resource/Mahfuzur_Rahaman"
+      }, {
+        "label" : "Maksim Vučinić",
+        "uri" : "http://dbpedia.org/resource/Maksim_Vučinić"
+      }, {
+        "label" : "Maktoum bin Rashid Al Maktoum",
+        "uri" : "http://dbpedia.org/resource/Maktoum_bin_Rashid_Al_Maktoum"
+      }, {
+        "label" : "Caroline Le Couteur",
+        "uri" : "http://dbpedia.org/resource/Caroline_Le_Couteur"
+      }, {
+        "label" : "Uddhav Thackeray",
+        "uri" : "http://dbpedia.org/resource/Uddhav_Thackeray"
+      }, {
+        "label" : "Ujir Singh Thapa",
+        "uri" : "http://dbpedia.org/resource/Ujir_Singh_Thapa"
+      }, {
+        "label" : "Umesh Nandkumar Patel",
+        "uri" : "http://dbpedia.org/resource/Umesh_Nandkumar_Patel"
+      }, {
+        "label" : "Vahideh Taleghani",
+        "uri" : "http://dbpedia.org/resource/Vahideh_Taleghani"
+      }, {
+        "label" : "Varun Gandhi",
+        "uri" : "http://dbpedia.org/resource/Varun_Gandhi"
+      }, {
+        "label" : "Vasco Fernandes Coutinho, captain of Espírito Santo",
+        "uri" : "http://dbpedia.org/resource/Vasco_Fernandes_Coutinho,_captain_of_Espírito_Santo"
+      }, {
+        "label" : "Ukita Hideie",
+        "uri" : "http://dbpedia.org/resource/Ukita_Hideie"
+      }, {
+        "label" : "Han Chan Piet",
+        "uri" : "http://dbpedia.org/resource/Han_Chan_Piet"
+      }, {
+        "label" : "Han Kik Ko",
+        "uri" : "http://dbpedia.org/resource/Han_Kik_Ko"
+      }, {
+        "label" : "Mansur al-Atrash",
+        "uri" : "http://dbpedia.org/resource/Mansur_al-Atrash"
+      }, {
+        "label" : "Moinul Islam Khan",
+        "uri" : "http://dbpedia.org/resource/Moinul_Islam_Khan"
+      }, {
+        "label" : "Bill Workman",
+        "uri" : "http://dbpedia.org/resource/Bill_Workman"
+      }, {
+        "label" : "Bimalendra Nidhi",
+        "uri" : "http://dbpedia.org/resource/Bimalendra_Nidhi"
+      }, {
+        "label" : "Blanche Cavendish, Countess of Burlington",
+        "uri" : "http://dbpedia.org/resource/Blanche_Cavendish,_Countess_of_Burlington"
+      }, {
+        "label" : "Abbasqoli Mo'tamad-dawla Javanshir",
+        "uri" : "http://dbpedia.org/resource/Abbasqoli_Mo'tamad-dawla_Javanshir"
+      }, {
+        "label" : "Dhir Shamsher Rana",
+        "uri" : "http://dbpedia.org/resource/Dhir_Shamsher_Rana"
+      }, {
+        "label" : "Dhiraj Deshmukh",
+        "uri" : "http://dbpedia.org/resource/Dhiraj_Deshmukh"
+      }, {
+        "label" : "Dilip Babasaheb Bhosale",
+        "uri" : "http://dbpedia.org/resource/Dilip_Babasaheb_Bhosale"
+      }, {
+        "label" : "Dirk Gysbert van Breda",
+        "uri" : "http://dbpedia.org/resource/Dirk_Gysbert_van_Breda"
+      }, {
+        "label" : "Gu Shao",
+        "uri" : "http://dbpedia.org/resource/Gu_Shao"
+      }, {
+        "label" : "Gulnara Karimova",
+        "uri" : "http://dbpedia.org/resource/Gulnara_Karimova"
+      }, {
+        "label" : "Khadga Shamsher Jang Bahadur Rana",
+        "uri" : "http://dbpedia.org/resource/Khadga_Shamsher_Jang_Bahadur_Rana"
+      }, {
+        "label" : "Kimbrough Stone",
+        "uri" : "http://dbpedia.org/resource/Kimbrough_Stone"
+      }, {
+        "label" : "Prince Raj",
+        "uri" : "http://dbpedia.org/resource/Prince_Raj"
+      }, {
+        "label" : "Qin Lang",
+        "uri" : "http://dbpedia.org/resource/Qin_Lang"
+      }, {
+        "label" : "Qubad Talabani",
+        "uri" : "http://dbpedia.org/resource/Qubad_Talabani"
+      }, {
+        "label" : "Selima Rahman",
+        "uri" : "http://dbpedia.org/resource/Selima_Rahman"
+      }, {
+        "label" : "Ajay Arjun Singh",
+        "uri" : "http://dbpedia.org/resource/Ajay_Arjun_Singh"
+      }, {
+        "label" : "Ajit Singh (politician)",
+        "uri" : "http://dbpedia.org/resource/Ajit_Singh_(politician)"
+      }, {
+        "label" : "Akbaruddin Owaisi",
+        "uri" : "http://dbpedia.org/resource/Akbaruddin_Owaisi"
+      }, {
+        "label" : "Alexander Akerman",
+        "uri" : "http://dbpedia.org/resource/Alexander_Akerman"
+      }, {
+        "label" : "Alexander Baring, 6th Baron Ashburton",
+        "uri" : "http://dbpedia.org/resource/Alexander_Baring,_6th_Baron_Ashburton"
+      }, {
+        "label" : "Alexander Bogoridi",
+        "uri" : "http://dbpedia.org/resource/Alexander_Bogoridi"
+      }, {
+        "label" : "Alexander W. Stow",
+        "uri" : "http://dbpedia.org/resource/Alexander_W._Stow"
+      }, {
+        "label" : "Alfred Conkling Coxe Jr.",
+        "uri" : "http://dbpedia.org/resource/Alfred_Conkling_Coxe_Jr."
+      }, {
+        "label" : "Alfred Józef Potocki",
+        "uri" : "http://dbpedia.org/resource/Alfred_Józef_Potocki"
+      }, {
+        "label" : "Alfred Lamb (Australian politician)",
+        "uri" : "http://dbpedia.org/resource/Alfred_Lamb_(Australian_politician)"
+      }, {
+        "label" : "Alphonso Taft",
+        "uri" : "http://dbpedia.org/resource/Alphonso_Taft"
+      }, {
+        "label" : "Chandrika Roy",
+        "uri" : "http://dbpedia.org/resource/Chandrika_Roy"
+      }, {
+        "label" : "Charilaos Trikoupis",
+        "uri" : "http://dbpedia.org/resource/Charilaos_Trikoupis"
+      }, {
+        "label" : "Charles Beauclerk, 2nd Duke of St Albans",
+        "uri" : "http://dbpedia.org/resource/Charles_Beauclerk,_2nd_Duke_of_St_Albans"
+      }, {
+        "label" : "Charles D. Drake",
+        "uri" : "http://dbpedia.org/resource/Charles_D._Drake"
+      }, {
+        "label" : "Charles D. Parker",
+        "uri" : "http://dbpedia.org/resource/Charles_D._Parker"
+      }, {
+        "label" : "Charles Holland Duell",
+        "uri" : "http://dbpedia.org/resource/Charles_Holland_Duell"
+      }, {
+        "label" : "Charles Spencer Francis",
+        "uri" : "http://dbpedia.org/resource/Charles_Spencer_Francis"
+      }, {
+        "label" : "Charles Taylor Sherman",
+        "uri" : "http://dbpedia.org/resource/Charles_Taylor_Sherman"
+      }, {
+        "label" : "Chaudhry Aamir Sultan Cheema",
+        "uri" : "http://dbpedia.org/resource/Chaudhry_Aamir_Sultan_Cheema"
+      }, {
+        "label" : "Chen Biao",
+        "uri" : "http://dbpedia.org/resource/Chen_Biao"
+      }, {
+        "label" : "Chen Li-an",
+        "uri" : "http://dbpedia.org/resource/Chen_Li-an"
+      }, {
+        "label" : "Chen Tai",
+        "uri" : "http://dbpedia.org/resource/Chen_Tai"
+      }, {
+        "label" : "Chiang Hsiao-yen",
+        "uri" : "http://dbpedia.org/resource/Chiang_Hsiao-yen"
+      }, {
+        "label" : "Fletcher Webster",
+        "uri" : "http://dbpedia.org/resource/Fletcher_Webster"
+      }, {
+        "label" : "Florence Norman",
+        "uri" : "http://dbpedia.org/resource/Florence_Norman"
+      }, {
+        "label" : "Nikolas Papadopoulos",
+        "uri" : "http://dbpedia.org/resource/Nikolas_Papadopoulos"
+      }, {
+        "label" : "Niwa Nagahiro",
+        "uri" : "http://dbpedia.org/resource/Niwa_Nagahiro"
+      }, {
+        "label" : "Oda Nobukatsu",
+        "uri" : "http://dbpedia.org/resource/Oda_Nobukatsu"
+      }, {
+        "label" : "Chaudhry Farrukh Altaf",
+        "uri" : "http://dbpedia.org/resource/Chaudhry_Farrukh_Altaf"
+      }, {
+        "label" : "Edgar Gerhart",
+        "uri" : "http://dbpedia.org/resource/Edgar_Gerhart"
+      }, {
+        "label" : "Fazal Rahimtoola",
+        "uri" : "http://dbpedia.org/resource/Fazal_Rahimtoola"
+      }, {
+        "label" : "Habib Rahimtoola",
+        "uri" : "http://dbpedia.org/resource/Habib_Rahimtoola"
+      }, {
+        "label" : "Richard Byron, 2nd Baron Byron",
+        "uri" : "http://dbpedia.org/resource/Richard_Byron,_2nd_Baron_Byron"
+      }, {
+        "label" : "Avss Amarnath Gudivada",
+        "uri" : "http://dbpedia.org/resource/Avss_Amarnath_Gudivada"
+      }, {
+        "label" : "Awais Leghari",
+        "uri" : "http://dbpedia.org/resource/Awais_Leghari"
+      }, {
+        "label" : "Azam Taleghani",
+        "uri" : "http://dbpedia.org/resource/Azam_Taleghani"
+      }, {
+        "label" : "Bafel Talabani",
+        "uri" : "http://dbpedia.org/resource/Bafel_Talabani"
+      }, {
+        "label" : "Baji Rao I",
+        "uri" : "http://dbpedia.org/resource/Baji_Rao_I"
+      }, {
+        "label" : "Bakhtawar Singh Thapa",
+        "uri" : "http://dbpedia.org/resource/Bakhtawar_Singh_Thapa"
+      }, {
+        "label" : "Bao Xun",
+        "uri" : "http://dbpedia.org/resource/Bao_Xun"
+      }, {
+        "label" : "Bas de Gaay Fortman",
+        "uri" : "http://dbpedia.org/resource/Bas_de_Gaay_Fortman"
+      }, {
+        "label" : "Basil Hamilton-Temple-Blackwood, 4th Marquess of Dufferin and Ava",
+        "uri" : "http://dbpedia.org/resource/Basil_Hamilton-Temple-Blackwood,_4th_Marquess_of_Dufferin_and_Ava"
+      }, {
+        "label" : "Liu Cong (Han dynasty)",
+        "uri" : "http://dbpedia.org/resource/Liu_Cong_(Han_dynasty)"
+      }, {
+        "label" : "Liu Ji (Three Kingdoms)",
+        "uri" : "http://dbpedia.org/resource/Liu_Ji_(Three_Kingdoms)"
+      }, {
+        "label" : "Liu Qi (Liu Biao's son)",
+        "uri" : "http://dbpedia.org/resource/Liu_Qi_(Liu_Biao's_son)"
+      }, {
+        "label" : "Liu Yong (Qing dynasty)",
+        "uri" : "http://dbpedia.org/resource/Liu_Yong_(Qing_dynasty)"
+      }, {
+        "label" : "Liu Zhang (warlord)",
+        "uri" : "http://dbpedia.org/resource/Liu_Zhang_(warlord)"
+      }, {
+        "label" : "Lola Karimova-Tillyaeva",
+        "uri" : "http://dbpedia.org/resource/Lola_Karimova-Tillyaeva"
+      }, {
+        "label" : "Louis von Doussa",
+        "uri" : "http://dbpedia.org/resource/Louis_von_Doussa"
+      }, {
+        "label" : "Tachibana Ginchiyo",
+        "uri" : "http://dbpedia.org/resource/Tachibana_Ginchiyo"
+      }, {
+        "label" : "Cao Shuang",
+        "uri" : "http://dbpedia.org/resource/Cao_Shuang"
+      }, {
+        "label" : "Carlos Bee (California politician)",
+        "uri" : "http://dbpedia.org/resource/Carlos_Bee_(California_politician)"
+      }, {
+        "label" : "Carol Miller (politician)",
+        "uri" : "http://dbpedia.org/resource/Carol_Miller_(politician)"
+      }, {
+        "label" : "Cassius Fairchild",
+        "uri" : "http://dbpedia.org/resource/Cassius_Fairchild"
+      }, {
+        "label" : "Christian Porter",
+        "uri" : "http://dbpedia.org/resource/Christian_Porter"
+      }, {
+        "label" : "Claude Luse",
+        "uri" : "http://dbpedia.org/resource/Claude_Luse"
+      }, {
+        "label" : "Clyde Packer",
+        "uri" : "http://dbpedia.org/resource/Clyde_Packer"
+      }, {
+        "label" : "Gazi Mohammad Shahnawaz",
+        "uri" : "http://dbpedia.org/resource/Gazi_Mohammad_Shahnawaz"
+      }, {
+        "label" : "George Beauclerk, 3rd Duke of St Albans",
+        "uri" : "http://dbpedia.org/resource/George_Beauclerk,_3rd_Duke_of_St_Albans"
+      }, {
+        "label" : "George Hemmant",
+        "uri" : "http://dbpedia.org/resource/George_Hemmant"
+      }, {
+        "label" : "George Hodges Knox",
+        "uri" : "http://dbpedia.org/resource/George_Hodges_Knox"
+      }, {
+        "label" : "George Oliver Plunkett",
+        "uri" : "http://dbpedia.org/resource/George_Oliver_Plunkett"
+      }, {
+        "label" : "George Rogers Clark Floyd",
+        "uri" : "http://dbpedia.org/resource/George_Rogers_Clark_Floyd"
+      }, {
+        "label" : "George T. Beck",
+        "uri" : "http://dbpedia.org/resource/George_T._Beck"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "17",
+    "lexicalEntryUri" : null,
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "LOCATION",
+    "frameType" : "NPP",
+    "sentences" : [ "Give me the death place of fictional characters played by $x", "Tell me the death place of fictional characters played by $x", "What is the death place of fictional characters played by $x?", "What was the death place of fictional characters played by $x?", "Which place is the death place of fictional characters played by $x?", "Which place was the death place of fictional characters played by $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfPropx)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "18",
     "lexicalEntryUri" : null,
     "language" : "EN",
     "type" : "SENTENCE",
@@ -320,7 +1000,27 @@
     },
     "combination" : true
   }, {
-    "id" : "9",
+    "id" : "19",
+    "lexicalEntryUri" : null,
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "VP",
+    "sentences" : [ "What played the father of $x?", "What playes the father of $x?", "Which person played the father of $x?", "Which person playes the father of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/father> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "20",
     "lexicalEntryUri" : null,
     "language" : "EN",
     "type" : "SENTENCE",
@@ -640,7 +1340,30 @@
     },
     "combination" : true
   }, {
-    "id" : "10",
+    "id" : "21",
+    "lexicalEntryUri" : null,
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "APP",
+    "sentences" : [ "What is played by the father of $x?", "What was played by the father of $x?", "Which fictional character is played by the father of $x?", "Which fictional character was played by the father of $x?", "Which fictional characters are played by the father of $x?", "Which fictional characters were played by the father of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/father> ?objOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Giles Watling",
+        "uri" : "http://dbpedia.org/resource/Giles_Watling"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "22",
     "lexicalEntryUri" : null,
     "language" : "EN",
     "type" : "SENTENCE",
@@ -714,7 +1437,27 @@
     },
     "combination" : true
   }, {
-    "id" : "11",
+    "id" : "23",
+    "lexicalEntryUri" : null,
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "WORK",
+    "frameType" : "APP",
+    "sentences" : [ "What is developed by the father of $x?", "What was developed by the father of $x?", "Which work is developed by the father of $x?", "Which work was developed by the father of $x?", "Which works are developed by the father of $x?", "Which works were developed by the father of $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/father> ?objOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "24",
     "lexicalEntryUri" : null,
     "language" : "EN",
     "type" : "SENTENCE",
@@ -731,6 +1474,326 @@
     "sentenceBindings" : {
       "bindingVariableName" : "$x",
       "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "25",
+    "lexicalEntryUri" : null,
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "DATE",
+    "frameType" : "IPP",
+    "sentences" : [ "When was the works developed by $x released?", "When were the works developed by $x released?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/releaseDate> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfPropx)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "989 Studios",
+        "uri" : "http://dbpedia.org/resource/989_Studios"
+      }, {
+        "label" : "ABS-CBN News and Current Affairs",
+        "uri" : "http://dbpedia.org/resource/ABS-CBN_News_and_Current_Affairs"
+      }, {
+        "label" : "ADK (company)",
+        "uri" : "http://dbpedia.org/resource/ADK_(company)"
+      }, {
+        "label" : "LucasArts",
+        "uri" : "http://dbpedia.org/resource/LucasArts"
+      }, {
+        "label" : "Lucy Cousins",
+        "uri" : "http://dbpedia.org/resource/Lucy_Cousins"
+      }, {
+        "label" : "M2 (game developer)",
+        "uri" : "http://dbpedia.org/resource/M2_(game_developer)"
+      }, {
+        "label" : "MSX2",
+        "uri" : "http://dbpedia.org/resource/MSX2"
+      }, {
+        "label" : "Mabrouk El Mechri",
+        "uri" : "http://dbpedia.org/resource/Mabrouk_El_Mechri"
+      }, {
+        "label" : "Mad Catz",
+        "uri" : "http://dbpedia.org/resource/Mad_Catz"
+      }, {
+        "label" : "Bandai Namco Games",
+        "uri" : "http://dbpedia.org/resource/Bandai_Namco_Games"
+      }, {
+        "label" : "Ubisoft",
+        "uri" : "http://dbpedia.org/resource/Ubisoft"
+      }, {
+        "label" : "Ubisoft Chengdu",
+        "uri" : "http://dbpedia.org/resource/Ubisoft_Chengdu"
+      }, {
+        "label" : "Ubisoft Montpellier",
+        "uri" : "http://dbpedia.org/resource/Ubisoft_Montpellier"
+      }, {
+        "label" : "Ubuntu Unity",
+        "uri" : "http://dbpedia.org/resource/Ubuntu_Unity"
+      }, {
+        "label" : "Ulteo",
+        "uri" : "http://dbpedia.org/resource/Ulteo"
+      }, {
+        "label" : "University of Tsukuba",
+        "uri" : "http://dbpedia.org/resource/University_of_Tsukuba"
+      }, {
+        "label" : "VMware",
+        "uri" : "http://dbpedia.org/resource/VMware"
+      }, {
+        "label" : "Cyan Worlds",
+        "uri" : "http://dbpedia.org/resource/Cyan_Worlds"
+      }, {
+        "label" : "Scott Peters (writer)",
+        "uri" : "http://dbpedia.org/resource/Scott_Peters_(writer)"
+      }, {
+        "label" : "HeroCraft",
+        "uri" : "http://dbpedia.org/resource/HeroCraft"
+      }, {
+        "label" : "Handheld Games",
+        "uri" : "http://dbpedia.org/resource/Handheld_Games"
+      }, {
+        "label" : "BioWare",
+        "uri" : "http://dbpedia.org/resource/BioWare"
+      }, {
+        "label" : "BlueSky Software",
+        "uri" : "http://dbpedia.org/resource/BlueSky_Software"
+      }, {
+        "label" : "Blue Sky Productions",
+        "uri" : "http://dbpedia.org/resource/Blue_Sky_Productions"
+      }, {
+        "label" : "Devsisters",
+        "uri" : "http://dbpedia.org/resource/Devsisters"
+      }, {
+        "label" : "Digital Leisure",
+        "uri" : "http://dbpedia.org/resource/Digital_Leisure"
+      }, {
+        "label" : "Diplo",
+        "uri" : "http://dbpedia.org/resource/Diplo"
+      }, {
+        "label" : "Grezzo",
+        "uri" : "http://dbpedia.org/resource/Grezzo"
+      }, {
+        "label" : "Kevin Shinick",
+        "uri" : "http://dbpedia.org/resource/Kevin_Shinick"
+      }, {
+        "label" : "Koei Tecmo",
+        "uri" : "http://dbpedia.org/resource/Koei_Tecmo"
+      }, {
+        "label" : "Kogado Studio",
+        "uri" : "http://dbpedia.org/resource/Kogado_Studio"
+      }, {
+        "label" : "Kojima Productions",
+        "uri" : "http://dbpedia.org/resource/Kojima_Productions"
+      }, {
+        "label" : "Konami",
+        "uri" : "http://dbpedia.org/resource/Konami"
+      }, {
+        "label" : "Korean Broadcasting System",
+        "uri" : "http://dbpedia.org/resource/Korean_Broadcasting_System"
+      }, {
+        "label" : "Aspyr Media",
+        "uri" : "http://dbpedia.org/resource/Aspyr_Media"
+      }, {
+        "label" : "Q Entertainment",
+        "uri" : "http://dbpedia.org/resource/Q_Entertainment"
+      }, {
+        "label" : "Quest Corporation",
+        "uri" : "http://dbpedia.org/resource/Quest_Corporation"
+      }, {
+        "label" : "RTL Klub",
+        "uri" : "http://dbpedia.org/resource/RTL_Klub"
+      }, {
+        "label" : "Radical Entertainment",
+        "uri" : "http://dbpedia.org/resource/Radical_Entertainment"
+      }, {
+        "label" : "Rainbow Studios",
+        "uri" : "http://dbpedia.org/resource/Rainbow_Studios"
+      }, {
+        "label" : "G.rev",
+        "uri" : "http://dbpedia.org/resource/G.rev"
+      }, {
+        "label" : "Hanako Games",
+        "uri" : "http://dbpedia.org/resource/Hanako_Games"
+      }, {
+        "label" : "Human Entertainment",
+        "uri" : "http://dbpedia.org/resource/Human_Entertainment"
+      }, {
+        "label" : "Irem",
+        "uri" : "http://dbpedia.org/resource/Irem"
+      }, {
+        "label" : "Exient Entertainment",
+        "uri" : "http://dbpedia.org/resource/Exient_Entertainment"
+      }, {
+        "label" : "Studio Alex",
+        "uri" : "http://dbpedia.org/resource/Studio_Alex"
+      }, {
+        "label" : "NLnet Labs",
+        "uri" : "http://dbpedia.org/resource/NLnet_Labs"
+      }, {
+        "label" : "Aksys Games",
+        "uri" : "http://dbpedia.org/resource/Aksys_Games"
+      }, {
+        "label" : "Alfred Shaughnessy",
+        "uri" : "http://dbpedia.org/resource/Alfred_Shaughnessy"
+      }, {
+        "label" : "Altron",
+        "uri" : "http://dbpedia.org/resource/Altron"
+      }, {
+        "label" : "Central Point Software",
+        "uri" : "http://dbpedia.org/resource/Central_Point_Software"
+      }, {
+        "label" : "Chiaki J. Konaka",
+        "uri" : "http://dbpedia.org/resource/Chiaki_J._Konaka"
+      }, {
+        "label" : "American Laser Games",
+        "uri" : "http://dbpedia.org/resource/American_Laser_Games"
+      }, {
+        "label" : "Nihon Falcom",
+        "uri" : "http://dbpedia.org/resource/Nihon_Falcom"
+      }, {
+        "label" : "Nintendo",
+        "uri" : "http://dbpedia.org/resource/Nintendo"
+      }, {
+        "label" : "Nintendo DS",
+        "uri" : "http://dbpedia.org/resource/Nintendo_DS"
+      }, {
+        "label" : "Nintendo Entertainment Analysis & Development",
+        "uri" : "http://dbpedia.org/resource/Nintendo_Entertainment_Analysis_&_Development"
+      }, {
+        "label" : "Nintendo Switch",
+        "uri" : "http://dbpedia.org/resource/Nintendo_Switch"
+      }, {
+        "label" : "Nippon Ichi Software",
+        "uri" : "http://dbpedia.org/resource/Nippon_Ichi_Software"
+      }, {
+        "label" : "Now Production",
+        "uri" : "http://dbpedia.org/resource/Now_Production"
+      }, {
+        "label" : "Natsume (company)",
+        "uri" : "http://dbpedia.org/resource/Natsume_(company)"
+      }, {
+        "label" : "Neko Entertainment",
+        "uri" : "http://dbpedia.org/resource/Neko_Entertainment"
+      }, {
+        "label" : "Success (company)",
+        "uri" : "http://dbpedia.org/resource/Success_(company)"
+      }, {
+        "label" : "Telenet Japan",
+        "uri" : "http://dbpedia.org/resource/Telenet_Japan"
+      }, {
+        "label" : "Warthog Games",
+        "uri" : "http://dbpedia.org/resource/Warthog_Games"
+      }, {
+        "label" : "Victor Interactive Software",
+        "uri" : "http://dbpedia.org/resource/Victor_Interactive_Software"
+      }, {
+        "label" : "Wadjet Eye Games",
+        "uri" : "http://dbpedia.org/resource/Wadjet_Eye_Games"
+      }, {
+        "label" : "Fill-in-Cafe",
+        "uri" : "http://dbpedia.org/resource/Fill-in-Cafe"
+      }, {
+        "label" : "Ferry Gouw",
+        "uri" : "http://dbpedia.org/resource/Ferry_Gouw"
+      }, {
+        "label" : "MTV Italy",
+        "uri" : "http://dbpedia.org/resource/MTV_Italy"
+      }, {
+        "label" : "07th Expansion",
+        "uri" : "http://dbpedia.org/resource/07th_Expansion"
+      }, {
+        "label" : "Avalanche Software",
+        "uri" : "http://dbpedia.org/resource/Avalanche_Software"
+      }, {
+        "label" : "Avalanche Studios",
+        "uri" : "http://dbpedia.org/resource/Avalanche_Studios"
+      }, {
+        "label" : "Backbone Entertainment",
+        "uri" : "http://dbpedia.org/resource/Backbone_Entertainment"
+      }, {
+        "label" : "Bandai",
+        "uri" : "http://dbpedia.org/resource/Bandai"
+      }, {
+        "label" : "Banpresto",
+        "uri" : "http://dbpedia.org/resource/Banpresto"
+      }, {
+        "label" : "Arrowhead Game Studios",
+        "uri" : "http://dbpedia.org/resource/Arrowhead_Game_Studios"
+      }, {
+        "label" : "Artdink",
+        "uri" : "http://dbpedia.org/resource/Artdink"
+      }, {
+        "label" : "Artoon",
+        "uri" : "http://dbpedia.org/resource/Artoon"
+      }, {
+        "label" : "LookingGlass Technologies",
+        "uri" : "http://dbpedia.org/resource/LookingGlass_Technologies"
+      }, {
+        "label" : "Loriciels",
+        "uri" : "http://dbpedia.org/resource/Loriciels"
+      }, {
+        "label" : "Josh A. Cagan",
+        "uri" : "http://dbpedia.org/resource/Josh_A._Cagan"
+      }, {
+        "label" : "Canonical (company)",
+        "uri" : "http://dbpedia.org/resource/Canonical_(company)"
+      }, {
+        "label" : "Canonical Ltd.",
+        "uri" : "http://dbpedia.org/resource/Canonical_Ltd."
+      }, {
+        "label" : "Capcom",
+        "uri" : "http://dbpedia.org/resource/Capcom"
+      }, {
+        "label" : "Choice of Games",
+        "uri" : "http://dbpedia.org/resource/Choice_of_Games"
+      }, {
+        "label" : "Chris Taylor (comedian)",
+        "uri" : "http://dbpedia.org/resource/Chris_Taylor_(comedian)"
+      }, {
+        "label" : "Cignal TV",
+        "uri" : "http://dbpedia.org/resource/Cignal_TV"
+      }, {
+        "label" : "Anchor Inc.",
+        "uri" : "http://dbpedia.org/resource/Anchor_Inc."
+      }, {
+        "label" : "GameHouse",
+        "uri" : "http://dbpedia.org/resource/GameHouse"
+      }, {
+        "label" : "Game Arts",
+        "uri" : "http://dbpedia.org/resource/Game_Arts"
+      }, {
+        "label" : "Game Republic",
+        "uri" : "http://dbpedia.org/resource/Game_Republic"
+      }, {
+        "label" : "Gameloft",
+        "uri" : "http://dbpedia.org/resource/Gameloft"
+      }, {
+        "label" : "Gene Reynolds",
+        "uri" : "http://dbpedia.org/resource/Gene_Reynolds"
+      }, {
+        "label" : "Genki (company)",
+        "uri" : "http://dbpedia.org/resource/Genki_(company)"
+      }, {
+        "label" : "Jeremy Ashkenas",
+        "uri" : "http://dbpedia.org/resource/Jeremy_Ashkenas"
+      }, {
+        "label" : "Bandai Entertainment Company",
+        "uri" : "http://dbpedia.org/resource/Bandai_Entertainment_Company"
+      }, {
+        "label" : "David M. Stern",
+        "uri" : "http://dbpedia.org/resource/David_M._Stern"
+      }, {
+        "label" : "HB Studios",
+        "uri" : "http://dbpedia.org/resource/HB_Studios"
+      }, {
+        "label" : "Microcabin",
+        "uri" : "http://dbpedia.org/resource/Microcabin"
+      } ]
     },
     "combination" : true
   } ]
