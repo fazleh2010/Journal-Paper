@@ -76,10 +76,10 @@ public class QueGG {
     private static String GENERATE_JSON = "generate";
     private static String CREATE_CSV = "CREATE_CSV";
     private static String BaseDir = "";
-    private static String QUESTION_ANSWER_LOCATION = BaseDir + "questions/";
     //tmp location
     //private static String QUESTION_ANSWER_LOCATION =  "/tmp/";
     private static String QUESTION_ANSWER_FILE = "questions";
+    private static String QUESTION_SUMMARY_FILE = "summary";
     private static String entityLabelDir = "src/main/resources/entityLabels/";
     //private static String javaLoc="/home/elahi/grammar/hackthon/fork/QueGG-web/target/";
     private static String javaLoc = "QueGG-webCopy/";
@@ -91,7 +91,7 @@ public class QueGG {
         JenaSystem.init();
 
         String search = GENERATE_JSON + CREATE_CSV;
-        String questionAnswerFile = null;
+        String questionAnswerFile = null,questionSummaryFile;
 
         try {
             if (args.length < 5) {
@@ -122,7 +122,8 @@ public class QueGG {
                 throw new Exception("No files to process for question answering system!!");
             }
             questionAnswerFile = outputDir + File.separator + QUESTION_ANSWER_FILE + "_" + language + ".csv";
-            ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, maxNumberOfEntities);
+            questionSummaryFile = outputDir + File.separator + QUESTION_SUMMARY_FILE + "_" + language + ".csv";
+            ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile,questionSummaryFile, maxNumberOfEntities);
             readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir, externalEntittyListflag);
 
             //temporary close of QA system generation
