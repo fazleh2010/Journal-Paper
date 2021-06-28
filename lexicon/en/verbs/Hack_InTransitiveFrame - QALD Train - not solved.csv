@@ -1,2 +1,0 @@
-LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,GrammarRule 1 :question 1,GrammarRule 1 :question 2,GrammarRule 1 :sparql,Grammar rule 2: question1,Grammar rule 2: question2,sparql2
-complete_on,verb,complete,completes,completed,on,InTransitiveFrame,domain,range,1,dbo:buildingEndDate,dbo:ArchitecturalStructure,xsd:date,-,FALSE,SELECT ?X WHERE { ?X dbo:buildingEndDate Y.},-,FALSE,SELECT ?X WHERE { Y dbo:buildingEndDate ?X.}
