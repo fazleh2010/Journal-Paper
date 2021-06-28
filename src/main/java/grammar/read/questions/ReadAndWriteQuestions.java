@@ -102,7 +102,7 @@ import util.io.Statistics;
 public class ReadAndWriteQuestions {
 
     public String[] questionHeader = new String[]{id, question, sparql, answer, frame};
-    public String[] summaryHeader = new String[]{lexicalEntry, numberOfGrammarRules, numberOfQuestions,frameType};
+    public String[] summaryHeader = new String[]{lexicalEntry, numberOfGrammarRules, numberOfQuestions,frameType,Status,Reason};
     public static String FRAMETYPE_NPP = "NPP";
     public static final String id = "id";
     public static final String question = "question";
@@ -114,6 +114,10 @@ public class ReadAndWriteQuestions {
     private static final String frameType = "frameType";
     private static final String numberOfGrammarRules = "numberOfGrammarRules";
     private static final String numberOfQuestions = "numberOfQuestions";
+    private static final String Status = "numberOfQuestions";
+    private static final String Reason = "numberOfQuestions";
+
+
     public CSVWriter csvWriterQuestions;
     public CSVWriter csvWriterSummary;
     public String questionAnswerFile = null;
@@ -181,9 +185,9 @@ public class ReadAndWriteQuestions {
 
                     if (this.summary.containsKey(uri)) {
                         Statistics summary = this.summary.get(uri);
-                        this.summary.put(uri, new Statistics(grammarEntryUnit.getFrameType(), summary.getNumberOfGrammarRules() + 1, noIndex));
+                        this.summary.put(uri, new Statistics(grammarEntryUnit.getFrameType(), summary.getNumberOfGrammarRules() + 1, noIndex,bindingList.size()));
                     } else {
-                        Statistics summary = new Statistics(grammarEntryUnit.getFrameType(), 1, noIndex);
+                        Statistics summary = new Statistics(grammarEntryUnit.getFrameType(), 1, noIndex,bindingList.size());
                         this.summary.put(uri, summary);
                     }
                 }
@@ -376,7 +380,7 @@ public class ReadAndWriteQuestions {
         }
         for (String key : summary.keySet()) {
             Statistics element = summary.get(key);
-            String[] record = {key,element.getNumberOfGrammarRules().toString(), element.getNumberOfQuestions().toString(), element.getFrameType()};
+            String[] record = {key,element.getNumberOfGrammarRules().toString(), element.getNumberOfQuestions().toString(), element.getFrameType(),element.getSuccess_Fail(),element.getReason()};
             this.csvWriterSummary.writeNext(record);
 
         }

@@ -112,11 +112,13 @@ public class QueGG {
                 queGG.init(language, inputDir, outputDir);
             } else if (fileType.contains("csv")) {
                 queGG.generateTurtle(inputDir);
+                queGG.init(language, inputDir, outputDir);
+                System.out.println("generated Json output!!!");
             } else {
                 throw new Exception("No file type is mentioned!!");
             }
 
-            queGG.init(language, inputDir, outputDir);
+            
             List<File> fileList = FileUtils.getFiles(outputDir + "/", outputFileName + "_" + language, ".json");
             if (fileList.isEmpty()) {
                 throw new Exception("No files to process for question answering system!!");
@@ -125,7 +127,9 @@ public class QueGG {
             questionSummaryFile = outputDir + File.separator + QUESTION_SUMMARY_FILE + "_" + language + ".csv";
             ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile,questionSummaryFile, maxNumberOfEntities);
             readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir, externalEntittyListflag);
-
+            
+            
+            
             //temporary close of QA system generation
             //ExecJar.callInterface(javaLoc,jarFile);
             //System.out.println("csv file generation successful!!");

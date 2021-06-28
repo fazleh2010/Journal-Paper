@@ -13,12 +13,34 @@ public class Statistics {
     private String frameType=null;
     private Integer numberOfGrammarRules=null;
     private Integer numberOfQuestions=null;
+    private Integer bindingList=null;
+    private String Success_Fail="Success";
+    private String reason="-";
+
+
     
-    public Statistics(String frameType,Integer numberOfGrammarRules,Integer numberOfQuestions){
+    public Statistics(String frameType,Integer numberOfGrammarRules,Integer numberOfQuestions,Integer bindingList){
        this.frameType=frameType;
        this.numberOfGrammarRules=numberOfGrammarRules;
        this.numberOfQuestions=numberOfQuestions;
-        
+       this.bindingList= bindingList;
+       if(bindingList==0){
+          this.Success_Fail="Failed";
+          this.reason="binding list is empty";
+       }
+       
+    }
+
+    public Integer getBindingList() {
+        return bindingList;
+    }
+
+    public String getSuccess_Fail() {
+        return Success_Fail;
+    }
+
+    public String getReason() {
+        return reason;
     }
 
    
