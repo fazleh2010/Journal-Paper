@@ -67,6 +67,7 @@ import com.google.api.services.sheets.v4.model.ValueRange;
 import grammar.read.questions.SparqlQuery;
 import static grammar.read.questions.SparqlQuery.FIND_ANY_ANSWER;
 import static grammar.read.questions.SparqlQuery.RETURN_TYPE_OBJECT;
+import grammar.sparql.SPARQLRequest;
 
 import java.io.*;
 import java.security.GeneralSecurityException;
@@ -102,6 +103,8 @@ public class QueGG {
 
         String search = GENERATE_JSON + CREATE_CSV;
         String questionAnswerFile = null,questionSummaryFile;
+        
+        SPARQLRequest.setEndpoint(endpoint);
 
         try {
             if (args.length < 5) {
@@ -385,4 +388,10 @@ public class QueGG {
         }
 
     }*/
+
+    public static String getEndpoint() {
+        return endpoint;
+    }
+    
+    
 }
