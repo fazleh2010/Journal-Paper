@@ -29,7 +29,7 @@ import java.util.logging.Logger;
 public class SparqlQuery {
     //https://www.w3.org/TR/rdf-sparql-query/
 
-    private static String endpoint = "https://dbpedia.org/sparql";
+    private  String endpoint = "https://dbpedia.org/sparql";
     private String objectOfProperty;
     public static String FIND_ANY_ANSWER = "FIND_ANY_ANSWER";
     public static String FIND_LABEL = "FIND_LABEL";
@@ -38,7 +38,8 @@ public class SparqlQuery {
     public static String RETURN_TYPE_SUBJECT = "subjOfProp";
     private String resultSparql=null;
 
-    public SparqlQuery(String entityUrl, String property, String type, String returnType) {
+    public SparqlQuery(String sparqlEndpoint,String entityUrl, String property, String type, String returnType) {
+        this.endpoint=sparqlEndpoint;
         if (type.contains(FIND_ANY_ANSWER)) {
             if (returnType.contains("objOfProp")) {
                 sparqlQuery = this.setSparqlQueryPropertyObject(entityUrl, property);
@@ -276,7 +277,7 @@ public class SparqlQuery {
         String subject = "http://dbpedia.org/resource/Province_of_Saxony";
         String object = "http://dbpedia.org/resource/Russia";
 
-        SparqlQuery sparqlQuery = new SparqlQuery(subject, objectUrl, FIND_ANY_ANSWER, RETURN_TYPE_OBJECT);
+        SparqlQuery sparqlQuery = new SparqlQuery("https://dbpedia.org/sparql",subject, objectUrl, FIND_ANY_ANSWER, RETURN_TYPE_OBJECT);
         //System.out.println(sparqlQuery.getSparqlQuery());
         
         String sparql=sparqlQuery.setSparqlQueryForLabel(object);

@@ -86,6 +86,8 @@ public class QueGG {
     private static String jarFile = "quegg-web-0.0.1-SNAPSHOT.jar";
     private static Boolean externalEntittyListflag = false;
     private static String outputFileName = "grammar_FULL_DATASET";
+    private  static String endpoint = "https://dbpedia.org/sparql";
+
 
     public static void main(String[] args) throws Exception {
         JenaSystem.init();
@@ -125,7 +127,7 @@ public class QueGG {
             }
             questionAnswerFile = outputDir + File.separator + QUESTION_ANSWER_FILE + "_" + language + ".csv";
             questionSummaryFile = outputDir + File.separator + QUESTION_SUMMARY_FILE + "_" + language + ".csv";
-            ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile,questionSummaryFile, maxNumberOfEntities);
+            ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(endpoint,questionAnswerFile,questionSummaryFile, maxNumberOfEntities);
             readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir, externalEntittyListflag);
             
             

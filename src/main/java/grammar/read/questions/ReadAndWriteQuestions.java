@@ -116,6 +116,7 @@ public class ReadAndWriteQuestions {
     private static final String numberOfQuestions = "numberOfQuestions";
     private static final String Status = "numberOfQuestions";
     private static final String Reason = "numberOfQuestions";
+    private  String endpoint = "https://dbpedia.org/sparql";
 
 
     public CSVWriter csvWriterQuestions;
@@ -128,8 +129,9 @@ public class ReadAndWriteQuestions {
     private Integer maxNumberOfEntities = 100;
     private static final org.apache.logging.log4j.Logger LOG = LogManager.getLogger(ReadAndWriteQuestions.class);
 
-    public ReadAndWriteQuestions(String questionAnswerFile, String questionSummaryFile, Integer maxNumberOfEntities) {
+    public ReadAndWriteQuestions(String endpoint,String questionAnswerFile, String questionSummaryFile, Integer maxNumberOfEntities) {
         this.initialExcluded();
+        this.endpoint=endpoint;
         this.questionAnswerFile = questionAnswerFile;
         this.questionSummaryFile = questionSummaryFile;
         this.maxNumberOfEntities = maxNumberOfEntities;
@@ -265,14 +267,14 @@ public class ReadAndWriteQuestions {
         SparqlQuery sparqlQuery = null;
         property = StringUtils.substringBetween(sparql, "<", ">");
 
-        sparqlQuery = new SparqlQuery(subjProp, property, SparqlQuery.FIND_ANY_ANSWER, returnType);
+        sparqlQuery = new SparqlQuery(this.endpoint,subjProp, property, SparqlQuery.FIND_ANY_ANSWER, returnType);
         //System.out.println("original sparql:: "+sparql);
         //System.out.println("sparqlQuery:: "+sparqlQuery.getSparqlQuery());
         answer = sparqlQuery.getObject();
         if (answer != null) {
             if (answer.contains("http:")) {
                 //System.out.println(answer);
-                SparqlQuery sparqlQueryLabel = new SparqlQuery(answer, property, SparqlQuery.FIND_LABEL, null);
+                SparqlQuery sparqlQueryLabel = new SparqlQuery(this.endpoint,answer, property, SparqlQuery.FIND_LABEL, null);
                 answer = sparqlQueryLabel.getObject();
                 //System.out.println(answer);
 
