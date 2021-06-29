@@ -64,10 +64,17 @@ import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.sheets.v4.SheetsScopes;
 import com.google.api.services.sheets.v4.model.AppendValuesResponse;
 import com.google.api.services.sheets.v4.model.ValueRange;
+import grammar.read.questions.SparqlQuery;
+import static grammar.read.questions.SparqlQuery.FIND_ANY_ANSWER;
+import static grammar.read.questions.SparqlQuery.RETURN_TYPE_OBJECT;
 
 import java.io.*;
 import java.security.GeneralSecurityException;
 import java.util.*;
+
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.HashMap;
 
 @NoArgsConstructor
 public class QueGG {
@@ -87,8 +94,9 @@ public class QueGG {
     private static Boolean externalEntittyListflag = false;
     private static String outputFileName = "grammar_FULL_DATASET";
     private  static String endpoint = "https://dbpedia.org/sparql";
-
-
+    //private  static String endpoint =  "https://query.wikidata.org/sparql";
+    
+    
     public static void main(String[] args) throws Exception {
         JenaSystem.init();
 

@@ -241,6 +241,11 @@
             <version>v4-rev581-1.25.0</version>
         </dependency>  
 
+<!-- https://mvnrepository.com/artifact/ont-app/sparql-client -->
+<!-- https://mvnrepository.com/artifact/com.bordercloud/SPARQL-JAVA -->
+<!-- https://mvnrepository.com/artifact/com.bordercloud/SPARQL-JAVA -->
+
+
 
 
 

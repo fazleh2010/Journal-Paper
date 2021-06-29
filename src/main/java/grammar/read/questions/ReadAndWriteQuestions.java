@@ -179,7 +179,7 @@ public class ReadAndWriteQuestions {
                 noIndex = this.replaceVariables(bindingList, sparql, returnVairable, grammarEntryUnit.getSentences(), syntacticFrame, noIndex, "");
                 noIndex = noIndex + 1;
                 //LOG.info("index:" + index + " Id:" + grammarEntryUnit.getId() + " total:" + total + " example:" + grammarEntryUnit.getSentences().iterator().next());
-                //System.out.println("index:" + index + " Id:" + grammarEntryUnit.getId() + " total:" + total + " example:" + grammarEntryUnit.getSentences().iterator().next());
+                System.out.println("index:" + index + " Id:" + grammarEntryUnit.getId() + " total:" + total + " example:" + grammarEntryUnit.getSentences().iterator().next());
                 idIndex = idIndex + 1;
 
                 if (grammarEntryUnit.getLexicalEntryUri() != null) {
@@ -221,7 +221,7 @@ public class ReadAndWriteQuestions {
             index = index + 1;
             sparql = this.modifySparql(sparql);
 
-            //System.out.println("index::" + index + " uriLabel::" + uriLabel.getLabel() + " questionForShow::" + questionForShow + " sparql::" + sparql + " answer::" + answer+ " syntacticFrame:"+syntacticFrame);
+            System.out.println("index::" + index + " uriLabel::" + uriLabel.getLabel() + " questionForShow::" + questionForShow + " sparql::" + sparql + " answer::" + answer+ " syntacticFrame:"+syntacticFrame);
             try {
                 if (answer.isEmpty() || answer.contains("no answer found")) {
                     continue;
