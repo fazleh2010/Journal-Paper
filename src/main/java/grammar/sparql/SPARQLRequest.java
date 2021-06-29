@@ -395,4 +395,10 @@ public class SPARQLRequest {
         SPARQL_ENDPOINT_URL=endpoint;
     }
 
+    public static String getSPARQL_ENDPOINT_URL() {
+        return SPARQL_ENDPOINT_URL;
+    }
+    
+    
+
 }

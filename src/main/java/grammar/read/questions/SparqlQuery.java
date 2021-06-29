@@ -5,6 +5,7 @@
  */
 package grammar.read.questions;
 
+import grammar.sparql.SPARQLRequest;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -38,8 +39,8 @@ public class SparqlQuery {
     public static String RETURN_TYPE_SUBJECT = "subjOfProp";
     private String resultSparql = null;
 
-    public SparqlQuery(String sparqlEndpoint, String entityUrl, String property, String type, String returnType) {
-        this.endpoint = sparqlEndpoint;
+    public SparqlQuery(String entityUrl, String property, String type, String returnType) {
+        this.endpoint = SPARQLRequest.getSPARQL_ENDPOINT_URL();
 
         if (endpoint.contains("dbpedia.org")) {
             if (type.contains(FIND_ANY_ANSWER)) {
@@ -321,10 +322,13 @@ public class SparqlQuery {
         String propertyUrl = "http://www.wikidata.org/prop/direct/P26";
         String subject = "http://www.wikidata.org/entity/Q1744";
         String endpoint = "https://query.wikidata.org/sparql";
+        endpoint = "https://dbpedia.org/sparql";
+        SPARQLRequest.setEndpoint(endpoint);
+
 
         //subject = "wd:Q1744";
         //propertyUrl="wdt:P26";
-        SparqlQuery sparqlQuery = new SparqlQuery(endpoint, subject, propertyUrl, FIND_ANY_ANSWER, RETURN_TYPE_OBJECT);
+        SparqlQuery sparqlQuery = new SparqlQuery(subject, propertyUrl, FIND_ANY_ANSWER, RETURN_TYPE_OBJECT);
         System.out.println(sparqlQuery.getSparqlQuery());
         System.out.println(sparqlQuery.getObject());
 

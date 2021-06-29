@@ -138,7 +138,7 @@ public class QueGG {
             }
             questionAnswerFile = outputDir + File.separator + QUESTION_ANSWER_FILE + "_" + language + ".csv";
             questionSummaryFile = outputDir + File.separator + QUESTION_SUMMARY_FILE + "_" + language + ".csv";
-            ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(endpoint,questionAnswerFile,questionSummaryFile, maxNumberOfEntities);
+            ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile,questionSummaryFile, maxNumberOfEntities);
             readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir, externalEntittyListflag);
             
             
