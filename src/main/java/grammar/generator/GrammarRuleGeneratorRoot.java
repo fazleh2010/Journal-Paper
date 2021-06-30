@@ -10,6 +10,7 @@ import grammar.generator.helper.BindingConstants;
 import grammar.generator.helper.datasets.sentencetemplates.SentenceTemplateFactory;
 import grammar.generator.helper.datasets.sentencetemplates.SentenceTemplateRepository;
 import grammar.generator.helper.parser.SentenceTemplateParser;
+import grammar.read.questions.SparqlQuery;
 import grammar.sparql.Prefix;
 import grammar.sparql.SPARQLRequest;
 import grammar.sparql.SelectVariable;
@@ -52,6 +53,8 @@ import java.util.stream.Stream;
 public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
 
     private static final Logger LOG = LogManager.getLogger(GrammarRuleGeneratorRoot.class);
+    private static String endpoint;
+
 
     /**
      * The frameType is the name of the LexInfo frame that the generated
@@ -124,9 +127,9 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
 
     @Override
     public void generateBindings(GrammarEntry grammarEntry) {
-        if (SPARQLRequest.getSPARQL_ENDPOINT_URL().contains("dbpedia")) {
+        if (endpoint.contains("dbpedia")) {
             generateBindingsDBpedia(grammarEntry);
-        } else if (SPARQLRequest.getSPARQL_ENDPOINT_URL().contains("wikidata")) {
+        } else if (endpoint.contains("wikidata")) {
             generateBindingsWikiData(grammarEntry);
         }
     }
@@ -158,6 +161,7 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
     }
 
     private void generateBindingsWikiData(GrammarEntry grammarEntry) {
+         System.out.println("Inside into Wikidata!!!!");
         SentenceBindings newSentenceBindings = new SentenceBindings();
         newSentenceBindings.setBindingVariableName(grammarEntry.getSentenceBindings().getBindingVariableName());
         List<Binding> bindingList = new ArrayList<>();
@@ -174,9 +178,10 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
         } else {
             // limited to 1000 distinct bindings
             SPARQLRequest sparqlRequest = getBindingSparqlRequest(grammarEntry, bindingQuery);
-
-            List<Map<String, String>> sparqlSelectResultList = sparqlRequest.getSparqlSelectResultList();
-            bindingList = makeBindingsFromSPARQLRequestResult(sparqlSelectResultList);
+            SPARQLRequest.setEndpoint(endpoint);
+            SparqlQuery sparqlQuery = new SparqlQuery(bindingQuery.toString());
+            bindingList  = sparqlQuery.getBindingList();
+            System.out.println(bindingList);
         }
         newSentenceBindings.setBindingList(bindingList);
         grammarEntry.setSentenceBindings(newSentenceBindings);
@@ -364,5 +369,9 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
             firstWordSentenceCaseSentences.add(modifySentence);
         }
         return firstWordSentenceCaseSentences;
+    }
+   
+    public static void setEndpoint(String endpointT) {
+        endpoint = endpointT;
     }
 }

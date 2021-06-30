@@ -94,7 +94,6 @@ public class QueGG {
     private static String jarFile = "quegg-web-0.0.1-SNAPSHOT.jar";
     private static Boolean externalEntittyListflag = false;
     private static String outputFileName = "grammar_FULL_DATASET";
-    private  static String endpoint = "https://dbpedia.org/sparql";
     //private  static String endpoint =  "https://query.wikidata.org/sparql";
     
     
@@ -103,8 +102,17 @@ public class QueGG {
 
         String search = GENERATE_JSON + CREATE_CSV;
         String questionAnswerFile = null,questionSummaryFile;
+        String endpoint = "https://dbpedia.org/sparql";
+        //String endpoint = "https://query.wikidata.org/sparql";
+
+
         
-        SPARQLRequest.setEndpoint(endpoint);
+        if (endpoint.contains("dbpedia")) {
+            SPARQLRequest.setEndpoint(endpoint);
+            setSparqlEndpoint(endpoint);
+        } else if (endpoint.contains("wikidata")) {
+            setSparqlEndpoint(endpoint);
+        }
 
         try {
             if (args.length < 5) {
@@ -136,6 +144,7 @@ public class QueGG {
             if (fileList.isEmpty()) {
                 throw new Exception("No files to process for question answering system!!");
             }
+            SparqlQuery.setEndpoint(endpoint);
             questionAnswerFile = outputDir + File.separator + QUESTION_ANSWER_FILE + "_" + language + ".csv";
             questionSummaryFile = outputDir + File.separator + QUESTION_SUMMARY_FILE + "_" + language + ".csv";
             ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile,questionSummaryFile, maxNumberOfEntities);
@@ -389,9 +398,10 @@ public class QueGG {
 
     }*/
 
-    public static String getEndpoint() {
-        return endpoint;
+   
+      private static void setSparqlEndpoint(String endpoint) {
+        GrammarRuleGeneratorRoot.setEndpoint(endpoint);
+        
     }
-    
     
 }

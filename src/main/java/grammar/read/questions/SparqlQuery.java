@@ -6,12 +6,17 @@
 package grammar.read.questions;
 
 import grammar.sparql.SPARQLRequest;
+import grammar.structure.component.Binding;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.DOMException;
@@ -28,9 +33,13 @@ import java.util.logging.Logger;
  * @author elahi
  */
 public class SparqlQuery {
+
+    
+
+  
     //https://www.w3.org/TR/rdf-sparql-query/
 
-    private String endpoint = "https://dbpedia.org/sparql";
+    private static String endpoint = null;
     private String objectOfProperty;
     public static String FIND_ANY_ANSWER = "FIND_ANY_ANSWER";
     public static String FIND_LABEL = "FIND_LABEL";
@@ -38,9 +47,10 @@ public class SparqlQuery {
     public static String RETURN_TYPE_OBJECT = "objOfProp";
     public static String RETURN_TYPE_SUBJECT = "subjOfProp";
     private String resultSparql = null;
+    private List<Binding> bindingList=new ArrayList<Binding>();
 
     public SparqlQuery(String entityUrl, String property, String type, String returnType) {
-        this.endpoint = SPARQLRequest.getSPARQL_ENDPOINT_URL();
+       // this.endpoint = SPARQLRequest.getSPARQL_ENDPOINT_URL();
 
         if (endpoint.contains("dbpedia.org")) {
             if (type.contains(FIND_ANY_ANSWER)) {
@@ -75,8 +85,9 @@ public class SparqlQuery {
     }
 
     public SparqlQuery(String sparqlQuery) {
+        this.endpoint = SPARQLRequest.getSPARQL_ENDPOINT_URL();
         this.resultSparql = executeSparqlQuery(sparqlQuery);
-        parseResult(resultSparql);
+        this.parseResultBindingList(resultSparql);
     }
 
     private String executeSparqlQuery(String query) {
@@ -353,6 +364,68 @@ public class SparqlQuery {
        //System.out.println("sparql:"+resultSparql);
        //System.out.println("sparql:"+sparql.getObject());
          */
+    }
+    
+    public static void setEndpoint(String endpointT) {
+        endpoint=endpointT;
+    }
+
+    public List<Binding> getBindingList() {
+        return bindingList;
+    }
+
+    private void parseResultBindingList(String xmlStr) {
+         Document doc = convertStringToXMLDocument(xmlStr);
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = null;
+        try {
+            builder = factory.newDocumentBuilder();
+            this.parseResult(builder, xmlStr);
+        } catch (Exception ex) {
+            Logger.getLogger(SparqlQuery.class.getName()).log(Level.SEVERE, null, ex);
+            System.err.println("error in parsing sparql in XML!" + ex.getMessage());
+            ex.printStackTrace();
+        }
+
+        try {
+            Document document = builder.parse(new InputSource(new StringReader(
+                    xmlStr)));
+            NodeList results = document.getElementsByTagName("results");
+            for (int i = 0; i < results.getLength(); i++) {
+                NodeList childList = results.item(i).getChildNodes();
+                  System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                for (int j = 0; j < childList.getLength(); j++) {
+                    Node childNode = childList.item(j);
+                    if ("result".equals(childNode.getNodeName())) {
+                        String[] lines = childList.item(j).getTextContent().strip().trim().split(System.getProperty("line.separator"));
+                        Integer index=0;
+                        String http="",label="";
+                        Map<String,String> map=new TreeMap<String,String>();
+                        for(String line:lines) {
+                           
+                            if(index==0)
+                              http=line.strip().trim();
+                            else if(index==3)
+                              label=line.strip().trim();
+                            index=index+1;
+                        }
+                       map.put(http,label);
+                       Binding binding=new Binding(http,label);
+                       this.bindingList.add(binding);
+                    }
+                   
+                }
+
+            }
+        } catch (SAXException ex) {
+            Logger.getLogger(SparqlQuery.class.getName()).log(Level.SEVERE, null, ex);
+            System.err.println("no result after sparql query!" + ex.getMessage());
+            return ;
+        } catch (IOException ex) {
+            Logger.getLogger(SparqlQuery.class.getName()).log(Level.SEVERE, null, ex);
+            System.err.println("no result after sparql query!" + ex.getMessage());
+            return ;
+        }
     }
 
 }
