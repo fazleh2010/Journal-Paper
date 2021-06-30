@@ -77,6 +77,7 @@ public class SparqlQuery {
             } else if (type.contains(FIND_LABEL)) {
                 sparqlQuery = this.setLabelWikiData(entityUrl);
             }
+            //System.out.println("sparqlQuery::"+sparqlQuery);
             this.resultSparql = executeSparqlQuery(sparqlQuery);
             parseResult(resultSparql);
 
@@ -159,7 +160,7 @@ public class SparqlQuery {
                 for (int j = 0; j < childList.getLength(); j++) {
                     Node childNode = childList.item(j);
                     if ("result".equals(childNode.getNodeName())) {
-                        //System.out.println("label!!!!!!!!!!!!!" + childList.item(j).getTextContent().trim());
+                        System.out.println("label!!!!!!!!!!!!!" + childList.item(j).getTextContent().trim());
                         this.objectOfProperty = childList.item(j).getTextContent().trim();
                     }
                 }
@@ -195,7 +196,7 @@ public class SparqlQuery {
                 + "   }\n"
                 + "}";*/
 
-        return "SELECT ?object ?objectLabel WHERE {\n"
+        return "SELECT ?objectLabel WHERE {\n"
                 + "    <" + entityUrl + "> <" + propertyUrl + "> ?object.\n"
                 + "   SERVICE wikibase:label {\n"
                 + "     bd:serviceParam wikibase:language \"en\" .\n"
@@ -410,7 +411,7 @@ public class SparqlQuery {
                             index=index+1;
                         }
                        map.put(http,label);
-                       Binding binding=new Binding(http,label);
+                       Binding binding=new Binding(label,http);
                        this.bindingList.add(binding);
                     }
                    

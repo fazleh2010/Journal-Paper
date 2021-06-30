@@ -94,7 +94,6 @@ public class QueGG {
     private static String jarFile = "quegg-web-0.0.1-SNAPSHOT.jar";
     private static Boolean externalEntittyListflag = false;
     private static String outputFileName = "grammar_FULL_DATASET";
-    //private  static String endpoint =  "https://query.wikidata.org/sparql";
     
     
     public static void main(String[] args) throws Exception {
