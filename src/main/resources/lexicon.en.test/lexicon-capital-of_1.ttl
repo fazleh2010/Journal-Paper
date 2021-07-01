@@ -17,7 +17,7 @@
   lemon:sense          :capital_sense_ontomap .
 
 :capital_form a    lemon:Form ;
-  lemon:writtenRep "রাজধানী"@en .
+  lemon:writtenRep "capital"@en .
 
 :capital_of_nounpp a           lexinfo:NounPPFrame ;
   lexinfo:copulativeArg        :arg1 ;
@@ -40,5 +40,5 @@
 ## Prepositions ##
 
 :of a                  lemon:SynRoleMarker ;
-  lemon:canonicalForm  [ lemon:writtenRep "এর"@en ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "of"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .

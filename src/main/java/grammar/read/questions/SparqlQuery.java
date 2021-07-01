@@ -160,7 +160,7 @@ public class SparqlQuery {
                 for (int j = 0; j < childList.getLength(); j++) {
                     Node childNode = childList.item(j);
                     if ("result".equals(childNode.getNodeName())) {
-                        System.out.println("label!!!!!!!!!!!!!" + childList.item(j).getTextContent().trim());
+                        //System.out.println("label!!!!!!!!!!!!!" + childList.item(j).getTextContent().trim());
                         this.objectOfProperty = childList.item(j).getTextContent().trim();
                     }
                 }
