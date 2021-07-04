@@ -24,16 +24,17 @@ java -jar target/QuestionGrammarGenerator.jar EN lexicon/en output 10 csv
 ````  
 
 ### Input example
-QueGG can red both csv and turtle file as input 
-- An example of csv input file (.csv) can be found [here] (https://github.com/fazleh2010/question-grammar-generator/blob/extension/examples/input/lexicon/en/nouns/NounPPFrame%20-%20QALD%20Train%20-%20not%20solved.csv)
+QueGG can take either csv or turtle file as input 
+- An example of csv input file (.csv) can be found [here] (https://github.com/fazleh2010/question-grammar-generator/blob/extension/examples/input/lexicon/en/nouns/NounPPFrame%20-%20QALD%20Train%20-%20not%20solved.csv) or
 - An example of turtle file can be found [here] (https://github.com/fazleh2010/question-grammar-generator/blob/extension/examples/input/lexicon/en/nouns/lexicon-birthPlace_of.ttl). The lexical entries are defined using the Lexicon Model for Ontologies [Lemon](https://lemon-model.net/) and the data category ontology [LexInfo](https://lexinfo.net/).
 
-#### Output file example
+
+### Output file example
 QueGG can generate two types of output file:
 - grammar entry (.json file)
 - question, sparql, and answer (.csv file)
 
-######  QueGG can generate a grammar entry that looks like this:
+######  grammar entry (.json file) that looks like this:
 
 ```json
 {
@@ -102,7 +103,7 @@ sentenceBindings.bindingList.label | The language specific label that was retrie
 sentenceBindings.bindingList.uri | The DBPedia ontology reference URI, will be identical to label for literals - can be used to insert into the SPARQL query 
 combination | A flag that shows if this grammar entry is a combination of multiple grammar entries or a base entry
 
-######  2. QueGG also generate questions, sparql, and answer (.csv) 
+######  question, sparql, and answer (.csv file)
 
 ```csv
 "id","question","sparql","answer","frame"
