@@ -1,2 +1,4 @@
 "lexicalEntry","numberOfGrammarRules","numberOfQuestions","frameType","numberOfQuestions","numberOfQuestions"
-"http://localhost:8080#birthPlace_of","2","65","NPP","Success","-"
+"http://localhost:8080#capital2","2","65","NPP","Success","-"
+"http://localhost:8080#direct1","1","102","VP","Success","-"
+"http://localhost:8080#direct1ed","2","167","APP","Success","-"

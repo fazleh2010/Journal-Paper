@@ -27,6 +27,7 @@ import java.io.File;
 import java.io.IOException;
 import grammar.read.questions.SparqlQuery;
 import grammar.sparql.SPARQLRequest;
+import util.io.GoogleXslSheet;
 
 @NoArgsConstructor
 public class QueGG {
@@ -95,7 +96,7 @@ public class QueGG {
         }
     }
 
-    public void generateTurtle(String inputDir) throws IOException {
+    public void generateTurtle(String inputDir) throws IOException, Exception {
         String lemonEntry = null;
         File f = new File(inputDir);
         String[] pathnames = f.list();
@@ -116,8 +117,12 @@ public class QueGG {
                         index = index + 1;
                         continue;
                     }
-                    TurtleCreation nounPPFrameXsl = new TurtleCreation(row);
-                    FileUtils.stringToFile(nounPPFrameXsl.getTutleString(), directory + nounPPFrameXsl.getTutleFileName());
+                    try {
+                        TurtleCreation turtleCreation = new TurtleCreation(row);
+                        FileUtils.stringToFile(turtleCreation.getTutleString(), directory + turtleCreation.getTutleFileName());
+                    } catch (Exception ex) {
+                        throw new Exception("invalid lexical entry in Google XSL sheet!!" ); //To change body of generated methods, choose Tools | Templates.   
+                    }
 
                 }
 

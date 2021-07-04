@@ -476,6 +476,11 @@ public class LexicalEntryUtil {
         String domainOrRange = selectVariable.mapDomainOrRange();
         return detectSubjectType(getReferenceUri(), domainOrRange,domainOrRangeType);
     }
+    
+    public SubjectType getSubjectType(SelectVariable selectVariable) {
+        String domainOrRange = selectVariable.mapDomainOrRange();
+        return detectSubjectType(getReferenceUri(), domainOrRange);
+    }
 
     /**
      * Detects the SubjectType of the given LexicalEntry. This enables the
@@ -519,6 +524,34 @@ public class LexicalEntryUtil {
             }
         }
 
+        return mapsToWho.contains(domainOrRangeResponse)
+                ? SubjectType.PERSON_INTERROGATIVE_PRONOUN
+                : SubjectType.THING_INTERROGATIVE_PRONOUN;
+    }
+   
+    private SubjectType detectSubjectType(String uri, String domainOrRange) {
+        List<String> mapsToWho = DomainOrRangeType.PERSON.getReferences().stream()
+                .map(URI::toString)
+                .collect(Collectors.toList());
+        String domainOrRangeResponse = "";
+        ParameterizedSparqlString parameterizedSparqlString = createSPARQLRequestForSubjectType(uri, domainOrRange);
+        QueryExecution exec = QueryExecutionFactory.sparqlService(SPARQL_ENDPOINT_URL, parameterizedSparqlString.asQuery());
+        ResultSet resultSet = exec.execSelect();
+        // check only first result as we are not interested in anything but Person
+        QuerySolution querySolution;
+        if (resultSet.hasNext()) {
+            querySolution = resultSet.next();
+            if (!isNull(querySolution)) {
+                domainOrRangeResponse = querySolution.get(domainOrRange).toString();
+            }
+        } else {
+            SelectVariable selectVariable = domainOrRange.equals("domain")
+                    ? SelectVariable.SUBJECT_OF_PROPERTY
+                    : SelectVariable.OBJECT_OF_PROPERTY;
+            domainOrRangeResponse = getConditionUriBySelectVariable(selectVariable).toString();
+        }
+        // always default to SubjectType.THING if not Person or not found
+        // check for label instead of uri.... Q215627 is person as well...
         return mapsToWho.contains(domainOrRangeResponse)
                 ? SubjectType.PERSON_INTERROGATIVE_PRONOUN
                 : SubjectType.THING_INTERROGATIVE_PRONOUN;
