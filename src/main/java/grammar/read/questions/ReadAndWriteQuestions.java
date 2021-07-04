@@ -53,6 +53,7 @@ public class ReadAndWriteQuestions {
     private static final String numberOfQuestions = "numberOfQuestions";
     private static final String Status = "numberOfQuestions";
     private static final String Reason = "numberOfQuestions";
+    private static  String language = "en";
 
 
     public CSVWriter csvWriterQuestions;
@@ -65,8 +66,9 @@ public class ReadAndWriteQuestions {
     private Integer maxNumberOfEntities = 100;
     private static final org.apache.logging.log4j.Logger LOG = LogManager.getLogger(ReadAndWriteQuestions.class);
 
-    public ReadAndWriteQuestions(String questionAnswerFile, String questionSummaryFile, Integer maxNumberOfEntities) {
+    public ReadAndWriteQuestions(String questionAnswerFile, String questionSummaryFile, Integer maxNumberOfEntities,String language) {
         this.initialExcluded();
+        this.language=language;
         this.questionAnswerFile = questionAnswerFile;
         this.questionSummaryFile = questionSummaryFile;
         this.maxNumberOfEntities = maxNumberOfEntities;
@@ -142,6 +144,8 @@ public class ReadAndWriteQuestions {
         Integer index = 0;
         List< String[]> rows = new ArrayList<String[]>();
         for (UriLabel uriLabel : uriLabels) {
+            //System.out.println("Uri:"+uriLabel.getUri());
+            //System.out.println("Label:"+uriLabel.getLabel());
             if (!isKbValid(uriLabel)) {
                 continue;
             }
@@ -156,7 +160,7 @@ public class ReadAndWriteQuestions {
             index = index + 1;
             sparql = this.modifySparql(sparql);
 
-            System.out.println("index::" + index + " uriLabel::" + uriLabel.getLabel() + " questionForShow::" + questionForShow + " sparql::" + sparql + " answer::" + answer+ " syntacticFrame:"+syntacticFrame);
+            //System.out.println("index::" + index + " uriLabel::" + uriLabel.getLabel() + " questionForShow::" + questionForShow + " sparql::" + sparql + " answer::" + answer+ " syntacticFrame:"+syntacticFrame);
             try {
                 if (answer.isEmpty() || answer.contains("no answer found")) {
                     continue;
@@ -206,14 +210,14 @@ public class ReadAndWriteQuestions {
         SparqlQuery sparqlQuery = null;
         property = StringUtils.substringBetween(sparql, "<", ">");
 
-        sparqlQuery = new SparqlQuery(subjProp, property, SparqlQuery.FIND_ANY_ANSWER, returnType);
+        sparqlQuery = new SparqlQuery(subjProp, property, SparqlQuery.FIND_ANY_ANSWER, returnType,language);
         //System.out.println("original sparql:: "+sparql);
         //System.out.println("sparqlQuery:: "+sparqlQuery.getSparqlQuery());
         answer = sparqlQuery.getObject();
         if (answer != null) {
             if (answer.contains("http:")) {
                 //System.out.println(answer);
-                SparqlQuery sparqlQueryLabel = new SparqlQuery(answer, property, SparqlQuery.FIND_LABEL, null);
+                SparqlQuery sparqlQueryLabel = new SparqlQuery(answer, property, SparqlQuery.FIND_LABEL, null,language);
                 answer = sparqlQueryLabel.getObject();
                 //System.out.println(answer);
 

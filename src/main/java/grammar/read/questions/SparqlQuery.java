@@ -49,7 +49,7 @@ public class SparqlQuery {
     private String resultSparql = null;
     private List<Binding> bindingList=new ArrayList<Binding>();
 
-    public SparqlQuery(String entityUrl, String property, String type, String returnType) {
+    public SparqlQuery(String entityUrl, String property, String type, String returnType,String language) {
        // this.endpoint = SPARQLRequest.getSPARQL_ENDPOINT_URL();
 
         if (endpoint.contains("dbpedia.org")) {
@@ -69,13 +69,13 @@ public class SparqlQuery {
         } else if (endpoint.contains("wikidata.org")) {
             if (type.contains(FIND_ANY_ANSWER)) {
                 if (returnType.contains("objOfProp")) {
-                    sparqlQuery = this.setObjectWikiData(entityUrl, property);
+                    sparqlQuery = this.setObjectWikiData(entityUrl, property,language);
                 } else if (returnType.contains("subjOfProp")) {
-                    sparqlQuery = this.setSubjectWikiData(entityUrl, property);
+                    sparqlQuery = this.setSubjectWikiData(entityUrl, property,language);
                 }
 
             } else if (type.contains(FIND_LABEL)) {
-                sparqlQuery = this.setLabelWikiData(entityUrl);
+                sparqlQuery = this.setLabelWikiData(entityUrl,language);
             }
             //System.out.println("sparqlQuery::"+sparqlQuery);
             this.resultSparql = executeSparqlQuery(sparqlQuery);
@@ -188,7 +188,7 @@ public class SparqlQuery {
 
     }
 
-    public String setObjectWikiData(String entityUrl, String propertyUrl) {
+    public String setObjectWikiData(String entityUrl, String propertyUrl,String language) {
         /*return "SELECT ?object ?objectLabel WHERE {\n"
                 + "   "+"<"+entityUrl+">"+" "+"<"+property+">"+" ?object.\n"
                 + "   SERVICE wikibase:label {\n"
@@ -196,13 +196,18 @@ public class SparqlQuery {
                 + "   }\n"
                 + "}";*/
 
-        return "SELECT ?objectLabel WHERE {\n"
+        /*return "SELECT ?objectLabel WHERE {\n"
                 + "    <" + entityUrl + "> <" + propertyUrl + "> ?object.\n"
                 + "   SERVICE wikibase:label {\n"
-                + "     bd:serviceParam wikibase:language \"en\" .\n"
+                + "     bd:serviceParam wikibase:language \""+language+"\" .\n"
                 + "   }\n"
                 + "}\n"
-                + "";
+                + "";*/
+        return "SELECT ?label WHERE {\n"
+                + "    <" + entityUrl + "> <" + propertyUrl + "> ?object.\n"
+                + "  ?object rdfs:label ?label \n"
+                + "        FILTER (langMatches( lang(?label), \""+language+"\" ) )\n"
+                + "}";
 
     }
 
@@ -223,20 +228,14 @@ public class SparqlQuery {
 
     }
 
-    public String setSubjectWikiData(String entityUrl, String property) {
-        String sparql = null;
-        if (entityUrl.contains("http:")) {
-            sparql = "select  ?s\n"
-                    + "    {\n"
-                    + "   " + "?s" + " " + "<" + property + ">" + "  " + "<" + entityUrl + ">" + "\n"
-                    + "    }";
-        } else {
-            sparql = "select  ?s\n"
-                    + "    {\n"
-                    + "   " + "?s" + " " + "<" + property + ">" + "  " + entityUrl + "\n"
-                    + "    }";
-        }
-        return sparql;
+    public String setSubjectWikiData(String entityUrl, String propertyUrl,String language) {
+          return "SELECT ?subjectLabel WHERE {\n"
+                + "    subject <" + propertyUrl + "> ?object.\n"
+                + "   SERVICE wikibase:label {\n"
+                + "     bd:serviceParam wikibase:language \""+language+"\" .\n"
+                + "   }\n"
+                + "}\n"
+                + "";
 
     }
 
@@ -272,7 +271,7 @@ public class SparqlQuery {
 
     }
 
-    public static String setLabelWikiData(String entityUrl) {
+    public static String setLabelWikiData(String entityUrl,String language) {
         String sparql = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n"
                 + "   PREFIX dbo: <http://dbpedia.org/ontology/>\n"
                 + "   PREFIX dbpedia: <http://dbpedia.org/resource/>\n"
@@ -328,7 +327,7 @@ public class SparqlQuery {
 
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
 
         String objectUrl = "http://dbpedia.org/ontology/largestCity";
         String propertyUrl = "http://www.wikidata.org/prop/direct/P26";
@@ -337,11 +336,11 @@ public class SparqlQuery {
         endpoint = "https://dbpedia.org/sparql";
         SPARQLRequest.setEndpoint(endpoint);
 
-
+        String language="en";
         //subject = "wd:Q1744";
         //propertyUrl="wdt:P26";
-        SparqlQuery sparqlQuery = new SparqlQuery(subject, propertyUrl, FIND_ANY_ANSWER, RETURN_TYPE_OBJECT);
-        System.out.println(sparqlQuery.getSparqlQuery());
+        SparqlQuery sparqlQuery = new SparqlQuery(subject, propertyUrl, FIND_ANY_ANSWER, RETURN_TYPE_OBJECT,language);
+        //System.out.println(sparqlQuery.getSparqlQuery());
         System.out.println(sparqlQuery.getObject());
 
         //SparqlQuery sparqlQuery = new SparqlQuery();
@@ -364,8 +363,8 @@ public class SparqlQuery {
        String resultSparql = sparql.executeSparqlQuery(entitieSparql);
        //System.out.println("sparql:"+resultSparql);
        //System.out.println("sparql:"+sparql.getObject());
-         */
-    }
+         
+    }*/
     
     public static void setEndpoint(String endpointT) {
         endpoint=endpointT;
@@ -394,7 +393,7 @@ public class SparqlQuery {
             NodeList results = document.getElementsByTagName("results");
             for (int i = 0; i < results.getLength(); i++) {
                 NodeList childList = results.item(i).getChildNodes();
-                  System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                  //System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                 for (int j = 0; j < childList.getLength(); j++) {
                     Node childNode = childList.item(j);
                     if ("result".equals(childNode.getNodeName())) {

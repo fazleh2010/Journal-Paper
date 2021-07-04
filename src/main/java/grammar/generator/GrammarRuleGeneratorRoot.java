@@ -161,7 +161,7 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
     }
 
     private void generateBindingsWikiData(GrammarEntry grammarEntry) {
-         System.out.println("Inside into Wikidata!!!!");
+        //System.out.println("Inside into Wikidata!!!!");
         SentenceBindings newSentenceBindings = new SentenceBindings();
         newSentenceBindings.setBindingVariableName(grammarEntry.getSentenceBindings().getBindingVariableName());
         List<Binding> bindingList = new ArrayList<>();
@@ -181,7 +181,7 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
             SPARQLRequest.setEndpoint(endpoint);
             SparqlQuery sparqlQuery = new SparqlQuery(bindingQuery.toString());
             bindingList  = sparqlQuery.getBindingList();
-            System.out.println(bindingList);
+            //System.out.println(bindingList);
         }
         newSentenceBindings.setBindingList(bindingList);
         grammarEntry.setSentenceBindings(newSentenceBindings);
