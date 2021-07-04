@@ -80,11 +80,6 @@ QueGG can generate two types of output file:
 }
 ```
 
-```csv
-
-
-```
-
 A detailed breakdown of the JSON keys and values:
 
 Key | Value
@@ -107,7 +102,15 @@ sentenceBindings.bindingList.label | The language specific label that was retrie
 sentenceBindings.bindingList.uri | The DBPedia ontology reference URI, will be identical to label for literals - can be used to insert into the SPARQL query 
 combination | A flag that shows if this grammar entry is a combination of multiple grammar entries or a base entry
 
-######  QueGG also generate questions, sparql, and answer 
+######  2. QueGG also generate questions, sparql, and answer (.csv) 
+
+```csv
+"id","question","sparql","answer","frame"
+"0","Give me the capital of Lower Canada","select  ?o    {    <http://dbpedia.org/resource/Lower_Canada> <http://dbpedia.org/ontology/capital>  ?o    }","Quebec City","NPP"
+"1","Tell me the capital of Lower Canada","select  ?o    {    <http://dbpedia.org/resource/Lower_Canada> <http://dbpedia.org/ontology/capital>  ?o    }","Quebec City","NPP"
+"2","What is the capital of Lower Canada?","select  ?o    {    <http://dbpedia.org/resource/Lower_Canada> <http://dbpedia.org/ontology/capital>  ?o    }","Quebec City","NPP"
+
+```
 
 
 ## Used Frameworks And Libraries
