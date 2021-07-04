@@ -45,6 +45,7 @@ public class TurtleCreation {
 
     private void setNounPPFrame(String[] row, String syntacticFrame) {
         this.setLemonEntryId(row[GoogleXslSheet.writtenFormInfinitive]);
+        //this.lemonEntry=row[GoogleXslSheet.writtenFormInfinitive];
         this.partOfSpeech = row[GoogleXslSheet.partOfSpeechIndex];
         this.writtenFormInfinitive = row[GoogleXslSheet.writtenFormInfinitive];
         this.writtenForm_plural = row[GoogleXslSheet.NounPPFrame.writtenFormPluralIndex];
@@ -118,14 +119,14 @@ public class TurtleCreation {
                 + "\n"
                 + ":" + this.lemonEntry + "_sense_ontomap a lemon:OntoMap, lemon:LexicalSense ;\n"
                 + "  lemon:ontoMapping         :" + this.lemonEntry + "_sense_ontomap ;\n"
-                + "  lemon:reference           <http://dbpedia.org/ontology/" + reference + "> ;\n"
+                + "  lemon:reference           <"+ reference + "> ;\n"
                 + "  lemon:subjOfProp          :arg2 ;\n"
                 + "  lemon:objOfProp           :arg1 ;\n"
                 + "  lemon:condition           :" + this.lemonEntry + "_condition .\n"
                 + "\n"
                 + ":" + this.lemonEntry + "_condition a lemon:condition ;\n"
-                + "  lemon:propertyDomain  <http://dbpedia.org/ontology/" + domain + "> ;\n"
-                + "  lemon:propertyRange   <http://dbpedia.org/ontology/" + range + "> .\n"
+                + "  lemon:propertyDomain  <"+domain + "> ;\n"
+                + "  lemon:propertyRange   <"+range + "> .\n"
                 + "\n"
                 + ":arg2 lemon:marker :of .\n"
                 + "\n"
@@ -226,15 +227,15 @@ public class TurtleCreation {
                 + "\n"
                 + ":" + lemonEntry + "_ontomap a   lemon:OntoMap, lemon:LexicalSense ;\n"
                 + "  lemon:ontoMapping :" + lemonEntry + "_ontomap ;\n"
-                + "  lemon:reference   <http://dbpedia.org/ontology/" + this.reference + "> ;\n"
+                + "  lemon:reference   <"+this.reference + "> ;\n"
                 + "  lemon:subjOfProp  :" + lemonEntry + "_obj ;\n"
                 + "  lemon:objOfProp   :" + lemonEntry + "_subj ;\n"
                 + "  lemon:condition   :" + lemonEntry + "_condition .\n"
                 + "\n"
                 + "\n"
                 + ":" + lemonEntry + "_condition a    lemon:condition ;\n"
-                + "  lemon:propertyDomain <http://dbpedia.org/ontology/" + this.domain + "> ;\n"
-                + "  lemon:propertyRange  <http://dbpedia.org/ontology/" + this.range + "> .\n"
+                + "  lemon:propertyDomain <"+this.domain + "> ;\n"
+                + "  lemon:propertyRange  <"+this.range + "> .\n"
                 + "\n"
                 + "\n"
                 + ":" + lemonEntry + "ed a            lemon:LexicalEntry ;\n"
@@ -318,15 +319,15 @@ public class TurtleCreation {
                 + "\n"
                 + ":" + this.lemonEntry + "_ontomap a     lemon:OntoMap, lemon:LexicalSense ;\n"
                 + "  lemon:ontoMapping :" + this.lemonEntry + "_ontomap ;\n"
-                + "  lemon:reference   <http://dbpedia.org/ontology/releaseDate> ;\n"
+                + "  lemon:reference   <"+this.reference+"> ;\n"
                 + "  lemon:subjOfProp  :" + this.lemonEntry + "_obj ;\n"
                 + "  lemon:objOfProp   :" + this.lemonEntry + "_subj ;\n"
                 + "  lemon:condition   :" + this.lemonEntry + "_condition .\n"
                 + "\n"
                 + "\n"
                 + ":" + this.lemonEntry + "_condition a      lemon:condition ;\n"
-                + "  lemon:propertyDomain <http://dbpedia.org/ontology/Song> ;\n"
-                + "  lemon:propertyRange  <http://www.w3.org/2001/XMLSchema#date> .\n"
+                + "  lemon:propertyDomain <"+this.domain+"> ;\n"
+                + "  lemon:propertyRange  <"+this.range+"> .\n"
                 + "\n"
                 + ":" + this.lemonEntry + "_obj lemon:marker :in .\n"
                 + "\n"
@@ -409,9 +410,18 @@ public class TurtleCreation {
     private String setReference(String reference) {
         if (reference.contains(":")) {
             String[] info = reference.split(":");
-            reference = info[1];
-
+            String prefix = info[0].strip().trim();
+            if (prefix.contains("dbo")) {
+                reference = "http://dbpedia.org/ontology/" + info[1];
+            } else if (prefix.contains("owl")) {
+                reference = "http://www.w3.org/2002/07/owl/" + info[1];
+            } else if (prefix.contains("xsd")) {
+                reference = "http://www.w3.org/2001/XMLSchema/" + info[1];
+            } else {
+                reference = "http://dbpedia.org/ontology/" + info[1];
+            }
         }
+
         return reference.strip().trim();
     }
 
@@ -458,13 +468,10 @@ public class TurtleCreation {
     }
 
     private String modify(String string) {
-        string = string.replaceAll("[^a-zA-Z0-9]", " ");
-        if (string.contains(string)) {
-            string = string.toLowerCase().strip().trim().replace(" ", "_");
-            string = string.toLowerCase().strip();
-        }
+        /*string = string.replaceAll("[^a-zA-Z0-9]", " ");
+        string = string.toLowerCase().strip().trim().replace(" ", "_");*/
         index = index + 1;
-        return string + index.toString();
+        return "LexicalEntry_" + index.toString();
     }
 
 }

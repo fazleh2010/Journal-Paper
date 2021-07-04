@@ -1,7 +1,7 @@
 {
   "grammarEntries" : [ {
     "id" : "1",
-    "lexicalEntryUri" : "http://localhost:8080#capital2",
+    "lexicalEntryUri" : "http://localhost:8080#LexicalEntry_2",
     "language" : "EN",
     "type" : "SENTENCE",
     "bindingType" : "COUNTRY",
@@ -321,7 +321,7 @@
     "combination" : false
   }, {
     "id" : "2",
-    "lexicalEntryUri" : "http://localhost:8080#capital2",
+    "lexicalEntryUri" : "http://localhost:8080#LexicalEntry_2",
     "language" : "EN",
     "type" : "NP",
     "bindingType" : "COUNTRY",
@@ -961,6 +961,326 @@
     "combination" : false
   }, {
     "id" : "4",
+    "lexicalEntryUri" : "http://localhost:8080#LexicalEntry_1",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "FILM",
+    "returnType" : "PERSON",
+    "frameType" : "VP",
+    "sentences" : [ "Which person directed ($x | FILM_NP)?", "Which person directs ($x | FILM_NP)?", "Who directed ($x | FILM_NP)?", "Who directs ($x | FILM_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "1920 (film)",
+        "uri" : "http://dbpedia.org/resource/1920_(film)"
+      }, {
+        "label" : "1958 (film)",
+        "uri" : "http://dbpedia.org/resource/1958_(film)"
+      }, {
+        "label" : "2015 Adelaide Film Festival",
+        "uri" : "http://dbpedia.org/resource/2015_Adelaide_Film_Festival"
+      }, {
+        "label" : "2016: Obama's America",
+        "uri" : "http://dbpedia.org/resource/2016:_Obama's_America"
+      }, {
+        "label" : "2016 The End",
+        "uri" : "http://dbpedia.org/resource/2016_The_End"
+      }, {
+        "label" : "6-18-67",
+        "uri" : "http://dbpedia.org/resource/6-18-67"
+      }, {
+        "label" : "600,000 Francs a Month (1926 film)",
+        "uri" : "http://dbpedia.org/resource/600,000_Francs_a_Month_(1926_film)"
+      }, {
+        "label" : "600,000 Francs a Month (1933 film)",
+        "uri" : "http://dbpedia.org/resource/600,000_Francs_a_Month_(1933_film)"
+      }, {
+        "label" : "60 Cycles",
+        "uri" : "http://dbpedia.org/resource/60_Cycles"
+      }, {
+        "label" : "6 Angels",
+        "uri" : "http://dbpedia.org/resource/6_Angels"
+      }, {
+        "label" : "7-Man Army",
+        "uri" : "http://dbpedia.org/resource/7-Man_Army"
+      }, {
+        "label" : "77 Rue Chalgrin",
+        "uri" : "http://dbpedia.org/resource/77_Rue_Chalgrin"
+      }, {
+        "label" : "7 chili in 7 giorni",
+        "uri" : "http://dbpedia.org/resource/7_chili_in_7_giorni"
+      }, {
+        "label" : "80 Degrees East of Birdland",
+        "uri" : "http://dbpedia.org/resource/80_Degrees_East_of_Birdland"
+      }, {
+        "label" : "8 Ball Bunny",
+        "uri" : "http://dbpedia.org/resource/8_Ball_Bunny"
+      }, {
+        "label" : "90 Days (film)",
+        "uri" : "http://dbpedia.org/resource/90_Days_(film)"
+      }, {
+        "label" : "93Queen",
+        "uri" : "http://dbpedia.org/resource/93Queen"
+      }, {
+        "label" : "999-9999",
+        "uri" : "http://dbpedia.org/resource/999-9999"
+      }, {
+        "label" : "9 Days in Summer",
+        "uri" : "http://dbpedia.org/resource/9_Days_in_Summer"
+      }, {
+        "label" : "9 Lives of a Wet Pussy",
+        "uri" : "http://dbpedia.org/resource/9_Lives_of_a_Wet_Pussy"
+      }, {
+        "label" : "9 Nelalu",
+        "uri" : "http://dbpedia.org/resource/9_Nelalu"
+      }, {
+        "label" : "9 millimeter",
+        "uri" : "http://dbpedia.org/resource/9_millimeter"
+      }, {
+        "label" : "A-Haunting We Will Go (1942 film)",
+        "uri" : "http://dbpedia.org/resource/A-Haunting_We_Will_Go_(1942_film)"
+      }, {
+        "label" : "A-Haunting We Will Go (1966 film)",
+        "uri" : "http://dbpedia.org/resource/A-Haunting_We_Will_Go_(1966_film)"
+      }, {
+        "label" : "A.D. (miniseries)",
+        "uri" : "http://dbpedia.org/resource/A.D._(miniseries)"
+      }, {
+        "label" : "A.P.E.X.",
+        "uri" : "http://dbpedia.org/resource/A.P.E.X."
+      }, {
+        "label" : "A. K. G. (film)",
+        "uri" : "http://dbpedia.org/resource/A._K._G._(film)"
+      }, {
+        "label" : "A/k/a Tommy Chong",
+        "uri" : "http://dbpedia.org/resource/A/k/a_Tommy_Chong"
+      }, {
+        "label" : "A: Ad Infinitum",
+        "uri" : "http://dbpedia.org/resource/A:_Ad_Infinitum"
+      }, {
+        "label" : "ABCD (film)",
+        "uri" : "http://dbpedia.org/resource/ABCD_(film)"
+      }, {
+        "label" : "ABC Africa",
+        "uri" : "http://dbpedia.org/resource/ABC_Africa"
+      }, {
+        "label" : "ABC miłości",
+        "uri" : "http://dbpedia.org/resource/ABC_miłości"
+      }, {
+        "label" : "Love, Pepper and Sweets",
+        "uri" : "http://dbpedia.org/resource/Love,_Pepper_and_Sweets"
+      }, {
+        "label" : "Love, Rosie (film)",
+        "uri" : "http://dbpedia.org/resource/Love,_Rosie_(film)"
+      }, {
+        "label" : "Love, Sex and Eating the Bones",
+        "uri" : "http://dbpedia.org/resource/Love,_Sex_and_Eating_the_Bones"
+      }, {
+        "label" : "Love, Simon",
+        "uri" : "http://dbpedia.org/resource/Love,_Simon"
+      }, {
+        "label" : "Love, Theft and Other Entanglements",
+        "uri" : "http://dbpedia.org/resource/Love,_Theft_and_Other_Entanglements"
+      }, {
+        "label" : "Love, Wedding, Marriage",
+        "uri" : "http://dbpedia.org/resource/Love,_Wedding,_Marriage"
+      }, {
+        "label" : "Love, Weddings & Other Disasters",
+        "uri" : "http://dbpedia.org/resource/Love,_Weddings_&_Other_Disasters"
+      }, {
+        "label" : "Love.net",
+        "uri" : "http://dbpedia.org/resource/Love.net"
+      }, {
+        "label" : "Love & Air Sex",
+        "uri" : "http://dbpedia.org/resource/Love_&_Air_Sex"
+      }, {
+        "label" : "Love & Basketball",
+        "uri" : "http://dbpedia.org/resource/Love_&_Basketball"
+      }, {
+        "label" : "Love & Dance",
+        "uri" : "http://dbpedia.org/resource/Love_&_Dance"
+      }, {
+        "label" : "Love & Distrust",
+        "uri" : "http://dbpedia.org/resource/Love_&_Distrust"
+      }, {
+        "label" : "Love & Friendship",
+        "uri" : "http://dbpedia.org/resource/Love_&_Friendship"
+      }, {
+        "label" : "Love & Lies",
+        "uri" : "http://dbpedia.org/resource/Love_&_Lies"
+      }, {
+        "label" : "Love & Loathing & Lulu & Ayano",
+        "uri" : "http://dbpedia.org/resource/Love_&_Loathing_&_Lulu_&_Ayano"
+      }, {
+        "label" : "Love & Love Only",
+        "uri" : "http://dbpedia.org/resource/Love_&_Love_Only"
+      }, {
+        "label" : "Love & Mercy (film)",
+        "uri" : "http://dbpedia.org/resource/Love_&_Mercy_(film)"
+      }, {
+        "label" : "Love & Other Drugs",
+        "uri" : "http://dbpedia.org/resource/Love_&_Other_Drugs"
+      }, {
+        "label" : "Love & Peace (film)",
+        "uri" : "http://dbpedia.org/resource/Love_&_Peace_(film)"
+      }, {
+        "label" : "Love & Pop",
+        "uri" : "http://dbpedia.org/resource/Love_&_Pop"
+      }, {
+        "label" : "Love '47",
+        "uri" : "http://dbpedia.org/resource/Love_'47"
+      }, {
+        "label" : "Love 'Em and Feed 'Em",
+        "uri" : "http://dbpedia.org/resource/Love_'Em_and_Feed_'Em"
+      }, {
+        "label" : "Love 'Em and Leave 'Em (film)",
+        "uri" : "http://dbpedia.org/resource/Love_'Em_and_Leave_'Em_(film)"
+      }, {
+        "label" : "Love 'em and Weep",
+        "uri" : "http://dbpedia.org/resource/Love_'em_and_Weep"
+      }, {
+        "label" : "Love (1919 American film)",
+        "uri" : "http://dbpedia.org/resource/Love_(1919_American_film)"
+      }, {
+        "label" : "Love (1920 film)",
+        "uri" : "http://dbpedia.org/resource/Love_(1920_film)"
+      }, {
+        "label" : "Love (1927 American film)",
+        "uri" : "http://dbpedia.org/resource/Love_(1927_American_film)"
+      }, {
+        "label" : "Love (1971 film)",
+        "uri" : "http://dbpedia.org/resource/Love_(1971_film)"
+      }, {
+        "label" : "Love (1991 film)",
+        "uri" : "http://dbpedia.org/resource/Love_(1991_film)"
+      }, {
+        "label" : "Love (2004 film)",
+        "uri" : "http://dbpedia.org/resource/Love_(2004_film)"
+      }, {
+        "label" : "Love (2005 film)",
+        "uri" : "http://dbpedia.org/resource/Love_(2005_film)"
+      }, {
+        "label" : "Love (2008 Bengali film)",
+        "uri" : "http://dbpedia.org/resource/Love_(2008_Bengali_film)"
+      }, {
+        "label" : "Love (2008 Indonesian film)",
+        "uri" : "http://dbpedia.org/resource/Love_(2008_Indonesian_film)"
+      }, {
+        "label" : "Love (2011 film)",
+        "uri" : "http://dbpedia.org/resource/Love_(2011_film)"
+      }, {
+        "label" : "Love (2012 film)",
+        "uri" : "http://dbpedia.org/resource/Love_(2012_film)"
+      }, {
+        "label" : "Love (2015 film)",
+        "uri" : "http://dbpedia.org/resource/Love_(2015_film)"
+      }, {
+        "label" : "Love 24x7",
+        "uri" : "http://dbpedia.org/resource/Love_24x7"
+      }, {
+        "label" : "Love 65",
+        "uri" : "http://dbpedia.org/resource/Love_65"
+      }, {
+        "label" : "Love 86",
+        "uri" : "http://dbpedia.org/resource/Love_86"
+      }, {
+        "label" : "Love 911",
+        "uri" : "http://dbpedia.org/resource/Love_911"
+      }, {
+        "label" : "Love @ First Note",
+        "uri" : "http://dbpedia.org/resource/Love_@_First_Note"
+      }, {
+        "label" : "Love Aaj Kal",
+        "uri" : "http://dbpedia.org/resource/Love_Aaj_Kal"
+      }, {
+        "label" : "Love Aaj Kal (2020 film)",
+        "uri" : "http://dbpedia.org/resource/Love_Aaj_Kal_(2020_film)"
+      }, {
+        "label" : "Love Aaj Kal Porshu",
+        "uri" : "http://dbpedia.org/resource/Love_Aaj_Kal_Porshu"
+      }, {
+        "label" : "Love Action Drama",
+        "uri" : "http://dbpedia.org/resource/Love_Action_Drama"
+      }, {
+        "label" : "Love Actually",
+        "uri" : "http://dbpedia.org/resource/Love_Actually"
+      }, {
+        "label" : "Love Actually... Sucks!",
+        "uri" : "http://dbpedia.org/resource/Love_Actually..._Sucks!"
+      }, {
+        "label" : "Love Affair (1932 film)",
+        "uri" : "http://dbpedia.org/resource/Love_Affair_(1932_film)"
+      }, {
+        "label" : "Love Affair (1939 film)",
+        "uri" : "http://dbpedia.org/resource/Love_Affair_(1939_film)"
+      }, {
+        "label" : "Love Affairs (1927 film)",
+        "uri" : "http://dbpedia.org/resource/Love_Affairs_(1927_film)"
+      }, {
+        "label" : "Love After Love (1992 film)",
+        "uri" : "http://dbpedia.org/resource/Love_After_Love_(1992_film)"
+      }, {
+        "label" : "Love Always, Santa",
+        "uri" : "http://dbpedia.org/resource/Love_Always,_Santa"
+      }, {
+        "label" : "Love Among Thieves",
+        "uri" : "http://dbpedia.org/resource/Love_Among_Thieves"
+      }, {
+        "label" : "Love Among the Millionaires",
+        "uri" : "http://dbpedia.org/resource/Love_Among_the_Millionaires"
+      }, {
+        "label" : "Love Among the Ruins (film)",
+        "uri" : "http://dbpedia.org/resource/Love_Among_the_Ruins_(film)"
+      }, {
+        "label" : "Love And...",
+        "uri" : "http://dbpedia.org/resource/Love_And..."
+      }, {
+        "label" : "Love Beats Rhymes",
+        "uri" : "http://dbpedia.org/resource/Love_Beats_Rhymes"
+      }, {
+        "label" : "Love Before Breakfast",
+        "uri" : "http://dbpedia.org/resource/Love_Before_Breakfast"
+      }, {
+        "label" : "Love Begins",
+        "uri" : "http://dbpedia.org/resource/Love_Begins"
+      }, {
+        "label" : "Love Begins at 20",
+        "uri" : "http://dbpedia.org/resource/Love_Begins_at_20"
+      }, {
+        "label" : "Love Between the Raindrops",
+        "uri" : "http://dbpedia.org/resource/Love_Between_the_Raindrops"
+      }, {
+        "label" : "Love Beyond Frontier (2019 TV series)",
+        "uri" : "http://dbpedia.org/resource/Love_Beyond_Frontier_(2019_TV_series)"
+      }, {
+        "label" : "Love Birds (1934 film)",
+        "uri" : "http://dbpedia.org/resource/Love_Birds_(1934_film)"
+      }, {
+        "label" : "Love Birds (1996 film)",
+        "uri" : "http://dbpedia.org/resource/Love_Birds_(1996_film)"
+      }, {
+        "label" : "Love Bites (film)",
+        "uri" : "http://dbpedia.org/resource/Love_Bites_(film)"
+      }, {
+        "label" : "Love Bound",
+        "uri" : "http://dbpedia.org/resource/Love_Bound"
+      }, {
+        "label" : "Love Breakups Zindagi",
+        "uri" : "http://dbpedia.org/resource/Love_Breakups_Zindagi"
+      }, {
+        "label" : "Love Brewed in the African Pot",
+        "uri" : "http://dbpedia.org/resource/Love_Brewed_in_the_African_Pot"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "5",
     "lexicalEntryUri" : "http://localhost:8080#direct1ed",
     "language" : "EN",
     "type" : "SENTENCE",
@@ -969,318 +1289,18 @@
     "frameType" : "APP",
     "sentences" : [ "What is directed by ($x | PERSON_NP)?", "What was directed by ($x | PERSON_NP)?", "Which movie is directed by ($x | PERSON_NP)?", "Which movie was directed by ($x | PERSON_NP)?", "Which movies are directed by ($x | PERSON_NP)?", "Which movies were directed by ($x | PERSON_NP)?" ],
     "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp))\n",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/http://dbpedia.org/ontology/director> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
       "$x" : "objOfProp"
     },
     "returnVariable" : "subjOfProp",
     "sentenceBindings" : {
       "bindingVariableName" : "$x",
-      "bindingList" : [ {
-        "label" : "A. E. Coleby",
-        "uri" : "http://dbpedia.org/resource/A._E._Coleby"
-      }, {
-        "label" : "A. Govindamoorthy",
-        "uri" : "http://dbpedia.org/resource/A._Govindamoorthy"
-      }, {
-        "label" : "A. Karunakaran",
-        "uri" : "http://dbpedia.org/resource/A._Karunakaran"
-      }, {
-        "label" : "A. L. Vijay",
-        "uri" : "http://dbpedia.org/resource/A._L._Vijay"
-      }, {
-        "label" : "A. M. Nandakumar",
-        "uri" : "http://dbpedia.org/resource/A._M._Nandakumar"
-      }, {
-        "label" : "A. M. Rathnam",
-        "uri" : "http://dbpedia.org/resource/A._M._Rathnam"
-      }, {
-        "label" : "A. R. Harwood",
-        "uri" : "http://dbpedia.org/resource/A._R._Harwood"
-      }, {
-        "label" : "A. R. Ramesh",
-        "uri" : "http://dbpedia.org/resource/A._R._Ramesh"
-      }, {
-        "label" : "A. Sheriff",
-        "uri" : "http://dbpedia.org/resource/A._Sheriff"
-      }, {
-        "label" : "A. T. Abu",
-        "uri" : "http://dbpedia.org/resource/A._T._Abu"
-      }, {
-        "label" : "A. T. Krishnaswamy",
-        "uri" : "http://dbpedia.org/resource/A._T._Krishnaswamy"
-      }, {
-        "label" : "A. T. Raghu",
-        "uri" : "http://dbpedia.org/resource/A._T._Raghu"
-      }, {
-        "label" : "A. V. Bramble",
-        "uri" : "http://dbpedia.org/resource/A._V._Bramble"
-      }, {
-        "label" : "A. Venkatesh (director)",
-        "uri" : "http://dbpedia.org/resource/A._Venkatesh_(director)"
-      }, {
-        "label" : "A. W. Vidmer",
-        "uri" : "http://dbpedia.org/resource/A._W._Vidmer"
-      }, {
-        "label" : "Alphonse Putharen",
-        "uri" : "http://dbpedia.org/resource/Alphonse_Putharen"
-      }, {
-        "label" : "Amber Films",
-        "uri" : "http://dbpedia.org/resource/Amber_Films"
-      }, {
-        "label" : "Love You Baba",
-        "uri" : "http://dbpedia.org/resource/Love_You_Baba"
-      }, {
-        "label" : "Lowell Dean",
-        "uri" : "http://dbpedia.org/resource/Lowell_Dean"
-      }, {
-        "label" : "Lowell Ganz",
-        "uri" : "http://dbpedia.org/resource/Lowell_Ganz"
-      }, {
-        "label" : "Lowell Sherman",
-        "uri" : "http://dbpedia.org/resource/Lowell_Sherman"
-      }, {
-        "label" : "Lu Chuan",
-        "uri" : "http://dbpedia.org/resource/Lu_Chuan"
-      }, {
-        "label" : "Lu Feng",
-        "uri" : "http://dbpedia.org/resource/Lu_Feng"
-      }, {
-        "label" : "Lu Min (actor)",
-        "uri" : "http://dbpedia.org/resource/Lu_Min_(actor)"
-      }, {
-        "label" : "Lu Xuechang",
-        "uri" : "http://dbpedia.org/resource/Lu_Xuechang"
-      }, {
-        "label" : "Lu Yang",
-        "uri" : "http://dbpedia.org/resource/Lu_Yang"
-      }, {
-        "label" : "Luc Bernard",
-        "uri" : "http://dbpedia.org/resource/Luc_Bernard"
-      }, {
-        "label" : "Luc Besson",
-        "uri" : "http://dbpedia.org/resource/Luc_Besson"
-      }, {
-        "label" : "Luc Bondy",
-        "uri" : "http://dbpedia.org/resource/Luc_Bondy"
-      }, {
-        "label" : "Luc Jacquet",
-        "uri" : "http://dbpedia.org/resource/Luc_Jacquet"
-      }, {
-        "label" : "Luc Moullet",
-        "uri" : "http://dbpedia.org/resource/Luc_Moullet"
-      }, {
-        "label" : "Luc Picard",
-        "uri" : "http://dbpedia.org/resource/Luc_Picard"
-      }, {
-        "label" : "Luc de Heusch",
-        "uri" : "http://dbpedia.org/resource/Luc_de_Heusch"
-      }, {
-        "label" : "Luca Guadagnino",
-        "uri" : "http://dbpedia.org/resource/Luca_Guadagnino"
-      }, {
-        "label" : "Luca Lucini",
-        "uri" : "http://dbpedia.org/resource/Luca_Lucini"
-      }, {
-        "label" : "Luca Miniero",
-        "uri" : "http://dbpedia.org/resource/Luca_Miniero"
-      }, {
-        "label" : "Lucas Belvaux",
-        "uri" : "http://dbpedia.org/resource/Lucas_Belvaux"
-      }, {
-        "label" : "Lucas Demare",
-        "uri" : "http://dbpedia.org/resource/Lucas_Demare"
-      }, {
-        "label" : "Lucas Elliot Eberl",
-        "uri" : "http://dbpedia.org/resource/Lucas_Elliot_Eberl"
-      }, {
-        "label" : "Lucas Reiner",
-        "uri" : "http://dbpedia.org/resource/Lucas_Reiner"
-      }, {
-        "label" : "Lucero Suárez",
-        "uri" : "http://dbpedia.org/resource/Lucero_Suárez"
-      }, {
-        "label" : "Luchino Visconti",
-        "uri" : "http://dbpedia.org/resource/Luchino_Visconti"
-      }, {
-        "label" : "Lucia Aniello",
-        "uri" : "http://dbpedia.org/resource/Lucia_Aniello"
-      }, {
-        "label" : "Lucian Pintilie",
-        "uri" : "http://dbpedia.org/resource/Lucian_Pintilie"
-      }, {
-        "label" : "Luciano Albertini",
-        "uri" : "http://dbpedia.org/resource/Luciano_Albertini"
-      }, {
-        "label" : "Luciano De Crescenzo",
-        "uri" : "http://dbpedia.org/resource/Luciano_De_Crescenzo"
-      }, {
-        "label" : "Luciano Emmer",
-        "uri" : "http://dbpedia.org/resource/Luciano_Emmer"
-      }, {
-        "label" : "Luciano Ercoli",
-        "uri" : "http://dbpedia.org/resource/Luciano_Ercoli"
-      }, {
-        "label" : "Luciano Ligabue",
-        "uri" : "http://dbpedia.org/resource/Luciano_Ligabue"
-      }, {
-        "label" : "Luciano Martino",
-        "uri" : "http://dbpedia.org/resource/Luciano_Martino"
-      }, {
-        "label" : "Luciano Salce",
-        "uri" : "http://dbpedia.org/resource/Luciano_Salce"
-      }, {
-        "label" : "Luciano Tovoli",
-        "uri" : "http://dbpedia.org/resource/Luciano_Tovoli"
-      }, {
-        "label" : "Lucien Bulathsinhala",
-        "uri" : "http://dbpedia.org/resource/Lucien_Bulathsinhala"
-      }, {
-        "label" : "Lucien Hubbard",
-        "uri" : "http://dbpedia.org/resource/Lucien_Hubbard"
-      }, {
-        "label" : "Lucien Jean-Baptiste",
-        "uri" : "http://dbpedia.org/resource/Lucien_Jean-Baptiste"
-      }, {
-        "label" : "Lucile Hadžihalilović",
-        "uri" : "http://dbpedia.org/resource/Lucile_Hadžihalilović"
-      }, {
-        "label" : "Lucille McVey",
-        "uri" : "http://dbpedia.org/resource/Lucille_McVey"
-      }, {
-        "label" : "Lucio Fulci",
-        "uri" : "http://dbpedia.org/resource/Lucio_Fulci"
-      }, {
-        "label" : "Lucio Pellegrini",
-        "uri" : "http://dbpedia.org/resource/Lucio_Pellegrini"
-      }, {
-        "label" : "Lucius J. Henderson",
-        "uri" : "http://dbpedia.org/resource/Lucius_J._Henderson"
-      }, {
-        "label" : "Lucky McKee",
-        "uri" : "http://dbpedia.org/resource/Lucky_McKee"
-      }, {
-        "label" : "Lucrecia Martel",
-        "uri" : "http://dbpedia.org/resource/Lucrecia_Martel"
-      }, {
-        "label" : "Lucy Akhurst",
-        "uri" : "http://dbpedia.org/resource/Lucy_Akhurst"
-      }, {
-        "label" : "Lucy Cousins",
-        "uri" : "http://dbpedia.org/resource/Lucy_Cousins"
-      }, {
-        "label" : "Lucy Liu",
-        "uri" : "http://dbpedia.org/resource/Lucy_Liu"
-      }, {
-        "label" : "Lucy Mulloy",
-        "uri" : "http://dbpedia.org/resource/Lucy_Mulloy"
-      }, {
-        "label" : "Lucélia Santos",
-        "uri" : "http://dbpedia.org/resource/Lucélia_Santos"
-      }, {
-        "label" : "Lucía Puenzo",
-        "uri" : "http://dbpedia.org/resource/Lucía_Puenzo"
-      }, {
-        "label" : "Ludi Boeken",
-        "uri" : "http://dbpedia.org/resource/Ludi_Boeken"
-      }, {
-        "label" : "Ludmil Staikov",
-        "uri" : "http://dbpedia.org/resource/Ludmil_Staikov"
-      }, {
-        "label" : "Ludovic Bernard",
-        "uri" : "http://dbpedia.org/resource/Ludovic_Bernard"
-      }, {
-        "label" : "Ludwig Berger (director)",
-        "uri" : "http://dbpedia.org/resource/Ludwig_Berger_(director)"
-      }, {
-        "label" : "Ludwig Schmid-Wildy",
-        "uri" : "http://dbpedia.org/resource/Ludwig_Schmid-Wildy"
-      }, {
-        "label" : "Ludwig Wüst",
-        "uri" : "http://dbpedia.org/resource/Ludwig_Wüst"
-      }, {
-        "label" : "Luigi Bazzoni",
-        "uri" : "http://dbpedia.org/resource/Luigi_Bazzoni"
-      }, {
-        "label" : "Luigi Capuano",
-        "uri" : "http://dbpedia.org/resource/Luigi_Capuano"
-      }, {
-        "label" : "Luigi Chiarini",
-        "uri" : "http://dbpedia.org/resource/Luigi_Chiarini"
-      }, {
-        "label" : "Luigi Comencini",
-        "uri" : "http://dbpedia.org/resource/Luigi_Comencini"
-      }, {
-        "label" : "Luigi Cozzi",
-        "uri" : "http://dbpedia.org/resource/Luigi_Cozzi"
-      }, {
-        "label" : "Luigi Lo Cascio",
-        "uri" : "http://dbpedia.org/resource/Luigi_Lo_Cascio"
-      }, {
-        "label" : "Luigi Maggi",
-        "uri" : "http://dbpedia.org/resource/Luigi_Maggi"
-      }, {
-        "label" : "Luigi Magni",
-        "uri" : "http://dbpedia.org/resource/Luigi_Magni"
-      }, {
-        "label" : "Luigi Malerba",
-        "uri" : "http://dbpedia.org/resource/Luigi_Malerba"
-      }, {
-        "label" : "Luigi Scattini",
-        "uri" : "http://dbpedia.org/resource/Luigi_Scattini"
-      }, {
-        "label" : "Luigi Zampa",
-        "uri" : "http://dbpedia.org/resource/Luigi_Zampa"
-      }, {
-        "label" : "Luis Alcoriza",
-        "uri" : "http://dbpedia.org/resource/Luis_Alcoriza"
-      }, {
-        "label" : "Luis Alfaro",
-        "uri" : "http://dbpedia.org/resource/Luis_Alfaro"
-      }, {
-        "label" : "Luis Armando Roche",
-        "uri" : "http://dbpedia.org/resource/Luis_Armando_Roche"
-      }, {
-        "label" : "Luis Bayón Herrera",
-        "uri" : "http://dbpedia.org/resource/Luis_Bayón_Herrera"
-      }, {
-        "label" : "Luis Buñuel",
-        "uri" : "http://dbpedia.org/resource/Luis_Buñuel"
-      }, {
-        "label" : "Luis César Amadori",
-        "uri" : "http://dbpedia.org/resource/Luis_César_Amadori"
-      }, {
-        "label" : "Luis Escobar Kirkpatrick",
-        "uri" : "http://dbpedia.org/resource/Luis_Escobar_Kirkpatrick"
-      }, {
-        "label" : "Luis Estrada (director)",
-        "uri" : "http://dbpedia.org/resource/Luis_Estrada_(director)"
-      }, {
-        "label" : "Luis García Berlanga",
-        "uri" : "http://dbpedia.org/resource/Luis_García_Berlanga"
-      }, {
-        "label" : "Luis Llosa",
-        "uri" : "http://dbpedia.org/resource/Luis_Llosa"
-      }, {
-        "label" : "Luis Lucia",
-        "uri" : "http://dbpedia.org/resource/Luis_Lucia"
-      }, {
-        "label" : "Luis Marquina",
-        "uri" : "http://dbpedia.org/resource/Luis_Marquina"
-      }, {
-        "label" : "Luis Ortega (film director)",
-        "uri" : "http://dbpedia.org/resource/Luis_Ortega_(film_director)"
-      }, {
-        "label" : "Luis Pardo",
-        "uri" : "http://dbpedia.org/resource/Luis_Pardo"
-      }, {
-        "label" : "Luis Piedrahita",
-        "uri" : "http://dbpedia.org/resource/Luis_Piedrahita"
-      } ]
+      "bindingList" : [ ]
     },
     "combination" : false
   }, {
-    "id" : "5",
+    "id" : "6",
     "lexicalEntryUri" : "http://localhost:8080#direct1ed",
     "language" : "EN",
     "type" : "NP",
@@ -1289,318 +1309,58 @@
     "frameType" : "APP",
     "sentences" : [ "movies directed by $x" ],
     "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp))\n",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/http://dbpedia.org/ontology/director> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
       "$x" : "objOfProp"
     },
     "returnVariable" : "subjOfProp",
     "sentenceBindings" : {
       "bindingVariableName" : "$x",
-      "bindingList" : [ {
-        "label" : "A. E. Coleby",
-        "uri" : "http://dbpedia.org/resource/A._E._Coleby"
-      }, {
-        "label" : "A. Govindamoorthy",
-        "uri" : "http://dbpedia.org/resource/A._Govindamoorthy"
-      }, {
-        "label" : "A. Karunakaran",
-        "uri" : "http://dbpedia.org/resource/A._Karunakaran"
-      }, {
-        "label" : "A. L. Vijay",
-        "uri" : "http://dbpedia.org/resource/A._L._Vijay"
-      }, {
-        "label" : "A. M. Nandakumar",
-        "uri" : "http://dbpedia.org/resource/A._M._Nandakumar"
-      }, {
-        "label" : "A. M. Rathnam",
-        "uri" : "http://dbpedia.org/resource/A._M._Rathnam"
-      }, {
-        "label" : "A. R. Harwood",
-        "uri" : "http://dbpedia.org/resource/A._R._Harwood"
-      }, {
-        "label" : "A. R. Ramesh",
-        "uri" : "http://dbpedia.org/resource/A._R._Ramesh"
-      }, {
-        "label" : "A. Sheriff",
-        "uri" : "http://dbpedia.org/resource/A._Sheriff"
-      }, {
-        "label" : "A. T. Abu",
-        "uri" : "http://dbpedia.org/resource/A._T._Abu"
-      }, {
-        "label" : "A. T. Krishnaswamy",
-        "uri" : "http://dbpedia.org/resource/A._T._Krishnaswamy"
-      }, {
-        "label" : "A. T. Raghu",
-        "uri" : "http://dbpedia.org/resource/A._T._Raghu"
-      }, {
-        "label" : "A. V. Bramble",
-        "uri" : "http://dbpedia.org/resource/A._V._Bramble"
-      }, {
-        "label" : "A. Venkatesh (director)",
-        "uri" : "http://dbpedia.org/resource/A._Venkatesh_(director)"
-      }, {
-        "label" : "A. W. Vidmer",
-        "uri" : "http://dbpedia.org/resource/A._W._Vidmer"
-      }, {
-        "label" : "Alphonse Putharen",
-        "uri" : "http://dbpedia.org/resource/Alphonse_Putharen"
-      }, {
-        "label" : "Amber Films",
-        "uri" : "http://dbpedia.org/resource/Amber_Films"
-      }, {
-        "label" : "Love You Baba",
-        "uri" : "http://dbpedia.org/resource/Love_You_Baba"
-      }, {
-        "label" : "Lowell Dean",
-        "uri" : "http://dbpedia.org/resource/Lowell_Dean"
-      }, {
-        "label" : "Lowell Ganz",
-        "uri" : "http://dbpedia.org/resource/Lowell_Ganz"
-      }, {
-        "label" : "Lowell Sherman",
-        "uri" : "http://dbpedia.org/resource/Lowell_Sherman"
-      }, {
-        "label" : "Lu Chuan",
-        "uri" : "http://dbpedia.org/resource/Lu_Chuan"
-      }, {
-        "label" : "Lu Feng",
-        "uri" : "http://dbpedia.org/resource/Lu_Feng"
-      }, {
-        "label" : "Lu Min (actor)",
-        "uri" : "http://dbpedia.org/resource/Lu_Min_(actor)"
-      }, {
-        "label" : "Lu Xuechang",
-        "uri" : "http://dbpedia.org/resource/Lu_Xuechang"
-      }, {
-        "label" : "Lu Yang",
-        "uri" : "http://dbpedia.org/resource/Lu_Yang"
-      }, {
-        "label" : "Luc Bernard",
-        "uri" : "http://dbpedia.org/resource/Luc_Bernard"
-      }, {
-        "label" : "Luc Besson",
-        "uri" : "http://dbpedia.org/resource/Luc_Besson"
-      }, {
-        "label" : "Luc Bondy",
-        "uri" : "http://dbpedia.org/resource/Luc_Bondy"
-      }, {
-        "label" : "Luc Jacquet",
-        "uri" : "http://dbpedia.org/resource/Luc_Jacquet"
-      }, {
-        "label" : "Luc Moullet",
-        "uri" : "http://dbpedia.org/resource/Luc_Moullet"
-      }, {
-        "label" : "Luc Picard",
-        "uri" : "http://dbpedia.org/resource/Luc_Picard"
-      }, {
-        "label" : "Luc de Heusch",
-        "uri" : "http://dbpedia.org/resource/Luc_de_Heusch"
-      }, {
-        "label" : "Luca Guadagnino",
-        "uri" : "http://dbpedia.org/resource/Luca_Guadagnino"
-      }, {
-        "label" : "Luca Lucini",
-        "uri" : "http://dbpedia.org/resource/Luca_Lucini"
-      }, {
-        "label" : "Luca Miniero",
-        "uri" : "http://dbpedia.org/resource/Luca_Miniero"
-      }, {
-        "label" : "Lucas Belvaux",
-        "uri" : "http://dbpedia.org/resource/Lucas_Belvaux"
-      }, {
-        "label" : "Lucas Demare",
-        "uri" : "http://dbpedia.org/resource/Lucas_Demare"
-      }, {
-        "label" : "Lucas Elliot Eberl",
-        "uri" : "http://dbpedia.org/resource/Lucas_Elliot_Eberl"
-      }, {
-        "label" : "Lucas Reiner",
-        "uri" : "http://dbpedia.org/resource/Lucas_Reiner"
-      }, {
-        "label" : "Lucero Suárez",
-        "uri" : "http://dbpedia.org/resource/Lucero_Suárez"
-      }, {
-        "label" : "Luchino Visconti",
-        "uri" : "http://dbpedia.org/resource/Luchino_Visconti"
-      }, {
-        "label" : "Lucia Aniello",
-        "uri" : "http://dbpedia.org/resource/Lucia_Aniello"
-      }, {
-        "label" : "Lucian Pintilie",
-        "uri" : "http://dbpedia.org/resource/Lucian_Pintilie"
-      }, {
-        "label" : "Luciano Albertini",
-        "uri" : "http://dbpedia.org/resource/Luciano_Albertini"
-      }, {
-        "label" : "Luciano De Crescenzo",
-        "uri" : "http://dbpedia.org/resource/Luciano_De_Crescenzo"
-      }, {
-        "label" : "Luciano Emmer",
-        "uri" : "http://dbpedia.org/resource/Luciano_Emmer"
-      }, {
-        "label" : "Luciano Ercoli",
-        "uri" : "http://dbpedia.org/resource/Luciano_Ercoli"
-      }, {
-        "label" : "Luciano Ligabue",
-        "uri" : "http://dbpedia.org/resource/Luciano_Ligabue"
-      }, {
-        "label" : "Luciano Martino",
-        "uri" : "http://dbpedia.org/resource/Luciano_Martino"
-      }, {
-        "label" : "Luciano Salce",
-        "uri" : "http://dbpedia.org/resource/Luciano_Salce"
-      }, {
-        "label" : "Luciano Tovoli",
-        "uri" : "http://dbpedia.org/resource/Luciano_Tovoli"
-      }, {
-        "label" : "Lucien Bulathsinhala",
-        "uri" : "http://dbpedia.org/resource/Lucien_Bulathsinhala"
-      }, {
-        "label" : "Lucien Hubbard",
-        "uri" : "http://dbpedia.org/resource/Lucien_Hubbard"
-      }, {
-        "label" : "Lucien Jean-Baptiste",
-        "uri" : "http://dbpedia.org/resource/Lucien_Jean-Baptiste"
-      }, {
-        "label" : "Lucile Hadžihalilović",
-        "uri" : "http://dbpedia.org/resource/Lucile_Hadžihalilović"
-      }, {
-        "label" : "Lucille McVey",
-        "uri" : "http://dbpedia.org/resource/Lucille_McVey"
-      }, {
-        "label" : "Lucio Fulci",
-        "uri" : "http://dbpedia.org/resource/Lucio_Fulci"
-      }, {
-        "label" : "Lucio Pellegrini",
-        "uri" : "http://dbpedia.org/resource/Lucio_Pellegrini"
-      }, {
-        "label" : "Lucius J. Henderson",
-        "uri" : "http://dbpedia.org/resource/Lucius_J._Henderson"
-      }, {
-        "label" : "Lucky McKee",
-        "uri" : "http://dbpedia.org/resource/Lucky_McKee"
-      }, {
-        "label" : "Lucrecia Martel",
-        "uri" : "http://dbpedia.org/resource/Lucrecia_Martel"
-      }, {
-        "label" : "Lucy Akhurst",
-        "uri" : "http://dbpedia.org/resource/Lucy_Akhurst"
-      }, {
-        "label" : "Lucy Cousins",
-        "uri" : "http://dbpedia.org/resource/Lucy_Cousins"
-      }, {
-        "label" : "Lucy Liu",
-        "uri" : "http://dbpedia.org/resource/Lucy_Liu"
-      }, {
-        "label" : "Lucy Mulloy",
-        "uri" : "http://dbpedia.org/resource/Lucy_Mulloy"
-      }, {
-        "label" : "Lucélia Santos",
-        "uri" : "http://dbpedia.org/resource/Lucélia_Santos"
-      }, {
-        "label" : "Lucía Puenzo",
-        "uri" : "http://dbpedia.org/resource/Lucía_Puenzo"
-      }, {
-        "label" : "Ludi Boeken",
-        "uri" : "http://dbpedia.org/resource/Ludi_Boeken"
-      }, {
-        "label" : "Ludmil Staikov",
-        "uri" : "http://dbpedia.org/resource/Ludmil_Staikov"
-      }, {
-        "label" : "Ludovic Bernard",
-        "uri" : "http://dbpedia.org/resource/Ludovic_Bernard"
-      }, {
-        "label" : "Ludwig Berger (director)",
-        "uri" : "http://dbpedia.org/resource/Ludwig_Berger_(director)"
-      }, {
-        "label" : "Ludwig Schmid-Wildy",
-        "uri" : "http://dbpedia.org/resource/Ludwig_Schmid-Wildy"
-      }, {
-        "label" : "Ludwig Wüst",
-        "uri" : "http://dbpedia.org/resource/Ludwig_Wüst"
-      }, {
-        "label" : "Luigi Bazzoni",
-        "uri" : "http://dbpedia.org/resource/Luigi_Bazzoni"
-      }, {
-        "label" : "Luigi Capuano",
-        "uri" : "http://dbpedia.org/resource/Luigi_Capuano"
-      }, {
-        "label" : "Luigi Chiarini",
-        "uri" : "http://dbpedia.org/resource/Luigi_Chiarini"
-      }, {
-        "label" : "Luigi Comencini",
-        "uri" : "http://dbpedia.org/resource/Luigi_Comencini"
-      }, {
-        "label" : "Luigi Cozzi",
-        "uri" : "http://dbpedia.org/resource/Luigi_Cozzi"
-      }, {
-        "label" : "Luigi Lo Cascio",
-        "uri" : "http://dbpedia.org/resource/Luigi_Lo_Cascio"
-      }, {
-        "label" : "Luigi Maggi",
-        "uri" : "http://dbpedia.org/resource/Luigi_Maggi"
-      }, {
-        "label" : "Luigi Magni",
-        "uri" : "http://dbpedia.org/resource/Luigi_Magni"
-      }, {
-        "label" : "Luigi Malerba",
-        "uri" : "http://dbpedia.org/resource/Luigi_Malerba"
-      }, {
-        "label" : "Luigi Scattini",
-        "uri" : "http://dbpedia.org/resource/Luigi_Scattini"
-      }, {
-        "label" : "Luigi Zampa",
-        "uri" : "http://dbpedia.org/resource/Luigi_Zampa"
-      }, {
-        "label" : "Luis Alcoriza",
-        "uri" : "http://dbpedia.org/resource/Luis_Alcoriza"
-      }, {
-        "label" : "Luis Alfaro",
-        "uri" : "http://dbpedia.org/resource/Luis_Alfaro"
-      }, {
-        "label" : "Luis Armando Roche",
-        "uri" : "http://dbpedia.org/resource/Luis_Armando_Roche"
-      }, {
-        "label" : "Luis Bayón Herrera",
-        "uri" : "http://dbpedia.org/resource/Luis_Bayón_Herrera"
-      }, {
-        "label" : "Luis Buñuel",
-        "uri" : "http://dbpedia.org/resource/Luis_Buñuel"
-      }, {
-        "label" : "Luis César Amadori",
-        "uri" : "http://dbpedia.org/resource/Luis_César_Amadori"
-      }, {
-        "label" : "Luis Escobar Kirkpatrick",
-        "uri" : "http://dbpedia.org/resource/Luis_Escobar_Kirkpatrick"
-      }, {
-        "label" : "Luis Estrada (director)",
-        "uri" : "http://dbpedia.org/resource/Luis_Estrada_(director)"
-      }, {
-        "label" : "Luis García Berlanga",
-        "uri" : "http://dbpedia.org/resource/Luis_García_Berlanga"
-      }, {
-        "label" : "Luis Llosa",
-        "uri" : "http://dbpedia.org/resource/Luis_Llosa"
-      }, {
-        "label" : "Luis Lucia",
-        "uri" : "http://dbpedia.org/resource/Luis_Lucia"
-      }, {
-        "label" : "Luis Marquina",
-        "uri" : "http://dbpedia.org/resource/Luis_Marquina"
-      }, {
-        "label" : "Luis Ortega (film director)",
-        "uri" : "http://dbpedia.org/resource/Luis_Ortega_(film_director)"
-      }, {
-        "label" : "Luis Pardo",
-        "uri" : "http://dbpedia.org/resource/Luis_Pardo"
-      }, {
-        "label" : "Luis Piedrahita",
-        "uri" : "http://dbpedia.org/resource/Luis_Piedrahita"
-      } ]
+      "bindingList" : [ ]
     },
     "combination" : false
   }, {
-    "id" : "6",
+    "id" : "7",
+    "lexicalEntryUri" : "http://localhost:8080#LexicalEntry_1ed",
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "FILM",
+    "frameType" : "APP",
+    "sentences" : [ "What is directed by ($x | PERSON_NP)?", "What was directed by ($x | PERSON_NP)?", "Which movie is directed by ($x | PERSON_NP)?", "Which movie was directed by ($x | PERSON_NP)?", "Which movies are directed by ($x | PERSON_NP)?", "Which movies were directed by ($x | PERSON_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/http://dbpedia.org/ontology/director> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "8",
+    "lexicalEntryUri" : "http://localhost:8080#LexicalEntry_1ed",
+    "language" : "EN",
+    "type" : "NP",
+    "bindingType" : "PERSON",
+    "returnType" : "FILM",
+    "frameType" : "APP",
+    "sentences" : [ "movies directed by $x" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/http://dbpedia.org/ontology/director> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "9",
     "lexicalEntryUri" : null,
     "language" : "EN",
     "type" : "SENTENCE",

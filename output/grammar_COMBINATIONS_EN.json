@@ -1,6 +1,6 @@
 {
   "grammarEntries" : [ {
-    "id" : "7",
+    "id" : "10",
     "lexicalEntryUri" : null,
     "language" : "EN",
     "type" : "SENTENCE",
@@ -9,314 +9,74 @@
     "frameType" : "VP",
     "sentences" : [ "Which person directed movies directed by $x?", "Which person directs movies directed by $x?", "Who directed movies directed by $x?", "Who directs movies directed by $x?" ],
     "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfPropx)\n)\n",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/http://dbpedia.org/ontology/director> ?objOfPropx)\n)\n",
     "sentenceToSparqlParameterMapping" : {
       "$x" : "objOfPropx"
     },
     "returnVariable" : "objOfProp",
     "sentenceBindings" : {
       "bindingVariableName" : "$x",
-      "bindingList" : [ {
-        "label" : "Love You Baba",
-        "uri" : "http://dbpedia.org/resource/Love_You_Baba"
-      }, {
-        "label" : "Luc Besson",
-        "uri" : "http://dbpedia.org/resource/Luc_Besson"
-      }, {
-        "label" : "Luchino Visconti",
-        "uri" : "http://dbpedia.org/resource/Luchino_Visconti"
-      }, {
-        "label" : "Luis César Amadori",
-        "uri" : "http://dbpedia.org/resource/Luis_César_Amadori"
-      }, {
-        "label" : "Luke Matheny",
-        "uri" : "http://dbpedia.org/resource/Luke_Matheny"
-      }, {
-        "label" : "Lupino Lane",
-        "uri" : "http://dbpedia.org/resource/Lupino_Lane"
-      }, {
-        "label" : "Léo Joannon",
-        "uri" : "http://dbpedia.org/resource/Léo_Joannon"
-      }, {
-        "label" : "Mai Zetterling",
-        "uri" : "http://dbpedia.org/resource/Mai_Zetterling"
-      }, {
-        "label" : "Ujwal Ghimire",
-        "uri" : "http://dbpedia.org/resource/Ujwal_Ghimire"
-      }, {
-        "label" : "Umetsugu Inoue",
-        "uri" : "http://dbpedia.org/resource/Umetsugu_Inoue"
-      }, {
-        "label" : "Usama Mukwaya",
-        "uri" : "http://dbpedia.org/resource/Usama_Mukwaya"
-      }, {
-        "label" : "Cătălin Mitulescu",
-        "uri" : "http://dbpedia.org/resource/Cătălin_Mitulescu"
-      }, {
-        "label" : "Dale Launer",
-        "uri" : "http://dbpedia.org/resource/Dale_Launer"
-      }, {
-        "label" : "Elda Tattoli",
-        "uri" : "http://dbpedia.org/resource/Elda_Tattoli"
-      }, {
-        "label" : "J. Sasikumar",
-        "uri" : "http://dbpedia.org/resource/J._Sasikumar"
-      }, {
-        "label" : "S. Ramanathan (film director)",
-        "uri" : "http://dbpedia.org/resource/S._Ramanathan_(film_director)"
-      }, {
-        "label" : "Sean Garrity (director)",
-        "uri" : "http://dbpedia.org/resource/Sean_Garrity_(director)"
-      }, {
-        "label" : "Simon Staho",
-        "uri" : "http://dbpedia.org/resource/Simon_Staho"
-      }, {
-        "label" : "Riingo Banerjee",
-        "uri" : "http://dbpedia.org/resource/Riingo_Banerjee"
-      }, {
-        "label" : "Robert Land",
-        "uri" : "http://dbpedia.org/resource/Robert_Land"
-      }, {
-        "label" : "Robert Péguy",
-        "uri" : "http://dbpedia.org/resource/Robert_Péguy"
-      }, {
-        "label" : "Thornton Freeland",
-        "uri" : "http://dbpedia.org/resource/Thornton_Freeland"
-      }, {
-        "label" : "Billy Wilder",
-        "uri" : "http://dbpedia.org/resource/Billy_Wilder"
-      }, {
-        "label" : "Blaine Thurier",
-        "uri" : "http://dbpedia.org/resource/Blaine_Thurier"
-      }, {
-        "label" : "Bo Widerberg",
-        "uri" : "http://dbpedia.org/resource/Bo_Widerberg"
-      }, {
-        "label" : "Bobby Burns",
-        "uri" : "http://dbpedia.org/resource/Bobby_Burns"
-      }, {
-        "label" : "Brad Armstrong (director)",
-        "uri" : "http://dbpedia.org/resource/Brad_Armstrong_(director)"
-      }, {
-        "label" : "Delbert Mann",
-        "uri" : "http://dbpedia.org/resource/Delbert_Mann"
-      }, {
-        "label" : "Dennis Dugan",
-        "uri" : "http://dbpedia.org/resource/Dennis_Dugan"
-      }, {
-        "label" : "Dermot Mulroney",
-        "uri" : "http://dbpedia.org/resource/Dermot_Mulroney"
-      }, {
-        "label" : "Dev Anand",
-        "uri" : "http://dbpedia.org/resource/Dev_Anand"
-      }, {
-        "label" : "Dhyan Sreenivasan",
-        "uri" : "http://dbpedia.org/resource/Dhyan_Sreenivasan"
-      }, {
-        "label" : "Diane Kurys",
-        "uri" : "http://dbpedia.org/resource/Diane_Kurys"
-      }, {
-        "label" : "Dibakar Banerjee",
-        "uri" : "http://dbpedia.org/resource/Dibakar_Banerjee"
-      }, {
-        "label" : "Dinesh D'Souza",
-        "uri" : "http://dbpedia.org/resource/Dinesh_D'Souza"
-      }, {
-        "label" : "Dino Risi",
-        "uri" : "http://dbpedia.org/resource/Dino_Risi"
-      }, {
-        "label" : "Dipendra K Khanal",
-        "uri" : "http://dbpedia.org/resource/Dipendra_K_Khanal"
-      }, {
-        "label" : "Doe Ching",
-        "uri" : "http://dbpedia.org/resource/Doe_Ching"
-      }, {
-        "label" : "Donald Crisp",
-        "uri" : "http://dbpedia.org/resource/Donald_Crisp"
-      }, {
-        "label" : "Glenn Jordan",
-        "uri" : "http://dbpedia.org/resource/Glenn_Jordan"
-      }, {
-        "label" : "Greg Berlanti",
-        "uri" : "http://dbpedia.org/resource/Greg_Berlanti"
-      }, {
-        "label" : "Greg Carter (filmmaker)",
-        "uri" : "http://dbpedia.org/resource/Greg_Carter_(filmmaker)"
-      }, {
-        "label" : "Gu Changwei",
-        "uri" : "http://dbpedia.org/resource/Gu_Changwei"
-      }, {
-        "label" : "Kevin Bacon",
-        "uri" : "http://dbpedia.org/resource/Kevin_Bacon"
-      }, {
-        "label" : "Kim Ki-young",
-        "uri" : "http://dbpedia.org/resource/Kim_Ki-young"
-      }, {
-        "label" : "Kim Kyu-tae",
-        "uri" : "http://dbpedia.org/resource/Kim_Kyu-tae"
-      }, {
-        "label" : "King Baggot",
-        "uri" : "http://dbpedia.org/resource/King_Baggot"
-      }, {
-        "label" : "King Vidor",
-        "uri" : "http://dbpedia.org/resource/King_Vidor"
-      }, {
-        "label" : "Kinuyo Tanaka",
-        "uri" : "http://dbpedia.org/resource/Kinuyo_Tanaka"
-      }, {
-        "label" : "Koichi Chigira",
-        "uri" : "http://dbpedia.org/resource/Koichi_Chigira"
-      }, {
-        "label" : "Kranthi Kumar",
-        "uri" : "http://dbpedia.org/resource/Kranthi_Kumar"
-      }, {
-        "label" : "Kristine Peterson",
-        "uri" : "http://dbpedia.org/resource/Kristine_Peterson"
-      }, {
-        "label" : "Kriv Stenders",
-        "uri" : "http://dbpedia.org/resource/Kriv_Stenders"
-      }, {
-        "label" : "Prithviraj Sukumaran",
-        "uri" : "http://dbpedia.org/resource/Prithviraj_Sukumaran"
-      }, {
-        "label" : "RZA",
-        "uri" : "http://dbpedia.org/resource/RZA"
-      }, {
-        "label" : "Rafi Mecartin",
-        "uri" : "http://dbpedia.org/resource/Rafi_Mecartin"
-      }, {
-        "label" : "Rahul Rawail",
-        "uri" : "http://dbpedia.org/resource/Rahul_Rawail"
-      }, {
-        "label" : "Rajendra Singh Babu",
-        "uri" : "http://dbpedia.org/resource/Rajendra_Singh_Babu"
-      }, {
-        "label" : "Ralph Ince",
-        "uri" : "http://dbpedia.org/resource/Ralph_Ince"
-      }, {
-        "label" : "Gordon Anderson (director)",
-        "uri" : "http://dbpedia.org/resource/Gordon_Anderson_(director)"
-      }, {
-        "label" : "Hans-Jürgen Syberberg",
-        "uri" : "http://dbpedia.org/resource/Hans-Jürgen_Syberberg"
-      }, {
-        "label" : "Hariharan (director)",
-        "uri" : "http://dbpedia.org/resource/Hariharan_(director)"
-      }, {
-        "label" : "Everett Lewis",
-        "uri" : "http://dbpedia.org/resource/Everett_Lewis"
-      }, {
-        "label" : "Oscar Whitbread",
-        "uri" : "http://dbpedia.org/resource/Oscar_Whitbread"
-      }, {
-        "label" : "Dennis Law Sau-Yiu",
-        "uri" : "http://dbpedia.org/resource/Dennis_Law_Sau-Yiu"
-      }, {
-        "label" : "Aisling Walsh",
-        "uri" : "http://dbpedia.org/resource/Aisling_Walsh"
-      }, {
-        "label" : "Aku Louhimies",
-        "uri" : "http://dbpedia.org/resource/Aku_Louhimies"
-      }, {
-        "label" : "Alain Corneau",
-        "uri" : "http://dbpedia.org/resource/Alain_Corneau"
-      }, {
-        "label" : "Alain Resnais",
-        "uri" : "http://dbpedia.org/resource/Alain_Resnais"
-      }, {
-        "label" : "Alan J. Pakula",
-        "uri" : "http://dbpedia.org/resource/Alan_J._Pakula"
-      }, {
-        "label" : "Alan James",
-        "uri" : "http://dbpedia.org/resource/Alan_James"
-      }, {
-        "label" : "Alan Rudolph",
-        "uri" : "http://dbpedia.org/resource/Alan_Rudolph"
-      }, {
-        "label" : "Albert Ray",
-        "uri" : "http://dbpedia.org/resource/Albert_Ray"
-      }, {
-        "label" : "Alberto Lattuada",
-        "uri" : "http://dbpedia.org/resource/Alberto_Lattuada"
-      }, {
-        "label" : "Alek Keshishian",
-        "uri" : "http://dbpedia.org/resource/Alek_Keshishian"
-      }, {
-        "label" : "Alessandro Blasetti",
-        "uri" : "http://dbpedia.org/resource/Alessandro_Blasetti"
-      }, {
-        "label" : "Alexander Singer",
-        "uri" : "http://dbpedia.org/resource/Alexander_Singer"
-      }, {
-        "label" : "Alfred Cheung",
-        "uri" : "http://dbpedia.org/resource/Alfred_Cheung"
-      }, {
-        "label" : "Alfred L. Werker",
-        "uri" : "http://dbpedia.org/resource/Alfred_L._Werker"
-      }, {
-        "label" : "Alfred Vohrer",
-        "uri" : "http://dbpedia.org/resource/Alfred_Vohrer"
-      }, {
-        "label" : "Cesare Zavattini",
-        "uri" : "http://dbpedia.org/resource/Cesare_Zavattini"
-      }, {
-        "label" : "Chang Cheh",
-        "uri" : "http://dbpedia.org/resource/Chang_Cheh"
-      }, {
-        "label" : "Charles Barton (director)",
-        "uri" : "http://dbpedia.org/resource/Charles_Barton_(director)"
-      }, {
-        "label" : "Charles C. Wilson (actor)",
-        "uri" : "http://dbpedia.org/resource/Charles_C._Wilson_(actor)"
-      }, {
-        "label" : "Charles Lamont",
-        "uri" : "http://dbpedia.org/resource/Charles_Lamont"
-      }, {
-        "label" : "Charles Vidor",
-        "uri" : "http://dbpedia.org/resource/Charles_Vidor"
-      }, {
-        "label" : "Anand Tiwari",
-        "uri" : "http://dbpedia.org/resource/Anand_Tiwari"
-      }, {
-        "label" : "Nikolai van der Heyde",
-        "uri" : "http://dbpedia.org/resource/Nikolai_van_der_Heyde"
-      }, {
-        "label" : "Noah Hawley",
-        "uri" : "http://dbpedia.org/resource/Noah_Hawley"
-      }, {
-        "label" : "Nora Ephron",
-        "uri" : "http://dbpedia.org/resource/Nora_Ephron"
-      }, {
-        "label" : "Norman Taurog",
-        "uri" : "http://dbpedia.org/resource/Norman_Taurog"
-      }, {
-        "label" : "Oddvar Bull Tuhus",
-        "uri" : "http://dbpedia.org/resource/Oddvar_Bull_Tuhus"
-      }, {
-        "label" : "Shomu Mukherjee",
-        "uri" : "http://dbpedia.org/resource/Shomu_Mukherjee"
-      }, {
-        "label" : "Siva Nageswara Rao",
-        "uri" : "http://dbpedia.org/resource/Siva_Nageswara_Rao"
-      }, {
-        "label" : "Roger Young (director)",
-        "uri" : "http://dbpedia.org/resource/Roger_Young_(director)"
-      }, {
-        "label" : "Heidi Ewing",
-        "uri" : "http://dbpedia.org/resource/Heidi_Ewing"
-      }, {
-        "label" : "Malcolm Marmorstein",
-        "uri" : "http://dbpedia.org/resource/Malcolm_Marmorstein"
-      }, {
-        "label" : "B. Jaya",
-        "uri" : "http://dbpedia.org/resource/B._Jaya"
-      }, {
-        "label" : "Barra Grant",
-        "uri" : "http://dbpedia.org/resource/Barra_Grant"
-      }, {
-        "label" : "Basil Dean",
-        "uri" : "http://dbpedia.org/resource/Basil_Dean"
-      } ]
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "11",
+    "lexicalEntryUri" : null,
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "VP",
+    "sentences" : [ "Which person directed movies directed by $x?", "Which person directs movies directed by $x?", "Who directed movies directed by $x?", "Who directs movies directed by $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/http://dbpedia.org/ontology/director> ?objOfPropx)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "12",
+    "lexicalEntryUri" : null,
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "VP",
+    "sentences" : [ "Which person directed movies directed by $x?", "Which person directs movies directed by $x?", "Who directed movies directed by $x?", "Who directs movies directed by $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/http://dbpedia.org/ontology/director> ?objOfPropx)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "13",
+    "lexicalEntryUri" : null,
+    "language" : "EN",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "VP",
+    "sentences" : [ "Which person directed movies directed by $x?", "Which person directs movies directed by $x?", "Who directed movies directed by $x?", "Who directs movies directed by $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/http://dbpedia.org/ontology/director> ?objOfPropx)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
     },
     "combination" : true
   } ]

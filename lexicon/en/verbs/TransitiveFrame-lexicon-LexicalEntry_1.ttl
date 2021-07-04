@@ -1,0 +1,84 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :LexicalEntry_1 ;
+  lemon:entry    :LexicalEntry_1ed ;
+  lemon:entry    :by .
+
+:LexicalEntry_1 a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_LexicalEntry_1 ;
+  lemon:otherForm      :form_LexicalEntry_1s ;
+  lemon:otherForm      :form_LexicalEntry_1ed ;
+  lemon:synBehavior    :LexicalEntry_1_frame_transitive ;
+  lemon:sense          :LexicalEntry_1_ontomap .
+
+
+:form_LexicalEntry_1 a         lemon:Form ;
+  lemon:writtenRep     "direct"@en ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_LexicalEntry_1s a    lemon:Form ;
+  lemon:writtenRep "directs"@en ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_LexicalEntry_1ed a   lemon:Form ;
+  lemon:writtenRep "directed"@en ;
+  lexinfo:tense    lexinfo:past .
+
+:LexicalEntry_1_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :LexicalEntry_1_subj ;
+  lexinfo:directObject     :LexicalEntry_1_obj .
+
+:LexicalEntry_1_ontomap a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :LexicalEntry_1_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/director> ;
+  lemon:subjOfProp  :LexicalEntry_1_obj ;
+  lemon:objOfProp   :LexicalEntry_1_subj ;
+  lemon:condition   :LexicalEntry_1_condition .
+
+
+:LexicalEntry_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Film> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+
+:LexicalEntry_1ed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_LexicalEntry_1ed_canonical ;
+  lemon:otherForm      :form_LexicalEntry_1ed_by ;
+  lemon:synBehavior    :LexicalEntry_1ed_frame_adjectivepp ;
+  lemon:sense          :LexicalEntry_1ed_ontomap .
+
+:form_LexicalEntry_1ed_canonical a lemon:Form ;
+  lemon:writtenRep         "directed"@en .
+
+:form_LexicalEntry_1ed_by a    lemon:Form ;
+  lemon:writtenRep     "directed"@en ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:LexicalEntry_1ed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :LexicalEntry_1ed_subj ;
+  lexinfo:prepositionalAdjunct :LexicalEntry_1ed_obj .
+
+:LexicalEntry_1ed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :LexicalEntry_1ed_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/http://dbpedia.org/ontology/director> ;
+  lemon:subjOfProp  :LexicalEntry_1ed_subj ;
+  lemon:objOfProp   :LexicalEntry_1ed_obj ;
+  lemon:condition   :LexicalEntry_1_condition .
+
+:LexicalEntry_1ed_obj lemon:marker :by .
+
+## Prepositions ##
+
+:by a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "by"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

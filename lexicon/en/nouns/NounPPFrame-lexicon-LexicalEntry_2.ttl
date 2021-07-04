@@ -7,30 +7,30 @@
 
 :lexicon_en a    lemon:Lexicon ;
   lemon:language "en" ;
-  lemon:entry    :capital2 ;
+  lemon:entry    :LexicalEntry_2 ;
   lemon:entry    :of .
 
-:capital2 a       lemon:LexicalEntry ;
+:LexicalEntry_2 a       lemon:LexicalEntry ;
   lexinfo:partOfSpeech lexinfo:noun ;
-  lemon:canonicalForm  :capital2_form ;
-  lemon:synBehavior    :capital2_nounpp ;
-  lemon:sense          :capital2_sense_ontomap .
+  lemon:canonicalForm  :LexicalEntry_2_form ;
+  lemon:synBehavior    :LexicalEntry_2_nounpp ;
+  lemon:sense          :LexicalEntry_2_sense_ontomap .
 
-:capital2_form a lemon:Form ;
+:LexicalEntry_2_form a lemon:Form ;
   lemon:writtenRep "capital"@en .
 
-:capital2_nounpp a        lexinfo:NounPPFrame ;
+:LexicalEntry_2_nounpp a        lexinfo:NounPPFrame ;
   lexinfo:copulativeArg        :arg1 ;
   lexinfo:prepositionalAdjunct :arg2 .
 
-:capital2_sense_ontomap a lemon:OntoMap, lemon:LexicalSense ;
-  lemon:ontoMapping         :capital2_sense_ontomap ;
+:LexicalEntry_2_sense_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :LexicalEntry_2_sense_ontomap ;
   lemon:reference           <http://dbpedia.org/ontology/capital> ;
   lemon:subjOfProp          :arg2 ;
   lemon:objOfProp           :arg1 ;
-  lemon:condition           :capital2_condition .
+  lemon:condition           :LexicalEntry_2_condition .
 
-:capital2_condition a lemon:condition ;
+:LexicalEntry_2_condition a lemon:condition ;
   lemon:propertyDomain  <http://dbpedia.org/ontology/Country> ;
   lemon:propertyRange   <http://dbpedia.org/ontology/City> .
 

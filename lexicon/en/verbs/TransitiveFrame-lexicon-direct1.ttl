@@ -70,7 +70,7 @@
 
 :direct1ed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
   lemon:ontoMapping :direct1ed_ontomap ;
-  lemon:reference   <http://dbpedia.org/ontology/director> ;
+  lemon:reference   <http://dbpedia.org/ontology/http://dbpedia.org/ontology/director> ;
   lemon:subjOfProp  :direct1ed_subj ;
   lemon:objOfProp   :direct1ed_obj ;
   lemon:condition   :direct1_condition .
