@@ -49,8 +49,8 @@ public class SparqlQuery {
     private String resultSparql = null;
     private List<Binding> bindingList=new ArrayList<Binding>();
 
-    public SparqlQuery(String entityUrl, String property, String type, String returnType,String language) {
-       // this.endpoint = SPARQLRequest.getSPARQL_ENDPOINT_URL();
+    public SparqlQuery(String entityUrl, String property, String type, String returnType,String language,String endpoint) {
+       this.endpoint = endpoint;
 
         if (endpoint.contains("dbpedia.org")) {
             if (type.contains(FIND_ANY_ANSWER)) {

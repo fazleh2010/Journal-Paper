@@ -27,8 +27,10 @@ public class TurtleCreation {
     private String tutleString = "";
     private String tutleFileName = "";
     private static Integer index = 0;
+    private LinkedData linkedData = null;
 
-    public TurtleCreation(String[] row) throws Exception {
+    public TurtleCreation(String[] row,LinkedData linkedData) throws Exception {
+        this.linkedData=linkedData;
         String syntacticFrame = findSyntacticFrame(row);
 
         if (syntacticFrame.equals(GoogleXslSheet.NounPPFrameStr)) {
@@ -411,25 +413,36 @@ public class TurtleCreation {
         if (reference.contains(":")) {
             String[] info = reference.split(":");
             String prefix = info[0].strip().trim();
-            if (prefix.contains("dbo")) {
-                reference = "http://dbpedia.org/ontology/" + info[1];
-            } else if (prefix.contains("owl")) {
-                reference = "http://www.w3.org/2002/07/owl/" + info[1];
-            } else if (prefix.contains("xsd")) {
-                reference = "http://www.w3.org/2001/XMLSchema/" + info[1];
-            } else {
-                reference = "http://dbpedia.org/ontology/" + info[1];
+            
+            if (this.linkedData.getEndpoint().contains("wikidata")) {
+                if (prefix.contains("wdt")) {
+                    reference = "http://www.wikidata.org/prop/direct/" + info[1];
+                } else if (prefix.contains("wd")) {
+                    reference = "http://www.wikidata.org/entity/" + info[1];
+                }
+            } else if (this.linkedData.getEndpoint().contains("dbpedia")) {
+                if (prefix.contains("dbo")) {
+                    reference = "http://dbpedia.org/ontology/" + info[1];
+                } else if (prefix.contains("owl")) {
+                    reference = "http://www.w3.org/2002/07/owl/" + info[1];
+                } else if (prefix.contains("xsd")) {
+                    reference = "http://www.w3.org/2001/XMLSchema/" + info[1];
+                } else {
+                    reference = "http://dbpedia.org/ontology/" + info[1];
+                }
             }
+
         }
 
         return reference.strip().trim();
     }
 
     private String findSyntacticFrame(String[] row) throws Exception {
-        //System.out.println("row[GoogleXslSheet.NounPPFrameSyntacticFrameIndex]::" + row[GoogleXslSheet.NounPPFrameSyntacticFrameIndex]);
-        //System.out.println("row[GoogleXslSheet.TransitFrameSyntacticFrameIndex]::" + row[GoogleXslSheet.TransitFrameSyntacticFrameIndex]);
-        //System.out.println("row[GoogleXslSheet.InTransitFrameSyntacticFrameIndex]::" + row[GoogleXslSheet.InTransitFrameSyntacticFrameIndex]);
-
+        /*System.out.println("row.length::" + row.length);
+        System.out.println("row[GoogleXslSheet.NounPPFrameSyntacticFrameIndex]::" + row[GoogleXslSheet.NounPPFrameSyntacticFrameIndex]);
+        System.out.println("row[GoogleXslSheet.TransitFrameSyntacticFrameIndex]::" + row[GoogleXslSheet.TransitFrameSyntacticFrameIndex]);
+        System.out.println("row[GoogleXslSheet.InTransitFrameSyntacticFrameIndex]::" + row[GoogleXslSheet.InTransitFrameSyntacticFrameIndex]);
+        */
         try{
         if (row[GoogleXslSheet.NounPPFrameSyntacticFrameIndex].equals(GoogleXslSheet.NounPPFrameStr)) {
             return GoogleXslSheet.NounPPFrameStr;

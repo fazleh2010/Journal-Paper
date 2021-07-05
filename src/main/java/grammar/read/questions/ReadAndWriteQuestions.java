@@ -64,10 +64,12 @@ public class ReadAndWriteQuestions {
     private Map<String, Statistics> summary = new TreeMap<String, Statistics>();
 
     private Integer maxNumberOfEntities = 100;
+    private String endpoint=null;
     private static final org.apache.logging.log4j.Logger LOG = LogManager.getLogger(ReadAndWriteQuestions.class);
 
-    public ReadAndWriteQuestions(String questionAnswerFile, String questionSummaryFile, Integer maxNumberOfEntities,String language) {
+    public ReadAndWriteQuestions(String questionAnswerFile, String questionSummaryFile, Integer maxNumberOfEntities,String language,String endpoint) {
         this.initialExcluded();
+        this.endpoint=endpoint;
         this.language=language;
         this.questionAnswerFile = questionAnswerFile;
         this.questionSummaryFile = questionSummaryFile;
@@ -154,7 +156,7 @@ public class ReadAndWriteQuestions {
             if(questionForShow.contains("Where is $x located?"))
                 continue;
 
-            Pair<String, String> pair = this.getAnswerFromWikipedia(uriLabel.getUri(), sparqlOrg, frameType);
+            Pair<String, String> pair = this.getAnswerFromWikipedia(uriLabel.getUri(), sparqlOrg, frameType,endpoint);
             String sparql = pair.component1();
             String answer = pair.component2();
             index = index + 1;
@@ -204,20 +206,20 @@ public class ReadAndWriteQuestions {
         return rowIndex;
     }
 
-    public Pair<String, String> getAnswerFromWikipedia(String subjProp, String sparql, String returnType) {
+    public Pair<String, String> getAnswerFromWikipedia(String subjProp, String sparql, String returnType,String endpoint) {
         String property = null;
         String answer = null;
         SparqlQuery sparqlQuery = null;
         property = StringUtils.substringBetween(sparql, "<", ">");
 
-        sparqlQuery = new SparqlQuery(subjProp, property, SparqlQuery.FIND_ANY_ANSWER, returnType,language);
+        sparqlQuery = new SparqlQuery(subjProp, property, SparqlQuery.FIND_ANY_ANSWER, returnType,language,endpoint);
         //System.out.println("original sparql:: "+sparql);
         //System.out.println("sparqlQuery:: "+sparqlQuery.getSparqlQuery());
         answer = sparqlQuery.getObject();
         if (answer != null) {
             if (answer.contains("http:")) {
                 //System.out.println(answer);
-                SparqlQuery sparqlQueryLabel = new SparqlQuery(answer, property, SparqlQuery.FIND_LABEL, null,language);
+                SparqlQuery sparqlQueryLabel = new SparqlQuery(answer, property, SparqlQuery.FIND_LABEL, null,language,endpoint);
                 answer = sparqlQueryLabel.getObject();
                 //System.out.println(answer);
 
