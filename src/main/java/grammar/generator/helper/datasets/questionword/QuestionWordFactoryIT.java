@@ -38,7 +38,7 @@ public class QuestionWordFactoryIT {
       new QuestionWord(
         language,
         SubjectType.THING_INTERROGATIVE_PRONOUN,
-        new AnnotatedInterrogativePronoun("Was", "singular", "commonGender", language)
+        new AnnotatedInterrogativePronoun("Qual", "singular", "commonGender", language)
       )
     );
   }

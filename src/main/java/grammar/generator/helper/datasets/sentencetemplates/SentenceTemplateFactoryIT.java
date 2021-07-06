@@ -40,7 +40,7 @@ public class SentenceTemplateFactoryIT implements Factory<SentenceTemplateReposi
       createSentenceTemplate(
         language,
         List.of(
-           "verb(reference:component_interrogativeDeterminer_ki) noun(condition:copulativeArg) verb(reference:component_be) prepositionalAdjunct preposition noun(root)?"
+           "interrogativeDeterminer verb(reference:component_be)  NP(prepositionalAdjunct)?"
           //"prepositionalAdjunct preposition noun(root) determiner(reference:component_the_2) verb(reference:component_imperative_transitive) .",
           //"prepositionalAdjunct preposition noun(root) determiner(reference:component_the_2) verb(reference:component_interrogativeDeterminer_ki) ?"
           //"prepositionalAdjunct preposition noun(root) determiner(reference:component_the_2) verb(reference:component_interrogativeDeterminer_kothay) ?"

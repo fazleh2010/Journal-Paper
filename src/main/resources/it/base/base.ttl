@@ -157,7 +157,7 @@
 ## Determiners ##
 
 :component_the a       lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "নাম"@en ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "la"@en ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
 :component_the_2 a       lemon:LexicalEntry ;
@@ -165,11 +165,11 @@
   lexinfo:partOfSpeech lexinfo:article .
 
 :component_a a         lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "a"@en ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "la"@en ] ;
   lexinfo:partOfSpeech lexinfo:determiner .
 
 :component_an a        lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "an"@en ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "la"@en ] ;
   lexinfo:partOfSpeech lexinfo:determiner .
 
 ## Prepositions ##
