@@ -201,7 +201,7 @@ public class LexicalEntryUtil {
         List<AnnotatedNounOrQuestionWord> questionWords;
         questionWords = questionWordRepository
                 .findByLanguageAndSubjectType(language, subjectType);
-        if (questionWords.size() != 1 && language.equals(Language.DE)) {
+        if (questionWords.size() != 1 && (language.equals(Language.DE)||language.equals(Language.IT))) {
             questionWords = questionWordRepository
                     .findByLanguageAndSubjectTypeAndNumberAndGender(
                             language,
@@ -328,6 +328,8 @@ public class LexicalEntryUtil {
                 conditionLabel = getPluralFormDe(conditionLabel);
             }else if (language.equals(Language.BN)) {
                 conditionLabel = getPluralFormBn(conditionLabel);
+            }else if (language.equals(Language.IT)) {
+                conditionLabel = getPluralFormDe(conditionLabel);
             }
             determinerToken = compileDeterminerToken(conditionLabel, determiner);
             return new Pair<String, String>(determinerToken.trim(),"plural");

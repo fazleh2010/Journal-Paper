@@ -161,12 +161,17 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                 )).name(),
                 SentenceType.NP.toString()
         );
+        /*System.out.println("questionWord::"+questionWord);
+          System.out.println("nounToken::"+nounToken);
+          System.out.println("object::"+object);*/
+
 
         // We already know, which sentence tokens to expect, so we search for them to find out where to put our expected AnnotatedWords and Strings
         Optional<SentenceToken> questionWordToken = getQuestionWordToken(sentenceTokens); // interrogativeDeterminer/-Pronoun
         Optional<SentenceToken> questionWordNounToken = getConditionNounToken(sentenceTokens); // noun(condition:copulativeArg)
         Optional<SentenceToken> rootToken = getRootToken(sentenceTokens);
         Optional<SentenceToken> pronounObjectToken = getObjectPronounToken(sentenceTokens);
+
 
         // Load a list of to be forms to make every possible sentence combination
         Optional<SentenceToken> copulaToken = getCopulaToken(sentenceTokens); // verb(reference:component_be)
@@ -219,7 +224,7 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                                 // Get noun for determiner token
                                 String determinerToken;
 
-                                if (getLanguage().equals(Language.DE)) {
+                                if (getLanguage().equals(Language.DE)||getLanguage().equals(Language.IT)) {
                                     URI nounRef;
                                     if (nounToken.contains(" ")) {
                                         nounRef = URI.create(LexiconSearch.LEXICON_BASE_URI + nounToken.replace(' ', '_').toLowerCase() + "_weak");

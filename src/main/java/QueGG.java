@@ -272,8 +272,8 @@ public class QueGG {
     }*/
     private static void setDataSet( LinkedData linkedData) throws Exception {
         String endpoint=linkedData.getEndpoint();
-        System.out.println("endpoint::"+endpoint);
-        System.out.println("prefixes::"+linkedData.getPrefixes());
+        //System.out.println("endpoint::"+endpoint);
+        //System.out.println("prefixes::"+linkedData.getPrefixes());
          if (linkedData.getEndpoint().contains("dbpedia")) {
             SPARQLRequest.setEndpoint(endpoint);
             GrammarRuleGeneratorRoot.setEndpoint(endpoint);

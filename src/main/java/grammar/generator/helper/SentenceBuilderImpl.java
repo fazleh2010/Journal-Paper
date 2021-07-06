@@ -94,6 +94,7 @@ public abstract class SentenceBuilderImpl implements SentenceBuilder {
       ).values());
     }
     generatedSentences.sort(String::compareToIgnoreCase);
+    //System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!generatedSentences::"+generatedSentences);
     return generatedSentences;
   }
 
