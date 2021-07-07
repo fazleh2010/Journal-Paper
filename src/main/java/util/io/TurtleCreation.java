@@ -413,13 +413,32 @@ public class TurtleCreation {
         if (reference.contains(":")) {
             String[] info = reference.split(":");
             String prefix = info[0].strip().trim();
+            
+            //this is temporary solution. This information should be taken from Json file.
+            if (this.linkedData.getEndpoint().contains("wikidata")) {
+                if (prefix.contains("wdt")) {
+                    reference = "http://www.wikidata.org/prop/direct/" + info[1];
+                } else if (prefix.contains("wd")) {
+                    reference = "http://www.wikidata.org/entity/" + info[1];
+                }
+            } else if (this.linkedData.getEndpoint().contains("dbpedia")) {
+                if (prefix.contains("dbo")) {
+                    reference = "http://dbpedia.org/ontology/" + info[1];
+                } else if (prefix.contains("owl")) {
+                    reference = "http://www.w3.org/2002/07/owl/" + info[1];
+                } else if (prefix.contains("xsd")) {
+                    reference = "http://www.w3.org/2001/XMLSchema/" + info[1];
+                } else {
+                    reference = "http://dbpedia.org/ontology/" + info[1];
+                }
+            }
 
-            Pair<Boolean, String> pair = this.findPrefix(prefix);
+            /*Pair<Boolean, String> pair = this.findPrefix(prefix);
             if (pair.getFirst()) {
                 reference = pair.getSecond();
             } else {
                 throw new Exception("the prefix " + prefix + " is not valid for dataset " + this.linkedData.getEndpoint());
-            }
+            }*/
 
         }
         return reference;
