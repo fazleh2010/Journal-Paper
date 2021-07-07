@@ -127,7 +127,7 @@ public class QueGG {
                     TurtleCreation turtleCreation;
                     try {
                         turtleCreation = new TurtleCreation(row,linkedData);
-                        FileUtils.stringToFile(turtleCreation.getTutleString(), directory + turtleCreation.getTutleFileName());
+                        FileUtils.stringToFile(turtleCreation.getTurtleString(), directory + turtleCreation.getTurtleFileName());
                     } catch (Exception ex) {
                         java.util.logging.Logger.getLogger(QueGG.class.getName()).log(Level.SEVERE, null, ex);
                     }

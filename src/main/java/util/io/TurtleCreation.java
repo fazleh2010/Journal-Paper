@@ -26,8 +26,8 @@ public class TurtleCreation {
     private String reference = "";
     private String domain = "";
     private String range = "";
-    private String tutleString = "";
-    private String tutleFileName = "";
+    private String turtleString = "";
+    private String turtleFileName = "";
     private static Integer index = 0;
     private LinkedData linkedData = null;
 
@@ -64,7 +64,7 @@ public class TurtleCreation {
 
         
         this.nounPPFrameTurtle();
-        this.tutleFileName = getFileName(syntacticFrame);
+        this.turtleFileName = getFileName(syntacticFrame);
     }
 
     private void setTransitiveFrame(String[] row, String syntacticFrame) throws Exception {
@@ -78,7 +78,7 @@ public class TurtleCreation {
         this.domain = this.setReference(row[GoogleXslSheet.TransitFrame.referenceIndex]);
         this.range = this.setReference(row[GoogleXslSheet.TransitFrame.rangeIndex]);
         this.transitiveTurtleSense();
-        this.tutleFileName = getFileName(syntacticFrame);
+        this.turtleFileName = getFileName(syntacticFrame);
     }
 
     private void setIntransitivePPFrame(String[] row, String syntacticFrame) throws Exception {
@@ -93,12 +93,12 @@ public class TurtleCreation {
         this.domain = this.setReference(row[GoogleXslSheet.InTransitFrame.domainIndex]);
         this.range = this.setReference(row[GoogleXslSheet.InTransitFrame.rangeIndex]);
         this.inTransitiveTurtleTemporal();
-        this.tutleFileName = getFileName(syntacticFrame);
+        this.turtleFileName = getFileName(syntacticFrame);
     }
 
     public void nounPPFrameTurtle() {
        
-        this.tutleString = "@prefix :        <http://localhost:8080/lexicon#> .\n"
+        this.turtleString = "@prefix :        <http://localhost:8080/lexicon#> .\n"
                 + "\n"
                 + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
                 + "@prefix lemon:   <http://lemon-model.net/lemon#> .\n"
@@ -143,7 +143,7 @@ public class TurtleCreation {
                 + "  lexinfo:partOfSpeech lexinfo:preposition .";
 
 
-        /*this.tutleString = "@prefix :        <http://localhost:8080/lexicon#> .\n"
+        /*this.turtleString = "@prefix :        <http://localhost:8080/lexicon#> .\n"
                 + "\n"
                 + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
                 + "@prefix lemon:   <http://lemon-model.net/lemon#> .\n"
@@ -191,7 +191,7 @@ public class TurtleCreation {
     public void transitiveTurtleSense() {
        
 
-        this.tutleString = "@prefix :        <http://localhost:8080/lexicon#> .\n"
+        this.turtleString = "@prefix :        <http://localhost:8080/lexicon#> .\n"
                 + "\n"
                 + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
                 + "@prefix lemon:   <http://lemon-model.net/lemon#> .\n"
@@ -283,7 +283,7 @@ public class TurtleCreation {
       
         //System.out.println(this.preposition+"!!!!!!!!!!!!!"+this.preposition);
 
-        this.tutleString = "@prefix :        <http://localhost:8080/lexicon#> .\n"
+        this.turtleString = "@prefix :        <http://localhost:8080/lexicon#> .\n"
                 + "\n"
                 + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
                 + "@prefix lemon:   <http://lemon-model.net/lemon#> .\n"
@@ -348,7 +348,7 @@ public class TurtleCreation {
         this.domain = this.setReference(domain);
         this.range = this.setReference(range);
 
-        this.tutleString = "@prefix :        <http://localhost:8080/lexicon#> .\n"
+        this.turtleString = "@prefix :        <http://localhost:8080/lexicon#> .\n"
                 + "\n"
                 + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
                 + "@prefix lemon:   <http://lemon-model.net/lemon#> .\n"
@@ -474,8 +474,8 @@ public class TurtleCreation {
 
     }
 
-    public String getTutleFileName() {
-        return tutleFileName;
+    public String getTurtleFileName() {
+        return turtleFileName;
     }
 
     private String getFileName(String syntacticFrame) {
@@ -483,8 +483,8 @@ public class TurtleCreation {
 
     }
 
-    public String getTutleString() {
-        return this.tutleString;
+    public String getTurtleString() {
+        return this.turtleString;
     }
 
     private String modify(String string) {
