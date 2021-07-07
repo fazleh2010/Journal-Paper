@@ -5,6 +5,8 @@
  */
 package util.io;
 
+import com.google.gdata.util.common.base.Pair;
+
 
 
 /**
@@ -45,7 +47,7 @@ public class TurtleCreation {
 
     }
 
-    private void setNounPPFrame(String[] row, String syntacticFrame) {
+    private void setNounPPFrame(String[] row, String syntacticFrame) throws Exception {
         this.setLemonEntryId(row[GoogleXslSheet.writtenFormInfinitive]);
         //this.lemonEntry=row[GoogleXslSheet.writtenFormInfinitive];
         this.partOfSpeech = row[GoogleXslSheet.partOfSpeechIndex];
@@ -53,28 +55,33 @@ public class TurtleCreation {
         this.writtenForm_plural = row[GoogleXslSheet.NounPPFrame.writtenFormPluralIndex];
         this.preposition = row[GoogleXslSheet.NounPPFrame.prepositionIndex];
         this.sense = row[GoogleXslSheet.NounPPFrame.senseIndex];
-        this.reference = row[GoogleXslSheet.NounPPFrame.referenceIndex];
-        this.domain = row[GoogleXslSheet.NounPPFrame.domainIndex];
-        this.range = row[GoogleXslSheet.NounPPFrame.rangeIndex];
+        //this.reference = row[GoogleXslSheet.NounPPFrame.referenceIndex];
+        //this.domain = row[GoogleXslSheet.NounPPFrame.domainIndex];
+        //this.range = row[GoogleXslSheet.NounPPFrame.rangeIndex];
+        this.reference = this.setReference(row[GoogleXslSheet.NounPPFrame.referenceIndex]);
+        this.domain = this.setReference(row[GoogleXslSheet.NounPPFrame.domainIndex]);
+        this.range = this.setReference(row[GoogleXslSheet.NounPPFrame.rangeIndex]);
+
+        
         this.nounPPFrameTurtle();
         this.tutleFileName = getFileName(syntacticFrame);
     }
 
-    private void setTransitiveFrame(String[] row, String syntacticFrame) {
+    private void setTransitiveFrame(String[] row, String syntacticFrame) throws Exception {
         this.setLemonEntryId(row[GoogleXslSheet.writtenFormInfinitive]);
         this.partOfSpeech = row[GoogleXslSheet.partOfSpeechIndex];
         this.writtenFormInfinitive = row[GoogleXslSheet.writtenFormInfinitive];
         this.writtenForm3rdPerson = row[GoogleXslSheet.TransitFrame.writtenForm3rdPerson];
         this.writtenFormPast = row[GoogleXslSheet.TransitFrame.writtenFormPast];
         this.sense = row[GoogleXslSheet.TransitFrame.senseIndex];
-        this.reference = row[GoogleXslSheet.TransitFrame.referenceIndex];
-        this.domain = row[GoogleXslSheet.TransitFrame.domainIndex];
-        this.range = row[GoogleXslSheet.TransitFrame.rangeIndex];
+        this.reference = this.setReference(row[GoogleXslSheet.TransitFrame.referenceIndex]);
+        this.domain = this.setReference(row[GoogleXslSheet.TransitFrame.referenceIndex]);
+        this.range = this.setReference(row[GoogleXslSheet.TransitFrame.rangeIndex]);
         this.transitiveTurtleSense();
         this.tutleFileName = getFileName(syntacticFrame);
     }
 
-    private void setIntransitivePPFrame(String[] row, String syntacticFrame) {
+    private void setIntransitivePPFrame(String[] row, String syntacticFrame) throws Exception {
         this.setLemonEntryId(row[GoogleXslSheet.writtenFormInfinitive]);
         this.partOfSpeech = row[GoogleXslSheet.partOfSpeechIndex];
         this.writtenFormInfinitive = row[GoogleXslSheet.writtenFormInfinitive];
@@ -82,18 +89,15 @@ public class TurtleCreation {
         this.writtenFormPast = row[GoogleXslSheet.InTransitFrame.writtenFormPast];
         this.preposition = row[GoogleXslSheet.InTransitFrame.preposition];
         this.sense = row[GoogleXslSheet.InTransitFrame.senseIndex];
-        this.reference = row[GoogleXslSheet.InTransitFrame.referenceIndex];
-        this.domain = row[GoogleXslSheet.InTransitFrame.domainIndex];
-        this.range = row[GoogleXslSheet.InTransitFrame.rangeIndex];
+        this.reference = this.setReference(row[GoogleXslSheet.InTransitFrame.referenceIndex]);
+        this.domain = this.setReference(row[GoogleXslSheet.InTransitFrame.domainIndex]);
+        this.range = this.setReference(row[GoogleXslSheet.InTransitFrame.rangeIndex]);
         this.inTransitiveTurtleTemporal();
         this.tutleFileName = getFileName(syntacticFrame);
     }
 
     public void nounPPFrameTurtle() {
-        this.reference = this.setReference(reference);
-        this.domain = this.setReference(domain);
-        this.range = this.setReference(range);
-
+       
         this.tutleString = "@prefix :        <http://localhost:8080/lexicon#> .\n"
                 + "\n"
                 + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
@@ -185,9 +189,7 @@ public class TurtleCreation {
     }
 
     public void transitiveTurtleSense() {
-        this.reference = this.setReference(reference);
-        this.domain = this.setReference(domain);
-        this.range = this.setReference(range);
+       
 
         this.tutleString = "@prefix :        <http://localhost:8080/lexicon#> .\n"
                 + "\n"
@@ -278,9 +280,7 @@ public class TurtleCreation {
     }
 
     public void inTransitiveTurtleTemporal() {
-        this.reference = this.setReference(reference);
-        this.domain = this.setReference(domain);
-        this.range = this.setReference(range);
+      
         //System.out.println(this.preposition+"!!!!!!!!!!!!!"+this.preposition);
 
         this.tutleString = "@prefix :        <http://localhost:8080/lexicon#> .\n"
@@ -409,32 +409,20 @@ public class TurtleCreation {
                 + "";
 
     }*/
-    private String setReference(String reference) {
+    private String setReference(String reference) throws Exception {
         if (reference.contains(":")) {
             String[] info = reference.split(":");
             String prefix = info[0].strip().trim();
-            
-            if (this.linkedData.getEndpoint().contains("wikidata")) {
-                if (prefix.contains("wdt")) {
-                    reference = "http://www.wikidata.org/prop/direct/" + info[1];
-                } else if (prefix.contains("wd")) {
-                    reference = "http://www.wikidata.org/entity/" + info[1];
-                }
-            } else if (this.linkedData.getEndpoint().contains("dbpedia")) {
-                if (prefix.contains("dbo")) {
-                    reference = "http://dbpedia.org/ontology/" + info[1];
-                } else if (prefix.contains("owl")) {
-                    reference = "http://www.w3.org/2002/07/owl/" + info[1];
-                } else if (prefix.contains("xsd")) {
-                    reference = "http://www.w3.org/2001/XMLSchema/" + info[1];
-                } else {
-                    reference = "http://dbpedia.org/ontology/" + info[1];
-                }
+
+            Pair<Boolean, String> pair = this.findPrefix(prefix);
+            if (pair.getFirst()) {
+                reference = pair.getSecond();
+            } else {
+                throw new Exception("the prefix " + prefix + " is not valid for dataset " + this.linkedData.getEndpoint());
             }
 
         }
-
-        return reference.strip().trim();
+        return reference;
     }
 
     private String findSyntacticFrame(String[] row) throws Exception {
@@ -485,6 +473,20 @@ public class TurtleCreation {
         string = string.toLowerCase().strip().trim().replace(" ", "_");*/
         index = index + 1;
         return "LexicalEntry_" + index.toString();
+    }
+
+    private Pair<Boolean, String> findPrefix(String prefix) {
+        prefix = prefix.strip().trim();
+        for (String key : this.linkedData.getPrefixes().keySet()) {
+            String value = this.linkedData.getPrefixes().get(key);
+            value = value.strip().trim();
+            key = key.strip().trim();
+            if (key.equals(prefix)) {
+                return new Pair<Boolean, String>(Boolean.TRUE, value);
+            }
+
+        }
+            return new Pair<Boolean, String>(Boolean.FALSE, prefix);
     }
 
 }
