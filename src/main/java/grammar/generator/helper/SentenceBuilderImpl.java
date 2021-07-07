@@ -18,6 +18,8 @@ import net.lexinfo.LexInfo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import util.exceptions.QueGGMissingFactoryClassException;
+import grammar.structure.component.DomainOrRangeMorphologicalProperties;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -92,6 +94,7 @@ public abstract class SentenceBuilderImpl implements SentenceBuilder {
       ).values());
     }
     generatedSentences.sort(String::compareToIgnoreCase);
+    //System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!generatedSentences::"+generatedSentences);
     return generatedSentences;
   }
 
@@ -143,6 +146,63 @@ public abstract class SentenceBuilderImpl implements SentenceBuilder {
           language,
           subjectType,
           lexInfo.getPropertyValue("singular"),
+          lexInfo.getPropertyValue("commonGender")
+        );
+    }
+    if (!isNull(annotatedNounOrQuestionWord)) {
+      if (questionWords.size() != 1) {
+        questionWords = questionWordRepository
+          .findByLanguageAndSubjectTypeAndNumber(
+            language,
+            subjectType,
+            annotatedNounOrQuestionWord.getNumber()
+          );
+      }
+      if (questionWords.size() != 1) {
+        questionWords = questionWordRepository
+          .findByLanguageAndSubjectTypeAndNumberAndGender(
+            language,
+            subjectType,
+            annotatedNounOrQuestionWord.getNumber(),
+            annotatedNounOrQuestionWord.getGender()
+          );
+      }
+    }
+    if (questionWords.size() != 1) {
+      LOG.error("Cannot find a matching subject in QuestionWordFactory({})", language);
+    } else {
+      sbjType = questionWords.get(0);
+    }
+    return sbjType;
+  }
+  
+  protected AnnotatedNounOrQuestionWord getAnnotatedQuestionWordBySubjectTypeAndNumber(
+    SubjectType subjectType,
+    Language language,
+    LexicalEntryUtil lexicalEntryUtil,
+    PropertyValue number,
+    AnnotatedNounOrQuestionWord annotatedNounOrQuestionWord
+  ) throws QueGGMissingFactoryClassException {
+    AnnotatedNounOrQuestionWord sbjType = new AnnotatedNoun("", "singular", language);
+    QuestionWordRepository questionWordRepository = new QuestionWordFactory(language).init();
+    List<AnnotatedNounOrQuestionWord> questionWords;
+    questionWords = questionWordRepository
+      .findByLanguageAndSubjectType(language, subjectType);
+    if (questionWords.size() != 1 && language.equals(Language.DE)) {
+      questionWords = questionWordRepository
+        .findByLanguageAndSubjectTypeAndNumberAndGender(
+          language,
+          subjectType,
+          number,
+          lexInfo.getPropertyValue(DomainOrRangeMorphologicalProperties.getMatchingGender(lexicalEntryUtil.getConditionUriBySelectVariable(lexicalEntryUtil.getSelectVariable())).toString().toLowerCase())
+        );
+    }
+    if (questionWords.size() != 1) {
+      questionWords = questionWordRepository
+        .findByLanguageAndSubjectTypeAndNumberAndGender(
+          language,
+          subjectType,
+          number,
           lexInfo.getPropertyValue("commonGender")
         );
     }

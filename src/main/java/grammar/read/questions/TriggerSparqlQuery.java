@@ -49,7 +49,7 @@ public class TriggerSparqlQuery {
             //System.out.print(command);
         } catch (Exception ex) {
             Logger.getLogger(TriggerSparqlQuery.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("error in unicode in sparql query!" + ex.getMessage());
+            System.err.println("error in unicode in sparql query!" + ex.getMessage());
             ex.printStackTrace();
         }
 
@@ -64,7 +64,7 @@ public class TriggerSparqlQuery {
             result = builder.toString();
         } catch (IOException ex) {
             Logger.getLogger(TriggerSparqlQuery.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("error in reading sparql query!" + ex.getMessage());
+            System.err.println("error in reading sparql query!" + ex.getMessage());
             ex.printStackTrace();
         }
         return result;
@@ -79,7 +79,7 @@ public class TriggerSparqlQuery {
             this.parseResult(builder, xmlStr);
         } catch (Exception ex) {
             Logger.getLogger(TriggerSparqlQuery.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("error in parsing sparql in XML!" + ex.getMessage());
+            System.err.println("error in parsing sparql in XML!" + ex.getMessage());
             ex.printStackTrace();
         }
     }

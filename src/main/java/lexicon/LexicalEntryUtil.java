@@ -38,6 +38,8 @@ import org.apache.jena.vocabulary.RDFS;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import util.exceptions.QueGGMissingFactoryClassException;
+import grammar.structure.component.DomainOrRangeMorphologicalProperties;
+
 
 import java.net.URI;
 import java.util.ArrayList;
@@ -152,6 +154,98 @@ public class LexicalEntryUtil {
         }
         return sbjType;
     }
+    
+    
+    /**
+     * Get the string representation of the pronoun or determiner that is or is
+     * part of the subject for the generated sentence.
+     *
+     * @param subjectType the {@link SubjectType} of the current lexical entry
+     * and sense.
+     * @param language the current language
+     * @param number the current number (singular or plural)
+     * @param annotatedNounOrQuestionWord
+     * <p>
+     * a noun or descendent class word that the output word should match to (by
+     * number, gender).<br> Can be {@code null} if the {@link SubjectType} is
+     * not a determiner or if there is no need to match the output word to any
+     * noun.</p>
+     * @return the string representation of a {@link SubjectType} matching by
+     * language and (if provided) by a noun's gender and number.
+     */
+    /**
+     * Get the string representation of the pronoun or determiner that is or is
+     * part of the subject for the generated sentence.
+     *
+     * @param subjectType the {@link SubjectType} of the current lexical entry
+     * and sense.
+     * @param language the current language
+     * @param number the current number (singular or plural)
+     * @param annotatedNounOrQuestionWord
+     * <p>
+     * a noun or descendent class word that the output word should match to (by
+     * number, gender).<br> Can be {@code null} if the {@link SubjectType} is
+     * not a determiner or if there is no need to match the output word to any
+     * noun.</p>
+     * @return the string representation of a {@link SubjectType} matching by
+     * language and (if provided) by a noun's gender and number.
+     */
+    public String getSubjectBySubjectTypeAndNumber(
+            SubjectType subjectType,
+            Language language,
+            PropertyValue number,
+            AnnotatedNounOrQuestionWord annotatedNounOrQuestionWord
+    ) throws QueGGMissingFactoryClassException {
+        String sbjType = "";
+        QuestionWordRepository questionWordRepository = new QuestionWordFactory(language).init();
+        List<AnnotatedNounOrQuestionWord> questionWords;
+        questionWords = questionWordRepository
+                .findByLanguageAndSubjectType(language, subjectType);
+        if (questionWords.size() != 1 && (language.equals(Language.DE)||language.equals(Language.IT))) {
+            questionWords = questionWordRepository
+                    .findByLanguageAndSubjectTypeAndNumberAndGender(
+                            language,
+                            subjectType,
+                            number,
+                            lexInfo.getPropertyValue(DomainOrRangeMorphologicalProperties.getMatchingGender(getConditionUriBySelectVariable(getSelectVariable())).toString().toLowerCase())
+                    );
+        }
+        if (questionWords.size() != 1) {
+            questionWords = questionWordRepository
+                    .findByLanguageAndSubjectTypeAndNumberAndGender(
+                            language,
+                            subjectType,
+                            number,
+                            lexInfo.getPropertyValue("commonGender")
+                    );
+        }
+        if (!isNull(annotatedNounOrQuestionWord)) {
+            if (questionWords.size() != 1) {
+                questionWords = questionWordRepository
+                        .findByLanguageAndSubjectTypeAndNumber(
+                                language,
+                                subjectType,
+                                annotatedNounOrQuestionWord.getNumber()
+                        );
+            }
+            if (questionWords.size() != 1) {
+                questionWords = questionWordRepository
+                        .findByLanguageAndSubjectTypeAndNumberAndGender(
+                                language,
+                                subjectType,
+                                annotatedNounOrQuestionWord.getNumber(),
+                                annotatedNounOrQuestionWord.getGender()
+                        );
+            }
+        }
+        if (questionWords.size() != 1) {
+            LOG.error("Cannot find a matching subject in QuestionWordFactory({})", language);
+        } else {
+            sbjType = questionWords.get(0).getWrittenRepValue();
+        }
+        return sbjType;
+    }
+    
 
     /**
      * Get a determiner token like "Which city" or "Which cities". If the
@@ -193,6 +287,57 @@ public class LexicalEntryUtil {
             
       
     }
+    
+    /**
+     * Get a determiner token like "Which city" or "Which cities". If the
+     * provided toBeVerb is a plural form, the conditionLabel will be changed to
+     * plural.
+     *
+     * @param number the number of the output noun
+     * @param conditionLabel a noun for the determiner. E.g. "city"
+     * @param determiner a determiner string. E.g. "Which"
+     * @return a string representing the combination of a determiner with a noun
+     * based on the number of a verb. E.g. "Which cities"
+     */
+    public static String getDeterminerTokenByNumber(
+            PropertyValue number,
+            String conditionLabel,
+            String determiner,
+            Language language
+    ) {
+        String determinerToken;
+        if (language.equals(Language.EN) && number.equals(new LexInfo().getPropertyValue("plural"))) {
+            conditionLabel = getPluralFormEn(conditionLabel);
+        }
+        determinerToken = compileDeterminerToken(conditionLabel, determiner);
+        return determinerToken.trim();
+    }
+    
+    public static Pair<String, String> getDeterminerTokenByNumberNew(
+            PropertyValue number,
+            String conditionLabel,
+            String determiner,
+            Language language
+    ) {
+        String determinerToken;
+
+        if (number.equals(new LexInfo().getPropertyValue("plural"))) {
+            if (language.equals(Language.EN)) {
+                conditionLabel = getPluralFormEn(conditionLabel);
+            } else if (language.equals(Language.DE)) {
+                conditionLabel = getPluralFormDe(conditionLabel);
+            }else if (language.equals(Language.BN)) {
+                conditionLabel = getPluralFormBn(conditionLabel);
+            }else if (language.equals(Language.IT)) {
+                conditionLabel = getPluralFormDe(conditionLabel);
+            }
+            determinerToken = compileDeterminerToken(conditionLabel, determiner);
+            return new Pair<String, String>(determinerToken.trim(),"plural");
+        } else {
+            determinerToken = compileDeterminerToken(conditionLabel, determiner);
+            return new Pair<String, String>(determinerToken.trim(), "singular");
+        }
+    }
 
     private static String getPluralFormEn(String noun) {
         return noun.endsWith("y")
@@ -201,6 +346,14 @@ public class LexicalEntryUtil {
                 ? noun.concat("es")
                 : noun.concat("s");
     }
+
+    private static String getPluralFormDe(String noun) {
+        return noun;
+    }
+     private static String getPluralFormBn(String noun) {
+        return noun;
+    }
+    
 
     private static String compileDeterminerToken(String returnVariableConditionLabel, String determiner) {
         return String.format(
@@ -221,7 +374,7 @@ public class LexicalEntryUtil {
         return parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords(this.lexicalEntry.getForms());
     }
 
-    private List<AnnotatedNounOrQuestionWord> parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords(Collection<LexicalForm> lexicalForms) {
+    public List<AnnotatedNounOrQuestionWord> parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords(Collection<LexicalForm> lexicalForms) {
         List<AnnotatedNounOrQuestionWord> annotatedNouns = new ArrayList<>();
         for (LexicalForm lexicalForm : lexicalForms) {
             AnnotatedNoun annotatedNoun
@@ -325,6 +478,11 @@ public class LexicalEntryUtil {
         String domainOrRange = selectVariable.mapDomainOrRange();
         return detectSubjectType(getReferenceUri(), domainOrRange,domainOrRangeType);
     }
+    
+    public SubjectType getSubjectType(SelectVariable selectVariable) {
+        String domainOrRange = selectVariable.mapDomainOrRange();
+        return detectSubjectType(getReferenceUri(), domainOrRange);
+    }
 
     /**
      * Detects the SubjectType of the given LexicalEntry. This enables the
@@ -368,6 +526,34 @@ public class LexicalEntryUtil {
             }
         }
 
+        return mapsToWho.contains(domainOrRangeResponse)
+                ? SubjectType.PERSON_INTERROGATIVE_PRONOUN
+                : SubjectType.THING_INTERROGATIVE_PRONOUN;
+    }
+   
+    private SubjectType detectSubjectType(String uri, String domainOrRange) {
+        List<String> mapsToWho = DomainOrRangeType.PERSON.getReferences().stream()
+                .map(URI::toString)
+                .collect(Collectors.toList());
+        String domainOrRangeResponse = "";
+        ParameterizedSparqlString parameterizedSparqlString = createSPARQLRequestForSubjectType(uri, domainOrRange);
+        QueryExecution exec = QueryExecutionFactory.sparqlService(SPARQL_ENDPOINT_URL, parameterizedSparqlString.asQuery());
+        ResultSet resultSet = exec.execSelect();
+        // check only first result as we are not interested in anything but Person
+        QuerySolution querySolution;
+        if (resultSet.hasNext()) {
+            querySolution = resultSet.next();
+            if (!isNull(querySolution)) {
+                domainOrRangeResponse = querySolution.get(domainOrRange).toString();
+            }
+        } else {
+            SelectVariable selectVariable = domainOrRange.equals("domain")
+                    ? SelectVariable.SUBJECT_OF_PROPERTY
+                    : SelectVariable.OBJECT_OF_PROPERTY;
+            domainOrRangeResponse = getConditionUriBySelectVariable(selectVariable).toString();
+        }
+        // always default to SubjectType.THING if not Person or not found
+        // check for label instead of uri.... Q215627 is person as well...
         return mapsToWho.contains(domainOrRangeResponse)
                 ? SubjectType.PERSON_INTERROGATIVE_PRONOUN
                 : SubjectType.THING_INTERROGATIVE_PRONOUN;
@@ -559,4 +745,36 @@ public class LexicalEntryUtil {
 
         return preposition;
     }
+    
+    public String getVerbParticle() {
+        String particle = null;
+        SynArg directObject = lexInfo.getSynArg("directObject");
+        Property POS = lexInfo.getProperty("partOfSpeech");
+        PropertyValue POSParticle = lexInfo.getPropertyValue("particle");
+        Frame frame = getFrameByGrammarType();
+
+        //this is a temporary code for solving the problem. this code will be refactored in some point.
+        try {
+            if (!isNull(frame)) {
+                SyntacticRoleMarker synRoleMarker = frame.getSynArg(directObject).iterator().next().getMarker();
+                if (synRoleMarker == null) return "";
+                PropertyValue POSValue = synRoleMarker.getProperty(POS).iterator().next();
+                if (POSValue.equals(POSParticle)) {
+                    particle = ((LexicalEntryImpl) synRoleMarker).getCanonicalForm().getWrittenRep().value;
+                    return particle;
+                }
+            }
+
+        } catch (NoSuchElementException noSuchExp) {
+            System.err.println("Particle is not found!!"+noSuchExp.getMessage());
+
+        }
+        return particle;
+    }
+
+    @Override
+    public String toString() {
+        return "LexicalEntryUtil{" + "lexicon=" + lexicon + ", lexicalEntry=" + lexicalEntry + ", frameType=" + frameType + ", lexicalSense=" + lexicalSense + ", lexInfo=" + lexInfo + ", language=" + language + ", owlRestriction=" + owlRestriction + '}';
+    }
+
 }

@@ -29,12 +29,14 @@ public class LexiconImporter {
   public LexiconImporter() {}
   
     public LemonModel loadModelFromDir(String dir, String internalResourceDir) throws IOException {
+        //System.out.println("dir::"+dir+"  internalResourceDir:"+internalResourceDir);
         final LemonSerializer serializer = LemonSerializer.newInstance();
         LemonModel model = null;
         try ( Stream<Path> paths = Files.walk(Paths.get(dir))) {
             List<Path> list = filterFiles(paths);
+            //System.out.println("turtle file size!!" + list.size());
             for (Path file : list) {
-                //System.out.println("file not working:" + file.getFileName());
+                //System.out.println("turtle file now working!!" + file.getFileName());
                 try {
                     if (model == null) {
                         model = serializer.read(new FileReader(file.toString()));
@@ -59,7 +61,6 @@ public class LexiconImporter {
     LemonSerializer serializer
   ) {
     InputStream inputStream = ClassLoader.getSystemResourceAsStream(internalResourceDir + PATH_TO_BASE_FILE);
-    System.out.println(internalResourceDir + PATH_TO_BASE_FILE);
     assert inputStream != null;
     InputStreamReader inputStreamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
     return serializer.read(new BufferedReader(inputStreamReader));

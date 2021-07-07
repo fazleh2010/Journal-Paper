@@ -15,7 +15,10 @@
   lemon:canonicalForm  :form_complete ;
   lemon:otherForm      :form_complete_past ;
   lemon:synBehavior    :complete_frame ;
-  lemon:sense          :complete_ontomap .
+  lemon:sense          :complete_ontomap_sense1 ;
+  lemon:sense          :complete_ontomap_sense2 ;
+  lemon:sense          :complete_ontomap_sense3 ;
+  lemon:sense          :complete_ontomap_sense4 .
 
 :form_complete a           lemon:Form ;
   lemon:writtenRep     "complete"@en ;
@@ -29,22 +32,60 @@
   lexinfo:tense     lexinfo:past .
 
 
-
 :complete_frame a                  lexinfo:IntransitivePPFrame ;
   lexinfo:subject              :complete_subj ;
   lexinfo:prepositionalAdjunct :complete_obj .
 
-:complete_ontomap a     lemon:OntoMap, lemon:LexicalSense ;
+:complete_ontomap_sense1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :complete_ontomap_sense1 ;
+  lemon:reference   <http://dbpedia.org/ontology/buildingEndDate> ;
+  lemon:subjOfProp  :complete_obj ;
+  lemon:objOfProp   :complete_subj ;
+  lemon:condition   :complete_condition_sense1 .
+
+
+:complete_condition_sense1 a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/ArchitecturalStructure> ;
+  lemon:propertyRange  <https://www.w3.org/2001/XMLSchema#date> .
+
+
+:complete_ontomap_sense2 a     lemon:OntoMap, lemon:LexicalSense ;
   lemon:ontoMapping :complete_ontomap ;
   lemon:reference   <http://dbpedia.org/ontology/buildingEndDate> ;
   lemon:subjOfProp  :complete_obj ;
   lemon:objOfProp   :complete_subj ;
-  lemon:condition   :complete_condition .
+  lemon:condition   :complete_condition_sense2 .
 
 
-:complete_condition a      lemon:condition ;
-  lemon:propertyDomain <http://dbpedia.org/ontology/ArchitecturalStructure> ;
-  lemon:propertyRange  <http://dbpedia.org/ontology/year> .
+:complete_condition_sense2 a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Building> ;
+  lemon:propertyRange  <https://www.w3.org/2001/XMLSchema#date> .
+
+:complete_ontomap_sense3 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :complete_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/buildingEndDate> ;
+  lemon:subjOfProp  :complete_obj ;
+  lemon:objOfProp   :complete_subj ;
+  lemon:condition   :complete_condition_sense3 .
+
+
+:complete_condition_sense3 a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Bridge> ;
+  lemon:propertyRange  <https://www.w3.org/2001/XMLSchema#date> .
+
+:complete_ontomap_sense4 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :complete_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/completionDate> ;
+  lemon:subjOfProp  :complete_obj ;
+  lemon:objOfProp   :complete_subj ;
+  lemon:condition   :complete_condition_sense4 .
+
+
+:complete_condition_sense4 a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Work> ;
+  lemon:propertyRange  <https://www.w3.org/2001/XMLSchema#date> .
+
+
 
 :complete_obj lemon:marker :in .
 
