@@ -41,7 +41,7 @@ public class QueGG {
     private static Boolean externalEntittyListflag = false;
     private static String outputFileName = "grammar_FULL_DATASET";
     //private static String srcDir = "src/main/resources/";
-   // private static String endpoint = "https://dbpedia.org/sparql";
+    // private static String endpoint = "https://dbpedia.org/sparql";
 
     public static void main(String[] args) throws Exception {
         JenaSystem.init();
@@ -63,19 +63,18 @@ public class QueGG {
             //setSparqlEndpoint(endpoint);
             Integer maxNumberOfEntities = Integer.parseInt(numberOfEntitiesString);
             String fileType = args[4];
-            String dataSetConfFile=args[5];
-            LinkedData linkedData=FileUtils.getLinkedDataConf(new File(dataSetConfFile));
+            String dataSetConfFile = args[5];
+            LinkedData linkedData = FileUtils.getLinkedDataConf(new File(dataSetConfFile));
             setDataSet(linkedData);
-            
+
             if (fileType.contains("ttl")) {
                 queGG.init(language, inputDir, outputDir);
             } else if (fileType.contains("csv")) {
-                queGG.generateTurtle(inputDir,linkedData);
+                queGG.generateTurtle(inputDir, linkedData);
                 queGG.init(language, inputDir, outputDir);
             } else {
                 throw new Exception("No file type is mentioned!!");
             }
-          
 
             List<File> fileList = FileUtils.getFiles(outputDir + "/", outputFileName + "_" + language, ".json");
             if (fileList.isEmpty()) {
@@ -83,9 +82,9 @@ public class QueGG {
             }
             questionAnswerFile = outputDir + File.separator + QUESTION_ANSWER_FILE + "_" + language + ".csv";
             questionSummaryFile = outputDir + File.separator + QUESTION_SUMMARY_FILE + "_" + language + ".csv";
-            ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile, maxNumberOfEntities, args[0],linkedData.getEndpoint());
+            ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile, maxNumberOfEntities, args[0], linkedData.getEndpoint());
             readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir, externalEntittyListflag);
-            
+
             LOG.warn("To get optimal combinations of sentences please add the following types to {}\n{}",
                     DomainOrRangeType.class.getName(), DomainOrRangeType.MISSING_TYPES.toString()
             );
@@ -103,7 +102,7 @@ public class QueGG {
         }
     }
 
-    public void generateTurtle(String inputDir,LinkedData linkedData) throws IOException {
+    public void generateTurtle(String inputDir, LinkedData linkedData) throws IOException {
         String lemonEntry = null;
         File f = new File(inputDir);
         String[] pathnames = f.list();
@@ -126,7 +125,7 @@ public class QueGG {
                     }
                     TurtleCreation turtleCreation;
                     try {
-                        turtleCreation = new TurtleCreation(row,linkedData);
+                        turtleCreation = new TurtleCreation(row, linkedData);
                         FileUtils.stringToFile(turtleCreation.getTutleString(), directory + turtleCreation.getTutleFileName());
                     } catch (Exception ex) {
                         java.util.logging.Logger.getLogger(QueGG.class.getName()).log(Level.SEVERE, null, ex);
@@ -270,11 +269,11 @@ public class QueGG {
             GrammarRuleGeneratorRoot.setEndpoint(endpoint);
         }
     }*/
-    private static void setDataSet( LinkedData linkedData) throws Exception {
-        String endpoint=linkedData.getEndpoint();
+    private static void setDataSet(LinkedData linkedData) throws Exception {
+        String endpoint = linkedData.getEndpoint();
         //System.out.println("endpoint::"+endpoint);
         //System.out.println("prefixes::"+linkedData.getPrefixes());
-         if (linkedData.getEndpoint().contains("dbpedia")) {
+        if (linkedData.getEndpoint().contains("dbpedia")) {
             SPARQLRequest.setEndpoint(endpoint);
             GrammarRuleGeneratorRoot.setEndpoint(endpoint);
         } else if (linkedData.getEndpoint().contains("wikidata")) {
