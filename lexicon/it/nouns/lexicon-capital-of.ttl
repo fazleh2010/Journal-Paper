@@ -23,14 +23,14 @@
 
 :capital_sense_ontomap a lemon:OntoMap, lemon:LexicalSense ;
   lemon:ontoMapping      :capital_sense_ontomap ;
-  lemon:reference        <http://dbpedia.org/ontology/capital> ;
+  lemon:reference        <http://purl.org/dc/terms/spatial> ;
   lemon:subjOfProp       :arg2 ;
   lemon:objOfProp        :arg1 ;
   lemon:condition        :capital_condition .
 
 :capital_condition a   lemon:condition ;
-  lemon:propertyDomain <http://dbpedia.org/ontology/Country> ;
-  lemon:propertyRange  <http://dbpedia.org/ontology/City> .
+  lemon:propertyDomain <http://dati.beniculturali.it/cis/CulturalHeritageObject> ;
+  lemon:propertyRange  <https://ontopia-lodview.agid.gov.it/onto/CLV/Address/address> .
 
 :arg2 lemon:marker :of .
 

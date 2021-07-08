@@ -81,10 +81,10 @@ public class QueGG {
             if (fileList.isEmpty()) {
                 throw new Exception("No files to process for question answering system!!");
             }
-            questionAnswerFile = outputDir + File.separator + QUESTION_ANSWER_FILE + "_" + language + ".csv";
+            /*questionAnswerFile = outputDir + File.separator + QUESTION_ANSWER_FILE + "_" + language + ".csv";
             questionSummaryFile = outputDir + File.separator + QUESTION_SUMMARY_FILE + "_" + language + ".csv";
             ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile, maxNumberOfEntities, args[0],linkedData.getEndpoint());
-            readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir, externalEntittyListflag);
+            readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir, externalEntittyListflag);*/
             
             LOG.warn("To get optimal combinations of sentences please add the following types to {}\n{}",
                     DomainOrRangeType.class.getName(), DomainOrRangeType.MISSING_TYPES.toString()
@@ -262,24 +262,13 @@ public class QueGG {
         return grammarWrapper;
     }
 
-    /*private static void setSparqlEndpoint(String endpoint) {
-        if (endpoint.contains("dbpedia")) {
+    private static void setDataSet(LinkedData linkedData) throws Exception {
+        String endpoint = linkedData.getEndpoint();
+        if (linkedData.getEndpoint().contains("dbpedia")) {
             SPARQLRequest.setEndpoint(endpoint);
-            GrammarRuleGeneratorRoot.setEndpoint(endpoint);
-        } else if (endpoint.contains("wikidata")) {
-            GrammarRuleGeneratorRoot.setEndpoint(endpoint);
         }
-    }*/
-    private static void setDataSet( LinkedData linkedData) throws Exception {
-        String endpoint=linkedData.getEndpoint();
-        //System.out.println("endpoint::"+endpoint);
-        //System.out.println("prefixes::"+linkedData.getPrefixes());
-         if (linkedData.getEndpoint().contains("dbpedia")) {
-            SPARQLRequest.setEndpoint(endpoint);
-            GrammarRuleGeneratorRoot.setEndpoint(endpoint);
-        } else if (linkedData.getEndpoint().contains("wikidata")) {
-            GrammarRuleGeneratorRoot.setEndpoint(endpoint);
-        }
+        GrammarRuleGeneratorRoot.setEndpoint(endpoint);
+
     }
 
 }

@@ -10,7 +10,7 @@
 		    "cis" : "http://dati.beniculturali.it/cis/",
 		    "clvapit" : "https://w3id.org/italia/onto/CLV/",
 		    "context" : "https://w3id.org/arco/ontology/context-description/",
-		    "dc" : "http://purl.org/dc/elements/1.1/",
+		    "dc" : "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/",
 		    "l0" : "https://w3id.org/italia/onto/l0/",
 		    "muapit" : "https://w3id.org/italia/onto/MU/",
 		    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -18,3 +18,5 @@
 		    "roapit" : "https://w3id.org/italia/onto/RO/"
             }
 }
+
+

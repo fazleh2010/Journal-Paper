@@ -402,11 +402,18 @@ public class SparqlQuery {
                         String http="",label="";
                         Map<String,String> map=new TreeMap<String,String>();
                         for(String line:lines) {
+                            
                            
-                            if(index==0)
-                              http=line.strip().trim();
-                            else if(index==3)
-                              label=line.strip().trim();
+                            if(index==0){
+                              http=line.strip().trim();    
+                            }
+                            else if(endpoint.contains("wikidata")&&index==3){
+                              label=line.strip().trim();  
+                            }
+                            else if(endpoint.contains("beniculturali")&&index==1){
+                              label=line.strip().trim();  
+                            }
+                            
                             index=index+1;
                         }
                        map.put(http,label);
@@ -427,5 +434,6 @@ public class SparqlQuery {
             return ;
         }
     }
+    
 
 }

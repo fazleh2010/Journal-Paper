@@ -129,8 +129,8 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
     public void generateBindings(GrammarEntry grammarEntry) {
         if (endpoint.contains("dbpedia")) {
             generateBindingsDBpedia(grammarEntry);
-        } else if (endpoint.contains("wikidata")) {
-            generateBindingsWikiData(grammarEntry);
+        } else  {
+            generateBindingsFromDataSet(grammarEntry);
         }
     }
 
@@ -160,7 +160,7 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
         grammarEntry.setSentenceBindings(newSentenceBindings);
     }
 
-    private void generateBindingsWikiData(GrammarEntry grammarEntry) {
+    private void generateBindingsFromDataSet(GrammarEntry grammarEntry) {
         //System.out.println("Inside into Wikidata!!!!");
         SentenceBindings newSentenceBindings = new SentenceBindings();
         newSentenceBindings.setBindingVariableName(grammarEntry.getSentenceBindings().getBindingVariableName());
