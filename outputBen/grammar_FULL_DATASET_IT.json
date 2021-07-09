@@ -7,7 +7,7 @@
     "bindingType" : "THING",
     "returnType" : "THING",
     "frameType" : "NPP",
-    "sentences" : [ "Qual era la creazione di ($x | THING_NP)?", "Qual è la creazione di ($x | THING_NP)?" ],
+    "sentences" : [ "Qual era la data di creazione di ($x | THING_NP)?", "Qual è la data di creazione di ($x | THING_NP)?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://purl.org/dc/elements/1.1/date> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {
@@ -327,7 +327,7 @@
     "bindingType" : "THING",
     "returnType" : "THING",
     "frameType" : "NPP",
-    "sentences" : [ "la creazione di $x" ],
+    "sentences" : [ "la data di creazione di $x" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp (triple ?subjOfProp <http://purl.org/dc/elements/1.1/date> ?objOfProp))\n",
     "sentenceToSparqlParameterMapping" : {

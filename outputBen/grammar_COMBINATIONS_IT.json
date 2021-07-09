@@ -7,7 +7,7 @@
     "bindingType" : "THING",
     "returnType" : "THING",
     "frameType" : "NPP",
-    "sentences" : [ "Qual era la creazione di la creazione di $x?", "Qual è la creazione di la creazione di $x?" ],
+    "sentences" : [ "Qual era la data di creazione di la data di creazione di $x?", "Qual è la data di creazione di la data di creazione di $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://purl.org/dc/elements/1.1/date> ?objOfProp)\n  (triple ?subjOfPropx <http://purl.org/dc/elements/1.1/date> ?subjOfProp)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -27,7 +27,7 @@
     "bindingType" : "THING",
     "returnType" : "THING",
     "frameType" : "NPP",
-    "sentences" : [ "Qual era la creazione di la scheda di $x?", "Qual è la creazione di la scheda di $x?" ],
+    "sentences" : [ "Qual era la data di creazione di la scheda di $x?", "Qual è la data di creazione di la scheda di $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://purl.org/dc/elements/1.1/date> ?objOfProp)\n  (triple ?subjOfPropx <http://purl.org/dc/elements/1.1/source> ?subjOfProp)\n)\n",
     "sentenceToSparqlParameterMapping" : {
@@ -47,7 +47,7 @@
     "bindingType" : "THING",
     "returnType" : "THING",
     "frameType" : "NPP",
-    "sentences" : [ "Qual era la scheda di la creazione di $x?", "Qual è la scheda di la creazione di $x?" ],
+    "sentences" : [ "Qual era la scheda di la data di creazione di $x?", "Qual è la scheda di la data di creazione di $x?" ],
     "queryType" : "SELECT",
     "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://purl.org/dc/elements/1.1/source> ?objOfProp)\n  (triple ?subjOfPropx <http://purl.org/dc/elements/1.1/date> ?subjOfProp)\n)\n",
     "sentenceToSparqlParameterMapping" : {
