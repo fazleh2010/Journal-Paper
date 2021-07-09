@@ -6,6 +6,8 @@
 package util.io;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -13,6 +15,7 @@ import java.util.TreeMap;
  *
  * @author elahi
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class LinkedData {
 
     @JsonProperty("endpoint")
