@@ -17,7 +17,7 @@
   lemon:sense          :LexicalEntry_2_sense_ontomap .
 
 :LexicalEntry_2_form a lemon:Form ;
-  lemon:writtenRep "creazione"@en .
+  lemon:writtenRep "data di creazione"@en .
 
 :LexicalEntry_2_nounpp a        lexinfo:NounPPFrame ;
   lexinfo:copulativeArg        :arg1 ;
