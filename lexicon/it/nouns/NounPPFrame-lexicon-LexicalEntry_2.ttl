@@ -17,7 +17,7 @@
   lemon:sense          :LexicalEntry_2_sense_ontomap .
 
 :LexicalEntry_2_form a lemon:Form ;
-  lemon:writtenRep "creazione"@en .
+  lemon:writtenRep "luogo di nascita"@en .
 
 :LexicalEntry_2_nounpp a        lexinfo:NounPPFrame ;
   lexinfo:copulativeArg        :arg1 ;
@@ -25,14 +25,14 @@
 
 :LexicalEntry_2_sense_ontomap a lemon:OntoMap, lemon:LexicalSense ;
   lemon:ontoMapping         :LexicalEntry_2_sense_ontomap ;
-  lemon:reference           <http://purl.org/dc/elements/1.1/date> ;
+  lemon:reference           <http://dbpedia.org/ontology/birthPlace> ;
   lemon:subjOfProp          :arg2 ;
   lemon:objOfProp           :arg1 ;
   lemon:condition           :LexicalEntry_2_condition .
 
 :LexicalEntry_2_condition a lemon:condition ;
-  lemon:propertyDomain  <https://dati.beniculturali.it/lodview-arco/ontology/arco/HistoricOrArtisticProperty> ;
-  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema/date> .
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Person> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Place> .
 
 :arg2 lemon:marker :of .
 

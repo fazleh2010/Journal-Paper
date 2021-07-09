@@ -17,7 +17,7 @@
   lemon:sense          :LexicalEntry_1_sense_ontomap .
 
 :LexicalEntry_1_form a lemon:Form ;
-  lemon:writtenRep "scheda"@en .
+  lemon:writtenRep "capitale"@en .
 
 :LexicalEntry_1_nounpp a        lexinfo:NounPPFrame ;
   lexinfo:copulativeArg        :arg1 ;
@@ -25,14 +25,14 @@
 
 :LexicalEntry_1_sense_ontomap a lemon:OntoMap, lemon:LexicalSense ;
   lemon:ontoMapping         :LexicalEntry_1_sense_ontomap ;
-  lemon:reference           <http://purl.org/dc/elements/1.1/source> ;
+  lemon:reference           <http://dbpedia.org/ontology/capital> ;
   lemon:subjOfProp          :arg2 ;
   lemon:objOfProp           :arg1 ;
   lemon:condition           :LexicalEntry_1_condition .
 
 :LexicalEntry_1_condition a lemon:condition ;
-  lemon:propertyDomain  <https://dati.beniculturali.it/lodview-arco/ontology/arco/HistoricOrArtisticProperty> ;
-  lemon:propertyRange   <https://w3id.org/arco/ontology/catalogue/CatalogueRecordD> .
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Country> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/City> .
 
 :arg2 lemon:marker :of .
 

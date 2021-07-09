@@ -1,0 +1,323 @@
+{
+  "grammarEntries" : [ {
+    "id" : "6",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "CITY",
+    "frameType" : "NPP",
+    "sentences" : [ "Qual era la capitale di la luogo di nascita di $x?", "Qual è la capitale di la luogo di nascita di $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/capital> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/birthPlace> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Attentato di Susa",
+        "uri" : "http://dbpedia.org/resource/2015_Sousse_attacks"
+      }, {
+        "label" : "Attentato di New York del 31 ottobre 2017",
+        "uri" : "http://dbpedia.org/resource/2017_New_York_City_truck_attack"
+      }, {
+        "label" : "Arsenio Sebastião Cabungula",
+        "uri" : "http://dbpedia.org/resource/Love_(footballer)"
+      }, {
+        "label" : "Loveth Ayila",
+        "uri" : "http://dbpedia.org/resource/Loveth_Ayila"
+      }, {
+        "label" : "Lovro Majer",
+        "uri" : "http://dbpedia.org/resource/Lovro_Majer"
+      }, {
+        "label" : "Lowell Thomas",
+        "uri" : "http://dbpedia.org/resource/Lowell_Thomas"
+      }, {
+        "label" : "Loyola de Palacio",
+        "uri" : "http://dbpedia.org/resource/Loyola_de_Palacio"
+      }, {
+        "label" : "Loïc Akono",
+        "uri" : "http://dbpedia.org/resource/Loïc_Akono"
+      }, {
+        "label" : "Loïc Attely",
+        "uri" : "http://dbpedia.org/resource/Loïc_Attely"
+      }, {
+        "label" : "Loïc Bigois",
+        "uri" : "http://dbpedia.org/resource/Loïc_Bigois"
+      }, {
+        "label" : "Loïc Bruni",
+        "uri" : "http://dbpedia.org/resource/Loïc_Bruni"
+      }, {
+        "label" : "Loïc Loval",
+        "uri" : "http://dbpedia.org/resource/Loïc_Loval"
+      }, {
+        "label" : "Loïc Meillard",
+        "uri" : "http://dbpedia.org/resource/Loïc_Meillard"
+      }, {
+        "label" : "Loïc Nottet",
+        "uri" : "http://dbpedia.org/resource/Loïc_Nottet"
+      }, {
+        "label" : "Loïc Rémy",
+        "uri" : "http://dbpedia.org/resource/Loïc_Rémy"
+      }, {
+        "label" : "Lu Feng",
+        "uri" : "http://dbpedia.org/resource/Lu_Feng"
+      }, {
+        "label" : "Lu Jianren",
+        "uri" : "http://dbpedia.org/resource/Lu_Jianren"
+      }, {
+        "label" : "Lu Wen",
+        "uri" : "http://dbpedia.org/resource/Lu_Wen"
+      }, {
+        "label" : "Lu Yong",
+        "uri" : "http://dbpedia.org/resource/Lu_Yong"
+      }, {
+        "label" : "Lua Blanco",
+        "uri" : "http://dbpedia.org/resource/Lua_Blanco"
+      }, {
+        "label" : "Luan Pinari",
+        "uri" : "http://dbpedia.org/resource/Luan_Pinari"
+      }, {
+        "label" : "Luan Silva dos Santos",
+        "uri" : "http://dbpedia.org/resource/Luan_Silva_(footballer,_born_1999)"
+      }, {
+        "label" : "Luan Zmijani",
+        "uri" : "http://dbpedia.org/resource/Luan_Zmijani"
+      }, {
+        "label" : "Luay Salah",
+        "uri" : "http://dbpedia.org/resource/Luay_Salah"
+      }, {
+        "label" : "Lubna Azabal",
+        "uri" : "http://dbpedia.org/resource/Lubna_Azabal"
+      }, {
+        "label" : "Lubna Tahtamouni",
+        "uri" : "http://dbpedia.org/resource/Lubna_Tahtamouni"
+      }, {
+        "label" : "Ljubomir Geraskov",
+        "uri" : "http://dbpedia.org/resource/Lubomir_Geraskov"
+      }, {
+        "label" : "Lubomir Kavalek",
+        "uri" : "http://dbpedia.org/resource/Lubomir_Kavalek"
+      }, {
+        "label" : "Ljubomyr Huzar",
+        "uri" : "http://dbpedia.org/resource/Lubomyr_Husar"
+      }, {
+        "label" : "Lubomír Pokluda",
+        "uri" : "http://dbpedia.org/resource/Lubomír_Pokluda"
+      }, {
+        "label" : "Lubomír Tesáček",
+        "uri" : "http://dbpedia.org/resource/Lubomír_Tesáček"
+      }, {
+        "label" : "Lubomír Štrougal",
+        "uri" : "http://dbpedia.org/resource/Lubomír_Štrougal"
+      }, {
+        "label" : "Luboš Bartoň",
+        "uri" : "http://dbpedia.org/resource/Luboš_Bartoň"
+      }, {
+        "label" : "Luboš Hušek",
+        "uri" : "http://dbpedia.org/resource/Luboš_Hušek"
+      }, {
+        "label" : "Luboš Ilizi",
+        "uri" : "http://dbpedia.org/resource/Luboš_Ilizi"
+      }, {
+        "label" : "Luboš Kalouda",
+        "uri" : "http://dbpedia.org/resource/Luboš_Kalouda"
+      }, {
+        "label" : "Luboš Kozel",
+        "uri" : "http://dbpedia.org/resource/Luboš_Kozel"
+      }, {
+        "label" : "Luboš Kubík",
+        "uri" : "http://dbpedia.org/resource/Luboš_Kubík"
+      }, {
+        "label" : "Luboš Loučka",
+        "uri" : "http://dbpedia.org/resource/Luboš_Loučka"
+      }, {
+        "label" : "Luboš Pecka",
+        "uri" : "http://dbpedia.org/resource/Luboš_Pecka"
+      }, {
+        "label" : "Luboš Perek",
+        "uri" : "http://dbpedia.org/resource/Luboš_Perek"
+      }, {
+        "label" : "Luc-Adolphe Tiao",
+        "uri" : "http://dbpedia.org/resource/Luc-Adolphe_Tiao"
+      }, {
+        "label" : "http://dbpedia.org/resource/Low_Ngai_Yuen",
+        "uri" : "http://dbpedia.org/resource/Low_Ngai_Yuen"
+      }, {
+        "label" : "http://dbpedia.org/resource/Low_Wee_Wern",
+        "uri" : "http://dbpedia.org/resource/Low_Wee_Wern"
+      }, {
+        "label" : "http://dbpedia.org/resource/Loyce_Biira_Bwambale",
+        "uri" : "http://dbpedia.org/resource/Loyce_Biira_Bwambale"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lubwa_p'Chong",
+        "uri" : "http://dbpedia.org/resource/Lubwa_p'Chong"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luba_Robin_Goldsmith",
+        "uri" : "http://dbpedia.org/resource/Luba_Robin_Goldsmith"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lubov_Azria",
+        "uri" : "http://dbpedia.org/resource/Lubov_Azria"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lubna_Khalid_Al_Qasimi",
+        "uri" : "http://dbpedia.org/resource/Lubna_Khalid_Al_Qasimi"
+      }, {
+        "label" : "http://dbpedia.org/resource/A.M._SNiPER",
+        "uri" : "http://dbpedia.org/resource/A.M._SNiPER"
+      }, {
+        "label" : "http://dbpedia.org/resource/A._E._Coleby",
+        "uri" : "http://dbpedia.org/resource/A._E._Coleby"
+      }, {
+        "label" : "http://dbpedia.org/resource/A._W._Baskcomb",
+        "uri" : "http://dbpedia.org/resource/A._W._Baskcomb"
+      }, {
+        "label" : "http://dbpedia.org/resource/A._J._Bernheim_Brush",
+        "uri" : "http://dbpedia.org/resource/A._J._Bernheim_Brush"
+      }, {
+        "label" : "http://dbpedia.org/resource/A._T._Smith",
+        "uri" : "http://dbpedia.org/resource/A._T._Smith"
+      }, {
+        "label" : "http://dbpedia.org/resource/Low_Ki",
+        "uri" : "http://dbpedia.org/resource/Low_Ki"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lowell_Blair_Nesbitt",
+        "uri" : "http://dbpedia.org/resource/Lowell_Blair_Nesbitt"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lowell_Green",
+        "uri" : "http://dbpedia.org/resource/Lowell_Green"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lowell_McAdam",
+        "uri" : "http://dbpedia.org/resource/Lowell_McAdam"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lowell_Norland",
+        "uri" : "http://dbpedia.org/resource/Lowell_Norland"
+      }, {
+        "label" : "http://dbpedia.org/resource/Loyal_Blaine_Aldrich",
+        "uri" : "http://dbpedia.org/resource/Loyal_Blaine_Aldrich"
+      }, {
+        "label" : "http://dbpedia.org/resource/Loyce_W._Turner",
+        "uri" : "http://dbpedia.org/resource/Loyce_W._Turner"
+      }, {
+        "label" : "http://dbpedia.org/resource/Loyd_Gentry_Jr.",
+        "uri" : "http://dbpedia.org/resource/Loyd_Gentry_Jr."
+      }, {
+        "label" : "http://dbpedia.org/resource/LuAnn_Tafoya",
+        "uri" : "http://dbpedia.org/resource/LuAnn_Tafoya"
+      }, {
+        "label" : "http://dbpedia.org/resource/Loyola_Guzmán",
+        "uri" : "http://dbpedia.org/resource/Loyola_Guzmán"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lovemore_Mokgweetsi",
+        "uri" : "http://dbpedia.org/resource/Lovemore_Mokgweetsi"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lu_Andrade",
+        "uri" : "http://dbpedia.org/resource/Lu_Andrade"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luan_José_Niedzielski",
+        "uri" : "http://dbpedia.org/resource/Luan_José_Niedzielski"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luan_Leite_da_Silva",
+        "uri" : "http://dbpedia.org/resource/Luan_Leite_da_Silva"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luan_Santana",
+        "uri" : "http://dbpedia.org/resource/Luan_Santana"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luan_Silva",
+        "uri" : "http://dbpedia.org/resource/Luan_Silva"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luan_Sérgio",
+        "uri" : "http://dbpedia.org/resource/Luan_Sérgio"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luan_de_Assis_Costa_Leite",
+        "uri" : "http://dbpedia.org/resource/Luan_de_Assis_Costa_Leite"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luana_Alzuguir",
+        "uri" : "http://dbpedia.org/resource/Luana_Alzuguir"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luana_Piovani",
+        "uri" : "http://dbpedia.org/resource/Luana_Piovani"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luana_Tanaka",
+        "uri" : "http://dbpedia.org/resource/Luana_Tanaka"
+      }, {
+        "label" : "http://dbpedia.org/resource/2016_New_York_and_New_Jersey_bombings",
+        "uri" : "http://dbpedia.org/resource/2016_New_York_and_New_Jersey_bombings"
+      }, {
+        "label" : "http://dbpedia.org/resource/Loyola_Hearn",
+        "uri" : "http://dbpedia.org/resource/Loyola_Hearn"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luan_Krasniqi",
+        "uri" : "http://dbpedia.org/resource/Luan_Krasniqi"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lu_Dingyi",
+        "uri" : "http://dbpedia.org/resource/Lu_Dingyi"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lu_Han_(general)",
+        "uri" : "http://dbpedia.org/resource/Lu_Han_(general)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lu_Jintang",
+        "uri" : "http://dbpedia.org/resource/Lu_Jintang"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lu_Kanru",
+        "uri" : "http://dbpedia.org/resource/Lu_Kanru"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lu_Muzhen",
+        "uri" : "http://dbpedia.org/resource/Lu_Muzhen"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luan_Skuqi",
+        "uri" : "http://dbpedia.org/resource/Luan_Skuqi"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luan_Vukatana",
+        "uri" : "http://dbpedia.org/resource/Luan_Vukatana"
+      }, {
+        "label" : "http://dbpedia.org/resource/Luarts_Lame",
+        "uri" : "http://dbpedia.org/resource/Luarts_Lame"
+      }, {
+        "label" : "http://dbpedia.org/resource/Loveline_Obiji",
+        "uri" : "http://dbpedia.org/resource/Loveline_Obiji"
+      }, {
+        "label" : "http://dbpedia.org/resource/AKM_Gouach_Uddin",
+        "uri" : "http://dbpedia.org/resource/AKM_Gouach_Uddin"
+      }, {
+        "label" : "http://dbpedia.org/resource/A._C._Wise",
+        "uri" : "http://dbpedia.org/resource/A._C._Wise"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lowell_Dean",
+        "uri" : "http://dbpedia.org/resource/Lowell_Dean"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lu_Chen_(scientist)",
+        "uri" : "http://dbpedia.org/resource/Lu_Chen_(scientist)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lu_Kang_(diplomat)",
+        "uri" : "http://dbpedia.org/resource/Lu_Kang_(diplomat)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lu_Ning",
+        "uri" : "http://dbpedia.org/resource/Lu_Ning"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lu_Shaye",
+        "uri" : "http://dbpedia.org/resource/Lu_Shaye"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lu_Xiufu",
+        "uri" : "http://dbpedia.org/resource/Lu_Xiufu"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lu_Yang",
+        "uri" : "http://dbpedia.org/resource/Lu_Yang"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lu_Yao_(footballer)",
+        "uri" : "http://dbpedia.org/resource/Lu_Yao_(footballer)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lu_Yongxiang_(engineer)",
+        "uri" : "http://dbpedia.org/resource/Lu_Yongxiang_(engineer)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lu_Yongzheng",
+        "uri" : "http://dbpedia.org/resource/Lu_Yongzheng"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lu_Zhuguo",
+        "uri" : "http://dbpedia.org/resource/Lu_Zhuguo"
+      } ]
+    },
+    "combination" : true
+  } ]
+}
