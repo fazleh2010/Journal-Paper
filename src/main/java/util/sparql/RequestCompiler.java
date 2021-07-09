@@ -48,7 +48,6 @@ public class RequestCompiler {
                                                 .getQueryPattern();
 
     query.setQueryPattern(body);
-    System.out.println("query:::::"+query);
 
     return query;
   }

@@ -160,10 +160,9 @@ public class ReadAndWriteQuestions {
             String sparql = pair.component1();
             String answer = pair.component2();
             index = index + 1;
-            System.out.println("sparql:"+sparql);
             sparql = this.modifySparql(sparql);
 
-            //System.out.println("index::" + index + " uriLabel::" + uriLabel.getLabel() + " questionForShow::" + questionForShow + " sparql::" + sparql + " answer::" + answer+ " syntacticFrame:"+syntacticFrame);
+            System.out.println("index::" + index + " uriLabel::" + uriLabel.getLabel() + " questionForShow::" + questionForShow + " sparql::" + sparql + " answer::" + answer+ " syntacticFrame:"+syntacticFrame);
             try {
                 if (answer.isEmpty() || answer.contains("no answer found")) {
                     continue;

@@ -82,6 +82,25 @@ public class SparqlQuery {
             parseResult(resultSparql);
 
         }
+        else if (endpoint.contains("beniculturali")) {
+            if (type.contains(FIND_ANY_ANSWER)) {
+                if (returnType.contains("objOfProp")) {
+                    sparqlQuery = this.setObjectBen(entityUrl, property,language);
+                    System.out.println("objOfProp::"+sparqlQuery);
+                } else if (returnType.contains("subjOfProp")) {
+                    sparqlQuery = this.setSubjectWikiData(entityUrl, property,language);
+                    System.out.println("sparqlQuery::"+sparqlQuery);
+
+                }
+
+            } else if (type.contains(FIND_LABEL)) {
+                sparqlQuery = this.setLabelWikiData(entityUrl,language);
+            }
+            //System.out.println("sparqlQuery::"+sparqlQuery);
+            this.resultSparql = executeSparqlQuery(sparqlQuery);
+            parseResult(resultSparql);
+
+        }
 
     }
 
@@ -215,6 +234,14 @@ public class SparqlQuery {
                 + "    <" + entityUrl + "> <" + propertyUrl + "> ?object.\n"
                 + "  ?object rdfs:label ?label \n"
                 + "        FILTER (langMatches( lang(?label), \""+language+"\" ) )\n"
+                + "}";
+
+    }
+    
+    public String setObjectBen(String entityUrl, String propertyUrl,String language) {
+      
+        return "SELECT ?object WHERE {\n"
+                + "    <" + entityUrl + "> <" + propertyUrl + "> ?object.\n"
                 + "}";
 
     }
@@ -455,6 +482,21 @@ public class SparqlQuery {
         }
         return str;
     }
+    
+    /*private String  modifyObjectAnswerSparql(String sparqlQuery) {
+        String[] lines =  sparqlQuery.strip().trim().split(System.getProperty("line.separator"));
+        String str="";
+        for(String line :lines){
+            if(line.contains("FILTER"))
+               continue;
+            else if(line.contains("rdfs:label"))
+               continue;
+            else
+            str+=line+"\n";
+
+        }
+        return str;
+    }*/
     
     
 
