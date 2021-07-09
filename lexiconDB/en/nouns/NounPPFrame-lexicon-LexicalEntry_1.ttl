@@ -25,14 +25,14 @@
 
 :LexicalEntry_1_sense_ontomap a lemon:OntoMap, lemon:LexicalSense ;
   lemon:ontoMapping         :LexicalEntry_1_sense_ontomap ;
-  lemon:reference           <http://www.wikidata.org/prop/direct/P36> ;
+  lemon:reference           <http://dbpedia.org/ontology/capital> ;
   lemon:subjOfProp          :arg2 ;
   lemon:objOfProp           :arg1 ;
   lemon:condition           :LexicalEntry_1_condition .
 
 :LexicalEntry_1_condition a lemon:condition ;
-  lemon:propertyDomain  <http://www.wikidata.org/entity/Q6256> ;
-  lemon:propertyRange   <http://www.wikidata.org/entity/Q5119> .
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Country> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/City> .
 
 :arg2 lemon:marker :of .
 

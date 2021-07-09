@@ -413,7 +413,7 @@ public class TurtleCreation {
         if (reference.contains(":")) {
             String[] info = reference.split(":");
             String prefix = info[0].strip().trim();
-            
+
             if (this.linkedData.getEndpoint().contains("wikidata")) {
                 if (prefix.contains("wdt")) {
                     reference = "http://www.wikidata.org/prop/direct/" + info[1];
@@ -425,6 +425,42 @@ public class TurtleCreation {
                     reference = "http://dbpedia.org/ontology/" + info[1];
                 } else if (prefix.contains("owl")) {
                     reference = "http://www.w3.org/2002/07/owl/" + info[1];
+                } else if (prefix.contains("xsd")) {
+                    reference = "http://www.w3.org/2001/XMLSchema/" + info[1];
+                } else {
+                    reference = "http://dbpedia.org/ontology/" + info[1];
+                }
+            } else if (this.linkedData.getEndpoint().contains("beniculturali")) {
+                if (prefix.equals("arco")) {
+                    reference = "https://dati.beniculturali.it/lodview-arco/ontology/arco/" + info[1];
+                } else if (prefix.equals("arco-arco")) {
+                    reference = "https://w3id.org/arco/core/" + info[1];
+                } else if (prefix.equals("arco-catalogue")) {
+                    reference = "https://w3id.org/arco/ontology/catalogue/" + info[1];
+                } else if (prefix.equals("arco-cd")) {
+                    reference = "https://w3id.org/arco/ontology/context-description/" + info[1];
+                } else if (prefix.equals("arco-dd")) {
+                    reference = "https://w3id.org/arco/ontology/denotative-description/" + info[1];
+                } else if (prefix.equals("arco-location")) {
+                    reference = "https://w3id.org/arco/ontology/location/" + info[1];
+                } else if (prefix.equals("cis")) {
+                    reference = "http://dati.beniculturali.it/cis/" + info[1];
+                } else if (prefix.equals("clvapit")) {
+                    reference = "https://w3id.org/italia/onto/CLV/" + info[1];
+                } else if (prefix.equals("context")) {
+                    reference = "https://w3id.org/arco/ontology/context-description/" + info[1];
+                } else if (prefix.equals("dc")) {
+                    reference = "http://purl.org/dc/elements/1.1/" + info[1];
+                } else if (prefix.equals("dcterms")) {
+                    reference = "http://purl.org/dc/terms/" + info[1];
+                } else if (prefix.equals("l0")) {
+                    reference = "https://w3id.org/italia/onto/l0/" + info[1];
+                } else if (prefix.equals("muapit")) {
+                    reference = "https://w3id.org/italia/onto/MU/" + info[1];
+                } else if (prefix.equals("oad")) {
+                    reference = "http://lod.xdams.org/reload/oad/" + info[1];
+                } else if (prefix.equals("roapit")) {
+                    reference = "https://w3id.org/italia/onto/RO/" + info[1];
                 } else if (prefix.contains("xsd")) {
                     reference = "http://www.w3.org/2001/XMLSchema/" + info[1];
                 } else {

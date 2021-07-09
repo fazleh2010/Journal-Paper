@@ -86,7 +86,15 @@ public class SparqlQuery {
     }
 
     public SparqlQuery(String sparqlQuery) {
-        this.endpoint = SPARQLRequest.getSPARQL_ENDPOINT_URL();
+        endpoint = SPARQLRequest.getSPARQL_ENDPOINT_URL();
+        //System.out.println("endpoint"+endpoint);
+        
+        //The data set has a problem that it does not get results given language filter
+        //This is a dirty solution for beniculturali dataset 
+        if (endpoint.contains("beniculturali") ) {
+           sparqlQuery=this.modifyBindingListSparql(sparqlQuery);
+           //System.out.println("sparqlQuery"+sparqlQuery);
+        }
         this.resultSparql = executeSparqlQuery(sparqlQuery);
         this.parseResultBindingList(resultSparql);
     }
@@ -434,6 +442,20 @@ public class SparqlQuery {
             return ;
         }
     }
+
+    private String  modifyBindingListSparql(String sparqlQuery) {
+        String[] lines =  sparqlQuery.strip().trim().split(System.getProperty("line.separator"));
+        String str="";
+        for(String line :lines){
+            if(line.contains("FILTER"))
+               continue;
+            else
+            str+=line+"\n";
+
+        }
+        return str;
+    }
+    
     
 
 }
