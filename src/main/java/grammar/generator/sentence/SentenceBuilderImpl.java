@@ -1,4 +1,4 @@
-package grammar.generator.helper;
+package grammar.generator.sentence;
 
 import eu.monnetproject.lemon.model.Property;
 import eu.monnetproject.lemon.model.PropertyValue;
@@ -19,6 +19,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import util.exceptions.QueGGMissingFactoryClassException;
 import grammar.structure.component.DomainOrRangeMorphologicalProperties;
+import grammar.structure.component.DomainOrRangeMorphologicalPropertiesIT;
 
 
 import java.util.ArrayList;
@@ -56,7 +57,7 @@ public abstract class SentenceBuilderImpl implements SentenceBuilder {
   }
 
   @Override
-  public List<String> generateFullSentences(String bindingVar, LexicalEntryUtil lexicalEntryUtil) throws
+  public List<String> generateFullSentencesForward(String bindingVar, LexicalEntryUtil lexicalEntryUtil) throws
                                                                                                   QueGGMissingFactoryClassException {
     List<String> generatedSentences = new ArrayList<>();
     List<List<SentenceToken>> parsedSentenceTemplates = getParsedSentenceTemplates(
@@ -79,7 +80,7 @@ public abstract class SentenceBuilderImpl implements SentenceBuilder {
     QueGGMissingFactoryClassException;
 
   @Override
-  public List<String> generateNP(String bindingVar, String[] arguments, LexicalEntryUtil lexicalEntryUtil) throws
+  public List<String> generateFullSentencesBackward(String bindingVar, String[] arguments, LexicalEntryUtil lexicalEntryUtil) throws
                                                                                                            QueGGMissingFactoryClassException {
     List<String> generatedSentences = new ArrayList<>();
     List<List<SentenceToken>> parsedSentenceTemplates = getParsedSentenceTemplates(
@@ -197,6 +198,15 @@ public abstract class SentenceBuilderImpl implements SentenceBuilder {
           lexInfo.getPropertyValue(DomainOrRangeMorphologicalProperties.getMatchingGender(lexicalEntryUtil.getConditionUriBySelectVariable(lexicalEntryUtil.getSelectVariable())).toString().toLowerCase())
         );
     }
+    if (questionWords.size() != 1 && language.equals(Language.IT)) {
+      questionWords = questionWordRepository
+        .findByLanguageAndSubjectTypeAndNumberAndGender(
+          language,
+          subjectType,
+          number,
+          lexInfo.getPropertyValue(DomainOrRangeMorphologicalPropertiesIT.getMatchingGender(lexicalEntryUtil.getConditionUriBySelectVariable(lexicalEntryUtil.getSelectVariable())).toString().toLowerCase())
+        );
+    }
     if (questionWords.size() != 1) {
       questionWords = questionWordRepository
         .findByLanguageAndSubjectTypeAndNumberAndGender(
@@ -258,7 +268,7 @@ public abstract class SentenceBuilderImpl implements SentenceBuilder {
     );
   }
 
-  protected Language getLanguage() {
+  public Language getLanguage() {
     return language;
   }
 

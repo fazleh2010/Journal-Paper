@@ -1,4 +1,4 @@
-package grammar.generator.helper;
+package grammar.generator.sentence;
 
 import eu.monnetproject.lemon.model.LexicalEntry;
 import eu.monnetproject.lemon.model.PropertyValue;
@@ -25,7 +25,7 @@ public class SentenceBuilderAdjectiveAttributiveEN implements SentenceBuilder {
   }
 
   @Override
-  public List<String> generateFullSentences(String bindingVar, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
+  public List<String> generateFullSentencesForward(String bindingVar, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
     List<String> generatedSentences = new ArrayList<>();
     // get to be forms
     LexicalEntry entry = new LexiconSearch(this.lexicalEntryUtil.getLexicon()).getReferencedResource("component_be");
@@ -39,7 +39,7 @@ public class SentenceBuilderAdjectiveAttributiveEN implements SentenceBuilder {
                    .append(separator)
                    .append(toBeForm.getWrittenRepValue())
                    .append(separator)
-                   .append(generateNP(bindingVar, new String[]{toBeForm.getNumber().getURI().getFragment()},
+                   .append(generateFullSentencesBackward(bindingVar, new String[]{toBeForm.getNumber().getURI().getFragment()},
                                       lexicalEntryUtil).get(0))
                    .append(QUESTION_MARK);
 
@@ -53,7 +53,7 @@ public class SentenceBuilderAdjectiveAttributiveEN implements SentenceBuilder {
   }
 
   @Override
-  public List<String> generateNP(String bindingVar, String[] argument, LexicalEntryUtil lexicalEntryUtil) {
+  public List<String> generateFullSentencesBackward(String bindingVar, String[] argument, LexicalEntryUtil lexicalEntryUtil) {
     List<String> generatedSentences = new ArrayList<>();
     List<PropertyValue> numberList = new ArrayList<>();
     // Get determiner "a"

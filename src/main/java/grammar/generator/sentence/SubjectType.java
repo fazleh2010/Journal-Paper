@@ -1,4 +1,4 @@
-package grammar.generator.helper;
+package grammar.generator.sentence;
 
 import grammar.structure.component.DomainOrRangeType;
 
@@ -11,9 +11,12 @@ import java.util.stream.Stream;
  */
 public enum SubjectType {
   PERSON_INTERROGATIVE_PRONOUN, // who
-  INTERROGATIVE_DETERMINER,     // which
+  INTERROGATIVE_DETERMINER,
+  INTERROGATIVE_DETERMINER_SINGULAR,     // which
+  INTERROGATIVE_DETERMINER_PLURAL,     // which
   THING_INTERROGATIVE_PRONOUN,  // what
-  INTERROGATIVE_TEMPORAL;  // what
+  INTERROGATIVE_TEMPORAL,
+  INTERROGATIVE_PLACE;  // where
 
   /**
    * Get the matching pronoun type (person or thing). The default value is "thing" if there is no clear match.<br>

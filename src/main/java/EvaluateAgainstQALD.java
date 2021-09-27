@@ -33,16 +33,20 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import static grammar.generator.BindingResolver.insertBindingInSPARQL;
-import static grammar.generator.helper.BindingConstants.DEFAULT_BINDING_VARIABLE;
+import static grammar.generator.sentence.BindingConstants.DEFAULT_BINDING_VARIABLE;
 import java.io.FileNotFoundException;
+import static java.lang.System.exit;
+import java.net.MalformedURLException;
 import java.net.URL;
 import static java.util.Objects.isNull;
+import org.apache.commons.text.similarity.CosineDistance;
 import static org.apache.jena.sparql.syntax.ElementWalker.walk;
 import static util.io.ResourceHelper.loadResource;
 
 public class EvaluateAgainstQALD {
   private static final Logger LOG = LogManager.getLogger(EvaluateAgainstQALD.class);
   private final Language language;
+  
 
   EvaluateAgainstQALD(Language language) {
     this.language = language;
@@ -60,32 +64,34 @@ public class EvaluateAgainstQALD {
   
        
    }*/
+  
+  
    
    public static URL loadResource(String resource, Class<?> clazz) throws FileNotFoundException {
+        
     URL res = clazz.getClassLoader().getResource(resource);
+  
     if (isNull(res)) {
       throw new FileNotFoundException(String.format("FileNotFound: %s", resource));
     }
     return res;
   }
 
-  public void evaluateAndOutput(GrammarWrapper grammarWrapper) throws IOException {
-    String qaldOriginalFile = QALDImporter.QALD_FILE;
-    String qaldModifiedFile = QALDImporter.QALD_FILE_MODIFIED;
-    String resultFileName = "QALD-QueGG-Comparison_" + LocalDateTime.now()
-                                                                    .format(DateTimeFormatter.ofPattern(
-                                                                      "yyyy-MM-dd_hh-mm")) + ".csv";
+  public void evaluateAndOutput(GrammarWrapper grammarWrapper,String qaldOriginalFile,String qaldModifiedFile,String resultFileName,String qaldRaw) throws IOException {
+    
+ 
     QALDImporter qaldImporter = new QALDImporter();
-    qaldImporter.qaldToCSV(qaldOriginalFile, "QALD-2017-dataset-raw.csv");
+    //qaldImporter.qaldToCSV(qaldOriginalFile, "QALD-2017-dataset-raw.csv");
+    qaldImporter.qaldToCSV(qaldOriginalFile,qaldRaw);
     QALD qaldModified = qaldImporter.readQald(qaldModifiedFile);
-    QALD qaldOriginal = qaldImporter.readQald(qaldOriginalFile);
+    //QALD qaldOriginal = qaldImporter.readQald(qaldOriginalFile);
 
     ZonedDateTime before = ZonedDateTime.now();
     EvaluationResult result = doEvaluation(qaldModified, grammarWrapper);
     ZonedDateTime after = ZonedDateTime.now();
     long duration = Duration.between(before, after).toSeconds();
 
-    qaldImporter.writeToCSV(resultToPrintableList(result, qaldOriginal), resultFileName);
+    //qaldImporter.writeToCSV(resultToPrintableList(result, qaldOriginal), resultFileName);
     LOG.info(String.format("Evaluation was completed in %dmin %ds", duration / 60, duration % 60));
     LOG.info("Results are available here: " + resultFileName);
   }
@@ -95,15 +101,18 @@ public class EvaluateAgainstQALD {
     EvaluationResult evaluationResult = new EvaluationResult();
     List<EntryComparison> entryComparisons = getAllSentenceMatches(qaldFile, grammarWrapper);
     for (EntryComparison entryComparison : entryComparisons) {
-
-      compareEntries(entryComparison);
-
-      evaluationResult.getEntryComparisons().add(entryComparison);
-      LOG.info("tp: {}, fp: {}, fn: {}", entryComparison.getTp(), entryComparison.getFp(), entryComparison.getFn());
+       compareEntriesNew(entryComparison);
+       //compareEntries(entryComparison);
+      
+      //evaluationResult.getEntryComparisons().add(entryComparison);
+      /*LOG.info("tp: {}, fp: {}, fn: {}", entryComparison.getTp(), entryComparison.getFp(), entryComparison.getFn());
       evaluationResult.setTp_global(evaluationResult.getTp_global() + entryComparison.getTp());
       evaluationResult.setFp_global(evaluationResult.getFp_global() + entryComparison.getFp());
-      evaluationResult.setFn_global(evaluationResult.getFn_global() + entryComparison.getFn());
+      evaluationResult.setFn_global(evaluationResult.getFn_global() + entryComparison.getFn());*/
     }
+    
+    //System.out.println("entryComparisons::::"+entryComparisons.size());
+
 
     evaluationResult.setPrecision_global(calculateMeasure(
       evaluationResult.getTp_global(),
@@ -225,19 +234,62 @@ public class EvaluateAgainstQALD {
    * -> capture group in bindings labels von QueGG suchen
    * -> uri nehmen und in QueGG sparql einsetzen, Ergebnisse der sparql queries (QueGG <-> QALD) vergleichen
    */
-  private void compareEntries(EntryComparison entryComparison) {
+  
+    private void compareEntriesNew(EntryComparison entryComparison) {
+        GrammarEntry grammarEntry = !isNull(entryComparison.getQueGGEntry()) ? (GrammarEntry) entryComparison.getQueGGEntry().getActualEntry() : null;
+        String qaldQuestion = entryComparison.getQaldEntry().getQuestions();
+        String cleanQaldQuestion = cleanQALDString(qaldQuestion); //  make lower case
+        String qaldSparql = entryComparison.getQaldEntry().getSparql();
+        String queGGSparql = !isNull(entryComparison.getQueGGEntry()) ? entryComparison.getQueGGEntry().getSparql() : "";
+        Query qaldPARQLQuery = new Query();
+        SPARQLParser.createParser(Syntax.syntaxSPARQL_11).parse(qaldPARQLQuery, qaldSparql);
+
+        // Replace grammarEntry sentence DEFAULT_BINDING_VARIABLE with a regex capture.
+        Boolean flag = false;
+        String matchedSentenceItem = "";
+        Pattern sentencePattern = null;
+        
+      
+        
+        if (!isNull(entryComparison.getQueGGEntry())) {
+            List<Pattern> matchedPatterns
+                    = entryComparison.getQueGGEntry().getQuestionList()
+                            .stream()
+                            .map(this::cleanString)
+                            .map(Pattern::compile)
+                            .filter(pattern -> !PatternMatchHelper.getPatternMatch(cleanQaldQuestion, pattern)
+                            .isEmpty())
+                            .collect(Collectors.toList());
+
+            //System.out.println("matchedPatterns:::"+matchedPatterns.size());
+            // We already know that there is at least one match in the sentences!
+              System.out.println("matchedPatterns::"+matchedPatterns);
+        }
+        
+        //cosineSimilarity(entryComparison,cleanQaldQuestion);
+        
+        /*System.out.println("qaldQuestion::"+qaldQuestion);
+        System.out.println("cleanQaldQuestion::"+cleanQaldQuestion);
+        System.out.println("qaldSparql::"+qaldSparql);
+        System.out.println("queGGSparql::"+queGGSparql);*/
+
+    }
+
+  
+   private void compareEntries(EntryComparison entryComparison) {
     GrammarEntry grammarEntry = !isNull(entryComparison.getQueGGEntry()) ? (GrammarEntry) entryComparison.getQueGGEntry().getActualEntry() : null;
     String qaldQuestion = entryComparison.getQaldEntry().getQuestions();
     String cleanQaldQuestion = cleanQALDString(qaldQuestion); //  make lower case
     String qaldSparql = entryComparison.getQaldEntry().getSparql();
     String queGGSparql = !isNull(entryComparison.getQueGGEntry()) ? entryComparison.getQueGGEntry().getSparql() : "";
-
     Query qaldPARQLQuery = new Query();
     SPARQLParser.createParser(Syntax.syntaxSPARQL_11).parse(qaldPARQLQuery, qaldSparql);
 
     // Replace grammarEntry sentence DEFAULT_BINDING_VARIABLE with a regex capture.
+    Boolean flag=false;
     String matchedSentenceItem = "";
     Pattern sentencePattern = null;
+  
     if (!isNull(entryComparison.getQueGGEntry())) {
       List<Pattern> matchedPatterns =
         entryComparison.getQueGGEntry().getQuestionList()
@@ -247,32 +299,56 @@ public class EvaluateAgainstQALD {
                        .filter(pattern -> !PatternMatchHelper.getPatternMatch(cleanQaldQuestion, pattern)
                                                                      .isEmpty())
                        .collect(Collectors.toList());
+      
       // We already know that there is at least one match in the sentences!
       if (matchedPatterns.size() == 1) {
-        sentencePattern = matchedPatterns.get(0);
+         sentencePattern = matchedPatterns.get(0);
         // Try to find an item to replace $x in the QueGG sentence
-        matchedSentenceItem = PatternMatchHelper.getPatternMatch(cleanQaldQuestion, sentencePattern);
+         matchedSentenceItem = PatternMatchHelper.getPatternMatch(cleanQaldQuestion, sentencePattern);
+         System.out.println("sentencePattern::"+sentencePattern);
+         System.out.println("matchedPatterns::"+matchedPatterns);
+         System.out.println("matchedSentenceItem::"+matchedSentenceItem);
+         System.out.println("cleanQaldQuestion::"+cleanQaldQuestion);
+         exit(1);
+        
+        flag=true;
       } else {
         LOG.info("How can there be more than one match in one sentence?!");
       }
     }
-
+    
+    
     String uriMatch = "";
     String bindingVarName = "";
     List<String> uriResultListQueGG = new ArrayList<>();
     List<String> uriResultListQALD;
     String matchedPattern = "";
 
+    String lowerCaseMatchedSentenceItem =null;
     if (!isNull(sentencePattern)) {
       matchedPattern = sentencePattern.toString();
       // Try to find the matching uri for the previously found item inside the QALD SPARQL query
-      String lowerCaseMatchedSentenceItem = matchedSentenceItem.toLowerCase().replace(" ", "_");
+      lowerCaseMatchedSentenceItem = matchedSentenceItem.toLowerCase().replace(" ", "_");
       uriMatch = findMatchingNodeToQALDSentenceMatchedItem(qaldPARQLQuery, lowerCaseMatchedSentenceItem);
+       
+     
     }
 
     LOG.debug("Executing QALD SPARQL Query:\n{}", qaldSparql);
     SPARQLRequest sparqlRequestQALD = SPARQLRequest.fromString(qaldSparql);
     uriResultListQALD = sparqlRequestQALD.getSparqlResultList();
+    
+       /*if (flag) {
+           System.out.println("sentencePattern::" + sentencePattern);
+           System.out.println("matchedSentenceItem::" + matchedSentenceItem);
+           System.out.println("lowerCaseMatchedSentenceItem::" + lowerCaseMatchedSentenceItem);
+           System.out.println("uriMatch::" + uriMatch);
+           System.out.println("sparqlRequestQALD::" + sparqlRequestQALD);
+           System.out.println("uriResultListQALD::" + uriResultListQALD);
+           exit(1);
+
+       }*/
+    
     entryComparison.setQaldResults(uriResultListQALD);
 
     // get variable name (i.e. objOfProp, subjOfProp) from QueGG binding sparql to replace it with uriMatch
@@ -283,6 +359,7 @@ public class EvaluateAgainstQALD {
       if (!isNull(entryComparison.getQueGGEntry())) {
         entryComparison.getQueGGEntry().setSparql(""); // delete SPARQL query because it was not executed anyway
       }
+     
     } else {
       // Execute QueGG and QALD SPARQL queries and compare results
       // replace binding variable with the previously found QALD uri match and execute the query
@@ -290,12 +367,14 @@ public class EvaluateAgainstQALD {
       // replace bindingVar in QueGG SPARQL
       queGGSparql = insertBindingInSPARQL(bindingVarName, uriMatch, queGGSparql);
       entryComparison.getQueGGEntry().setSparql(queGGSparql);
+      
 
       LOG.info("Executing QueGG SPARQL Query:\n{}", queGGSparql);
       SPARQLRequest sparqlRequestQueGG = SPARQLRequest.fromString(queGGSparql.replace(bindingVarName, uriMatch));
       uriResultListQueGG = sparqlRequestQueGG.getSparqlResultList();
       LOG.info("QueGG Query results: {}", uriResultListQueGG);
       LOG.info("QALD Query results: {}", uriResultListQALD);
+      
     }
 
     LOG.debug(
@@ -310,7 +389,7 @@ public class EvaluateAgainstQALD {
       True  Positive:  Number of results in QueGG SPARQL query that are also in QALD  query results
       False Positive:  Number of results in QueGG SPARQL query that are not  in QALD  query results
       False Negative:  Number of results in QALD  SPARQL query that are not  in QueGG query results
-      True  Negative:  Number of results missing from both datasets -> not relevant
+      //True  Negative:  Number of results missing from both datasets -> not relevant
 
       Precision:  TP / (TP + FP)
       Recall:     TP / (TP + FN)
@@ -325,6 +404,8 @@ public class EvaluateAgainstQALD {
     entryComparison.setFn(uriResultListQALD.stream()
                                            .filter(resultQald -> !finalUriResultListQueGG.contains(resultQald))
                                            .count());
+    
+     
 
     // Add Precision, Recall, F-measure
     if ((entryComparison.getTp() + entryComparison.getFp()) > 0) {
@@ -354,6 +435,19 @@ public class EvaluateAgainstQALD {
         )
       );
     }
+    
+    
+     if (flag) {
+           System.out.println("sentencePattern::" + sentencePattern);
+           System.out.println("matchedSentenceItem::" + matchedSentenceItem);
+           System.out.println("lowerCaseMatchedSentenceItem::" + lowerCaseMatchedSentenceItem);
+           System.out.println("uriMatch::" + uriMatch);
+           System.out.println("sparqlRequestQALD::" + sparqlRequestQALD);
+           System.out.println("entryComparison::" + entryComparison);
+           exit(1);
+
+       }
+    
     LOG.debug("tp: {}, fp: {}, fn: {}", entryComparison.getTp(), entryComparison.getFp(), entryComparison.getFn());
     LOG.debug(
       "Precision: {}, Recall: {}, F-measure: {}",
@@ -440,6 +534,8 @@ public class EvaluateAgainstQALD {
   }
 
   private List<EntryComparison> getAllSentenceMatches(QALD qaldFile, GrammarWrapper grammarWrapper) {
+      //System.out.print("qaldFile.questions:"+qaldFile.questions.get(10).question.get(0).language.contains("it"));
+      //exit(1);
     List<EntryComparison> matchingEntries = new ArrayList<>();
     List<String> qaldSentences =
       qaldFile.questions
@@ -447,7 +543,7 @@ public class EvaluateAgainstQALD {
         .map(qaldQuestions -> qaldQuestions.question)
         .flatMap(qaldQuestions1 ->
                    qaldQuestions1.stream().parallel()
-                                 .filter(qaldQuestion -> qaldQuestion.language.equals("en"))
+                                 .filter(qaldQuestion -> qaldQuestion.language.equals("it"))
                                  .map(qaldQuestion -> qaldQuestion.string))
         .collect(Collectors.toList());
 
@@ -503,7 +599,7 @@ public class EvaluateAgainstQALD {
         qaldQuestions ->
         {
           EntryComparison entryComparison = new EntryComparison();
-          String qaldQuestion = QALDImporter.getQaldQuestionString(qaldQuestions, "en");
+          String qaldQuestion = QALDImporter.getQaldQuestionString(qaldQuestions, "it");
           String qaldSparql = qaldQuestions.query.sparql;
           matchedQueGGEntries
             .forEach(
@@ -559,7 +655,7 @@ public class EvaluateAgainstQALD {
 //                      .filter(qaldQuestions -> !qaldQuestions.answertype.equals("boolean")) // removes ASK queries from result set
                       .map(qaldQuestions -> {
                         EntryComparison entryComparison = new EntryComparison();
-                        String qaldQuestion = QALDImporter.getQaldQuestionString(qaldQuestions, "en");
+                        String qaldQuestion = QALDImporter.getQaldQuestionString(qaldQuestions, "it");
                         String qaldSparql = qaldQuestions.query.sparql;
                         Entry qaldEntry = new Entry();
                         qaldEntry.setActualEntry(qaldQuestions);
@@ -595,4 +691,40 @@ public class EvaluateAgainstQALD {
                          ).isEmpty()
                      );
   }
+
+    private List<Pattern> findMatchPatterns(EntryComparison entryComparison, String cleanQaldQuestion) {
+        List<Pattern> patterns=new ArrayList<Pattern>();
+        patterns= entryComparison.getQueGGEntry().getQuestionList()
+                .stream()
+                .map(this::cleanString)
+                .map(Pattern::compile)
+                .filter(pattern -> !PatternMatchHelper.getPatternMatch(cleanQaldQuestion, pattern)
+                .isEmpty())
+                .collect(Collectors.toList());
+        
+        for(Pattern pattern:patterns){
+            System.out.println("pattern:::"+pattern);
+        }
+        return patterns;
+    }
+    
+    private Boolean cosineSimilarity(EntryComparison entryComparison, String cleanQaldQuestion) {
+        double cosineDistance = 0.0;
+        double cosineDistancePercentage = 0.0;
+        double cosineSimilarityPercentage = 0.0;
+
+        for (String question : entryComparison.getQueGGEntry().getQuestionList()) {
+            System.out.println("question::" + question);
+            cosineDistance = new CosineDistance().apply(question, cleanQaldQuestion);
+            cosineDistancePercentage = Math.round(cosineDistance * 100);
+            cosineSimilarityPercentage = Math.round((1 - cosineDistance) * 100);
+            if (cosineSimilarityPercentage > 40) {
+                System.out.println("cosineSimilarityPercentage");
+                return true;
+            }
+        }
+        return false;
+    }
+    
+  
 }

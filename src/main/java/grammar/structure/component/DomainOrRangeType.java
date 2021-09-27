@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static grammar.sparql.Prefix.DBO;
+import static grammar.sparql.Prefix.DBP;
 
 public enum DomainOrRangeType {
   PERSON(
@@ -39,6 +40,7 @@ public enum DomainOrRangeType {
       URI.create(DBO.getUri() + "TableTennisPlayer"),
       URI.create(DBO.getUri() + "Boxer"),
       URI.create(DBO.getUri() + "MemberOfParliament"),
+      URI.create(DBO.getUri() + "AmericanFootballPlayer"),
       URI.create(DBO.getUri() + "IceHockeyPlayer"),
       URI.create(DBO.getUri() + "Model"),
       URI.create(DBO.getUri() + "BasketballPlayer"),
@@ -63,14 +65,61 @@ public enum DomainOrRangeType {
       URI.create(DBO.getUri() + "Curler"),
       URI.create(DBO.getUri() + "Saint"),
       URI.create(DBO.getUri() + "FictionalCharacter"),
+      URI.create(DBO.getUri() + "author"),
       URI.create("http://www.wikidata.org/entity/Q215627") // wiki data person
+    )
+  ),
+  PLACE(
+    List.of(
+      URI.create(DBO.getUri() + "Place"),
+      URI.create(DBO.getUri() + "City"),
+      URI.create(DBO.getUri() + "State"),
+      URI.create(DBO.getUri() + "Country"),
+      URI.create(DBO.getUri() + "PopulatedPlace"),
+      URI.create(DBO.getUri() + "birthPlace"),
+      URI.create(DBO.getUri() + "deathPlace"),
+      URI.create(DBO.getUri() +  "placeOfBurial")
     )
   ),
   NAME(List.of(
     URI.create(DBO.getUri() + "GivenName"),
     URI.create(DBO.getUri() + "Name")
   )),
-  DATE(List.of(URI.create("http://www.w3.org/2001/XMLSchema#date"))),
+    DATE(List.of(
+            URI.create("http://www.w3.org/2001/XMLSchema#date"),
+            URI.create("http://www.w3.org/2001/XMLSchema#gYear"),
+            URI.create(DBO.getUri() + "buildingStartDate"),
+            URI.create(DBO.getUri() + "buildingEndDate"),
+            URI.create(DBO.getUri() + "completionDate"),
+            URI.create(DBO.getUri() + "deathDate"),
+            URI.create(DBO.getUri() + "birthDate"),
+            URI.create(DBO.getUri() + "firstAirDate"),
+            URI.create(DBO.getUri() + "latestReleaseDate"),
+            URI.create(DBO.getUri() + "releaseDate"),
+            URI.create(DBO.getUri() + "decommissioningDate"),
+            URI.create(DBO.getUri() + "launchDate"),
+            URI.create(DBO.getUri() + "formationDate"),
+            URI.create(DBO.getUri() + "yearOfConstruction"),
+            URI.create(DBO.getUri() + "firstPublicationYear"),
+            URI.create(DBO.getUri() + "birthYear"),
+            URI.create(DBO.getUri() + "publicationDate"),
+            URI.create(DBO.getUri() + "discontinued"),
+            URI.create(DBO.getUri() + "introduced"),
+            URI.create(DBO.getUri() + "openingDate"),
+            URI.create(DBO.getUri() + "foundingDate"),
+            URI.create(DBO.getUri() + "foundingYear"),
+            URI.create(DBO.getUri() + "dissolutionDate"),
+            URI.create(DBO.getUri() + "demolitionDate"),
+            URI.create(DBO.getUri() + "rebuildingDate"),
+            URI.create(DBO.getUri() + "reopeningDate"),
+            URI.create(DBO.getUri() + "openingYear"),
+            URI.create(DBO.getUri() + "productionDate"),
+            URI.create(DBO.getUri() + "activeYearsStartYear"),
+            URI.create(DBO.getUri() + "activeYearsEndYear"),
+            URI.create(DBP.getUri() + "published")
+    )),
+
+
   COUNTRY(List.of(URI.create(DBO.getUri() + "Country"))),
   CITY(List.of(
     URI.create(DBO.getUri() + "City"),
@@ -113,10 +162,12 @@ public enum DomainOrRangeType {
     URI.create("http://www.w3.org/2001/XMLSchema#positiveInteger")
   )),
   FOOD(List.of(URI.create(DBO.getUri() + "Food"))),
+  BEVERAGE(List.of(URI.create(DBO.getUri() + "Beverage"))),
   FILM(List.of(URI.create(DBO.getUri() + "Film"))),
   BOOK(List.of(URI.create(DBO.getUri() + "Book"))),
   SONG(List.of(URI.create(DBO.getUri() + "Song"))),
   MUSICAL(List.of(URI.create(DBO.getUri() + "Musical"))),
+  ALBUM(List.of(URI.create(DBO.getUri() + "Album"))),
   WORK(List.of(
     URI.create(DBO.getUri() + "Work"),
     URI.create(DBO.getUri() + "Artwork"),
@@ -148,6 +199,9 @@ public enum DomainOrRangeType {
   )),
   LAUNCHPAD(List.of(URI.create(DBO.getUri() + "LaunchPad"))),
   MUSEUM(List.of(URI.create(DBO.getUri() + "Museum"))),
+  BODYOFWATER(List.of(URI.create(DBO.getUri() + "BodyOfWater"))),
+  MILITARY_CONFLICT(List.of(URI.create(DBO.getUri() + "MilitaryConflict"))),
+  MUSICAL_WORK(List.of(URI.create(DBO.getUri() + "MusicalWork"))),
   TELEVISIONSHOW(List.of(URI.create(DBO.getUri() + "TelevisionShow"))),
   TELEVISIONEPISODE(List.of(URI.create(DBO.getUri() + "TelevisionEpisode"))),
   AWARD(List.of(URI.create(DBO.getUri() + "Award"))),
@@ -171,6 +225,11 @@ public enum DomainOrRangeType {
     URI.create(DBO.getUri() + "Country"),
     URI.create(DBO.getUri() + "City"),
     URI.create(DBO.getUri() + "WineRegion")
+  )),
+  ARCHITECTURE_STRUCTURE(List.of(
+    URI.create(DBO.getUri() + "ArchitecturalStructure"),
+    URI.create(DBO.getUri() + "Bridge"),
+    URI.create(DBO.getUri() + "Building")
   )),
   OWNEDTHING(List.of(URI.create(DBO.getUri() + "Thing"))),
   THING(List.of(URI.create("http://www.w3.org/2002/07/owl#Thing"))); // default if no other matches
@@ -202,4 +261,6 @@ public enum DomainOrRangeType {
   public List<URI> getReferences() {
     return references;
   }
+
+  
 }

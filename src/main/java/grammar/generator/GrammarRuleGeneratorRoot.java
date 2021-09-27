@@ -6,11 +6,11 @@ import eu.monnetproject.lemon.model.Frame;
 import eu.monnetproject.lemon.model.LexicalEntry;
 import eu.monnetproject.lemon.model.LexicalSense;
 import eu.monnetproject.lemon.model.Lexicon;
-import grammar.generator.helper.BindingConstants;
+import grammar.generator.sentence.BindingConstants;
 import grammar.generator.helper.datasets.sentencetemplates.SentenceTemplateFactory;
 import grammar.generator.helper.datasets.sentencetemplates.SentenceTemplateRepository;
 import grammar.generator.helper.parser.SentenceTemplateParser;
-import grammar.read.questions.SparqlQuery;
+import grammar.sparql.SparqlQuery;
 import grammar.sparql.Prefix;
 import grammar.sparql.SPARQLRequest;
 import grammar.sparql.SelectVariable;
@@ -61,7 +61,7 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
      * sentence will be based on.
      */
     private final FrameType frameType;
-    private final Language language;
+    final Language language;
     /**
      * The bindingValue is the variable that will be used for bindings in a
      * sentence and for the bindings list (i.e. "$x").

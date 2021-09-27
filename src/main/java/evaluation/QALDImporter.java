@@ -2,6 +2,7 @@ package evaluation;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.opencsv.CSVWriter;
+import java.io.File;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,9 +17,11 @@ import static util.io.ResourceHelper.loadResource;
 public class QALDImporter {
    //public static final String QALD_FILE = "QALD-2017/qald-7-train-multilingual.json";
    //public static final String QALD_FILE_MODIFIED = "QALD-2017/qald-7-train-multilingual_modified.json";
-   public static final String QALD_FILE = "QALD-2017/qald-7-test-multilingual.json";
-   public static final String QALD_FILE_MODIFIED = "QALD-2017/qald-7-test-multilingual_modified.json";
- 
+    
+    /*public static final String RESOURCE = "/home/elahi/AHack/italian/question-grammar-generator/src/main/resources/";
+    public static final String QALD_FILE = RESOURCE + "QALD-2017/qald-7-train-multilingual.json";
+    public static final String QALD_FILE_MODIFIED = RESOURCE + "QALD-2017/qald-7-train-multilingual_modified.json";*/
+
     
     private static final Logger LOG = LogManager.getLogger(QALDImporter.class);
 
@@ -31,8 +34,8 @@ public class QALDImporter {
 
   public QALD readQald(String file) throws IOException {
     ObjectMapper objectMapper = new ObjectMapper();
-    URL qaldFile = loadResource(file, this.getClass());
-    return objectMapper.readValue(qaldFile, QALD.class);
+    //URL qaldFile = loadResource(file, this.getClass());
+    return objectMapper.readValue(new File(file), QALD.class);
   }
 
   public void writeToCSV(List<String[]> dataLines, String fileName) throws IOException {
@@ -58,4 +61,12 @@ public class QALDImporter {
                                  .findFirst()
                                  .orElseThrow().string;
   }
+  
+  public static void main(String []args) throws IOException {
+      
+      QALDImporter qaldImporter=new QALDImporter();
+      
+      
+  }
+  
 }

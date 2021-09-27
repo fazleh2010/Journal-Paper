@@ -1,4 +1,4 @@
-package grammar.generator.helper;
+package grammar.generator.sentence;
 
 public class BindingConstants {
   public static final String DEFAULT_BINDING_VARIABLE = "$x";

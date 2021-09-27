@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package grammar.read.questions;
+package grammar.sparql;
 
 import grammar.sparql.SPARQLRequest;
 import grammar.structure.component.Binding;
@@ -19,7 +19,6 @@ import java.util.Map;
 import java.util.TreeMap;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import org.w3c.dom.DOMException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -33,17 +32,11 @@ import java.util.logging.Logger;
  * @author elahi
  */
 public class SparqlQuery {
-
-    
-
-  
-    //https://www.w3.org/TR/rdf-sparql-query/
-
     private static String endpoint = null;
     private String objectOfProperty;
     public static String FIND_ANY_ANSWER = "FIND_ANY_ANSWER";
     public static String FIND_LABEL = "FIND_LABEL";
-    public String sparqlQuery = null;
+    private String sparqlQuery = null;
     public static String RETURN_TYPE_OBJECT = "objOfProp";
     public static String RETURN_TYPE_SUBJECT = "subjOfProp";
     private String resultSparql = null;
@@ -61,7 +54,7 @@ public class SparqlQuery {
                 }
 
             } else if (type.contains(FIND_LABEL)) {
-                sparqlQuery = this.setLabelWikipedia(entityUrl);
+                sparqlQuery = this.setLabelWikipedia(entityUrl,language);
             }
             //System.out.print("sparqlQuery::"+sparqlQuery);
             this.resultSparql = executeSparqlQuery(sparqlQuery);
@@ -291,7 +284,7 @@ public class SparqlQuery {
 
     }
 
-    public static String setLabelWikipedia(String entityUrl) {
+    public static String setLabelWikipedia(String entityUrl,String language) {
         String sparql = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n"
                 + "   PREFIX dbo: <http://dbpedia.org/ontology/>\n"
                 + "   PREFIX dbpedia: <http://dbpedia.org/resource/>\n"
@@ -299,7 +292,7 @@ public class SparqlQuery {
                 + "   SELECT DISTINCT ?label \n"
                 + "   WHERE {  \n"
                 + "       <" + entityUrl + "> rdfs:label ?label .     \n"
-                + "       filter(langMatches(lang(?label),\"EN\"))         \n"
+                + "       filter(langMatches(lang(?label),\""+language+"\"))         \n"
                 + "   }";
 
         return sparql;
@@ -498,6 +491,10 @@ public class SparqlQuery {
         return str;
     }*/
     
-    
+    public static void main(String [] args){
+        System.out.println("Hallow world");
+        String sparql= setLabelWikipedia("http://dbpedia.org/resource/Germany","IT");
+        System.out.println(sparql);
+    }
 
 }

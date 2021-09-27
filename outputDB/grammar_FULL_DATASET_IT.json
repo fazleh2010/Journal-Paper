@@ -1,1286 +1,6 @@
 {
   "grammarEntries" : [ {
     "id" : "1",
-    "lexicalEntryUri" : "http://localhost:8080#LexicalEntry_2",
-    "language" : "IT",
-    "type" : "SENTENCE",
-    "bindingType" : "PERSON",
-    "returnType" : "LOCATION",
-    "frameType" : "NPP",
-    "sentences" : [ "Qual era la luogo di nascita di ($x | PERSON_NP)?", "Qual è la luogo di nascita di ($x | PERSON_NP)?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp))\n",
-    "sentenceToSparqlParameterMapping" : {
-      "$x" : "subjOfProp"
-    },
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "$x",
-      "bindingList" : [ {
-        "label" : "Massacro di Isla Vista",
-        "uri" : "http://dbpedia.org/resource/2014_Isla_Vista_killings"
-      }, {
-        "label" : "Attentato di Ottawa del 2014",
-        "uri" : "http://dbpedia.org/resource/2014_shootings_at_Parliament_Hill,_Ottawa"
-      }, {
-        "label" : "Attentato di Susa",
-        "uri" : "http://dbpedia.org/resource/2015_Sousse_attacks"
-      }, {
-        "label" : "Attentato di Berlino del 19 dicembre 2016",
-        "uri" : "http://dbpedia.org/resource/2016_Berlin_truck_attack"
-      }, {
-        "label" : "Sparatoria di Baton Rouge",
-        "uri" : "http://dbpedia.org/resource/2016_shooting_of_Baton_Rouge_police_officers"
-      }, {
-        "label" : "Strage di Dallas",
-        "uri" : "http://dbpedia.org/resource/2016_shooting_of_Dallas_police_officers"
-      }, {
-        "label" : "Attentato di New York del 31 ottobre 2017",
-        "uri" : "http://dbpedia.org/resource/2017_New_York_City_truck_attack"
-      }, {
-        "label" : "A.D.O.R.",
-        "uri" : "http://dbpedia.org/resource/A.D.O.R."
-      }, {
-        "label" : "A.J. Applegate",
-        "uri" : "http://dbpedia.org/resource/A.J._Applegate"
-      }, {
-        "label" : "A. B. Guthrie Jr.",
-        "uri" : "http://dbpedia.org/resource/A._B._Guthrie_Jr."
-      }, {
-        "label" : "Alva Noto",
-        "uri" : "http://dbpedia.org/resource/Alva_Noto"
-      }, {
-        "label" : "Arsenio Sebastião Cabungula",
-        "uri" : "http://dbpedia.org/resource/Love_(footballer)"
-      }, {
-        "label" : "Lovel Palmer",
-        "uri" : "http://dbpedia.org/resource/Lovel_Palmer"
-      }, {
-        "label" : "Loveth Ayila",
-        "uri" : "http://dbpedia.org/resource/Loveth_Ayila"
-      }, {
-        "label" : "Lovie Smith",
-        "uri" : "http://dbpedia.org/resource/Lovie_Smith"
-      }, {
-        "label" : "Lovisa Lindh",
-        "uri" : "http://dbpedia.org/resource/Lovisa_Lindh"
-      }, {
-        "label" : "Lovre Bašić",
-        "uri" : "http://dbpedia.org/resource/Lovre_Bašić"
-      }, {
-        "label" : "Lovre Brečić",
-        "uri" : "http://dbpedia.org/resource/Lovre_Brečić"
-      }, {
-        "label" : "Lovre Kalinić",
-        "uri" : "http://dbpedia.org/resource/Lovre_Kalinić"
-      }, {
-        "label" : "Lovre Vulin",
-        "uri" : "http://dbpedia.org/resource/Lovre_Vulin"
-      }, {
-        "label" : "Lovre Čirjak",
-        "uri" : "http://dbpedia.org/resource/Lovre_Čirjak"
-      }, {
-        "label" : "Lovro Cvek",
-        "uri" : "http://dbpedia.org/resource/Lovro_Cvek"
-      }, {
-        "label" : "Lovro Majer",
-        "uri" : "http://dbpedia.org/resource/Lovro_Majer"
-      }, {
-        "label" : "Lovro Mazalin",
-        "uri" : "http://dbpedia.org/resource/Lovro_Mazalin"
-      }, {
-        "label" : "Lovro Zovko",
-        "uri" : "http://dbpedia.org/resource/Lovro_Zovko"
-      }, {
-        "label" : "Lowell George",
-        "uri" : "http://dbpedia.org/resource/Lowell_George"
-      }, {
-        "label" : "Lowell Gilmore",
-        "uri" : "http://dbpedia.org/resource/Lowell_Gilmore"
-      }, {
-        "label" : "Lowell MacDonald",
-        "uri" : "http://dbpedia.org/resource/Lowell_MacDonald"
-      }, {
-        "label" : "Lowell Sherman",
-        "uri" : "http://dbpedia.org/resource/Lowell_Sherman"
-      }, {
-        "label" : "Lowell Thomas",
-        "uri" : "http://dbpedia.org/resource/Lowell_Thomas"
-      }, {
-        "label" : "Lowes Moore",
-        "uri" : "http://dbpedia.org/resource/Lowes_Moore"
-      }, {
-        "label" : "Loy Vaught",
-        "uri" : "http://dbpedia.org/resource/Loy_Vaught"
-      }, {
-        "label" : "Loyal Griggs",
-        "uri" : "http://dbpedia.org/resource/Loyal_Griggs"
-      }, {
-        "label" : "Loyd King",
-        "uri" : "http://dbpedia.org/resource/Loyd_King"
-      }, {
-        "label" : "Loyola O'Connor",
-        "uri" : "http://dbpedia.org/resource/Loyola_O'Connor"
-      }, {
-        "label" : "Loyola de Palacio",
-        "uri" : "http://dbpedia.org/resource/Loyola_de_Palacio"
-      }, {
-        "label" : "Loïc Abenzoar",
-        "uri" : "http://dbpedia.org/resource/Loïc_Abenzoar"
-      }, {
-        "label" : "Loïc Akono",
-        "uri" : "http://dbpedia.org/resource/Loïc_Akono"
-      }, {
-        "label" : "Loïc Amisse",
-        "uri" : "http://dbpedia.org/resource/Loïc_Amisse"
-      }, {
-        "label" : "Loïc Attely",
-        "uri" : "http://dbpedia.org/resource/Loïc_Attely"
-      }, {
-        "label" : "Loïc Baal",
-        "uri" : "http://dbpedia.org/resource/Loïc_Baal"
-      }, {
-        "label" : "Loïc Bigois",
-        "uri" : "http://dbpedia.org/resource/Loïc_Bigois"
-      }, {
-        "label" : "Loïc Bruni",
-        "uri" : "http://dbpedia.org/resource/Loïc_Bruni"
-      }, {
-        "label" : "Loïc Chauvet",
-        "uri" : "http://dbpedia.org/resource/Loïc_Chauvet"
-      }, {
-        "label" : "Loïc Chetout",
-        "uri" : "http://dbpedia.org/resource/Loïc_Chetout"
-      }, {
-        "label" : "Loïc Damour",
-        "uri" : "http://dbpedia.org/resource/Loïc_Damour"
-      }, {
-        "label" : "Loïc Duval",
-        "uri" : "http://dbpedia.org/resource/Loïc_Duval"
-      }, {
-        "label" : "Loïc Loval",
-        "uri" : "http://dbpedia.org/resource/Loïc_Loval"
-      }, {
-        "label" : "Loïc Meillard",
-        "uri" : "http://dbpedia.org/resource/Loïc_Meillard"
-      }, {
-        "label" : "Loïc Nottet",
-        "uri" : "http://dbpedia.org/resource/Loïc_Nottet"
-      }, {
-        "label" : "Loïc Nego",
-        "uri" : "http://dbpedia.org/resource/Loïc_Négo"
-      }, {
-        "label" : "Loïc Poujol",
-        "uri" : "http://dbpedia.org/resource/Loïc_Poujol"
-      }, {
-        "label" : "Loïc Puyo",
-        "uri" : "http://dbpedia.org/resource/Loïc_Puyo"
-      }, {
-        "label" : "Loïc Rémy",
-        "uri" : "http://dbpedia.org/resource/Loïc_Rémy"
-      }, {
-        "label" : "Loïc Vliegen",
-        "uri" : "http://dbpedia.org/resource/Loïc_Vliegen"
-      }, {
-        "label" : "Loïck Landre",
-        "uri" : "http://dbpedia.org/resource/Loïck_Landre"
-      }, {
-        "label" : "Loïs Diony",
-        "uri" : "http://dbpedia.org/resource/Loïs_Diony"
-      }, {
-        "label" : "Loïs Openda",
-        "uri" : "http://dbpedia.org/resource/Loïs_Openda"
-      }, {
-        "label" : "Lu'ayy al-Atassi",
-        "uri" : "http://dbpedia.org/resource/Lu'ay_al-Atassi"
-      }, {
-        "label" : "LuFisto",
-        "uri" : "http://dbpedia.org/resource/LuFisto"
-      }, {
-        "label" : "Lu Bofei",
-        "uri" : "http://dbpedia.org/resource/Lu_Bofei"
-      }, {
-        "label" : "Lu Chuan",
-        "uri" : "http://dbpedia.org/resource/Lu_Chuan"
-      }, {
-        "label" : "Lu Chunlong",
-        "uri" : "http://dbpedia.org/resource/Lu_Chunlong"
-      }, {
-        "label" : "Lu Feng",
-        "uri" : "http://dbpedia.org/resource/Lu_Feng"
-      }, {
-        "label" : "Lu Haodong",
-        "uri" : "http://dbpedia.org/resource/Lu_Haodong"
-      }, {
-        "label" : "Lu Jiajing",
-        "uri" : "http://dbpedia.org/resource/Lu_Jiajing"
-      }, {
-        "label" : "Lu Jiang",
-        "uri" : "http://dbpedia.org/resource/Lu_Jiang"
-      }, {
-        "label" : "Lu Jianren",
-        "uri" : "http://dbpedia.org/resource/Lu_Jianren"
-      }, {
-        "label" : "Lu Jingjing",
-        "uri" : "http://dbpedia.org/resource/Lu_Jingjing"
-      }, {
-        "label" : "Lu Parker",
-        "uri" : "http://dbpedia.org/resource/Lu_Parker"
-      }, {
-        "label" : "Lu Rongting",
-        "uri" : "http://dbpedia.org/resource/Lu_Rongting"
-      }, {
-        "label" : "Lu Shanglei",
-        "uri" : "http://dbpedia.org/resource/Lu_Shanglei"
-      }, {
-        "label" : "Lu Wen",
-        "uri" : "http://dbpedia.org/resource/Lu_Wen"
-      }, {
-        "label" : "Lu Wenfu",
-        "uri" : "http://dbpedia.org/resource/Lu_Wenfu"
-      }, {
-        "label" : "Lu Xun",
-        "uri" : "http://dbpedia.org/resource/Lu_Xun"
-      }, {
-        "label" : "Lu Yen-hsun",
-        "uri" : "http://dbpedia.org/resource/Lu_Yen-hsun"
-      }, {
-        "label" : "Lu Ying",
-        "uri" : "http://dbpedia.org/resource/Lu_Ying"
-      }, {
-        "label" : "Lu Yong",
-        "uri" : "http://dbpedia.org/resource/Lu_Yong"
-      }, {
-        "label" : "Lua Blanco",
-        "uri" : "http://dbpedia.org/resource/Lua_Blanco"
-      }, {
-        "label" : "Luan Garcia Teixeira",
-        "uri" : "http://dbpedia.org/resource/Luan_Garcia"
-      }, {
-        "label" : "Jujie Luan",
-        "uri" : "http://dbpedia.org/resource/Luan_Jujie"
-      }, {
-        "label" : "Luan Madson Gedeão de Paiva",
-        "uri" : "http://dbpedia.org/resource/Luan_Madson_Gedeão_de_Paiva"
-      }, {
-        "label" : "Luanzinho",
-        "uri" : "http://dbpedia.org/resource/Luan_Martins_Pereira"
-      }, {
-        "label" : "Luan Michel de Louzã",
-        "uri" : "http://dbpedia.org/resource/Luan_Michel_de_Louzã"
-      }, {
-        "label" : "Luan Pinari",
-        "uri" : "http://dbpedia.org/resource/Luan_Pinari"
-      }, {
-        "label" : "Luan Vinicius da Silva Santos",
-        "uri" : "http://dbpedia.org/resource/Luan_Santos_(footballer,_born_1999)"
-      }, {
-        "label" : "Luan Silva dos Santos",
-        "uri" : "http://dbpedia.org/resource/Luan_Silva_(footballer,_born_1999)"
-      }, {
-        "label" : "Luan Vieira",
-        "uri" : "http://dbpedia.org/resource/Luan_Vieira"
-      }, {
-        "label" : "Luan Zmijani",
-        "uri" : "http://dbpedia.org/resource/Luan_Zmijani"
-      }, {
-        "label" : "Luana Bertolucci Paixão",
-        "uri" : "http://dbpedia.org/resource/Luana_Bertolucci_Paixão"
-      }, {
-        "label" : "Luana Patten",
-        "uri" : "http://dbpedia.org/resource/Luana_Patten"
-      }, {
-        "label" : "Luann Ryon",
-        "uri" : "http://dbpedia.org/resource/Luann_Ryon"
-      }, {
-        "label" : "Luay Salah",
-        "uri" : "http://dbpedia.org/resource/Luay_Salah"
-      }, {
-        "label" : "Luba Lisa",
-        "uri" : "http://dbpedia.org/resource/Luba_Lisa"
-      }, {
-        "label" : "Lubambo Musonda",
-        "uri" : "http://dbpedia.org/resource/Lubambo_Musonda"
-      }, {
-        "label" : "Lubna Azabal",
-        "uri" : "http://dbpedia.org/resource/Lubna_Azabal"
-      }, {
-        "label" : "Lubna Tahtamouni",
-        "uri" : "http://dbpedia.org/resource/Lubna_Tahtamouni"
-      }, {
-        "label" : "Lubo Kristek",
-        "uri" : "http://dbpedia.org/resource/Lubo_Kristek"
-      }, {
-        "label" : "Ljubomir Geraskov",
-        "uri" : "http://dbpedia.org/resource/Lubomir_Geraskov"
-      }, {
-        "label" : "Lubomir Kavalek",
-        "uri" : "http://dbpedia.org/resource/Lubomir_Kavalek"
-      } ]
-    },
-    "combination" : false
-  }, {
-    "id" : "2",
-    "lexicalEntryUri" : "http://localhost:8080#LexicalEntry_2",
-    "language" : "IT",
-    "type" : "NP",
-    "bindingType" : "PERSON",
-    "returnType" : "LOCATION",
-    "frameType" : "NPP",
-    "sentences" : [ "la luogo di nascita di $x" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp))\n",
-    "sentenceToSparqlParameterMapping" : {
-      "$x" : "subjOfProp"
-    },
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "$x",
-      "bindingList" : [ {
-        "label" : "Massacro di Isla Vista",
-        "uri" : "http://dbpedia.org/resource/2014_Isla_Vista_killings"
-      }, {
-        "label" : "Attentato di Ottawa del 2014",
-        "uri" : "http://dbpedia.org/resource/2014_shootings_at_Parliament_Hill,_Ottawa"
-      }, {
-        "label" : "Attentato di Susa",
-        "uri" : "http://dbpedia.org/resource/2015_Sousse_attacks"
-      }, {
-        "label" : "Attentato di Berlino del 19 dicembre 2016",
-        "uri" : "http://dbpedia.org/resource/2016_Berlin_truck_attack"
-      }, {
-        "label" : "Sparatoria di Baton Rouge",
-        "uri" : "http://dbpedia.org/resource/2016_shooting_of_Baton_Rouge_police_officers"
-      }, {
-        "label" : "Strage di Dallas",
-        "uri" : "http://dbpedia.org/resource/2016_shooting_of_Dallas_police_officers"
-      }, {
-        "label" : "Attentato di New York del 31 ottobre 2017",
-        "uri" : "http://dbpedia.org/resource/2017_New_York_City_truck_attack"
-      }, {
-        "label" : "A.D.O.R.",
-        "uri" : "http://dbpedia.org/resource/A.D.O.R."
-      }, {
-        "label" : "A.J. Applegate",
-        "uri" : "http://dbpedia.org/resource/A.J._Applegate"
-      }, {
-        "label" : "A. B. Guthrie Jr.",
-        "uri" : "http://dbpedia.org/resource/A._B._Guthrie_Jr."
-      }, {
-        "label" : "Alva Noto",
-        "uri" : "http://dbpedia.org/resource/Alva_Noto"
-      }, {
-        "label" : "Arsenio Sebastião Cabungula",
-        "uri" : "http://dbpedia.org/resource/Love_(footballer)"
-      }, {
-        "label" : "Lovel Palmer",
-        "uri" : "http://dbpedia.org/resource/Lovel_Palmer"
-      }, {
-        "label" : "Loveth Ayila",
-        "uri" : "http://dbpedia.org/resource/Loveth_Ayila"
-      }, {
-        "label" : "Lovie Smith",
-        "uri" : "http://dbpedia.org/resource/Lovie_Smith"
-      }, {
-        "label" : "Lovisa Lindh",
-        "uri" : "http://dbpedia.org/resource/Lovisa_Lindh"
-      }, {
-        "label" : "Lovre Bašić",
-        "uri" : "http://dbpedia.org/resource/Lovre_Bašić"
-      }, {
-        "label" : "Lovre Brečić",
-        "uri" : "http://dbpedia.org/resource/Lovre_Brečić"
-      }, {
-        "label" : "Lovre Kalinić",
-        "uri" : "http://dbpedia.org/resource/Lovre_Kalinić"
-      }, {
-        "label" : "Lovre Vulin",
-        "uri" : "http://dbpedia.org/resource/Lovre_Vulin"
-      }, {
-        "label" : "Lovre Čirjak",
-        "uri" : "http://dbpedia.org/resource/Lovre_Čirjak"
-      }, {
-        "label" : "Lovro Cvek",
-        "uri" : "http://dbpedia.org/resource/Lovro_Cvek"
-      }, {
-        "label" : "Lovro Majer",
-        "uri" : "http://dbpedia.org/resource/Lovro_Majer"
-      }, {
-        "label" : "Lovro Mazalin",
-        "uri" : "http://dbpedia.org/resource/Lovro_Mazalin"
-      }, {
-        "label" : "Lovro Zovko",
-        "uri" : "http://dbpedia.org/resource/Lovro_Zovko"
-      }, {
-        "label" : "Lowell George",
-        "uri" : "http://dbpedia.org/resource/Lowell_George"
-      }, {
-        "label" : "Lowell Gilmore",
-        "uri" : "http://dbpedia.org/resource/Lowell_Gilmore"
-      }, {
-        "label" : "Lowell MacDonald",
-        "uri" : "http://dbpedia.org/resource/Lowell_MacDonald"
-      }, {
-        "label" : "Lowell Sherman",
-        "uri" : "http://dbpedia.org/resource/Lowell_Sherman"
-      }, {
-        "label" : "Lowell Thomas",
-        "uri" : "http://dbpedia.org/resource/Lowell_Thomas"
-      }, {
-        "label" : "Lowes Moore",
-        "uri" : "http://dbpedia.org/resource/Lowes_Moore"
-      }, {
-        "label" : "Loy Vaught",
-        "uri" : "http://dbpedia.org/resource/Loy_Vaught"
-      }, {
-        "label" : "Loyal Griggs",
-        "uri" : "http://dbpedia.org/resource/Loyal_Griggs"
-      }, {
-        "label" : "Loyd King",
-        "uri" : "http://dbpedia.org/resource/Loyd_King"
-      }, {
-        "label" : "Loyola O'Connor",
-        "uri" : "http://dbpedia.org/resource/Loyola_O'Connor"
-      }, {
-        "label" : "Loyola de Palacio",
-        "uri" : "http://dbpedia.org/resource/Loyola_de_Palacio"
-      }, {
-        "label" : "Loïc Abenzoar",
-        "uri" : "http://dbpedia.org/resource/Loïc_Abenzoar"
-      }, {
-        "label" : "Loïc Akono",
-        "uri" : "http://dbpedia.org/resource/Loïc_Akono"
-      }, {
-        "label" : "Loïc Amisse",
-        "uri" : "http://dbpedia.org/resource/Loïc_Amisse"
-      }, {
-        "label" : "Loïc Attely",
-        "uri" : "http://dbpedia.org/resource/Loïc_Attely"
-      }, {
-        "label" : "Loïc Baal",
-        "uri" : "http://dbpedia.org/resource/Loïc_Baal"
-      }, {
-        "label" : "Loïc Bigois",
-        "uri" : "http://dbpedia.org/resource/Loïc_Bigois"
-      }, {
-        "label" : "Loïc Bruni",
-        "uri" : "http://dbpedia.org/resource/Loïc_Bruni"
-      }, {
-        "label" : "Loïc Chauvet",
-        "uri" : "http://dbpedia.org/resource/Loïc_Chauvet"
-      }, {
-        "label" : "Loïc Chetout",
-        "uri" : "http://dbpedia.org/resource/Loïc_Chetout"
-      }, {
-        "label" : "Loïc Damour",
-        "uri" : "http://dbpedia.org/resource/Loïc_Damour"
-      }, {
-        "label" : "Loïc Duval",
-        "uri" : "http://dbpedia.org/resource/Loïc_Duval"
-      }, {
-        "label" : "Loïc Loval",
-        "uri" : "http://dbpedia.org/resource/Loïc_Loval"
-      }, {
-        "label" : "Loïc Meillard",
-        "uri" : "http://dbpedia.org/resource/Loïc_Meillard"
-      }, {
-        "label" : "Loïc Nottet",
-        "uri" : "http://dbpedia.org/resource/Loïc_Nottet"
-      }, {
-        "label" : "Loïc Nego",
-        "uri" : "http://dbpedia.org/resource/Loïc_Négo"
-      }, {
-        "label" : "Loïc Poujol",
-        "uri" : "http://dbpedia.org/resource/Loïc_Poujol"
-      }, {
-        "label" : "Loïc Puyo",
-        "uri" : "http://dbpedia.org/resource/Loïc_Puyo"
-      }, {
-        "label" : "Loïc Rémy",
-        "uri" : "http://dbpedia.org/resource/Loïc_Rémy"
-      }, {
-        "label" : "Loïc Vliegen",
-        "uri" : "http://dbpedia.org/resource/Loïc_Vliegen"
-      }, {
-        "label" : "Loïck Landre",
-        "uri" : "http://dbpedia.org/resource/Loïck_Landre"
-      }, {
-        "label" : "Loïs Diony",
-        "uri" : "http://dbpedia.org/resource/Loïs_Diony"
-      }, {
-        "label" : "Loïs Openda",
-        "uri" : "http://dbpedia.org/resource/Loïs_Openda"
-      }, {
-        "label" : "Lu'ayy al-Atassi",
-        "uri" : "http://dbpedia.org/resource/Lu'ay_al-Atassi"
-      }, {
-        "label" : "LuFisto",
-        "uri" : "http://dbpedia.org/resource/LuFisto"
-      }, {
-        "label" : "Lu Bofei",
-        "uri" : "http://dbpedia.org/resource/Lu_Bofei"
-      }, {
-        "label" : "Lu Chuan",
-        "uri" : "http://dbpedia.org/resource/Lu_Chuan"
-      }, {
-        "label" : "Lu Chunlong",
-        "uri" : "http://dbpedia.org/resource/Lu_Chunlong"
-      }, {
-        "label" : "Lu Feng",
-        "uri" : "http://dbpedia.org/resource/Lu_Feng"
-      }, {
-        "label" : "Lu Haodong",
-        "uri" : "http://dbpedia.org/resource/Lu_Haodong"
-      }, {
-        "label" : "Lu Jiajing",
-        "uri" : "http://dbpedia.org/resource/Lu_Jiajing"
-      }, {
-        "label" : "Lu Jiang",
-        "uri" : "http://dbpedia.org/resource/Lu_Jiang"
-      }, {
-        "label" : "Lu Jianren",
-        "uri" : "http://dbpedia.org/resource/Lu_Jianren"
-      }, {
-        "label" : "Lu Jingjing",
-        "uri" : "http://dbpedia.org/resource/Lu_Jingjing"
-      }, {
-        "label" : "Lu Parker",
-        "uri" : "http://dbpedia.org/resource/Lu_Parker"
-      }, {
-        "label" : "Lu Rongting",
-        "uri" : "http://dbpedia.org/resource/Lu_Rongting"
-      }, {
-        "label" : "Lu Shanglei",
-        "uri" : "http://dbpedia.org/resource/Lu_Shanglei"
-      }, {
-        "label" : "Lu Wen",
-        "uri" : "http://dbpedia.org/resource/Lu_Wen"
-      }, {
-        "label" : "Lu Wenfu",
-        "uri" : "http://dbpedia.org/resource/Lu_Wenfu"
-      }, {
-        "label" : "Lu Xun",
-        "uri" : "http://dbpedia.org/resource/Lu_Xun"
-      }, {
-        "label" : "Lu Yen-hsun",
-        "uri" : "http://dbpedia.org/resource/Lu_Yen-hsun"
-      }, {
-        "label" : "Lu Ying",
-        "uri" : "http://dbpedia.org/resource/Lu_Ying"
-      }, {
-        "label" : "Lu Yong",
-        "uri" : "http://dbpedia.org/resource/Lu_Yong"
-      }, {
-        "label" : "Lua Blanco",
-        "uri" : "http://dbpedia.org/resource/Lua_Blanco"
-      }, {
-        "label" : "Luan Garcia Teixeira",
-        "uri" : "http://dbpedia.org/resource/Luan_Garcia"
-      }, {
-        "label" : "Jujie Luan",
-        "uri" : "http://dbpedia.org/resource/Luan_Jujie"
-      }, {
-        "label" : "Luan Madson Gedeão de Paiva",
-        "uri" : "http://dbpedia.org/resource/Luan_Madson_Gedeão_de_Paiva"
-      }, {
-        "label" : "Luanzinho",
-        "uri" : "http://dbpedia.org/resource/Luan_Martins_Pereira"
-      }, {
-        "label" : "Luan Michel de Louzã",
-        "uri" : "http://dbpedia.org/resource/Luan_Michel_de_Louzã"
-      }, {
-        "label" : "Luan Pinari",
-        "uri" : "http://dbpedia.org/resource/Luan_Pinari"
-      }, {
-        "label" : "Luan Vinicius da Silva Santos",
-        "uri" : "http://dbpedia.org/resource/Luan_Santos_(footballer,_born_1999)"
-      }, {
-        "label" : "Luan Silva dos Santos",
-        "uri" : "http://dbpedia.org/resource/Luan_Silva_(footballer,_born_1999)"
-      }, {
-        "label" : "Luan Vieira",
-        "uri" : "http://dbpedia.org/resource/Luan_Vieira"
-      }, {
-        "label" : "Luan Zmijani",
-        "uri" : "http://dbpedia.org/resource/Luan_Zmijani"
-      }, {
-        "label" : "Luana Bertolucci Paixão",
-        "uri" : "http://dbpedia.org/resource/Luana_Bertolucci_Paixão"
-      }, {
-        "label" : "Luana Patten",
-        "uri" : "http://dbpedia.org/resource/Luana_Patten"
-      }, {
-        "label" : "Luann Ryon",
-        "uri" : "http://dbpedia.org/resource/Luann_Ryon"
-      }, {
-        "label" : "Luay Salah",
-        "uri" : "http://dbpedia.org/resource/Luay_Salah"
-      }, {
-        "label" : "Luba Lisa",
-        "uri" : "http://dbpedia.org/resource/Luba_Lisa"
-      }, {
-        "label" : "Lubambo Musonda",
-        "uri" : "http://dbpedia.org/resource/Lubambo_Musonda"
-      }, {
-        "label" : "Lubna Azabal",
-        "uri" : "http://dbpedia.org/resource/Lubna_Azabal"
-      }, {
-        "label" : "Lubna Tahtamouni",
-        "uri" : "http://dbpedia.org/resource/Lubna_Tahtamouni"
-      }, {
-        "label" : "Lubo Kristek",
-        "uri" : "http://dbpedia.org/resource/Lubo_Kristek"
-      }, {
-        "label" : "Ljubomir Geraskov",
-        "uri" : "http://dbpedia.org/resource/Lubomir_Geraskov"
-      }, {
-        "label" : "Lubomir Kavalek",
-        "uri" : "http://dbpedia.org/resource/Lubomir_Kavalek"
-      } ]
-    },
-    "combination" : false
-  }, {
-    "id" : "3",
-    "lexicalEntryUri" : "http://localhost:8080#LexicalEntry_1",
-    "language" : "IT",
-    "type" : "SENTENCE",
-    "bindingType" : "COUNTRY",
-    "returnType" : "CITY",
-    "frameType" : "NPP",
-    "sentences" : [ "Qual era la capitale di ($x | COUNTRY_NP)?", "Qual è la capitale di ($x | COUNTRY_NP)?" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
-    "sentenceToSparqlParameterMapping" : {
-      "$x" : "subjOfProp"
-    },
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "$x",
-      "bindingList" : [ {
-        "label" : "Basso Canada",
-        "uri" : "http://dbpedia.org/resource/Lower_Canada"
-      }, {
-        "label" : "Sultanato di Yafa Inferiore",
-        "uri" : "http://dbpedia.org/resource/Lower_Yafa"
-      }, {
-        "label" : "Lu (stato)",
-        "uri" : "http://dbpedia.org/resource/Lu_(state)"
-      }, {
-        "label" : "Repubblica Popolare di Lugansk",
-        "uri" : "http://dbpedia.org/resource/Luhansk_People's_Republic"
-      }, {
-        "label" : "Lusitania (provincia romana)",
-        "uri" : "http://dbpedia.org/resource/Lusitania"
-      }, {
-        "label" : "Liutici",
-        "uri" : "http://dbpedia.org/resource/Lutici"
-      }, {
-        "label" : "Lussemburgo",
-        "uri" : "http://dbpedia.org/resource/Luxembourg"
-      }, {
-        "label" : "Luxemburg (Wisconsin)",
-        "uri" : "http://dbpedia.org/resource/Luxembourg"
-      }, {
-        "label" : "Licia e Panfilia",
-        "uri" : "http://dbpedia.org/resource/Lycia_et_Pamphylia"
-      }, {
-        "label" : "Ma-i",
-        "uri" : "http://dbpedia.org/resource/Ma-i"
-      }, {
-        "label" : "Macedonia (provincia romana)",
-        "uri" : "http://dbpedia.org/resource/Macedonia_(Roman_province)"
-      }, {
-        "label" : "Regno di Macedonia",
-        "uri" : "http://dbpedia.org/resource/Macedonia_(ancient_kingdom)"
-      }, {
-        "label" : "Makedonia (thema)",
-        "uri" : "http://dbpedia.org/resource/Macedonia_(theme)"
-      }, {
-        "label" : "Madagascar",
-        "uri" : "http://dbpedia.org/resource/Madagascar"
-      }, {
-        "label" : "Regno Magadha",
-        "uri" : "http://dbpedia.org/resource/Magadha"
-      }, {
-        "label" : "Provincia Autonoma Ungherese",
-        "uri" : "http://dbpedia.org/resource/Magyar_Autonomous_Region"
-      }, {
-        "label" : "Sultanato Mahra di Qishn e Socotra",
-        "uri" : "http://dbpedia.org/resource/Mahra_Sultanate"
-      }, {
-        "label" : "Maine (fiume)",
-        "uri" : "http://dbpedia.org/resource/Maine"
-      }, {
-        "label" : "Maine",
-        "uri" : "http://dbpedia.org/resource/Maine"
-      }, {
-        "label" : "Majapahit",
-        "uri" : "http://dbpedia.org/resource/Majapahit"
-      }, {
-        "label" : "Sultanato della Migiurtinia",
-        "uri" : "http://dbpedia.org/resource/Majeerteen_Sultanate"
-      }, {
-        "label" : "Makuria",
-        "uri" : "http://dbpedia.org/resource/Makuria"
-      }, {
-        "label" : "Sultanato di Malacca",
-        "uri" : "http://dbpedia.org/resource/Malacca_Sultanate"
-      }, {
-        "label" : "Malawi",
-        "uri" : "http://dbpedia.org/resource/Malawi"
-      }, {
-        "label" : "Unione malese",
-        "uri" : "http://dbpedia.org/resource/Malayan_Union"
-      }, {
-        "label" : "Malaysia",
-        "uri" : "http://dbpedia.org/resource/Malaysia"
-      }, {
-        "label" : "Maldive",
-        "uri" : "http://dbpedia.org/resource/Maldives"
-      }, {
-        "label" : "Malerkotla (stato)",
-        "uri" : "http://dbpedia.org/resource/Malerkotla_State"
-      }, {
-        "label" : "Malerkotla",
-        "uri" : "http://dbpedia.org/resource/Malerkotla_State"
-      }, {
-        "label" : "Mali",
-        "uri" : "http://dbpedia.org/resource/Mali"
-      }, {
-        "label" : "Impero del Mali",
-        "uri" : "http://dbpedia.org/resource/Mali_Empire"
-      }, {
-        "label" : "Federazione del Mali",
-        "uri" : "http://dbpedia.org/resource/Mali_Federation"
-      }, {
-        "label" : "Uganda",
-        "uri" : "http://dbpedia.org/resource/Uganda"
-      }, {
-        "label" : "Ugocsa",
-        "uri" : "http://dbpedia.org/resource/Ugocsa_County"
-      }, {
-        "label" : "Ucraina",
-        "uri" : "http://dbpedia.org/resource/Ukraine"
-      }, {
-        "label" : "Repubblica Socialista Sovietica Ucraina",
-        "uri" : "http://dbpedia.org/resource/Ukraine"
-      }, {
-        "label" : "Repubblica Popolare Ucraina",
-        "uri" : "http://dbpedia.org/resource/Ukrainian_People's_Republic"
-      }, {
-        "label" : "Ucraina",
-        "uri" : "http://dbpedia.org/resource/Ukrainian_Soviet_Socialist_Republic"
-      }, {
-        "label" : "Repubblica Socialista Sovietica Ucraina",
-        "uri" : "http://dbpedia.org/resource/Ukrainian_Soviet_Socialist_Republic"
-      }, {
-        "label" : "Banu Umayya",
-        "uri" : "http://dbpedia.org/resource/Umayyad_Caliphate"
-      }, {
-        "label" : "Califfato omayyade",
-        "uri" : "http://dbpedia.org/resource/Umayyad_Caliphate"
-      }, {
-        "label" : "Svezia-Norvegia",
-        "uri" : "http://dbpedia.org/resource/Union_between_Sweden_and_Norway"
-      }, {
-        "label" : "Unione Sudafricana",
-        "uri" : "http://dbpedia.org/resource/Union_of_South_Africa"
-      }, {
-        "label" : "Sharja",
-        "uri" : "http://dbpedia.org/resource/United_Arab_Emirates"
-      }, {
-        "label" : "Emirati Arabi Uniti",
-        "uri" : "http://dbpedia.org/resource/United_Arab_Emirates"
-      }, {
-        "label" : "Repubblica Araba Unita",
-        "uri" : "http://dbpedia.org/resource/United_Arab_Republic"
-      }, {
-        "label" : "Stati Arabi Uniti",
-        "uri" : "http://dbpedia.org/resource/United_Arab_States"
-      }, {
-        "label" : "Regno Unito",
-        "uri" : "http://dbpedia.org/resource/United_Kingdom"
-      }, {
-        "label" : "Gran Bretagna",
-        "uri" : "http://dbpedia.org/resource/United_Kingdom"
-      }, {
-        "label" : "Regno Unito di Gran Bretagna e Irlanda",
-        "uri" : "http://dbpedia.org/resource/United_Kingdom"
-      }, {
-        "label" : "Regno Unito",
-        "uri" : "http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland"
-      }, {
-        "label" : "Gran Bretagna",
-        "uri" : "http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland"
-      }, {
-        "label" : "Regno Unito di Gran Bretagna e Irlanda",
-        "uri" : "http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland"
-      }, {
-        "label" : "Regno Unito di Portogallo, Brasile e Algarves",
-        "uri" : "http://dbpedia.org/resource/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves"
-      }, {
-        "label" : "Regno Unito dei Paesi Bassi",
-        "uri" : "http://dbpedia.org/resource/United_Kingdom_of_the_Netherlands"
-      }, {
-        "label" : "UNSF",
-        "uri" : "http://dbpedia.org/resource/United_Nations_Temporary_Executive_Authority"
-      }, {
-        "label" : "UNTAET",
-        "uri" : "http://dbpedia.org/resource/United_Nations_Transitional_Administration_in_East_Timor"
-      }, {
-        "label" : "Province Unite del Centro Italia",
-        "uri" : "http://dbpedia.org/resource/United_Provinces_of_Central_Italy"
-      }, {
-        "label" : "Province Unite del Río de la Plata",
-        "uri" : "http://dbpedia.org/resource/United_Provinces_of_the_Rio_de_la_Plata"
-      }, {
-        "label" : "Stati Uniti d'America",
-        "uri" : "http://dbpedia.org/resource/United_States"
-      }, {
-        "label" : "Stati Uniti di Colombia",
-        "uri" : "http://dbpedia.org/resource/United_States_of_Colombia"
-      }, {
-        "label" : "Stati Uniti d'Indonesia",
-        "uri" : "http://dbpedia.org/resource/United_States_of_Indonesia"
-      }, {
-        "label" : "Stati Uniti delle Isole Ionie",
-        "uri" : "http://dbpedia.org/resource/United_States_of_the_Ionian_Islands"
-      }, {
-        "label" : "Repubblica Unita delle Suvadive",
-        "uri" : "http://dbpedia.org/resource/United_Suvadive_Republic"
-      }, {
-        "label" : "Alto Canada",
-        "uri" : "http://dbpedia.org/resource/Upper_Canada"
-      }, {
-        "label" : "Urartu",
-        "uri" : "http://dbpedia.org/resource/Urartu"
-      }, {
-        "label" : "Uruguay",
-        "uri" : "http://dbpedia.org/resource/Uruguay"
-      }, {
-        "label" : "Utik",
-        "uri" : "http://dbpedia.org/resource/Utik"
-      }, {
-        "label" : "Khaganato uiguro",
-        "uri" : "http://dbpedia.org/resource/Uyghur_Khaganate"
-      }, {
-        "label" : "Eyalet di Uyvar",
-        "uri" : "http://dbpedia.org/resource/Uyvar_Eyalet"
-      }, {
-        "label" : "Repubblica Socialista Sovietica Uzbeka",
-        "uri" : "http://dbpedia.org/resource/Uzbek_Soviet_Socialist_Republic"
-      }, {
-        "label" : "Uzbekistan",
-        "uri" : "http://dbpedia.org/resource/Uzbekistan"
-      }, {
-        "label" : "Vajji",
-        "uri" : "http://dbpedia.org/resource/Vajji"
-      }, {
-        "label" : "Tasmania (isola)",
-        "uri" : "http://dbpedia.org/resource/Van_Diemen's_Land"
-      }, {
-        "label" : "Vilayet di Van",
-        "uri" : "http://dbpedia.org/resource/Van_Vilayet"
-      }, {
-        "label" : "Regno dei Vandali",
-        "uri" : "http://dbpedia.org/resource/Vandal_Kingdom"
-      }, {
-        "label" : "Vanuatu",
-        "uri" : "http://dbpedia.org/resource/Vanuatu"
-      }, {
-        "label" : "Eyalet di Varat",
-        "uri" : "http://dbpedia.org/resource/Varat_Eyalet"
-      }, {
-        "label" : "Varasd",
-        "uri" : "http://dbpedia.org/resource/Varaždin_County_(former)"
-      }, {
-        "label" : "Vas (antico comitato)",
-        "uri" : "http://dbpedia.org/resource/Vas_County_(former)"
-      }, {
-        "label" : "Vaspurakan",
-        "uri" : "http://dbpedia.org/resource/Vaspurakan"
-      }, {
-        "label" : "Vatsa",
-        "uri" : "http://dbpedia.org/resource/Vatsa"
-      }, {
-        "label" : "Velay",
-        "uri" : "http://dbpedia.org/resource/Velay"
-      }, {
-        "label" : "Venda (bantustan)",
-        "uri" : "http://dbpedia.org/resource/Venda"
-      }, {
-        "label" : "Isole Ionie sotto il dominio veneziano",
-        "uri" : "http://dbpedia.org/resource/Venetian_rule_in_the_Ionian_Islands"
-      }, {
-        "label" : "Venezuela",
-        "uri" : "http://dbpedia.org/resource/Venezuela"
-      }, {
-        "label" : "Provincia del Venezuela",
-        "uri" : "http://dbpedia.org/resource/Venezuela_Province"
-      }, {
-        "label" : "Repubblica del Vermont",
-        "uri" : "http://dbpedia.org/resource/Vermont_Republic"
-      }, {
-        "label" : "Veszprém (antico comitato)",
-        "uri" : "http://dbpedia.org/resource/Veszprém_County_(former)"
-      }, {
-        "label" : "Provincia di Veszprém",
-        "uri" : "http://dbpedia.org/resource/Veszprém_County_(former)"
-      }, {
-        "label" : "Cuma eolica",
-        "uri" : "http://dbpedia.org/resource/Cyme_(Aeolis)"
-      }, {
-        "label" : "Repubblica Socialista Ceca",
-        "uri" : "http://dbpedia.org/resource/Czech_Socialist_Republic"
-      }, {
-        "label" : "Territorio del Dakota",
-        "uri" : "http://dbpedia.org/resource/Dakota_Territory"
-      }, {
-        "label" : "Dalmatia (thema)",
-        "uri" : "http://dbpedia.org/resource/Dalmatia_(theme)"
-      }, {
-        "label" : "Damaraland",
-        "uri" : "http://dbpedia.org/resource/Damaraland"
-      }, {
-        "label" : "Eyalet di Damasco",
-        "uri" : "http://dbpedia.org/resource/Damascus_Eyalet"
-      }, {
-        "label" : "Abbazia di Salem",
-        "uri" : "http://dbpedia.org/resource/Salem_Abbey"
-      }, {
-        "label" : "Regno di Bosnia",
-        "uri" : "http://dbpedia.org/resource/Kingdom_of_Bosnia"
-      }, {
-        "label" : "Marca di Brandeburgo",
-        "uri" : "http://dbpedia.org/resource/Margraviate_of_Brandenburg"
-      }, {
-        "label" : "Principato vescovile di Bressanone",
-        "uri" : "http://dbpedia.org/resource/Prince-Bishopric_of_Brixen"
-      } ]
-    },
-    "combination" : false
-  }, {
-    "id" : "4",
-    "lexicalEntryUri" : "http://localhost:8080#LexicalEntry_1",
-    "language" : "IT",
-    "type" : "NP",
-    "bindingType" : "COUNTRY",
-    "returnType" : "CITY",
-    "frameType" : "NPP",
-    "sentences" : [ "la capitale di $x" ],
-    "queryType" : "SELECT",
-    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
-    "sentenceToSparqlParameterMapping" : {
-      "$x" : "subjOfProp"
-    },
-    "returnVariable" : "objOfProp",
-    "sentenceBindings" : {
-      "bindingVariableName" : "$x",
-      "bindingList" : [ {
-        "label" : "Basso Canada",
-        "uri" : "http://dbpedia.org/resource/Lower_Canada"
-      }, {
-        "label" : "Sultanato di Yafa Inferiore",
-        "uri" : "http://dbpedia.org/resource/Lower_Yafa"
-      }, {
-        "label" : "Lu (stato)",
-        "uri" : "http://dbpedia.org/resource/Lu_(state)"
-      }, {
-        "label" : "Repubblica Popolare di Lugansk",
-        "uri" : "http://dbpedia.org/resource/Luhansk_People's_Republic"
-      }, {
-        "label" : "Lusitania (provincia romana)",
-        "uri" : "http://dbpedia.org/resource/Lusitania"
-      }, {
-        "label" : "Liutici",
-        "uri" : "http://dbpedia.org/resource/Lutici"
-      }, {
-        "label" : "Lussemburgo",
-        "uri" : "http://dbpedia.org/resource/Luxembourg"
-      }, {
-        "label" : "Luxemburg (Wisconsin)",
-        "uri" : "http://dbpedia.org/resource/Luxembourg"
-      }, {
-        "label" : "Licia e Panfilia",
-        "uri" : "http://dbpedia.org/resource/Lycia_et_Pamphylia"
-      }, {
-        "label" : "Ma-i",
-        "uri" : "http://dbpedia.org/resource/Ma-i"
-      }, {
-        "label" : "Macedonia (provincia romana)",
-        "uri" : "http://dbpedia.org/resource/Macedonia_(Roman_province)"
-      }, {
-        "label" : "Regno di Macedonia",
-        "uri" : "http://dbpedia.org/resource/Macedonia_(ancient_kingdom)"
-      }, {
-        "label" : "Makedonia (thema)",
-        "uri" : "http://dbpedia.org/resource/Macedonia_(theme)"
-      }, {
-        "label" : "Madagascar",
-        "uri" : "http://dbpedia.org/resource/Madagascar"
-      }, {
-        "label" : "Regno Magadha",
-        "uri" : "http://dbpedia.org/resource/Magadha"
-      }, {
-        "label" : "Provincia Autonoma Ungherese",
-        "uri" : "http://dbpedia.org/resource/Magyar_Autonomous_Region"
-      }, {
-        "label" : "Sultanato Mahra di Qishn e Socotra",
-        "uri" : "http://dbpedia.org/resource/Mahra_Sultanate"
-      }, {
-        "label" : "Maine (fiume)",
-        "uri" : "http://dbpedia.org/resource/Maine"
-      }, {
-        "label" : "Maine",
-        "uri" : "http://dbpedia.org/resource/Maine"
-      }, {
-        "label" : "Majapahit",
-        "uri" : "http://dbpedia.org/resource/Majapahit"
-      }, {
-        "label" : "Sultanato della Migiurtinia",
-        "uri" : "http://dbpedia.org/resource/Majeerteen_Sultanate"
-      }, {
-        "label" : "Makuria",
-        "uri" : "http://dbpedia.org/resource/Makuria"
-      }, {
-        "label" : "Sultanato di Malacca",
-        "uri" : "http://dbpedia.org/resource/Malacca_Sultanate"
-      }, {
-        "label" : "Malawi",
-        "uri" : "http://dbpedia.org/resource/Malawi"
-      }, {
-        "label" : "Unione malese",
-        "uri" : "http://dbpedia.org/resource/Malayan_Union"
-      }, {
-        "label" : "Malaysia",
-        "uri" : "http://dbpedia.org/resource/Malaysia"
-      }, {
-        "label" : "Maldive",
-        "uri" : "http://dbpedia.org/resource/Maldives"
-      }, {
-        "label" : "Malerkotla (stato)",
-        "uri" : "http://dbpedia.org/resource/Malerkotla_State"
-      }, {
-        "label" : "Malerkotla",
-        "uri" : "http://dbpedia.org/resource/Malerkotla_State"
-      }, {
-        "label" : "Mali",
-        "uri" : "http://dbpedia.org/resource/Mali"
-      }, {
-        "label" : "Impero del Mali",
-        "uri" : "http://dbpedia.org/resource/Mali_Empire"
-      }, {
-        "label" : "Federazione del Mali",
-        "uri" : "http://dbpedia.org/resource/Mali_Federation"
-      }, {
-        "label" : "Uganda",
-        "uri" : "http://dbpedia.org/resource/Uganda"
-      }, {
-        "label" : "Ugocsa",
-        "uri" : "http://dbpedia.org/resource/Ugocsa_County"
-      }, {
-        "label" : "Ucraina",
-        "uri" : "http://dbpedia.org/resource/Ukraine"
-      }, {
-        "label" : "Repubblica Socialista Sovietica Ucraina",
-        "uri" : "http://dbpedia.org/resource/Ukraine"
-      }, {
-        "label" : "Repubblica Popolare Ucraina",
-        "uri" : "http://dbpedia.org/resource/Ukrainian_People's_Republic"
-      }, {
-        "label" : "Ucraina",
-        "uri" : "http://dbpedia.org/resource/Ukrainian_Soviet_Socialist_Republic"
-      }, {
-        "label" : "Repubblica Socialista Sovietica Ucraina",
-        "uri" : "http://dbpedia.org/resource/Ukrainian_Soviet_Socialist_Republic"
-      }, {
-        "label" : "Banu Umayya",
-        "uri" : "http://dbpedia.org/resource/Umayyad_Caliphate"
-      }, {
-        "label" : "Califfato omayyade",
-        "uri" : "http://dbpedia.org/resource/Umayyad_Caliphate"
-      }, {
-        "label" : "Svezia-Norvegia",
-        "uri" : "http://dbpedia.org/resource/Union_between_Sweden_and_Norway"
-      }, {
-        "label" : "Unione Sudafricana",
-        "uri" : "http://dbpedia.org/resource/Union_of_South_Africa"
-      }, {
-        "label" : "Sharja",
-        "uri" : "http://dbpedia.org/resource/United_Arab_Emirates"
-      }, {
-        "label" : "Emirati Arabi Uniti",
-        "uri" : "http://dbpedia.org/resource/United_Arab_Emirates"
-      }, {
-        "label" : "Repubblica Araba Unita",
-        "uri" : "http://dbpedia.org/resource/United_Arab_Republic"
-      }, {
-        "label" : "Stati Arabi Uniti",
-        "uri" : "http://dbpedia.org/resource/United_Arab_States"
-      }, {
-        "label" : "Regno Unito",
-        "uri" : "http://dbpedia.org/resource/United_Kingdom"
-      }, {
-        "label" : "Gran Bretagna",
-        "uri" : "http://dbpedia.org/resource/United_Kingdom"
-      }, {
-        "label" : "Regno Unito di Gran Bretagna e Irlanda",
-        "uri" : "http://dbpedia.org/resource/United_Kingdom"
-      }, {
-        "label" : "Regno Unito",
-        "uri" : "http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland"
-      }, {
-        "label" : "Gran Bretagna",
-        "uri" : "http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland"
-      }, {
-        "label" : "Regno Unito di Gran Bretagna e Irlanda",
-        "uri" : "http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland"
-      }, {
-        "label" : "Regno Unito di Portogallo, Brasile e Algarves",
-        "uri" : "http://dbpedia.org/resource/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves"
-      }, {
-        "label" : "Regno Unito dei Paesi Bassi",
-        "uri" : "http://dbpedia.org/resource/United_Kingdom_of_the_Netherlands"
-      }, {
-        "label" : "UNSF",
-        "uri" : "http://dbpedia.org/resource/United_Nations_Temporary_Executive_Authority"
-      }, {
-        "label" : "UNTAET",
-        "uri" : "http://dbpedia.org/resource/United_Nations_Transitional_Administration_in_East_Timor"
-      }, {
-        "label" : "Province Unite del Centro Italia",
-        "uri" : "http://dbpedia.org/resource/United_Provinces_of_Central_Italy"
-      }, {
-        "label" : "Province Unite del Río de la Plata",
-        "uri" : "http://dbpedia.org/resource/United_Provinces_of_the_Rio_de_la_Plata"
-      }, {
-        "label" : "Stati Uniti d'America",
-        "uri" : "http://dbpedia.org/resource/United_States"
-      }, {
-        "label" : "Stati Uniti di Colombia",
-        "uri" : "http://dbpedia.org/resource/United_States_of_Colombia"
-      }, {
-        "label" : "Stati Uniti d'Indonesia",
-        "uri" : "http://dbpedia.org/resource/United_States_of_Indonesia"
-      }, {
-        "label" : "Stati Uniti delle Isole Ionie",
-        "uri" : "http://dbpedia.org/resource/United_States_of_the_Ionian_Islands"
-      }, {
-        "label" : "Repubblica Unita delle Suvadive",
-        "uri" : "http://dbpedia.org/resource/United_Suvadive_Republic"
-      }, {
-        "label" : "Alto Canada",
-        "uri" : "http://dbpedia.org/resource/Upper_Canada"
-      }, {
-        "label" : "Urartu",
-        "uri" : "http://dbpedia.org/resource/Urartu"
-      }, {
-        "label" : "Uruguay",
-        "uri" : "http://dbpedia.org/resource/Uruguay"
-      }, {
-        "label" : "Utik",
-        "uri" : "http://dbpedia.org/resource/Utik"
-      }, {
-        "label" : "Khaganato uiguro",
-        "uri" : "http://dbpedia.org/resource/Uyghur_Khaganate"
-      }, {
-        "label" : "Eyalet di Uyvar",
-        "uri" : "http://dbpedia.org/resource/Uyvar_Eyalet"
-      }, {
-        "label" : "Repubblica Socialista Sovietica Uzbeka",
-        "uri" : "http://dbpedia.org/resource/Uzbek_Soviet_Socialist_Republic"
-      }, {
-        "label" : "Uzbekistan",
-        "uri" : "http://dbpedia.org/resource/Uzbekistan"
-      }, {
-        "label" : "Vajji",
-        "uri" : "http://dbpedia.org/resource/Vajji"
-      }, {
-        "label" : "Tasmania (isola)",
-        "uri" : "http://dbpedia.org/resource/Van_Diemen's_Land"
-      }, {
-        "label" : "Vilayet di Van",
-        "uri" : "http://dbpedia.org/resource/Van_Vilayet"
-      }, {
-        "label" : "Regno dei Vandali",
-        "uri" : "http://dbpedia.org/resource/Vandal_Kingdom"
-      }, {
-        "label" : "Vanuatu",
-        "uri" : "http://dbpedia.org/resource/Vanuatu"
-      }, {
-        "label" : "Eyalet di Varat",
-        "uri" : "http://dbpedia.org/resource/Varat_Eyalet"
-      }, {
-        "label" : "Varasd",
-        "uri" : "http://dbpedia.org/resource/Varaždin_County_(former)"
-      }, {
-        "label" : "Vas (antico comitato)",
-        "uri" : "http://dbpedia.org/resource/Vas_County_(former)"
-      }, {
-        "label" : "Vaspurakan",
-        "uri" : "http://dbpedia.org/resource/Vaspurakan"
-      }, {
-        "label" : "Vatsa",
-        "uri" : "http://dbpedia.org/resource/Vatsa"
-      }, {
-        "label" : "Velay",
-        "uri" : "http://dbpedia.org/resource/Velay"
-      }, {
-        "label" : "Venda (bantustan)",
-        "uri" : "http://dbpedia.org/resource/Venda"
-      }, {
-        "label" : "Isole Ionie sotto il dominio veneziano",
-        "uri" : "http://dbpedia.org/resource/Venetian_rule_in_the_Ionian_Islands"
-      }, {
-        "label" : "Venezuela",
-        "uri" : "http://dbpedia.org/resource/Venezuela"
-      }, {
-        "label" : "Provincia del Venezuela",
-        "uri" : "http://dbpedia.org/resource/Venezuela_Province"
-      }, {
-        "label" : "Repubblica del Vermont",
-        "uri" : "http://dbpedia.org/resource/Vermont_Republic"
-      }, {
-        "label" : "Veszprém (antico comitato)",
-        "uri" : "http://dbpedia.org/resource/Veszprém_County_(former)"
-      }, {
-        "label" : "Provincia di Veszprém",
-        "uri" : "http://dbpedia.org/resource/Veszprém_County_(former)"
-      }, {
-        "label" : "Cuma eolica",
-        "uri" : "http://dbpedia.org/resource/Cyme_(Aeolis)"
-      }, {
-        "label" : "Repubblica Socialista Ceca",
-        "uri" : "http://dbpedia.org/resource/Czech_Socialist_Republic"
-      }, {
-        "label" : "Territorio del Dakota",
-        "uri" : "http://dbpedia.org/resource/Dakota_Territory"
-      }, {
-        "label" : "Dalmatia (thema)",
-        "uri" : "http://dbpedia.org/resource/Dalmatia_(theme)"
-      }, {
-        "label" : "Damaraland",
-        "uri" : "http://dbpedia.org/resource/Damaraland"
-      }, {
-        "label" : "Eyalet di Damasco",
-        "uri" : "http://dbpedia.org/resource/Damascus_Eyalet"
-      }, {
-        "label" : "Abbazia di Salem",
-        "uri" : "http://dbpedia.org/resource/Salem_Abbey"
-      }, {
-        "label" : "Regno di Bosnia",
-        "uri" : "http://dbpedia.org/resource/Kingdom_of_Bosnia"
-      }, {
-        "label" : "Marca di Brandeburgo",
-        "uri" : "http://dbpedia.org/resource/Margraviate_of_Brandenburg"
-      }, {
-        "label" : "Principato vescovile di Bressanone",
-        "uri" : "http://dbpedia.org/resource/Prince-Bishopric_of_Brixen"
-      } ]
-    },
-    "combination" : false
-  }, {
-    "id" : "5",
     "lexicalEntryUri" : null,
     "language" : "IT",
     "type" : "SENTENCE",
@@ -1297,305 +17,305 @@
     "sentenceBindings" : {
       "bindingVariableName" : "$x",
       "bindingList" : [ {
-        "label" : "Cantone di Lussemburgo",
-        "uri" : "http://dbpedia.org/resource/Luxembourg_(canton)"
+        "label" : "Bamna",
+        "uri" : "http://dbpedia.org/resource/Bamna_Upazila"
       }, {
-        "label" : "Lussemburgo (città)",
-        "uri" : "http://dbpedia.org/resource/Luxembourg_City"
+        "label" : "Banaripara",
+        "uri" : "http://dbpedia.org/resource/Banaripara_Upazila"
       }, {
-        "label" : "Stretto di Luzon",
-        "uri" : "http://dbpedia.org/resource/Luzon_Strait"
+        "label" : "Bancharampur",
+        "uri" : "http://dbpedia.org/resource/Bancharampur_Upazila"
       }, {
-        "label" : "Madiromirafy",
-        "uri" : "http://dbpedia.org/resource/Madiromirafy"
+        "label" : "Bandar (Dacca)",
+        "uri" : "http://dbpedia.org/resource/Bandar_Upazila"
       }, {
-        "label" : "Madirovalo",
-        "uri" : "http://dbpedia.org/resource/Madirovalo"
+        "label" : "Distretto di Bandarban",
+        "uri" : "http://dbpedia.org/resource/Bandarban_District"
       }, {
-        "label" : "Maevaranohely",
-        "uri" : "http://dbpedia.org/resource/Maevaranohely"
+        "label" : "Bandarban Sadar",
+        "uri" : "http://dbpedia.org/resource/Bandarban_Sadar_Upazila"
       }, {
-        "label" : "Maevatanana",
-        "uri" : "http://dbpedia.org/resource/Maevatanana"
+        "label" : "Baniachong",
+        "uri" : "http://dbpedia.org/resource/Baniachong_Upazila"
       }, {
-        "label" : "Distretto di Maevatanana",
-        "uri" : "http://dbpedia.org/resource/Maevatanana_(district)"
+        "label" : "Banshkhali",
+        "uri" : "http://dbpedia.org/resource/Banshkhali_Upazila"
       }, {
-        "label" : "Maevatanana II",
-        "uri" : "http://dbpedia.org/resource/Maevatanana_II"
+        "label" : "Baraigram",
+        "uri" : "http://dbpedia.org/resource/Baraigram_Upazila"
       }, {
-        "label" : "Mafaijijo",
-        "uri" : "http://dbpedia.org/resource/Mafaijijo"
+        "label" : "Barguna",
+        "uri" : "http://dbpedia.org/resource/Barguna"
       }, {
-        "label" : "Mahabako",
-        "uri" : "http://dbpedia.org/resource/Mahabako"
+        "label" : "Distretto di Barguna",
+        "uri" : "http://dbpedia.org/resource/Barguna_District"
       }, {
-        "label" : "Mahabe",
-        "uri" : "http://dbpedia.org/resource/Mahabe"
+        "label" : "Barguna Sadar",
+        "uri" : "http://dbpedia.org/resource/Barguna_Sadar_Upazila"
       }, {
-        "label" : "Mahabo (Betroka)",
-        "uri" : "http://dbpedia.org/resource/Mahabo,_Betroka"
+        "label" : "Barhatta",
+        "uri" : "http://dbpedia.org/resource/Barhatta_Upazila"
       }, {
-        "label" : "Mahabo (Vohipeno)",
-        "uri" : "http://dbpedia.org/resource/Mahabo,_Vohipeno"
+        "label" : "Barisal",
+        "uri" : "http://dbpedia.org/resource/Barisal"
       }, {
-        "label" : "Distretto di Mahabo",
-        "uri" : "http://dbpedia.org/resource/Mahabo_(district)"
+        "label" : "Distretto di Barisal",
+        "uri" : "http://dbpedia.org/resource/Barisal_District"
       }, {
-        "label" : "Mahabo Mananivo",
-        "uri" : "http://dbpedia.org/resource/Mahabo_Mananivo"
+        "label" : "Divisione di Barisal",
+        "uri" : "http://dbpedia.org/resource/Barisal_Division"
       }, {
-        "label" : "Mahaboboka",
-        "uri" : "http://dbpedia.org/resource/Mahaboboka"
+        "label" : "Barisal Sadar",
+        "uri" : "http://dbpedia.org/resource/Barisal_Sadar_Upazila"
       }, {
-        "label" : "Mahaditra",
-        "uri" : "http://dbpedia.org/resource/Mahaditra"
+        "label" : "Barkal",
+        "uri" : "http://dbpedia.org/resource/Barkal_Upazila"
       }, {
-        "label" : "Mahadrodroka",
-        "uri" : "http://dbpedia.org/resource/Mahadrodroka"
+        "label" : "Barlekha",
+        "uri" : "http://dbpedia.org/resource/Barlekha_Upazila"
       }, {
-        "label" : "Mahaela",
-        "uri" : "http://dbpedia.org/resource/Mahaela"
+        "label" : "Barura",
+        "uri" : "http://dbpedia.org/resource/Barura_Upazila"
       }, {
-        "label" : "Mahafasa Centre",
-        "uri" : "http://dbpedia.org/resource/Mahafasa_Centre"
+        "label" : "Basail (Bangladesh)",
+        "uri" : "http://dbpedia.org/resource/Basail_Upazila"
       }, {
-        "label" : "Mahaiza",
-        "uri" : "http://dbpedia.org/resource/Mahaiza"
+        "label" : "Batiaghata",
+        "uri" : "http://dbpedia.org/resource/Batiaghata_Upazila"
       }, {
-        "label" : "Mahajamba Usine",
-        "uri" : "http://dbpedia.org/resource/Mahajamba_Usine"
+        "label" : "Bauphal",
+        "uri" : "http://dbpedia.org/resource/Bauphal_Upazila"
       }, {
-        "label" : "Mahajanga",
-        "uri" : "http://dbpedia.org/resource/Mahajanga"
+        "label" : "Golfo del Bengala",
+        "uri" : "http://dbpedia.org/resource/Bay_of_Bengal"
       }, {
-        "label" : "Distretto di Mahajanga II",
-        "uri" : "http://dbpedia.org/resource/Mahajanga_II_(district)"
+        "label" : "Baia della Pomerania",
+        "uri" : "http://dbpedia.org/resource/Bay_of_Pomerania_(nature_reserve)"
       }, {
-        "label" : "Provincia di Mahajanga",
-        "uri" : "http://dbpedia.org/resource/Mahajanga_Province"
+        "label" : "Belaichhari",
+        "uri" : "http://dbpedia.org/resource/Belaichhari_Upazila"
       }, {
-        "label" : "Mahaly",
-        "uri" : "http://dbpedia.org/resource/Mahaly"
+        "label" : "Belkuchi",
+        "uri" : "http://dbpedia.org/resource/Belkuchi_Upazila"
       }, {
-        "label" : "Mahamaibe",
-        "uri" : "http://dbpedia.org/resource/Mahamaibe"
+        "label" : "Burichang",
+        "uri" : "http://dbpedia.org/resource/Burichang_Upazila"
       }, {
-        "label" : "Mahanoro",
-        "uri" : "http://dbpedia.org/resource/Mahanoro"
+        "label" : "Agailjhara",
+        "uri" : "http://dbpedia.org/resource/Agailjhara_Upazila"
       }, {
-        "label" : "Distretto di Mahanoro",
-        "uri" : "http://dbpedia.org/resource/Mahanoro_(district)"
+        "label" : "Ajmiriganj",
+        "uri" : "http://dbpedia.org/resource/Ajmiriganj_Upazila"
       }, {
-        "label" : "Mahasoa",
-        "uri" : "http://dbpedia.org/resource/Mahasoa"
+        "label" : "Akhaura",
+        "uri" : "http://dbpedia.org/resource/Akhaura_Upazila"
       }, {
-        "label" : "Mahasoa Est",
-        "uri" : "http://dbpedia.org/resource/Mahasoa_Est"
+        "label" : "Akkelpur",
+        "uri" : "http://dbpedia.org/resource/Akkelpur_Upazila"
       }, {
-        "label" : "Mahasoabe (Vohibato)",
-        "uri" : "http://dbpedia.org/resource/Mahasoabe,_Fianarantsoa_II"
+        "label" : "Alamdanga",
+        "uri" : "http://dbpedia.org/resource/Alamdanga_Upazila"
       }, {
-        "label" : "Mahasoabe (Vohipeno)",
-        "uri" : "http://dbpedia.org/resource/Mahasoabe,_Vohipeno"
+        "label" : "Alfadanga",
+        "uri" : "http://dbpedia.org/resource/Alfadanga_Upazila"
       }, {
-        "label" : "Mahasolo",
-        "uri" : "http://dbpedia.org/resource/Mahasolo"
+        "label" : "Harinakunda",
+        "uri" : "http://dbpedia.org/resource/Harinakunda_Upazila"
       }, {
-        "label" : "Mahatalaky",
-        "uri" : "http://dbpedia.org/resource/Mahatalaky"
+        "label" : "Haripur (Bangladesh)",
+        "uri" : "http://dbpedia.org/resource/Haripur_Upazila"
       }, {
-        "label" : "Mahatsara Iefaka",
-        "uri" : "http://dbpedia.org/resource/Mahatsara_Iefaka"
+        "label" : "Harirampur",
+        "uri" : "http://dbpedia.org/resource/Harirampur_Upazila"
       }, {
-        "label" : "Mahatsara Sud",
-        "uri" : "http://dbpedia.org/resource/Mahatsara_Sud"
+        "label" : "Hathazari",
+        "uri" : "http://dbpedia.org/resource/Hathazari_Upazila"
       }, {
-        "label" : "Mahatsinjo (Maevatanana)",
-        "uri" : "http://dbpedia.org/resource/Mahatsinjo,_Maevatanana"
+        "label" : "Hatibandha (Bangladesh)",
+        "uri" : "http://dbpedia.org/resource/Hatibandha_Upazila"
       }, {
-        "label" : "Mahatsinjo (Vondrozo)",
-        "uri" : "http://dbpedia.org/resource/Mahatsinjo,_Vondrozo"
+        "label" : "Madan (Bangladesh)",
+        "uri" : "http://dbpedia.org/resource/Madan_Upazila"
       }, {
-        "label" : "Mahatsinjony",
-        "uri" : "http://dbpedia.org/resource/Mahatsinjony"
+        "label" : "Madarganj",
+        "uri" : "http://dbpedia.org/resource/Madarganj_Upazila"
       }, {
-        "label" : "Mahavanona",
-        "uri" : "http://dbpedia.org/resource/Mahavanona"
+        "label" : "Distretto di Madaripur",
+        "uri" : "http://dbpedia.org/resource/Madaripur_District"
       }, {
-        "label" : "Mahavelo (Farafangana)",
-        "uri" : "http://dbpedia.org/resource/Mahavelo,_Farafangana"
+        "label" : "Madaripur Sadar",
+        "uri" : "http://dbpedia.org/resource/Madaripur_Sadar_Upazila"
       }, {
-        "label" : "Mahavelo (Vondrozo)",
-        "uri" : "http://dbpedia.org/resource/Mahavelo,_Vondrozo"
+        "label" : "Madhukhali",
+        "uri" : "http://dbpedia.org/resource/Madhukhali_Upazila"
       }, {
-        "label" : "Foul Poite",
-        "uri" : "http://dbpedia.org/resource/Mahavelona"
+        "label" : "Madhupur (Bangladesh)",
+        "uri" : "http://dbpedia.org/resource/Madhupur_Upazila"
       }, {
-        "label" : "Mahavelona (Soavinandriana)",
-        "uri" : "http://dbpedia.org/resource/Mahavelona,_Soavinandriana"
+        "label" : "Distretto di Magura",
+        "uri" : "http://dbpedia.org/resource/Magura_District"
       }, {
-        "label" : "Mahavoky Nord",
-        "uri" : "http://dbpedia.org/resource/Mahavoky_Nord"
+        "label" : "Magura Sadar",
+        "uri" : "http://dbpedia.org/resource/Magura_Sadar_Upazila"
       }, {
-        "label" : "Mahazina Ambohipierenana",
-        "uri" : "http://dbpedia.org/resource/Mahazina_Ambohipierenana"
+        "label" : "Mahalchhari",
+        "uri" : "http://dbpedia.org/resource/Mahalchhari_Upazila"
       }, {
-        "label" : "Mahazoarivo (Fandriana)",
-        "uri" : "http://dbpedia.org/resource/Mahazoarivo,_Fandriana"
+        "label" : "Maheshpur",
+        "uri" : "http://dbpedia.org/resource/Maheshpur_Upazila"
       }, {
-        "label" : "Mahazoarivo (Isandra)",
-        "uri" : "http://dbpedia.org/resource/Mahazoarivo,_Fianarantsoa_II"
+        "label" : "Mohadevpur",
+        "uri" : "http://dbpedia.org/resource/Mohadevpur_Upazila"
       }, {
-        "label" : "Mahazoarivo (Vohipeno)",
-        "uri" : "http://dbpedia.org/resource/Mahazoarivo,_Vohipeno"
+        "label" : "Mohammadpur",
+        "uri" : "http://dbpedia.org/resource/Mohammadpur_Upazila"
       }, {
-        "label" : "Mahazoarivo (Vondrozo)",
-        "uri" : "http://dbpedia.org/resource/Mahazoarivo,_Vondrozo"
+        "label" : "Mohanganj",
+        "uri" : "http://dbpedia.org/resource/Mohanganj_Upazila"
       }, {
-        "label" : "Mahazoma",
-        "uri" : "http://dbpedia.org/resource/Mahazoma"
+        "label" : "Mohanpur (Bangladesh)",
+        "uri" : "http://dbpedia.org/resource/Mohanpur_Upazila"
       }, {
-        "label" : "Mahazony",
-        "uri" : "http://dbpedia.org/resource/Mahazony"
+        "label" : "Maheshkhali",
+        "uri" : "http://dbpedia.org/resource/Moheshkhali_Upazila"
       }, {
-        "label" : "Maheriraty",
-        "uri" : "http://dbpedia.org/resource/Maheriraty"
+        "label" : "Mollahat",
+        "uri" : "http://dbpedia.org/resource/Mollahat_Upazila"
       }, {
-        "label" : "Maherivaratra",
-        "uri" : "http://dbpedia.org/resource/Maherivaratra"
+        "label" : "Mongla",
+        "uri" : "http://dbpedia.org/resource/Mongla_Upazila"
       }, {
-        "label" : "Maintinandry",
-        "uri" : "http://dbpedia.org/resource/Maintinandry"
+        "label" : "Monohardi",
+        "uri" : "http://dbpedia.org/resource/Monohardi_Upazila"
       }, {
-        "label" : "Maintirano",
-        "uri" : "http://dbpedia.org/resource/Maintirano"
+        "label" : "Morrelganj",
+        "uri" : "http://dbpedia.org/resource/Morrelganj_Upazila"
       }, {
-        "label" : "Distretto di Maintirano",
-        "uri" : "http://dbpedia.org/resource/Maintirano_District"
+        "label" : "Distretto di Maulvibazar",
+        "uri" : "http://dbpedia.org/resource/Moulvibazar_District"
       }, {
-        "label" : "Maintsokely",
-        "uri" : "http://dbpedia.org/resource/Maintsokely"
+        "label" : "Muksudpur",
+        "uri" : "http://dbpedia.org/resource/Muksudpur_Upazila"
       }, {
-        "label" : "Malaimbandy",
-        "uri" : "http://dbpedia.org/resource/Malaimbandy"
+        "label" : "Muktagachha",
+        "uri" : "http://dbpedia.org/resource/Muktagacha_Upazila"
       }, {
-        "label" : "Consthum",
-        "uri" : "http://dbpedia.org/resource/Consthum"
+        "label" : "Muladi (Bangladesh)",
+        "uri" : "http://dbpedia.org/resource/Muladi_Upazila"
       }, {
-        "label" : "Useldange",
-        "uri" : "http://dbpedia.org/resource/Useldange"
+        "label" : "Distretto di Munshiganj",
+        "uri" : "http://dbpedia.org/resource/Munshiganj_District"
       }, {
-        "label" : "Regione di Vakinankaratra",
-        "uri" : "http://dbpedia.org/resource/Vakinankaratra"
+        "label" : "Munshiganj Sadar",
+        "uri" : "http://dbpedia.org/resource/Munshiganj_Sadar_Upazila"
       }, {
-        "label" : "Valabetokana",
-        "uri" : "http://dbpedia.org/resource/Valabetokana"
+        "label" : "Sapahar",
+        "uri" : "http://dbpedia.org/resource/Sapahar_Upazila"
       }, {
-        "label" : "Vallée de l'Ernz",
-        "uri" : "http://dbpedia.org/resource/Vallée_de_l'Ernz"
+        "label" : "Sarail",
+        "uri" : "http://dbpedia.org/resource/Sarail_Upazila"
       }, {
-        "label" : "Distretto di Vangaindrano",
-        "uri" : "http://dbpedia.org/resource/Vangaindrano_(district)"
+        "label" : "Sarankhola",
+        "uri" : "http://dbpedia.org/resource/Sarankhola_Upazila"
       }, {
-        "label" : "Vanono",
-        "uri" : "http://dbpedia.org/resource/Vanono"
+        "label" : "Sariakandi",
+        "uri" : "http://dbpedia.org/resource/Sariakandi_Upazila"
       }, {
-        "label" : "Vatana (Manakara)",
-        "uri" : "http://dbpedia.org/resource/Vatana,_Madagascar"
+        "label" : "Sarishabari",
+        "uri" : "http://dbpedia.org/resource/Sarishabari_Upazila"
       }, {
-        "label" : "Vatanato",
-        "uri" : "http://dbpedia.org/resource/Vatanato"
+        "label" : "Satkania",
+        "uri" : "http://dbpedia.org/resource/Satkania_Upazila"
       }, {
-        "label" : "Vatohandrina",
-        "uri" : "http://dbpedia.org/resource/Vatohandrina"
+        "label" : "Distretto di Satkhira",
+        "uri" : "http://dbpedia.org/resource/Satkhira_District"
       }, {
-        "label" : "Vatolatsaka",
-        "uri" : "http://dbpedia.org/resource/Vatolatsaka"
+        "label" : "Satkhira Sadar",
+        "uri" : "http://dbpedia.org/resource/Satkhira_Sadar_Upazila"
       }, {
-        "label" : "Vatomandry",
-        "uri" : "http://dbpedia.org/resource/Vatomandry"
+        "label" : "Saturia",
+        "uri" : "http://dbpedia.org/resource/Saturia_Upazila"
       }, {
-        "label" : "Distretto di Vatomandry",
-        "uri" : "http://dbpedia.org/resource/Vatomandry_(district)"
+        "label" : "Senbagh",
+        "uri" : "http://dbpedia.org/resource/Senbagh_Upazila"
       }, {
-        "label" : "Regione di Vatovavy-Fitovinany",
-        "uri" : "http://dbpedia.org/resource/Vatovavy-Fitovinany"
+        "label" : "Shahjadpur",
+        "uri" : "http://dbpedia.org/resource/Shahjadpur_Upazila"
       }, {
-        "label" : "Vavatenina",
-        "uri" : "http://dbpedia.org/resource/Vavatenina"
+        "label" : "Shailkupa",
+        "uri" : "http://dbpedia.org/resource/Shailkupa_Upazila"
       }, {
-        "label" : "Distretto di Vavatenina",
-        "uri" : "http://dbpedia.org/resource/Vavatenina_District"
+        "label" : "Shajahanpur",
+        "uri" : "http://dbpedia.org/resource/Shajahanpur_Upazila"
       }, {
-        "label" : "Veromanga",
-        "uri" : "http://dbpedia.org/resource/Veromanga"
+        "label" : "Shalikha",
+        "uri" : "http://dbpedia.org/resource/Shalikha_Upazila"
       }, {
-        "label" : "Chodoriv",
-        "uri" : "http://dbpedia.org/resource/Khodoriv"
+        "label" : "Terokhada",
+        "uri" : "http://dbpedia.org/resource/Terokhada_Upazila"
       }, {
-        "label" : "Bissen",
-        "uri" : "http://dbpedia.org/resource/Bissen"
+        "label" : "Tetulia",
+        "uri" : "http://dbpedia.org/resource/Tetulia_Upazila"
       }, {
-        "label" : "Biwer",
-        "uri" : "http://dbpedia.org/resource/Biwer"
+        "label" : "Distretto di Thakurgaon",
+        "uri" : "http://dbpedia.org/resource/Thakurgaon_District"
       }, {
-        "label" : "Boanamary",
-        "uri" : "http://dbpedia.org/resource/Boanamary"
+        "label" : "Thakurgaon Sadar",
+        "uri" : "http://dbpedia.org/resource/Thakurgaon_Sadar_Upazila"
       }, {
-        "label" : "Bobakindro",
-        "uri" : "http://dbpedia.org/resource/Bobakindro"
+        "label" : "Thanchi",
+        "uri" : "http://dbpedia.org/resource/Thanchi_Upazila"
       }, {
-        "label" : "Bobasakoa",
-        "uri" : "http://dbpedia.org/resource/Bobasakoa"
+        "label" : "Fakirhat",
+        "uri" : "http://dbpedia.org/resource/Fakirhat_Upazila"
       }, {
-        "label" : "Regione di Boeny",
-        "uri" : "http://dbpedia.org/resource/Boeny"
+        "label" : "Distretto di Faridpur",
+        "uri" : "http://dbpedia.org/resource/Faridpur_District"
       }, {
-        "label" : "Regione di Bongolava",
-        "uri" : "http://dbpedia.org/resource/Bongolava"
+        "label" : "Fatikchhari",
+        "uri" : "http://dbpedia.org/resource/Fatikchhari_Upazila"
       }, {
-        "label" : "Distretto di Boriziny",
-        "uri" : "http://dbpedia.org/resource/Boriziny-Vaovao_(district)"
+        "label" : "Fenchuganj",
+        "uri" : "http://dbpedia.org/resource/Fenchuganj_Upazila"
       }, {
-        "label" : "Boulaide",
-        "uri" : "http://dbpedia.org/resource/Boulaide"
+        "label" : "Feni (Bangladesh)",
+        "uri" : "http://dbpedia.org/resource/Feni,_Bangladesh"
       }, {
-        "label" : "Bourscheid (Francia)",
-        "uri" : "http://dbpedia.org/resource/Bourscheid,_Luxembourg"
+        "label" : "Distretto di Feni",
+        "uri" : "http://dbpedia.org/resource/Feni_District"
       }, {
-        "label" : "Bourscheid (Lussemburgo)",
-        "uri" : "http://dbpedia.org/resource/Bourscheid,_Luxembourg"
+        "label" : "Abhaynagar",
+        "uri" : "http://dbpedia.org/resource/Abhaynagar_Upazila"
       }, {
-        "label" : "Bous (Lussemburgo)",
-        "uri" : "http://dbpedia.org/resource/Bous,_Luxembourg"
+        "label" : "Adamdighi",
+        "uri" : "http://dbpedia.org/resource/Adamdighi_Upazila"
       }, {
-        "label" : "Bous (Saarland)",
-        "uri" : "http://dbpedia.org/resource/Bous,_Luxembourg"
+        "label" : "Aditmari",
+        "uri" : "http://dbpedia.org/resource/Aditmari_Upazila"
       }, {
-        "label" : "Regione di Diana",
-        "uri" : "http://dbpedia.org/resource/Diana_Region"
+        "label" : "Distretto di Chuadanga",
+        "uri" : "http://dbpedia.org/resource/Chuadanga_District"
       }, {
-        "label" : "Didy",
-        "uri" : "http://dbpedia.org/resource/Didy"
+        "label" : "Chuadanga Sadar",
+        "uri" : "http://dbpedia.org/resource/Chuadanga_Sadar_Upazila"
       }, {
-        "label" : "Diekirch",
-        "uri" : "http://dbpedia.org/resource/Diekirch"
+        "label" : "Chunarughat",
+        "uri" : "http://dbpedia.org/resource/Chunarughat_Upazila"
       }, {
-        "label" : "Cantone di Diekirch",
-        "uri" : "http://dbpedia.org/resource/Diekirch_(canton)"
+        "label" : "Comilla",
+        "uri" : "http://dbpedia.org/resource/Comilla"
       }, {
-        "label" : "Differdange",
-        "uri" : "http://dbpedia.org/resource/Differdange"
+        "label" : "Comilla Sadar",
+        "uri" : "http://dbpedia.org/resource/Comilla_Adarsha_Sadar_Upazila"
       }, {
-        "label" : "Dippach (Lussemburgo)",
-        "uri" : "http://dbpedia.org/resource/Dippach"
+        "label" : "Distretto di Comilla",
+        "uri" : "http://dbpedia.org/resource/Comilla_District"
       }, {
-        "label" : "Djangoa",
-        "uri" : "http://dbpedia.org/resource/Djangoa"
+        "label" : "Companiganj (Noakhali)",
+        "uri" : "http://dbpedia.org/resource/Companiganj_Upazila,_Noakhali"
       }, {
-        "label" : "Doany",
-        "uri" : "http://dbpedia.org/resource/Doany"
+        "label" : "Distretto di Cox's Bazar",
+        "uri" : "http://dbpedia.org/resource/Cox's_Bazar_District"
       } ]
     },
     "combination" : false

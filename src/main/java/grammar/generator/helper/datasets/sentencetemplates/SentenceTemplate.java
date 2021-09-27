@@ -20,6 +20,7 @@ class SentenceTemplate {
   private final SentenceType entryType;
   private final Language language;
   private final List<String> templates;
+  
   /**
    * These are the arguments of the respective sentence template.<br>
    * Valid values are:

@@ -25,4 +25,5 @@ public class EntryComparison implements Serializable {
   public void addFn(float newValue) {
     fn += newValue;
   }
+  
 }

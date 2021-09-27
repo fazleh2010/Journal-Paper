@@ -1,4 +1,4 @@
-package grammar.generator.helper;
+package grammar.generator.sentence;
 
 import eu.monnetproject.lemon.model.LexicalEntry;
 import eu.monnetproject.lemon.model.PropertyValue;
@@ -25,11 +25,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-import static grammar.generator.helper.BindingConstants.BINDING_TOKEN_TEMPLATE;
+import static grammar.generator.sentence.BindingConstants.BINDING_TOKEN_TEMPLATE;
 import static grammar.generator.helper.parser.SentenceTemplateParser.QUESTION_MARK;
+import grammar.sparql.SelectVariable;
+import static java.lang.System.exit;
 import static java.util.Objects.isNull;
 import java.util.logging.Level;
 import static lexicon.LexicalEntryUtil.getDeterminerTokenByNumber;
+import util.io.GenderUtils;
 
 public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
 
@@ -44,101 +47,6 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
         super(language, frameType, sentenceTemplateRepository, sentenceTemplateParser);
     }
 
-    /*protected List<String> interpretSentenceToken(
-            List<SentenceToken> sentenceTokens,
-            String bindingVar,
-            LexicalEntryUtil lexicalEntryUtil
-    ) throws
-            QueGGMissingFactoryClassException {
-        List<String> generatedSentences = new ArrayList<>();
-        // We already know how to find the matching AnnotatedWords or String tokens than need to be added to the sentence
-        // Load all forms of this lexical entry
-        List<AnnotatedNounOrQuestionWord> annotatedLexicalEntryNouns = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords();
-        AnnotatedNounOrQuestionWord questionWord
-                = // Who / what
-                getAnnotatedQuestionWordBySubjectType(lexicalEntryUtil.getSubjectType(lexicalEntryUtil.getSelectVariable(),DomainOrRangeType.PERSON), getLanguage(), null);
-        String nounToken = lexicalEntryUtil.getReturnVariableConditionLabel(lexicalEntryUtil.getSelectVariable());
-        String object = String.format(
-                BINDING_TOKEN_TEMPLATE,
-                bindingVar,
-                DomainOrRangeType.getMatchingType(lexicalEntryUtil.getConditionUriBySelectVariable(
-                        LexicalEntryUtil.getOppositeSelectVariable(lexicalEntryUtil.getSelectVariable())
-                )).name(),
-                SentenceType.NP.toString()
-        );
-
-        // We already know, which sentence tokens to expect, so we search for them to find out where to put our expected AnnotatedWords and Strings
-        Optional<SentenceToken> questionWordToken = getQuestionWordToken(sentenceTokens); // interrogativeDeterminer/-Pronoun
-        Optional<SentenceToken> questionWordNounToken = getConditionNounToken(sentenceTokens); // noun(condition:copulativeArg)
-        Optional<SentenceToken> rootToken = getRootToken(sentenceTokens);
-        Optional<SentenceToken> pronounObjectToken = getObjectPronounToken(sentenceTokens);
-
-        // Load a list of to be forms to make every possible sentence combination
-        Optional<SentenceToken> copulaToken = getCopulaToken(sentenceTokens); // verb(reference:component_be)
-        List<AnnotatedVerb> toBeVerbs = new ArrayList<>();
-        if (copulaToken.isPresent()) {
-            URI copulaRef = copulaToken.get().getLocalReference();
-            LexicalEntry entry = new LexiconSearch(lexicalEntryUtil.getLexicon()).getReferencedResource(copulaRef);
-            toBeVerbs = lexicalEntryUtil.parseLexicalEntryToAnnotatedVerbs(entry.getOtherForms());
-        }
-
-        for (AnnotatedNounOrQuestionWord annotatedNoun : annotatedLexicalEntryNouns) {
-            String[] sentenceArray = new String[sentenceTokens.size()];
-            // Get NP for this annotatedNoun
-            for (AnnotatedVerb toBeVerb : toBeVerbs) {
-                if (annotatedNoun.getNumber().equals(toBeVerb.getNumber())
-                        || (rootToken.isPresent() && isValidAdjectiveForm(rootToken.get()))) {
-                    if (isNPPPresent(sentenceTokens) && rootToken.isPresent()) {
-                        String np = generateNPOrAP(sentenceTokens, object, lexicalEntryUtil).get(annotatedNoun.getNumber());
-                        sentenceArray[rootToken.get().getPosition()] = np;
-                        copulaToken.ifPresent(sentenceToken -> sentenceArray[sentenceToken.getPosition()] = toBeVerb.getWrittenRepValue());
-                        // Get interrogative determiner or pronoun for this sentence
-                        if (pronounObjectToken.isPresent()) {
-                            URI detRef = pronounObjectToken.get().getLocalReference();
-                            LexicalEntry entry = new LexiconSearch(lexicalEntryUtil.getLexicon()).getReferencedResource(detRef);
-                            String object_pronoun = entry.getCanonicalForm().getWrittenRep().value;
-                            sentenceArray[pronounObjectToken.get().getPosition()] = object_pronoun;
-                        }
-
-                        if (questionWordToken.isPresent()) {
-                            // Get determiner token
-                            if (questionWordNounToken.isPresent() && !lexicalEntryUtil.hasInvalidDeterminerToken(
-                                    lexicalEntryUtil
-                                            .getSelectVariable())) { // check if there is any noun with a condition
-                                // must be determiner token
-                                questionWord = getAnnotatedQuestionWordBySubjectType(
-                                        SubjectType.INTERROGATIVE_DETERMINER,
-                                        getLanguage(),
-                                        null
-                                );
-                                // Get noun for determiner token
-                                String determinerToken = getDeterminerTokenByNumber(
-                                        toBeVerb.getNumber(),
-                                        nounToken,
-                                        questionWord.getWrittenRepValue()
-                                );
-                                sentenceArray[questionWordToken.get().getPosition()] = determinerToken;
-                            } else if (isValidAdjectiveForm(rootToken.get())
-                                    && toBeVerb.getNumber().equals(getLexInfo().getPropertyValue("plural"))) {
-                                // skip plural copula for interrogative pronoun if adjective / participle
-                                continue;
-                            } else {
-                                sentenceArray[questionWordToken.get().getPosition()] = questionWord.getWrittenRepValue();
-                            }
-                        }
-                        String sentence = buildSentence(Arrays.asList(sentenceArray)).concat(QUESTION_MARK);
-                        if (!generatedSentences.contains(sentence)) {
-                            generatedSentences.add(sentence);
-                        }
-                    } else {
-                        LOG.error("Please add the tag 'root' to every possible sentence template for this class!");
-                    }
-                }
-            }
-        }
-        return generatedSentences;
-    }*/
-    
     protected List<String> interpretSentenceToken(
             List<SentenceToken> sentenceTokens,
             String bindingVar,
@@ -161,9 +69,10 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                 )).name(),
                 SentenceType.NP.toString()
         );
-        /*System.out.println("questionWord::"+questionWord);
-          System.out.println("nounToken::"+nounToken);
-          System.out.println("object::"+object);*/
+        
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        System.out.println("!!!!!!!!!!!!!!!!nounToken::"+nounToken);
 
 
         // We already know, which sentence tokens to expect, so we search for them to find out where to put our expected AnnotatedWords and Strings
@@ -194,10 +103,10 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                             np = generateNPOrAP(sentenceTokens, object, lexicalEntryUtil).get(annotatedNoun.getNumber());
                             sentenceArray[rootToken.get().getPosition()] = np;
                         } catch (Exception ex) {
-                            System.err.println("failed to generate Noun Phrase"+ ex.getMessage());
+                            System.err.println("failed to generate Noun Phrase" + ex.getMessage());
                             java.util.logging.Logger.getLogger(SentenceBuilderCopulativePP.class.getName()).log(Level.SEVERE, null, ex);
                         }
-                        
+
                         copulaToken.ifPresent(sentenceToken -> sentenceArray[sentenceToken.getPosition()] = toBeVerb.getWrittenRepValue());
                         // Get interrogative determiner or pronoun for this sentence
                         if (pronounObjectToken.isPresent()) {
@@ -223,8 +132,8 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
 
                                 // Get noun for determiner token
                                 String determinerToken;
-
-                                if (getLanguage().equals(Language.DE)||getLanguage().equals(Language.IT)) {
+                                //||getLanguage().equals(Language.IT)
+                                if (getLanguage().equals(Language.DE)) {
                                     URI nounRef;
                                     if (nounToken.contains(" ")) {
                                         nounRef = URI.create(LexiconSearch.LEXICON_BASE_URI + nounToken.replace(' ', '_').toLowerCase() + "_weak");
@@ -372,7 +281,7 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
         String preposition = lexicalEntryUtil.getPreposition();
         String object = String.format("%s", bindingVar);
         String nounToken = lexicalEntryUtil.getReturnVariableConditionLabel(lexicalEntryUtil.getSelectVariable());
-        //System.out.println("lexicalEntryUtil::"+lexicalEntryUtil);
+        System.out.println("SentenceToken::"+sentenceTokens.toString());
        
 
         // We already know, which sentence tokens to expect, so we search for them to find out where to put our expected AnnotatedWords and Strings
@@ -381,7 +290,7 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
         Optional<SentenceToken> npPreposition = getNPPreposition(sentenceTokens);
         Optional<SentenceToken> npObject = getNPObject(sentenceTokens);
         Optional<SentenceToken> conditionLabel = getConditionNounToken(sentenceTokens);
-
+       
         String grammaticalCase = "nominativeCase";
         if (rootToken.isPresent()) {
             grammaticalCase = rootToken.get().getGrammaticalCase();
@@ -401,13 +310,22 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                     //System.out.println("lexicalEntryUtil.getLexicon()::" + lexicalEntryUtil.getLexicon());
                     //System.out.println("entry::" + entry);
                     //System.out.println("detRef::" + detRef);
-                    determiner = entry.getCanonicalForm().getWrittenRep().value;
+                    if (getLanguage().equals(Language.IT)) {
+                        /*GenderUtils GenderUtils = new GenderUtils(Language.IT, lexicalEntryUtil.getReferenceUri());
+                        determiner = GenderUtils.getArticle();*/
+                        determiner ="";
+                        //temporary solution is adding article in written form
+                    } else {
+                        determiner = entry.getCanonicalForm().getWrittenRep().value;
+                    }
+                   
                 }
                 catch(Exception ex){
                     throw new Exception("some value of lemon not found::"+ex.getMessage());
                 }
                
                 List<AnnotatedNounOrQuestionWord> determiners = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords(entry.getOtherForms());
+                                
                 for (AnnotatedNounOrQuestionWord det : determiners) {
                     if (annotatedNoun.getNumber().equals(det.getNumber())) {
                         if (det.getNumber().equals(lexicalEntryUtil.getLexInfo().getPropertyValue("singular"))
@@ -457,7 +375,7 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                             getLanguage()
                     );
                 }
-
+                determinerToken="";
                 sentenceArray[conditionLabel.get().getPosition()] = determinerToken;
             }
             if (rootToken.isPresent() && npPreposition.isPresent() && npObject.isPresent()) {
@@ -470,6 +388,8 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                 }
             }
         }
+                
+
         return generatedSentences;
     }
 

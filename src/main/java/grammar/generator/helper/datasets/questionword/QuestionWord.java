@@ -1,6 +1,6 @@
 package grammar.generator.helper.datasets.questionword;
 
-import grammar.generator.helper.SubjectType;
+import grammar.generator.sentence.SubjectType;
 import grammar.generator.helper.sentencetemplates.AnnotatedNounOrQuestionWord;
 import grammar.structure.component.Language;
 import lombok.Getter;

@@ -1,4 +1,5 @@
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import eu.monnetproject.lemon.LemonModel;
 import grammar.generator.BindingResolver;
 import grammar.generator.GrammarRuleGeneratorRoot;
@@ -25,10 +26,15 @@ import util.io.FileUtils;
 import util.io.TurtleCreation;
 import java.io.File;
 import java.io.IOException;
-import grammar.read.questions.SparqlQuery;
+import grammar.sparql.SparqlQuery;
 import grammar.sparql.SPARQLRequest;
+import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.logging.Level;
+import org.apache.commons.text.similarity.CosineDistance;
 import util.io.LinkedData;
+import static util.io.ResourceHelper.loadResource;
 
 @NoArgsConstructor
 public class QueGG {
@@ -40,8 +46,6 @@ public class QueGG {
     private static String entityLabelDir = "src/main/resources/entityLabels/";
     private static Boolean externalEntittyListflag = false;
     private static String outputFileName = "grammar_FULL_DATASET";
-    //private static String srcDir = "src/main/resources/";
-   // private static String endpoint = "https://dbpedia.org/sparql";
 
     public static void main(String[] args) throws Exception {
         JenaSystem.init();
@@ -63,19 +67,22 @@ public class QueGG {
             //setSparqlEndpoint(endpoint);
             Integer maxNumberOfEntities = Integer.parseInt(numberOfEntitiesString);
             String fileType = args[4];
-            String dataSetConfFile=args[5];
-            LinkedData linkedData=FileUtils.getLinkedDataConf(new File(dataSetConfFile));
+            String dataSetConfFile = args[5];
+            LinkedData linkedData = FileUtils.getLinkedDataConf(new File(dataSetConfFile));
             setDataSet(linkedData);
-            
+
             if (fileType.contains("ttl")) {
                 queGG.init(language, inputDir, outputDir);
             } else if (fileType.contains("csv")) {
-                queGG.generateTurtle(inputDir,linkedData);
-                queGG.init(language, inputDir, outputDir);
+                if (TurtleCreation.generateTurtle(inputDir, linkedData, language.toString().toLowerCase())) {
+                    queGG.init(language, inputDir, outputDir);
+                } else {
+                    throw new Exception("no turle file is found to process!!");
+                }
+
             } else {
                 throw new Exception("No file type is mentioned!!");
             }
-          
 
             List<File> fileList = FileUtils.getFiles(outputDir + "/", outputFileName + "_" + language, ".json");
             if (fileList.isEmpty()) {
@@ -83,9 +90,9 @@ public class QueGG {
             }
             questionAnswerFile = outputDir + File.separator + QUESTION_ANSWER_FILE + "_" + language + ".csv";
             questionSummaryFile = outputDir + File.separator + QUESTION_SUMMARY_FILE + "_" + language + ".csv";
-            ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile, maxNumberOfEntities, args[0],linkedData.getEndpoint());
+            ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile, maxNumberOfEntities, args[0], linkedData.getEndpoint());
             readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir, externalEntittyListflag);
-            
+
             LOG.warn("To get optimal combinations of sentences please add the following types to {}\n{}",
                     DomainOrRangeType.class.getName(), DomainOrRangeType.MISSING_TYPES.toString()
             );
@@ -100,42 +107,6 @@ public class QueGG {
             loadInputAndGenerate(language, inputDir, outputDir);
         } catch (InvocationTargetException | NoSuchMethodException | InstantiationException | IllegalAccessException e) {
             LOG.error("Could not create grammar: {}", e.getMessage());
-        }
-    }
-
-    public void generateTurtle(String inputDir,LinkedData linkedData) throws IOException {
-        String lemonEntry = null;
-        File f = new File(inputDir);
-        String[] pathnames = f.list();
-        for (String pathname : pathnames) {
-            String[] files = new File(inputDir + File.separatorChar + pathname).list();
-
-            for (String file : files) {
-                if (!file.contains(".csv")) {
-                    continue;
-                }
-                CsvFile csvFile = new CsvFile();
-                String directory = inputDir + "/" + pathname + "/";
-                List<String[]> rows = csvFile.getRows(new File(directory + file));
-                Integer index = 0;
-
-                for (String[] row : rows) {
-                    if (index == 0) {
-                        index = index + 1;
-                        continue;
-                    }
-                    TurtleCreation turtleCreation;
-                    try {
-                        turtleCreation = new TurtleCreation(row,linkedData);
-                        FileUtils.stringToFile(turtleCreation.getTutleString(), directory + turtleCreation.getTutleFileName());
-                    } catch (Exception ex) {
-                        java.util.logging.Logger.getLogger(QueGG.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-
-                }
-
-            }
-
         }
     }
 

@@ -5,7 +5,7 @@
  */
 package grammar.generator.helper.datasets.questionword;
 
-import grammar.generator.helper.SubjectType;
+import grammar.generator.sentence.SubjectType;
 import grammar.generator.helper.sentencetemplates.AnnotatedInterrogativeDeterminer;
 import grammar.generator.helper.sentencetemplates.AnnotatedInterrogativePronoun;
 import grammar.structure.component.Language;
@@ -33,13 +33,41 @@ public class QuestionWordFactoryIT {
         initBN(language);
     }
 
-   private void initBN(Language language) {
-    questionWordRepository.add(
-      new QuestionWord(
-        language,
-        SubjectType.THING_INTERROGATIVE_PRONOUN,
-        new AnnotatedInterrogativePronoun("Qual", "singular", "commonGender", language)
-      )
-    );
-  }
+    private void initBN(Language language) {
+        questionWordRepository.add(
+                new QuestionWord(
+                        language,
+                        SubjectType.PERSON_INTERROGATIVE_PRONOUN,
+                        new AnnotatedInterrogativePronoun("Chi", "singular", "commonGender", language)
+                )
+        );
+        questionWordRepository.add(
+                new QuestionWord(
+                        language,
+                        SubjectType.THING_INTERROGATIVE_PRONOUN,
+                        new AnnotatedInterrogativePronoun("Qual", "singular", "commonGender", language)
+                )
+        );
+        questionWordRepository.add(
+                new QuestionWord(
+                        language,
+                        SubjectType.INTERROGATIVE_DETERMINER,
+                        new AnnotatedInterrogativeDeterminer("Quale", "singular", "commonGender", language)
+                )
+        );
+        questionWordRepository.add(
+                new QuestionWord(
+                        language,
+                        SubjectType.INTERROGATIVE_TEMPORAL,
+                        new AnnotatedInterrogativeDeterminer("Quando", "singular", "commonGender", language)
+                )
+        );
+        questionWordRepository.add(
+                new QuestionWord(
+                        language,
+                        SubjectType.INTERROGATIVE_PLACE,
+                        new AnnotatedInterrogativeDeterminer("Dove", "singular", "commonGender", language)
+                )
+        );
+    }
 }

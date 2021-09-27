@@ -1,7 +1,7 @@
 package grammar.generator;
 
 import eu.monnetproject.lemon.model.Lexicon;
-import grammar.generator.helper.BindingConstants;
+import grammar.generator.sentence.BindingConstants;
 import grammar.sparql.SelectVariable;
 import grammar.structure.component.DomainOrRangeType;
 import grammar.structure.component.FrameType;

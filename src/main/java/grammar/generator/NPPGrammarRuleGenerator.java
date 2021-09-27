@@ -1,8 +1,8 @@
 package grammar.generator;
 
-import grammar.generator.helper.BindingConstants;
-import grammar.generator.helper.SentenceBuilder;
-import grammar.generator.helper.SentenceBuilderCopulativePP;
+import grammar.generator.sentence.BindingConstants;
+import grammar.generator.sentence.SentenceBuilder;
+import grammar.generator.sentence.SentenceBuilderCopulativePP;
 import grammar.structure.component.FrameType;
 import grammar.structure.component.GrammarEntry;
 import grammar.structure.component.Language;
@@ -32,7 +32,7 @@ public class NPPGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
       getSentenceTemplateParser()
     );
 
-    return sentenceBuilder.generateFullSentences(getBindingVariable(), lexicalEntryUtil);
+    return sentenceBuilder.generateFullSentencesForward(getBindingVariable(), lexicalEntryUtil);
   }
 
   @Override
@@ -51,7 +51,7 @@ public class NPPGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
       getSentenceTemplateRepository(),
       getSentenceTemplateParser()
     );
-    List<String> generatedSentences = sentenceBuilder.generateNP(getBindingVariable(),
+    List<String> generatedSentences = sentenceBuilder.generateFullSentencesBackward(getBindingVariable(),
                                                                  new String[]{"prepositionalAdjunct"},
                                                                  lexicalEntryUtil
     );

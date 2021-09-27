@@ -21,11 +21,11 @@
 
 
 :form_create a         lemon:Form ;
-  lemon:writtenRep     "create"@en ;
+  lemon:writtenRep     "creare"@en ;
   lexinfo:verbFormMood lexinfo:infinitive .
 
 :form_created a    lemon:Form ;
-  lemon:writtenRep "created"@en ;
+  lemon:writtenRep "creato"@en ;
   lexinfo:tense    lexinfo:past .
 
 :create_frame_transitive a lexinfo:TransitiveFrame ;
@@ -63,10 +63,10 @@
   lemon:sense          :created_sense2 .
 
 :form_created_canonical a lemon:Form ;
-  lemon:writtenRep        "created"@en .
+  lemon:writtenRep        "creato"@en .
 
 :form_created_by a     lemon:Form ;
-  lemon:writtenRep     "created"@en ;
+  lemon:writtenRep     "creato"@en ;
   lexinfo:verbFormMood lexinfo:participle .
 
 
