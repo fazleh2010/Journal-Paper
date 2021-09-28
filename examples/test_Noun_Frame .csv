@@ -1,0 +1,2 @@
+LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range
+areaCode_of,noun,il prefisso,i prefissi ,di,NounPPFrame,range,domain,1,dbo:areaCode,dbo:Place,xsd:string

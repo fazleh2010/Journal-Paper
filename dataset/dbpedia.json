@@ -237,5 +237,5 @@
     "yt" : "http://gdata.youtube.com/schemas/2007",
     "zem" : "http://s.zemanta.com/ns"
   },
-  "bindingLimit": 10
+  "bindingLimit": 10000
 }

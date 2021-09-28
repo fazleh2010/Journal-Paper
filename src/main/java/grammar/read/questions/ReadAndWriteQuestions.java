@@ -12,6 +12,7 @@ import com.github.andrewoma.dexx.collection.Pair;
 import com.opencsv.CSVWriter;
 import java.io.File;
 import java.io.FileWriter;
+import static java.lang.System.exit;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -55,14 +56,16 @@ public class ReadAndWriteQuestions {
     private Integer maxNumberOfEntities = 100;
     private String endpoint = null;
     private static final org.apache.logging.log4j.Logger LOG = LogManager.getLogger(ReadAndWriteQuestions.class);
+    private Boolean online=false; 
 
-    public ReadAndWriteQuestions(String questionAnswerFile, String questionSummaryFile, Integer maxNumberOfEntities, String language, String endpoint) {
+    public ReadAndWriteQuestions(String questionAnswerFile, String questionSummaryFile, Integer maxNumberOfEntities, String language, String endpoint, Boolean online) {
         this.initialExcluded();
         this.endpoint = endpoint;
         this.language = language;
         this.questionAnswerFile = questionAnswerFile;
         this.questionSummaryFile = questionSummaryFile;
         this.maxNumberOfEntities = maxNumberOfEntities;
+        this.online=online;
     }
 
     public void readQuestionAnswers(List<File> fileList, String entityDir, Boolean externalEntittyListflag) throws Exception {
@@ -97,14 +100,22 @@ public class ReadAndWriteQuestions {
                 String retunrStr = grammarEntryUnit.getBindingType();
                 String syntacticFrame = grammarEntryUnit.getFrameType();
                 List<UriLabel> bindingList = new ArrayList<UriLabel>();
+                
+                if(grammarEntryUnit.getBindingType().contains("LOCATION")&&grammarEntryUnit.getReturnType().contains("LOCATION"))
+                    continue;
 
                 if (externalEntittyListflag) {
-                    String entityFileName = entityDir + "ENTITY_LABEL_LIST" + "_" + retunrStr.toLowerCase() + ".txt";
+                    
+                    String entityFileName = entityDir + "ENTITY_LABEL_LIST" + "_" + retunrStr.toLowerCase()+ ".txt";
+                    //entityFileName="/home/elahi/AHack/italian/question-grammar-generator/src/main/resources/entityLabels/ENTITY_LABEL_LIST_Person.txt";
+                    //System.out.println("entityFileName::"+entityFileName);
                     File entityFile = new File(entityFileName);
                     bindingList = this.getExtendedBindingList(grammarEntryUnit.getBindingList(), entityFile);
+                    //System.out.println(bindingList.size());
                 } else {
                     bindingList = grammarEntryUnit.getBindingList();
                 }
+               
                 noIndex = this.replaceVariables(bindingList, sparql, returnVairable, grammarEntryUnit.getSentences(), syntacticFrame, noIndex, "");
                 noIndex = noIndex + 1;
                 //LOG.info("index:" + index + " Id:" + grammarEntryUnit.getId() + " total:" + total + " example:" + grammarEntryUnit.getSentences().iterator().next());
@@ -143,11 +154,12 @@ public class ReadAndWriteQuestions {
             }
             //System.out.println("index: " + index + " size:" + uriLabels.size() + " uriLabel:::" + uriLabel.getUri() + " labe::" + uriLabel.getLabel());
             String questionForShow = questions.iterator().next();
+            
             if (questionForShow.contains("Where is $x located?")) {
                 continue;
             }
 
-            String[] wikipediaAnswer = this.getAnswerFromWikipedia(uriLabel.getUri(), sparqlOrg, frameType, endpoint);
+            String[] wikipediaAnswer = this.getAnswerFromWikipedia(uriLabel.getUri(), sparqlOrg, frameType, endpoint,online);
             String sparql = wikipediaAnswer[0];
             String answerUri = wikipediaAnswer[1];
             String answer = wikipediaAnswer[2];
@@ -156,9 +168,9 @@ public class ReadAndWriteQuestions {
 
             System.out.println("index::" + index + " uriLabel::" + uriLabel.getLabel() + " questionForShow::" + questionForShow + " sparql::" + sparql + " answer::" + answer + " syntacticFrame:" + syntacticFrame);
             try {
-                if (answer.isEmpty() || answer.contains("no answer found")) {
+                /*if (answer.isEmpty() || answer.contains("no answer found")) {
                     continue;
-                } else {
+                } else*/ {
                     /*if (index >= this.maxNumberOfEntities) {
                         break;
                     }*/
@@ -183,6 +195,11 @@ public class ReadAndWriteQuestions {
                         if (uriLabel.getLabel().isEmpty()) {
                             continue;
                         }
+                        if(!online){
+                            answerUri="offline";
+                            answer="offline";
+                        }
+                            
 
                         String[] record = {id, questionT, sparql, answerUri, answer, syntacticFrame};
                         this.csvWriterQuestions.writeNext(record);
@@ -198,19 +215,19 @@ public class ReadAndWriteQuestions {
         return rowIndex;
     }
 
-    public String[] getAnswerFromWikipedia(String subjProp, String sparql, String returnType, String endpoint) {
+    public String[] getAnswerFromWikipedia(String subjProp, String sparql, String returnType, String endpoint,Boolean online) {
         String answerUri = null;
         String answerLabel = "no answer found";
         SparqlQuery sparqlQuery = null;
         String property = StringUtils.substringBetween(sparql, "<", ">");
-        sparqlQuery = new SparqlQuery(subjProp, property, SparqlQuery.FIND_ANY_ANSWER, returnType, language, endpoint);
+        sparqlQuery = new SparqlQuery(subjProp, property, SparqlQuery.FIND_ANY_ANSWER, returnType, language, endpoint,online);
         //System.out.println("original sparql:: "+sparql);
         //System.out.println("sparqlQuery:: "+sparqlQuery.getSparqlQuery());
         answerUri = sparqlQuery.getObject();
         if (answerUri != null) {
             if (answerUri.contains("http:")) {
                 //System.out.println(answer);
-                SparqlQuery sparqlQueryLabel = new SparqlQuery(answerUri, property, SparqlQuery.FIND_LABEL, null, language, endpoint);
+                SparqlQuery sparqlQueryLabel = new SparqlQuery(answerUri, property, SparqlQuery.FIND_LABEL, null, language, endpoint,online);
                 answerLabel = sparqlQueryLabel.getObject();
                 //System.out.println(answer);
 

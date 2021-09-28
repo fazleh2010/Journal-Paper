@@ -42,7 +42,7 @@ public class SparqlQuery {
     private String resultSparql = null;
     private List<Binding> bindingList=new ArrayList<Binding>();
 
-    public SparqlQuery(String entityUrl, String property, String type, String returnType,String language,String endpoint) {
+    public SparqlQuery(String entityUrl, String property, String type, String returnType,String language,String endpoint,Boolean online) {
        this.endpoint = endpoint;
 
         if (endpoint.contains("dbpedia.org")) {
@@ -57,8 +57,13 @@ public class SparqlQuery {
                 sparqlQuery = this.setLabelWikipedia(entityUrl,language);
             }
             //System.out.print("sparqlQuery::"+sparqlQuery);
-            this.resultSparql = executeSparqlQuery(sparqlQuery);
-            parseResult(resultSparql);
+            if (online) {
+                this.resultSparql = executeSparqlQuery(sparqlQuery);
+                parseResult(resultSparql);
+            }
+            else 
+                return;
+          
         } else if (endpoint.contains("wikidata.org")) {
             if (type.contains(FIND_ANY_ANSWER)) {
                 if (returnType.contains("objOfProp")) {

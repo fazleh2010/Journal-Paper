@@ -1,0 +1,9 @@
+LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range
+birthPlace_of,noun,il luogo di nascita,-,di,NounPPFrame,range,domain,1,dbo:birthPlace,dbo:Person,dbo:Place
+causeOfDeath_of,noun,la causa della morte,le cause della morte,di,NounPPFrame,range,domain,1,dbo:deathCause,dbo:Person,owl:Thing
+child_of_m,noun,il figlio,i figli,di,NounPPFrame,range,domain,1,dbo:child,dbo:Person,dbo:Person
+child_of_f,noun,la figlia,le figlie,di,NounPPFrame,range,domain,1,dbo:child,dbo:Person,dbo:Person
+deathDate-of,noun,la data della morte,-,di,NounPPFrame,range,domain,1,dbo:deathDate,dbo:Person,xsd:date
+father_of,noun,iil padre,-,di,NounPPFrame,range,domain,1,dbo:father,dbo:Person,dbo:Person
+influencer_of,noun,l'influenza,le influenze,di,NounPPFrame,range,domain,1,dbo:influenced,dbo:Person,dbo:Person
+restingPlace-of,noun,il luogo di sepoltura,-,di,NounPPFrame,range,domain,1,dbo:restingPlace,dbo:Person,xsd:string

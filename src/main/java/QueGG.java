@@ -44,8 +44,9 @@ public class QueGG {
     private static String QUESTION_ANSWER_FILE = "questions";
     private static String QUESTION_SUMMARY_FILE = "summary";
     private static String entityLabelDir = "src/main/resources/entityLabels/";
-    private static Boolean externalEntittyListflag = false;
+    private static Boolean externalEntittyListflag = true;
     private static String outputFileName = "grammar_FULL_DATASET";
+    private static Boolean online=false;
 
     public static void main(String[] args) throws Exception {
         JenaSystem.init();
@@ -83,6 +84,7 @@ public class QueGG {
             } else {
                 throw new Exception("No file type is mentioned!!");
             }
+            online=false;
 
             List<File> fileList = FileUtils.getFiles(outputDir + "/", outputFileName + "_" + language, ".json");
             if (fileList.isEmpty()) {
@@ -90,7 +92,7 @@ public class QueGG {
             }
             questionAnswerFile = outputDir + File.separator + QUESTION_ANSWER_FILE + "_" + language + ".csv";
             questionSummaryFile = outputDir + File.separator + QUESTION_SUMMARY_FILE + "_" + language + ".csv";
-            ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile, maxNumberOfEntities, args[0], linkedData.getEndpoint());
+            ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile, maxNumberOfEntities, args[0], linkedData.getEndpoint(),online);
             readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir, externalEntittyListflag);
 
             LOG.warn("To get optimal combinations of sentences please add the following types to {}\n{}",
