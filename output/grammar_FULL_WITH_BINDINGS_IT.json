@@ -1,0 +1,3155 @@
+{
+  "grammarEntries" : [ {
+    "id" : "1",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnoli ecclesiastico?", "Quale erano spagnoli ecclesiasticos?", "Quale sono spagnoli ecclesiasticos?", "Quale è la spagnoli ecclesiastico?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Cleric>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnoli agente?", "Quale erano spagnoli agentes?", "Quale sono spagnoli agentes?", "Quale è la spagnoli agente?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Agent>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "5",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnoli atleta?", "Quale erano spagnoli atletas?", "Quale sono spagnoli atletas?", "Quale è la spagnoli atleta?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Athlete>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "7",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnoli architetto?", "Quale erano spagnoli architettos?", "Quale sono spagnoli architettos?", "Quale è la spagnoli architetto?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Architect>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "9",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnoli artista?", "Quale erano spagnoli artistas?", "Quale sono spagnoli artistas?", "Quale è la spagnoli artista?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Artist>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "11",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnoli persona?", "Quale erano spagnoli personas?", "Quale sono spagnoli personas?", "Quale è la spagnoli persona?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "13",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "THING",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnoli delinquente?", "Quale erano spagnoli delinquentes?", "Quale sono spagnoli delinquentes?", "Quale è la spagnoli delinquente?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Criminal>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "15",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnoli giocatore di scacchi?", "Quale erano spagnoli giocatore di scacchis?", "Quale sono spagnoli giocatore di scacchis?", "Quale è la spagnoli giocatore di scacchi?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/ChessPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "17",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnoli nuotatore?", "Quale erano spagnoli nuotatores?", "Quale sono spagnoli nuotatores?", "Quale è la spagnoli nuotatore?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Swimmer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "19",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnoli vescovo cristiano?", "Quale erano spagnoli vescovo cristianos?", "Quale sono spagnoli vescovo cristianos?", "Quale è la spagnoli vescovo cristiano?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/ChristianBishop>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "21",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "THING",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnoli cardinale?", "Quale erano spagnoli cardinales?", "Quale sono spagnoli cardinales?", "Quale è la spagnoli cardinale?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Cardinal>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "23",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnoli militare?", "Quale erano spagnoli militares?", "Quale sono spagnoli militares?", "Quale è la spagnoli militare?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/MilitaryPerson>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "25",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnoli giocatore di pallacanestro?", "Quale erano spagnoli giocatore di pallacanestros?", "Quale sono spagnoli giocatore di pallacanestros?", "Quale è la spagnoli giocatore di pallacanestro?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/BasketballPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "27",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnola ecclesiastico?", "Quale erano spagnola ecclesiasticos?", "Quale sono spagnola ecclesiasticos?", "Quale è la spagnola ecclesiastico?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Cleric>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "29",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnola agente?", "Quale erano spagnola agentes?", "Quale sono spagnola agentes?", "Quale è la spagnola agente?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Agent>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "31",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnola atleta?", "Quale erano spagnola atletas?", "Quale sono spagnola atletas?", "Quale è la spagnola atleta?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Athlete>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "33",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnola architetto?", "Quale erano spagnola architettos?", "Quale sono spagnola architettos?", "Quale è la spagnola architetto?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Architect>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "35",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnola artista?", "Quale erano spagnola artistas?", "Quale sono spagnola artistas?", "Quale è la spagnola artista?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Artist>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "37",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnola persona?", "Quale erano spagnola personas?", "Quale sono spagnola personas?", "Quale è la spagnola persona?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "39",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "THING",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnola delinquente?", "Quale erano spagnola delinquentes?", "Quale sono spagnola delinquentes?", "Quale è la spagnola delinquente?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Criminal>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "41",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnola giocatore di scacchi?", "Quale erano spagnola giocatore di scacchis?", "Quale sono spagnola giocatore di scacchis?", "Quale è la spagnola giocatore di scacchi?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/ChessPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "43",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnola nuotatore?", "Quale erano spagnola nuotatores?", "Quale sono spagnola nuotatores?", "Quale è la spagnola nuotatore?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Swimmer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "45",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnola vescovo cristiano?", "Quale erano spagnola vescovo cristianos?", "Quale sono spagnola vescovo cristianos?", "Quale è la spagnola vescovo cristiano?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/ChristianBishop>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "47",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "THING",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnola cardinale?", "Quale erano spagnola cardinales?", "Quale sono spagnola cardinales?", "Quale è la spagnola cardinale?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Cardinal>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "49",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnola militare?", "Quale erano spagnola militares?", "Quale sono spagnola militares?", "Quale è la spagnola militare?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/MilitaryPerson>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "51",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la spagnola giocatore di pallacanestro?", "Quale erano spagnola giocatore di pallacanestros?", "Quale sono spagnola giocatore di pallacanestros?", "Quale è la spagnola giocatore di pallacanestro?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Spain>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/BasketballPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "53",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedesi agente?", "Quale erano svedesi agentes?", "Quale sono svedesi agentes?", "Quale è la svedesi agente?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Agent>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "55",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedesi atleta?", "Quale erano svedesi atletas?", "Quale sono svedesi atletas?", "Quale è la svedesi atleta?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Athlete>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "57",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedesi architetto?", "Quale erano svedesi architettos?", "Quale sono svedesi architettos?", "Quale è la svedesi architetto?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Architect>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "59",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedesi artista?", "Quale erano svedesi artistas?", "Quale sono svedesi artistas?", "Quale è la svedesi artista?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Artist>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "61",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedesi persona?", "Quale erano svedesi personas?", "Quale sono svedesi personas?", "Quale è la svedesi persona?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "63",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedesi pattinatore?", "Quale erano svedesi pattinatores?", "Quale sono svedesi pattinatores?", "Quale è la svedesi pattinatore?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Skater>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "65",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "THING",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedesi delinquente?", "Quale erano svedesi delinquentes?", "Quale sono svedesi delinquentes?", "Quale è la svedesi delinquente?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Criminal>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "67",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedesi giocatore di scacchi?", "Quale erano svedesi giocatore di scacchis?", "Quale sono svedesi giocatore di scacchis?", "Quale è la svedesi giocatore di scacchi?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/ChessPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "69",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedesi nuotatore?", "Quale erano svedesi nuotatores?", "Quale sono svedesi nuotatores?", "Quale è la svedesi nuotatore?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Swimmer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "71",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedesi vescovo cristiano?", "Quale erano svedesi vescovo cristianos?", "Quale sono svedesi vescovo cristianos?", "Quale è la svedesi vescovo cristiano?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/ChristianBishop>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "73",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedesi reginetta di bellezza?", "Quale erano svedesi reginetta di bellezzas?", "Quale sono svedesi reginetta di bellezzas?", "Quale è la svedesi reginetta di bellezza?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/BeautyQueen>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "75",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedesi calciatore?", "Quale erano svedesi calciatores?", "Quale sono svedesi calciatores?", "Quale è la svedesi calciatore?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/SoccerPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "77",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedesi ecclesiastico?", "Quale erano svedesi ecclesiasticos?", "Quale sono svedesi ecclesiasticos?", "Quale è la svedesi ecclesiastico?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Cleric>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "79",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "BAND",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedesi gruppo musicale?", "Quale erano svedesi gruppo musicales?", "Quale sono svedesi gruppo musicales?", "Quale è la svedesi gruppo musicale?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Band>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "81",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedesi sciatore?", "Quale erano svedesi sciatores?", "Quale sono svedesi sciatores?", "Quale è la svedesi sciatore?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Skier>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "83",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "BUILDING",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedesi edificio?", "Quale erano svedesi edificios?", "Quale sono svedesi edificios?", "Quale è la svedesi edificio?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Building>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "85",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedesi attore?", "Quale erano svedesi attores?", "Quale sono svedesi attores?", "Quale è la svedesi attore?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Actor>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "87",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedesi giocatore di pallacanestro?", "Quale erano svedesi giocatore di pallacanestros?", "Quale sono svedesi giocatore di pallacanestros?", "Quale è la svedesi giocatore di pallacanestro?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/BasketballPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "89",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedesi pugile?", "Quale erano svedesi pugiles?", "Quale sono svedesi pugiles?", "Quale è la svedesi pugile?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Boxer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "91",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedese agente?", "Quale erano svedese agentes?", "Quale sono svedese agentes?", "Quale è la svedese agente?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Agent>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "93",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedese atleta?", "Quale erano svedese atletas?", "Quale sono svedese atletas?", "Quale è la svedese atleta?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Athlete>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "95",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedese architetto?", "Quale erano svedese architettos?", "Quale sono svedese architettos?", "Quale è la svedese architetto?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Architect>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "97",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedese artista?", "Quale erano svedese artistas?", "Quale sono svedese artistas?", "Quale è la svedese artista?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Artist>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "99",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedese persona?", "Quale erano svedese personas?", "Quale sono svedese personas?", "Quale è la svedese persona?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "101",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedese pattinatore?", "Quale erano svedese pattinatores?", "Quale sono svedese pattinatores?", "Quale è la svedese pattinatore?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Skater>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "103",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "THING",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedese delinquente?", "Quale erano svedese delinquentes?", "Quale sono svedese delinquentes?", "Quale è la svedese delinquente?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Criminal>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "105",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedese giocatore di scacchi?", "Quale erano svedese giocatore di scacchis?", "Quale sono svedese giocatore di scacchis?", "Quale è la svedese giocatore di scacchi?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/ChessPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "107",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedese nuotatore?", "Quale erano svedese nuotatores?", "Quale sono svedese nuotatores?", "Quale è la svedese nuotatore?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Swimmer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "109",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedese vescovo cristiano?", "Quale erano svedese vescovo cristianos?", "Quale sono svedese vescovo cristianos?", "Quale è la svedese vescovo cristiano?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/ChristianBishop>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "111",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedese reginetta di bellezza?", "Quale erano svedese reginetta di bellezzas?", "Quale sono svedese reginetta di bellezzas?", "Quale è la svedese reginetta di bellezza?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/BeautyQueen>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "113",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedese calciatore?", "Quale erano svedese calciatores?", "Quale sono svedese calciatores?", "Quale è la svedese calciatore?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/SoccerPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "115",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedese ecclesiastico?", "Quale erano svedese ecclesiasticos?", "Quale sono svedese ecclesiasticos?", "Quale è la svedese ecclesiastico?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Cleric>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "117",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "BAND",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedese gruppo musicale?", "Quale erano svedese gruppo musicales?", "Quale sono svedese gruppo musicales?", "Quale è la svedese gruppo musicale?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Band>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "119",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedese sciatore?", "Quale erano svedese sciatores?", "Quale sono svedese sciatores?", "Quale è la svedese sciatore?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Skier>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "121",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "BUILDING",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedese edificio?", "Quale erano svedese edificios?", "Quale sono svedese edificios?", "Quale è la svedese edificio?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Building>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "123",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedese attore?", "Quale erano svedese attores?", "Quale sono svedese attores?", "Quale è la svedese attore?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Actor>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "125",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedese giocatore di pallacanestro?", "Quale erano svedese giocatore di pallacanestros?", "Quale sono svedese giocatore di pallacanestros?", "Quale è la svedese giocatore di pallacanestro?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/BasketballPlayer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "127",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "AA",
+    "sentences" : [ "Quale era la svedese pugile?", "Quale erano svedese pugiles?", "Quale sono svedese pugiles?", "Quale è la svedese pugile?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?isA <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Sweden>)\n  (triple ?isA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Boxer>)\n)\n",
+    "sentenceToSparqlParameterMapping" : null,
+    "returnVariable" : "isA",
+    "sentenceBindings" : {
+      "bindingVariableName" : "NONE",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Bamna located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bamna_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bamna_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bamna_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Banaripara located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Banaripara_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Banaripara_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Banaripara_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Bancharampur located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bancharampur_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bancharampur_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bancharampur_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Bandar (Dacca) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bandar_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bandar_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bandar_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Distretto di Bandarban located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bandarban_District> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bandarban_District> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bandarban_District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Bandarban Sadar located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bandarban_Sadar_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bandarban_Sadar_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bandarban_Sadar_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Baniachong located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Baniachong_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Baniachong_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Baniachong_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Banshkhali located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Banshkhali_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Banshkhali_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Banshkhali_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Baraigram located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Baraigram_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Baraigram_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Baraigram_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Barguna located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Barguna> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Barguna> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Barguna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Distretto di Barguna located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Barguna_District> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Barguna_District> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Barguna_District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Barguna Sadar located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Barguna_Sadar_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Barguna_Sadar_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Barguna_Sadar_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Barhatta located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Barhatta_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Barhatta_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Barhatta_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Barisal located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Barisal> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Barisal> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Barisal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Distretto di Barisal located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Barisal_District> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Barisal_District> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Barisal_District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Divisione di Barisal located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Barisal_Division> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Barisal_Division> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Barisal_Division> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Barisal Sadar located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Barisal_Sadar_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Barisal_Sadar_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Barisal_Sadar_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Barkal located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Barkal_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Barkal_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Barkal_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Barlekha located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Barlekha_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Barlekha_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Barlekha_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Barura located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Barura_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Barura_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Barura_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Basail (Bangladesh) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Basail_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Basail_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Basail_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Batiaghata located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Batiaghata_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Batiaghata_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Batiaghata_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Bauphal located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bauphal_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bauphal_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bauphal_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Golfo del Bengala located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bay_of_Bengal> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bay_of_Bengal> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bay_of_Bengal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Baia della Pomerania located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Bay_of_Pomerania_(nature_reserve)> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Bay_of_Pomerania_(nature_reserve)> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Bay_of_Pomerania_(nature_reserve)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Belaichhari located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Belaichhari_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Belaichhari_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Belaichhari_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Belkuchi located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Belkuchi_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Belkuchi_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Belkuchi_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Burichang located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Burichang_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Burichang_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Burichang_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Agailjhara located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Agailjhara_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Agailjhara_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Agailjhara_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Ajmiriganj located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Ajmiriganj_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Ajmiriganj_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Ajmiriganj_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Akhaura located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Akhaura_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Akhaura_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Akhaura_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Akkelpur located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Akkelpur_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Akkelpur_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Akkelpur_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Alamdanga located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Alamdanga_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Alamdanga_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Alamdanga_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Alfadanga located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Alfadanga_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Alfadanga_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Alfadanga_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Harinakunda located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Harinakunda_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Harinakunda_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Harinakunda_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Haripur (Bangladesh) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Haripur_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Haripur_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Haripur_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Harirampur located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Harirampur_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Harirampur_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Harirampur_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Hathazari located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Hathazari_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Hathazari_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Hathazari_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Hatibandha (Bangladesh) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Hatibandha_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Hatibandha_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Hatibandha_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Madan (Bangladesh) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Madan_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Madan_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Madan_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Madarganj located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Madarganj_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Madarganj_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Madarganj_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Distretto di Madaripur located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Madaripur_District> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Madaripur_District> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Madaripur_District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Madaripur Sadar located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Madaripur_Sadar_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Madaripur_Sadar_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Madaripur_Sadar_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Madhukhali located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Madhukhali_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Madhukhali_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Madhukhali_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Madhupur (Bangladesh) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Madhupur_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Madhupur_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Madhupur_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Distretto di Magura located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Magura_District> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Magura_District> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Magura_District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Magura Sadar located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Magura_Sadar_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Magura_Sadar_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Magura_Sadar_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Mahalchhari located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mahalchhari_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mahalchhari_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mahalchhari_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Maheshpur located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Maheshpur_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Maheshpur_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Maheshpur_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Mohadevpur located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mohadevpur_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mohadevpur_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mohadevpur_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Mohammadpur located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mohammadpur_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mohammadpur_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mohammadpur_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Mohanganj located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mohanganj_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mohanganj_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mohanganj_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Mohanpur (Bangladesh) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mohanpur_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mohanpur_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mohanpur_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Maheshkhali located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Moheshkhali_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Moheshkhali_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Moheshkhali_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Mollahat located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mollahat_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mollahat_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mollahat_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Mongla located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Mongla_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Mongla_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Mongla_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Monohardi located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Monohardi_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Monohardi_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Monohardi_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Morrelganj located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Morrelganj_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Morrelganj_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Morrelganj_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Distretto di Maulvibazar located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Moulvibazar_District> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Moulvibazar_District> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Moulvibazar_District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Muksudpur located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Muksudpur_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Muksudpur_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Muksudpur_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Muktagachha located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Muktagacha_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Muktagacha_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Muktagacha_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Muladi (Bangladesh) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Muladi_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Muladi_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Muladi_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Distretto di Munshiganj located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Munshiganj_District> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Munshiganj_District> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Munshiganj_District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Munshiganj Sadar located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Munshiganj_Sadar_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Munshiganj_Sadar_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Munshiganj_Sadar_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Sapahar located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Sapahar_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Sapahar_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Sapahar_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Sarail located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Sarail_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Sarail_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Sarail_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Sarankhola located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Sarankhola_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Sarankhola_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Sarankhola_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Sariakandi located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Sariakandi_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Sariakandi_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Sariakandi_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Sarishabari located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Sarishabari_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Sarishabari_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Sarishabari_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Satkania located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Satkania_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Satkania_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Satkania_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Distretto di Satkhira located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Satkhira_District> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Satkhira_District> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Satkhira_District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Satkhira Sadar located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Satkhira_Sadar_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Satkhira_Sadar_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Satkhira_Sadar_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Saturia located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Saturia_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Saturia_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Saturia_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Senbagh located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Senbagh_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Senbagh_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Senbagh_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Shahjadpur located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Shahjadpur_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Shahjadpur_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Shahjadpur_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Shailkupa located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Shailkupa_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Shailkupa_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Shailkupa_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Shajahanpur located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Shajahanpur_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Shajahanpur_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Shajahanpur_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Shalikha located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Shalikha_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Shalikha_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Shalikha_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Terokhada located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Terokhada_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Terokhada_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Terokhada_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Tetulia located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Tetulia_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Tetulia_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Tetulia_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Distretto di Thakurgaon located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Thakurgaon_District> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Thakurgaon_District> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Thakurgaon_District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Thakurgaon Sadar located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Thakurgaon_Sadar_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Thakurgaon_Sadar_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Thakurgaon_Sadar_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Thanchi located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Thanchi_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Thanchi_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Thanchi_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Fakirhat located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Fakirhat_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Fakirhat_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Fakirhat_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Distretto di Faridpur located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Faridpur_District> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Faridpur_District> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Faridpur_District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Fatikchhari located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Fatikchhari_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Fatikchhari_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Fatikchhari_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Fenchuganj located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Fenchuganj_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Fenchuganj_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Fenchuganj_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Feni (Bangladesh) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Feni,_Bangladesh> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Feni,_Bangladesh> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Feni,_Bangladesh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Distretto di Feni located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Feni_District> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Feni_District> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Feni_District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Abhaynagar located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Abhaynagar_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Abhaynagar_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Abhaynagar_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Adamdighi located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Adamdighi_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Adamdighi_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Adamdighi_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Aditmari located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Aditmari_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Aditmari_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Aditmari_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Distretto di Chuadanga located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Chuadanga_District> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Chuadanga_District> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Chuadanga_District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Chuadanga Sadar located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Chuadanga_Sadar_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Chuadanga_Sadar_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Chuadanga_Sadar_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Chunarughat located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Chunarughat_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Chunarughat_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Chunarughat_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Comilla located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Comilla> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Comilla> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Comilla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Comilla Sadar located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Comilla_Adarsha_Sadar_Upazila> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Comilla_Adarsha_Sadar_Upazila> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Comilla_Adarsha_Sadar_Upazila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Distretto di Comilla located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Comilla_District> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Comilla_District> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Comilla_District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Companiganj (Noakhali) located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Companiganj_Upazila,_Noakhali> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Companiganj_Upazila,_Noakhali> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Companiganj_Upazila,_Noakhali> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  }, {
+    "id" : "129",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is Distretto di Cox's Bazar located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple <http://dbpedia.org/resource/Cox's_Bazar_District> <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple <http://dbpedia.org/resource/Cox's_Bazar_District> <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple <http://dbpedia.org/resource/Cox's_Bazar_District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : null
+    },
+    "combination" : false
+  } ]
+}

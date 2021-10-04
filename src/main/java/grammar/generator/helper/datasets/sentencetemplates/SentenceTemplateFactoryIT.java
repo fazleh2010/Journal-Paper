@@ -243,9 +243,9 @@ public class SentenceTemplateFactoryIT implements Factory<SentenceTemplateReposi
       createSentenceTemplate(
         language,
         List.of(
-          "subject(INTERROGATIVE_PRONOUN) verb(past) directObject(X)?",
+          //"subject(INTERROGATIVE_PRONOUN) verb(past) directObject(X)?",
           "subject(INTERROGATIVE_PRONOUN) verb(past) determiner directObject(X)?",
-          "subject(INTERROGATIVE_DETERMINER) verb(past) directObject(X)?",
+          //"subject(INTERROGATIVE_DETERMINER) verb(past) directObject(X)?",
           "subject(INTERROGATIVE_DETERMINER) verb(past) determiner directObject(X)"
         ),
         "TransitiveFrame",

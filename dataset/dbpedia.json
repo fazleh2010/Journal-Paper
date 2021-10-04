@@ -180,6 +180,7 @@
     "rdfa" : "http://www.w3.org/ns/rdfa#",
     "rdfdf" : "http://www.openlinksw.com/virtrdf-data-formats#",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "res" : "http://dbpedia.org/resource/",
     "rev" : "http://purl.org/stuff/rev#",
     "rss" : "http://purl.org/rss/1.0/",
     "sc" : "http://purl.org/science/owl/sciencecommons/",

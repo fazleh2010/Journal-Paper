@@ -8,6 +8,7 @@ import grammar.generator.helper.datasets.sentencetemplates.TemplateConstants;
 import grammar.generator.helper.parser.SentenceTemplateParser;
 import grammar.generator.helper.parser.SentenceToken;
 import grammar.generator.helper.sentencetemplates.AnnotatedVerb;
+import grammar.sparql.SelectVariable;
 import grammar.structure.component.DomainOrRangeType;
 import grammar.structure.component.FrameType;
 import grammar.structure.component.Language;
@@ -48,7 +49,7 @@ public class SentenceBuilderTransitiveVPEN extends SentenceBuilderImpl implement
             String bindingVariable,
             LexicalEntryUtil lexicalEntryUtil,
             Map<String, String> determinerTokens
-    ) {
+    ) throws QueGGMissingFactoryClassException {
         super(language, frameType, sentenceTemplateRepository, sentenceTemplateParser);
         this.lexicalEntryUtil = lexicalEntryUtil;
         this.bindingVariable = bindingVariable;
@@ -107,7 +108,7 @@ public class SentenceBuilderTransitiveVPEN extends SentenceBuilderImpl implement
         return new String[]{string};
     }
 
-    private String getWord(String[] tokens) throws QueGGMissingFactoryClassException {
+    private String getWord(String[] tokens,String range) throws QueGGMissingFactoryClassException {
         String atrribute = null, reference = null;
         String word = " X ";
 
@@ -122,7 +123,9 @@ public class SentenceBuilderTransitiveVPEN extends SentenceBuilderImpl implement
             }
 
         } else if (tokens[0].contains(DETERMINER)) {
-            word = this.getGender(tokens[0], "Person");
+            GenderUtils genderUtils = new GenderUtils(range);
+            word = genderUtils.getArticle();
+            System.out.println(DETERMINER+"   "+word);
 
         } else {
             word = this.getReplaceToken(tokens[1]);
@@ -136,10 +139,10 @@ public class SentenceBuilderTransitiveVPEN extends SentenceBuilderImpl implement
         return word;
     }
 
-    private String prepareSentence(List<String> positionTokens) throws QueGGMissingFactoryClassException {
+    private String prepareSentence(List<String> positionTokens,String range) throws QueGGMissingFactoryClassException {
         String str = "";
         for (String positionString : positionTokens) {
-            String positionWord = this.getWord(parseToken(positionString)) + " ";
+            String positionWord = this.getWord(parseToken(positionString),range) + " ";
             str += positionWord;
         }
         return str.stripTrailing();
@@ -209,12 +212,7 @@ public class SentenceBuilderTransitiveVPEN extends SentenceBuilderImpl implement
 
     }
 
-    private String getGender(String token, String noun) {
-        GenderUtils genderUtils=new GenderUtils(noun,this.getLanguage());
-        return genderUtils.getArticle();
-        
-    }
-
+  
     private boolean isPerson(String token) {
         return true;
     }
@@ -223,15 +221,19 @@ public class SentenceBuilderTransitiveVPEN extends SentenceBuilderImpl implement
         return sentences;
     }
 
-    private void getSentencesFromTemplates(List<String> sentenceTemplates) {
-        Integer index = 0;
+    private void getSentencesFromTemplates(List<String> sentenceTemplates) throws QueGGMissingFactoryClassException {
+        Integer index = 0;           
+        //String range=this.getRange();
+        String domain=this.getDomain();
+        //System.out.println("domain::::"+domain);
+         System.out.println("domain::::"+domain);
 
         for (String sentenceTemplate : sentenceTemplates) {
             try {
                 System.out.println(sentenceTemplate + " " + index);
                 index = index + 1;
                 List<String> positionTokens = this.parseTemplate(sentenceTemplate);
-                String sentence = this.prepareSentence(positionTokens);
+                String sentence = this.prepareSentence(positionTokens,domain);
                 System.out.println(sentence);
                 sentences.add(sentence);
                 //getSentences(tokens);
@@ -244,4 +246,13 @@ public class SentenceBuilderTransitiveVPEN extends SentenceBuilderImpl implement
         }
     }
 
+    private String getRange() {
+        SelectVariable selectVarForward = lexicalEntryUtil.getSelectVariable();
+        return lexicalEntryUtil.getConditionUriBySelectVariable(selectVarForward).toString();
+    }
+     private String getDomain() {
+         SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
+        return lexicalEntryUtil.getConditionUriBySelectVariable(oppositeSelectVariable).toString();
+    }
+    
 }

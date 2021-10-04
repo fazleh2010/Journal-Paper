@@ -1,0 +1,17 @@
+LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range
+areaCode_of,noun,il prefisso,i prefissi ,di,NounPPFrame,range,domain,1,dbo:areaCode,dbo:Country,xsd:string
+author_of_m,noun,l'autore,gli autori,di,NounPPFrame,range,domain,1,dbo:author,dbo:Book,dbo:Person
+author_of_f,noun,l'autrice,le autrice,di,NounPPFrame,range,domain,1,dbo:author,dbo:Book,dbo:Person
+currency_of,noun,la valuta,le valute,di,NounPPFrame,range,domain,1,dbo:currency,dbo:Country,dbo:Currency
+editor_of,noun,l'editor,gli editor,di,NounPPFrame,range,domain,1,dbo:editor,dbo:Book,dbo:Person
+foundationPlace_of,noun,il luogo di fondazione,-,di,NounPPFrame,range,domain,1,dbo:foundationPlace,dbo:Organisation,dbo:City
+founder_of_m,noun,il fondatore,i fondatori,di,NounPPFrame,range,domain,1,dbo:parentCompany,dbo:Company,dbo:Company
+founder_of_f,noun,la fondatrice,le fondatrici,di,NounPPFrame,range,domain,1,dbo:parentCompany,dbo:Company,dbo:Company
+foundingYear_of,noun,l'anno di fondazione,-,di,NounPPFrame,range,domain,1,dbo:foundingYear,dbo:Company,xsd:date
+formOfGovernment-of,noun,la forma di governo,-,di,NounPPFrame,range,domain,1,dbo:governmentType,dbo:Country,dbo:GovernmentType
+headquarter_of,noun,il quartier generale,-,di,NounPPFrame,range,domain,1,dbo:headquarter,dbo:Organisation,dbo:PopulatedPlace
+largestCity_of,noun,la città più grande,-,di,NounPPFrame,range,domain,1,dbo:largestCity,dbo:Country,dbo:City
+leader-of,noun,il capo del governo,-,di,NounPPFrame,range,domain,1,dbo:leader,dbo:Country,dbo:Person
+musicComposer-of,noun,il compositore,i compositori,di,NounPPFrame,range,domain,1,dbo:musicComposer,dbo:Film,dbo:Person
+timeZone-of,noun,il fuso orario,i fusi orari,di,NounPPFrame,range,domain,1,dbo:timezone,dbo:City,xsd:string
+mayor_of,noun,il sindaco,-,di,NounPPFrame,range,domain,1,dbo:mayor,dbo:City,dbo:Person

@@ -78,9 +78,8 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
         generatedSentences.addAll(sentenceBuilder.getSentences());
         
         System.out.println(generatedSentences);
-
+        //exit(1);
         generatedSentences.sort(String::compareToIgnoreCase);
-        exit(1);
         return generatedSentences;
     }
 }

@@ -1,0 +1,5 @@
+LemonEntry,partOfSpeech,writtenForm,SyntacticFrame,copulativeSubject,attributiveArg,sense,reference,owl:onProperty,owl:hasValue,domain,range
+Spanish_f,adjective,spagnola,AdjectiveAttributiveFrame,PredSynArg,AttrSynArg,1,owl:Restriction,dbo:nationality,res:Spain,dbo:Person,dbo:Artist
+Spanish_p,adjective,spagnoli,AdjectiveAttributiveFrame,PredSynArg,AttrSynArg,1,owl:Restriction,dbo:nationality,res:Spain,dbo:Person,dbo:Artist
+Swedish_m_f,adjective,svedese,AdjectiveAttributiveFrame,PredSynArg,AttrSynArg,1,owl:Restriction,dbo:birthPlace,res:Sweden,dbo:Person,dbo:Artist
+Swedish_p,adjective,svedesi,AdjectiveAttributiveFrame,PredSynArg,AttrSynArg,1,owl:Restriction,dbo:birthPlace,res:Sweden,dbo:Person,dbo:Artist

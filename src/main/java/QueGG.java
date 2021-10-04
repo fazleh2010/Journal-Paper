@@ -44,9 +44,9 @@ public class QueGG {
     private static String QUESTION_ANSWER_FILE = "questions";
     private static String QUESTION_SUMMARY_FILE = "summary";
     private static String entityLabelDir = "src/main/resources/entityLabels/";
-    private static Boolean externalEntittyListflag = true;
+    private static Boolean externalEntittyListflag = false;
     private static String outputFileName = "grammar_FULL_DATASET";
-    private static Boolean online=false;
+    private static Boolean online=true;
 
     public static void main(String[] args) throws Exception {
         JenaSystem.init();
@@ -84,8 +84,7 @@ public class QueGG {
             } else {
                 throw new Exception("No file type is mentioned!!");
             }
-            online=false;
-
+          
             List<File> fileList = FileUtils.getFiles(outputDir + "/", outputFileName + "_" + language, ".json");
             if (fileList.isEmpty()) {
                 throw new Exception("No files to process for question answering system!!");

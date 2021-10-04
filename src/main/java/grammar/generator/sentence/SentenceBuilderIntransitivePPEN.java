@@ -105,6 +105,8 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder, Templat
         SubjectType subjectType = this.lexicalEntryUtil.getSubjectType(this.lexicalEntryUtil.getSelectVariable());
         String qWord = this.lexicalEntryUtil.getSubjectBySubjectType(subjectType, language, null);
         List<AnnotatedVerb> annotatedVerbs = lexicalEntryUtil.parseLexicalEntryToAnnotatedVerbs();
+       
+        
         Map<String, String> verbTokens = this.getVerbTokens(annotatedVerbs, lexicalEntryUtil,lexicalEntryUtil.getSelectVariable());
         Map<String, String> auxilaries = this.getAuxilariesVerb(numberList, "component_aux_object_past", lexInfo);
         String variable = String.format(
