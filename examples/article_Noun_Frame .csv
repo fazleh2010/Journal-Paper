@@ -1,0 +1,2 @@
+LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range
+birthPlace_of,noun,il luogo di nascita,-,di,NounPPFrame,range,domain,1,dbo:birthPlace,dbo:Person,dbo:Place

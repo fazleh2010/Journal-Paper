@@ -25,7 +25,7 @@ java -jar target/QuestionGrammarGenerator.jar IT lexicon/it output 10 csv datase
 
 ### Input example
 QueGG can take either csv or turtle file as input 
-- An example of csv input file (.csv)  (https://github.com/fazleh2010/question-grammar-generator/blob/extension/examples/input/nounppframe.csv) or
+- An example of csv input file (.csv)  () or
 - An example of turtle file (.ttl) (https://github.com/fazleh2010/question-grammar-generator/blob/extension/examples/input/lexicon-capital-of.ttl). The lexical entries are defined using the Lexicon Model for Ontologies [Lemon](https://lemon-model.net/) and the data category ontology [LexInfo](https://lexinfo.net/).
 
 
