@@ -3,8 +3,10 @@
 /target/
 /out/
 /bin/
-/output/
-/lexiconOld/
-/outputDB/
-/import/
-/logs/
+output/
+lexicon/
+lexiconOld/
+outputDB/
+example/
+import/
+logs/
