@@ -1,7 +1,9 @@
 package grammar.generator.helper.parser;
 
-import grammar.generator.helper.datasets.sentencetemplates.SentenceTemplateFactory;
-import grammar.generator.helper.datasets.sentencetemplates.SentenceTemplateRepository;
+import grammar.generator.SentenceTemplateParser;
+import grammar.generator.SentenceToken;
+import grammar.datasets.sentencetemplates.SentenceTemplateFactory;
+import grammar.datasets.sentencetemplates.SentenceTemplateRepository;
 import grammar.structure.component.Language;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

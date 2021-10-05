@@ -6,7 +6,7 @@
 package util.io;
 
 import java.util.List;
-import grammar.generator.helper.datasets.sentencetemplates.TemplateConstants;
+import grammar.datasets.sentencetemplates.TemplateConstants;
 
 /**
  *

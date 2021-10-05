@@ -1,6 +1,6 @@
 package grammar.generator.helper;
 
-import grammar.generator.sentence.SubjectType;
+import grammar.generator.SubjectType;
 import grammar.structure.component.DomainOrRangeType;
 import org.junit.jupiter.api.Test;
 

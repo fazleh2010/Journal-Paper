@@ -1,6 +1,5 @@
 package grammar.generator;
 
-import grammar.generator.sentence.BindingConstants;
 import grammar.structure.component.GrammarEntry;
 import grammar.structure.component.GrammarWrapper;
 import grammar.structure.component.SentenceType;

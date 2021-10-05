@@ -9,7 +9,7 @@ import grammar.generator.NPPGrammarRuleGenerator;
 import grammar.generator.TransitiveVPGrammarRuleGenerator;
 import net.lexinfo.LexInfo;
 import util.io.GoogleXslSheet;
-import grammar.generator.helper.datasets.sentencetemplates.TemplateConstants;
+import grammar.datasets.sentencetemplates.TemplateConstants;
 
 public enum FrameType {
   NPP(TemplateConstants.NOUN_PP_FRAME, new LexInfo().getSynArg("copulativeArg"), NPPGrammarRuleGenerator.class),

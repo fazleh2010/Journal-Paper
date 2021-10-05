@@ -1,6 +1,6 @@
 package grammar.generator;
 
-import grammar.generator.helper.sentencetemplates.AnnotatedVerb;
+import grammar.datasets.annotated.AnnotatedVerb;
 import grammar.structure.component.Language;
 import net.lexinfo.LexInfo;
 import org.junit.jupiter.api.Test;

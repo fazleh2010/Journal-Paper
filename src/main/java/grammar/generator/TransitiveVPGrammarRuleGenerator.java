@@ -1,10 +1,7 @@
 package grammar.generator;
 
 import eu.monnetproject.lemon.model.PropertyValue;
-import grammar.generator.sentence.BindingConstants;
-import grammar.generator.sentence.SentenceBuilderTransitiveVPEN;
-import grammar.generator.sentence.SubjectType;
-import grammar.generator.helper.sentencetemplates.AnnotatedVerb;
+import grammar.datasets.annotated.AnnotatedVerb;
 import grammar.structure.component.DomainOrRangeType;
 import grammar.structure.component.FrameType;
 import grammar.structure.component.Language;
@@ -18,7 +15,7 @@ import util.exceptions.QueGGMissingFactoryClassException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static grammar.generator.sentence.BindingConstants.BINDING_TOKEN_TEMPLATE;
+import static grammar.generator.BindingConstants.BINDING_TOKEN_TEMPLATE;
 import static java.lang.System.exit;
 import java.util.Map;
 import java.util.TreeMap;

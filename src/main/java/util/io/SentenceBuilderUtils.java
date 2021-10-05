@@ -7,9 +7,9 @@ package util.io;
 
 
 import eu.monnetproject.lemon.model.PropertyValue;
-import grammar.generator.helper.sentencetemplates.AnnotatedVerb;
-import static grammar.generator.sentence.BindingConstants.BINDING_TOKEN_TEMPLATE;
-import grammar.generator.sentence.SubjectType;
+import grammar.datasets.annotated.AnnotatedVerb;
+import static grammar.generator.BindingConstants.BINDING_TOKEN_TEMPLATE;
+import grammar.generator.SubjectType;
 import grammar.structure.component.DomainOrRangeType;
 import grammar.structure.component.Language;
 import grammar.structure.component.SentenceType;

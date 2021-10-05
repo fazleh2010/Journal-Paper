@@ -33,7 +33,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import static grammar.generator.BindingResolver.insertBindingInSPARQL;
-import static grammar.generator.sentence.BindingConstants.DEFAULT_BINDING_VARIABLE;
+import static grammar.generator.BindingConstants.DEFAULT_BINDING_VARIABLE;
 import java.io.FileNotFoundException;
 import static java.lang.System.exit;
 import java.net.MalformedURLException;

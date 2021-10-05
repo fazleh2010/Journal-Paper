@@ -1,9 +1,6 @@
 package grammar.generator;
 
-import grammar.generator.sentence.BindingConstants;
-import grammar.generator.sentence.SentenceBuilder;
-import grammar.generator.sentence.SentenceBuilderIntransitivePPEN;
-import grammar.generator.helper.sentencetemplates.AnnotatedVerb;
+import grammar.datasets.annotated.AnnotatedVerb;
 import grammar.structure.component.FrameType;
 import grammar.structure.component.GrammarEntry;
 import grammar.structure.component.Language;
