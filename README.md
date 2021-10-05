@@ -96,9 +96,11 @@ combination | A flag that shows if this grammar entry is a combination of multip
 
 ```csv
 "id","question","sparql","answer","frame"
-"0","Give me the capital of Lower Canada","select  ?o    {    <http://dbpedia.org/resource/Lower_Canada> <http://dbpedia.org/ontology/capital>  ?o    }","Quebec City","NPP"
-"1","Tell me the capital of Lower Canada","select  ?o    {    <http://dbpedia.org/resource/Lower_Canada> <http://dbpedia.org/ontology/capital>  ?o    }","Quebec City","NPP"
-"2","What is the capital of Lower Canada?","select  ?o    {    <http://dbpedia.org/resource/Lower_Canada> <http://dbpedia.org/ontology/capital>  ?o    }","Quebec City","NPP"
+1,Qual era il luogo di nascita di Balraj Sahni?, select ?o {<http://dbpedia.org/resource/Balraj_Sahni> <http://dbpedia.org/ontology/birthPlace>  ?o },http://dbpedia.org/resource/Pakistan,Pakistan,NPP
+2,Qual è il luogo di nascita di Balraj Sahni?, select  ?o {<http://dbpedia.org/resource/Balraj_Sahni> <http://dbpedia.org/ontology/birthPlace>  ?o },http://dbpedia.org/resource/Pakistan,Pakistan,NPP
+3,il luogo di nascita di Balraj Sahni,select  ?o {<http://dbpedia.org/resource/Balraj_Sahni> <http://dbpedia.org/ontology/birthPlace> ?o},http://dbpedia.org/resource/Pakistan,Pakistan,NPP
+....
+...
 
 ```
 
