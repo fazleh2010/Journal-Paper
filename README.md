@@ -26,7 +26,7 @@ java -jar target/QuestionGrammarGenerator.jar IT lexicon/it output 10 csv datase
 ### Input example
 QueGG can take either csv or turtle file as input 
 - An example of csv input file (.csv)  (https://github.com/fazleh2010/question-grammar-generator/blob/italian/examples/article_Noun_Frame%20.csv) or
-- An example of turtle file (.ttl) (https://github.com/fazleh2010/question-grammar-generator/blob/extension/examples/input/lexicon-capital-of.ttl). The lexical entries are defined using the Lexicon Model for Ontologies [Lemon](https://lemon-model.net/) and the data category ontology [LexInfo](https://lexinfo.net/).
+- An example of turtle file (.ttl) (https://github.com/fazleh2010/question-grammar-generator/blob/italian/examples/NounPPFrame-lexicon-birthPlace_of.ttl). The lexical entries are defined using the Lexicon Model for Ontologies [Lemon](https://lemon-model.net/) and the data category ontology [LexInfo](https://lexinfo.net/).
 
 
 ### Output file example
@@ -38,43 +38,32 @@ QueGG can generate two types of output file:
 
 ```json
 {
-    "id": "107",
-    "language": "EN",
-    "type": "SENTENCE",
-    "bindingType": "COUNTRY",
-    "returnType": "CITY",
-    "frameType": "NPP",
-    "sentences": [
-        "What is the capital of ($x | COUNTRY_NP)?",
-        "What was the capital of ($x | COUNTRY_NP)?",
-        "Which city is the capital of ($x | COUNTRY_NP)?",
-        "Which city was the capital of ($x | COUNTRY_NP)?"
-    ],
-    "queryType": "SELECT",
-    "sparqlQuery": "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
-    "sentenceToSparqlParameterMapping": {
-        "$x": "subjOfProp"
+    "id" : "1",
+    "lexicalEntryUri" : "http://localhost:8080#birthPlace_of",
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PLACE",
+    "frameType" : "NPP",
+    "sentences" : [ "Qual era il luogo di nascita di ($x | PERSON_NP)?", "Qual è il luogo di nascita di ($x | PERSON_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
     },
-    "returnVariable": "objOfProp",
-    "sentenceBindings": {
-        "bindingVariableName": "$x",
-        "bindingList": [
-            {
-                "label": "Abbasid Caliphate",
-                "uri": "http://dbpedia.org/resource/Abbasid_Caliphate"
-            },
-            {
-                "label": "Almohad Caliphate",
-                "uri": "http://dbpedia.org/resource/Almohad_Caliphate"
-            },
-            {
-                "label": "Dacia",
-                "uri": "http://dbpedia.org/resource/Dacia"
-            },
-            {
-                "label": "Democratic Republic of Afghanistan",
-                "uri": "http://dbpedia.org/resource/Democratic_Republic_of_Afghanistan"
-            }
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Balraj Sahni",
+        "uri" : "http://dbpedia.org/resource/Balraj_Sahni"
+      }, {
+        "label" : "Balram Jakhar",
+        "uri" : "http://dbpedia.org/resource/Balram_Jakhar"
+      }, {
+        "label" : "Baltacı Mehmed Pascià",
+        "uri" : "http://dbpedia.org/resource/Baltacı_Mehmet_Pasha"
+      }
         ]
     },
     "combination": false
