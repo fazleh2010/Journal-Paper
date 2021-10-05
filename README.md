@@ -5,7 +5,7 @@ The project creates QA system given a lemon lexica or Csv file (contains informa
 <p>The source code can be compiled and run using <em>Java 11</em> and <em>Maven</em>.</p>
 
 ```shell script
-git clone https://github.com/fazleh2010/question-grammar-generator.git -b extension
+git clone https://github.com/fazleh2010/question-grammar-generator.git -b italian
 ```
 build the jar file
 ```shell script
