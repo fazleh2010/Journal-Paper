@@ -101,7 +101,6 @@ combination | A flag that shows if this grammar entry is a combination of multip
 3,il luogo di nascita di Balraj Sahni,select  ?o {<http://dbpedia.org/resource/Balraj_Sahni> <http://dbpedia.org/ontology/birthPlace> ?o},http://dbpedia.org/resource/Pakistan,Pakistan,NPP
 ....
 ...
-
 ```
 
 
