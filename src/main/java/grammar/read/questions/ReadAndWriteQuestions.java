@@ -25,38 +25,69 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.apache.commons.lang3.StringUtils;
 
+
+import java.io.*;
+import java.security.GeneralSecurityException;
+import java.util.*;
+import org.apache.logging.log4j.LogManager;
+import util.io.Statistics;
+import util.sparql.SparqlQuery;
+
 /**
  *
  * @author elahi
  */
 public class ReadAndWriteQuestions {
 
-    public String[] header = new String[]{id, question, sparql, answer, frame};
+    public String[] questionHeader = new String[]{id, question, sparql, answer, frame};
+    public String[] summaryHeader = new String[]{lexicalEntry, numberOfGrammarRules, numberOfQuestions,frameType,Status,Reason};
     public static String FRAMETYPE_NPP = "NPP";
     public static final String id = "id";
     public static final String question = "question";
     public static final String sparql = "sparql";
     public static final String answer = "answer";
     public static final String frame = "frame";
-    public CSVWriter csvWriter;
-    public String questionAnswerFile=null;
-    private Set<String> excludes=new HashSet<String>();
-    private Integer maxNumberOfEntities=100;
-   
-    public ReadAndWriteQuestions(String questionAnswerFile, Integer maxNumberOfEntities) {
-       this.initialExcluded();
-       this.questionAnswerFile=questionAnswerFile;
-       this.maxNumberOfEntities=maxNumberOfEntities;
+    private static final String lexicalEntry = "lexicalEntry";
+    private static final String sentenceType = "sentenceType";
+    private static final String frameType = "frameType";
+    private static final String numberOfGrammarRules = "numberOfGrammarRules";
+    private static final String numberOfQuestions = "numberOfQuestions";
+    private static final String Status = "numberOfQuestions";
+    private static final String Reason = "numberOfQuestions";
+    private static  String language = "en";
+
+
+    public CSVWriter csvWriterQuestions;
+    public CSVWriter csvWriterSummary;
+    public String questionAnswerFile = null;
+    public String questionSummaryFile = null;
+    private Set<String> excludes = new HashSet<String>();
+    private Map<String, Statistics> summary = new TreeMap<String, Statistics>();
+
+    private Integer maxNumberOfEntities = 100;
+    private String endpoint=null;
+    private static final org.apache.logging.log4j.Logger LOG = LogManager.getLogger(ReadAndWriteQuestions.class);
+
+    public ReadAndWriteQuestions(String questionAnswerFile, String questionSummaryFile, Integer maxNumberOfEntities,String language,String endpoint) {
+        this.initialExcluded();
+        this.endpoint=endpoint;
+        this.language=language;
+        this.questionAnswerFile = questionAnswerFile;
+        this.questionSummaryFile = questionSummaryFile;
+        this.maxNumberOfEntities = maxNumberOfEntities;
     }
 
-    public void readQuestionAnswers(List<File> fileList,String entityDir, Boolean externalEntittyListflag) throws Exception {
+    public void readQuestionAnswers(List<File> fileList, String entityDir, Boolean externalEntittyListflag) throws Exception {
         String sparql = null;
         Integer index = 0;
 
-            this.csvWriter = new CSVWriter(new FileWriter(questionAnswerFile));
-            //this.csvWriter = new CSVWriter(new FileWriter(questionAnswerFile, true));
-            this.csvWriter.writeNext(header);
-        
+        this.csvWriterQuestions = new CSVWriter(new FileWriter(questionAnswerFile));
+        this.csvWriterSummary = new CSVWriter(new FileWriter(questionSummaryFile));
+        //this.csvWriter = new CSVWriter(new FileWriter(questionAnswerFile, true));
+        this.csvWriterQuestions.writeNext(questionHeader);
+        this.csvWriterSummary.writeNext(summaryHeader);
+
+        LOG.info("Number of Files!!'", fileList.size());
 
         for (File file : fileList) {
             index = index + 1;
@@ -64,66 +95,84 @@ public class ReadAndWriteQuestions {
             GrammarEntries grammarEntries = mapper.readValue(file, GrammarEntries.class);
             Integer total = grammarEntries.getGrammarEntries().size();
             Integer idIndex = 0, noIndex = 0;
+            LOG.info("running file'", file.getName());
             for (GrammarEntryUnit grammarEntryUnit : grammarEntries.getGrammarEntries()) {
-                 /*if (idIndex > 1) {
+                /*if (idIndex > 1) {
                     break;
                 }*/
-                /*if (grammarEntryUnit.getSentences().iterator().next().contains("Where is $x located?"))
+ /*if (grammarEntryUnit.getSentences().iterator().next().contains("Where is $x located?"))
                     continue;*/
-                
+
                 sparql = grammarEntryUnit.getSparqlQuery();
                 String returnVairable = grammarEntryUnit.getReturnVariable();
-                String retunrStr=grammarEntryUnit.getBindingType();
-                String syntacticFrame=grammarEntryUnit.getFrameType();
-                List<UriLabel> bindingList=new ArrayList<UriLabel>();
-                
+                String retunrStr = grammarEntryUnit.getBindingType();
+                String syntacticFrame = grammarEntryUnit.getFrameType();
+                List<UriLabel> bindingList = new ArrayList<UriLabel>();
+
                 if (externalEntittyListflag) {
                     String entityFileName = entityDir + "ENTITY_LABEL_LIST" + "_" + retunrStr.toLowerCase() + ".txt";
                     File entityFile = new File(entityFileName);
                     bindingList = this.getExtendedBindingList(grammarEntryUnit.getBindingList(), entityFile);
-
-                } else
+                } else {
                     bindingList = grammarEntryUnit.getBindingList();
-                    
-                noIndex =this.replaceVariables(bindingList, sparql, returnVairable,grammarEntryUnit.getSentences(),syntacticFrame,noIndex);
+                }
+                noIndex = this.replaceVariables(bindingList, sparql, returnVairable, grammarEntryUnit.getSentences(), syntacticFrame, noIndex, "");
                 noIndex = noIndex + 1;
-                System.out.println("index:" + index + " Id:" + grammarEntryUnit.getId() + " total:" + total + " example:" + grammarEntryUnit.getSentences().iterator().next());
+                //LOG.info("index:" + index + " Id:" + grammarEntryUnit.getId() + " total:" + total + " example:" + grammarEntryUnit.getSentences().iterator().next());
+                //System.out.println("index:" + index + " Id:" + grammarEntryUnit.getId() + " total:" + total + " example:" + grammarEntryUnit.getSentences().iterator().next());
                 idIndex = idIndex + 1;
+
+                if (grammarEntryUnit.getLexicalEntryUri() != null) {
+                    String uri = grammarEntryUnit.getLexicalEntryUri().toString();
+
+                    if (this.summary.containsKey(uri)) {
+                        Statistics summary = this.summary.get(uri);
+                        this.summary.put(uri, new Statistics(grammarEntryUnit.getFrameType(), summary.getNumberOfGrammarRules() + 1, noIndex,bindingList.size()));
+                    } else {
+                        Statistics summary = new Statistics(grammarEntryUnit.getFrameType(), 1, noIndex,bindingList.size());
+                        this.summary.put(uri, summary);
+                    }
+                }
+
             }
         }
-        this.csvWriter.close();
+        this.writeSummary(this.summary);
+        //System.out.println("this.summary::" + this.summary);
+        this.csvWriterQuestions.close();
+        this.csvWriterSummary.close();
 
     }
-    
-    private Integer replaceVariables(List<UriLabel> uriLabels, String sparqlOrg, String frameType, List<String> questions, String syntacticFrame,Integer rowIndex) {
+
+    private Integer replaceVariables(List<UriLabel> uriLabels, String sparqlOrg, String frameType, List<String> questions, String syntacticFrame, Integer rowIndex, String lexicalEntry) {
         Integer index = 0;
         List< String[]> rows = new ArrayList<String[]>();
         for (UriLabel uriLabel : uriLabels) {
+            //System.out.println("Uri:"+uriLabel.getUri());
+            //System.out.println("Label:"+uriLabel.getLabel());
             if (!isKbValid(uriLabel)) {
                 continue;
             }
             //System.out.println("index: " + index + " size:" + uriLabels.size() + " uriLabel:::" + uriLabel.getUri() + " labe::" + uriLabel.getLabel());
-            String questionForShow=questions.iterator().next();
-            /*if(questionForShow.contains("Where is $x located?"))
-                continue;*/
-            
-            Pair<String, String> pair = this.getAnswerFromWikipedia(uriLabel.getUri(), sparqlOrg, frameType);
+            String questionForShow = questions.iterator().next();
+            if(questionForShow.contains("Where is $x located?"))
+                continue;
+
+            Pair<String, String> pair = this.getAnswerFromWikipedia(uriLabel.getUri(), sparqlOrg, frameType,endpoint);
             String sparql = pair.component1();
             String answer = pair.component2();
             index = index + 1;
-            sparql=this.modifySparql(sparql);
-            
-            System.out.println("index::" + index + " uriLabel::" + uriLabel.getLabel() + " questionForShow::" + questionForShow + " sparql::" + sparql + " answer::" + answer+ " syntacticFrame:"+syntacticFrame);
-            
-         
-            
+            sparql = this.modifySparql(sparql);
+
+            //System.out.println("index::" + index + " uriLabel::" + uriLabel.getLabel() + " questionForShow::" + questionForShow + " sparql::" + sparql + " answer::" + answer+ " syntacticFrame:"+syntacticFrame);
             try {
-                if (answer.isEmpty()||answer.contains("no answer found")) {
+                if (answer.isEmpty() || answer.contains("no answer found")) {
                     continue;
                 } else {
-                      if (index >= this.maxNumberOfEntities)
+                    if (index >= this.maxNumberOfEntities) {
                         break;
+                    }
                     for (String question : questions) {
+                        //System.out.println(question);
                         if (question.contains("(") && question.contains(")")) {
                             String result = StringUtils.substringBetween(question, "(", ")");
                             question = question.replace(result, "X");
@@ -140,35 +189,38 @@ public class ReadAndWriteQuestions {
                         questionT = questionT.replace("$x", uriLabel.getLabel());
                         questionT = questionT.replace(",", "");
                         questionT = questionT.stripLeading().trim();
-                        String[] record = {id, questionT, sparql, answer,syntacticFrame};
-                        this.csvWriter.writeNext(record);
+                        if(uriLabel.getLabel().isEmpty()){
+                           continue;
+                        }
+                        System.out.println("id::" + id + " questionT::" +questionT + " sparql::" + sparql + " answer::" + answer + " syntacticFrame::" + syntacticFrame);
+                        String[] record = {id, questionT, sparql, answer, syntacticFrame};
+                        this.csvWriterQuestions.writeNext(record);
                         rowIndex = rowIndex + 1;
                     }
                 }
 
             } catch (Exception ex) {
-                System.err.println(ex.getMessage()  + " " + sparql + " " + answer);
+                System.err.println(ex.getMessage() + " " + sparql + " " + answer);
             }
         }
 
         return rowIndex;
     }
-    
-    
-    public Pair<String, String> getAnswerFromWikipedia(String subjProp, String sparql, String returnType) {
+
+    public Pair<String, String> getAnswerFromWikipedia(String subjProp, String sparql, String returnType,String endpoint) {
         String property = null;
         String answer = null;
         SparqlQuery sparqlQuery = null;
         property = StringUtils.substringBetween(sparql, "<", ">");
-        
-        sparqlQuery = new SparqlQuery(subjProp, property, SparqlQuery.FIND_ANY_ANSWER, returnType);
+
+        sparqlQuery = new SparqlQuery(subjProp, property, SparqlQuery.FIND_ANY_ANSWER, returnType,language,endpoint);
         //System.out.println("original sparql:: "+sparql);
         //System.out.println("sparqlQuery:: "+sparqlQuery.getSparqlQuery());
         answer = sparqlQuery.getObject();
         if (answer != null) {
             if (answer.contains("http:")) {
                 //System.out.println(answer);
-                SparqlQuery sparqlQueryLabel = new SparqlQuery(answer, property, SparqlQuery.FIND_LABEL, null);
+                SparqlQuery sparqlQueryLabel = new SparqlQuery(answer, property, SparqlQuery.FIND_LABEL, null,language,endpoint);
                 answer = sparqlQueryLabel.getObject();
                 //System.out.println(answer);
 
@@ -178,10 +230,6 @@ public class ReadAndWriteQuestions {
             return new Pair<String, String>(sparqlQuery.sparqlQuery, "no answer found");
         }
     }
-
-    
-
-   
 
     private void initialExcluded() {
         this.excludes.add("2013_Santa_Monica_shooting");
@@ -215,7 +263,7 @@ public class ReadAndWriteQuestions {
         return true;
     }
 
-    private String modifyQuestion(String questionT,String uriLabel) {
+    /*private String modifyQuestion(String questionT, String uriLabel) {
         questionT = questionT.replaceAll("(X)", uriLabel);
         questionT = questionT.replace("(", "");
         questionT = questionT.replace(")", "");
@@ -223,9 +271,9 @@ public class ReadAndWriteQuestions {
         questionT = questionT.replace(",", "");
         questionT = questionT.stripLeading().trim();
         return questionT;
-    }
+    }*/
 
-    private Integer makeCsvRow(List<String> questions, List<String[]> rows,  Integer rowIndex) {
+    /*private Integer makeCsvRow(List<String> questions, List<String[]> rows, Integer rowIndex) {
         for (String question : questions) {
             if (question.contains("(") && question.contains(")")) {
                 String result = StringUtils.substringBetween(question, "(", ")");
@@ -246,14 +294,14 @@ public class ReadAndWriteQuestions {
                 questionT = questionT.stripLeading().trim();
                 String sparql = row[1];
                 String answer = row[2];
-                //System.out.println("id::" + id + " uriLabel::" + uriLabel + " question::" + questionT + " sparql::" + sparql + " answer::" + answer);
+                System.out.println("id::" + id + " uriLabel::" + uriLabel + " question::" + questionT + " sparql::" + sparql + " answer::" + answer);
                 String[] record = {id, questionT, sparql, answer};
-                this.csvWriter.writeNext(record);
+                this.csvWriterQuestions.writeNext(record);
                 rowIndex = rowIndex + 1;
             }
         }
         return rowIndex;
-    }
+    }*/
 
     private List<UriLabel> getExtendedBindingList(List<UriLabel> bindingList, File classFile) {
         List<UriLabel> modifyLabels = new ArrayList<UriLabel>();
@@ -272,6 +320,18 @@ public class ReadAndWriteQuestions {
         sparql = sparql.replace(" ", "+");
         sparql = sparql.replace("+", " ");
         return sparql;
+    }
+
+    private void writeSummary(Map<String, Statistics> summary) {
+        if (summary.isEmpty()) {
+            return;
+        }
+        for (String key : summary.keySet()) {
+            Statistics element = summary.get(key);
+            String[] record = {key,element.getNumberOfGrammarRules().toString(), element.getNumberOfQuestions().toString(), element.getFrameType(),element.getSuccess_Fail(),element.getReason()};
+            this.csvWriterSummary.writeNext(record);
+
+        }
     }
 
 }

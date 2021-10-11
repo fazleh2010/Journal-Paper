@@ -1,0 +1,123 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range
+flow_through,verb,passare,passa,passava,attraverso,IntransitivePPFrame,domain,range,1,dbo:country,dbo:River,dbo:Country
+-,verb,passare,passa,passava,attraverso,IntransitivePPFrame,domain,range,2,dbo:city,dbo:River,dbo:City
+grow_in,verb,crescere,cresce,cresceva,nel,IntransitivePPFrame,range,domain,1,dbo:growingGrape,dbo:WineRegion,dbo:Grape
+stand_for,verb,,,,,IntransitivePPFrame,range,domain,1,dbo:abbreviation,owl:Thing,dbo:string
+starr_in,verb,recitare,recita,ha recitato,in,IntransitivePPFrame,domain,range,1,dbo:starring,dbo:Film,dbo:Actor
+begin_at,verb,partire,parte,partiva,da,IntransitivePPFrame,domain,range,1,dbp:source1Location,dbo:River,dbo:Country
+-,verb,partire,parte,partiva,da,IntransitivePPFrame,domain,range,1,dbp:source2Location,dbo:River,dbo:City
+flow_into,verb,confluire,confluisce,confluiva,nel,IntransitivePPFrame,range,domain,1,dbo:inflow,dbo:BodyOfWater,dbo:BodyOfWater
+draft_in,verb,arruolare,arruola,arruolato,nel,IntransitivePPFrame,domain,range,1,dbo:draftYear,dbo:AmericanFootballPlayer,xsd:gYear
+complete_in,verb,completare,completa,completato,nel,IntransitivePPFrame,domain,range,1,dbo:buildingEndDate,dbo:ArchitecturalStructure,xsd:gYear
+-,verb,completare,completa,completato,nel,IntransitivePPFrame,domain,range,2,dbo:completionDate,dbo:Work,xsd:gYear
+-,verb,completare,completa,completato,nel,IntransitivePPFrame,domain,range,3,dbo:buildingEndDate,dbo:Bridge,xsd:gYear
+-,verb,completare,completa,completato,nel,IntransitivePPFrame,domain,range,4,dbo:buildingEndDate,dbo:Building,xsd:gYear
+build_in,verb,costruire,costruisce,costruito,nel,IntransitivePPFrame,domain,range,1,dbo:buildingStartDate,dbo:ArchitecturalStructure,xsd:gYear
+-,verb,costruire,costruisce,costruito,nel,IntransitivePPFrame,domain,range,2,dbo:buildingStartDate,dbo:Bridge,xsd:gYear
+-,verb,costruire,costruisce,costruito,nel,IntransitivePPFrame,domain,range,3,dbo:buildingStartDate,dbo:Building,xsd:gYear
+inaugurate_in,verb,inaugurare,inaugura,inaugurata,nel,IntransitivePPFrame,domain,range,1,dbo:openingDate,dbo:ArchitecturalStructure,xsd:gYear
+,verb,inaugurare,inaugura,inaugurata,nel,IntransitivePPFrame,domain,range,2,dbo:openingDate,dbo:Bridge,xsd:gYear
+,verb,inaugurare,inaugura,inaugurata,nel,IntransitivePPFrame,domain,range,3,dbo:openingDate,dbo:Building,xsd:gYear
+founded_on,verb,fondare,fonda,fondato,nel,IntransitivePPFrame,domain,range,1,dbo:foundingDate,dbo:Organisation,xsd:date
+-,verb,fondare,fonda,fondato,nel,IntransitivePPFrame,domain,range,2,dbo:foundingDate,dbo:Settlement,xsd:date
+-,verb,fondare,fonda,fondato,nel,IntransitivePPFrame,domain,range,4,dbo:formationDate,dbo:PoliticalParty,xsd:date
+founded_in,verb,fondare,fonda,fondato,nel,IntransitivePPFrame,domain,range,2,dbo:foundingYear,dbo:Organisation,xsd:gYear
+-,verb,fondare,fonda,fondato,nel,IntransitivePPFrame,domain,range,2,dbo:foundingDate,dbo:Settlement,xsd:gYear
+-,verb,fondare,fonda,fondato,nel,IntransitivePPFrame,domain,range,4,dbo:formationDate,dbo:PoliticalParty,xsd:gYear
+released_on,verb,uscire,esce,uscito,il,IntransitivePPFrame,domain,range,1,dbo:releaseDate,dbo:TelevisionShow,xsd:date
+-,verb,uscire,esce,uscito,il,IntransitivePPFrame,domain,range,2,dbo:releaseDate,dbo:Song,xsd:date
+-,verb,uscire,esce,uscito,il,IntransitivePPFrame,domain,range,3,dbo:releaseDate,dbo:Software,xsd:date
+,verb,uscire,esce,uscito,il,IntransitivePPFrame,domain,range,1,dbo:computingPlatform,dbo:Software,owl:Thing
+published_on,verb,pubblicare,pubblica,pubblicato,il,IntransitivePPFrame,domain,range,1,dbp:published,dbo:Song,xsd:date
+-,verb,pubblicare,pubblica,pubblicato,il,IntransitivePPFrame,domain,range,1,dbp:published,dbo:Article,xsd:date
+-,verb,pubblicare,pubblica,pubblicato,il,IntransitivePPFrame,domain,range,1,dbo:publicationDate,dbo:Book,xsd:date
+published_in,verb,pubblicare,pubblica,pubblicato,il,IntransitivePPFrame,domain,range,1,dbp:published,dbo:Song,xsd:gYear
+-,verb,pubblicare,pubblica,pubblicato,il,IntransitivePPFrame,domain,range,1,dbp:published,dbo:Article,xsd:gYear
+-,verb,pubblicare,pubblica,pubblicato,il,IntransitivePPFrame,domain,range,1,dbo:publicationDate,dbo:Book,xsd:gYear
+dissolve_on,verb,sciogliere,scioglie,sciolta,il,IntransitivePPFrame,domain,range,1,dbo:dissolutionDate,dbo:PopulatedPlace,xsd:date
+dissolve_in,verb,sciogliere,scioglie,sciolta,il,IntransitivePPFrame,domain,range,1,dbo:dissolutionDate,dbo:PopulatedPlace,xsd:gYear
+destroy_on,verb,dsitruggere,distrugge,distrutto,nel,IntransitivePPFrame,domain,range,1,dbo:demolitionDate,dbo:ArchitecturalStructure,xsd:date
+destroy_in,verb,dsitruggere,distrugge,distrutto,nel,IntransitivePPFrame,domain,range,2,dbo:demolitionDate,dbo:ArchitecturalStructure,xsd:gYear
+rebuild_on,verb,ricostruire,riscostruisce,ricostruito,nel,IntransitivePPFrame,domain,range,1,dbo:rebuildingDate,dbo:ArchitecturalStructure,xsd:date
+rebuild_in,verb,ricostruire,riscostruisce,ricostruito,nel,IntransitivePPFrame,domain,range,1,dbo:rebuildingDate,dbo:ArchitecturalStructure,xsd:gYear
+reopen_on,verb,riaprire,riapre,riaperto,nel,IntransitivePPFrame,domain,range,1,dbo:reopeningDate,dbo:ArchitecturalStructure,xsd:date
+reopen_in,verb,riaprire,riapre,riaperto,nel,IntransitivePPFrame,domain,range,1,dbo:reopeningDate,dbo:ArchitecturalStructure,xsd:gYear
+discontinue_on,verb,interrompere,interrompe,interrotto,nel,IntransitivePPFrame,domain,range,1,dbo:discontinued,dbo:Beverage,xsd:date
+discontinue_in,verb,interrompere,interrompe,interrotto,nel,IntransitivePPFrame,domain,range,1,dbo:discontinued,dbo:Beverage,xsd:gYear
+introduced_on,verb,introdurre,introduce,introdotto,nel,IntransitivePPFrame,domain,range,1,dbo:introduced,dbo:Beverage,xsd:date
+introduced_in,verb,introdurre,introduce,introdotto,nel,IntransitivePPFrame,domain,range,1,dbo:introduced,dbo:Beverage,xsd:gYear
+open_on,verb,aprire,apre,aperto,nel,IntransitivePPFrame,domain,range,1,dbo:openingDate,dbo:Bridge,xsd:date
+open_in,verb,aprire,apre,aperto,nel,IntransitivePPFrame,domain,range,1,dbo:openingYear,dbo:Bridge,xsd:gYear
+produced_on,verb,produrre,produce,prodotto,nel,IntransitivePPFrame,domain,range,1,dbo:productionDate,dbo:Film,xsd:date
+-,verb,produrre,produce,prodotto,nel,IntransitivePPFrame,domain,range,2,dbo:productionDate,dbo:Album,xsd:date
+-,verb,produrre,produce,prodotto,nel,IntransitivePPFrame,domain,range,3,dbo:productionDate,dbo:Song,xsd:date
+produced_in,verb,produrre,produce,prodotto,nel,IntransitivePPFrame,domain,range,1,dbo:productionDate,dbo:Film,xsd:gYear
+-,verb,produrre,produce,prodotto,nel,IntransitivePPFrame,domain,range,2,dbo:productionDate,dbo:Album,xsd:gYear
+-,verb,produrre,produce,prodotto,nel,IntransitivePPFrame,domain,range,1,dbo:productionDate,dbo:Song,xsd:gYear
+establish_in,verb,,,,,IntransitivePPFrame,domain,range,1,dbo:firstPublicationYear,dbo:PeriodicalLiterature,xsd:gYear
+form_in,verb,formarsi,si forma,formata,nel,IntransitivePPFrame,domain,range,1,dbo:activeYearsStartYear,dbo:Band,xsd:date
+born _on,verb,nascere,nasce,nato,nel,IntransitivePPFrame,domain,range,1,dbo:birthDate,dbo:Person,xsd:date
+live_in,verb,vivere,vive,vissuto,nel,IntransitivePPFrame,domain,range,1,dbo:residence,dbo:Person,dbo:Place
+die_on,verb,morire,muore,morto,nel,IntransitivePPFrame,domain,range,1,dbo:deathDate,dbo:Person,xsd:date
+die_from,verb,morire,muore,morto,nel,IntransitivePPFrame,domain,range,1,dbo:deathCause,dbo:Person,owl:Thing
+-,verb,morire,muore,morto,nel,IntransitivePPFrame,domain,range,1,dbp:deathCause,dbo:Person,dbo:Disease
+take_place_in,verb,avvenire,avviene,avvenuto,nel,IntransitivePPFrame,domain,range,1,dbo:place,dbo:MilitaryConflict,dbo:PopulatedPlace
+-,verb,avvenire,avviene,avvenuto,nel,IntransitivePPFrame,domain,range,2,dbo:date,dbo:MilitaryConflict,xsd:date
+compose_for,verb,comporre,compone,composto,per,IntransitivePPFrame,domain,range,1,dbo:musicComposer,dbo:Work,dbo:Person
+-,verb,comporre,compone,composto,per,IntransitivePPFrame,domain,range,2,dbo:composer,dbo:Work,dbo:Person
+-,verb,comporre,compone,composto,per,IntransitivePPFrame,domain,range,3,dbp:music,dbo:Work,dbo:Person
+work_for,verb,lavorare,lavora,lavorato,per,IntransitivePPFrame,domain,range,1,dbo:keyPerson,dbo:Organisation,dbo:Person
+-,verb,lavorare,lavora,lavorato,per,IntransitivePPFrame,domain,range,2,dbp:keyPeople,dbo:Organisation,dbo:Person
+bury_in,verb,seppellire,seppellisce,sepolto,nel,IntransitivePPFrame,domain,range,1,dbp:burialPlace,dbo:Person,dbo:City
+start_acting_on,verb,iniziare a recitare,inizia a recitare,iniziato a recitare,nel,IntransitivePPFrame,domain,range,1,dbo:activeYearsStartYear,dbo:Actor,xsd:date
+stop_acting_on,verb,smettere di recitare,smette di recitare,smesso di recitare,nel,IntransitivePPFrame,domain,range,1,dbo:activeYearsEndYear,dbo:Actor,xsd:date
+fight_in,verb,,,,,IntransitivePPFrame,range,domain,1,dbo:combatant,dbo:MilitaryConflict,xsd:string
+play_in,verb,recitare,recita,recitato,in,IntransitivePPFrame,domain,range,1,dbo:member,dbo:Person,dbo:Band
+,verb,recitare,recita,recitato,in,IntransitivePPFrame,domain,range,2,dbo:member,dbo:Person,dbo:Play
+-,verb,recitare,recita,recitato,in,IntransitivePPFrame,domain,range,3,dbo:position,dbo:Person,owl:Thing
+split_up_in,verb,dividere,divide,divisa,nel,IntransitivePPFrame,domain,range,1,dbo:activeYearsEndYear,dbo:Band,xsd:date
+study_at,verb,studiare,studia,studiato,presso,IntransitivePPFrame,domain,range,1,dbo:education,dbo:Person,dbo:EducationalInstitution
+relate_to,verb,,,,,IntransitivePPFrame,domain,range,1,dbo:related,dbo:Beverage,dbo:Beverage
+record_in,verb,registrare,registra,registrato,presso,IntransitivePPFrame,domain,range,1,dbo:recordedIn,dbo:MusicalWork,dbo:PopulatedPlace
+locate_in,verb,trovarsi,si trova,trovata,in,IntransitivePPFrame,domain,range,2,dbo:location,dbo:City,dbo:Country 
+-,verb,trovarsi,si trova,trovata,a,IntransitivePPFrame,domain,range,4,dbo:location,dbo:Airport,dbo:Place
+-,verb,trovarsi,si trova,trovata,a,IntransitivePPFrame,domain,range,9,dbo:location,dbo:BodyOfWater,dbo:Place
+-,verb,trovarsi,si trova,trovata,in,IntransitivePPFrame,domain,range,5,dbo:country,dbo:Mountain,dbo:Country
+-,verb,trovarsi,si trova,trovata,in,IntransitivePPFrame,domain,range,6,dbo:locatedInArea,dbo:Place,dbo:Place
+-,verb,trovarsi,si trova,trovata,in,IntransitivePPFrame,domain,range,7,dbo:country,dbo:Settlement,dbo:Country
+-,verb,trovarsi,si trova,trovata,in,IntransitivePPFrame,domain,range,8,dbo:country,dbo:BodyOfWater,dbo:Country
+-,verb,trovarsi,si trova,trovata,a,IntransitivePPFrame,domain,range,1,dbo:location,dbo:Organisation,dbo:Place
+-,verb,trovarsi,si trova,trovata,a,IntransitivePPFrame,domain,range,3,dbo:city,dbo:Airport,dbo:City
+belong_to,verb,far parte,fa parte,faceva parte,di,IntransitivePPFrame,domain,range,3,dbp:album,dbo:Song,dbo:Album
+-,verb,far parte,fa parte,faceva parte,di,IntransitivePPFrame,domain,range,1,dbo:species,dbo:Animal,dbp:species
+-,verb,far parte,fa parte,faceva parte,di,IntransitivePPFrame,domain,range,2,dbp:genre,dbo:Album,dbo:Genre
+-,verb,far parte,fa parte,faceva parte,di,IntransitivePPFrame,domain,range,4,dbo:genre,dbo:Film,dbo:Genre
+-,verb,far parte,fa parte,faceva parte,di,IntransitivePPFrame,domain,range,5,dbp:partof,dbo:Airport,yago:Facility103315023
+-,verb,far parte,fa parte,faceva parte,di,IntransitivePPFrame,domain,range,6,dbp:party,dbo:Agent,dbo:PoliticalParty
+-,verb,far parte,fa parte,faceva parte,di,IntransitivePPFrame,domain,range,7,dbo:literaryGenre,dbo:WrittenWork,dbo:Genre
+-,verb,far parte,fa parte,faceva parte,di,IntransitivePPFrame,domain,range,8,dbo:mountainRange,dbo:Mountain,dbo:MountainRange
+-,verb,far parte,fa parte,faceva parte,di,IntransitivePPFrame,domain,range,9,dbo:genre,dbo:Band,dbo:Genre
+-,verb,far parte,fa parte,faceva parte,di,IntransitivePPFrame,domain,range,10,dbo:bandMember,dbo:Person,dbo:Band
+-,verb,far parte,fa parte,faceva parte,di,IntransitivePPFrame,domain,range,11,dbo:genre,dbo:Software,dbo:Genre
+-,verb,far parte,fa parte,faceva parte,di,IntransitivePPFrame,domain,range,12,dbo:series,dbo:Software,owl:Thing
+-,verb,far parte,fa parte,faceva parte,di,IntransitivePPFrame,domain,range,13,dbo:genre,dbo:Artist,dbo:Genre
+-,verb,far parte,fa parte,faceva parte,di,IntransitivePPFrame,domain,range,14,dbo:team,dbo:Person,dbo:SportsTeam
+-,verb,far parte,fa parte,faceva parte,di,IntransitivePPFrame,domain,range,15,dbo:subdivision,dbo:Settlement,dbo:Place
+-,verb,far parte,fa parte,faceva parte,di,IntransitivePPFrame,domain,range,16,dbo:timeZone,dbo:Place,yago:TimeZone108691276
+-,verb,far parte,fa parte,faceva parte,di,IntransitivePPFrame,domain,range,17,dbo:architecturalStyle,dbo:ArchitecturalStructure,owl:Thing
+-,verb,far parte,fa parte,faceva parte,di,IntransitivePPFrame,domain,range,18,dbo:formerTeam,dbo:Athlete,dbo:SportsTeam
+play_for,verb,giocare,gioca,giocava,per,IntransitivePPFrame,domain,range,1,dbo:debutTeam,dbo:Athlete,dbo:SportsTeam
+study_at,verb,studiare,studia,studiato,presso,IntransitivePPFrame,domain,range,1,dbo:education,dbo:Person,dbo:EducationalInstitution
+name_after,verb,,,,,IntransitivePPFrame,domain,range,1,dbo:namedAfter,dbo:Settlement,dbo:Agent
+associate_with,verb,essere legata,?? legata,era legata,a,IntransitivePPFrame,domain,range,1,dbo:associatedBand,dbo:Band,dbo:Band
+-,verb,essere legata,?? legata,era legata,a,IntransitivePPFrame,domain,range,2,dbo:associatedMusicalArtist,dbo:Band,dbo:MusicalArtist
+-,verb,essere legata,?? legata,era legata,a,IntransitivePPFrame,domain,range,3,dbo:movement,dbo:Artist,owl:Thing
+currently_use_for,verb,usuare attualmente,attualmente usa,attualmente usata,come,IntransitivePPFrame,domain,range,1,dbo:currentlyUsedFor,dbo:ArchitecturalStructure,xsd:string
+initially_use_for,verb,usare inizialmente,usa inizialmente,inizialmente usata,come,IntransitivePPFrame,domain,range,2,dbo:initiallyUsedFor,dbo:ArchitecturalStructure,xsd:string
+originate_in,verb,originare,origina,originata,in,IntransitivePPFrame,domain,range,1,dbo:sourceCountry,dbo:Stream,dbo:Country
+end_in,verb,finire,finisce,finito,nel,IntransitivePPFrame,domain,range,1,dbo:mouthPlace,dbo:River,dbo:PopulatedPlace
+-,verb,finire,finisce,finito,nel,IntransitivePPFrame,domain,range,2,dbo:mouthCountry,dbo:River,dbo:Country
+be_from,verb,venire,viene,veniva,da,IntransitivePPFrame,domain,range,1,dbo:hometown,dbo:Agent,dbo:Settlement
+border_in,verb,confinare,confina,confinava,con,IntransitivePPFrame,domain,range,1,dbo:borderingstates,dbo:State,dbo:State
+bury_in,verb,seppellire,seppellisce,seppellito,a,IntransitivePPFrame,domain,range,1,dbp:burialPlace,dbo:Person,dbo:City
+-,verb,seppellire,seppellisce,seppellito,a,IntransitivePPFrame,domain,range,2,dbo:restingPlace,dbo:Person,dbo:Place

@@ -5,6 +5,9 @@
  */
 package util.io;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import grammar.read.questions.UriLabel;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -16,9 +19,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.logging.Level;
@@ -59,7 +64,7 @@ public class FileUtils {
     }
 
     public static List<File> getFiles(String fileDir, String category, String extension) {
-        System.out.println("fileDir:"+fileDir);
+        //System.out.println("fileDir:"+fileDir);
         String[] files = new File(fileDir).list();
         List<File> selectedFiles = new ArrayList<File>();
         for (String fileName : files) {
@@ -103,10 +108,10 @@ public class FileUtils {
         File f = new File(inputDir);
         String[] pathnames = f.list();
         for (String pathname : pathnames) {
-            System.out.println("pathname::"+inputDir + File.separatorChar + pathname);
+            //System.out.println("pathname::"+inputDir + File.separatorChar + pathname);
             String[] files = new File(inputDir + pathname).list();
             for (String file : files) {
-                System.out.println("file::"+file);
+                //System.out.println("file::"+file);
                
 
             }
@@ -114,5 +119,10 @@ public class FileUtils {
         }
 
     }*/
+   
+    public static LinkedData getLinkedDataConf(File file) throws Exception {
+        ObjectMapper mapper = new ObjectMapper();
+        return mapper.readValue(file, LinkedData.class);
+    }
 
 }

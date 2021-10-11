@@ -1,0 +1,59 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :flow_into ;
+  lemon:entry    :nel .
+
+:flow_into a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_flow_into ;
+  lemon:otherForm      :form_flow_into_past ;
+  lemon:sense          :flow_into_sense_1 ;
+  lemon:synBehavior    :flow_into_frame .
+
+:form_flow_into a           lemon:Form ;
+  lemon:writtenRep     "confluire"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:form_flow_into a      lemon:Form ;
+  lemon:writtenRep "confluisce"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:form_flow_into_past a lemon:Form ;
+  lemon:writtenRep  "confluiva"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:flow_into_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :flow_into_subj ;
+  lexinfo:prepositionalAdjunct :flow_into_obj .
+
+:flow_into_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :flow_into_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/inflow> ;
+  lemon:subjOfProp  :flow_into_obj ;
+  lemon:objOfProp   :flow_into_subj ;
+  lemon:condition   :flow_into_sense_1_condition .
+
+:flow_into_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/BodyOfWater> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/BodyOfWater> .
+
+
+:flow_into_obj lemon:marker :nel .
+
+## Prepositions ##
+:nel a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "nel"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

@@ -1,0 +1,59 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :belong_to ;
+  lemon:entry    :di .
+
+:belong_to a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_belong_to ;
+  lemon:otherForm      :form_belong_to_past ;
+  lemon:sense          :belong_to_sense_1 ;
+  lemon:synBehavior    :belong_to_frame .
+
+:form_belong_to a           lemon:Form ;
+  lemon:writtenRep     "far parte"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:form_belong_to a      lemon:Form ;
+  lemon:writtenRep "fa parte"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:form_belong_to_past a lemon:Form ;
+  lemon:writtenRep  "faceva parte"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:belong_to_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :belong_to_subj ;
+  lexinfo:prepositionalAdjunct :belong_to_obj .
+
+:belong_to_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :belong_to_ontomap ;
+  lemon:reference   <dbp:album> ;
+  lemon:subjOfProp  :belong_to_obj ;
+  lemon:objOfProp   :belong_to_subj ;
+  lemon:condition   :belong_to_sense_1_condition .
+
+:belong_to_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Song> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Album> .
+
+
+:belong_to_obj lemon:marker :di .
+
+## Prepositions ##
+:di a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "di"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

@@ -1,0 +1,1303 @@
+{
+  "grammarEntries" : [ {
+    "id" : "1",
+    "lexicalEntryUri" : "http://localhost:8080#LexicalEntry_2",
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentences" : [ "Qual era la creazione di ($x | THING_NP)?", "Qual è la creazione di ($x | THING_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://purl.org/dc/elements/1.1/date> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Chiesa di S. Agostino",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011661"
+      }, {
+        "label" : "Chiesa di San Giovanni Evangelista e ex canonica ora caserma dei Carabinieri",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011671"
+      }, {
+        "label" : "Chiesa di S. Spirito degli Armeni",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011678"
+      }, {
+        "label" : "Duomo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011682"
+      }, {
+        "label" : "Ruderi di edificio romano",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011695"
+      }, {
+        "label" : "Chiesa dell'Annunziata dei Frati Minori Osservanti",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011703"
+      }, {
+        "label" : "Chiesa del Sacramento",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011704"
+      }, {
+        "label" : "Chiesa di San Francesco",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011705"
+      }, {
+        "label" : "Chiesa di San Giuseppe",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011706"
+      }, {
+        "label" : "Oratorio di S.Bovo (parr.S.M. Del Torresino)",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011832"
+      }, {
+        "label" : "Via del Santo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011903"
+      }, {
+        "label" : "Chiesa di S. Maria del Torresino",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011931"
+      }, {
+        "label" : "Chiesa di S.Francesco d'Assisi",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011998"
+      }, {
+        "label" : "Basilica della SS.Trinità",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012005"
+      }, {
+        "label" : "Chiesa dell'Annunziata degli Algoziri",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012017"
+      }, {
+        "label" : "Chiesa dei SS. Cosma e Damiano",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012025"
+      }, {
+        "label" : "Oratorio di S. Caterina all'Olivella",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012033"
+      }, {
+        "label" : "Oratorio della Compagnia dei SS. Elena e Costantino",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012034"
+      }, {
+        "label" : "Oratorio dei Ss. Crispino e Crispiniano",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012036"
+      }, {
+        "label" : "Chiesa di S.Francesco di Paola ai Candelai",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012041"
+      }, {
+        "label" : "Chiesa di Casa Professa",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012043"
+      }, {
+        "label" : "Chiesa di S.Maria degli Angeli detta della Gancia",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012054"
+      }, {
+        "label" : "Chiesa di S.Maria della Vittoria",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012063"
+      }, {
+        "label" : "Chiesa di S.Mercurio",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012067"
+      }, {
+        "label" : "Chiesa dei Quaranta Martiri",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012077"
+      }, {
+        "label" : "Chiesa di S.Silvestro",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012080"
+      }, {
+        "label" : "Chiesa di S.Teresa alla Kalsa",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012084"
+      }, {
+        "label" : "Chiesa dell'Immacolata",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012087"
+      }, {
+        "label" : "Oratorio di S.Eligio degli Argentieri",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012117"
+      }, {
+        "label" : "Oratorio di S.Maria di Montesanto",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012125"
+      }, {
+        "label" : "Oratorio di S.Paolino di Nola",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012129"
+      }, {
+        "label" : "Monastero delle benedettine",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012235"
+      }, {
+        "label" : "Chiesa del collegio di Maria",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012236"
+      }, {
+        "label" : "Chiesa di S. Maria Assunta in cielo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012261"
+      }, {
+        "label" : "Chiesa Parrocchiale",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012262"
+      }, {
+        "label" : "Chiesa di S. Agostino",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012273"
+      }, {
+        "label" : "Chiesa del Santuario di San Francesco in Paola",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012275"
+      }, {
+        "label" : "Chiesa Madre",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012412"
+      }, {
+        "label" : "Chiesa Cattedrale",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012536"
+      }, {
+        "label" : "Chiesa parrocchiale dell'Assunta in Cielo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012691"
+      }, {
+        "label" : "Chiesa del Purificatore",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012805"
+      }, {
+        "label" : "Chiesa di S.Agostino",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012807"
+      }, {
+        "label" : "Chiesa di S.Francesco",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012814"
+      }, {
+        "label" : "Chiesa di S.Giovanni Battista",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012816"
+      }, {
+        "label" : "Duomo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012828"
+      }, {
+        "label" : "Municipio",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012829"
+      }, {
+        "label" : "Chiesa di S. Martino",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012858"
+      }, {
+        "label" : "Chiesa del SS. Rosario",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012862"
+      }, {
+        "label" : "Chiesa di S. Stefano",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012881"
+      }, {
+        "label" : "Chiesa della SS. Annunziata",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012888"
+      }, {
+        "label" : "Cattedrale di Pescia",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012897"
+      }, {
+        "label" : "Chiesa di S. Andrea e Lucia",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012902"
+      }, {
+        "label" : "Casa natale del cardinale Mazarino",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012943"
+      }, {
+        "label" : "Chiesa parrocchiale",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012953"
+      }, {
+        "label" : "Chiesa Parrocchiale di S. Giovanni in Canale",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S013034"
+      }, {
+        "label" : "Chiesa di S.Leonardo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S013072"
+      }, {
+        "label" : "Chiesa di S.Maria Maggiore e S.Michele Arcangelo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S013073"
+      }, {
+        "label" : "Chiesa di S.Bernardino",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S013097"
+      }, {
+        "label" : "Residenza Comunale",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S013098"
+      }, {
+        "label" : "Venerabile Confraternita della Misericordia",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S013219"
+      }, {
+        "label" : "Chiesa parrocchiale",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S013252"
+      }, {
+        "label" : "Chiesa",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004848"
+      }, {
+        "label" : "Chiesa parrocchiale San Salvatore",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004861"
+      }, {
+        "label" : "Cappella di San Michele presso la cascina Vescovo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004865"
+      }, {
+        "label" : "Chiesa di San Martino di Liramo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004870"
+      }, {
+        "label" : "Biblioteca comunale",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004978"
+      }, {
+        "label" : "Chiesa di Santa Maria",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004981"
+      }, {
+        "label" : "Chiesa di Santa Maria della Stella. Confraternita del Gonfalone",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004982"
+      }, {
+        "label" : "Chiesa di Santa Maria del Suffragio",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004983"
+      }, {
+        "label" : "Chiesa dei Santi Martiri giapponesi",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004984"
+      }, {
+        "label" : "Museo Civico",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004989"
+      }, {
+        "label" : "Piazza della Rocca",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004992"
+      }, {
+        "label" : "Asilo San Callisto",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004998"
+      }, {
+        "label" : "Chiesa del Conventino",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004999"
+      }, {
+        "label" : "Chiesa di San Sebastiano",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005000"
+      }, {
+        "label" : "Madonna delle Grazie",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005001"
+      }, {
+        "label" : "Chiesa dell'Immacolata Concezione",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005002"
+      }, {
+        "label" : "Chiesa San Michele",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005003"
+      }, {
+        "label" : "Chiesa di San Pietro e San Calisto",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005004"
+      }, {
+        "label" : "Municipio",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005005"
+      }, {
+        "label" : "Municipio",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005006"
+      }, {
+        "label" : "Chiesa di San Flaviano",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005007"
+      }, {
+        "label" : "Chiesa dell'ex Monastero di San Michele Arcangelo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005077"
+      }, {
+        "label" : "Chiesa parrocchiale",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005167"
+      }, {
+        "label" : "Chiesa parrocchiale di San Massimo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005171"
+      }, {
+        "label" : "Chiesa arcipretale di San Nicola da Bari",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005204"
+      }, {
+        "label" : "Cappella dell'Annunziata",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005338"
+      }, {
+        "label" : "Casa De Rossi",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005339"
+      }, {
+        "label" : "Casa Moroni",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005340"
+      }, {
+        "label" : "Casa Prosperi",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005341"
+      }, {
+        "label" : "Casa Riozzi",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005342"
+      }, {
+        "label" : "Casa Tiraborelli",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005343"
+      }, {
+        "label" : "Casa Tommasi",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005344"
+      }, {
+        "label" : "Chiesa dell'Annunziata",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005345"
+      }, {
+        "label" : "Chiesa di Santa Caterina",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005346"
+      }, {
+        "label" : "Chiesa di San Francesco",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005347"
+      }, {
+        "label" : "Chiesa di Santa Maria della Pietà",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005348"
+      }, {
+        "label" : "Chiesa e chiostro di Sant'Oliva",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005351"
+      }, {
+        "label" : "Chiesa di San Salvatore",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005353"
+      }, {
+        "label" : "Piazza Santa Maria",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005358"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "2",
+    "lexicalEntryUri" : "http://localhost:8080#LexicalEntry_2",
+    "language" : "IT",
+    "type" : "NP",
+    "bindingType" : "THING",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentences" : [ "la creazione di $x" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://purl.org/dc/elements/1.1/date> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Chiesa di S. Agostino",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011661"
+      }, {
+        "label" : "Chiesa di San Giovanni Evangelista e ex canonica ora caserma dei Carabinieri",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011671"
+      }, {
+        "label" : "Chiesa di S. Spirito degli Armeni",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011678"
+      }, {
+        "label" : "Duomo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011682"
+      }, {
+        "label" : "Ruderi di edificio romano",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011695"
+      }, {
+        "label" : "Chiesa dell'Annunziata dei Frati Minori Osservanti",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011703"
+      }, {
+        "label" : "Chiesa del Sacramento",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011704"
+      }, {
+        "label" : "Chiesa di San Francesco",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011705"
+      }, {
+        "label" : "Chiesa di San Giuseppe",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011706"
+      }, {
+        "label" : "Oratorio di S.Bovo (parr.S.M. Del Torresino)",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011832"
+      }, {
+        "label" : "Via del Santo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011903"
+      }, {
+        "label" : "Chiesa di S. Maria del Torresino",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011931"
+      }, {
+        "label" : "Chiesa di S.Francesco d'Assisi",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S011998"
+      }, {
+        "label" : "Basilica della SS.Trinità",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012005"
+      }, {
+        "label" : "Chiesa dell'Annunziata degli Algoziri",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012017"
+      }, {
+        "label" : "Chiesa dei SS. Cosma e Damiano",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012025"
+      }, {
+        "label" : "Oratorio di S. Caterina all'Olivella",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012033"
+      }, {
+        "label" : "Oratorio della Compagnia dei SS. Elena e Costantino",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012034"
+      }, {
+        "label" : "Oratorio dei Ss. Crispino e Crispiniano",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012036"
+      }, {
+        "label" : "Chiesa di S.Francesco di Paola ai Candelai",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012041"
+      }, {
+        "label" : "Chiesa di Casa Professa",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012043"
+      }, {
+        "label" : "Chiesa di S.Maria degli Angeli detta della Gancia",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012054"
+      }, {
+        "label" : "Chiesa di S.Maria della Vittoria",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012063"
+      }, {
+        "label" : "Chiesa di S.Mercurio",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012067"
+      }, {
+        "label" : "Chiesa dei Quaranta Martiri",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012077"
+      }, {
+        "label" : "Chiesa di S.Silvestro",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012080"
+      }, {
+        "label" : "Chiesa di S.Teresa alla Kalsa",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012084"
+      }, {
+        "label" : "Chiesa dell'Immacolata",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012087"
+      }, {
+        "label" : "Oratorio di S.Eligio degli Argentieri",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012117"
+      }, {
+        "label" : "Oratorio di S.Maria di Montesanto",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012125"
+      }, {
+        "label" : "Oratorio di S.Paolino di Nola",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012129"
+      }, {
+        "label" : "Monastero delle benedettine",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012235"
+      }, {
+        "label" : "Chiesa del collegio di Maria",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012236"
+      }, {
+        "label" : "Chiesa di S. Maria Assunta in cielo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012261"
+      }, {
+        "label" : "Chiesa Parrocchiale",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012262"
+      }, {
+        "label" : "Chiesa di S. Agostino",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012273"
+      }, {
+        "label" : "Chiesa del Santuario di San Francesco in Paola",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012275"
+      }, {
+        "label" : "Chiesa Madre",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012412"
+      }, {
+        "label" : "Chiesa Cattedrale",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012536"
+      }, {
+        "label" : "Chiesa parrocchiale dell'Assunta in Cielo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012691"
+      }, {
+        "label" : "Chiesa del Purificatore",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012805"
+      }, {
+        "label" : "Chiesa di S.Agostino",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012807"
+      }, {
+        "label" : "Chiesa di S.Francesco",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012814"
+      }, {
+        "label" : "Chiesa di S.Giovanni Battista",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012816"
+      }, {
+        "label" : "Duomo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012828"
+      }, {
+        "label" : "Municipio",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012829"
+      }, {
+        "label" : "Chiesa di S. Martino",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012858"
+      }, {
+        "label" : "Chiesa del SS. Rosario",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012862"
+      }, {
+        "label" : "Chiesa di S. Stefano",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012881"
+      }, {
+        "label" : "Chiesa della SS. Annunziata",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012888"
+      }, {
+        "label" : "Cattedrale di Pescia",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012897"
+      }, {
+        "label" : "Chiesa di S. Andrea e Lucia",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012902"
+      }, {
+        "label" : "Casa natale del cardinale Mazarino",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012943"
+      }, {
+        "label" : "Chiesa parrocchiale",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S012953"
+      }, {
+        "label" : "Chiesa Parrocchiale di S. Giovanni in Canale",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S013034"
+      }, {
+        "label" : "Chiesa di S.Leonardo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S013072"
+      }, {
+        "label" : "Chiesa di S.Maria Maggiore e S.Michele Arcangelo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S013073"
+      }, {
+        "label" : "Chiesa di S.Bernardino",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S013097"
+      }, {
+        "label" : "Residenza Comunale",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S013098"
+      }, {
+        "label" : "Venerabile Confraternita della Misericordia",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S013219"
+      }, {
+        "label" : "Chiesa parrocchiale",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S013252"
+      }, {
+        "label" : "Chiesa",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004848"
+      }, {
+        "label" : "Chiesa parrocchiale San Salvatore",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004861"
+      }, {
+        "label" : "Cappella di San Michele presso la cascina Vescovo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004865"
+      }, {
+        "label" : "Chiesa di San Martino di Liramo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004870"
+      }, {
+        "label" : "Biblioteca comunale",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004978"
+      }, {
+        "label" : "Chiesa di Santa Maria",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004981"
+      }, {
+        "label" : "Chiesa di Santa Maria della Stella. Confraternita del Gonfalone",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004982"
+      }, {
+        "label" : "Chiesa di Santa Maria del Suffragio",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004983"
+      }, {
+        "label" : "Chiesa dei Santi Martiri giapponesi",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004984"
+      }, {
+        "label" : "Museo Civico",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004989"
+      }, {
+        "label" : "Piazza della Rocca",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004992"
+      }, {
+        "label" : "Asilo San Callisto",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004998"
+      }, {
+        "label" : "Chiesa del Conventino",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S004999"
+      }, {
+        "label" : "Chiesa di San Sebastiano",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005000"
+      }, {
+        "label" : "Madonna delle Grazie",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005001"
+      }, {
+        "label" : "Chiesa dell'Immacolata Concezione",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005002"
+      }, {
+        "label" : "Chiesa San Michele",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005003"
+      }, {
+        "label" : "Chiesa di San Pietro e San Calisto",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005004"
+      }, {
+        "label" : "Municipio",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005005"
+      }, {
+        "label" : "Municipio",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005006"
+      }, {
+        "label" : "Chiesa di San Flaviano",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005007"
+      }, {
+        "label" : "Chiesa dell'ex Monastero di San Michele Arcangelo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005077"
+      }, {
+        "label" : "Chiesa parrocchiale",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005167"
+      }, {
+        "label" : "Chiesa parrocchiale di San Massimo",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005171"
+      }, {
+        "label" : "Chiesa arcipretale di San Nicola da Bari",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005204"
+      }, {
+        "label" : "Cappella dell'Annunziata",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005338"
+      }, {
+        "label" : "Casa De Rossi",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005339"
+      }, {
+        "label" : "Casa Moroni",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005340"
+      }, {
+        "label" : "Casa Prosperi",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005341"
+      }, {
+        "label" : "Casa Riozzi",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005342"
+      }, {
+        "label" : "Casa Tiraborelli",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005343"
+      }, {
+        "label" : "Casa Tommasi",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005344"
+      }, {
+        "label" : "Chiesa dell'Annunziata",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005345"
+      }, {
+        "label" : "Chiesa di Santa Caterina",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005346"
+      }, {
+        "label" : "Chiesa di San Francesco",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005347"
+      }, {
+        "label" : "Chiesa di Santa Maria della Pietà",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005348"
+      }, {
+        "label" : "Chiesa e chiostro di Sant'Oliva",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005351"
+      }, {
+        "label" : "Chiesa di San Salvatore",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005353"
+      }, {
+        "label" : "Piazza Santa Maria",
+        "uri" : "http://dati.beniculturali.it/iccd/schede/resource/uod/S005358"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "lexicalEntryUri" : "http://localhost:8080#LexicalEntry_1",
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentences" : [ "Qual era la scheda di ($x | THING_NP)?", "Qual è la scheda di ($x | THING_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://purl.org/dc/elements/1.1/source> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Metainfo Luogo 138764",
+        "uri" : "http://dati.beniculturali.it/mibact/luoghi/resource/CulturalInstituteOrSite/138764.rdf"
+      }, {
+        "label" : "Metainfo Luogo 138761",
+        "uri" : "http://dati.beniculturali.it/mibact/luoghi/resource/CulturalInstituteOrSite/138761.rdf"
+      }, {
+        "label" : "Metainfo Luogo 139195",
+        "uri" : "http://dati.beniculturali.it/mibact/luoghi/resource/CulturalInstituteOrSite/139195.rdf"
+      }, {
+        "label" : "Metainfo Luogo 143478",
+        "uri" : "http://dati.beniculturali.it/mibact/luoghi/resource/CulturalInstituteOrSite/143478.rdf"
+      }, {
+        "label" : "Metainfo Luogo 144618",
+        "uri" : "http://dati.beniculturali.it/mibact/luoghi/resource/CulturalInstituteOrSite/144618.rdf"
+      }, {
+        "label" : "Metainfo Evento 122980",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122980.rdf"
+      }, {
+        "label" : "Metainfo Evento 122981",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122981.rdf"
+      }, {
+        "label" : "Metainfo Evento 122982",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122982.rdf"
+      }, {
+        "label" : "Metainfo Evento 122983",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122983.rdf"
+      }, {
+        "label" : "Metainfo Evento 122984",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122984.rdf"
+      }, {
+        "label" : "Metainfo Evento 122985",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122985.rdf"
+      }, {
+        "label" : "Metainfo Evento 122986",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122986.rdf"
+      }, {
+        "label" : "Metainfo Evento 122987",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122987.rdf"
+      }, {
+        "label" : "Metainfo Evento 122988",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122988.rdf"
+      }, {
+        "label" : "Metainfo Evento 122989",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122989.rdf"
+      }, {
+        "label" : "Metainfo Evento 122990",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122990.rdf"
+      }, {
+        "label" : "Metainfo Evento 122992",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122992.rdf"
+      }, {
+        "label" : "Metainfo Evento 122993",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122993.rdf"
+      }, {
+        "label" : "Metainfo Evento 122995",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122995.rdf"
+      }, {
+        "label" : "Metainfo Evento 122996",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122996.rdf"
+      }, {
+        "label" : "Metainfo Evento 122997",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122997.rdf"
+      }, {
+        "label" : "Metainfo Evento 122998",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122998.rdf"
+      }, {
+        "label" : "Metainfo Evento 122999",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122999.rdf"
+      }, {
+        "label" : "Metainfo Evento 123001",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123001.rdf"
+      }, {
+        "label" : "Metainfo Evento 123002",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123002.rdf"
+      }, {
+        "label" : "Metainfo Evento 123003",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123003.rdf"
+      }, {
+        "label" : "Metainfo Evento 123009",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123009.rdf"
+      }, {
+        "label" : "Metainfo Evento 123010",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123010.rdf"
+      }, {
+        "label" : "Metainfo Evento 123012",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123012.rdf"
+      }, {
+        "label" : "Metainfo Evento 123013",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123013.rdf"
+      }, {
+        "label" : "Metainfo Evento 123014",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123014.rdf"
+      }, {
+        "label" : "Metainfo Evento 123015",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123015.rdf"
+      }, {
+        "label" : "Metainfo Evento 123017",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123017.rdf"
+      }, {
+        "label" : "Metainfo Evento 123018",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123018.rdf"
+      }, {
+        "label" : "Metainfo Evento 123020",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123020.rdf"
+      }, {
+        "label" : "Metainfo Evento 123021",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123021.rdf"
+      }, {
+        "label" : "Metainfo Evento 123022",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123022.rdf"
+      }, {
+        "label" : "Metainfo Evento 123024",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123024.rdf"
+      }, {
+        "label" : "Metainfo Evento 123026",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123026.rdf"
+      }, {
+        "label" : "Metainfo Evento 123028",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123028.rdf"
+      }, {
+        "label" : "Metainfo Evento 123029",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123029.rdf"
+      }, {
+        "label" : "Metainfo Evento 123030",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123030.rdf"
+      }, {
+        "label" : "Metainfo Evento 123031",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123031.rdf"
+      }, {
+        "label" : "Metainfo Evento 123032",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123032.rdf"
+      }, {
+        "label" : "Metainfo Evento 123033",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123033.rdf"
+      }, {
+        "label" : "Metainfo Evento 123034",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123034.rdf"
+      }, {
+        "label" : "Metainfo Evento 123035",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123035.rdf"
+      }, {
+        "label" : "Metainfo Evento 123036",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123036.rdf"
+      }, {
+        "label" : "Metainfo Evento 123039",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123039.rdf"
+      }, {
+        "label" : "Metainfo Evento 123041",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123041.rdf"
+      }, {
+        "label" : "Metainfo Evento 123042",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123042.rdf"
+      }, {
+        "label" : "Metainfo Evento 123043",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123043.rdf"
+      }, {
+        "label" : "Metainfo Evento 123044",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123044.rdf"
+      }, {
+        "label" : "Metainfo Evento 123045",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123045.rdf"
+      }, {
+        "label" : "Metainfo Evento 123046",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123046.rdf"
+      }, {
+        "label" : "Metainfo Evento 123047",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123047.rdf"
+      }, {
+        "label" : "Metainfo Evento 123048",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123048.rdf"
+      }, {
+        "label" : "Metainfo Evento 123052",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123052.rdf"
+      }, {
+        "label" : "Metainfo Evento 123053",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123053.rdf"
+      }, {
+        "label" : "Metainfo Evento 123054",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123054.rdf"
+      }, {
+        "label" : "Metainfo Evento 123056",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123056.rdf"
+      }, {
+        "label" : "Metainfo Evento 123058",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123058.rdf"
+      }, {
+        "label" : "Metainfo Evento 123059",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123059.rdf"
+      }, {
+        "label" : "Metainfo Evento 123060",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123060.rdf"
+      }, {
+        "label" : "Metainfo Evento 123061",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123061.rdf"
+      }, {
+        "label" : "Metainfo Evento 123062",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123062.rdf"
+      }, {
+        "label" : "Metainfo Evento 123063",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123063.rdf"
+      }, {
+        "label" : "Metainfo Evento 123064",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123064.rdf"
+      }, {
+        "label" : "Metainfo Evento 123066",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123066.rdf"
+      }, {
+        "label" : "Metainfo Evento 123067",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123067.rdf"
+      }, {
+        "label" : "Metainfo Evento 123070",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123070.rdf"
+      }, {
+        "label" : "Metainfo Evento 123071",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123071.rdf"
+      }, {
+        "label" : "Metainfo Evento 123076",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123076.rdf"
+      }, {
+        "label" : "Metainfo Evento 123078",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123078.rdf"
+      }, {
+        "label" : "Metainfo Evento 123079",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123079.rdf"
+      }, {
+        "label" : "Metainfo Evento 123080",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123080.rdf"
+      }, {
+        "label" : "Metainfo Evento 123081",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123081.rdf"
+      }, {
+        "label" : "Metainfo Evento 123082",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123082.rdf"
+      }, {
+        "label" : "Metainfo Evento 123083",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123083.rdf"
+      }, {
+        "label" : "Metainfo Evento 123084",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123084.rdf"
+      }, {
+        "label" : "Metainfo Evento 123085",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123085.rdf"
+      }, {
+        "label" : "Metainfo Evento 123086",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123086.rdf"
+      }, {
+        "label" : "Metainfo Evento 123088",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123088.rdf"
+      }, {
+        "label" : "Metainfo Evento 123090",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123090.rdf"
+      }, {
+        "label" : "Metainfo Evento 123091",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123091.rdf"
+      }, {
+        "label" : "Metainfo Evento 123093",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123093.rdf"
+      }, {
+        "label" : "Metainfo Evento 123108",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123108.rdf"
+      }, {
+        "label" : "Metainfo Evento 123109",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123109.rdf"
+      }, {
+        "label" : "Metainfo Evento 123110",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123110.rdf"
+      }, {
+        "label" : "Metainfo Evento 123111",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123111.rdf"
+      }, {
+        "label" : "Metainfo Evento 123112",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123112.rdf"
+      }, {
+        "label" : "Metainfo Evento 123113",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123113.rdf"
+      }, {
+        "label" : "Metainfo Evento 123120",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123120.rdf"
+      }, {
+        "label" : "Metainfo Evento 123123",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123123.rdf"
+      }, {
+        "label" : "Metainfo Evento 123124",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123124.rdf"
+      }, {
+        "label" : "Metainfo Evento 123125",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123125.rdf"
+      }, {
+        "label" : "Metainfo Evento 123126",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123126.rdf"
+      }, {
+        "label" : "Metainfo Evento 123127",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123127.rdf"
+      }, {
+        "label" : "Metainfo Evento 123128",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123128.rdf"
+      }, {
+        "label" : "Metainfo Evento 123129",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123129.rdf"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "4",
+    "lexicalEntryUri" : "http://localhost:8080#LexicalEntry_1",
+    "language" : "IT",
+    "type" : "NP",
+    "bindingType" : "THING",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentences" : [ "la scheda di $x" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://purl.org/dc/elements/1.1/source> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Metainfo Luogo 138764",
+        "uri" : "http://dati.beniculturali.it/mibact/luoghi/resource/CulturalInstituteOrSite/138764.rdf"
+      }, {
+        "label" : "Metainfo Luogo 138761",
+        "uri" : "http://dati.beniculturali.it/mibact/luoghi/resource/CulturalInstituteOrSite/138761.rdf"
+      }, {
+        "label" : "Metainfo Luogo 139195",
+        "uri" : "http://dati.beniculturali.it/mibact/luoghi/resource/CulturalInstituteOrSite/139195.rdf"
+      }, {
+        "label" : "Metainfo Luogo 143478",
+        "uri" : "http://dati.beniculturali.it/mibact/luoghi/resource/CulturalInstituteOrSite/143478.rdf"
+      }, {
+        "label" : "Metainfo Luogo 144618",
+        "uri" : "http://dati.beniculturali.it/mibact/luoghi/resource/CulturalInstituteOrSite/144618.rdf"
+      }, {
+        "label" : "Metainfo Evento 122980",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122980.rdf"
+      }, {
+        "label" : "Metainfo Evento 122981",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122981.rdf"
+      }, {
+        "label" : "Metainfo Evento 122982",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122982.rdf"
+      }, {
+        "label" : "Metainfo Evento 122983",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122983.rdf"
+      }, {
+        "label" : "Metainfo Evento 122984",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122984.rdf"
+      }, {
+        "label" : "Metainfo Evento 122985",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122985.rdf"
+      }, {
+        "label" : "Metainfo Evento 122986",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122986.rdf"
+      }, {
+        "label" : "Metainfo Evento 122987",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122987.rdf"
+      }, {
+        "label" : "Metainfo Evento 122988",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122988.rdf"
+      }, {
+        "label" : "Metainfo Evento 122989",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122989.rdf"
+      }, {
+        "label" : "Metainfo Evento 122990",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122990.rdf"
+      }, {
+        "label" : "Metainfo Evento 122992",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122992.rdf"
+      }, {
+        "label" : "Metainfo Evento 122993",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122993.rdf"
+      }, {
+        "label" : "Metainfo Evento 122995",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122995.rdf"
+      }, {
+        "label" : "Metainfo Evento 122996",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122996.rdf"
+      }, {
+        "label" : "Metainfo Evento 122997",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122997.rdf"
+      }, {
+        "label" : "Metainfo Evento 122998",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122998.rdf"
+      }, {
+        "label" : "Metainfo Evento 122999",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/122999.rdf"
+      }, {
+        "label" : "Metainfo Evento 123001",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123001.rdf"
+      }, {
+        "label" : "Metainfo Evento 123002",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123002.rdf"
+      }, {
+        "label" : "Metainfo Evento 123003",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123003.rdf"
+      }, {
+        "label" : "Metainfo Evento 123009",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123009.rdf"
+      }, {
+        "label" : "Metainfo Evento 123010",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123010.rdf"
+      }, {
+        "label" : "Metainfo Evento 123012",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123012.rdf"
+      }, {
+        "label" : "Metainfo Evento 123013",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123013.rdf"
+      }, {
+        "label" : "Metainfo Evento 123014",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123014.rdf"
+      }, {
+        "label" : "Metainfo Evento 123015",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123015.rdf"
+      }, {
+        "label" : "Metainfo Evento 123017",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123017.rdf"
+      }, {
+        "label" : "Metainfo Evento 123018",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123018.rdf"
+      }, {
+        "label" : "Metainfo Evento 123020",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123020.rdf"
+      }, {
+        "label" : "Metainfo Evento 123021",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123021.rdf"
+      }, {
+        "label" : "Metainfo Evento 123022",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123022.rdf"
+      }, {
+        "label" : "Metainfo Evento 123024",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123024.rdf"
+      }, {
+        "label" : "Metainfo Evento 123026",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123026.rdf"
+      }, {
+        "label" : "Metainfo Evento 123028",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123028.rdf"
+      }, {
+        "label" : "Metainfo Evento 123029",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123029.rdf"
+      }, {
+        "label" : "Metainfo Evento 123030",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123030.rdf"
+      }, {
+        "label" : "Metainfo Evento 123031",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123031.rdf"
+      }, {
+        "label" : "Metainfo Evento 123032",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123032.rdf"
+      }, {
+        "label" : "Metainfo Evento 123033",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123033.rdf"
+      }, {
+        "label" : "Metainfo Evento 123034",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123034.rdf"
+      }, {
+        "label" : "Metainfo Evento 123035",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123035.rdf"
+      }, {
+        "label" : "Metainfo Evento 123036",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123036.rdf"
+      }, {
+        "label" : "Metainfo Evento 123039",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123039.rdf"
+      }, {
+        "label" : "Metainfo Evento 123041",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123041.rdf"
+      }, {
+        "label" : "Metainfo Evento 123042",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123042.rdf"
+      }, {
+        "label" : "Metainfo Evento 123043",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123043.rdf"
+      }, {
+        "label" : "Metainfo Evento 123044",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123044.rdf"
+      }, {
+        "label" : "Metainfo Evento 123045",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123045.rdf"
+      }, {
+        "label" : "Metainfo Evento 123046",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123046.rdf"
+      }, {
+        "label" : "Metainfo Evento 123047",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123047.rdf"
+      }, {
+        "label" : "Metainfo Evento 123048",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123048.rdf"
+      }, {
+        "label" : "Metainfo Evento 123052",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123052.rdf"
+      }, {
+        "label" : "Metainfo Evento 123053",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123053.rdf"
+      }, {
+        "label" : "Metainfo Evento 123054",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123054.rdf"
+      }, {
+        "label" : "Metainfo Evento 123056",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123056.rdf"
+      }, {
+        "label" : "Metainfo Evento 123058",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123058.rdf"
+      }, {
+        "label" : "Metainfo Evento 123059",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123059.rdf"
+      }, {
+        "label" : "Metainfo Evento 123060",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123060.rdf"
+      }, {
+        "label" : "Metainfo Evento 123061",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123061.rdf"
+      }, {
+        "label" : "Metainfo Evento 123062",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123062.rdf"
+      }, {
+        "label" : "Metainfo Evento 123063",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123063.rdf"
+      }, {
+        "label" : "Metainfo Evento 123064",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123064.rdf"
+      }, {
+        "label" : "Metainfo Evento 123066",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123066.rdf"
+      }, {
+        "label" : "Metainfo Evento 123067",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123067.rdf"
+      }, {
+        "label" : "Metainfo Evento 123070",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123070.rdf"
+      }, {
+        "label" : "Metainfo Evento 123071",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123071.rdf"
+      }, {
+        "label" : "Metainfo Evento 123076",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123076.rdf"
+      }, {
+        "label" : "Metainfo Evento 123078",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123078.rdf"
+      }, {
+        "label" : "Metainfo Evento 123079",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123079.rdf"
+      }, {
+        "label" : "Metainfo Evento 123080",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123080.rdf"
+      }, {
+        "label" : "Metainfo Evento 123081",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123081.rdf"
+      }, {
+        "label" : "Metainfo Evento 123082",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123082.rdf"
+      }, {
+        "label" : "Metainfo Evento 123083",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123083.rdf"
+      }, {
+        "label" : "Metainfo Evento 123084",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123084.rdf"
+      }, {
+        "label" : "Metainfo Evento 123085",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123085.rdf"
+      }, {
+        "label" : "Metainfo Evento 123086",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123086.rdf"
+      }, {
+        "label" : "Metainfo Evento 123088",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123088.rdf"
+      }, {
+        "label" : "Metainfo Evento 123090",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123090.rdf"
+      }, {
+        "label" : "Metainfo Evento 123091",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123091.rdf"
+      }, {
+        "label" : "Metainfo Evento 123093",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123093.rdf"
+      }, {
+        "label" : "Metainfo Evento 123108",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123108.rdf"
+      }, {
+        "label" : "Metainfo Evento 123109",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123109.rdf"
+      }, {
+        "label" : "Metainfo Evento 123110",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123110.rdf"
+      }, {
+        "label" : "Metainfo Evento 123111",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123111.rdf"
+      }, {
+        "label" : "Metainfo Evento 123112",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123112.rdf"
+      }, {
+        "label" : "Metainfo Evento 123113",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123113.rdf"
+      }, {
+        "label" : "Metainfo Evento 123120",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123120.rdf"
+      }, {
+        "label" : "Metainfo Evento 123123",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123123.rdf"
+      }, {
+        "label" : "Metainfo Evento 123124",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123124.rdf"
+      }, {
+        "label" : "Metainfo Evento 123125",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123125.rdf"
+      }, {
+        "label" : "Metainfo Evento 123126",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123126.rdf"
+      }, {
+        "label" : "Metainfo Evento 123127",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123127.rdf"
+      }, {
+        "label" : "Metainfo Evento 123128",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123128.rdf"
+      }, {
+        "label" : "Metainfo Evento 123129",
+        "uri" : "http://dati.beniculturali.it/mibact/eventi/resource/CulturalEvent/123129.rdf"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "5",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is $x located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple ?subjOfProp <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : false
+  } ]
+}

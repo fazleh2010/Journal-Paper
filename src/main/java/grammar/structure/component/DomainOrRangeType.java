@@ -63,14 +63,42 @@ public enum DomainOrRangeType {
       URI.create(DBO.getUri() + "Curler"),
       URI.create(DBO.getUri() + "Saint"),
       URI.create(DBO.getUri() + "FictionalCharacter"),
+      URI.create(DBO.getUri() + "author"),
       URI.create("http://www.wikidata.org/entity/Q215627") // wiki data person
+    )
+  ),
+  PLACE(
+    List.of(
+      URI.create(DBO.getUri() + "Place"),
+      URI.create(DBO.getUri() + "City"),
+      URI.create(DBO.getUri() + "Country"),
+      URI.create(DBO.getUri() + "PopulatedPlace"),
+      URI.create(DBO.getUri() + "birthPlace"),
+      URI.create(DBO.getUri() + "deathPlace"),
+      URI.create(DBO.getUri() +  "placeOfBurial")
     )
   ),
   NAME(List.of(
     URI.create(DBO.getUri() + "GivenName"),
     URI.create(DBO.getUri() + "Name")
   )),
-  DATE(List.of(URI.create("http://www.w3.org/2001/XMLSchema#date"))),
+  DATE(List.of(
+    URI.create("http://www.w3.org/2001/XMLSchema#date"),
+    URI.create("http://www.w3.org/2001/XMLSchema#gYear"),
+    URI.create(DBO.getUri() + "buildingStartDate"),
+    URI.create(DBO.getUri() + "buildingEndDate"),
+    URI.create(DBO.getUri() + "completionDate"),
+    URI.create(DBO.getUri() + "deathDate"),
+    URI.create(DBO.getUri() + "birthDate"),  
+    URI.create(DBO.getUri() + "firstAirDate"),
+    URI.create(DBO.getUri() +"latestReleaseDate"),
+    URI.create(DBO.getUri() +"decommissioningDate"),
+    URI.create(DBO.getUri() + "launchDate"),
+    URI.create(DBO.getUri() + "formationDate"),
+    URI.create(DBO.getUri() + "yearOfConstruction"),
+    URI.create(DBO.getUri() + "firstPublicationYear"),
+    URI.create(DBO.getUri() + "birthYear")
+            )),
   COUNTRY(List.of(URI.create(DBO.getUri() + "Country"))),
   CITY(List.of(
     URI.create(DBO.getUri() + "City"),
@@ -172,6 +200,11 @@ public enum DomainOrRangeType {
     URI.create(DBO.getUri() + "City"),
     URI.create(DBO.getUri() + "WineRegion")
   )),
+  ARCHITECTURE_STRUCTURE(List.of(
+    URI.create(DBO.getUri() + "ArchitecturalStructure"),
+    URI.create(DBO.getUri() + "Bridge"),
+    URI.create(DBO.getUri() + "Building")
+  )),
   OWNEDTHING(List.of(URI.create(DBO.getUri() + "Thing"))),
   THING(List.of(URI.create("http://www.w3.org/2002/07/owl#Thing"))); // default if no other matches
 
@@ -203,3 +236,4 @@ public enum DomainOrRangeType {
     return references;
   }
 }
+

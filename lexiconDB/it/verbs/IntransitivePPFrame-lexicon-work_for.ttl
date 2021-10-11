@@ -1,0 +1,59 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :work_for ;
+  lemon:entry    :per .
+
+:work_for a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_work_for ;
+  lemon:otherForm      :form_work_for_past ;
+  lemon:sense          :work_for_sense_1 ;
+  lemon:synBehavior    :work_for_frame .
+
+:form_work_for a           lemon:Form ;
+  lemon:writtenRep     "lavorare"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:form_work_for a      lemon:Form ;
+  lemon:writtenRep "lavora"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:form_work_for_past a lemon:Form ;
+  lemon:writtenRep  "lavorato"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:work_for_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :work_for_subj ;
+  lexinfo:prepositionalAdjunct :work_for_obj .
+
+:work_for_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :work_for_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/keyPerson> ;
+  lemon:subjOfProp  :work_for_obj ;
+  lemon:objOfProp   :work_for_subj ;
+  lemon:condition   :work_for_sense_1_condition .
+
+:work_for_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Organisation> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+
+:work_for_obj lemon:marker :per .
+
+## Prepositions ##
+:per a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "per"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

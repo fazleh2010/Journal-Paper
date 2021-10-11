@@ -1,0 +1,58 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range
+flow_through,verb,passare,passa,passava,attraverso,IntransitivePPFrame,domain,range,1,dbo:country,dbo:River,dbo:Country
+grow_in,verb,crescere,cresce,cresceva,nel,IntransitivePPFrame,range,domain,1,dbo:growingGrape,dbo:WineRegion,dbo:Grape
+starr_in,verb,recitare,recita,ha recitato,in,IntransitivePPFrame,domain,range,1,dbo:starring,dbo:Film,dbo:Actor
+begin_at,verb,partire,parte,partiva,da,IntransitivePPFrame,domain,range,1,dbp:source1Location,dbo:River,dbo:Country
+flow_into,verb,confluire,confluisce,confluiva,nel,IntransitivePPFrame,range,domain,1,dbo:inflow,dbo:BodyOfWater,dbo:BodyOfWater
+draft_in,verb,arruolare,arruola,arruolato,nel,IntransitivePPFrame,domain,range,1,dbo:draftYear,dbo:AmericanFootballPlayer,xsd:gYear
+complete_in,verb,completare,completa,completato,nel,IntransitivePPFrame,domain,range,1,dbo:buildingEndDate,dbo:ArchitecturalStructure,xsd:gYear
+build_in,verb,costruire,costruisce,costruito,nel,IntransitivePPFrame,domain,range,1,dbo:buildingStartDate,dbo:ArchitecturalStructure,xsd:gYear
+inaugurate_in,verb,inaugurare,inaugura,inaugurata,nel,IntransitivePPFrame,domain,range,1,dbo:openingDate,dbo:ArchitecturalStructure,xsd:gYear
+founded_on,verb,fondare,fonda,fondato,nel,IntransitivePPFrame,domain,range,1,dbo:foundingDate,dbo:Organisation,xsd:date
+founded_in,verb,fondare,fonda,fondato,nel,IntransitivePPFrame,domain,range,2,dbo:foundingYear,dbo:Organisation,xsd:gYear
+released_on,verb,uscire,esce,uscito,il,IntransitivePPFrame,domain,range,1,dbo:releaseDate,dbo:TelevisionShow,xsd:date
+published_on,verb,pubblicare,pubblica,pubblicato,il,IntransitivePPFrame,domain,range,1,dbp:published,dbo:Song,xsd:date
+published_in,verb,pubblicare,pubblica,pubblicato,il,IntransitivePPFrame,domain,range,1,dbp:published,dbo:Song,xsd:gYear
+dissolve_on,verb,sciogliere,scioglie,sciolta,il,IntransitivePPFrame,domain,range,1,dbo:dissolutionDate,dbo:PopulatedPlace,xsd:date
+dissolve_in,verb,sciogliere,scioglie,sciolta,il,IntransitivePPFrame,domain,range,1,dbo:dissolutionDate,dbo:PopulatedPlace,xsd:gYear
+destroy_on,verb,dsitruggere,distrugge,distrutto,nel,IntransitivePPFrame,domain,range,1,dbo:demolitionDate,dbo:ArchitecturalStructure,xsd:date
+destroy_in,verb,dsitruggere,distrugge,distrutto,nel,IntransitivePPFrame,domain,range,2,dbo:demolitionDate,dbo:ArchitecturalStructure,xsd:gYear
+rebuild_on,verb,ricostruire,riscostruisce,ricostruito,nel,IntransitivePPFrame,domain,range,1,dbo:rebuildingDate,dbo:ArchitecturalStructure,xsd:date
+rebuild_in,verb,ricostruire,riscostruisce,ricostruito,nel,IntransitivePPFrame,domain,range,1,dbo:rebuildingDate,dbo:ArchitecturalStructure,xsd:gYear
+reopen_on,verb,riaprire,riapre,riaperto,nel,IntransitivePPFrame,domain,range,1,dbo:reopeningDate,dbo:ArchitecturalStructure,xsd:date
+reopen_in,verb,riaprire,riapre,riaperto,nel,IntransitivePPFrame,domain,range,1,dbo:reopeningDate,dbo:ArchitecturalStructure,xsd:gYear
+discontinue_on,verb,interrompere,interrompe,interrotto,nel,IntransitivePPFrame,domain,range,1,dbo:discontinued,dbo:Beverage,xsd:date
+discontinue_in,verb,interrompere,interrompe,interrotto,nel,IntransitivePPFrame,domain,range,1,dbo:discontinued,dbo:Beverage,xsd:gYear
+introduced_on,verb,introdurre,introduce,introdotto,nel,IntransitivePPFrame,domain,range,1,dbo:introduced,dbo:Beverage,xsd:date
+introduced_in,verb,introdurre,introduce,introdotto,nel,IntransitivePPFrame,domain,range,1,dbo:introduced,dbo:Beverage,xsd:gYear
+open_on,verb,aprire,apre,aperto,nel,IntransitivePPFrame,domain,range,1,dbo:openingDate,dbo:Bridge,xsd:date
+open_in,verb,aprire,apre,aperto,nel,IntransitivePPFrame,domain,range,1,dbo:openingYear,dbo:Bridge,xsd:gYear
+produced_on,verb,produrre,produce,prodotto,nel,IntransitivePPFrame,domain,range,1,dbo:productionDate,dbo:Film,xsd:date
+produced_in,verb,produrre,produce,prodotto,nel,IntransitivePPFrame,domain,range,1,dbo:productionDate,dbo:Film,xsd:gYear
+form_in,verb,formarsi,si forma,formata,nel,IntransitivePPFrame,domain,range,1,dbo:activeYearsStartYear,dbo:Band,xsd:date
+born_on,verb,nascere,nasce,nato,nel,IntransitivePPFrame,domain,range,1,dbo:birthDate,dbo:Person,xsd:date
+live_in,verb,vivere,vive,vissuto,nel,IntransitivePPFrame,domain,range,1,dbo:residence,dbo:Person,dbo:Place
+die_on,verb,morire,muore,morto,nel,IntransitivePPFrame,domain,range,1,dbo:deathDate,dbo:Person,xsd:date
+die_from,verb,morire,muore,morto,nel,IntransitivePPFrame,domain,range,1,dbo:deathCause,dbo:Person,owl:Thing
+take_place_in,verb,avvenire,avviene,avvenuto,nel,IntransitivePPFrame,domain,range,1,dbo:place,dbo:MilitaryConflict,dbo:PopulatedPlace
+compose_for,verb,comporre,compone,composto,per,IntransitivePPFrame,domain,range,1,dbo:musicComposer,dbo:Work,dbo:Person
+work_for,verb,lavorare,lavora,lavorato,per,IntransitivePPFrame,domain,range,1,dbo:keyPerson,dbo:Organisation,dbo:Person
+bury_in,verb,seppellire,seppellisce,sepolto,nel,IntransitivePPFrame,domain,range,1,dbp:burialPlace,dbo:Person,dbo:City
+start_acting_on,verb,iniziare a recitare,inizia a recitare,iniziato a recitare,nel,IntransitivePPFrame,domain,range,1,dbo:activeYearsStartYear,dbo:Actor,xsd:date
+stop_acting_on,verb,smettere di recitare,smette di recitare,smesso di recitare,nel,IntransitivePPFrame,domain,range,1,dbo:activeYearsEndYear,dbo:Actor,xsd:date
+play_in,verb,recitare,recita,recitato,in,IntransitivePPFrame,domain,range,1,dbo:member,dbo:Person,dbo:Band
+split_up_in,verb,dividere,divide,divisa,nel,IntransitivePPFrame,domain,range,1,dbo:activeYearsEndYear,dbo:Band,xsd:date
+study_at,verb,studiare,studia,studiato,presso,IntransitivePPFrame,domain,range,1,dbo:education,dbo:Person,dbo:EducationalInstitution
+record_in,verb,registrare,registra,registrato,presso,IntransitivePPFrame,domain,range,1,dbo:recordedIn,dbo:MusicalWork,dbo:PopulatedPlace
+locate_in,verb,trovarsi,si trova,trovata,in,IntransitivePPFrame,domain,range,2,dbo:location,dbo:City,dbo:Country 
+belong_to,verb,far parte,fa parte,faceva parte,di,IntransitivePPFrame,domain,range,3,dbp:album,dbo:Song,dbo:Album
+play_for,verb,giocare,gioca,giocava,per,IntransitivePPFrame,domain,range,1,dbo:debutTeam,dbo:Athlete,dbo:SportsTeam
+study_at,verb,studiare,studia,studiato,presso,IntransitivePPFrame,domain,range,1,dbo:education,dbo:Person,dbo:EducationalInstitution
+associate_with,verb,essere legata,?? legata,era legata,a,IntransitivePPFrame,domain,range,1,dbo:associatedBand,dbo:Band,dbo:Band
+currently_use_for,verb,usuare attualmente,attualmente usa,attualmente usata,come,IntransitivePPFrame,domain,range,1,dbo:currentlyUsedFor,dbo:ArchitecturalStructure,xsd:string
+initially_use_for,verb,usare inizialmente,usa inizialmente,inizialmente usata,come,IntransitivePPFrame,domain,range,2,dbo:initiallyUsedFor,dbo:ArchitecturalStructure,xsd:string
+originate_in,verb,originare,origina,originata,in,IntransitivePPFrame,domain,range,1,dbo:sourceCountry,dbo:Stream,dbo:Country
+end_in,verb,finire,finisce,finito,nel,IntransitivePPFrame,domain,range,1,dbo:mouthPlace,dbo:River,dbo:PopulatedPlace
+be_from,verb,venire,viene,veniva,da,IntransitivePPFrame,domain,range,1,dbo:hometown,dbo:Agent,dbo:Settlement
+border_in,verb,confinare,confina,confinava,con,IntransitivePPFrame,domain,range,1,dbo:borderingstates,dbo:State,dbo:State
+bury_in,verb,seppellire,seppellisce,seppellito,a,IntransitivePPFrame,domain,range,1,dbp:burialPlace,dbo:Person,dbo:City

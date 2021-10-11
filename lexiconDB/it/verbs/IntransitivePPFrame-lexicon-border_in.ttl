@@ -1,0 +1,59 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :border_in ;
+  lemon:entry    :con .
+
+:border_in a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_border_in ;
+  lemon:otherForm      :form_border_in_past ;
+  lemon:sense          :border_in_sense_1 ;
+  lemon:synBehavior    :border_in_frame .
+
+:form_border_in a           lemon:Form ;
+  lemon:writtenRep     "confinare"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:form_border_in a      lemon:Form ;
+  lemon:writtenRep "confina"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:form_border_in_past a lemon:Form ;
+  lemon:writtenRep  "confinava"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:border_in_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :border_in_subj ;
+  lexinfo:prepositionalAdjunct :border_in_obj .
+
+:border_in_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :border_in_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/borderingstates> ;
+  lemon:subjOfProp  :border_in_obj ;
+  lemon:objOfProp   :border_in_subj ;
+  lemon:condition   :border_in_sense_1_condition .
+
+:border_in_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/State> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/State> .
+
+
+:border_in_obj lemon:marker :con .
+
+## Prepositions ##
+:con a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "con"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

@@ -1,0 +1,10 @@
+LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range
+birthPlace_of,noun,জন্মস্থান,-,এর,NounPPFrame,range,domain,1,wdt:P19,wd:Q5,wd:Q3624078
+nationality_of,noun,জাতীয়তা,-,এর,NounPPFrame,range,domain,1,wdt:P27,wd:Q5,wd:Q3624078
+given_name_of,noun,প্রদত্ত নাম,-,এর,NounPPFrame,range,domain,1,wdt:P735,wd:Q19643892,xsd:string
+family_name_of,noun,পারিবারিক নাম,-,এর,NounPPFrame,range,domain,,wdt:P734,wd:Q19643892,xsd:string
+birthDate_of,noun,জন্ম তারিখ,-,এর,NounPPFrame,range,domain,1,wdt:P569,wd:Q5,xsd:date
+causeOfDeath_of,noun,মৃত্যুর কারণ,মৃত্যুর কারণগুলো,এর,NounPPFrame,range,domain,1,wdt:P509,wd:Q5,Q18608756
+deathDate-of,noun,মৃত্যুর তারিখ,-,এর,NounPPFrame,range,domain,1,wdt:P570,dbo:Person,xsd:date
+child_of,noun,সন্তান,সন্তানদের,এর,NounPPFrame,range,domain,1,wdt:P40,wd:Q5,wd:Q5
+author_of,noun,লেখক,লেখকদের,এর,NounPPFrame,range,domain,1,wdt:P50,wd:Q571,wd:Q5

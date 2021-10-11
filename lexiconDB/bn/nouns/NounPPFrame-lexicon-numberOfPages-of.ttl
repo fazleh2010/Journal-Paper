@@ -1,0 +1,43 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "bn" ;
+  lemon:entry    :numberOfPages-of ;
+  lemon:entry    :এর .
+
+:numberOfPages-of a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :numberOfPages-of_form ;
+  lemon:sense          :numberOfPages-of_sense_1 ;
+  lemon:synBehavior    :numberOfPages-of_nounpp .
+
+:numberOfPages-of_form a lemon:Form ;
+  lemon:writtenRep "পৃষ্ঠা সংখ্যা"@bn .
+
+:numberOfPages-of_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:numberOfPages-of_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :numberOfPages-of_sense_1 ;
+  lemon:reference           <dbo:numberOfPages> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :numberOfPages-of_sense_1_condition .
+
+:numberOfPages-of_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <dbo:WrittenWork> ;
+  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+
+:arg2 lemon:marker :এর .
+
+## Prepositions ##
+
+:এর a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "এর"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

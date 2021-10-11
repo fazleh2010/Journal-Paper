@@ -1,0 +1,12 @@
+LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,GrammarRule1:question1,SPARQL,GrammarRule1: question2,SPARQL Question 2,GrammarRule 1: questions,SPARQL ,NP (Grammar Rule 2),,grammar rules,numberOfQuestions
+father_of,noun,পিতা,-,এর,NounPPFrame,range,domain,1,dbo:father,dbo:Person,dbo:Person,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,,2,
+editor_of,noun,সম্পাদক,সম্পাদকদের,এর,NounPPFrame,range,domain,1,dbo:editor,dbo:Work,dbo:Person,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,,2,
+capital-of,noun,রাজধানী,-,এর,NounPPFrame,range,domain,1,dbo:capital,dbo:Country,dbo:City,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,,2,
+author_of,noun,লেখক,লেখকদের,এর,NounPPFrame,range,domain,1,dbo:author,dbo:Work,dbo:Person,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,,2,
+child_of,noun,সন্তান,সন্তানদের,এর,NounPPFrame,range,domain,1,dbo:child,dbo:Person,dbo:Person,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,,2,
+currency_of,noun,মুদ্রা,-,এর,NounPPFrame,range,domain,1,dbo:currency,dbo:Country,dbo:Currency,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,,2,
+founder_of,noun,প্রতিষ্ঠাতা,প্রতিষ্ঠাতাদের,এর,NounPPFrame,range,domain,1,dbo:parentCompany,dbo:Company,dbo:Company,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,,2,
+producer-of,noun,প্রযোজক,প্রযোজকদের,এর,NounPPFrame,range,domain,1,dbo:producer,dbo:Song,dbo:Person,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,,,
+distributor-of,noun,পরিবেশক,পরিবেশকদের,এর,NounPPFrame,range,domain,1,dbo:distributor,dbo:Film,dbo:Organisation,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,,2,
+director-of,noun,পরিচালক,পরিচালকদের,এর,NounPPFrame,range,domain,1,dbo:director,dbo:Film,dbo:Person,-,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,,2,
+composer-of,noun,সুরকার,সুরকারদের,এর,NounPPFrame,range,domain,1,dbo:composer,dbo:Work,dbo:Person,-,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,#NAME?,,2,

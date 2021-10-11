@@ -1,0 +1,43 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "bn" ;
+  lemon:entry    :leader-of ;
+  lemon:entry    :এর .
+
+:leader-of a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :leader-of_form ;
+  lemon:sense          :leader-of_sense_1 ;
+  lemon:synBehavior    :leader-of_nounpp .
+
+:leader-of_form a lemon:Form ;
+  lemon:writtenRep "নেতা"@bn .
+
+:leader-of_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:leader-of_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :leader-of_sense_1 ;
+  lemon:reference           <dbo:leader> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :leader-of_sense_1_condition .
+
+:leader-of_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <dbo:Country> ;
+  lemon:propertyRange   <dbo:Person> .
+
+:arg2 lemon:marker :এর .
+
+## Prepositions ##
+
+:এর a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "এর"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

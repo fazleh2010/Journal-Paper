@@ -1,0 +1,71 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :study_at ;
+  lemon:entry    :presso .
+
+:study_at a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_study_at ;
+  lemon:otherForm      :form_study_at_past ;
+  lemon:sense          :study_at_sense_1 ;
+  lemon:sense          :study_at_sense_2 ;
+  lemon:synBehavior    :study_at_frame .
+
+:form_study_at a           lemon:Form ;
+  lemon:writtenRep     "studiare"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:form_study_at a      lemon:Form ;
+  lemon:writtenRep "studia"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:form_study_at_past a lemon:Form ;
+  lemon:writtenRep  "studiato"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:study_at_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :study_at_subj ;
+  lexinfo:prepositionalAdjunct :study_at_obj .
+
+:study_at_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :study_at_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/education> ;
+  lemon:subjOfProp  :study_at_obj ;
+  lemon:objOfProp   :study_at_subj ;
+  lemon:condition   :study_at_sense_1_condition .
+
+:study_at_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Person> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/EducationalInstitution> .
+
+:study_at_sense_2 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :study_at_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/education> ;
+  lemon:subjOfProp  :study_at_obj ;
+  lemon:objOfProp   :study_at_subj ;
+  lemon:condition   :study_at_sense_2_condition .
+
+:study_at_sense_2_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Person> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/EducationalInstitution> .
+
+
+:study_at_obj lemon:marker :presso .
+
+## Prepositions ##
+:presso a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "presso"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

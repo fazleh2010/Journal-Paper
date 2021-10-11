@@ -4,6 +4,7 @@ import grammar.generator.BindingResolver;
 import grammar.generator.GrammarRuleGeneratorRoot;
 import grammar.generator.GrammarRuleGeneratorRootImpl;
 import grammar.read.questions.ReadAndWriteQuestions;
+import grammar.sparql.SPARQLRequest;
 import grammar.structure.component.DomainOrRangeType;
 import grammar.structure.component.FrameType;
 import grammar.structure.component.GrammarEntry;
@@ -33,42 +34,28 @@ import util.io.ExecJar;
 import java.lang.*;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import static java.util.Objects.isNull;
+import util.io.LinkedData;
  
-
-
-
-
 @NoArgsConstructor
 public class QueGG {
 
     private static final Logger LOG = LogManager.getLogger(QueGG.class);
-    private static String GENERATE_JSON = "generate";
-    private static String CREATE_CSV = "CREATE_CSV";
     private static String BaseDir = "";
-    private static String QUESTION_ANSWER_LOCATION = BaseDir + "questions/";
-    //tmp location
-    //private static String QUESTION_ANSWER_LOCATION =  "/tmp/";
     private static String QUESTION_ANSWER_FILE = "questions";
+    private static String QUESTION_SUMMARY_FILE = "summary";
     private static String entityLabelDir = "src/main/resources/entityLabels/";
-    //private static String javaLoc="/home/elahi/grammar/hackthon/fork/QueGG-web/target/";
-    private static String javaLoc="QueGG-webCopy/";
-    private static String jarFile="quegg-web-0.0.1-SNAPSHOT.jar";
-    private static Boolean externalEntittyListflag=false;
-    private static String outputFileName="grammar_FULL_DATASET";
-
-    /*public static void mainT(String[] args) throws Exception {
-      queGG.callInterface(javaLoc,jarFile);
-    }*/
-
+    private static Boolean externalEntittyListflag = false;
+    private static String outputFileName = "grammar_FULL_DATASET";
+    //private static String srcDir = "src/main/resources/";
+    // private static String endpoint = "https://dbpedia.org/sparql";
     
     public static void main(String[] args) throws Exception {
         JenaSystem.init();
-
-        String search=GENERATE_JSON+CREATE_CSV;
-        String questionAnswerFile = null;
+        String questionAnswerFile = null, questionSummaryFile, languageStr = null;
 
         try {
-            if (args.length < 5) {
+            if (args.length < 6) {
                 throw new IllegalArgumentException(String.format("Too few parameters (%s/%s)", args.length, 3));
             }
             QueGG queGG = new QueGG();
@@ -79,33 +66,37 @@ public class QueGG {
             language = Language.stringToLanguage(args[0]);
             String inputDir = Path.of(args[1]).toString();
             String outputDir = Path.of(args[2]).toString();
-            String numberOfEntitiesString=Path.of(args[3]).toString();
-            Integer maxNumberOfEntities=Integer.parseInt(numberOfEntitiesString);
-            String fileType=args[4];
-            if(fileType.contains("ttl")){
-               queGG.init(language, inputDir, outputDir);
-                }
-            else if(fileType.contains("csv")){
-               queGG.generateTurtle(inputDir);
-            }
-            else
-              throw new Exception("No file type is mentioned!!");
-
+            String numberOfEntitiesString = Path.of(args[3]).toString();
+            //setSparqlEndpoint(endpoint);
+            Integer maxNumberOfEntities = Integer.parseInt(numberOfEntitiesString);
+            String fileType = args[4];
+            String dataSetConfFile=args[5];
+            LinkedData linkedData=FileUtils.getLinkedDataConf(new File(dataSetConfFile));
+            setDataSet(linkedData);
+            
+            if (fileType.contains("ttl")) {
                 queGG.init(language, inputDir, outputDir);
-                System.out.println("outputFileName+language::"+outputFileName+"_"+language);
-                List<File> fileList = FileUtils.getFiles(outputDir+"/", outputFileName+"_"+language, ".json");
-                if (fileList.isEmpty()) {
-                    throw new Exception("No files to process for question answering system!!");
+            } else if (fileType.contains("csv")) {
+                if (TurtleCreation.generateTurtle(inputDir, linkedData,language.toString().toLowerCase())) {
+                    queGG.init(language, inputDir, outputDir);
+                } else {
+                    throw new Exception("no turle file is found to process!!");
                 }
-                questionAnswerFile =  outputDir+ File.separator + QUESTION_ANSWER_FILE+"_"+language+".csv";
-                ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile,maxNumberOfEntities);
-                readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir,externalEntittyListflag);
 
-                //temporary close of QA system generation
-                //ExecJar.callInterface(javaLoc,jarFile);
-                //System.out.println("csv file generation successful!!");
+            } else {
+                throw new Exception("No file type is mentioned!!");
+            }
+          
 
-
+            List<File> fileList = FileUtils.getFiles(outputDir + "/", outputFileName + "_" + language, ".json");
+            if (fileList.isEmpty()) {
+                throw new Exception("No files to process for question answering system!!");
+            }
+            questionAnswerFile = outputDir + File.separator + QUESTION_ANSWER_FILE + "_" + language + ".csv";
+            questionSummaryFile = outputDir + File.separator + QUESTION_SUMMARY_FILE + "_" + language + ".csv";
+            ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile, maxNumberOfEntities, args[0],linkedData.getEndpoint());
+            readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir, externalEntittyListflag);
+            
             LOG.warn("To get optimal combinations of sentences please add the following types to {}\n{}",
                     DomainOrRangeType.class.getName(), DomainOrRangeType.MISSING_TYPES.toString()
             );
@@ -115,52 +106,16 @@ public class QueGG {
         }
     }
 
-   
-
     public void init(Language language, String inputDir, String outputDir) throws IOException {
         try {
             loadInputAndGenerate(language, inputDir, outputDir);
         } catch (InvocationTargetException | NoSuchMethodException | InstantiationException | IllegalAccessException e) {
             LOG.error("Could not create grammar: {}", e.getMessage());
         }
+        catch (Exception  e) {
+            LOG.error("Could not create grammar: {}", e.getMessage());
+        }
     }
-
-    public void generateTurtle(String inputDir) throws IOException {
-            //FileUtils.deleteFiles(inputDir,".ttl");
-        
-               String lemonEntry=null;
-               File f = new File(inputDir);
-               String[]pathnames = f.list();
-               for (String pathname : pathnames) {
-                    String[]files = new File(inputDir+File.separatorChar+pathname).list(); 
-
-                    for (String file : files) {
-                          if(!file.contains(".csv"))
-                             continue;
-                          CsvFile csvFile = new CsvFile();
-                           System.out.println(inputDir+"/"+pathname+"/"+file);
-                           String directory=inputDir+"/"+pathname+"/";
-                          List<String[]> rows = csvFile.getRows(new File(directory+file));
-                          Integer index = 0;
-
-
-                        for (String[] row : rows) {
-                            if (index == 0) {
-                                index=index+1;
-                                continue;
-                            } 
-                            TurtleCreation nounPPFrameXsl = new TurtleCreation(row);
-                            FileUtils.stringToFile(nounPPFrameXsl.getTutleString(), directory + nounPPFrameXsl.getTutleFileName());
-                               
-                    
-                        }
-
-                    }
-                    
-                }   
-    }
-
-
 
 
     private void loadInputAndGenerate(Language lang, String inputDir, String outputDir) throws
@@ -168,7 +123,8 @@ public class QueGG {
             InvocationTargetException,
             NoSuchMethodException,
             InstantiationException,
-            IllegalAccessException {
+            IllegalAccessException,
+            Exception {
         LexiconImporter lexiconImporter = new LexiconImporter();
         LemonModel lemonModel = lexiconImporter.loadModelFromDir(inputDir, lang.toString().toLowerCase());
         printInputSummary(lemonModel);
@@ -285,6 +241,25 @@ public class QueGG {
         return grammarWrapper;
     }
 
- 
+    /*private static void setSparqlEndpoint(String endpoint) {
+        if (endpoint.contains("dbpedia")) {
+            SPARQLRequest.setEndpoint(endpoint);
+            GrammarRuleGeneratorRoot.setEndpoint(endpoint);
+        } else if (endpoint.contains("wikidata")) {
+            GrammarRuleGeneratorRoot.setEndpoint(endpoint);
+        }
+    }*/
+    private static void setDataSet(LinkedData linkedData) throws Exception {
+        String endpoint = linkedData.getEndpoint();
+        long bindingLimit=linkedData.getBindingLimit();
+        //System.out.println("endpoint::"+endpoint);
+        //System.out.println("prefixes::"+linkedData.getPrefixes());
+        if (linkedData.getEndpoint().contains("dbpedia")) {
+            SPARQLRequest.setEndpoint(endpoint);
+            GrammarRuleGeneratorRoot.setEndpoint(endpoint,bindingLimit);
+        } else if (linkedData.getEndpoint().contains("wikidata")) {
+            GrammarRuleGeneratorRoot.setEndpoint(endpoint,bindingLimit);
+        }
+    }
 
 }

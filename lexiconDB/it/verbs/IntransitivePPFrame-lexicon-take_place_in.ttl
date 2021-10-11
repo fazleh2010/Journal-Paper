@@ -1,0 +1,59 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :take_place_in ;
+  lemon:entry    :nel .
+
+:take_place_in a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_take_place_in ;
+  lemon:otherForm      :form_take_place_in_past ;
+  lemon:sense          :take_place_in_sense_1 ;
+  lemon:synBehavior    :take_place_in_frame .
+
+:form_take_place_in a           lemon:Form ;
+  lemon:writtenRep     "avvenire"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:form_take_place_in a      lemon:Form ;
+  lemon:writtenRep "avviene"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:form_take_place_in_past a lemon:Form ;
+  lemon:writtenRep  "avvenuto"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:take_place_in_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :take_place_in_subj ;
+  lexinfo:prepositionalAdjunct :take_place_in_obj .
+
+:take_place_in_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :take_place_in_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/place> ;
+  lemon:subjOfProp  :take_place_in_obj ;
+  lemon:objOfProp   :take_place_in_subj ;
+  lemon:condition   :take_place_in_sense_1_condition .
+
+:take_place_in_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/MilitaryConflict> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/PopulatedPlace> .
+
+
+:take_place_in_obj lemon:marker :nel .
+
+## Prepositions ##
+:nel a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "nel"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

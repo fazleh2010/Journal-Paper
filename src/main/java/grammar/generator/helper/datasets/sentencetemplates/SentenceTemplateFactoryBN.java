@@ -46,7 +46,7 @@ class SentenceTemplateFactoryBN implements Factory<SentenceTemplateRepository> {
       createNPTemplate(
         language,
         List.of(
-          "prepositionalAdjunct preposition noun(root)"
+          "determiner(reference:component_the) noun(root) preposition prepositionalAdjunct"
         ),
         "prepositionalAdjunct"
       )
@@ -62,6 +62,103 @@ class SentenceTemplateFactoryBN implements Factory<SentenceTemplateRepository> {
         "attributiveArg"
       )
     );
+    // AdjectiveAttributiveFrame
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+          "interrogativePronoun verb(reference:component_be) NP(attributiveArg)?"
+        ),
+        "attributiveArg"
+      )
+    );
+    // AdjectivePPFrame
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+          "interrogativeDeterminer noun(condition:copulativeSubject) verb(reference:component_be) AP(prepositionalAdjunct)?",
+          "interrogativePronoun verb(reference:component_be) AP(prepositionalAdjunct)?"
+        ),
+        "copulativeSubject",
+        "prepositionalAdjunct"
+      )
+    );
+    // AdjectivePPFrame NP
+    sentenceTemplateRepository.add(
+      createNPTemplate(
+        language,
+        List.of(
+          "noun(condition:copulativeSubject,number:plural) AP(prepositionalAdjunct)"
+        ),
+        "copulativeSubject",
+        "prepositionalAdjunct"
+      )
+    );
+    // AP(prepositionalAdjunct)
+    sentenceTemplateRepository.add(
+      createAPTemplate(
+        language,
+        List.of(
+          "adjective(root) preposition prepositionalAdjunct",
+          "verb(root,verbFormMood:participle) preposition prepositionalAdjunct"
+        ),
+        "prepositionalAdjunct"
+      )
+    );
+    // IntransitivePPFrame
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+          "interrogativeDeterminer noun(condition:subject) VP(prepositionalAdjunct)?",
+          "interrogativePronoun VP(prepositionalAdjunct)?"
+        ),
+        "subject",
+        "prepositionalAdjunct"
+      )
+    );
+    // VP(prepositionalAdjunct)
+    sentenceTemplateRepository.add(
+      createVPTemplate(
+        language,
+        List.of(
+          "verb(root) preposition prepositionalAdjunct"
+        ),
+        "prepositionalAdjunct"
+      )
+    );
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+          "TemporalDeterminer noun(condition:subject) VP(temporalAdjunct)?"
+        ),
+        "subject",
+        "temporalAdjunct"
+      )
+    );
+    // TransitiveFrame
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+          "interrogativeDeterminer noun(condition:subject) VP(directObject)?",
+          "interrogativePronoun VP(directObject)?"
+        ),
+        "subject",
+        "directObject"
+      )
+    );
+    // VP(directObject)
+    sentenceTemplateRepository.add(
+      createVPTemplate(
+        language,
+        List.of(
+          "verb(root) directObject"
+        ),
+        "directObject"
+      )
+    );
   }
-
 }

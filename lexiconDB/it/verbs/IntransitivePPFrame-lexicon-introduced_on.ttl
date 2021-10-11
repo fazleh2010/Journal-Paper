@@ -1,0 +1,59 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :introduced_on ;
+  lemon:entry    :nel .
+
+:introduced_on a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_introduced_on ;
+  lemon:otherForm      :form_introduced_on_past ;
+  lemon:sense          :introduced_on_sense_1 ;
+  lemon:synBehavior    :introduced_on_frame .
+
+:form_introduced_on a           lemon:Form ;
+  lemon:writtenRep     "introdurre"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:form_introduced_on a      lemon:Form ;
+  lemon:writtenRep "introduce"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:form_introduced_on_past a lemon:Form ;
+  lemon:writtenRep  "introdotto"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:introduced_on_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :introduced_on_subj ;
+  lexinfo:prepositionalAdjunct :introduced_on_obj .
+
+:introduced_on_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :introduced_on_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/introduced> ;
+  lemon:subjOfProp  :introduced_on_obj ;
+  lemon:objOfProp   :introduced_on_subj ;
+  lemon:condition   :introduced_on_sense_1_condition .
+
+:introduced_on_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Beverage> ;
+  lemon:propertyRange  <http://www.w3.org/2001/XMLSchema/date> .
+
+
+:introduced_on_obj lemon:marker :nel .
+
+## Prepositions ##
+:nel a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "nel"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

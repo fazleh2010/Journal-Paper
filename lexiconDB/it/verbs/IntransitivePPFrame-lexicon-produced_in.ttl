@@ -1,0 +1,59 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :produced_in ;
+  lemon:entry    :nel .
+
+:produced_in a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_produced_in ;
+  lemon:otherForm      :form_produced_in_past ;
+  lemon:sense          :produced_in_sense_1 ;
+  lemon:synBehavior    :produced_in_frame .
+
+:form_produced_in a           lemon:Form ;
+  lemon:writtenRep     "produrre"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:form_produced_in a      lemon:Form ;
+  lemon:writtenRep "produce"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:form_produced_in_past a lemon:Form ;
+  lemon:writtenRep  "prodotto"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:produced_in_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :produced_in_subj ;
+  lexinfo:prepositionalAdjunct :produced_in_obj .
+
+:produced_in_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :produced_in_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/productionDate> ;
+  lemon:subjOfProp  :produced_in_obj ;
+  lemon:objOfProp   :produced_in_subj ;
+  lemon:condition   :produced_in_sense_1_condition .
+
+:produced_in_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Film> ;
+  lemon:propertyRange  <http://www.w3.org/2001/XMLSchema/gYear> .
+
+
+:produced_in_obj lemon:marker :nel .
+
+## Prepositions ##
+:nel a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "nel"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

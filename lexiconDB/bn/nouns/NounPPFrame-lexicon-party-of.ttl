@@ -1,0 +1,43 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "bn" ;
+  lemon:entry    :party-of ;
+  lemon:entry    :এর .
+
+:party-of a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :party-of_form ;
+  lemon:sense          :party-of_sense_1 ;
+  lemon:synBehavior    :party-of_nounpp .
+
+:party-of_form a lemon:Form ;
+  lemon:writtenRep "রাজনৈতিক দল"@bn .
+
+:party-of_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:party-of_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :party-of_sense_1 ;
+  lemon:reference           <dbo:party> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :party-of_sense_1_condition .
+
+:party-of_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <dbo:Politician> ;
+  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#string> .
+
+:arg2 lemon:marker :এর .
+
+## Prepositions ##
+
+:এর a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "এর"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

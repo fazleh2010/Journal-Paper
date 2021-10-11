@@ -1,0 +1,1055 @@
+{
+  "grammarEntries" : [ {
+    "id" : "6",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentences" : [ "Qual era la genere di la genere di $x?", "Qual è la genere di la genere di $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://www.wikidata.org/prop/direct/P136> ?objOfProp)\n  (triple ?subjOfPropx <http://www.wikidata.org/prop/direct/P136> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q262385"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q927182"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q2655502"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q3534149"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q5267981"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q5823554"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q6946327"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q7317781"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q7786047"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q7897004"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q7997882"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q16151256"
+      }, {
+        "label" : "Manu Dibango",
+        "uri" : "http://www.wikidata.org/entity/Q445829"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q22162440"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q24806870"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q26836230"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q27902812"
+      }, {
+        "label" : "Ernest Feydeau",
+        "uri" : "http://www.wikidata.org/entity/Q683974"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q31836193"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q35558719"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q36817579"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q42311470"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q42882363"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q47005433"
+      }, {
+        "label" : "Der beste Tag meines Lebens",
+        "uri" : "http://www.wikidata.org/entity/Q1198357"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q56308828"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q58012027"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q72495363"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q86094656"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q93984576"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q99851947"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q100266201"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q104768675"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q106389571"
+      }, {
+        "label" : "Al Jarreau",
+        "uri" : "http://www.wikidata.org/entity/Q174547"
+      }, {
+        "label" : "Julie London",
+        "uri" : "http://www.wikidata.org/entity/Q231255"
+      }, {
+        "label" : "Carmina Einsidlensia",
+        "uri" : "http://www.wikidata.org/entity/Q1309108"
+      }, {
+        "label" : "Goldständer",
+        "uri" : "http://www.wikidata.org/entity/Q1536174"
+      }, {
+        "label" : "Appunti per una Sinfonia",
+        "uri" : "http://www.wikidata.org/entity/Q30015057"
+      }, {
+        "label" : "Prinz Pi",
+        "uri" : "http://www.wikidata.org/entity/Q99001"
+      }, {
+        "label" : "Die besten Tage sind gezählt",
+        "uri" : "http://www.wikidata.org/entity/Q5274472"
+      }, {
+        "label" : "Ecloghe",
+        "uri" : "http://www.wikidata.org/entity/Q42189213"
+      }, {
+        "label" : "I Can't Give You Anything but Love, Baby",
+        "uri" : "http://www.wikidata.org/entity/Q1027522"
+      }, {
+        "label" : "Epic Rap Battles of History",
+        "uri" : "http://www.wikidata.org/entity/Q1058740"
+      }, {
+        "label" : "Neger Neger",
+        "uri" : "http://www.wikidata.org/entity/Q1974356"
+      }, {
+        "label" : "U (Fighting with my ghost)",
+        "uri" : "http://www.wikidata.org/entity/Q18176458"
+      }, {
+        "label" : "Some of These Days",
+        "uri" : "http://www.wikidata.org/entity/Q4348404"
+      }, {
+        "label" : "Julien Sewering",
+        "uri" : "http://www.wikidata.org/entity/Q20756201"
+      }, {
+        "label" : "NMZS",
+        "uri" : "http://www.wikidata.org/entity/Q15836145"
+      }, {
+        "label" : "Lope de Rueda",
+        "uri" : "http://www.wikidata.org/entity/Q52206"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q74645"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q238154"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q275271"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q406854"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q866916"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q952502"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q1100794"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q1141763"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q1154663"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q1191331"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q1393377"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q1393389"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q1718375"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q1941238"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q1941944"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q1943631"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q1945151"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q1963103"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q2136482"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q2199574"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q2264201"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q2347441"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q4494921"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q5559037"
+      }, {
+        "label" : "Zack de la Rocha",
+        "uri" : "http://www.wikidata.org/entity/Q139933"
+      }, {
+        "label" : "Rage Against the Machine",
+        "uri" : "http://www.wikidata.org/entity/Q72092"
+      }, {
+        "label" : "ORANGE RANGE",
+        "uri" : "http://www.wikidata.org/entity/Q249623"
+      }, {
+        "label" : "Fernando Sor",
+        "uri" : "http://www.wikidata.org/entity/Q254110"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q16664710"
+      }, {
+        "label" : "Butterfly",
+        "uri" : "http://www.wikidata.org/entity/Q582848"
+      }, {
+        "label" : "Phaedra",
+        "uri" : "http://www.wikidata.org/entity/Q642815"
+      }, {
+        "label" : "Playmate of the Year",
+        "uri" : "http://www.wikidata.org/entity/Q739857"
+      }, {
+        "label" : "Written in the Stars",
+        "uri" : "http://www.wikidata.org/entity/Q248044"
+      }, {
+        "label" : "Satellite",
+        "uri" : "http://www.wikidata.org/entity/Q666741"
+      }, {
+        "label" : "Lose Yourself",
+        "uri" : "http://www.wikidata.org/entity/Q957616"
+      }, {
+        "label" : "Ricochet",
+        "uri" : "http://www.wikidata.org/entity/Q971006"
+      }, {
+        "label" : "The Gift of Game",
+        "uri" : "http://www.wikidata.org/entity/Q1087981"
+      }, {
+        "label" : "Dan Bull",
+        "uri" : "http://www.wikidata.org/entity/Q1159013"
+      }, {
+        "label" : "Poland",
+        "uri" : "http://www.wikidata.org/entity/Q599300"
+      }, {
+        "label" : "Machine Gun Kelly",
+        "uri" : "http://www.wikidata.org/entity/Q1354843"
+      }, {
+        "label" : "Rebirth",
+        "uri" : "http://www.wikidata.org/entity/Q1756209"
+      }, {
+        "label" : "Satellite",
+        "uri" : "http://www.wikidata.org/entity/Q1749460"
+      }, {
+        "label" : "Renegades",
+        "uri" : "http://www.wikidata.org/entity/Q1122516"
+      }, {
+        "label" : "Peeping Tom",
+        "uri" : "http://www.wikidata.org/entity/Q1853822"
+      }, {
+        "label" : "Freek Show",
+        "uri" : "http://www.wikidata.org/entity/Q1947460"
+      }, {
+        "label" : "Rise Up",
+        "uri" : "http://www.wikidata.org/entity/Q2094249"
+      }, {
+        "label" : "Let It Rock",
+        "uri" : "http://www.wikidata.org/entity/Q1982870"
+      }, {
+        "label" : "Noize MC",
+        "uri" : "http://www.wikidata.org/entity/Q2026639"
+      }, {
+        "label" : "What We're All About",
+        "uri" : "http://www.wikidata.org/entity/Q2274289"
+      }, {
+        "label" : "Encore",
+        "uri" : "http://www.wikidata.org/entity/Q2468041"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "7",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentences" : [ "Qual era la genere di la lavoro di $x?", "Qual è la genere di la lavoro di $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://www.wikidata.org/prop/direct/P136> ?objOfProp)\n  (triple ?subjOfPropx <http://www.wikidata.org/prop/direct/P106> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q2158657"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q2679895"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q4382785"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q5766357"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q5829690"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q6089113"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q11310894"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q11694915"
+      }, {
+        "label" : "Jewel De'Nyle",
+        "uri" : "http://www.wikidata.org/entity/Q268165"
+      }, {
+        "label" : "Missy",
+        "uri" : "http://www.wikidata.org/entity/Q456185"
+      }, {
+        "label" : "Hans Moser",
+        "uri" : "http://www.wikidata.org/entity/Q111927"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q19820231"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q19898568"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q22007192"
+      }, {
+        "label" : "Lynn LeMay",
+        "uri" : "http://www.wikidata.org/entity/Q515067"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q23718751"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q25634087"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q28482204"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q29735176"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q30727745"
+      }, {
+        "label" : "Gregory Dark",
+        "uri" : "http://www.wikidata.org/entity/Q946314"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q42492273"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q43381438"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q47482727"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q56194417"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q56339508"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q63351268"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q65113410"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q65398229"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q66126618"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q66744408"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q67954827"
+      }, {
+        "label" : "Jean-Marie Pallardy",
+        "uri" : "http://www.wikidata.org/entity/Q1685054"
+      }, {
+        "label" : "Aaron Lawrence",
+        "uri" : "http://www.wikidata.org/entity/Q2820070"
+      }, {
+        "label" : "Fred Coppula",
+        "uri" : "http://www.wikidata.org/entity/Q3086809"
+      }, {
+        "label" : "Holly Randall",
+        "uri" : "http://www.wikidata.org/entity/Q3139396"
+      }, {
+        "label" : "Ricky D",
+        "uri" : "http://www.wikidata.org/entity/Q7332059"
+      }, {
+        "label" : "Ovidie",
+        "uri" : "http://www.wikidata.org/entity/Q451251"
+      }, {
+        "label" : "Nacho Vidal",
+        "uri" : "http://www.wikidata.org/entity/Q1255380"
+      }, {
+        "label" : "Steve Drake",
+        "uri" : "http://www.wikidata.org/entity/Q3498912"
+      }, {
+        "label" : "Randy White",
+        "uri" : "http://www.wikidata.org/entity/Q7292514"
+      }, {
+        "label" : "Tory Lane",
+        "uri" : "http://www.wikidata.org/entity/Q233106"
+      }, {
+        "label" : "Skye Blue",
+        "uri" : "http://www.wikidata.org/entity/Q518322"
+      }, {
+        "label" : "Erik Rhodes",
+        "uri" : "http://www.wikidata.org/entity/Q529570"
+      }, {
+        "label" : "John B. Root",
+        "uri" : "http://www.wikidata.org/entity/Q3180965"
+      }, {
+        "label" : "Darla Crane",
+        "uri" : "http://www.wikidata.org/entity/Q11838177"
+      }, {
+        "label" : "Bob Dzhek",
+        "uri" : "http://www.wikidata.org/entity/Q4088518"
+      }, {
+        "label" : "Frank Thring",
+        "uri" : "http://www.wikidata.org/entity/Q28798286"
+      }, {
+        "label" : "Jace Rocker",
+        "uri" : "http://www.wikidata.org/entity/Q3157074"
+      }, {
+        "label" : "Jean Desvilles",
+        "uri" : "http://www.wikidata.org/entity/Q3171722"
+      }, {
+        "label" : "John Seeman",
+        "uri" : "http://www.wikidata.org/entity/Q6257231"
+      }, {
+        "label" : "Sharon McNight",
+        "uri" : "http://www.wikidata.org/entity/Q23928442"
+      }, {
+        "label" : "Radley Metzger",
+        "uri" : "http://www.wikidata.org/entity/Q343888"
+      }, {
+        "label" : "Helen Duval",
+        "uri" : "http://www.wikidata.org/entity/Q443573"
+      }, {
+        "label" : "Philippe Soine",
+        "uri" : "http://www.wikidata.org/entity/Q28372840"
+      }, {
+        "label" : "David Aaron Clark",
+        "uri" : "http://www.wikidata.org/entity/Q5230560"
+      }, {
+        "label" : "Ralph Parfait",
+        "uri" : "http://www.wikidata.org/entity/Q6035337"
+      }, {
+        "label" : "Taryn Thomas",
+        "uri" : "http://www.wikidata.org/entity/Q272034"
+      }, {
+        "label" : "Princess Donna",
+        "uri" : "http://www.wikidata.org/entity/Q347965"
+      }, {
+        "label" : "Brent Everett",
+        "uri" : "http://www.wikidata.org/entity/Q364286"
+      }, {
+        "label" : "Lucas Kazan",
+        "uri" : "http://www.wikidata.org/entity/Q454499"
+      }, {
+        "label" : "Manuel Ferrara",
+        "uri" : "http://www.wikidata.org/entity/Q715159"
+      }, {
+        "label" : "Marc Dorcel",
+        "uri" : "http://www.wikidata.org/entity/Q951882"
+      }, {
+        "label" : "Chuck Vincent",
+        "uri" : "http://www.wikidata.org/entity/Q11318125"
+      }, {
+        "label" : "Nic Cramer",
+        "uri" : "http://www.wikidata.org/entity/Q3339539"
+      }, {
+        "label" : "Svetlana Marsh",
+        "uri" : "http://www.wikidata.org/entity/Q4966103"
+      }, {
+        "label" : "Lily Cade",
+        "uri" : "http://www.wikidata.org/entity/Q6548462"
+      }, {
+        "label" : "Tiffany Mynx",
+        "uri" : "http://www.wikidata.org/entity/Q450203"
+      }, {
+        "label" : "Chris Steele",
+        "uri" : "http://www.wikidata.org/entity/Q1077772"
+      }, {
+        "label" : "Phil Hollyday",
+        "uri" : "http://www.wikidata.org/entity/Q3378792"
+      }, {
+        "label" : "Ignacio Allende Fernández",
+        "uri" : "http://www.wikidata.org/entity/Q5197486"
+      }, {
+        "label" : "Inari Vachs",
+        "uri" : "http://www.wikidata.org/entity/Q241456"
+      }, {
+        "label" : "Gerard Damiano",
+        "uri" : "http://www.wikidata.org/entity/Q380715"
+      }, {
+        "label" : "Steve Parker",
+        "uri" : "http://www.wikidata.org/entity/Q61711012"
+      }, {
+        "label" : "Taylor Wane",
+        "uri" : "http://www.wikidata.org/entity/Q461948"
+      }, {
+        "label" : "Asia Carrera",
+        "uri" : "http://www.wikidata.org/entity/Q540597"
+      }, {
+        "label" : "Frank James",
+        "uri" : "http://www.wikidata.org/entity/Q63568820"
+      }, {
+        "label" : "Dan Leal",
+        "uri" : "http://www.wikidata.org/entity/Q18098439"
+      }, {
+        "label" : "Kayla Kleevage",
+        "uri" : "http://www.wikidata.org/entity/Q2282943"
+      }, {
+        "label" : "Cecil Howard",
+        "uri" : "http://www.wikidata.org/entity/Q2943697"
+      }, {
+        "label" : "Terry Kemaco",
+        "uri" : "http://www.wikidata.org/entity/Q60323938"
+      }, {
+        "label" : "Bryan Kocis",
+        "uri" : "http://www.wikidata.org/entity/Q4980211"
+      }, {
+        "label" : "Ana Foxxx",
+        "uri" : "http://www.wikidata.org/entity/Q15115189"
+      }, {
+        "label" : "Greg Lansky",
+        "uri" : "http://www.wikidata.org/entity/Q22278021"
+      }, {
+        "label" : "Joseph Bardo",
+        "uri" : "http://www.wikidata.org/entity/Q71667449"
+      }, {
+        "label" : "Noel C. Bloom",
+        "uri" : "http://www.wikidata.org/entity/Q16105855"
+      }, {
+        "label" : "Mike Adriano",
+        "uri" : "http://www.wikidata.org/entity/Q16149982"
+      }, {
+        "label" : "Chris Roma",
+        "uri" : "http://www.wikidata.org/entity/Q69044789"
+      }, {
+        "label" : "Benny Profane",
+        "uri" : "http://www.wikidata.org/entity/Q59963338"
+      }, {
+        "label" : "Jasmine Jae",
+        "uri" : "http://www.wikidata.org/entity/Q27955299"
+      }, {
+        "label" : "A. Wise Guy",
+        "uri" : "http://www.wikidata.org/entity/Q71013612"
+      }, {
+        "label" : "Janet Alfano",
+        "uri" : "http://www.wikidata.org/entity/Q69568546"
+      }, {
+        "label" : "Jake Jacobs",
+        "uri" : "http://www.wikidata.org/entity/Q59831745"
+      }, {
+        "label" : "Kristofer Weston",
+        "uri" : "http://www.wikidata.org/entity/Q59908164"
+      }, {
+        "label" : "Jonas Middleton",
+        "uri" : "http://www.wikidata.org/entity/Q70913998"
+      }, {
+        "label" : "James DiGiorgio",
+        "uri" : "http://www.wikidata.org/entity/Q56071838"
+      }, {
+        "label" : "Bruno Bond",
+        "uri" : "http://www.wikidata.org/entity/Q65064629"
+      }, {
+        "label" : "Xavier Xerxes",
+        "uri" : "http://www.wikidata.org/entity/Q59555953"
+      }, {
+        "label" : "Michael Benveniste",
+        "uri" : "http://www.wikidata.org/entity/Q75135015"
+      }, {
+        "label" : "Marco Toto",
+        "uri" : "http://www.wikidata.org/entity/Q70234135"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "8",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentences" : [ "Qual era la lavoro di la genere di $x?", "Qual è la lavoro di la genere di $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://www.wikidata.org/prop/direct/P106> ?objOfProp)\n  (triple ?subjOfPropx <http://www.wikidata.org/prop/direct/P136> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q4030640"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q4925184"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q5304163"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q5823554"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q7270583"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q7576978"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q7765296"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q13365774"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q24577534"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q42896380"
+      }, {
+        "label" : "La Caduta di Artù",
+        "uri" : "http://www.wikidata.org/entity/Q1101425"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q47464927"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q47465116"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q61696006"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q61831755"
+      }, {
+        "label" : "Sweet Baby James",
+        "uri" : "http://www.wikidata.org/entity/Q745580"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q73618004"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q101242239"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q105944921"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q106390712"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q107387314"
+      }, {
+        "label" : "Jean-Baptiste Collet",
+        "uri" : "http://www.wikidata.org/entity/Q3163966"
+      }, {
+        "label" : "Fast as You Can",
+        "uri" : "http://www.wikidata.org/entity/Q5437023"
+      }, {
+        "label" : "La fine della l'età d'argento – Effetti della gelosia",
+        "uri" : "http://www.wikidata.org/entity/Q18688068"
+      } ]
+    },
+    "combination" : true
+  }, {
+    "id" : "9",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentences" : [ "Qual era la lavoro di la lavoro di $x?", "Qual è la lavoro di la lavoro di $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://www.wikidata.org/prop/direct/P106> ?objOfProp)\n  (triple ?subjOfPropx <http://www.wikidata.org/prop/direct/P106> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Théodore Tronchin",
+        "uri" : "http://www.wikidata.org/entity/Q116710"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q13190065"
+      }, {
+        "label" : "Didier Robert de Vaugondy",
+        "uri" : "http://www.wikidata.org/entity/Q289004"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q16187901"
+      }, {
+        "label" : "Vincenzo di Beauvais",
+        "uri" : "http://www.wikidata.org/entity/Q455162"
+      }, {
+        "label" : "Augustin Roux",
+        "uri" : "http://www.wikidata.org/entity/Q523844"
+      }, {
+        "label" : "François-Vincent Toussaint",
+        "uri" : "http://www.wikidata.org/entity/Q564845"
+      }, {
+        "label" : "Jean-Baptiste-René Robinet",
+        "uri" : "http://www.wikidata.org/entity/Q611233"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q27891311"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q39081728"
+      }, {
+        "label" : "Charles-Louis d’Authville Des Amourettes",
+        "uri" : "http://www.wikidata.org/entity/Q1063418"
+      }, {
+        "label" : "César Chesneau Dumarsais",
+        "uri" : "http://www.wikidata.org/entity/Q1150686"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q60289603"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q60290244"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q60290790"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q60291070"
+      }, {
+        "label" : "André Le Breton",
+        "uri" : "http://www.wikidata.org/entity/Q127324"
+      }, {
+        "label" : "Jacques-Philippe-Augustin Douchet",
+        "uri" : "http://www.wikidata.org/entity/Q1677866"
+      }, {
+        "label" : "Jacques Montet",
+        "uri" : "http://www.wikidata.org/entity/Q1678046"
+      }, {
+        "label" : "Jean-Denis de Montlovier",
+        "uri" : "http://www.wikidata.org/entity/Q1684798"
+      }, {
+        "label" : "Jean-Rodolphe Perronet",
+        "uri" : "http://www.wikidata.org/entity/Q1685286"
+      }, {
+        "label" : "Charles Le Roy",
+        "uri" : "http://www.wikidata.org/entity/Q277022"
+      }, {
+        "label" : "Georges-Louis Le Sage",
+        "uri" : "http://www.wikidata.org/entity/Q116201"
+      }, {
+        "label" : "Jean-Edme Romilly",
+        "uri" : "http://www.wikidata.org/entity/Q121103"
+      }, {
+        "label" : "Ferdinand Berthoud",
+        "uri" : "http://www.wikidata.org/entity/Q124411"
+      }, {
+        "label" : "Paul-Jacques Malouin",
+        "uri" : "http://www.wikidata.org/entity/Q167883"
+      }, {
+        "label" : "Claude-Adrien Helvétius",
+        "uri" : "http://www.wikidata.org/entity/Q190302"
+      }, {
+        "label" : "Nicolas Desmarest",
+        "uri" : "http://www.wikidata.org/entity/Q203719"
+      }, {
+        "label" : "Charles Pinot Duclos",
+        "uri" : "http://www.wikidata.org/entity/Q982034"
+      }, {
+        "label" : "Jean Bouillet",
+        "uri" : "http://www.wikidata.org/entity/Q1685390"
+      }, {
+        "label" : "Louis-Jacques Goussier",
+        "uri" : "http://www.wikidata.org/entity/Q1341431"
+      }, {
+        "label" : "Élie Bertrand",
+        "uri" : "http://www.wikidata.org/entity/Q117423"
+      }, {
+        "label" : "Jean Michel Moreau",
+        "uri" : "http://www.wikidata.org/entity/Q321972"
+      }, {
+        "label" : "Antoine de Seguiran",
+        "uri" : "http://www.wikidata.org/entity/Q587313"
+      }, {
+        "label" : "Pierre-Jacques Willermoz",
+        "uri" : "http://www.wikidata.org/entity/Q907133"
+      }, {
+        "label" : "Nicolas-Sylvestre Bergier",
+        "uri" : "http://www.wikidata.org/entity/Q977519"
+      }, {
+        "label" : "Jean-Joseph Rallier des Ourmes",
+        "uri" : "http://www.wikidata.org/entity/Q1684941"
+      }, {
+        "label" : "Jean Baptiste Le Rond d'Alembert",
+        "uri" : "http://www.wikidata.org/entity/Q153232"
+      }, {
+        "label" : "André Morellet",
+        "uri" : "http://www.wikidata.org/entity/Q178653"
+      }, {
+        "label" : "Antoine-François de Fourcroy",
+        "uri" : "http://www.wikidata.org/entity/Q446875"
+      }, {
+        "label" : "Jacques-Nicolas Bellin",
+        "uri" : "http://www.wikidata.org/entity/Q607846"
+      }, {
+        "label" : "Louis Guillaume Le Monnier",
+        "uri" : "http://www.wikidata.org/entity/Q981710"
+      }, {
+        "label" : "Jacques Barbeu-Dubourg",
+        "uri" : "http://www.wikidata.org/entity/Q1340141"
+      }, {
+        "label" : "Claude-Henri Watelet",
+        "uri" : "http://www.wikidata.org/entity/Q1392588"
+      }, {
+        "label" : "Jacques-François de Villiers",
+        "uri" : "http://www.wikidata.org/entity/Q1408947"
+      }, {
+        "label" : "Pierre-Jean Grosley",
+        "uri" : "http://www.wikidata.org/entity/Q1530909"
+      }, {
+        "label" : "Jean-Baptiste de Voglie",
+        "uri" : "http://www.wikidata.org/entity/Q1684697"
+      }, {
+        "label" : "Jean-Joseph Menuret",
+        "uri" : "http://www.wikidata.org/entity/Q1684939"
+      }, {
+        "label" : "Henri Fouquet",
+        "uri" : "http://www.wikidata.org/entity/Q1605827"
+      }, {
+        "label" : "Charles-Benjamin de Lubières",
+        "uri" : "http://www.wikidata.org/entity/Q119893"
+      }, {
+        "label" : "Charles-Georges Le Roy",
+        "uri" : "http://www.wikidata.org/entity/Q249412"
+      }, {
+        "label" : "Jean-François Marmontel",
+        "uri" : "http://www.wikidata.org/entity/Q379923"
+      }, {
+        "label" : "Jacques-François Blondel",
+        "uri" : "http://www.wikidata.org/entity/Q430136"
+      }, {
+        "label" : "Gabriel François Venel",
+        "uri" : "http://www.wikidata.org/entity/Q551115"
+      }, {
+        "label" : "Pierre Daubenton",
+        "uri" : "http://www.wikidata.org/entity/Q635820"
+      }, {
+        "label" : "Charles de Brosses",
+        "uri" : "http://www.wikidata.org/entity/Q725718"
+      }, {
+        "label" : "Jean-Baptiste Bourguignon d'Anville",
+        "uri" : "http://www.wikidata.org/entity/Q733907"
+      }, {
+        "label" : "Jean-Jacques de Boissieu",
+        "uri" : "http://www.wikidata.org/entity/Q976026"
+      }, {
+        "label" : "Jean-Martin de Prades",
+        "uri" : "http://www.wikidata.org/entity/Q1685062"
+      }, {
+        "label" : "Jean Pestré",
+        "uri" : "http://www.wikidata.org/entity/Q1685748"
+      }, {
+        "label" : "Jean-Baptiste de Lamarck",
+        "uri" : "http://www.wikidata.org/entity/Q82122"
+      }, {
+        "label" : "Anne Robert Jacques Turgot",
+        "uri" : "http://www.wikidata.org/entity/Q221303"
+      }, {
+        "label" : "Étienne Jean Bouchu",
+        "uri" : "http://www.wikidata.org/entity/Q289741"
+      }, {
+        "label" : "Théophile de Bordeu",
+        "uri" : "http://www.wikidata.org/entity/Q542728"
+      }, {
+        "label" : "Antoine-François Brisson",
+        "uri" : "http://www.wikidata.org/entity/Q585270"
+      }, {
+        "label" : "Paul-Joseph Barthez",
+        "uri" : "http://www.wikidata.org/entity/Q591657"
+      }, {
+        "label" : "Michał Ogiński",
+        "uri" : "http://www.wikidata.org/entity/Q704506"
+      }, {
+        "label" : "Jean-François de Saint-Lambert",
+        "uri" : "http://www.wikidata.org/entity/Q981928"
+      }, {
+        "label" : "Jean-Baptiste Le Roy",
+        "uri" : "http://www.wikidata.org/entity/Q999471"
+      }, {
+        "label" : "Claude Yvon",
+        "uri" : "http://www.wikidata.org/entity/Q1097234"
+      }, {
+        "label" : "Conrad Lycosthenes",
+        "uri" : "http://www.wikidata.org/entity/Q1126897"
+      }, {
+        "label" : "Alexandre Deleyre",
+        "uri" : "http://www.wikidata.org/entity/Q1245280"
+      }, {
+        "label" : "Edme-François Mallet",
+        "uri" : "http://www.wikidata.org/entity/Q1383530"
+      }, {
+        "label" : "Jean-Baptiste-Pierre Le Romain",
+        "uri" : "http://www.wikidata.org/entity/Q1684603"
+      }, {
+        "label" : "Jean-Henri-Nicolas Bouillet",
+        "uri" : "http://www.wikidata.org/entity/Q1684894"
+      }, {
+        "label" : "Michel-Antoine David",
+        "uri" : "http://www.wikidata.org/entity/Q1930602"
+      }, {
+        "label" : "Johann Heinrich Samuel Formey",
+        "uri" : "http://www.wikidata.org/entity/Q88385"
+      }, {
+        "label" : "Étienne Bonnot de Condillac",
+        "uri" : "http://www.wikidata.org/entity/Q272119"
+      }, {
+        "label" : "Jacques-André Naigeon",
+        "uri" : "http://www.wikidata.org/entity/Q279912"
+      }, {
+        "label" : "Étienne Maurice Falconet",
+        "uri" : "http://www.wikidata.org/entity/Q289246"
+      }, {
+        "label" : "Louis de Cahusac",
+        "uri" : "http://www.wikidata.org/entity/Q325083"
+      }, {
+        "label" : "Antoine-Gaspard Boucher d'Argis",
+        "uri" : "http://www.wikidata.org/entity/Q382946"
+      }, {
+        "label" : "Amédée Louis Michel Lepeletier",
+        "uri" : "http://www.wikidata.org/entity/Q482189"
+      }, {
+        "label" : "Louis Jean-Marie Daubenton",
+        "uri" : "http://www.wikidata.org/entity/Q546443"
+      }, {
+        "label" : "Jean Michel Papillon",
+        "uri" : "http://www.wikidata.org/entity/Q947603"
+      }, {
+        "label" : "François-Georges Mareschal de Bièvre",
+        "uri" : "http://www.wikidata.org/entity/Q974287"
+      }, {
+        "label" : "Wojciech Szweykowski",
+        "uri" : "http://www.wikidata.org/entity/Q9376908"
+      }, {
+        "label" : "Arnulphe d'Aumont",
+        "uri" : "http://www.wikidata.org/entity/Q180118"
+      }, {
+        "label" : "Louis-Élisabeth de La Vergne de Tressan",
+        "uri" : "http://www.wikidata.org/entity/Q219622"
+      }, {
+        "label" : "Louis de Jaucourt",
+        "uri" : "http://www.wikidata.org/entity/Q584990"
+      }, {
+        "label" : "Antoine Joseph Dezallier d'Argenville",
+        "uri" : "http://www.wikidata.org/entity/Q585422"
+      }, {
+        "label" : "Antoine Louis",
+        "uri" : "http://www.wikidata.org/entity/Q586650"
+      }, {
+        "label" : "Ljuben Karavelov",
+        "uri" : "http://www.wikidata.org/entity/Q713297"
+      }, {
+        "label" : "Stanislas Jean Boufflers",
+        "uri" : "http://www.wikidata.org/entity/Q918355"
+      }, {
+        "label" : "Jean-Baptiste de La Chapelle",
+        "uri" : "http://www.wikidata.org/entity/Q1371596"
+      }, {
+        "label" : "Jean Paul de Gua de Malves",
+        "uri" : "http://www.wikidata.org/entity/Q1384614"
+      }, {
+        "label" : "Joseph-François-Édouard de Corsembleu",
+        "uri" : "http://www.wikidata.org/entity/Q1589804"
+      }, {
+        "label" : "António Nunes Ribeiro Sanches",
+        "uri" : "http://www.wikidata.org/entity/Q611232"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q60415387"
+      }, {
+        "label" : "",
+        "uri" : "http://www.wikidata.org/entity/Q60522036"
+      } ]
+    },
+    "combination" : true
+  } ]
+}

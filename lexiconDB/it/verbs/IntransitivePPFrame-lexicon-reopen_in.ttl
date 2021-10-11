@@ -1,0 +1,59 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :reopen_in ;
+  lemon:entry    :nel .
+
+:reopen_in a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_reopen_in ;
+  lemon:otherForm      :form_reopen_in_past ;
+  lemon:sense          :reopen_in_sense_1 ;
+  lemon:synBehavior    :reopen_in_frame .
+
+:form_reopen_in a           lemon:Form ;
+  lemon:writtenRep     "riaprire"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:form_reopen_in a      lemon:Form ;
+  lemon:writtenRep "riapre"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:form_reopen_in_past a lemon:Form ;
+  lemon:writtenRep  "riaperto"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:reopen_in_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :reopen_in_subj ;
+  lexinfo:prepositionalAdjunct :reopen_in_obj .
+
+:reopen_in_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :reopen_in_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/reopeningDate> ;
+  lemon:subjOfProp  :reopen_in_obj ;
+  lemon:objOfProp   :reopen_in_subj ;
+  lemon:condition   :reopen_in_sense_1_condition .
+
+:reopen_in_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/ArchitecturalStructure> ;
+  lemon:propertyRange  <http://www.w3.org/2001/XMLSchema/gYear> .
+
+
+:reopen_in_obj lemon:marker :nel .
+
+## Prepositions ##
+:nel a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "nel"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

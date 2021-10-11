@@ -1,0 +1,59 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :released_on ;
+  lemon:entry    :il .
+
+:released_on a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_released_on ;
+  lemon:otherForm      :form_released_on_past ;
+  lemon:sense          :released_on_sense_1 ;
+  lemon:synBehavior    :released_on_frame .
+
+:form_released_on a           lemon:Form ;
+  lemon:writtenRep     "uscire"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:form_released_on a      lemon:Form ;
+  lemon:writtenRep "esce"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:form_released_on_past a lemon:Form ;
+  lemon:writtenRep  "uscito"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:released_on_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :released_on_subj ;
+  lexinfo:prepositionalAdjunct :released_on_obj .
+
+:released_on_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :released_on_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/releaseDate> ;
+  lemon:subjOfProp  :released_on_obj ;
+  lemon:objOfProp   :released_on_subj ;
+  lemon:condition   :released_on_sense_1_condition .
+
+:released_on_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/TelevisionShow> ;
+  lemon:propertyRange  <http://www.w3.org/2001/XMLSchema/date> .
+
+
+:released_on_obj lemon:marker :il .
+
+## Prepositions ##
+:il a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "il"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

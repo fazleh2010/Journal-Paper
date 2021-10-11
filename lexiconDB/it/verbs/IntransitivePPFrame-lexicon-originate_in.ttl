@@ -1,0 +1,59 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :originate_in ;
+  lemon:entry    :in .
+
+:originate_in a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_originate_in ;
+  lemon:otherForm      :form_originate_in_past ;
+  lemon:sense          :originate_in_sense_1 ;
+  lemon:synBehavior    :originate_in_frame .
+
+:form_originate_in a           lemon:Form ;
+  lemon:writtenRep     "originare"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:form_originate_in a      lemon:Form ;
+  lemon:writtenRep "origina"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:form_originate_in_past a lemon:Form ;
+  lemon:writtenRep  "originata"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:originate_in_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :originate_in_subj ;
+  lexinfo:prepositionalAdjunct :originate_in_obj .
+
+:originate_in_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :originate_in_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/sourceCountry> ;
+  lemon:subjOfProp  :originate_in_obj ;
+  lemon:objOfProp   :originate_in_subj ;
+  lemon:condition   :originate_in_sense_1_condition .
+
+:originate_in_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Stream> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Country> .
+
+
+:originate_in_obj lemon:marker :in .
+
+## Prepositions ##
+:in a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "in"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

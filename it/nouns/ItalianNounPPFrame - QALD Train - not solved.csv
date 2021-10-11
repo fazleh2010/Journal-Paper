@@ -1,0 +1,42 @@
+LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range
+areaCode_of,noun,prefisso telefonico,prefissi telefonici,di,NounPPFrame,range,domain,1,dbo:areaCode,dbo:Place,xsd:string
+artisticMovement_of,noun,movimento artistico,movimenti artistici,di,NounPPFrame,range,domain,1,dbo:movement,dbo:Artist,owl:Thing
+author_of,noun,autore,autori,di,NounPPFrame,range,domain,1,dbo:author,dbo:Work,dbo:Person
+birthPlace_of,noun,luogo di nascita,-,di,NounPPFrame,range,domain,1,dbo:birthPlace,dbo:Person,dbo:Place
+birthYear_of,noun,anno di nascita,-,di,NounPPFrame,range,domain,1,dbo:birthYear,dbo:Person,xsd:gYear
+causeOfDeath_of,noun,causa della morte,cause della morte,di,NounPPFrame,range,domain,1,dbo:deathCause,dbo:Person,owl:Thing
+child_of,noun,figlio,figli,di,NounPPFrame,range,domain,1,dbo:child,dbo:Person,dbo:Person
+completionDate-of,noun,data di completamento,-,di,NounPPFrame,range,domain,1,dbo:completionDate,dbo:TelevisionShow,xsd:date
+cost_of,noun,costo,-,di,NounPPFrame,range,domain,1,dbo:budget,dbo:Film,xsd:double
+currency_of,noun,valuta,valute,di,NounPPFrame,range,domain,1,dbo:currency,dbo:Country,dbo:Currency
+deathDate-of,noun,data della morte,-,di,NounPPFrame,range,domain,1,dbo:deathDate,dbo:Person,xsd:date
+developer_of,noun,sviluppatore,sviluppatori,di,NounPPFrame,range,domain,1,dbo:developer,dbo:Work,dbo:Agent
+dissolutionDate_of,noun,data di scioglimento,-,di,NounPPFrame,range,domain,1,dbo:dissolutionDate,dbo:PopulatedPlace,xsd:date
+doctoralSupervisor_of,noun,supervisore di dottorato,supervisori di dottorato,di,NounPPFrame,range,domain,1,dbo: doctoralAdvisor,dbo:Scientist,dbo:Person
+editor_of,noun,editor,editor,di,NounPPFrame,range,domain,1,dbo:editor,dbo:Work,dbo:Person
+elevation_of,noun,altezza,-,di,NounPPFrame,range,domain,1,dbo:areaUrban,dbo:PopulatedPlace,xsd:double
+episode_of,noun,episodio,episodi,di,NounPPFrame,range,domain,1,dbo:series,dbo:TelevisionEpisode,dbo:TelevisionShow
+father_of,noun,padre,-,di,NounPPFrame,range,domain,1,dbo:father,dbo:Person,dbo:Person
+foundationPlace_of,noun,luogo di fondazione,-,di,NounPPFrame,range,domain,1,dbo:foundationPlace,dbo:Organisation,dbo:City
+founder_of,noun,fondatore,fondatori,di,NounPPFrame,range,domain,1,dbo:parentCompany,dbo:Company,dbo:Company
+foundingYear_of,noun,anno di fondazione,-,di,NounPPFrame,range,domain,1,dbo:foundingYear,dbo:Company,xsd:gYear
+formOfGovernment-of,noun,forma di governo,-,di,NounPPFrame,range,domain,1,dbo:governmentType,dbo:Country,dbo:GovernmentType
+headquarter_of,noun,quartier generale,-,di,NounPPFrame,range,domain,1,dbo:headquarter,dbo:Organisation,dbo:PopulatedPlace
+height_of,noun,altezza,-,di,NounPPFrame,range,domain,1,dbo:height,dbo:Person,xsd:double
+homeStadium_of,noun,stadio,stadi,di,NounPPFrame,range,domain,1,dbo:ground,dbo:SoccerClub,dbo:Building
+host_of,noun,conduttore,conduttori,di,NounPPFrame,range,domain,1,dbo:presenter,dbo:TelevisionShow,dbo:Person
+influencer_of,noun,influenza,influenze,di,NounPPFrame,range,domain,1,dbo:influenced,dbo:Person,dbo:Person
+ingredient_of,noun,ingrediente,ingredienti,di,NounPPFrame,range,domain,1,dbo:ingredient,dbo:Food,owl:Thing
+largestCity_of,noun,citt?  pi?? grande,-,di,NounPPFrame,range,domain,1,dbo:largestCity,dbo:Country,dbo:City
+leader-of,noun,capo del governo,-,di,NounPPFrame,range,domain,1,dbo:leader,dbo:Country,dbo:Person
+location-of,noun,posizione,-,di,NounPPFrame,range,domain,1,dbo:location,dbo:Place,dbo:Place
+manufacturer-of,noun,produttore,produttori,di,NounPPFrame,range,domain,1,dbo:manufacturer,owl:Thing,dbo:Organisation
+mayor_of,noun,sindaco,-,di,NounPPFrame,range,domain,1,dbo:mayor,dbo:City,dbo:Person
+musicComposer-of,noun,compositore,compositori,di,NounPPFrame,range,domain,1,dbo:musicComposer,dbo:Film,dbo:Person
+nationality_of,noun,nazionalit? ,-,di,NounPPFrame,range,domain,1,dbo:nationality,dbo:Person,dbo:Country
+numberOfPages-of,noun,numero di pagine,-,di,NounPPFrame,range,domain,1,dbo:numberOfPages,dbo:WrittenWork,xsd:positiveInteger
+party-of,noun,partito,partiti,di,NounPPFrame,range,domain,1,dbo:party,dbo:Politician,xsd:string
+residence-of,noun,residenza,residenze,di,NounPPFrame,range,domain,1,dbo:residence,dbo:Place,dbo:Person
+restingPlace-of,noun,luogo di sepoltura,-,di,NounPPFrame,range,domain,1,dbo:restingPlace,dbo:Person,xsd:string
+successor-of,noun,successore,-,di,NounPPFrame,range,domain,1,dbo:successor,dbo:Person,dbo:Person
+timeZone-of,noun,fuso orario,fusi orari,di,NounPPFrame,range,domain,1,dbo:timezone,dbo:City,xsd:string

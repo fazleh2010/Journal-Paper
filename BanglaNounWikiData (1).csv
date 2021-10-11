@@ -1,0 +1,3 @@
+LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range
+author_of,noun,লেখক,লেখকদের,এর,NounPPFrame,range,domain,1,wdt:P50,wd:Q571,wd:Q5
+birthPlace_of,noun,জন্মস্থান,-,এর,NounPPFrame,range,domain,1,wdt:P19,wd:Q5,wd:Q30

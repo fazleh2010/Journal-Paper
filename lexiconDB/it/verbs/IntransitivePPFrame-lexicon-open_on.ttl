@@ -1,0 +1,59 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :open_on ;
+  lemon:entry    :nel .
+
+:open_on a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_open_on ;
+  lemon:otherForm      :form_open_on_past ;
+  lemon:sense          :open_on_sense_1 ;
+  lemon:synBehavior    :open_on_frame .
+
+:form_open_on a           lemon:Form ;
+  lemon:writtenRep     "aprire"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:form_open_on a      lemon:Form ;
+  lemon:writtenRep "apre"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:form_open_on_past a lemon:Form ;
+  lemon:writtenRep  "aperto"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:open_on_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :open_on_subj ;
+  lexinfo:prepositionalAdjunct :open_on_obj .
+
+:open_on_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :open_on_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/openingDate> ;
+  lemon:subjOfProp  :open_on_obj ;
+  lemon:objOfProp   :open_on_subj ;
+  lemon:condition   :open_on_sense_1_condition .
+
+:open_on_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Bridge> ;
+  lemon:propertyRange  <http://www.w3.org/2001/XMLSchema/date> .
+
+
+:open_on_obj lemon:marker :nel .
+
+## Prepositions ##
+:nel a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "nel"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

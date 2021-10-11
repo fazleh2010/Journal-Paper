@@ -1,0 +1,40 @@
+LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range
+areaCode_of,noun,এলাকার কোড,এলাকাগুলোর কোড,এর,NounPPFrame,range,domain,1,dbo:areaCode,dbo:Place,xsd:string
+author_of,noun,লেখক,লেখকদের,এর,NounPPFrame,range,domain,1,dbo:author,dbo:Work,dbo:Person
+birthPlace_of,noun,জন্মস্থান,-,এর,NounPPFrame,range,domain,1,dbo:birthPlace,dbo:Person,dbo:Place
+birthYear_of,noun,জন্মের বছর,-,এর,NounPPFrame,range,domain,1,dbo:birthYear,dbo:Person,xsd:gYear
+causeOfDeath_of,noun,মৃত্যুর কারণ,মৃত্যুর কারণগুলো,এর,NounPPFrame,range,domain,1,dbo:deathCause,dbo:Person,owl:Thing
+child_of,noun,সন্তান,সন্তানদের,এর,NounPPFrame,range,domain,1,dbo:child,dbo:Person,dbo:Person
+completionDate-of,noun,সমাপ্তির তারিখ,-,এর,NounPPFrame,range,domain,1,dbo:completionDate,dbo:TelevisionShow,xsd:date
+cost_of,noun,খরচ,-,এর,NounPPFrame,range,domain,1,dbo:budget,dbo:Film,xsd:double
+currency_of,noun,মুদ্রা,মুদ্রাগুলো,এর,NounPPFrame,range,domain,1,dbo:currency,dbo:Country,dbo:Currency
+deathDate-of,noun,মৃত্যুর তারিখ,-,এর,NounPPFrame,range,domain,1,dbo:deathDate,dbo:Person,xsd:date
+dissolutionDate_of,noun,বিলুপ্তির তারিখ,-,এর,NounPPFrame,range,domain,1,dbo:dissolutionDate,dbo:PopulatedPlace,xsd:date
+doctoralSupervisor_of,noun,ডক্টরাল সুপারভাইজার,ডক্টরাল সুপারভাইজারদের,এর,NounPPFrame,range,domain,1,dbo: doctoralAdvisor,dbo:Scientist,dbo:Person
+editor_of,noun,সম্পাদক,সম্পাদকদের,এর,NounPPFrame,range,domain,1,dbo:editor,dbo:Work,dbo:Person
+elevation_of,noun,পরিমাপ,-,এর,NounPPFrame,range,domain,1,dbo:areaUrban,dbo:PopulatedPlace,xsd:double
+episode_of,noun,পর্ব,পর্বগুলো,এর,NounPPFrame,range,domain,1,dbo:series,dbo:TelevisionEpisode,dbo:TelevisionShow
+father_of,noun,বাবা,বাবার,এর,NounPPFrame,range,domain,1,dbo:father,dbo:Person,dbo:Person
+foundationPlace_of,noun,ভিত্তি স্থান,-,এর,NounPPFrame,range,domain,1,dbo:foundationPlace,dbo:Organisation,dbo:City
+founder_of,noun,প্রতিষ্ঠাতা,প্রতিষ্ঠাতাদের,এর,NounPPFrame,range,domain,1,dbo:parentCompany,dbo:Company,dbo:Company
+foundingYear_of,noun,প্রতিষ্ঠার বছর,-,এর,NounPPFrame,range,domain,1,dbo:foundingYear,dbo:Company,xsd:gYear
+formOfGovernment-of,noun,সরকারের গঠন,-,এর,NounPPFrame,range,domain,1,dbo:governmentType,dbo:Country,dbo:GovernmentType
+headquarter_of,noun,সদর দপ্তর,-,এর,NounPPFrame,range,domain,1,dbo:headquarter,dbo:Organisation,dbo:PopulatedPlace
+height_of,noun,উচ্চতা,-,এর,NounPPFrame,range,domain,1,dbo:height,dbo:Person,xsd:double
+homeStadium_of,noun,স্টেডিয়াম,স্টেডিয়াম,এর,NounPPFrame,range,domain,1,dbo:ground,dbo:SoccerClub,dbo:Building
+host_of,noun,আয়োজক,আয়োজকদের,এর,NounPPFrame,range,domain,1,dbo:presenter,dbo:TelevisionShow,dbo:Person
+influencer_of,noun,প্রভাবক,প্রভাবকদের,এর,NounPPFrame,range,domain,1,dbo:influenced,dbo:Person,dbo:Person
+ingredient_of,noun,উপকরণ,উপকরণ,এর,NounPPFrame,range,domain,1,dbo:ingredient,dbo:Food,owl:Thing
+largestCity_of,noun,বৃহত্তম শহর,-,এর,NounPPFrame,range,domain,1,dbo:largestCity,dbo:Country,dbo:City
+leader-of,noun,নেতা,-,এর,NounPPFrame,range,domain,1,dbo:leader,dbo:Country,dbo:Person
+location-of,noun,অবস্থান,-,এর,NounPPFrame,range,domain,1,dbo:location,dbo:Place,dbo:Place
+manufacturer-of,noun,নির্মাতা,নির্মাতা,এর,NounPPFrame,range,domain,1,dbo:manufacturer,owl:Thing,dbo:Organisation
+mayor_of,noun,মেয়র,-,এর,NounPPFrame,range,domain,1,dbo:mayor,dbo:City,dbo:Person
+musicComposer-of,noun,সঙ্গীত রচয়িতা,সঙ্গীত রচয়িতা,এর,NounPPFrame,range,domain,1,dbo:musicComposer,dbo:Film,dbo:Person
+nationality_of,noun,জাতীয়তা,-,এর,NounPPFrame,range,domain,1,dbo:nationality,dbo:Person,dbo:Country
+numberOfPages-of,noun,পৃষ্ঠা সংখ্যা,-,এর,NounPPFrame,range,domain,1,dbo:numberOfPages,dbo:WrittenWork,xsd:positiveInteger
+party-of,noun,রাজনৈতিক দল,রাজনৈতিক দলগুলো,এর,NounPPFrame,range,domain,1,dbo:party,dbo:Politician,xsd:string
+residence-of,noun,বাসস্থান,বাসস্থান,এর,NounPPFrame,range,domain,1,dbo:residence,dbo:Place,dbo:Person
+restingPlace-of,noun,luogo di sepoltura,-,এর,NounPPFrame,range,domain,1,dbo:restingPlace,dbo:Person,xsd:string
+successor-of,noun,উত্তরাধিকারী,-,এর,NounPPFrame,range,domain,1,dbo:successor,dbo:Person,dbo:Person
+timeZone-of,noun,সময় অঞ্চল,সময় অঞ্চলগুলো,এর,NounPPFrame,range,domain,1,dbo:timezone,dbo:City,xsd:string

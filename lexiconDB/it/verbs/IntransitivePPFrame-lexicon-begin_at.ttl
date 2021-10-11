@@ -1,0 +1,59 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :begin_at ;
+  lemon:entry    :da .
+
+:begin_at a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_begin_at ;
+  lemon:otherForm      :form_begin_at_past ;
+  lemon:sense          :begin_at_sense_1 ;
+  lemon:synBehavior    :begin_at_frame .
+
+:form_begin_at a           lemon:Form ;
+  lemon:writtenRep     "partire"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:form_begin_at a      lemon:Form ;
+  lemon:writtenRep "parte"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:form_begin_at_past a lemon:Form ;
+  lemon:writtenRep  "partiva"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:begin_at_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :begin_at_subj ;
+  lexinfo:prepositionalAdjunct :begin_at_obj .
+
+:begin_at_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :begin_at_ontomap ;
+  lemon:reference   <dbp:source1Location> ;
+  lemon:subjOfProp  :begin_at_obj ;
+  lemon:objOfProp   :begin_at_subj ;
+  lemon:condition   :begin_at_sense_1_condition .
+
+:begin_at_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/River> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Country> .
+
+
+:begin_at_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

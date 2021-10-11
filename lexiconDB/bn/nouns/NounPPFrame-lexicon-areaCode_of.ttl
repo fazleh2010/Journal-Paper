@@ -1,0 +1,43 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "bn" ;
+  lemon:entry    :areaCode_of ;
+  lemon:entry    :এর .
+
+:areaCode_of a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :areaCode_of_form ;
+  lemon:sense          :areaCode_of_sense_1 ;
+  lemon:synBehavior    :areaCode_of_nounpp .
+
+:areaCode_of_form a lemon:Form ;
+  lemon:writtenRep "এলাকার কোড"@bn .
+
+:areaCode_of_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:areaCode_of_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :areaCode_of_sense_1 ;
+  lemon:reference           <dbo:areaCode> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :areaCode_of_sense_1_condition .
+
+:areaCode_of_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <dbo:Place> ;
+  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#string> .
+
+:arg2 lemon:marker :এর .
+
+## Prepositions ##
+
+:এর a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "এর"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

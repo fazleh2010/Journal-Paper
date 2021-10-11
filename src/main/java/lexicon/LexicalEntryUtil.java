@@ -50,6 +50,7 @@ import java.util.stream.Collectors;
 
 import static grammar.sparql.Prefix.DBPEDIA;
 import static grammar.sparql.SPARQLRequest.SPARQL_ENDPOINT_URL;
+import grammar.structure.component.DomainOrRangeMorphologicalPropertiesIT;
 import java.util.NoSuchElementException;
 import static java.util.Objects.isNull;
 
@@ -119,6 +120,10 @@ public class LexicalEntryUtil {
         List<AnnotatedNounOrQuestionWord> questionWords;
         questionWords = questionWordRepository
                 .findByLanguageAndSubjectType(language, subjectType);
+        
+        System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
+      
+
         if (questionWords.size() != 1) {
             questionWords = questionWordRepository
                     .findByLanguageAndSubjectTypeAndNumberAndGender(
@@ -127,6 +132,7 @@ public class LexicalEntryUtil {
                             lexInfo.getPropertyValue("singular"),
                             lexInfo.getPropertyValue("commonGender")
                     );
+              System.out.println("questionWords:::"+questionWords);
         }
         if (!isNull(annotatedNounOrQuestionWord)) {
             if (questionWords.size() != 1) {
@@ -146,6 +152,7 @@ public class LexicalEntryUtil {
                                 annotatedNounOrQuestionWord.getGender()
                         );
             }
+             System.out.println("isNull:::"+questionWords);
         }
         if (questionWords.size() != 1) {
             LOG.error("Cannot find a matching subject in QuestionWordFactory({})", language);
@@ -201,13 +208,22 @@ public class LexicalEntryUtil {
         List<AnnotatedNounOrQuestionWord> questionWords;
         questionWords = questionWordRepository
                 .findByLanguageAndSubjectType(language, subjectType);
-        if (questionWords.size() != 1 && language.equals(Language.DE)) {
+        if (questionWords.size() != 1 && (language.equals(Language.DE))) {
             questionWords = questionWordRepository
                     .findByLanguageAndSubjectTypeAndNumberAndGender(
                             language,
                             subjectType,
                             number,
                             lexInfo.getPropertyValue(DomainOrRangeMorphologicalProperties.getMatchingGender(getConditionUriBySelectVariable(getSelectVariable())).toString().toLowerCase())
+                    );
+        }
+        if (questionWords.size() != 1 && (language.equals(Language.IT))) {
+            questionWords = questionWordRepository
+                    .findByLanguageAndSubjectTypeAndNumberAndGender(
+                            language,
+                            subjectType,
+                            number,
+                            lexInfo.getPropertyValue(DomainOrRangeMorphologicalPropertiesIT.getMatchingGender(getConditionUriBySelectVariable(getSelectVariable())).toString().toLowerCase())
                     );
         }
         if (questionWords.size() != 1) {
@@ -328,6 +344,8 @@ public class LexicalEntryUtil {
                 conditionLabel = getPluralFormDe(conditionLabel);
             }else if (language.equals(Language.BN)) {
                 conditionLabel = getPluralFormBn(conditionLabel);
+            }else if (language.equals(Language.IT)) {
+                conditionLabel = getPluralFormDe(conditionLabel);
             }
             determinerToken = compileDeterminerToken(conditionLabel, determiner);
             return new Pair<String, String>(determinerToken.trim(),"plural");
@@ -476,6 +494,11 @@ public class LexicalEntryUtil {
         String domainOrRange = selectVariable.mapDomainOrRange();
         return detectSubjectType(getReferenceUri(), domainOrRange,domainOrRangeType);
     }
+    
+    public SubjectType getSubjectType(SelectVariable selectVariable) {
+        String domainOrRange = selectVariable.mapDomainOrRange();
+        return detectSubjectType(getReferenceUri(), domainOrRange);
+    }
 
     /**
      * Detects the SubjectType of the given LexicalEntry. This enables the
@@ -519,6 +542,34 @@ public class LexicalEntryUtil {
             }
         }
 
+        return mapsToWho.contains(domainOrRangeResponse)
+                ? SubjectType.PERSON_INTERROGATIVE_PRONOUN
+                : SubjectType.THING_INTERROGATIVE_PRONOUN;
+    }
+   
+    private SubjectType detectSubjectType(String uri, String domainOrRange) {
+        List<String> mapsToWho = DomainOrRangeType.PERSON.getReferences().stream()
+                .map(URI::toString)
+                .collect(Collectors.toList());
+        String domainOrRangeResponse = "";
+        ParameterizedSparqlString parameterizedSparqlString = createSPARQLRequestForSubjectType(uri, domainOrRange);
+        QueryExecution exec = QueryExecutionFactory.sparqlService(SPARQL_ENDPOINT_URL, parameterizedSparqlString.asQuery());
+        ResultSet resultSet = exec.execSelect();
+        // check only first result as we are not interested in anything but Person
+        QuerySolution querySolution;
+        if (resultSet.hasNext()) {
+            querySolution = resultSet.next();
+            if (!isNull(querySolution)) {
+                domainOrRangeResponse = querySolution.get(domainOrRange).toString();
+            }
+        } else {
+            SelectVariable selectVariable = domainOrRange.equals("domain")
+                    ? SelectVariable.SUBJECT_OF_PROPERTY
+                    : SelectVariable.OBJECT_OF_PROPERTY;
+            domainOrRangeResponse = getConditionUriBySelectVariable(selectVariable).toString();
+        }
+        // always default to SubjectType.THING if not Person or not found
+        // check for label instead of uri.... Q215627 is person as well...
         return mapsToWho.contains(domainOrRangeResponse)
                 ? SubjectType.PERSON_INTERROGATIVE_PRONOUN
                 : SubjectType.THING_INTERROGATIVE_PRONOUN;
@@ -582,7 +633,6 @@ public class LexicalEntryUtil {
             SelectVariable selectVariable
     ) {
         URI domainOrRangeUri = getConditionUriBySelectVariable(selectVariable);
-
         SPARQLRequest sparqlRequest = new SPARQLRequest();
         sparqlRequest.setSelectVariable(selectVariable);
         sparqlRequest.setSearchProperty(domainOrRangeUri.toString());
@@ -691,7 +741,8 @@ public class LexicalEntryUtil {
         Property POS = lexInfo.getProperty("partOfSpeech");
         PropertyValue POSPreposition = lexInfo.getPropertyValue("preposition");
         Frame frame = getFrameByGrammarType();
-
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!"+frame.toString()+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+      
         //this is a temporary code for solving the problem. this code will be refactored in some point.
         try {
             if (!isNull(frame)) {
@@ -702,6 +753,12 @@ public class LexicalEntryUtil {
                     return preposition;
                 }
             }
+            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+
+            System.out.println(lexInfo);
+
 
         } catch (NoSuchElementException noSuchExp) {
             System.err.println("Preposition is not found!!"+noSuchExp.getMessage());

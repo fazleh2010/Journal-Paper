@@ -1,0 +1,83 @@
+{
+  "grammarEntries" : [ {
+    "id" : "6",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentences" : [ "Qual era la data di creazione di la data di creazione di $x?", "Qual è la data di creazione di la data di creazione di $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://purl.org/dc/elements/1.1/date> ?objOfProp)\n  (triple ?subjOfPropx <http://purl.org/dc/elements/1.1/date> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "7",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentences" : [ "Qual era la data di creazione di la scheda di $x?", "Qual è la data di creazione di la scheda di $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://purl.org/dc/elements/1.1/date> ?objOfProp)\n  (triple ?subjOfPropx <http://purl.org/dc/elements/1.1/source> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "8",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentences" : [ "Qual era la scheda di la data di creazione di $x?", "Qual è la scheda di la data di creazione di $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://purl.org/dc/elements/1.1/source> ?objOfProp)\n  (triple ?subjOfPropx <http://purl.org/dc/elements/1.1/date> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  }, {
+    "id" : "9",
+    "lexicalEntryUri" : null,
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentences" : [ "Qual era la scheda di la scheda di $x?", "Qual è la scheda di la scheda di $x?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://purl.org/dc/elements/1.1/source> ?objOfProp)\n  (triple ?subjOfPropx <http://purl.org/dc/elements/1.1/source> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "combination" : true
+  } ]
+}

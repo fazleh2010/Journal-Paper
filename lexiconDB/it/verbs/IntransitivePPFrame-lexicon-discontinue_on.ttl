@@ -1,0 +1,59 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :discontinue_on ;
+  lemon:entry    :nel .
+
+:discontinue_on a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_discontinue_on ;
+  lemon:otherForm      :form_discontinue_on_past ;
+  lemon:sense          :discontinue_on_sense_1 ;
+  lemon:synBehavior    :discontinue_on_frame .
+
+:form_discontinue_on a           lemon:Form ;
+  lemon:writtenRep     "interrompere"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:form_discontinue_on a      lemon:Form ;
+  lemon:writtenRep "interrompe"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:form_discontinue_on_past a lemon:Form ;
+  lemon:writtenRep  "interrotto"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:discontinue_on_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :discontinue_on_subj ;
+  lexinfo:prepositionalAdjunct :discontinue_on_obj .
+
+:discontinue_on_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :discontinue_on_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/discontinued> ;
+  lemon:subjOfProp  :discontinue_on_obj ;
+  lemon:objOfProp   :discontinue_on_subj ;
+  lemon:condition   :discontinue_on_sense_1_condition .
+
+:discontinue_on_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Beverage> ;
+  lemon:propertyRange  <http://www.w3.org/2001/XMLSchema/date> .
+
+
+:discontinue_on_obj lemon:marker :nel .
+
+## Prepositions ##
+:nel a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "nel"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

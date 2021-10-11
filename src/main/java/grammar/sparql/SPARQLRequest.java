@@ -38,15 +38,15 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import static java.util.Objects.isNull;
 import java.util.regex.Pattern;
 
-import static java.util.Objects.isNull;
 import static util.validation.NullCheck.notNull;
 
 @Setter
 @Getter
 public class SPARQLRequest {
-  public static final String SPARQL_ENDPOINT_URL = "http://dbpedia.org/sparql";
+  public static  String SPARQL_ENDPOINT_URL = "http://dbpedia.org/sparql";
   public static final long DEFAULT_LIMIT = 100;
   private static final Logger LOG = LogManager.getLogger(SPARQLRequest.class);
   private final String labelString = RDFS.label.getLocalName();
@@ -390,5 +390,15 @@ public class SPARQLRequest {
   public String toString() {
     return parameterizedSparqlString.toString();
   }
+
+    public static void setEndpoint(String endpoint) {
+        SPARQL_ENDPOINT_URL=endpoint;
+    }
+
+    public static String getSPARQL_ENDPOINT_URL() {
+        return SPARQL_ENDPOINT_URL;
+    }
+    
+    
 
 }
