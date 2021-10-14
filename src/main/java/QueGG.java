@@ -89,6 +89,7 @@ public class QueGG {
             if (fileList.isEmpty()) {
                 throw new Exception("No files to process for question answering system!!");
             }
+           
             questionAnswerFile = outputDir + File.separator + QUESTION_ANSWER_FILE + "_" + language + ".csv";
             questionSummaryFile = outputDir + File.separator + QUESTION_SUMMARY_FILE + "_" + language + ".csv";
             ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile, maxNumberOfEntities, args[0], linkedData.getEndpoint(),online);

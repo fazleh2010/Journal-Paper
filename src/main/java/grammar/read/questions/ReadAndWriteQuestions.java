@@ -111,7 +111,7 @@ public class ReadAndWriteQuestions {
                     //System.out.println("entityFileName::"+entityFileName);
                     File entityFile = new File(entityFileName);
                     bindingList = this.getExtendedBindingList(grammarEntryUnit.getBindingList(), entityFile);
-                    //System.out.println(bindingList.size());
+                    System.out.println(bindingList.size());
                 } else {
                     bindingList = grammarEntryUnit.getBindingList();
                 }
