@@ -37,11 +37,11 @@ public class QALDImporter {
     return objectMapper.readValue(new File(file), QALD.class);
   }
 
-  public void writeToCSV(List<String[]> dataLines, String fileName) throws IOException {
-    CSVWriter writer = new CSVWriter(new FileWriter(fileName), '\t', '"', '"', "\n");
-    dataLines.forEach(writer::writeNext);
-    writer.close();
-  }
+    public void writeToCSV(List<String[]> dataLines, String fileName) throws IOException {
+        CSVWriter writer = new CSVWriter(new FileWriter(fileName), '\t', '"', '"', "\n");
+        dataLines.forEach(writer::writeNext);
+        writer.close();
+    }
 
   private List<String[]> qaldJsonToCSVTemplate(QALD qaldFile,String languageCode) {
     List<String[]> list = new ArrayList<>();

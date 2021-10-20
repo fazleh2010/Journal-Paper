@@ -153,10 +153,10 @@ public class QueGG {
         GrammarWrapper gw2 = objectMapper.readValue(grammarEntriesFile2, GrammarWrapper.class);
         grammarWrapper.merge(gw2);
         EvaluateAgainstQALD evaluateAgainstQALD = new EvaluateAgainstQALD(languageCode, endpoint);
-        String resultFileName = qaldDir + "QALD-QueGG-Comparison_" + LocalDateTime.now()
+        String resultFileName = qaldDir + File.separator +  "QALD-QueGG-Comparison_" + LocalDateTime.now()
                 .format(DateTimeFormatter.ofPattern(
                         "yyyy-MM-dd_hh-mm")) + ".csv";
-        String qaldRaw = qaldDir + "QALD-2017-dataset-raw.csv";
+        String qaldRaw = qaldDir + File.separator +  "QALD-2017-dataset-raw.csv";
         //System.out.println("all files are read!!!");
         evaluateAgainstQALD.evaluateAndOutput(grammarWrapper, qaldFile, qaldModifiedFile, resultFileName, qaldRaw, languageCode);
 
