@@ -57,11 +57,8 @@ public class QueGG {
         Language language = null;
         LinkedData linkedData = null;
          String numberOfEntitiesString =null;
-         
-          System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!: ");
-       System.out.println("args: "+args.length );
-
-        try {
+      
+         try {
             if (args.length < 4) {
                 throw new IllegalArgumentException(String.format("Too few parameters (%s/%s)", args.length, 3));
             }  //if (args.length >4 && args.length <6) {

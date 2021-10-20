@@ -53,18 +53,11 @@ public class EvaluateAgainstQALD {
 
     public void evaluateAndOutput(GrammarWrapper grammarWrapper, String qaldOriginalFile, String qaldModifiedFile, String resultFileName, String qaldRaw, String languageCode) throws IOException {
         QALDImporter qaldImporter = new QALDImporter();
-        qaldImporter.qaldToCSV(qaldOriginalFile, qaldRaw,languageCode);
+        qaldImporter.qaldToCSV(qaldOriginalFile, qaldRaw, languageCode);
         //qaldImporter.qaldToCSV(qaldOriginalFile, qaldRaw);
         QALD qaldModified = qaldImporter.readQald(qaldModifiedFile);
         QALD qaldOriginal = qaldImporter.readQald(qaldOriginalFile);
         EvaluationResult result = doEvaluation(qaldModified, grammarWrapper, languageCode);
-        //System.out.println("f_measure_global:::" + result.f_measure_global);
-        //System.out.println("precision_global:::" + result.precision_global);
-        //System.out.println("recall_global:::" + result.recall_global);
-        //System.out.println("tp_global:::" + result.tp_global);
-        //System.out.println("fp_global:::" + result.fp_global);
-        //System.out.println("fn_global:::" + result.fn_global);
-
         //this.writeResult(qaldImporter,qaldOriginal,result,resultFileName,languageCode);
     }
 
@@ -74,11 +67,11 @@ public class EvaluateAgainstQALD {
         List<EntryComparison> entryComparisons = getAllSentenceMatches(qaldFile, grammarWrapper, languageCode, BOG, similarityPercentage);
         for (EntryComparison entryComparison : entryComparisons) {
             compareEntries(entryComparison);
-            /*evaluationResult.getEntryComparisons().add(entryComparison);
+            evaluationResult.getEntryComparisons().add(entryComparison);
             LOG.info("tp: {}, fp: {}, fn: {}", entryComparison.getTp(), entryComparison.getFp(), entryComparison.getFn());
             evaluationResult.setTp_global(evaluationResult.getTp_global() + entryComparison.getTp());
             evaluationResult.setFp_global(evaluationResult.getFp_global() + entryComparison.getFp());
-            evaluationResult.setFn_global(evaluationResult.getFn_global() + entryComparison.getFn());*/
+            evaluationResult.setFn_global(evaluationResult.getFn_global() + entryComparison.getFn());
         }
 
         evaluationResult.setPrecision_global(calculateMeasure(
@@ -115,6 +108,12 @@ public class EvaluateAgainstQALD {
                 evaluationResult.getRecall_global(),
                 evaluationResult.getF_measure_global()
         );
+        /*System.out.println("getTp_global::"+evaluationResult.getTp_global());
+        System.out.println("evaluationResult::"+evaluationResult.getFp_global());
+        System.out.println("evaluationResult::"+evaluationResult.getFn_global());
+        System.out.println("getPrecision_global()::"+evaluationResult.getPrecision_global());
+        System.out.println("getRecall_global()()::"+evaluationResult.getRecall_global());
+         System.out.println("getRecall_global()()::"+evaluationResult.getF_measure_global());*/
         return evaluationResult;
     }
 
@@ -134,7 +133,7 @@ public class EvaluateAgainstQALD {
         Query qaldPARQLQuery = new Query();
         SPARQLParser.createParser(Syntax.syntaxSPARQL_11).parse(qaldPARQLQuery, qaldSparql);
         String matchedSentenceItem = "";
-        Pattern sentencePattern = null;
+        String sentencePattern = null;
         String uriMatch = "";
         String bindingVarName = "";
         List<String> uriResultListQueGG = new ArrayList<String>();
@@ -148,7 +147,8 @@ public class EvaluateAgainstQALD {
 
         // get variable name (i.e. objOfProp, subjOfProp) from QueGG binding sparql to replace it with uriMatch
         bindingVarName = getVarNameFromQueGGBinding(grammarEntry);
-        System.out.println("uriMatch:::"+uriMatch);
+        
+       
         
         if (bindingVarName.isEmpty() || uriMatch.isEmpty()) {
             // Variable name to substitute in the bindings SPARQL or a valid uri substitute could not be found
@@ -157,18 +157,34 @@ public class EvaluateAgainstQALD {
                 entryComparison.getQueGGEntry().setSparql(""); // delete SPARQL query because it was not executed anyway
             }
         } else {
+            String queGGSparqlOrg=queGGSparql;
             queGGSparql=this.getQuGGResult(queGGSparql,uriMatch,bindingVarName);
             uriResultListQueGG= this.getResultForQaldSparqlQuery(queGGSparql);
             //uriResultListQueGG=new ArrayList<String>();
             //uriResultListQueGG.add("http://dbpedia.org/ontology/Donald_Trump");
             entryComparison.getQueGGEntry().setSparql(queGGSparql);
             entryComparison.setQueGGResults(uriResultListQueGG);    
+        
+            /*if (entryComparison.getMatchedFlag()) {
+                System.out.println("sentencePattern:::" + sentencePattern);
+                System.out.println("uriMatch:::" + uriMatch);
+                System.out.println("qaldSparql:::" + qaldSparql);
+                System.out.println("uriResultListQALD:::" + uriResultListQALD);
+                System.out.println("uriResultListQueGG:::" + uriResultListQueGG);
+                System.out.println("queGG questions:::" + entryComparison.getQueGGEntry().getQuestionList());
+                System.out.println("queGGSparqlOrg:::" + queGGSparqlOrg);
+                System.out.println("queGGSparql:::" + queGGSparql);
+                System.out.println("bindingVarName:::" + bindingVarName);
+                exit(1);
+            }*/
+
+
          
-            LOG.info(sentencePattern);
+            /*LOG.info(sentencePattern);
             LOG.info(uriMatch);
             LOG.info(qaldSparql);
             LOG.info(uriResultListQALD);
-            LOG.info(uriResultListQueGG);
+            LOG.info(uriResultListQueGG);*/
            
         }
 
@@ -213,57 +229,6 @@ public class EvaluateAgainstQALD {
                 .filter(resultQald -> !finalUriResultListQueGG.contains(resultQald))
                 .count());
 
-        if (entryComparison.getTp()==1) {
-          System.out.println(":::::::::::::entryComparison.getTp():::::::::::::::::::::::::::" );
-          System.out.println("Qald Question::" + qaldQuestion);
-          System.out.println("Qald Sparql Query::" + qaldSparql);
-          System.out.println("QALD Answer::" + uriResultListQALD);
-          System.out.println("QueGG Sparql Query::" + queGGSparql);
-          System.out.println("QueGG Answer::" + uriResultListQueGG);
-          System.out.println("finalUriResultListQueGG::::"+finalUriResultListQueGG );
-          System.out.println("getTp::" + entryComparison.getTp());
-          System.out.println("getFp::" + entryComparison.getFp());
-          System.out.println("getFn::" + entryComparison.getFn());
-          System.out.println("getPrecision::" + entryComparison.getPrecision());
-          System.out.println("getRecall::" + entryComparison.getRecall());
-          System.out.println("getF_measure::" + entryComparison.getF_measure());
-          System.out.println("::::::::::::::::::::::::::::::::::::::::" );
-
-      }
-        if (entryComparison.getFp()==1) {
-           System.out.println(":::::::::::::::::::::(entryComparison.getFp():::::::::::::::::::" );
-          System.out.println("Qald Question::" + qaldQuestion);
-          System.out.println("Qald Sparql Query::" + qaldSparql);
-          System.out.println("QALD Answer::" + uriResultListQALD);
-          System.out.println("QueGG Sparql Query::" + queGGSparql);
-          System.out.println("QueGG Answer::" + uriResultListQueGG);
-          System.out.println("finalUriResultListQueGG::::"+finalUriResultListQueGG );
-          System.out.println("getTp::" + entryComparison.getTp());
-          System.out.println("getFp::" + entryComparison.getFp());
-          System.out.println("getFn::" + entryComparison.getFn());
-          System.out.println("getPrecision::" + entryComparison.getPrecision());
-          System.out.println("getRecall::" + entryComparison.getRecall());
-          System.out.println("getF_measure::" + entryComparison.getF_measure());
-          System.out.println("::::::::::::::::::::::::::::::::::::::::" );
-          
-            
-      } if (entryComparison.getFn()==1) {
-           System.out.println("::::::::::::::::entryComparison.getFn()::::::::::::::::::::::::" );
-          System.out.println("Qald Question::" + qaldQuestion);
-          System.out.println("Qald Sparql Query::" + qaldSparql);
-          System.out.println("QALD Answer::" + uriResultListQALD);
-          System.out.println("QueGG Sparql Query::" + queGGSparql);
-          System.out.println("QueGG Answer::" + uriResultListQueGG);
-          System.out.println("finalUriResultListQueGG::::"+finalUriResultListQueGG );
-          System.out.println("getTp::" + entryComparison.getTp());
-          System.out.println("getFp::" + entryComparison.getFp());
-          System.out.println("getFn::" + entryComparison.getFn());
-          System.out.println("getPrecision::" + entryComparison.getPrecision());
-          System.out.println("getRecall::" + entryComparison.getRecall());
-          System.out.println("getF_measure::" + entryComparison.getF_measure());
-          System.out.println("::::::::::::::::::::::::::::::::::::::::" );
-      }
-
         // Add Precision, Recall, F-measure
         if ((entryComparison.getTp() + entryComparison.getFp()) > 0) {
             entryComparison.setPrecision(calculateMeasure(
@@ -296,6 +261,57 @@ public class EvaluateAgainstQALD {
                 entryComparison.getRecall(),
                 entryComparison.getF_measure()
         );
+         /*if (entryComparison.getTp()==1) {
+          System.out.println(":::::::::::::entryComparison.getTp():::::::::::::::::::::::::::" );
+          System.out.println("Qald Question::" + qaldQuestion);
+          System.out.println("Qald Sparql Query::" + qaldSparql);
+          System.out.println("QALD Answer::" + uriResultListQALD);
+          System.out.println("QueGG Sparql Query::" + queGGSparql);
+          System.out.println("QueGG Answer::" + uriResultListQueGG);
+          System.out.println("finalUriResultListQueGG::::"+finalUriResultListQueGG );
+          System.out.println("getTp::" + entryComparison.getTp());
+          System.out.println("getFp::" + entryComparison.getFp());
+          System.out.println("getFn::" + entryComparison.getFn());
+          System.out.println("getPrecision::" + entryComparison.getPrecision());
+          System.out.println("getRecall::" + entryComparison.getRecall());
+          System.out.println("getF_measure::" + entryComparison.getF_measure());
+          System.out.println("::::::::::::::::::::::::::::::::::::::::" );
+      }
+        if (entryComparison.getFp()==1) {
+           System.out.println(":::::::::::::::::::::(entryComparison.getFp():::::::::::::::::::" );
+          System.out.println("Qald Question::" + qaldQuestion);
+          System.out.println("Qald Sparql Query::" + qaldSparql);
+          System.out.println("QALD Answer::" + uriResultListQALD);
+          System.out.println("QueGG Sparql Query::" + queGGSparql);
+          System.out.println("QueGG Answer::" + uriResultListQueGG);
+          System.out.println("finalUriResultListQueGG::::"+finalUriResultListQueGG );
+          System.out.println("getTp::" + entryComparison.getTp());
+          System.out.println("getFp::" + entryComparison.getFp());
+          System.out.println("getFn::" + entryComparison.getFn());
+          System.out.println("getPrecision::" + entryComparison.getPrecision());
+          System.out.println("getRecall::" + entryComparison.getRecall());
+          System.out.println("getF_measure::" + entryComparison.getF_measure());
+          System.out.println("::::::::::::::::::::::::::::::::::::::::" );
+                   
+
+            
+      } if (entryComparison.getFn()==1) {
+           System.out.println("::::::::::::::::entryComparison.getFn()::::::::::::::::::::::::" );
+          System.out.println("Qald Question::" + qaldQuestion);
+          System.out.println("Qald Sparql Query::" + qaldSparql);
+          System.out.println("QALD Answer::" + uriResultListQALD);
+          System.out.println("QueGG Sparql Query::" + queGGSparql);
+          System.out.println("QueGG Answer::" + uriResultListQueGG);
+          System.out.println("finalUriResultListQueGG::::"+finalUriResultListQueGG );
+          System.out.println("getTp::" + entryComparison.getTp());
+          System.out.println("getFp::" + entryComparison.getFp());
+          System.out.println("getFn::" + entryComparison.getFn());
+          System.out.println("getPrecision::" + entryComparison.getPrecision());
+          System.out.println("getRecall::" + entryComparison.getRecall());
+          System.out.println("getF_measure::" + entryComparison.getF_measure());
+          System.out.println("::::::::::::::::::::::::::::::::::::::::" );
+          
+      }*/
     }
     
     
@@ -422,50 +438,7 @@ public class EvaluateAgainstQALD {
         return new ArrayList<Pattern>();
     }
 
-    /*private List<String> getOriginalMatch(List<String> qaldSentences, List<Pattern> queGGPatterns, String matchType,double similarityPercentage) {
-
-        List<String> list = new ArrayList<String>();
-        if (matchType.contains(ORIGINAL)) {
-            list = qaldSentences.stream().parallel()
-                    .filter(qaldQuestion
-                            -> queGGPatterns.stream().parallel()
-                            .anyMatch(queGGPattern -> !PatternMatchHelper.getPatternMatch(
-                            cleanQALDString(qaldQuestion),
-                            queGGPattern
-                    ).isEmpty())
-                    )
-                    .collect(Collectors.toList());
-        } else if (matchType.contains(BOG)) {
-            double cosineDistance = 0.0;
-            double cosineDistancePercentage = 0.0;
-            double cosineSimilarityPercentage = 0.0;
-            for (String qaldsentence : qaldSentences) {
-                String qaldsentenceOrg=qaldsentence;
-                qaldsentence=qaldsentence.toLowerCase();
-                for (Pattern pattern : queGGPatterns) {
-                    String queGGquestion = pattern.pattern().toLowerCase().replace("^", "");
-                    queGGquestion = queGGquestion.replace("([\\w\\s\\d-,.']+)\\", "");
-                    queGGquestion = queGGquestion.replace("$", "");
-                    cosineDistance = new CosineDistance().apply(qaldsentence, queGGquestion);
-                    cosineDistancePercentage = Math.round(cosineDistance * 100);
-                    cosineSimilarityPercentage = Math.round((1 - cosineDistance) * 100);
-                      //if (qaldsentence.contains("chi era la moglie del abraham lincoln?"))
-                       // System.out.println("qaldsentence:" + qaldsentence + "  queGGquestion:" + queGGquestion + " cosine:" + cosineSimilarityPercentage);
-                    if (cosineSimilarityPercentage > similarityPercentage) {
-                        //if (pattern.pattern().contains("marito")||pattern.pattern().contains("moglie")) {
-                            //System.out.println("qaldsentence:" + qaldsentence + "  queGGquestion:" + queGGquestion + " cosine:" + cosineSimilarityPercentage);
-                            list.add(qaldsentenceOrg);
-                        //}
-                       
-                    }
-                }
-            }
-
-        }
-        
-        return list;
-
-    }*/
+  
     private List<String> getOriginalMatch(List<String> qaldSentences, List<Pattern> queGGPatterns, String matchType, double similarityPercentage) {
 
         List<String> list = new ArrayList<String>();
@@ -543,13 +516,14 @@ public class EvaluateAgainstQALD {
             entryComparisons.add(entryComparison);
             if (!grammarEntities.isEmpty()) {
                 System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-                System.out.println("getQaldEntry::::" + entryComparison.getQaldEntry());
-                System.out.println("getQueGGEntry::::" + entryComparison.getQueGGEntry());
+                System.out.println("getQaldEntry::::" + entryComparison.getQaldEntry().getQuestions());
+                System.out.println("getQueGGEntry::::" + entryComparison.getQueGGEntry().getQuestionList());
 
             }
 
             //}
         }
+
         return entryComparisons;
     }
 
@@ -564,7 +538,7 @@ public class EvaluateAgainstQALD {
                 cosineDistance = new CosineDistance().apply(qaldsentence, queGGquestion);
                 cosineDistancePercentage = Math.round(cosineDistance * 100);
                 cosineSimilarityPercentage = Math.round((1 - cosineDistance) * 100);
-                if (cosineSimilarityPercentage > 50.0) {
+                if (cosineSimilarityPercentage > similarityPercentage) {
                     //System.out.println("queGGquestion:::" + queGGquestion + " queGGquestion:::" + queGGquestion + " cosineSimilarityPercentage::" + cosineSimilarityPercentage);
                     grammarEntities.add(grammarEntry);
                 }
@@ -573,64 +547,7 @@ public class EvaluateAgainstQALD {
         return grammarEntities;
     }
 
-    /*private void getOriginalMatch(List<String> qaldSentences, List<GrammarEntry> grammarEntries, String matchType, double similarityPercentage) {
-
-      
-        if (matchType.contains(BOG)) {
-            double cosineDistance = 0.0;
-            double cosineDistancePercentage = 0.0;
-            double cosineSimilarityPercentage = 0.0;
-            for (String qaldsentence : qaldSentences) {
-                String qaldsentenceOrg = qaldsentence;
-                qaldsentence = qaldsentence.toLowerCase();
-                for (GrammarEntry grammarEntry : grammarEntries) {
-                    Boolean match=false;
-                    String id = grammarEntry.getId();
-                    List<String> sentences = grammarEntry.getSentences();
-                    for (String queGGquestion : sentences) {
-                        cosineDistance = new CosineDistance().apply(qaldsentence, queGGquestion);
-                        cosineDistancePercentage = Math.round(cosineDistance * 100);
-                        cosineSimilarityPercentage = Math.round((1 - cosineDistance) * 100);
-                        queGGquestion=queGGquestion.replace("($x | PERSON_NP)", "");
-                        queGGquestion=queGGquestion.toLowerCase().strip();
-                        //if (qaldsentence.contains("chi era la moglie del abraham lincoln?"))
-                        //System.out.println("qaldsentence:" + qaldsentence + "  queGGquestion:" + queGGquestion + " cosine:" + cosineSimilarityPercentage);
-                        if (cosineSimilarityPercentage > similarityPercentage) {
-                            //if (pattern.pattern().contains("marito")||pattern.pattern().contains("moglie")) {
-                            System.out.println("qaldsentence:" + qaldsentence + "  queGGquestion:" + queGGquestion + " cosine:" + cosineSimilarityPercentage);
-                            this.qaldQuestions.add(qaldsentenceOrg);
-                             match=true;
-                             break;
-                            //}
-
-                        }
-                    }
-                    if(match){
-                       this.matchedQueGGEntriesIds.put(grammarEntry.getId(),grammarEntry);
-                    }
-
-                }
-            }
-
-        }
-        
-       //System.out.println("this.grammarEntryIds:"+ this.matchedQueGGEntries);
-       //exit(1);
-
-    }*/
- /*private List<GrammarEntry> getMatchedGrammarEntries(List<GrammarEntry> grammarEntries) {
-         List<GrammarEntry> matchedEntities=new ArrayList<GrammarEntry>();
-         for (GrammarEntry grammarEntry : grammarEntries) {
-             String id=grammarEntry.getId().trim().strip();
-             System.out.println(id);
-              System.out.println(this.matchedQueGGEntriesIds.toString());
-             
-             if(this.matchedQueGGEntriesIds.equals(id)){
-                 matchedEntities.add(grammarEntry);
-             }
-         }
-         return matchedEntities;
-    }*/
+  
     private void writeResult(QALDImporter qaldImporter, QALD qaldOriginal, EvaluationResult result, String resultFileName, String languageCode) throws IOException {
         ZonedDateTime before = ZonedDateTime.now();
         ZonedDateTime after = ZonedDateTime.now();
@@ -642,34 +559,37 @@ public class EvaluateAgainstQALD {
         LOG.info("Results are available here: " + resultFileName);
     }
 
-    private Pattern getMatchPattern(EntryComparison entryComparison, String cleanQaldQuestion) {
+    private String getMatchPattern(EntryComparison entryComparison, String cleanQaldQuestion) {
+        String pattern=null;
         if (entryComparison.getMatchedFlag()) {
-            List<Pattern> matchedPatterns
+            /*List<Pattern> matchedPatterns
                     = entryComparison.getQueGGEntry().getQuestionList()
                             .stream()
                             .map(this::cleanString)
                             .map(Pattern::compile)
                             .filter(pattern -> !PatternMatchHelper.getPatternMatch(cleanQaldQuestion, pattern)
                             .isEmpty())
-                            .collect(Collectors.toList());
+                            .collect(Collectors.toList());*/
 
-            if (matchedPatterns.size() == 1) {
+            /*if (matchedPatterns.size() == 1) {
                 return matchedPatterns.get(0);
+            }*/           
+            for (String question : entryComparison.getQueGGEntry().getQuestionList()) {
+                pattern = this.cleanString(question);
+                return pattern;
             }
 
         }
-        return null;
+        return pattern;
     }
 
-    private String getMatchedUri(Pattern sentencePattern,String matchedSentenceItem,Query qaldPARQLQuery) {
+    private String getMatchedUri(String sentencePattern,String matchedSentenceItem,Query qaldPARQLQuery) {
         String uriMatch="";
         if (!isNull(sentencePattern)) {
             String matchedPattern = sentencePattern.toString();
             // Try to find the matching uri for the previously found item inside the QALD SPARQL query
             String lowerCaseMatchedSentenceItem = matchedSentenceItem.toLowerCase().replace(" ", "_");
             uriMatch = findMatchingNodeToQALDSentenceMatchedItem(qaldPARQLQuery, lowerCaseMatchedSentenceItem);
-            System.out.println("lowerCaseMatchedSentenceItem::" + lowerCaseMatchedSentenceItem);
-            System.out.println("uriMatch::" + uriMatch);
         }
         return uriMatch;
     }
@@ -683,8 +603,18 @@ public class EvaluateAgainstQALD {
     }
 
     private String getQuGGResult(String queGGSparql,String uriMatch,String bindingVarName) {
+        String replaceUri=null;
+        if(bindingVarName.contains("subjOfProp")){
+           replaceUri="objOfProp" ;
+        }
+        else if(bindingVarName.contains("objOfProp")){
+             replaceUri="subjOfProp" ;
+        }
+            
+        
+            
         String property = StringUtils.substringBetween(queGGSparql, "<", ">");
-        SparqlQuery sparqlQuery = new SparqlQuery(uriMatch, property, SparqlQuery.FIND_ANY_ANSWER, bindingVarName, language, endpoint, false);
+        SparqlQuery sparqlQuery = new SparqlQuery(uriMatch, property, SparqlQuery.FIND_ANY_ANSWER, replaceUri, language, endpoint, false);
         return  sparqlQuery.getSparqlQuery();
     }
 
