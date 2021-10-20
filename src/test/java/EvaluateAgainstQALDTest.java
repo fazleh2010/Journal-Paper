@@ -15,14 +15,14 @@ import static util.io.ResourceHelper.loadResource;
 
 class EvaluateAgainstQALDTest {
 
-    private static final EvaluateAgainstQALD evaluateAgainstQALD = new EvaluateAgainstQALD(Language.EN);
+    /*private static final EvaluateAgainstQALD evaluateAgainstQALD = new EvaluateAgainstQALD(Language.EN);
     private GrammarWrapper grammarWrapper;
     private static final String RESOURCE = "/home/elahi/AHack/italian/question-grammar-generator/src/main/resources/QALD-2017/";
     private static final String DATASET_EN_JSON =RESOURCE +"grammar_FULL_DATASET_IT.json";
     private static final String COMBINATIONS_EN_JSON = RESOURCE +"grammar_COMBINATIONS_IT.json";
     public static final String QALD_FILE = RESOURCE + "QALD-2017/qald-7-train-multilingual.json";
     public static final String QALD_FILE_MODIFIED = RESOURCE + "QALD-2017/qald-7-train-multilingual_modified.json";
-
+    */
 
 
     /*@BeforeEach
@@ -58,22 +58,7 @@ class EvaluateAgainstQALDTest {
     //private static final String COMBINATIONS_EN_JSON = "/home/elahi/AHack/italian/question-grammar-generator/json/grammar_COMBINATIONS_IT.json";
    
     
-    public static void main(String[] args) throws IOException {
-        QueGG evaluateAgainstQALDTest = new QueGG();
-        ObjectMapper objectMapper = new ObjectMapper();
-        File grammarEntriesFile = new File(DATASET_EN_JSON);
-        File grammarEntriesFile2 = new File(COMBINATIONS_EN_JSON);
-        GrammarWrapper grammarWrapper = objectMapper.readValue(grammarEntriesFile, GrammarWrapper.class);
-        GrammarWrapper gw2 = objectMapper.readValue(grammarEntriesFile2, GrammarWrapper.class);
-        grammarWrapper.merge(gw2);
-        EvaluateAgainstQALD EvaluateAgainstQALD = new EvaluateAgainstQALD(Language.IT);
-        String resultFileName = RESOURCE + "QALD-2017/" + "QALD-QueGG-Comparison_" + LocalDateTime.now()
-                .format(DateTimeFormatter.ofPattern(
-                        "yyyy-MM-dd_hh-mm")) + ".csv";
-        String qaldRaw = RESOURCE + "QALD-2017/" + "QALD-2017-dataset-raw.csv";
-        EvaluateAgainstQALD.evaluateAndOutput(grammarWrapper, QALD_FILE, QALD_FILE_MODIFIED, resultFileName, qaldRaw);
-
-    }
+   
     
      //private static String srcDir = "src/main/resources/";
    // private static String endpoint = "https://dbpedia.org/sparql";

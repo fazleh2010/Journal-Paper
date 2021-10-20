@@ -1,0 +1,28 @@
+1. 
+Are there any castles in the United States?
+PREFIX dct: <http://purl.org/dc/terms/> 
+PREFIX dbc: <http://dbpedia.org/resource/Category:> 
+ ask where {?uri dct:subject dbc:Castles_in_the_United_States}
+
+2.Can you find frescoes in Crete?
+PREFIX dct: <http://purl.org/dc/terms/> 
+PREFIX dbc: <http://dbpedia.org/resource/Category:> 
+PREFIX dbp: <http://dbpedia.org/property/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX dbr: <http://dbpedia.org/resource/> ask where { ?uri dct:subject dbc:Minoan_frescos . ?uri dbp:museum ?museum . ?museum dbo:location dbr:Crete . }"
+
+
+3. Do Urdu and Persian have a common root?
+
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX dbr: <http://dbpedia.org/resource/> ask where 
+{ dbr:Urdu dbo:languageFamily ?uri . dbr:Persian_language dbo:languageFamily ?uri . }"
+
+4.Does the Ford Motor Company have a manufacturing plant in Malaysia?
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX dbr: <http://dbpedia.org/resource/> ask where 
+{ ?uri dbo:assembly dbr:Malaysia . ?uri dbo:manufacturer dbr:Ford_Motor_Company . }"
+
+
+
+

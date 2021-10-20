@@ -12,7 +12,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-import static util.io.ResourceHelper.loadResource;
 
 public class QALDImporter {
    //public static final String QALD_FILE = "QALD-2017/qald-7-train-multilingual.json";
@@ -27,9 +26,9 @@ public class QALDImporter {
 
   public QALDImporter() {}
 
-  public void qaldToCSV(String qaldFile, String outputFile) throws IOException {
+  public void qaldToCSV(String qaldFile, String outputFile,String languageCode) throws IOException {
     QALD qald = readQald(qaldFile);
-    writeToCSV(qaldJsonToCSVTemplate(qald), outputFile);
+    writeToCSV(qaldJsonToCSVTemplate(qald,languageCode), outputFile);
   }
 
   public QALD readQald(String file) throws IOException {
@@ -44,7 +43,7 @@ public class QALDImporter {
     writer.close();
   }
 
-  private List<String[]> qaldJsonToCSVTemplate(QALD qaldFile) {
+  private List<String[]> qaldJsonToCSVTemplate(QALD qaldFile,String languageCode) {
     List<String[]> list = new ArrayList<>();
     list.add(new String[]{"id", "answertype", "question", "sparql"});
     qaldFile.questions.forEach(qaldQuestions -> {

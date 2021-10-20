@@ -102,7 +102,11 @@ combination | A flag that shows if this grammar entry is a combination of multip
 ....
 ...
 ```
+Run Evaluation
 
+````shell script
+java -jar target/QuestionGrammarGenerator.jar IT qald outputDB dataset/dbpedia.json
+````
 
 ## Used Frameworks And Libraries
 

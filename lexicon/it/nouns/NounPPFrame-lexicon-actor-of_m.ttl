@@ -1,0 +1,43 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :actor-of_m ;
+  lemon:entry    :di .
+
+:actor-of_m a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :actor-of_m_form ;
+  lemon:sense          :actor-of_m_sense_1 ;
+  lemon:synBehavior    :actor-of_m_nounpp .
+
+:actor-of_m_form a lemon:Form ;
+  lemon:writtenRep "l' attore"@it .
+
+:actor-of_m_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:actor-of_m_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :actor-of_m_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/Actor> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :actor-of_m_sense_1_condition .
+
+:actor-of_m_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Film> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Person> .
+
+:arg2 lemon:marker :di .
+
+## Prepositions ##
+
+:di a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "di"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

@@ -1,0 +1,43 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :gross-of ;
+  lemon:entry    :di .
+
+:gross-of a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :gross-of_form ;
+  lemon:sense          :gross-of_sense_1 ;
+  lemon:synBehavior    :gross-of_nounpp .
+
+:gross-of_form a lemon:Form ;
+  lemon:writtenRep "il guadagno"@it .
+
+:gross-of_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:gross-of_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :gross-of_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/gross> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :gross-of_sense_1_condition .
+
+:gross-of_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Film> ;
+  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#double> .
+
+:arg2 lemon:marker :di .
+
+## Prepositions ##
+
+:di a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "di"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

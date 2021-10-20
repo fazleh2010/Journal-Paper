@@ -1,0 +1,402 @@
+QALD-17 training
+
+When Questions (11 questions of training and test QALD)
+Form: When AUX NP VERB?
+AUX=did/was/
+NP= article+noun
+VERB=(dissolve,complete,happened,found,die,born)
+
+
+Lemon: verb_termporal (dissolve_temporal,complete_termporal,event_temporal,found_temporal, etc.)
+reference:       (dbo:DissolveDate,dbo:completionDate,dbo:deathDate,dbo:startDate,dbo:endDate,dbo:creationDate,dbo:bornDate..etc)
+
+Arg1: dbo:Person, dbo:Party,dbo:ship, dbo:Battle_of_X, dbo:Company, etc
+Arg2= dbo:date/dbo:year
+
+
+1. When did the Ming dynasty dissolve?..................................................
+"id": "61"
+"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/> \nSELECT DISTINCT ?date\nWHERE {  \n        res:Ming_dynasty dbo:dissolutionDate ?date .\n}"
+
+When did the (X|binding) dissolve?
+
+res:Ming_dynasty      dbo:dissolutionDate            ?date .
+(Ming dynasty)        (dissolve_temporal)             When did
+
+X: Ming dynasty:   lemon:propertyDomain dbo:(/Goverment/Party/Monarachi/)
+dissolve_temporal:     dissolve: dbo:dissolutionDate
+Y: When did:       propertyRange  dbo:date 
+
+2. When was the Titanic completed?..........................................................
+"id": "114"
+"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?date\nWHERE { \n        res:RMS_Titanic dbo:completionDate ?date . \n}"
+
+When was the (X|binding) completed?
+
+res:RMS_Titanic       dbo:completionDate      ?date . 
+Titanic               completed_temporal      When did
+
+X: RMS_Titanic:   lemon:propertyDomain dbo:(/ship)
+complete_temporal:     completed: dbo:completionDate
+Y: When did:       propertyRange  dbo:date 
+
+3. When did Boris Becker end his active career?.................................................
+"id": "160"
+"sparql": "SELECT DISTINCT ?d WHERE { <http://dbpedia.org/resource/Boris_Becker> <http://dbpedia.org/ontology/activeYearsEndDate> ?d . } "
+
+When did (X|binding) end_his/her_active_career?
+
+res: Boris_Becker>  dbo:activeYearsEndDate ?d .
+(Boris Becker)     (active_end_temporal)   (When did)
+
+X: Boris_Becker:   lemon:propertyDomain dbo:(Person)
+active_end_temporal:   end his/her active career: dbo:activeYearsEndDate
+Y: When did:       propertyRange  dbo:date 
+
+4. When was the Battle of Gettysburg ?............................................................
+"id": "0",
+"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?date \nWHERE { \n       res:Battle_of_Gettysburg dbo:date ?date .\n}"
+
+reformulated: When was the Battle of Gettysburg happened?
+When was (X|binding) happened?
+
+res:Battle_of_Gettysburg    dbo:date          ?date .
+(Battle of Gettysburg)     (happen_temporal)  (When was)
+
+X: Battle of Gettysburg:   lemon:propertyDomain dbo:(Battle)
+happen_temporal:   happened/take place/occured: dbo:activeYearsEndDate
+Y: When did:       propertyRange  dbo:date 
+
+5. When was Jack Wolfskin founded?.................................................................
+"id": "175"
+"sparql": "SELECT DISTINCT ?year WHERE {  <http://dbpedia.org/resource/Jack_Wolfskin> <http://dbpedia.org/ontology/foundingYear> ?year . } "
+
+res:Jack_Wolfskin> dbo:foundingYear> ?year . 
+(Jack Wolfskin)    (found_termporal) When was                  
+
+X: Jack Wolfskin :   lemon:propertyDomain dbo:(Person)
+found_temporal:      found: dbo:foundingYear
+Y: When did:         propertyRange  dbo:year
+
+6.When did princess Diana die?............................................................................
+"id": "213"
+"sparql": "SELECT DISTINCT ?d WHERE { <http://dbpedia.org/resource/Diana,_Princess_of_Wales> <http://dbpedia.org/ontology/deathDate> ?d . }"
+
+
+res:Diana,_Princess_of_Wales dbo:deathDate  ?d .
+
+X: Diana,_Princess_of_Wales :   lemon:propertyDomain dbo:(Person)
+death_temporal:                 dies: dbo:deathDate
+Y: When did:                    propertyRange  dbo:year
+
+7. When did Dracula's creator die?................................
+"id": "90",
+"sparql": "SELECT DISTINCT ?date WHERE {  <http://dbpedia.org/resource/Count_Dracula> <http://dbpedia.org/ontology/creator> ?x .  ?x <http://dbpedia.org/ontology/deathDate> ?date . } "
+
+<http://dbpedia.org/resource/Count_Dracula> <http://dbpedia.org/ontology/creator> ?x .  ?x <http://dbpedia.org/ontology/deathDate> ?date . } 
+
+-complex
+
+
+QALD-17 test
+8. When did Muhammad die?........................................
+When did (X|Person) die?
+
+res:Muhammad dbo:deathDate ?date.
+(Muhammad)   (die_temporal) When did?
+
+X: Muhammad :    lemon:propertyDomain dbo:(Person)
+die_temporal:    dies: dbo:deathDate
+Y: When did:     propertyRange  dbo:year
+
+9. When was the De Beers company founded?........................
+res:De_Beers          dbo:foundingYear    ?date.
+De Beers company      found_temporal      When was?
+
+X: De Beers company :   lemon:propertyDomain dbo:(Company)
+found_temporal:         found:  dbo:foundingYear 
+Y: When did:            propertyRange  dbo:year
+
+10. When was John Adams born?....................................
+res:John_Adams     dbo:birthDate    ?date.
+John_Adams         born_temporal    When was
+
+X: John Adams :         lemon:propertyDomain dbo:(Person)
+born_termporal:         born:  dbo:birthDate 
+Y: When did:            propertyRange  dbo:date
+
+
+11. When did Paraguay proclaim its independence?.................
+res:Paraguay dbp:establishedDate ?date .
+-complex
+
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+How Questions (12 how questions of training and test)
+Form: 
+How many/much NP  AUX VERB PP?
+AUX=are
+NP= article+noun
+PP= preposition+noun
+
+
+
+1. How many languages are spoken in Turkmenistan? (training QALD-17).............................. 
+"id": "33"
+"sparql": "SELECT (COUNT(DISTINCT ?x) as ?c) WHERE {  <http://dbpedia.org/resource/Turkmenistan> <http://dbpedia.org/ontology/language> ?x . } "
+
+
+res:Turkmenistan   dbo:language                 ?x .
+(Turkmenistan)    (languages_are_spoken_in)    (How many) 
+
+X: Turkmenistan :                   lemon:propertyDomain dbo:(Country/Continent)
+languages_are_spoken in:            languages are spoken in   dbo:language
+Y:How many:                         propertyRange  dbo:number
+
+2. How many languages are spoken in Colombia? (training QALD-17)........................................
+"id": "208",
+"sparql": "SELECT (COUNT(DISTINCT ?uri) as ?c) WHERE {  ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Language> .  <http://dbpedia.org/resource/Colombia> <http://dbpedia.org/ontology/language> ?uri . } "
+
+res:Colombia>    dbo:language                ?uri .
+(Colombia)      (languages_are_spoken_in)   (How many)
+
+X: Colombia :                       lemon:propertyDomain dbo:(Country)
+languages_are_spoken_in :           languages are spoken in   dbo:language
+Y: How many:                        propertyRange  dbo:number
+
+3. How many people live in Poland? (training QALD-17) ...........................
+"id": "41"
+"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Poland> <http://dbpedia.org/ontology/populationTotal> ?uri . }  "
+
+res:Poland   dbo:populationTotal  ?uri .
+(Poland)     (people_live_in)     (How many)  
+
+X: Poland :                   lemon:propertyDomain dbo:(Country)
+people_live_in:                people live in  dbo:language
+Y:How many                     PropertyRange  dbo:number
+
+4.How many ethnic groups live in Slovenia? (training QALD-17)....................
+"id": "111",
+"sparql": "SELECT (COUNT(DISTINCT ?uri) as ?c) WHERE {  <http://dbpedia.org/resource/Slovenia> <http://dbpedia.org/ontology/ethnicGroup> ?uri . } "
+
+res:Slovenia   dbo:ethnicGroup            ?uri . 
+ (Slovenia)   (ethnic_groups_live_in)     (How many)
+
+X: Slovenia :             lemon:propertyDomain dbo:(Country)
+ethnic_groups_live_in:    ethnic groups live in   dbo:ethnicGroup
+Y:How many ethnic groups: propertyRange  dbo:number
+
+5. How many people live in Eurasia? (training QALD-17)....................
+"id": "45"
+sparql": "PREFIX res: <http://dbpedia.org/resource/> PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?population where { res:Eurasia dbo:populationTotal ?population . }"
+
+
+res:Eurasia dbo:populationTotal ?population .
+(Eurasia)    (people_live_in)    (How many)
+
+X: Eurasia :          lemon:propertyDomain dbo:(Country)
+people_live_in :      people live in dbo:populationTotal
+Y: How many people:   propertyRange  dbo:number
+
+6. How high is the lighthouse in Colombo? (training QALD-17)........................
+"id": "2",,
+"sparql": "SELECT DISTINCT ?num WHERE {  <http://dbpedia.org/resource/Colombo_Lighthouse> <http://dbpedia.org/ontology/height> ?num . } "
+
+res:Colombo_Lighthouse     dbo:height ?num .
+(lighthouse in Colombo)    (high_is)  How   
+
+X: Colombo_Lighthouse :          lemon:propertyDomain dbo:()
+high_is :                        high is dbo:height
+Y: How :                         propertyRange  dbo:number   
+
+7. How much did Pulp Fiction cost?.........(training QALD-17).....................
+"id": "5"
+"sparql": "SELECT DISTINCT ?n WHERE {  <http://dbpedia.org/resource/Pulp_Fiction> <http://dbpedia.org/ontology/budget> ?n . } "
+
+
+reformulated:How much Pulp Fiction cost?.........(training QALD-17).....................
+
+res:Pulp_Fiction  dbo:budget  ?n .
+(Pulp Fiction)    (cost)     (How much) 
+
+X: Pulp Fiction :   lemon:propertyDomain dbo:(Book)
+cost :              cost dbo:budget
+Y: How much:        propertyRange  dbo:number
+
+8. How tall is Amazon Eve?.........(training QALD-17).....................
+"id": "17"
+"sparql": "SELECT DISTINCT ?height WHERE {  <http://dbpedia.org/resource/Amazon_Eve> <http://dbpedia.org/ontology/height> ?height . } "
+
+res:Amazon_Eve  dbo:height ?height .
+(Amazon Eve)    (tall_is)   how 
+
+X: Amazon Eve :       lemon:propertyDomain dbo:(Person)
+tall_is :             is tall <http://dbpedia.org/ontology/height>
+Y: how tell is:       propertyRange  dbo:number
+
+9. How much did the Lego Movie cost?.........(training QALD-17).....................
+"id": "29",
+"sparql": "SELECT DISTINCT ?n WHERE { <http://dbpedia.org/resource/The_Lego_Movie> <http://dbpedia.org/ontology/budget> ?n . } "
+
+reformulated:How much the Lego Movie cost?.........(training QALD-17).....................
+
+res:The_Lego_Movie   dbo:budget  ?n 
+(Lego Movie)         (cost)      (How much)
+
+X: Lego Movie :       lemon:propertyDomain dbo:(Person)
+cost :                cost dbo:budget
+Y: How much:          propertyRange  dbo:number
+
+10. How tall is Claudia Schiffer?.........(training QALD-17).....................
+"id": "118",
+"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nSELECT DISTINCT ?height \nWHERE {       \n        res:Claudia_Schiffer dbo:height ?height .      \n}"
+
+res:Claudia_Schiffer   dbo:height ?height .
+(Claudia_Schiffer)    (tall_is)  How   
+
+X: Claudia_Schiffer :          lemon:propertyDomain dbo:()
+tall_is :                      tall is dbo:height
+Y: How :                       propertyRange  dbo:number   
+
+11.How tall is Michael Jordan?.........(training QALD-17).....................
+"id": "162",
+"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?num \nWHERE {\n        res:Michael_Jordan dbo:height ?num .\n}"
+res:Michael_Jordan dbo:height ?num
+
+12. How high is the Yokohama Marine Tower?.........(training QALD-17).....................
+"id": "198",
+"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nSELECT DISTINCT ?height \nWHERE {       \n        res:Claudia_Schiffer dbo:height ?height .      \n}"
+
+
+res:Yokohama_Marine_Tower dbo:height ?num .
+
+13.  "How many Aldi stores are there? .........(training QALD-17).....................
+"id": "79",
+"sparql": "SELECT DISTINCT ?number WHERE {  <http://dbpedia.org/resource/Aldi> <http://dbpedia.org/ontology/numberOfLocations> ?number . } "
+
+<http://dbpedia.org/resource/Aldi> <http://dbpedia.org/ontology/numberOfLocations> ?number .
+ Aldi                                                                              how many 
+
+14. How many people live in the capital of Australia? .........(training QALD-17).....................
+"id": "75",
+sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?num \nWHERE {\n        res:Australia dbo:capital ?x .\n        ?x dbo:populationTotal ?num .\n}"
+
+ res:Australia          dbo:capital         ?x .
+ Australia              the capital of 
+
+ ?x dbo:populationTotal ?num .\n}
+     (live in)               (How many people)
+
+15. How many companies were founded by the founder of Facebook?.........(training QALD-17).....................
+<http://dbpedia.org/resource/Facebook> <http://dbpedia.org/ontology/foundedBy> ?uri . 
+Facebook                                 founder                            
+?uri <http://dbpedia.org/ontology/foundedBy> ?uri .
+                                             (how many companies)
+
+16. "How many children did Benjamin Franklin have?" (id=96).........(training QALD-17).....................
+<http://dbpedia.org/resource/Benjamin_Franklin> <http://dbpedia.org/ontology/child> ?uri .
+Benjamin Franklin                                 have_person                        How many children did
+
+X: Benjamin Franklin :     lemon:propertyDomain dbo:(Person)
+have_person :              have:  <http://dbpedia.org/ontology/child>
+Y: How many children did:  propertyRange  dbo:number
+
+
+17. How many pages does War and Peace have?.........(training QALD-17).....................
+ res:War_and_Peace   dbo:numberOfPages ?n 
+ War_and_Peace          have                How many pages does
+
+X: War_and_Peace :       lemon:propertyDomain dbo:(Book)
+have :                   have:  dbo:numberOfPages
+Y: How many pages does:  propertyRange  dbo:number
+
+18. How many inhabitants does the largest city in Canada have?.........(training QALD-17).....................
+res:Canada dbo:largestCity ?city .        
+?city dbo:populationTotal ?num .
+
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+Simple List?Give questions(4 questions)
+
+1. "List the children of Margaret Thatcher.........(training QALD-17).....................
+"id": "97",
+"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nSELECT DISTINCT ?uri \nWHERE {\n\tres:Margaret_Thatcher dbo:child ?uri .\n}"
+
+res:Margaret_Thatcher dbo:child          ?uri 
+(Margaret Thatcher)   (the_children_of)   List
+
+X: Margaret Thatcher :   lemon:propertyDomain dbo:(Person)
+the_children_of :        the children of dbo:child
+List:                    propertyRange  dbo:Person
+
+2. "List all games by GMT..........(training QALD-17).....................
+"id": "102",
+"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE {\t\n        ?uri dbo:publisher res:GMT_Games .\n}"
+
+?uri        dbo:publisher      res:GMT_Games 
+List all   (published_by)       GMT
+
+3.Give me the currency of China..........(training QALD-17).....................
+"id": "126",
+"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/> \nSELECT DISTINCT ?uri\nWHERE {  \n   res:China dbo:currency ?uri . \n}"
+		
+res:China dbo:currency      ?uri .
+(China)   (the_currency_of) Give me
+
+
+X: China :               lemon:propertyDomain dbo:(Country)
+the_currency_of :        the currency of dbo:currency
+List:                    propertyRange  dbo:thing
+
+4. Give me all members of Prodigy.........(training QALD-17).....................
+"id": "204",
+"sparql": "SELECT DISTINCT ?uri WHERE {  <http://dbpedia.org/resource/The_Prodigy> <http://dbpedia.org/ontology/bandMember> ?uri . } "
+
+res:The_Prodigy   dbo:bandMember ?uri . 
+(Prodigy)        numbers_of      Give me
+
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+Question start with Auxilary verbs.........................
+
+1.  "Is Barack Obama a democrat?".........(training QALD-17).....................
+"id": "37",
+query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nASK\nWHERE { \n        res:Barack_Obama dbo:party <http://dbpedia.org/resource/Democratic_Party_(United_States)> . \n}"
+res:Barack_Obama dbo:party <http://dbpedia.org/resource/Democratic_Party_(United_States)> .
+
+2. "Is Christian Bale starring in Batman Begins?.........(training QALD-17).....................
+"id": "43",
+"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nASK \nWHERE {\n\tres:Batman_Begins dbo:starring res:Christian_Bale .\n}"
+
+res:Batman_Begins dbo:starring res:Christian_Bale .
+
+3. "Is Frank Herbert still alive?",.........(training QALD-17).....................
+"id": "47",
+"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nASK \nWHERE {\n\tOPTIONAL { res:Frank_Herbert dbo:deathDate ?date . }\n        FILTER (!BOUND(?date))\n}"
+
+res:Frank_Herbert dbo:deathDate ?date .
+
+4."Does Neymar play for Real Madrid?.........(training QALD-17).....................
+"id": "55",
+"sparql": "ASK WHERE { <http://dbpedia.org/resource/Neymar> <http://dbpedia.org/ontology/team> <http://dbpedia.org/resource/Real_Madrid_C.F.> . }"
+
+res:Neymar dbo:team res:Real_Madrid_C.F.> 
+
+5.  "Does the Isar flow into a lake?",.........(training QALD-17).....................
+"id": "103",
+"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nASK\nWHERE {\n        ?x dbo:inflow res:Isar .\n        ?x rdf:type dbo:Lake . \n}"
+\n        ?x dbo:inflow res:Isar .\n        ?x rdf:type dbo:Lake . \n
+
+6. "Is Rita Wilson the wife of Tom Hanks?",.........(training QALD-17).....................
+res:Tom_Hanks dbo:spouse res:Rita_Wilson 
+"id": "109",
+"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nASK \nWHERE { \n        res:Tom_Hanks dbo:spouse res:Rita_Wilson . \n}"
+
+7. Is the wife of president Obama called Michelle?",.........(training QALD-17).....................
+"id": "110",
+"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nASK \nWHERE {\n        res:Barack_Obama dbo:spouse ?spouse .\n        ?spouse rdfs:label ?name .\n        FILTER(regex(?name,'Michelle')) \n}"
+			},
+res:Barack_Obama dbo:spouse ?spouse .\n        ?spouse rdfs:label ?name .\n        FILTER(regex(?name,'Michelle'))
+
+

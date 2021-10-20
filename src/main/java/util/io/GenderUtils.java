@@ -23,12 +23,20 @@ public class GenderUtils {
     static {
         referenceArticleMap.put("http://dbpedia.org/ontology/areaCode", new String[]{"il"});
         referenceArticleMap.put("http://dbpedia.org/ontology/author", new String[]{"il", "la"});
+        referenceArticleMap.put("http://dbpedia.org/ontology/Author", new String[]{"il", "la"});
         referenceArticleMap.put("http://dbpedia.org/ontology/Film", new String[]{"il"});
         referenceArticleMap.put("http://dbpedia.org/ontology/Bridge", new String[]{"il"});
         referenceArticleMap.put("http://dbpedia.org/ontology/Book", new String[]{"il"});
         referenceArticleMap.put("http://dbpedia.org/ontology/Song", new String[]{"il"});
         referenceArticleMap.put("http://dbpedia.org/ontology/Work", new String[]{"il"});
         referenceArticleMap.put("http://dbpedia.org/ontology/Person", new String[]{"il", "la"});
+        referenceArticleMap.put("http://dbpedia.org/ontology/Company", new String[]{"la"});
+        referenceArticleMap.put("http://dbpedia.org/ontology/Organization", new String[]{"la"});
+        referenceArticleMap.put("http://dbpedia.org/ontology/Ideology", new String[]{"il"});
+        referenceArticleMap.put("http://dbpedia.org/ontology/Language", new String[]{"il"});
+        referenceArticleMap.put("http://dbpedia.org/ontology/BodyOfWater", new String[]{"il"});
+        referenceArticleMap.put("http://dbpedia.org/ontology/MusicalWork", new String[]{"la"});
+        referenceArticleMap.put("http://dbpedia.org/ontology/Band", new String[]{"il"});
     }
     
    public GenderUtils(Language language, String reference) {
