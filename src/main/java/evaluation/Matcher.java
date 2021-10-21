@@ -102,7 +102,7 @@ public class Matcher {
                 .orElseThrow();
     }
     
-     private static String cleanString(String sentence) {
+     public static String cleanString(String sentence) {
         return String.format("^%s$", sentence
                 .replace(DEFAULT_BINDING_VARIABLE, "([\\w\\s\\d-,.']+)")
                 .replaceAll("\\((.+)\\s\\|\\s(.+)\\)", "([\\\\w\\\\s\\\\d-,.']+)")

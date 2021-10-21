@@ -205,6 +205,7 @@ public enum DomainOrRangeType {
   TELEVISIONSHOW(List.of(URI.create(DBO.getUri() + "TelevisionShow"))),
   TELEVISIONEPISODE(List.of(URI.create(DBO.getUri() + "TelevisionEpisode"))),
   AWARD(List.of(URI.create(DBO.getUri() + "Award"))),
+  WEBSITE(List.of(URI.create(DBO.getUri() + "Website"))),
   RIVER(List.of(
     URI.create(DBO.getUri() + "River"),
     URI.create(DBO.getUri() + "Stream")

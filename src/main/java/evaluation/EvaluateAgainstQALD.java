@@ -41,7 +41,7 @@ public class EvaluateAgainstQALD {
     private final String language;
     private final String ORIGINAL = "ORIGINAL";
     private final String BOG = "BOG";
-    private final double similarityPercentage = 65;
+    private final double similarityPercentage = 35.0;
     private Map<String, GrammarEntry> matchedQueGGEntriesIds = new TreeMap<String, GrammarEntry>();
     private Set<String> qaldQuestions = new TreeSet<String>();
     private String endpoint=null;
@@ -391,14 +391,13 @@ public class EvaluateAgainstQALD {
             entryComparisons.add(entryComparison);
             
             if (!grammarEntities.isEmpty()) {
-                //System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-                //System.out.println("getQaldEntry::::" + entryComparison.getQaldEntry().getQuestions());
-                //System.out.println("getQueGGEntry::::" + entryComparison.getQueGGEntry().getQuestionList());
+                System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                System.out.println("getQaldEntry::::" + entryComparison.getQaldEntry().getQuestions());
+                System.out.println("getQueGGEntry::::" + entryComparison.getQueGGEntry().getQuestionList());
             }
 
             //}
         }
-
         return entryComparisons;
     }
 
@@ -413,8 +412,13 @@ public class EvaluateAgainstQALD {
                 cosineDistance = new CosineDistance().apply(qaldsentence, queGGquestion);
                 cosineDistancePercentage = Math.round(cosineDistance * 100);
                 cosineSimilarityPercentage = Math.round((1 - cosineDistance) * 100);
+                queGGquestion=Matcher.cleanString(queGGquestion);
+                queGGquestion=queGGquestion.replace("([\\w\\s\\d-,.']+)$","");
+                queGGquestion=queGGquestion.replace("([\\w\\s\\d-,.']+)\\?$","?");
+                queGGquestion=queGGquestion.replace("^","");
+                
                 if (cosineSimilarityPercentage > similarityPercentage) {
-                    //System.out.println("queGGquestion:::" + queGGquestion + " queGGquestion:::" + queGGquestion + " cosineSimilarityPercentage::" + cosineSimilarityPercentage);
+                    System.out.println("qaldsentence:::" + qaldsentence + " queGGquestion:::" + queGGquestion + " cosineSimilarityPercentage::" + cosineSimilarityPercentage);
                     grammarEntities.add(grammarEntry);
                 }
             }

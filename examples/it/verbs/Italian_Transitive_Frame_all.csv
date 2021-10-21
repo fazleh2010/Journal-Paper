@@ -1,0 +1,41 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,SyntacticFrame,subject,directObject,sense,reference,domain,range
+direct,verb,dirigere,dirige,ha diretto,TransitiveFrame,range,domain,1,dbo:director,dbo:Film,dbo:Person
+design,verb,progettare,progetta,ha progettato,TransitiveFrame,range,domain,1,dbo:architect,dbo:Bridge,dbo:Architect
+cross,verb,attraversare,attraversa,ha attraversato,TransitiveFrame,range,domain,1,dbo:crosses,dbo:Bridge,dbo:River
+discover,verb,scoprire,scopre,ha scoperto,TransitiveFrame,range,domain,1,dbo:discoverer,dbo:Place,dbo:Person
+produce,verb,produrre,produce,ha prodotto,TransitiveFrame,range,domain,1,dbo:producer,dbo:Film,dbo:Person
+publish,verb,pubblicare,pubblica,ha pubblicato,TransitiveFrame,range,domain,1,dbo:publisher,dbo:Book,dbo:Agent
+write,verb,scrivere,scrive,ha scritto,TransitiveFrame,range,domain,1,dbo:writer,dbo:Song,dbo:Person
+paint,verb,dipingere,dipinge,ha dipinto,TransitiveFrame,range,domain,1,dbo:artist,dbo:ArtWork,dbo:Person
+win,verb,vincere,vince,ha vinto,TransitiveFrame,range,domain,1,dbo:award,dbo:Person,dbo:Award
+found,verb,fondare,fonda,ha fondato,TransitiveFrame,range,domain,1,dbo:foundedBy,dbo:Organisation,dbo:Person
+present,verb,presentare,presenta,ha presentato,TransitiveFrame,range,domain,1,dbo:presenter,dbo:TelevisionShow,dbo:Person
+perform,verb,suonare,suona,ha suonato,TransitiveFrame,range,domain,1,dbo:artist,dbo:MusicalWork,dbo:Agent
+succeed,verb,seguire,segue,ha seguito,TransitiveFrame,range,domain,1,dbo:successor,dbo:Person,dbo:Person
+distribute,verb,dsitribuire,distribuisce,ha distribuito,TransitiveFrame,range,domain,1,dbo:distributor,dbo:TelevisionShow,dbo:Organisation
+air,verb,trasmettere,trasmette,ha trasmesso,TransitiveFrame,range,domain,1,dbo:network,dbo:Film,dbo:Broadcaster
+precede,verb,precedere,precede,ha preceduto,TransitiveFrame,range,domain,1,dbp:prevTitle,dbo:Album,dbo:Album
+marry,verb,sposare,sposa,ha sposato,TransitiveFrame,range,domain,1,dbo:spouse,dbo:Person,dbo:Person
+own,verb,possedere,possiede,ha posseduto,TransitiveFrame,range,domain,1,dbo:owner,dbo:Airport,dbo:Agent
+operate,verb,operare,opera,ha operato,TransitiveFrame,range,domain,1,dbp:operator,dbo:Airport,dbo:Organisation
+control,verb,controllare,controlla,ha controllato,TransitiveFrame,range,domain,1,dbp:controlledby,dbo:Airport,dbo:Organisation
+illustrate,verb,illustrare,illustra,ha illustrato,TransitiveFrame,range,domain,1,dbo:illustrator,dbo:WrittenWork,dbo:Person
+support,verb,supportare,supporta,ha supportato,TransitiveFrame,range,domain,1,dbo:ideology,dbo:Ideology,dbo:Agent
+speak,verb,parlare,parla,parlava,TransitiveFrame,range,domain,1,dbo:officialLanguage,dbo:Language,dbo:PopulatedPlace
+join,verb,unirsi,si unisce,si è unito,TransitiveFrame,range,domain,1,dbo:riverMouth,dbo:BodyOfWater,dbo:River
+create,verb,creare,crea,ha creato,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Agent
+leave,verb,lasciare,lascia,ha lasciato,TransitiveFrame,range,domain,1,dbo:formerBandMember,dbo:Band,dbo:Person
+program,verb,programmare,programma,ha programmato,TransitiveFrame,range,domain,1,dbp:programmer,dbo:Software,dbo:Person
+cover,verb,occuparsi,si occupa,si occupava,TransitiveFrame,range,domain,1,dbo:academicDiscipline,owl:Thing,dbo:AcademicJournal
+edit,verb,curare,cura,curava,TransitiveFrame,range,domain,1,dbo:editor,dbo:AcademicJournal,dbo:Agent
+manage,verb,occuparsi,si occupa,si occupava,TransitiveFrame,range,domain,1,dbo:managerClub,dbo:SportsTeam,dbo:Athlete
+lead,verb,guidare,guida,guiidava,TransitiveFrame,range,domain,1,dbp:leaderName,dbo:Place,dbo:Person
+drain,verb,drenare,drena,ha drenato,TransitiveFrame,range,domain,1,dbo:outflow,dbo:BodyOfWater,dbo:River
+maintain,verb,curare,cura,curava,TransitiveFrame,range,domain,1,dbo:maintainedBy,dbo:ArchitecturalStructure,dbo:Agent
+rent,verb,affittare,affitta,affittava,TransitiveFrame,range,domain,1,dbo:tenant,dbo:ArchitecturalStructure,dbo:Organisation
+breed,verb,allevare,alleva,allevava,TransitiveFrame,range,domain,1,dbo:breeder,dbo:Animal,dbo:Person
+train,verb,allenare,allena,ha allenato,TransitiveFrame,range,domain,1,dbo:trainer,dbo:Athlete,dbo:Person
+follow,verb,seguire,segue,ha seguito,TransitiveFrame,range,domain,1,dbp:nextTitle,dbo:Album,dbo:Album
+compose,verb,comporre,compone,ha composto,TransitiveFrame,range,domain,1,dbo:musicComposer,dbo:Work,dbo:Person
+develop,verb,sviluppare,sviluppa,ha sviluppato,TransitiveFrame,range,domain,1,dbo:developer,dbo:Work,dbo:Person
+play,verb,interpretare,interpreta,ha interpretato,TransitiveFrame,range,domain,1,dbo:portrayer,dbo:FictionalCharacter,dbo:Person

@@ -22,6 +22,12 @@ Run the system:
 java -jar <jar file> <language> <input_directory> <output_director> <number_of_entities> <input_type>
 java -jar target/QuestionGrammarGenerator.jar IT lexicon/it outputDB 10 csv dataset/dbpedia.json                                                                 
 ````  
+Run Evaluation
+
+````shell script
+java -jar target/QuestionGrammarGenerator.jar IT qald outputDB dataset/dbpedia.json
+````
+
 
 ### Input example
 QueGG can take either csv or turtle file as input 
@@ -102,11 +108,7 @@ combination | A flag that shows if this grammar entry is a combination of multip
 ....
 ...
 ```
-Run Evaluation
 
-````shell script
-java -jar target/QuestionGrammarGenerator.jar IT qald outputDB dataset/dbpedia.json
-````
 
 ## Used Frameworks And Libraries
 
