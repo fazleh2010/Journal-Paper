@@ -10,6 +10,7 @@ import static grammar.datasets.sentencetemplates.SentenceTemplate.createAPTempla
 import static grammar.datasets.sentencetemplates.SentenceTemplate.createNPTemplate;
 import static grammar.datasets.sentencetemplates.SentenceTemplate.createSentenceTemplate;
 import static grammar.datasets.sentencetemplates.SentenceTemplate.createVPTemplate;
+import static grammar.datasets.sentencetemplates.TemplateConstants.ACTIVE;
 import grammar.structure.component.Language;
 import java.util.List;
 import static util.io.TemplateConstants.BACKWARD;
@@ -47,9 +48,6 @@ public class SentenceTemplateFactoryIT implements Factory<SentenceTemplateReposi
         language,
         List.of(
            "interrogativeDeterminer verb(reference:component_be)  NP(prepositionalAdjunct)?"
-          //"prepositionalAdjunct preposition noun(root) determiner(reference:component_the_2) verb(reference:component_imperative_transitive) .",
-          //"prepositionalAdjunct preposition noun(root) determiner(reference:component_the_2) verb(reference:component_interrogativeDeterminer_ki) ?"
-          //"prepositionalAdjunct preposition noun(root) determiner(reference:component_the_2) verb(reference:component_interrogativeDeterminer_kothay) ?"
         ),
         "copulativeArg",
         "prepositionalAdjunct"
@@ -131,25 +129,12 @@ public class SentenceTemplateFactoryIT implements Factory<SentenceTemplateReposi
         "prepositionalAdjunct"
       )
     );
-    
-     //Intransitive
-     //WRB intransitiveverb [domain]	Dove cresce [entity]?
-     //WDT dbo:range intransitiveverb IN DT [domain] Quale uva cresce nella [entity]?	
-     //WDT dbo:domain intransitiveverb IN [range] Quale uva cresce in [entity]?
-     //IN WDT dbo:domain intransitiveverb [range]? In quale regione cresce [entity]?	
-     
-      //WRB intransitiveverb [domain]	Dove cresce [X|Grape]?
-    //IN WDT dbo:domain intransitiveverb [range]? In quale regione cresce (X|grape)?	
-    
-    // IntransitivePPFrame
+ 
     sentenceTemplateRepository.add(
       createSentenceTemplate(
         language,
         List.of(
         "subject(INTERROGATIVE_DETERMINER_SINGULAR) verb(present) preposition adjunct(X)?" //Quale uva cresce in [entity]?
-        // "preposition object(INTERROGATIVE_DETERMINER) verb(present) subject(X)?"// In quale regione cresce (X|grape)?
-          //"interrogativeDeterminer noun(condition:subject) VP(prepositionalAdjunct)?",
-          //"interrogativePronoun VP(prepositionalAdjunct)?"
         ),
         "IntransitivePPFrame",
         WHAT_WHICH_DO_THING,
@@ -164,8 +149,6 @@ public class SentenceTemplateFactoryIT implements Factory<SentenceTemplateReposi
         language,
         List.of(
           "object(INTERROGATIVE_PLACE) verb(present) subject(X)?"//Dove cresce [entity]?
-          //"interrogativeDeterminer noun(condition:subject) VP(prepositionalAdjunct)?",
-          //"interrogativePronoun VP(prepositionalAdjunct)?"
         ),
        "IntransitivePPFrame",
         WHAT_WHICH_DO_THING,
@@ -202,23 +185,6 @@ public class SentenceTemplateFactoryIT implements Factory<SentenceTemplateReposi
         Language.IT.toString()
       )
     );
-    // IntransitivePPFrame
-    /*sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
-        List.of(
-          "subject(INTERROGATIVE_DETERMINER) verb(present) preposition Adjunct(X)?",
-          "subject(INTERROGATIVE_PRONOUN) verb(present) object(X)?"
-          //"interrogativeDeterminer noun(condition:subject) VP(prepositionalAdjunct)?",
-          //"interrogativePronoun VP(prepositionalAdjunct)?"
-        ),
-        "IntransitivePPFrame",
-        "range",
-        Language.IT.toString()
-      )
-    );*/
-    //IN WDT dbo:domain intransitiveverb [range]? In quale regione cresce (X|grape)?	
-    // VP(prepositionalAdjunct)
     sentenceTemplateRepository.add(
       createVPTemplate(
         language,
@@ -239,17 +205,37 @@ public class SentenceTemplateFactoryIT implements Factory<SentenceTemplateReposi
       )
     );
     // TransitiveFrame
+    //Qald-7: Che film ha diretto Kurosawa?,
     sentenceTemplateRepository.add(
       createSentenceTemplate(
         language,
         List.of(
-          //"subject(INTERROGATIVE_PRONOUN) verb(past) directObject(X)?",
-          "subject(INTERROGATIVE_PRONOUN) verb(past) determiner directObject(X)?",
-          //"subject(INTERROGATIVE_DETERMINER) verb(past) directObject(X)?",
-          "subject(INTERROGATIVE_DETERMINER) verb(past) determiner directObject(X)"
+          "subject(PERSON_INTERROGATIVE_PRONOUN) verb(past) determiner(directObject) directObject(X)?",
+          "subject(INTERROGATIVE_DETERMINER) verb(past) determiner(directObject) directObject(X)?"
         ),
         "TransitiveFrame",
-        "active",
+        ACTIVE,
+        Language.IT.toString()
+      )
+    );
+    // TransitiveFrame
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+      // Da chi è stata costruita [entity]?	
+      // Da chi è stata costruita l'['entity]?	
+      // Da qualle persona è stata costruita [entity]?	
+      // Da quale persona è stata costruita l'['entity]?
+      // Qald-7: Che film ha diretto Kurosawa?,
+       //Qald-7: Dammi tutti i film diretti da Francis Ford Coppola.
+       //Qald-7: Quanti film ha diretto Stanley Kubrick?",
+       "directObject(INTERROGATIVE_DETERMINER) verb(past) subject(X)?",
+      "directObject(PERSON_INTERROGATIVE_PRONOUN) verb(past) subject(X)?",
+      "verb(component_imperative_transitive:present) determiner(determiner_plural) verb(past) preposition(da) subject(X)."
+        ),
+        "TransitiveFrame",
+        "passive",
         Language.IT.toString()
       )
     );

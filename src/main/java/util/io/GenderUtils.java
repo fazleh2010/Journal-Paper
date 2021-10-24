@@ -19,6 +19,13 @@ public class GenderUtils {
     private String article = null;
     private String[] articles =new String[2];
     private static Map<String,String[]> referenceArticleMap = new TreeMap<String,String[]>();
+    private static Map<String,String[]> dbpediaClassMap = new TreeMap<String,String[]>();
+    
+    static {
+        dbpediaClassMap.put("http://dbpedia.org/ontology/Film", new String[]{"film"});
+    }
+    
+     
     
     static {
         referenceArticleMap.put("http://dbpedia.org/ontology/areaCode", new String[]{"il"});
@@ -63,6 +70,13 @@ public class GenderUtils {
 
     public String getArticle() {
         return article;
+    }
+    
+    public static String getManuallyCreatedLabel(String uri) {
+        if (dbpediaClassMap.containsKey(uri)) {
+            return dbpediaClassMap.get(uri)[0];
+        }
+        return null;
     }
 
 }

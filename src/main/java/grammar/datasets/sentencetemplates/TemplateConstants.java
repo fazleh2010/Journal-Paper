@@ -20,6 +20,7 @@ public interface TemplateConstants {
 
     public static String subject = "subject";
     public static String directObject = "directObject";
+     public static String object = "object";
     public static String interrogativePronoun = "interrogativePronoun";
     public static String interrogativeDeterminer = "interrogativeDeterminer";
     public static String VERB = "verb";

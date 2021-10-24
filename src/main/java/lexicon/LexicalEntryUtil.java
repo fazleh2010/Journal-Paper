@@ -643,6 +643,8 @@ public class LexicalEntryUtil {
                 ? sparqlSelectResultList.get(0).get(RDFS.label.getLocalName())
                 : "";
     }
+    
+   
 
     /**
      * Checks the validity of the domain or range condition of the current

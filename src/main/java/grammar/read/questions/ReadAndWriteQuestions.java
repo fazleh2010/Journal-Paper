@@ -174,6 +174,11 @@ public class ReadAndWriteQuestions {
                     /*if (index >= this.maxNumberOfEntities) {
                         break;
                     }*/
+                    
+                if (answerUri.isEmpty() || answerUri.length()<2){//answer.contains("no answer found")) {
+                    continue;
+                }
+                    
                     for (String question : questions) {
                         //System.out.println(question);
                         if (question.contains("(") && question.contains(")")) {

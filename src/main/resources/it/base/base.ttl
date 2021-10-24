@@ -16,11 +16,11 @@
   lemon:entry    :component_interrogativeDeterminer_kothay ;
   lemon:entry    :component_have ;
   lemon:entry    :component_the ;
-  lemon:entry    :component_the_2 ;
+  lemon:entry    :determiner_plural ;
   lemon:entry    :component_a ;
   lemon:entry    :component_an ;
   lemon:entry    :object_pronoun;
-  lemon:entry    :for ;
+  lemon:entry    :da ;
   lemon:entry    :by ;
   lemon:entry    :from ;
   lemon:entry    :with ;
@@ -87,22 +87,14 @@
   lexinfo:partOfSpeech lexinfo:verb .
 
 :component_imperative_transitive a        lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "নাম বলো"@en ;
+  lemon:canonicalForm  [ lemon:writtenRep "Dammi"@en ;
   lexinfo:verbFormMood                    lexinfo:infinitive ] ;
-  lemon:otherForm      [ lemon:writtenRep "নাম বলো"@en ;
+  lemon:otherForm      [ lemon:writtenRep "Dammi tutti"@en ;
   lexinfo:tense                           lexinfo:present ;
   lexinfo:person                          lexinfo:secondPerson ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "নাম বলো"@en ;
-  lexinfo:tense                           lexinfo:present ;
-  lexinfo:person                          lexinfo:secondPerson ;
-  lexinfo:number                          lexinfo:plural ] ;
-  lemon:otherForm      [ lemon:writtenRep "নাম বলো"@en ;
-  lexinfo:tense                           lexinfo:present ;
-  lexinfo:person                          lexinfo:secondPerson ;
-  lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "নাম বলো"@en ;
-  lexinfo:tense                           lexinfo:present ;
+  lemon:otherForm      [ lemon:writtenRep "Dammi"@en ;
+  lexinfo:tense                           lexinfo:past ;
   lexinfo:person                          lexinfo:secondPerson ;
   lexinfo:number                          lexinfo:plural ] ;
   lexinfo:partOfSpeech lexinfo:verb .
@@ -162,8 +154,8 @@
   lemon:canonicalForm  [ lemon:writtenRep "la"@en ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
-:component_the_2 a       lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "এর"@en ] ;
+:determiner_plural a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "i"@en ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
 :component_a a         lemon:LexicalEntry ;
@@ -176,7 +168,7 @@
 
 ## Prepositions ##
 
-:for a                 lemon:SynRoleMarker ;
+:da a                 lemon:SynRoleMarker ;
   lemon:canonicalForm  [ lemon:writtenRep "for"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
 

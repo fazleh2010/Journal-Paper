@@ -58,7 +58,7 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
      * The frameType is the name of the LexInfo frame that the generated
      * sentence will be based on.
      */
-    private final FrameType frameType;
+    final FrameType frameType;
     final Language language;
     /**
      * The bindingValue is the variable that will be used for bindings in a

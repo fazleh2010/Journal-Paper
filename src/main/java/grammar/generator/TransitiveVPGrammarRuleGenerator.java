@@ -1,25 +1,23 @@
 package grammar.generator;
 
-import eu.monnetproject.lemon.model.PropertyValue;
 import grammar.datasets.annotated.AnnotatedVerb;
-import grammar.structure.component.DomainOrRangeType;
+import static grammar.datasets.sentencetemplates.TemplateConstants.ACTIVE;
+import static grammar.datasets.sentencetemplates.TemplateConstants.PASSIVE;
 import grammar.structure.component.FrameType;
 import grammar.structure.component.Language;
 import grammar.structure.component.SentenceType;
 import lexicon.LexicalEntryUtil;
-import net.lexinfo.LexInfo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import util.exceptions.QueGGMissingFactoryClassException;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import static grammar.generator.BindingConstants.BINDING_TOKEN_TEMPLATE;
+import grammar.structure.component.GrammarEntry;
 import static java.lang.System.exit;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
-import static lexicon.LexicalEntryUtil.getDeterminerTokenByNumber;
+import java.util.logging.Level;
 
 public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
 
@@ -28,8 +26,73 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
     public TransitiveVPGrammarRuleGenerator(Language language) {
         super(FrameType.VP, language, BindingConstants.DEFAULT_BINDING_VARIABLE);
     }
-
+    
     @Override
+    public List<String> generateSentences(
+            LexicalEntryUtil lexicalEntryUtil
+    ) throws QueGGMissingFactoryClassException {
+        List<String> generatedSentences = new ArrayList<>();
+        List<String> sentenceTemplates = getSentenceTemplateRepository().findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
+                getLanguage(), new String[]{getFrameType().getName(), ACTIVE, getLanguage().toString()});
+        String bindingVar = getBindingVariable();
+        try {
+            SentenceBuilderTransitiveVPEN sentenceBuilder = new SentenceBuilderTransitiveVPEN(
+                    getLanguage(),
+                    lexicalEntryUtil,
+                    sentenceTemplates);
+            generatedSentences = sentenceBuilder.generateFullSentencesForward(bindingVar, lexicalEntryUtil);
+            generatedSentences.sort(String::compareToIgnoreCase);
+        } catch (Exception ex) {
+            java.util.logging.Logger.getLogger(TransitiveVPGrammarRuleGenerator.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return generatedSentences;
+    }
+
+    protected List<String> generateOppositeSentences(LexicalEntryUtil lexicalEntryUtil) throws
+            QueGGMissingFactoryClassException {
+        List<String> generatedSentences = new ArrayList<>();
+        List<String> sentenceTemplates = getSentenceTemplateRepository().findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
+                getLanguage(), new String[]{getFrameType().getName(), PASSIVE, getLanguage().toString()});
+        String bindingVar = getBindingVariable();
+        try {
+            SentenceBuilderTransitiveVPEN sentenceBuilder = new SentenceBuilderTransitiveVPEN(
+                    getLanguage(),
+                    lexicalEntryUtil,
+                    sentenceTemplates);
+            generatedSentences = sentenceBuilder.generateFullSentencesBackward(bindingVar, new String[2], lexicalEntryUtil);
+            generatedSentences.sort(String::compareToIgnoreCase);
+        } catch (Exception ex) {
+            java.util.logging.Logger.getLogger(TransitiveVPGrammarRuleGenerator.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return generatedSentences;
+    }
+
+    /**
+     * Generate an entry with sentence structure: Which _noun_ does $x _verb_
+     * _preposition_?
+     */
+    public GrammarEntry generateFragmentEntry(GrammarEntry grammarEntry, LexicalEntryUtil lexicalEntryUtil) throws
+            QueGGMissingFactoryClassException {
+        GrammarEntry fragmentEntry = copyGrammarEntry(grammarEntry);
+        fragmentEntry.setType(SentenceType.SENTENCE);
+        // Assign opposite values
+        fragmentEntry.setReturnType(grammarEntry.getBindingType());
+        fragmentEntry.setBindingType(grammarEntry.getReturnType());
+        fragmentEntry.setReturnVariable(grammarEntry.getBindingVariable());
+        Map<String, String> sentenceToSparqlParameterMapping = new HashMap<String, String>();
+        sentenceToSparqlParameterMapping.put(grammarEntry.getSentenceBindings().getBindingVariableName(),
+                grammarEntry.getReturnVariable());
+        fragmentEntry.setSentenceToSparqlParameterMapping(sentenceToSparqlParameterMapping);
+
+        // sentences
+        List<String> generatedSentences = generateOppositeSentences(lexicalEntryUtil);
+        fragmentEntry.setSentences(generatedSentences);
+
+        return fragmentEntry;
+    }
+
+    /*@Override
     public List<String> generateSentences(LexicalEntryUtil lexicalEntryUtil) throws
             QueGGMissingFactoryClassException {
         List<String> generatedSentences = new ArrayList<>();
@@ -37,46 +100,32 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
 
         //SubjectType subjectType = lexicalEntryUtil.getSubjectType(lexicalEntryUtil.getSelectVariable(),DomainOrRangeType.PERSON);
         List<AnnotatedVerb> annotatedVerbs = lexicalEntryUtil.parseLexicalEntryToAnnotatedVerbs();
-        String variableString = String.format(
-                BINDING_TOKEN_TEMPLATE,
-                getBindingVariable(),
-                DomainOrRangeType.getMatchingType(lexicalEntryUtil.getConditionUriBySelectVariable(
-                        LexicalEntryUtil.getOppositeSelectVariable(lexicalEntryUtil.getSelectVariable())
-                )).name(),
-                SentenceType.NP);
-
+       
+       
+        
         Map<String, String> verbTokens = new TreeMap<String, String>();
 
-        for (AnnotatedVerb annotatedVerb : annotatedVerbs) {
-            String conditionLabel = lexicalEntryUtil.getReturnVariableConditionLabel(lexicalEntryUtil.getSelectVariable());
-            String determiner = lexicalEntryUtil.getSubjectBySubjectType(
-                    SubjectType.INTERROGATIVE_DETERMINER,
-                    getLanguage(),
-                    null
-            );
-            String determinerToken = getDeterminerTokenByNumber(annotatedVerb.getNumber(), conditionLabel, determiner);
-            String number=annotatedVerb.getNumber().toString();
-            if(annotatedVerb.getNumber().toString().contains("#")){
-               number=number.split("#")[1];
-               verbTokens.put(number, determinerToken);
-            }
-           
-        }
+        
+        String variableString = getBindingVariable();
 
-        SentenceBuilderTransitiveVPEN sentenceBuilder = new SentenceBuilderTransitiveVPEN(
-                getLanguage(),
-                getFrameType(),
-                getSentenceTemplateRepository(),
-                getSentenceTemplateParser(),
-                variableString,
-                lexicalEntryUtil,
-                verbTokens);
-        
-        generatedSentences.addAll(sentenceBuilder.getSentences());
-        
-        System.out.println(generatedSentences);
-        //exit(1);
-        generatedSentences.sort(String::compareToIgnoreCase);
+        SentenceBuilderTransitiveVPEN sentenceBuilder;
+        try {
+            sentenceBuilder = new SentenceBuilderTransitiveVPEN(
+                    getLanguage(),
+                    getFrameType(),
+                    getSentenceTemplateRepository(),
+                    getSentenceTemplateParser(),
+                    variableString,
+                    lexicalEntryUtil);
+            generatedSentences.addAll(sentenceBuilder.getSentences());
+            generatedSentences.sort(String::compareToIgnoreCase);
+             //System.out.println("generatedSentences:::"+generatedSentences);
+        } catch (Exception ex) {
+            java.util.logging.Logger.getLogger(TransitiveVPGrammarRuleGenerator.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
         return generatedSentences;
-    }
+    }*/
+    
+     
 }

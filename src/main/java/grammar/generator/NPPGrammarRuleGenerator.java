@@ -13,48 +13,48 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class NPPGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
-  private static final Logger LOG = LogManager.getLogger(NPPGrammarRuleGenerator.class);
 
-  public NPPGrammarRuleGenerator(Language language) {
-    super(FrameType.NPP, language, BindingConstants.DEFAULT_BINDING_VARIABLE);
-  }
+    private static final Logger LOG = LogManager.getLogger(NPPGrammarRuleGenerator.class);
 
-  @Override
-  public List<String> generateSentences(LexicalEntryUtil lexicalEntryUtil) throws
-                                                                                                          QueGGMissingFactoryClassException {
-    SentenceBuilder sentenceBuilder = new SentenceBuilderCopulativePP(
-      getLanguage(),
-      getFrameType(),
-      getSentenceTemplateRepository(),
-      getSentenceTemplateParser()
-    );
+    public NPPGrammarRuleGenerator(Language language) {
+        super(FrameType.NPP, language, BindingConstants.DEFAULT_BINDING_VARIABLE);
+    }
 
-    return sentenceBuilder.generateFullSentencesForward(getBindingVariable(), lexicalEntryUtil);
-  }
+    @Override
+    public List<String> generateSentences(LexicalEntryUtil lexicalEntryUtil) throws
+            QueGGMissingFactoryClassException {
+        SentenceBuilder sentenceBuilder = new SentenceBuilderCopulativePP(
+                getLanguage(),
+                getFrameType(),
+                getSentenceTemplateRepository(),
+                getSentenceTemplateParser()
+        );
 
-  @Override
-  public GrammarEntry generateFragmentEntry(
-    GrammarEntry grammarEntry,
-    LexicalEntryUtil lexicalEntryUtil
-  ) throws QueGGMissingFactoryClassException {
-    GrammarEntry fragmentEntry = copyGrammarEntry(grammarEntry);
-    fragmentEntry.setType(SentenceType.NP);
-     fragmentEntry.setLexicalEntryUri(lexicalEntryUtil.getLexicalEntry().getURI());
+        return sentenceBuilder.generateFullSentencesForward(getBindingVariable(), lexicalEntryUtil);
+    }
 
+    @Override
+    public GrammarEntry generateFragmentEntry(
+            GrammarEntry grammarEntry,
+            LexicalEntryUtil lexicalEntryUtil
+    ) throws QueGGMissingFactoryClassException {
+        GrammarEntry fragmentEntry = copyGrammarEntry(grammarEntry);
+        fragmentEntry.setType(SentenceType.NP);
+        fragmentEntry.setLexicalEntryUri(lexicalEntryUtil.getLexicalEntry().getURI());
 
-    SentenceBuilder sentenceBuilder = new SentenceBuilderCopulativePP(
-      getLanguage(),
-      getFrameType(),
-      getSentenceTemplateRepository(),
-      getSentenceTemplateParser()
-    );
-    List<String> generatedSentences = sentenceBuilder.generateFullSentencesBackward(getBindingVariable(),
-                                                                 new String[]{"prepositionalAdjunct"},
-                                                                 lexicalEntryUtil
-    );
-    generatedSentences = generatedSentences.stream().distinct().collect(Collectors.toList());
-    fragmentEntry.setSentences(generatedSentences);
+        SentenceBuilder sentenceBuilder = new SentenceBuilderCopulativePP(
+                getLanguage(),
+                getFrameType(),
+                getSentenceTemplateRepository(),
+                getSentenceTemplateParser()
+        );
+        List<String> generatedSentences = sentenceBuilder.generateFullSentencesBackward(getBindingVariable(),
+                new String[]{"prepositionalAdjunct"},
+                lexicalEntryUtil
+        );
+        generatedSentences = generatedSentences.stream().distinct().collect(Collectors.toList());
+        fragmentEntry.setSentences(generatedSentences);
 
-    return fragmentEntry;
-  }
+        return fragmentEntry;
+    }
 }
