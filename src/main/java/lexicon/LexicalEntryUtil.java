@@ -792,6 +792,24 @@ public class LexicalEntryUtil {
         }
         return particle;
     }
+    
+    public static String getRange(LexicalEntryUtil lexicalEntryUtil) {
+        SelectVariable selectVarForward = lexicalEntryUtil.getSelectVariable();
+        return lexicalEntryUtil.getConditionUriBySelectVariable(selectVarForward).toString();
+    }
+
+    public static String getDomain(LexicalEntryUtil lexicalEntryUtil) {
+        SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(lexicalEntryUtil.getSelectVariable());
+        return lexicalEntryUtil.getConditionUriBySelectVariable(oppositeSelectVariable).toString();
+    }
+    
+    public static SelectVariable getDomainSelectable(LexicalEntryUtil lexicalEntryUtil) {
+        return lexicalEntryUtil.getSelectVariable();
+    }
+
+    public static SelectVariable getRangeSelectable(LexicalEntryUtil lexicalEntryUtil) {
+        return LexicalEntryUtil.getOppositeSelectVariable(lexicalEntryUtil.getSelectVariable());
+    }
 
     @Override
     public String toString() {

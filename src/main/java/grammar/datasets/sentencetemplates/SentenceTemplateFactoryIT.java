@@ -214,7 +214,7 @@ public class SentenceTemplateFactoryIT implements Factory<SentenceTemplateReposi
           "subject(INTERROGATIVE_DETERMINER) verb(past) determiner(directObject) directObject(X)?"
         ),
         "TransitiveFrame",
-        ACTIVE,
+        FORWARD,
         Language.IT.toString()
       )
     );
@@ -230,12 +230,12 @@ public class SentenceTemplateFactoryIT implements Factory<SentenceTemplateReposi
       // Qald-7: Che film ha diretto Kurosawa?,
        //Qald-7: Dammi tutti i film diretti da Francis Ford Coppola.
        //Qald-7: Quanti film ha diretto Stanley Kubrick?",
-       "directObject(INTERROGATIVE_DETERMINER) verb(past) subject(X)?",
+      "directObject(INTERROGATIVE_DETERMINER) verb(past) subject(X)?",
       "directObject(PERSON_INTERROGATIVE_PRONOUN) verb(past) subject(X)?",
       "verb(component_imperative_transitive:present) determiner(determiner_plural) verb(past) preposition(da) subject(X)."
         ),
         "TransitiveFrame",
-        "passive",
+        BACKWARD,
         Language.IT.toString()
       )
     );

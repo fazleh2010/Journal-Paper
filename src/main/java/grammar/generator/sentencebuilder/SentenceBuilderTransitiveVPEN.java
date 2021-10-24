@@ -32,13 +32,13 @@ import org.apache.commons.lang3.StringUtils;
 import util.exceptions.QueGGMissingFactoryClassException;
 import util.io.GenderUtils;
 
-public class SentenceBuilderTransitiveVPEN implements SentenceBuilder,TemplateConstants {
+public class SentenceBuilderTransitiveVPEN implements SentenceBuilder, TemplateConstants {
 
     private String bindingVariable;
     private LexicalEntryUtil lexicalEntryUtil;
     private List<String> sentenceTemplates = new ArrayList<String>();
     private SelectVariable determinerObject = null;
-    private Language language=null;
+    private Language language = null;
     private static Set<SubjectType> questionWords = new TreeSet<SubjectType>();
 
     static {
@@ -55,27 +55,20 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder,TemplateCo
             List<String> sentenceTemplates
     ) throws QueGGMissingFactoryClassException, Exception {
         this.lexicalEntryUtil = lexicalEntryUtil;
-        this.language=language;
-        this.sentenceTemplates=sentenceTemplates;
-          
-
-        /*List<String> sentenceTemplates = new ArrayList<String>();
-        sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
-                language, new String[]{frameType.getName(), ACTIVE, language.toString()});
-        this.getSentencesFromTemplates(ACTIVE, sentenceTemplates);
-        sentenceTemplates = new ArrayList<String>();*/
+        this.language = language;
+        this.sentenceTemplates = sentenceTemplates;
     }
-    
+
     @Override
     public List<String> generateFullSentencesForward(String bindingVar, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
         Integer index = 0;
         List<String> sentences = new ArrayList<String>();
         this.bindingVariable = String.format(BINDING_TOKEN_TEMPLATE,
                 bindingVar,
-                DomainOrRangeType.getMatchingType(lexicalEntryUtil.getConditionUriBySelectVariable(this.getRangeSelectable())
+                DomainOrRangeType.getMatchingType(lexicalEntryUtil.getConditionUriBySelectVariable(LexicalEntryUtil.getRangeSelectable(lexicalEntryUtil))
                 ).name(),
                 SentenceType.NP);
-        this.determinerObject = this.getDomainSelectable();
+        this.determinerObject = LexicalEntryUtil.getDomainSelectable(lexicalEntryUtil);
         return this.findSentencesFromTemplates(this.sentenceTemplates);
     }
 
@@ -83,12 +76,11 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder,TemplateCo
     public List<String> generateFullSentencesBackward(String bindingVar, String[] argument, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
         this.bindingVariable = String.format(BINDING_TOKEN_TEMPLATE,
                 bindingVar,
-                DomainOrRangeType.getMatchingType(lexicalEntryUtil.getConditionUriBySelectVariable(this.getDomainSelectable())
+                DomainOrRangeType.getMatchingType(lexicalEntryUtil.getConditionUriBySelectVariable(LexicalEntryUtil.getDomainSelectable(lexicalEntryUtil))
                 ).name(),
                 SentenceType.NP);
-        this.determinerObject = this.getRangeSelectable();
+        this.determinerObject = LexicalEntryUtil.getRangeSelectable(lexicalEntryUtil);
         return this.findSentencesFromTemplates(this.sentenceTemplates);
-         
 
     }
 
@@ -152,7 +144,6 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder,TemplateCo
 
         System.out.println("attribute::" + attribute + " reference:" + reference);
 
-        
         if (reference.contains("X")) {
             word = this.bindingVariable;
 
@@ -170,32 +161,24 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder,TemplateCo
                 }
             }
 
-        }else if (attribute.equals(TemplateConstants.directObject)) {
-            String determinterToken = this.getDeterminerToken(this.determinerObject, reference);
+        } else if (attribute.equals(TemplateConstants.directObject)) {
+            String determinterToken = this.getDeterminerToken(this.determinerObject, reference, TemplateConstants.directObject);
             if (!determinterToken.isEmpty()) {
                 word = determinterToken;
             } else {
                 throw new Exception("No reference is provided in direct object!!");
             }
 
-        }      
-        else if (attribute.equals(subject)) {
-            word = this.getQuestionWord(reference);
-        }/* else if (attribute.equals(directObject)) {
-            String temp = this.getQuestionWord(reference);
-            if (temp != null) {
-                word = temp;
+        } else if (attribute.equals(subject)) {
+            String determinterToken = this.getDeterminerToken(this.determinerObject, reference, TemplateConstants.subject);
+            if (!determinterToken.isEmpty()) {
+                word = determinterToken;
+            } else {
+                word = this.getQuestionWord(reference);
             }
 
-        }*/ else if (attribute.equals(DETERMINER) || attribute.equals(PREPOSITION)) {
+        }else if (attribute.equals(DETERMINER) || attribute.equals(PREPOSITION)) {
             word = getSubjectObjectBased(reference);
-
-        } else if (attribute.equals(TemplateConstants.object)) {
-            word = this.getReplaceReference(this.determinerObject, attribute, reference);
-        } else {
-            if (attribute.equals(TemplateConstants.object)) {
-                word = getConditionLabelManually(this.determinerObject);
-            }
 
         }
         System.out.println(word);
@@ -210,82 +193,6 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder,TemplateCo
             str += positionWord;
         }
         return str.stripTrailing();
-    }
-
-    private String getReplaceReference(SelectVariable selectVariable, String attribute, String reference) throws QueGGMissingFactoryClassException, Exception {
-        String word = null;
-        if (reference.contains("X")) {
-            word = this.bindingVariable;
-
-        } else if (attribute.equals(TemplateConstants.directObject)) {
-            String determinterToken = this.getDeterminerToken(selectVariable, reference);
-            if (!determinterToken.isEmpty()) {
-                word = determinterToken;
-            } else {
-                throw new Exception("No reference is provided in direct object!!");
-            }
-
-        } else if (attribute.equals(TemplateConstants.subject)) {
-            String determinterToken = this.getDeterminerToken(selectVariable, reference);
-            if (!determinterToken.isEmpty()) {
-                word = determinterToken;
-            } else {
-                throw new Exception("No reference is provided in subject!!");
-            }
-
-        } else if (attribute.contains(TemplateConstants.subject)) {
-            String determinterToken = this.getDeterminerToken(selectVariable, reference);
-            if (!determinterToken.isEmpty()) {
-                word = determinterToken;
-            } else {
-                throw new Exception("No reference is provided in subject!!");
-            }
-
-        }
-
-        /*String word = "X";
-        if (reference.contains("X")) {
-            word = bindingVariable;
-        }
-        if (reference.contains(SubjectType.PERSON_INTERROGATIVE_PRONOUN.name())||
-            reference.contains(SubjectType.THING_INTERROGATIVE_PRONOUN.name())) {
-            if (isPerson(reference)) {
-                word = lexicalEntryUtil.getSubjectBySubjectType(
-                        SubjectType.PERSON_INTERROGATIVE_PRONOUN,
-                        getLanguage(),
-                        null
-                );
-            } else {
-                word = lexicalEntryUtil.getSubjectBySubjectType(
-                        SubjectType.THING_INTERROGATIVE_PRONOUN,
-                        getLanguage(),
-                        null
-                );
-            }
-
-        }*/
-        //SubjectType subjectType = lexicalEntryUtil.getSubjectType(lexicalEntryUtil.getSelectVariable());
-        return word;
-    }
-
-    private Map<String, String> getAuxilariesVerb(List<PropertyValue> numberList, String auxilaryVerbString, LexInfo lexInfo) {
-        LexicalEntry auxilaryVerb = new LexiconSearch(this.lexicalEntryUtil.getLexicon()).getReferencedResource(auxilaryVerbString);
-
-        Map<String, String> auxilaries = new HashMap<String, String>();
-        for (PropertyValue number : numberList) {
-            String[] info = number.toString().split("#");
-            String auxVerb = auxilaryVerb.getForms().stream()
-                    .filter(lexicalForm -> lexicalForm.getProperty(lexInfo.getProperty("tense"))
-                    .contains(lexInfo.getPropertyValue("past")))
-                    .filter(lexicalForm -> lexicalForm.getProperty(lexInfo.getProperty("number"))
-                    .contains(lexInfo.getPropertyValue(info[1])))
-                    .findFirst()
-                    .orElseThrow()
-                    .getWrittenRep().value;
-            auxilaries.put(info[1], auxVerb);
-
-        }
-        return auxilaries;
     }
 
     private String getEntry(String reference, String tense) {
@@ -323,11 +230,6 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder,TemplateCo
         return null;
     }
 
-    private boolean isPerson(String token) {
-        return true;
-    }
-
-  
     private String getRange() {
         SelectVariable selectVarForward = lexicalEntryUtil.getSelectVariable();
         return lexicalEntryUtil.getConditionUriBySelectVariable(selectVarForward).toString();
@@ -338,7 +240,6 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder,TemplateCo
         return lexicalEntryUtil.getConditionUriBySelectVariable(oppositeSelectVariable).toString();
     }
 
-  
     private Map<String, String> getDeteminerTokens(SelectVariable selectVariable, SubjectType subjectType) throws QueGGMissingFactoryClassException {
         Map<String, String> determinerTokens = new TreeMap<String, String>();
         List<AnnotatedVerb> annotatedVerbs = lexicalEntryUtil.parseLexicalEntryToAnnotatedVerbs();
@@ -363,30 +264,24 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder,TemplateCo
         return determinerTokens;
     }
 
-    private SelectVariable getDomainSelectable() {
-        return lexicalEntryUtil.getSelectVariable();
-    }
-
-    private SelectVariable getRangeSelectable() {
-        return LexicalEntryUtil.getOppositeSelectVariable(lexicalEntryUtil.getSelectVariable());
-    }
+    
 
     private String getConditionLabelManually(SelectVariable selectVariable) {
         return GenderUtils.getManuallyCreatedLabel(lexicalEntryUtil.getConditionUriBySelectVariable(selectVariable).toString());
     }
 
-    private String getDeterminerToken(SelectVariable determinerObject, String reference) throws QueGGMissingFactoryClassException {
+    private String getDeterminerToken(SelectVariable determinerObject, String reference, String subject) throws QueGGMissingFactoryClassException {
         String result = "";
         for (SubjectType subjectType : questionWords) {
-            if (reference.contains(subjectType.name())&&reference.contains(SubjectType.INTERROGATIVE_DETERMINER.name())) {
+            if (reference.contains(subjectType.name()) && reference.contains(SubjectType.INTERROGATIVE_DETERMINER.name())) {
                 Map<String, String> determinerTokens = this.getDeteminerTokens(determinerObject, subjectType);
                 if (determinerTokens.containsKey("singular")) {
                     result = determinerTokens.get("singular");
                     break;
                 }
 
-            }
-            else if (reference.contains(subjectType.name())&&reference.contains(SubjectType.PERSON_INTERROGATIVE_PRONOUN.name())) {
+            } else if (reference.contains(subjectType.name()) && reference.contains(SubjectType.PERSON_INTERROGATIVE_PRONOUN.name())
+                    && subject.contains(TemplateConstants.directObject)) {
                 Map<String, String> determinerTokens = this.getDeteminerTokens(determinerObject, subjectType);
                 if (determinerTokens.containsKey("singular")) {
                     result = determinerTokens.get("singular");
@@ -414,5 +309,4 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder,TemplateCo
         return result;
     }
 
-   
 }

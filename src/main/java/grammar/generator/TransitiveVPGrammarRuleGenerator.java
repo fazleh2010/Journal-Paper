@@ -18,6 +18,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.logging.Level;
+import static util.io.TemplateConstants.BACKWARD;
+import static util.io.TemplateConstants.FORWARD;
 
 public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
 
@@ -33,7 +35,7 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
     ) throws QueGGMissingFactoryClassException {
         List<String> generatedSentences = new ArrayList<>();
         List<String> sentenceTemplates = getSentenceTemplateRepository().findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
-                getLanguage(), new String[]{getFrameType().getName(), ACTIVE, getLanguage().toString()});
+                getLanguage(), new String[]{getFrameType().getName(), FORWARD, getLanguage().toString()});
         String bindingVar = getBindingVariable();
         try {
             SentenceBuilderTransitiveVPEN sentenceBuilder = new SentenceBuilderTransitiveVPEN(
@@ -53,7 +55,7 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
             QueGGMissingFactoryClassException {
         List<String> generatedSentences = new ArrayList<>();
         List<String> sentenceTemplates = getSentenceTemplateRepository().findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
-                getLanguage(), new String[]{getFrameType().getName(), PASSIVE, getLanguage().toString()});
+                getLanguage(), new String[]{getFrameType().getName(), BACKWARD, getLanguage().toString()});
         String bindingVar = getBindingVariable();
         try {
             SentenceBuilderTransitiveVPEN sentenceBuilder = new SentenceBuilderTransitiveVPEN(
