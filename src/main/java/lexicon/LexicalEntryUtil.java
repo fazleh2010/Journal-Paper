@@ -275,10 +275,12 @@ public class LexicalEntryUtil {
             PropertyValue number, String conditionLabel,
             String determiner
     ) {
+        System.out.println("PropertyValue:::"+number);
         String determinerToken;
         if (number.equals(new LexInfo().getPropertyValue("plural"))) {
             conditionLabel = getPluralFormEn(conditionLabel);
         }
+         System.out.println("conditionLabel:::"+conditionLabel);
         determinerToken = compileDeterminerToken(conditionLabel, determiner);
         return determinerToken.trim();
     }
@@ -630,6 +632,7 @@ public class LexicalEntryUtil {
             SelectVariable selectVariable
     ) {
         URI domainOrRangeUri = getConditionUriBySelectVariable(selectVariable);
+        System.out.println("domainOrRangeUri:::"+domainOrRangeUri);
         SPARQLRequest sparqlRequest = new SPARQLRequest();
         sparqlRequest.setSelectVariable(selectVariable);
         sparqlRequest.setSearchProperty(domainOrRangeUri.toString());

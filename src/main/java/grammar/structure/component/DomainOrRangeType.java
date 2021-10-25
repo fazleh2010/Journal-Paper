@@ -233,6 +233,7 @@ public enum DomainOrRangeType {
     URI.create(DBO.getUri() + "Building")
   )),
   OWNEDTHING(List.of(URI.create(DBO.getUri() + "Thing"))),
+  VIDEOGAME(List.of(URI.create(DBO.getUri() + "VideoGame"))),
   THING(List.of(URI.create("http://www.w3.org/2002/07/owl#Thing"))); // default if no other matches
 
   public static final List<URI> MISSING_TYPES = new ArrayList<>();

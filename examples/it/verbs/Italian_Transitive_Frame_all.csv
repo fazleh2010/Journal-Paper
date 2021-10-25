@@ -3,9 +3,14 @@ direct,verb,dirigere,dirige,ha diretto,TransitiveFrame,range,domain,1,dbo:direct
 design,verb,progettare,progetta,ha progettato,TransitiveFrame,range,domain,1,dbo:architect,dbo:Bridge,dbo:Architect
 cross,verb,attraversare,attraversa,ha attraversato,TransitiveFrame,range,domain,1,dbo:crosses,dbo:Bridge,dbo:River
 discover,verb,scoprire,scopre,ha scoperto,TransitiveFrame,range,domain,1,dbo:discoverer,dbo:Place,dbo:Person
+write,verb,scrivere,scrive,ha scritto,TransitiveFrame,range,domain,1,dbo:writer,dbo:Song,dbo:Person
+create,verb,creare,crea,ha creato,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Agent
+speak,verb,parla ,parla,parlava,TransitiveFrame,range,domain,1,dbo:language,dbo:Language,dbo:Country
+,,,,,,,,,,,
+develop,verb,sviluppare,sviluppa,ha sviluppato,TransitiveFrame,range,domain,1,dbo:product,dbo:Software,dbo:Company
 produce,verb,produrre,produce,ha prodotto,TransitiveFrame,range,domain,1,dbo:producer,dbo:Film,dbo:Person
 publish,verb,pubblicare,pubblica,ha pubblicato,TransitiveFrame,range,domain,1,dbo:publisher,dbo:Book,dbo:Agent
-write,verb,scrivere,scrive,ha scritto,TransitiveFrame,range,domain,1,dbo:writer,dbo:Song,dbo:Person
+publish,verb,pubblicare,pubblica,ha pubblicato,TransitiveFrame,range,domain,1,dbo:publisher,dbo:VideoGame,dbo:Software
 paint,verb,dipingere,dipinge,ha dipinto,TransitiveFrame,range,domain,1,dbo:artist,dbo:ArtWork,dbo:Person
 win,verb,vincere,vince,ha vinto,TransitiveFrame,range,domain,1,dbo:award,dbo:Person,dbo:Award
 found,verb,fondare,fonda,ha fondato,TransitiveFrame,range,domain,1,dbo:foundedBy,dbo:Organisation,dbo:Person
@@ -18,12 +23,12 @@ precede,verb,precedere,precede,ha preceduto,TransitiveFrame,range,domain,1,dbp:p
 marry,verb,sposare,sposa,ha sposato,TransitiveFrame,range,domain,1,dbo:spouse,dbo:Person,dbo:Person
 own,verb,possedere,possiede,ha posseduto,TransitiveFrame,range,domain,1,dbo:owner,dbo:Airport,dbo:Agent
 operate,verb,operare,opera,ha operato,TransitiveFrame,range,domain,1,dbp:operator,dbo:Airport,dbo:Organisation
+operate,verb,operare,opera,ha operato,TransitiveFrame,range,domain,1,dbp:operator,dbo:Company,dbo:LaunchPad
 control,verb,controllare,controlla,ha controllato,TransitiveFrame,range,domain,1,dbp:controlledby,dbo:Airport,dbo:Organisation
 illustrate,verb,illustrare,illustra,ha illustrato,TransitiveFrame,range,domain,1,dbo:illustrator,dbo:WrittenWork,dbo:Person
 support,verb,supportare,supporta,ha supportato,TransitiveFrame,range,domain,1,dbo:ideology,dbo:Ideology,dbo:Agent
 speak,verb,parlare,parla,parlava,TransitiveFrame,range,domain,1,dbo:officialLanguage,dbo:Language,dbo:PopulatedPlace
 join,verb,unirsi,si unisce,si è unito,TransitiveFrame,range,domain,1,dbo:riverMouth,dbo:BodyOfWater,dbo:River
-create,verb,creare,crea,ha creato,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Agent
 leave,verb,lasciare,lascia,ha lasciato,TransitiveFrame,range,domain,1,dbo:formerBandMember,dbo:Band,dbo:Person
 program,verb,programmare,programma,ha programmato,TransitiveFrame,range,domain,1,dbp:programmer,dbo:Software,dbo:Person
 cover,verb,occuparsi,si occupa,si occupava,TransitiveFrame,range,domain,1,dbo:academicDiscipline,owl:Thing,dbo:AcademicJournal

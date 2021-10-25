@@ -361,7 +361,7 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder, Templat
         for (AnnotatedVerb annotatedVerb : annotatedVerbs) {
             String conditionLabel = lexicalEntryUtil.getReturnVariableConditionLabel(selectVariable);
             String determiner = lexicalEntryUtil.getSubjectBySubjectType(
-                    SubjectType.INTERROGATIVE_DETERMINER,
+                    SubjectType.INTERROGATIVE_DETERMINER_SINGULAR,
                     language,
                     null
             );
@@ -381,7 +381,7 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder, Templat
          for (PropertyValue number : numberList) {
             String conditionLabel = this.lexicalEntryUtil.getReturnVariableConditionLabel(selectVariable);
             String determiner = this.lexicalEntryUtil.getSubjectBySubjectType(
-                    SubjectType.INTERROGATIVE_DETERMINER,
+                    SubjectType.INTERROGATIVE_DETERMINER_SINGULAR,
                     language,
                     null
             );

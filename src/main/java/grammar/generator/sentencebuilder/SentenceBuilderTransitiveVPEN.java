@@ -8,6 +8,7 @@ import static grammar.generator.BindingConstants.BINDING_TOKEN_TEMPLATE;
 import grammar.datasets.sentencetemplates.SentenceTemplateRepository;
 import grammar.datasets.sentencetemplates.TemplateConstants;
 import grammar.datasets.annotated.AnnotatedVerb;
+import grammar.datasets.questionword.QuestionWordFactoryIT;
 import grammar.sparql.SelectVariable;
 import grammar.structure.component.DomainOrRangeType;
 import grammar.structure.component.FrameType;
@@ -17,6 +18,7 @@ import static java.lang.System.exit;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -39,15 +41,8 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder, TemplateC
     private List<String> sentenceTemplates = new ArrayList<String>();
     private SelectVariable determinerObject = null;
     private Language language = null;
-    private static Set<SubjectType> questionWords = new TreeSet<SubjectType>();
 
-    static {
-        questionWords.add(SubjectType.PERSON_INTERROGATIVE_PRONOUN);
-        questionWords.add(SubjectType.THING_INTERROGATIVE_PRONOUN);
-        questionWords.add(SubjectType.INTERROGATIVE_DETERMINER);
-        questionWords.add(SubjectType.INTERROGATIVE_TEMPORAL);
-        questionWords.add(SubjectType.INTERROGATIVE_PLACE);
-    }
+   
 
     public SentenceBuilderTransitiveVPEN(
             Language language,
@@ -81,6 +76,7 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder, TemplateC
                 SentenceType.NP);
         this.determinerObject = LexicalEntryUtil.getRangeSelectable(lexicalEntryUtil);
         return this.findSentencesFromTemplates(this.sentenceTemplates);
+       
 
     }
 
@@ -88,7 +84,7 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder, TemplateC
         Integer index = 0;
         List<String> sentences = new ArrayList<String>();
         for (String sentenceTemplate : sentenceTemplates) {
-            System.out.println(sentenceTemplate + " " + index);
+            //System.out.println(sentenceTemplate + " " + index);
             index = index + 1;
             List<String> positionTokens = this.parseTemplate(sentenceTemplate);
             String sentence;
@@ -142,7 +138,7 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder, TemplateC
             attribute = tokens[0];
         }
 
-        System.out.println("attribute::" + attribute + " reference:" + reference);
+        //System.out.println("attribute::" + attribute + " reference:" + reference);
 
         if (reference.contains(VARIABLE_INDICATOR)) {
             word = this.bindingVariable;
@@ -176,12 +172,11 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder, TemplateC
             } else {
                 word = this.getQuestionWord(reference);
             }
-
         }else if (attribute.equals(DETERMINER) || attribute.equals(PREPOSITION)) {
             word = getSubjectObjectBased(reference);
 
         }
-        System.out.println(word);
+       
 
         return word;
     }
@@ -200,7 +195,7 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder, TemplateC
         LexicalEntry lexicalEntry = new LexiconSearch(this.lexicalEntryUtil.getLexicon()).getReferencedResource(reference);
         Collection<LexicalForm> forms = lexicalEntry.getForms();
 
-        if (tense.contains(PRESENT)) {
+        //if (tense.contains(PRESENT)||tense.contains(PAST)) {
             for (LexicalForm lexicalForm : forms) {
                 Collection<PropertyValue> propertyValues = lexicalForm.getProperty(lexInfo.getProperty(TENSE));
                 for (PropertyValue propertyValue : propertyValues) {
@@ -210,8 +205,8 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder, TemplateC
 
                 }
             }
-        }
-        return null;
+        //}
+        return TENSE;
     }
 
     private String getSubjectObjectBased(String reference) {
@@ -235,9 +230,9 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder, TemplateC
         List<AnnotatedVerb> annotatedVerbs = lexicalEntryUtil.parseLexicalEntryToAnnotatedVerbs();
         for (AnnotatedVerb annotatedVerb : annotatedVerbs) {
             String conditionLabel = lexicalEntryUtil.getReturnVariableConditionLabel(selectVariable);
-            if (conditionLabel.isEmpty()) {
+            if (conditionLabel == null || conditionLabel.isEmpty()) {
                 conditionLabel = this.getConditionLabelManually(selectVariable);
-            }
+            } 
             String determiner = lexicalEntryUtil.getSubjectBySubjectType(
                     subjectType,
                     this.language,
@@ -262,11 +257,20 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder, TemplateC
 
     private String getDeterminerToken(SelectVariable determinerObject, String reference, String subject) throws QueGGMissingFactoryClassException {
         String result = "";
-        for (SubjectType subjectType : questionWords) {
-            if (reference.contains(subjectType.name()) && reference.contains(SubjectType.INTERROGATIVE_DETERMINER.name())) {
+
+        for (SubjectType subjectType : QuestionWordFactoryIT.questionWords) {
+
+            if (reference.contains(subjectType.name()) && reference.contains(SubjectType.INTERROGATIVE_DETERMINER_SINGULAR.name())) {
                 Map<String, String> determinerTokens = this.getDeteminerTokens(determinerObject, subjectType);
                 if (determinerTokens.containsKey(SINGULAR)) {
                     result = determinerTokens.get(SINGULAR);
+                    break;
+                }
+
+            } else if (reference.contains(subjectType.name()) && reference.contains(SubjectType.INTERROGATIVE_DETERMINER_PLURAL.name())) {
+                Map<String, String> determinerTokens = this.getDeteminerTokens(determinerObject, subjectType);
+                if (determinerTokens.containsKey(PLURAL)) {
+                    result = determinerTokens.get(PLURAL);
                     break;
                 }
 
@@ -278,14 +282,24 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder, TemplateC
                     break;
                 }
 
+            } else if (reference.contains(subjectType.name()) && reference.contains(SubjectType.PERSON_INTERROGATIVE_PRONOUN.name())
+                    && subject.contains(TemplateConstants.directObject)) {
+                Map<String, String> determinerTokens = this.getDeteminerTokens(determinerObject, subjectType);
+                if (determinerTokens.containsKey(PLURAL)) {
+                    result = determinerTokens.get(PLURAL);
+                    break;
+                }
+
             }
+
         }
+
         return result;
     }
 
     private String getQuestionWord(String reference) throws QueGGMissingFactoryClassException {
         String result = "";
-        for (SubjectType subjectType : questionWords) {
+        for (SubjectType subjectType : QuestionWordFactoryIT.questionWords) {
             if (reference.contains(subjectType.name())) {
                 result = lexicalEntryUtil.getSubjectBySubjectType(
                         SubjectType.PERSON_INTERROGATIVE_PRONOUN,

@@ -33,13 +33,13 @@ class SubjectTypeTest {
 
   @Test
   void testIsPronoun_negativeCase() {
-    subjectType = SubjectType.INTERROGATIVE_DETERMINER;
+    subjectType = SubjectType.INTERROGATIVE_DETERMINER_SINGULAR;
     assertFalse(subjectType.isPronoun());
   }
 
   @Test
   void testIsDeterminer() {
-    subjectType = SubjectType.INTERROGATIVE_DETERMINER;
+    subjectType = SubjectType.INTERROGATIVE_DETERMINER_SINGULAR;
     assertTrue(subjectType.isDeterminer());
   }
 }

@@ -1,0 +1,11 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,SyntacticFrame,subject,directObject,sense,reference,domain,range
+Direct_1,verb,dirigere,dirige,ha diretto,TransitiveFrame,range,domain,1,dbo:director,dbo:Film,dbo:Person
+Create_1,verb,creare,crea,ha creato,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Agent
+Create_2,verb,creare,crea,ha creato,TransitiveFrame,range,domain,2,dbo:creator,dbo:Book,dbo:Agent
+Create_3,verb,creare,crea,ha creato,TransitiveFrame,range,domain,3,dbo:creator,dbo:Website,dbo:Agent
+Create_4,verb,creare,crea,ha creato,TransitiveFrame,range,domain,4,dbo:creator,dbo:Work,dbo:Agent
+Design_1,verb,progettare,progetta,ha progettato,TransitiveFrame,range,domain,1,dbo:architect,dbo:Bridge,dbo:Architect
+Cross_1,verb,attraversa,attraversa,ha attraversato,TransitiveFrame,range,domain,1,dbo:crosses,dbo:Bridge,dbo:River
+Discover_1,verb,scoprire,scopre,ha scoperto,TransitiveFrame,range,domain,1,dbo:discoverer,dbo:Place,dbo:Person
+Write_1,verb,scrivere,scrive,ha scritto,TransitiveFrame,range,domain,1,dbo:writer,dbo:Song,dbo:Person
+Speak_1,verb,parla ,parla,parlava,TransitiveFrame,range,domain,1,dbo:language,dbo:Language,dbo:Country

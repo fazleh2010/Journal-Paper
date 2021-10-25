@@ -26,6 +26,14 @@ public class GenderUtils {
         dbpediaClassMap.put("http://dbpedia.org/ontology/Website", new String[]{"sito web"});
         dbpediaClassMap.put("http://dbpedia.org/ontology/Work", new String[]{"Opera"});
         dbpediaClassMap.put("http://dbpedia.org/ontology/TelevisionShow", new String[]{"programma televisivo"});
+        dbpediaClassMap.put("http://dbpedia.org/ontology/River", new String[]{"fiume"});
+        dbpediaClassMap.put("http://dbpedia.org/ontology/Place", new String[]{"posto"}); 
+        dbpediaClassMap.put("http://dbpedia.org/ontology/Language", new String[]{"lingua"}); 
+        //dbpediaClassMap.put("http://dbpedia.org/ontology/Country", new String[]{"paese"}); 
+        dbpediaClassMap.put("http://dbpedia.org/ontology/Country", new String[]{"stati"}); 
+        
+
+        
     }
     
      
@@ -37,7 +45,7 @@ public class GenderUtils {
         referenceArticleMap.put("http://dbpedia.org/ontology/Film", new String[]{"il"});
         referenceArticleMap.put("http://dbpedia.org/ontology/Bridge", new String[]{"il"});
         referenceArticleMap.put("http://dbpedia.org/ontology/Book", new String[]{"il"});
-        referenceArticleMap.put("http://dbpedia.org/ontology/Song", new String[]{"il"});
+        referenceArticleMap.put("http://dbpedia.org/ontology/Song", new String[]{"la"});
         referenceArticleMap.put("http://dbpedia.org/ontology/Work", new String[]{"il"});
         referenceArticleMap.put("http://dbpedia.org/ontology/Person", new String[]{"il", "la"});
         referenceArticleMap.put("http://dbpedia.org/ontology/Company", new String[]{"la"});
@@ -47,6 +55,8 @@ public class GenderUtils {
         referenceArticleMap.put("http://dbpedia.org/ontology/BodyOfWater", new String[]{"il"});
         referenceArticleMap.put("http://dbpedia.org/ontology/MusicalWork", new String[]{"la"});
         referenceArticleMap.put("http://dbpedia.org/ontology/Band", new String[]{"il"});
+        referenceArticleMap.put("http://dbpedia.org/ontology/ArtWork", new String[]{"il"});
+        
     }
     
    public GenderUtils(Language language, String reference) {

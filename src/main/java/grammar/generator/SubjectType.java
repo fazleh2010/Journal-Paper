@@ -11,7 +11,6 @@ import java.util.stream.Stream;
  */
 public enum SubjectType {
   PERSON_INTERROGATIVE_PRONOUN, // who
-  INTERROGATIVE_DETERMINER,
   INTERROGATIVE_DETERMINER_SINGULAR,     // which
   INTERROGATIVE_DETERMINER_PLURAL,     // which
   THING_INTERROGATIVE_PRONOUN,  // what

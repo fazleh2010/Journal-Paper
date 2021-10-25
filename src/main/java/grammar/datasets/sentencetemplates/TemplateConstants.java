@@ -37,8 +37,10 @@ public interface TemplateConstants {
      public static String VARIABLE_INDICATOR= "X";
     public static String COLON= ":";
     public static String PRESENT="present";
+    public static String PAST="past";
      public static String TENSE="tense";
      public static String SLASH="#";
      public static String SINGULAR="singular";
+     public static String PLURAL="plural";
 
 }

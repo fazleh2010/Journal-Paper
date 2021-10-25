@@ -121,7 +121,7 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                                             .getSelectVariable())) { // check if there is any noun with a condition
                                 // must be determiner token
                                 questionWord = getAnnotatedQuestionWordBySubjectTypeAndNumber(
-                                        SubjectType.INTERROGATIVE_DETERMINER,
+                                        SubjectType.INTERROGATIVE_DETERMINER_SINGULAR,
                                         getLanguage(),
                                         lexicalEntryUtil,
                                         toBeVerb.getNumber(),

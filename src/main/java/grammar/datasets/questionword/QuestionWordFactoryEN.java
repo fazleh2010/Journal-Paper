@@ -43,7 +43,7 @@ class QuestionWordFactoryEN implements Factory<QuestionWordRepository> {
     questionWordRepository.add(
       new QuestionWord(
         language,
-        SubjectType.INTERROGATIVE_DETERMINER,
+        SubjectType.INTERROGATIVE_DETERMINER_SINGULAR,
         new AnnotatedInterrogativeDeterminer("Which", "singular", "commonGender", language)
       )
     );

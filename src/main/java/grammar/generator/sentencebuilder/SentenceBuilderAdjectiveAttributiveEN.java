@@ -30,7 +30,7 @@ public class SentenceBuilderAdjectiveAttributiveEN implements SentenceBuilder {
     // get to be forms
     LexicalEntry entry = new LexiconSearch(this.lexicalEntryUtil.getLexicon()).getReferencedResource("component_be");
     List<AnnotatedVerb> toBeVerbs = this.lexicalEntryUtil.parseLexicalEntryToAnnotatedVerbs(entry.getOtherForms());
-    String subject = this.lexicalEntryUtil.getSubjectBySubjectType(SubjectType.INTERROGATIVE_DETERMINER, language, null);
+    String subject = this.lexicalEntryUtil.getSubjectBySubjectType(SubjectType.INTERROGATIVE_DETERMINER_SINGULAR, language, null);
 
     String separator = " ";
     for (AnnotatedVerb toBeForm : toBeVerbs) {

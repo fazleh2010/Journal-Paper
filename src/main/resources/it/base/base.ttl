@@ -21,10 +21,10 @@
   lemon:entry    :component_an ;
   lemon:entry    :object_pronoun;
   lemon:entry    :da ;
-  lemon:entry    :by ;
+  lemon:entry    :si ;
   lemon:entry    :from ;
   lemon:entry    :with ;
-  lemon:entry    :in ;
+  lemon:entry    :In ;
   lemon:entry    :into ;
   lemon:entry    :on ;
   lemon:entry    :of ;
@@ -160,8 +160,8 @@
   lemon:canonicalForm  [ lemon:writtenRep "for"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
 
-:by a                  lemon:SynRoleMarker ;
-  lemon:canonicalForm  [ lemon:writtenRep "by"@en ] ;
+:si a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "si"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
 
 :from a                lemon:SynRoleMarker ;
@@ -172,8 +172,8 @@
   lemon:canonicalForm  [ lemon:writtenRep "with"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
 
-:in a                  lemon:SynRoleMarker ;
-  lemon:canonicalForm  [ lemon:writtenRep "in"@en ] ;
+:In a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "In"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
 
 :into a                lemon:SynRoleMarker ;

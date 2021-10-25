@@ -278,8 +278,9 @@ public class EvaluateAgainstQALD {
           System.out.println("getRecall::" + entryComparison.getRecall());
           System.out.println("getF_measure::" + entryComparison.getF_measure());
           System.out.println("::::::::::::::::::::::::::::::::::::::::" );
+          exit(1);
       }
-        if (entryComparison.getFp()==1) {
+        /*if (entryComparison.getFp()==1) {
            System.out.println(":::::::::::::::::::::(entryComparison.getFp():::::::::::::::::::" );
           System.out.println("Qald Question::" + qaldQuestion);
           System.out.println("Qald Sparql Query::" + qaldSparql);
@@ -394,6 +395,7 @@ public class EvaluateAgainstQALD {
                 System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                 System.out.println("getQaldEntry::::" + entryComparison.getQaldEntry().getQuestions());
                 System.out.println("getQueGGEntry::::" + entryComparison.getQueGGEntry().getQuestionList());
+               
             }
 
             //}
@@ -415,10 +417,13 @@ public class EvaluateAgainstQALD {
                 queGGquestion=Matcher.cleanString(queGGquestion);
                 queGGquestion=queGGquestion.replace("([\\w\\s\\d-,.']+)$","");
                 queGGquestion=queGGquestion.replace("([\\w\\s\\d-,.']+)\\?$","?");
+                queGGquestion=queGGquestion.replace("([\\w\\s\\d-,.']+).$","?");
+                queGGquestion=queGGquestion.replace("([\\w\\s\\d-,.']+)","");
                 queGGquestion=queGGquestion.replace("^","");
-                
+                System.out.println("qaldsentence2:::" + qaldsentence + " queGGquestion2:::" + queGGquestion + " cosineSimilarityPercentage::" + cosineSimilarityPercentage);
+
                 if (cosineSimilarityPercentage > similarityPercentage) {
-                    System.out.println("qaldsentence:::" + qaldsentence + " queGGquestion:::" + queGGquestion + " cosineSimilarityPercentage::" + cosineSimilarityPercentage);
+                    System.out.println("qaldsentence2:::" + qaldsentence + " queGGquestion2:::" + queGGquestion + " cosineSimilarityPercentage::" + cosineSimilarityPercentage);
                     grammarEntities.add(grammarEntry);
                 }
             }

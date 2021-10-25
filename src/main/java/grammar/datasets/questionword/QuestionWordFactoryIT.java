@@ -9,6 +9,8 @@ import grammar.generator.SubjectType;
 import grammar.datasets.annotated.AnnotatedInterrogativeDeterminer;
 import grammar.datasets.annotated.AnnotatedInterrogativePronoun;
 import grammar.structure.component.Language;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  *
@@ -18,6 +20,17 @@ public class QuestionWordFactoryIT {
 
     private final QuestionWordRepository questionWordRepository;
     private final Language language;
+    public static Set<SubjectType> questionWords = new TreeSet<SubjectType>();
+
+    
+     static {
+        questionWords.add(SubjectType.PERSON_INTERROGATIVE_PRONOUN);
+        questionWords.add(SubjectType.THING_INTERROGATIVE_PRONOUN);
+        questionWords.add(SubjectType.INTERROGATIVE_DETERMINER_SINGULAR);
+        questionWords.add(SubjectType.INTERROGATIVE_DETERMINER_PLURAL);
+        questionWords.add(SubjectType.INTERROGATIVE_TEMPORAL);
+        questionWords.add(SubjectType.INTERROGATIVE_PLACE);
+    }
 
     QuestionWordFactoryIT() {
         this.language = Language.IT;
@@ -51,8 +64,15 @@ public class QuestionWordFactoryIT {
         questionWordRepository.add(
                 new QuestionWord(
                         language,
-                        SubjectType.INTERROGATIVE_DETERMINER,
+                        SubjectType.INTERROGATIVE_DETERMINER_SINGULAR,
                         new AnnotatedInterrogativeDeterminer("Quale", "singular", "commonGender", language)
+                )
+        );
+        questionWordRepository.add(
+                new QuestionWord(
+                        language,
+                        SubjectType.INTERROGATIVE_DETERMINER_PLURAL,
+                        new AnnotatedInterrogativeDeterminer("Quali", "plural", "commonGender", language)
                 )
         );
         questionWordRepository.add(
