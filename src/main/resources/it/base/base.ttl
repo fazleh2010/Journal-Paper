@@ -106,18 +106,6 @@
   lemon:otherForm      [ lemon:writtenRep "Qual"@en ;
   lexinfo:tense                           lexinfo:present ;
   lexinfo:person                          lexinfo:secondPerson ;
-  lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Qual"@en ;
-  lexinfo:tense                           lexinfo:present ;
-  lexinfo:person                          lexinfo:secondPerson ;
-  lexinfo:number                          lexinfo:plural ] ;
-  lemon:otherForm      [ lemon:writtenRep "Qual"@en ;
-  lexinfo:tense                           lexinfo:present ;
-  lexinfo:person                          lexinfo:secondPerson ;
-  lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Qual"@en ;
-  lexinfo:tense                           lexinfo:present ;
-  lexinfo:person                          lexinfo:secondPerson ;
   lexinfo:number                          lexinfo:plural ] ;
   lexinfo:partOfSpeech lexinfo:verb .
 

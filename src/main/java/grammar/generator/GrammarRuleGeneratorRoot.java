@@ -345,6 +345,7 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
 
     protected GrammarEntry copyGrammarEntry(GrammarEntry grammarEntry) {
         GrammarEntry fragmentEntry = new GrammarEntry();
+        fragmentEntry.setLexicalEntryUri(grammarEntry.getLexicalEntryUri());
         fragmentEntry.setBindingType(grammarEntry.getBindingType());
         fragmentEntry.setReturnType(grammarEntry.getReturnType());
         fragmentEntry.setLanguage(grammarEntry.getLanguage());

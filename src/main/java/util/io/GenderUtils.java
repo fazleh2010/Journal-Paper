@@ -23,6 +23,9 @@ public class GenderUtils {
     
     static {
         dbpediaClassMap.put("http://dbpedia.org/ontology/Film", new String[]{"film"});
+        dbpediaClassMap.put("http://dbpedia.org/ontology/Website", new String[]{"sito web"});
+        dbpediaClassMap.put("http://dbpedia.org/ontology/Work", new String[]{"Opera"});
+        dbpediaClassMap.put("http://dbpedia.org/ontology/TelevisionShow", new String[]{"programma televisivo"});
     }
     
      

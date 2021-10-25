@@ -32,5 +32,13 @@ public interface TemplateConstants {
     public static String PASSIVE = "passive";
     
      public static String PREPOSITION="preposition";
+    public static String QUESTION_MARK= "?";
+    public static String FULL_STOP= ".";
+     public static String VARIABLE_INDICATOR= "X";
+    public static String COLON= ":";
+    public static String PRESENT="present";
+     public static String TENSE="tense";
+     public static String SLASH="#";
+     public static String SINGULAR="singular";
 
 }

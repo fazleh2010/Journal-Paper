@@ -121,7 +121,7 @@ public class QueGG {
         }
     }
 
-    public static void evalution(String qaldDir, String outputDir, Language language, String endpoint) throws IOException {
+    public static void evalution(String qaldDir, String outputDir, Language language, String endpoint) throws IOException, Exception {
         QueGG evaluateAgainstQALDTest = new QueGG();
         ObjectMapper objectMapper = new ObjectMapper();
         String[] fileList = new File(qaldDir).list();
@@ -147,6 +147,7 @@ public class QueGG {
         }
 
         String languageCode = language.name().toLowerCase();
+        try{
         File grammarEntriesFile = new File(queGGJson);
         File grammarEntriesFile2 = new File(queGGJsonCombined);
         GrammarWrapper grammarWrapper = objectMapper.readValue(grammarEntriesFile, GrammarWrapper.class);
@@ -159,6 +160,10 @@ public class QueGG {
         String qaldRaw = qaldDir + File.separator +  "QALD-2017-dataset-raw.csv";
         //System.out.println("all files are read!!!");
         evaluateAgainstQALD.evaluateAndOutput(grammarWrapper, qaldFile, qaldModifiedFile, resultFileName, qaldRaw, languageCode);
+        }catch(Exception ex){
+            throw new Exception("no QueGG Json files to evaluate!!!");
+        }
+        
 
     }
 

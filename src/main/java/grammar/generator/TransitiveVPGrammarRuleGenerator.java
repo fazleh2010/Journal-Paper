@@ -94,40 +94,4 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
         return fragmentEntry;
     }
 
-    /*@Override
-    public List<String> generateSentences(LexicalEntryUtil lexicalEntryUtil) throws
-            QueGGMissingFactoryClassException {
-        List<String> generatedSentences = new ArrayList<>();
-        String sentence = null;
-
-        //SubjectType subjectType = lexicalEntryUtil.getSubjectType(lexicalEntryUtil.getSelectVariable(),DomainOrRangeType.PERSON);
-        List<AnnotatedVerb> annotatedVerbs = lexicalEntryUtil.parseLexicalEntryToAnnotatedVerbs();
-       
-       
-        
-        Map<String, String> verbTokens = new TreeMap<String, String>();
-
-        
-        String variableString = getBindingVariable();
-
-        SentenceBuilderTransitiveVPEN sentenceBuilder;
-        try {
-            sentenceBuilder = new SentenceBuilderTransitiveVPEN(
-                    getLanguage(),
-                    getFrameType(),
-                    getSentenceTemplateRepository(),
-                    getSentenceTemplateParser(),
-                    variableString,
-                    lexicalEntryUtil);
-            generatedSentences.addAll(sentenceBuilder.getSentences());
-            generatedSentences.sort(String::compareToIgnoreCase);
-             //System.out.println("generatedSentences:::"+generatedSentences);
-        } catch (Exception ex) {
-            java.util.logging.Logger.getLogger(TransitiveVPGrammarRuleGenerator.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       
-        return generatedSentences;
-    }*/
-    
-     
 }
