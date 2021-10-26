@@ -1,5 +1,7 @@
 package grammar.generator.helper.parser;
 
+import grammar.generator.SentenceToken;
+import grammar.generator.SentenceTokenImpl;
 import eu.monnetproject.lemon.model.Property;
 import eu.monnetproject.lemon.model.PropertyValue;
 import eu.monnetproject.lemon.model.SynArg;

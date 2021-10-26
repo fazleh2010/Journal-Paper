@@ -1,0 +1,43 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "bn" ;
+  lemon:entry    :nationality_of ;
+  lemon:entry    :prepos .
+
+:nationality_of a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :nationality_of_form ;
+  lemon:sense          :nationality_of_sense_1 ;
+  lemon:synBehavior    :nationality_of_nounpp .
+
+:nationality_of_form a lemon:Form ;
+  lemon:writtenRep "জাতীয়তা"@bn .
+
+:nationality_of_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:nationality_of_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :nationality_of_sense_1 ;
+  lemon:reference           <http://www.wikidata.org/prop/direct/P27> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :nationality_of_sense_1_condition .
+
+:nationality_of_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://www.wikidata.org/entity/Q5> ;
+  lemon:propertyRange   <http://www.wikidata.org/entity/Q3624078> .
+
+:arg2 lemon:marker :prepos .
+
+## Prepositions ##
+
+:prepos a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "এর"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

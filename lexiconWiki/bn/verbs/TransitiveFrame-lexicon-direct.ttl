@@ -1,0 +1,86 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "bn" ;
+  lemon:entry    :to_direct ;
+  lemon:entry    :directed ;
+  lemon:entry    :prepos .
+
+:to_direct a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_direct ;
+  lemon:otherForm      :form_direct_2nd ;
+  lemon:otherForm      :form_direct_3rd ;
+  lemon:otherForm      :form_directed ;
+  lemon:sense          :direct_sense_1 ;
+  lemon:synBehavior    :direct_frame_transitive .
+
+:form_direct a         lemon:Form ;
+  lemon:writtenRep     "পরিচালনা"@bn ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_direct_2nd a    lemon:Form ;
+  lemon:writtenRep "পরিচালনা করে"@bn ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_direct_3rd a    lemon:Form ;
+  lemon:writtenRep "পরিচালনা করছে"@bn ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_directed a   lemon:Form ;
+  lemon:writtenRep "পরিচালনা করেছিল"@bn ;
+  lexinfo:tense    lexinfo:past .
+
+:direct_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :direct_subj ;
+  lexinfo:directObject     :direct_obj .
+
+:direct_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :direct_sense_1 ;
+  lemon:reference   <http://www.wikidata.org/prop/direct/P57> ;
+  lemon:subjOfProp  :direct_obj ;
+  lemon:objOfProp   :direct_subj ;
+  lemon:condition   :direct_sense_1_condition .
+
+
+:direct_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://www.wikidata.org/entity/Q11424> ;
+  lemon:propertyRange  <http://www.wikidata.org/entity/Q5> .
+
+:directed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_directed_canonical ;
+  lemon:otherForm      :form_directed_by ;
+  lemon:synBehavior    :directed_frame_adjectivepp ;
+  lemon:sense          :directed_ontomap .
+
+:form_directed_canonical a lemon:Form ;
+  lemon:writtenRep         "পরিচালনা করা"@bn .
+
+:form_directed_by a    lemon:Form ;
+  lemon:writtenRep     "পরিচালনা করা"@bn ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:directed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :directed_subj ;
+  lexinfo:prepositionalAdjunct :directed_obj .
+
+:directed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :directed_ontomap ;
+  lemon:reference   <http://www.wikidata.org/prop/direct/P57> ;
+  lemon:subjOfProp  :directed_subj ;
+  lemon:objOfProp   :directed_obj ;
+  lemon:condition   :direct_sense_1_condition .
+:directed_obj lemon:marker :prepos .
+
+## Prepositions ##
+:prepos a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@bn ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

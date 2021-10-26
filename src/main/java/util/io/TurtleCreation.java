@@ -5,155 +5,304 @@
  */
 package util.io;
 
+import com.google.gdata.util.common.base.Pair;
 import java.io.File;
 import java.io.IOException;
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Set;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.logging.Level;
+import util.io.GoogleXslSheet.AttributiveAdjectiveFrame;
 
 /**
  *
  * @author elahi
  */
 public class TurtleCreation {
-//LemonEntry	partOfSpeech	writtenForm (singular)	writtenForm (plural)	preposition	SyntacticFrame	copulativeArg	prepositionalAdjunct	sense	reference	domain	range	GrammarRule1:question1	SPARQL	GrammarRule1: question2	SPARQL Question 2	GrammarRule 1: questions	SPARQL 	NP (Grammar Rule 2)		grammar rules	numberOfQuestions
-//birthPlace_of	noun	birth place	-	of	NounPPFrame	range	domain	1	dbo:birthPlace	dbo:Person	dbo:Place	#NAME?	#NAME?	#NAME?	#NAME?	#NAME?	#NAME?	#NAME?		2	
 
-    private String LemonEntry = "birthPlace_of";
-    private String partOfSpeech = "noun";
-    private String writtenForm_singular = "birth place";
-    private String writtenForm_plural = "-";
-    private String preposition = "of";
-    private String SyntacticFrame = "NounPPFrame";
-    private String copulativeArg = "range";
-    private String prepositionalAdjunct = "domain";
-    private String sense = "1";
-    private String reference = "dbo:birthPlace";
-    private String domain = "dbo:Person";
-    private String range = "dbo:Place";
+    private String lemonEntry = "";
+    private String partOfSpeech = "";
+    private String writtenForm_plural = "";
+    private String writtenFormInfinitive = "";
+    private String writtenForm3rdPerson = "";
+    private String writtenFormPast = "";
+    private String preposition = "";
+    private String tutleString = "";
+    private String tutleFileName = "";
+    private static Integer index = 0;
+    private LinkedData linkedData = null;
+    private String language = "";
 
-    public TurtleCreation(String[] row) {
+    public TurtleCreation(String key, List<String[]> rows, LinkedData linkedData,String language) throws Exception {
+        this.linkedData = linkedData;
+        this.language=language;
+        String syntacticFrame = findSyntacticFrame(rows);
 
-        this.LemonEntry = row[0];
-        this.partOfSpeech = row[1];
-        this.writtenForm_singular = row[2];
-        this.writtenForm_plural = row[3];
-
-        this.preposition = row[4];
-        this.SyntacticFrame = row[5];
-        this.copulativeArg = row[6];
-        this.prepositionalAdjunct = row[7];
-
-        this.sense = row[8];
-        this.reference = row[9];
-        this.domain = row[10];
-        this.range = row[11];
+        if (syntacticFrame.equals(GoogleXslSheet.NOUN_PP_FRAME)) {
+            setNounPPFrame(key, rows, syntacticFrame);
+        } else if (syntacticFrame.equals(GoogleXslSheet.TRANSITIVE_FRAME)) {
+            setTransitiveFrame(key, rows, syntacticFrame,"da");
+        } else if (syntacticFrame.equals(GoogleXslSheet.IN_TRANSITIVE_PP_FRAME)) {
+            setIntransitivePPFrame(key, rows, syntacticFrame);
+        } else if (syntacticFrame.equals(GoogleXslSheet.ADJECTIVE_ATTRIBUTIVE_FRAME)) {
+            setAdjectiveFrame(key, rows, syntacticFrame);
+        } else {
+            System.out.println("no syntactic frame is found!!");
+            //syntacticFrame = row[GoogleXslSheet.TransitFrameSyntacticFrameIndex];
+        }
 
     }
 
-    public TurtleCreation() {
+    private void setNounPPFrame(String key, List<String[]> rows, String syntacticFrame) throws Exception {
+        this.setLemonEntryId(key);
+
+        List<Tupples> tupples = new ArrayList<Tupples>();
+        Integer index = 0;
+        for (String[] row : rows) {
+            if (index == 0) {
+                this.partOfSpeech = row[GoogleXslSheet.partOfSpeechIndex];
+                this.writtenFormInfinitive = row[GoogleXslSheet.writtenFormInfinitive];
+                this.writtenForm_plural = row[GoogleXslSheet.NounPPFrame.writtenFormPluralIndex];
+                this.preposition = row[GoogleXslSheet.NounPPFrame.prepositionIndex];
+            }
+            tupples.add(new Tupples(this.lemonEntry,
+                    index + 1,
+                    this.setReference(row[GoogleXslSheet.NounPPFrame.referenceIndex]),
+                    this.setReference(row[GoogleXslSheet.NounPPFrame.domainIndex]),
+                    this.setReference(row[GoogleXslSheet.NounPPFrame.rangeIndex])));
+            index = index + 1;
+        }
+        this.tutleString
+                = GoogleXslSheet.NounPPFrame.getNounPPFrameHeader(this.lemonEntry, this.preposition, this.language)
+                + GoogleXslSheet.NounPPFrame.getIndexing(this.lemonEntry, tupples)
+                + GoogleXslSheet.NounPPFrame.getWrittenTtl(this.lemonEntry, writtenFormInfinitive,this.language)
+                + GoogleXslSheet.getSenseDetail(tupples, GoogleXslSheet.NOUN_PP_FRAME, this.lemonEntry, this.writtenFormInfinitive, this.preposition, this.language)
+                + GoogleXslSheet.NounPPFrame.getPreposition(this.preposition, language);
+        this.tutleFileName = getFileName(syntacticFrame);
+
     }
 
+    private void setTransitiveFrame(String key, List<String[]> rows, String syntacticFrame,String preposition) throws Exception {
+        this.setLemonEntryId(key);
+        List<Tupples> tupples = new ArrayList<Tupples>();
+        Integer index = 0;
+        for (String[] row : rows) {
+            if (index == 0) {
+                this.partOfSpeech = row[GoogleXslSheet.partOfSpeechIndex];
+                this.writtenFormInfinitive = row[GoogleXslSheet.writtenFormInfinitive];
+                this.writtenForm3rdPerson = row[GoogleXslSheet.TransitFrame.writtenForm3rdPerson];
+                this.writtenFormPast = row[GoogleXslSheet.TransitFrame.writtenFormPast];
+                System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+                System.out.println("row[GoogleXslSheet.TransitFrame.writtenFormPast]:"+row[GoogleXslSheet.TransitFrame.writtenFormPast]);
+                System.out.println("writtenForm3rdPerson:"+writtenFormPast);
+                this.preposition = preposition;
+            }
+            tupples.add(new Tupples(this.lemonEntry,
+                    index + 1,
+                    this.setReference(row[GoogleXslSheet.TransitFrame.referenceIndex]),
+                    this.setReference(row[GoogleXslSheet.TransitFrame.domainIndex]),
+                    this.setReference(row[GoogleXslSheet.TransitFrame.rangeIndex])));
+            index = index + 1;
 
-    public String getLemonEntry() {
-        return LemonEntry;
+        }
+        this.tutleString
+                = GoogleXslSheet.TransitFrame.getHeader(this.lemonEntry,this.preposition,this.language)
+                + GoogleXslSheet.TransitFrame.getSenseIndexing(tupples, lemonEntry)
+                + GoogleXslSheet.TransitFrame.getWritten(this.lemonEntry, this.writtenFormInfinitive, this.writtenForm3rdPerson, this.writtenFormPast,this.language)
+                + GoogleXslSheet.getSenseDetail(tupples, GoogleXslSheet.TRANSITIVE_FRAME,this.lemonEntry,this.writtenFormInfinitive,this.preposition,this.language)
+                + GoogleXslSheet.getPrepostion(this.preposition,this.language);
+        this.tutleFileName = getFileName(syntacticFrame);
     }
 
-    public String getPartOfSpeech() {
-        return partOfSpeech;
+    private void setIntransitivePPFrame(String key, List<String[]> rows, String syntacticFrame) throws Exception {
+
+        List<Tupples> tupples = new ArrayList<Tupples>();
+        Integer index = 0;
+        for (String[] row : rows) {
+            if (index == 0) {
+                this.setLemonEntryId(row[GoogleXslSheet.lemonEntryIndex]);
+                this.partOfSpeech = row[GoogleXslSheet.partOfSpeechIndex];
+                this.writtenFormInfinitive = row[GoogleXslSheet.writtenFormInfinitive];
+                this.writtenForm3rdPerson = row[GoogleXslSheet.InTransitFrame.writtenForm3rdPerson];
+                this.writtenFormPast = row[GoogleXslSheet.InTransitFrame.writtenFormPast];
+                this.preposition = row[GoogleXslSheet.InTransitFrame.preposition];
+                /*if(this.preposition.contains("-")){
+                   ;
+                }
+                else 
+                    continue;*/
+
+            }
+            tupples.add(new Tupples(this.lemonEntry,
+                    index + 1,
+                    this.setReference(row[GoogleXslSheet.InTransitFrame.referenceIndex]),
+                    this.setReference(row[GoogleXslSheet.InTransitFrame.domainIndex]),
+                    this.setReference(row[GoogleXslSheet.InTransitFrame.rangeIndex])));
+            index = index + 1;
+        }
+        this.tutleString
+                = GoogleXslSheet.InTransitFrame.getHeader(this.lemonEntry,this.preposition,this.language)
+                + GoogleXslSheet.InTransitFrame.getSenseIndexing(tupples,this.lemonEntry)
+                + GoogleXslSheet.InTransitFrame.getWritten(lemonEntry,writtenFormInfinitive,writtenForm3rdPerson,writtenFormPast,this.language)
+                + GoogleXslSheet.getSenseDetail(tupples, GoogleXslSheet.IN_TRANSITIVE_PP_FRAME,this.lemonEntry,this.writtenFormInfinitive,this.preposition,this.language)
+                + GoogleXslSheet.getPrepostion(this.preposition,this.language);        
+        this.tutleFileName = getFileName(syntacticFrame);
+        
+        /*System.out.println("partOfSpeech::" + partOfSpeech);
+        System.out.println("writtenFormInfinitive::" + writtenFormInfinitive);
+        System.out.println("writtenForm3rdPerson::" + writtenForm3rdPerson);
+        System.out.println("preposition::" + preposition);
+        System.out.println("sense::" + sense);
+        System.out.println("reference::" + reference);
+        System.out.println("reference::" + domain);
+        System.out.println("reference::" + range);*/
     }
 
-    public String getWrittenForm_singular() {
-        return writtenForm_singular;
+    private void setAdjectiveFrame(String key, List<String[]> rows, String syntacticFrame) throws Exception {
+        List<Tupples> tupples = new ArrayList<Tupples>();
+        Integer index = 0;
+        for (String[] row : rows) {
+            System.out.println(row[GoogleXslSheet.lemonEntryIndex]);
+              System.out.println(row[GoogleXslSheet.partOfSpeechIndex]);
+              System.out.println(row[GoogleXslSheet.writtenFormInfinitive]);
+            if (index == 0) {
+                this.setLemonEntryId(row[GoogleXslSheet.lemonEntryIndex]);
+                this.partOfSpeech = row[GoogleXslSheet.partOfSpeechIndex];
+                this.writtenFormInfinitive = row[GoogleXslSheet.writtenFormInfinitive];
+
+            }
+                
+
+            tupples.add(new Tupples(this.lemonEntry,
+                    index + 1,
+                    "",
+                    this.setReference(row[GoogleXslSheet.AttributiveAdjectiveFrame.owl_onPropertyIndex]),
+                    this.setReference(row[GoogleXslSheet.AttributiveAdjectiveFrame.owl_hasValueIndex])));
+            index = index + 1;
+        }
+            System.out.println(index+"  tupples:"+tupples.size());
+        this.tutleString
+                = GoogleXslSheet.AttributiveAdjectiveFrame.getAtrributiveFrameHeader(this.lemonEntry, tupples,this.language)
+                + GoogleXslSheet.AttributiveAdjectiveFrame.getAtrributiveFrameIndexing(tupples, this.lemonEntry)
+                + GoogleXslSheet.AttributiveAdjectiveFrame.getAtrrtibutiveWrittenForm(lemonEntry, writtenFormInfinitive,this.language)
+                + GoogleXslSheet.getSenseDetail(tupples, syntacticFrame, this.lemonEntry,"","",this.language);
+        this.tutleFileName = getFileName(syntacticFrame);
+        System.out.println(tutleString);
+        System.out.println(tutleFileName);
+
+        /*System.out.println("partOfSpeech::" + partOfSpeech);
+        System.out.println("writtenFormInfinitive::" + writtenFormInfinitive);
+        System.out.println("writtenForm3rdPerson::" + writtenForm3rdPerson);
+        System.out.println("preposition::" + preposition);
+        System.out.println("sense::" + sense);
+        System.out.println("reference::" + reference);
+        System.out.println("reference::" + domain);
+        System.out.println("reference::" + range);*/
     }
 
-    public String getWrittenForm_plural() {
-        return writtenForm_plural;
+    public void nounPPFrameTurtle(List<Tupples> tupples,String prepostion) {
+        this.tutleString
+                = GoogleXslSheet.NounPPFrame.getNounPPFrameHeader(this.lemonEntry,prepostion,this.language)
+                + GoogleXslSheet.NounPPFrame.getIndexing(this.lemonEntry,tupples)
+                + GoogleXslSheet.NounPPFrame.getWrittenTtl(this.lemonEntry,writtenFormInfinitive,this.language)
+                + GoogleXslSheet.getSenseDetail(tupples, GoogleXslSheet.NOUN_PP_FRAME,this.lemonEntry,this.writtenFormInfinitive,this.preposition,this.language)
+                + GoogleXslSheet.NounPPFrame.getPreposition(prepostion, language);
     }
 
-    public String getPreposition() {
-        return preposition;
-    }
+   
+    private String setReference(String reference) throws Exception {
+        if (reference.contains(LinkedData.http)) {
+            return reference;
+        } else if (reference.contains(LinkedData.colon)) {
+            String[] info = reference.split(LinkedData.colon);
+            String prefix = info[0].strip().trim();
+            if (this.linkedData.getPrefixes().containsKey(prefix)) {
+                reference = this.linkedData.getPrefixes().get(prefix) + info[1];
+            }
 
-    public String getSyntacticFrame() {
-        return SyntacticFrame;
-    }
-
-    public String getCopulativeArg() {
-        return copulativeArg;
-    }
-
-    public String getPrepositionalAdjunct() {
-        return prepositionalAdjunct;
-    }
-
-    public String getSense() {
-        return sense;
-    }
-
-    public String getReference() {
+        }
         return reference;
     }
 
-    public String getDomain() {
-        return domain;
-    }
-    
-    public static void main(String args[]) throws IOException {
-
-      
-        String mainResources = "src/main/resources/lexicon/";
-        String csvDir = "csv/";
-        String inputDir = mainResources + csvDir;
-        String outputDir = null;
-        String testResources = "src/test/resources/lexicon/";
-        
-        Set<String> frames=new HashSet<String>();
-        frames.add("NounPPFrame");
-      
-        for (String frame : frames) {
-            List<File> files = FileUtils.getFiles(inputDir, frame, ".csv");
-            if (frame.contains("NounPPFrame")) {
-                outputDir = testResources + "en/" + "nouns/";
-            }
-            for (File file : files) {
-                CsvFile csvFile = new CsvFile();
-                List<String[]> rows = csvFile.getRows(file);
-                Integer index = 0;
-                for (String[] row : rows) {
-                    if (index == 0) {
-                        ;
-                    } else {
-                        TurtleCreation nounPPFrameXsl = new TurtleCreation(row);
-                        String lemonEntry=nounPPFrameXsl.getLemonEntry();
-                        lemonEntry=lemonEntry.replace("/", "");
-                        String fileName = "z-csv-lexicon" + "-" + lemonEntry + ".ttl";
-                        String tutleString = nounPPFrameXsl.nounPPFrameTurtle();
-                        FileUtils.stringToFile(tutleString, outputDir + fileName);
-                    }
-                    index=index+1;
-                    
-                }
-
-            }
-        }
-        
-
-      
-
-        /*NounPPFrameXsl nounPPFrameXsl = new NounPPFrameXsl(LemonEntry, partOfSpeech, writtenForm_singular, writtenForm_plural,
-                preposition, SyntacticFrame, copulativeArg, prepositionalAdjunct,
-                sense, reference, domain);*/
-        //System.out.println(tutleString);
-    }
-
-    public String nounPPFrameTurtle() {
-        this.reference=this.setReference(reference);
-        this.domain=this.setReference(domain);
-        this.range=this.setReference(range);
+    private String findSyntacticFrame(List<String[]> rows) throws Exception {
+        String syntactType = null;
        
+            
+            Integer index = 0;
+            for (String[] row : rows) {
+                if (index == 0) {
+                    syntactType = this.findSyntacticFrame(row);
+                    break;
+                }
+            }
         
-        String template = "@prefix :        <http://localhost:8080/lexicon#> .\n"
+        return syntactType;
+    }
+
+    private String findSyntacticFrame(String[] row) throws Exception {
+       
+        /*System.out.println("row.length::" + row.length);
+        System.out.println("row[GoogleXslSheet.NounPPFrameSyntacticFrameIndex]::" + row[GoogleXslSheet.NounPPFrameSyntacticFrameIndex]);
+        System.out.println("row[GoogleXslSheet.TransitFrameSyntacticFrameIndex]::" + row[GoogleXslSheet.TransitFrameSyntacticFrameIndex]);
+        System.out.println("row[GoogleXslSheet.InTransitFrameSyntacticFrameIndex]::" + row[GoogleXslSheet.InTransitFrameSyntacticFrameIndex]);
+        System.out.println("row[GoogleXslSheet.AdjectiveFrameIndex]::" + row[GoogleXslSheet.AdjectiveFrameIndex]);
+       */
+
+        try {
+            if (row[GoogleXslSheet.NounPPFrameSyntacticFrameIndex].equals(GoogleXslSheet.NOUN_PP_FRAME)) {
+                return GoogleXslSheet.NOUN_PP_FRAME;
+            } else if (row[GoogleXslSheet.TransitFrameSyntacticFrameIndex].equals(GoogleXslSheet.TRANSITIVE_FRAME)) {
+                return GoogleXslSheet.TRANSITIVE_FRAME;
+            } else if (row[GoogleXslSheet.InTransitFrameSyntacticFrameIndex].equals(GoogleXslSheet.IN_TRANSITIVE_PP_FRAME)) {
+                return GoogleXslSheet.IN_TRANSITIVE_PP_FRAME;
+            } else if (row[GoogleXslSheet.AdjectiveFrameIndex].equals(GoogleXslSheet.ADJECTIVE_ATTRIBUTIVE_FRAME)) {
+                return GoogleXslSheet.ADJECTIVE_ATTRIBUTIVE_FRAME;
+            } else {
+               System.out.println("row.length::" + row.length);
+                //throw new Exception("invalid entry."); //To change body of generated methods, choose Tools | Templates.   
+            }
+        } catch (NullPointerException ex) {
+            throw new Exception("no lexical entries found in csv file" + ex.getMessage().toString()); //To change body of generated methods, choose Tools | Templates.   
+        } catch (Exception ex) {
+            throw new Exception("invalid entry." + ex.getMessage().toString()); //To change body of generated methods, choose Tools | Templates.   
+        }
+        return null;
+    }
+
+    private String modify(String string) {
+        /*string = string.replaceAll("[^a-zA-Z0-9]", " ");
+        string = string.toLowerCase().strip().trim().replace(" ", "_");*/
+        index = index + 1;
+        //return "LexicalEntry_" + string+"_"+index.toString();
+        return string;
+    }
+
+    private Pair<Boolean, String> findPrefix(String prefix) {
+        prefix = prefix.strip().trim();
+        for (String key : this.linkedData.getPrefixes().keySet()) {
+            String value = this.linkedData.getPrefixes().get(key);
+            value = value.strip().trim();
+            key = key.strip().trim();
+            if (key.equals(prefix)) {
+                return new Pair<Boolean, String>(Boolean.TRUE, value);
+            }
+
+        }
+        return new Pair<Boolean, String>(Boolean.FALSE, prefix);
+    }
+
+    /*Pair<Boolean, String> pair = this.findPrefix(prefix);
+            if (pair.getFirst()) {
+                reference = pair.getSecond();
+            } else {
+                throw new Exception("the prefix " + prefix + " is not valid for dataset " + this.linkedData.getEndpoint());
+            }*/
+   
+
+    /*private String getInTransitivePPFrameHeader() {
+        return "@prefix :        <http://localhost:8080/lexicon#> .\n"
                 + "\n"
                 + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
                 + "@prefix lemon:   <http://lemon-model.net/lemon#> .\n"
@@ -162,51 +311,226 @@ public class TurtleCreation {
                 + "\n"
                 + ":lexicon_en a    lemon:Lexicon ;\n"
                 + "  lemon:language \"en\" ;\n"
-                + "  lemon:entry    :birthPlace_of ;\n"
-                + "  lemon:entry    :of .\n"
-                + "\n"
-                + ":birthPlace_of a       lemon:LexicalEntry ;\n"
-                + "  lexinfo:partOfSpeech lexinfo:noun ;\n"
-                + "  lemon:canonicalForm  :birthPlace_form ;\n"
-                + "  lemon:synBehavior    :birthPlace_of_nounpp ;\n"
-                + "  lemon:sense          :birthPlace_sense_ontomap .\n"
-                + "\n"
-                + ":birthPlace_form a lemon:Form ;\n"
-                + "  lemon:writtenRep \""+writtenForm_singular+"\"@en .\n"
-                + "\n"
-                + ":birthPlace_of_nounpp a        lexinfo:NounPPFrame ;\n"
-                + "  lexinfo:copulativeArg        :arg1 ;\n"
-                + "  lexinfo:prepositionalAdjunct :arg2 .\n"
-                + "\n"
-                + ":birthPlace_sense_ontomap a lemon:OntoMap, lemon:LexicalSense ;\n"
-                + "  lemon:ontoMapping         :birthPlace_sense_ontomap ;\n"
-                + "  lemon:reference           <http://dbpedia.org/ontology/"+reference+"> ;\n"
-                + "  lemon:subjOfProp          :arg2 ;\n"
-                + "  lemon:objOfProp           :arg1 ;\n"
-                + "  lemon:condition           :birthPlace_condition .\n"
-                + "\n"
-                + ":birthPlace_condition a lemon:condition ;\n"
-                + "  lemon:propertyDomain  <http://dbpedia.org/ontology/"+domain+"> ;\n"
-                + "  lemon:propertyRange   <http://dbpedia.org/ontology/"+range+"> .\n"
-                + "\n"
-                + ":arg2 lemon:marker :of .\n"
-                + "\n"
-                + "## Prepositions ##\n"
-                + "\n"
-                + ":of a                  lemon:SynRoleMarker ;\n"
-                + "  lemon:canonicalForm  [ lemon:writtenRep \""+preposition+"\"@en ] ;\n"
-                + "  lexinfo:partOfSpeech lexinfo:preposition .";
-        return template;
+                + "  lemon:entry    :to_" + this.lemonEntry + " ;\n"
+                + "  lemon:entry    :in .\n"
+                + "\n";
+    }*/
+
+    /*private List<Tupples> getSenseIds(Integer rank, String reference, String domain,String range) {
+        List<Tupples> senses = new ArrayList<Tupples>();
+        for (Integer index = 0; rank > index; index++) {
+            String senseId=this.lemonEntry + "_sense_" + index.toString() + "ontomap";
+            senses.add(new Tupples(senseId,reference,domain,range));
+        }
+        return senses;
+    }*/
+    private String getSenseId(List<Tupples> senseIds) {
+        String str = "";
+        for (Tupples tupple : senseIds) {
+            String line = "  lemon:sense          :" + tupple.getSenseId() + " ;\n";
+            str += line;
+        }
+        return str;
+    }
+
+    /*private String getSenseDetail(List<Tupples> senseIds) {
+        String str = "";
+        for (Tupples tupple : senseIds) {
+            String line = ":" + tupple.getSenseId() + " a lemon:OntoMap, lemon:LexicalSense ;\n"
+                    + "  lemon:ontoMapping         :" + tupple.getSenseId() + " ;\n"
+                    + "  lemon:reference           <" + tupple.getReference() + "> ;\n"
+                    + "  lemon:subjOfProp          :arg2 ;\n"
+                    + "  lemon:objOfProp           :arg1 ;\n"
+                    + "  lemon:condition           :" + tupple.getSenseId() + "_condition .\n"
+                    + "\n"
+                    + ":" + tupple.getSenseId() + "_condition a lemon:condition ;\n"
+                    + "  lemon:propertyDomain  <" + tupple.getDomain() + "> ;\n"
+                    + "  lemon:propertyRange   <" + tupple.getRange() + "> .\n"
+                    + "\n";
+            str += line;
+        }
+        return str;
+
+    }*/
+   
+
+   
+   
+
+    /*private String getInTransIndexing(List<Tupples> senseIds) {
+        String senseIdStr = this.getSenseId(senseIds);
+        senseIdStr = ":to_" + this.lemonEntry + " a             lemon:LexicalEntry ;\n"
+                + "  lexinfo:partOfSpeech lexinfo:verb ;\n"
+                + "  lemon:canonicalForm  :form_" + this.lemonEntry + " ;\n"
+                + "  lemon:otherForm      :form_" + this.lemonEntry + "_past ;\n"
+                + senseIdStr
+                + "  lemon:synBehavior    :" + this.lemonEntry + "_frame .\n"
+                + "\n";
+        return senseIdStr;
+    }*/
+
+    
+
+    /*private String getInTranSenseDetail(List<Tupples> tupples) {
+        String str = "";
+        for (Tupples tupple : tupples) {
+            String line = ":" + tupple.getSenseId() + " a     lemon:OntoMap, lemon:LexicalSense ;\n"
+                    + "  lemon:ontoMapping :" + this.lemonEntry + "_ontomap ;\n"
+                    + "  lemon:reference   <" + tupple.getReference() + "> ;\n"
+                    + "  lemon:subjOfProp  :" + this.lemonEntry + "_obj ;\n"
+                    + "  lemon:objOfProp   :" + this.lemonEntry + "_subj ;\n"
+                    + "  lemon:condition   :" + this.lemonEntry + "_condition .\n"
+                    + "\n"
+                    + ":" + this.lemonEntry + "_condition a      lemon:condition ;\n"
+                    + "  lemon:propertyDomain <" + tupple.getDomain() + "> ;\n"
+                    + "  lemon:propertyRange  <" + tupple.getRange() + "> .\n"
+                    + "\n";
+            str += line;
+        }
+
+        return str;
+    }*/
+    
+
+    /*private String getSenseDetail(List<Tupples> tupples, String syntacticFrame) {
+        String str = "";
+
+        if (syntacticFrame.equals(GoogleXslSheet.TransitiveFrameStr)) {
+            for (Tupples tupple : tupples) {
+                String line = ":" + tupple.getSenseId() + " a   lemon:OntoMap, lemon:LexicalSense ;\n"
+                        + "  lemon:ontoMapping         :" + tupple.getSenseId() + " ;\n"
+                        + "  lemon:reference   <" + tupple.getReference() + "> ;\n"
+                        + "  lemon:subjOfProp  :" + lemonEntry + "_obj ;\n"
+                        + "  lemon:objOfProp   :" + lemonEntry + "_subj ;\n"
+                        + "  lemon:condition   :" + tupple.getSenseId() + "_condition .\n"
+                        + "\n"
+                        + "\n"
+                        + ":" + tupple.getSenseId() + "_condition a    lemon:condition ;\n"
+                        + "  lemon:propertyDomain <" + tupple.getDomain() + "> ;\n"
+                        + "  lemon:propertyRange  <" + tupple.getRange() + "> .\n"
+                        + "\n";
+                str += line;
+            }
+        } else if (syntacticFrame.equals(GoogleXslSheet.InTransitiveFrameStr)) {
+            for (Tupples tupple : tupples) {
+                String line = ":" + tupple.getSenseId() + " a     lemon:OntoMap, lemon:LexicalSense ;\n"
+                        + "  lemon:ontoMapping :" + this.lemonEntry + "_ontomap ;\n"
+                        + "  lemon:reference   <" + tupple.getReference() + "> ;\n"
+                        + "  lemon:subjOfProp  :" + this.lemonEntry + "_obj ;\n"
+                        + "  lemon:objOfProp   :" + this.lemonEntry + "_subj ;\n"
+                        + "  lemon:condition   :" + tupple.getSenseId() + "_condition .\n"
+                        + "\n"
+                        + ":" + tupple.getSenseId() + "_condition a      lemon:condition ;\n"
+                        + "  lemon:propertyDomain <" + tupple.getDomain() + "> ;\n"
+                        + "  lemon:propertyRange  <" + tupple.getRange() + "> .\n"
+                        + "\n";
+                str += line;
+            }
+
+        } else if (syntacticFrame.equals(GoogleXslSheet.NounPPFrameStr)) {
+            for (Tupples tupple : tupples) {
+                String line = ":" + tupple.getSenseId() + " a lemon:OntoMap, lemon:LexicalSense ;\n"
+                        + "  lemon:ontoMapping         :" + tupple.getSenseId() + " ;\n"
+                        + "  lemon:reference           <" + tupple.getReference() + "> ;\n"
+                        + "  lemon:subjOfProp          :arg2 ;\n"
+                        + "  lemon:objOfProp           :arg1 ;\n"
+                        + "  lemon:condition           :" + tupple.getSenseId() + "_condition .\n"
+                        + "\n"
+                        + ":" + tupple.getSenseId() + "_condition a lemon:condition ;\n"
+                        + "  lemon:propertyDomain  <" + tupple.getDomain() + "> ;\n"
+                        + "  lemon:propertyRange   <" + tupple.getRange() + "> .\n"
+                        + "\n";
+                str += line;
+            }
+        } else if (syntacticFrame.equals(GoogleXslSheet.AdjectiveFrameStr)) {
+            for (Tupples tupple : tupples) {
+                String line = ":" + tupple.getSenseId() + "_sense a  lemon:LexicalSense ;\n"
+                        + "  lemon:reference :" + tupple.getSenseId() + "_res ;\n"
+                        + "  lemon:isA       :" + tupple.getSenseId() + "_AttrSynArg, :swedish_PredSynArg .\n"
+                        + "\n"
+                        + ":" + tupple.getSenseId() + "_res a   owl:Restriction ;\n"
+                        + "  owl:onProperty <" + tupple.getDomain() + "> ;\n"
+                        + "  owl:hasValue   <" + tupple.getRange() + "> .\n";
+                str += line;
+            }
+        }
+
+        return str;
+    }*/
+
+    private void setLemonEntryId(String[] row) {
+        this.lemonEntry = row[GoogleXslSheet.lemonEntryIndex];
+    }
+
+    private void setLemonEntryId(String writtenForm) {
+        this.lemonEntry = this.modify(writtenForm);
 
     }
 
-    private String setReference(String reference) {
-         if (reference.contains(":")) {
-            String[] info = reference.split(":");
-            reference = info[1];
+    public String getTutleFileName() {
+        return tutleFileName;
+    }
+
+    private String getFileName(String syntacticFrame) {
+        return syntacticFrame + "-lexicon" + "-" + lemonEntry.replace("/", "") + ".ttl";
+
+    }
+
+    public String getTutleString() {
+        return this.tutleString;
+    }
+    
+    public static Boolean generateTurtle(String inputDir, LinkedData linkedData,String language) throws IOException, Exception {
+        String lemonEntry = null;
+        File f = new File(inputDir);
+        Boolean flag=false;
+        String[] pathnames = f.list();
+        for (String pathname : pathnames) {
+            String[] files = new File(inputDir + File.separatorChar + pathname).list();
+            for (String fileName : files) {
+                if (!fileName.contains(".csv")) {
+                    continue;
+                }
+
+                CsvFile csvFile = new CsvFile();
+                String directory = inputDir + "/" + pathname + "/";
+                List<String[]> rows = csvFile.getRows(new File(directory + fileName));
+                Integer index = 0;
+                Map<String, List<String[]>> keyRows = new HashMap<String, List<String[]>>();
+                for (String[] row : rows) {
+                    if (index == 0) {
+                        index = index + 1;
+                        continue;
+                    } 
+                    String key = row[0];
+                    List<String[]> values = new ArrayList<String[]>();
+                    if (keyRows.containsKey(key)) {
+                        values = keyRows.get(key);
+                    }
+                    values.add(row);
+                    keyRows.put(key, values);
+                    index = index + 1;
+                }
+                try {
+                    Integer count=0;
+                    for (String key : keyRows.keySet()) {
+                        count=count+1;
+                        System.out.println("key:"+key+" count:"+count);
+                        List<String[]> values = keyRows.get(key);
+                        TurtleCreation turtleCreation = new TurtleCreation(key,values, linkedData,language);
+                        FileUtils.stringToFile(turtleCreation.getTutleString(), directory + turtleCreation.getTutleFileName());
+                        flag=true;
+                    }
+
+                } catch (Exception ex) {
+                    java.util.logging.Logger.getLogger(TurtleCreation.class.getName()).log(Level.SEVERE, null, ex);
+                    throw new Exception(ex.getMessage());
+                }
+
+            }
 
         }
-        return reference.strip().trim();
+      return flag;
     }
 
 }

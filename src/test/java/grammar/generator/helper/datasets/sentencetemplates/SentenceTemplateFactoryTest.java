@@ -1,5 +1,7 @@
 package grammar.generator.helper.datasets.sentencetemplates;
 
+import grammar.datasets.sentencetemplates.SentenceTemplateRepository;
+import grammar.datasets.sentencetemplates.SentenceTemplateFactory;
 import grammar.structure.component.Language;
 import org.junit.jupiter.api.Test;
 import util.exceptions.QueGGMissingFactoryClassException;

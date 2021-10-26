@@ -14,6 +14,12 @@ public class QALD {
   public static class QALDDatasetDefinition {
     @JsonProperty
     String id;
+
+        @Override
+        public String toString() {
+            return "QALDDatasetDefinition{" + "id=" + id + '}';
+        }
+    
   }
 
   public static class QALDQuestion {
@@ -23,11 +29,23 @@ public class QALD {
     public String string;
     @JsonProperty
     public String keywords;
+
+        @Override
+        public String toString() {
+            return "QALDQuestion{" + "language=" + language + ", string=" + string + ", keywords=" + keywords + '}';
+        }
+    
   }
 
   public static class QALDQuery {
     @JsonProperty
     public String sparql;
+
+        @Override
+        public String toString() {
+            return "QALDQuery{" + "sparql=" + sparql + '}';
+        }
+    
   }
 
   @JsonIgnoreProperties(ignoreUnknown = true)
@@ -41,4 +59,10 @@ public class QALD {
     @JsonProperty
     public QALDQuery query;
   }
+
+    @Override
+    public String toString() {
+        return "QALD{" + "dataset=" + dataset + ", questions=" + questions + '}';
+    }
+  
 }
