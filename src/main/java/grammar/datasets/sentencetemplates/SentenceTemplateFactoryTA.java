@@ -28,7 +28,7 @@ public class SentenceTemplateFactoryTA implements Factory<SentenceTemplateReposi
     private final Language language;
 
     SentenceTemplateFactoryTA() {
-        this.language = Language.IT;
+        this.language = Language.TA;
         this.sentenceTemplateRepository = new SentenceTemplateDataset();
     }
 
@@ -42,12 +42,13 @@ public class SentenceTemplateFactoryTA implements Factory<SentenceTemplateReposi
     }
 
     private void init(Language language) {
-    // NounPPFrame
+     // NounPPFrame
     sentenceTemplateRepository.add(
       createSentenceTemplate(
         language,
         List.of(
-           "interrogativeDeterminer verb(reference:component_be)  NP(prepositionalAdjunct)?"
+          "prepositionalAdjunct preposition noun(root) verb(reference:component_interrogativeDeterminer_ki) ?"
+          //"prepositionalAdjunct preposition noun(root) determiner(reference:component_the_2) verb(reference:component_interrogativeDeterminer_kothay) ?"
         ),
         "copulativeArg",
         "prepositionalAdjunct"
@@ -58,7 +59,7 @@ public class SentenceTemplateFactoryTA implements Factory<SentenceTemplateReposi
       createNPTemplate(
         language,
         List.of(
-          "determiner(reference:component_the) noun(root) preposition prepositionalAdjunct"
+          "preposition prepositionalAdjunct noun(root)"
         ),
         "prepositionalAdjunct"
       )
@@ -404,6 +405,31 @@ For Plural number:
 - GLI for words starting with z,s + consonant, gn,ps, x and for words starting with a vowel
 - LE if every entity is of female gender
     */
+    
+ /*
+    1. What is the capital of Germany? (here 'capital of' is relative noun)
+
+ஜெர்மனியின் தலைநகரம் எது?
+jermaṉi.y-iṉ talainakaram etu?
+Germany-GEN  capital      which
+
+NOTE: This example did not consist of the relative pronoun. Maybe, someone can explain the concept of relative"noun"?
+
+2. Who designed the Brooklyn Bridge? (here 'design' is a transitive verb)
+
+யார் ப்ரூக்ளின் பாலத்தை வடிவமைத்தார்கள்?
+yār prūkḷiṉ pālatt-ai vaṭivamai-tt-ārkaḷ?
+who Brroklyn bridge-ACC design-PST-3.PL.Hum
+
+3. Which actors were born in Germany? (here 'born' is an intransitive verb)
+
+எந்த நடிகர்கள் ஜெர்மனியில் பிறந்தார்கள்?
+enta naṭikarkaḷ  jermaṉi.y-il    piṟa-nt-ārkaḷ?
+which actors     Germany-LOC born-PST-3.PL.Hum
+
+
+
+     */
 
 
 }

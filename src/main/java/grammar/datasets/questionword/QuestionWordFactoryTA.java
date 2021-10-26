@@ -51,7 +51,7 @@ class QuestionWordFactoryTA implements Factory<QuestionWordRepository> {
                 new QuestionWord(
                         language,
                         SubjectType.THING_INTERROGATIVE_PRONOUN,
-                        new AnnotatedInterrogativePronoun("என்ன", "singular", "commonGender", language)
+                        new AnnotatedInterrogativePronoun("எது", "singular", "commonGender", language)
                 )
         );
         questionWordRepository.add(

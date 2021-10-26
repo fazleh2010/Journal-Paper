@@ -1,0 +1,43 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "ta" ;
+  lemon:entry    :capital-of ;
+  lemon:entry    :இன் .
+
+:capital-of a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :capital-of_form ;
+  lemon:sense          :capital-of_sense_1 ;
+  lemon:synBehavior    :capital-of_nounpp .
+
+:capital-of_form a lemon:Form ;
+  lemon:writtenRep "தலைநகரம்"@ta .
+
+:capital-of_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:capital-of_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :capital-of_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/capital> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :capital-of_sense_1_condition .
+
+:capital-of_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Country> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/City> .
+
+:arg2 lemon:marker :இன் .
+
+## Prepositions ##
+
+:இன் a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "இன்"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

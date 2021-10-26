@@ -6,11 +6,12 @@
 @base            <http://localhost:8080#> .
 
 :lexicon_en a    lemon:Lexicon ;
-  lemon:language "en" ;
+  lemon:language "ta" ;
   lemon:entry    :component_be ;
   lemon:entry    :component_do ;
   lemon:entry    :component_aux_object_past ;
   lemon:entry    :component_imperative_plural ;
+  lemon:entry    :component_interrogativeDeterminer_ki ;
   lemon:entry    :component_imperative_transitive ;
   lemon:entry    :component_have ;
   lemon:entry    :component_the ;
@@ -105,6 +106,27 @@
 
 :component_have a      lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "வேண்டும்"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+:component_interrogativeDeterminer_ki a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "எது"@en ;
+  lexinfo:verbFormMood                    lexinfo:infinitive ] ;
+  lemon:otherForm      [ lemon:writtenRep "எது"@en ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "எது"@en ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lemon:otherForm      [ lemon:writtenRep "எது"@en ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "எது"@en ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:plural ] ;
   lexinfo:partOfSpeech lexinfo:verb .
 
 
