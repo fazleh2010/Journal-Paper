@@ -1,0 +1,963 @@
+{
+  "grammarEntries" : [ {
+    "id" : "1",
+    "lexicalEntryUri" : "http://localhost:8080#capital-of",
+    "language" : "TA",
+    "type" : "SENTENCE",
+    "bindingType" : "PLACE",
+    "returnType" : "PLACE",
+    "frameType" : "NPP",
+    "sentences" : [ "($x | PLACE_NP) இன் தலைநகரம் எது?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "http://dbpedia.org/resource/Colonial_Mauritania",
+        "uri" : "http://dbpedia.org/resource/Colonial_Mauritania"
+      }, {
+        "label" : "http://dbpedia.org/resource/Colony_of_British_Columbia_(1858–1866)",
+        "uri" : "http://dbpedia.org/resource/Colony_of_British_Columbia_(1858–1866)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Colony_of_British_Columbia_(1866–1871)",
+        "uri" : "http://dbpedia.org/resource/Colony_of_British_Columbia_(1866–1871)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Colony_of_Fiji",
+        "uri" : "http://dbpedia.org/resource/Colony_of_Fiji"
+      }, {
+        "label" : "http://dbpedia.org/resource/Colony_of_Greenland",
+        "uri" : "http://dbpedia.org/resource/Colony_of_Greenland"
+      }, {
+        "label" : "http://dbpedia.org/resource/Colony_of_Natal",
+        "uri" : "http://dbpedia.org/resource/Colony_of_Natal"
+      }, {
+        "label" : "http://dbpedia.org/resource/Colony_of_Niger",
+        "uri" : "http://dbpedia.org/resource/Colony_of_Niger"
+      }, {
+        "label" : "http://dbpedia.org/resource/Colony_of_Rhode_Island_and_Providence_Plantations",
+        "uri" : "http://dbpedia.org/resource/Colony_of_Rhode_Island_and_Providence_Plantations"
+      }, {
+        "label" : "http://dbpedia.org/resource/Colony_of_Vancouver_Island",
+        "uri" : "http://dbpedia.org/resource/Colony_of_Vancouver_Island"
+      }, {
+        "label" : "http://dbpedia.org/resource/Colorado_Territory",
+        "uri" : "http://dbpedia.org/resource/Colorado_Territory"
+      }, {
+        "label" : "http://dbpedia.org/resource/Committee_of_Members_of_the_Constituent_Assembly",
+        "uri" : "http://dbpedia.org/resource/Committee_of_Members_of_the_Constituent_Assembly"
+      }, {
+        "label" : "http://dbpedia.org/resource/Commune_of_the_Working_People_of_Estonia",
+        "uri" : "http://dbpedia.org/resource/Commune_of_the_Working_People_of_Estonia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Connecticut_Colony",
+        "uri" : "http://dbpedia.org/resource/Connecticut_Colony"
+      }, {
+        "label" : "http://dbpedia.org/resource/Conservative_Republic",
+        "uri" : "http://dbpedia.org/resource/Conservative_Republic"
+      }, {
+        "label" : "http://dbpedia.org/resource/Danish_India",
+        "uri" : "http://dbpedia.org/resource/Danish_India"
+      }, {
+        "label" : "http://dbpedia.org/resource/Electorate_of_Hesse",
+        "uri" : "http://dbpedia.org/resource/Electorate_of_Hesse"
+      }, {
+        "label" : "http://dbpedia.org/resource/Grand_Duchy_of_Hesse",
+        "uri" : "http://dbpedia.org/resource/Grand_Duchy_of_Hesse"
+      }, {
+        "label" : "http://dbpedia.org/resource/Greater_Hesse",
+        "uri" : "http://dbpedia.org/resource/Greater_Hesse"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hadiya_Sultanate",
+        "uri" : "http://dbpedia.org/resource/Hadiya_Sultanate"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hamdanid_dynasty",
+        "uri" : "http://dbpedia.org/resource/Hamdanid_dynasty"
+      }, {
+        "label" : "http://dbpedia.org/resource/Herodian_Kingdom_of_Judea",
+        "uri" : "http://dbpedia.org/resource/Herodian_Kingdom_of_Judea"
+      }, {
+        "label" : "http://dbpedia.org/resource/Himyarite_Kingdom",
+        "uri" : "http://dbpedia.org/resource/Himyarite_Kingdom"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hispania_Baetica",
+        "uri" : "http://dbpedia.org/resource/Hispania_Baetica"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hittites",
+        "uri" : "http://dbpedia.org/resource/Hittites"
+      }, {
+        "label" : "http://dbpedia.org/resource/Huan_Xuan",
+        "uri" : "http://dbpedia.org/resource/Huan_Xuan"
+      }, {
+        "label" : "http://dbpedia.org/resource/New_Hebrides",
+        "uri" : "http://dbpedia.org/resource/New_Hebrides"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nogai_Horde",
+        "uri" : "http://dbpedia.org/resource/Nogai_Horde"
+      }, {
+        "label" : "http://dbpedia.org/resource/Province_of_Kurhessen",
+        "uri" : "http://dbpedia.org/resource/Province_of_Kurhessen"
+      }, {
+        "label" : "http://dbpedia.org/resource/SAO_Herzegovina",
+        "uri" : "http://dbpedia.org/resource/SAO_Herzegovina"
+      }, {
+        "label" : "http://dbpedia.org/resource/Sayn-Wittgenstein-Hohenstein",
+        "uri" : "http://dbpedia.org/resource/Sayn-Wittgenstein-Hohenstein"
+      }, {
+        "label" : "http://dbpedia.org/resource/State_of_Hanover",
+        "uri" : "http://dbpedia.org/resource/State_of_Hanover"
+      }, {
+        "label" : "http://dbpedia.org/resource/Territory_of_Hawaii",
+        "uri" : "http://dbpedia.org/resource/Territory_of_Hawaii"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kilwa_Sultanate",
+        "uri" : "http://dbpedia.org/resource/Kilwa_Sultanate"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kindah",
+        "uri" : "http://dbpedia.org/resource/Kindah"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kingdom_of_Iberia",
+        "uri" : "http://dbpedia.org/resource/Kingdom_of_Iberia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kingdom_of_Kubang_Pasu_Darul_Qiyam",
+        "uri" : "http://dbpedia.org/resource/Kingdom_of_Kubang_Pasu_Darul_Qiyam"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kingdom_of_Kurdistan",
+        "uri" : "http://dbpedia.org/resource/Kingdom_of_Kurdistan"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kingdom_of_Serbia_(medieval)",
+        "uri" : "http://dbpedia.org/resource/Kingdom_of_Serbia_(medieval)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Koga_Domain",
+        "uri" : "http://dbpedia.org/resource/Koga_Domain"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kong_Empire",
+        "uri" : "http://dbpedia.org/resource/Kong_Empire"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kosala_Kingdom",
+        "uri" : "http://dbpedia.org/resource/Kosala_Kingdom"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kothi_State",
+        "uri" : "http://dbpedia.org/resource/Kothi_State"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kymi_Province",
+        "uri" : "http://dbpedia.org/resource/Kymi_Province"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lacs_Region",
+        "uri" : "http://dbpedia.org/resource/Lacs_Region"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lapland_(former_province_of_Finland)",
+        "uri" : "http://dbpedia.org/resource/Lapland_(former_province_of_Finland)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Late_Period_of_ancient_Egypt",
+        "uri" : "http://dbpedia.org/resource/Late_Period_of_ancient_Egypt"
+      }, {
+        "label" : "http://dbpedia.org/resource/Later_Liao",
+        "uri" : "http://dbpedia.org/resource/Later_Liao"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lawa_Thikana",
+        "uri" : "http://dbpedia.org/resource/Lawa_Thikana"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lazica",
+        "uri" : "http://dbpedia.org/resource/Lazica"
+      }, {
+        "label" : "http://dbpedia.org/resource/Liao_(Zhou_dynasty_state)",
+        "uri" : "http://dbpedia.org/resource/Liao_(Zhou_dynasty_state)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Margraviate_of_Landsberg",
+        "uri" : "http://dbpedia.org/resource/Margraviate_of_Landsberg"
+      }, {
+        "label" : "http://dbpedia.org/resource/Northern_Liang",
+        "uri" : "http://dbpedia.org/resource/Northern_Liang"
+      }, {
+        "label" : "http://dbpedia.org/resource/Principality_of_Leiningen",
+        "uri" : "http://dbpedia.org/resource/Principality_of_Leiningen"
+      }, {
+        "label" : "http://dbpedia.org/resource/Saxe-Lauenburg",
+        "uri" : "http://dbpedia.org/resource/Saxe-Lauenburg"
+      }, {
+        "label" : "http://dbpedia.org/resource/Western_Liang_(Sixteen_Kingdoms)",
+        "uri" : "http://dbpedia.org/resource/Western_Liang_(Sixteen_Kingdoms)"
+      }, {
+        "label" : "http://dbpedia.org/resource/General_Sarmiento_Partido",
+        "uri" : "http://dbpedia.org/resource/General_Sarmiento_Partido"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hamaland",
+        "uri" : "http://dbpedia.org/resource/Hamaland"
+      }, {
+        "label" : "http://dbpedia.org/resource/Klein-Venedig",
+        "uri" : "http://dbpedia.org/resource/Klein-Venedig"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lawksawk_State",
+        "uri" : "http://dbpedia.org/resource/Lawksawk_State"
+      }, {
+        "label" : "http://dbpedia.org/resource/Republic_of_Spanish_Haiti",
+        "uri" : "http://dbpedia.org/resource/Republic_of_Spanish_Haiti"
+      }, {
+        "label" : "http://dbpedia.org/resource/Rhodanic_Republic",
+        "uri" : "http://dbpedia.org/resource/Rhodanic_Republic"
+      }, {
+        "label" : "http://dbpedia.org/resource/Una-Sana_Canton",
+        "uri" : "http://dbpedia.org/resource/Una-Sana_Canton"
+      }, {
+        "label" : "http://dbpedia.org/resource/Volhynian_Governorate",
+        "uri" : "http://dbpedia.org/resource/Volhynian_Governorate"
+      }, {
+        "label" : "http://dbpedia.org/resource/Łęczyca_Voivodeship",
+        "uri" : "http://dbpedia.org/resource/Łęczyca_Voivodeship"
+      }, {
+        "label" : "http://dbpedia.org/resource/Karluk_Yabghu",
+        "uri" : "http://dbpedia.org/resource/Karluk_Yabghu"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kart_dynasty",
+        "uri" : "http://dbpedia.org/resource/Kart_dynasty"
+      }, {
+        "label" : "http://dbpedia.org/resource/Karystia",
+        "uri" : "http://dbpedia.org/resource/Karystia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Sambalpur_State",
+        "uri" : "http://dbpedia.org/resource/Sambalpur_State"
+      }, {
+        "label" : "http://dbpedia.org/resource/Uí_Fidgenti",
+        "uri" : "http://dbpedia.org/resource/Uí_Fidgenti"
+      }, {
+        "label" : "http://dbpedia.org/resource/Warsaw_Department",
+        "uri" : "http://dbpedia.org/resource/Warsaw_Department"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mlechchha_dynasty",
+        "uri" : "http://dbpedia.org/resource/Mlechchha_dynasty"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mongol_Armenia",
+        "uri" : "http://dbpedia.org/resource/Mongol_Armenia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Principality_of_Hamamshen",
+        "uri" : "http://dbpedia.org/resource/Principality_of_Hamamshen"
+      }, {
+        "label" : "http://dbpedia.org/resource/Republic_of_Zakopane",
+        "uri" : "http://dbpedia.org/resource/Republic_of_Zakopane"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maakhir",
+        "uri" : "http://dbpedia.org/resource/Maakhir"
+      }, {
+        "label" : "http://dbpedia.org/resource/Michigan_Territory",
+        "uri" : "http://dbpedia.org/resource/Michigan_Territory"
+      }, {
+        "label" : "http://dbpedia.org/resource/Principality_of_Nassau-Orange-Fulda",
+        "uri" : "http://dbpedia.org/resource/Principality_of_Nassau-Orange-Fulda"
+      }, {
+        "label" : "http://dbpedia.org/resource/Saffarid_dynasty",
+        "uri" : "http://dbpedia.org/resource/Saffarid_dynasty"
+      }, {
+        "label" : "http://dbpedia.org/resource/Sud-Bandama",
+        "uri" : "http://dbpedia.org/resource/Sud-Bandama"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maona_of_Chios_and_Phocaea",
+        "uri" : "http://dbpedia.org/resource/Maona_of_Chios_and_Phocaea"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mar'ashis",
+        "uri" : "http://dbpedia.org/resource/Mar'ashis"
+      }, {
+        "label" : "http://dbpedia.org/resource/Moxoene",
+        "uri" : "http://dbpedia.org/resource/Moxoene"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nurgan_Regional_Military_Commission",
+        "uri" : "http://dbpedia.org/resource/Nurgan_Regional_Military_Commission"
+      }, {
+        "label" : "http://dbpedia.org/resource/Rasulid_dynasty",
+        "uri" : "http://dbpedia.org/resource/Rasulid_dynasty"
+      }, {
+        "label" : "http://dbpedia.org/resource/Zimbabwe_Rhodesia",
+        "uri" : "http://dbpedia.org/resource/Zimbabwe_Rhodesia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Öland_County",
+        "uri" : "http://dbpedia.org/resource/Öland_County"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nord_Department_(Ivory_Coast)",
+        "uri" : "http://dbpedia.org/resource/Nord_Department_(Ivory_Coast)"
+      }, {
+        "label" : "http://dbpedia.org/resource/November_1918_in_Alsace-Lorraine",
+        "uri" : "http://dbpedia.org/resource/November_1918_in_Alsace-Lorraine"
+      }, {
+        "label" : "http://dbpedia.org/resource/Numidia",
+        "uri" : "http://dbpedia.org/resource/Numidia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Peten_Itza_kingdom",
+        "uri" : "http://dbpedia.org/resource/Peten_Itza_kingdom"
+      }, {
+        "label" : "http://dbpedia.org/resource/Marlborough_County",
+        "uri" : "http://dbpedia.org/resource/Marlborough_County"
+      }, {
+        "label" : "http://dbpedia.org/resource/Marstrand_Free_Port",
+        "uri" : "http://dbpedia.org/resource/Marstrand_Free_Port"
+      }, {
+        "label" : "http://dbpedia.org/resource/Midrarid_dynasty",
+        "uri" : "http://dbpedia.org/resource/Midrarid_dynasty"
+      }, {
+        "label" : "http://dbpedia.org/resource/Switzerland_in_the_Napoleonic_era",
+        "uri" : "http://dbpedia.org/resource/Switzerland_in_the_Napoleonic_era"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nafplia_Province",
+        "uri" : "http://dbpedia.org/resource/Nafplia_Province"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nagvanshis_of_Chotanagpur",
+        "uri" : "http://dbpedia.org/resource/Nagvanshis_of_Chotanagpur"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mường_Autonomous_Territory",
+        "uri" : "http://dbpedia.org/resource/Mường_Autonomous_Territory"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nasrid_dynasty_(Sistan)",
+        "uri" : "http://dbpedia.org/resource/Nasrid_dynasty_(Sistan)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Tashkent_(1784)",
+        "uri" : "http://dbpedia.org/resource/Tashkent_(1784)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Independent_Albania",
+        "uri" : "http://dbpedia.org/resource/Independent_Albania"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "2",
+    "lexicalEntryUri" : "http://localhost:8080#capital-of",
+    "language" : "TA",
+    "type" : "NP",
+    "bindingType" : "PLACE",
+    "returnType" : "PLACE",
+    "frameType" : "NPP",
+    "sentences" : [ "இன் $x தலைநகரம்" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "http://dbpedia.org/resource/Colonial_Mauritania",
+        "uri" : "http://dbpedia.org/resource/Colonial_Mauritania"
+      }, {
+        "label" : "http://dbpedia.org/resource/Colony_of_British_Columbia_(1858–1866)",
+        "uri" : "http://dbpedia.org/resource/Colony_of_British_Columbia_(1858–1866)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Colony_of_British_Columbia_(1866–1871)",
+        "uri" : "http://dbpedia.org/resource/Colony_of_British_Columbia_(1866–1871)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Colony_of_Fiji",
+        "uri" : "http://dbpedia.org/resource/Colony_of_Fiji"
+      }, {
+        "label" : "http://dbpedia.org/resource/Colony_of_Greenland",
+        "uri" : "http://dbpedia.org/resource/Colony_of_Greenland"
+      }, {
+        "label" : "http://dbpedia.org/resource/Colony_of_Natal",
+        "uri" : "http://dbpedia.org/resource/Colony_of_Natal"
+      }, {
+        "label" : "http://dbpedia.org/resource/Colony_of_Niger",
+        "uri" : "http://dbpedia.org/resource/Colony_of_Niger"
+      }, {
+        "label" : "http://dbpedia.org/resource/Colony_of_Rhode_Island_and_Providence_Plantations",
+        "uri" : "http://dbpedia.org/resource/Colony_of_Rhode_Island_and_Providence_Plantations"
+      }, {
+        "label" : "http://dbpedia.org/resource/Colony_of_Vancouver_Island",
+        "uri" : "http://dbpedia.org/resource/Colony_of_Vancouver_Island"
+      }, {
+        "label" : "http://dbpedia.org/resource/Colorado_Territory",
+        "uri" : "http://dbpedia.org/resource/Colorado_Territory"
+      }, {
+        "label" : "http://dbpedia.org/resource/Committee_of_Members_of_the_Constituent_Assembly",
+        "uri" : "http://dbpedia.org/resource/Committee_of_Members_of_the_Constituent_Assembly"
+      }, {
+        "label" : "http://dbpedia.org/resource/Commune_of_the_Working_People_of_Estonia",
+        "uri" : "http://dbpedia.org/resource/Commune_of_the_Working_People_of_Estonia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Connecticut_Colony",
+        "uri" : "http://dbpedia.org/resource/Connecticut_Colony"
+      }, {
+        "label" : "http://dbpedia.org/resource/Conservative_Republic",
+        "uri" : "http://dbpedia.org/resource/Conservative_Republic"
+      }, {
+        "label" : "http://dbpedia.org/resource/Danish_India",
+        "uri" : "http://dbpedia.org/resource/Danish_India"
+      }, {
+        "label" : "http://dbpedia.org/resource/Electorate_of_Hesse",
+        "uri" : "http://dbpedia.org/resource/Electorate_of_Hesse"
+      }, {
+        "label" : "http://dbpedia.org/resource/Grand_Duchy_of_Hesse",
+        "uri" : "http://dbpedia.org/resource/Grand_Duchy_of_Hesse"
+      }, {
+        "label" : "http://dbpedia.org/resource/Greater_Hesse",
+        "uri" : "http://dbpedia.org/resource/Greater_Hesse"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hadiya_Sultanate",
+        "uri" : "http://dbpedia.org/resource/Hadiya_Sultanate"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hamdanid_dynasty",
+        "uri" : "http://dbpedia.org/resource/Hamdanid_dynasty"
+      }, {
+        "label" : "http://dbpedia.org/resource/Herodian_Kingdom_of_Judea",
+        "uri" : "http://dbpedia.org/resource/Herodian_Kingdom_of_Judea"
+      }, {
+        "label" : "http://dbpedia.org/resource/Himyarite_Kingdom",
+        "uri" : "http://dbpedia.org/resource/Himyarite_Kingdom"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hispania_Baetica",
+        "uri" : "http://dbpedia.org/resource/Hispania_Baetica"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hittites",
+        "uri" : "http://dbpedia.org/resource/Hittites"
+      }, {
+        "label" : "http://dbpedia.org/resource/Huan_Xuan",
+        "uri" : "http://dbpedia.org/resource/Huan_Xuan"
+      }, {
+        "label" : "http://dbpedia.org/resource/New_Hebrides",
+        "uri" : "http://dbpedia.org/resource/New_Hebrides"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nogai_Horde",
+        "uri" : "http://dbpedia.org/resource/Nogai_Horde"
+      }, {
+        "label" : "http://dbpedia.org/resource/Province_of_Kurhessen",
+        "uri" : "http://dbpedia.org/resource/Province_of_Kurhessen"
+      }, {
+        "label" : "http://dbpedia.org/resource/SAO_Herzegovina",
+        "uri" : "http://dbpedia.org/resource/SAO_Herzegovina"
+      }, {
+        "label" : "http://dbpedia.org/resource/Sayn-Wittgenstein-Hohenstein",
+        "uri" : "http://dbpedia.org/resource/Sayn-Wittgenstein-Hohenstein"
+      }, {
+        "label" : "http://dbpedia.org/resource/State_of_Hanover",
+        "uri" : "http://dbpedia.org/resource/State_of_Hanover"
+      }, {
+        "label" : "http://dbpedia.org/resource/Territory_of_Hawaii",
+        "uri" : "http://dbpedia.org/resource/Territory_of_Hawaii"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kilwa_Sultanate",
+        "uri" : "http://dbpedia.org/resource/Kilwa_Sultanate"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kindah",
+        "uri" : "http://dbpedia.org/resource/Kindah"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kingdom_of_Iberia",
+        "uri" : "http://dbpedia.org/resource/Kingdom_of_Iberia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kingdom_of_Kubang_Pasu_Darul_Qiyam",
+        "uri" : "http://dbpedia.org/resource/Kingdom_of_Kubang_Pasu_Darul_Qiyam"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kingdom_of_Kurdistan",
+        "uri" : "http://dbpedia.org/resource/Kingdom_of_Kurdistan"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kingdom_of_Serbia_(medieval)",
+        "uri" : "http://dbpedia.org/resource/Kingdom_of_Serbia_(medieval)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Koga_Domain",
+        "uri" : "http://dbpedia.org/resource/Koga_Domain"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kong_Empire",
+        "uri" : "http://dbpedia.org/resource/Kong_Empire"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kosala_Kingdom",
+        "uri" : "http://dbpedia.org/resource/Kosala_Kingdom"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kothi_State",
+        "uri" : "http://dbpedia.org/resource/Kothi_State"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kymi_Province",
+        "uri" : "http://dbpedia.org/resource/Kymi_Province"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lacs_Region",
+        "uri" : "http://dbpedia.org/resource/Lacs_Region"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lapland_(former_province_of_Finland)",
+        "uri" : "http://dbpedia.org/resource/Lapland_(former_province_of_Finland)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Late_Period_of_ancient_Egypt",
+        "uri" : "http://dbpedia.org/resource/Late_Period_of_ancient_Egypt"
+      }, {
+        "label" : "http://dbpedia.org/resource/Later_Liao",
+        "uri" : "http://dbpedia.org/resource/Later_Liao"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lawa_Thikana",
+        "uri" : "http://dbpedia.org/resource/Lawa_Thikana"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lazica",
+        "uri" : "http://dbpedia.org/resource/Lazica"
+      }, {
+        "label" : "http://dbpedia.org/resource/Liao_(Zhou_dynasty_state)",
+        "uri" : "http://dbpedia.org/resource/Liao_(Zhou_dynasty_state)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Margraviate_of_Landsberg",
+        "uri" : "http://dbpedia.org/resource/Margraviate_of_Landsberg"
+      }, {
+        "label" : "http://dbpedia.org/resource/Northern_Liang",
+        "uri" : "http://dbpedia.org/resource/Northern_Liang"
+      }, {
+        "label" : "http://dbpedia.org/resource/Principality_of_Leiningen",
+        "uri" : "http://dbpedia.org/resource/Principality_of_Leiningen"
+      }, {
+        "label" : "http://dbpedia.org/resource/Saxe-Lauenburg",
+        "uri" : "http://dbpedia.org/resource/Saxe-Lauenburg"
+      }, {
+        "label" : "http://dbpedia.org/resource/Western_Liang_(Sixteen_Kingdoms)",
+        "uri" : "http://dbpedia.org/resource/Western_Liang_(Sixteen_Kingdoms)"
+      }, {
+        "label" : "http://dbpedia.org/resource/General_Sarmiento_Partido",
+        "uri" : "http://dbpedia.org/resource/General_Sarmiento_Partido"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hamaland",
+        "uri" : "http://dbpedia.org/resource/Hamaland"
+      }, {
+        "label" : "http://dbpedia.org/resource/Klein-Venedig",
+        "uri" : "http://dbpedia.org/resource/Klein-Venedig"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lawksawk_State",
+        "uri" : "http://dbpedia.org/resource/Lawksawk_State"
+      }, {
+        "label" : "http://dbpedia.org/resource/Republic_of_Spanish_Haiti",
+        "uri" : "http://dbpedia.org/resource/Republic_of_Spanish_Haiti"
+      }, {
+        "label" : "http://dbpedia.org/resource/Rhodanic_Republic",
+        "uri" : "http://dbpedia.org/resource/Rhodanic_Republic"
+      }, {
+        "label" : "http://dbpedia.org/resource/Una-Sana_Canton",
+        "uri" : "http://dbpedia.org/resource/Una-Sana_Canton"
+      }, {
+        "label" : "http://dbpedia.org/resource/Volhynian_Governorate",
+        "uri" : "http://dbpedia.org/resource/Volhynian_Governorate"
+      }, {
+        "label" : "http://dbpedia.org/resource/Łęczyca_Voivodeship",
+        "uri" : "http://dbpedia.org/resource/Łęczyca_Voivodeship"
+      }, {
+        "label" : "http://dbpedia.org/resource/Karluk_Yabghu",
+        "uri" : "http://dbpedia.org/resource/Karluk_Yabghu"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kart_dynasty",
+        "uri" : "http://dbpedia.org/resource/Kart_dynasty"
+      }, {
+        "label" : "http://dbpedia.org/resource/Karystia",
+        "uri" : "http://dbpedia.org/resource/Karystia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Sambalpur_State",
+        "uri" : "http://dbpedia.org/resource/Sambalpur_State"
+      }, {
+        "label" : "http://dbpedia.org/resource/Uí_Fidgenti",
+        "uri" : "http://dbpedia.org/resource/Uí_Fidgenti"
+      }, {
+        "label" : "http://dbpedia.org/resource/Warsaw_Department",
+        "uri" : "http://dbpedia.org/resource/Warsaw_Department"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mlechchha_dynasty",
+        "uri" : "http://dbpedia.org/resource/Mlechchha_dynasty"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mongol_Armenia",
+        "uri" : "http://dbpedia.org/resource/Mongol_Armenia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Principality_of_Hamamshen",
+        "uri" : "http://dbpedia.org/resource/Principality_of_Hamamshen"
+      }, {
+        "label" : "http://dbpedia.org/resource/Republic_of_Zakopane",
+        "uri" : "http://dbpedia.org/resource/Republic_of_Zakopane"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maakhir",
+        "uri" : "http://dbpedia.org/resource/Maakhir"
+      }, {
+        "label" : "http://dbpedia.org/resource/Michigan_Territory",
+        "uri" : "http://dbpedia.org/resource/Michigan_Territory"
+      }, {
+        "label" : "http://dbpedia.org/resource/Principality_of_Nassau-Orange-Fulda",
+        "uri" : "http://dbpedia.org/resource/Principality_of_Nassau-Orange-Fulda"
+      }, {
+        "label" : "http://dbpedia.org/resource/Saffarid_dynasty",
+        "uri" : "http://dbpedia.org/resource/Saffarid_dynasty"
+      }, {
+        "label" : "http://dbpedia.org/resource/Sud-Bandama",
+        "uri" : "http://dbpedia.org/resource/Sud-Bandama"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maona_of_Chios_and_Phocaea",
+        "uri" : "http://dbpedia.org/resource/Maona_of_Chios_and_Phocaea"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mar'ashis",
+        "uri" : "http://dbpedia.org/resource/Mar'ashis"
+      }, {
+        "label" : "http://dbpedia.org/resource/Moxoene",
+        "uri" : "http://dbpedia.org/resource/Moxoene"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nurgan_Regional_Military_Commission",
+        "uri" : "http://dbpedia.org/resource/Nurgan_Regional_Military_Commission"
+      }, {
+        "label" : "http://dbpedia.org/resource/Rasulid_dynasty",
+        "uri" : "http://dbpedia.org/resource/Rasulid_dynasty"
+      }, {
+        "label" : "http://dbpedia.org/resource/Zimbabwe_Rhodesia",
+        "uri" : "http://dbpedia.org/resource/Zimbabwe_Rhodesia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Öland_County",
+        "uri" : "http://dbpedia.org/resource/Öland_County"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nord_Department_(Ivory_Coast)",
+        "uri" : "http://dbpedia.org/resource/Nord_Department_(Ivory_Coast)"
+      }, {
+        "label" : "http://dbpedia.org/resource/November_1918_in_Alsace-Lorraine",
+        "uri" : "http://dbpedia.org/resource/November_1918_in_Alsace-Lorraine"
+      }, {
+        "label" : "http://dbpedia.org/resource/Numidia",
+        "uri" : "http://dbpedia.org/resource/Numidia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Peten_Itza_kingdom",
+        "uri" : "http://dbpedia.org/resource/Peten_Itza_kingdom"
+      }, {
+        "label" : "http://dbpedia.org/resource/Marlborough_County",
+        "uri" : "http://dbpedia.org/resource/Marlborough_County"
+      }, {
+        "label" : "http://dbpedia.org/resource/Marstrand_Free_Port",
+        "uri" : "http://dbpedia.org/resource/Marstrand_Free_Port"
+      }, {
+        "label" : "http://dbpedia.org/resource/Midrarid_dynasty",
+        "uri" : "http://dbpedia.org/resource/Midrarid_dynasty"
+      }, {
+        "label" : "http://dbpedia.org/resource/Switzerland_in_the_Napoleonic_era",
+        "uri" : "http://dbpedia.org/resource/Switzerland_in_the_Napoleonic_era"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nafplia_Province",
+        "uri" : "http://dbpedia.org/resource/Nafplia_Province"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nagvanshis_of_Chotanagpur",
+        "uri" : "http://dbpedia.org/resource/Nagvanshis_of_Chotanagpur"
+      }, {
+        "label" : "http://dbpedia.org/resource/Mường_Autonomous_Territory",
+        "uri" : "http://dbpedia.org/resource/Mường_Autonomous_Territory"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nasrid_dynasty_(Sistan)",
+        "uri" : "http://dbpedia.org/resource/Nasrid_dynasty_(Sistan)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Tashkent_(1784)",
+        "uri" : "http://dbpedia.org/resource/Tashkent_(1784)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Independent_Albania",
+        "uri" : "http://dbpedia.org/resource/Independent_Albania"
+      } ]
+    },
+    "combination" : false
+  }, {
+    "id" : "3",
+    "lexicalEntryUri" : null,
+    "language" : "TA",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is $x located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple ?subjOfProp <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "http://dbpedia.org/resource/Durham_County,_Ontario",
+        "uri" : "http://dbpedia.org/resource/Durham_County,_Ontario"
+      }, {
+        "label" : "http://dbpedia.org/resource/Gachiani",
+        "uri" : "http://dbpedia.org/resource/Gachiani"
+      }, {
+        "label" : "http://dbpedia.org/resource/New_England_Colonies",
+        "uri" : "http://dbpedia.org/resource/New_England_Colonies"
+      }, {
+        "label" : "http://dbpedia.org/resource/Wellington_District,_Upper_Canada",
+        "uri" : "http://dbpedia.org/resource/Wellington_District,_Upper_Canada"
+      }, {
+        "label" : "http://dbpedia.org/resource/York,_Upper_Canada",
+        "uri" : "http://dbpedia.org/resource/York,_Upper_Canada"
+      }, {
+        "label" : "http://dbpedia.org/resource/Corwin,_Henry_County,_Indiana",
+        "uri" : "http://dbpedia.org/resource/Corwin,_Henry_County,_Indiana"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hertevin",
+        "uri" : "http://dbpedia.org/resource/Hertevin"
+      }, {
+        "label" : "http://dbpedia.org/resource/Koh_Band_District",
+        "uri" : "http://dbpedia.org/resource/Koh_Band_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Zurmat_District",
+        "uri" : "http://dbpedia.org/resource/Zurmat_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Jaghatu_District_(Maidan_Wardak)__Jaghatu__1",
+        "uri" : "http://dbpedia.org/resource/Jaghatu_District_(Maidan_Wardak)__Jaghatu__1"
+      }, {
+        "label" : "http://dbpedia.org/resource/'Aliabad",
+        "uri" : "http://dbpedia.org/resource/'Aliabad"
+      }, {
+        "label" : "http://dbpedia.org/resource/Achin_District",
+        "uri" : "http://dbpedia.org/resource/Achin_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Adineh_Masjed",
+        "uri" : "http://dbpedia.org/resource/Adineh_Masjed"
+      }, {
+        "label" : "http://dbpedia.org/resource/Adraskan",
+        "uri" : "http://dbpedia.org/resource/Adraskan"
+      }, {
+        "label" : "http://dbpedia.org/resource/Adraskan_District",
+        "uri" : "http://dbpedia.org/resource/Adraskan_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Afshar,_Kabul",
+        "uri" : "http://dbpedia.org/resource/Afshar,_Kabul"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ahandara",
+        "uri" : "http://dbpedia.org/resource/Ahandara"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ahangaran",
+        "uri" : "http://dbpedia.org/resource/Ahangaran"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ahmad_Shah_Baba_Mina",
+        "uri" : "http://dbpedia.org/resource/Ahmad_Shah_Baba_Mina"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ahtaj",
+        "uri" : "http://dbpedia.org/resource/Ahtaj"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ajar,_Afghanistan",
+        "uri" : "http://dbpedia.org/resource/Ajar,_Afghanistan"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ajrim",
+        "uri" : "http://dbpedia.org/resource/Ajrim"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ajristan_District",
+        "uri" : "http://dbpedia.org/resource/Ajristan_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ak_Bolak",
+        "uri" : "http://dbpedia.org/resource/Ak_Bolak"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ak_Tapa",
+        "uri" : "http://dbpedia.org/resource/Ak_Tapa"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ak_Toba",
+        "uri" : "http://dbpedia.org/resource/Ak_Toba"
+      }, {
+        "label" : "http://dbpedia.org/resource/Akhjar",
+        "uri" : "http://dbpedia.org/resource/Akhjar"
+      }, {
+        "label" : "http://dbpedia.org/resource/Akhshay",
+        "uri" : "http://dbpedia.org/resource/Akhshay"
+      }, {
+        "label" : "http://dbpedia.org/resource/Alasay",
+        "uri" : "http://dbpedia.org/resource/Alasay"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bayram,_Baghlan",
+        "uri" : "http://dbpedia.org/resource/Bayram,_Baghlan"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bayri",
+        "uri" : "http://dbpedia.org/resource/Bayri"
+      }, {
+        "label" : "http://dbpedia.org/resource/Baza'i_Gonbad",
+        "uri" : "http://dbpedia.org/resource/Baza'i_Gonbad"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bazar-e_Taleh",
+        "uri" : "http://dbpedia.org/resource/Bazar-e_Taleh"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bazar-i-Panjwayi",
+        "uri" : "http://dbpedia.org/resource/Bazar-i-Panjwayi"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bazarak",
+        "uri" : "http://dbpedia.org/resource/Bazarak"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bazarak,_Balkh",
+        "uri" : "http://dbpedia.org/resource/Bazarak,_Balkh"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bazarak_District",
+        "uri" : "http://dbpedia.org/resource/Bazarak_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bazargan,_Afghanistan",
+        "uri" : "http://dbpedia.org/resource/Bazargan,_Afghanistan"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bazartu",
+        "uri" : "http://dbpedia.org/resource/Bazartu"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bazgir,_Badakhshan",
+        "uri" : "http://dbpedia.org/resource/Bazgir,_Badakhshan"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bed-e_Khva",
+        "uri" : "http://dbpedia.org/resource/Bed-e_Khva"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bekhe_Qada",
+        "uri" : "http://dbpedia.org/resource/Bekhe_Qada"
+      }, {
+        "label" : "http://dbpedia.org/resource/Berana",
+        "uri" : "http://dbpedia.org/resource/Berana"
+      }, {
+        "label" : "http://dbpedia.org/resource/Besh_Qol",
+        "uri" : "http://dbpedia.org/resource/Besh_Qol"
+      }, {
+        "label" : "http://dbpedia.org/resource/Beygshahr",
+        "uri" : "http://dbpedia.org/resource/Beygshahr"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bia_Mordeh",
+        "uri" : "http://dbpedia.org/resource/Bia_Mordeh"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bid-e_Kalan",
+        "uri" : "http://dbpedia.org/resource/Bid-e_Kalan"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bid_Khvah",
+        "uri" : "http://dbpedia.org/resource/Bid_Khvah"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bid_Qowl_Bala",
+        "uri" : "http://dbpedia.org/resource/Bid_Qowl_Bala"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bidak,_Afghanistan",
+        "uri" : "http://dbpedia.org/resource/Bidak,_Afghanistan"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bidqowl",
+        "uri" : "http://dbpedia.org/resource/Bidqowl"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bihsud_District",
+        "uri" : "http://dbpedia.org/resource/Bihsud_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Bilchiragh_District",
+        "uri" : "http://dbpedia.org/resource/Bilchiragh_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Cawgay",
+        "uri" : "http://dbpedia.org/resource/Cawgay"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chaghcharan",
+        "uri" : "http://dbpedia.org/resource/Chaghcharan"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chaghcharan_District",
+        "uri" : "http://dbpedia.org/resource/Chaghcharan_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chah_Ab_District",
+        "uri" : "http://dbpedia.org/resource/Chah_Ab_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chahar_Dar",
+        "uri" : "http://dbpedia.org/resource/Chahar_Dar"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chahar_Kent",
+        "uri" : "http://dbpedia.org/resource/Chahar_Kent"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chahar_Mahalleh",
+        "uri" : "http://dbpedia.org/resource/Chahar_Mahalleh"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chaharikar_District",
+        "uri" : "http://dbpedia.org/resource/Chaharikar_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chahi",
+        "uri" : "http://dbpedia.org/resource/Chahi"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chakaran",
+        "uri" : "http://dbpedia.org/resource/Chakaran"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chakari,_Afghanistan",
+        "uri" : "http://dbpedia.org/resource/Chakari,_Afghanistan"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chakav",
+        "uri" : "http://dbpedia.org/resource/Chakav"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chakhansur_(village)",
+        "uri" : "http://dbpedia.org/resource/Chakhansur_(village)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chakhansur_District",
+        "uri" : "http://dbpedia.org/resource/Chakhansur_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chaki_Wardak",
+        "uri" : "http://dbpedia.org/resource/Chaki_Wardak"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chaki_Wardak_District",
+        "uri" : "http://dbpedia.org/resource/Chaki_Wardak_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chal_District",
+        "uri" : "http://dbpedia.org/resource/Chal_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chalas",
+        "uri" : "http://dbpedia.org/resource/Chalas"
+      }, {
+        "label" : "http://dbpedia.org/resource/Cham_Qalʽeh",
+        "uri" : "http://dbpedia.org/resource/Cham_Qalʽeh"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chaman-e_Bid,_Afghanistan",
+        "uri" : "http://dbpedia.org/resource/Chaman-e_Bid,_Afghanistan"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chap_Qowlak",
+        "uri" : "http://dbpedia.org/resource/Chap_Qowlak"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chapa_Dara",
+        "uri" : "http://dbpedia.org/resource/Chapa_Dara"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chapa_Dara_District",
+        "uri" : "http://dbpedia.org/resource/Chapa_Dara_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chaparhar_District",
+        "uri" : "http://dbpedia.org/resource/Chaparhar_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chapchal",
+        "uri" : "http://dbpedia.org/resource/Chapchal"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chaqmaqtin_Lake",
+        "uri" : "http://dbpedia.org/resource/Chaqmaqtin_Lake"
+      }, {
+        "label" : "http://dbpedia.org/resource/Char_Asiab",
+        "uri" : "http://dbpedia.org/resource/Char_Asiab"
+      }, {
+        "label" : "http://dbpedia.org/resource/Char_Asiab_District",
+        "uri" : "http://dbpedia.org/resource/Char_Asiab_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Char_Bulak",
+        "uri" : "http://dbpedia.org/resource/Char_Bulak"
+      }, {
+        "label" : "http://dbpedia.org/resource/Char_Dara_District",
+        "uri" : "http://dbpedia.org/resource/Char_Dara_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Char_Kateh",
+        "uri" : "http://dbpedia.org/resource/Char_Kateh"
+      }, {
+        "label" : "http://dbpedia.org/resource/Charbolak_District",
+        "uri" : "http://dbpedia.org/resource/Charbolak_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Charikar",
+        "uri" : "http://dbpedia.org/resource/Charikar"
+      }, {
+        "label" : "http://dbpedia.org/resource/Charkint_District",
+        "uri" : "http://dbpedia.org/resource/Charkint_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Dado,_Afghanistan",
+        "uri" : "http://dbpedia.org/resource/Dado,_Afghanistan"
+      }, {
+        "label" : "http://dbpedia.org/resource/Dadwal",
+        "uri" : "http://dbpedia.org/resource/Dadwal"
+      }, {
+        "label" : "http://dbpedia.org/resource/Dahan-e_Av_Par",
+        "uri" : "http://dbpedia.org/resource/Dahan-e_Av_Par"
+      }, {
+        "label" : "http://dbpedia.org/resource/Dahan-e_Baghdarreh",
+        "uri" : "http://dbpedia.org/resource/Dahan-e_Baghdarreh"
+      }, {
+        "label" : "http://dbpedia.org/resource/Dahan-e_Chahar_Deh",
+        "uri" : "http://dbpedia.org/resource/Dahan-e_Chahar_Deh"
+      }, {
+        "label" : "http://dbpedia.org/resource/Dahan-e_Darreh_Chasht",
+        "uri" : "http://dbpedia.org/resource/Dahan-e_Darreh_Chasht"
+      }, {
+        "label" : "http://dbpedia.org/resource/Dahan-e_Dival",
+        "uri" : "http://dbpedia.org/resource/Dahan-e_Dival"
+      }, {
+        "label" : "http://dbpedia.org/resource/Dahan-e_Do_Laneh",
+        "uri" : "http://dbpedia.org/resource/Dahan-e_Do_Laneh"
+      }, {
+        "label" : "http://dbpedia.org/resource/Dahan-e_Eshposhteh",
+        "uri" : "http://dbpedia.org/resource/Dahan-e_Eshposhteh"
+      }, {
+        "label" : "http://dbpedia.org/resource/Dahan-e_Fatu",
+        "uri" : "http://dbpedia.org/resource/Dahan-e_Fatu"
+      }, {
+        "label" : "http://dbpedia.org/resource/Dahan-e_Jow_Palal",
+        "uri" : "http://dbpedia.org/resource/Dahan-e_Jow_Palal"
+      }, {
+        "label" : "http://dbpedia.org/resource/Dahan-e_Jowkak",
+        "uri" : "http://dbpedia.org/resource/Dahan-e_Jowkak"
+      }, {
+        "label" : "http://dbpedia.org/resource/Dahan-e_Kanak",
+        "uri" : "http://dbpedia.org/resource/Dahan-e_Kanak"
+      } ]
+    },
+    "combination" : false
+  } ]
+}

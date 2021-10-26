@@ -25,7 +25,7 @@ java -jar target/QuestionGrammarGenerator.jar TA lexicon/it outputDB 10 csv data
 Run Evaluation
 
 ````shell script
-java -jar target/QuestionGrammarGenerator.jar TA qald outputDB dataset/dbpedia.json
+java -jar target/QuestionGrammarGenerator.jar TA qald output dataset/dbpedia.json
 ````
 
 

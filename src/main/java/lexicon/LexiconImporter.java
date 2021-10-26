@@ -27,6 +27,7 @@ import java.util.stream.Stream;
 @Data
 public class LexiconImporter {
   private static final String PATH_TO_BASE_FILE = "/base/base.ttl";
+  private static final String  dir="src/main/resources/";
   private static Logger LOG = LogManager.getLogger(LexiconImporter.class);
 
   public LexiconImporter() {}
@@ -63,7 +64,7 @@ public class LexiconImporter {
     String internalResourceDir,
     LemonSerializer serializer
   ) throws FileNotFoundException {
-      String dir="/home/elahi/AHack/tamil/question-grammar-generator/src/main/resources/";
+     
     File initialFile = new File(dir+internalResourceDir + PATH_TO_BASE_FILE);
     InputStream inputStream = new FileInputStream(initialFile);
     //InputStream inputStream = new InputStream(new File(internalResourceDir + PATH_TO_BASE_FILE));

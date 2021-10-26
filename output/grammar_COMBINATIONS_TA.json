@@ -1,0 +1,167 @@
+{
+  "grammarEntries" : [ {
+    "id" : "4",
+    "lexicalEntryUri" : null,
+    "language" : "TA",
+    "type" : "SENTENCE",
+    "bindingType" : "PLACE",
+    "returnType" : "PLACE",
+    "frameType" : "NPP",
+    "sentences" : [ "இன் $x தலைநகரம் இன் தலைநகரம் எது?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/capital> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/capital> ?subjOfProp)\n)\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "http://dbpedia.org/resource/Hispania",
+        "uri" : "http://dbpedia.org/resource/Hispania"
+      }, {
+        "label" : "http://dbpedia.org/resource/Chera_dynasty",
+        "uri" : "http://dbpedia.org/resource/Chera_dynasty"
+      }, {
+        "label" : "http://dbpedia.org/resource/Principality_of_Valona",
+        "uri" : "http://dbpedia.org/resource/Principality_of_Valona"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kholm_Governorate_(Ukraine)",
+        "uri" : "http://dbpedia.org/resource/Kholm_Governorate_(Ukraine)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Illyrian_Provinces",
+        "uri" : "http://dbpedia.org/resource/Illyrian_Provinces"
+      }, {
+        "label" : "http://dbpedia.org/resource/Northern_Wei",
+        "uri" : "http://dbpedia.org/resource/Northern_Wei"
+      }, {
+        "label" : "http://dbpedia.org/resource/Western_Union_(alliance)",
+        "uri" : "http://dbpedia.org/resource/Western_Union_(alliance)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Reichsgau_Danzig-West_Prussia",
+        "uri" : "http://dbpedia.org/resource/Reichsgau_Danzig-West_Prussia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Edom",
+        "uri" : "http://dbpedia.org/resource/Edom"
+      }, {
+        "label" : "http://dbpedia.org/resource/Republic_of_Sonora",
+        "uri" : "http://dbpedia.org/resource/Republic_of_Sonora"
+      }, {
+        "label" : "http://dbpedia.org/resource/Louisiana",
+        "uri" : "http://dbpedia.org/resource/Louisiana"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kingdom_of_Artsakh",
+        "uri" : "http://dbpedia.org/resource/Kingdom_of_Artsakh"
+      }, {
+        "label" : "http://dbpedia.org/resource/First_Intermediate_Period_of_Egypt",
+        "uri" : "http://dbpedia.org/resource/First_Intermediate_Period_of_Egypt"
+      }, {
+        "label" : "http://dbpedia.org/resource/Nagar_(princely_state)",
+        "uri" : "http://dbpedia.org/resource/Nagar_(princely_state)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Panama_State",
+        "uri" : "http://dbpedia.org/resource/Panama_State"
+      }, {
+        "label" : "http://dbpedia.org/resource/Republic_of_Independent_Guiana",
+        "uri" : "http://dbpedia.org/resource/Republic_of_Independent_Guiana"
+      }, {
+        "label" : "http://dbpedia.org/resource/Republic_of_San_Marco",
+        "uri" : "http://dbpedia.org/resource/Republic_of_San_Marco"
+      }, {
+        "label" : "http://dbpedia.org/resource/State_of_Kanawha",
+        "uri" : "http://dbpedia.org/resource/State_of_Kanawha"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kingdom_of_Araucanía_and_Patagonia",
+        "uri" : "http://dbpedia.org/resource/Kingdom_of_Araucanía_and_Patagonia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Phulra",
+        "uri" : "http://dbpedia.org/resource/Phulra"
+      }, {
+        "label" : "http://dbpedia.org/resource/Thirteen_Colonies",
+        "uri" : "http://dbpedia.org/resource/Thirteen_Colonies"
+      }, {
+        "label" : "http://dbpedia.org/resource/Königsegg",
+        "uri" : "http://dbpedia.org/resource/Königsegg"
+      }, {
+        "label" : "http://dbpedia.org/resource/Third_Intermediate_Period_of_Egypt",
+        "uri" : "http://dbpedia.org/resource/Third_Intermediate_Period_of_Egypt"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kidarites",
+        "uri" : "http://dbpedia.org/resource/Kidarites"
+      }, {
+        "label" : "http://dbpedia.org/resource/Dutch_East_Indies",
+        "uri" : "http://dbpedia.org/resource/Dutch_East_Indies"
+      }, {
+        "label" : "http://dbpedia.org/resource/French_and_British_interregnum_in_the_Dutch_East_Indies",
+        "uri" : "http://dbpedia.org/resource/French_and_British_interregnum_in_the_Dutch_East_Indies"
+      }, {
+        "label" : "http://dbpedia.org/resource/Second_Intermediate_Period_of_Egypt",
+        "uri" : "http://dbpedia.org/resource/Second_Intermediate_Period_of_Egypt"
+      }, {
+        "label" : "http://dbpedia.org/resource/Confederation_of_the_Rhine",
+        "uri" : "http://dbpedia.org/resource/Confederation_of_the_Rhine"
+      }, {
+        "label" : "http://dbpedia.org/resource/German_Confederation",
+        "uri" : "http://dbpedia.org/resource/German_Confederation"
+      }, {
+        "label" : "http://dbpedia.org/resource/German_Empire_(1848–49)",
+        "uri" : "http://dbpedia.org/resource/German_Empire_(1848–49)"
+      }, {
+        "label" : "http://dbpedia.org/resource/Buyid_dynasty",
+        "uri" : "http://dbpedia.org/resource/Buyid_dynasty"
+      }, {
+        "label" : "http://dbpedia.org/resource/Numidia",
+        "uri" : "http://dbpedia.org/resource/Numidia"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kel_Ahaggar",
+        "uri" : "http://dbpedia.org/resource/Kel_Ahaggar"
+      }, {
+        "label" : "http://dbpedia.org/resource/Dacia_Ripensis",
+        "uri" : "http://dbpedia.org/resource/Dacia_Ripensis"
+      }, {
+        "label" : "http://dbpedia.org/resource/Sanjak_of_Nicopolis",
+        "uri" : "http://dbpedia.org/resource/Sanjak_of_Nicopolis"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kingdom_of_Kongo",
+        "uri" : "http://dbpedia.org/resource/Kingdom_of_Kongo"
+      }, {
+        "label" : "http://dbpedia.org/resource/Stolberg-Wernigerode",
+        "uri" : "http://dbpedia.org/resource/Stolberg-Wernigerode"
+      }, {
+        "label" : "http://dbpedia.org/resource/Taifa_of_Algeciras",
+        "uri" : "http://dbpedia.org/resource/Taifa_of_Algeciras"
+      }, {
+        "label" : "http://dbpedia.org/resource/Taifa_of_Badajoz",
+        "uri" : "http://dbpedia.org/resource/Taifa_of_Badajoz"
+      }, {
+        "label" : "http://dbpedia.org/resource/Lacedaemon_Province",
+        "uri" : "http://dbpedia.org/resource/Lacedaemon_Province"
+      }, {
+        "label" : "http://dbpedia.org/resource/Yamatai",
+        "uri" : "http://dbpedia.org/resource/Yamatai"
+      }, {
+        "label" : "http://dbpedia.org/resource/Aztec_Empire",
+        "uri" : "http://dbpedia.org/resource/Aztec_Empire"
+      }, {
+        "label" : "http://dbpedia.org/resource/North_Sea_Empire",
+        "uri" : "http://dbpedia.org/resource/North_Sea_Empire"
+      }, {
+        "label" : "http://dbpedia.org/resource/Free_City_of_Danzig_Government_in_Exile",
+        "uri" : "http://dbpedia.org/resource/Free_City_of_Danzig_Government_in_Exile"
+      }, {
+        "label" : "http://dbpedia.org/resource/Captaincy_General_of_the_Philippines",
+        "uri" : "http://dbpedia.org/resource/Captaincy_General_of_the_Philippines"
+      }, {
+        "label" : "http://dbpedia.org/resource/United_States_Military_Government_of_the_Philippine_Islands",
+        "uri" : "http://dbpedia.org/resource/United_States_Military_Government_of_the_Philippine_Islands"
+      }, {
+        "label" : "http://dbpedia.org/resource/Xianbei_state",
+        "uri" : "http://dbpedia.org/resource/Xianbei_state"
+      }, {
+        "label" : "http://dbpedia.org/resource/Yunnan_Province,_Republic_of_China",
+        "uri" : "http://dbpedia.org/resource/Yunnan_Province,_Republic_of_China"
+      } ]
+    },
+    "combination" : true
+  } ]
+}

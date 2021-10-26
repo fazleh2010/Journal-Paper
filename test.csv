@@ -1,3 +1,0 @@
-id,question,sparql,answer_rdf,answer,frame
-0,Quale era la australiani ecclesiastico?,SELECT DISTINCT ?uri WHERE { ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Cleric> ; <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Australia> },http://dbpedia.org/resource/Keith_Rayner,,AA
-1,Quale erano australiani ecclesiasticos?,SELECT DISTINCT ?uri WHERE { ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Cleric> ; <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Australia> },http://dbpedia.org/resource/Keith_Rayner,,AA

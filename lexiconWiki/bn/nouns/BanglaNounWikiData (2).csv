@@ -1,5 +1,0 @@
-LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range
-causeOfDeath_of,noun,মৃত্যুর কারণ,মৃত্যুর কারণগুলো,এর,NounPPFrame,range,domain,1,wdt:P509,wd:Q5,wd:Q18608756
-birthPlace_of,noun,জন্মস্থান,-,এর,NounPPFrame,range,domain,1,wdt:P19,wd:Q5,wd:Q3624078
-nationality_of,noun,জাতীয়তা,-,এর,NounPPFrame,range,domain,1,wdt:P27,wd:Q5,wd:Q3624078
-author_of,noun,লেখক,লেখকদের,এর,NounPPFrame,range,domain,1,wdt:P50,wd:Q571,wd:Q5
