@@ -8,11 +8,14 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import static java.lang.System.exit;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -59,9 +62,11 @@ public class LexiconImporter {
   private LemonModel loadBaseFileFromResources(
     String internalResourceDir,
     LemonSerializer serializer
-  ) {
-    InputStream inputStream = ClassLoader.getSystemResourceAsStream(internalResourceDir + PATH_TO_BASE_FILE);
-    assert inputStream != null;
+  ) throws FileNotFoundException {
+      String dir="/home/elahi/AHack/tamil/question-grammar-generator/src/main/resources/";
+    File initialFile = new File(dir+internalResourceDir + PATH_TO_BASE_FILE);
+    InputStream inputStream = new FileInputStream(initialFile);
+    //InputStream inputStream = new InputStream(new File(internalResourceDir + PATH_TO_BASE_FILE));
     InputStreamReader inputStreamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
     return serializer.read(new BufferedReader(inputStreamReader));
   }
