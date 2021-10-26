@@ -36,9 +36,9 @@ public class Writer {
         List<String[]> list = new ArrayList<>();
         list.add(new String[]{
             "QALD id",
-            "QALD original question",
-            "QALD original SPARQL query",
-            "QueGG original question",
+            "QALD question",
+            "QALD SPARQL query",
+            "QueGG question",
             "QueGG SPARQL query",
             "TP",
             "FP",
@@ -62,7 +62,7 @@ public class Writer {
                         entryComparison.getQaldEntry().getId(),
                         qaldQuestion,
                         qaldSparql,
-                        entryComparison.getQaldEntry().getQuestions(),
+                        entryComparison.getQueGGEntry().getQuestions(),
                         !isNull(entryComparison.getQueGGEntry())
                         ? entryComparison.getQueGGEntry().getSparql()
                         : "", // entryComparison.getQueGGEntries().stream().filter(entry -> entry.).getSentences().stream().reduce((x, y) -> x + "\n" + y).orElse(""),
