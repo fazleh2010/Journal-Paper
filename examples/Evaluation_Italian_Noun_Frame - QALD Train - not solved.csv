@@ -1,0 +1,3 @@
+LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,,,,,,,,,,,,,,,,
+spouse-of_m,noun,il marito,le mogli,di,NounPPFrame,range,domain,1,dbo:spouse,dbo:Person,dbo:Person,,,,,,,,,,,,,#N/A,#N/A,,2
+spouse-of_f,noun,la moglie,i creatori,di,NounPPFrame,range,domain,1,dbo:spouse,dbo:Person,dbo:Person,,,,,,,,,,,,,#N/A,#N/A,,2

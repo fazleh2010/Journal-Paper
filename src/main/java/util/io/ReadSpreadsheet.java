@@ -42,9 +42,9 @@ public class ReadSpreadsheet {
         // Print entries
         ListFeed feed = (ListFeed) service.getFeed(listFeedUrl, ListFeed.class);
         for (ListEntry entry : feed.getEntries()) {
-            System.out.println("new row");
+            //System.out.println("new row");
             for (String tag : entry.getCustomElements().getTags()) {
-                System.out.println("     " + tag + ": " + entry.getCustomElements().getValue(tag));
+                //System.out.println("     " + tag + ": " + entry.getCustomElements().getValue(tag));
             }
         }
     }

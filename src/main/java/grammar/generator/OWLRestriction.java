@@ -46,4 +46,9 @@ public class OWLRestriction {
     return this;
   }
 
+    @Override
+    public String toString() {
+        return "OWLRestriction{" + "lexicon=" + lexicon + ", lexicalSenseReference=" + lexicalSenseReference + ", property=" + property + ", value=" + value + '}';
+    }
+
 }

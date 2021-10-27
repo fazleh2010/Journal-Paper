@@ -1,0 +1,43 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :creator_of_m ;
+  lemon:entry    :di .
+
+:creator_of_m a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :creator_of_m_form ;
+  lemon:sense          :creator_of_m_sense_1 ;
+  lemon:synBehavior    :creator_of_m_nounpp .
+
+:creator_of_m_form a lemon:Form ;
+  lemon:writtenRep "il creatore"@it .
+
+:creator_of_m_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:creator_of_m_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :creator_of_m_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/creator> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :creator_of_m_sense_1_condition .
+
+:creator_of_m_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Person> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Agent> .
+
+:arg2 lemon:marker :di .
+
+## Prepositions ##
+
+:di a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "di"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
