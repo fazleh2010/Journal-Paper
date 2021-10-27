@@ -1,5 +1,0 @@
-LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,SyntacticFrame,subject,directObject,sense,reference,domain,range
-Create_1,verb,creare,crea,ha creato,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Agent
-Create_2,verb,creare,crea,ha creato,TransitiveFrame,range,domain,2,dbo:creator,dbo:Book,dbo:Agent
-Create_3,verb,creare,crea,ha creato,TransitiveFrame,range,domain,3,dbo:creator,dbo:Website,dbo:Agent
-Create_4,verb,creare,crea,ha creato,TransitiveFrame,range,domain,4,dbo:creator,dbo:Work,dbo:Agent
