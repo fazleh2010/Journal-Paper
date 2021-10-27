@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_lead ;
+  lemon:entry    :leaded ;
+  lemon:entry    :da .
+
+:to_lead a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_lead ;
+  lemon:otherForm      :form_leads ;
+  lemon:otherForm      :form_leaded ;
+  lemon:sense          :lead_sense_1 ;
+  lemon:synBehavior    :lead_frame_transitive .
+
+:form_lead a         lemon:Form ;
+  lemon:writtenRep     "guidare"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_leads a    lemon:Form ;
+  lemon:writtenRep "guida"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_leaded a   lemon:Form ;
+  lemon:writtenRep "guiidava"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:lead_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :lead_subj ;
+  lexinfo:directObject     :lead_obj .
+
+:lead_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :lead_sense_1 ;
+  lemon:reference   <http://dbpedia.org/property/leaderName> ;
+  lemon:subjOfProp  :lead_obj ;
+  lemon:objOfProp   :lead_subj ;
+  lemon:condition   :lead_sense_1_condition .
+
+
+:lead_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Place> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:leaded a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_leaded_canonical ;
+  lemon:otherForm      :form_leaded_by ;
+  lemon:synBehavior    :leaded_frame_adjectivepp ;
+  lemon:sense          :leaded_ontomap .
+
+:form_leaded_canonical a lemon:Form ;
+  lemon:writtenRep         "guidare"@it .
+
+:form_leaded_by a    lemon:Form ;
+  lemon:writtenRep     "guidare"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:leaded_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :leaded_subj ;
+  lexinfo:prepositionalAdjunct :leaded_obj .
+
+:leaded_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :leaded_ontomap ;
+  lemon:reference   <http://dbpedia.org/property/leaderName> ;
+  lemon:subjOfProp  :leaded_subj ;
+  lemon:objOfProp   :leaded_obj ;
+  lemon:condition   :lead_sense_1_condition .
+:leaded_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

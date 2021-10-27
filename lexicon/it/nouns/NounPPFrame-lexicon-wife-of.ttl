@@ -1,0 +1,43 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :wife-of ;
+  lemon:entry    :di .
+
+:wife-of a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :wife-of_form ;
+  lemon:sense          :wife-of_sense_1 ;
+  lemon:synBehavior    :wife-of_nounpp .
+
+:wife-of_form a lemon:Form ;
+  lemon:writtenRep "la moglie"@it .
+
+:wife-of_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:wife-of_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :wife-of_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/spouse> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :wife-of_sense_1_condition .
+
+:wife-of_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Person> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Person> .
+
+:arg2 lemon:marker :di .
+
+## Prepositions ##
+
+:di a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "di"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

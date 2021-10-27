@@ -17,7 +17,7 @@ public class QueGGGermanTest {
     private static Language language = Language.stringToLanguage("DE");
 
    
-    public static void main(String []agrs) {
+    /*public static void main(String []agrs) {
         QueGG queGG = new QueGG();
         try {
             queGG.init(language, inputDir, outputDir);
@@ -25,5 +25,5 @@ public class QueGGGermanTest {
             java.util.logging.Logger.getLogger(QueGGGermanTest.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-    }
+    }*/
 }

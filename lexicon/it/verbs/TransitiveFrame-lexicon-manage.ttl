@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_manage ;
+  lemon:entry    :manageed ;
+  lemon:entry    :da .
+
+:to_manage a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_manage ;
+  lemon:otherForm      :form_manages ;
+  lemon:otherForm      :form_manageed ;
+  lemon:sense          :manage_sense_1 ;
+  lemon:synBehavior    :manage_frame_transitive .
+
+:form_manage a         lemon:Form ;
+  lemon:writtenRep     "occuparsi"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_manages a    lemon:Form ;
+  lemon:writtenRep "si occupa"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_manageed a   lemon:Form ;
+  lemon:writtenRep "si occupava"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:manage_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :manage_subj ;
+  lexinfo:directObject     :manage_obj .
+
+:manage_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :manage_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/managerClub> ;
+  lemon:subjOfProp  :manage_obj ;
+  lemon:objOfProp   :manage_subj ;
+  lemon:condition   :manage_sense_1_condition .
+
+
+:manage_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/SportsTeam> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Athlete> .
+
+:manageed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_manageed_canonical ;
+  lemon:otherForm      :form_manageed_by ;
+  lemon:synBehavior    :manageed_frame_adjectivepp ;
+  lemon:sense          :manageed_ontomap .
+
+:form_manageed_canonical a lemon:Form ;
+  lemon:writtenRep         "occuparsi"@it .
+
+:form_manageed_by a    lemon:Form ;
+  lemon:writtenRep     "occuparsi"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:manageed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :manageed_subj ;
+  lexinfo:prepositionalAdjunct :manageed_obj .
+
+:manageed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :manageed_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/managerClub> ;
+  lemon:subjOfProp  :manageed_subj ;
+  lemon:objOfProp   :manageed_obj ;
+  lemon:condition   :manage_sense_1_condition .
+:manageed_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

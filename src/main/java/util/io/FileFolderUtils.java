@@ -8,6 +8,7 @@ package util.io;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.github.jsonldjava.shaded.com.google.common.collect.Sets;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -188,7 +189,7 @@ public class FileFolderUtils {
         return lists;
     }
 
-    public static LinkedHashMap<String, String> fileToHashOrg(String fileName) throws FileNotFoundException, IOException {
+    public static LinkedHashMap<String, String> fileToHashOrg(String fileName,String seperator) throws FileNotFoundException, IOException {
         LinkedHashMap<String, String> hash = new LinkedHashMap<String, String>();
         BufferedReader reader;
         String line = "";
@@ -198,12 +199,14 @@ public class FileFolderUtils {
             while (line != null) {
                 line = reader.readLine();
                 if (line != null) {
-                    if (line.contains(" ")) {
-                        String[] info = line.split(" ");
-                        String key = info[0];
-                        String value = info[1];
+                    if (line.contains(seperator)) {
+                        String[] info = line.split(seperator);
+                        String key = info[0].trim().stripLeading().stripTrailing().strip();
+                        String value = info[1].trim().stripLeading().stripTrailing().strip();
                         hash.put(key, value);
                     }
+                    else
+                       System.out.println("line::"+line);
 
                 }
 
@@ -213,6 +216,19 @@ public class FileFolderUtils {
             e.printStackTrace();
         }
         return hash;
+    }
+    
+    public static void hashOrgToFile(LinkedHashMap<String, String> orgHash, String fileName) throws FileNotFoundException, IOException {
+        BufferedReader reader;
+        String str = "";
+
+        for (String key : orgHash.keySet()) {
+            String value = orgHash.get(key);
+            String line = key + "=" + value+ "\n" ;
+            str += line;
+        }
+        stringToFiles(str, fileName);
+
     }
 
     public static Set<String> fileToSet(String fileName) throws FileNotFoundException, IOException {
@@ -547,6 +563,30 @@ public class FileFolderUtils {
         return false;
     }
     
+    
+    public static void main(String[] args) throws IOException {
+        String dir = "/home/elahi/AHack/italian/question-grammar-generator/src/main/resources/it/base/";
+        String genderFileName = "gender.txt";
+        String labeledGenderFileName = "genderLabeled.txt";
+        String allFileName = "all.txt";
+        String genderNotLabeled = "genderNotLabeled.txt";
+        String seperator = "=";
+        LinkedHashMap<String, String> map = FileFolderUtils.fileToHashOrg(dir + genderFileName, seperator);
+        FileFolderUtils.hashOrgToFile(map, dir+labeledGenderFileName);
+        //System.out.println(map);
+        List<String> list = getList(dir + allFileName);
+        Set<String> set = new HashSet<String>(list);
+        System.out.println(set.size());
+
+        //Set<String> common=Sets.intersection(map.keySet(), set);
+        //System.out.println(common.size());
+
+        set.removeAll(map.keySet());
+        System.out.println(set.size());
+         List<String> resultList = new ArrayList<String>(set);
+        listToFiles(resultList,dir+genderNotLabeled);
+
+    }
     
    
 

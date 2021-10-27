@@ -1,0 +1,43 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :revenue-of ;
+  lemon:entry    :di .
+
+:revenue-of a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :revenue-of_form ;
+  lemon:sense          :revenue-of_sense_1 ;
+  lemon:synBehavior    :revenue-of_nounpp .
+
+:revenue-of_form a lemon:Form ;
+  lemon:writtenRep "il reddito"@it .
+
+:revenue-of_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:revenue-of_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :revenue-of_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/revenue> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :revenue-of_sense_1_condition .
+
+:revenue-of_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Organisation> ;
+  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#double> .
+
+:arg2 lemon:marker :di .
+
+## Prepositions ##
+
+:di a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "di"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

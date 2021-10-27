@@ -1,5 +1,7 @@
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import eu.monnetproject.lemon.LemonModel;
+import evaluation.EvaluateAgainstQALD;
 import grammar.generator.BindingResolver;
 import grammar.generator.GrammarRuleGeneratorRoot;
 import grammar.generator.GrammarRuleGeneratorRootImpl;
@@ -25,10 +27,16 @@ import util.io.FileUtils;
 import util.io.TurtleCreation;
 import java.io.File;
 import java.io.IOException;
-import grammar.read.questions.SparqlQuery;
+import grammar.sparql.SparqlQuery;
 import grammar.sparql.SPARQLRequest;
+import static java.lang.System.exit;
+import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.logging.Level;
+import org.apache.commons.text.similarity.CosineDistance;
 import util.io.LinkedData;
+import static util.io.ResourceHelper.loadResource;
 
 @NoArgsConstructor
 public class QueGG {
@@ -40,52 +48,71 @@ public class QueGG {
     private static String entityLabelDir = "src/main/resources/entityLabels/";
     private static Boolean externalEntittyListflag = false;
     private static String outputFileName = "grammar_FULL_DATASET";
-    //private static String srcDir = "src/main/resources/";
-    // private static String endpoint = "https://dbpedia.org/sparql";
+    private static Boolean online = true;
 
     public static void main(String[] args) throws Exception {
         JenaSystem.init();
-        String questionAnswerFile = null, questionSummaryFile, languageStr = null;
-
-        try {
-            if (args.length < 6) {
+        QueGG queGG = new QueGG();
+        String questionAnswerFile = null, questionSummaryFile, languageStr = null, outputDir = null, qaldDir = null, dataSetConfFile = null;
+        Language language = null;
+        LinkedData linkedData = null;
+         String numberOfEntitiesString =null;
+      
+         try {
+            if (args.length < 4) {
                 throw new IllegalArgumentException(String.format("Too few parameters (%s/%s)", args.length, 3));
-            }
-            QueGG queGG = new QueGG();
-            Language language = Language.stringToLanguage(args[0]);
-            LOG.info("Starting {} with language parameter '{}'", QueGG.class.getName(), language);
-            LOG.info("Input directory: {}", Path.of(args[1]).toString());
-            LOG.info("Output directory: {}", Path.of(args[2]).toString());
-            language = Language.stringToLanguage(args[0]);
-            String inputDir = Path.of(args[1]).toString();
-            String outputDir = Path.of(args[2]).toString();
-            String numberOfEntitiesString = Path.of(args[3]).toString();
-            //setSparqlEndpoint(endpoint);
-            Integer maxNumberOfEntities = Integer.parseInt(numberOfEntitiesString);
-            String fileType = args[4];
-            String dataSetConfFile = args[5];
-            LinkedData linkedData = FileUtils.getLinkedDataConf(new File(dataSetConfFile));
-            setDataSet(linkedData);
+            }  //if (args.length >4 && args.length <6) {
+            if (args.length == 4) {
+                language = Language.stringToLanguage(args[0]);
+                qaldDir = args[1];
+                outputDir = args[2];
+                dataSetConfFile = args[3];
+                linkedData = FileUtils.getLinkedDataConf(new File(dataSetConfFile));
+                System.out.println("outputDir: " + outputDir + " qaldDir::" + qaldDir + " " + language + " linkedData.getEndpoint():" + linkedData.getEndpoint());
+                evalution(qaldDir, outputDir, language, linkedData.getEndpoint());
+            } else if (args.length == 6) {
+                language = Language.stringToLanguage(args[0]);
+                LOG.info("Starting {} with language parameter '{}'", QueGG.class.getName(), language);
+                LOG.info("Input directory: {}", Path.of(args[1]).toString());
+                LOG.info("Output directory: {}", Path.of(args[2]).toString());
+                language = Language.stringToLanguage(args[0]);
+                String inputDir = Path.of(args[1]).toString();
+                outputDir = Path.of(args[2]).toString();
+                numberOfEntitiesString = Path.of(args[3]).toString();
+                //setSparqlEndpoint(endpoint);
+                String fileType = args[4];
+                dataSetConfFile = args[5];
+                linkedData = FileUtils.getLinkedDataConf(new File(dataSetConfFile));
+                setDataSet(linkedData);
 
-            if (fileType.contains("ttl")) {
-                queGG.init(language, inputDir, outputDir);
-            } else if (fileType.contains("csv")) {
-                queGG.generateTurtle(inputDir, linkedData);
-                queGG.init(language, inputDir, outputDir);
-            } else {
-                throw new Exception("No file type is mentioned!!");
+                if (fileType.equals("ttl")) {
+                    queGG.init(language, inputDir, outputDir);
+                } else if (fileType.equals("csv")) {
+                    if (TurtleCreation.generateTurtle(inputDir, linkedData, language.toString().toLowerCase())) {
+                        queGG.init(language, inputDir, outputDir);
+                    } else {
+                        throw new Exception("no turle file is found to process!!");
+                    }
+
+                } else if (fileType.equals("qa")) {
+                    Integer maxNumberOfEntities = Integer.parseInt(numberOfEntitiesString);
+                    List<File> fileList = FileUtils.getFiles(outputDir + "/", outputFileName + "_" + language, ".json");
+                    if (fileList.isEmpty()) {
+                        throw new Exception("No files to process for question answering system!!");
+                    }
+
+                    questionAnswerFile = outputDir + File.separator + QUESTION_ANSWER_FILE + "_" + language + ".csv";
+                    questionSummaryFile = outputDir + File.separator + QUESTION_SUMMARY_FILE + "_" + language + ".csv";
+                    ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile, maxNumberOfEntities, args[0], linkedData.getEndpoint(), online);
+                    readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir, externalEntittyListflag);
+
+                } else {
+                    throw new Exception("No file type is mentioned!!");
+                }
+
             }
 
-            List<File> fileList = FileUtils.getFiles(outputDir + "/", outputFileName + "_" + language, ".json");
-            if (fileList.isEmpty()) {
-                throw new Exception("No files to process for question answering system!!");
-            }
-            questionAnswerFile = outputDir + File.separator + QUESTION_ANSWER_FILE + "_" + language + ".csv";
-            questionSummaryFile = outputDir + File.separator + QUESTION_SUMMARY_FILE + "_" + language + ".csv";
-            ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile, maxNumberOfEntities, args[0], linkedData.getEndpoint());
-            readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir, externalEntittyListflag);
-
-            LOG.warn("To get optimal combinations of sentences please add the following types to {}\n{}",
+                   LOG.warn("To get optimal combinations of sentences please add the following types to {}\n{}",
                     DomainOrRangeType.class.getName(), DomainOrRangeType.MISSING_TYPES.toString()
             );
         } catch (IllegalArgumentException | IOException e) {
@@ -94,47 +121,58 @@ public class QueGG {
         }
     }
 
+    public static void evalution(String qaldDir, String outputDir, Language language, String endpoint) throws IOException, Exception {
+        QueGG evaluateAgainstQALDTest = new QueGG();
+        ObjectMapper objectMapper = new ObjectMapper();
+        String[] fileList = new File(qaldDir).list();
+        String queGGJson = null, queGGJsonCombined = null, qaldFile = null, qaldModifiedFile = null;
+
+        for (String fileName : new File(qaldDir).list()) {
+            if (fileName.contains("qald")) {
+                if (fileName.contains("train-multilingual_modified.json")) {
+                    qaldModifiedFile = qaldDir + File.separator + fileName;
+                } else if (fileName.contains("train-multilingual.json")) {
+                    qaldFile = qaldDir + File.separator + fileName;
+                }
+            }
+        }
+
+        for (String fileName : new File(outputDir).list()) {
+            if (fileName.contains("grammar_FULL_DATASET") && fileName.contains(language.name())) {
+                queGGJson = outputDir + File.separator + fileName;
+            } else if (fileName.contains("grammar_COMBINATIONS") && fileName.contains(language.name())) {
+                queGGJsonCombined = outputDir + File.separator + fileName;
+            }
+
+        }
+
+        String languageCode = language.name().toLowerCase();
+        try{
+        File grammarEntriesFile = new File(queGGJson);
+        File grammarEntriesFile2 = new File(queGGJsonCombined);
+        GrammarWrapper grammarWrapper = objectMapper.readValue(grammarEntriesFile, GrammarWrapper.class);
+        GrammarWrapper gw2 = objectMapper.readValue(grammarEntriesFile2, GrammarWrapper.class);
+        grammarWrapper.merge(gw2);
+        EvaluateAgainstQALD evaluateAgainstQALD = new EvaluateAgainstQALD(languageCode, endpoint);
+        /*String resultFileName = qaldDir + File.separator +  "QALD-QueGG-Comparison_" + LocalDateTime.now()
+                .format(DateTimeFormatter.ofPattern(
+                        "yyyy-MM-dd_hh-mm")) + ".csv";*/
+        String resultFileName = qaldDir + File.separator +  "QALD-QueGG-Comparison_"+ languageCode+ ".csv";
+        String qaldRaw = qaldDir + File.separator +  "QALD-2017-dataset-raw.csv";
+        //System.out.println("all files are read!!!");
+        evaluateAgainstQALD.evaluateAndOutput(grammarWrapper, qaldFile, qaldModifiedFile, resultFileName, qaldRaw, languageCode);
+        }catch(Exception ex){
+            throw new Exception("no QueGG Json files to evaluate!!!");
+        }
+        
+
+    }
+
     public void init(Language language, String inputDir, String outputDir) throws IOException {
         try {
             loadInputAndGenerate(language, inputDir, outputDir);
         } catch (InvocationTargetException | NoSuchMethodException | InstantiationException | IllegalAccessException e) {
             LOG.error("Could not create grammar: {}", e.getMessage());
-        }
-    }
-
-    public void generateTurtle(String inputDir, LinkedData linkedData) throws IOException {
-        String lemonEntry = null;
-        File f = new File(inputDir);
-        String[] pathnames = f.list();
-        for (String pathname : pathnames) {
-            String[] files = new File(inputDir + File.separatorChar + pathname).list();
-
-            for (String file : files) {
-                if (!file.contains(".csv")) {
-                    continue;
-                }
-                CsvFile csvFile = new CsvFile();
-                String directory = inputDir + "/" + pathname + "/";
-                List<String[]> rows = csvFile.getRows(new File(directory + file));
-                Integer index = 0;
-
-                for (String[] row : rows) {
-                    if (index == 0) {
-                        index = index + 1;
-                        continue;
-                    }
-                    TurtleCreation turtleCreation;
-                    try {
-                        turtleCreation = new TurtleCreation(row, linkedData);
-                        FileUtils.stringToFile(turtleCreation.getTutleString(), directory + turtleCreation.getTutleFileName());
-                    } catch (Exception ex) {
-                        java.util.logging.Logger.getLogger(QueGG.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-
-                }
-
-            }
-
         }
     }
 
@@ -261,24 +299,13 @@ public class QueGG {
         return grammarWrapper;
     }
 
-    /*private static void setSparqlEndpoint(String endpoint) {
-        if (endpoint.contains("dbpedia")) {
-            SPARQLRequest.setEndpoint(endpoint);
-            GrammarRuleGeneratorRoot.setEndpoint(endpoint);
-        } else if (endpoint.contains("wikidata")) {
-            GrammarRuleGeneratorRoot.setEndpoint(endpoint);
-        }
-    }*/
     private static void setDataSet(LinkedData linkedData) throws Exception {
         String endpoint = linkedData.getEndpoint();
-        //System.out.println("endpoint::"+endpoint);
-        //System.out.println("prefixes::"+linkedData.getPrefixes());
         if (linkedData.getEndpoint().contains("dbpedia")) {
             SPARQLRequest.setEndpoint(endpoint);
-            GrammarRuleGeneratorRoot.setEndpoint(endpoint);
-        } else if (linkedData.getEndpoint().contains("wikidata")) {
-            GrammarRuleGeneratorRoot.setEndpoint(endpoint);
         }
+        GrammarRuleGeneratorRoot.setEndpoint(endpoint);
+
     }
 
 }

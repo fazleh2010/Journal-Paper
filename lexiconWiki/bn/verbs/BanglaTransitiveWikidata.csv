@@ -1,0 +1,4 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,SyntacticFrame,subject,directObject,sense,reference,domain,range,GrammarRule 1:question1,GrammarRule 1:question2,GrammarRule 1:sparql,GrammarRule 2:question1,GrammarRule2: sparql
+develop,verb,তৈরি ,তৈরি করেছে,তৈরি করেছিল,TransitiveFrame,range,domain,1,wdt:P178,wd:Q386724,wd:Q24229398,#REF!,#REF!,#NAME?,#REF!,#NAME?
+direct,verb,পরিচালনা করা,পরিচালনা করেছে,পরিচালনা করেছিল,TransitiveFrame,range,domain,1,wdt:P57,wd:Q11424,wd:Q5,#REF!,#REF!,#NAME?,#REF!,#NAME?
+design,verb,নকশা করা,নকশা করেছে,নকশা করেছিল,TransitiveFrame,range,domain,1,wdt:P84,wd:Q570116,wd:Q5,#REF!,#REF!,#NAME?,#REF!,#NAME?

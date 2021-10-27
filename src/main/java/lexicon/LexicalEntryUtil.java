@@ -13,12 +13,12 @@ import eu.monnetproject.lemon.model.PropertyValue;
 import eu.monnetproject.lemon.model.SynArg;
 import eu.monnetproject.lemon.model.SyntacticRoleMarker;
 import grammar.generator.OWLRestriction;
-import grammar.generator.helper.SubjectType;
-import grammar.generator.helper.datasets.questionword.QuestionWordFactory;
-import grammar.generator.helper.datasets.questionword.QuestionWordRepository;
-import grammar.generator.helper.sentencetemplates.AnnotatedNoun;
-import grammar.generator.helper.sentencetemplates.AnnotatedNounOrQuestionWord;
-import grammar.generator.helper.sentencetemplates.AnnotatedVerb;
+import grammar.generator.SubjectType;
+import grammar.datasets.questionword.QuestionWordFactory;
+import grammar.datasets.questionword.QuestionWordRepository;
+import grammar.datasets.annotated.AnnotatedNoun;
+import grammar.datasets.annotated.AnnotatedNounOrQuestionWord;
+import grammar.datasets.annotated.AnnotatedVerb;
 import grammar.sparql.Prefix;
 import grammar.sparql.SPARQLRequest;
 import grammar.sparql.SelectVariable;
@@ -50,6 +50,7 @@ import java.util.stream.Collectors;
 
 import static grammar.sparql.Prefix.DBPEDIA;
 import static grammar.sparql.SPARQLRequest.SPARQL_ENDPOINT_URL;
+import grammar.structure.component.DomainOrRangeMorphologicalPropertiesIT;
 import java.util.NoSuchElementException;
 import static java.util.Objects.isNull;
 
@@ -118,7 +119,8 @@ public class LexicalEntryUtil {
         QuestionWordRepository questionWordRepository = new QuestionWordFactory(language).init();
         List<AnnotatedNounOrQuestionWord> questionWords;
         questionWords = questionWordRepository
-                .findByLanguageAndSubjectType(language, subjectType);
+                .findByLanguageAndSubjectType(language, subjectType);      
+
         if (questionWords.size() != 1) {
             questionWords = questionWordRepository
                     .findByLanguageAndSubjectTypeAndNumberAndGender(
@@ -127,6 +129,7 @@ public class LexicalEntryUtil {
                             lexInfo.getPropertyValue("singular"),
                             lexInfo.getPropertyValue("commonGender")
                     );
+              System.out.println("questionWords:::"+questionWords);
         }
         if (!isNull(annotatedNounOrQuestionWord)) {
             if (questionWords.size() != 1) {
@@ -146,6 +149,7 @@ public class LexicalEntryUtil {
                                 annotatedNounOrQuestionWord.getGender()
                         );
             }
+             System.out.println("isNull:::"+questionWords);
         }
         if (questionWords.size() != 1) {
             LOG.error("Cannot find a matching subject in QuestionWordFactory({})", language);
@@ -201,13 +205,22 @@ public class LexicalEntryUtil {
         List<AnnotatedNounOrQuestionWord> questionWords;
         questionWords = questionWordRepository
                 .findByLanguageAndSubjectType(language, subjectType);
-        if (questionWords.size() != 1 && (language.equals(Language.DE)||language.equals(Language.IT))) {
+        if (questionWords.size() != 1 && (language.equals(Language.DE))) {
             questionWords = questionWordRepository
                     .findByLanguageAndSubjectTypeAndNumberAndGender(
                             language,
                             subjectType,
                             number,
                             lexInfo.getPropertyValue(DomainOrRangeMorphologicalProperties.getMatchingGender(getConditionUriBySelectVariable(getSelectVariable())).toString().toLowerCase())
+                    );
+        }
+        if (questionWords.size() != 1 && (language.equals(Language.IT))) {
+            questionWords = questionWordRepository
+                    .findByLanguageAndSubjectTypeAndNumberAndGender(
+                            language,
+                            subjectType,
+                            number,
+                            lexInfo.getPropertyValue(DomainOrRangeMorphologicalPropertiesIT.getMatchingGender(getConditionUriBySelectVariable(getSelectVariable())).toString().toLowerCase())
                     );
         }
         if (questionWords.size() != 1) {
@@ -262,10 +275,12 @@ public class LexicalEntryUtil {
             PropertyValue number, String conditionLabel,
             String determiner
     ) {
+        System.out.println("PropertyValue:::"+number);
         String determinerToken;
         if (number.equals(new LexInfo().getPropertyValue("plural"))) {
             conditionLabel = getPluralFormEn(conditionLabel);
         }
+         System.out.println("conditionLabel:::"+conditionLabel);
         determinerToken = compileDeterminerToken(conditionLabel, determiner);
         return determinerToken.trim();
     }
@@ -617,7 +632,7 @@ public class LexicalEntryUtil {
             SelectVariable selectVariable
     ) {
         URI domainOrRangeUri = getConditionUriBySelectVariable(selectVariable);
-
+        System.out.println("domainOrRangeUri:::"+domainOrRangeUri);
         SPARQLRequest sparqlRequest = new SPARQLRequest();
         sparqlRequest.setSelectVariable(selectVariable);
         sparqlRequest.setSearchProperty(domainOrRangeUri.toString());
@@ -631,6 +646,8 @@ public class LexicalEntryUtil {
                 ? sparqlSelectResultList.get(0).get(RDFS.label.getLocalName())
                 : "";
     }
+    
+   
 
     /**
      * Checks the validity of the domain or range condition of the current
@@ -726,7 +743,8 @@ public class LexicalEntryUtil {
         Property POS = lexInfo.getProperty("partOfSpeech");
         PropertyValue POSPreposition = lexInfo.getPropertyValue("preposition");
         Frame frame = getFrameByGrammarType();
-
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!"+frame.toString()+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+      
         //this is a temporary code for solving the problem. this code will be refactored in some point.
         try {
             if (!isNull(frame)) {
@@ -737,6 +755,12 @@ public class LexicalEntryUtil {
                     return preposition;
                 }
             }
+            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+
+            System.out.println(lexInfo);
+
 
         } catch (NoSuchElementException noSuchExp) {
             System.err.println("Preposition is not found!!"+noSuchExp.getMessage());
@@ -770,6 +794,24 @@ public class LexicalEntryUtil {
 
         }
         return particle;
+    }
+    
+    public static String getRange(LexicalEntryUtil lexicalEntryUtil) {
+        SelectVariable selectVarForward = lexicalEntryUtil.getSelectVariable();
+        return lexicalEntryUtil.getConditionUriBySelectVariable(selectVarForward).toString();
+    }
+
+    public static String getDomain(LexicalEntryUtil lexicalEntryUtil) {
+        SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(lexicalEntryUtil.getSelectVariable());
+        return lexicalEntryUtil.getConditionUriBySelectVariable(oppositeSelectVariable).toString();
+    }
+    
+    public static SelectVariable getDomainSelectable(LexicalEntryUtil lexicalEntryUtil) {
+        return lexicalEntryUtil.getSelectVariable();
+    }
+
+    public static SelectVariable getRangeSelectable(LexicalEntryUtil lexicalEntryUtil) {
+        return LexicalEntryUtil.getOppositeSelectVariable(lexicalEntryUtil.getSelectVariable());
     }
 
     @Override

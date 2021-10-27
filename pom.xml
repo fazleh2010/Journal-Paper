@@ -165,6 +165,12 @@
             <version>1.18.12</version>
             <scope>provided</scope>
         </dependency>
+        
+        <dependency>
+            <groupId>io.github.semlink</groupId>
+            <artifactId>verbnet</artifactId>
+            <version>0.0.1</version>
+        </dependency>
 
         <dependency>
             <groupId>javax.validation</groupId>
@@ -242,4 +248,5 @@
 
         
     </dependencies>
+    <name>question-answering-oldItalian</name>
 </project>

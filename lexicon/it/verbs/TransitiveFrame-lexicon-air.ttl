@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_air ;
+  lemon:entry    :aired ;
+  lemon:entry    :da .
+
+:to_air a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_air ;
+  lemon:otherForm      :form_airs ;
+  lemon:otherForm      :form_aired ;
+  lemon:sense          :air_sense_1 ;
+  lemon:synBehavior    :air_frame_transitive .
+
+:form_air a         lemon:Form ;
+  lemon:writtenRep     "trasmettere"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_airs a    lemon:Form ;
+  lemon:writtenRep "trasmette"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_aired a   lemon:Form ;
+  lemon:writtenRep "ha trasmesso"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:air_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :air_subj ;
+  lexinfo:directObject     :air_obj .
+
+:air_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :air_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/network> ;
+  lemon:subjOfProp  :air_obj ;
+  lemon:objOfProp   :air_subj ;
+  lemon:condition   :air_sense_1_condition .
+
+
+:air_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Film> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Broadcaster> .
+
+:aired a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_aired_canonical ;
+  lemon:otherForm      :form_aired_by ;
+  lemon:synBehavior    :aired_frame_adjectivepp ;
+  lemon:sense          :aired_ontomap .
+
+:form_aired_canonical a lemon:Form ;
+  lemon:writtenRep         "trasmettere"@it .
+
+:form_aired_by a    lemon:Form ;
+  lemon:writtenRep     "trasmettere"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:aired_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :aired_subj ;
+  lexinfo:prepositionalAdjunct :aired_obj .
+
+:aired_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :aired_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/network> ;
+  lemon:subjOfProp  :aired_subj ;
+  lemon:objOfProp   :aired_obj ;
+  lemon:condition   :air_sense_1_condition .
+:aired_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

@@ -16,7 +16,7 @@ public class QueGGEnglishTest {
     private static Language language = Language.stringToLanguage("EN");
 
    
-    public static void main(String []agrs) {
+    /*public static void main(String []agrs) {
         QueGG queGG = new QueGG();
         try {
             queGG.init(language, inputDir, outputDir);
@@ -24,6 +24,6 @@ public class QueGGEnglishTest {
             java.util.logging.Logger.getLogger(QueGGEnglishTest.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-    }
+    }*/
    
 }

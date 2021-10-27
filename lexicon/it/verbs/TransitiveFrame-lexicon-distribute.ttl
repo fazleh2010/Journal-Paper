@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_distribute ;
+  lemon:entry    :distributeed ;
+  lemon:entry    :da .
+
+:to_distribute a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_distribute ;
+  lemon:otherForm      :form_distributes ;
+  lemon:otherForm      :form_distributeed ;
+  lemon:sense          :distribute_sense_1 ;
+  lemon:synBehavior    :distribute_frame_transitive .
+
+:form_distribute a         lemon:Form ;
+  lemon:writtenRep     "dsitribuire"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_distributes a    lemon:Form ;
+  lemon:writtenRep "distribuisce"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_distributeed a   lemon:Form ;
+  lemon:writtenRep "ha distribuito"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:distribute_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :distribute_subj ;
+  lexinfo:directObject     :distribute_obj .
+
+:distribute_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :distribute_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/distributor> ;
+  lemon:subjOfProp  :distribute_obj ;
+  lemon:objOfProp   :distribute_subj ;
+  lemon:condition   :distribute_sense_1_condition .
+
+
+:distribute_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/TelevisionShow> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Organisation> .
+
+:distributeed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_distributeed_canonical ;
+  lemon:otherForm      :form_distributeed_by ;
+  lemon:synBehavior    :distributeed_frame_adjectivepp ;
+  lemon:sense          :distributeed_ontomap .
+
+:form_distributeed_canonical a lemon:Form ;
+  lemon:writtenRep         "dsitribuire"@it .
+
+:form_distributeed_by a    lemon:Form ;
+  lemon:writtenRep     "dsitribuire"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:distributeed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :distributeed_subj ;
+  lexinfo:prepositionalAdjunct :distributeed_obj .
+
+:distributeed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :distributeed_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/distributor> ;
+  lemon:subjOfProp  :distributeed_subj ;
+  lemon:objOfProp   :distributeed_obj ;
+  lemon:condition   :distribute_sense_1_condition .
+:distributeed_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

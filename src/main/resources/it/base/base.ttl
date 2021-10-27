@@ -12,19 +12,19 @@
   lemon:entry    :component_aux_object_past ;
   lemon:entry    :component_imperative_plural ;
   lemon:entry    :component_imperative_transitive ;
-  lemon:entry    :component_interrogativeDeterminer_ki ;
+  lemon:entry    :interrogativeDeterminer ;
   lemon:entry    :component_interrogativeDeterminer_kothay ;
   lemon:entry    :component_have ;
   lemon:entry    :component_the ;
-  lemon:entry    :component_the_2 ;
+  lemon:entry    :determiner_plural ;
   lemon:entry    :component_a ;
   lemon:entry    :component_an ;
   lemon:entry    :object_pronoun;
-  lemon:entry    :for ;
-  lemon:entry    :by ;
+  lemon:entry    :da ;
+  lemon:entry    :si ;
   lemon:entry    :from ;
   lemon:entry    :with ;
-  lemon:entry    :in ;
+  lemon:entry    :In ;
   lemon:entry    :into ;
   lemon:entry    :on ;
   lemon:entry    :of ;
@@ -54,6 +54,8 @@
   lexinfo:number                          lexinfo:plural ] ;
   lexinfo:partOfSpeech lexinfo:verb .
 
+
+
 :component_do a        lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "do"@en ] ;
   lexinfo:partOfSpeech lexinfo:verb ;
@@ -63,13 +65,13 @@
   lexinfo:number                          lexinfo:singular ] .
 
 :component_aux_object_past a        lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "be"@en ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "essere"@en ] ;
   lexinfo:partOfSpeech lexinfo:verb ;
-  lemon:otherForm      [ lemon:writtenRep "was"@en ;
+  lemon:otherForm      [ lemon:writtenRep "è stata"@en ;
   lexinfo:tense                           lexinfo:past ;
   lexinfo:person                          lexinfo:thirdPerson ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "were"@en ;
+  lemon:otherForm      [ lemon:writtenRep "è stato"@en ;
   lexinfo:tense                           lexinfo:past ;
   lexinfo:person                          lexinfo:thirdPerson ;
   lexinfo:number                          lexinfo:plural ] .
@@ -85,42 +87,22 @@
   lexinfo:partOfSpeech lexinfo:verb .
 
 :component_imperative_transitive a        lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "নাম বলো"@en ;
+  lemon:canonicalForm  [ lemon:writtenRep "Dammi"@en ;
   lexinfo:verbFormMood                    lexinfo:infinitive ] ;
-  lemon:otherForm      [ lemon:writtenRep "নাম বলো"@en ;
+  lemon:otherForm      [ lemon:writtenRep "Dammi tutti"@en ;
   lexinfo:tense                           lexinfo:present ;
   lexinfo:person                          lexinfo:secondPerson ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "নাম বলো"@en ;
-  lexinfo:tense                           lexinfo:present ;
-  lexinfo:person                          lexinfo:secondPerson ;
-  lexinfo:number                          lexinfo:plural ] ;
-  lemon:otherForm      [ lemon:writtenRep "নাম বলো"@en ;
-  lexinfo:tense                           lexinfo:present ;
-  lexinfo:person                          lexinfo:secondPerson ;
-  lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "নাম বলো"@en ;
-  lexinfo:tense                           lexinfo:present ;
+  lemon:otherForm      [ lemon:writtenRep "Dammi"@en ;
+  lexinfo:tense                           lexinfo:past ;
   lexinfo:person                          lexinfo:secondPerson ;
   lexinfo:number                          lexinfo:plural ] ;
   lexinfo:partOfSpeech lexinfo:verb .
 
 
- :component_interrogativeDeterminer_ki a        lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "Quali"@en ;
+ :interrogativeDeterminer a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "Quale"@en ;
   lexinfo:verbFormMood                    lexinfo:infinitive ] ;
-  lemon:otherForm      [ lemon:writtenRep "Qual"@en ;
-  lexinfo:tense                           lexinfo:present ;
-  lexinfo:person                          lexinfo:secondPerson ;
-  lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Qual"@en ;
-  lexinfo:tense                           lexinfo:present ;
-  lexinfo:person                          lexinfo:secondPerson ;
-  lexinfo:number                          lexinfo:plural ] ;
-  lemon:otherForm      [ lemon:writtenRep "Qual"@en ;
-  lexinfo:tense                           lexinfo:present ;
-  lexinfo:person                          lexinfo:secondPerson ;
-  lexinfo:number                          lexinfo:singular ] ;
   lemon:otherForm      [ lemon:writtenRep "Qual"@en ;
   lexinfo:tense                           lexinfo:present ;
   lexinfo:person                          lexinfo:secondPerson ;
@@ -160,8 +142,8 @@
   lemon:canonicalForm  [ lemon:writtenRep "la"@en ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
-:component_the_2 a       lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "এর"@en ] ;
+:determiner_plural a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "i"@en ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
 :component_a a         lemon:LexicalEntry ;
@@ -174,12 +156,12 @@
 
 ## Prepositions ##
 
-:for a                 lemon:SynRoleMarker ;
+:da a                 lemon:SynRoleMarker ;
   lemon:canonicalForm  [ lemon:writtenRep "for"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
 
-:by a                  lemon:SynRoleMarker ;
-  lemon:canonicalForm  [ lemon:writtenRep "by"@en ] ;
+:si a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "si"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
 
 :from a                lemon:SynRoleMarker ;
@@ -190,8 +172,8 @@
   lemon:canonicalForm  [ lemon:writtenRep "with"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
 
-:in a                  lemon:SynRoleMarker ;
-  lemon:canonicalForm  [ lemon:writtenRep "in"@en ] ;
+:In a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "In"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
 
 :into a                lemon:SynRoleMarker ;

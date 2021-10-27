@@ -1,0 +1,43 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :numberOfSeasons-of ;
+  lemon:entry    :di .
+
+:numberOfSeasons-of a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :numberOfSeasons-of_form ;
+  lemon:sense          :numberOfSeasons-of_sense_1 ;
+  lemon:synBehavior    :numberOfSeasons-of_nounpp .
+
+:numberOfSeasons-of_form a lemon:Form ;
+  lemon:writtenRep "il numero di stagioni"@it .
+
+:numberOfSeasons-of_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:numberOfSeasons-of_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :numberOfSeasons-of_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/numberOfSeasons> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :numberOfSeasons-of_sense_1_condition .
+
+:numberOfSeasons-of_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/TelevisionShow> ;
+  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#integer> .
+
+:arg2 lemon:marker :di .
+
+## Prepositions ##
+
+:di a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "di"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

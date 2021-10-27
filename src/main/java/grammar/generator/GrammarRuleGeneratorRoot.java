@@ -6,11 +6,9 @@ import eu.monnetproject.lemon.model.Frame;
 import eu.monnetproject.lemon.model.LexicalEntry;
 import eu.monnetproject.lemon.model.LexicalSense;
 import eu.monnetproject.lemon.model.Lexicon;
-import grammar.generator.helper.BindingConstants;
-import grammar.generator.helper.datasets.sentencetemplates.SentenceTemplateFactory;
-import grammar.generator.helper.datasets.sentencetemplates.SentenceTemplateRepository;
-import grammar.generator.helper.parser.SentenceTemplateParser;
-import grammar.read.questions.SparqlQuery;
+import grammar.datasets.sentencetemplates.SentenceTemplateFactory;
+import grammar.datasets.sentencetemplates.SentenceTemplateRepository;
+import grammar.sparql.SparqlQuery;
 import grammar.sparql.Prefix;
 import grammar.sparql.SPARQLRequest;
 import grammar.sparql.SelectVariable;
@@ -60,8 +58,8 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
      * The frameType is the name of the LexInfo frame that the generated
      * sentence will be based on.
      */
-    private final FrameType frameType;
-    private final Language language;
+    final FrameType frameType;
+    final Language language;
     /**
      * The bindingValue is the variable that will be used for bindings in a
      * sentence and for the bindings list (i.e. "$x").
@@ -129,8 +127,8 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
     public void generateBindings(GrammarEntry grammarEntry) {
         if (endpoint.contains("dbpedia")) {
             generateBindingsDBpedia(grammarEntry);
-        } else if (endpoint.contains("wikidata")) {
-            generateBindingsWikiData(grammarEntry);
+        } else  {
+            generateBindingsFromDataSet(grammarEntry);
         }
     }
 
@@ -160,7 +158,7 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
         grammarEntry.setSentenceBindings(newSentenceBindings);
     }
 
-    private void generateBindingsWikiData(GrammarEntry grammarEntry) {
+    private void generateBindingsFromDataSet(GrammarEntry grammarEntry) {
         //System.out.println("Inside into Wikidata!!!!");
         SentenceBindings newSentenceBindings = new SentenceBindings();
         newSentenceBindings.setBindingVariableName(grammarEntry.getSentenceBindings().getBindingVariableName());
@@ -347,6 +345,7 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
 
     protected GrammarEntry copyGrammarEntry(GrammarEntry grammarEntry) {
         GrammarEntry fragmentEntry = new GrammarEntry();
+        fragmentEntry.setLexicalEntryUri(grammarEntry.getLexicalEntryUri());
         fragmentEntry.setBindingType(grammarEntry.getBindingType());
         fragmentEntry.setReturnType(grammarEntry.getReturnType());
         fragmentEntry.setLanguage(grammarEntry.getLanguage());

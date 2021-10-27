@@ -28,6 +28,7 @@ public enum Language {
     PT,
     RO,
     RU,
+    TA,
     SK,
     SL,
     SV;

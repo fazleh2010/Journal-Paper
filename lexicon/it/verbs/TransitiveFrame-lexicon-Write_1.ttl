@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_Write_1 ;
+  lemon:entry    :Write_1ed ;
+  lemon:entry    :da .
+
+:to_Write_1 a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_Write_1 ;
+  lemon:otherForm      :form_Write_1s ;
+  lemon:otherForm      :form_Write_1ed ;
+  lemon:sense          :Write_1_sense_1 ;
+  lemon:synBehavior    :Write_1_frame_transitive .
+
+:form_Write_1 a         lemon:Form ;
+  lemon:writtenRep     "scrivere"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_Write_1s a    lemon:Form ;
+  lemon:writtenRep "scrive"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_Write_1ed a   lemon:Form ;
+  lemon:writtenRep "ha scritto"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:Write_1_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :Write_1_subj ;
+  lexinfo:directObject     :Write_1_obj .
+
+:Write_1_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :Write_1_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/writer> ;
+  lemon:subjOfProp  :Write_1_obj ;
+  lemon:objOfProp   :Write_1_subj ;
+  lemon:condition   :Write_1_sense_1_condition .
+
+
+:Write_1_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Song> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:Write_1ed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_Write_1ed_canonical ;
+  lemon:otherForm      :form_Write_1ed_by ;
+  lemon:synBehavior    :Write_1ed_frame_adjectivepp ;
+  lemon:sense          :Write_1ed_ontomap .
+
+:form_Write_1ed_canonical a lemon:Form ;
+  lemon:writtenRep         "scrivere"@it .
+
+:form_Write_1ed_by a    lemon:Form ;
+  lemon:writtenRep     "scrivere"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:Write_1ed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :Write_1ed_subj ;
+  lexinfo:prepositionalAdjunct :Write_1ed_obj .
+
+:Write_1ed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :Write_1ed_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/writer> ;
+  lemon:subjOfProp  :Write_1ed_subj ;
+  lemon:objOfProp   :Write_1ed_obj ;
+  lemon:condition   :Write_1_sense_1_condition .
+:Write_1ed_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

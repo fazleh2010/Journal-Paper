@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_cover ;
+  lemon:entry    :covered ;
+  lemon:entry    :da .
+
+:to_cover a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_cover ;
+  lemon:otherForm      :form_covers ;
+  lemon:otherForm      :form_covered ;
+  lemon:sense          :cover_sense_1 ;
+  lemon:synBehavior    :cover_frame_transitive .
+
+:form_cover a         lemon:Form ;
+  lemon:writtenRep     "occuparsi"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_covers a    lemon:Form ;
+  lemon:writtenRep "si occupa"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_covered a   lemon:Form ;
+  lemon:writtenRep "si occupava"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:cover_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :cover_subj ;
+  lexinfo:directObject     :cover_obj .
+
+:cover_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :cover_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/academicDiscipline> ;
+  lemon:subjOfProp  :cover_obj ;
+  lemon:objOfProp   :cover_subj ;
+  lemon:condition   :cover_sense_1_condition .
+
+
+:cover_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://www.w3.org/2002/07/owl#Thing> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/AcademicJournal> .
+
+:covered a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_covered_canonical ;
+  lemon:otherForm      :form_covered_by ;
+  lemon:synBehavior    :covered_frame_adjectivepp ;
+  lemon:sense          :covered_ontomap .
+
+:form_covered_canonical a lemon:Form ;
+  lemon:writtenRep         "occuparsi"@it .
+
+:form_covered_by a    lemon:Form ;
+  lemon:writtenRep     "occuparsi"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:covered_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :covered_subj ;
+  lexinfo:prepositionalAdjunct :covered_obj .
+
+:covered_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :covered_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/academicDiscipline> ;
+  lemon:subjOfProp  :covered_subj ;
+  lemon:objOfProp   :covered_obj ;
+  lemon:condition   :cover_sense_1_condition .
+:covered_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_support ;
+  lemon:entry    :supported ;
+  lemon:entry    :da .
+
+:to_support a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_support ;
+  lemon:otherForm      :form_supports ;
+  lemon:otherForm      :form_supported ;
+  lemon:sense          :support_sense_1 ;
+  lemon:synBehavior    :support_frame_transitive .
+
+:form_support a         lemon:Form ;
+  lemon:writtenRep     "supportare"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_supports a    lemon:Form ;
+  lemon:writtenRep "supporta"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_supported a   lemon:Form ;
+  lemon:writtenRep "ha supportato"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:support_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :support_subj ;
+  lexinfo:directObject     :support_obj .
+
+:support_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :support_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/ideology> ;
+  lemon:subjOfProp  :support_obj ;
+  lemon:objOfProp   :support_subj ;
+  lemon:condition   :support_sense_1_condition .
+
+
+:support_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Ideology> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Agent> .
+
+:supported a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_supported_canonical ;
+  lemon:otherForm      :form_supported_by ;
+  lemon:synBehavior    :supported_frame_adjectivepp ;
+  lemon:sense          :supported_ontomap .
+
+:form_supported_canonical a lemon:Form ;
+  lemon:writtenRep         "supportare"@it .
+
+:form_supported_by a    lemon:Form ;
+  lemon:writtenRep     "supportare"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:supported_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :supported_subj ;
+  lexinfo:prepositionalAdjunct :supported_obj .
+
+:supported_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :supported_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/ideology> ;
+  lemon:subjOfProp  :supported_subj ;
+  lemon:objOfProp   :supported_obj ;
+  lemon:condition   :support_sense_1_condition .
+:supported_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

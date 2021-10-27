@@ -5,29 +5,19 @@ package grammar.read.questions;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+import grammar.sparql.SparqlQuery;
 import util.io.FileUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.andrewoma.dexx.collection.Pair;
-import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
-import com.opencsv.exceptions.CsvException;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
+import static java.lang.System.exit;
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.apache.commons.lang3.StringUtils;
-
-
-import java.io.*;
-import java.security.GeneralSecurityException;
 import java.util.*;
 import org.apache.logging.log4j.LogManager;
 import util.io.Statistics;
@@ -38,23 +28,23 @@ import util.io.Statistics;
  */
 public class ReadAndWriteQuestions {
 
-    public String[] questionHeader = new String[]{id, question, sparql, answer, frame};
-    public String[] summaryHeader = new String[]{lexicalEntry, numberOfGrammarRules, numberOfQuestions,frameType,Status,Reason};
+    public String[] questionHeader = new String[]{ID, QUESTION, SPARQL, ANSWER_URI, ANSWER, FRAME};
+    public String[] summaryHeader = new String[]{LEXICAL_ENTRY, NUMBER_OF_GRAMMAR_RULES, NUMBER_OF_QUESTIONS, FRAMETYPE, Status, Reason};
     public static String FRAMETYPE_NPP = "NPP";
-    public static final String id = "id";
-    public static final String question = "question";
-    public static final String sparql = "sparql";
-    public static final String answer = "answer";
-    public static final String frame = "frame";
-    private static final String lexicalEntry = "lexicalEntry";
-    private static final String sentenceType = "sentenceType";
-    private static final String frameType = "frameType";
-    private static final String numberOfGrammarRules = "numberOfGrammarRules";
-    private static final String numberOfQuestions = "numberOfQuestions";
+    public static final String ID = "id";
+    public static final String QUESTION = "question";
+    public static final String SPARQL = "sparql";
+    public static final String ANSWER_URI = "answer";
+    public static final String ANSWER = "answer";
+    public static final String FRAME = "frame";
+    private static final String LEXICAL_ENTRY = "lexicalEntry";
+    private static final String SENTENCETYPE = "sentenceType";
+    private static final String FRAMETYPE = "frameType";
+    private static final String NUMBER_OF_GRAMMAR_RULES = "numberOfGrammarRules";
+    private static final String NUMBER_OF_QUESTIONS = "numberOfQuestions";
     private static final String Status = "numberOfQuestions";
     private static final String Reason = "numberOfQuestions";
-    private static  String language = "en";
-
+    private static String language = "en";
 
     public CSVWriter csvWriterQuestions;
     public CSVWriter csvWriterSummary;
@@ -64,16 +54,18 @@ public class ReadAndWriteQuestions {
     private Map<String, Statistics> summary = new TreeMap<String, Statistics>();
 
     private Integer maxNumberOfEntities = 100;
-    private String endpoint=null;
+    private String endpoint = null;
     private static final org.apache.logging.log4j.Logger LOG = LogManager.getLogger(ReadAndWriteQuestions.class);
+    private Boolean online=false; 
 
-    public ReadAndWriteQuestions(String questionAnswerFile, String questionSummaryFile, Integer maxNumberOfEntities,String language,String endpoint) {
+    public ReadAndWriteQuestions(String questionAnswerFile, String questionSummaryFile, Integer maxNumberOfEntities, String language, String endpoint, Boolean online) {
         this.initialExcluded();
-        this.endpoint=endpoint;
-        this.language=language;
+        this.endpoint = endpoint;
+        this.language = language;
         this.questionAnswerFile = questionAnswerFile;
         this.questionSummaryFile = questionSummaryFile;
         this.maxNumberOfEntities = maxNumberOfEntities;
+        this.online=online;
     }
 
     public void readQuestionAnswers(List<File> fileList, String entityDir, Boolean externalEntittyListflag) throws Exception {
@@ -96,10 +88,11 @@ public class ReadAndWriteQuestions {
             Integer idIndex = 0, noIndex = 0;
             LOG.info("running file'", file.getName());
             for (GrammarEntryUnit grammarEntryUnit : grammarEntries.getGrammarEntries()) {
+                
                 /*if (idIndex > 1) {
                     break;
                 }*/
- /*if (grammarEntryUnit.getSentences().iterator().next().contains("Where is $x located?"))
+                /*if (grammarEntryUnit.getSentences().iterator().next().contains("Where is $x located?"))
                     continue;*/
 
                 sparql = grammarEntryUnit.getSparqlQuery();
@@ -107,14 +100,22 @@ public class ReadAndWriteQuestions {
                 String retunrStr = grammarEntryUnit.getBindingType();
                 String syntacticFrame = grammarEntryUnit.getFrameType();
                 List<UriLabel> bindingList = new ArrayList<UriLabel>();
+                
+                if(grammarEntryUnit.getBindingType().contains("LOCATION")&&grammarEntryUnit.getReturnType().contains("LOCATION"))
+                    continue;
 
                 if (externalEntittyListflag) {
-                    String entityFileName = entityDir + "ENTITY_LABEL_LIST" + "_" + retunrStr.toLowerCase() + ".txt";
+                    
+                    String entityFileName = entityDir + "ENTITY_LABEL_LIST" + "_" + retunrStr.toLowerCase()+ ".txt";
+                    //entityFileName="/home/elahi/AHack/italian/question-grammar-generator/src/main/resources/entityLabels/ENTITY_LABEL_LIST_Person.txt";
+                    //System.out.println("entityFileName::"+entityFileName);
                     File entityFile = new File(entityFileName);
                     bindingList = this.getExtendedBindingList(grammarEntryUnit.getBindingList(), entityFile);
+                    System.out.println(bindingList.size());
                 } else {
                     bindingList = grammarEntryUnit.getBindingList();
                 }
+               
                 noIndex = this.replaceVariables(bindingList, sparql, returnVairable, grammarEntryUnit.getSentences(), syntacticFrame, noIndex, "");
                 noIndex = noIndex + 1;
                 //LOG.info("index:" + index + " Id:" + grammarEntryUnit.getId() + " total:" + total + " example:" + grammarEntryUnit.getSentences().iterator().next());
@@ -126,9 +127,9 @@ public class ReadAndWriteQuestions {
 
                     if (this.summary.containsKey(uri)) {
                         Statistics summary = this.summary.get(uri);
-                        this.summary.put(uri, new Statistics(grammarEntryUnit.getFrameType(), summary.getNumberOfGrammarRules() + 1, noIndex,bindingList.size()));
+                        this.summary.put(uri, new Statistics(grammarEntryUnit.getFrameType(), summary.getNumberOfGrammarRules() + 1, noIndex, bindingList.size()));
                     } else {
-                        Statistics summary = new Statistics(grammarEntryUnit.getFrameType(), 1, noIndex,bindingList.size());
+                        Statistics summary = new Statistics(grammarEntryUnit.getFrameType(), 1, noIndex, bindingList.size());
                         this.summary.put(uri, summary);
                     }
                 }
@@ -153,23 +154,31 @@ public class ReadAndWriteQuestions {
             }
             //System.out.println("index: " + index + " size:" + uriLabels.size() + " uriLabel:::" + uriLabel.getUri() + " labe::" + uriLabel.getLabel());
             String questionForShow = questions.iterator().next();
-            if(questionForShow.contains("Where is $x located?"))
+            
+            if (questionForShow.contains("Where is $x located?")) {
                 continue;
+            }
 
-            Pair<String, String> pair = this.getAnswerFromWikipedia(uriLabel.getUri(), sparqlOrg, frameType,endpoint);
-            String sparql = pair.component1();
-            String answer = pair.component2();
+            String[] wikipediaAnswer = this.getAnswerFromWikipedia(uriLabel.getUri(), sparqlOrg, frameType, endpoint,online);
+            String sparql = wikipediaAnswer[0];
+            String answerUri = wikipediaAnswer[1];
+            String answer = wikipediaAnswer[2];
             index = index + 1;
             sparql = this.modifySparql(sparql);
 
-            //System.out.println("index::" + index + " uriLabel::" + uriLabel.getLabel() + " questionForShow::" + questionForShow + " sparql::" + sparql + " answer::" + answer+ " syntacticFrame:"+syntacticFrame);
+            System.out.println("index::" + index + " uriLabel::" + uriLabel.getLabel() + " questionForShow::" + questionForShow + " sparql::" + sparql + " answer::" + answer + " syntacticFrame:" + syntacticFrame);
             try {
-                if (answer.isEmpty() || answer.contains("no answer found")) {
+                /*if (answer.isEmpty() || answer.contains("no answer found")) {
                     continue;
-                } else {
-                    if (index >= this.maxNumberOfEntities) {
+                } else*/ {
+                    /*if (index >= this.maxNumberOfEntities) {
                         break;
-                    }
+                    }*/
+                    
+                if (answerUri.isEmpty() || answerUri.length()<2){//answer.contains("no answer found")) {
+                    continue;
+                }
+                    
                     for (String question : questions) {
                         //System.out.println(question);
                         if (question.contains("(") && question.contains(")")) {
@@ -188,11 +197,16 @@ public class ReadAndWriteQuestions {
                         questionT = questionT.replace("$x", uriLabel.getLabel());
                         questionT = questionT.replace(",", "");
                         questionT = questionT.stripLeading().trim();
-                        if(uriLabel.getLabel().isEmpty()){
-                           continue;
+                        if (uriLabel.getLabel().isEmpty()) {
+                            continue;
                         }
-                        
-                        String[] record = {id, questionT, sparql, answer, syntacticFrame};
+                        if(!online){
+                            answerUri="offline";
+                            answer="offline";
+                        }
+                            
+
+                        String[] record = {id, questionT, sparql, answerUri, answer, syntacticFrame};
                         this.csvWriterQuestions.writeNext(record);
                         rowIndex = rowIndex + 1;
                     }
@@ -206,28 +220,25 @@ public class ReadAndWriteQuestions {
         return rowIndex;
     }
 
-    public Pair<String, String> getAnswerFromWikipedia(String subjProp, String sparql, String returnType,String endpoint) {
-        String property = null;
-        String answer = null;
+    public String[] getAnswerFromWikipedia(String subjProp, String sparql, String returnType, String endpoint,Boolean online) {
+        String answerUri = null;
+        String answerLabel = "no answer found";
         SparqlQuery sparqlQuery = null;
-        property = StringUtils.substringBetween(sparql, "<", ">");
-
-        sparqlQuery = new SparqlQuery(subjProp, property, SparqlQuery.FIND_ANY_ANSWER, returnType,language,endpoint);
+        String property = StringUtils.substringBetween(sparql, "<", ">");
+        sparqlQuery = new SparqlQuery(subjProp, property, SparqlQuery.FIND_ANY_ANSWER, returnType, language, endpoint,online);
         //System.out.println("original sparql:: "+sparql);
         //System.out.println("sparqlQuery:: "+sparqlQuery.getSparqlQuery());
-        answer = sparqlQuery.getObject();
-        if (answer != null) {
-            if (answer.contains("http:")) {
+        answerUri = sparqlQuery.getObject();
+        if (answerUri != null) {
+            if (answerUri.contains("http:")) {
                 //System.out.println(answer);
-                SparqlQuery sparqlQueryLabel = new SparqlQuery(answer, property, SparqlQuery.FIND_LABEL, null,language,endpoint);
-                answer = sparqlQueryLabel.getObject();
+                SparqlQuery sparqlQueryLabel = new SparqlQuery(answerUri, property, SparqlQuery.FIND_LABEL, null, language, endpoint,online);
+                answerLabel = sparqlQueryLabel.getObject();
                 //System.out.println(answer);
 
             }
-            return new Pair<String, String>(sparqlQuery.sparqlQuery, answer);
-        } else {
-            return new Pair<String, String>(sparqlQuery.sparqlQuery, "no answer found");
         }
+        return new String[]{sparqlQuery.getSparqlQuery(), answerUri, answerLabel};
     }
 
     private void initialExcluded() {
@@ -262,46 +273,6 @@ public class ReadAndWriteQuestions {
         return true;
     }
 
-    /*private String modifyQuestion(String questionT, String uriLabel) {
-        questionT = questionT.replaceAll("(X)", uriLabel);
-        questionT = questionT.replace("(", "");
-        questionT = questionT.replace(")", "");
-        questionT = questionT.replace("$x", uriLabel);
-        questionT = questionT.replace(",", "");
-        questionT = questionT.stripLeading().trim();
-        return questionT;
-    }*/
-
-    /*private Integer makeCsvRow(List<String> questions, List<String[]> rows, Integer rowIndex) {
-        for (String question : questions) {
-            if (question.contains("(") && question.contains(")")) {
-                String result = StringUtils.substringBetween(question, "(", ")");
-                question = question.replace(result, "X");
-            } else if (question.contains("$x")) {
-                //System.out.println(question);
-
-            }
-            for (String[] row : rows) {
-                String id = rowIndex.toString();
-                String uriLabel = row[0];
-                //question = modifyQuestion(question, uriLabel);
-                String questionT = question.replaceAll("(X)", uriLabel);
-                questionT = questionT.replace("(", "");
-                questionT = questionT.replace(")", "");
-                questionT = questionT.replace("$x", uriLabel);
-                questionT = questionT.replace(",", "");
-                questionT = questionT.stripLeading().trim();
-                String sparql = row[1];
-                String answer = row[2];
-                System.out.println("id::" + id + " uriLabel::" + uriLabel + " question::" + questionT + " sparql::" + sparql + " answer::" + answer);
-                String[] record = {id, questionT, sparql, answer};
-                this.csvWriterQuestions.writeNext(record);
-                rowIndex = rowIndex + 1;
-            }
-        }
-        return rowIndex;
-    }*/
-
     private List<UriLabel> getExtendedBindingList(List<UriLabel> bindingList, File classFile) {
         List<UriLabel> modifyLabels = new ArrayList<UriLabel>();
         for (UriLabel uriLabel : bindingList) {
@@ -327,7 +298,7 @@ public class ReadAndWriteQuestions {
         }
         for (String key : summary.keySet()) {
             Statistics element = summary.get(key);
-            String[] record = {key,element.getNumberOfGrammarRules().toString(), element.getNumberOfQuestions().toString(), element.getFrameType(),element.getSuccess_Fail(),element.getReason()};
+            String[] record = {key, element.getNumberOfGrammarRules().toString(), element.getNumberOfQuestions().toString(), element.getFrameType(), element.getSuccess_Fail(), element.getReason()};
             this.csvWriterSummary.writeNext(record);
 
         }

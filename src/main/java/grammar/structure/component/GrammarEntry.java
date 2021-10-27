@@ -31,6 +31,7 @@ public class GrammarEntry implements Serializable {
   private String returnVariable; // aka selectVariable
   private boolean isCombination = false;
   private SentenceBindings sentenceBindings;
+  private String qaldMatchedQuestion;
 
   /**
    * This is a convenience method to retrieve the mapped binding variable from
@@ -61,6 +62,7 @@ public class GrammarEntry implements Serializable {
     grammarEntry.sparqlQuery = this.sparqlQuery;
     grammarEntry.returnVariable = this.returnVariable;
     grammarEntry.isCombination = this.isCombination;
+    grammarEntry.qaldMatchedQuestion=this.qaldMatchedQuestion;
     if (this.sentenceToSparqlParameterMapping != null) {
       grammarEntry.sentenceToSparqlParameterMapping = new HashMap<>(this.sentenceToSparqlParameterMapping);
     }

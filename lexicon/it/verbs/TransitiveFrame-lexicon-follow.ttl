@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_follow ;
+  lemon:entry    :followed ;
+  lemon:entry    :da .
+
+:to_follow a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_follow ;
+  lemon:otherForm      :form_follows ;
+  lemon:otherForm      :form_followed ;
+  lemon:sense          :follow_sense_1 ;
+  lemon:synBehavior    :follow_frame_transitive .
+
+:form_follow a         lemon:Form ;
+  lemon:writtenRep     "seguire"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_follows a    lemon:Form ;
+  lemon:writtenRep "segue"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_followed a   lemon:Form ;
+  lemon:writtenRep "ha seguito"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:follow_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :follow_subj ;
+  lexinfo:directObject     :follow_obj .
+
+:follow_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :follow_sense_1 ;
+  lemon:reference   <http://dbpedia.org/property/nextTitle> ;
+  lemon:subjOfProp  :follow_obj ;
+  lemon:objOfProp   :follow_subj ;
+  lemon:condition   :follow_sense_1_condition .
+
+
+:follow_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Album> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Album> .
+
+:followed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_followed_canonical ;
+  lemon:otherForm      :form_followed_by ;
+  lemon:synBehavior    :followed_frame_adjectivepp ;
+  lemon:sense          :followed_ontomap .
+
+:form_followed_canonical a lemon:Form ;
+  lemon:writtenRep         "seguire"@it .
+
+:form_followed_by a    lemon:Form ;
+  lemon:writtenRep     "seguire"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:followed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :followed_subj ;
+  lexinfo:prepositionalAdjunct :followed_obj .
+
+:followed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :followed_ontomap ;
+  lemon:reference   <http://dbpedia.org/property/nextTitle> ;
+  lemon:subjOfProp  :followed_subj ;
+  lemon:objOfProp   :followed_obj ;
+  lemon:condition   :follow_sense_1_condition .
+:followed_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

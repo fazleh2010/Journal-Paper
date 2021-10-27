@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_Direct_1 ;
+  lemon:entry    :Direct_1ed ;
+  lemon:entry    :da .
+
+:to_Direct_1 a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_Direct_1 ;
+  lemon:otherForm      :form_Direct_1s ;
+  lemon:otherForm      :form_Direct_1ed ;
+  lemon:sense          :Direct_1_sense_1 ;
+  lemon:synBehavior    :Direct_1_frame_transitive .
+
+:form_Direct_1 a         lemon:Form ;
+  lemon:writtenRep     "dirigere"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_Direct_1s a    lemon:Form ;
+  lemon:writtenRep "dirige"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_Direct_1ed a   lemon:Form ;
+  lemon:writtenRep "ha diretto"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:Direct_1_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :Direct_1_subj ;
+  lexinfo:directObject     :Direct_1_obj .
+
+:Direct_1_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :Direct_1_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/director> ;
+  lemon:subjOfProp  :Direct_1_obj ;
+  lemon:objOfProp   :Direct_1_subj ;
+  lemon:condition   :Direct_1_sense_1_condition .
+
+
+:Direct_1_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Film> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:Direct_1ed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_Direct_1ed_canonical ;
+  lemon:otherForm      :form_Direct_1ed_by ;
+  lemon:synBehavior    :Direct_1ed_frame_adjectivepp ;
+  lemon:sense          :Direct_1ed_ontomap .
+
+:form_Direct_1ed_canonical a lemon:Form ;
+  lemon:writtenRep         "dirigere"@it .
+
+:form_Direct_1ed_by a    lemon:Form ;
+  lemon:writtenRep     "dirigere"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:Direct_1ed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :Direct_1ed_subj ;
+  lexinfo:prepositionalAdjunct :Direct_1ed_obj .
+
+:Direct_1ed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :Direct_1ed_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/director> ;
+  lemon:subjOfProp  :Direct_1ed_subj ;
+  lemon:objOfProp   :Direct_1ed_obj ;
+  lemon:condition   :Direct_1_sense_1_condition .
+:Direct_1ed_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

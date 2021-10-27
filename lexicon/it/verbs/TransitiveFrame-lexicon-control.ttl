@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_control ;
+  lemon:entry    :controled ;
+  lemon:entry    :da .
+
+:to_control a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_control ;
+  lemon:otherForm      :form_controls ;
+  lemon:otherForm      :form_controled ;
+  lemon:sense          :control_sense_1 ;
+  lemon:synBehavior    :control_frame_transitive .
+
+:form_control a         lemon:Form ;
+  lemon:writtenRep     "controllare"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_controls a    lemon:Form ;
+  lemon:writtenRep "controlla"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_controled a   lemon:Form ;
+  lemon:writtenRep "ha controllato"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:control_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :control_subj ;
+  lexinfo:directObject     :control_obj .
+
+:control_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :control_sense_1 ;
+  lemon:reference   <http://dbpedia.org/property/controlledby> ;
+  lemon:subjOfProp  :control_obj ;
+  lemon:objOfProp   :control_subj ;
+  lemon:condition   :control_sense_1_condition .
+
+
+:control_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Airport> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Organisation> .
+
+:controled a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_controled_canonical ;
+  lemon:otherForm      :form_controled_by ;
+  lemon:synBehavior    :controled_frame_adjectivepp ;
+  lemon:sense          :controled_ontomap .
+
+:form_controled_canonical a lemon:Form ;
+  lemon:writtenRep         "controllare"@it .
+
+:form_controled_by a    lemon:Form ;
+  lemon:writtenRep     "controllare"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:controled_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :controled_subj ;
+  lexinfo:prepositionalAdjunct :controled_obj .
+
+:controled_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :controled_ontomap ;
+  lemon:reference   <http://dbpedia.org/property/controlledby> ;
+  lemon:subjOfProp  :controled_subj ;
+  lemon:objOfProp   :controled_obj ;
+  lemon:condition   :control_sense_1_condition .
+:controled_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

@@ -5,7 +5,7 @@ The project creates QA system given a lemon lexica or Csv file (contains informa
 <p>The source code can be compiled and run using <em>Java 11</em> and <em>Maven</em>.</p>
 
 ```shell script
-git clone https://github.com/fazleh2010/question-grammar-generator.git -b extension
+git clone https://github.com/fazleh2010/question-grammar-generator.git -b italian
 ```
 build the jar file
 ```shell script
@@ -13,20 +13,26 @@ mvn clean install
 mvn clean package
 ```
 Run the system:
-- language: `EN` (English)
+- language: `EN` (English), `IT` (Italian), `ES` (Spanish)
 - input_directory: The directory that contains lemon (the turtle files) or csv files  that will be processed by QueGG. If csv file then the program will first create lemon and then generate grammar entry files. If lemon then it will generate grammar entry files. 
 - output_director: The output directory for the json grammar entry files that are produced by QueGG
 - number_of_entities: The number of entities in binding list. If the parameter is 10 then the maximum number of binding list is 10.
 - input_type:  The input file indicator. `csv` or  `ttl`.If `csv` then the lexical entires are given in the form of rows in csv. If  `ttl` then the lexical entries are given in lemon format.                                         
 ````shell script
 java -jar <jar file> <language> <input_directory> <output_director> <number_of_entities> <input_type>
-java -jar target/QuestionGrammarGenerator.jar EN lexicon/en output 10 csv dataset/wikidata.json                                                                 
+java -jar target/QuestionGrammarGenerator.jar ES lexicon/es outputDB 10 csv dataset/dbpedia.json                                                                 
 ````  
+Run Evaluation
+
+````shell script
+java -jar target/QuestionGrammarGenerator.jar ES qald outputDB dataset/dbpedia.json
+````
+
 
 ### Input example
 QueGG can take either csv or turtle file as input 
-- An example of csv input file (.csv)  (https://github.com/fazleh2010/question-grammar-generator/blob/extension/examples/input/nounppframe.csv) or
-- An example of turtle file (.ttl) (https://github.com/fazleh2010/question-grammar-generator/blob/extension/examples/input/lexicon-capital-of.ttl). The lexical entries are defined using the Lexicon Model for Ontologies [Lemon](https://lemon-model.net/) and the data category ontology [LexInfo](https://lexinfo.net/).
+- An example of csv input file (.csv)  (https://github.com/fazleh2010/question-grammar-generator/blob/italian/examples/article_Noun_Frame%20.csv) or
+- An example of turtle file (.ttl) (https://github.com/fazleh2010/question-grammar-generator/blob/italian/examples/NounPPFrame-lexicon-birthPlace_of.ttl). The lexical entries are defined using the Lexicon Model for Ontologies [Lemon](https://lemon-model.net/) and the data category ontology [LexInfo](https://lexinfo.net/).
 
 
 ### Output file example
@@ -38,43 +44,32 @@ QueGG can generate two types of output file:
 
 ```json
 {
-    "id": "107",
-    "language": "EN",
-    "type": "SENTENCE",
-    "bindingType": "COUNTRY",
-    "returnType": "CITY",
-    "frameType": "NPP",
-    "sentences": [
-        "What is the capital of ($x | COUNTRY_NP)?",
-        "What was the capital of ($x | COUNTRY_NP)?",
-        "Which city is the capital of ($x | COUNTRY_NP)?",
-        "Which city was the capital of ($x | COUNTRY_NP)?"
-    ],
-    "queryType": "SELECT",
-    "sparqlQuery": "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/capital> ?objOfProp))\n",
-    "sentenceToSparqlParameterMapping": {
-        "$x": "subjOfProp"
+    "id" : "1",
+    "lexicalEntryUri" : "http://localhost:8080#birthPlace_of",
+    "language" : "IT",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PLACE",
+    "frameType" : "NPP",
+    "sentences" : [ "Qual era il luogo di nascita di ($x | PERSON_NP)?", "Qual è il luogo di nascita di ($x | PERSON_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
     },
-    "returnVariable": "objOfProp",
-    "sentenceBindings": {
-        "bindingVariableName": "$x",
-        "bindingList": [
-            {
-                "label": "Abbasid Caliphate",
-                "uri": "http://dbpedia.org/resource/Abbasid_Caliphate"
-            },
-            {
-                "label": "Almohad Caliphate",
-                "uri": "http://dbpedia.org/resource/Almohad_Caliphate"
-            },
-            {
-                "label": "Dacia",
-                "uri": "http://dbpedia.org/resource/Dacia"
-            },
-            {
-                "label": "Democratic Republic of Afghanistan",
-                "uri": "http://dbpedia.org/resource/Democratic_Republic_of_Afghanistan"
-            }
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Balraj Sahni",
+        "uri" : "http://dbpedia.org/resource/Balraj_Sahni"
+      }, {
+        "label" : "Balram Jakhar",
+        "uri" : "http://dbpedia.org/resource/Balram_Jakhar"
+      }, {
+        "label" : "Baltacı Mehmed Pascià",
+        "uri" : "http://dbpedia.org/resource/Baltacı_Mehmet_Pasha"
+      }
         ]
     },
     "combination": false
@@ -107,10 +102,11 @@ combination | A flag that shows if this grammar entry is a combination of multip
 
 ```csv
 "id","question","sparql","answer","frame"
-"0","Give me the capital of Lower Canada","select  ?o    {    <http://dbpedia.org/resource/Lower_Canada> <http://dbpedia.org/ontology/capital>  ?o    }","Quebec City","NPP"
-"1","Tell me the capital of Lower Canada","select  ?o    {    <http://dbpedia.org/resource/Lower_Canada> <http://dbpedia.org/ontology/capital>  ?o    }","Quebec City","NPP"
-"2","What is the capital of Lower Canada?","select  ?o    {    <http://dbpedia.org/resource/Lower_Canada> <http://dbpedia.org/ontology/capital>  ?o    }","Quebec City","NPP"
-
+1,Qual era il luogo di nascita di Balraj Sahni?, select ?o {<http://dbpedia.org/resource/Balraj_Sahni> <http://dbpedia.org/ontology/birthPlace>  ?o },http://dbpedia.org/resource/Pakistan,Pakistan,NPP
+2,Qual è il luogo di nascita di Balraj Sahni?, select  ?o {<http://dbpedia.org/resource/Balraj_Sahni> <http://dbpedia.org/ontology/birthPlace>  ?o },http://dbpedia.org/resource/Pakistan,Pakistan,NPP
+3,il luogo di nascita di Balraj Sahni,select  ?o {<http://dbpedia.org/resource/Balraj_Sahni> <http://dbpedia.org/ontology/birthPlace> ?o},http://dbpedia.org/resource/Pakistan,Pakistan,NPP
+....
+...
 ```
 
 

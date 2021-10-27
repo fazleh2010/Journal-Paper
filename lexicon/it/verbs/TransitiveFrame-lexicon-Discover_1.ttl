@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_Discover_1 ;
+  lemon:entry    :Discover_1ed ;
+  lemon:entry    :da .
+
+:to_Discover_1 a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_Discover_1 ;
+  lemon:otherForm      :form_Discover_1s ;
+  lemon:otherForm      :form_Discover_1ed ;
+  lemon:sense          :Discover_1_sense_1 ;
+  lemon:synBehavior    :Discover_1_frame_transitive .
+
+:form_Discover_1 a         lemon:Form ;
+  lemon:writtenRep     "scoprire"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_Discover_1s a    lemon:Form ;
+  lemon:writtenRep "scopre"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_Discover_1ed a   lemon:Form ;
+  lemon:writtenRep "ha scoperto"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:Discover_1_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :Discover_1_subj ;
+  lexinfo:directObject     :Discover_1_obj .
+
+:Discover_1_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :Discover_1_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/discoverer> ;
+  lemon:subjOfProp  :Discover_1_obj ;
+  lemon:objOfProp   :Discover_1_subj ;
+  lemon:condition   :Discover_1_sense_1_condition .
+
+
+:Discover_1_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Place> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:Discover_1ed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_Discover_1ed_canonical ;
+  lemon:otherForm      :form_Discover_1ed_by ;
+  lemon:synBehavior    :Discover_1ed_frame_adjectivepp ;
+  lemon:sense          :Discover_1ed_ontomap .
+
+:form_Discover_1ed_canonical a lemon:Form ;
+  lemon:writtenRep         "scoprire"@it .
+
+:form_Discover_1ed_by a    lemon:Form ;
+  lemon:writtenRep     "scoprire"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:Discover_1ed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :Discover_1ed_subj ;
+  lexinfo:prepositionalAdjunct :Discover_1ed_obj .
+
+:Discover_1ed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :Discover_1ed_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/discoverer> ;
+  lemon:subjOfProp  :Discover_1ed_subj ;
+  lemon:objOfProp   :Discover_1ed_obj ;
+  lemon:condition   :Discover_1_sense_1_condition .
+:Discover_1ed_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
