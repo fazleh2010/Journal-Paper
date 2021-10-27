@@ -1,0 +1,43 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :homeStadium_of ;
+  lemon:entry    :of .
+
+:homeStadium_of a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :homeStadium_of_form ;
+  lemon:sense          :homeStadium_of_sense_1 ;
+  lemon:synBehavior    :homeStadium_of_nounpp .
+
+:homeStadium_of_form a lemon:Form ;
+  lemon:writtenRep "home stadium"@en .
+
+:homeStadium_of_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:homeStadium_of_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :homeStadium_of_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/ground> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :homeStadium_of_sense_1_condition .
+
+:homeStadium_of_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/SoccerClub> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Building> .
+
+:arg2 lemon:marker :of .
+
+## Prepositions ##
+
+:of a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "of"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

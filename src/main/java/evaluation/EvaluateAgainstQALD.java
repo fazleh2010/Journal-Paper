@@ -41,7 +41,7 @@ public class EvaluateAgainstQALD {
     private final String language;
     private final String ORIGINAL = "ORIGINAL";
     private final String BOG = "BOG";
-    private final double similarityPercentage = 60.0;
+    private final double similarityPercentage = 80.0;
     private Map<String, GrammarEntry> matchedQueGGEntriesIds = new TreeMap<String, GrammarEntry>();
     private Set<String> qaldQuestions = new TreeSet<String>();
     private String endpoint=null;
