@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_leave ;
+  lemon:entry    :leaveed ;
+  lemon:entry    :da .
+
+:to_leave a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_leave ;
+  lemon:otherForm      :form_leaves ;
+  lemon:otherForm      :form_leaveed ;
+  lemon:sense          :leave_sense_1 ;
+  lemon:synBehavior    :leave_frame_transitive .
+
+:form_leave a         lemon:Form ;
+  lemon:writtenRep     "lasciare"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_leaves a    lemon:Form ;
+  lemon:writtenRep "lascia"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_leaveed a   lemon:Form ;
+  lemon:writtenRep "ha lasciato"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:leave_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :leave_subj ;
+  lexinfo:directObject     :leave_obj .
+
+:leave_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :leave_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/formerBandMember> ;
+  lemon:subjOfProp  :leave_obj ;
+  lemon:objOfProp   :leave_subj ;
+  lemon:condition   :leave_sense_1_condition .
+
+
+:leave_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Band> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:leaveed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_leaveed_canonical ;
+  lemon:otherForm      :form_leaveed_by ;
+  lemon:synBehavior    :leaveed_frame_adjectivepp ;
+  lemon:sense          :leaveed_ontomap .
+
+:form_leaveed_canonical a lemon:Form ;
+  lemon:writtenRep         "lasciare"@it .
+
+:form_leaveed_by a    lemon:Form ;
+  lemon:writtenRep     "lasciare"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:leaveed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :leaveed_subj ;
+  lexinfo:prepositionalAdjunct :leaveed_obj .
+
+:leaveed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :leaveed_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/formerBandMember> ;
+  lemon:subjOfProp  :leaveed_subj ;
+  lemon:objOfProp   :leaveed_obj ;
+  lemon:condition   :leave_sense_1_condition .
+:leaveed_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

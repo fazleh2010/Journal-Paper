@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_Cross_1 ;
+  lemon:entry    :Cross_1ed ;
+  lemon:entry    :da .
+
+:to_Cross_1 a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_Cross_1 ;
+  lemon:otherForm      :form_Cross_1s ;
+  lemon:otherForm      :form_Cross_1ed ;
+  lemon:sense          :Cross_1_sense_1 ;
+  lemon:synBehavior    :Cross_1_frame_transitive .
+
+:form_Cross_1 a         lemon:Form ;
+  lemon:writtenRep     "attraversa"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_Cross_1s a    lemon:Form ;
+  lemon:writtenRep "attraversa"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_Cross_1ed a   lemon:Form ;
+  lemon:writtenRep "ha attraversato"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:Cross_1_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :Cross_1_subj ;
+  lexinfo:directObject     :Cross_1_obj .
+
+:Cross_1_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :Cross_1_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/crosses> ;
+  lemon:subjOfProp  :Cross_1_obj ;
+  lemon:objOfProp   :Cross_1_subj ;
+  lemon:condition   :Cross_1_sense_1_condition .
+
+
+:Cross_1_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Bridge> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/River> .
+
+:Cross_1ed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_Cross_1ed_canonical ;
+  lemon:otherForm      :form_Cross_1ed_by ;
+  lemon:synBehavior    :Cross_1ed_frame_adjectivepp ;
+  lemon:sense          :Cross_1ed_ontomap .
+
+:form_Cross_1ed_canonical a lemon:Form ;
+  lemon:writtenRep         "attraversa"@it .
+
+:form_Cross_1ed_by a    lemon:Form ;
+  lemon:writtenRep     "attraversa"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:Cross_1ed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :Cross_1ed_subj ;
+  lexinfo:prepositionalAdjunct :Cross_1ed_obj .
+
+:Cross_1ed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :Cross_1ed_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/crosses> ;
+  lemon:subjOfProp  :Cross_1ed_subj ;
+  lemon:objOfProp   :Cross_1ed_obj ;
+  lemon:condition   :Cross_1_sense_1_condition .
+:Cross_1ed_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

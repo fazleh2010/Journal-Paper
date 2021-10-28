@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_illustrate ;
+  lemon:entry    :illustrateed ;
+  lemon:entry    :da .
+
+:to_illustrate a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_illustrate ;
+  lemon:otherForm      :form_illustrates ;
+  lemon:otherForm      :form_illustrateed ;
+  lemon:sense          :illustrate_sense_1 ;
+  lemon:synBehavior    :illustrate_frame_transitive .
+
+:form_illustrate a         lemon:Form ;
+  lemon:writtenRep     "illustrare"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_illustrates a    lemon:Form ;
+  lemon:writtenRep "illustra"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_illustrateed a   lemon:Form ;
+  lemon:writtenRep "ha illustrato"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:illustrate_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :illustrate_subj ;
+  lexinfo:directObject     :illustrate_obj .
+
+:illustrate_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :illustrate_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/illustrator> ;
+  lemon:subjOfProp  :illustrate_obj ;
+  lemon:objOfProp   :illustrate_subj ;
+  lemon:condition   :illustrate_sense_1_condition .
+
+
+:illustrate_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/WrittenWork> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:illustrateed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_illustrateed_canonical ;
+  lemon:otherForm      :form_illustrateed_by ;
+  lemon:synBehavior    :illustrateed_frame_adjectivepp ;
+  lemon:sense          :illustrateed_ontomap .
+
+:form_illustrateed_canonical a lemon:Form ;
+  lemon:writtenRep         "illustrare"@it .
+
+:form_illustrateed_by a    lemon:Form ;
+  lemon:writtenRep     "illustrare"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:illustrateed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :illustrateed_subj ;
+  lexinfo:prepositionalAdjunct :illustrateed_obj .
+
+:illustrateed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :illustrateed_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/illustrator> ;
+  lemon:subjOfProp  :illustrateed_subj ;
+  lemon:objOfProp   :illustrateed_obj ;
+  lemon:condition   :illustrate_sense_1_condition .
+:illustrateed_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

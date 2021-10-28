@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_program ;
+  lemon:entry    :programed ;
+  lemon:entry    :da .
+
+:to_program a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_program ;
+  lemon:otherForm      :form_programs ;
+  lemon:otherForm      :form_programed ;
+  lemon:sense          :program_sense_1 ;
+  lemon:synBehavior    :program_frame_transitive .
+
+:form_program a         lemon:Form ;
+  lemon:writtenRep     "programmare"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_programs a    lemon:Form ;
+  lemon:writtenRep "programma"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_programed a   lemon:Form ;
+  lemon:writtenRep "ha programmato"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:program_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :program_subj ;
+  lexinfo:directObject     :program_obj .
+
+:program_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :program_sense_1 ;
+  lemon:reference   <http://dbpedia.org/property/programmer> ;
+  lemon:subjOfProp  :program_obj ;
+  lemon:objOfProp   :program_subj ;
+  lemon:condition   :program_sense_1_condition .
+
+
+:program_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Software> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:programed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_programed_canonical ;
+  lemon:otherForm      :form_programed_by ;
+  lemon:synBehavior    :programed_frame_adjectivepp ;
+  lemon:sense          :programed_ontomap .
+
+:form_programed_canonical a lemon:Form ;
+  lemon:writtenRep         "programmare"@it .
+
+:form_programed_by a    lemon:Form ;
+  lemon:writtenRep     "programmare"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:programed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :programed_subj ;
+  lexinfo:prepositionalAdjunct :programed_obj .
+
+:programed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :programed_ontomap ;
+  lemon:reference   <http://dbpedia.org/property/programmer> ;
+  lemon:subjOfProp  :programed_subj ;
+  lemon:objOfProp   :programed_obj ;
+  lemon:condition   :program_sense_1_condition .
+:programed_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_breed ;
+  lemon:entry    :breeded ;
+  lemon:entry    :da .
+
+:to_breed a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_breed ;
+  lemon:otherForm      :form_breeds ;
+  lemon:otherForm      :form_breeded ;
+  lemon:sense          :breed_sense_1 ;
+  lemon:synBehavior    :breed_frame_transitive .
+
+:form_breed a         lemon:Form ;
+  lemon:writtenRep     "allevare"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_breeds a    lemon:Form ;
+  lemon:writtenRep "alleva"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_breeded a   lemon:Form ;
+  lemon:writtenRep "allevava"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:breed_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :breed_subj ;
+  lexinfo:directObject     :breed_obj .
+
+:breed_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :breed_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/breeder> ;
+  lemon:subjOfProp  :breed_obj ;
+  lemon:objOfProp   :breed_subj ;
+  lemon:condition   :breed_sense_1_condition .
+
+
+:breed_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Animal> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:breeded a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_breeded_canonical ;
+  lemon:otherForm      :form_breeded_by ;
+  lemon:synBehavior    :breeded_frame_adjectivepp ;
+  lemon:sense          :breeded_ontomap .
+
+:form_breeded_canonical a lemon:Form ;
+  lemon:writtenRep         "allevare"@it .
+
+:form_breeded_by a    lemon:Form ;
+  lemon:writtenRep     "allevare"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:breeded_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :breeded_subj ;
+  lexinfo:prepositionalAdjunct :breeded_obj .
+
+:breeded_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :breeded_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/breeder> ;
+  lemon:subjOfProp  :breeded_subj ;
+  lemon:objOfProp   :breeded_obj ;
+  lemon:condition   :breed_sense_1_condition .
+:breeded_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_train ;
+  lemon:entry    :trained ;
+  lemon:entry    :da .
+
+:to_train a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_train ;
+  lemon:otherForm      :form_trains ;
+  lemon:otherForm      :form_trained ;
+  lemon:sense          :train_sense_1 ;
+  lemon:synBehavior    :train_frame_transitive .
+
+:form_train a         lemon:Form ;
+  lemon:writtenRep     "allenare"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_trains a    lemon:Form ;
+  lemon:writtenRep "allena"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_trained a   lemon:Form ;
+  lemon:writtenRep "ha allenato"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:train_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :train_subj ;
+  lexinfo:directObject     :train_obj .
+
+:train_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :train_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/trainer> ;
+  lemon:subjOfProp  :train_obj ;
+  lemon:objOfProp   :train_subj ;
+  lemon:condition   :train_sense_1_condition .
+
+
+:train_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Athlete> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:trained a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_trained_canonical ;
+  lemon:otherForm      :form_trained_by ;
+  lemon:synBehavior    :trained_frame_adjectivepp ;
+  lemon:sense          :trained_ontomap .
+
+:form_trained_canonical a lemon:Form ;
+  lemon:writtenRep         "allenare"@it .
+
+:form_trained_by a    lemon:Form ;
+  lemon:writtenRep     "allenare"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:trained_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :trained_subj ;
+  lexinfo:prepositionalAdjunct :trained_obj .
+
+:trained_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :trained_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/trainer> ;
+  lemon:subjOfProp  :trained_subj ;
+  lemon:objOfProp   :trained_obj ;
+  lemon:condition   :train_sense_1_condition .
+:trained_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

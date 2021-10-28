@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_drain ;
+  lemon:entry    :drained ;
+  lemon:entry    :da .
+
+:to_drain a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_drain ;
+  lemon:otherForm      :form_drains ;
+  lemon:otherForm      :form_drained ;
+  lemon:sense          :drain_sense_1 ;
+  lemon:synBehavior    :drain_frame_transitive .
+
+:form_drain a         lemon:Form ;
+  lemon:writtenRep     "drenare"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_drains a    lemon:Form ;
+  lemon:writtenRep "drena"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_drained a   lemon:Form ;
+  lemon:writtenRep "ha drenato"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:drain_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :drain_subj ;
+  lexinfo:directObject     :drain_obj .
+
+:drain_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :drain_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/outflow> ;
+  lemon:subjOfProp  :drain_obj ;
+  lemon:objOfProp   :drain_subj ;
+  lemon:condition   :drain_sense_1_condition .
+
+
+:drain_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/BodyOfWater> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/River> .
+
+:drained a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_drained_canonical ;
+  lemon:otherForm      :form_drained_by ;
+  lemon:synBehavior    :drained_frame_adjectivepp ;
+  lemon:sense          :drained_ontomap .
+
+:form_drained_canonical a lemon:Form ;
+  lemon:writtenRep         "drenare"@it .
+
+:form_drained_by a    lemon:Form ;
+  lemon:writtenRep     "drenare"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:drained_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :drained_subj ;
+  lexinfo:prepositionalAdjunct :drained_obj .
+
+:drained_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :drained_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/outflow> ;
+  lemon:subjOfProp  :drained_subj ;
+  lemon:objOfProp   :drained_obj ;
+  lemon:condition   :drain_sense_1_condition .
+:drained_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

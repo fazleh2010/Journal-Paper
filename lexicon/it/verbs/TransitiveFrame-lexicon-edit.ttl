@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_edit ;
+  lemon:entry    :edited ;
+  lemon:entry    :da .
+
+:to_edit a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_edit ;
+  lemon:otherForm      :form_edits ;
+  lemon:otherForm      :form_edited ;
+  lemon:sense          :edit_sense_1 ;
+  lemon:synBehavior    :edit_frame_transitive .
+
+:form_edit a         lemon:Form ;
+  lemon:writtenRep     "curare"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_edits a    lemon:Form ;
+  lemon:writtenRep "cura"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_edited a   lemon:Form ;
+  lemon:writtenRep "curava"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:edit_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :edit_subj ;
+  lexinfo:directObject     :edit_obj .
+
+:edit_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :edit_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/editor> ;
+  lemon:subjOfProp  :edit_obj ;
+  lemon:objOfProp   :edit_subj ;
+  lemon:condition   :edit_sense_1_condition .
+
+
+:edit_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/AcademicJournal> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Agent> .
+
+:edited a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_edited_canonical ;
+  lemon:otherForm      :form_edited_by ;
+  lemon:synBehavior    :edited_frame_adjectivepp ;
+  lemon:sense          :edited_ontomap .
+
+:form_edited_canonical a lemon:Form ;
+  lemon:writtenRep         "curare"@it .
+
+:form_edited_by a    lemon:Form ;
+  lemon:writtenRep     "curare"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:edited_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :edited_subj ;
+  lexinfo:prepositionalAdjunct :edited_obj .
+
+:edited_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :edited_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/editor> ;
+  lemon:subjOfProp  :edited_subj ;
+  lemon:objOfProp   :edited_obj ;
+  lemon:condition   :edit_sense_1_condition .
+:edited_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

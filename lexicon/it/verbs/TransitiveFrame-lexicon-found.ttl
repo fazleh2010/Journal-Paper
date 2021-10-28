@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_found ;
+  lemon:entry    :founded ;
+  lemon:entry    :da .
+
+:to_found a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_found ;
+  lemon:otherForm      :form_founds ;
+  lemon:otherForm      :form_founded ;
+  lemon:sense          :found_sense_1 ;
+  lemon:synBehavior    :found_frame_transitive .
+
+:form_found a         lemon:Form ;
+  lemon:writtenRep     "fondare"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_founds a    lemon:Form ;
+  lemon:writtenRep "fonda"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_founded a   lemon:Form ;
+  lemon:writtenRep "ha fondato"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:found_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :found_subj ;
+  lexinfo:directObject     :found_obj .
+
+:found_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :found_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/foundedBy> ;
+  lemon:subjOfProp  :found_obj ;
+  lemon:objOfProp   :found_subj ;
+  lemon:condition   :found_sense_1_condition .
+
+
+:found_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Organisation> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:founded a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_founded_canonical ;
+  lemon:otherForm      :form_founded_by ;
+  lemon:synBehavior    :founded_frame_adjectivepp ;
+  lemon:sense          :founded_ontomap .
+
+:form_founded_canonical a lemon:Form ;
+  lemon:writtenRep         "fondare"@it .
+
+:form_founded_by a    lemon:Form ;
+  lemon:writtenRep     "fondare"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:founded_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :founded_subj ;
+  lexinfo:prepositionalAdjunct :founded_obj .
+
+:founded_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :founded_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/foundedBy> ;
+  lemon:subjOfProp  :founded_subj ;
+  lemon:objOfProp   :founded_obj ;
+  lemon:condition   :found_sense_1_condition .
+:founded_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

@@ -1,0 +1,14 @@
+LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,,,,,,,,,,,,,,,,
+length_of,noun,la lunghezza,i nemici,di,NounPPFrame,range,domain,1,dbp:length,dbo:River,xsd:nonNegativeInteger,,,,,,,,,,,,,#N/A,#N/A,,2
+electoralDistrict-of,noun,il distretto elettorale,X -,di,NounPPFrame,range,domain,1,dbo:region,dbo:Politician,dbo:Place,,,,,,,,,,,,,#N/A,#N/A,,2
+publicationDate-of,noun,la data di pubblicazione,i compositori,di,NounPPFrame,range,domain,1,dbo:publicationDate,dbo:WrittenWork,xsd:date,,,,,,,,,,,,,#N/A,#N/A,,2
+composer-of,noun,il compositore,i direttori,di,NounPPFrame,range,domain,1,dbo:composer,dbo:Work,dbo:Person,,,,,,,,,,,,,#N/A,#N/A,,2
+author_of,noun,l' autore,i produttori,di,NounPPFrame,range,domain,1,dbo:author,dbo:Work,dbo:Person,,,,,,,,,,,,,#N/A,#N/A,,2
+writer-of,noun,il scrittore,-,di,NounPPFrame,range,domain,1,dbo:writer,dbo:Work,dbo:Person,,,,,,,,,,,,,#N/A,#N/A,,2
+publisher-of,noun,l' editore,-,di,NounPPFrame,range,domain,2,dbo:publisher,dbo:WrittenWork,dbo:Agent,,,,,,,,,,,,,#N/A,#N/A,,
+currencyCode-of,noun,il codice valuta,-,di,NounPPFrame,range,domain,1,dbo:currencyCode,dbo:Currency,xsd:string,,,,,,,,,,,,,#N/A,#N/A,,
+numberOfStudents-of,noun,il numero di studenti,-,di,NounPPFrame,range,domain,1,dbo:numberOfStudents,dbo:EducationalInstitution,xsd:nonNegativeInteger,,,,,,,,,,,,,#N/A,#N/A,,
+numberOfPostgraduateStudents,noun,il numero di studenti postdoc,-,di,NounPPFrame,range,domain,1,dbo:numberOfPostgraduateStudents,dbo:University,xsd:nonNegativeInteger,,,,,,,,,,,,,#N/A,#N/A,,
+numberOfUndergraduateStudents,noun,il numero di studenti universitari,-,di,NounPPFrame,range,domain,1,dbo:numberOfUndergraduateStudents,dbo:EducationalInstitution,xsd:nonNegativeInteger,,,,,,,,,,,,,#N/A,#N/A,,
+party-of,noun,il partito,-,di,NounPPFrame,range,domain,1,dbo:party,dbo:Politician,xsd:string,,,,,,,,,,,,,#N/A,#N/A,,
+designer-of,noun,l' ideatore,gli attori,di,NounPPFrame,range,domain,1,dbo:designer,dbo:Work,dbo:Person,,,,,,,,,,,,,#N/A,#N/A,,

@@ -1,0 +1,200 @@
+{
+  "status": "success",
+  "result": {
+    "document_id": "cbaa4642-8846-438c-9be3-baa1db768e1d",
+    "format": "json-ld",
+    "rdf_data": [
+      {
+        "@id": "http://www.spain.info/what-drive-licence-can-you-use-in-spain-?_abe268d1-54d5-47cd-bf53-5475a50d2f7c#hasReferenceLink",
+        "@type": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        ]
+      },
+      {
+        "@id": "http://www.spain.info/what-drive-licence-can-you-use-in-spain-?_abe268d1-54d5-47cd-bf53-5475a50d2f7c#hasSection",
+        "@type": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        ]
+      },
+      {
+        "@id": "http://www.spain.info/what-drive-licence-can-you-use-in-spain-?_abe268d1-54d5-47cd-bf53-5475a50d2f7c#hasContent",
+        "@type": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        ]
+      },
+      {
+        "@id": "http://www.spain.info",
+        "@type": [
+          "http://www.w3.org/2000/01/rdf-schema#Class"
+        ],
+        "http://www.spain.info/what-drive-licence-can-you-use-in-spain-?_abe268d1-54d5-47cd-bf53-5475a50d2f7c#hasSection": [
+          {
+            "@id": "http%3A%2F%2Fwww.spain.info%2F%23drive-how-do-you-drive-in-spain-%3F_88c57b8f-34aa-4845-872e-9c1f980ab4bb"
+          }
+        ]
+      },
+      {
+        "@id": "http%3A%2F%2Fwww.spain.info%2F%23drive-how-do-you-drive-in-spain-%3F_88c57b8f-34aa-4845-872e-9c1f980ab4bb",
+        "@type": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        ],
+        "http://www.spain.info/what-drive-licence-can-you-use-in-spain-?_abe268d1-54d5-47cd-bf53-5475a50d2f7c#hasSection": [
+          {
+            "@id": "http%3A%2F%2Fwww.spain.info%2F%23what-drive-licence-can-you-use-in-spain-%3F_abe268d1-54d5-47cd-bf53-5475a50d2f7c"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Driving. How do you drive in Spain?."
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+          {
+            "@id": "http://www.spain.info"
+          }
+        ]
+      },
+      {
+        "@id": "http%3A%2F%2Fwww.spain.info%2F%23what-drive-licence-can-you-use-in-spain-%3F_abe268d1-54d5-47cd-bf53-5475a50d2f7c",
+        "@type": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        ],
+        "http%3A%2F%2Fwww.spain.info%2F%23hasId": [
+          {
+            "@value": "cbaa4642-8846-438c-9be3-baa1db768e1d"
+          }
+        ],
+        "http%3A%2F%2Fwww.spain.info%2F%23hasLocation": [
+          {
+            "@value": "Moldavia"
+          },
+          {
+            "@value": "Montenegro"
+          },
+          {
+            "@value": "Bosnia"
+          },
+          {
+            "@value": "Iran"
+          },
+          {
+            "@value": "Morocco"
+          },
+          {
+            "@value": "Ukraine"
+          },
+          {
+            "@value": "Norway"
+          },
+          {
+            "@value": "Tunisia"
+          },
+          {
+            "@value": "Byelorussia"
+          },
+          {
+            "@value": "Macedonia"
+          },
+          {
+            "@value": "Albania Azerbaijan"
+          },
+          {
+            "@value": "Spain"
+          },
+          {
+            "@value": "Iceland"
+          },
+          {
+            "@value": "Turkey"
+          },
+          {
+            "@value": "Russia"
+          },
+          {
+            "@value": "Israel"
+          },
+          {
+            "@value": "Croatia"
+          }
+        ],
+        "http%3A%2F%2Fwww.spain.info%2F%23hasNationality": [
+          {
+            "@value": "Spanish"
+          }
+        ],
+        "http%3A%2F%2Fwww.spain.info%2F%23hasOrganization": [
+          {
+            "@value": "the European Union"
+          },
+          {
+            "@value": "Customs"
+          },
+          {
+            "@value": "International Civil Liability Insurance Certificate"
+          },
+          {
+            "@value": "Consulate"
+          },
+          {
+            "@value": "EU"
+          },
+          {
+            "@value": "European Union"
+          },
+          {
+            "@value": "Embassy"
+          },
+          {
+            "@value": "Green Card"
+          }
+        ],
+        "http%3A%2F%2Fwww.spain.info%2F%23hasPeriod": [
+          {
+            "@value": "six months"
+          },
+          {
+            "@value": "one year"
+          },
+          {
+            "@value": "18 years of age"
+          }
+        ],
+        "http%3A%2F%2Fwww.spain.info%2F%23hasPerson": [
+          {
+            "@value": "Liechtenstein Andorra"
+          }
+        ],
+        "http%3A%2F%2Fwww.spain.info%2F%23hasProperty": [
+          {
+            "@value": "personinfo"
+          }
+        ],
+        "http%3A%2F%2Fwww.spain.info%2F%23hasValue": [
+          {
+            "@value": "one"
+          }
+        ],
+        "http://www.spain.info/what-drive-licence-can-you-use-in-spain-?_abe268d1-54d5-47cd-bf53-5475a50d2f7c#hasContent": [
+          {
+            "@value": "All European Union driving licences and international driving licences are valid in Spain. Remember that the latter is only valid for one year and to get one you must have a licence to drive in your country. The minimum age for driving in Spain is 18 years of age. If you are coming to Spain in your own car, you will have to ask for a temporary circulation permit for the vehicle at Customs. It is valid for six months, after which you must register your car in Spain. In all cases, the vehicle’s number plate should include an oval sticker indicating the country it comes from (for cars from the European Union, the EU flag on current number plates is sufficient). Also, remember that it is absolutely necessary to have valid international insurance. With regard to driving insurance, if you're from the European Union, Switzerland, Norway, Iceland, Liechtenstein, Andorra or Croatia, you'll need to have the insurance policy with you together with the receipt justifying its validity. If you are from Albania, Azerbaijan, Bosnia-Herzegovina, Byelorussia, Iran, Israel, Macedonia, Morocco, Moldavia, Tunisia, Turkey, Ukraine, Russia or Montenegro, you must get a Green Card or International Civil Liability Insurance Certificate. For all other cases, it will be necessary to take out Border Insurance. Since conditions may vary, we suggest that you contact the Spanish Embassy or Consulate to verify these requirements before you start your trip."
+          }
+        ],
+        "http://www.spain.info/what-drive-licence-can-you-use-in-spain-?_abe268d1-54d5-47cd-bf53-5475a50d2f7c#hasReferenceLink": [
+          {
+            "@value": "https://www.spain.info/en/travel-tips/driving-regulations/"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "What driving licences can you use in Spain?."
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+          {
+            "@id": "http%3A%2F%2Fwww.spain.info%2F%23drive-how-do-you-drive-in-spain-%3F_88c57b8f-34aa-4845-872e-9c1f980ab4bb"
+          }
+        ]
+      }
+    ]
+  }
+}

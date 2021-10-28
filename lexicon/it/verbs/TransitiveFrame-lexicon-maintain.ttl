@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_maintain ;
+  lemon:entry    :maintained ;
+  lemon:entry    :da .
+
+:to_maintain a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_maintain ;
+  lemon:otherForm      :form_maintains ;
+  lemon:otherForm      :form_maintained ;
+  lemon:sense          :maintain_sense_1 ;
+  lemon:synBehavior    :maintain_frame_transitive .
+
+:form_maintain a         lemon:Form ;
+  lemon:writtenRep     "curare"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_maintains a    lemon:Form ;
+  lemon:writtenRep "cura"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_maintained a   lemon:Form ;
+  lemon:writtenRep "curava"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:maintain_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :maintain_subj ;
+  lexinfo:directObject     :maintain_obj .
+
+:maintain_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :maintain_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/maintainedBy> ;
+  lemon:subjOfProp  :maintain_obj ;
+  lemon:objOfProp   :maintain_subj ;
+  lemon:condition   :maintain_sense_1_condition .
+
+
+:maintain_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/ArchitecturalStructure> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Agent> .
+
+:maintained a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_maintained_canonical ;
+  lemon:otherForm      :form_maintained_by ;
+  lemon:synBehavior    :maintained_frame_adjectivepp ;
+  lemon:sense          :maintained_ontomap .
+
+:form_maintained_canonical a lemon:Form ;
+  lemon:writtenRep         "curare"@it .
+
+:form_maintained_by a    lemon:Form ;
+  lemon:writtenRep     "curare"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:maintained_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :maintained_subj ;
+  lexinfo:prepositionalAdjunct :maintained_obj .
+
+:maintained_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :maintained_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/maintainedBy> ;
+  lemon:subjOfProp  :maintained_subj ;
+  lemon:objOfProp   :maintained_obj ;
+  lemon:condition   :maintain_sense_1_condition .
+:maintained_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

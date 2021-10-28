@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_operate ;
+  lemon:entry    :operateed ;
+  lemon:entry    :da .
+
+:to_operate a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_operate ;
+  lemon:otherForm      :form_operates ;
+  lemon:otherForm      :form_operateed ;
+  lemon:sense          :operate_sense_1 ;
+  lemon:synBehavior    :operate_frame_transitive .
+
+:form_operate a         lemon:Form ;
+  lemon:writtenRep     "operare"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_operates a    lemon:Form ;
+  lemon:writtenRep "opera"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_operateed a   lemon:Form ;
+  lemon:writtenRep "ha operato"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:operate_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :operate_subj ;
+  lexinfo:directObject     :operate_obj .
+
+:operate_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :operate_sense_1 ;
+  lemon:reference   <http://dbpedia.org/property/operator> ;
+  lemon:subjOfProp  :operate_obj ;
+  lemon:objOfProp   :operate_subj ;
+  lemon:condition   :operate_sense_1_condition .
+
+
+:operate_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Airport> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Organisation> .
+
+:operateed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_operateed_canonical ;
+  lemon:otherForm      :form_operateed_by ;
+  lemon:synBehavior    :operateed_frame_adjectivepp ;
+  lemon:sense          :operateed_ontomap .
+
+:form_operateed_canonical a lemon:Form ;
+  lemon:writtenRep         "operare"@it .
+
+:form_operateed_by a    lemon:Form ;
+  lemon:writtenRep     "operare"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:operateed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :operateed_subj ;
+  lexinfo:prepositionalAdjunct :operateed_obj .
+
+:operateed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :operateed_ontomap ;
+  lemon:reference   <http://dbpedia.org/property/operator> ;
+  lemon:subjOfProp  :operateed_subj ;
+  lemon:objOfProp   :operateed_obj ;
+  lemon:condition   :operate_sense_1_condition .
+:operateed_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

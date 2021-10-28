@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_precede ;
+  lemon:entry    :precedeed ;
+  lemon:entry    :da .
+
+:to_precede a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_precede ;
+  lemon:otherForm      :form_precedes ;
+  lemon:otherForm      :form_precedeed ;
+  lemon:sense          :precede_sense_1 ;
+  lemon:synBehavior    :precede_frame_transitive .
+
+:form_precede a         lemon:Form ;
+  lemon:writtenRep     "precedere"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_precedes a    lemon:Form ;
+  lemon:writtenRep "precede"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_precedeed a   lemon:Form ;
+  lemon:writtenRep "ha preceduto"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:precede_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :precede_subj ;
+  lexinfo:directObject     :precede_obj .
+
+:precede_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :precede_sense_1 ;
+  lemon:reference   <http://dbpedia.org/property/prevTitle> ;
+  lemon:subjOfProp  :precede_obj ;
+  lemon:objOfProp   :precede_subj ;
+  lemon:condition   :precede_sense_1_condition .
+
+
+:precede_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Album> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Album> .
+
+:precedeed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_precedeed_canonical ;
+  lemon:otherForm      :form_precedeed_by ;
+  lemon:synBehavior    :precedeed_frame_adjectivepp ;
+  lemon:sense          :precedeed_ontomap .
+
+:form_precedeed_canonical a lemon:Form ;
+  lemon:writtenRep         "precedere"@it .
+
+:form_precedeed_by a    lemon:Form ;
+  lemon:writtenRep     "precedere"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:precedeed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :precedeed_subj ;
+  lexinfo:prepositionalAdjunct :precedeed_obj .
+
+:precedeed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :precedeed_ontomap ;
+  lemon:reference   <http://dbpedia.org/property/prevTitle> ;
+  lemon:subjOfProp  :precedeed_subj ;
+  lemon:objOfProp   :precedeed_obj ;
+  lemon:condition   :precede_sense_1_condition .
+:precedeed_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

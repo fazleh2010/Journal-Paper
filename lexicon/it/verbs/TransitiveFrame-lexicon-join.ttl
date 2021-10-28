@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_join ;
+  lemon:entry    :joined ;
+  lemon:entry    :da .
+
+:to_join a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_join ;
+  lemon:otherForm      :form_joins ;
+  lemon:otherForm      :form_joined ;
+  lemon:sense          :join_sense_1 ;
+  lemon:synBehavior    :join_frame_transitive .
+
+:form_join a         lemon:Form ;
+  lemon:writtenRep     "unirsi"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_joins a    lemon:Form ;
+  lemon:writtenRep "si unisce"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_joined a   lemon:Form ;
+  lemon:writtenRep "si è unito"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:join_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :join_subj ;
+  lexinfo:directObject     :join_obj .
+
+:join_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :join_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/riverMouth> ;
+  lemon:subjOfProp  :join_obj ;
+  lemon:objOfProp   :join_subj ;
+  lemon:condition   :join_sense_1_condition .
+
+
+:join_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/BodyOfWater> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/River> .
+
+:joined a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_joined_canonical ;
+  lemon:otherForm      :form_joined_by ;
+  lemon:synBehavior    :joined_frame_adjectivepp ;
+  lemon:sense          :joined_ontomap .
+
+:form_joined_canonical a lemon:Form ;
+  lemon:writtenRep         "unirsi"@it .
+
+:form_joined_by a    lemon:Form ;
+  lemon:writtenRep     "unirsi"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:joined_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :joined_subj ;
+  lexinfo:prepositionalAdjunct :joined_obj .
+
+:joined_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :joined_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/riverMouth> ;
+  lemon:subjOfProp  :joined_subj ;
+  lemon:objOfProp   :joined_obj ;
+  lemon:condition   :join_sense_1_condition .
+:joined_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

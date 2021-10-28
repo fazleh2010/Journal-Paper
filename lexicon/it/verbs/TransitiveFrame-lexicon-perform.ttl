@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_perform ;
+  lemon:entry    :performed ;
+  lemon:entry    :da .
+
+:to_perform a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_perform ;
+  lemon:otherForm      :form_performs ;
+  lemon:otherForm      :form_performed ;
+  lemon:sense          :perform_sense_1 ;
+  lemon:synBehavior    :perform_frame_transitive .
+
+:form_perform a         lemon:Form ;
+  lemon:writtenRep     "suonare"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_performs a    lemon:Form ;
+  lemon:writtenRep "suona"@it ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_performed a   lemon:Form ;
+  lemon:writtenRep "ha suonato"@it ;
+  lexinfo:tense    lexinfo:past .
+
+:perform_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :perform_subj ;
+  lexinfo:directObject     :perform_obj .
+
+:perform_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :perform_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/artist> ;
+  lemon:subjOfProp  :perform_obj ;
+  lemon:objOfProp   :perform_subj ;
+  lemon:condition   :perform_sense_1_condition .
+
+
+:perform_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/MusicalWork> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Agent> .
+
+:performed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_performed_canonical ;
+  lemon:otherForm      :form_performed_by ;
+  lemon:synBehavior    :performed_frame_adjectivepp ;
+  lemon:sense          :performed_ontomap .
+
+:form_performed_canonical a lemon:Form ;
+  lemon:writtenRep         "suonare"@it .
+
+:form_performed_by a    lemon:Form ;
+  lemon:writtenRep     "suonare"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:performed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :performed_subj ;
+  lexinfo:prepositionalAdjunct :performed_obj .
+
+:performed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :performed_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/artist> ;
+  lemon:subjOfProp  :performed_subj ;
+  lemon:objOfProp   :performed_obj ;
+  lemon:condition   :perform_sense_1_condition .
+:performed_obj lemon:marker :da .
+
+## Prepositions ##
+:da a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
