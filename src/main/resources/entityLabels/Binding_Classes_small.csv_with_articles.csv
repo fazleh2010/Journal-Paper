@@ -1,0 +1,689 @@
+,url,name,type,article,di,a,da,in
+0,http://dbpedia.org/resource/Abraham_Lincoln,Abraham Lincoln,Politician,X,di,a,da,in
+1,http://dbpedia.org/resource/Abraham_Lincoln,Abraham Lincoln,Agent,X,di,a,da,in
+2,http://dbpedia.org/resource/Abraham_Lincoln,Abraham Lincoln,OfficeHolder,X,di,a,da,in
+3,http://dbpedia.org/resource/Abraham_Lincoln,Abraham Lincoln,Person,X,di,a,da,in
+4,http://dbpedia.org/resource/Pulp_Fiction,Pulp Fiction,Film,il,del,al,dal,nel
+5,http://dbpedia.org/resource/Pulp_Fiction,Pulp Fiction,Work,il,del,al,dal,nel
+6,http://dbpedia.org/resource/Heineken,Heineken (birra),EthnicGroup,il,del,al,dal,nel
+7,http://dbpedia.org/resource/Heineken,Heineken (birra),Beverage,il,del,al,dal,nel
+8,http://dbpedia.org/resource/Heineken,Heineken (birra),Food,il,del,al,dal,nel
+9,http://dbpedia.org/resource/Operation_Overlord,Operazione Overlord,MilitaryConflict,l',dell',all',dall',nell'
+10,http://dbpedia.org/resource/Operation_Overlord,Operazione Overlord,Event,l',dell',all',dall',nell'
+11,http://dbpedia.org/resource/Operation_Overlord,Operazione Overlord,SocietalEvent,l',dell',all',dall',nell'
+12,http://dbpedia.org/resource/Slack_(software),Slack,Work,il,del,al,dal,nel
+13,http://dbpedia.org/resource/Slack_(software),Slack,Software,il,del,al,dal,nel
+14,http://dbpedia.org/resource/Jacques_Chirac,Jacques Chirac,Politician,il,del,al,dal,nel
+15,http://dbpedia.org/resource/Jacques_Chirac,Jacques Chirac,Agent,il,del,al,dal,nel
+16,http://dbpedia.org/resource/Jacques_Chirac,Jacques Chirac,OfficeHolder,il,del,al,dal,nel
+17,http://dbpedia.org/resource/Jacques_Chirac,Jacques Chirac,Person,il,del,al,dal,nel
+18,http://dbpedia.org/resource/The_Storm_on_the_Sea_of_Galilee,Cristo nella tempesta sul mare di Galilea,Artwork,il,del,al,dal,nel
+19,http://dbpedia.org/resource/The_Storm_on_the_Sea_of_Galilee,Cristo nella tempesta sul mare di Galilea,Work,il,del,al,dal,nel
+20,http://dbpedia.org/resource/Weser,Weser,NaturalPlace,il,del,al,dal,nel
+21,http://dbpedia.org/resource/Weser,Weser,BodyOfWater,il,del,al,dal,nel
+22,http://dbpedia.org/resource/Weser,Weser,River,il,del,al,dal,nel
+23,http://dbpedia.org/resource/Weser,Weser,Stream,il,del,al,dal,nel
+24,http://dbpedia.org/resource/Weser,Weser,Place,il,del,al,dal,nel
+25,http://dbpedia.org/resource/Weser,Weser,Location,il,del,al,dal,nel
+26,http://dbpedia.org/resource/FC_Porto,Futebol Clube do Porto,Agent,il,del,al,dal,nel
+27,http://dbpedia.org/resource/FC_Porto,Futebol Clube do Porto,Organisation,il,del,al,dal,nel
+28,http://dbpedia.org/resource/FC_Porto,Futebol Clube do Porto,SoccerClub,il,del,al,dal,nel
+29,http://dbpedia.org/resource/FC_Porto,Futebol Clube do Porto,SportsClub,il,del,al,dal,nel
+30,http://dbpedia.org/resource/Viking_Press,Viking Press,Agent,il,del,al,dal,nel
+31,http://dbpedia.org/resource/Viking_Press,Viking Press,Company,il,del,al,dal,nel
+32,http://dbpedia.org/resource/Viking_Press,Viking Press,Organisation,il,del,al,dal,nel
+33,http://dbpedia.org/resource/Viking_Press,Viking Press,Publisher,il,del,al,dal,nel
+34,http://dbpedia.org/resource/Jack_Kerouac,Jack Kerouac,Agent,il,del,al,dal,nel
+35,http://dbpedia.org/resource/Jack_Kerouac,Jack Kerouac,Person,il,del,al,dal,nel
+36,http://dbpedia.org/resource/Jack_Kerouac,Jack Kerouac,Writer,il,del,al,dal,nel
+37,http://dbpedia.org/resource/The_Scream,L'urlo,Artwork,il,del,al,dal,nel
+38,http://dbpedia.org/resource/The_Scream,L'urlo,Work,il,del,al,dal,nel
+39,http://dbpedia.org/resource/The_Pillars_of_the_Earth,I pilastri della Terra,WrittenWork,gli,degli,agli,dagli,negli
+40,http://dbpedia.org/resource/The_Pillars_of_the_Earth,I pilastri della Terra,Book,gli,degli,agli,dagli,negli
+41,http://dbpedia.org/resource/The_Pillars_of_the_Earth,I pilastri della Terra,Work,gli,degli,agli,dagli,negli
+42,http://dbpedia.org/resource/Ceres_(dwarf_planet),Cerere (astronomia),CelestialBody,le,delle,alle,dalle,nelle
+43,http://dbpedia.org/resource/Ceres_(dwarf_planet),Cerere (astronomia),Planet,le,delle,alle,dalle,nelle
+44,http://dbpedia.org/resource/Ceres_(dwarf_planet),Cerere (astronomia),Place,le,delle,alle,dalle,nelle
+45,http://dbpedia.org/resource/Ceres_(dwarf_planet),Cerere (astronomia),Location,le,delle,alle,dalle,nelle
+46,http://dbpedia.org/resource/Brooklyn_Bridge,Ponte di Brooklyn,ArchitecturalStructure,le,delle,alle,dalle,nelle
+47,http://dbpedia.org/resource/Brooklyn_Bridge,Ponte di Brooklyn,Infrastructure,le,delle,alle,dalle,nelle
+48,http://dbpedia.org/resource/Brooklyn_Bridge,Ponte di Brooklyn,Bridge,le,delle,alle,dalle,nelle
+49,http://dbpedia.org/resource/Brooklyn_Bridge,Ponte di Brooklyn,RouteOfTransportation,le,delle,alle,dalle,nelle
+50,http://dbpedia.org/resource/Paris,Parigi,Settlement,le,delle,alle,dalle,nelle
+51,http://dbpedia.org/resource/Paris,Parigi,City,le,delle,alle,dalle,nelle
+52,http://dbpedia.org/resource/Paris,Parigi,Place,le,delle,alle,dalle,nelle
+53,http://dbpedia.org/resource/Paris,Parigi,Location,le,delle,alle,dalle,nelle
+54,http://dbpedia.org/resource/Paris,Parigi,PopulatedPlace,le,delle,alle,dalle,nelle
+55,http://dbpedia.org/resource/Ankara,Provincia di Ankara,Settlement,la,della,alla,dalla,nella
+56,http://dbpedia.org/resource/Ankara,Provincia di Ankara,City,la,della,alla,dalla,nella
+57,http://dbpedia.org/resource/Ankara,Provincia di Ankara,Place,la,della,alla,dalla,nella
+58,http://dbpedia.org/resource/Ankara,Provincia di Ankara,PopulatedPlace,la,della,alla,dalla,nella
+59,http://dbpedia.org/resource/Ankara,Provincia di Ankara,Location,la,della,alla,dalla,nella
+60,http://dbpedia.org/resource/French_Polynesia,Polinesia francese,Country,la,della,alla,dalla,nella
+61,http://dbpedia.org/resource/Douglas_Hofstadter,Douglas Hofstadter,Agent,il,del,al,dal,nel
+62,http://dbpedia.org/resource/Douglas_Hofstadter,Douglas Hofstadter,Scientist,il,del,al,dal,nel
+63,http://dbpedia.org/resource/Douglas_Hofstadter,Douglas Hofstadter,Person,il,del,al,dal,nel
+64,http://dbpedia.org/resource/The_Lego_Movie,The LEGO Movie,Film,le,delle,alle,dalle,nelle
+65,http://dbpedia.org/resource/The_Lego_Movie,The LEGO Movie,Work,le,delle,alle,dalle,nelle
+66,http://dbpedia.org/resource/Piccadilly,Piccadilly,Road,il,del,al,dal,nel
+67,http://dbpedia.org/resource/Piccadilly,Piccadilly,City,il,del,al,dal,nel
+68,"http://dbpedia.org/resource/Prince_William,_Duke_of_Cambridge","William, duca di Cambridge",Agent,il,del,al,dal,nel
+69,"http://dbpedia.org/resource/Prince_William,_Duke_of_Cambridge","William, duca di Cambridge",Royalty,il,del,al,dal,nel
+70,"http://dbpedia.org/resource/Prince_William,_Duke_of_Cambridge","William, duca di Cambridge",Person,il,del,al,dal,nel
+71,http://dbpedia.org/resource/Agent_Smith,Smith (personaggio),Agent,il,del,al,dal,nel
+72,http://dbpedia.org/resource/Agent_Smith,Smith (personaggio),FictionalCharacter,il,del,al,dal,nel
+73,http://dbpedia.org/resource/Turkmenistan,Turkmenistan,MusicalArtist,il,del,al,dal,nel
+74,http://dbpedia.org/resource/Turkmenistan,Turkmenistan,Country,il,del,al,dal,nel
+75,http://dbpedia.org/resource/Turkmenistan,Turkmenistan,Place,il,del,al,dal,nel
+76,http://dbpedia.org/resource/Turkmenistan,Turkmenistan,Location,il,del,al,dal,nel
+77,http://dbpedia.org/resource/Turkmenistan,Turkmenistan,PopulatedPlace,il,del,al,dal,nel
+78,http://dbpedia.org/resource/Julia_Roberts,Julia Roberts,Agent,la,della,alla,dalla,nella
+79,http://dbpedia.org/resource/Julia_Roberts,Julia Roberts,Person,la,della,alla,dalla,nella
+80,http://dbpedia.org/resource/Richard_Gere,Richard Gere,Agent,il,del,al,dal,nel
+81,http://dbpedia.org/resource/Richard_Gere,Richard Gere,Person,il,del,al,dal,nel
+82,http://dbpedia.org/resource/Ganges,Ganges,NaturalPlace,il,del,al,dal,nel
+83,http://dbpedia.org/resource/Ganges,Ganges,BodyOfWater,il,del,al,dal,nel
+84,http://dbpedia.org/resource/Ganges,Ganges,River,il,del,al,dal,nel
+85,http://dbpedia.org/resource/Ganges,Ganges,Stream,il,del,al,dal,nel
+86,http://dbpedia.org/resource/Ganges,Ganges,Place,il,del,al,dal,nel
+87,http://dbpedia.org/resource/Ganges,Ganges,Location,il,del,al,dal,nel
+88,http://dbpedia.org/resource/Rachel_Stevens,Rachel Stevens,Person,il,del,al,dal,nel
+89,http://dbpedia.org/resource/Barack_Obama,Barack Obama,Politician,il,del,al,dal,nel
+90,http://dbpedia.org/resource/Barack_Obama,Barack Obama,Agent,il,del,al,dal,nel
+91,http://dbpedia.org/resource/Barack_Obama,Barack Obama,OfficeHolder,il,del,al,dal,nel
+92,http://dbpedia.org/resource/Barack_Obama,Barack Obama,Person,il,del,al,dal,nel
+93,http://dbpedia.org/resource/Democratic_Party_(United_States),Partito Democratico (Stati Uniti d'America),PoliticalParty,il,del,al,dal,nel
+94,http://dbpedia.org/resource/Democratic_Party_(United_States),Partito Democratico (Stati Uniti d'America),Agent,il,del,al,dal,nel
+95,http://dbpedia.org/resource/Democratic_Party_(United_States),Partito Democratico (Stati Uniti d'America),Organisation,il,del,al,dal,nel
+96,http://dbpedia.org/resource/Johann_Sebastian_Bach,Johann Sebastian Bach,MusicalArtist,il,del,al,dal,nel
+97,http://dbpedia.org/resource/Johann_Sebastian_Bach,Johann Sebastian Bach,Agent,il,del,al,dal,nel
+98,http://dbpedia.org/resource/Johann_Sebastian_Bach,Johann Sebastian Bach,Person,il,del,al,dal,nel
+99,http://dbpedia.org/resource/Jane_Fonda,Jane Fonda,Agent,le,delle,alle,dalle,nelle
+100,http://dbpedia.org/resource/Jane_Fonda,Jane Fonda,Person,le,delle,alle,dalle,nelle
+101,http://dbpedia.org/resource/Mount_Everest,Everest,NaturalPlace,X,di,a,da,in
+102,http://dbpedia.org/resource/Mount_Everest,Everest,Mountain,X,di,a,da,in
+103,http://dbpedia.org/resource/Mount_Everest,Everest,Place,X,di,a,da,in
+104,http://dbpedia.org/resource/Mount_Everest,Everest,Location,X,di,a,da,in
+105,http://dbpedia.org/resource/Poland,Polonia,MusicalArtist,la,della,alla,dalla,nella
+106,http://dbpedia.org/resource/Poland,Polonia,Country,la,della,alla,dalla,nella
+107,http://dbpedia.org/resource/Poland,Polonia,Place,la,della,alla,dalla,nella
+108,http://dbpedia.org/resource/Poland,Polonia,PopulatedPlace,la,della,alla,dalla,nella
+109,http://dbpedia.org/resource/Poland,Polonia,Location,la,della,alla,dalla,nella
+110,http://dbpedia.org/resource/Palace_of_Westminster,Palazzo di Westminster,Settlement,il,del,al,dal,nel
+111,http://dbpedia.org/resource/Palace_of_Westminster,Palazzo di Westminster,HistoricPlace,il,del,al,dal,nel
+112,http://dbpedia.org/resource/Palace_of_Westminster,Palazzo di Westminster,Place,il,del,al,dal,nel
+113,http://dbpedia.org/resource/Palace_of_Westminster,Palazzo di Westminster,Location,il,del,al,dal,nel
+114,http://dbpedia.org/resource/Batman_Begins,Batman Begins,Film,il,del,al,dal,nel
+115,http://dbpedia.org/resource/Batman_Begins,Batman Begins,Work,il,del,al,dal,nel
+116,http://dbpedia.org/resource/Christian_Bale,Christian Bale,Agent,il,del,al,dal,nel
+117,http://dbpedia.org/resource/Christian_Bale,Christian Bale,Person,il,del,al,dal,nel
+118,http://dbpedia.org/resource/Alec_Guinness,Alec Guinness,Agent,X,di,a,da,in
+119,http://dbpedia.org/resource/Alec_Guinness,Alec Guinness,Person,X,di,a,da,in
+120,http://dbpedia.org/resource/Australia,Australia,MusicalArtist,X,di,a,da,in
+121,http://dbpedia.org/resource/Australia,Australia,Country,X,di,a,da,in
+122,http://dbpedia.org/resource/Australia,Australia,Place,X,di,a,da,in
+123,http://dbpedia.org/resource/Australia,Australia,PopulatedPlace,X,di,a,da,in
+124,http://dbpedia.org/resource/Australia,Australia,Location,X,di,a,da,in
+125,http://dbpedia.org/resource/Frank_Herbert,Frank Herbert,Agent,il,del,al,dal,nel
+126,http://dbpedia.org/resource/Frank_Herbert,Frank Herbert,Person,il,del,al,dal,nel
+127,http://dbpedia.org/resource/Frank_Herbert,Frank Herbert,Writer,il,del,al,dal,nel
+128,http://dbpedia.org/resource/Family_Guy,I Griffin,Work,gli,degli,agli,dagli,negli
+129,http://dbpedia.org/resource/Family_Guy,I Griffin,TelevisionShow,gli,degli,agli,dagli,negli
+130,http://dbpedia.org/resource/Suriname,Suriname,Country,le,delle,alle,dalle,nelle
+131,http://dbpedia.org/resource/Suriname,Suriname,Place,le,delle,alle,dalle,nelle
+132,http://dbpedia.org/resource/Suriname,Suriname,Location,le,delle,alle,dalle,nelle
+133,http://dbpedia.org/resource/Suriname,Suriname,PopulatedPlace,le,delle,alle,dalle,nelle
+134,http://dbpedia.org/resource/Hotel_California,Hotel California (singolo),Song,il,del,al,dal,nel
+135,http://dbpedia.org/resource/Hotel_California,Hotel California (singolo),Single,il,del,al,dal,nel
+136,http://dbpedia.org/resource/Hotel_California,Hotel California (singolo),Work,il,del,al,dal,nel
+137,http://dbpedia.org/resource/Hotel_California,Hotel California (singolo),MusicalWork,il,del,al,dal,nel
+138,http://dbpedia.org/resource/William_Shatner,William Shatner,Agent,il,del,al,dal,nel
+139,http://dbpedia.org/resource/William_Shatner,William Shatner,Person,il,del,al,dal,nel
+140,http://dbpedia.org/resource/Skateboarding,Skateboard,Sport,il,del,al,dal,nel
+141,http://dbpedia.org/resource/Skateboarding,Skateboard,MusicGenre,il,del,al,dal,nel
+142,http://dbpedia.org/resource/Skateboarding,Skateboard,Activity,il,del,al,dal,nel
+143,http://dbpedia.org/resource/Sweden,Riksdag,MusicalArtist,il,del,al,dal,nel
+144,http://dbpedia.org/resource/Sweden,Riksdag,Country,il,del,al,dal,nel
+145,http://dbpedia.org/resource/Sweden,Riksdag,Place,il,del,al,dal,nel
+146,http://dbpedia.org/resource/Sweden,Riksdag,PopulatedPlace,il,del,al,dal,nel
+147,http://dbpedia.org/resource/Sweden,Riksdag,Location,il,del,al,dal,nel
+148,http://dbpedia.org/resource/Sweden,Riksdag,MusicalArtist,il,del,al,dal,nel
+149,http://dbpedia.org/resource/Sweden,Riksdag,Country,il,del,al,dal,nel
+150,http://dbpedia.org/resource/Sweden,Riksdag,Place,il,del,al,dal,nel
+151,http://dbpedia.org/resource/Sweden,Riksdag,PopulatedPlace,il,del,al,dal,nel
+152,http://dbpedia.org/resource/Sweden,Riksdag,Location,il,del,al,dal,nel
+153,http://dbpedia.org/resource/Carrot_cake,Torta di carote,Food,la,della,alla,dalla,nella
+154,http://dbpedia.org/resource/Neymar,Neymar,Agent,il,del,al,dal,nel
+155,http://dbpedia.org/resource/Neymar,Neymar,SoccerPlayer,il,del,al,dal,nel
+156,http://dbpedia.org/resource/Neymar,Neymar,Athlete,il,del,al,dal,nel
+157,http://dbpedia.org/resource/Neymar,Neymar,Person,il,del,al,dal,nel
+158,http://dbpedia.org/resource/Real_Madrid_CF,Real Madrid Club de Fútbol,Agent,i,dei,ai,dai,nei
+159,http://dbpedia.org/resource/Real_Madrid_CF,Real Madrid Club de Fútbol,Organisation,i,dei,ai,dai,nei
+160,http://dbpedia.org/resource/Real_Madrid_CF,Real Madrid Club de Fútbol,SoccerClub,i,dei,ai,dai,nei
+161,http://dbpedia.org/resource/Real_Madrid_CF,Real Madrid Club de Fútbol,SportsClub,i,dei,ai,dai,nei
+162,http://dbpedia.org/resource/Academy_Awards,Premio Oscar,Award,il,del,al,dal,nel
+163,http://dbpedia.org/resource/Academy_Awards,Premio Oscar,TelevisionShow,il,del,al,dal,nel
+164,http://dbpedia.org/resource/Google,Google (azienda),Agent,le,delle,alle,dalle,nelle
+165,http://dbpedia.org/resource/Google,Google (azienda),Company,le,delle,alle,dalle,nelle
+166,http://dbpedia.org/resource/Google,Google (azienda),Organisation,le,delle,alle,dalle,nelle
+167,http://dbpedia.org/resource/Secret_Intelligence_Service,Secret Intelligence Service,Agent,il,del,al,dal,nel
+168,http://dbpedia.org/resource/Secret_Intelligence_Service,Secret Intelligence Service,Organisation,il,del,al,dal,nel
+169,http://dbpedia.org/resource/Secret_Intelligence_Service,Secret Intelligence Service,GovernmentAgency,il,del,al,dal,nel
+170,http://dbpedia.org/resource/Secret_Intelligence_Service,Secret Intelligence Service,MilitaryUnit,il,del,al,dal,nel
+171,http://dbpedia.org/resource/United_Kingdom,Regno Unito di Gran Bretagna e Irlanda,Country,il,del,al,dal,nel
+172,http://dbpedia.org/resource/United_Kingdom,Regno Unito di Gran Bretagna e Irlanda,Place,il,del,al,dal,nel
+173,http://dbpedia.org/resource/United_Kingdom,Regno Unito di Gran Bretagna e Irlanda,PopulatedPlace,il,del,al,dal,nel
+174,http://dbpedia.org/resource/United_Kingdom,Regno Unito di Gran Bretagna e Irlanda,Location,il,del,al,dal,nel
+175,http://dbpedia.org/resource/Cuban_Missile_Crisis,Crisi dei missili di Cuba,MilitaryConflict,la,della,alla,dalla,nella
+176,http://dbpedia.org/resource/Cuban_Missile_Crisis,Crisi dei missili di Cuba,Event,la,della,alla,dalla,nella
+177,http://dbpedia.org/resource/Cuban_Missile_Crisis,Crisi dei missili di Cuba,SocietalEvent,la,della,alla,dalla,nella
+178,http://dbpedia.org/resource/Bay_of_Pigs_Invasion,Invasione della baia dei Porci,MilitaryConflict,l',dell',all',dall',nell'
+179,http://dbpedia.org/resource/Bay_of_Pigs_Invasion,Invasione della baia dei Porci,Event,l',dell',all',dall',nell'
+180,http://dbpedia.org/resource/Bay_of_Pigs_Invasion,Invasione della baia dei Porci,SocietalEvent,l',dell',all',dall',nell'
+181,http://dbpedia.org/resource/Ming_dynasty,Dinastia Ming,Country,la,della,alla,dalla,nella
+182,http://dbpedia.org/resource/Ming_dynasty,Dinastia Ming,Place,la,della,alla,dalla,nella
+183,http://dbpedia.org/resource/Ming_dynasty,Dinastia Ming,Location,la,della,alla,dalla,nella
+184,http://dbpedia.org/resource/Ming_dynasty,Dinastia Ming,PopulatedPlace,la,della,alla,dalla,nella
+185,http://dbpedia.org/resource/The_Sopranos,I Soprano,Work,gli,degli,agli,dagli,negli
+186,http://dbpedia.org/resource/The_Sopranos,I Soprano,TelevisionShow,gli,degli,agli,dagli,negli
+187,"http://dbpedia.org/resource/Melbourne,_Florida",Melbourne (Florida),Settlement,le,delle,alle,dalle,nelle
+188,"http://dbpedia.org/resource/Melbourne,_Florida",Melbourne (Florida),City,le,delle,alle,dalle,nelle
+189,"http://dbpedia.org/resource/Melbourne,_Florida",Melbourne (Florida),Place,le,delle,alle,dalle,nelle
+190,"http://dbpedia.org/resource/Melbourne,_Florida",Melbourne (Florida),Location,le,delle,alle,dalle,nelle
+191,"http://dbpedia.org/resource/Melbourne,_Florida",Melbourne (Florida),PopulatedPlace,le,delle,alle,dalle,nelle
+192,http://dbpedia.org/resource/Arnold_Schwarzenegger,Arnold Schwarzenegger,Politician,X,di,a,da,in
+193,http://dbpedia.org/resource/Arnold_Schwarzenegger,Arnold Schwarzenegger,Agent,X,di,a,da,in
+194,http://dbpedia.org/resource/Arnold_Schwarzenegger,Arnold Schwarzenegger,Person,X,di,a,da,in
+195,http://dbpedia.org/resource/Mount_Everest,Everest,NaturalPlace,X,di,a,da,in
+196,http://dbpedia.org/resource/Mount_Everest,Everest,Mountain,X,di,a,da,in
+197,http://dbpedia.org/resource/Mount_Everest,Everest,Place,X,di,a,da,in
+198,http://dbpedia.org/resource/Mount_Everest,Everest,Location,X,di,a,da,in
+199,http://dbpedia.org/resource/Australia,Australia,MusicalArtist,X,di,a,da,in
+200,http://dbpedia.org/resource/Australia,Australia,Country,X,di,a,da,in
+201,http://dbpedia.org/resource/Australia,Australia,Place,X,di,a,da,in
+202,http://dbpedia.org/resource/Australia,Australia,PopulatedPlace,X,di,a,da,in
+203,http://dbpedia.org/resource/Australia,Australia,Location,X,di,a,da,in
+204,http://dbpedia.org/resource/NASA,NASA,Company,il,del,al,dal,nel
+205,http://dbpedia.org/resource/NASA,NASA,Organisation,il,del,al,dal,nel
+206,http://dbpedia.org/resource/Tel_Aviv,Tel Aviv,Settlement,il,del,al,dal,nel
+207,http://dbpedia.org/resource/Tel_Aviv,Tel Aviv,City,il,del,al,dal,nel
+208,http://dbpedia.org/resource/Tel_Aviv,Tel Aviv,Place,il,del,al,dal,nel
+209,http://dbpedia.org/resource/Tel_Aviv,Tel Aviv,Location,il,del,al,dal,nel
+210,http://dbpedia.org/resource/Tel_Aviv,Tel Aviv,PopulatedPlace,il,del,al,dal,nel
+211,http://dbpedia.org/resource/The_Sopranos,I Soprano,Work,gli,degli,agli,dagli,negli
+212,http://dbpedia.org/resource/The_Sopranos,I Soprano,TelevisionShow,gli,degli,agli,dagli,negli
+213,http://dbpedia.org/resource/Batman,Batman,Agent,il,del,al,dal,nel
+214,http://dbpedia.org/resource/Batman,Batman,FictionalCharacter,il,del,al,dal,nel
+215,http://dbpedia.org/resource/Batman,Batman,ComicsCharacter,il,del,al,dal,nel
+216,http://dbpedia.org/resource/Batman,Batman,TelevisionShow,il,del,al,dal,nel
+217,http://dbpedia.org/resource/Gus_Fring,Gus Fring,Agent,il,del,al,dal,nel
+218,http://dbpedia.org/resource/Gus_Fring,Gus Fring,FictionalCharacter,il,del,al,dal,nel
+219,http://dbpedia.org/resource/GIMP,GIMP,Work,il,del,al,dal,nel
+220,http://dbpedia.org/resource/GIMP,GIMP,Software,il,del,al,dal,nel
+221,http://dbpedia.org/resource/GIMP,GIMP,Person,il,del,al,dal,nel
+222,http://dbpedia.org/resource/Forbes,Forbes,WrittenWork,il,del,al,dal,nel
+223,http://dbpedia.org/resource/Forbes,Forbes,PeriodicalLiterature,il,del,al,dal,nel
+224,http://dbpedia.org/resource/Forbes,Forbes,Work,il,del,al,dal,nel
+225,http://dbpedia.org/resource/Forbes,Forbes,Magazine,il,del,al,dal,nel
+226,http://dbpedia.org/resource/Australia,Australia,MusicalArtist,X,di,a,da,in
+227,http://dbpedia.org/resource/Australia,Australia,Country,X,di,a,da,in
+228,http://dbpedia.org/resource/Australia,Australia,Place,X,di,a,da,in
+229,http://dbpedia.org/resource/Australia,Australia,PopulatedPlace,X,di,a,da,in
+230,http://dbpedia.org/resource/Australia,Australia,Location,X,di,a,da,in
+231,http://dbpedia.org/resource/Surfing,Surf,Sport,il,del,al,dal,nel
+232,http://dbpedia.org/resource/Surfing,Surf,Activity,il,del,al,dal,nel
+233,http://dbpedia.org/resource/Surfing,Surf,PersonFunction,il,del,al,dal,nel
+234,http://dbpedia.org/resource/Australia,Australia,MusicalArtist,X,di,a,da,in
+235,http://dbpedia.org/resource/Australia,Australia,Country,X,di,a,da,in
+236,http://dbpedia.org/resource/Australia,Australia,Place,X,di,a,da,in
+237,http://dbpedia.org/resource/Australia,Australia,PopulatedPlace,X,di,a,da,in
+238,http://dbpedia.org/resource/Australia,Australia,Location,X,di,a,da,in
+239,http://dbpedia.org/resource/Electronics,Elettronica,MusicGenre,X,di,a,da,in
+240,http://dbpedia.org/resource/Electronics,Elettronica,Work,X,di,a,da,in
+241,http://dbpedia.org/resource/Beijing,Pechino,Settlement,il,del,al,dal,nel
+242,http://dbpedia.org/resource/Beijing,Pechino,City,il,del,al,dal,nel
+243,http://dbpedia.org/resource/Beijing,Pechino,Place,il,del,al,dal,nel
+244,http://dbpedia.org/resource/Beijing,Pechino,Location,il,del,al,dal,nel
+245,http://dbpedia.org/resource/Beijing,Pechino,PopulatedPlace,il,del,al,dal,nel
+246,http://dbpedia.org/resource/Aldi,ALDI,Agent,X,di,a,da,in
+247,http://dbpedia.org/resource/Aldi,ALDI,Company,X,di,a,da,in
+248,http://dbpedia.org/resource/Aldi,ALDI,Organisation,X,di,a,da,in
+249,http://dbpedia.org/resource/Cameroon,Camerun,MusicalArtist,il,del,al,dal,nel
+250,http://dbpedia.org/resource/Cameroon,Camerun,Country,il,del,al,dal,nel
+251,http://dbpedia.org/resource/Cameroon,Camerun,Place,il,del,al,dal,nel
+252,http://dbpedia.org/resource/Cameroon,Camerun,Location,il,del,al,dal,nel
+253,http://dbpedia.org/resource/Cameroon,Camerun,PopulatedPlace,il,del,al,dal,nel
+254,http://dbpedia.org/resource/Abraham_Lincoln,Abraham Lincoln,Politician,X,di,a,da,in
+255,http://dbpedia.org/resource/Abraham_Lincoln,Abraham Lincoln,Agent,X,di,a,da,in
+256,http://dbpedia.org/resource/Abraham_Lincoln,Abraham Lincoln,OfficeHolder,X,di,a,da,in
+257,http://dbpedia.org/resource/Abraham_Lincoln,Abraham Lincoln,Person,X,di,a,da,in
+258,http://dbpedia.org/resource/Francis_Ford_Coppola,Francis Ford Coppola,Agent,il,del,al,dal,nel
+259,http://dbpedia.org/resource/Francis_Ford_Coppola,Francis Ford Coppola,Person,il,del,al,dal,nel
+260,http://dbpedia.org/resource/Tim_Burton,Tim Burton,Agent,il,del,al,dal,nel
+261,http://dbpedia.org/resource/Tim_Burton,Tim Burton,Person,il,del,al,dal,nel
+262,http://dbpedia.org/resource/Breaking_Bad,Breaking Bad,Work,il,del,al,dal,nel
+263,http://dbpedia.org/resource/Breaking_Bad,Breaking Bad,TelevisionShow,il,del,al,dal,nel
+264,http://dbpedia.org/resource/Game_of_Thrones,Il Trono di Spade (serie televisiva),Work,l',dell',all',dall',nell'
+265,http://dbpedia.org/resource/Game_of_Thrones,Il Trono di Spade (serie televisiva),TelevisionShow,l',dell',all',dall',nell'
+266,http://dbpedia.org/resource/Natalie_Portman,Natalie Portman,Agent,le,delle,alle,dalle,nelle
+267,http://dbpedia.org/resource/Natalie_Portman,Natalie Portman,Person,le,delle,alle,dalle,nelle
+268,http://dbpedia.org/resource/United_States,Governo federale degli Stati Uniti d'America,Country,il,del,al,dal,nel
+269,http://dbpedia.org/resource/United_States,Governo federale degli Stati Uniti d'America,Person,il,del,al,dal,nel
+270,http://dbpedia.org/resource/United_States,Governo federale degli Stati Uniti d'America,Place,il,del,al,dal,nel
+271,http://dbpedia.org/resource/United_States,Governo federale degli Stati Uniti d'America,Location,il,del,al,dal,nel
+272,http://dbpedia.org/resource/United_States,Governo federale degli Stati Uniti d'America,PopulatedPlace,il,del,al,dal,nel
+273,http://dbpedia.org/resource/Elvis_Presley,Elvis Presley,MusicalArtist,X,di,a,da,in
+274,http://dbpedia.org/resource/Elvis_Presley,Elvis Presley,Agent,X,di,a,da,in
+275,http://dbpedia.org/resource/Elvis_Presley,Elvis Presley,Band,X,di,a,da,in
+276,http://dbpedia.org/resource/Elvis_Presley,Elvis Presley,Person,X,di,a,da,in
+277,http://dbpedia.org/resource/Mickey_Rourke,Mickey Rourke,Agent,il,del,al,dal,nel
+278,http://dbpedia.org/resource/Mickey_Rourke,Mickey Rourke,Person,il,del,al,dal,nel
+279,http://dbpedia.org/resource/Guy_Ritchie,Guy Ritchie,Agent,il,del,al,dal,nel
+280,http://dbpedia.org/resource/Guy_Ritchie,Guy Ritchie,Person,il,del,al,dal,nel
+281,http://dbpedia.org/resource/Count_Dracula,Conte Dracula,Agent,le,delle,alle,dalle,nelle
+282,http://dbpedia.org/resource/Count_Dracula,Conte Dracula,FictionalCharacter,le,delle,alle,dalle,nelle
+283,http://dbpedia.org/resource/Count_Dracula,Conte Dracula,Person,le,delle,alle,dalle,nelle
+284,http://dbpedia.org/resource/Batman,Batman,Agent,il,del,al,dal,nel
+285,http://dbpedia.org/resource/Batman,Batman,FictionalCharacter,il,del,al,dal,nel
+286,http://dbpedia.org/resource/Batman,Batman,ComicsCharacter,il,del,al,dal,nel
+287,http://dbpedia.org/resource/Batman,Batman,TelevisionShow,il,del,al,dal,nel
+288,http://dbpedia.org/resource/Russia,Russia,Country,la,della,alla,dalla,nella
+289,http://dbpedia.org/resource/Russia,Russia,Place,la,della,alla,dalla,nella
+290,http://dbpedia.org/resource/Russia,Russia,PopulatedPlace,la,della,alla,dalla,nella
+291,http://dbpedia.org/resource/Russia,Russia,Location,la,della,alla,dalla,nella
+292,http://dbpedia.org/resource/Facebook,Facebook,Company,il,del,al,dal,nel
+293,http://dbpedia.org/resource/Facebook,Facebook,Work,il,del,al,dal,nel
+294,http://dbpedia.org/resource/Facebook,Facebook,Website,il,del,al,dal,nel
+295,http://dbpedia.org/resource/Grunge,Grunge,MusicGenre,le,delle,alle,dalle,nelle
+296,http://dbpedia.org/resource/Grunge,Grunge,TopicalConcept,le,delle,alle,dalle,nelle
+297,http://dbpedia.org/resource/Grunge,Grunge,Genre,le,delle,alle,dalle,nelle
+298,http://dbpedia.org/resource/Canada,Canada,MusicalArtist,la,della,alla,dalla,nella
+299,http://dbpedia.org/resource/Canada,Canada,Country,la,della,alla,dalla,nella
+300,http://dbpedia.org/resource/Canada,Canada,Place,la,della,alla,dalla,nella
+301,http://dbpedia.org/resource/Canada,Canada,Location,la,della,alla,dalla,nella
+302,http://dbpedia.org/resource/Canada,Canada,PopulatedPlace,la,della,alla,dalla,nella
+303,http://dbpedia.org/resource/Benjamin_Franklin,Benjamin Franklin,Politician,il,del,al,dal,nel
+304,http://dbpedia.org/resource/Benjamin_Franklin,Benjamin Franklin,Agent,il,del,al,dal,nel
+305,http://dbpedia.org/resource/Benjamin_Franklin,Benjamin Franklin,OfficeHolder,il,del,al,dal,nel
+306,http://dbpedia.org/resource/Benjamin_Franklin,Benjamin Franklin,Person,il,del,al,dal,nel
+307,http://dbpedia.org/resource/Margaret_Thatcher,Margaret Thatcher,Politician,il,del,al,dal,nel
+308,http://dbpedia.org/resource/Margaret_Thatcher,Margaret Thatcher,Agent,il,del,al,dal,nel
+309,http://dbpedia.org/resource/Margaret_Thatcher,Margaret Thatcher,OfficeHolder,il,del,al,dal,nel
+310,http://dbpedia.org/resource/Margaret_Thatcher,Margaret Thatcher,Person,il,del,al,dal,nel
+311,http://dbpedia.org/resource/Meryl_Streep,Meryl Streep,Agent,il,del,al,dal,nel
+312,http://dbpedia.org/resource/Meryl_Streep,Meryl Streep,Person,il,del,al,dal,nel
+313,http://dbpedia.org/resource/Hylidae,Hylidae,Insect,le,delle,alle,dalle,nelle
+314,http://dbpedia.org/resource/Velvet_Goldmine,Velvet Goldmine,Film,il,del,al,dal,nel
+315,http://dbpedia.org/resource/Velvet_Goldmine,Velvet Goldmine,Work,il,del,al,dal,nel
+316,http://dbpedia.org/resource/Christian_Bale,Christian Bale,Agent,il,del,al,dal,nel
+317,http://dbpedia.org/resource/Christian_Bale,Christian Bale,Person,il,del,al,dal,nel
+318,http://dbpedia.org/resource/GMT_Games,GMT Games,Agent,il,del,al,dal,nel
+319,http://dbpedia.org/resource/GMT_Games,GMT Games,Company,il,del,al,dal,nel
+320,http://dbpedia.org/resource/GMT_Games,GMT Games,Organisation,il,del,al,dal,nel
+321,http://dbpedia.org/resource/GMT_Games,GMT Games,Publisher,il,del,al,dal,nel
+322,http://dbpedia.org/resource/Isar,Isar,NaturalPlace,X,di,a,da,in
+323,http://dbpedia.org/resource/Isar,Isar,BodyOfWater,X,di,a,da,in
+324,http://dbpedia.org/resource/Isar,Isar,River,X,di,a,da,in
+325,http://dbpedia.org/resource/Isar,Isar,Stream,X,di,a,da,in
+326,http://dbpedia.org/resource/Isar,Isar,Place,X,di,a,da,in
+327,http://dbpedia.org/resource/Isar,Isar,Location,X,di,a,da,in
+328,http://dbpedia.org/resource/Yeti_Airlines,Yeti Airlines Domestic,Agent,le,delle,alle,dalle,nelle
+329,http://dbpedia.org/resource/Yeti_Airlines,Yeti Airlines Domestic,Company,le,delle,alle,dalle,nelle
+330,http://dbpedia.org/resource/Yeti_Airlines,Yeti Airlines Domestic,Organisation,le,delle,alle,dalle,nelle
+331,http://dbpedia.org/resource/Yeti_Airlines,Yeti Airlines Domestic,Airline,le,delle,alle,dalle,nelle
+332,http://dbpedia.org/resource/Yeti_Airlines,Yeti Airlines Domestic,PublicTransitSystem,le,delle,alle,dalle,nelle
+333,http://dbpedia.org/resource/India,India,MusicalArtist,X,di,a,da,in
+334,http://dbpedia.org/resource/India,India,Country,X,di,a,da,in
+335,http://dbpedia.org/resource/India,India,Place,X,di,a,da,in
+336,http://dbpedia.org/resource/India,India,Location,X,di,a,da,in
+337,http://dbpedia.org/resource/India,India,PopulatedPlace,X,di,a,da,in
+338,http://dbpedia.org/resource/Wikipedia,Wikipedia,Book,la,della,alla,dalla,nella
+339,http://dbpedia.org/resource/Wikipedia,Wikipedia,Work,la,della,alla,dalla,nella
+340,http://dbpedia.org/resource/Wikipedia,Wikipedia,Website,la,della,alla,dalla,nella
+341,http://dbpedia.org/resource/Tom_Hanks,Tom Hanks,Agent,il,del,al,dal,nel
+342,http://dbpedia.org/resource/Tom_Hanks,Tom Hanks,Person,il,del,al,dal,nel
+343,http://dbpedia.org/resource/Rita_Wilson,Rita Wilson,Agent,la,della,alla,dalla,nella
+344,http://dbpedia.org/resource/Rita_Wilson,Rita Wilson,Person,la,della,alla,dalla,nella
+345,http://dbpedia.org/resource/Barack_Obama,Barack Obama,Politician,il,del,al,dal,nel
+346,http://dbpedia.org/resource/Barack_Obama,Barack Obama,Agent,il,del,al,dal,nel
+347,http://dbpedia.org/resource/Barack_Obama,Barack Obama,OfficeHolder,il,del,al,dal,nel
+348,http://dbpedia.org/resource/Barack_Obama,Barack Obama,Person,il,del,al,dal,nel
+349,http://dbpedia.org/resource/Slovenia,Repubblica Socialista di Slovenia,Country,la,della,alla,dalla,nella
+350,http://dbpedia.org/resource/Slovenia,Repubblica Socialista di Slovenia,Place,la,della,alla,dalla,nella
+351,http://dbpedia.org/resource/Slovenia,Repubblica Socialista di Slovenia,PopulatedPlace,la,della,alla,dalla,nella
+352,http://dbpedia.org/resource/Slovenia,Repubblica Socialista di Slovenia,Location,la,della,alla,dalla,nella
+353,http://dbpedia.org/resource/Eritrea,Eritrea,Country,X,di,a,da,in
+354,http://dbpedia.org/resource/Eritrea,Eritrea,Place,X,di,a,da,in
+355,http://dbpedia.org/resource/Eritrea,Eritrea,Location,X,di,a,da,in
+356,http://dbpedia.org/resource/Eritrea,Eritrea,PopulatedPlace,X,di,a,da,in
+357,http://dbpedia.org/resource/Eritrea,Eritrea,Country,X,di,a,da,in
+358,http://dbpedia.org/resource/Eritrea,Eritrea,Place,X,di,a,da,in
+359,http://dbpedia.org/resource/Eritrea,Eritrea,Location,X,di,a,da,in
+360,http://dbpedia.org/resource/Eritrea,Eritrea,PopulatedPlace,X,di,a,da,in
+361,http://dbpedia.org/resource/Stanley_Kubrick,Stanley Kubrick,Person,il,del,al,dal,nel
+362,http://dbpedia.org/resource/War_and_Peace,Guerra e pace,WrittenWork,la,della,alla,dalla,nella
+363,http://dbpedia.org/resource/War_and_Peace,Guerra e pace,Book,la,della,alla,dalla,nella
+364,http://dbpedia.org/resource/War_and_Peace,Guerra e pace,Work,la,della,alla,dalla,nella
+365,http://dbpedia.org/resource/Premier_League,Premier League,Agent,il,del,al,dal,nel
+366,http://dbpedia.org/resource/Premier_League,Premier League,SoccerLeague,il,del,al,dal,nel
+367,http://dbpedia.org/resource/Premier_League,Premier League,Organisation,il,del,al,dal,nel
+368,http://dbpedia.org/resource/Premier_League,Premier League,SportsLeague,il,del,al,dal,nel
+369,http://dbpedia.org/resource/Italy,Italia,Country,X,di,a,da,in
+370,http://dbpedia.org/resource/Italy,Italia,Person,X,di,a,da,in
+371,http://dbpedia.org/resource/Italy,Italia,Place,X,di,a,da,in
+372,http://dbpedia.org/resource/Italy,Italia,Location,X,di,a,da,in
+373,http://dbpedia.org/resource/Italy,Italia,PopulatedPlace,X,di,a,da,in
+374,http://dbpedia.org/resource/Claudia_Schiffer,Claudia Schiffer,Agent,la,della,alla,dalla,nella
+375,http://dbpedia.org/resource/Claudia_Schiffer,Claudia Schiffer,Model,la,della,alla,dalla,nella
+376,http://dbpedia.org/resource/Claudia_Schiffer,Claudia Schiffer,Person,la,della,alla,dalla,nella
+377,http://dbpedia.org/resource/Lufthansa,Lufthansa,Agent,la,della,alla,dalla,nella
+378,http://dbpedia.org/resource/Lufthansa,Lufthansa,Company,la,della,alla,dalla,nella
+379,http://dbpedia.org/resource/Lufthansa,Lufthansa,Organisation,la,della,alla,dalla,nella
+380,http://dbpedia.org/resource/Lufthansa,Lufthansa,Airline,la,della,alla,dalla,nella
+381,http://dbpedia.org/resource/Lufthansa,Lufthansa,PublicTransitSystem,la,della,alla,dalla,nella
+382,http://dbpedia.org/resource/Dortmund_Airport,Aeroporto di Dortmund,ArchitecturalStructure,l',dell',all',dall',nell'
+383,http://dbpedia.org/resource/Dortmund_Airport,Aeroporto di Dortmund,Airport,l',dell',all',dall',nell'
+384,http://dbpedia.org/resource/Dortmund_Airport,Aeroporto di Dortmund,Infrastructure,l',dell',all',dall',nell'
+385,http://dbpedia.org/resource/Berlin_Tegel_Airport,Aeroporto di Berlino-Tegel,ArchitecturalStructure,l',dell',all',dall',nell'
+386,http://dbpedia.org/resource/Berlin_Tegel_Airport,Aeroporto di Berlino-Tegel,Airport,l',dell',all',dall',nell'
+387,http://dbpedia.org/resource/Berlin_Tegel_Airport,Aeroporto di Berlino-Tegel,Infrastructure,l',dell',all',dall',nell'
+388,http://dbpedia.org/resource/Titanic_(1997_film),Titanic (film 1997),Film,il,del,al,dal,nel
+389,http://dbpedia.org/resource/Titanic_(1997_film),Titanic (film 1997),Work,il,del,al,dal,nel
+390,http://dbpedia.org/resource/Akira_Kurosawa,Akira Kurosawa,Agent,X,di,a,da,in
+391,http://dbpedia.org/resource/Akira_Kurosawa,Akira Kurosawa,Person,X,di,a,da,in
+392,http://dbpedia.org/resource/Elvis_Presley,Elvis Presley,MusicalArtist,X,di,a,da,in
+393,http://dbpedia.org/resource/Elvis_Presley,Elvis Presley,Agent,X,di,a,da,in
+394,http://dbpedia.org/resource/Elvis_Presley,Elvis Presley,Band,X,di,a,da,in
+395,http://dbpedia.org/resource/Elvis_Presley,Elvis Presley,Person,X,di,a,da,in
+396,http://dbpedia.org/resource/Rome,Rom (Meclemburgo-Pomerania Anteriore),Settlement,il,del,al,dal,nel
+397,http://dbpedia.org/resource/Rome,Rom (Meclemburgo-Pomerania Anteriore),Country,il,del,al,dal,nel
+398,http://dbpedia.org/resource/Rome,Rom (Meclemburgo-Pomerania Anteriore),City,il,del,al,dal,nel
+399,http://dbpedia.org/resource/Rome,Rom (Meclemburgo-Pomerania Anteriore),Place,il,del,al,dal,nel
+400,http://dbpedia.org/resource/Rome,Rom (Meclemburgo-Pomerania Anteriore),Location,il,del,al,dal,nel
+401,http://dbpedia.org/resource/Rome,Rom (Meclemburgo-Pomerania Anteriore),PopulatedPlace,il,del,al,dal,nel
+402,http://dbpedia.org/resource/China,China (gruppo musicale),Country,la,della,alla,dalla,nella
+403,http://dbpedia.org/resource/China,China (gruppo musicale),Place,la,della,alla,dalla,nella
+404,http://dbpedia.org/resource/China,China (gruppo musicale),Location,la,della,alla,dalla,nella
+405,http://dbpedia.org/resource/China,China (gruppo musicale),PopulatedPlace,la,della,alla,dalla,nella
+406,http://dbpedia.org/resource/DBpedia,DBpedia,Work,la,della,alla,dalla,nella
+407,http://dbpedia.org/resource/DBpedia,DBpedia,Software,la,della,alla,dalla,nella
+408,http://dbpedia.org/resource/DBpedia,DBpedia,Band,la,della,alla,dalla,nella
+409,http://dbpedia.org/resource/Abraham_Lincoln,Abraham Lincoln,Politician,X,di,a,da,in
+410,http://dbpedia.org/resource/Abraham_Lincoln,Abraham Lincoln,Agent,X,di,a,da,in
+411,http://dbpedia.org/resource/Abraham_Lincoln,Abraham Lincoln,OfficeHolder,X,di,a,da,in
+412,http://dbpedia.org/resource/Abraham_Lincoln,Abraham Lincoln,Person,X,di,a,da,in
+413,http://dbpedia.org/resource/Netherlands,Regno dei Paesi Bassi,Country,il,del,al,dal,nel
+414,http://dbpedia.org/resource/Netherlands,Regno dei Paesi Bassi,Place,il,del,al,dal,nel
+415,http://dbpedia.org/resource/Netherlands,Regno dei Paesi Bassi,Location,il,del,al,dal,nel
+416,http://dbpedia.org/resource/Netherlands,Regno dei Paesi Bassi,PopulatedPlace,il,del,al,dal,nel
+417,http://dbpedia.org/resource/Nikos_Kazantzakis,Nikos Kazantzakis,Agent,il,del,al,dal,nel
+418,http://dbpedia.org/resource/Nikos_Kazantzakis,Nikos Kazantzakis,Person,il,del,al,dal,nel
+419,http://dbpedia.org/resource/Nikos_Kazantzakis,Nikos Kazantzakis,Writer,il,del,al,dal,nel
+420,http://dbpedia.org/resource/Elizabeth_II,Elisabetta II del Regno Unito,Agent,X,di,a,da,in
+421,http://dbpedia.org/resource/Elizabeth_II,Elisabetta II del Regno Unito,Royalty,X,di,a,da,in
+422,http://dbpedia.org/resource/Elizabeth_II,Elisabetta II del Regno Unito,Person,X,di,a,da,in
+423,http://dbpedia.org/resource/Canada,Canada,MusicalArtist,la,della,alla,dalla,nella
+424,http://dbpedia.org/resource/Canada,Canada,Country,la,della,alla,dalla,nella
+425,http://dbpedia.org/resource/Canada,Canada,Place,la,della,alla,dalla,nella
+426,http://dbpedia.org/resource/Canada,Canada,Location,la,della,alla,dalla,nella
+427,http://dbpedia.org/resource/Canada,Canada,PopulatedPlace,la,della,alla,dalla,nella
+428,http://dbpedia.org/resource/Nile,Nilo,NaturalPlace,il,del,al,dal,nel
+429,http://dbpedia.org/resource/Nile,Nilo,BodyOfWater,il,del,al,dal,nel
+430,http://dbpedia.org/resource/Nile,Nilo,River,il,del,al,dal,nel
+431,http://dbpedia.org/resource/Nile,Nilo,Stream,il,del,al,dal,nel
+432,http://dbpedia.org/resource/Nile,Nilo,Place,il,del,al,dal,nel
+433,http://dbpedia.org/resource/Nile,Nilo,Location,il,del,al,dal,nel
+434,http://dbpedia.org/resource/Hovercraft,Hovercraft,Ship,il,del,al,dal,nel
+435,http://dbpedia.org/resource/Elvis_Presley,Elvis Presley,MusicalArtist,X,di,a,da,in
+436,http://dbpedia.org/resource/Elvis_Presley,Elvis Presley,Agent,X,di,a,da,in
+437,http://dbpedia.org/resource/Elvis_Presley,Elvis Presley,Band,X,di,a,da,in
+438,http://dbpedia.org/resource/Elvis_Presley,Elvis Presley,Person,X,di,a,da,in
+439,http://dbpedia.org/resource/Bill_Gates,Bill Gates,Agent,il,del,al,dal,nel
+440,http://dbpedia.org/resource/Bill_Gates,Bill Gates,Person,il,del,al,dal,nel
+441,http://dbpedia.org/resource/Japanese_language,Lingua giapponese,Language,la,della,alla,dalla,nella
+442,http://dbpedia.org/resource/Muhammad_Ali,Muhammad Ali,Agent,il,del,al,dal,nel
+443,http://dbpedia.org/resource/Muhammad_Ali,Muhammad Ali,Person,il,del,al,dal,nel
+444,http://dbpedia.org/resource/Muhammad_Ali,Muhammad Ali,Boxer,il,del,al,dal,nel
+445,http://dbpedia.org/resource/Michelle_Obama,Michelle Obama,Politician,le,delle,alle,dalle,nelle
+446,http://dbpedia.org/resource/Michelle_Obama,Michelle Obama,Agent,le,delle,alle,dalle,nelle
+447,http://dbpedia.org/resource/Michelle_Obama,Michelle Obama,OfficeHolder,le,delle,alle,dalle,nelle
+448,http://dbpedia.org/resource/Michelle_Obama,Michelle Obama,Person,le,delle,alle,dalle,nelle
+449,http://dbpedia.org/resource/Berlin,Berlino Est,Settlement,il,del,al,dal,nel
+450,http://dbpedia.org/resource/Berlin,Berlino Est,City,il,del,al,dal,nel
+451,http://dbpedia.org/resource/Berlin,Berlino Est,Place,il,del,al,dal,nel
+452,http://dbpedia.org/resource/Berlin,Berlino Est,Location,il,del,al,dal,nel
+453,http://dbpedia.org/resource/Berlin,Berlino Est,PopulatedPlace,il,del,al,dal,nel
+454,http://dbpedia.org/resource/Last_Action_Hero,Last Action Hero - L'ultimo grande eroe,Film,il,del,al,dal,nel
+455,http://dbpedia.org/resource/Last_Action_Hero,Last Action Hero - L'ultimo grande eroe,Work,il,del,al,dal,nel
+456,http://dbpedia.org/resource/San_Francisco,San Francisco,Building,il,del,al,dal,nel
+457,http://dbpedia.org/resource/San_Francisco,San Francisco,Settlement,il,del,al,dal,nel
+458,http://dbpedia.org/resource/San_Francisco,San Francisco,City,il,del,al,dal,nel
+459,http://dbpedia.org/resource/San_Francisco,San Francisco,Place,il,del,al,dal,nel
+460,http://dbpedia.org/resource/San_Francisco,San Francisco,Location,il,del,al,dal,nel
+461,http://dbpedia.org/resource/San_Francisco,San Francisco,PopulatedPlace,il,del,al,dal,nel
+462,http://dbpedia.org/resource/Queen_(band),Queen,MusicalArtist,il,del,al,dal,nel
+463,http://dbpedia.org/resource/Queen_(band),Queen,Agent,il,del,al,dal,nel
+464,http://dbpedia.org/resource/Queen_(band),Queen,Group,il,del,al,dal,nel
+465,http://dbpedia.org/resource/Queen_(band),Queen,Organisation,il,del,al,dal,nel
+466,http://dbpedia.org/resource/Queen_(band),Queen,Band,il,del,al,dal,nel
+467,http://dbpedia.org/resource/Walt_Disney,Walt Disney,Politician,il,del,al,dal,nel
+468,http://dbpedia.org/resource/Walt_Disney,Walt Disney,Agent,il,del,al,dal,nel
+469,http://dbpedia.org/resource/Walt_Disney,Walt Disney,Person,il,del,al,dal,nel
+470,http://dbpedia.org/resource/Lance_Bass,Lance Bass,MusicalArtist,le,delle,alle,dalle,nelle
+471,http://dbpedia.org/resource/Lance_Bass,Lance Bass,Agent,le,delle,alle,dalle,nelle
+472,http://dbpedia.org/resource/Lance_Bass,Lance Bass,Person,le,delle,alle,dalle,nelle
+473,http://dbpedia.org/resource/Canada,Canada,MusicalArtist,la,della,alla,dalla,nella
+474,http://dbpedia.org/resource/Canada,Canada,Country,la,della,alla,dalla,nella
+475,http://dbpedia.org/resource/Canada,Canada,Place,la,della,alla,dalla,nella
+476,http://dbpedia.org/resource/Canada,Canada,Location,la,della,alla,dalla,nella
+477,http://dbpedia.org/resource/Canada,Canada,PopulatedPlace,la,della,alla,dalla,nella
+478,http://dbpedia.org/resource/Vincent_van_Gogh,Vincent van Gogh,Artist,il,del,al,dal,nel
+479,http://dbpedia.org/resource/Vincent_van_Gogh,Vincent van Gogh,Agent,il,del,al,dal,nel
+480,http://dbpedia.org/resource/Vincent_van_Gogh,Vincent van Gogh,Person,il,del,al,dal,nel
+481,http://dbpedia.org/resource/Vincent_van_Gogh,Vincent van Gogh,Writer,il,del,al,dal,nel
+482,http://dbpedia.org/resource/Andrew_Jackson,Andrew Jackson,Politician,X,di,a,da,in
+483,http://dbpedia.org/resource/Andrew_Jackson,Andrew Jackson,Agent,X,di,a,da,in
+484,http://dbpedia.org/resource/Andrew_Jackson,Andrew Jackson,OfficeHolder,X,di,a,da,in
+485,http://dbpedia.org/resource/Andrew_Jackson,Andrew Jackson,Person,X,di,a,da,in
+486,http://dbpedia.org/resource/Game_of_Thrones,Il Trono di Spade (serie televisiva),Work,l',dell',all',dall',nell'
+487,http://dbpedia.org/resource/Game_of_Thrones,Il Trono di Spade (serie televisiva),TelevisionShow,l',dell',all',dall',nell'
+488,http://dbpedia.org/resource/Brooklyn_Bridge,Ponte di Brooklyn,ArchitecturalStructure,le,delle,alle,dalle,nelle
+489,http://dbpedia.org/resource/Brooklyn_Bridge,Ponte di Brooklyn,Infrastructure,le,delle,alle,dalle,nelle
+490,http://dbpedia.org/resource/Brooklyn_Bridge,Ponte di Brooklyn,Bridge,le,delle,alle,dalle,nelle
+491,http://dbpedia.org/resource/Brooklyn_Bridge,Ponte di Brooklyn,RouteOfTransportation,le,delle,alle,dalle,nelle
+492,http://dbpedia.org/resource/Boris_Becker,Boris Becker,Agent,il,del,al,dal,nel
+493,http://dbpedia.org/resource/Boris_Becker,Boris Becker,TennisPlayer,il,del,al,dal,nel
+494,http://dbpedia.org/resource/Boris_Becker,Boris Becker,Athlete,il,del,al,dal,nel
+495,http://dbpedia.org/resource/Boris_Becker,Boris Becker,Person,il,del,al,dal,nel
+496,http://dbpedia.org/resource/Michael_Jordan,Michael Jordan,Agent,il,del,al,dal,nel
+497,http://dbpedia.org/resource/Michael_Jordan,Michael Jordan,Athlete,il,del,al,dal,nel
+498,http://dbpedia.org/resource/Michael_Jordan,Michael Jordan,Person,il,del,al,dal,nel
+499,http://dbpedia.org/resource/Michael_Jordan,Michael Jordan,BasketballPlayer,il,del,al,dal,nel
+500,http://dbpedia.org/resource/Paris,Parigi,Settlement,le,delle,alle,dalle,nelle
+501,http://dbpedia.org/resource/Paris,Parigi,City,le,delle,alle,dalle,nelle
+502,http://dbpedia.org/resource/Paris,Parigi,Place,le,delle,alle,dalle,nelle
+503,http://dbpedia.org/resource/Paris,Parigi,Location,le,delle,alle,dalle,nelle
+504,http://dbpedia.org/resource/Paris,Parigi,PopulatedPlace,le,delle,alle,dalle,nelle
+505,http://dbpedia.org/resource/The_Pillars_of_the_Earth,I pilastri della Terra,WrittenWork,gli,degli,agli,dagli,negli
+506,http://dbpedia.org/resource/The_Pillars_of_the_Earth,I pilastri della Terra,Book,gli,degli,agli,dagli,negli
+507,http://dbpedia.org/resource/The_Pillars_of_the_Earth,I pilastri della Terra,Work,gli,degli,agli,dagli,negli
+508,http://dbpedia.org/resource/Mount_Everest,Everest,NaturalPlace,X,di,a,da,in
+509,http://dbpedia.org/resource/Mount_Everest,Everest,Mountain,X,di,a,da,in
+510,http://dbpedia.org/resource/Mount_Everest,Everest,Place,X,di,a,da,in
+511,http://dbpedia.org/resource/Mount_Everest,Everest,Location,X,di,a,da,in
+512,http://dbpedia.org/resource/Albert_Einstein,Albert Einstein,Agent,X,di,a,da,in
+513,http://dbpedia.org/resource/Albert_Einstein,Albert Einstein,Scientist,X,di,a,da,in
+514,http://dbpedia.org/resource/Albert_Einstein,Albert Einstein,Person,X,di,a,da,in
+515,http://dbpedia.org/resource/Sylvester_Stallone,Sylvester Stallone,Agent,il,del,al,dal,nel
+516,http://dbpedia.org/resource/Sylvester_Stallone,Sylvester Stallone,Person,il,del,al,dal,nel
+517,http://dbpedia.org/resource/Czech_Republic,Repubblica Ceca,MusicalArtist,la,della,alla,dalla,nella
+518,http://dbpedia.org/resource/Czech_Republic,Repubblica Ceca,Country,la,della,alla,dalla,nella
+519,http://dbpedia.org/resource/Czech_Republic,Repubblica Ceca,Place,la,della,alla,dalla,nella
+520,http://dbpedia.org/resource/Czech_Republic,Repubblica Ceca,Location,la,della,alla,dalla,nella
+521,http://dbpedia.org/resource/Czech_Republic,Repubblica Ceca,PopulatedPlace,la,della,alla,dalla,nella
+522,http://dbpedia.org/resource/Aristotle,Aristotele,Agent,X,di,a,da,in
+523,http://dbpedia.org/resource/Aristotle,Aristotele,Philosopher,X,di,a,da,in
+524,http://dbpedia.org/resource/Aristotle,Aristotele,Person,X,di,a,da,in
+525,http://dbpedia.org/resource/Socrates,Socrate,Agent,le,delle,alle,dalle,nelle
+526,http://dbpedia.org/resource/Socrates,Socrate,Philosopher,le,delle,alle,dalle,nelle
+527,http://dbpedia.org/resource/Socrates,Socrate,Person,le,delle,alle,dalle,nelle
+528,http://dbpedia.org/resource/Salt_Lake_City,Salt Lake City,Settlement,il,del,al,dal,nel
+529,http://dbpedia.org/resource/Salt_Lake_City,Salt Lake City,City,il,del,al,dal,nel
+530,http://dbpedia.org/resource/Salt_Lake_City,Salt Lake City,Place,il,del,al,dal,nel
+531,http://dbpedia.org/resource/Salt_Lake_City,Salt Lake City,Location,il,del,al,dal,nel
+532,http://dbpedia.org/resource/Salt_Lake_City,Salt Lake City,PopulatedPlace,il,del,al,dal,nel
+533,http://dbpedia.org/resource/Cher,Cher,MusicalArtist,il,del,al,dal,nel
+534,http://dbpedia.org/resource/Cher,Cher,Agent,il,del,al,dal,nel
+535,http://dbpedia.org/resource/Cher,Cher,Band,il,del,al,dal,nel
+536,http://dbpedia.org/resource/Cher,Cher,Person,il,del,al,dal,nel
+537,http://dbpedia.org/resource/Sonny_Bono,Sonny Bono,Person,il,del,al,dal,nel
+538,http://dbpedia.org/resource/Headquarters_of_the_United_Nations,Ufficio delle Nazioni Unite a New York,Building,l',dell',all',dall',nell'
+539,http://dbpedia.org/resource/Headquarters_of_the_United_Nations,Ufficio delle Nazioni Unite a New York,ArchitecturalStructure,l',dell',all',dall',nell'
+540,http://dbpedia.org/resource/Penguin_Books,Penguin Books,Building,il,del,al,dal,nel
+541,http://dbpedia.org/resource/Penguin_Books,Penguin Books,Agent,il,del,al,dal,nel
+542,http://dbpedia.org/resource/Penguin_Books,Penguin Books,Company,il,del,al,dal,nel
+543,http://dbpedia.org/resource/Penguin_Books,Penguin Books,Organisation,il,del,al,dal,nel
+544,http://dbpedia.org/resource/Penguin_Books,Penguin Books,Publisher,il,del,al,dal,nel
+545,http://dbpedia.org/resource/Rotterdam,Rotterdam,Settlement,il,del,al,dal,nel
+546,http://dbpedia.org/resource/Rotterdam,Rotterdam,City,il,del,al,dal,nel
+547,http://dbpedia.org/resource/Rotterdam,Rotterdam,Place,il,del,al,dal,nel
+548,http://dbpedia.org/resource/Rotterdam,Rotterdam,Location,il,del,al,dal,nel
+549,http://dbpedia.org/resource/Rotterdam,Rotterdam,PopulatedPlace,il,del,al,dal,nel
+550,http://dbpedia.org/resource/Oceanography,Oceanografia,Organisation,X,di,a,da,in
+551,http://dbpedia.org/resource/Oceanography,Oceanografia,PersonFunction,X,di,a,da,in
+552,http://dbpedia.org/resource/Sweden,Riksdag,MusicalArtist,il,del,al,dal,nel
+553,http://dbpedia.org/resource/Sweden,Riksdag,Country,il,del,al,dal,nel
+554,http://dbpedia.org/resource/Sweden,Riksdag,Place,il,del,al,dal,nel
+555,http://dbpedia.org/resource/Sweden,Riksdag,PopulatedPlace,il,del,al,dal,nel
+556,http://dbpedia.org/resource/Sweden,Riksdag,Location,il,del,al,dal,nel
+557,http://dbpedia.org/resource/Ernest_Hemingway,Ernest Hemingway,Agent,X,di,a,da,in
+558,http://dbpedia.org/resource/Ernest_Hemingway,Ernest Hemingway,Person,X,di,a,da,in
+559,http://dbpedia.org/resource/Ernest_Hemingway,Ernest Hemingway,Writer,X,di,a,da,in
+560,http://dbpedia.org/resource/Autobiography,Autobiografia,MusicGenre,X,di,a,da,in
+561,http://dbpedia.org/resource/Autobiography,Autobiografia,Book,X,di,a,da,in
+562,http://dbpedia.org/resource/Juan_Carlos_I_of_Spain,Juan Carlos I di Spagna,Royalty,il,del,al,dal,nel
+563,http://dbpedia.org/resource/Nikola_Tesla,Nikola Tesla,Agent,la,della,alla,dalla,nella
+564,http://dbpedia.org/resource/Nikola_Tesla,Nikola Tesla,Person,la,della,alla,dalla,nella
+565,http://dbpedia.org/resource/Nobel_Prize_in_Physics,Premio Nobel per la fisica,Award,il,del,al,dal,nel
+566,http://dbpedia.org/resource/Proinsulin,Β-mercaptoetilammina,Biomolecule,la,della,alla,dalla,nella
+567,http://dbpedia.org/resource/Proinsulin,Β-mercaptoetilammina,ChemicalCompound,la,della,alla,dalla,nella
+568,http://dbpedia.org/resource/Queen_Victoria,Vittoria del Regno Unito,Agent,la,della,alla,dalla,nella
+569,http://dbpedia.org/resource/Queen_Victoria,Vittoria del Regno Unito,Royalty,la,della,alla,dalla,nella
+570,http://dbpedia.org/resource/Queen_Victoria,Vittoria del Regno Unito,Person,la,della,alla,dalla,nella
+571,http://dbpedia.org/resource/Che_Guevara,Che Guevara,Politician,le,delle,alle,dalle,nelle
+572,http://dbpedia.org/resource/Che_Guevara,Che Guevara,Agent,le,delle,alle,dalle,nelle
+573,http://dbpedia.org/resource/Che_Guevara,Che Guevara,Person,le,delle,alle,dalle,nelle
+574,http://dbpedia.org/resource/Lake_Baikal,Lago Bajkal,NaturalPlace,il,del,al,dal,nel
+575,http://dbpedia.org/resource/Lake_Baikal,Lago Bajkal,BodyOfWater,il,del,al,dal,nel
+576,http://dbpedia.org/resource/Lake_Baikal,Lago Bajkal,Lake,il,del,al,dal,nel
+577,http://dbpedia.org/resource/Lake_Baikal,Lago Bajkal,Place,il,del,al,dal,nel
+578,http://dbpedia.org/resource/Lake_Baikal,Lago Bajkal,Location,il,del,al,dal,nel
+579,http://dbpedia.org/resource/Great_Bear_Lake,Grande Lago degli Orsi,NaturalPlace,le,delle,alle,dalle,nelle
+580,http://dbpedia.org/resource/Great_Bear_Lake,Grande Lago degli Orsi,BodyOfWater,le,delle,alle,dalle,nelle
+581,http://dbpedia.org/resource/Great_Bear_Lake,Grande Lago degli Orsi,Lake,le,delle,alle,dalle,nelle
+582,http://dbpedia.org/resource/Great_Bear_Lake,Grande Lago degli Orsi,Place,le,delle,alle,dalle,nelle
+583,http://dbpedia.org/resource/Great_Bear_Lake,Grande Lago degli Orsi,Location,le,delle,alle,dalle,nelle
+584,http://dbpedia.org/resource/Aki_Kaurismäki,Aki Kaurismäki,Agent,X,di,a,da,in
+585,http://dbpedia.org/resource/Aki_Kaurismäki,Aki Kaurismäki,Person,X,di,a,da,in
+586,http://dbpedia.org/resource/Grand_Prix_(Cannes_Film_Festival),Grand Prix Speciale della Giuria,Award,il,del,al,dal,nel
+587,http://dbpedia.org/resource/William_Goldman,William Goldman,Agent,il,del,al,dal,nel
+588,http://dbpedia.org/resource/William_Goldman,William Goldman,Person,il,del,al,dal,nel
+589,http://dbpedia.org/resource/William_Goldman,William Goldman,Writer,il,del,al,dal,nel
+590,http://dbpedia.org/resource/Fort_Knox,Fort Knox,MilitaryUnit,il,del,al,dal,nel
+591,http://dbpedia.org/resource/Fort_Knox,Fort Knox,Place,il,del,al,dal,nel
+592,http://dbpedia.org/resource/Fort_Knox,Fort Knox,Location,il,del,al,dal,nel
+593,http://dbpedia.org/resource/Fort_Knox,Fort Knox,MilitaryUnit,il,del,al,dal,nel
+594,http://dbpedia.org/resource/Fort_Knox,Fort Knox,Place,il,del,al,dal,nel
+595,http://dbpedia.org/resource/Fort_Knox,Fort Knox,Location,il,del,al,dal,nel
+596,http://dbpedia.org/resource/United_States,Governo federale degli Stati Uniti d'America,Country,il,del,al,dal,nel
+597,http://dbpedia.org/resource/United_States,Governo federale degli Stati Uniti d'America,Person,il,del,al,dal,nel
+598,http://dbpedia.org/resource/United_States,Governo federale degli Stati Uniti d'America,Place,il,del,al,dal,nel
+599,http://dbpedia.org/resource/United_States,Governo federale degli Stati Uniti d'America,Location,il,del,al,dal,nel
+600,http://dbpedia.org/resource/United_States,Governo federale degli Stati Uniti d'America,PopulatedPlace,il,del,al,dal,nel
+601,http://dbpedia.org/resource/Syngman_Rhee,Syngman Rhee,Politician,il,del,al,dal,nel
+602,http://dbpedia.org/resource/Syngman_Rhee,Syngman Rhee,Agent,il,del,al,dal,nel
+603,http://dbpedia.org/resource/Syngman_Rhee,Syngman Rhee,OfficeHolder,il,del,al,dal,nel
+604,http://dbpedia.org/resource/Syngman_Rhee,Syngman Rhee,Person,il,del,al,dal,nel
+605,http://dbpedia.org/resource/San_Pedro_de_Atacama,San Pedro de Atacama,Settlement,il,del,al,dal,nel
+606,http://dbpedia.org/resource/San_Pedro_de_Atacama,San Pedro de Atacama,Town,il,del,al,dal,nel
+607,http://dbpedia.org/resource/San_Pedro_de_Atacama,San Pedro de Atacama,Place,il,del,al,dal,nel
+608,http://dbpedia.org/resource/San_Pedro_de_Atacama,San Pedro de Atacama,Location,il,del,al,dal,nel
+609,http://dbpedia.org/resource/San_Pedro_de_Atacama,San Pedro de Atacama,PopulatedPlace,il,del,al,dal,nel
+610,http://dbpedia.org/resource/The_Three_Dancers,I tre ballerini,Artwork,gli,degli,agli,dagli,negli
+611,http://dbpedia.org/resource/The_Three_Dancers,I tre ballerini,Work,gli,degli,agli,dagli,negli
+612,http://dbpedia.org/resource/Manhattan_Project,Progetto Manhattan,Agent,il,del,al,dal,nel
+613,http://dbpedia.org/resource/Manhattan_Project,Progetto Manhattan,Organisation,il,del,al,dal,nel
+614,http://dbpedia.org/resource/Manhattan_Project,Progetto Manhattan,MilitaryUnit,il,del,al,dal,nel
+615,http://dbpedia.org/resource/Nobel_Peace_Prize,Premio Nobel per la pace,Award,il,del,al,dal,nel
+616,http://dbpedia.org/resource/Nobel_Peace_Prize,Premio Nobel per la pace,TelevisionShow,il,del,al,dal,nel
+617,http://dbpedia.org/resource/Foundation_series,Ciclo delle Fondazioni,TelevisionShow,il,del,al,dal,nel
+618,http://dbpedia.org/resource/New_Jersey,Provincia del New Jersey,Settlement,la,della,alla,dalla,nella
+619,http://dbpedia.org/resource/New_Jersey,Provincia del New Jersey,AdministrativeRegion,la,della,alla,dalla,nella
+620,http://dbpedia.org/resource/New_Jersey,Provincia del New Jersey,Region,la,della,alla,dalla,nella
+621,http://dbpedia.org/resource/New_Jersey,Provincia del New Jersey,Place,la,della,alla,dalla,nella
+622,http://dbpedia.org/resource/New_Jersey,Provincia del New Jersey,PopulatedPlace,la,della,alla,dalla,nella
+623,http://dbpedia.org/resource/New_Jersey,Provincia del New Jersey,Location,la,della,alla,dalla,nella
+624,http://dbpedia.org/resource/New_York_City,New York,Settlement,il,del,al,dal,nel
+625,http://dbpedia.org/resource/New_York_City,New York,City,il,del,al,dal,nel
+626,http://dbpedia.org/resource/New_York_City,New York,Place,il,del,al,dal,nel
+627,http://dbpedia.org/resource/New_York_City,New York,Location,il,del,al,dal,nel
+628,http://dbpedia.org/resource/New_York_City,New York,PopulatedPlace,il,del,al,dal,nel
+629,http://dbpedia.org/resource/Yokohama_Marine_Tower,Torre marittima di Yokohama,ArchitecturalStructure,le,delle,alle,dalle,nelle
+630,http://dbpedia.org/resource/Yokohama_Marine_Tower,Torre marittima di Yokohama,Lighthouse,le,delle,alle,dalle,nelle
+631,http://dbpedia.org/resource/Yokohama_Marine_Tower,Torre marittima di Yokohama,Tower,le,delle,alle,dalle,nelle
+632,http://dbpedia.org/resource/World_of_Warcraft,World of Warcraft,VideoGame,il,del,al,dal,nel
+633,http://dbpedia.org/resource/World_of_Warcraft,World of Warcraft,Work,il,del,al,dal,nel
+634,http://dbpedia.org/resource/World_of_Warcraft,World of Warcraft,Software,il,del,al,dal,nel
+635,http://dbpedia.org/resource/Harold_and_Maude,Harold e Maude,Film,il,del,al,dal,nel
+636,http://dbpedia.org/resource/The_Prodigy,Prodigy Communications Corporation,Agent,il,del,al,dal,nel
+637,http://dbpedia.org/resource/The_Prodigy,Prodigy Communications Corporation,Group,il,del,al,dal,nel
+638,http://dbpedia.org/resource/The_Prodigy,Prodigy Communications Corporation,Organisation,il,del,al,dal,nel
+639,http://dbpedia.org/resource/The_Prodigy,Prodigy Communications Corporation,Band,il,del,al,dal,nel
+640,http://dbpedia.org/resource/Spain,Spagna,Country,la,della,alla,dalla,nella
+641,http://dbpedia.org/resource/Spain,Spagna,Place,la,della,alla,dalla,nella
+642,http://dbpedia.org/resource/Spain,Spagna,Location,la,della,alla,dalla,nella
+643,http://dbpedia.org/resource/Spain,Spagna,PopulatedPlace,la,della,alla,dalla,nella
+644,http://dbpedia.org/resource/Benicio_del_Toro,Benicio del Toro,Agent,il,del,al,dal,nel
+645,http://dbpedia.org/resource/Benicio_del_Toro,Benicio del Toro,Person,il,del,al,dal,nel
+646,http://dbpedia.org/resource/TUI_Travel,TUI Travel,Agent,il,del,al,dal,nel
+647,http://dbpedia.org/resource/TUI_Travel,TUI Travel,Company,il,del,al,dal,nel
+648,http://dbpedia.org/resource/TUI_Travel,TUI Travel,Organisation,il,del,al,dal,nel
+649,http://dbpedia.org/resource/TUI_Travel,TUI Travel,Band,il,del,al,dal,nel
+650,http://dbpedia.org/resource/Glasgow_Airport,Aeroporto di Glasgow,ArchitecturalStructure,l',dell',all',dall',nell'
+651,http://dbpedia.org/resource/Glasgow_Airport,Aeroporto di Glasgow,Airport,l',dell',all',dall',nell'
+652,http://dbpedia.org/resource/Glasgow_Airport,Aeroporto di Glasgow,Infrastructure,l',dell',all',dall',nell'
+653,http://dbpedia.org/resource/Dublin_Airport,Aeroporto Internazionale di Dublino,ArchitecturalStructure,l',dell',all',dall',nell'
+654,http://dbpedia.org/resource/Dublin_Airport,Aeroporto Internazionale di Dublino,Airport,l',dell',all',dall',nell'
+655,http://dbpedia.org/resource/Dublin_Airport,Aeroporto Internazionale di Dublino,Infrastructure,l',dell',all',dall',nell'
+656,http://dbpedia.org/resource/Mecca,La Mecca,Settlement,la,della,alla,dalla,nella
+657,http://dbpedia.org/resource/Mecca,La Mecca,City,la,della,alla,dalla,nella
+658,http://dbpedia.org/resource/Mecca,La Mecca,Place,la,della,alla,dalla,nella
+659,http://dbpedia.org/resource/Mecca,La Mecca,Location,la,della,alla,dalla,nella
+660,http://dbpedia.org/resource/Mecca,La Mecca,PopulatedPlace,la,della,alla,dalla,nella
+661,http://dbpedia.org/resource/Colombia,Repubblica della Nuova Granada,MusicalArtist,la,della,alla,dalla,nella
+662,http://dbpedia.org/resource/Colombia,Repubblica della Nuova Granada,Country,la,della,alla,dalla,nella
+663,http://dbpedia.org/resource/Colombia,Repubblica della Nuova Granada,Place,la,della,alla,dalla,nella
+664,http://dbpedia.org/resource/Colombia,Repubblica della Nuova Granada,PopulatedPlace,la,della,alla,dalla,nella
+665,http://dbpedia.org/resource/Colombia,Repubblica della Nuova Granada,Location,la,della,alla,dalla,nella
+666,http://dbpedia.org/resource/Spain,Spagna,Country,la,della,alla,dalla,nella
+667,http://dbpedia.org/resource/Spain,Spagna,Place,la,della,alla,dalla,nella
+668,http://dbpedia.org/resource/Spain,Spagna,Location,la,della,alla,dalla,nella
+669,http://dbpedia.org/resource/Spain,Spagna,PopulatedPlace,la,della,alla,dalla,nella
+670,http://dbpedia.org/resource/Surfing,Surf,Sport,il,del,al,dal,nel
+671,http://dbpedia.org/resource/Surfing,Surf,Activity,il,del,al,dal,nel
+672,http://dbpedia.org/resource/Surfing,Surf,PersonFunction,il,del,al,dal,nel
+673,http://dbpedia.org/resource/Philippines,Filippine,MusicalArtist,le,delle,alle,dalle,nelle
+674,http://dbpedia.org/resource/Philippines,Filippine,Country,le,delle,alle,dalle,nelle
+675,http://dbpedia.org/resource/Philippines,Filippine,Place,le,delle,alle,dalle,nelle
+676,http://dbpedia.org/resource/Philippines,Filippine,Location,le,delle,alle,dalle,nelle
+677,http://dbpedia.org/resource/Philippines,Filippine,PopulatedPlace,le,delle,alle,dalle,nelle
+678,http://dbpedia.org/resource/Cola,Cola (bevanda),Beverage,la,della,alla,dalla,nella
+679,http://dbpedia.org/resource/Cola,Cola (bevanda),Food,la,della,alla,dalla,nella
+680,"http://dbpedia.org/resource/Diana,_Princess_of_Wales",Diana Spencer,Agent,la,della,alla,dalla,nella
+681,"http://dbpedia.org/resource/Diana,_Princess_of_Wales",Diana Spencer,Royalty,la,della,alla,dalla,nella
+682,"http://dbpedia.org/resource/Diana,_Princess_of_Wales",Diana Spencer,Person,la,della,alla,dalla,nella
+683,http://dbpedia.org/resource/Sparkling_wine,Vino spumante,Company,il,del,al,dal,nel
+684,http://dbpedia.org/resource/France,Franca (San Paolo),Country,la,della,alla,dalla,nella
+685,http://dbpedia.org/resource/France,Franca (San Paolo),Place,la,della,alla,dalla,nella
+686,http://dbpedia.org/resource/France,Franca (San Paolo),PopulatedPlace,la,della,alla,dalla,nella
+687,http://dbpedia.org/resource/France,Franca (San Paolo),Location,la,della,alla,dalla,nella

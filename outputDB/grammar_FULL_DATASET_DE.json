@@ -1,0 +1,3534 @@
+{
+  "grammarEntries" : [ {
+    "id" : "1",
+    "lexicalEntryUri" : "http://localhost:8080#children_of_4",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "Liste die Kinder von ($x | PERSON_NP) auf", "Welche Person ist die Kinder von ($x | PERSON_NP)", "Welche Person sind die Kinder von ($x | PERSON_NP)", "Welche Person war die Kinder von ($x | PERSON_NP)", "Welche Person waren die Kinder von ($x | PERSON_NP)", "Wer ist die Kinder von ($x | PERSON_NP)", "Wer sind die Kinder von ($x | PERSON_NP)", "Wer war die Kinder von ($x | PERSON_NP)", "Wer waren die Kinder von ($x | PERSON_NP)" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Sayyid Adschall Schams ad-Din Umar",
+        "uri" : "http://dbpedia.org/resource/Ajall_Shams_al-Din_Omar"
+      }, {
+        "label" : "Akaki Zereteli",
+        "uri" : "http://dbpedia.org/resource/Akaki_Tsereteli"
+      }, {
+        "label" : "Al-Hādī",
+        "uri" : "http://dbpedia.org/resource/Al-Hadi"
+      }, {
+        "label" : "Al-Hākim I.",
+        "uri" : "http://dbpedia.org/resource/Al-Hakim_I"
+      }, {
+        "label" : "Al-Muqtafi",
+        "uri" : "http://dbpedia.org/resource/Al-Muqtafi"
+      }, {
+        "label" : "Al-Mustadī'",
+        "uri" : "http://dbpedia.org/resource/Al-Mustadi"
+      }, {
+        "label" : "Al-Mustakfī",
+        "uri" : "http://dbpedia.org/resource/Al-Mustakfi"
+      }, {
+        "label" : "Al-Mustakfi I.",
+        "uri" : "http://dbpedia.org/resource/Al-Mustakfi_I_(Cairo)"
+      }, {
+        "label" : "Al-Mustandschid",
+        "uri" : "http://dbpedia.org/resource/Al-Mustanjid"
+      }, {
+        "label" : "Al-Mustarschid",
+        "uri" : "http://dbpedia.org/resource/Al-Mustarshid"
+      }, {
+        "label" : "Al-Mustazhir bi-'llah",
+        "uri" : "http://dbpedia.org/resource/Al-Mustazhir"
+      }, {
+        "label" : "Al-Muttaqi",
+        "uri" : "http://dbpedia.org/resource/Al-Muttaqi"
+      }, {
+        "label" : "Al-Muzaffar Haddschi I.",
+        "uri" : "http://dbpedia.org/resource/Al-Muzaffar_Hajji"
+      }, {
+        "label" : "An-Nāsir Muhammad ibn Qalāwūn",
+        "uri" : "http://dbpedia.org/resource/Al-Nasir_Muhammad"
+      }, {
+        "label" : "Al-Qasim al-Ma'mun",
+        "uri" : "http://dbpedia.org/resource/Al-Qasim_al-Ma'mun"
+      }, {
+        "label" : "Az-Zāhir (Abbaside)",
+        "uri" : "http://dbpedia.org/resource/Al-Zahir_bi-Amr_Allah"
+      }, {
+        "label" : "Tekisch (Choresmien)",
+        "uri" : "http://dbpedia.org/resource/Ala_al-Din_Tekish"
+      }, {
+        "label" : "Catherine de Courtenay",
+        "uri" : "http://dbpedia.org/resource/Catherine_I,_Latin_Empress"
+      }, {
+        "label" : "Luisa Fernanda von Spanien",
+        "uri" : "http://dbpedia.org/resource/Infanta_Luisa_Fernanda,_Duchess_of_Montpensier"
+      }, {
+        "label" : "Jack Fisk",
+        "uri" : "http://dbpedia.org/resource/Jack_Fisk"
+      }, {
+        "label" : "Jean-Pierre Elkabbach",
+        "uri" : "http://dbpedia.org/resource/Jean-Pierre_Elkabbach"
+      }, {
+        "label" : "Jérôme Bonaparte-Patterson",
+        "uri" : "http://dbpedia.org/resource/Jérôme_Napoléon_Bonaparte"
+      }, {
+        "label" : "Margarete von England",
+        "uri" : "http://dbpedia.org/resource/Margaret_of_England"
+      }, {
+        "label" : "Maria Amalia von Brandenburg",
+        "uri" : "http://dbpedia.org/resource/Marie_Amalie_of_Brandenburg"
+      }, {
+        "label" : "Mary Stewart von Schottland",
+        "uri" : "http://dbpedia.org/resource/Mary_Stewart,_Countess_of_Arran"
+      }, {
+        "label" : "Matthew G. Martínez",
+        "uri" : "http://dbpedia.org/resource/Matthew_G._Martínez"
+      }, {
+        "label" : "Nathanael Herreshoff",
+        "uri" : "http://dbpedia.org/resource/Nathanael_Greene_Herreshoff"
+      }, {
+        "label" : "Nissanka Malla",
+        "uri" : "http://dbpedia.org/resource/Nissanka_Malla_of_Polonnaruwa"
+      }, {
+        "label" : "Paul Howard Poberezny",
+        "uri" : "http://dbpedia.org/resource/Paul_Poberezny"
+      }, {
+        "label" : "Paula Fox",
+        "uri" : "http://dbpedia.org/resource/Paula_Fox"
+      }, {
+        "label" : "Price Daniel",
+        "uri" : "http://dbpedia.org/resource/Price_Daniel"
+      }, {
+        "label" : "Auguste von Preußen (1780–1841)",
+        "uri" : "http://dbpedia.org/resource/Princess_Augusta_of_Prussia"
+      }, {
+        "label" : "Franziska von Brasilien",
+        "uri" : "http://dbpedia.org/resource/Princess_Francisca_of_Brazil"
+      }, {
+        "label" : "Ranulph le Meschin, 3. Earl of Chester",
+        "uri" : "http://dbpedia.org/resource/Ranulf_le_Meschin,_3rd_Earl_of_Chester"
+      }, {
+        "label" : "Robert W. Scott",
+        "uri" : "http://dbpedia.org/resource/Robert_W._Scott"
+      }, {
+        "label" : "Sanaṭrūq II.",
+        "uri" : "http://dbpedia.org/resource/Sanatruq_II"
+      }, {
+        "label" : "Schachbut bin Dhiyab",
+        "uri" : "http://dbpedia.org/resource/Shakhbut_bin_Dhiyab_Al_Nahyan"
+      }, {
+        "label" : "Susan Kohner",
+        "uri" : "http://dbpedia.org/resource/Susan_Kohner"
+      }, {
+        "label" : "Tự Đức",
+        "uri" : "http://dbpedia.org/resource/Tự_Đức"
+      }, {
+        "label" : "Ulvhild Håkonsdatter",
+        "uri" : "http://dbpedia.org/resource/Ulvhild_Håkansdotter"
+      }, {
+        "label" : "Victor Gollancz",
+        "uri" : "http://dbpedia.org/resource/Victor_Gollancz"
+      }, {
+        "label" : "Vologaeses IV.",
+        "uri" : "http://dbpedia.org/resource/Vologases_IV"
+      }, {
+        "label" : "Werner Lindemann",
+        "uri" : "http://dbpedia.org/resource/Werner_Lindemann"
+      }, {
+        "label" : "Zachariah Keodirelang Matthews",
+        "uri" : "http://dbpedia.org/resource/Z._K._Matthews"
+      }, {
+        "label" : "Zhang Bojun",
+        "uri" : "http://dbpedia.org/resource/Zhang_Bojun"
+      }, {
+        "label" : "Aschot III.",
+        "uri" : "http://dbpedia.org/resource/Ashot_III_of_Armenia"
+      }, {
+        "label" : "Eormenred",
+        "uri" : "http://dbpedia.org/resource/Eormenred_of_Kent"
+      }, {
+        "label" : "Eutropia (Frau Maximians)",
+        "uri" : "http://dbpedia.org/resource/Eutropia"
+      }, {
+        "label" : "Geoffrey Pole",
+        "uri" : "http://dbpedia.org/resource/Geoffrey_Pole"
+      }, {
+        "label" : "Huijong",
+        "uri" : "http://dbpedia.org/resource/Huijong_of_Goryeo"
+      }, {
+        "label" : "Jacqueline de Longwy",
+        "uri" : "http://dbpedia.org/resource/Jacqueline_de_Longwy"
+      }, {
+        "label" : "Julius Constantius",
+        "uri" : "http://dbpedia.org/resource/Julius_Constantius"
+      }, {
+        "label" : "Kurt Katch",
+        "uri" : "http://dbpedia.org/resource/Kurt_Katch"
+      }, {
+        "label" : "Lazar Branković",
+        "uri" : "http://dbpedia.org/resource/Lazar_Branković"
+      }, {
+        "label" : "Leslie Caron",
+        "uri" : "http://dbpedia.org/resource/Leslie_Caron"
+      }, {
+        "label" : "Lola Glaudini",
+        "uri" : "http://dbpedia.org/resource/Lola_Glaudini"
+      }, {
+        "label" : "Marguerite Churchill",
+        "uri" : "http://dbpedia.org/resource/Marguerite_Churchill"
+      }, {
+        "label" : "Martha Ford",
+        "uri" : "http://dbpedia.org/resource/Martha_Firestone_Ford"
+      }, {
+        "label" : "Mary Higgins Clark",
+        "uri" : "http://dbpedia.org/resource/Mary_Higgins_Clark"
+      }, {
+        "label" : "Maurice Richlin",
+        "uri" : "http://dbpedia.org/resource/Maurice_Richlin"
+      }, {
+        "label" : "Nicolas Chopin",
+        "uri" : "http://dbpedia.org/resource/Nicolas_Chopin"
+      }, {
+        "label" : "Osman Bölükbaşı",
+        "uri" : "http://dbpedia.org/resource/Osman_Bölükbaşı"
+      }, {
+        "label" : "Peter Ritchie Calder, Baron Ritchie-Calder",
+        "uri" : "http://dbpedia.org/resource/Peter_Ritchie_Calder"
+      }, {
+        "label" : "Philippe Delerm",
+        "uri" : "http://dbpedia.org/resource/Philippe_Delerm"
+      }, {
+        "label" : "Friedrich von Oranien-Nassau (1797–1881)",
+        "uri" : "http://dbpedia.org/resource/Prince_Frederick_of_the_Netherlands"
+      }, {
+        "label" : "Jean d’Orléans, duc de Guise",
+        "uri" : "http://dbpedia.org/resource/Prince_Jean,_Duke_of_Guise"
+      }, {
+        "label" : "Samuel Allyne Otis",
+        "uri" : "http://dbpedia.org/resource/Samuel_Allyne_Otis"
+      }, {
+        "label" : "Serge Dassault",
+        "uri" : "http://dbpedia.org/resource/Serge_Dassault"
+      }, {
+        "label" : "Toussaint Charbonneau",
+        "uri" : "http://dbpedia.org/resource/Toussaint_Charbonneau"
+      }, {
+        "label" : "Valgerður Gunnarsdóttir",
+        "uri" : "http://dbpedia.org/resource/Valgerður_Gunnarsdóttir"
+      }, {
+        "label" : "Astyages",
+        "uri" : "http://dbpedia.org/resource/Astyages"
+      }, {
+        "label" : "Atalja",
+        "uri" : "http://dbpedia.org/resource/Athaliah"
+      }, {
+        "label" : "Athanagild",
+        "uri" : "http://dbpedia.org/resource/Athanagild"
+      }, {
+        "label" : "Ala ad-Din Atsiz",
+        "uri" : "http://dbpedia.org/resource/Atsiz"
+      }, {
+        "label" : "Caecilia Attica",
+        "uri" : "http://dbpedia.org/resource/Attica_(wife_of_Agrippa)"
+      }, {
+        "label" : "Eurydike (Gattin Philipps II.)",
+        "uri" : "http://dbpedia.org/resource/Audata"
+      }, {
+        "label" : "Carinus",
+        "uri" : "http://dbpedia.org/resource/Carinus"
+      }, {
+        "label" : "Carl Herz (Mathematiker)",
+        "uri" : "http://dbpedia.org/resource/Carl_S._Herz"
+      }, {
+        "label" : "Carmen Boullosa",
+        "uri" : "http://dbpedia.org/resource/Carmen_Boullosa"
+      }, {
+        "label" : "Kassander",
+        "uri" : "http://dbpedia.org/resource/Cassander"
+      }, {
+        "label" : "Ubol Ratana",
+        "uri" : "http://dbpedia.org/resource/Ubol_Ratana"
+      }, {
+        "label" : "Uddhav Thackeray",
+        "uri" : "http://dbpedia.org/resource/Uddhav_Thackeray"
+      }, {
+        "label" : "Ulrike Eleonore von Dänemark",
+        "uri" : "http://dbpedia.org/resource/Ulrika_Eleonora_of_Denmark"
+      }, {
+        "label" : "Uma Nehru",
+        "uri" : "http://dbpedia.org/resource/Uma_Nehru"
+      }, {
+        "label" : "ʿUmar ibn ʿAbd al-ʿAzīz",
+        "uri" : "http://dbpedia.org/resource/Umar_II"
+      }, {
+        "label" : "Urraca (León)",
+        "uri" : "http://dbpedia.org/resource/Urraca_of_León"
+      }, {
+        "label" : "Usman dan Fodio",
+        "uri" : "http://dbpedia.org/resource/Usman_dan_Fodio"
+      }, {
+        "label" : "Maxtla",
+        "uri" : "http://dbpedia.org/resource/Maxtla"
+      }, {
+        "label" : "Pierre Granier-Deferre",
+        "uri" : "http://dbpedia.org/resource/Pierre_Granier-Deferre"
+      }, {
+        "label" : "Susanna von Bayern",
+        "uri" : "http://dbpedia.org/resource/Susanna_of_Bavaria"
+      }, {
+        "label" : "Tanotamun",
+        "uri" : "http://dbpedia.org/resource/Tantamani"
+      }, {
+        "label" : "Wu Ding",
+        "uri" : "http://dbpedia.org/resource/Wu_Ding"
+      }, {
+        "label" : "Enlil-nirari",
+        "uri" : "http://dbpedia.org/resource/Enlil-nirari"
+      }, {
+        "label" : "Frederick Nutter Chasen",
+        "uri" : "http://dbpedia.org/resource/Frederick_Nutter_Chasen"
+      }, {
+        "label" : "Halime Sultan",
+        "uri" : "http://dbpedia.org/resource/Halime_Sultan"
+      }, {
+        "label" : "Ngwane III.",
+        "uri" : "http://dbpedia.org/resource/Ngwane_III"
+      }, {
+        "label" : "Ordoño I. (Asturien)",
+        "uri" : "http://dbpedia.org/resource/Ordoño_I_of_Asturias"
+      }, {
+        "label" : "Roman Jackiw",
+        "uri" : "http://dbpedia.org/resource/Roman_Jackiw"
+      }, {
+        "label" : "Rusa I.",
+        "uri" : "http://dbpedia.org/resource/Rusa_I"
+      }, {
+        "label" : "Wladimir Grigorjewitsch Nak",
+        "uri" : "http://dbpedia.org/resource/Vladimir_Nak"
+      } ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "2",
+    "lexicalEntryUri" : "http://localhost:8080#children_of_4",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "die Kinder von ($x | PERSON_NP)" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Achariten",
+        "uri" : "http://dbpedia.org/resource/Akhraten"
+      }, {
+        "label" : "Al-Aziz (Ayyubide)",
+        "uri" : "http://dbpedia.org/resource/Al-Aziz_Uthman"
+      }, {
+        "label" : "Al-Hādī",
+        "uri" : "http://dbpedia.org/resource/Al-Hadi"
+      }, {
+        "label" : "Al-Hākim I.",
+        "uri" : "http://dbpedia.org/resource/Al-Hakim_I"
+      }, {
+        "label" : "Al-Kamil Schaban I.",
+        "uri" : "http://dbpedia.org/resource/Al-Kamil_Sha'ban"
+      }, {
+        "label" : "Al-Mansur Abu Bakr",
+        "uri" : "http://dbpedia.org/resource/Al-Mansur_Abu_Bakr"
+      }, {
+        "label" : "Ali I.",
+        "uri" : "http://dbpedia.org/resource/Al-Mansur_Ali"
+      }, {
+        "label" : "Turan Schah (Herrscher)",
+        "uri" : "http://dbpedia.org/resource/Al-Muazzam_Turanshah"
+      }, {
+        "label" : "Al-Muntasir",
+        "uri" : "http://dbpedia.org/resource/Al-Muntasir"
+      }, {
+        "label" : "Al-Muqtafi",
+        "uri" : "http://dbpedia.org/resource/Al-Muqtafi"
+      }, {
+        "label" : "Al-Musta'sim bi-'llah",
+        "uri" : "http://dbpedia.org/resource/Al-Musta'sim"
+      }, {
+        "label" : "Al-Mustadī'",
+        "uri" : "http://dbpedia.org/resource/Al-Mustadi"
+      }, {
+        "label" : "Al-Mustakfī",
+        "uri" : "http://dbpedia.org/resource/Al-Mustakfi"
+      }, {
+        "label" : "Al-Mustakfi I.",
+        "uri" : "http://dbpedia.org/resource/Al-Mustakfi_I_(Cairo)"
+      }, {
+        "label" : "Al-Mustandschid",
+        "uri" : "http://dbpedia.org/resource/Al-Mustanjid"
+      }, {
+        "label" : "Al-Mustarschid",
+        "uri" : "http://dbpedia.org/resource/Al-Mustarshid"
+      }, {
+        "label" : "Al-Mustazhir bi-'llah",
+        "uri" : "http://dbpedia.org/resource/Al-Mustazhir"
+      }, {
+        "label" : "Al-Muttaqi",
+        "uri" : "http://dbpedia.org/resource/Al-Muttaqi"
+      }, {
+        "label" : "Al-Muzaffar Haddschi I.",
+        "uri" : "http://dbpedia.org/resource/Al-Muzaffar_Hajji"
+      }, {
+        "label" : "An-Nāsir Muhammad ibn Qalāwūn",
+        "uri" : "http://dbpedia.org/resource/Al-Nasir_Muhammad"
+      }, {
+        "label" : "Az-Zafir",
+        "uri" : "http://dbpedia.org/resource/Al-Zafir"
+      }, {
+        "label" : "Az-Zāhir (Abbaside)",
+        "uri" : "http://dbpedia.org/resource/Al-Zahir_bi-Amr_Allah"
+      }, {
+        "label" : "Tekisch (Choresmien)",
+        "uri" : "http://dbpedia.org/resource/Ala_al-Din_Tekish"
+      }, {
+        "label" : "Alakhai Bekhi",
+        "uri" : "http://dbpedia.org/resource/Alakhai_Bekhi"
+      }, {
+        "label" : "Aššur-nirari III.",
+        "uri" : "http://dbpedia.org/resource/Ashur-nirari_III"
+      }, {
+        "label" : "Catherine de Courtenay",
+        "uri" : "http://dbpedia.org/resource/Catherine_I,_Latin_Empress"
+      }, {
+        "label" : "Děpold",
+        "uri" : "http://dbpedia.org/resource/Děpold_I_of_Jamnitz"
+      }, {
+        "label" : "François de Bourbon, comte d’Enghien",
+        "uri" : "http://dbpedia.org/resource/Francis,_Count_of_Enghien"
+      }, {
+        "label" : "Fuller Albright",
+        "uri" : "http://dbpedia.org/resource/Fuller_Albright"
+      }, {
+        "label" : "Hans Pleydenwurff",
+        "uri" : "http://dbpedia.org/resource/Hans_Pleydenwurff"
+      }, {
+        "label" : "Heinrich I. (Utrecht)",
+        "uri" : "http://dbpedia.org/resource/Henry_I_van_Vianden"
+      }, {
+        "label" : "Luisa Fernanda von Spanien",
+        "uri" : "http://dbpedia.org/resource/Infanta_Luisa_Fernanda,_Duchess_of_Montpensier"
+      }, {
+        "label" : "Jakob Oftebro",
+        "uri" : "http://dbpedia.org/resource/Jakob_Oftebro"
+      }, {
+        "label" : "Jean-Claude Casadesus",
+        "uri" : "http://dbpedia.org/resource/Jean-Claude_Casadesus"
+      }, {
+        "label" : "Johanna von Bayern (1362–1386)",
+        "uri" : "http://dbpedia.org/resource/Joanna_of_Bavaria"
+      }, {
+        "label" : "Joey Merlino",
+        "uri" : "http://dbpedia.org/resource/Joey_Merlino"
+      }, {
+        "label" : "John Carter Cash",
+        "uri" : "http://dbpedia.org/resource/John_Carter_Cash"
+      }, {
+        "label" : "Johann Ernst (Sachsen-Coburg)",
+        "uri" : "http://dbpedia.org/resource/John_Ernest,_Duke_of_Saxe-Coburg"
+      }, {
+        "label" : "Jérôme Bonaparte-Patterson",
+        "uri" : "http://dbpedia.org/resource/Jérôme_Napoléon_Bonaparte"
+      }, {
+        "label" : "Liudolf (Ezzonen)",
+        "uri" : "http://dbpedia.org/resource/Liudolf_of_Lotharingia"
+      }, {
+        "label" : "Margarete von England",
+        "uri" : "http://dbpedia.org/resource/Margaret_of_England"
+      }, {
+        "label" : "Maria von Trapezunt",
+        "uri" : "http://dbpedia.org/resource/Maria_of_Trebizond"
+      }, {
+        "label" : "Maria Amalia von Brandenburg",
+        "uri" : "http://dbpedia.org/resource/Marie_Amalie_of_Brandenburg"
+      }, {
+        "label" : "Marie de Coucy",
+        "uri" : "http://dbpedia.org/resource/Marie_I_de_Coucy,_Countess_of_Soissons"
+      }, {
+        "label" : "Mary Stewart von Schottland",
+        "uri" : "http://dbpedia.org/resource/Mary_Stewart,_Countess_of_Arran"
+      }, {
+        "label" : "Oliver Jesse Carter",
+        "uri" : "http://dbpedia.org/resource/Oliver_Jesse_Carter"
+      }, {
+        "label" : "Petros S. Kokkalis",
+        "uri" : "http://dbpedia.org/resource/Petros_S._Kokkalis"
+      }, {
+        "label" : "Philipp von Bayern",
+        "uri" : "http://dbpedia.org/resource/Philipp_of_Bavaria"
+      }, {
+        "label" : "Georgi Konstantinowitsch Romanow",
+        "uri" : "http://dbpedia.org/resource/Prince_Georgy_Konstantinovich_of_Russia"
+      }, {
+        "label" : "Auguste von Preußen (1780–1841)",
+        "uri" : "http://dbpedia.org/resource/Princess_Augusta_of_Prussia"
+      }, {
+        "label" : "Franziska von Brasilien",
+        "uri" : "http://dbpedia.org/resource/Princess_Francisca_of_Brazil"
+      }, {
+        "label" : "Saloninus",
+        "uri" : "http://dbpedia.org/resource/Saloninus"
+      }, {
+        "label" : "Sanaṭrūq II.",
+        "uri" : "http://dbpedia.org/resource/Sanatruq_II"
+      }, {
+        "label" : "Sarah Strange",
+        "uri" : "http://dbpedia.org/resource/Sarah_Strange"
+      }, {
+        "label" : "Schachbut bin Dhiyab",
+        "uri" : "http://dbpedia.org/resource/Shakhbut_bin_Dhiyab_Al_Nahyan"
+      }, {
+        "label" : "Soumya Swaminathan",
+        "uri" : "http://dbpedia.org/resource/Soumya_Swaminathan"
+      }, {
+        "label" : "Stanford White",
+        "uri" : "http://dbpedia.org/resource/Stanford_White"
+      }, {
+        "label" : "Susan Kohner",
+        "uri" : "http://dbpedia.org/resource/Susan_Kohner"
+      }, {
+        "label" : "Theuderich II.",
+        "uri" : "http://dbpedia.org/resource/Theuderic_II"
+      }, {
+        "label" : "Torild Skard",
+        "uri" : "http://dbpedia.org/resource/Torild_Skard"
+      }, {
+        "label" : "25 Windhundwelpen",
+        "uri" : "http://dbpedia.org/resource/Two_Dozen_and_One_Greyhounds"
+      }, {
+        "label" : "Tự Đức",
+        "uri" : "http://dbpedia.org/resource/Tự_Đức"
+      }, {
+        "label" : "William Hamilton, 12. Duke of Hamilton",
+        "uri" : "http://dbpedia.org/resource/William_Douglas-Hamilton,_12th_Duke_of_Hamilton"
+      }, {
+        "label" : "Wilhelm Ernst (Sachsen-Weimar)",
+        "uri" : "http://dbpedia.org/resource/William_Ernest,_Duke_of_Saxe-Weimar"
+      }, {
+        "label" : "Aschot III.",
+        "uri" : "http://dbpedia.org/resource/Ashot_III_of_Armenia"
+      }, {
+        "label" : "Emma von Provence",
+        "uri" : "http://dbpedia.org/resource/Emma_of_Provence"
+      }, {
+        "label" : "Eormenred",
+        "uri" : "http://dbpedia.org/resource/Eormenred_of_Kent"
+      }, {
+        "label" : "Friedrich Erdmann (Anhalt-Köthen-Pleß)",
+        "uri" : "http://dbpedia.org/resource/Frederick_Erdmann,_Prince_of_Anhalt-Pless"
+      }, {
+        "label" : "Geoffrey Pole",
+        "uri" : "http://dbpedia.org/resource/Geoffrey_Pole"
+      }, {
+        "label" : "Huijong",
+        "uri" : "http://dbpedia.org/resource/Huijong_of_Goryeo"
+      }, {
+        "label" : "Julius Constantius",
+        "uri" : "http://dbpedia.org/resource/Julius_Constantius"
+      }, {
+        "label" : "Kajol",
+        "uri" : "http://dbpedia.org/resource/Kajol"
+      }, {
+        "label" : "Katharina (England)",
+        "uri" : "http://dbpedia.org/resource/Katherine_of_England"
+      }, {
+        "label" : "Augusta Gordon",
+        "uri" : "http://dbpedia.org/resource/Lady_Augusta_Gordon"
+      }, {
+        "label" : "Lazar Branković",
+        "uri" : "http://dbpedia.org/resource/Lazar_Branković"
+      }, {
+        "label" : "Lindley Murray (Grammatiker)",
+        "uri" : "http://dbpedia.org/resource/Lindley_Murray"
+      }, {
+        "label" : "Lola Glaudini",
+        "uri" : "http://dbpedia.org/resource/Lola_Glaudini"
+      }, {
+        "label" : "Louis Mountbatten, 1. Earl Mountbatten of Burma",
+        "uri" : "http://dbpedia.org/resource/Louis_Mountbatten,_1st_Earl_Mountbatten_of_Burma"
+      }, {
+        "label" : "Ludwig Anton von der Pfalz",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Anton_von_Pfalz-Neuburg"
+      }, {
+        "label" : "Manuel José Estrada Cabrera",
+        "uri" : "http://dbpedia.org/resource/Manuel_Estrada_Cabrera"
+      }, {
+        "label" : "Margarete von Lothringen",
+        "uri" : "http://dbpedia.org/resource/Margaret_of_Lorraine"
+      }, {
+        "label" : "Martha Ford",
+        "uri" : "http://dbpedia.org/resource/Martha_Firestone_Ford"
+      }, {
+        "label" : "Matilda Brown",
+        "uri" : "http://dbpedia.org/resource/Matilda_Brown"
+      }, {
+        "label" : "Mstislaw I.",
+        "uri" : "http://dbpedia.org/resource/Mstislav_I_of_Kiev"
+      }, {
+        "label" : "Murat Belge",
+        "uri" : "http://dbpedia.org/resource/Murat_Belge"
+      }, {
+        "label" : "Musa Çelebi",
+        "uri" : "http://dbpedia.org/resource/Musa_Çelebi"
+      }, {
+        "label" : "Myriam Harry",
+        "uri" : "http://dbpedia.org/resource/Myriam_Harry"
+      }, {
+        "label" : "Norton P. Otis",
+        "uri" : "http://dbpedia.org/resource/Norton_P._Otis"
+      }, {
+        "label" : "Ordoño IV. (León)",
+        "uri" : "http://dbpedia.org/resource/Ordoño_IV_of_León"
+      }, {
+        "label" : "Pietro Tempesta",
+        "uri" : "http://dbpedia.org/resource/Peter_Tempesta"
+      }, {
+        "label" : "August von Sachsen-Gotha-Altenburg",
+        "uri" : "http://dbpedia.org/resource/Prince_August_of_Saxe-Gotha-Altenburg"
+      }, {
+        "label" : "Friedrich von Oranien-Nassau (1797–1881)",
+        "uri" : "http://dbpedia.org/resource/Prince_Frederick_of_the_Netherlands"
+      }, {
+        "label" : "Jean d’Orléans, duc de Guise",
+        "uri" : "http://dbpedia.org/resource/Prince_Jean,_Duke_of_Guise"
+      }, {
+        "label" : "Alexandrine-Louise von Dänemark",
+        "uri" : "http://dbpedia.org/resource/Princess_Alexandrine-Louise_of_Denmark"
+      }, {
+        "label" : "Caroline Reuß zu Greiz",
+        "uri" : "http://dbpedia.org/resource/Princess_Caroline_Reuss_of_Greiz"
+      }, {
+        "label" : "Johanna Charlotte von Anhalt-Dessau",
+        "uri" : "http://dbpedia.org/resource/Princess_Johanna_Charlotte_of_Anhalt-Dessau"
+      }, {
+        "label" : "Sophie von Sachsen-Hildburghausen",
+        "uri" : "http://dbpedia.org/resource/Princess_Sophie_of_Saxe-Hildburghausen"
+      }, {
+        "label" : "Raoul de Gacé",
+        "uri" : "http://dbpedia.org/resource/Ralph_de_Gacé"
+      }, {
+        "label" : "Robert Charles Winthrop",
+        "uri" : "http://dbpedia.org/resource/Robert_Charles_Winthrop"
+      }, {
+        "label" : "Ruben II. (Armenien)",
+        "uri" : "http://dbpedia.org/resource/Ruben_II,_Prince_of_Armenia"
+      } ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "3",
+    "lexicalEntryUri" : "http://localhost:8080#children_of_3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "Liste die Kinder von ($x | PERSON_NP) auf", "Welche Person ist die Kinder von ($x | PERSON_NP)", "Welche Person sind die Kinder von ($x | PERSON_NP)", "Welche Person war die Kinder von ($x | PERSON_NP)", "Welche Person waren die Kinder von ($x | PERSON_NP)", "Wer ist die Kinder von ($x | PERSON_NP)", "Wer sind die Kinder von ($x | PERSON_NP)", "Wer war die Kinder von ($x | PERSON_NP)", "Wer waren die Kinder von ($x | PERSON_NP)" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Sayyid Adschall Schams ad-Din Umar",
+        "uri" : "http://dbpedia.org/resource/Ajall_Shams_al-Din_Omar"
+      }, {
+        "label" : "Akaki Zereteli",
+        "uri" : "http://dbpedia.org/resource/Akaki_Tsereteli"
+      }, {
+        "label" : "Al-Hādī",
+        "uri" : "http://dbpedia.org/resource/Al-Hadi"
+      }, {
+        "label" : "Al-Hākim I.",
+        "uri" : "http://dbpedia.org/resource/Al-Hakim_I"
+      }, {
+        "label" : "Al-Muqtafi",
+        "uri" : "http://dbpedia.org/resource/Al-Muqtafi"
+      }, {
+        "label" : "Al-Mustadī'",
+        "uri" : "http://dbpedia.org/resource/Al-Mustadi"
+      }, {
+        "label" : "Al-Mustakfī",
+        "uri" : "http://dbpedia.org/resource/Al-Mustakfi"
+      }, {
+        "label" : "Al-Mustakfi I.",
+        "uri" : "http://dbpedia.org/resource/Al-Mustakfi_I_(Cairo)"
+      }, {
+        "label" : "Al-Mustandschid",
+        "uri" : "http://dbpedia.org/resource/Al-Mustanjid"
+      }, {
+        "label" : "Al-Mustarschid",
+        "uri" : "http://dbpedia.org/resource/Al-Mustarshid"
+      }, {
+        "label" : "Al-Mustazhir bi-'llah",
+        "uri" : "http://dbpedia.org/resource/Al-Mustazhir"
+      }, {
+        "label" : "Al-Muttaqi",
+        "uri" : "http://dbpedia.org/resource/Al-Muttaqi"
+      }, {
+        "label" : "Al-Muzaffar Haddschi I.",
+        "uri" : "http://dbpedia.org/resource/Al-Muzaffar_Hajji"
+      }, {
+        "label" : "An-Nāsir Muhammad ibn Qalāwūn",
+        "uri" : "http://dbpedia.org/resource/Al-Nasir_Muhammad"
+      }, {
+        "label" : "Al-Qasim al-Ma'mun",
+        "uri" : "http://dbpedia.org/resource/Al-Qasim_al-Ma'mun"
+      }, {
+        "label" : "Az-Zāhir (Abbaside)",
+        "uri" : "http://dbpedia.org/resource/Al-Zahir_bi-Amr_Allah"
+      }, {
+        "label" : "Tekisch (Choresmien)",
+        "uri" : "http://dbpedia.org/resource/Ala_al-Din_Tekish"
+      }, {
+        "label" : "Catherine de Courtenay",
+        "uri" : "http://dbpedia.org/resource/Catherine_I,_Latin_Empress"
+      }, {
+        "label" : "Luisa Fernanda von Spanien",
+        "uri" : "http://dbpedia.org/resource/Infanta_Luisa_Fernanda,_Duchess_of_Montpensier"
+      }, {
+        "label" : "Jack Fisk",
+        "uri" : "http://dbpedia.org/resource/Jack_Fisk"
+      }, {
+        "label" : "Jean-Pierre Elkabbach",
+        "uri" : "http://dbpedia.org/resource/Jean-Pierre_Elkabbach"
+      }, {
+        "label" : "Jérôme Bonaparte-Patterson",
+        "uri" : "http://dbpedia.org/resource/Jérôme_Napoléon_Bonaparte"
+      }, {
+        "label" : "Margarete von England",
+        "uri" : "http://dbpedia.org/resource/Margaret_of_England"
+      }, {
+        "label" : "Maria Amalia von Brandenburg",
+        "uri" : "http://dbpedia.org/resource/Marie_Amalie_of_Brandenburg"
+      }, {
+        "label" : "Mary Stewart von Schottland",
+        "uri" : "http://dbpedia.org/resource/Mary_Stewart,_Countess_of_Arran"
+      }, {
+        "label" : "Matthew G. Martínez",
+        "uri" : "http://dbpedia.org/resource/Matthew_G._Martínez"
+      }, {
+        "label" : "Nathanael Herreshoff",
+        "uri" : "http://dbpedia.org/resource/Nathanael_Greene_Herreshoff"
+      }, {
+        "label" : "Nissanka Malla",
+        "uri" : "http://dbpedia.org/resource/Nissanka_Malla_of_Polonnaruwa"
+      }, {
+        "label" : "Paul Howard Poberezny",
+        "uri" : "http://dbpedia.org/resource/Paul_Poberezny"
+      }, {
+        "label" : "Paula Fox",
+        "uri" : "http://dbpedia.org/resource/Paula_Fox"
+      }, {
+        "label" : "Price Daniel",
+        "uri" : "http://dbpedia.org/resource/Price_Daniel"
+      }, {
+        "label" : "Auguste von Preußen (1780–1841)",
+        "uri" : "http://dbpedia.org/resource/Princess_Augusta_of_Prussia"
+      }, {
+        "label" : "Franziska von Brasilien",
+        "uri" : "http://dbpedia.org/resource/Princess_Francisca_of_Brazil"
+      }, {
+        "label" : "Ranulph le Meschin, 3. Earl of Chester",
+        "uri" : "http://dbpedia.org/resource/Ranulf_le_Meschin,_3rd_Earl_of_Chester"
+      }, {
+        "label" : "Robert W. Scott",
+        "uri" : "http://dbpedia.org/resource/Robert_W._Scott"
+      }, {
+        "label" : "Sanaṭrūq II.",
+        "uri" : "http://dbpedia.org/resource/Sanatruq_II"
+      }, {
+        "label" : "Schachbut bin Dhiyab",
+        "uri" : "http://dbpedia.org/resource/Shakhbut_bin_Dhiyab_Al_Nahyan"
+      }, {
+        "label" : "Susan Kohner",
+        "uri" : "http://dbpedia.org/resource/Susan_Kohner"
+      }, {
+        "label" : "Tự Đức",
+        "uri" : "http://dbpedia.org/resource/Tự_Đức"
+      }, {
+        "label" : "Ulvhild Håkonsdatter",
+        "uri" : "http://dbpedia.org/resource/Ulvhild_Håkansdotter"
+      }, {
+        "label" : "Victor Gollancz",
+        "uri" : "http://dbpedia.org/resource/Victor_Gollancz"
+      }, {
+        "label" : "Vologaeses IV.",
+        "uri" : "http://dbpedia.org/resource/Vologases_IV"
+      }, {
+        "label" : "Werner Lindemann",
+        "uri" : "http://dbpedia.org/resource/Werner_Lindemann"
+      }, {
+        "label" : "Zachariah Keodirelang Matthews",
+        "uri" : "http://dbpedia.org/resource/Z._K._Matthews"
+      }, {
+        "label" : "Zhang Bojun",
+        "uri" : "http://dbpedia.org/resource/Zhang_Bojun"
+      }, {
+        "label" : "Aschot III.",
+        "uri" : "http://dbpedia.org/resource/Ashot_III_of_Armenia"
+      }, {
+        "label" : "Eormenred",
+        "uri" : "http://dbpedia.org/resource/Eormenred_of_Kent"
+      }, {
+        "label" : "Eutropia (Frau Maximians)",
+        "uri" : "http://dbpedia.org/resource/Eutropia"
+      }, {
+        "label" : "Geoffrey Pole",
+        "uri" : "http://dbpedia.org/resource/Geoffrey_Pole"
+      }, {
+        "label" : "Huijong",
+        "uri" : "http://dbpedia.org/resource/Huijong_of_Goryeo"
+      }, {
+        "label" : "Jacqueline de Longwy",
+        "uri" : "http://dbpedia.org/resource/Jacqueline_de_Longwy"
+      }, {
+        "label" : "Julius Constantius",
+        "uri" : "http://dbpedia.org/resource/Julius_Constantius"
+      }, {
+        "label" : "Kurt Katch",
+        "uri" : "http://dbpedia.org/resource/Kurt_Katch"
+      }, {
+        "label" : "Lazar Branković",
+        "uri" : "http://dbpedia.org/resource/Lazar_Branković"
+      }, {
+        "label" : "Leslie Caron",
+        "uri" : "http://dbpedia.org/resource/Leslie_Caron"
+      }, {
+        "label" : "Lola Glaudini",
+        "uri" : "http://dbpedia.org/resource/Lola_Glaudini"
+      }, {
+        "label" : "Marguerite Churchill",
+        "uri" : "http://dbpedia.org/resource/Marguerite_Churchill"
+      }, {
+        "label" : "Martha Ford",
+        "uri" : "http://dbpedia.org/resource/Martha_Firestone_Ford"
+      }, {
+        "label" : "Mary Higgins Clark",
+        "uri" : "http://dbpedia.org/resource/Mary_Higgins_Clark"
+      }, {
+        "label" : "Maurice Richlin",
+        "uri" : "http://dbpedia.org/resource/Maurice_Richlin"
+      }, {
+        "label" : "Nicolas Chopin",
+        "uri" : "http://dbpedia.org/resource/Nicolas_Chopin"
+      }, {
+        "label" : "Osman Bölükbaşı",
+        "uri" : "http://dbpedia.org/resource/Osman_Bölükbaşı"
+      }, {
+        "label" : "Peter Ritchie Calder, Baron Ritchie-Calder",
+        "uri" : "http://dbpedia.org/resource/Peter_Ritchie_Calder"
+      }, {
+        "label" : "Philippe Delerm",
+        "uri" : "http://dbpedia.org/resource/Philippe_Delerm"
+      }, {
+        "label" : "Friedrich von Oranien-Nassau (1797–1881)",
+        "uri" : "http://dbpedia.org/resource/Prince_Frederick_of_the_Netherlands"
+      }, {
+        "label" : "Jean d’Orléans, duc de Guise",
+        "uri" : "http://dbpedia.org/resource/Prince_Jean,_Duke_of_Guise"
+      }, {
+        "label" : "Samuel Allyne Otis",
+        "uri" : "http://dbpedia.org/resource/Samuel_Allyne_Otis"
+      }, {
+        "label" : "Serge Dassault",
+        "uri" : "http://dbpedia.org/resource/Serge_Dassault"
+      }, {
+        "label" : "Toussaint Charbonneau",
+        "uri" : "http://dbpedia.org/resource/Toussaint_Charbonneau"
+      }, {
+        "label" : "Valgerður Gunnarsdóttir",
+        "uri" : "http://dbpedia.org/resource/Valgerður_Gunnarsdóttir"
+      }, {
+        "label" : "Astyages",
+        "uri" : "http://dbpedia.org/resource/Astyages"
+      }, {
+        "label" : "Atalja",
+        "uri" : "http://dbpedia.org/resource/Athaliah"
+      }, {
+        "label" : "Athanagild",
+        "uri" : "http://dbpedia.org/resource/Athanagild"
+      }, {
+        "label" : "Ala ad-Din Atsiz",
+        "uri" : "http://dbpedia.org/resource/Atsiz"
+      }, {
+        "label" : "Caecilia Attica",
+        "uri" : "http://dbpedia.org/resource/Attica_(wife_of_Agrippa)"
+      }, {
+        "label" : "Eurydike (Gattin Philipps II.)",
+        "uri" : "http://dbpedia.org/resource/Audata"
+      }, {
+        "label" : "Carinus",
+        "uri" : "http://dbpedia.org/resource/Carinus"
+      }, {
+        "label" : "Carl Herz (Mathematiker)",
+        "uri" : "http://dbpedia.org/resource/Carl_S._Herz"
+      }, {
+        "label" : "Carmen Boullosa",
+        "uri" : "http://dbpedia.org/resource/Carmen_Boullosa"
+      }, {
+        "label" : "Kassander",
+        "uri" : "http://dbpedia.org/resource/Cassander"
+      }, {
+        "label" : "Ubol Ratana",
+        "uri" : "http://dbpedia.org/resource/Ubol_Ratana"
+      }, {
+        "label" : "Uddhav Thackeray",
+        "uri" : "http://dbpedia.org/resource/Uddhav_Thackeray"
+      }, {
+        "label" : "Ulrike Eleonore von Dänemark",
+        "uri" : "http://dbpedia.org/resource/Ulrika_Eleonora_of_Denmark"
+      }, {
+        "label" : "Uma Nehru",
+        "uri" : "http://dbpedia.org/resource/Uma_Nehru"
+      }, {
+        "label" : "ʿUmar ibn ʿAbd al-ʿAzīz",
+        "uri" : "http://dbpedia.org/resource/Umar_II"
+      }, {
+        "label" : "Urraca (León)",
+        "uri" : "http://dbpedia.org/resource/Urraca_of_León"
+      }, {
+        "label" : "Usman dan Fodio",
+        "uri" : "http://dbpedia.org/resource/Usman_dan_Fodio"
+      }, {
+        "label" : "Maxtla",
+        "uri" : "http://dbpedia.org/resource/Maxtla"
+      }, {
+        "label" : "Pierre Granier-Deferre",
+        "uri" : "http://dbpedia.org/resource/Pierre_Granier-Deferre"
+      }, {
+        "label" : "Susanna von Bayern",
+        "uri" : "http://dbpedia.org/resource/Susanna_of_Bavaria"
+      }, {
+        "label" : "Tanotamun",
+        "uri" : "http://dbpedia.org/resource/Tantamani"
+      }, {
+        "label" : "Wu Ding",
+        "uri" : "http://dbpedia.org/resource/Wu_Ding"
+      }, {
+        "label" : "Enlil-nirari",
+        "uri" : "http://dbpedia.org/resource/Enlil-nirari"
+      }, {
+        "label" : "Frederick Nutter Chasen",
+        "uri" : "http://dbpedia.org/resource/Frederick_Nutter_Chasen"
+      }, {
+        "label" : "Halime Sultan",
+        "uri" : "http://dbpedia.org/resource/Halime_Sultan"
+      }, {
+        "label" : "Ngwane III.",
+        "uri" : "http://dbpedia.org/resource/Ngwane_III"
+      }, {
+        "label" : "Ordoño I. (Asturien)",
+        "uri" : "http://dbpedia.org/resource/Ordoño_I_of_Asturias"
+      }, {
+        "label" : "Roman Jackiw",
+        "uri" : "http://dbpedia.org/resource/Roman_Jackiw"
+      }, {
+        "label" : "Rusa I.",
+        "uri" : "http://dbpedia.org/resource/Rusa_I"
+      }, {
+        "label" : "Wladimir Grigorjewitsch Nak",
+        "uri" : "http://dbpedia.org/resource/Vladimir_Nak"
+      } ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "4",
+    "lexicalEntryUri" : "http://localhost:8080#children_of_3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "die Kinder von ($x | PERSON_NP)" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Achariten",
+        "uri" : "http://dbpedia.org/resource/Akhraten"
+      }, {
+        "label" : "Al-Aziz (Ayyubide)",
+        "uri" : "http://dbpedia.org/resource/Al-Aziz_Uthman"
+      }, {
+        "label" : "Al-Hādī",
+        "uri" : "http://dbpedia.org/resource/Al-Hadi"
+      }, {
+        "label" : "Al-Hākim I.",
+        "uri" : "http://dbpedia.org/resource/Al-Hakim_I"
+      }, {
+        "label" : "Al-Kamil Schaban I.",
+        "uri" : "http://dbpedia.org/resource/Al-Kamil_Sha'ban"
+      }, {
+        "label" : "Al-Mansur Abu Bakr",
+        "uri" : "http://dbpedia.org/resource/Al-Mansur_Abu_Bakr"
+      }, {
+        "label" : "Ali I.",
+        "uri" : "http://dbpedia.org/resource/Al-Mansur_Ali"
+      }, {
+        "label" : "Turan Schah (Herrscher)",
+        "uri" : "http://dbpedia.org/resource/Al-Muazzam_Turanshah"
+      }, {
+        "label" : "Al-Muntasir",
+        "uri" : "http://dbpedia.org/resource/Al-Muntasir"
+      }, {
+        "label" : "Al-Muqtafi",
+        "uri" : "http://dbpedia.org/resource/Al-Muqtafi"
+      }, {
+        "label" : "Al-Musta'sim bi-'llah",
+        "uri" : "http://dbpedia.org/resource/Al-Musta'sim"
+      }, {
+        "label" : "Al-Mustadī'",
+        "uri" : "http://dbpedia.org/resource/Al-Mustadi"
+      }, {
+        "label" : "Al-Mustakfī",
+        "uri" : "http://dbpedia.org/resource/Al-Mustakfi"
+      }, {
+        "label" : "Al-Mustakfi I.",
+        "uri" : "http://dbpedia.org/resource/Al-Mustakfi_I_(Cairo)"
+      }, {
+        "label" : "Al-Mustandschid",
+        "uri" : "http://dbpedia.org/resource/Al-Mustanjid"
+      }, {
+        "label" : "Al-Mustarschid",
+        "uri" : "http://dbpedia.org/resource/Al-Mustarshid"
+      }, {
+        "label" : "Al-Mustazhir bi-'llah",
+        "uri" : "http://dbpedia.org/resource/Al-Mustazhir"
+      }, {
+        "label" : "Al-Muttaqi",
+        "uri" : "http://dbpedia.org/resource/Al-Muttaqi"
+      }, {
+        "label" : "Al-Muzaffar Haddschi I.",
+        "uri" : "http://dbpedia.org/resource/Al-Muzaffar_Hajji"
+      }, {
+        "label" : "An-Nāsir Muhammad ibn Qalāwūn",
+        "uri" : "http://dbpedia.org/resource/Al-Nasir_Muhammad"
+      }, {
+        "label" : "Az-Zafir",
+        "uri" : "http://dbpedia.org/resource/Al-Zafir"
+      }, {
+        "label" : "Az-Zāhir (Abbaside)",
+        "uri" : "http://dbpedia.org/resource/Al-Zahir_bi-Amr_Allah"
+      }, {
+        "label" : "Tekisch (Choresmien)",
+        "uri" : "http://dbpedia.org/resource/Ala_al-Din_Tekish"
+      }, {
+        "label" : "Alakhai Bekhi",
+        "uri" : "http://dbpedia.org/resource/Alakhai_Bekhi"
+      }, {
+        "label" : "Aššur-nirari III.",
+        "uri" : "http://dbpedia.org/resource/Ashur-nirari_III"
+      }, {
+        "label" : "Catherine de Courtenay",
+        "uri" : "http://dbpedia.org/resource/Catherine_I,_Latin_Empress"
+      }, {
+        "label" : "Děpold",
+        "uri" : "http://dbpedia.org/resource/Děpold_I_of_Jamnitz"
+      }, {
+        "label" : "François de Bourbon, comte d’Enghien",
+        "uri" : "http://dbpedia.org/resource/Francis,_Count_of_Enghien"
+      }, {
+        "label" : "Fuller Albright",
+        "uri" : "http://dbpedia.org/resource/Fuller_Albright"
+      }, {
+        "label" : "Hans Pleydenwurff",
+        "uri" : "http://dbpedia.org/resource/Hans_Pleydenwurff"
+      }, {
+        "label" : "Heinrich I. (Utrecht)",
+        "uri" : "http://dbpedia.org/resource/Henry_I_van_Vianden"
+      }, {
+        "label" : "Luisa Fernanda von Spanien",
+        "uri" : "http://dbpedia.org/resource/Infanta_Luisa_Fernanda,_Duchess_of_Montpensier"
+      }, {
+        "label" : "Jakob Oftebro",
+        "uri" : "http://dbpedia.org/resource/Jakob_Oftebro"
+      }, {
+        "label" : "Jean-Claude Casadesus",
+        "uri" : "http://dbpedia.org/resource/Jean-Claude_Casadesus"
+      }, {
+        "label" : "Johanna von Bayern (1362–1386)",
+        "uri" : "http://dbpedia.org/resource/Joanna_of_Bavaria"
+      }, {
+        "label" : "Joey Merlino",
+        "uri" : "http://dbpedia.org/resource/Joey_Merlino"
+      }, {
+        "label" : "John Carter Cash",
+        "uri" : "http://dbpedia.org/resource/John_Carter_Cash"
+      }, {
+        "label" : "Johann Ernst (Sachsen-Coburg)",
+        "uri" : "http://dbpedia.org/resource/John_Ernest,_Duke_of_Saxe-Coburg"
+      }, {
+        "label" : "Jérôme Bonaparte-Patterson",
+        "uri" : "http://dbpedia.org/resource/Jérôme_Napoléon_Bonaparte"
+      }, {
+        "label" : "Liudolf (Ezzonen)",
+        "uri" : "http://dbpedia.org/resource/Liudolf_of_Lotharingia"
+      }, {
+        "label" : "Margarete von England",
+        "uri" : "http://dbpedia.org/resource/Margaret_of_England"
+      }, {
+        "label" : "Maria von Trapezunt",
+        "uri" : "http://dbpedia.org/resource/Maria_of_Trebizond"
+      }, {
+        "label" : "Maria Amalia von Brandenburg",
+        "uri" : "http://dbpedia.org/resource/Marie_Amalie_of_Brandenburg"
+      }, {
+        "label" : "Marie de Coucy",
+        "uri" : "http://dbpedia.org/resource/Marie_I_de_Coucy,_Countess_of_Soissons"
+      }, {
+        "label" : "Mary Stewart von Schottland",
+        "uri" : "http://dbpedia.org/resource/Mary_Stewart,_Countess_of_Arran"
+      }, {
+        "label" : "Oliver Jesse Carter",
+        "uri" : "http://dbpedia.org/resource/Oliver_Jesse_Carter"
+      }, {
+        "label" : "Petros S. Kokkalis",
+        "uri" : "http://dbpedia.org/resource/Petros_S._Kokkalis"
+      }, {
+        "label" : "Philipp von Bayern",
+        "uri" : "http://dbpedia.org/resource/Philipp_of_Bavaria"
+      }, {
+        "label" : "Georgi Konstantinowitsch Romanow",
+        "uri" : "http://dbpedia.org/resource/Prince_Georgy_Konstantinovich_of_Russia"
+      }, {
+        "label" : "Auguste von Preußen (1780–1841)",
+        "uri" : "http://dbpedia.org/resource/Princess_Augusta_of_Prussia"
+      }, {
+        "label" : "Franziska von Brasilien",
+        "uri" : "http://dbpedia.org/resource/Princess_Francisca_of_Brazil"
+      }, {
+        "label" : "Saloninus",
+        "uri" : "http://dbpedia.org/resource/Saloninus"
+      }, {
+        "label" : "Sanaṭrūq II.",
+        "uri" : "http://dbpedia.org/resource/Sanatruq_II"
+      }, {
+        "label" : "Sarah Strange",
+        "uri" : "http://dbpedia.org/resource/Sarah_Strange"
+      }, {
+        "label" : "Schachbut bin Dhiyab",
+        "uri" : "http://dbpedia.org/resource/Shakhbut_bin_Dhiyab_Al_Nahyan"
+      }, {
+        "label" : "Soumya Swaminathan",
+        "uri" : "http://dbpedia.org/resource/Soumya_Swaminathan"
+      }, {
+        "label" : "Stanford White",
+        "uri" : "http://dbpedia.org/resource/Stanford_White"
+      }, {
+        "label" : "Susan Kohner",
+        "uri" : "http://dbpedia.org/resource/Susan_Kohner"
+      }, {
+        "label" : "Theuderich II.",
+        "uri" : "http://dbpedia.org/resource/Theuderic_II"
+      }, {
+        "label" : "Torild Skard",
+        "uri" : "http://dbpedia.org/resource/Torild_Skard"
+      }, {
+        "label" : "25 Windhundwelpen",
+        "uri" : "http://dbpedia.org/resource/Two_Dozen_and_One_Greyhounds"
+      }, {
+        "label" : "Tự Đức",
+        "uri" : "http://dbpedia.org/resource/Tự_Đức"
+      }, {
+        "label" : "William Hamilton, 12. Duke of Hamilton",
+        "uri" : "http://dbpedia.org/resource/William_Douglas-Hamilton,_12th_Duke_of_Hamilton"
+      }, {
+        "label" : "Wilhelm Ernst (Sachsen-Weimar)",
+        "uri" : "http://dbpedia.org/resource/William_Ernest,_Duke_of_Saxe-Weimar"
+      }, {
+        "label" : "Aschot III.",
+        "uri" : "http://dbpedia.org/resource/Ashot_III_of_Armenia"
+      }, {
+        "label" : "Emma von Provence",
+        "uri" : "http://dbpedia.org/resource/Emma_of_Provence"
+      }, {
+        "label" : "Eormenred",
+        "uri" : "http://dbpedia.org/resource/Eormenred_of_Kent"
+      }, {
+        "label" : "Friedrich Erdmann (Anhalt-Köthen-Pleß)",
+        "uri" : "http://dbpedia.org/resource/Frederick_Erdmann,_Prince_of_Anhalt-Pless"
+      }, {
+        "label" : "Geoffrey Pole",
+        "uri" : "http://dbpedia.org/resource/Geoffrey_Pole"
+      }, {
+        "label" : "Huijong",
+        "uri" : "http://dbpedia.org/resource/Huijong_of_Goryeo"
+      }, {
+        "label" : "Julius Constantius",
+        "uri" : "http://dbpedia.org/resource/Julius_Constantius"
+      }, {
+        "label" : "Kajol",
+        "uri" : "http://dbpedia.org/resource/Kajol"
+      }, {
+        "label" : "Katharina (England)",
+        "uri" : "http://dbpedia.org/resource/Katherine_of_England"
+      }, {
+        "label" : "Augusta Gordon",
+        "uri" : "http://dbpedia.org/resource/Lady_Augusta_Gordon"
+      }, {
+        "label" : "Lazar Branković",
+        "uri" : "http://dbpedia.org/resource/Lazar_Branković"
+      }, {
+        "label" : "Lindley Murray (Grammatiker)",
+        "uri" : "http://dbpedia.org/resource/Lindley_Murray"
+      }, {
+        "label" : "Lola Glaudini",
+        "uri" : "http://dbpedia.org/resource/Lola_Glaudini"
+      }, {
+        "label" : "Louis Mountbatten, 1. Earl Mountbatten of Burma",
+        "uri" : "http://dbpedia.org/resource/Louis_Mountbatten,_1st_Earl_Mountbatten_of_Burma"
+      }, {
+        "label" : "Ludwig Anton von der Pfalz",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Anton_von_Pfalz-Neuburg"
+      }, {
+        "label" : "Manuel José Estrada Cabrera",
+        "uri" : "http://dbpedia.org/resource/Manuel_Estrada_Cabrera"
+      }, {
+        "label" : "Margarete von Lothringen",
+        "uri" : "http://dbpedia.org/resource/Margaret_of_Lorraine"
+      }, {
+        "label" : "Martha Ford",
+        "uri" : "http://dbpedia.org/resource/Martha_Firestone_Ford"
+      }, {
+        "label" : "Matilda Brown",
+        "uri" : "http://dbpedia.org/resource/Matilda_Brown"
+      }, {
+        "label" : "Mstislaw I.",
+        "uri" : "http://dbpedia.org/resource/Mstislav_I_of_Kiev"
+      }, {
+        "label" : "Murat Belge",
+        "uri" : "http://dbpedia.org/resource/Murat_Belge"
+      }, {
+        "label" : "Musa Çelebi",
+        "uri" : "http://dbpedia.org/resource/Musa_Çelebi"
+      }, {
+        "label" : "Myriam Harry",
+        "uri" : "http://dbpedia.org/resource/Myriam_Harry"
+      }, {
+        "label" : "Norton P. Otis",
+        "uri" : "http://dbpedia.org/resource/Norton_P._Otis"
+      }, {
+        "label" : "Ordoño IV. (León)",
+        "uri" : "http://dbpedia.org/resource/Ordoño_IV_of_León"
+      }, {
+        "label" : "Pietro Tempesta",
+        "uri" : "http://dbpedia.org/resource/Peter_Tempesta"
+      }, {
+        "label" : "August von Sachsen-Gotha-Altenburg",
+        "uri" : "http://dbpedia.org/resource/Prince_August_of_Saxe-Gotha-Altenburg"
+      }, {
+        "label" : "Friedrich von Oranien-Nassau (1797–1881)",
+        "uri" : "http://dbpedia.org/resource/Prince_Frederick_of_the_Netherlands"
+      }, {
+        "label" : "Jean d’Orléans, duc de Guise",
+        "uri" : "http://dbpedia.org/resource/Prince_Jean,_Duke_of_Guise"
+      }, {
+        "label" : "Alexandrine-Louise von Dänemark",
+        "uri" : "http://dbpedia.org/resource/Princess_Alexandrine-Louise_of_Denmark"
+      }, {
+        "label" : "Caroline Reuß zu Greiz",
+        "uri" : "http://dbpedia.org/resource/Princess_Caroline_Reuss_of_Greiz"
+      }, {
+        "label" : "Johanna Charlotte von Anhalt-Dessau",
+        "uri" : "http://dbpedia.org/resource/Princess_Johanna_Charlotte_of_Anhalt-Dessau"
+      }, {
+        "label" : "Sophie von Sachsen-Hildburghausen",
+        "uri" : "http://dbpedia.org/resource/Princess_Sophie_of_Saxe-Hildburghausen"
+      }, {
+        "label" : "Raoul de Gacé",
+        "uri" : "http://dbpedia.org/resource/Ralph_de_Gacé"
+      }, {
+        "label" : "Robert Charles Winthrop",
+        "uri" : "http://dbpedia.org/resource/Robert_Charles_Winthrop"
+      }, {
+        "label" : "Ruben II. (Armenien)",
+        "uri" : "http://dbpedia.org/resource/Ruben_II,_Prince_of_Armenia"
+      } ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "5",
+    "lexicalEntryUri" : "http://localhost:8080#children_of_2",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "Liste die Kinder von ($x | THING_NP) auf", "Welche Person ist die Kinder von ($x | THING_NP)", "Welche Person sind die Kinder von ($x | THING_NP)", "Welche Person war die Kinder von ($x | THING_NP)", "Welche Person waren die Kinder von ($x | THING_NP)", "Wer ist die Kinder von ($x | THING_NP)", "Wer sind die Kinder von ($x | THING_NP)", "Wer war die Kinder von ($x | THING_NP)", "Wer waren die Kinder von ($x | THING_NP)" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Sayyid Adschall Schams ad-Din Umar",
+        "uri" : "http://dbpedia.org/resource/Ajall_Shams_al-Din_Omar"
+      }, {
+        "label" : "Akaki Zereteli",
+        "uri" : "http://dbpedia.org/resource/Akaki_Tsereteli"
+      }, {
+        "label" : "Al-Hādī",
+        "uri" : "http://dbpedia.org/resource/Al-Hadi"
+      }, {
+        "label" : "Al-Hākim I.",
+        "uri" : "http://dbpedia.org/resource/Al-Hakim_I"
+      }, {
+        "label" : "Al-Muqtafi",
+        "uri" : "http://dbpedia.org/resource/Al-Muqtafi"
+      }, {
+        "label" : "Al-Mustadī'",
+        "uri" : "http://dbpedia.org/resource/Al-Mustadi"
+      }, {
+        "label" : "Al-Mustakfī",
+        "uri" : "http://dbpedia.org/resource/Al-Mustakfi"
+      }, {
+        "label" : "Al-Mustakfi I.",
+        "uri" : "http://dbpedia.org/resource/Al-Mustakfi_I_(Cairo)"
+      }, {
+        "label" : "Al-Mustandschid",
+        "uri" : "http://dbpedia.org/resource/Al-Mustanjid"
+      }, {
+        "label" : "Al-Mustarschid",
+        "uri" : "http://dbpedia.org/resource/Al-Mustarshid"
+      }, {
+        "label" : "Al-Mustazhir bi-'llah",
+        "uri" : "http://dbpedia.org/resource/Al-Mustazhir"
+      }, {
+        "label" : "Al-Muttaqi",
+        "uri" : "http://dbpedia.org/resource/Al-Muttaqi"
+      }, {
+        "label" : "Al-Muzaffar Haddschi I.",
+        "uri" : "http://dbpedia.org/resource/Al-Muzaffar_Hajji"
+      }, {
+        "label" : "An-Nāsir Muhammad ibn Qalāwūn",
+        "uri" : "http://dbpedia.org/resource/Al-Nasir_Muhammad"
+      }, {
+        "label" : "Al-Qasim al-Ma'mun",
+        "uri" : "http://dbpedia.org/resource/Al-Qasim_al-Ma'mun"
+      }, {
+        "label" : "Az-Zāhir (Abbaside)",
+        "uri" : "http://dbpedia.org/resource/Al-Zahir_bi-Amr_Allah"
+      }, {
+        "label" : "Tekisch (Choresmien)",
+        "uri" : "http://dbpedia.org/resource/Ala_al-Din_Tekish"
+      }, {
+        "label" : "Catherine de Courtenay",
+        "uri" : "http://dbpedia.org/resource/Catherine_I,_Latin_Empress"
+      }, {
+        "label" : "Luisa Fernanda von Spanien",
+        "uri" : "http://dbpedia.org/resource/Infanta_Luisa_Fernanda,_Duchess_of_Montpensier"
+      }, {
+        "label" : "Jack Fisk",
+        "uri" : "http://dbpedia.org/resource/Jack_Fisk"
+      }, {
+        "label" : "Jean-Pierre Elkabbach",
+        "uri" : "http://dbpedia.org/resource/Jean-Pierre_Elkabbach"
+      }, {
+        "label" : "Jérôme Bonaparte-Patterson",
+        "uri" : "http://dbpedia.org/resource/Jérôme_Napoléon_Bonaparte"
+      }, {
+        "label" : "Margarete von England",
+        "uri" : "http://dbpedia.org/resource/Margaret_of_England"
+      }, {
+        "label" : "Maria Amalia von Brandenburg",
+        "uri" : "http://dbpedia.org/resource/Marie_Amalie_of_Brandenburg"
+      }, {
+        "label" : "Mary Stewart von Schottland",
+        "uri" : "http://dbpedia.org/resource/Mary_Stewart,_Countess_of_Arran"
+      }, {
+        "label" : "Matthew G. Martínez",
+        "uri" : "http://dbpedia.org/resource/Matthew_G._Martínez"
+      }, {
+        "label" : "Nathanael Herreshoff",
+        "uri" : "http://dbpedia.org/resource/Nathanael_Greene_Herreshoff"
+      }, {
+        "label" : "Nissanka Malla",
+        "uri" : "http://dbpedia.org/resource/Nissanka_Malla_of_Polonnaruwa"
+      }, {
+        "label" : "Paul Howard Poberezny",
+        "uri" : "http://dbpedia.org/resource/Paul_Poberezny"
+      }, {
+        "label" : "Paula Fox",
+        "uri" : "http://dbpedia.org/resource/Paula_Fox"
+      }, {
+        "label" : "Price Daniel",
+        "uri" : "http://dbpedia.org/resource/Price_Daniel"
+      }, {
+        "label" : "Auguste von Preußen (1780–1841)",
+        "uri" : "http://dbpedia.org/resource/Princess_Augusta_of_Prussia"
+      }, {
+        "label" : "Franziska von Brasilien",
+        "uri" : "http://dbpedia.org/resource/Princess_Francisca_of_Brazil"
+      }, {
+        "label" : "Ranulph le Meschin, 3. Earl of Chester",
+        "uri" : "http://dbpedia.org/resource/Ranulf_le_Meschin,_3rd_Earl_of_Chester"
+      }, {
+        "label" : "Robert W. Scott",
+        "uri" : "http://dbpedia.org/resource/Robert_W._Scott"
+      }, {
+        "label" : "Sanaṭrūq II.",
+        "uri" : "http://dbpedia.org/resource/Sanatruq_II"
+      }, {
+        "label" : "Schachbut bin Dhiyab",
+        "uri" : "http://dbpedia.org/resource/Shakhbut_bin_Dhiyab_Al_Nahyan"
+      }, {
+        "label" : "Susan Kohner",
+        "uri" : "http://dbpedia.org/resource/Susan_Kohner"
+      }, {
+        "label" : "Tự Đức",
+        "uri" : "http://dbpedia.org/resource/Tự_Đức"
+      }, {
+        "label" : "Ulvhild Håkonsdatter",
+        "uri" : "http://dbpedia.org/resource/Ulvhild_Håkansdotter"
+      }, {
+        "label" : "Victor Gollancz",
+        "uri" : "http://dbpedia.org/resource/Victor_Gollancz"
+      }, {
+        "label" : "Vologaeses IV.",
+        "uri" : "http://dbpedia.org/resource/Vologases_IV"
+      }, {
+        "label" : "Werner Lindemann",
+        "uri" : "http://dbpedia.org/resource/Werner_Lindemann"
+      }, {
+        "label" : "Zachariah Keodirelang Matthews",
+        "uri" : "http://dbpedia.org/resource/Z._K._Matthews"
+      }, {
+        "label" : "Zhang Bojun",
+        "uri" : "http://dbpedia.org/resource/Zhang_Bojun"
+      }, {
+        "label" : "Aschot III.",
+        "uri" : "http://dbpedia.org/resource/Ashot_III_of_Armenia"
+      }, {
+        "label" : "Eormenred",
+        "uri" : "http://dbpedia.org/resource/Eormenred_of_Kent"
+      }, {
+        "label" : "Eutropia (Frau Maximians)",
+        "uri" : "http://dbpedia.org/resource/Eutropia"
+      }, {
+        "label" : "Geoffrey Pole",
+        "uri" : "http://dbpedia.org/resource/Geoffrey_Pole"
+      }, {
+        "label" : "Huijong",
+        "uri" : "http://dbpedia.org/resource/Huijong_of_Goryeo"
+      }, {
+        "label" : "Jacqueline de Longwy",
+        "uri" : "http://dbpedia.org/resource/Jacqueline_de_Longwy"
+      }, {
+        "label" : "Julius Constantius",
+        "uri" : "http://dbpedia.org/resource/Julius_Constantius"
+      }, {
+        "label" : "Kurt Katch",
+        "uri" : "http://dbpedia.org/resource/Kurt_Katch"
+      }, {
+        "label" : "Lazar Branković",
+        "uri" : "http://dbpedia.org/resource/Lazar_Branković"
+      }, {
+        "label" : "Leslie Caron",
+        "uri" : "http://dbpedia.org/resource/Leslie_Caron"
+      }, {
+        "label" : "Lola Glaudini",
+        "uri" : "http://dbpedia.org/resource/Lola_Glaudini"
+      }, {
+        "label" : "Marguerite Churchill",
+        "uri" : "http://dbpedia.org/resource/Marguerite_Churchill"
+      }, {
+        "label" : "Martha Ford",
+        "uri" : "http://dbpedia.org/resource/Martha_Firestone_Ford"
+      }, {
+        "label" : "Mary Higgins Clark",
+        "uri" : "http://dbpedia.org/resource/Mary_Higgins_Clark"
+      }, {
+        "label" : "Maurice Richlin",
+        "uri" : "http://dbpedia.org/resource/Maurice_Richlin"
+      }, {
+        "label" : "Nicolas Chopin",
+        "uri" : "http://dbpedia.org/resource/Nicolas_Chopin"
+      }, {
+        "label" : "Osman Bölükbaşı",
+        "uri" : "http://dbpedia.org/resource/Osman_Bölükbaşı"
+      }, {
+        "label" : "Peter Ritchie Calder, Baron Ritchie-Calder",
+        "uri" : "http://dbpedia.org/resource/Peter_Ritchie_Calder"
+      }, {
+        "label" : "Philippe Delerm",
+        "uri" : "http://dbpedia.org/resource/Philippe_Delerm"
+      }, {
+        "label" : "Friedrich von Oranien-Nassau (1797–1881)",
+        "uri" : "http://dbpedia.org/resource/Prince_Frederick_of_the_Netherlands"
+      }, {
+        "label" : "Jean d’Orléans, duc de Guise",
+        "uri" : "http://dbpedia.org/resource/Prince_Jean,_Duke_of_Guise"
+      }, {
+        "label" : "Samuel Allyne Otis",
+        "uri" : "http://dbpedia.org/resource/Samuel_Allyne_Otis"
+      }, {
+        "label" : "Serge Dassault",
+        "uri" : "http://dbpedia.org/resource/Serge_Dassault"
+      }, {
+        "label" : "Toussaint Charbonneau",
+        "uri" : "http://dbpedia.org/resource/Toussaint_Charbonneau"
+      }, {
+        "label" : "Valgerður Gunnarsdóttir",
+        "uri" : "http://dbpedia.org/resource/Valgerður_Gunnarsdóttir"
+      }, {
+        "label" : "Astyages",
+        "uri" : "http://dbpedia.org/resource/Astyages"
+      }, {
+        "label" : "Atalja",
+        "uri" : "http://dbpedia.org/resource/Athaliah"
+      }, {
+        "label" : "Athanagild",
+        "uri" : "http://dbpedia.org/resource/Athanagild"
+      }, {
+        "label" : "Ala ad-Din Atsiz",
+        "uri" : "http://dbpedia.org/resource/Atsiz"
+      }, {
+        "label" : "Caecilia Attica",
+        "uri" : "http://dbpedia.org/resource/Attica_(wife_of_Agrippa)"
+      }, {
+        "label" : "Eurydike (Gattin Philipps II.)",
+        "uri" : "http://dbpedia.org/resource/Audata"
+      }, {
+        "label" : "Carinus",
+        "uri" : "http://dbpedia.org/resource/Carinus"
+      }, {
+        "label" : "Carl Herz (Mathematiker)",
+        "uri" : "http://dbpedia.org/resource/Carl_S._Herz"
+      }, {
+        "label" : "Carmen Boullosa",
+        "uri" : "http://dbpedia.org/resource/Carmen_Boullosa"
+      }, {
+        "label" : "Kassander",
+        "uri" : "http://dbpedia.org/resource/Cassander"
+      }, {
+        "label" : "Ubol Ratana",
+        "uri" : "http://dbpedia.org/resource/Ubol_Ratana"
+      }, {
+        "label" : "Uddhav Thackeray",
+        "uri" : "http://dbpedia.org/resource/Uddhav_Thackeray"
+      }, {
+        "label" : "Ulrike Eleonore von Dänemark",
+        "uri" : "http://dbpedia.org/resource/Ulrika_Eleonora_of_Denmark"
+      }, {
+        "label" : "Uma Nehru",
+        "uri" : "http://dbpedia.org/resource/Uma_Nehru"
+      }, {
+        "label" : "ʿUmar ibn ʿAbd al-ʿAzīz",
+        "uri" : "http://dbpedia.org/resource/Umar_II"
+      }, {
+        "label" : "Urraca (León)",
+        "uri" : "http://dbpedia.org/resource/Urraca_of_León"
+      }, {
+        "label" : "Usman dan Fodio",
+        "uri" : "http://dbpedia.org/resource/Usman_dan_Fodio"
+      }, {
+        "label" : "Maxtla",
+        "uri" : "http://dbpedia.org/resource/Maxtla"
+      }, {
+        "label" : "Pierre Granier-Deferre",
+        "uri" : "http://dbpedia.org/resource/Pierre_Granier-Deferre"
+      }, {
+        "label" : "Susanna von Bayern",
+        "uri" : "http://dbpedia.org/resource/Susanna_of_Bavaria"
+      }, {
+        "label" : "Tanotamun",
+        "uri" : "http://dbpedia.org/resource/Tantamani"
+      }, {
+        "label" : "Wu Ding",
+        "uri" : "http://dbpedia.org/resource/Wu_Ding"
+      }, {
+        "label" : "Enlil-nirari",
+        "uri" : "http://dbpedia.org/resource/Enlil-nirari"
+      }, {
+        "label" : "Frederick Nutter Chasen",
+        "uri" : "http://dbpedia.org/resource/Frederick_Nutter_Chasen"
+      }, {
+        "label" : "Halime Sultan",
+        "uri" : "http://dbpedia.org/resource/Halime_Sultan"
+      }, {
+        "label" : "Ngwane III.",
+        "uri" : "http://dbpedia.org/resource/Ngwane_III"
+      }, {
+        "label" : "Ordoño I. (Asturien)",
+        "uri" : "http://dbpedia.org/resource/Ordoño_I_of_Asturias"
+      }, {
+        "label" : "Roman Jackiw",
+        "uri" : "http://dbpedia.org/resource/Roman_Jackiw"
+      }, {
+        "label" : "Rusa I.",
+        "uri" : "http://dbpedia.org/resource/Rusa_I"
+      }, {
+        "label" : "Wladimir Grigorjewitsch Nak",
+        "uri" : "http://dbpedia.org/resource/Vladimir_Nak"
+      } ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "6",
+    "lexicalEntryUri" : "http://localhost:8080#children_of_2",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentences" : [ "die Kinder von ($x | THING_NP)" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Achariten",
+        "uri" : "http://dbpedia.org/resource/Akhraten"
+      }, {
+        "label" : "Al-Aziz (Ayyubide)",
+        "uri" : "http://dbpedia.org/resource/Al-Aziz_Uthman"
+      }, {
+        "label" : "Al-Hādī",
+        "uri" : "http://dbpedia.org/resource/Al-Hadi"
+      }, {
+        "label" : "Al-Hākim I.",
+        "uri" : "http://dbpedia.org/resource/Al-Hakim_I"
+      }, {
+        "label" : "Al-Kamil Schaban I.",
+        "uri" : "http://dbpedia.org/resource/Al-Kamil_Sha'ban"
+      }, {
+        "label" : "Al-Mansur Abu Bakr",
+        "uri" : "http://dbpedia.org/resource/Al-Mansur_Abu_Bakr"
+      }, {
+        "label" : "Ali I.",
+        "uri" : "http://dbpedia.org/resource/Al-Mansur_Ali"
+      }, {
+        "label" : "Turan Schah (Herrscher)",
+        "uri" : "http://dbpedia.org/resource/Al-Muazzam_Turanshah"
+      }, {
+        "label" : "Al-Muntasir",
+        "uri" : "http://dbpedia.org/resource/Al-Muntasir"
+      }, {
+        "label" : "Al-Muqtafi",
+        "uri" : "http://dbpedia.org/resource/Al-Muqtafi"
+      }, {
+        "label" : "Al-Musta'sim bi-'llah",
+        "uri" : "http://dbpedia.org/resource/Al-Musta'sim"
+      }, {
+        "label" : "Al-Mustadī'",
+        "uri" : "http://dbpedia.org/resource/Al-Mustadi"
+      }, {
+        "label" : "Al-Mustakfī",
+        "uri" : "http://dbpedia.org/resource/Al-Mustakfi"
+      }, {
+        "label" : "Al-Mustakfi I.",
+        "uri" : "http://dbpedia.org/resource/Al-Mustakfi_I_(Cairo)"
+      }, {
+        "label" : "Al-Mustandschid",
+        "uri" : "http://dbpedia.org/resource/Al-Mustanjid"
+      }, {
+        "label" : "Al-Mustarschid",
+        "uri" : "http://dbpedia.org/resource/Al-Mustarshid"
+      }, {
+        "label" : "Al-Mustazhir bi-'llah",
+        "uri" : "http://dbpedia.org/resource/Al-Mustazhir"
+      }, {
+        "label" : "Al-Muttaqi",
+        "uri" : "http://dbpedia.org/resource/Al-Muttaqi"
+      }, {
+        "label" : "Al-Muzaffar Haddschi I.",
+        "uri" : "http://dbpedia.org/resource/Al-Muzaffar_Hajji"
+      }, {
+        "label" : "An-Nāsir Muhammad ibn Qalāwūn",
+        "uri" : "http://dbpedia.org/resource/Al-Nasir_Muhammad"
+      }, {
+        "label" : "Az-Zafir",
+        "uri" : "http://dbpedia.org/resource/Al-Zafir"
+      }, {
+        "label" : "Az-Zāhir (Abbaside)",
+        "uri" : "http://dbpedia.org/resource/Al-Zahir_bi-Amr_Allah"
+      }, {
+        "label" : "Tekisch (Choresmien)",
+        "uri" : "http://dbpedia.org/resource/Ala_al-Din_Tekish"
+      }, {
+        "label" : "Alakhai Bekhi",
+        "uri" : "http://dbpedia.org/resource/Alakhai_Bekhi"
+      }, {
+        "label" : "Aššur-nirari III.",
+        "uri" : "http://dbpedia.org/resource/Ashur-nirari_III"
+      }, {
+        "label" : "Catherine de Courtenay",
+        "uri" : "http://dbpedia.org/resource/Catherine_I,_Latin_Empress"
+      }, {
+        "label" : "Děpold",
+        "uri" : "http://dbpedia.org/resource/Děpold_I_of_Jamnitz"
+      }, {
+        "label" : "François de Bourbon, comte d’Enghien",
+        "uri" : "http://dbpedia.org/resource/Francis,_Count_of_Enghien"
+      }, {
+        "label" : "Fuller Albright",
+        "uri" : "http://dbpedia.org/resource/Fuller_Albright"
+      }, {
+        "label" : "Hans Pleydenwurff",
+        "uri" : "http://dbpedia.org/resource/Hans_Pleydenwurff"
+      }, {
+        "label" : "Heinrich I. (Utrecht)",
+        "uri" : "http://dbpedia.org/resource/Henry_I_van_Vianden"
+      }, {
+        "label" : "Luisa Fernanda von Spanien",
+        "uri" : "http://dbpedia.org/resource/Infanta_Luisa_Fernanda,_Duchess_of_Montpensier"
+      }, {
+        "label" : "Jakob Oftebro",
+        "uri" : "http://dbpedia.org/resource/Jakob_Oftebro"
+      }, {
+        "label" : "Jean-Claude Casadesus",
+        "uri" : "http://dbpedia.org/resource/Jean-Claude_Casadesus"
+      }, {
+        "label" : "Johanna von Bayern (1362–1386)",
+        "uri" : "http://dbpedia.org/resource/Joanna_of_Bavaria"
+      }, {
+        "label" : "Joey Merlino",
+        "uri" : "http://dbpedia.org/resource/Joey_Merlino"
+      }, {
+        "label" : "John Carter Cash",
+        "uri" : "http://dbpedia.org/resource/John_Carter_Cash"
+      }, {
+        "label" : "Johann Ernst (Sachsen-Coburg)",
+        "uri" : "http://dbpedia.org/resource/John_Ernest,_Duke_of_Saxe-Coburg"
+      }, {
+        "label" : "Jérôme Bonaparte-Patterson",
+        "uri" : "http://dbpedia.org/resource/Jérôme_Napoléon_Bonaparte"
+      }, {
+        "label" : "Liudolf (Ezzonen)",
+        "uri" : "http://dbpedia.org/resource/Liudolf_of_Lotharingia"
+      }, {
+        "label" : "Margarete von England",
+        "uri" : "http://dbpedia.org/resource/Margaret_of_England"
+      }, {
+        "label" : "Maria von Trapezunt",
+        "uri" : "http://dbpedia.org/resource/Maria_of_Trebizond"
+      }, {
+        "label" : "Maria Amalia von Brandenburg",
+        "uri" : "http://dbpedia.org/resource/Marie_Amalie_of_Brandenburg"
+      }, {
+        "label" : "Marie de Coucy",
+        "uri" : "http://dbpedia.org/resource/Marie_I_de_Coucy,_Countess_of_Soissons"
+      }, {
+        "label" : "Mary Stewart von Schottland",
+        "uri" : "http://dbpedia.org/resource/Mary_Stewart,_Countess_of_Arran"
+      }, {
+        "label" : "Oliver Jesse Carter",
+        "uri" : "http://dbpedia.org/resource/Oliver_Jesse_Carter"
+      }, {
+        "label" : "Petros S. Kokkalis",
+        "uri" : "http://dbpedia.org/resource/Petros_S._Kokkalis"
+      }, {
+        "label" : "Philipp von Bayern",
+        "uri" : "http://dbpedia.org/resource/Philipp_of_Bavaria"
+      }, {
+        "label" : "Georgi Konstantinowitsch Romanow",
+        "uri" : "http://dbpedia.org/resource/Prince_Georgy_Konstantinovich_of_Russia"
+      }, {
+        "label" : "Auguste von Preußen (1780–1841)",
+        "uri" : "http://dbpedia.org/resource/Princess_Augusta_of_Prussia"
+      }, {
+        "label" : "Franziska von Brasilien",
+        "uri" : "http://dbpedia.org/resource/Princess_Francisca_of_Brazil"
+      }, {
+        "label" : "Saloninus",
+        "uri" : "http://dbpedia.org/resource/Saloninus"
+      }, {
+        "label" : "Sanaṭrūq II.",
+        "uri" : "http://dbpedia.org/resource/Sanatruq_II"
+      }, {
+        "label" : "Sarah Strange",
+        "uri" : "http://dbpedia.org/resource/Sarah_Strange"
+      }, {
+        "label" : "Schachbut bin Dhiyab",
+        "uri" : "http://dbpedia.org/resource/Shakhbut_bin_Dhiyab_Al_Nahyan"
+      }, {
+        "label" : "Soumya Swaminathan",
+        "uri" : "http://dbpedia.org/resource/Soumya_Swaminathan"
+      }, {
+        "label" : "Stanford White",
+        "uri" : "http://dbpedia.org/resource/Stanford_White"
+      }, {
+        "label" : "Susan Kohner",
+        "uri" : "http://dbpedia.org/resource/Susan_Kohner"
+      }, {
+        "label" : "Theuderich II.",
+        "uri" : "http://dbpedia.org/resource/Theuderic_II"
+      }, {
+        "label" : "Torild Skard",
+        "uri" : "http://dbpedia.org/resource/Torild_Skard"
+      }, {
+        "label" : "25 Windhundwelpen",
+        "uri" : "http://dbpedia.org/resource/Two_Dozen_and_One_Greyhounds"
+      }, {
+        "label" : "Tự Đức",
+        "uri" : "http://dbpedia.org/resource/Tự_Đức"
+      }, {
+        "label" : "William Hamilton, 12. Duke of Hamilton",
+        "uri" : "http://dbpedia.org/resource/William_Douglas-Hamilton,_12th_Duke_of_Hamilton"
+      }, {
+        "label" : "Wilhelm Ernst (Sachsen-Weimar)",
+        "uri" : "http://dbpedia.org/resource/William_Ernest,_Duke_of_Saxe-Weimar"
+      }, {
+        "label" : "Aschot III.",
+        "uri" : "http://dbpedia.org/resource/Ashot_III_of_Armenia"
+      }, {
+        "label" : "Emma von Provence",
+        "uri" : "http://dbpedia.org/resource/Emma_of_Provence"
+      }, {
+        "label" : "Eormenred",
+        "uri" : "http://dbpedia.org/resource/Eormenred_of_Kent"
+      }, {
+        "label" : "Friedrich Erdmann (Anhalt-Köthen-Pleß)",
+        "uri" : "http://dbpedia.org/resource/Frederick_Erdmann,_Prince_of_Anhalt-Pless"
+      }, {
+        "label" : "Geoffrey Pole",
+        "uri" : "http://dbpedia.org/resource/Geoffrey_Pole"
+      }, {
+        "label" : "Huijong",
+        "uri" : "http://dbpedia.org/resource/Huijong_of_Goryeo"
+      }, {
+        "label" : "Julius Constantius",
+        "uri" : "http://dbpedia.org/resource/Julius_Constantius"
+      }, {
+        "label" : "Kajol",
+        "uri" : "http://dbpedia.org/resource/Kajol"
+      }, {
+        "label" : "Katharina (England)",
+        "uri" : "http://dbpedia.org/resource/Katherine_of_England"
+      }, {
+        "label" : "Augusta Gordon",
+        "uri" : "http://dbpedia.org/resource/Lady_Augusta_Gordon"
+      }, {
+        "label" : "Lazar Branković",
+        "uri" : "http://dbpedia.org/resource/Lazar_Branković"
+      }, {
+        "label" : "Lindley Murray (Grammatiker)",
+        "uri" : "http://dbpedia.org/resource/Lindley_Murray"
+      }, {
+        "label" : "Lola Glaudini",
+        "uri" : "http://dbpedia.org/resource/Lola_Glaudini"
+      }, {
+        "label" : "Louis Mountbatten, 1. Earl Mountbatten of Burma",
+        "uri" : "http://dbpedia.org/resource/Louis_Mountbatten,_1st_Earl_Mountbatten_of_Burma"
+      }, {
+        "label" : "Ludwig Anton von der Pfalz",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Anton_von_Pfalz-Neuburg"
+      }, {
+        "label" : "Manuel José Estrada Cabrera",
+        "uri" : "http://dbpedia.org/resource/Manuel_Estrada_Cabrera"
+      }, {
+        "label" : "Margarete von Lothringen",
+        "uri" : "http://dbpedia.org/resource/Margaret_of_Lorraine"
+      }, {
+        "label" : "Martha Ford",
+        "uri" : "http://dbpedia.org/resource/Martha_Firestone_Ford"
+      }, {
+        "label" : "Matilda Brown",
+        "uri" : "http://dbpedia.org/resource/Matilda_Brown"
+      }, {
+        "label" : "Mstislaw I.",
+        "uri" : "http://dbpedia.org/resource/Mstislav_I_of_Kiev"
+      }, {
+        "label" : "Murat Belge",
+        "uri" : "http://dbpedia.org/resource/Murat_Belge"
+      }, {
+        "label" : "Musa Çelebi",
+        "uri" : "http://dbpedia.org/resource/Musa_Çelebi"
+      }, {
+        "label" : "Myriam Harry",
+        "uri" : "http://dbpedia.org/resource/Myriam_Harry"
+      }, {
+        "label" : "Norton P. Otis",
+        "uri" : "http://dbpedia.org/resource/Norton_P._Otis"
+      }, {
+        "label" : "Ordoño IV. (León)",
+        "uri" : "http://dbpedia.org/resource/Ordoño_IV_of_León"
+      }, {
+        "label" : "Pietro Tempesta",
+        "uri" : "http://dbpedia.org/resource/Peter_Tempesta"
+      }, {
+        "label" : "August von Sachsen-Gotha-Altenburg",
+        "uri" : "http://dbpedia.org/resource/Prince_August_of_Saxe-Gotha-Altenburg"
+      }, {
+        "label" : "Friedrich von Oranien-Nassau (1797–1881)",
+        "uri" : "http://dbpedia.org/resource/Prince_Frederick_of_the_Netherlands"
+      }, {
+        "label" : "Jean d’Orléans, duc de Guise",
+        "uri" : "http://dbpedia.org/resource/Prince_Jean,_Duke_of_Guise"
+      }, {
+        "label" : "Alexandrine-Louise von Dänemark",
+        "uri" : "http://dbpedia.org/resource/Princess_Alexandrine-Louise_of_Denmark"
+      }, {
+        "label" : "Caroline Reuß zu Greiz",
+        "uri" : "http://dbpedia.org/resource/Princess_Caroline_Reuss_of_Greiz"
+      }, {
+        "label" : "Johanna Charlotte von Anhalt-Dessau",
+        "uri" : "http://dbpedia.org/resource/Princess_Johanna_Charlotte_of_Anhalt-Dessau"
+      }, {
+        "label" : "Sophie von Sachsen-Hildburghausen",
+        "uri" : "http://dbpedia.org/resource/Princess_Sophie_of_Saxe-Hildburghausen"
+      }, {
+        "label" : "Raoul de Gacé",
+        "uri" : "http://dbpedia.org/resource/Ralph_de_Gacé"
+      }, {
+        "label" : "Robert Charles Winthrop",
+        "uri" : "http://dbpedia.org/resource/Robert_Charles_Winthrop"
+      }, {
+        "label" : "Ruben II. (Armenien)",
+        "uri" : "http://dbpedia.org/resource/Ruben_II,_Prince_of_Armenia"
+      } ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "7",
+    "lexicalEntryUri" : "http://localhost:8080#children_of",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "Liste die Herausgeber von ($x | PERSON_NP) auf", "Welche Person ist die Herausgeber von ($x | PERSON_NP)", "Welche Person sind die Herausgeber von ($x | PERSON_NP)", "Welche Person war die Herausgeber von ($x | PERSON_NP)", "Welche Person waren die Herausgeber von ($x | PERSON_NP)", "Wer ist die Herausgeber von ($x | PERSON_NP)", "Wer sind die Herausgeber von ($x | PERSON_NP)", "Wer war die Herausgeber von ($x | PERSON_NP)", "Wer waren die Herausgeber von ($x | PERSON_NP)" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Sayyid Adschall Schams ad-Din Umar",
+        "uri" : "http://dbpedia.org/resource/Ajall_Shams_al-Din_Omar"
+      }, {
+        "label" : "Akaki Zereteli",
+        "uri" : "http://dbpedia.org/resource/Akaki_Tsereteli"
+      }, {
+        "label" : "Al-Hādī",
+        "uri" : "http://dbpedia.org/resource/Al-Hadi"
+      }, {
+        "label" : "Al-Hākim I.",
+        "uri" : "http://dbpedia.org/resource/Al-Hakim_I"
+      }, {
+        "label" : "Al-Muqtafi",
+        "uri" : "http://dbpedia.org/resource/Al-Muqtafi"
+      }, {
+        "label" : "Al-Mustadī'",
+        "uri" : "http://dbpedia.org/resource/Al-Mustadi"
+      }, {
+        "label" : "Al-Mustakfī",
+        "uri" : "http://dbpedia.org/resource/Al-Mustakfi"
+      }, {
+        "label" : "Al-Mustakfi I.",
+        "uri" : "http://dbpedia.org/resource/Al-Mustakfi_I_(Cairo)"
+      }, {
+        "label" : "Al-Mustandschid",
+        "uri" : "http://dbpedia.org/resource/Al-Mustanjid"
+      }, {
+        "label" : "Al-Mustarschid",
+        "uri" : "http://dbpedia.org/resource/Al-Mustarshid"
+      }, {
+        "label" : "Al-Mustazhir bi-'llah",
+        "uri" : "http://dbpedia.org/resource/Al-Mustazhir"
+      }, {
+        "label" : "Al-Muttaqi",
+        "uri" : "http://dbpedia.org/resource/Al-Muttaqi"
+      }, {
+        "label" : "Al-Muzaffar Haddschi I.",
+        "uri" : "http://dbpedia.org/resource/Al-Muzaffar_Hajji"
+      }, {
+        "label" : "An-Nāsir Muhammad ibn Qalāwūn",
+        "uri" : "http://dbpedia.org/resource/Al-Nasir_Muhammad"
+      }, {
+        "label" : "Al-Qasim al-Ma'mun",
+        "uri" : "http://dbpedia.org/resource/Al-Qasim_al-Ma'mun"
+      }, {
+        "label" : "Az-Zāhir (Abbaside)",
+        "uri" : "http://dbpedia.org/resource/Al-Zahir_bi-Amr_Allah"
+      }, {
+        "label" : "Tekisch (Choresmien)",
+        "uri" : "http://dbpedia.org/resource/Ala_al-Din_Tekish"
+      }, {
+        "label" : "Catherine de Courtenay",
+        "uri" : "http://dbpedia.org/resource/Catherine_I,_Latin_Empress"
+      }, {
+        "label" : "Luisa Fernanda von Spanien",
+        "uri" : "http://dbpedia.org/resource/Infanta_Luisa_Fernanda,_Duchess_of_Montpensier"
+      }, {
+        "label" : "Jack Fisk",
+        "uri" : "http://dbpedia.org/resource/Jack_Fisk"
+      }, {
+        "label" : "Jean-Pierre Elkabbach",
+        "uri" : "http://dbpedia.org/resource/Jean-Pierre_Elkabbach"
+      }, {
+        "label" : "Jérôme Bonaparte-Patterson",
+        "uri" : "http://dbpedia.org/resource/Jérôme_Napoléon_Bonaparte"
+      }, {
+        "label" : "Margarete von England",
+        "uri" : "http://dbpedia.org/resource/Margaret_of_England"
+      }, {
+        "label" : "Maria Amalia von Brandenburg",
+        "uri" : "http://dbpedia.org/resource/Marie_Amalie_of_Brandenburg"
+      }, {
+        "label" : "Mary Stewart von Schottland",
+        "uri" : "http://dbpedia.org/resource/Mary_Stewart,_Countess_of_Arran"
+      }, {
+        "label" : "Matthew G. Martínez",
+        "uri" : "http://dbpedia.org/resource/Matthew_G._Martínez"
+      }, {
+        "label" : "Nathanael Herreshoff",
+        "uri" : "http://dbpedia.org/resource/Nathanael_Greene_Herreshoff"
+      }, {
+        "label" : "Nissanka Malla",
+        "uri" : "http://dbpedia.org/resource/Nissanka_Malla_of_Polonnaruwa"
+      }, {
+        "label" : "Paul Howard Poberezny",
+        "uri" : "http://dbpedia.org/resource/Paul_Poberezny"
+      }, {
+        "label" : "Paula Fox",
+        "uri" : "http://dbpedia.org/resource/Paula_Fox"
+      }, {
+        "label" : "Price Daniel",
+        "uri" : "http://dbpedia.org/resource/Price_Daniel"
+      }, {
+        "label" : "Auguste von Preußen (1780–1841)",
+        "uri" : "http://dbpedia.org/resource/Princess_Augusta_of_Prussia"
+      }, {
+        "label" : "Franziska von Brasilien",
+        "uri" : "http://dbpedia.org/resource/Princess_Francisca_of_Brazil"
+      }, {
+        "label" : "Ranulph le Meschin, 3. Earl of Chester",
+        "uri" : "http://dbpedia.org/resource/Ranulf_le_Meschin,_3rd_Earl_of_Chester"
+      }, {
+        "label" : "Robert W. Scott",
+        "uri" : "http://dbpedia.org/resource/Robert_W._Scott"
+      }, {
+        "label" : "Sanaṭrūq II.",
+        "uri" : "http://dbpedia.org/resource/Sanatruq_II"
+      }, {
+        "label" : "Schachbut bin Dhiyab",
+        "uri" : "http://dbpedia.org/resource/Shakhbut_bin_Dhiyab_Al_Nahyan"
+      }, {
+        "label" : "Susan Kohner",
+        "uri" : "http://dbpedia.org/resource/Susan_Kohner"
+      }, {
+        "label" : "Tự Đức",
+        "uri" : "http://dbpedia.org/resource/Tự_Đức"
+      }, {
+        "label" : "Ulvhild Håkonsdatter",
+        "uri" : "http://dbpedia.org/resource/Ulvhild_Håkansdotter"
+      }, {
+        "label" : "Victor Gollancz",
+        "uri" : "http://dbpedia.org/resource/Victor_Gollancz"
+      }, {
+        "label" : "Vologaeses IV.",
+        "uri" : "http://dbpedia.org/resource/Vologases_IV"
+      }, {
+        "label" : "Werner Lindemann",
+        "uri" : "http://dbpedia.org/resource/Werner_Lindemann"
+      }, {
+        "label" : "Zachariah Keodirelang Matthews",
+        "uri" : "http://dbpedia.org/resource/Z._K._Matthews"
+      }, {
+        "label" : "Zhang Bojun",
+        "uri" : "http://dbpedia.org/resource/Zhang_Bojun"
+      }, {
+        "label" : "Aschot III.",
+        "uri" : "http://dbpedia.org/resource/Ashot_III_of_Armenia"
+      }, {
+        "label" : "Eormenred",
+        "uri" : "http://dbpedia.org/resource/Eormenred_of_Kent"
+      }, {
+        "label" : "Eutropia (Frau Maximians)",
+        "uri" : "http://dbpedia.org/resource/Eutropia"
+      }, {
+        "label" : "Geoffrey Pole",
+        "uri" : "http://dbpedia.org/resource/Geoffrey_Pole"
+      }, {
+        "label" : "Huijong",
+        "uri" : "http://dbpedia.org/resource/Huijong_of_Goryeo"
+      }, {
+        "label" : "Jacqueline de Longwy",
+        "uri" : "http://dbpedia.org/resource/Jacqueline_de_Longwy"
+      }, {
+        "label" : "Julius Constantius",
+        "uri" : "http://dbpedia.org/resource/Julius_Constantius"
+      }, {
+        "label" : "Kurt Katch",
+        "uri" : "http://dbpedia.org/resource/Kurt_Katch"
+      }, {
+        "label" : "Lazar Branković",
+        "uri" : "http://dbpedia.org/resource/Lazar_Branković"
+      }, {
+        "label" : "Leslie Caron",
+        "uri" : "http://dbpedia.org/resource/Leslie_Caron"
+      }, {
+        "label" : "Lola Glaudini",
+        "uri" : "http://dbpedia.org/resource/Lola_Glaudini"
+      }, {
+        "label" : "Marguerite Churchill",
+        "uri" : "http://dbpedia.org/resource/Marguerite_Churchill"
+      }, {
+        "label" : "Martha Ford",
+        "uri" : "http://dbpedia.org/resource/Martha_Firestone_Ford"
+      }, {
+        "label" : "Mary Higgins Clark",
+        "uri" : "http://dbpedia.org/resource/Mary_Higgins_Clark"
+      }, {
+        "label" : "Maurice Richlin",
+        "uri" : "http://dbpedia.org/resource/Maurice_Richlin"
+      }, {
+        "label" : "Nicolas Chopin",
+        "uri" : "http://dbpedia.org/resource/Nicolas_Chopin"
+      }, {
+        "label" : "Osman Bölükbaşı",
+        "uri" : "http://dbpedia.org/resource/Osman_Bölükbaşı"
+      }, {
+        "label" : "Peter Ritchie Calder, Baron Ritchie-Calder",
+        "uri" : "http://dbpedia.org/resource/Peter_Ritchie_Calder"
+      }, {
+        "label" : "Philippe Delerm",
+        "uri" : "http://dbpedia.org/resource/Philippe_Delerm"
+      }, {
+        "label" : "Friedrich von Oranien-Nassau (1797–1881)",
+        "uri" : "http://dbpedia.org/resource/Prince_Frederick_of_the_Netherlands"
+      }, {
+        "label" : "Jean d’Orléans, duc de Guise",
+        "uri" : "http://dbpedia.org/resource/Prince_Jean,_Duke_of_Guise"
+      }, {
+        "label" : "Samuel Allyne Otis",
+        "uri" : "http://dbpedia.org/resource/Samuel_Allyne_Otis"
+      }, {
+        "label" : "Serge Dassault",
+        "uri" : "http://dbpedia.org/resource/Serge_Dassault"
+      }, {
+        "label" : "Toussaint Charbonneau",
+        "uri" : "http://dbpedia.org/resource/Toussaint_Charbonneau"
+      }, {
+        "label" : "Valgerður Gunnarsdóttir",
+        "uri" : "http://dbpedia.org/resource/Valgerður_Gunnarsdóttir"
+      }, {
+        "label" : "Astyages",
+        "uri" : "http://dbpedia.org/resource/Astyages"
+      }, {
+        "label" : "Atalja",
+        "uri" : "http://dbpedia.org/resource/Athaliah"
+      }, {
+        "label" : "Athanagild",
+        "uri" : "http://dbpedia.org/resource/Athanagild"
+      }, {
+        "label" : "Ala ad-Din Atsiz",
+        "uri" : "http://dbpedia.org/resource/Atsiz"
+      }, {
+        "label" : "Caecilia Attica",
+        "uri" : "http://dbpedia.org/resource/Attica_(wife_of_Agrippa)"
+      }, {
+        "label" : "Eurydike (Gattin Philipps II.)",
+        "uri" : "http://dbpedia.org/resource/Audata"
+      }, {
+        "label" : "Carinus",
+        "uri" : "http://dbpedia.org/resource/Carinus"
+      }, {
+        "label" : "Carl Herz (Mathematiker)",
+        "uri" : "http://dbpedia.org/resource/Carl_S._Herz"
+      }, {
+        "label" : "Carmen Boullosa",
+        "uri" : "http://dbpedia.org/resource/Carmen_Boullosa"
+      }, {
+        "label" : "Kassander",
+        "uri" : "http://dbpedia.org/resource/Cassander"
+      }, {
+        "label" : "Ubol Ratana",
+        "uri" : "http://dbpedia.org/resource/Ubol_Ratana"
+      }, {
+        "label" : "Uddhav Thackeray",
+        "uri" : "http://dbpedia.org/resource/Uddhav_Thackeray"
+      }, {
+        "label" : "Ulrike Eleonore von Dänemark",
+        "uri" : "http://dbpedia.org/resource/Ulrika_Eleonora_of_Denmark"
+      }, {
+        "label" : "Uma Nehru",
+        "uri" : "http://dbpedia.org/resource/Uma_Nehru"
+      }, {
+        "label" : "ʿUmar ibn ʿAbd al-ʿAzīz",
+        "uri" : "http://dbpedia.org/resource/Umar_II"
+      }, {
+        "label" : "Urraca (León)",
+        "uri" : "http://dbpedia.org/resource/Urraca_of_León"
+      }, {
+        "label" : "Usman dan Fodio",
+        "uri" : "http://dbpedia.org/resource/Usman_dan_Fodio"
+      }, {
+        "label" : "Maxtla",
+        "uri" : "http://dbpedia.org/resource/Maxtla"
+      }, {
+        "label" : "Pierre Granier-Deferre",
+        "uri" : "http://dbpedia.org/resource/Pierre_Granier-Deferre"
+      }, {
+        "label" : "Susanna von Bayern",
+        "uri" : "http://dbpedia.org/resource/Susanna_of_Bavaria"
+      }, {
+        "label" : "Tanotamun",
+        "uri" : "http://dbpedia.org/resource/Tantamani"
+      }, {
+        "label" : "Wu Ding",
+        "uri" : "http://dbpedia.org/resource/Wu_Ding"
+      }, {
+        "label" : "Enlil-nirari",
+        "uri" : "http://dbpedia.org/resource/Enlil-nirari"
+      }, {
+        "label" : "Frederick Nutter Chasen",
+        "uri" : "http://dbpedia.org/resource/Frederick_Nutter_Chasen"
+      }, {
+        "label" : "Halime Sultan",
+        "uri" : "http://dbpedia.org/resource/Halime_Sultan"
+      }, {
+        "label" : "Ngwane III.",
+        "uri" : "http://dbpedia.org/resource/Ngwane_III"
+      }, {
+        "label" : "Ordoño I. (Asturien)",
+        "uri" : "http://dbpedia.org/resource/Ordoño_I_of_Asturias"
+      }, {
+        "label" : "Roman Jackiw",
+        "uri" : "http://dbpedia.org/resource/Roman_Jackiw"
+      }, {
+        "label" : "Rusa I.",
+        "uri" : "http://dbpedia.org/resource/Rusa_I"
+      }, {
+        "label" : "Wladimir Grigorjewitsch Nak",
+        "uri" : "http://dbpedia.org/resource/Vladimir_Nak"
+      } ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "8",
+    "lexicalEntryUri" : "http://localhost:8080#children_of",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "die Herausgeber von ($x | PERSON_NP)" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Achariten",
+        "uri" : "http://dbpedia.org/resource/Akhraten"
+      }, {
+        "label" : "Al-Aziz (Ayyubide)",
+        "uri" : "http://dbpedia.org/resource/Al-Aziz_Uthman"
+      }, {
+        "label" : "Al-Hādī",
+        "uri" : "http://dbpedia.org/resource/Al-Hadi"
+      }, {
+        "label" : "Al-Hākim I.",
+        "uri" : "http://dbpedia.org/resource/Al-Hakim_I"
+      }, {
+        "label" : "Al-Kamil Schaban I.",
+        "uri" : "http://dbpedia.org/resource/Al-Kamil_Sha'ban"
+      }, {
+        "label" : "Al-Mansur Abu Bakr",
+        "uri" : "http://dbpedia.org/resource/Al-Mansur_Abu_Bakr"
+      }, {
+        "label" : "Ali I.",
+        "uri" : "http://dbpedia.org/resource/Al-Mansur_Ali"
+      }, {
+        "label" : "Turan Schah (Herrscher)",
+        "uri" : "http://dbpedia.org/resource/Al-Muazzam_Turanshah"
+      }, {
+        "label" : "Al-Muntasir",
+        "uri" : "http://dbpedia.org/resource/Al-Muntasir"
+      }, {
+        "label" : "Al-Muqtafi",
+        "uri" : "http://dbpedia.org/resource/Al-Muqtafi"
+      }, {
+        "label" : "Al-Musta'sim bi-'llah",
+        "uri" : "http://dbpedia.org/resource/Al-Musta'sim"
+      }, {
+        "label" : "Al-Mustadī'",
+        "uri" : "http://dbpedia.org/resource/Al-Mustadi"
+      }, {
+        "label" : "Al-Mustakfī",
+        "uri" : "http://dbpedia.org/resource/Al-Mustakfi"
+      }, {
+        "label" : "Al-Mustakfi I.",
+        "uri" : "http://dbpedia.org/resource/Al-Mustakfi_I_(Cairo)"
+      }, {
+        "label" : "Al-Mustandschid",
+        "uri" : "http://dbpedia.org/resource/Al-Mustanjid"
+      }, {
+        "label" : "Al-Mustarschid",
+        "uri" : "http://dbpedia.org/resource/Al-Mustarshid"
+      }, {
+        "label" : "Al-Mustazhir bi-'llah",
+        "uri" : "http://dbpedia.org/resource/Al-Mustazhir"
+      }, {
+        "label" : "Al-Muttaqi",
+        "uri" : "http://dbpedia.org/resource/Al-Muttaqi"
+      }, {
+        "label" : "Al-Muzaffar Haddschi I.",
+        "uri" : "http://dbpedia.org/resource/Al-Muzaffar_Hajji"
+      }, {
+        "label" : "An-Nāsir Muhammad ibn Qalāwūn",
+        "uri" : "http://dbpedia.org/resource/Al-Nasir_Muhammad"
+      }, {
+        "label" : "Az-Zafir",
+        "uri" : "http://dbpedia.org/resource/Al-Zafir"
+      }, {
+        "label" : "Az-Zāhir (Abbaside)",
+        "uri" : "http://dbpedia.org/resource/Al-Zahir_bi-Amr_Allah"
+      }, {
+        "label" : "Tekisch (Choresmien)",
+        "uri" : "http://dbpedia.org/resource/Ala_al-Din_Tekish"
+      }, {
+        "label" : "Alakhai Bekhi",
+        "uri" : "http://dbpedia.org/resource/Alakhai_Bekhi"
+      }, {
+        "label" : "Aššur-nirari III.",
+        "uri" : "http://dbpedia.org/resource/Ashur-nirari_III"
+      }, {
+        "label" : "Catherine de Courtenay",
+        "uri" : "http://dbpedia.org/resource/Catherine_I,_Latin_Empress"
+      }, {
+        "label" : "Děpold",
+        "uri" : "http://dbpedia.org/resource/Děpold_I_of_Jamnitz"
+      }, {
+        "label" : "François de Bourbon, comte d’Enghien",
+        "uri" : "http://dbpedia.org/resource/Francis,_Count_of_Enghien"
+      }, {
+        "label" : "Fuller Albright",
+        "uri" : "http://dbpedia.org/resource/Fuller_Albright"
+      }, {
+        "label" : "Hans Pleydenwurff",
+        "uri" : "http://dbpedia.org/resource/Hans_Pleydenwurff"
+      }, {
+        "label" : "Heinrich I. (Utrecht)",
+        "uri" : "http://dbpedia.org/resource/Henry_I_van_Vianden"
+      }, {
+        "label" : "Luisa Fernanda von Spanien",
+        "uri" : "http://dbpedia.org/resource/Infanta_Luisa_Fernanda,_Duchess_of_Montpensier"
+      }, {
+        "label" : "Jakob Oftebro",
+        "uri" : "http://dbpedia.org/resource/Jakob_Oftebro"
+      }, {
+        "label" : "Jean-Claude Casadesus",
+        "uri" : "http://dbpedia.org/resource/Jean-Claude_Casadesus"
+      }, {
+        "label" : "Johanna von Bayern (1362–1386)",
+        "uri" : "http://dbpedia.org/resource/Joanna_of_Bavaria"
+      }, {
+        "label" : "Joey Merlino",
+        "uri" : "http://dbpedia.org/resource/Joey_Merlino"
+      }, {
+        "label" : "John Carter Cash",
+        "uri" : "http://dbpedia.org/resource/John_Carter_Cash"
+      }, {
+        "label" : "Johann Ernst (Sachsen-Coburg)",
+        "uri" : "http://dbpedia.org/resource/John_Ernest,_Duke_of_Saxe-Coburg"
+      }, {
+        "label" : "Jérôme Bonaparte-Patterson",
+        "uri" : "http://dbpedia.org/resource/Jérôme_Napoléon_Bonaparte"
+      }, {
+        "label" : "Liudolf (Ezzonen)",
+        "uri" : "http://dbpedia.org/resource/Liudolf_of_Lotharingia"
+      }, {
+        "label" : "Margarete von England",
+        "uri" : "http://dbpedia.org/resource/Margaret_of_England"
+      }, {
+        "label" : "Maria von Trapezunt",
+        "uri" : "http://dbpedia.org/resource/Maria_of_Trebizond"
+      }, {
+        "label" : "Maria Amalia von Brandenburg",
+        "uri" : "http://dbpedia.org/resource/Marie_Amalie_of_Brandenburg"
+      }, {
+        "label" : "Marie de Coucy",
+        "uri" : "http://dbpedia.org/resource/Marie_I_de_Coucy,_Countess_of_Soissons"
+      }, {
+        "label" : "Mary Stewart von Schottland",
+        "uri" : "http://dbpedia.org/resource/Mary_Stewart,_Countess_of_Arran"
+      }, {
+        "label" : "Oliver Jesse Carter",
+        "uri" : "http://dbpedia.org/resource/Oliver_Jesse_Carter"
+      }, {
+        "label" : "Petros S. Kokkalis",
+        "uri" : "http://dbpedia.org/resource/Petros_S._Kokkalis"
+      }, {
+        "label" : "Philipp von Bayern",
+        "uri" : "http://dbpedia.org/resource/Philipp_of_Bavaria"
+      }, {
+        "label" : "Georgi Konstantinowitsch Romanow",
+        "uri" : "http://dbpedia.org/resource/Prince_Georgy_Konstantinovich_of_Russia"
+      }, {
+        "label" : "Auguste von Preußen (1780–1841)",
+        "uri" : "http://dbpedia.org/resource/Princess_Augusta_of_Prussia"
+      }, {
+        "label" : "Franziska von Brasilien",
+        "uri" : "http://dbpedia.org/resource/Princess_Francisca_of_Brazil"
+      }, {
+        "label" : "Saloninus",
+        "uri" : "http://dbpedia.org/resource/Saloninus"
+      }, {
+        "label" : "Sanaṭrūq II.",
+        "uri" : "http://dbpedia.org/resource/Sanatruq_II"
+      }, {
+        "label" : "Sarah Strange",
+        "uri" : "http://dbpedia.org/resource/Sarah_Strange"
+      }, {
+        "label" : "Schachbut bin Dhiyab",
+        "uri" : "http://dbpedia.org/resource/Shakhbut_bin_Dhiyab_Al_Nahyan"
+      }, {
+        "label" : "Soumya Swaminathan",
+        "uri" : "http://dbpedia.org/resource/Soumya_Swaminathan"
+      }, {
+        "label" : "Stanford White",
+        "uri" : "http://dbpedia.org/resource/Stanford_White"
+      }, {
+        "label" : "Susan Kohner",
+        "uri" : "http://dbpedia.org/resource/Susan_Kohner"
+      }, {
+        "label" : "Theuderich II.",
+        "uri" : "http://dbpedia.org/resource/Theuderic_II"
+      }, {
+        "label" : "Torild Skard",
+        "uri" : "http://dbpedia.org/resource/Torild_Skard"
+      }, {
+        "label" : "25 Windhundwelpen",
+        "uri" : "http://dbpedia.org/resource/Two_Dozen_and_One_Greyhounds"
+      }, {
+        "label" : "Tự Đức",
+        "uri" : "http://dbpedia.org/resource/Tự_Đức"
+      }, {
+        "label" : "William Hamilton, 12. Duke of Hamilton",
+        "uri" : "http://dbpedia.org/resource/William_Douglas-Hamilton,_12th_Duke_of_Hamilton"
+      }, {
+        "label" : "Wilhelm Ernst (Sachsen-Weimar)",
+        "uri" : "http://dbpedia.org/resource/William_Ernest,_Duke_of_Saxe-Weimar"
+      }, {
+        "label" : "Aschot III.",
+        "uri" : "http://dbpedia.org/resource/Ashot_III_of_Armenia"
+      }, {
+        "label" : "Emma von Provence",
+        "uri" : "http://dbpedia.org/resource/Emma_of_Provence"
+      }, {
+        "label" : "Eormenred",
+        "uri" : "http://dbpedia.org/resource/Eormenred_of_Kent"
+      }, {
+        "label" : "Friedrich Erdmann (Anhalt-Köthen-Pleß)",
+        "uri" : "http://dbpedia.org/resource/Frederick_Erdmann,_Prince_of_Anhalt-Pless"
+      }, {
+        "label" : "Geoffrey Pole",
+        "uri" : "http://dbpedia.org/resource/Geoffrey_Pole"
+      }, {
+        "label" : "Huijong",
+        "uri" : "http://dbpedia.org/resource/Huijong_of_Goryeo"
+      }, {
+        "label" : "Julius Constantius",
+        "uri" : "http://dbpedia.org/resource/Julius_Constantius"
+      }, {
+        "label" : "Kajol",
+        "uri" : "http://dbpedia.org/resource/Kajol"
+      }, {
+        "label" : "Katharina (England)",
+        "uri" : "http://dbpedia.org/resource/Katherine_of_England"
+      }, {
+        "label" : "Augusta Gordon",
+        "uri" : "http://dbpedia.org/resource/Lady_Augusta_Gordon"
+      }, {
+        "label" : "Lazar Branković",
+        "uri" : "http://dbpedia.org/resource/Lazar_Branković"
+      }, {
+        "label" : "Lindley Murray (Grammatiker)",
+        "uri" : "http://dbpedia.org/resource/Lindley_Murray"
+      }, {
+        "label" : "Lola Glaudini",
+        "uri" : "http://dbpedia.org/resource/Lola_Glaudini"
+      }, {
+        "label" : "Louis Mountbatten, 1. Earl Mountbatten of Burma",
+        "uri" : "http://dbpedia.org/resource/Louis_Mountbatten,_1st_Earl_Mountbatten_of_Burma"
+      }, {
+        "label" : "Ludwig Anton von der Pfalz",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Anton_von_Pfalz-Neuburg"
+      }, {
+        "label" : "Manuel José Estrada Cabrera",
+        "uri" : "http://dbpedia.org/resource/Manuel_Estrada_Cabrera"
+      }, {
+        "label" : "Margarete von Lothringen",
+        "uri" : "http://dbpedia.org/resource/Margaret_of_Lorraine"
+      }, {
+        "label" : "Martha Ford",
+        "uri" : "http://dbpedia.org/resource/Martha_Firestone_Ford"
+      }, {
+        "label" : "Matilda Brown",
+        "uri" : "http://dbpedia.org/resource/Matilda_Brown"
+      }, {
+        "label" : "Mstislaw I.",
+        "uri" : "http://dbpedia.org/resource/Mstislav_I_of_Kiev"
+      }, {
+        "label" : "Murat Belge",
+        "uri" : "http://dbpedia.org/resource/Murat_Belge"
+      }, {
+        "label" : "Musa Çelebi",
+        "uri" : "http://dbpedia.org/resource/Musa_Çelebi"
+      }, {
+        "label" : "Myriam Harry",
+        "uri" : "http://dbpedia.org/resource/Myriam_Harry"
+      }, {
+        "label" : "Norton P. Otis",
+        "uri" : "http://dbpedia.org/resource/Norton_P._Otis"
+      }, {
+        "label" : "Ordoño IV. (León)",
+        "uri" : "http://dbpedia.org/resource/Ordoño_IV_of_León"
+      }, {
+        "label" : "Pietro Tempesta",
+        "uri" : "http://dbpedia.org/resource/Peter_Tempesta"
+      }, {
+        "label" : "August von Sachsen-Gotha-Altenburg",
+        "uri" : "http://dbpedia.org/resource/Prince_August_of_Saxe-Gotha-Altenburg"
+      }, {
+        "label" : "Friedrich von Oranien-Nassau (1797–1881)",
+        "uri" : "http://dbpedia.org/resource/Prince_Frederick_of_the_Netherlands"
+      }, {
+        "label" : "Jean d’Orléans, duc de Guise",
+        "uri" : "http://dbpedia.org/resource/Prince_Jean,_Duke_of_Guise"
+      }, {
+        "label" : "Alexandrine-Louise von Dänemark",
+        "uri" : "http://dbpedia.org/resource/Princess_Alexandrine-Louise_of_Denmark"
+      }, {
+        "label" : "Caroline Reuß zu Greiz",
+        "uri" : "http://dbpedia.org/resource/Princess_Caroline_Reuss_of_Greiz"
+      }, {
+        "label" : "Johanna Charlotte von Anhalt-Dessau",
+        "uri" : "http://dbpedia.org/resource/Princess_Johanna_Charlotte_of_Anhalt-Dessau"
+      }, {
+        "label" : "Sophie von Sachsen-Hildburghausen",
+        "uri" : "http://dbpedia.org/resource/Princess_Sophie_of_Saxe-Hildburghausen"
+      }, {
+        "label" : "Raoul de Gacé",
+        "uri" : "http://dbpedia.org/resource/Ralph_de_Gacé"
+      }, {
+        "label" : "Robert Charles Winthrop",
+        "uri" : "http://dbpedia.org/resource/Robert_Charles_Winthrop"
+      }, {
+        "label" : "Ruben II. (Armenien)",
+        "uri" : "http://dbpedia.org/resource/Ruben_II,_Prince_of_Armenia"
+      } ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "9",
+    "lexicalEntryUri" : "http://localhost:8080#children_of_1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "Liste die Kinder von ($x | PERSON_NP) auf", "Welche Person ist die Kinder von ($x | PERSON_NP)", "Welche Person sind die Kinder von ($x | PERSON_NP)", "Welche Person war die Kinder von ($x | PERSON_NP)", "Welche Person waren die Kinder von ($x | PERSON_NP)", "Wer ist die Kinder von ($x | PERSON_NP)", "Wer sind die Kinder von ($x | PERSON_NP)", "Wer war die Kinder von ($x | PERSON_NP)", "Wer waren die Kinder von ($x | PERSON_NP)" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Sayyid Adschall Schams ad-Din Umar",
+        "uri" : "http://dbpedia.org/resource/Ajall_Shams_al-Din_Omar"
+      }, {
+        "label" : "Akaki Zereteli",
+        "uri" : "http://dbpedia.org/resource/Akaki_Tsereteli"
+      }, {
+        "label" : "Al-Hādī",
+        "uri" : "http://dbpedia.org/resource/Al-Hadi"
+      }, {
+        "label" : "Al-Hākim I.",
+        "uri" : "http://dbpedia.org/resource/Al-Hakim_I"
+      }, {
+        "label" : "Al-Muqtafi",
+        "uri" : "http://dbpedia.org/resource/Al-Muqtafi"
+      }, {
+        "label" : "Al-Mustadī'",
+        "uri" : "http://dbpedia.org/resource/Al-Mustadi"
+      }, {
+        "label" : "Al-Mustakfī",
+        "uri" : "http://dbpedia.org/resource/Al-Mustakfi"
+      }, {
+        "label" : "Al-Mustakfi I.",
+        "uri" : "http://dbpedia.org/resource/Al-Mustakfi_I_(Cairo)"
+      }, {
+        "label" : "Al-Mustandschid",
+        "uri" : "http://dbpedia.org/resource/Al-Mustanjid"
+      }, {
+        "label" : "Al-Mustarschid",
+        "uri" : "http://dbpedia.org/resource/Al-Mustarshid"
+      }, {
+        "label" : "Al-Mustazhir bi-'llah",
+        "uri" : "http://dbpedia.org/resource/Al-Mustazhir"
+      }, {
+        "label" : "Al-Muttaqi",
+        "uri" : "http://dbpedia.org/resource/Al-Muttaqi"
+      }, {
+        "label" : "Al-Muzaffar Haddschi I.",
+        "uri" : "http://dbpedia.org/resource/Al-Muzaffar_Hajji"
+      }, {
+        "label" : "An-Nāsir Muhammad ibn Qalāwūn",
+        "uri" : "http://dbpedia.org/resource/Al-Nasir_Muhammad"
+      }, {
+        "label" : "Al-Qasim al-Ma'mun",
+        "uri" : "http://dbpedia.org/resource/Al-Qasim_al-Ma'mun"
+      }, {
+        "label" : "Az-Zāhir (Abbaside)",
+        "uri" : "http://dbpedia.org/resource/Al-Zahir_bi-Amr_Allah"
+      }, {
+        "label" : "Tekisch (Choresmien)",
+        "uri" : "http://dbpedia.org/resource/Ala_al-Din_Tekish"
+      }, {
+        "label" : "Catherine de Courtenay",
+        "uri" : "http://dbpedia.org/resource/Catherine_I,_Latin_Empress"
+      }, {
+        "label" : "Luisa Fernanda von Spanien",
+        "uri" : "http://dbpedia.org/resource/Infanta_Luisa_Fernanda,_Duchess_of_Montpensier"
+      }, {
+        "label" : "Jack Fisk",
+        "uri" : "http://dbpedia.org/resource/Jack_Fisk"
+      }, {
+        "label" : "Jean-Pierre Elkabbach",
+        "uri" : "http://dbpedia.org/resource/Jean-Pierre_Elkabbach"
+      }, {
+        "label" : "Jérôme Bonaparte-Patterson",
+        "uri" : "http://dbpedia.org/resource/Jérôme_Napoléon_Bonaparte"
+      }, {
+        "label" : "Margarete von England",
+        "uri" : "http://dbpedia.org/resource/Margaret_of_England"
+      }, {
+        "label" : "Maria Amalia von Brandenburg",
+        "uri" : "http://dbpedia.org/resource/Marie_Amalie_of_Brandenburg"
+      }, {
+        "label" : "Mary Stewart von Schottland",
+        "uri" : "http://dbpedia.org/resource/Mary_Stewart,_Countess_of_Arran"
+      }, {
+        "label" : "Matthew G. Martínez",
+        "uri" : "http://dbpedia.org/resource/Matthew_G._Martínez"
+      }, {
+        "label" : "Nathanael Herreshoff",
+        "uri" : "http://dbpedia.org/resource/Nathanael_Greene_Herreshoff"
+      }, {
+        "label" : "Nissanka Malla",
+        "uri" : "http://dbpedia.org/resource/Nissanka_Malla_of_Polonnaruwa"
+      }, {
+        "label" : "Paul Howard Poberezny",
+        "uri" : "http://dbpedia.org/resource/Paul_Poberezny"
+      }, {
+        "label" : "Paula Fox",
+        "uri" : "http://dbpedia.org/resource/Paula_Fox"
+      }, {
+        "label" : "Price Daniel",
+        "uri" : "http://dbpedia.org/resource/Price_Daniel"
+      }, {
+        "label" : "Auguste von Preußen (1780–1841)",
+        "uri" : "http://dbpedia.org/resource/Princess_Augusta_of_Prussia"
+      }, {
+        "label" : "Franziska von Brasilien",
+        "uri" : "http://dbpedia.org/resource/Princess_Francisca_of_Brazil"
+      }, {
+        "label" : "Ranulph le Meschin, 3. Earl of Chester",
+        "uri" : "http://dbpedia.org/resource/Ranulf_le_Meschin,_3rd_Earl_of_Chester"
+      }, {
+        "label" : "Robert W. Scott",
+        "uri" : "http://dbpedia.org/resource/Robert_W._Scott"
+      }, {
+        "label" : "Sanaṭrūq II.",
+        "uri" : "http://dbpedia.org/resource/Sanatruq_II"
+      }, {
+        "label" : "Schachbut bin Dhiyab",
+        "uri" : "http://dbpedia.org/resource/Shakhbut_bin_Dhiyab_Al_Nahyan"
+      }, {
+        "label" : "Susan Kohner",
+        "uri" : "http://dbpedia.org/resource/Susan_Kohner"
+      }, {
+        "label" : "Tự Đức",
+        "uri" : "http://dbpedia.org/resource/Tự_Đức"
+      }, {
+        "label" : "Ulvhild Håkonsdatter",
+        "uri" : "http://dbpedia.org/resource/Ulvhild_Håkansdotter"
+      }, {
+        "label" : "Victor Gollancz",
+        "uri" : "http://dbpedia.org/resource/Victor_Gollancz"
+      }, {
+        "label" : "Vologaeses IV.",
+        "uri" : "http://dbpedia.org/resource/Vologases_IV"
+      }, {
+        "label" : "Werner Lindemann",
+        "uri" : "http://dbpedia.org/resource/Werner_Lindemann"
+      }, {
+        "label" : "Zachariah Keodirelang Matthews",
+        "uri" : "http://dbpedia.org/resource/Z._K._Matthews"
+      }, {
+        "label" : "Zhang Bojun",
+        "uri" : "http://dbpedia.org/resource/Zhang_Bojun"
+      }, {
+        "label" : "Aschot III.",
+        "uri" : "http://dbpedia.org/resource/Ashot_III_of_Armenia"
+      }, {
+        "label" : "Eormenred",
+        "uri" : "http://dbpedia.org/resource/Eormenred_of_Kent"
+      }, {
+        "label" : "Eutropia (Frau Maximians)",
+        "uri" : "http://dbpedia.org/resource/Eutropia"
+      }, {
+        "label" : "Geoffrey Pole",
+        "uri" : "http://dbpedia.org/resource/Geoffrey_Pole"
+      }, {
+        "label" : "Huijong",
+        "uri" : "http://dbpedia.org/resource/Huijong_of_Goryeo"
+      }, {
+        "label" : "Jacqueline de Longwy",
+        "uri" : "http://dbpedia.org/resource/Jacqueline_de_Longwy"
+      }, {
+        "label" : "Julius Constantius",
+        "uri" : "http://dbpedia.org/resource/Julius_Constantius"
+      }, {
+        "label" : "Kurt Katch",
+        "uri" : "http://dbpedia.org/resource/Kurt_Katch"
+      }, {
+        "label" : "Lazar Branković",
+        "uri" : "http://dbpedia.org/resource/Lazar_Branković"
+      }, {
+        "label" : "Leslie Caron",
+        "uri" : "http://dbpedia.org/resource/Leslie_Caron"
+      }, {
+        "label" : "Lola Glaudini",
+        "uri" : "http://dbpedia.org/resource/Lola_Glaudini"
+      }, {
+        "label" : "Marguerite Churchill",
+        "uri" : "http://dbpedia.org/resource/Marguerite_Churchill"
+      }, {
+        "label" : "Martha Ford",
+        "uri" : "http://dbpedia.org/resource/Martha_Firestone_Ford"
+      }, {
+        "label" : "Mary Higgins Clark",
+        "uri" : "http://dbpedia.org/resource/Mary_Higgins_Clark"
+      }, {
+        "label" : "Maurice Richlin",
+        "uri" : "http://dbpedia.org/resource/Maurice_Richlin"
+      }, {
+        "label" : "Nicolas Chopin",
+        "uri" : "http://dbpedia.org/resource/Nicolas_Chopin"
+      }, {
+        "label" : "Osman Bölükbaşı",
+        "uri" : "http://dbpedia.org/resource/Osman_Bölükbaşı"
+      }, {
+        "label" : "Peter Ritchie Calder, Baron Ritchie-Calder",
+        "uri" : "http://dbpedia.org/resource/Peter_Ritchie_Calder"
+      }, {
+        "label" : "Philippe Delerm",
+        "uri" : "http://dbpedia.org/resource/Philippe_Delerm"
+      }, {
+        "label" : "Friedrich von Oranien-Nassau (1797–1881)",
+        "uri" : "http://dbpedia.org/resource/Prince_Frederick_of_the_Netherlands"
+      }, {
+        "label" : "Jean d’Orléans, duc de Guise",
+        "uri" : "http://dbpedia.org/resource/Prince_Jean,_Duke_of_Guise"
+      }, {
+        "label" : "Samuel Allyne Otis",
+        "uri" : "http://dbpedia.org/resource/Samuel_Allyne_Otis"
+      }, {
+        "label" : "Serge Dassault",
+        "uri" : "http://dbpedia.org/resource/Serge_Dassault"
+      }, {
+        "label" : "Toussaint Charbonneau",
+        "uri" : "http://dbpedia.org/resource/Toussaint_Charbonneau"
+      }, {
+        "label" : "Valgerður Gunnarsdóttir",
+        "uri" : "http://dbpedia.org/resource/Valgerður_Gunnarsdóttir"
+      }, {
+        "label" : "Astyages",
+        "uri" : "http://dbpedia.org/resource/Astyages"
+      }, {
+        "label" : "Atalja",
+        "uri" : "http://dbpedia.org/resource/Athaliah"
+      }, {
+        "label" : "Athanagild",
+        "uri" : "http://dbpedia.org/resource/Athanagild"
+      }, {
+        "label" : "Ala ad-Din Atsiz",
+        "uri" : "http://dbpedia.org/resource/Atsiz"
+      }, {
+        "label" : "Caecilia Attica",
+        "uri" : "http://dbpedia.org/resource/Attica_(wife_of_Agrippa)"
+      }, {
+        "label" : "Eurydike (Gattin Philipps II.)",
+        "uri" : "http://dbpedia.org/resource/Audata"
+      }, {
+        "label" : "Carinus",
+        "uri" : "http://dbpedia.org/resource/Carinus"
+      }, {
+        "label" : "Carl Herz (Mathematiker)",
+        "uri" : "http://dbpedia.org/resource/Carl_S._Herz"
+      }, {
+        "label" : "Carmen Boullosa",
+        "uri" : "http://dbpedia.org/resource/Carmen_Boullosa"
+      }, {
+        "label" : "Kassander",
+        "uri" : "http://dbpedia.org/resource/Cassander"
+      }, {
+        "label" : "Ubol Ratana",
+        "uri" : "http://dbpedia.org/resource/Ubol_Ratana"
+      }, {
+        "label" : "Uddhav Thackeray",
+        "uri" : "http://dbpedia.org/resource/Uddhav_Thackeray"
+      }, {
+        "label" : "Ulrike Eleonore von Dänemark",
+        "uri" : "http://dbpedia.org/resource/Ulrika_Eleonora_of_Denmark"
+      }, {
+        "label" : "Uma Nehru",
+        "uri" : "http://dbpedia.org/resource/Uma_Nehru"
+      }, {
+        "label" : "ʿUmar ibn ʿAbd al-ʿAzīz",
+        "uri" : "http://dbpedia.org/resource/Umar_II"
+      }, {
+        "label" : "Urraca (León)",
+        "uri" : "http://dbpedia.org/resource/Urraca_of_León"
+      }, {
+        "label" : "Usman dan Fodio",
+        "uri" : "http://dbpedia.org/resource/Usman_dan_Fodio"
+      }, {
+        "label" : "Maxtla",
+        "uri" : "http://dbpedia.org/resource/Maxtla"
+      }, {
+        "label" : "Pierre Granier-Deferre",
+        "uri" : "http://dbpedia.org/resource/Pierre_Granier-Deferre"
+      }, {
+        "label" : "Susanna von Bayern",
+        "uri" : "http://dbpedia.org/resource/Susanna_of_Bavaria"
+      }, {
+        "label" : "Tanotamun",
+        "uri" : "http://dbpedia.org/resource/Tantamani"
+      }, {
+        "label" : "Wu Ding",
+        "uri" : "http://dbpedia.org/resource/Wu_Ding"
+      }, {
+        "label" : "Enlil-nirari",
+        "uri" : "http://dbpedia.org/resource/Enlil-nirari"
+      }, {
+        "label" : "Frederick Nutter Chasen",
+        "uri" : "http://dbpedia.org/resource/Frederick_Nutter_Chasen"
+      }, {
+        "label" : "Halime Sultan",
+        "uri" : "http://dbpedia.org/resource/Halime_Sultan"
+      }, {
+        "label" : "Ngwane III.",
+        "uri" : "http://dbpedia.org/resource/Ngwane_III"
+      }, {
+        "label" : "Ordoño I. (Asturien)",
+        "uri" : "http://dbpedia.org/resource/Ordoño_I_of_Asturias"
+      }, {
+        "label" : "Roman Jackiw",
+        "uri" : "http://dbpedia.org/resource/Roman_Jackiw"
+      }, {
+        "label" : "Rusa I.",
+        "uri" : "http://dbpedia.org/resource/Rusa_I"
+      }, {
+        "label" : "Wladimir Grigorjewitsch Nak",
+        "uri" : "http://dbpedia.org/resource/Vladimir_Nak"
+      } ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "10",
+    "lexicalEntryUri" : "http://localhost:8080#children_of_1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "PERSON",
+    "returnType" : "PERSON",
+    "frameType" : "NPP",
+    "sentences" : [ "die Kinder von ($x | PERSON_NP)" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Achariten",
+        "uri" : "http://dbpedia.org/resource/Akhraten"
+      }, {
+        "label" : "Al-Aziz (Ayyubide)",
+        "uri" : "http://dbpedia.org/resource/Al-Aziz_Uthman"
+      }, {
+        "label" : "Al-Hādī",
+        "uri" : "http://dbpedia.org/resource/Al-Hadi"
+      }, {
+        "label" : "Al-Hākim I.",
+        "uri" : "http://dbpedia.org/resource/Al-Hakim_I"
+      }, {
+        "label" : "Al-Kamil Schaban I.",
+        "uri" : "http://dbpedia.org/resource/Al-Kamil_Sha'ban"
+      }, {
+        "label" : "Al-Mansur Abu Bakr",
+        "uri" : "http://dbpedia.org/resource/Al-Mansur_Abu_Bakr"
+      }, {
+        "label" : "Ali I.",
+        "uri" : "http://dbpedia.org/resource/Al-Mansur_Ali"
+      }, {
+        "label" : "Turan Schah (Herrscher)",
+        "uri" : "http://dbpedia.org/resource/Al-Muazzam_Turanshah"
+      }, {
+        "label" : "Al-Muntasir",
+        "uri" : "http://dbpedia.org/resource/Al-Muntasir"
+      }, {
+        "label" : "Al-Muqtafi",
+        "uri" : "http://dbpedia.org/resource/Al-Muqtafi"
+      }, {
+        "label" : "Al-Musta'sim bi-'llah",
+        "uri" : "http://dbpedia.org/resource/Al-Musta'sim"
+      }, {
+        "label" : "Al-Mustadī'",
+        "uri" : "http://dbpedia.org/resource/Al-Mustadi"
+      }, {
+        "label" : "Al-Mustakfī",
+        "uri" : "http://dbpedia.org/resource/Al-Mustakfi"
+      }, {
+        "label" : "Al-Mustakfi I.",
+        "uri" : "http://dbpedia.org/resource/Al-Mustakfi_I_(Cairo)"
+      }, {
+        "label" : "Al-Mustandschid",
+        "uri" : "http://dbpedia.org/resource/Al-Mustanjid"
+      }, {
+        "label" : "Al-Mustarschid",
+        "uri" : "http://dbpedia.org/resource/Al-Mustarshid"
+      }, {
+        "label" : "Al-Mustazhir bi-'llah",
+        "uri" : "http://dbpedia.org/resource/Al-Mustazhir"
+      }, {
+        "label" : "Al-Muttaqi",
+        "uri" : "http://dbpedia.org/resource/Al-Muttaqi"
+      }, {
+        "label" : "Al-Muzaffar Haddschi I.",
+        "uri" : "http://dbpedia.org/resource/Al-Muzaffar_Hajji"
+      }, {
+        "label" : "An-Nāsir Muhammad ibn Qalāwūn",
+        "uri" : "http://dbpedia.org/resource/Al-Nasir_Muhammad"
+      }, {
+        "label" : "Az-Zafir",
+        "uri" : "http://dbpedia.org/resource/Al-Zafir"
+      }, {
+        "label" : "Az-Zāhir (Abbaside)",
+        "uri" : "http://dbpedia.org/resource/Al-Zahir_bi-Amr_Allah"
+      }, {
+        "label" : "Tekisch (Choresmien)",
+        "uri" : "http://dbpedia.org/resource/Ala_al-Din_Tekish"
+      }, {
+        "label" : "Alakhai Bekhi",
+        "uri" : "http://dbpedia.org/resource/Alakhai_Bekhi"
+      }, {
+        "label" : "Aššur-nirari III.",
+        "uri" : "http://dbpedia.org/resource/Ashur-nirari_III"
+      }, {
+        "label" : "Catherine de Courtenay",
+        "uri" : "http://dbpedia.org/resource/Catherine_I,_Latin_Empress"
+      }, {
+        "label" : "Děpold",
+        "uri" : "http://dbpedia.org/resource/Děpold_I_of_Jamnitz"
+      }, {
+        "label" : "François de Bourbon, comte d’Enghien",
+        "uri" : "http://dbpedia.org/resource/Francis,_Count_of_Enghien"
+      }, {
+        "label" : "Fuller Albright",
+        "uri" : "http://dbpedia.org/resource/Fuller_Albright"
+      }, {
+        "label" : "Hans Pleydenwurff",
+        "uri" : "http://dbpedia.org/resource/Hans_Pleydenwurff"
+      }, {
+        "label" : "Heinrich I. (Utrecht)",
+        "uri" : "http://dbpedia.org/resource/Henry_I_van_Vianden"
+      }, {
+        "label" : "Luisa Fernanda von Spanien",
+        "uri" : "http://dbpedia.org/resource/Infanta_Luisa_Fernanda,_Duchess_of_Montpensier"
+      }, {
+        "label" : "Jakob Oftebro",
+        "uri" : "http://dbpedia.org/resource/Jakob_Oftebro"
+      }, {
+        "label" : "Jean-Claude Casadesus",
+        "uri" : "http://dbpedia.org/resource/Jean-Claude_Casadesus"
+      }, {
+        "label" : "Johanna von Bayern (1362–1386)",
+        "uri" : "http://dbpedia.org/resource/Joanna_of_Bavaria"
+      }, {
+        "label" : "Joey Merlino",
+        "uri" : "http://dbpedia.org/resource/Joey_Merlino"
+      }, {
+        "label" : "John Carter Cash",
+        "uri" : "http://dbpedia.org/resource/John_Carter_Cash"
+      }, {
+        "label" : "Johann Ernst (Sachsen-Coburg)",
+        "uri" : "http://dbpedia.org/resource/John_Ernest,_Duke_of_Saxe-Coburg"
+      }, {
+        "label" : "Jérôme Bonaparte-Patterson",
+        "uri" : "http://dbpedia.org/resource/Jérôme_Napoléon_Bonaparte"
+      }, {
+        "label" : "Liudolf (Ezzonen)",
+        "uri" : "http://dbpedia.org/resource/Liudolf_of_Lotharingia"
+      }, {
+        "label" : "Margarete von England",
+        "uri" : "http://dbpedia.org/resource/Margaret_of_England"
+      }, {
+        "label" : "Maria von Trapezunt",
+        "uri" : "http://dbpedia.org/resource/Maria_of_Trebizond"
+      }, {
+        "label" : "Maria Amalia von Brandenburg",
+        "uri" : "http://dbpedia.org/resource/Marie_Amalie_of_Brandenburg"
+      }, {
+        "label" : "Marie de Coucy",
+        "uri" : "http://dbpedia.org/resource/Marie_I_de_Coucy,_Countess_of_Soissons"
+      }, {
+        "label" : "Mary Stewart von Schottland",
+        "uri" : "http://dbpedia.org/resource/Mary_Stewart,_Countess_of_Arran"
+      }, {
+        "label" : "Oliver Jesse Carter",
+        "uri" : "http://dbpedia.org/resource/Oliver_Jesse_Carter"
+      }, {
+        "label" : "Petros S. Kokkalis",
+        "uri" : "http://dbpedia.org/resource/Petros_S._Kokkalis"
+      }, {
+        "label" : "Philipp von Bayern",
+        "uri" : "http://dbpedia.org/resource/Philipp_of_Bavaria"
+      }, {
+        "label" : "Georgi Konstantinowitsch Romanow",
+        "uri" : "http://dbpedia.org/resource/Prince_Georgy_Konstantinovich_of_Russia"
+      }, {
+        "label" : "Auguste von Preußen (1780–1841)",
+        "uri" : "http://dbpedia.org/resource/Princess_Augusta_of_Prussia"
+      }, {
+        "label" : "Franziska von Brasilien",
+        "uri" : "http://dbpedia.org/resource/Princess_Francisca_of_Brazil"
+      }, {
+        "label" : "Saloninus",
+        "uri" : "http://dbpedia.org/resource/Saloninus"
+      }, {
+        "label" : "Sanaṭrūq II.",
+        "uri" : "http://dbpedia.org/resource/Sanatruq_II"
+      }, {
+        "label" : "Sarah Strange",
+        "uri" : "http://dbpedia.org/resource/Sarah_Strange"
+      }, {
+        "label" : "Schachbut bin Dhiyab",
+        "uri" : "http://dbpedia.org/resource/Shakhbut_bin_Dhiyab_Al_Nahyan"
+      }, {
+        "label" : "Soumya Swaminathan",
+        "uri" : "http://dbpedia.org/resource/Soumya_Swaminathan"
+      }, {
+        "label" : "Stanford White",
+        "uri" : "http://dbpedia.org/resource/Stanford_White"
+      }, {
+        "label" : "Susan Kohner",
+        "uri" : "http://dbpedia.org/resource/Susan_Kohner"
+      }, {
+        "label" : "Theuderich II.",
+        "uri" : "http://dbpedia.org/resource/Theuderic_II"
+      }, {
+        "label" : "Torild Skard",
+        "uri" : "http://dbpedia.org/resource/Torild_Skard"
+      }, {
+        "label" : "25 Windhundwelpen",
+        "uri" : "http://dbpedia.org/resource/Two_Dozen_and_One_Greyhounds"
+      }, {
+        "label" : "Tự Đức",
+        "uri" : "http://dbpedia.org/resource/Tự_Đức"
+      }, {
+        "label" : "William Hamilton, 12. Duke of Hamilton",
+        "uri" : "http://dbpedia.org/resource/William_Douglas-Hamilton,_12th_Duke_of_Hamilton"
+      }, {
+        "label" : "Wilhelm Ernst (Sachsen-Weimar)",
+        "uri" : "http://dbpedia.org/resource/William_Ernest,_Duke_of_Saxe-Weimar"
+      }, {
+        "label" : "Aschot III.",
+        "uri" : "http://dbpedia.org/resource/Ashot_III_of_Armenia"
+      }, {
+        "label" : "Emma von Provence",
+        "uri" : "http://dbpedia.org/resource/Emma_of_Provence"
+      }, {
+        "label" : "Eormenred",
+        "uri" : "http://dbpedia.org/resource/Eormenred_of_Kent"
+      }, {
+        "label" : "Friedrich Erdmann (Anhalt-Köthen-Pleß)",
+        "uri" : "http://dbpedia.org/resource/Frederick_Erdmann,_Prince_of_Anhalt-Pless"
+      }, {
+        "label" : "Geoffrey Pole",
+        "uri" : "http://dbpedia.org/resource/Geoffrey_Pole"
+      }, {
+        "label" : "Huijong",
+        "uri" : "http://dbpedia.org/resource/Huijong_of_Goryeo"
+      }, {
+        "label" : "Julius Constantius",
+        "uri" : "http://dbpedia.org/resource/Julius_Constantius"
+      }, {
+        "label" : "Kajol",
+        "uri" : "http://dbpedia.org/resource/Kajol"
+      }, {
+        "label" : "Katharina (England)",
+        "uri" : "http://dbpedia.org/resource/Katherine_of_England"
+      }, {
+        "label" : "Augusta Gordon",
+        "uri" : "http://dbpedia.org/resource/Lady_Augusta_Gordon"
+      }, {
+        "label" : "Lazar Branković",
+        "uri" : "http://dbpedia.org/resource/Lazar_Branković"
+      }, {
+        "label" : "Lindley Murray (Grammatiker)",
+        "uri" : "http://dbpedia.org/resource/Lindley_Murray"
+      }, {
+        "label" : "Lola Glaudini",
+        "uri" : "http://dbpedia.org/resource/Lola_Glaudini"
+      }, {
+        "label" : "Louis Mountbatten, 1. Earl Mountbatten of Burma",
+        "uri" : "http://dbpedia.org/resource/Louis_Mountbatten,_1st_Earl_Mountbatten_of_Burma"
+      }, {
+        "label" : "Ludwig Anton von der Pfalz",
+        "uri" : "http://dbpedia.org/resource/Ludwig_Anton_von_Pfalz-Neuburg"
+      }, {
+        "label" : "Manuel José Estrada Cabrera",
+        "uri" : "http://dbpedia.org/resource/Manuel_Estrada_Cabrera"
+      }, {
+        "label" : "Margarete von Lothringen",
+        "uri" : "http://dbpedia.org/resource/Margaret_of_Lorraine"
+      }, {
+        "label" : "Martha Ford",
+        "uri" : "http://dbpedia.org/resource/Martha_Firestone_Ford"
+      }, {
+        "label" : "Matilda Brown",
+        "uri" : "http://dbpedia.org/resource/Matilda_Brown"
+      }, {
+        "label" : "Mstislaw I.",
+        "uri" : "http://dbpedia.org/resource/Mstislav_I_of_Kiev"
+      }, {
+        "label" : "Murat Belge",
+        "uri" : "http://dbpedia.org/resource/Murat_Belge"
+      }, {
+        "label" : "Musa Çelebi",
+        "uri" : "http://dbpedia.org/resource/Musa_Çelebi"
+      }, {
+        "label" : "Myriam Harry",
+        "uri" : "http://dbpedia.org/resource/Myriam_Harry"
+      }, {
+        "label" : "Norton P. Otis",
+        "uri" : "http://dbpedia.org/resource/Norton_P._Otis"
+      }, {
+        "label" : "Ordoño IV. (León)",
+        "uri" : "http://dbpedia.org/resource/Ordoño_IV_of_León"
+      }, {
+        "label" : "Pietro Tempesta",
+        "uri" : "http://dbpedia.org/resource/Peter_Tempesta"
+      }, {
+        "label" : "August von Sachsen-Gotha-Altenburg",
+        "uri" : "http://dbpedia.org/resource/Prince_August_of_Saxe-Gotha-Altenburg"
+      }, {
+        "label" : "Friedrich von Oranien-Nassau (1797–1881)",
+        "uri" : "http://dbpedia.org/resource/Prince_Frederick_of_the_Netherlands"
+      }, {
+        "label" : "Jean d’Orléans, duc de Guise",
+        "uri" : "http://dbpedia.org/resource/Prince_Jean,_Duke_of_Guise"
+      }, {
+        "label" : "Alexandrine-Louise von Dänemark",
+        "uri" : "http://dbpedia.org/resource/Princess_Alexandrine-Louise_of_Denmark"
+      }, {
+        "label" : "Caroline Reuß zu Greiz",
+        "uri" : "http://dbpedia.org/resource/Princess_Caroline_Reuss_of_Greiz"
+      }, {
+        "label" : "Johanna Charlotte von Anhalt-Dessau",
+        "uri" : "http://dbpedia.org/resource/Princess_Johanna_Charlotte_of_Anhalt-Dessau"
+      }, {
+        "label" : "Sophie von Sachsen-Hildburghausen",
+        "uri" : "http://dbpedia.org/resource/Princess_Sophie_of_Saxe-Hildburghausen"
+      }, {
+        "label" : "Raoul de Gacé",
+        "uri" : "http://dbpedia.org/resource/Ralph_de_Gacé"
+      }, {
+        "label" : "Robert Charles Winthrop",
+        "uri" : "http://dbpedia.org/resource/Robert_Charles_Winthrop"
+      }, {
+        "label" : "Ruben II. (Armenien)",
+        "uri" : "http://dbpedia.org/resource/Ruben_II,_Prince_of_Armenia"
+      } ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "11",
+    "lexicalEntryUri" : null,
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "LOCATION",
+    "returnType" : "LOCATION",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is $x located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple ?subjOfProp <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ {
+        "label" : "Ouled Said",
+        "uri" : "http://dbpedia.org/resource/Ouled_Said"
+      }, {
+        "label" : "Tebessa",
+        "uri" : "http://dbpedia.org/resource/Tébessa"
+      }, {
+        "label" : "Algier",
+        "uri" : "http://dbpedia.org/resource/Algiers"
+      }, {
+        "label" : "Algier (Provinz)",
+        "uri" : "http://dbpedia.org/resource/Algiers_Province"
+      }, {
+        "label" : "Annaba",
+        "uri" : "http://dbpedia.org/resource/Annaba"
+      }, {
+        "label" : "In Aménas",
+        "uri" : "http://dbpedia.org/resource/In_Amenas"
+      }, {
+        "label" : "Kouba (Algerien)",
+        "uri" : "http://dbpedia.org/resource/Kouba,_Algeria"
+      }, {
+        "label" : "Lakhdaria",
+        "uri" : "http://dbpedia.org/resource/Lakhdaria"
+      }, {
+        "label" : "Sali (Adrar)",
+        "uri" : "http://dbpedia.org/resource/Sali,_Algeria"
+      }, {
+        "label" : "Sétif",
+        "uri" : "http://dbpedia.org/resource/Sétif"
+      }, {
+        "label" : "Sitifis",
+        "uri" : "http://dbpedia.org/resource/Sétif"
+      }, {
+        "label" : "Erg Issaouane",
+        "uri" : "http://dbpedia.org/resource/Issaouane_Erg"
+      }, {
+        "label" : "Mansourah",
+        "uri" : "http://dbpedia.org/resource/Mansoura,_Tlemcen"
+      }, {
+        "label" : "Tanezrouft",
+        "uri" : "http://dbpedia.org/resource/Tanezrouft"
+      }, {
+        "label" : "Westlicher Großer Erg",
+        "uri" : "http://dbpedia.org/resource/Grand_Erg_Occidental"
+      }, {
+        "label" : "Ain Beida",
+        "uri" : "http://dbpedia.org/resource/Aïn_Beïda,_Oum_El_Bouaghi"
+      }, {
+        "label" : "Batna (Stadt)",
+        "uri" : "http://dbpedia.org/resource/Batna,_Algeria"
+      }, {
+        "label" : "Batna (Provinz)",
+        "uri" : "http://dbpedia.org/resource/Batna_Province"
+      }, {
+        "label" : "Boumerdes (Provinz)",
+        "uri" : "http://dbpedia.org/resource/Boumerdès_Province"
+      }, {
+        "label" : "El Biar",
+        "uri" : "http://dbpedia.org/resource/El_Biar"
+      }, {
+        "label" : "Yahia Boushaki",
+        "uri" : "http://dbpedia.org/resource/Yahia_Boushaki"
+      }, {
+        "label" : "Bechar",
+        "uri" : "http://dbpedia.org/resource/Béchar"
+      }, {
+        "label" : "Titularbistum Bugia",
+        "uri" : "http://dbpedia.org/resource/Béjaïa"
+      }, {
+        "label" : "Bejaia",
+        "uri" : "http://dbpedia.org/resource/Béjaïa"
+      }, {
+        "label" : "Saldae",
+        "uri" : "http://dbpedia.org/resource/Béjaïa"
+      }, {
+        "label" : "Béni Abbès",
+        "uri" : "http://dbpedia.org/resource/Béni_Abbès"
+      }, {
+        "label" : "Béni Saf",
+        "uri" : "http://dbpedia.org/resource/Béni_Saf"
+      }, {
+        "label" : "Tamanrasset",
+        "uri" : "http://dbpedia.org/resource/Tamanrasset"
+      }, {
+        "label" : "Tamanrasset (Provinz)",
+        "uri" : "http://dbpedia.org/resource/Tamanrasset_Province"
+      }, {
+        "label" : "Khenchela (Provinz)",
+        "uri" : "http://dbpedia.org/resource/Khenchela_Province"
+      }, {
+        "label" : "Sidi bel Abbès",
+        "uri" : "http://dbpedia.org/resource/Sidi_Bel_Abbès"
+      }, {
+        "label" : "Sidi Bel Abbès (Provinz)",
+        "uri" : "http://dbpedia.org/resource/Sidi_Bel_Abbès"
+      }, {
+        "label" : "Souk Ahras (Provinz)",
+        "uri" : "http://dbpedia.org/resource/Souk_Ahras_Province"
+      }, {
+        "label" : "Touggourt (Provinz)",
+        "uri" : "http://dbpedia.org/resource/Touggourt_Province"
+      }, {
+        "label" : "Tademait-Plateau",
+        "uri" : "http://dbpedia.org/resource/Tademaït"
+      }, {
+        "label" : "In Zghmir",
+        "uri" : "http://dbpedia.org/resource/In_Zghmir"
+      }, {
+        "label" : "Twat (Berber)",
+        "uri" : "http://dbpedia.org/resource/Tuat"
+      }, {
+        "label" : "Sidi bel Abbès",
+        "uri" : "http://dbpedia.org/resource/Sidi_Bel_Abbès_Province"
+      }, {
+        "label" : "Sidi Bel Abbès (Provinz)",
+        "uri" : "http://dbpedia.org/resource/Sidi_Bel_Abbès_Province"
+      }, {
+        "label" : "Aïn El Assel",
+        "uri" : "http://dbpedia.org/resource/Aïn_El_Assel"
+      }, {
+        "label" : "Oued Zenati",
+        "uri" : "http://dbpedia.org/resource/Oued_Zenati"
+      }, {
+        "label" : "Medjez Sfa",
+        "uri" : "http://dbpedia.org/resource/Medjez_Sfa"
+      }, {
+        "label" : "Mers-el-Kébir",
+        "uri" : "http://dbpedia.org/resource/Mers_El_Kébir"
+      }, {
+        "label" : "Messaad",
+        "uri" : "http://dbpedia.org/resource/Messaâd"
+      }, {
+        "label" : "Metarfa",
+        "uri" : "http://dbpedia.org/resource/Metarfa"
+      }, {
+        "label" : "Miliana",
+        "uri" : "http://dbpedia.org/resource/Miliana"
+      }, {
+        "label" : "Tlemcen",
+        "uri" : "http://dbpedia.org/resource/Tlemcen"
+      }, {
+        "label" : "Erg Iguidi",
+        "uri" : "http://dbpedia.org/resource/Erg_Iguidi"
+      }, {
+        "label" : "Abadla",
+        "uri" : "http://dbpedia.org/resource/Abadla"
+      }, {
+        "label" : "Abalessa",
+        "uri" : "http://dbpedia.org/resource/Abalessa"
+      }, {
+        "label" : "Deldoul",
+        "uri" : "http://dbpedia.org/resource/Deldoul,_Adrar"
+      }, {
+        "label" : "Belkheir (Guelma)",
+        "uri" : "http://dbpedia.org/resource/Belkheir"
+      }, {
+        "label" : "Ben Djarah",
+        "uri" : "http://dbpedia.org/resource/Ben_Djerrah"
+      }, {
+        "label" : "Ben Mehdi",
+        "uri" : "http://dbpedia.org/resource/Ben_Mehdi"
+      }, {
+        "label" : "Beni Mester",
+        "uri" : "http://dbpedia.org/resource/Beni_Mester"
+      }, {
+        "label" : "Beni Mezline",
+        "uri" : "http://dbpedia.org/resource/Beni_Mezline"
+      }, {
+        "label" : "Berrihane",
+        "uri" : "http://dbpedia.org/resource/Berrihane"
+      }, {
+        "label" : "Muaskar",
+        "uri" : "http://dbpedia.org/resource/Mascara,_Algeria"
+      }, {
+        "label" : "Muaskar (Provinz)",
+        "uri" : "http://dbpedia.org/resource/Mascara_Province"
+      }, {
+        "label" : "Mila (Algerien)",
+        "uri" : "http://dbpedia.org/resource/Mila,_Algeria"
+      }, {
+        "label" : "Mila (Provinz)",
+        "uri" : "http://dbpedia.org/resource/Mila,_Algeria"
+      }, {
+        "label" : "Mila (Algerien)",
+        "uri" : "http://dbpedia.org/resource/Mila_Province"
+      }, {
+        "label" : "Mila (Provinz)",
+        "uri" : "http://dbpedia.org/resource/Mila_Province"
+      }, {
+        "label" : "Dahouara",
+        "uri" : "http://dbpedia.org/resource/Dahouara"
+      }, {
+        "label" : "Saharaatlas",
+        "uri" : "http://dbpedia.org/resource/Saharan_Atlas"
+      }, {
+        "label" : "Salaoua Announa",
+        "uri" : "http://dbpedia.org/resource/Salaoua_Announa"
+      }, {
+        "label" : "Saida",
+        "uri" : "http://dbpedia.org/resource/Saïda,_Algeria"
+      }, {
+        "label" : "Saida (Provinz)",
+        "uri" : "http://dbpedia.org/resource/Saïda,_Algeria"
+      }, {
+        "label" : "Saida",
+        "uri" : "http://dbpedia.org/resource/Saïda_Province"
+      }, {
+        "label" : "Saida (Provinz)",
+        "uri" : "http://dbpedia.org/resource/Saïda_Province"
+      }, {
+        "label" : "Sebaa",
+        "uri" : "http://dbpedia.org/resource/Sbaa"
+      }, {
+        "label" : "http://dbpedia.org/resource/M'Rara",
+        "uri" : "http://dbpedia.org/resource/M'Rara"
+      }, {
+        "label" : "http://dbpedia.org/resource/Maâfa",
+        "uri" : "http://dbpedia.org/resource/Maâfa"
+      }, {
+        "label" : "http://dbpedia.org/resource/Merdja_Sidi_Abed",
+        "uri" : "http://dbpedia.org/resource/Merdja_Sidi_Abed"
+      }, {
+        "label" : "http://dbpedia.org/resource/Sidi_Ali_Benyoub_District",
+        "uri" : "http://dbpedia.org/resource/Sidi_Ali_Benyoub_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Tadjenanet_District",
+        "uri" : "http://dbpedia.org/resource/Tadjenanet_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Tamalous",
+        "uri" : "http://dbpedia.org/resource/Tamalous"
+      }, {
+        "label" : "http://dbpedia.org/resource/Taougrit",
+        "uri" : "http://dbpedia.org/resource/Taougrit"
+      }, {
+        "label" : "http://dbpedia.org/resource/Zoubia,_Algeria",
+        "uri" : "http://dbpedia.org/resource/Zoubia,_Algeria"
+      }, {
+        "label" : "http://dbpedia.org/resource/Barbouche",
+        "uri" : "http://dbpedia.org/resource/Barbouche"
+      }, {
+        "label" : "http://dbpedia.org/resource/Kasdir",
+        "uri" : "http://dbpedia.org/resource/Kasdir"
+      }, {
+        "label" : "http://dbpedia.org/resource/Oued_Lilli",
+        "uri" : "http://dbpedia.org/resource/Oued_Lilli"
+      }, {
+        "label" : "http://dbpedia.org/resource/Si_Abdelghani",
+        "uri" : "http://dbpedia.org/resource/Si_Abdelghani"
+      }, {
+        "label" : "http://dbpedia.org/resource/Sidi_Makhlouf",
+        "uri" : "http://dbpedia.org/resource/Sidi_Makhlouf"
+      }, {
+        "label" : "http://dbpedia.org/resource/Teghalimet",
+        "uri" : "http://dbpedia.org/resource/Teghalimet"
+      }, {
+        "label" : "http://dbpedia.org/resource/Yabous",
+        "uri" : "http://dbpedia.org/resource/Yabous"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ténira_District",
+        "uri" : "http://dbpedia.org/resource/Ténira_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ténès",
+        "uri" : "http://dbpedia.org/resource/Ténès"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ténès_District",
+        "uri" : "http://dbpedia.org/resource/Ténès_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Téssala_District",
+        "uri" : "http://dbpedia.org/resource/Téssala_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/Hidoussa",
+        "uri" : "http://dbpedia.org/resource/Hidoussa"
+      }, {
+        "label" : "http://dbpedia.org/resource/El_Hadjar",
+        "uri" : "http://dbpedia.org/resource/El_Hadjar"
+      }, {
+        "label" : "http://dbpedia.org/resource/Amalou,_Algeria",
+        "uri" : "http://dbpedia.org/resource/Amalou,_Algeria"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ammal",
+        "uri" : "http://dbpedia.org/resource/Ammal"
+      }, {
+        "label" : "http://dbpedia.org/resource/Ammas",
+        "uri" : "http://dbpedia.org/resource/Ammas"
+      }, {
+        "label" : "http://dbpedia.org/resource/Amsel,_Algeria",
+        "uri" : "http://dbpedia.org/resource/Amsel,_Algeria"
+      }, {
+        "label" : "http://dbpedia.org/resource/Asla,_Algeria",
+        "uri" : "http://dbpedia.org/resource/Asla,_Algeria"
+      }, {
+        "label" : "http://dbpedia.org/resource/El_Achour",
+        "uri" : "http://dbpedia.org/resource/El_Achour"
+      }, {
+        "label" : "http://dbpedia.org/resource/In_Amenas_District",
+        "uri" : "http://dbpedia.org/resource/In_Amenas_District"
+      }, {
+        "label" : "http://dbpedia.org/resource/El_Kala_District",
+        "uri" : "http://dbpedia.org/resource/El_Kala_District"
+      } ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  } ]
+}
