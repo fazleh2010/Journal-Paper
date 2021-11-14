@@ -22,6 +22,7 @@ import java.util.*;
 
 import static grammar.generator.helper.BindingConstants.BINDING_TOKEN_TEMPLATE;
 import static grammar.generator.helper.parser.SentenceTemplateParser.QUESTION_MARK;
+import static java.lang.System.exit;
 import static java.util.Objects.isNull;
 import static lexicon.LexicalEntryUtil.getDeterminerTokenByNumber;
 
@@ -50,7 +51,7 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
         List<AnnotatedNounOrQuestionWord> annotatedLexicalEntryNouns = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords();
         AnnotatedNounOrQuestionWord questionWord
                 = // Who / what
-                getAnnotatedQuestionWordBySubjectTypeAndNumber(lexicalEntryUtil.getSubjectType(lexicalEntryUtil.getSelectVariable(),DomainOrRangeType.PERSON), getLanguage(), lexicalEntryUtil, getLexInfo().getPropertyValue("singular"),  null);
+                getAnnotatedQuestionWordBySubjectTypeAndNumber(lexicalEntryUtil.getSubjectType(lexicalEntryUtil.getSelectVariable(), DomainOrRangeType.PERSON), getLanguage(), lexicalEntryUtil, getLexInfo().getPropertyValue("singular"), null);
         String nounToken = lexicalEntryUtil.getReturnVariableConditionLabel(lexicalEntryUtil.getSelectVariable());
         String object = String.format(
                 BINDING_TOKEN_TEMPLATE,
@@ -114,11 +115,12 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                                 if (getLanguage().equals(Language.DE)) {
                                     URI nounRef;
                                     if (nounToken.contains(" ")) {
-                                        nounRef = URI.create(LexiconSearch.LEXICON_BASE_URI + nounToken.replace(' ', '_').toLowerCase() + "_weak");
+                                        nounRef = URI.create(LexiconSearch.LEXICON_BASE_URI + nounToken.replace(' ', '_') + "_weak");
                                     } else {
-                                        nounRef = URI.create(LexiconSearch.LEXICON_BASE_URI + nounToken.toLowerCase());
+                                        nounRef = URI.create(LexiconSearch.LEXICON_BASE_URI + nounToken);
                                     }
                                     LexicalEntry entry = new LexiconSearch(lexicalEntryUtil.getLexicon()).getReferencedResource(nounRef);
+                                    //System.out.println("nounRef:::" + nounRef);
                                     String questionNoun = entry.getCanonicalForm().getWrittenRep().value;
                                     List<AnnotatedNounOrQuestionWord> questionWordNoun = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords(entry.getOtherForms());
 
@@ -126,8 +128,9 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                                         if (noun.getNumber().equals(toBeVerb.getNumber())) {
                                             questionNoun = noun.getWrittenRepValue();
                                         }
+                                        //System.out.println("questionNoun::"+questionNoun);
                                     }
-
+                                   
                                     determinerToken = getDeterminerTokenByNumber(
                                             toBeVerb.getNumber(),
                                             questionNoun,
@@ -164,6 +167,7 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                 }
             }
         }
+        
         return generatedSentences;
     }
 
@@ -231,12 +235,12 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                         if (det.getNumber().equals(lexicalEntryUtil.getLexInfo().getPropertyValue("singular"))
                                 && annotatedNoun.getGender().equals(det.getGender())) {
                             determiner = det.getWrittenRepValue();
-                        }
-                        else if (det.getNumber().equals(lexicalEntryUtil.getLexInfo().getPropertyValue("plural"))) {
+                        } else if (det.getNumber().equals(lexicalEntryUtil.getLexInfo().getPropertyValue("plural"))) {
                             determiner = det.getWrittenRepValue();
                         }
                     }
                 }
+
                 sentenceArray[npDeterminer.get().getPosition()] = determiner;
             }
             if (conditionLabel.isPresent()
@@ -275,6 +279,7 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                             getLanguage()
                     );
                 }
+                System.out.println("determinerToken:::" + determinerToken);
 
                 sentenceArray[conditionLabel.get().getPosition()] = determinerToken;
             }
@@ -288,6 +293,7 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                 }
             }
         }
+
         return generatedSentences;
     }
 
@@ -358,4 +364,6 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl {
                 .equals(getLexInfo().getPropertyValue("pronoun")))
                 .findFirst();
     }
+
+   
 }

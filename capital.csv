@@ -1,0 +1,2 @@
+LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),writtenForm (accusative),writtenForm (dative),writtenForm (genetive),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range
+capital-of-1,noun,Hauptstadt,-,Hauptstadt,Hauptstadt,Hauptstadt,von,NounPPFrame,range,domain,1,dbo:capital,dbo:Country,dbo:City

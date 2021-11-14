@@ -23,7 +23,8 @@
   lemon:entry    :fiktiver_charakter_strong ;
   lemon:entry    :musikalischer_künstler_weak ;
   lemon:entry    :musikalischer_künstler_strong ;
-  lemon:entry    :person ;
+  lemon:entry    :Person ;
+  lemon:entry    :Stadt ;
   lemon:entry    :werk ;
   lemon:entry    :agent ;
   lemon:entry    :museum ;
@@ -241,13 +242,25 @@
   lexinfo:partOfSpeech lexinfo:noun .
 
 
-:person a       lemon:LexicalEntry ;
+:Person a       lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "Person"@de ] ;
   lemon:otherForm      [ lemon:writtenRep "Person"@de ;
   lexinfo:gender                          lexinfo:feminine ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
   lemon:otherForm      [ lemon:writtenRep "Personen"@de ;
+  lexinfo:gender                          lexinfo:feminine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+:Stadt a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "Land"@de ] ;
+  lemon:otherForm      [ lemon:writtenRep "Land"@de ;
+  lexinfo:gender                          lexinfo:feminine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "Länder"@de ;
   lexinfo:gender                          lexinfo:feminine ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:plural ] ;

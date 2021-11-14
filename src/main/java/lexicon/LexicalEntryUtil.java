@@ -46,10 +46,12 @@ import java.util.stream.Collectors;
 
 import static grammar.sparql.Prefix.DBPEDIA;
 import static grammar.sparql.SPARQLRequest.SPARQL_ENDPOINT_URL;
+import static java.lang.System.exit;
 import static java.util.Objects.isNull;
+import util.io.TemplateConstants;
 
 @Getter
-public class LexicalEntryUtil {
+public class LexicalEntryUtil implements TemplateConstants{
 
     private static final Logger LOG = LogManager.getLogger(LexicalEntryUtil.class);
 
@@ -244,6 +246,10 @@ public class LexicalEntryUtil {
     public List<AnnotatedNounOrQuestionWord> parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords(Collection<LexicalForm> lexicalForms) {
         List<AnnotatedNounOrQuestionWord> annotatedNouns = new ArrayList<>();
         for (LexicalForm lexicalForm : lexicalForms) {
+            if (lexicalForm.getWrittenRep().value.equals(TemplateConstants.blankToken)) {
+                continue;
+            }
+
             AnnotatedNoun annotatedNoun
                     = new AnnotatedNoun(
                             lexicalForm.getWrittenRep().value,

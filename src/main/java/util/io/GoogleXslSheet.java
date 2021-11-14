@@ -17,27 +17,31 @@ public class GoogleXslSheet {
     public static Integer lemonEntryIndex = 0;
     public static Integer partOfSpeechIndex = 1;
     public static Integer writtenFormInfinitive = 2;
-    public static Integer NounPPFrameSyntacticFrameIndex = 5;
     public static Integer TransitFrameSyntacticFrameIndex = 5;
     public static Integer InTransitFrameSyntacticFrameIndex = 6;
     public static Integer AdjectiveFrameIndex = 3;
-
-    
 
     public static class NounPPFrame {
         //LemonEntry	partOfSpeech	writtenForm (singular)	writtenForm (plural)	preposition	SyntacticFrame	copulativeArg	prepositionalAdjunct	sense	reference	domain	range	GrammarRule1:question1	SPARQL	GrammarRule1: question2	SPARQL Question 2	GrammarRule 1: questions	SPARQL 	NP (Grammar Rule 2)		grammar rules	numberOfQuestions
         //birthPlace_of	noun	birth place	-	of	NounPPFrame	range	domain	1	dbo:birthPlace	dbo:Person	dbo:Place	#NAME?	#NAME?	#NAME?	#NAME?	#NAME?	#NAME?	#NAME?		2	
 
-        public static Integer writtenFormPluralIndex = 3;
-        public static Integer prepositionIndex = 4;
-        public static Integer syntacticFrameIndex = 5;
-        public static Integer copulativeArgIndex = 6;
-        public static Integer prepositionalAdjunctIndex = 7;
-        public static Integer senseIndex = 8;
-        public static Integer referenceIndex = 9;
-        public static Integer domainIndex = 10;
-        public static Integer rangeIndex = 11;
-        
+        public static Integer lexicalIdIndex = 0;
+        public static Integer partOfSpeechIndex = 1;
+        public static Integer genderIndex = 2;
+        public static Integer writtenFormSingularIndex = 3;
+        public static Integer writtenFormPluraIndex = 4;
+        public static Integer writtenFormAccusativeIndex = 5;
+        public static Integer writtenFormDativeIndex = 6;
+        public static Integer writtenFormGenetiveIndex = 7;
+        public static Integer prepositionIndex = 8;
+        public static Integer nounPPFrameSyntacticFrameIndex = 9;
+        public static Integer copulativeArgIndex = 10;
+        public static Integer prepositionalAdjunctIndex = 11;
+        public static Integer senseIndex = 12;
+        public static Integer referenceIndex = 13;
+        public static Integer domainIndex = 14;
+        public static Integer rangeIndex = 15;
+
         public static String getNounPPFrameHeader(String lemonEntry, String preposition, String language) {
             return "@prefix :        <http://localhost:8080/lexicon#> .\n"
                     + "\n"
@@ -58,33 +62,136 @@ public class GoogleXslSheet {
             senseIdStr = ":" + lemonEntry + " a       lemon:LexicalEntry ;\n"
                     + "  lexinfo:partOfSpeech lexinfo:noun ;\n"
                     + "  lemon:canonicalForm  :" + lemonEntry + "_form ;\n"
+                    + "  lemon:otherForm      :" + lemonEntry+"_plural_form" + " ;\n"
+                    + "  lemon:otherForm      :" + lemonEntry+"_accusative_form" + " ;\n"
+                    + "  lemon:otherForm      :" + lemonEntry+"_dative_form" + " ;\n"
+                    + "  lemon:otherForm      :" + lemonEntry+"_genitive_form" + " ;\n"
+                    + "  lemon:otherForm      :" + lemonEntry+"_plural_form" + " ;\n"
                     + senseIdStr
                     + "  lemon:synBehavior    :" + lemonEntry + "_nounpp .\n"
                     + "\n";
             return senseIdStr;
         }
 
-        public static String getWrittenTtl(String lemonEntry, String writtenFormInfinitive,String language) {
-            return ":" + lemonEntry + "_form a lemon:Form ;\n"
-                    + "  lemon:writtenRep \"" + writtenFormInfinitive + "\"@"+language+" .\n"
+        public static String getWrittenFormAll(String lemonEntry,String gender, String singular, String plural, String accusativeForm, String dativeForm, String writtenGenitiveForm, String language) {
+            String writtenForm
+                    = ":" + lemonEntry + "_form" + " a lemon:Form ;\n"
+                    + "  lemon:writtenRep \"" + singular + "\"@" + language + " ;\n"
+                    + "  lexinfo:gender   lexinfo:"+gender+" ;\n"
+                    + "  lexinfo:number   lexinfo:singular ;\n"
+                    + "  lexinfo:case     lexinfo:nominativeCase"+" .\n"
                     + "\n"
-                    + ":" + lemonEntry + "_nounpp a        lexinfo:NounPPFrame ;\n"
+                    + ":" + lemonEntry+"_plural_form" + " a lemon:Form ;\n"
+                    + "  lemon:writtenRep \"" + plural + "\"@" + language + " ;\n"
+                    + "  lexinfo:gender   lexinfo:"+gender+" ;\n"
+                    + "  lexinfo:number   lexinfo:plural ;\n"
+                    + "  lexinfo:case     lexinfo:nominativeCase"+" .\n"
+                    + "\n"
+                    + ":" + lemonEntry+"_accusative_form" + " a lemon:Form ;\n"
+                    + "  lemon:writtenRep \"" + accusativeForm + "\"@" + language + " ;\n"
+                    + "  lexinfo:gender   lexinfo:"+gender+" ;\n"
+                    + "  lexinfo:number   lexinfo:singular ;\n"
+                    + "  lexinfo:case     lexinfo:accusativeCase"+" .\n"
+                    + "\n"
+                    + ":" + lemonEntry+"_dative_form" + " a lemon:Form ;\n"
+                    + "  lemon:writtenRep \"" + dativeForm + "\"@" + language + " ;\n"
+                    + "  lexinfo:gender   lexinfo:"+gender+" ;\n"
+                    + "  lexinfo:number   lexinfo:singular ;\n"
+                    + "  lexinfo:case     lexinfo:dativeCase"+" .\n"
+                    + "\n"
+                    + ":" + lemonEntry+"_genitive_form" + " a lemon:Form ;\n"
+                    + "  lemon:writtenRep \"" + writtenGenitiveForm + "\"@" + language + " ;\n"
+                    + "  lexinfo:gender   lexinfo:"+gender+" ;\n"
+                    + "  lexinfo:number   lexinfo:singular ;\n"
+                    + "  lexinfo:case     lexinfo:genitiveCase"+" .\n"
+                    + "\n";
+           
+            String copulativeStr= ":" + lemonEntry + "_nounpp"+" a        lexinfo:NounPPFrame ;\n"
                     + "  lexinfo:copulativeArg        :arg1 ;\n"
                     + "  lexinfo:prepositionalAdjunct :arg2 .\n"
                     + "\n";
+
+            return writtenForm+copulativeStr;
+
         }
-        
-        public static String getPreposition(String preposition,String language ) {
-            return ":arg2 lemon:marker :"+preposition+" .\n"
+
+       
+
+        public static String getPreposition(String preposition, String language) {
+            return ":arg2 lemon:marker :" + preposition + " .\n"
                     + "\n"
                     + "## Prepositions ##\n"
                     + "\n"
-                    + ":"+preposition+" a                  lemon:SynRoleMarker ;\n"
-                    + "  lemon:canonicalForm  [ lemon:writtenRep \"" + preposition + "\"@"+"en"+" ] ;\n"
+                    + ":" + preposition + " a                  lemon:SynRoleMarker ;\n"
+                    + "  lemon:canonicalForm  [ lemon:writtenRep \"" + preposition + "\"@" + "en" + " ] ;\n"
                     + "  lexinfo:partOfSpeech lexinfo:preposition .";
         }
 
+        public static Integer getLexicalIdIndex() {
+            return lexicalIdIndex;
+        }
 
+        public static Integer getPartOfSpeechIndex() {
+            return partOfSpeechIndex;
+        }
+
+        public static Integer getGenderIndex() {
+            return genderIndex;
+        }
+
+        public static Integer getWrittenFormSingularIndex() {
+            return writtenFormSingularIndex;
+        }
+
+        public static Integer getWrittenFormPluraIndex() {
+            return writtenFormPluraIndex;
+        }
+
+        public static Integer getWrittenFormAccusativeIndex() {
+            return writtenFormAccusativeIndex;
+        }
+
+        public static Integer getWrittenFormDativeIndex() {
+            return writtenFormDativeIndex;
+        }
+
+        public static Integer getWrittenFormGenetiveIndex() {
+            return writtenFormGenetiveIndex;
+        }
+
+        public static Integer getPrepositionIndex() {
+            return prepositionIndex;
+        }
+
+        public static Integer getNounPPFrameSyntacticFrameIndex() {
+            return nounPPFrameSyntacticFrameIndex;
+        }
+
+        public static Integer getCopulativeArgIndex() {
+            return copulativeArgIndex;
+        }
+
+        public static Integer getPrepositionalAdjunctIndex() {
+            return prepositionalAdjunctIndex;
+        }
+
+        public static Integer getSenseIndex() {
+            return senseIndex;
+        }
+
+        public static Integer getReferenceIndex() {
+            return referenceIndex;
+        }
+
+        public static Integer getDomainIndex() {
+            return domainIndex;
+        }
+
+        public static Integer getRangeIndex() {
+            return rangeIndex;
+        }
+
+        
 
     }
 
@@ -94,36 +201,33 @@ public class GoogleXslSheet {
 
         public static Integer writtenForm3rdPerson = 3;
         public static Integer writtenFormPast = 4;
-        public static Integer syntacticIndex = 5;
+        public static Integer transitFrameSyntacticFrameIndex = 5;
         public static Integer subjectIndex = 6;
         public static Integer directObjectIndex = 7;
         public static Integer senseIndex = 8;
         public static Integer referenceIndex = 9;
         public static Integer domainIndex = 10;
         public static Integer rangeIndex = 11;
-        
-        
-        
-        
-  public static String getHeader(String lemonEntry,String preposition,String language) {
-        return "@prefix :        <http://localhost:8080/lexicon#> .\n"
-                + "\n"
-                + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
-                + "@prefix lemon:   <http://lemon-model.net/lemon#> .\n"
-                + "\n"
-                + "@base            <http://localhost:8080#> .\n"
-                + "\n"
-                + ":lexicon_en a    lemon:Lexicon ;\n"
-                + "  lemon:language \""+language+"\" ;\n"
-                + "  lemon:entry    :" +"to_"+ lemonEntry + " ;\n"
-                + "  lemon:entry    :" + lemonEntry + "ed"+" ;\n"
-                + "  lemon:entry    :"+preposition+" .\n"
-                + "\n";
-    }
-    
+
+        public static String getHeader(String lemonEntry, String preposition, String language) {
+            return "@prefix :        <http://localhost:8080/lexicon#> .\n"
+                    + "\n"
+                    + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
+                    + "@prefix lemon:   <http://lemon-model.net/lemon#> .\n"
+                    + "\n"
+                    + "@base            <http://localhost:8080#> .\n"
+                    + "\n"
+                    + ":lexicon_en a    lemon:Lexicon ;\n"
+                    + "  lemon:language \"" + language + "\" ;\n"
+                    + "  lemon:entry    :" + "to_" + lemonEntry + " ;\n"
+                    + "  lemon:entry    :" + lemonEntry + "ed" + " ;\n"
+                    + "  lemon:entry    :" + preposition + " .\n"
+                    + "\n";
+        }
+
         public static String getSenseIndexing(List<Tupples> tupples, String lemonEntry) {
             String senseIdStr = getSenseId(tupples);
-            senseIdStr = ":" +"to_"+ lemonEntry + " a           lemon:LexicalEntry ;\n"
+            senseIdStr = ":" + "to_" + lemonEntry + " a           lemon:LexicalEntry ;\n"
                     + "  lexinfo:partOfSpeech lexinfo:verb ;\n"
                     + "  lemon:canonicalForm  :form_" + lemonEntry + " ;\n"
                     + "  lemon:otherForm      :form_" + lemonEntry + "s ;\n"
@@ -134,19 +238,19 @@ public class GoogleXslSheet {
             return senseIdStr;
         }
 
-        public static String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast,String language) {
-            System.out.println("----------------"+writtenFormPast);
-            
+        public static String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast, String language) {
+            System.out.println("----------------" + writtenFormPast);
+
             return ":form_" + lemonEntry + " a         lemon:Form ;\n"
-                    + "  lemon:writtenRep     \"" + writtenFormInfinitive + "\"@"+language+" ;\n"
+                    + "  lemon:writtenRep     \"" + writtenFormInfinitive + "\"@" + language + " ;\n"
                     + "  lexinfo:verbFormMood lexinfo:infinitive .\n"
                     + "\n"
                     + ":form_" + lemonEntry + "s a    lemon:Form ;\n"
-                    + "  lemon:writtenRep \"" + writtenForm3rdPerson + "\"@"+language+" ;\n"
+                    + "  lemon:writtenRep \"" + writtenForm3rdPerson + "\"@" + language + " ;\n"
                     + "  lexinfo:person   lexinfo:secondPerson .\n"
                     + "\n"
                     + ":form_" + lemonEntry + "ed a   lemon:Form ;\n"
-                    + "  lemon:writtenRep \"" + writtenFormPast + "\"@"+language+" ;\n"
+                    + "  lemon:writtenRep \"" + writtenFormPast + "\"@" + language + " ;\n"
                     + "  lexinfo:tense    lexinfo:past .\n"
                     + "\n"
                     + ":" + lemonEntry + "_frame_transitive a lexinfo:TransitiveFrame ;\n"
@@ -154,8 +258,44 @@ public class GoogleXslSheet {
                     + "  lexinfo:directObject     :" + lemonEntry + "_obj .\n"
                     + "\n";
         }
-        
-      
+
+        public static Integer getWrittenForm3rdPerson() {
+            return writtenForm3rdPerson;
+        }
+
+        public static Integer getWrittenFormPast() {
+            return writtenFormPast;
+        }
+
+        public static Integer getTransitFrameSyntacticFrameIndex() {
+            return transitFrameSyntacticFrameIndex;
+        }
+
+       
+
+        public static Integer getSubjectIndex() {
+            return subjectIndex;
+        }
+
+        public static Integer getDirectObjectIndex() {
+            return directObjectIndex;
+        }
+
+        public static Integer getSenseIndex() {
+            return senseIndex;
+        }
+
+        public static Integer getReferenceIndex() {
+            return referenceIndex;
+        }
+
+        public static Integer getDomainIndex() {
+            return domainIndex;
+        }
+
+        public static Integer getRangeIndex() {
+            return rangeIndex;
+        }
 
     }
 
@@ -173,7 +313,7 @@ public class GoogleXslSheet {
         public static Integer referenceIndex = 10;
         public static Integer domainIndex = 11;
         public static Integer rangeIndex = 12;
-        
+
         public static String getHeader(String lemonEntry, String proposition, String language) {
             return "@prefix :        <http://localhost:8080/lexicon#> .\n"
                     + "\n"
@@ -188,33 +328,33 @@ public class GoogleXslSheet {
                     + "  lemon:entry    :" + proposition + " .\n"
                     + "\n";
         }
-        
+
         public static String getSenseIndexing(List<Tupples> senseIds, String lemonEntry) {
-        String senseIdStr = getSenseId(senseIds);
-        senseIdStr = ":"+ lemonEntry + " a             lemon:LexicalEntry ;\n"
-                + "  lexinfo:partOfSpeech lexinfo:verb ;\n"
-                + "  lemon:canonicalForm  :form_" + lemonEntry + " ;\n"
-                + "  lemon:otherForm      :form_" + lemonEntry + "_past ;\n"
-                + senseIdStr
-                + "  lemon:synBehavior    :" + lemonEntry + "_frame .\n"
-                + "\n";
-        return senseIdStr;
-    }
-        
-        public static String getWritten(String lemonEntry,String writtenFormInfinitive,String writtenForm3rdPerson,String writtenFormPast,String language) {
+            String senseIdStr = getSenseId(senseIds);
+            senseIdStr = ":" + lemonEntry + " a             lemon:LexicalEntry ;\n"
+                    + "  lexinfo:partOfSpeech lexinfo:verb ;\n"
+                    + "  lemon:canonicalForm  :form_" + lemonEntry + " ;\n"
+                    + "  lemon:otherForm      :form_" + lemonEntry + "_past ;\n"
+                    + senseIdStr
+                    + "  lemon:synBehavior    :" + lemonEntry + "_frame .\n"
+                    + "\n";
+            return senseIdStr;
+        }
+
+        public static String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast, String language) {
             return ":form_" + lemonEntry + " a           lemon:Form ;\n"
-                    + "  lemon:writtenRep     \"" + writtenFormInfinitive + "\"@"+language+" ;\n"
+                    + "  lemon:writtenRep     \"" + writtenFormInfinitive + "\"@" + language + " ;\n"
                     + "  lexinfo:verbFormMood lexinfo:infinitive .\n"
                     + "\n"
                     + "\n"
                     + ":form_" + lemonEntry + " a      lemon:Form ;\n"
-                    + "  lemon:writtenRep \"" + writtenForm3rdPerson + "\"@"+language+" ;\n"
+                    + "  lemon:writtenRep \"" + writtenForm3rdPerson + "\"@" + language + " ;\n"
                     + "  lexinfo:number   lexinfo:singular ;\n"
                     + "  lexinfo:person   lexinfo:thirdPerson ;\n"
                     + "  lexinfo:tense    lexinfo:present .\n"
                     + "\n"
                     + ":form_" + lemonEntry + "_past a lemon:Form ;\n"
-                    + "  lemon:writtenRep  \"" + writtenFormPast + "\"@"+language+" ;\n"
+                    + "  lemon:writtenRep  \"" + writtenFormPast + "\"@" + language + " ;\n"
                     + "  lexinfo:number    lexinfo:singular ;\n"
                     + "  lexinfo:person    lexinfo:thirdPerson ;\n"
                     + "  lexinfo:tense     lexinfo:past .\n"
@@ -223,6 +363,46 @@ public class GoogleXslSheet {
                     + "  lexinfo:subject              :" + lemonEntry + "_subj ;\n"
                     + "  lexinfo:prepositionalAdjunct :" + lemonEntry + "_obj .\n"
                     + "\n";
+        }
+
+        public static Integer getWrittenForm3rdPerson() {
+            return writtenForm3rdPerson;
+        }
+
+        public static Integer getWrittenFormPast() {
+            return writtenFormPast;
+        }
+
+        public static Integer getPreposition() {
+            return preposition;
+        }
+
+        public static Integer getSyntacticFrame() {
+            return SyntacticFrame;
+        }
+
+        public static Integer getSubject() {
+            return subject;
+        }
+
+        public static Integer getPrepositionalAdjunct() {
+            return prepositionalAdjunct;
+        }
+
+        public static Integer getSenseIndex() {
+            return senseIndex;
+        }
+
+        public static Integer getReferenceIndex() {
+            return referenceIndex;
+        }
+
+        public static Integer getDomainIndex() {
+            return domainIndex;
+        }
+
+        public static Integer getRangeIndex() {
+            return rangeIndex;
         }
 
     }
@@ -244,12 +424,11 @@ public class GoogleXslSheet {
         public static Integer classIndex = 12;
         public static Integer originalIndex = 13;
         public static Integer size = originalIndex + 1;
-        
-        public static String getAtrributiveFrameHeader(String lemonEntry,List<Tupples> senseIds,String language) {
+
+        public static String getAtrributiveFrameHeader(String lemonEntry, List<Tupples> senseIds, String language) {
             String senseIdStr = getSenseIdRes(senseIds);
-                    
-               return     
-                    "@prefix :        <http://localhost:8080/#> .\n"
+
+            return "@prefix :        <http://localhost:8080/#> .\n"
                     + "\n"
                     + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
                     + "@prefix lemon:   <http://lemon-model.net/lemon#> .\n"
@@ -258,7 +437,7 @@ public class GoogleXslSheet {
                     + "@base            <http://localhost:8080#> .\n"
                     + "\n"
                     + ":lexicon_en a    lemon:Lexicon ;\n"
-                    + "  lemon:language \""+language+"\" ;\n"
+                    + "  lemon:language \"" + language + "\" ;\n"
                     //+ "  lemon:entry    :" + lemonEntry + "_res ;\n"
                     + senseIdStr
                     + "  lemon:entry    :" + lemonEntry + " .\n"
@@ -267,7 +446,7 @@ public class GoogleXslSheet {
 
         public static String getAtrributiveFrameIndexing(List<Tupples> senseIds, String lemonEntry) {
             String senseIdStr = getSenseId(senseIds);
-            senseIdStr = ":"+lemonEntry + " a             lemon:LexicalEntry ;\n"
+            senseIdStr = ":" + lemonEntry + " a             lemon:LexicalEntry ;\n"
                     + "  lexinfo:partOfSpeech lexinfo:adjective ;\n"
                     + "  lemon:canonicalForm  :" + lemonEntry + "_lemma ;\n"
                     + senseIdStr
@@ -276,44 +455,44 @@ public class GoogleXslSheet {
             return senseIdStr;
         }
 
-        public static String getAtrrtibutiveWrittenForm(String lemonEntry, String writtenFormInfinitive,String language) {
-            return ":" + lemonEntry + "_lemma lemon:writtenRep \"" + writtenFormInfinitive + "\"@"+language+" .\n"
+        public static String getAtrrtibutiveWrittenForm(String lemonEntry, String writtenFormInfinitive, String language) {
+            return ":" + lemonEntry + "_lemma lemon:writtenRep \"" + writtenFormInfinitive + "\"@" + language + " .\n"
                     + "\n"
-                    + ":"+lemonEntry+"_predFrame a        lexinfo:AdjectivePredicateFrame ;\n"
+                    + ":" + lemonEntry + "_predFrame a        lexinfo:AdjectivePredicateFrame ;\n"
                     + "  lexinfo:copulativeSubject :" + lemonEntry + "_PredSynArg .\n"
                     + "\n"
-                    + ":"+lemonEntry+"_attrFrame a     lexinfo:AdjectiveAttributiveFrame ;\n"
+                    + ":" + lemonEntry + "_attrFrame a     lexinfo:AdjectiveAttributiveFrame ;\n"
                     + "  lexinfo:attributiveArg :" + lemonEntry + "_AttrSynArg .\n"
                     + "\n";
 
         }
     }
-    
-     public static String getSenseId(List<Tupples> senseIds) {
-        String str="";
-        for (Tupples tupple: senseIds) {
-            String line="  lemon:sense          :" + tupple.getSenseId() + " ;\n";
-            str+=line;
+
+    public static String getSenseId(List<Tupples> senseIds) {
+        String str = "";
+        for (Tupples tupple : senseIds) {
+            String line = "  lemon:sense          :" + tupple.getSenseId() + " ;\n";
+            str += line;
         }
         return str;
     }
-     
-      public static String getSenseIdRes(List<Tupples> senseIds) {
-        String str="";
-        for (Tupples tupple: senseIds) {
-            String line="   lemon:entry          :" + tupple.getSenseId() + "_res ;\n";
-            str+=line;
+
+    public static String getSenseIdRes(List<Tupples> senseIds) {
+        String str = "";
+        for (Tupples tupple : senseIds) {
+            String line = "   lemon:entry          :" + tupple.getSenseId() + "_res ;\n";
+            str += line;
         }
         return str;
     }
-    
-    public static String getSenseDetail(List<Tupples> tupples, String syntacticFrame, String lemonEntry,String pastTense,String preposition,String language) {
+
+    public static String getSenseDetail(List<Tupples> tupples, String syntacticFrame, String lemonEntry, String pastTense, String preposition, String language) {
         String str = "";
         if (syntacticFrame.equals(TemplateVariable.TransitiveFrame)) {
             str = "";
             for (Tupples tupple : tupples) {
                 String line = ":" + tupple.getSenseId() + " a   lemon:OntoMap, lemon:LexicalSense ;\n"
-                        + "  lemon:ontoMapping :" + tupple.getSenseId()+" ;\n"
+                        + "  lemon:ontoMapping :" + tupple.getSenseId() + " ;\n"
                         + "  lemon:reference   <" + tupple.getReference() + "> ;\n"
                         + "  lemon:subjOfProp  :" + lemonEntry + "_obj ;\n"
                         + "  lemon:objOfProp   :" + lemonEntry + "_subj ;\n"
@@ -326,40 +505,40 @@ public class GoogleXslSheet {
                         + "\n";
                 str += line;
             }
-            String intransitiveStr="";
-            lemonEntry=lemonEntry + "ed";
+            String intransitiveStr = "";
+            lemonEntry = lemonEntry + "ed";
             for (Tupples tupple : tupples) {
-                String line=":"+lemonEntry+" a            lemon:LexicalEntry ;\n"
-                    + "  lexinfo:partOfSpeech lexinfo:adjective ;\n"
-                    + "  lemon:canonicalForm  :form_"+lemonEntry+"_canonical ;\n"
-                    + "  lemon:otherForm      :form_"+lemonEntry+"_by ;\n"
-                    + "  lemon:synBehavior    :"+lemonEntry+"_frame_adjectivepp ;\n"
-                    + "  lemon:sense          :"+lemonEntry+"_ontomap .\n"
-                    + "\n"
-                    + ":form_"+lemonEntry+"_canonical a lemon:Form ;\n"
-                    + "  lemon:writtenRep         \""+pastTense+"\"@"+language+" .\n"
-                    + "\n"
-                    + ":form_"+lemonEntry+"_by a    lemon:Form ;\n"
-                    + "  lemon:writtenRep     \""+pastTense+"\"@"+language+" ;\n"
-                    + "  lexinfo:verbFormMood lexinfo:participle .\n"
-                    + "\n"
-                    + "\n"
-                    + ":"+lemonEntry+"_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;\n"
-                    + "  lexinfo:copulativeSubject    :"+lemonEntry+"_subj ;\n"
-                    + "  lexinfo:prepositionalAdjunct :"+lemonEntry+"_obj .\n"
-                    + "\n"
-                    + ":"+lemonEntry+"_ontomap"+" a lemon:OntoMap, lemon:LexicalSense ;\n"
-                    + "  lemon:ontoMapping :"+lemonEntry+"_ontomap"+" ;\n"
-                    + "  lemon:reference   <" + tupple.getReference() + "> ;\n"
-                    + "  lemon:subjOfProp  :"+lemonEntry+"_subj ;\n"
-                    + "  lemon:objOfProp   :"+lemonEntry+"_obj ;\n"
-                    + "  lemon:condition   :"+tupple.getSenseId()+"_condition .";
-                intransitiveStr+=line;
+                String line = ":" + lemonEntry + " a            lemon:LexicalEntry ;\n"
+                        + "  lexinfo:partOfSpeech lexinfo:adjective ;\n"
+                        + "  lemon:canonicalForm  :form_" + lemonEntry + "_canonical ;\n"
+                        + "  lemon:otherForm      :form_" + lemonEntry + "_by ;\n"
+                        + "  lemon:synBehavior    :" + lemonEntry + "_frame_adjectivepp ;\n"
+                        + "  lemon:sense          :" + lemonEntry + "_ontomap .\n"
+                        + "\n"
+                        + ":form_" + lemonEntry + "_canonical a lemon:Form ;\n"
+                        + "  lemon:writtenRep         \"" + pastTense + "\"@" + language + " .\n"
+                        + "\n"
+                        + ":form_" + lemonEntry + "_by a    lemon:Form ;\n"
+                        + "  lemon:writtenRep     \"" + pastTense + "\"@" + language + " ;\n"
+                        + "  lexinfo:verbFormMood lexinfo:participle .\n"
+                        + "\n"
+                        + "\n"
+                        + ":" + lemonEntry + "_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;\n"
+                        + "  lexinfo:copulativeSubject    :" + lemonEntry + "_subj ;\n"
+                        + "  lexinfo:prepositionalAdjunct :" + lemonEntry + "_obj .\n"
+                        + "\n"
+                        + ":" + lemonEntry + "_ontomap" + " a lemon:OntoMap, lemon:LexicalSense ;\n"
+                        + "  lemon:ontoMapping :" + lemonEntry + "_ontomap" + " ;\n"
+                        + "  lemon:reference   <" + tupple.getReference() + "> ;\n"
+                        + "  lemon:subjOfProp  :" + lemonEntry + "_subj ;\n"
+                        + "  lemon:objOfProp   :" + lemonEntry + "_obj ;\n"
+                        + "  lemon:condition   :" + tupple.getSenseId() + "_condition .";
+                intransitiveStr += line;
             }
-            String prep="\n"
-                +":" + lemonEntry + "_obj lemon:marker :"+preposition+" .\n"
-                + "\n";
-            str=str+intransitiveStr+prep;
+            String prep = "\n"
+                    + ":" + lemonEntry + "_obj lemon:marker :" + preposition + " .\n"
+                    + "\n";
+            str = str + intransitiveStr + prep;
         } else if (syntacticFrame.equals(TemplateVariable.IntransitivePPFrame)) {
             for (Tupples tupple : tupples) {
                 String line = ":" + tupple.getSenseId() + " a     lemon:OntoMap, lemon:LexicalSense ;\n"
@@ -375,10 +554,10 @@ public class GoogleXslSheet {
                         + "\n";
                 str += line;
             }
-            String prep="\n"
-                +":" + lemonEntry + "_obj lemon:marker :"+preposition+" .\n"
-                + "\n";
-             str=str+prep;
+            String prep = "\n"
+                    + ":" + lemonEntry + "_obj lemon:marker :" + preposition + " .\n"
+                    + "\n";
+            str = str + prep;
 
         } else if (syntacticFrame.equals(TemplateVariable.NounPPFrame)) {
             for (Tupples tupple : tupples) {
@@ -399,7 +578,7 @@ public class GoogleXslSheet {
             for (Tupples tupple : tupples) {
                 String line = ":" + tupple.getSenseId() + " a  lemon:LexicalSense ;\n"
                         + "  lemon:reference :" + tupple.getSenseId() + "_res ;\n"
-                        + "  lemon:isA       :" + lemonEntry + "_AttrSynArg, :"+lemonEntry+"_PredSynArg .\n"
+                        + "  lemon:isA       :" + lemonEntry + "_AttrSynArg, :" + lemonEntry + "_PredSynArg .\n"
                         + "\n"
                         + ":" + tupple.getSenseId() + "_res a   owl:Restriction ;\n"
                         + "  owl:onProperty <" + tupple.getDomain() + "> ;\n"
@@ -410,14 +589,47 @@ public class GoogleXslSheet {
 
         return str;
     }
-    
-    public static String getPrepostion(String preposition,String language) {
-        return    "## Prepositions ##\n"
-                + ":"+preposition+" a                  lemon:SynRoleMarker ;\n"
-                + "  lemon:canonicalForm  [ lemon:writtenRep \"" + preposition + "\"@"+language+" ] ;\n"
+
+    public static String getPrepostion(String preposition, String language) {
+        return "## Prepositions ##\n"
+                + ":" + preposition + " a                  lemon:SynRoleMarker ;\n"
+                + "  lemon:canonicalForm  [ lemon:writtenRep \"" + preposition + "\"@" + language + " ] ;\n"
                 + "  lexinfo:partOfSpeech lexinfo:preposition .\n"
                 + "\n"
                 + "";
     }
+
+    public static Integer getLemonEntryIndex() {
+        return lemonEntryIndex;
+    }
+
+    public static Integer getPartOfSpeechIndex() {
+        return partOfSpeechIndex;
+    }
+
+    public static Integer getWrittenFormInfinitive() {
+        return writtenFormInfinitive;
+    }
+
+   
+
+    public static Integer getTransitFrameSyntacticFrameIndex() {
+        return TransitFrameSyntacticFrameIndex;
+    }
+
+    public static Integer getInTransitFrameSyntacticFrameIndex() {
+        return InTransitFrameSyntacticFrameIndex;
+    }
+
+    public static Integer getAdjectiveFrameIndex() {
+        return AdjectiveFrameIndex;
+    }
+    
+      /*
+                      "  lemon:otherForm    :" + lemonEntry+"_accusative_form" + " ;\n"
+                    + "  lemon:otherForm    :" + lemonEntry+"_dative_form" + " ;\n"
+                    + "  lemon:otherForm    :" + lemonEntry+"_genitive_form" + " ;\n"
+                    + "  lemon:otherForm    :" + lemonEntry+"_plural_form" + " ;\n"
+            */
 
 }

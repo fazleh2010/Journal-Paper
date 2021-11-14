@@ -40,5 +40,8 @@ public interface TemplateConstants {
     public static String ACTIVE = "active";
     public static String PASSIVE = "passive";
      public static String pronoun="pronoun";
+    public static String blankToken="-";
+
+     
 
 }
