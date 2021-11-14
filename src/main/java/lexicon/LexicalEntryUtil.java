@@ -83,9 +83,9 @@ public class LexicalEntryUtil {
 
     public static SelectVariable getOppositeSelectVariable(SelectVariable selectVariable) {
         return selectVariable
-                .equals(SelectVariable.SUBJECT_OF_PROPERTY)
-                ? SelectVariable.OBJECT_OF_PROPERTY
-                : SelectVariable.SUBJECT_OF_PROPERTY;
+                .equals(SelectVariable.subjOfProp)
+                ? SelectVariable.objOfProp
+                : SelectVariable.subjOfProp;
     }
 
     /**
@@ -372,8 +372,8 @@ public class LexicalEntryUtil {
             }
         } else {
             SelectVariable selectVariable = domainOrRange.equals("domain")
-                    ? SelectVariable.SUBJECT_OF_PROPERTY
-                    : SelectVariable.OBJECT_OF_PROPERTY;
+                    ? SelectVariable.subjOfProp
+                    : SelectVariable.objOfProp;
             domainOrRangeResponse = getConditionUriBySelectVariable(selectVariable).toString();
         }
         // always default to SubjectType.THING if not Person or not found
@@ -421,7 +421,7 @@ public class LexicalEntryUtil {
      */
     public URI getConditionUriBySelectVariable(SelectVariable selectVariable) {
         URI domainOrRangeUri;
-        if (selectVariable.equals(SelectVariable.SUBJECT_OF_PROPERTY)) {
+        if (selectVariable.equals(SelectVariable.subjOfProp)) {
             domainOrRangeUri = getConditionFromSense(Condition.propertyDomain);
         } else {
             domainOrRangeUri = getConditionFromSense(Condition.propertyRange);
@@ -507,16 +507,16 @@ public class LexicalEntryUtil {
                 .iterator().next().getURI();
         // match to sense arg value
         if (lexicalSense.getSubjOfProps().stream().anyMatch(argument -> argument.getURI().equals(argValue))) {
-            selectVariable = SelectVariable.SUBJECT_OF_PROPERTY;
+            selectVariable = SelectVariable.subjOfProp;
         } else if (lexicalSense.getObjOfProps().stream().anyMatch(argument -> argument.getURI().equals(argValue))) {
-            selectVariable = SelectVariable.OBJECT_OF_PROPERTY;
+            selectVariable = SelectVariable.objOfProp;
         } else if (lexicalSense.getIsAs().stream().anyMatch(argument -> argument.getURI().equals(argValue))) {
             selectVariable = SelectVariable.IS_A;
         } else {
             LOG.warn("No selectVariable found for {}, defaulting to {}",
-                    lexicalEntry.getURI(), SelectVariable.OBJECT_OF_PROPERTY.getVariableName()
+                    lexicalEntry.getURI(), SelectVariable.objOfProp.getVariableName()
             );
-            selectVariable = SelectVariable.OBJECT_OF_PROPERTY;
+            selectVariable = SelectVariable.objOfProp;
         }
         return selectVariable;
     }

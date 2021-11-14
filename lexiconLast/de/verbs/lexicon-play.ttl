@@ -1,0 +1,99 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_de a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :spielen ;
+  lemon:entry    :gespielt ;
+  lemon:entry    :von .
+
+:spielen a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_spielen_inf ;
+  lemon:otherForm      :form_spielt ;
+  lemon:otherForm      :form_spielen ;
+  lemon:otherForm      :form_spielte ;
+  lemon:otherForm      :form_spielten ;
+  lemon:synBehavior    :spielen_frame_transitive ;
+  lemon:sense          :spielen_ontomap .
+
+:form_spielen_inf a           lemon:Form ;
+  lemon:writtenRep     "spielen"@de ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_spielt a      lemon:Form ;
+  lemon:writtenRep "spielt"@de ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:tense    lexinfo:present ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_spielen a      lemon:Form ;
+  lemon:writtenRep "spielen"@de ;
+  lexinfo:number   lexinfo:plural ;
+  lexinfo:tense    lexinfo:present ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_spielte a     lemon:Form ;
+  lemon:writtenRep "spielte"@de ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:tense    lexinfo:past .
+
+:form_spielten a     lemon:Form ;
+  lemon:writtenRep "spielten"@de ;
+  lexinfo:number   lexinfo:plural ;
+  lexinfo:tense    lexinfo:past .
+
+:spielen_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject        :spielen_subj ;
+  lexinfo:directObject   :spielen_obj .
+
+:spielen_ontomap a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :spielen_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/portrayer> ;
+  lemon:subjOfProp  :spielen_obj ;
+  lemon:objOfProp   :spielen_subj ;
+  lemon:condition   :spielen_condition .
+
+:spielen_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/FictionalCharacter> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+# see https://lemon-model.net/lemon-cookbook/node17.html
+
+:gespielt a              lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_gespielt_canonical ;
+  lemon:otherForm      :form_gespielt_von ;
+  lemon:synBehavior    :gespielt_frame_adjectivepp ;
+  lemon:sense          :gespielt_ontomap .
+
+:form_gespielt_canonical a lemon:Form ;
+  lemon:writtenRep       "gespielt"@de .
+
+:form_gespielt_von a      lemon:Form ;
+  lemon:writtenRep     "gespielt"@de ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+:gespielt_frame_adjectivepp a    lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :gespielt_subj ;
+  lexinfo:prepositionalAdjunct :gespielt_obj .
+
+:gespielt_ontomap a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :gespielt_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/portrayer> ;
+  lemon:subjOfProp  :gespielt_subj ;
+  lemon:objOfProp   :gespielt_obj ;
+  lemon:condition   :spielen_condition .
+
+:gespielt_obj lemon:marker :von .
+
+## Prepositions ##
+
+:von a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "von"@de ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

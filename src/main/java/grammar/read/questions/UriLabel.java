@@ -19,6 +19,15 @@ public class UriLabel {
     private String label;
     @JsonProperty("uri")
     private String uri;
+    
+    public UriLabel() {
+        
+    }
+    
+    public UriLabel(String uri, String label) {
+        this.uri = uri;
+        this.label = label;
+    }
 
     public String getLabel() {
         return label;

@@ -1,0 +1,108 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_de a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :ausstellen ;
+  lemon:entry    :ausgestellt ;
+  lemon:entry    :aus ;
+  lemon:entry    :von .
+
+:ausstellen a          lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_ausstellen ;
+  lemon:otherForm      :form_stellt_aus ;
+  lemon:otherForm      :form_stellen_aus ;
+  lemon:otherForm      :form_stellte_aus ;
+  lemon:otherForm      :form_stellten_aus ;
+  lemon:synBehavior    :ausstellen_frame_transitive ;
+  lemon:sense          :ausstellen_ontomap .
+
+:form_ausstellen a        lemon:Form ;
+  lemon:writtenRep     "ausstellen"@de ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_stellt_aus a   lemon:Form ;
+  lemon:writtenRep "stellt"@de ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:tense    lexinfo:present ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_stellen_aus a   lemon:Form ;
+  lemon:writtenRep "stellen"@de ;
+  lexinfo:number   lexinfo:plural ;
+  lexinfo:tense    lexinfo:present ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_stellte_aus a  lemon:Form ;
+  lemon:writtenRep "stellte"@de ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:tense    lexinfo:past .
+
+:form_stellten_aus a  lemon:Form ;
+  lemon:writtenRep "stellten"@de ;
+  lexinfo:number   lexinfo:plural ;
+  lexinfo:tense    lexinfo:past .
+
+:ausstellen_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject           :ausstellen_subj ;
+  lexinfo:directObject      :ausstellen_obj .
+
+:ausstellen_ontomap a  lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :ausstellen_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/museum> ;
+  lemon:subjOfProp  :ausstellen_obj ;
+  lemon:objOfProp   :ausstellen_subj ;
+  lemon:condition   :ausstellen_condition .
+
+:ausstellen_condition a   lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Artwork> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Museum> .
+
+:ausstellen_obj lemon:marker :aus .
+
+# see https://lemon-model.net/lemon-cookbook/node17.html
+
+:ausgestellt a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_ausgestellt_canonical ;
+  lemon:otherForm      :form_ausgestellt_von ;
+  lemon:synBehavior    :ausgestellt_frame_adjectivepp ;
+  lemon:sense          :ausgestellt_ontomap .
+
+:form_ausgestellt_canonical a lemon:Form ;
+  lemon:writtenRep          "ausgestellt"@de .
+
+:form_ausgestellt_von a   lemon:Form ;
+  lemon:writtenRep     "ausgestellt"@de ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+:ausgestellt_frame_adjectivepp a lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :ausgestellt_subj ;
+  lexinfo:prepositionalAdjunct :ausgestellt_obj .
+
+:ausgestellt_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping  :ausgestellt_ontomap ;
+  lemon:reference    <http://dbpedia.org/ontology/museum> ;
+  lemon:subjOfProp   :ausgestellt_subj ;
+  lemon:objOfProp    :ausgestellt_obj ;
+  lemon:condition    :ausstellen_condition .
+
+:ausgestellt_obj lemon:marker :von .
+
+## Particles ##
+
+:aus a                 lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "aus"@de ] ;
+  lexinfo:partOfSpeech lexinfo:particle .
+
+## Prepositions ##
+
+:von a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "von"@de ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
