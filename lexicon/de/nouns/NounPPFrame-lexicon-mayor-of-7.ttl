@@ -1,0 +1,75 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :mayor-of-7 ;
+  lemon:entry    :von .
+
+:mayor-of-7 a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :mayor-of-7_form ;
+  lemon:otherForm      :mayor-of-7_plural_form ;
+  lemon:otherForm      :mayor-of-7_accusative_form ;
+  lemon:otherForm      :mayor-of-7_dative_form ;
+  lemon:otherForm      :mayor-of-7_genitive_form ;
+  lemon:otherForm      :mayor-of-7_plural_form ;
+  lemon:sense          :mayor-of-7_sense_1 ;
+  lemon:synBehavior    :mayor-of-7_nounpp .
+
+:mayor-of-7_form a lemon:Form ;
+  lemon:writtenRep "B�rgermeister"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:nominativeCase .
+
+:mayor-of-7_plural_form a lemon:Form ;
+  lemon:writtenRep "-"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:plural ;
+  lexinfo:case     lexinfo:nominativeCase .
+
+:mayor-of-7_accusative_form a lemon:Form ;
+  lemon:writtenRep "B�rgermeister"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:accusativeCase .
+
+:mayor-of-7_dative_form a lemon:Form ;
+  lemon:writtenRep "B�rgermeister"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:dativeCase .
+
+:mayor-of-7_genitive_form a lemon:Form ;
+  lemon:writtenRep "B�rgermeisters"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:genitiveCase .
+
+:mayor-of-7_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:mayor-of-7_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :mayor-of-7_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/leaderName> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :mayor-of-7_sense_1_condition .
+
+:mayor-of-7_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Place> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Person> .
+
+:arg2 lemon:marker :von .
+
+## Prepositions ##
+
+:von a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "von"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

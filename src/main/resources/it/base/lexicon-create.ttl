@@ -1,0 +1,97 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :to_create ;
+  lemon:entry    :created ;
+  lemon:entry    :by .
+
+:to_create a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_create ;
+  lemon:otherForm      :form_created ;
+  lemon:synBehavior    :create_frame_transitive ;
+  lemon:sense          :create_sense1 ;
+  lemon:sense          :create_sense2 .
+
+
+:form_create a         lemon:Form ;
+  lemon:writtenRep     "creare"@en ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_created a    lemon:Form ;
+  lemon:writtenRep "creato"@en ;
+  lexinfo:tense    lexinfo:past .
+
+:create_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :create_subj ;
+  lexinfo:directObject     :create_obj .
+
+:create_sense1 a    lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :create_sense1 ;
+  lemon:reference   <http://dbpedia.org/ontology/creator> ;
+  lemon:subjOfProp  :create_obj ;
+  lemon:objOfProp   :create_subj ;
+  lemon:condition   :create_condition_televisionShow .
+
+:create_condition_televisionShow a lemon:condition ;
+  lemon:propertyDomain             <http://dbpedia.org/ontology/TelevisionShow> ;
+  lemon:propertyRange              <http://dbpedia.org/ontology/Agent> .
+
+:create_sense2 a    lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :create_sense3 ;
+  lemon:reference   <http://dbpedia.org/ontology/creator> ;
+  lemon:subjOfProp  :create_obj ;
+  lemon:objOfProp   :create_subj ;
+  lemon:condition   :create_condition_work .
+
+:create_condition_work a lemon:condition ;
+  lemon:propertyDomain   <http://dbpedia.org/ontology/Work> ;
+  lemon:propertyRange    <http://dbpedia.org/ontology/Agent> .
+
+:created a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_created_canonical ;
+  lemon:otherForm      :form_created_by ;
+  lemon:synBehavior    :created_frame_adjectivepp ;
+  lemon:sense          :created_sense1 ;
+  lemon:sense          :created_sense2 .
+
+:form_created_canonical a lemon:Form ;
+  lemon:writtenRep        "creato"@en .
+
+:form_created_by a     lemon:Form ;
+  lemon:writtenRep     "creato"@en ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:created_frame_adjectivepp a   lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :created_subj ;
+  lexinfo:prepositionalAdjunct :created_obj .
+
+:created_sense1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :created_sense1 ;
+  lemon:reference   <http://dbpedia.org/ontology/creator> ;
+  lemon:subjOfProp  :created_subj ;
+  lemon:objOfProp   :created_obj ;
+  lemon:condition   :create_condition_televisionShow .
+
+:created_sense2 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :created_sense3 ;
+  lemon:reference   <http://dbpedia.org/ontology/creator> ;
+  lemon:subjOfProp  :created_subj ;
+  lemon:objOfProp   :created_obj ;
+  lemon:condition   :create_condition_work .
+
+:created_obj lemon:marker :by .
+
+## Prepositions ##
+
+:by a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "by"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

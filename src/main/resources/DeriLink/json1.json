@@ -1,0 +1,121 @@
+{
+  "status": "success",
+  "result": {
+    "document_id": "09e59afb-50ce-41b4-bde3-53a1953020fd",
+    "format": "json-ld",
+    "rdf_data": [
+      {
+        "@id": "http://www.citizensinformation.ie",
+        "@type": [
+          "http://www.w3.org/2000/01/rdf-schema#Class"
+        ],
+        "http://www.citizensinformation.ie/how-do-I-apply-for-a-mygovid-account-?_f2e15fac-426a-4c58-af7d-7764ae872d29#hasSection": [
+          {
+            "@id": "http%3A%2F%2Fwww.citizensinformation.ie%2F%23apply-for-social-welfare-payment-and-service-online_a82968af-2590-4400-90de-99670e7d50e6"
+          }
+        ]
+      },
+      {
+        "@id": "http%3A%2F%2Fwww.citizensinformation.ie%2F%23apply-for-social-welfare-payment-and-service-online_a82968af-2590-4400-90de-99670e7d50e6",
+        "@type": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        ],
+        "http://www.citizensinformation.ie/how-do-I-apply-for-a-mygovid-account-?_f2e15fac-426a-4c58-af7d-7764ae872d29#hasSection": [
+          {
+            "@id": "http%3A%2F%2Fwww.citizensinformation.ie%2F%23how-do-I-apply-for-a-mygovid-account-%3F_f2e15fac-426a-4c58-af7d-7764ae872d29"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Applying for social welfare payments and services online."
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+          {
+            "@id": "http://www.citizensinformation.ie"
+          }
+        ]
+      },
+      {
+        "@id": "http://www.citizensinformation.ie/how-do-I-apply-for-a-mygovid-account-?_f2e15fac-426a-4c58-af7d-7764ae872d29#hasReferenceLink",
+        "@type": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        ]
+      },
+      {
+        "@id": "http%3A%2F%2Fwww.citizensinformation.ie%2F%23how-do-I-apply-for-a-mygovid-account-%3F_f2e15fac-426a-4c58-af7d-7764ae872d29",
+        "@type": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        ],
+        "http%3A%2F%2Fwww.citizensinformation.ie%2F%23hasId": [
+          {
+            "@value": "09e59afb-50ce-41b4-bde3-53a1953020fd"
+          }
+        ],
+        "http%3A%2F%2Fwww.citizensinformation.ie%2F%23hasLocation": [
+          {
+            "@value": "MyWelfare"
+          }
+        ],
+        "http%3A%2F%2Fwww.citizensinformation.ie%2F%23hasOrganization": [
+          {
+            "@value": "Public Services Card"
+          },
+          {
+            "@value": "PPS"
+          },
+          {
+            "@value": "Register"
+          }
+        ],
+        "http%3A%2F%2Fwww.citizensinformation.ie%2F%23hasPeriod": [
+          {
+            "@value": "now"
+          }
+        ],
+        "http%3A%2F%2Fwww.citizensinformation.ie%2F%23hasProperty": [
+          {
+            "@value": "personinfo"
+          }
+        ],
+        "http%3A%2F%2Fwww.citizensinformation.ie%2F%23hasValue": [
+          {
+            "@value": "two"
+          }
+        ],
+        "http://www.citizensinformation.ie/how-do-I-apply-for-a-mygovid-account-?_f2e15fac-426a-4c58-af7d-7764ae872d29#hasContent": [
+          {
+            "@value": "To create your basic MyGovID account, visit MyGovID.ie, enter your email address, create a password and click ‘Register now’. A code will be sent to your email address which you will need to enter on screen to complete your basic account registration. Once you have activated your MyGovID account, you can log into your basic account. You will see a list of online services including MyWelfare services. You can also log directly into MyWelfare using your MyGovID. If you want to upgrade from a basic to a verified MyGovID account, you need: A PPS number (see below) A Public Services Card (see below) A verified phone that can receive text messages. If your phone is not verified already, you can verify your phone online or call: 1890 927 999. Every time you access your verified MyGovID account, you will be asked to enter a verification code sent to your mobile phone. This two-step authentication process makes your account very secure."
+          }
+        ],
+        "http://www.citizensinformation.ie/how-do-I-apply-for-a-mygovid-account-?_f2e15fac-426a-4c58-af7d-7764ae872d29#hasReferenceLink": [
+          {
+            "@value": "https://www.citizensinformation.ie/social_welfare/irish_social_welfare_system/claiming_a_social_welfare_payment/applying_for_social_welfare_payments_and_services_online.html"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "How do I apply for a MyGovID\naccount?."
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+          {
+            "@id": "http%3A%2F%2Fwww.citizensinformation.ie%2F%23apply-for-social-welfare-payment-and-service-online_a82968af-2590-4400-90de-99670e7d50e6"
+          }
+        ]
+      },
+      {
+        "@id": "http://www.citizensinformation.ie/how-do-I-apply-for-a-mygovid-account-?_f2e15fac-426a-4c58-af7d-7764ae872d29#hasSection",
+        "@type": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        ]
+      },
+      {
+        "@id": "http://www.citizensinformation.ie/how-do-I-apply-for-a-mygovid-account-?_f2e15fac-426a-4c58-af7d-7764ae872d29#hasContent",
+        "@type": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        ]
+      }
+    ]
+  }
+}
