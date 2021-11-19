@@ -1,4 +1,0 @@
-LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range
-protein-1,noun,Hauptstadt,-,von,NounPPFrame,range,domain,1,rdf:type,dbo:ChemicalCompound,dbo:Protein
-Protein-2,noun,Hauptstadt,-,von,NounPPFrame,range,domain,1,rdf:type,dbo:Protein,dbo:Protein
-Protein-3,noun,Hauptstadt,-,von,NounPPFrame,range,domain,1,rdf:type,dbo:Biomolecule,dbo:Protein
