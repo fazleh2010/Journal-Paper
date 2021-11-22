@@ -1,6 +1,9 @@
 package grammar.generator;
 
 import grammar.datasets.annotated.AnnotatedVerb;
+import grammar.datasets.sentencetemplates.TempConstants;
+import static grammar.datasets.sentencetemplates.TempConstants.booleanQuestionDomain;
+import static grammar.datasets.sentencetemplates.TempConstants.booleanQuestionDomainRange;
 import grammar.structure.component.FrameType;
 import grammar.structure.component.Language;
 import grammar.structure.component.SentenceType;
@@ -16,10 +19,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.logging.Level;
-import static util.io.TemplateConstants.BACKWARD;
-import static util.io.TemplateConstants.FORWARD;
+import org.apache.jena.query.QueryType;
 
-public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
+public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot implements TempConstants {
 
     private static final Logger LOG = LogManager.getLogger(TransitiveVPGrammarRuleGenerator.class);
 
@@ -32,14 +34,15 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
             LexicalEntryUtil lexicalEntryUtil
     ) throws QueGGMissingFactoryClassException {
         List<String> generatedSentences = new ArrayList<>();
-        List<String> sentenceTemplates = getSentenceTemplateRepository().findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
-                getLanguage(), new String[]{getFrameType().getName(), FORWARD, getLanguage().toString()});
+    
         String bindingVar = getBindingVariable();
         try {
-            SentenceBuilderTransitiveVPEN sentenceBuilder = new SentenceBuilderTransitiveVPEN(
+            SentenceBuilderIntransitivePPEN sentenceBuilder = new SentenceBuilderIntransitivePPEN(
                     getLanguage(),
-                    lexicalEntryUtil,
-                    sentenceTemplates);
+                    this.getFrameType(),
+                    this.getSentenceTemplateRepository(),
+                    this.getSentenceTemplateParser(),
+                    lexicalEntryUtil);
             generatedSentences = sentenceBuilder.generateFullSentencesForward(bindingVar, lexicalEntryUtil);
             generatedSentences.sort(String::compareToIgnoreCase);
         } catch (Exception ex) {
@@ -51,15 +54,34 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
 
     protected List<String> generateOppositeSentences(LexicalEntryUtil lexicalEntryUtil) throws
             QueGGMissingFactoryClassException {
-        List<String> generatedSentences = new ArrayList<>();
-        List<String> sentenceTemplates = getSentenceTemplateRepository().findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
-                getLanguage(), new String[]{getFrameType().getName(), BACKWARD, getLanguage().toString()});
+        List<String> generatedSentences = new ArrayList<String>();
         String bindingVar = getBindingVariable();
         try {
-            SentenceBuilderTransitiveVPEN sentenceBuilder = new SentenceBuilderTransitiveVPEN(
+             SentenceBuilderIntransitivePPEN sentenceBuilder = new SentenceBuilderIntransitivePPEN(
                     getLanguage(),
-                    lexicalEntryUtil,
-                    sentenceTemplates);
+                    this.getFrameType(),
+                    this.getSentenceTemplateRepository(),
+                    this.getSentenceTemplateParser(),
+                    lexicalEntryUtil);
+            generatedSentences = sentenceBuilder.generateFullSentencesBackward(bindingVar, new String[2], lexicalEntryUtil);
+            generatedSentences.sort(String::compareToIgnoreCase);
+        } catch (Exception ex) {
+            java.util.logging.Logger.getLogger(TransitiveVPGrammarRuleGenerator.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return generatedSentences;
+    }
+    
+    protected List<String> generateAPP(LexicalEntryUtil lexicalEntryUtil) throws
+            QueGGMissingFactoryClassException {
+        List<String> generatedSentences = new ArrayList<String>();
+        String bindingVar = getBindingVariable();
+        try {
+             SentenceBuilderIntransitivePPEN sentenceBuilder = new SentenceBuilderIntransitivePPEN(
+                    getLanguage(),
+                    this.getFrameType(),
+                    this.getSentenceTemplateRepository(),
+                    this.getSentenceTemplateParser(),
+                    lexicalEntryUtil);
             generatedSentences = sentenceBuilder.generateFullSentencesBackward(bindingVar, new String[2], lexicalEntryUtil);
             generatedSentences.sort(String::compareToIgnoreCase);
         } catch (Exception ex) {
@@ -93,5 +115,8 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
 
         return grammarEntries;
     }
+    
+    
+   
 
 }

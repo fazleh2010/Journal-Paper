@@ -12,18 +12,12 @@ import static grammar.datasets.sentencetemplates.SentenceTemplate.createSentence
 import static grammar.datasets.sentencetemplates.SentenceTemplate.createVPTemplate;
 import grammar.structure.component.Language;
 import java.util.List;
-import static util.io.TemplateConstants.BACKWARD;
-import static util.io.TemplateConstants.FORWARD;
-import static util.io.TemplateConstants.WHAT_WHICH_DO_THING;
-import static util.io.TemplateConstants.WHEN_WHAT_PAST_THING;
-import static util.io.TemplateConstants.WHEN_WHO_PAST_PERSON;
-import static util.io.TemplateConstants.WHERE_WHO_PAST_PERSON;
 
 /**
  *
  * @author elahi
  */
-public class SentenceTemplateFactoryIT implements Factory<SentenceTemplateRepository> {
+public class SentenceTemplateFactoryIT  implements Factory<SentenceTemplateRepository>,TempConstants {
 
     private final SentenceTemplateRepository sentenceTemplateRepository;
     private final Language language;
@@ -133,8 +127,7 @@ public class SentenceTemplateFactoryIT implements Factory<SentenceTemplateReposi
     );
  
     sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
         //"subject(INTERROGATIVE_DETERMINER_SINGULAR) verb(present) preposition adjunct(X)?", //Quale uva cresce in [entity]?
         "preposition object(interrogativeDeterminerSingular) verb(past) subject(X)?",
@@ -146,7 +139,7 @@ public class SentenceTemplateFactoryIT implements Factory<SentenceTemplateReposi
         ),
         "IntransitivePPFrame",
         WHAT_WHICH_DO_THING,
-        FORWARD,
+        forward,
         Language.IT.toString()
       )
     );
@@ -167,8 +160,7 @@ PREPOSITION + (COSA, CHI, DOVE) + aux + VERB( PAST) + SUBJECT*/
     
      // IntransitivePPFrame
     sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
          "preposition object(interrogativePronounThingWhat) verb(present) subject(X)?",
          "preposition object(interrogativePronounThingWhat) verb(past) subject(X)?",
@@ -177,14 +169,13 @@ PREPOSITION + (COSA, CHI, DOVE) + aux + VERB( PAST) + SUBJECT*/
         ),
        "IntransitivePPFrame",
         WHAT_WHICH_DO_THING,
-        BACKWARD,
+        backward,
         Language.IT.toString()
       )
     );
     //Quando è stato arruolato [entity]?
       sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(    
         //"object(INTERROGATIVE_PLACE) verb(present) subject(X)?",//Dove cresce [entity]?
         "object(interrogativeTemporal) component_be(present:singular) verb(past) subject(X)?",
@@ -194,7 +185,7 @@ PREPOSITION + (COSA, CHI, DOVE) + aux + VERB( PAST) + SUBJECT*/
         ),
         "IntransitivePPFrame",
         WHEN_WHAT_PAST_THING,
-        FORWARD,
+        forward,
         Language.IT.toString()
       )
     );
@@ -202,69 +193,64 @@ PREPOSITION + (COSA, CHI, DOVE) + aux + VERB( PAST) + SUBJECT*/
      // IntransitivePPFrame
      //Quale nave è stata completata nel 2010?
     sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
         "subject(interrogativePronounThingWhat) verb(past) preposition(date) adjunct(X)?",
         "subject(interrogativePronounThingWhat) verb(present) preposition(date) adjunct(X)?"
         ),
        "IntransitivePPFrame",
         WHEN_WHAT_PAST_THING,
-        BACKWARD,
+        backward,
         Language.IT.toString()
       )
     );
     //"Quando è morta la principessa Diana?",
       sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(    
        "object(interrogativeTemporal) component_be(present:singular) verb(past) subject(X)?"
         ),
         "IntransitivePPFrame",
         WHEN_WHO_PAST_PERSON,
-        FORWARD,
+        forward,
         Language.IT.toString()
       )
     );
       //Chi è morto nel 2010?
     sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
         "subject(interrogativePronounPerson) component_be(present:singular) verb(past) preposition(date) adjunct(X)?"        
        
         ),
        "IntransitivePPFrame",
         WHEN_WHO_PAST_PERSON,
-        BACKWARD,
+        backward,
         Language.IT.toString()
       )
     );
      //"Dove è nato Bach?",
       sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(    
        "object(interrogativePlace) component_be(present:singular) verb(past) subject(X)?"
         ),
         "IntransitivePPFrame",
         WHERE_WHO_PAST_PERSON,
-        FORWARD,
+        forward,
         Language.IT.toString()
       )
     );
       //Chi è nato in Germania?
     sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
         "subject(interrogativePronounPerson) component_be(present:singular) verb(past) preposition(place) adjunct(X)?"          
        
         ),
        "IntransitivePPFrame",
         WHERE_WHO_PAST_PERSON,
-        BACKWARD,
+        backward,
         Language.IT.toString()
       )
     );
@@ -290,8 +276,7 @@ PREPOSITION + (COSA, CHI, DOVE) + aux + VERB( PAST) + SUBJECT*/
     // TransitiveFrame
     //Qald-7: Che film ha diretto Kurosawa?,
     sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
           "subject(interrogativePronounPerson) verb(present) determiner(directObject) directObject(X)?",
           "subject(interrogativePronounPerson) verb(past) determiner(directObject) directObject(X)?",
@@ -300,14 +285,13 @@ PREPOSITION + (COSA, CHI, DOVE) + aux + VERB( PAST) + SUBJECT*/
           
         ),
         "TransitiveFrame",
-        FORWARD,
+        forward,
         Language.IT.toString()
       )
     );
     // TransitiveFrame
     sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
       // Da chi è stata costruita [entity]?	
       // Da chi è stata costruita l'['entity]?	
@@ -322,7 +306,7 @@ PREPOSITION + (COSA, CHI, DOVE) + aux + VERB( PAST) + SUBJECT*/
       //"preposition(In) subject(INTERROGATIVE_DETERMINER_PLURAL) verb(present) preposition(si) directObject(X)."
         ),
         "TransitiveFrame",
-        BACKWARD,
+        backward,
         Language.IT.toString()
       )
     );

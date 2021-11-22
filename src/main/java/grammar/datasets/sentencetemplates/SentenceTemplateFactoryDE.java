@@ -6,12 +6,12 @@ import static grammar.datasets.sentencetemplates.SentenceTemplate.createNPTempla
 import static grammar.datasets.sentencetemplates.SentenceTemplate.createSentenceTemplate;
 import static grammar.datasets.sentencetemplates.SentenceTemplate.createVPTemplate;
 import grammar.datasets.sentencetemplates.SentenceTemplateRepository;
+import static grammar.structure.component.FrameType.APP;
 import grammar.structure.component.Language;
 import java.util.List;
 
 
-
-class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository> {
+class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, TempConstants {
 
   private final SentenceTemplateRepository sentenceTemplateRepository;
   private final Language language;
@@ -55,8 +55,8 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository> {
            //"preposition interrogativeDeterminer(dativeCase:range:singular) verb(component_be:present:singular) determiner(component_the_nominative:domain:singular) adjunct(domain)?",
            //"interrogativePlace(nominativeCase:singular) verb(component_be:present:singular) determiner(component_the_nominative:domain:singular) object(domain)?"     
                  ),
-        TemplateVariable.NounPPFrame,
-        TemplateVariable.whQuestion
+        NounPPFrame,
+        whQuestion
       )
     );
     
@@ -93,8 +93,8 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository> {
            // Wieviele Seiten hat Krieg und Frieden?
            // "interrogativeAmount(range:singular) noun(nominativeCase:plural) verb(component_haben:present:singular) object(domain)?"        
                  ),
-        TemplateVariable.NounPPFrame,
-        TemplateVariable.booleanQuestionDomainRange
+        NounPPFrame,
+        booleanQuestionDomainRange
       )
     );
      //NounPPFrame boolean question
@@ -119,8 +119,8 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository> {
            // Wieviele Seiten hat Krieg und Frieden?
            // "interrogativeAmount(range:singular) noun(nominativeCase:plural) verb(component_haben:present:singular) object(domain)?"        
                  ),
-        TemplateVariable.NounPPFrame,
-        TemplateVariable.booleanQuestionDomain
+        NounPPFrame,
+        booleanQuestionDomain
       )
     );
     //NounPPFrame
@@ -138,8 +138,8 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository> {
           //Gib mir das Mitglied von...?
           //"verb(reference:component_imperative_transitive) pronoun(reference:object_pronoun) determiner(reference:component_the_accusative) noun(root:accusativeCase) preposition prepositionalAdjunct"
           ),
-        TemplateVariable.NounPPFrame,
-        TemplateVariable.nounPhrase
+        NounPPFrame,
+        nounPhrase
       )
     );
     
@@ -155,93 +155,180 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository> {
           //Gib mir das Mitglied von...?
           //"verb(reference:component_imperative_transitive) pronoun(reference:object_pronoun) determiner(reference:component_the_accusative) noun(root:accusativeCase) preposition prepositionalAdjunct"
           ),
-        TemplateVariable.NounPPFrame,
-        TemplateVariable.noun
+        NounPPFrame,
+        noun
       )
     );
     
-    /*sentenceTemplateRepository.add(
+    sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(
           //Wo ist der Westminster-Palast?",
           "interrogativePlace(nominativeCase:range:singular) verb(component_be:present:singular) object(domain)?"
           ),
-        TemplateVariable.NounPPFrame,
-        TemplateVariable.location
+        NounPPFrame,
+        location
+      )
+    );
+    
+     // TransitiveFrame
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+        "interrogativePronoun(nominativeCase:range:singular) mainVerb(past:thridPerson) object(domain)?",
+        "interrogativeDeterminer(nominativeCase:range:singular) mainVerb(past:thridPerson) object(domain)?"
+        ),
+       TransitiveFrame,
+        active
+      )
+    );
+      // TransitiveFrame
+      //"Was wird von ($x | PERSON_NP) entwickelt?", "Was wurde von ($x | PERSON_NP) entwickelt?", 
+      //"Werk wird von ($x | PERSON_NP) entwickelt?", "Werk wurde von ($x | PERSON_NP) entwickelt?", 
+      //"Werke werden von ($x | PERSON_NP) entwickelt?", 
+      //"Werke wurden von ($x | PERSON_NP) entwickelt?"
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+        "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:singular) preposition object(range) verb(mainVerb:past:thridPerson)?",
+        "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:past:thridPerson)?",
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:singular) preposition object(range) verb(mainVerb:past:thridPerson)?",
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:past:thridPerson)?"
+        //"interrogativeDeterminer(nominativeCase:domain:plural) verb(component_be:future:singular) preposition object(range) verb(mainVerb:past:thridPerson)?",
+        //"interrogativeDeterminer(nominativeCase:domain:plural) verb(component_be:future:plural) preposition object(range) verb(mainVerb:past:thridPerson)?"
+    
+        ),
+        TransitiveFrame,
+        passive
+      )
+    );
+    
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+        "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:singular) preposition object(range) verb(mainVerb:past:thridPerson)?",
+        "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:past:thridPerson)?",
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:singular) preposition object(range) verb(mainVerb:past:thridPerson)?",
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:past:thridPerson)?"
+        //"interrogativeDeterminer(nominativeCase:domain:plural) verb(component_be:future:singular) preposition object(range) verb(mainVerb:past:thridPerson)?",
+        //"interrogativeDeterminer(nominativeCase:domain:plural) verb(component_be:future:plural) preposition object(range) verb(mainVerb:past:thridPerson)?"
+    
+        ),
+        TransitiveFrame,
+        APP.toString()
+      )
+    );
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+          //Was fließt durch...?
+         "interrogativePronoun(nominativeCase:domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+         //Welcher Fluss fließt durch...?
+          "interrogativeDeterminer(nominativeCase:domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+          "interrogativeDeterminer(nominativeCase:domain:plural) verb(mainVerb:present:thridPerson) preposition adjunct(range)?"
+
+        ),
+        IntransitivePPFrame,
+        WHAT_WHICH_DO_THING,
+        forward
+      )
+    );
+    //Durch welches Land fließt der Rhein?
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+          "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(mainVerb:present:thridPerson) adjunct(domain)?"
+        ),
+        IntransitivePPFrame,
+        WHAT_WHICH_DO_THING,
+        backward
+      )
+    );
+      ///////////////////////////////
+       sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+          //"Wann wurde die Titanic fertiggestellt?", interrogativeTemporal verb(mainVerb:present:thridPerson)
+         //"interrogativeTemporal verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:present:thridPerson)?"
+        ),
+        IntransitivePPFrame,
+        WHEN_WHAT_PAST_THING,
+        forward
+      )
+    );
+    //Was wurde 2010 fertiggestellt?
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+          //"interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:present:thridPerson)?",
+          //"interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:plural) preposition adjunct(range) verb(mainVerb:present:thridPerson)?"
+        ),
+        IntransitivePPFrame,
+        WHEN_WHAT_PAST_THING,
+        backward
+      )
+    );
+    ///////////////////////////////
+       sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+          //"In welchem Jahr wurde Rachel Stevens geboren?",
+         "preposition interrogativeDeterminer(dativeCase:range:singular) adjunct(domain) verb(component_werden:past:singular)  verb(mainVerb:perfect:thridPerson)"
+        ),
+        IntransitivePPFrame,
+        WHEN_WHO_PAST_PERSON,
+        forward
+      )
+    );
+    //Was wurde 2010 fertiggestellt?
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+          "interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:present:thridPerson)?",
+          "interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:plural) preposition adjunct(range) verb(mainVerb:present:thridPerson)?"
+        ),
+        IntransitivePPFrame,
+        WHEN_WHO_PAST_PERSON,
+        backward
+      )
+    );
+    
+    
+    
+     /*sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+          //Welche Person entwickelte...?
+          "interrogativeDeterminer noun(condition:subject) VP(directObject)?",
+          //Wer entwickelte...?
+          "interrogativePronoun VP(directObject)?"
+        ),
+        "subject",
+        "directObject"
+      )
+    );
+    // VP(directObject)
+    sentenceTemplateRepository.add(
+      createVPTemplate(
+        language,
+        List.of(
+          //entwickelte...
+          "verb(root) directObject"
+        ),
+        "directObject"
       )
     );*/
     
-   /* // NP(prepositionalAdjunct)
-    sentenceTemplateRepository.add(
-      createNPTemplate(
-        language,
-        List.of(
-          //das Mitglied von...
-          "determiner(component_the_nominative) noun(nominativeCase) preposition prepositionalAdjunct"
-        ),
-        TemplateEntities.NOUN_PP_FRAME,
-        TemplateEntities.NounPhrase
-      )
-    );*/
-    /* Not working yet
-    // NP(attributiveArg)
-    sentenceTemplateRepository.add(
-      createNPTemplate(
-        language,
-        List.of(
-          "determiner adjective(root) attributiveArg(number:singular)",
-          "adjective(root) attributiveArg(number:plural)"
-        ),
-        "attributiveArg"
-      )
-    );
-    // AdjectiveAttributiveFrame
-    sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
-        List.of(
-          "interrogativePronoun verb(reference:component_be) NP(attributiveArg)?"
-        ),
-        "attributiveArg"
-      )
-    );*/
-    // AdjectivePPFrame
-    sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
-        List.of(
-          //Welches Kunstwerk wird von ... ausgestellt
-          "interrogativeDeterminer noun(condition:copulativeSubject) verb(reference:component_be_passive) AP(prepositionalAdjunct)?",
-          //Was wird von ... ausgestellt
-          "interrogativePronoun verb(reference:component_be_passive) AP(prepositionalAdjunct)?"
-        ),
-        "copulativeSubject",
-        "prepositionalAdjunct"
-      )
-    );
-    // AdjectivePPFrame NP
-    sentenceTemplateRepository.add(
-      createNPTemplate(
-        language,
-        List.of(
-          //Kunstwerke ausgestellt von...
-          "noun(condition:copulativeSubject,number:plural) verb(root,verbFormMood:participle) preposition prepositionalAdjunct"
-        ),
-        "copulativeSubject",
-        "prepositionalAdjunct"
-      )
-    );
-    // AP(prepositionalAdjunct)
-    sentenceTemplateRepository.add(
-      createAPTemplate(
-        language,
-        List.of(
-          //von ... ausgestellt
-          "preposition prepositionalAdjunct verb(root,verbFormMood:participle)"
-        ),
-        "prepositionalAdjunct"
-      )
-    );
+    
+  
+  
     /* Not working yet
     // IntransitivePPFrame
     sentenceTemplateRepository.add(
@@ -279,28 +366,52 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository> {
       )
     );*/
     // TransitiveFrame
+   
+      // AdjectiveAttributiveFrame
     sentenceTemplateRepository.add(
       createSentenceTemplate(
         language,
         List.of(
-          //Welche Person entwickelte...?
-          "interrogativeDeterminer noun(condition:subject) VP(directObject)?",
-          //Wer entwickelte...?
-          "interrogativePronoun VP(directObject)?"
+          "interrogativePronoun verb(reference:component_be) NP(attributiveArg)?"
         ),
-        "subject",
-        "directObject"
+        "attributiveArg"
       )
     );
-    // VP(directObject)
+    // AdjectivePPFrame
     sentenceTemplateRepository.add(
-      createVPTemplate(
+      createSentenceTemplate(
         language,
         List.of(
-          //entwickelte...
-          "verb(root) directObject"
+          //Welches Kunstwerk wird von ... ausgestellt
+          "interrogativeDeterminer noun(condition:copulativeSubject) verb(reference:component_be_passive) AP(prepositionalAdjunct)?",
+          //Was wird von ... ausgestellt
+          "interrogativePronoun verb(reference:component_be_passive) AP(prepositionalAdjunct)?"
         ),
-        "directObject"
+        "copulativeSubject",
+        "prepositionalAdjunct"
+      )
+    );
+    // AdjectivePPFrame NP
+    sentenceTemplateRepository.add(
+      createNPTemplate(
+        language,
+        List.of(
+          //Kunstwerke ausgestellt von...
+          "noun(condition:copulativeSubject,number:plural) verb(root,verbFormMood:participle) preposition prepositionalAdjunct"
+        ),
+        "copulativeSubject",
+        "prepositionalAdjunct"
+      )
+    );
+    // AP(prepositionalAdjunct)
+    sentenceTemplateRepository.add(
+      createAPTemplate(
+        language,
+        List.of(
+          //von ... ausgestellt
+          "preposition prepositionalAdjunct verb(root,verbFormMood:participle)"
+        ),
+        "prepositionalAdjunct"
       )
     );
   }

@@ -5,7 +5,7 @@
  */
 package util.io;
 
-import grammar.datasets.sentencetemplates.TemplateVariable;
+import grammar.datasets.sentencetemplates.TempConstants;
 import java.util.List;
 
 /**
@@ -209,7 +209,7 @@ public class GoogleXslSheet {
         public static Integer domainIndex = 10;
         public static Integer rangeIndex = 11;
 
-        public static String getHeader(String lemonEntry, String preposition, String language) {
+        public static String getHeader(String lemonEntry, String prepositionAttr,String preposition, String language) {
             return "@prefix :        <http://localhost:8080/lexicon#> .\n"
                     + "\n"
                     + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
@@ -221,7 +221,7 @@ public class GoogleXslSheet {
                     + "  lemon:language \"" + language + "\" ;\n"
                     + "  lemon:entry    :" + "to_" + lemonEntry + " ;\n"
                     + "  lemon:entry    :" + lemonEntry + "ed" + " ;\n"
-                    + "  lemon:entry    :" + preposition + " .\n"
+                    + "  lemon:entry    :" + prepositionAttr + " .\n"
                     + "\n";
         }
 
@@ -247,11 +247,13 @@ public class GoogleXslSheet {
                     + "\n"
                     + ":form_" + lemonEntry + "s a    lemon:Form ;\n"
                     + "  lemon:writtenRep \"" + writtenForm3rdPerson + "\"@" + language + " ;\n"
-                    + "  lexinfo:person   lexinfo:secondPerson .\n"
+                    + "  lexinfo:tense    lexinfo:past ;\n"
+                    + "  lexinfo:person   lexinfo:thirdPerson .\n"
                     + "\n"
                     + ":form_" + lemonEntry + "ed a   lemon:Form ;\n"
                     + "  lemon:writtenRep \"" + writtenFormPast + "\"@" + language + " ;\n"
-                    + "  lexinfo:tense    lexinfo:past .\n"
+                    + "  lexinfo:tense    lexinfo:perfect ;\n"
+                    + "  lexinfo:person   lexinfo:thirdPerson .\n"
                     + "\n"
                     + ":" + lemonEntry + "_frame_transitive a lexinfo:TransitiveFrame ;\n"
                     + "  lexinfo:subject          :" + lemonEntry + "_subj ;\n"
@@ -313,6 +315,13 @@ public class GoogleXslSheet {
         public static Integer referenceIndex = 10;
         public static Integer domainIndex = 11;
         public static Integer rangeIndex = 12;
+        public static Integer domainArticleIndex = 13;
+        public static Integer domainWrittenSingular = 14;
+        public static Integer domainWrittenPlural = 15;
+        public static Integer rangeArticleIndex = 16;
+        public static Integer rangeWrittenSingular = 17;
+        public static Integer rangeWrittenPlural = 18;
+
 
         public static String getHeader(String lemonEntry, String proposition, String language) {
             return "@prefix :        <http://localhost:8080/lexicon#> .\n"
@@ -405,6 +414,33 @@ public class GoogleXslSheet {
             return rangeIndex;
         }
 
+        public static Integer getDomainArticleIndex() {
+            return domainArticleIndex;
+        }
+
+        public static Integer getRangeArticleIndex() {
+            return rangeArticleIndex;
+        }
+
+        public static Integer getDomainWrittenSingular() {
+            return domainWrittenSingular;
+        }
+
+        public static Integer getDomainWrittenPlural() {
+            return domainWrittenPlural;
+        }
+
+        public static Integer getRangeWrittenSingular() {
+            return rangeWrittenSingular;
+        }
+
+        public static Integer getRangeWrittenPlural() {
+            return rangeWrittenPlural;
+        }
+
+       
+        
+
     }
 
     public static class AttributiveAdjectiveFrame {
@@ -488,7 +524,7 @@ public class GoogleXslSheet {
 
     public static String getSenseDetail(List<Tupples> tupples, String syntacticFrame, String lemonEntry, String pastTense, String preposition, String language) {
         String str = "";
-        if (syntacticFrame.equals(TemplateVariable.TransitiveFrame)) {
+        if (syntacticFrame.equals(TempConstants.TransitiveFrame)) {
             str = "";
             for (Tupples tupple : tupples) {
                 String line = ":" + tupple.getSenseId() + " a   lemon:OntoMap, lemon:LexicalSense ;\n"
@@ -539,7 +575,7 @@ public class GoogleXslSheet {
                     + ":" + lemonEntry + "_obj lemon:marker :" + preposition + " .\n"
                     + "\n";
             str = str + intransitiveStr + prep;
-        } else if (syntacticFrame.equals(TemplateVariable.IntransitivePPFrame)) {
+        } else if (syntacticFrame.equals(TempConstants.IntransitivePPFrame)) {
             for (Tupples tupple : tupples) {
                 String line = ":" + tupple.getSenseId() + " a     lemon:OntoMap, lemon:LexicalSense ;\n"
                         + "  lemon:ontoMapping :" + lemonEntry + "_ontomap ;\n"
@@ -559,7 +595,7 @@ public class GoogleXslSheet {
                     + "\n";
             str = str + prep;
 
-        } else if (syntacticFrame.equals(TemplateVariable.NounPPFrame)) {
+        } else if (syntacticFrame.equals(TempConstants.NounPPFrame)) {
             for (Tupples tupple : tupples) {
                 String line = ":" + tupple.getSenseId() + " a lemon:OntoMap, lemon:LexicalSense ;\n"
                         + "  lemon:ontoMapping         :" + tupple.getSenseId() + " ;\n"
@@ -574,7 +610,7 @@ public class GoogleXslSheet {
                         + "\n";
                 str += line;
             }
-        } else if (syntacticFrame.equals(TemplateVariable.AdjectiveAttributiveFrame)) {
+        } else if (syntacticFrame.equals(TempConstants.AdjectiveAttributiveFrame)) {
             for (Tupples tupple : tupples) {
                 String line = ":" + tupple.getSenseId() + " a  lemon:LexicalSense ;\n"
                         + "  lemon:reference :" + tupple.getSenseId() + "_res ;\n"
@@ -590,9 +626,9 @@ public class GoogleXslSheet {
         return str;
     }
 
-    public static String getPrepostion(String preposition, String language) {
+    public static String getPrepostion(String preopistionAttr,String preposition, String language) {
         return "## Prepositions ##\n"
-                + ":" + preposition + " a                  lemon:SynRoleMarker ;\n"
+                + ":" + preopistionAttr + " a                  lemon:SynRoleMarker ;\n"
                 + "  lemon:canonicalForm  [ lemon:writtenRep \"" + preposition + "\"@" + language + " ] ;\n"
                 + "  lexinfo:partOfSpeech lexinfo:preposition .\n"
                 + "\n"
@@ -632,4 +668,5 @@ public class GoogleXslSheet {
                     + "  lemon:otherForm    :" + lemonEntry+"_plural_form" + " ;\n"
             */
 
+   
 }

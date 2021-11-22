@@ -5,7 +5,7 @@ import eu.monnetproject.lemon.model.PropertyValue;
 import grammar.datasets.sentencetemplates.SentenceTemplateRepository;
 import grammar.datasets.annotated.AnnotatedNounOrQuestionWord;
 import grammar.datasets.annotated.AnnotatedVerb;
-import grammar.datasets.sentencetemplates.TemplateVariable;
+import grammar.datasets.sentencetemplates.TempConstants;
 import static grammar.generator.BindingConstants.BINDING_TOKEN_TEMPLATE;
 import grammar.structure.component.DomainOrRangeType;
 import grammar.structure.component.FrameType;
@@ -35,13 +35,11 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.logging.Level;
 import static lexicon.LexicalEntryUtil.getDeterminerTokenByNumber;
-import util.io.FindQuestionWord;
 import util.io.GenderUtils;
 import util.io.SentenceBuilderUtils;
-import static util.io.TemplateConstants.FORWARD;
 import util.io.TemplateFinder;
 
-public class SentenceBuilderCopulativePP extends SentenceBuilderImpl  {
+public class SentenceBuilderCopulativePP extends SentenceBuilderImpl implements TempConstants  {
 
     private static final Logger LOG = LogManager.getLogger(SentenceBuilderCopulativePP.class);
     private TemplateFinder templateFinder = null;
@@ -75,21 +73,6 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl  {
                 SentenceType.NP
         );*/
 
-        List<String> sentenceTemplates = this.getSentenceTemplateRepository().findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
-                this.getLanguage(), new String[]{this.getFrameType().getName(), TemplateVariable.whQuestion, this.getLanguage().toString()});
-
-        //System.out.println("sentenceTemplates::" + type);
-        SentenceBuilderUtils sentenceBuilderFromTemplates = new SentenceBuilderUtils(this.getLanguage(), lexicalEntryUtil,  selectVariable, oppositeSelectVariable,bindingVariable);
-
-        for (String sentenceTemplate : sentenceTemplates) {
-            index = index + 1;
-            List<String> positionTokens = sentenceBuilderFromTemplates.parseTemplate(sentenceTemplate);
-            System.out.println("positionTokens::" + positionTokens);
-            /*String sentence = sentenceBuilderFromTemplates.prepareSentence(positionTokens);
-            System.out.println("sentence::" + sentence);
-            sentences.add(sentence);*/
-        }
-        exit(1);
         return  new TreeMap<PropertyValue, String>();
     }
 
@@ -131,21 +114,11 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl  {
 
 
         List<String> sentenceTemplates = this.getSentenceTemplateRepository().findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
-                this.getLanguage(), new String[]{this.getFrameType().getName(), TemplateVariable.whQuestion,  this.getLanguage().toString()});
+                this.getLanguage(), new String[]{this.getFrameType().getName(), whQuestion,  this.getLanguage().toString()});
       
         //System.out.println("sentenceTemplates::" + type);
 
-        SentenceBuilderUtils sentenceBuilderFromTemplates = new SentenceBuilderUtils( this.getLanguage(), lexicalEntryUtil,  selectVariable, oppositeSelectVariable,bindingVar);
-
-        for (String sentenceTemplate : sentenceTemplates) {
-            index = index + 1;
-            List<String> positionTokens = sentenceBuilderFromTemplates.parseTemplate(sentenceTemplate);
-            System.out.println("positionTokens::" + positionTokens);
-            String newsentence = sentenceBuilderFromTemplates.prepareSentence(positionTokens);
-            System.out.println("sentence::" + newsentence);
-            sentences.add(newsentence);
-        }
-        exit(1);
+       
 
         return new ArrayList<String>(sentences);
 
@@ -228,20 +201,9 @@ public class SentenceBuilderCopulativePP extends SentenceBuilderImpl  {
         
 
         List<String> sentenceTemplates = this.getSentenceTemplateRepository().findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
-                this.getLanguage(), new String[]{this.getFrameType().getName(), TemplateVariable.whQuestion, this.getLanguage().toString()});
+                this.getLanguage(), new String[]{this.getFrameType().getName(), whQuestion, this.getLanguage().toString()});
 
-        //System.out.println("sentenceTemplates::" + type);
-        SentenceBuilderUtils sentenceBuilderFromTemplates = new SentenceBuilderUtils(this.getLanguage(), lexicalEntryUtil, selectVariable, oppositeSelectVariable,bindingVariable);
-
-        for (String sentenceTemplate : sentenceTemplates) {
-            index = index + 1;
-            List<String> positionTokens = sentenceBuilderFromTemplates.parseTemplate(sentenceTemplate);
-            System.out.println("positionTokens::" + positionTokens);
-            String newSentence = sentenceBuilderFromTemplates.prepareSentence(positionTokens);
-            System.out.println("sentence::" + newSentence);
-            sentences.add(newSentence);
-        }
-        exit(1);
+       
 
         /*for (AnnotatedNounOrQuestionWord annotatedNoun : annotatedLexicalEntryNouns) {
             System.out.println("annotatedNoun::"+annotatedNoun.getWrittenRepValue());

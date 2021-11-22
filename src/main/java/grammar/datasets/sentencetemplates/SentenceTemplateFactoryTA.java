@@ -12,16 +12,12 @@ import static grammar.datasets.sentencetemplates.SentenceTemplate.createSentence
 import static grammar.datasets.sentencetemplates.SentenceTemplate.createVPTemplate;
 import grammar.structure.component.Language;
 import java.util.List;
-import static util.io.TemplateConstants.BACKWARD;
-import static util.io.TemplateConstants.FORWARD;
-import static util.io.TemplateConstants.WHAT_WHICH_DO_THING;
-import static util.io.TemplateConstants.WHEN_WHAT_PAST_THING;
 
 /**
  *
  * @author elahi
  */
-public class SentenceTemplateFactoryTA implements Factory<SentenceTemplateRepository> {
+public class SentenceTemplateFactoryTA implements Factory<SentenceTemplateRepository>,TempConstants {
 
     private final SentenceTemplateRepository sentenceTemplateRepository;
     private final Language language;
@@ -130,57 +126,53 @@ public class SentenceTemplateFactoryTA implements Factory<SentenceTemplateReposi
     );
  
     sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
         "subject(INTERROGATIVE_DETERMINER_SINGULAR) verb(present) preposition adjunct(X)?" //Quale uva cresce in [entity]?
         ),
         "IntransitivePPFrame",
         WHAT_WHICH_DO_THING,
-        FORWARD,
+        forward,
         Language.IT.toString()
       )
     );
     
      // IntransitivePPFrame
     sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
           "object(INTERROGATIVE_PLACE) verb(present) subject(X)?"//Dove cresce [entity]?
         ),
        "IntransitivePPFrame",
         WHAT_WHICH_DO_THING,
-        BACKWARD,
+        backward,
         Language.IT.toString()
       )
     );
     //Quando è stato arruolato [entity]?
       sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(      
         "object(INTERROGATIVE_TEMPORAL) component_aux_object_past(singular) verb(present) subject(X)?" ,
         "object(INTERROGATIVE_TEMPORAL) component_aux_object_past(plural) verb(present) subject(X)?" 
         ),
         "IntransitivePPFrame",
         WHEN_WHAT_PAST_THING,
-        FORWARD,
+        forward,
         Language.IT.toString()
       )
     );
     
      // IntransitivePPFrame
     sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
         "subject(INTERROGATIVE_DETERMINER_SINGULAR) component_aux_object_past(singular) verb(past) preposition adjunct(X)?"
         //"subject(INTERROGATIVE_DETERMINER_PLURAL) component_aux_object_past(plural) verb(past) preposition adjunct(X)?"
         ),
        "IntransitivePPFrame",
         WHEN_WHAT_PAST_THING,
-        BACKWARD,
+        backward,
         Language.IT.toString()
       )
     );
@@ -206,8 +198,7 @@ public class SentenceTemplateFactoryTA implements Factory<SentenceTemplateReposi
     // TransitiveFrame
     //Qald-7: Che film ha diretto Kurosawa?,
     sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
           "subject(PERSON_INTERROGATIVE_PRONOUN) verb(present) determiner(directObject) directObject(X)?",
           "subject(PERSON_INTERROGATIVE_PRONOUN) verb(past) determiner(directObject) directObject(X)?",
@@ -216,14 +207,13 @@ public class SentenceTemplateFactoryTA implements Factory<SentenceTemplateReposi
           
         ),
         "TransitiveFrame",
-        FORWARD,
+        forward,
         Language.IT.toString()
       )
     );
     // TransitiveFrame
     sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
       // Da chi è stata costruita [entity]?	
       // Da chi è stata costruita l'['entity]?	
@@ -238,7 +228,7 @@ public class SentenceTemplateFactoryTA implements Factory<SentenceTemplateReposi
       //"preposition(In) subject(INTERROGATIVE_DETERMINER_PLURAL) verb(present) preposition(si) directObject(X)."
         ),
         "TransitiveFrame",
-        BACKWARD,
+        backward,
         Language.IT.toString()
       )
     );

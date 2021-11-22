@@ -133,7 +133,7 @@ public class ReadAndWriteQuestions {
                 List<UriLabel> returnList=new ArrayList<UriLabel>();
                 Map<String, String[]> resultsOffline = new TreeMap<String, String[]>();
                 
-                if (grammarEntryUnit.getQueryType().equals(QueryType.SELECT)) {
+                if (grammarEntryUnit.getQueryType().equals(QueryType.ASK)) {
                     continue;
                 }
 

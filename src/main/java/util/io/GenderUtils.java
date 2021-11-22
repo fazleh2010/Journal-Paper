@@ -16,19 +16,24 @@ import java.util.TreeMap;
  */
 public class GenderUtils {
 
-    private String article = null;
-    private String[] articles = new String[2];
     public static Map<String, String[]> referenceArticleMap = new TreeMap<String, String[]>();
-    public static Map<String, String[]> dbpediaClassMap = new TreeMap<String, String[]>();
+    public static Map<String, String[]> writtenForms = new TreeMap<String, String[]>();
 
-    public static void setArticles(Map<String, String[]> referenceArticleMapT) {
+    public static void setWrittenForms(String uri, String writtenSingular, String writtenPlural) {
+        writtenForms.put(uri, new String[]{writtenSingular, writtenPlural});
+    }
+    
+     public static void setArticles(String uri, String artile) {
+        referenceArticleMap.put(uri, new String[]{artile});
+    }
+    
+    
+
+    /*public static void setArticles(Map<String, String[]> referenceArticleMapT) {
         referenceArticleMap = referenceArticleMapT;
-    }
+    }*/
 
-    public static Map<String, String[]> getArticles() {
-        return referenceArticleMap;
-    }
-
+   
     static {
 
     }
@@ -47,7 +52,7 @@ public class GenderUtils {
 
     }
 
-    public GenderUtils(Language language, String reference) {
+    /*public GenderUtils(Language language, String reference) {
         System.out.println("language::" + language + " reference:" + reference);
 
         if (referenceArticleMap.containsKey(reference)) {
@@ -56,39 +61,55 @@ public class GenderUtils {
             this.article = "XXXXX";
         }
 
-    }
+    }*/
 
-    public GenderUtils(String domain) {
+ /*public GenderUtils(String domain) {
         if (referenceArticleMap.containsKey(domain)) {
             article = referenceArticleMap.get(domain)[0];
         } else {
             article = "";
         }
-    }
-
-    GenderUtils(String noun, Language language) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public String getArticle() {
+    }*/
+    public static String getArticle(String domain) {
+        String article = "XX";
+        if (referenceArticleMap.containsKey(domain)) {
+            article = referenceArticleMap.get(domain)[0];
+        }
         return article;
     }
 
-    public static String getManuallyCreatedLabel(String uri) {
+    public static String getWrittenFormSingular(String uri) {
+        return writtenForms.get(uri)[0];
+    }
+
+    public static String getWrittenFormPlural(String uri) {
+        return writtenForms.get(uri)[1];
+    }
+
+    /*public static String getManuallyCreatedLabel(String uri) {
         if (dbpediaClassMap.containsKey(uri)) {
             return dbpediaClassMap.get(uri)[0];
         }
         return null;
-    }
+    }*/
     public static void display() {
-        for (String key : GenderUtils.referenceArticleMap.keySet()) {
+        for (String key : referenceArticleMap.keySet()) {
             System.out.println("key::" + key);
-            String[] articles = GenderUtils.referenceArticleMap.get(key);
+            String[] articles = referenceArticleMap.get(key);
             for (String article : articles) {
                 System.out.println("article::" + article);
             }
         }
+        
+        /*for (String key : writtenForms.keySet()) {
+            System.out.println("key::" + key);
+            for (String form : writtenForms.get(key)) {
+                System.out.println("form::" + form);
+            }
+        }*/
     }
+
+   
     
 
 }

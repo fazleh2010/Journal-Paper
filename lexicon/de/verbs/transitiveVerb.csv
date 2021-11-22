@@ -1,0 +1,2 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive,writtenFormThridPerson,writtenFormPerfect,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural
+complete_in,verb,fertigstellen,fertiggestellt,fertiggestellt,in,IntransitivePPFrame,domain,range,1,dbo:buildingEndDate,dbo:ArchitecturalStructure,xsd:gYear,masculine,Fluss,FlÅsse,neuter,Land, LÑnder

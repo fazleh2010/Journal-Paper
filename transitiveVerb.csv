@@ -1,0 +1,2 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive,writtenFormPastTense,writtenFormPast,SyntacticFrame,subject,directObject,sense,reference,domain,range,passive_preposition
+discover,verb,entdecken,entdeckte,entdeckt,TransitiveFrame,range,domain,1,dbo:discoverer,dbo:Place,dbo:Person,von

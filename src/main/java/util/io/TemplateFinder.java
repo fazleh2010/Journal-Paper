@@ -5,6 +5,7 @@
  */
 package util.io;
 
+import grammar.datasets.sentencetemplates.TempConstants;
 import grammar.sparql.SelectVariable;
 import grammar.structure.component.DomainOrRangeType;
 import grammar.structure.component.FrameType;
@@ -17,7 +18,7 @@ import org.apache.commons.lang3.StringUtils;
  *
  * @author elahi
  */
-public class TemplateFinder implements TemplateConstants{
+public class TemplateFinder implements TempConstants{
 
     private LexicalEntryUtil lexicalEntryUtil = null;
     private DomainOrRangeType forwardDomainOrRange = null;
@@ -33,7 +34,6 @@ public class TemplateFinder implements TemplateConstants{
         else if (frameType.equals(FrameType.NPP)) {
             this.selectedTemplate = this.getSentenceTemplate();
         }
-
     }
 
     private void findForwardDomainAndRange() {
@@ -174,6 +174,10 @@ public class TemplateFinder implements TemplateConstants{
 
         }
         return determinerStr;
+    }
+
+    private String getSentenceTemplateTransitive() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

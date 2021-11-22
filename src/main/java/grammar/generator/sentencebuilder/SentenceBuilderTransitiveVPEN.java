@@ -9,8 +9,7 @@ import grammar.datasets.sentencetemplates.SentenceTemplateRepository;
 import grammar.datasets.annotated.AnnotatedVerb;
 import static grammar.datasets.questionword.QuestionWordFactoryDE.questionWords;
 import grammar.datasets.questionword.QuestionWordFactoryIT;
-import grammar.datasets.sentencetemplates.TemplateVariable;
-import static grammar.datasets.sentencetemplates.TemplateVariable.FULL_STOP;
+import grammar.datasets.sentencetemplates.TempConstants;
 import static grammar.generator.SentenceTemplateParser.QUESTION_MARK;
 import grammar.sparql.SelectVariable;
 import grammar.structure.component.DomainOrRangeType;
@@ -36,11 +35,8 @@ import net.lexinfo.LexInfo;
 import org.apache.commons.lang3.StringUtils;
 import util.exceptions.QueGGMissingFactoryClassException;
 import util.io.GenderUtils;
-import static util.io.TemplateConstants.verb;
-import static grammar.datasets.sentencetemplates.TemplateVariable.colon;
-import static grammar.datasets.sentencetemplates.TemplateVariable.variableIndicator;
 
-public class SentenceBuilderTransitiveVPEN implements SentenceBuilder {
+public class SentenceBuilderTransitiveVPEN  implements SentenceBuilder,TempConstants {
 
     private String bindingVariable;
     private LexicalEntryUtil lexicalEntryUtil;
@@ -85,8 +81,23 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder {
        
 
     }
+    
+    @Override
+    public List<String> generateBooleanQuestionDomainRange(String bindingVariable, String[] string, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<String> generateBooleanQuestionsDomain(String bindingVariable, String[] string, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     private List<String> findSentencesFromTemplates(List<String> sentenceTemplates) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
+    /*private List<String> findSentencesFromTemplates(List<String> sentenceTemplates) {
         Integer index = 0;
         List<String> sentences = new ArrayList<String>();
         for (String sentenceTemplate : sentenceTemplates) {
@@ -326,8 +337,9 @@ public class SentenceBuilderTransitiveVPEN implements SentenceBuilder {
     @Override
     public List<String> generateBooleanQuestionsDomain(String bindingVariable, String[] string, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    }*/
 
+   
    
    
 }

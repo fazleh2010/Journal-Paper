@@ -21,8 +21,10 @@
   lemon:entry    :interrogativePronounPerson ;
   lemon:entry    :interrogativePronounThing ;
   lemon:entry    :interrogativePlace ;
+  lemon:entry    :interrogativeTemporal ;
   lemon:entry    :component_heißen ;
   lemon:entry    :component_haben ;
+  lemon:entry    :component_werden ;
   lemon:entry    :definite_article ;
   lemon:entry    :aus ;
   lemon:entry    :fuer ;
@@ -137,6 +139,51 @@
   lemon:otherForm      [ lemon:writtenRep "waren"@de ;
   lexinfo:tense                           lexinfo:past ;
   lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lemon:otherForm      [ lemon:writtenRep "wird"@de ;
+  lexinfo:tense                           lexinfo:future ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "wurde"@de ;
+  lexinfo:tense                           lexinfo:future ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+ :component_werden a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "werden"@de ;
+  lexinfo:verbFormMood                    lexinfo:infinitive ] ;
+  lemon:otherForm      [ lemon:writtenRep "werde"@de ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:firstPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "wirst"@de ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "wird"@de ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "werden"@de ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:firstPerson ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lemon:otherForm      [ lemon:writtenRep "wurde"@de ;
+  lexinfo:tense                           lexinfo:past ;
+  lexinfo:person                          lexinfo:firstPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "wurdest"@de ;
+  lexinfo:tense                           lexinfo:past ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "wurde"@de ;
+  lexinfo:tense                           lexinfo:past ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "wurden"@de ;
+  lexinfo:tense                           lexinfo:past ;
+  lexinfo:person                          lexinfo:firstPerson ;
   lexinfo:number                          lexinfo:plural ] ;
   lexinfo:partOfSpeech lexinfo:verb .
 
@@ -342,7 +389,7 @@
 
 :interrogativeDeterminer a       lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "Welche"@de ] ;
-  lemon:otherForm      [ lemon:writtenRep "Welche"@de ;
+  lemon:otherForm      [ lemon:writtenRep "Welcher"@de ;
   lexinfo:gender                          lexinfo:masculine ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
@@ -355,6 +402,15 @@
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
   lemon:otherForm      [ lemon:writtenRep "Welche"@de ;
+  lexinfo:gender                          lexinfo:masculine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lemon:otherForm      [ lemon:writtenRep "Welche"@de ;
+  lexinfo:gender                          lexinfo:feminine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lemon:otherForm      [ lemon:writtenRep "Welche"@de ;
+  lexinfo:gender                          lexinfo:neuter ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:plural ] ;
   lemon:otherForm      [ lemon:writtenRep "Welchem"@de ;
@@ -470,6 +526,9 @@
   lexinfo:number                          lexinfo:plural ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
+  :interrogativeTemporal a               lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "Wann"@de ] ;
+   lexinfo:partOfSpeech lexinfo:verb .
 
   :imperative_plural a               lemon:SynRoleMarker ;
   lemon:canonicalForm  [ lemon:writtenRep "Liste"@de ] ;

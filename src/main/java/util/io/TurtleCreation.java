@@ -6,7 +6,7 @@
 package util.io;
 
 import com.google.gdata.util.common.base.Pair;
-import grammar.datasets.sentencetemplates.TemplateVariable;
+import grammar.datasets.sentencetemplates.TempConstants;
 import java.io.File;
 import java.io.IOException;
 import static java.lang.System.exit;
@@ -47,13 +47,13 @@ public class TurtleCreation {
         this.language=language;
         String syntacticFrame = findSyntacticFrame(rows);
 
-        if (syntacticFrame.equals(TemplateVariable.NounPPFrame)) {
+        if (syntacticFrame.equals(TempConstants.NounPPFrame)) {
             setNounPPFrame(key, rows, syntacticFrame);
-        } else if (syntacticFrame.equals(TemplateVariable.TransitiveFrame)) {
-            setTransitiveFrame(key, rows, syntacticFrame,"da");
-        } else if (syntacticFrame.equals(TemplateVariable.IntransitivePPFrame)) {
+        } else if (syntacticFrame.equals(TempConstants.TransitiveFrame)) {
+            setTransitiveFrame(key, rows, syntacticFrame);
+        } else if (syntacticFrame.equals(TempConstants.IntransitivePPFrame)) {
             setIntransitivePPFrame(key, rows, syntacticFrame);
-        } else if (syntacticFrame.equals(TemplateVariable.AdjectiveAttributiveFrame)) {
+        } else if (syntacticFrame.equals(TempConstants.AdjectiveAttributiveFrame)) {
             setAdjectiveFrame(key, rows, syntacticFrame);
         } else {
             System.out.println("no syntactic frame is found!!");
@@ -93,13 +93,13 @@ public class TurtleCreation {
                 = GoogleXslSheet.NounPPFrame.getNounPPFrameHeader(this.lemonEntry, this.preposition, this.language)
                 + GoogleXslSheet.NounPPFrame.getIndexing(this.lemonEntry, tupplesList)
                 + GoogleXslSheet.NounPPFrame.getWrittenFormAll(this.lemonEntry,this.gender, this.writtenFormSingular,this.writtenFormPlural,writtenFormAccusativeForm,this.writtenDativeForm,this.writtenGenitiveForm,this.language)
-                + GoogleXslSheet.getSenseDetail(tupplesList, TemplateVariable.NounPPFrame, this.lemonEntry, this.writtenFormSingular, this.preposition, this.language)
+                + GoogleXslSheet.getSenseDetail(tupplesList, TempConstants.NounPPFrame, this.lemonEntry, this.writtenFormSingular, this.preposition, this.language)
                 + GoogleXslSheet.NounPPFrame.getPreposition(this.preposition, language);
         this.tutleFileName = getFileName(syntacticFrame);
 
     }
 
-    private void setTransitiveFrame(String key, List<String[]> rows, String syntacticFrame,String preposition) throws Exception {
+    private void setTransitiveFrame(String key, List<String[]> rows, String syntacticFrame) throws Exception {
         this.setLemonEntryId(key);
         List<Tupples> tupples = new ArrayList<Tupples>();
         Integer index = 0;
@@ -109,10 +109,7 @@ public class TurtleCreation {
                 this.writtenFormSingular = row[GoogleXslSheet.writtenFormInfinitive];
                 this.writtenForm3rdPerson = row[GoogleXslSheet.TransitFrame.writtenForm3rdPerson];
                 this.writtenFormPast = row[GoogleXslSheet.TransitFrame.writtenFormPast];
-                System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-                System.out.println("row[GoogleXslSheet.TransitFrame.writtenFormPast]:"+row[GoogleXslSheet.TransitFrame.writtenFormPast]);
-                System.out.println("writtenForm3rdPerson:"+writtenFormPast);
-                this.preposition = preposition;
+                this.preposition = row[GoogleXslSheet.TransitFrame.rangeIndex+1];
             }
             tupples.add(new Tupples(this.lemonEntry,
                     index + 1,
@@ -123,17 +120,17 @@ public class TurtleCreation {
 
         }
         this.tutleString
-                = GoogleXslSheet.TransitFrame.getHeader(this.lemonEntry,this.preposition,this.language)
+                = GoogleXslSheet.TransitFrame.getHeader(this.lemonEntry,TempConstants.preposition,this.preposition,this.language)
                 + GoogleXslSheet.TransitFrame.getSenseIndexing(tupples, lemonEntry)
                 + GoogleXslSheet.TransitFrame.getWritten(this.lemonEntry, this.writtenFormSingular, this.writtenForm3rdPerson, this.writtenFormPast,this.language)
-                + GoogleXslSheet.getSenseDetail(tupples, TemplateVariable.TransitiveFrame,this.lemonEntry,this.writtenFormSingular,this.preposition,this.language)
-                + GoogleXslSheet.getPrepostion(this.preposition,this.language);
+                + GoogleXslSheet.getSenseDetail(tupples, TempConstants.TransitiveFrame,this.lemonEntry,this.writtenFormSingular,this.preposition,this.language)
+                + GoogleXslSheet.getPrepostion(TempConstants.preposition,this.preposition,this.language);
         this.tutleFileName = getFileName(syntacticFrame);
     }
 
     private void setIntransitivePPFrame(String key, List<String[]> rows, String syntacticFrame) throws Exception {
 
-        List<Tupples> tupples = new ArrayList<Tupples>();
+        List<Tupples> tupplesList = new ArrayList<Tupples>();
         Integer index = 0;
         for (String[] row : rows) {
             if (index == 0) {
@@ -150,19 +147,22 @@ public class TurtleCreation {
                     continue;*/
 
             }
-            tupples.add(new Tupples(this.lemonEntry,
+            Tupples tupple=new Tupples(this.lemonEntry,
                     index + 1,
-                    this.setReference(row[GoogleXslSheet.InTransitFrame.referenceIndex]),
-                    this.setReference(row[GoogleXslSheet.InTransitFrame.domainIndex]),
-                    this.setReference(row[GoogleXslSheet.InTransitFrame.rangeIndex])));
+                    this.setReference(row[GoogleXslSheet.InTransitFrame.getReferenceIndex()]),
+                    this.setReference(row[GoogleXslSheet.InTransitFrame.getDomainIndex()]),
+                    this.setReference(row[GoogleXslSheet.InTransitFrame.getRangeIndex()]));
+            tupplesList.add(tupple);
             index = index + 1;
+            this.setDomainRangeInfo(tupple,this.gender,row);
+          
         }
         this.tutleString
-                = GoogleXslSheet.InTransitFrame.getHeader(this.lemonEntry,this.preposition,this.language)
-                + GoogleXslSheet.InTransitFrame.getSenseIndexing(tupples,this.lemonEntry)
+                = GoogleXslSheet.InTransitFrame.getHeader(this.lemonEntry,TempConstants.preposition,this.language)
+                + GoogleXslSheet.InTransitFrame.getSenseIndexing(tupplesList,this.lemonEntry)
                 + GoogleXslSheet.InTransitFrame.getWritten(lemonEntry,writtenFormSingular,writtenForm3rdPerson,writtenFormPast,this.language)
-                + GoogleXslSheet.getSenseDetail(tupples, TemplateVariable.IntransitivePPFrame,this.lemonEntry,this.writtenFormSingular,this.preposition,this.language)
-                + GoogleXslSheet.getPrepostion(this.preposition,this.language);        
+                + GoogleXslSheet.getSenseDetail(tupplesList, TempConstants.IntransitivePPFrame,this.lemonEntry,this.writtenFormSingular,this.preposition,this.language)
+                + GoogleXslSheet.getPrepostion(TempConstants.preposition,this.preposition,this.language);        
         this.tutleFileName = getFileName(syntacticFrame);
         
         /*System.out.println("partOfSpeech::" + partOfSpeech);
@@ -257,14 +257,14 @@ public class TurtleCreation {
        
 
         try {
-            if (nounPPFrame.equals(TemplateVariable.NounPPFrame)) {
-                return TemplateVariable.NounPPFrame;
-            } else if (row[GoogleXslSheet.TransitFrame.getTransitFrameSyntacticFrameIndex()].equals(TemplateVariable.TransitiveFrame)) {
-                return TemplateVariable.TransitiveFrame;
-            } else if (row[GoogleXslSheet.InTransitFrameSyntacticFrameIndex].equals(TemplateVariable.IntransitivePPFrame)) {
-                return TemplateVariable.IntransitivePPFrame;
-            } else if (row[GoogleXslSheet.AdjectiveFrameIndex].equals(TemplateVariable.AdjectiveAttributiveFrame)) {
-                return TemplateVariable.AdjectiveAttributiveFrame;
+            if (nounPPFrame.equals(TempConstants.NounPPFrame)) {
+                return TempConstants.NounPPFrame;
+            } else if (row[GoogleXslSheet.TransitFrame.getTransitFrameSyntacticFrameIndex()].equals(TempConstants.TransitiveFrame)) {
+                return TempConstants.TransitiveFrame;
+            } else if (row[GoogleXslSheet.InTransitFrameSyntacticFrameIndex].equals(TempConstants.IntransitivePPFrame)) {
+                return TempConstants.IntransitivePPFrame;
+            } else if (row[GoogleXslSheet.AdjectiveFrameIndex].equals(TempConstants.AdjectiveAttributiveFrame)) {
+                return TempConstants.AdjectiveAttributiveFrame;
             } else {
                System.out.println("row.length::" + row.length);
                 //throw new Exception("invalid entry."); //To change body of generated methods, choose Tools | Templates.   
@@ -537,6 +537,14 @@ public class TurtleCreation {
 
         }
       return flag;
+    }
+
+    private void setDomainRangeInfo(Tupples tupple, String gender,String []row) {
+        GenderUtils.setArticles(tupple.getReference(), gender);
+        GenderUtils.setArticles(tupple.getDomain(), row[GoogleXslSheet.InTransitFrame.getDomainArticleIndex()]);
+        GenderUtils.setArticles(tupple.getRange(), row[GoogleXslSheet.InTransitFrame.getRangeArticleIndex()]);
+        GenderUtils.setWrittenForms(tupple.getDomain(), row[GoogleXslSheet.InTransitFrame.getDomainWrittenSingular()], row[GoogleXslSheet.InTransitFrame.getDomainWrittenPlural()]);
+        GenderUtils.setWrittenForms(tupple.getRange(), row[GoogleXslSheet.InTransitFrame.getRangeWrittenSingular()], row[GoogleXslSheet.InTransitFrame.getRangeWrittenPlural()]);
     }
 
 }

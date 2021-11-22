@@ -13,8 +13,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import static util.io.TemplateConstants.BACKWARD;
-import static util.io.TemplateConstants.FORWARD;
 
 public class IntransitivePPGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
 
