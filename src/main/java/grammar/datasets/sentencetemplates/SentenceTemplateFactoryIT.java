@@ -138,7 +138,7 @@ public class SentenceTemplateFactoryIT  implements Factory<SentenceTemplateRepos
         //"preposition adjunct(INTERROGATIVE_DETERMINER_PLURAL) verb(present) subject(X)?"
         ),
         "IntransitivePPFrame",
-        WHAT_WHICH_DO_THING,
+        WHAT_WHICH_PRESENT_THING,
         forward,
         Language.IT.toString()
       )
@@ -168,7 +168,7 @@ PREPOSITION + (COSA, CHI, DOVE) + aux + VERB( PAST) + SUBJECT*/
          "preposition object(interrogativePronounThingWhat) verb(past) subject(X)?"
         ),
        "IntransitivePPFrame",
-        WHAT_WHICH_DO_THING,
+        WHAT_WHICH_PRESENT_THING,
         backward,
         Language.IT.toString()
       )

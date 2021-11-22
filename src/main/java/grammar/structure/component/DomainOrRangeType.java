@@ -10,7 +10,7 @@ import static grammar.sparql.Prefix.DBO;
 import static grammar.sparql.Prefix.DBP;
 
 public enum DomainOrRangeType {
-    Person(
+    PersonCheck(
             List.of(
                     URI.create(DBO.getUri() + "Person"),
                     URI.create(DBO.getUri() + "Agent"),
@@ -68,8 +68,60 @@ public enum DomainOrRangeType {
                     URI.create("http://www.wikidata.org/entity/Q215627") // wiki data person
             )
     ),
+    
+    Person(List.of(URI.create(DBO.getUri() + "Person"))),
     Agent(List.of(URI.create(DBO.getUri() + "Agent"))),
+    Mayor(List.of(URI.create(DBO.getUri() + "Mayor"))),
+    Actor(List.of(URI.create(DBO.getUri() + "Actor"))),
+    Scientist(List.of(URI.create(DBO.getUri() + "Scientist"))),
+    Architect(List.of(URI.create(DBO.getUri() + "Architect"))),
+    Artist(List.of(URI.create(DBO.getUri() + "Artist"))),
+    MusicalArtist(List.of(URI.create(DBO.getUri() + "MusicalArtist"))),
+    Politician(List.of(URI.create(DBO.getUri() + "Politician"))),
+    Economist(List.of(URI.create(DBO.getUri() + "Economist"))),  
+    Cleric(List.of(URI.create(DBO.getUri() + "Cleric"))),
+    SoccerPlayer(List.of(URI.create(DBO.getUri() + "SoccerPlayer"))),
+    Skier(List.of(URI.create(DBO.getUri() + "Skier"))),
+    Wrestler(List.of(URI.create(DBO.getUri() + "Wrestler"))),
+    HandballPlayer(List.of(URI.create(DBO.getUri() + "HandballPlayer"))),
+    Cyclist(List.of(URI.create(DBO.getUri() + "Cyclist"))),
+    DartsPlayer(List.of(URI.create(DBO.getUri() + "DartsPlayer"))),
+    SpeedwayRider(List.of(URI.create(DBO.getUri() + "SpeedwayRider"))),
+    GridironFootballPlayer(List.of(URI.create(DBO.getUri() + "GridironFootballPlayer"))),
+    MartialArtist(List.of(URI.create(DBO.getUri() + "MartialArtist"))),
+    SportsManager(List.of(URI.create(DBO.getUri() + "SportsManager"))),
+    MilitaryPerson(List.of(URI.create(DBO.getUri() + "MilitaryPerson"))),
+    BeautyQueen(List.of(URI.create(DBO.getUri() + "BeautyQueen"))),
+    Skater(List.of(URI.create(DBO.getUri() + "Skater"))),
+    TableTennisPlayer(List.of(URI.create(DBO.getUri() + "TableTennisPlayer"))),
+    Boxer(List.of(URI.create(DBO.getUri() + "Boxer"))),
+    MemberOfParliament(List.of(URI.create(DBO.getUri() + "MemberOfParliament"))),
+    AmericanFootballPlayer(List.of(URI.create(DBO.getUri() + "AmericanFootballPlayer"))),
+    IceHockeyPlayer(List.of(URI.create(DBO.getUri() + "IceHockeyPlayer"))),
+    Model(List.of(URI.create(DBO.getUri() + "Model"))),
+    BasketballPlayer(List.of(URI.create(DBO.getUri() + "BasketballPlayer"))),
+    SoccerManager(List.of(URI.create(DBO.getUri() + "SoccerManager"))),
+    PrimeMinister(List.of(URI.create(DBO.getUri() + "PrimeMinister"))),
+    MotorsportRacer(List.of(URI.create(DBO.getUri() + "MotorsportRacer"))),
+    Writer(List.of(URI.create(DBO.getUri() + "Writer"))),
+    ComicsCreator(List.of(URI.create(DBO.getUri() + "ComicsCreator"))),
+    ChristianBishop(List.of(URI.create(DBO.getUri() + "ChristianBishop"))),
+    VolleyballPlayer(List.of(URI.create(DBO.getUri() + "VolleyballPlayer"))),
+    Swimmer(List.of(URI.create(DBO.getUri() + "Swimmer"))),
+    RacingDriver(List.of(URI.create(DBO.getUri() + "RacingDriver"))),
+    GolfPlayer(List.of(URI.create(DBO.getUri() + "GolfPlayer"))),
+    MotorcycleRider(List.of(URI.create(DBO.getUri() + "MotorcycleRider"))),
+    ChessPlayer(List.of(URI.create(DBO.getUri() + "ChessPlayer"))),
     OfficeHolder(List.of(URI.create(DBO.getUri() + "OfficeHolder"))),
+    Athlete(List.of(URI.create(DBO.getUri() + "Athlete"))),
+    FigureSkater(List.of(URI.create(DBO.getUri() + "FigureSkater"))),
+    TennisPlayer(List.of(URI.create(DBO.getUri() + "TennisPlayer"))),
+    WinterSportPlayer(List.of(URI.create(DBO.getUri() + "WinterSportPlayer"))),
+    Curler(List.of(URI.create(DBO.getUri() + "Curler"))),
+    Saint(List.of(URI.create(DBO.getUri() + "Saint"))),
+    FictionalCharacter(List.of(URI.create(DBO.getUri() + "FictionalCharacter"))),
+    
+    
     Country(List.of(URI.create(DBO.getUri() + "Country"))),
     State(List.of(URI.create(DBO.getUri() + "State"))),
     PopulatedPlace(List.of(URI.create(DBO.getUri() + "PopulatedPlace"))),
@@ -88,7 +140,7 @@ public enum DomainOrRangeType {
     Language(List.of(URI.create(DBO.getUri() + "Language"))), 
    
 
-    /*PLACE(
+    PLACECheck(
     List.of(
       URI.create(DBO.getUri() + "Place"),
       URI.create(DBO.getUri() + "City"),
@@ -97,9 +149,10 @@ public enum DomainOrRangeType {
       URI.create(DBO.getUri() + "PopulatedPlace"),
       URI.create(DBO.getUri() + "birthPlace"),
       URI.create(DBO.getUri() + "deathPlace"),
-      URI.create(DBO.getUri() +  "placeOfBurial")
+      URI.create(DBO.getUri() +  "placeOfBurial"),
+      URI.create(DBO.getUri() +  "NaturalPlace")
     )
-  ),*/
+  ),
     Name(List.of(
             URI.create(DBO.getUri() + "GivenName"),
             URI.create(DBO.getUri() + "Name")
@@ -185,7 +238,13 @@ public enum DomainOrRangeType {
     Song(List.of(URI.create(DBO.getUri() + "Song"))),
     Musical(List.of(URI.create(DBO.getUri() + "Musical"))),
     Album(List.of(URI.create(DBO.getUri() + "Album"))),
-    Work(List.of(
+    Work(List.of(URI.create(DBO.getUri() + "Work"))),
+    Artwork(List.of(URI.create(DBO.getUri() + "Artwork"))),
+    WrittenWork(List.of(URI.create(DBO.getUri() + "WrittenWork"))),
+    Single(List.of(URI.create(DBO.getUri() + "Single"))),
+    
+    
+    WorkCheck(List.of(
             URI.create(DBO.getUri() + "Work"),
             URI.create(DBO.getUri() + "Artwork"),
             URI.create(DBO.getUri() + "WrittenWork"),
@@ -209,11 +268,14 @@ public enum DomainOrRangeType {
     Airline(List.of(URI.create(DBO.getUri() + "Airline"))),
     Airport(List.of(URI.create(DBO.getUri() + "Airport"))),
     PoliticalParty(List.of(URI.create(DBO.getUri() + "PoliticalParty"))),
-    ArchitecturalStructure(List.of(
+    ArchitecturalStructureCheck(List.of(
             URI.create(DBO.getUri() + "ArchitecturalStructure"),
             URI.create(DBO.getUri() + "HistoricBuilding"),
             URI.create(DBO.getUri() + "Building")
     )),
+    ArchitecturalStructure(List.of(URI.create(DBO.getUri() + "ArchitecturalStructure"))),
+    HistoricBuilding(List.of(URI.create(DBO.getUri() + "HistoricBuilding"))),
+    Building(List.of(URI.create(DBO.getUri() + "Building"))),
     LaunchPad(List.of(URI.create(DBO.getUri() + "LaunchPad"))),
     Museum(List.of(URI.create(DBO.getUri() + "Museum"))),
     BodyOfWater(List.of(URI.create(DBO.getUri() + "BodyOfWater"))),

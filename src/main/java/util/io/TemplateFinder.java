@@ -10,6 +10,7 @@ import grammar.sparql.SelectVariable;
 import grammar.structure.component.DomainOrRangeType;
 import grammar.structure.component.FrameType;
 import grammar.structure.component.Language;
+import static java.lang.System.exit;
 import java.net.URI;
 import lexicon.LexicalEntryUtil;
 import org.apache.commons.lang3.StringUtils;
@@ -47,7 +48,7 @@ public class TemplateFinder implements TempConstants{
         } else if (selectedTemplate.equals(WHERE_WHO_PAST_PERSON)) {
             this.forwardDomainOrRange = DomainOrRangeType.Place;
             this.oppositeDomainOrRange = DomainOrRangeType.Person;
-        } else if (selectedTemplate.equals(WHAT_WHICH_DO_THING)) {
+        } else if (selectedTemplate.equals(WHAT_WHICH_PRESENT_THING)) {
             this.forwardDomainOrRange = DomainOrRangeType.THING;
             this.oppositeDomainOrRange = DomainOrRangeType.THING;
         }
@@ -67,12 +68,12 @@ public class TemplateFinder implements TempConstants{
         } catch (QueGGMissingFactoryClassException ex) {
             Logger.getLogger(SentenceBuilderIntransitivePPEN.class.getName()).log(Level.SEVERE, null, ex);
         }*/
-        //System.out.println("subjectUri::"+subjectUri);
-        //System.out.println("objectUri::"+objectUri);
-        //System.out.println("referenceUri::"+referenceUri);
-        //System.out.println("isPerson(subjectUri)::"+isPerson(subjectUri));
-        //System.out.println("isDate(referenceUri)::"+isDate(referenceUri));
-        //System.out.println("isPlace(referenceUri)::"+isPlace(objectUri));
+        /*System.out.println("subjectUri::"+subjectUri);
+        System.out.println("objectUri::"+objectUri);
+        System.out.println("referenceUri::"+referenceUri);
+        System.out.println("isPerson(subjectUri)::"+isPerson(subjectUri));
+        System.out.println("isDate(referenceUri)::"+isDate(referenceUri));
+        System.out.println("isPlace(referenceUri)::"+isPlace(objectUri));*/
         if (isPerson(subjectUri) && isPlace(objectUri)) {
             type = WHERE_WHO_PAST_PERSON;
         } else if (isPerson(subjectUri) && isDate(referenceUri)) {
@@ -80,9 +81,9 @@ public class TemplateFinder implements TempConstants{
         } else if (!isPerson(subjectUri) && isDate(referenceUri)) {
             type = WHEN_WHAT_PAST_THING;
         } else {
-            type = WHAT_WHICH_DO_THING;
+            type = WHAT_WHICH_PRESENT_THING;
         }
-        //System.out.println("type::"+type);
+       
         return type;
 
     }
@@ -106,7 +107,7 @@ public class TemplateFinder implements TempConstants{
         if (StringUtils.isBlank(string)) {
             return false;
         }
-        for (URI key : DomainOrRangeType.ArchitecturalStructure.getReferences()) {
+        for (URI key : DomainOrRangeType.ArchitecturalStructureCheck.getReferences()) {
             if (string.equals(key.toString())) {
                 return true;
             }
@@ -119,7 +120,7 @@ public class TemplateFinder implements TempConstants{
         if (StringUtils.isBlank(string)) {
             return false;
         }
-        for (URI key : DomainOrRangeType.Work.getReferences()) {
+        for (URI key : DomainOrRangeType.WorkCheck.getReferences()) {
             if (string.equals(key.toString())) {
                 return true;
             }
@@ -132,7 +133,7 @@ public class TemplateFinder implements TempConstants{
         if (StringUtils.isBlank(string)) {
             return false;
         }
-        for (URI key : DomainOrRangeType.Place.getReferences()) {
+        for (URI key : DomainOrRangeType.PLACECheck.getReferences()) {
             if (string.equals(key.toString())) {
                 return true;
             }
@@ -176,8 +177,5 @@ public class TemplateFinder implements TempConstants{
         return determinerStr;
     }
 
-    private String getSentenceTemplateTransitive() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+  
 }

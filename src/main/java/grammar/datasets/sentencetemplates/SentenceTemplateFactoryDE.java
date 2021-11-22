@@ -219,30 +219,28 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
       )
     );
     sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
           //Was fließt durch...?
-         "interrogativePronoun(nominativeCase:domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+         //"interrogativePronoun(nominativeCase:domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
          //Welcher Fluss fließt durch...?
-          "interrogativeDeterminer(nominativeCase:domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
-          "interrogativeDeterminer(nominativeCase:domain:plural) verb(mainVerb:present:thridPerson) preposition adjunct(range)?"
+          //"interrogativeDeterminer(nominativeCase:domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+         // "interrogativeDeterminer(nominativeCase:domain:plural) verb(mainVerb:present:thridPerson) preposition adjunct(range)?"
 
         ),
         IntransitivePPFrame,
-        WHAT_WHICH_DO_THING,
+        WHAT_WHICH_PRESENT_THING,
         forward
       )
     );
     //Durch welches Land fließt der Rhein?
       sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
-          "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(mainVerb:present:thridPerson) adjunct(domain)?"
+          //"preposition interrogativeDeterminer(nominativeCase:range:singular) verb(mainVerb:present:thridPerson) adjunct(domain)?"
         ),
         IntransitivePPFrame,
-        WHAT_WHICH_DO_THING,
+        WHAT_WHICH_PRESENT_THING,
         backward
       )
     );
@@ -278,26 +276,58 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
         language,
         List.of(
           //"In welchem Jahr wurde Rachel Stevens geboren?",
-         "preposition interrogativeDeterminer(dativeCase:range:singular) adjunct(domain) verb(component_werden:past:singular)  verb(mainVerb:perfect:thridPerson)"
+         //"preposition interrogativeDeterminer(dativeCase:range:singular) verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:past:thridPerson)?",
+         //Wann wurde Abrham Lincon geboren?
+         //"interrogativeTemporal verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:past:thridPerson)?"
         ),
         IntransitivePPFrame,
         WHEN_WHO_PAST_PERSON,
         forward
       )
     );
-    //Was wurde 2010 fertiggestellt?
+    //Welche Person wurde 2010 geboren?
+    //Wer ist 2010 geboren?
       sentenceTemplateRepository.add(
       createSentenceTemplate(
         language,
         List.of(
-          "interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:present:thridPerson)?",
-          "interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:plural) preposition adjunct(range) verb(mainVerb:present:thridPerson)?"
+         //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) adjunct(range) verb(mainVerb:past:thridPerson)?",
+         //"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:past:thridPerson)?"
         ),
         IntransitivePPFrame,
         WHEN_WHO_PAST_PERSON,
         backward
       )
     );
+      
+       ///////////////////////////////
+       sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+         //"Welche Profisurfer wurden auf den Philippinen geboren?",
+           "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:past:thridPerson)?"      
+             ),
+        IntransitivePPFrame,
+        WHERE_WHO_PAST_PERSON,
+        forward
+      )
+    );
+    //Welche Person wurde 2010 geboren?
+    //Wer ist 2010 geboren?
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+        //Wo wurde Donald Trump geboren?
+         "interrogativeTemporal verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:past:thridPerson)?"
+        ),
+        IntransitivePPFrame,
+        WHERE_WHO_PAST_PERSON,
+        backward
+      )
+    );
+    
     
     
     
