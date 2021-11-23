@@ -1,5 +1,0 @@
-LemonEntry,partOfSpeech,writtenFormInfinitive,writtenFormThridPerson,writtenFormPerfect,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural
-born_in_1,verb,geb„ren,geb„rt,geboren,auf,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Person,dbo:Place,masculine,Person,Personen,neuter,Jahr,Jahren
-born_in_2,verb,geb„ren,geb„rt,geboren,auf,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Person,dbo:Location,masculine,Person,Personen,feminine,Lage,Lagen
-born_in_3,verb,geb„ren,geb„rt,geboren,auf,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Person,dbo:PopulatedPlace,masculine,Person,Personen,neuter,Ort,™rter
-born_in_4,verb,geb„ren,geb„rt,geboren,auf,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Person,dbo:Country,masculine,Person,Personen,neuter,Land,L„nder

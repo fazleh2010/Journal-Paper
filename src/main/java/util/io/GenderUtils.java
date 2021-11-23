@@ -5,28 +5,45 @@
  */
 package util.io;
 
+import com.google.gdata.util.common.base.Pair;
+import grammar.datasets.sentencetemplates.TempConstants;
 import grammar.structure.component.Language;
 import static java.lang.System.exit;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 /**
  *
  * @author elahi
  */
-public class GenderUtils {
+public class GenderUtils implements TempConstants{
 
     public static Map<String, String[]> referenceArticleMap = new TreeMap<String, String[]>();
     public static Map<String, String[]> writtenForms = new TreeMap<String, String[]>();
+    public static Map<String,Pair<String,String>> trennVerbType = new TreeMap<String,Pair<String,String>>();
+    public static Map<String,ParamterFinder> verbDetail = new TreeMap<String,ParamterFinder>();
 
     public static void setWrittenForms(String uri, String writtenSingular, String writtenPlural) {
         writtenForms.put(uri, new String[]{writtenSingular, writtenPlural});
     }
-    
-     public static void setArticles(String uri, String artile) {
+
+    public static void setArticles(String uri, String artile) {
         referenceArticleMap.put(uri, new String[]{artile});
     }
     
+    
+    public static void setVerbType(String verb, String type) {
+        if (verb != null&&type.contains(separableVerb)) {
+           if(verb.contains(" ")){
+              String []info= verb.split(" ");
+              trennVerbType.put(verb, new Pair<String,String>(info[0],info[1]));
+           }
+        }
+
+    }
+
     
 
     /*public static void setArticles(Map<String, String[]> referenceArticleMapT) {
@@ -85,6 +102,22 @@ public class GenderUtils {
     public static String getWrittenFormPlural(String uri) {
         return writtenForms.get(uri)[1];
     }
+    
+    public static String getTrennVerbType(String verb, String type) {
+        Pair<String, String> pair = trennVerbType.get(verb);
+        if (type.contains(TrennVerbPart1)) {
+            return pair.first;
+        } else {
+            return pair.second;
+        }
+    }
+    
+    public static Boolean isTrennVerbType(String verb) {
+        if (trennVerbType.containsKey(verb)) {
+            return true;
+        }
+        return false;
+    }
 
     /*public static String getManuallyCreatedLabel(String uri) {
         if (dbpediaClassMap.containsKey(uri)) {
@@ -101,12 +134,7 @@ public class GenderUtils {
             }
         }
         
-        /*for (String key : writtenForms.keySet()) {
-            System.out.println("key::" + key);
-            for (String form : writtenForms.get(key)) {
-                System.out.println("form::" + form);
-            }
-        }*/
+        
     }
 
    

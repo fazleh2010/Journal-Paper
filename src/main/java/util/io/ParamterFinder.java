@@ -16,8 +16,6 @@ import java.util.Set;
  */
 public class ParamterFinder implements TempConstants {
 
-  
-
     private Pair<String, String> numberPair = new Pair<String, String>("", "");
     private Pair<String, String> tensePair = new Pair<String, String>("", "");
     private Pair<String, String> personPair = new Pair<String, String>("", "");
@@ -37,6 +35,12 @@ public class ParamterFinder implements TempConstants {
 
         }
 
+    }
+    
+    public ParamterFinder(String numberValue, String tenseValue, String personValue) {
+        numberPair = new Pair<String, String>(number, numberValue);
+        tensePair = new Pair<String, String>(tense, tenseValue);
+        personPair = new Pair<String, String>(person, personValue);
     }
 
     public String getReference() {

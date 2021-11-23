@@ -17,8 +17,6 @@ public class GoogleXslSheet {
     public static Integer lemonEntryIndex = 0;
     public static Integer partOfSpeechIndex = 1;
     public static Integer writtenFormInfinitive = 2;
-    public static Integer TransitFrameSyntacticFrameIndex = 5;
-    public static Integer InTransitFrameSyntacticFrameIndex = 6;
     public static Integer AdjectiveFrameIndex = 3;
 
     public static class NounPPFrame {
@@ -34,13 +32,19 @@ public class GoogleXslSheet {
         public static Integer writtenFormDativeIndex = 6;
         public static Integer writtenFormGenetiveIndex = 7;
         public static Integer prepositionIndex = 8;
-        public static Integer nounPPFrameSyntacticFrameIndex = 9;
+        public static Integer SyntacticFrame = 9;
         public static Integer copulativeArgIndex = 10;
         public static Integer prepositionalAdjunctIndex = 11;
         public static Integer senseIndex = 12;
         public static Integer referenceIndex = 13;
         public static Integer domainIndex = 14;
         public static Integer rangeIndex = 15;
+        public static Integer domainArticleIndex = 16;
+        public static Integer domainWrittenSingular = 17;
+        public static Integer domainWrittenPlural = 18;
+        public static Integer rangeArticleIndex = 19;
+        public static Integer rangeWrittenSingular = 20;
+        public static Integer rangeWrittenPlural = 21;
 
         public static String getNounPPFrameHeader(String lemonEntry, String preposition, String language) {
             return "@prefix :        <http://localhost:8080/lexicon#> .\n"
@@ -117,14 +121,23 @@ public class GoogleXslSheet {
 
        
 
-        public static String getPreposition(String preposition, String language) {
-            return ":arg2 lemon:marker :" + preposition + " .\n"
+        public static String getPreposition(String prepositionAtt,String preposition, String language) {
+            return ":arg2 lemon:marker :" + prepositionAtt + " .\n"
                     + "\n"
                     + "## Prepositions ##\n"
                     + "\n"
-                    + ":" + preposition + " a                  lemon:SynRoleMarker ;\n"
+                    + ":" + prepositionAtt + " a                  lemon:SynRoleMarker ;\n"
                     + "  lemon:canonicalForm  [ lemon:writtenRep \"" + preposition + "\"@" + "en" + " ] ;\n"
                     + "  lexinfo:partOfSpeech lexinfo:preposition .";
+        }
+     
+        public static void setArticle(Tupples tupple, String gender, String[] row) {
+            GenderUtils.setArticles(tupple.getReference(), gender);
+            GenderUtils.setArticles(tupple.getDomain(), row[getDomainArticleIndex()]);
+            GenderUtils.setArticles(tupple.getRange(), row[getRangeArticleIndex()]);
+            System.out.println(GenderUtils.referenceArticleMap);
+            GenderUtils.setWrittenForms(tupple.getDomain(), row[getDomainWrittenSingular()], row[getDomainWrittenPlural()]);
+            GenderUtils.setWrittenForms(tupple.getRange(), row[getRangeWrittenSingular()], row[getRangeWrittenPlural()]);
         }
 
         public static Integer getLexicalIdIndex() {
@@ -163,8 +176,8 @@ public class GoogleXslSheet {
             return prepositionIndex;
         }
 
-        public static Integer getNounPPFrameSyntacticFrameIndex() {
-            return nounPPFrameSyntacticFrameIndex;
+        public static Integer getSyntacticFrame() {
+            return SyntacticFrame;
         }
 
         public static Integer getCopulativeArgIndex() {
@@ -191,6 +204,30 @@ public class GoogleXslSheet {
             return rangeIndex;
         }
 
+        public static Integer getDomainArticleIndex() {
+            return domainArticleIndex;
+        }
+
+        public static Integer getDomainWrittenSingular() {
+            return domainWrittenSingular;
+        }
+
+        public static Integer getDomainWrittenPlural() {
+            return domainWrittenPlural;
+        }
+
+        public static Integer getRangeArticleIndex() {
+            return rangeArticleIndex;
+        }
+
+        public static Integer getRangeWrittenSingular() {
+            return rangeWrittenSingular;
+        }
+
+        public static Integer getRangeWrittenPlural() {
+            return rangeWrittenPlural;
+        }
+
         
 
     }
@@ -201,13 +238,19 @@ public class GoogleXslSheet {
 
         public static Integer writtenForm3rdPerson = 3;
         public static Integer writtenFormPast = 4;
-        public static Integer transitFrameSyntacticFrameIndex = 5;
+        public static Integer SyntacticFrame = 5;
         public static Integer subjectIndex = 6;
         public static Integer directObjectIndex = 7;
         public static Integer senseIndex = 8;
         public static Integer referenceIndex = 9;
         public static Integer domainIndex = 10;
         public static Integer rangeIndex = 11;
+        public static Integer domainArticleIndex = rangeIndex+1;
+        public static Integer domainWrittenSingular = domainArticleIndex+1;
+        public static Integer domainWrittenPlural = domainWrittenSingular+1;
+        public static Integer rangeArticleIndex = domainWrittenPlural+1;
+        public static Integer rangeWrittenSingular = rangeArticleIndex+1;
+        public static Integer rangeWrittenPlural = rangeWrittenSingular+1;
 
         public static String getHeader(String lemonEntry, String prepositionAttr,String preposition, String language) {
             return "@prefix :        <http://localhost:8080/lexicon#> .\n"
@@ -269,11 +312,9 @@ public class GoogleXslSheet {
             return writtenFormPast;
         }
 
-        public static Integer getTransitFrameSyntacticFrameIndex() {
-            return transitFrameSyntacticFrameIndex;
+        public static Integer getSyntacticFrame() {
+            return SyntacticFrame;
         }
-
-       
 
         public static Integer getSubjectIndex() {
             return subjectIndex;
@@ -299,6 +340,32 @@ public class GoogleXslSheet {
             return rangeIndex;
         }
 
+        public static Integer getDomainArticleIndex() {
+            return domainArticleIndex;
+        }
+
+        public static Integer getDomainWrittenSingular() {
+            return domainWrittenSingular;
+        }
+
+        public static Integer getDomainWrittenPlural() {
+            return domainWrittenPlural;
+        }
+
+        public static Integer getRangeArticleIndex() {
+            return rangeArticleIndex;
+        }
+
+        public static Integer getRangeWrittenSingular() {
+            return rangeWrittenSingular;
+        }
+
+        public static Integer getRangeWrittenPlural() {
+            return rangeWrittenPlural;
+        }
+
+       
+
     }
 
     public static class InTransitFrame {
@@ -307,20 +374,22 @@ public class GoogleXslSheet {
         //flow_through	verb	flow	flows	flowed	through	IntransitivePPFrame	domain	range	1	dbo:country	dbo:River	dbo:Country	What dbo:River(X) flows through Y(dbo:Country)?	FALSE	SELECT ?X WHERE { ?X dbo:country Y.}	Which dbo:Country(X) does Y(dbo:River) flow through?	FALSE	SELECT ?X WHERE { Y dbo:country ?X.}
         public static Integer writtenForm3rdPerson = 3;
         public static Integer writtenFormPast = 4;
-        public static Integer preposition = 5;
-        public static Integer SyntacticFrame = 6;
-        public static Integer subject = 7;
-        public static Integer prepositionalAdjunct = 8;
-        public static Integer senseIndex = 9;
-        public static Integer referenceIndex = 10;
-        public static Integer domainIndex = 11;
-        public static Integer rangeIndex = 12;
-        public static Integer domainArticleIndex = 13;
-        public static Integer domainWrittenSingular = 14;
-        public static Integer domainWrittenPlural = 15;
-        public static Integer rangeArticleIndex = 16;
-        public static Integer rangeWrittenSingular = 17;
-        public static Integer rangeWrittenPlural = 18;
+        public static Integer writtenFormPerfect = 5;
+        public static Integer preposition = 6;
+        public static Integer SyntacticFrame = 7;
+        public static Integer subject = 8;
+        public static Integer prepositionalAdjunct = 9;
+        public static Integer senseIndex = 10;
+        public static Integer referenceIndex = 11;
+        public static Integer domainIndex = 12;
+        public static Integer rangeIndex = 13;
+        public static Integer domainArticleIndex = 14;
+        public static Integer domainWrittenSingular = 15;
+        public static Integer domainWrittenPlural = 16;
+        public static Integer rangeArticleIndex = 17;
+        public static Integer rangeWrittenSingular = 18;
+        public static Integer rangeWrittenPlural = 19;
+
 
 
         public static String getHeader(String lemonEntry, String proposition, String language) {
@@ -342,31 +411,38 @@ public class GoogleXslSheet {
             String senseIdStr = getSenseId(senseIds);
             senseIdStr = ":" + lemonEntry + " a             lemon:LexicalEntry ;\n"
                     + "  lexinfo:partOfSpeech lexinfo:verb ;\n"
-                    + "  lemon:canonicalForm  :form_" + lemonEntry + " ;\n"
-                    + "  lemon:otherForm      :form_" + lemonEntry + "_past ;\n"
+                    + "  lemon:canonicalForm  :" + lemonEntry + "_present"+" ;\n"
+                    + "  lemon:otherForm      :" + lemonEntry + "_past"+" ;\n"
+                    + "  lemon:otherForm      :" + lemonEntry + "_perfect"+" ;\n"
                     + senseIdStr
                     + "  lemon:synBehavior    :" + lemonEntry + "_frame .\n"
                     + "\n";
             return senseIdStr;
         }
 
-        public static String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast, String language) {
-            return ":form_" + lemonEntry + " a           lemon:Form ;\n"
+        public static String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast, String writtenFormPerfect, String language) {
+            return ":" + lemonEntry + "_present"+ " a           lemon:Form ;\n"
                     + "  lemon:writtenRep     \"" + writtenFormInfinitive + "\"@" + language + " ;\n"
                     + "  lexinfo:verbFormMood lexinfo:infinitive .\n"
                     + "\n"
                     + "\n"
-                    + ":form_" + lemonEntry + " a      lemon:Form ;\n"
+                    + ":" + lemonEntry + "_present"+ " a      lemon:Form ;\n"
                     + "  lemon:writtenRep \"" + writtenForm3rdPerson + "\"@" + language + " ;\n"
                     + "  lexinfo:number   lexinfo:singular ;\n"
                     + "  lexinfo:person   lexinfo:thirdPerson ;\n"
                     + "  lexinfo:tense    lexinfo:present .\n"
                     + "\n"
-                    + ":form_" + lemonEntry + "_past a lemon:Form ;\n"
+                    + ":" + lemonEntry + "_past"+" a lemon:Form ;\n"
                     + "  lemon:writtenRep  \"" + writtenFormPast + "\"@" + language + " ;\n"
                     + "  lexinfo:number    lexinfo:singular ;\n"
                     + "  lexinfo:person    lexinfo:thirdPerson ;\n"
                     + "  lexinfo:tense     lexinfo:past .\n"
+                    + "\n"
+                    + ":" + lemonEntry + "_perfect"+" a lemon:Form ;\n"
+                    + "  lemon:writtenRep  \"" + writtenFormPerfect + "\"@" + language + " ;\n"
+                    + "  lexinfo:number    lexinfo:singular ;\n"
+                    + "  lexinfo:person    lexinfo:thirdPerson ;\n"
+                    + "  lexinfo:tense     lexinfo:perfect .\n"
                     + "\n"
                     + ":" + lemonEntry + "_frame a  lexinfo:IntransitivePPFrame ;\n"
                     + "  lexinfo:subject              :" + lemonEntry + "_subj ;\n"
@@ -397,6 +473,7 @@ public class GoogleXslSheet {
         public static Integer getPrepositionalAdjunct() {
             return prepositionalAdjunct;
         }
+        
 
         public static Integer getSenseIndex() {
             return senseIndex;
@@ -648,14 +725,6 @@ public class GoogleXslSheet {
     }
 
    
-
-    public static Integer getTransitFrameSyntacticFrameIndex() {
-        return TransitFrameSyntacticFrameIndex;
-    }
-
-    public static Integer getInTransitFrameSyntacticFrameIndex() {
-        return InTransitFrameSyntacticFrameIndex;
-    }
 
     public static Integer getAdjectiveFrameIndex() {
         return AdjectiveFrameIndex;

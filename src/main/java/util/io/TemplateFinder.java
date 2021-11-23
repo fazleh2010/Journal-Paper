@@ -8,6 +8,7 @@ package util.io;
 import grammar.datasets.sentencetemplates.TempConstants;
 import grammar.sparql.SelectVariable;
 import grammar.structure.component.DomainOrRangeType;
+import grammar.structure.component.DomainOrRangeTypeCheck;
 import grammar.structure.component.FrameType;
 import grammar.structure.component.Language;
 import static java.lang.System.exit;
@@ -107,7 +108,7 @@ public class TemplateFinder implements TempConstants{
         if (StringUtils.isBlank(string)) {
             return false;
         }
-        for (URI key : DomainOrRangeType.ArchitecturalStructureCheck.getReferences()) {
+        for (URI key : DomainOrRangeTypeCheck.ArchitecturalStructureCheck.getReferences()) {
             if (string.equals(key.toString())) {
                 return true;
             }
@@ -120,7 +121,7 @@ public class TemplateFinder implements TempConstants{
         if (StringUtils.isBlank(string)) {
             return false;
         }
-        for (URI key : DomainOrRangeType.WorkCheck.getReferences()) {
+        for (URI key : DomainOrRangeTypeCheck.WorkCheck.getReferences()) {
             if (string.equals(key.toString())) {
                 return true;
             }
@@ -133,7 +134,7 @@ public class TemplateFinder implements TempConstants{
         if (StringUtils.isBlank(string)) {
             return false;
         }
-        for (URI key : DomainOrRangeType.PLACECheck.getReferences()) {
+        for (URI key : DomainOrRangeTypeCheck.PlaceCheck.getReferences()) {
             if (string.equals(key.toString())) {
                 return true;
             }

@@ -95,6 +95,7 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder,TempCons
             List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                     language, new String[]{frameType.getName(), template, backward});
             sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable,sentenceTemplates);
+            exit(1);
         } else if (this.frameType.equals(FrameType.NPP)) {
             sentences = nounPhrase(bindingVariable, lexicalEntryUtil);
         }
@@ -156,6 +157,8 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder,TempCons
 
             sentences.add(str.stripTrailing());
         }
+        
+        System.out.println(sentences);
 
         return new ArrayList<String>(sentences);
     }
@@ -255,7 +258,7 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder,TempCons
             index = index + 1;
             List<String> positionTokens = sentenceBuilderFromTemplates.parseTemplate(sentenceTemplate);
             String str = "", positionWord = "";
-            Boolean validFlag = true;
+            //Boolean validFlag = true;
             for (String positionString : positionTokens) {
                 String[] parseToken = sentenceBuilderFromTemplates.parseToken(positionString);
                 positionWord = sentenceBuilderFromTemplates.getWords(parseToken, index);
@@ -263,14 +266,14 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder,TempCons
                 str += positionWord;
                 index = index + 1;
                 System.out.println("positionString:::" + positionString + " positionWord:" + positionWord);
-                validFlag = this.checkValidity(positionWord);
+                /*validFlag = this.checkValidity(positionWord);
                 if (!validFlag) {
                     break;
-                }
+                }*/
             }
-            if(!validFlag){
+            /*if(!validFlag){
                     continue;
-                }
+                }*/
             String newsSentence = str.stripTrailing();
 
             String newSentence = sentenceBuilderFromTemplates.prepareSentence(positionTokens);

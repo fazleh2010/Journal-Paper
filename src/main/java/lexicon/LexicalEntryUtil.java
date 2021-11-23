@@ -427,6 +427,7 @@ public class LexicalEntryUtil {
      */
     public List<AnnotatedVerb> parseLexicalEntryToAnnotatedVerbs(Collection<LexicalForm> lexicalForms) {
         List<AnnotatedVerb> annotatedVerbs = new ArrayList<>();
+        
         for (LexicalForm lexicalForm : lexicalForms) {
             if (isNull(lexicalForm.getWrittenRep())) {
                 LOG.error("{} - {} is missing a writtenRep", this.lexicalEntry, lexicalForm.getURI());
@@ -443,6 +444,7 @@ public class LexicalEntryUtil {
             annotatedVerb.setVerbFormMood(getPropertyValueOrDefaultFromLexicalForm("verbFormMood", null, lexicalForm));
             annotatedVerb.setAspect(getPropertyValueOrDefaultFromLexicalForm("aspect", null, lexicalForm));
             annotatedVerbs.add(annotatedVerb);
+            //System.out.println("!!!!!!!!!!!annotatedVerb:::"+annotatedVerb);
         }
         return annotatedVerbs;
     }

@@ -1,0 +1,75 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :wife_of_4 ;
+  lemon:entry    :preposition .
+
+:wife_of_4 a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :wife_of_4_form ;
+  lemon:otherForm      :wife_of_4_plural_form ;
+  lemon:otherForm      :wife_of_4_accusative_form ;
+  lemon:otherForm      :wife_of_4_dative_form ;
+  lemon:otherForm      :wife_of_4_genitive_form ;
+  lemon:otherForm      :wife_of_4_plural_form ;
+  lemon:sense          :wife_of_4_sense_1 ;
+  lemon:synBehavior    :wife_of_4_nounpp .
+
+:wife_of_4_form a lemon:Form ;
+  lemon:writtenRep "Frau"@de ;
+  lexinfo:gender   lexinfo:feminine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:nominativeCase .
+
+:wife_of_4_plural_form a lemon:Form ;
+  lemon:writtenRep "Frauen"@de ;
+  lexinfo:gender   lexinfo:feminine ;
+  lexinfo:number   lexinfo:plural ;
+  lexinfo:case     lexinfo:nominativeCase .
+
+:wife_of_4_accusative_form a lemon:Form ;
+  lemon:writtenRep "Frau"@de ;
+  lexinfo:gender   lexinfo:feminine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:accusativeCase .
+
+:wife_of_4_dative_form a lemon:Form ;
+  lemon:writtenRep "Frau"@de ;
+  lexinfo:gender   lexinfo:feminine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:dativeCase .
+
+:wife_of_4_genitive_form a lemon:Form ;
+  lemon:writtenRep "Frau"@de ;
+  lexinfo:gender   lexinfo:feminine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:genitiveCase .
+
+:wife_of_4_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:wife_of_4_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :wife_of_4_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/spouse> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :wife_of_4_sense_1_condition .
+
+:wife_of_4_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Politician> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Person> .
+
+:arg2 lemon:marker :preposition .
+
+## Prepositions ##
+
+:preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "von"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

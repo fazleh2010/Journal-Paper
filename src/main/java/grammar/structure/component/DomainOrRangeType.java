@@ -10,65 +10,6 @@ import static grammar.sparql.Prefix.DBO;
 import static grammar.sparql.Prefix.DBP;
 
 public enum DomainOrRangeType {
-    PersonCheck(
-            List.of(
-                    URI.create(DBO.getUri() + "Person"),
-                    URI.create(DBO.getUri() + "Agent"),
-                    URI.create(DBO.getUri() + "Mayor"),
-                    URI.create(DBO.getUri() + "Actor"),
-                    URI.create(DBO.getUri() + "Scientist"),
-                    URI.create(DBO.getUri() + "Architect"),
-                    URI.create(DBO.getUri() + "Artist"),
-                    URI.create(DBO.getUri() + "MusicalArtist"),
-                    URI.create(DBO.getUri() + "Politician"),
-                    URI.create(DBO.getUri() + "Economist"),
-                    URI.create(DBO.getUri() + "Cleric"),
-                    URI.create(DBO.getUri() + "SoccerPlayer"),
-                    URI.create(DBO.getUri() + "Skier"),
-                    URI.create(DBO.getUri() + "Wrestler"),
-                    URI.create(DBO.getUri() + "HandballPlayer"),
-                    URI.create(DBO.getUri() + "Cyclist"),
-                    URI.create(DBO.getUri() + "DartsPlayer"),
-                    URI.create(DBO.getUri() + "SpeedwayRider"),
-                    URI.create(DBO.getUri() + "GridironFootballPlayer"),
-                    URI.create(DBO.getUri() + "MartialArtist"),
-                    URI.create(DBO.getUri() + "SportsManager"),
-                    URI.create(DBO.getUri() + "MilitaryPerson"),
-                    URI.create(DBO.getUri() + "BeautyQueen"),
-                    URI.create(DBO.getUri() + "Skater"),
-                    URI.create(DBO.getUri() + "TableTennisPlayer"),
-                    URI.create(DBO.getUri() + "Boxer"),
-                    URI.create(DBO.getUri() + "MemberOfParliament"),
-                    URI.create(DBO.getUri() + "AmericanFootballPlayer"),
-                    URI.create(DBO.getUri() + "IceHockeyPlayer"),
-                    URI.create(DBO.getUri() + "Model"),
-                    URI.create(DBO.getUri() + "BasketballPlayer"),
-                    URI.create(DBO.getUri() + "SoccerManager"),
-                    URI.create(DBO.getUri() + "PrimeMinister"),
-                    URI.create(DBO.getUri() + "MotorsportRacer"),
-                    URI.create(DBO.getUri() + "Writer"),
-                    URI.create(DBO.getUri() + "ComicsCreator"),
-                    URI.create(DBO.getUri() + "ChristianBishop"),
-                    URI.create(DBO.getUri() + "VolleyballPlayer"),
-                    URI.create(DBO.getUri() + "Swimmer"),
-                    URI.create(DBO.getUri() + "RacingDriver"),
-                    URI.create(DBO.getUri() + "GolfPlayer"),
-                    URI.create(DBO.getUri() + "MotorcycleRider"),
-                    URI.create(DBO.getUri() + "ChessPlayer"),
-                    URI.create(DBO.getUri() + "OfficeHolder"),
-                    URI.create(DBO.getUri() + "Athlete"),
-                    URI.create(DBO.getUri() + "FigureSkater"),
-                    URI.create(DBO.getUri() + "SquashPlayer"),
-                    URI.create(DBO.getUri() + "TennisPlayer"),
-                    URI.create(DBO.getUri() + "WinterSportPlayer"),
-                    URI.create(DBO.getUri() + "Curler"),
-                    URI.create(DBO.getUri() + "Saint"),
-                    URI.create(DBO.getUri() + "FictionalCharacter"),
-                    URI.create(DBO.getUri() + "author"),
-                    URI.create("http://www.wikidata.org/entity/Q215627") // wiki data person
-            )
-    ),
-    
     Person(List.of(URI.create(DBO.getUri() + "Person"))),
     Agent(List.of(URI.create(DBO.getUri() + "Agent"))),
     Mayor(List.of(URI.create(DBO.getUri() + "Mayor"))),
@@ -119,8 +60,7 @@ public enum DomainOrRangeType {
     WinterSportPlayer(List.of(URI.create(DBO.getUri() + "WinterSportPlayer"))),
     Curler(List.of(URI.create(DBO.getUri() + "Curler"))),
     Saint(List.of(URI.create(DBO.getUri() + "Saint"))),
-    FictionalCharacter(List.of(URI.create(DBO.getUri() + "FictionalCharacter"))),
-    
+    FictionalCharacter(List.of(URI.create(DBO.getUri() + "FictionalCharacter"))),  
     
     Country(List.of(URI.create(DBO.getUri() + "Country"))),
     State(List.of(URI.create(DBO.getUri() + "State"))),
@@ -138,21 +78,7 @@ public enum DomainOrRangeType {
     IceHockeyLeague(List.of(URI.create(DBO.getUri() + "IceHockeyLeague"))),
     Tower(List.of(URI.create(DBO.getUri() + "Tower"))),
     Language(List.of(URI.create(DBO.getUri() + "Language"))), 
-   
 
-    PLACECheck(
-    List.of(
-      URI.create(DBO.getUri() + "Place"),
-      URI.create(DBO.getUri() + "City"),
-      URI.create(DBO.getUri() + "State"),
-      URI.create(DBO.getUri() + "Country"),
-      URI.create(DBO.getUri() + "PopulatedPlace"),
-      URI.create(DBO.getUri() + "birthPlace"),
-      URI.create(DBO.getUri() + "deathPlace"),
-      URI.create(DBO.getUri() +  "placeOfBurial"),
-      URI.create(DBO.getUri() +  "NaturalPlace")
-    )
-  ),
     Name(List.of(
             URI.create(DBO.getUri() + "GivenName"),
             URI.create(DBO.getUri() + "Name")
@@ -242,18 +168,7 @@ public enum DomainOrRangeType {
     Artwork(List.of(URI.create(DBO.getUri() + "Artwork"))),
     WrittenWork(List.of(URI.create(DBO.getUri() + "WrittenWork"))),
     Single(List.of(URI.create(DBO.getUri() + "Single"))),
-    
-    
-    WorkCheck(List.of(
-            URI.create(DBO.getUri() + "Work"),
-            URI.create(DBO.getUri() + "Artwork"),
-            URI.create(DBO.getUri() + "WrittenWork"),
-            URI.create(DBO.getUri() + "Film"),
-            URI.create(DBO.getUri() + "Book"),
-            URI.create(DBO.getUri() + "Song"),
-            URI.create(DBO.getUri() + "Single"),
-            URI.create(DBO.getUri() + "Musical")
-    )),
+   
     Software(List.of(
             URI.create(DBO.getUri() + "Software"),
             URI.create(DBO.getUri() + "VideoGame")
@@ -268,11 +183,6 @@ public enum DomainOrRangeType {
     Airline(List.of(URI.create(DBO.getUri() + "Airline"))),
     Airport(List.of(URI.create(DBO.getUri() + "Airport"))),
     PoliticalParty(List.of(URI.create(DBO.getUri() + "PoliticalParty"))),
-    ArchitecturalStructureCheck(List.of(
-            URI.create(DBO.getUri() + "ArchitecturalStructure"),
-            URI.create(DBO.getUri() + "HistoricBuilding"),
-            URI.create(DBO.getUri() + "Building")
-    )),
     ArchitecturalStructure(List.of(URI.create(DBO.getUri() + "ArchitecturalStructure"))),
     HistoricBuilding(List.of(URI.create(DBO.getUri() + "HistoricBuilding"))),
     Building(List.of(URI.create(DBO.getUri() + "Building"))),

@@ -36,7 +36,7 @@
   lemon:entry    :fiktiver_charakter_strong ;
   lemon:entry    :musikalischer_künstler_weak ;
   lemon:entry    :musikalischer_künstler_strong ;
-  lemon:entry    :imperative_plural ;
+  lemon:entry    :imperative_verb ;
   lemon:entry    :person ;
   lemon:entry    :werk ;
   lemon:entry    :agent ;
@@ -530,9 +530,18 @@
   lemon:canonicalForm  [ lemon:writtenRep "Wann"@de ] ;
    lexinfo:partOfSpeech lexinfo:verb .
 
-  :imperative_plural a               lemon:SynRoleMarker ;
-  lemon:canonicalForm  [ lemon:writtenRep "Liste"@de ] ;
-   lexinfo:partOfSpeech lexinfo:verb .
+:imperative_verb a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "List"@de ;
+  lexinfo:verbFormMood                    lexinfo:infinitive ] ;
+  lemon:otherForm      [ lemon:writtenRep "List"@de ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "Liste"@de ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
 
   
 

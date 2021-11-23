@@ -677,12 +677,12 @@ public class SentenceBuilderUtils implements TempConstants {
         List<AnnotatedVerb> annotatedVerbs = lexicalEntryUtil.parseLexicalEntryToAnnotatedVerbs();
 
         for (AnnotatedVerb annotatedVerb : annotatedVerbs) {
-
             if (annotatedVerb.getTense().toString().contains(paramterFinder.getTensePair().second) && annotatedVerb.getPerson().toString().contains(paramterFinder.getPersonPair().second)) {
                 return annotatedVerb.getWrittenRepValue();
             }
 
         }
+        exit(1);
         return null;
     }
 
@@ -690,9 +690,17 @@ public class SentenceBuilderUtils implements TempConstants {
         String word = null;
         ParamterFinder paramterFinder = new ParamterFinder(attribute, reference);
 
-        if (paramterFinder.getReference().contains(mainVerb)) {
+        if (paramterFinder.getReference().contains(TrennVerbPart1) || paramterFinder.getReference().contains(TrennVerbPart2)) {
+            //System.out.println("givenWord::"+word);
             word = this.getMainVerb(paramterFinder);
-
+            //System.out.println("mainWord::"+word);
+            if (GenderUtils.isTrennVerbType(word)) {
+                word=GenderUtils.getTrennVerbType(word, paramterFinder.getReference());
+            }
+            //System.out.println("word::"+word);
+            
+        } else if (paramterFinder.getReference().equals(mainVerb)) {
+            word = this.getMainVerb(paramterFinder);
         } else {
             if (paramterFinder.getParameterLength() == 2 && paramterFinder.getTensePair().first != null) {
                 word = getEntryOneAtrributeCheck(paramterFinder.getReference(), paramterFinder.getTensePair().first, paramterFinder.getTensePair().second);
@@ -722,5 +730,7 @@ public class SentenceBuilderUtils implements TempConstants {
         return word;
 
     }
+
+  
 
 }

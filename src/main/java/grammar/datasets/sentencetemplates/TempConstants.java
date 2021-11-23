@@ -31,7 +31,10 @@ public interface TempConstants {
     public static String interrogativePronoun = "interrogativePronoun";
     public static String interrogativeDeterminer = "interrogativeDeterminer";
     public static String mainVerb = "mainVerb";
+    public static String TrennVerbPart2 = "TrennVerbPart2";
+    public static String TrennVerbPart1 = "TrennVerbPart1";
     public static final String verb = "verb";
+    public static final String separableVerb="separableVerb";
 
     public static String questionMark = "?";
     public static String space = " ";

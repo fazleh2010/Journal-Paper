@@ -1,0 +1,5 @@
+LemonEntry,partOfSpeech,gender,writtenFormNominative(singular),writtenFormNominative (plural),writtenFormSingular (accusative),writtenFormSingular (dative),writtenFormSingular (genetive),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural
+wife_of_1,noun,feminine,Frau,Frauen,Frau,Frau,Frau,von,NounPPFrame,range,domain,1,dbo:spouse,dbo:Person,dbo:Person,masculine,Person,ÿPersonen,feminine,Person,ÿPersonen
+wife_of_2,noun,feminine,Frau,Frauen,Frau,Frau,Frau,von,NounPPFrame,range,domain,1,dbo:spouse,dbo:OfficeHolder,dbo:Person,masculine,Amtsinhaber,Amtsinhaber,feminine,Person,ÿPersonen
+wife_of_3,noun,feminine,Frau,Frauen,Frau,Frau,Frau,von,NounPPFrame,range,domain,1,dbo:spouse,dbo:Agent,dbo:Person,masculine,Agent,Agenten,feminine,Person,ÿPersonen
+wife_of_4,noun,feminine,Frau,Frauen,Frau,Frau,Frau,von,NounPPFrame,range,domain,1,dbo:spouse,dbo:Politician,dbo:Person,masculine,Politiker,Politiker,feminine,Person,ÿPersonen
