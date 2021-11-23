@@ -179,8 +179,9 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
     sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(
-        "interrogativePronoun(nominativeCase:range:singular) mainVerb(past:thridPerson) object(domain)?",
-        "interrogativeDeterminer(nominativeCase:range:singular) mainVerb(past:thridPerson) object(domain)?"
+         //Wer moderiert die BBC Wildlife Specials?
+        "interrogativePronoun(nominativeCase:range:singular) mainVerb(past:thridPerson) determiner(component_the_accusative:domain:singular) object(domain)?",
+        "interrogativeDeterminer(nominativeCase:range:singular) mainVerb(past:thridPerson) determiner(component_the_accusative:domain:singular) object(domain)?"
         ),
        TransitiveFrame,
         active
@@ -194,12 +195,14 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
     sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(
-        //"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:singular) preposition object(range) verb(mainVerb:past:thridPerson)?",
-        //"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:past:thridPerson)?",
-        //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:singular) preposition object(range) verb(mainVerb:past:thridPerson)?",
-        //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:past:thridPerson)?"
-        //"interrogativeDeterminer(nominativeCase:domain:plural) verb(component_be:future:singular) preposition object(range) verb(mainVerb:past:thridPerson)?",
-        //"interrogativeDeterminer(nominativeCase:domain:plural) verb(component_be:future:plural) preposition object(range) verb(mainVerb:past:thridPerson)?"
+         //"Was wird von ($x | PERSON_NP) entwickelt?"
+        "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:singular) preposition object(range) verb(mainVerb:past:thridPerson)?",
+         //Was wurde von ($x | PERSON_NP) entwickelt?
+        "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:past:thridPerson)?",
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:singular) preposition object(range) verb(mainVerb:past:thridPerson)?",
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:past:thridPerson)?",
+        "interrogativeDeterminer(nominativeCase:domain:plural) verb(component_be:future:singular) preposition object(range) verb(mainVerb:past:thridPerson)?",
+        "interrogativeDeterminer(nominativeCase:domain:plural) verb(component_be:future:plural) preposition object(range) verb(mainVerb:past:thridPerson)?"
     
         ),
         TransitiveFrame,

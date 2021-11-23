@@ -245,12 +245,14 @@ public class GoogleXslSheet {
         public static Integer referenceIndex = 9;
         public static Integer domainIndex = 10;
         public static Integer rangeIndex = 11;
-        public static Integer domainArticleIndex = rangeIndex+1;
-        public static Integer domainWrittenSingular = domainArticleIndex+1;
-        public static Integer domainWrittenPlural = domainWrittenSingular+1;
-        public static Integer rangeArticleIndex = domainWrittenPlural+1;
-        public static Integer rangeWrittenSingular = rangeArticleIndex+1;
-        public static Integer rangeWrittenPlural = rangeWrittenSingular+1;
+        public static Integer domainArticleIndex = 12;
+        public static Integer domainWrittenSingular =13;
+        public static Integer domainWrittenPlural =14;
+        public static Integer rangeArticleIndex = 15;
+        public static Integer rangeWrittenSingular = 16;
+        public static Integer rangeWrittenPlural = 17;
+        public static Integer passivePrepositionIndex = 18;
+
 
         public static String getHeader(String lemonEntry, String prepositionAttr,String preposition, String language) {
             return "@prefix :        <http://localhost:8080/lexicon#> .\n"
@@ -303,6 +305,21 @@ public class GoogleXslSheet {
                     + "  lexinfo:directObject     :" + lemonEntry + "_obj .\n"
                     + "\n";
         }
+       
+        public static void setArticle(Tupples tupple, String gender, String[] row, String partOfSpeech, String writtenFormSingular, String writtenFormPlural,
+                String writtenFormPast, String writtenFormAccusativeForm, String writtenDativeForm, String writtenGenitiveForm) {
+            GenderUtils.setArticles(tupple.getReference(), gender);
+            GenderUtils.setArticles(tupple.getDomain(), row[getDomainArticleIndex()]);
+            GenderUtils.setArticles(tupple.getRange(), row[getRangeArticleIndex()]);
+            GenderUtils.setWrittenForms(tupple.getDomain(), row[getDomainWrittenSingular()], row[getDomainWrittenPlural()]);
+            GenderUtils.setWrittenForms(tupple.getRange(), row[getRangeWrittenSingular()], row[getRangeWrittenPlural()]);
+            GenderUtils.setVerbType(writtenFormSingular, partOfSpeech);
+            GenderUtils.setVerbType(writtenFormPlural, partOfSpeech);
+            GenderUtils.setVerbType(writtenFormPast, partOfSpeech);
+            GenderUtils.setVerbType(writtenFormAccusativeForm, partOfSpeech);
+            GenderUtils.setVerbType(writtenDativeForm, partOfSpeech);
+            GenderUtils.setVerbType(writtenGenitiveForm, partOfSpeech);
+        }
 
         public static Integer getWrittenForm3rdPerson() {
             return writtenForm3rdPerson;
@@ -340,6 +357,10 @@ public class GoogleXslSheet {
             return rangeIndex;
         }
 
+        public static Integer getPassivePrepositionIndex() {
+            return passivePrepositionIndex;
+        }
+
         public static Integer getDomainArticleIndex() {
             return domainArticleIndex;
         }
@@ -364,6 +385,7 @@ public class GoogleXslSheet {
             return rangeWrittenPlural;
         }
 
+        
        
 
     }

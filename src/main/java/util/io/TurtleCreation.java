@@ -111,13 +111,17 @@ public class TurtleCreation {
                 this.writtenFormSingular = row[GoogleXslSheet.writtenFormInfinitive];
                 this.writtenForm3rdPerson = row[GoogleXslSheet.TransitFrame.writtenForm3rdPerson];
                 this.writtenFormPast = row[GoogleXslSheet.TransitFrame.writtenFormPast];
-                this.preposition = row[GoogleXslSheet.TransitFrame.rangeIndex+1];
+                this.preposition = row[GoogleXslSheet.TransitFrame.passivePrepositionIndex];
             }
-            tupples.add(new Tupples(this.lemonEntry,
+            Tupples tupple=new Tupples(this.lemonEntry,
                     index + 1,
                     this.setReference(row[GoogleXslSheet.TransitFrame.referenceIndex]),
                     this.setReference(row[GoogleXslSheet.TransitFrame.domainIndex]),
-                    this.setReference(row[GoogleXslSheet.TransitFrame.rangeIndex])));
+                    this.setReference(row[GoogleXslSheet.TransitFrame.rangeIndex]));
+            
+            GoogleXslSheet.TransitFrame.setArticle(tupple, this.gender, row, this.partOfSpeech, this.writtenFormSingular, this.writtenFormPlural,
+                    this.writtenFormPast, this.writtenFormAccusativeForm, this.writtenDativeForm, this.writtenGenitiveForm);
+            tupples.add(tupple);
             index = index + 1;
 
         }
