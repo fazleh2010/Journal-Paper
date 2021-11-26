@@ -1,0 +1,22 @@
+LemonEntry,partOfSpeech,gender,writtenFormNominative(singular),writtenFormNominative (plural),writtenFormSingular (accusative),writtenFormSingular (dative),writtenFormSingular (genetive),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,domain_article,range_article,domain_written_singular,range_written_singular
+capital-of-1,noun,feminine,Hauptstadt,-,Hauptstadt,Hauptstadt,Hauptstadt,von,NounPPFrame,range,domain,1,dbo:capital,dbo:Country,dbo:City,neuter,feminine,Land,Ort
+capital-of-2,noun,feminine,Hauptstadt,-,Hauptstadt,Hauptstadt,Hauptstadt,von,NounPPFrame,range,domain,1,dbo:capital,dbo:Place,dbo:City,feminine,feminine,Lage,Stadt
+capital-of-3,noun,feminine,Hauptstadt,-,Hauptstadt,Hauptstadt,Hauptstadt,von,NounPPFrame,range,domain,1,dbo:capital,dbo:Location,dbo:City,feminine,feminine,Lage,Stadt
+capital-of-4,noun,feminine,Hauptstadt,-,Hauptstadt,Hauptstadt,Hauptstadt,von,NounPPFrame,range,domain,1,dbo:capital,dbo:PopulatedPlace,dbo:City,masculine,feminine,Bevîlkerter Ort,Stadt
+mayor-of-1,noun,masculine,BÅrgermeister,-,BÅrgermeister,BÅrgermeister,BÅrgermeisters,von,NounPPFrame,range,domain,1,dbo:mayor,dbo:City,dbo:Person,feminine,masculine,Stadt,Person
+mayor-of-2,noun,masculine,BÅrgermeister,-,BÅrgermeister,BÅrgermeister,BÅrgermeisters,von,NounPPFrame,range,domain,1,dbo:mayor,dbo:Place,dbo:Person,masculine,masculine,Ort,Person
+mayor-of-3,noun,masculine,BÅrgermeister,-,BÅrgermeister,BÅrgermeister,BÅrgermeisters,von,NounPPFrame,range,domain,1,dbo:mayor,dbo:Location,dbo:Person,feminine,masculine,Lage,Person
+mayor-of-4,noun,masculine,BÅrgermeister,-,BÅrgermeister,BÅrgermeister,BÅrgermeisters,von,NounPPFrame,range,domain,1,dbo:mayor,dbo:PopulatedPlace,dbo:Person,masculine,masculine,Bevîlkerter Ort,Person
+mayor-of-5,noun,masculine,BÅrgermeister,-,BÅrgermeister,BÅrgermeister,BÅrgermeisters,von,NounPPFrame,range,domain,1,dbo:mayor,dbo:Settlement,dbo:Person,feminine,masculine,Siedlung,Person
+mayor-of-6,noun,masculine,BÅrgermeister,-,BÅrgermeister,BÅrgermeister,BÅrgermeisters,von,NounPPFrame,range,domain,1,dbo:leaderName,dbo:City,dbo:Person,feminine,masculine,Stadt,Person
+mayor-of-7,noun,masculine,BÅrgermeister,-,BÅrgermeister,BÅrgermeister,BÅrgermeisters,von,NounPPFrame,range,domain,1,dbo:leaderName,dbo:Place,dbo:Person,masculine,masculine,Lage,Person
+mayor-of-8,noun,masculine,BÅrgermeister,-,BÅrgermeister,BÅrgermeister,BÅrgermeisters,von,NounPPFrame,range,domain,1,dbo:leaderName,dbo:Location,dbo:Person,feminine,masculine,Lage,Person
+mayor-of-9,noun,masculine,BÅrgermeister,-,BÅrgermeister,BÅrgermeister,BÅrgermeisters,von,NounPPFrame,range,domain,1,dbo:leaderName,dbo:PopulatedPlace,dbo:Person,masculine,masculine,Bevîlkerter Ort,Person
+mayor-of-10,noun,masculine,BÅrgermeister,-,BÅrgermeister,BÅrgermeister,BÅrgermeisters,von,NounPPFrame,range,domain,1,dbo:leaderName,dbo:Settlement,dbo:Person,feminine,masculine,Siedlung,Person
+height_of_1,noun,feminine,Hîhe,-,Hîhe,Hîhe,Hîhe,von,NounPPFrame,range,domain,1,dbo:height,dbo:Lighthouse,xsd:integer,masculine,feminine,Leuchtturm,Zahl
+height_of_2,noun,feminine,Hîhe,-,Hîhe,Hîhe,Hîhe,von,NounPPFrame,range,domain,2,dbo:height,dbo:Tower,xsd:integer,masculine,feminine,Turm,Zahl
+height_of_3,noun,feminine,Hîhe,-,Hîhe,Hîhe,Hîhe,von,NounPPFrame,range,domain,3,dbo:height,dbo:ArchitecturalStructure,xsd:integer,feminine,feminine,Architektonische Struktur,Zahl
+official_language_1,noun,feminine,Amtssprache,Amtssprachen,Amtssprache,Amtssprache,Amtssprache,von,NounPPFrame,range,domain,1,dbo:officialLanguage,dbo:Country,dbo:Language,neuter,feminine,Land,Sprache
+population_of_1,noun,feminine,Gesamteinwohnerzahl,-,Gesamteinwohnerzahl,Gesamteinwohnerzahl,Gesamteinwohnerzahl,von,NounPPFrame,range,domain,1,dbo:populationTotal,dbo:Location,xsd:double,feminine,feminine,Lage,Zahl
+population_of_2,noun,feminine,Gesamteinwohnerzahl,-,Gesamteinwohnerzahl,Gesamteinwohnerzahl,Gesamteinwohnerzahl,von,NounPPFrame,range,domain,1,dbo:populationTotal,dbo:City,xsd:double,feminine,feminine,Stadt,Zahl
+population_of_3,noun,feminine,Gesamteinwohnerzahl,-,Gesamteinwohnerzahl,Gesamteinwohnerzahl,Gesamteinwohnerzahl,von,NounPPFrame,range,domain,1,dbo:populationTotal,dbo:Settlement,xsd:double,feminine,feminine,Siedlung,Zahl

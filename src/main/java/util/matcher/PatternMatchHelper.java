@@ -1,5 +1,6 @@
 package util.matcher;
 
+import static java.lang.System.exit;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -20,6 +21,7 @@ public class PatternMatchHelper {
    * @return The first item that was matched and is contained in the specified group or "" if there was no match.
    */
   public static String getPatternMatch(String matchTarget, Pattern pattern) {
+     // System.out.println("matchTarget:::"+matchTarget+" pattern:"+pattern);
     return getPatternMatch(matchTarget, pattern, "", 1);
   }
 

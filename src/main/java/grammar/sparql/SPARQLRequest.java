@@ -46,7 +46,7 @@ import static util.validation.NullCheck.notNull;
 @Setter
 @Getter
 public class SPARQLRequest {
-  public static final String SPARQL_ENDPOINT_URL = "http://dbpedia.org/sparql";
+  public static  String SPARQL_ENDPOINT_URL = "http://dbpedia.org/sparql";
   public static final long DEFAULT_LIMIT = 100;
   private static final Logger LOG = LogManager.getLogger(SPARQLRequest.class);
   private final String labelString = RDFS.label.getLocalName();
@@ -83,9 +83,9 @@ public class SPARQLRequest {
     notNull("searchProperty", searchProperty, this.getClass());
     Triple triple =
       Triple.create(
-        Var.alloc(SelectVariable.SUBJECT_OF_PROPERTY.getVariableName()),
+        Var.alloc(SelectVariable.subjOfProp.getVariableName()),
         NodeFactory.createURI(searchProperty),
-        Var.alloc(SelectVariable.OBJECT_OF_PROPERTY.getVariableName())
+        Var.alloc(SelectVariable.objOfProp.getVariableName())
       );
     block.addTriple(triple);
   }
@@ -390,5 +390,15 @@ public class SPARQLRequest {
   public String toString() {
     return parameterizedSparqlString.toString();
   }
+
+    public static void setEndpoint(String endpoint) {
+        SPARQL_ENDPOINT_URL=endpoint;
+    }
+
+    public static String getSPARQL_ENDPOINT_URL() {
+        return SPARQL_ENDPOINT_URL;
+    }
+    
+    
 
 }

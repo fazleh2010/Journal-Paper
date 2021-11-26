@@ -1,0 +1,5 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive,writtenFormThridPerson,writtenFormPerfect,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural
+flow_through,verb,flie·en,flie·t,ist geflossen,durch,IntransitivePPFrame,domain,range,1,dbo:country,dbo:River,dbo:Country,masculine,Fluss,FlÅsse,neuter,Land,LÑnder
+complete_in,verb,fertigstellen,fertiggestellt,fertiggestellt,in,IntransitivePPFrame,domain,range,1,dbo:buildingEndDate,dbo:Ship,xsd:date,neuter,Schiff,Schiffe,neuter,Date,Dates
+born_in,verb,gebÑren,gebÑrt,geboren,in,IntransitivePPFrame,domain,range,1,dbo:birthYear,dbo:Person,xsd:gYear,masculine,Person,Personen,neuter,Jahr,Jahren
+born_on,verb,gebÑren,gebÑrt,geboren,auf,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Person,dbo:Place,masculine,Person,Personen,neuter,Ort,ôrter

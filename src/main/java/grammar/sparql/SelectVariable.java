@@ -1,8 +1,9 @@
 package grammar.sparql;
 
 public enum SelectVariable {
-  SUBJECT_OF_PROPERTY("subjOfProp"),
-  OBJECT_OF_PROPERTY("objOfProp"),
+  subjOfProp("subjOfProp"),
+  objOfProp("objOfProp"),
+  reference("reference"),
   IS_A("isA");
 
   private final String name;
@@ -16,7 +17,7 @@ public enum SelectVariable {
   }
 
   public String mapDomainOrRange() {
-    return equals(SUBJECT_OF_PROPERTY) ? "domain" : "range";
+    return equals(subjOfProp) ? "domain" : "range";
   }
 }
 
