@@ -2,6 +2,7 @@
   "languageCode" : "de",
   "inputDir" : "lexicon",
   "outputDir" : "output",
+  "qaldDir" : "qald",
   "numberOfEntities" : 10,
   "similarityThresold" : 80.0,
   "csvToTurtle" : true,

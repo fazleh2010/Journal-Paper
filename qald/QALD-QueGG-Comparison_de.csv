@@ -316,7 +316,10 @@ WHERE {
       ?uri dbo:publisher res:Mean_Hamster_Software . 
 }"		"0.0"	"0.0"	"1.0"	"0.0"	"0.0"	"0.0"
 "79"	"false"	"Wieviele Aldi-Filialen gibt es?"		"SELECT DISTINCT ?number WHERE {  <http://dbpedia.org/resource/Aldi> <http://dbpedia.org/ontology/numberOfLocations> ?number . } "		"0.0"	"0.0"	"1.0"	"0.0"	"0.0"	"0.0"
-"80"	"false"	"Was ist die Hauptstadt von Kamerun?"		"SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Cameroon> <http://dbpedia.org/ontology/capital> ?uri. } "		"0.0"	"0.0"	"1.0"	"0.0"	"0.0"	"0.0"
+"80"	"true"	"Was ist die Hauptstadt von Kamerun?"	"Was ist die Hauptstadt von Kamerun?"	"SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Cameroon> <http://dbpedia.org/ontology/capital> ?uri. } "	"select  ?o    
+{
+    <http://dbpedia.org/resource/Cameroon> <http://dbpedia.org/ontology/capital>  ?o    
+}"	"1.0"	"0.0"	"0.0"	"1.0"	"1.0"	"1.0"
 "81"	"false"	"Gibt es ein Videospiel, das Battle Chess heißt?"		"PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -662,12 +665,15 @@ ORDER BY DESC(?s)
 OFFSET 0 LIMIT 1"		"0.0"	"0.0"	"1.0"	"0.0"	"0.0"	"0.0"
 "152"	"false"	"Aus welchem Land kommt Sitecore?"		"SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Sitecore> <http://dbpedia.org/ontology/foundationPlace> ?uri . }"		"0.0"	"0.0"	"0.0"	"0.0"	"0.0"	"0.0"
 "153"	"false"	"Wen hat Lance Bass geheiratet?"		"SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/spouse> <http://dbpedia.org/resource/Lance_Bass> . } "		"0.0"	"0.0"	"0.0"	"0.0"	"0.0"	"0.0"
-"154"	"false"	"Was ist die Hauptstadt von Kanada?"		"PREFIX dbo:  <http://dbpedia.org/ontology/>
+"154"	"true"	"Was ist die Hauptstadt von Kanada?"	"Was ist die Hauptstadt von Kanada?"	"PREFIX dbo:  <http://dbpedia.org/ontology/>
 PREFIX res:  <http://dbpedia.org/resource/>
 SELECT DISTINCT ?uri 
 WHERE {
         res:Canada dbo:capital ?uri .
-}"		"0.0"	"0.0"	"1.0"	"0.0"	"0.0"	"0.0"
+}"	"select  ?o    
+{
+    <http://dbpedia.org/resource/Canada> <http://dbpedia.org/ontology/capital>  ?o    
+}"	"1.0"	"0.0"	"0.0"	"1.0"	"1.0"	"1.0"
 "155"	"false"	"Wer hat Vincent van Gogh inspiriert?"		"SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/influenced> <http://dbpedia.org/resource/Vincent_van_Gogh> . }"		"0.0"	"0.0"	"0.0"	"0.0"	"0.0"	"0.0"
 "156"	"false"	"In welcher Stadt ist John F. Kennedy gestorben?"		"PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX res: <http://dbpedia.org/resource/>
@@ -926,4 +932,4 @@ WHERE {
         ?uri dbo:wineProduced res:Sparkling_wine .
         ?uri dbo:location res:France .
 }"		"0.0"	"0.0"	"1.0"	"0.0"	"0.0"	"0.0"
-""	""	""	""	""	""	"0.0"	"0.0"	"507.0"	"NaN"	"0.0"	"NaN"
+""	""	""	""	""	""	"2.0"	"0.0"	"505.0"	"1.0"	"0.003944773"	"0.007858546"

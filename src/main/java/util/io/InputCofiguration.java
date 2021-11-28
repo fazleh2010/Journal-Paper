@@ -34,6 +34,8 @@ public class InputCofiguration {
     private String inputDir = null;
     @JsonProperty("outputDir")
     private String outputDir = null;
+    @JsonProperty("qaldDir")
+    private String qaldDir = null;
     @JsonProperty("numberOfEntities")
     private Integer numberOfEntities;
     @JsonProperty("similarityThresold")
@@ -89,7 +91,7 @@ public class InputCofiguration {
         return protoTypeToQuestion;
     }
 
-    public Boolean getEvalution() {
+    public Boolean isEvalution() {
         return evalution;
     }
 
@@ -105,6 +107,10 @@ public class InputCofiguration {
         return linkedData;
     }
 
+    public String getQaldDir() {
+        return qaldDir;
+    }
+    
     @Override
     public String toString() {
         return "InputCofiguration{" + "language=" + languageCode + ", inputDir=" + getInputDir() + ", outputDir=" + getOutputDir() + ", numberOfEntities=" + numberOfEntities + ", similarityThresold=" + similarityThresold + ", csvToTurtle=" + csvToTurtle + ", turtleToProtoType=" + turtleToProtoType + ", protoTypeToQuestion=" + protoTypeToQuestion + ", evalution=" + evalution + '}';

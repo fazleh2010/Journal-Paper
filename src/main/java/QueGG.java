@@ -80,6 +80,9 @@ public class QueGG {
                 if(inputCofiguration.isProtoTypeToQuestion()){
                     queGG.protoToReal(inputCofiguration);
                 }
+                if(inputCofiguration.isEvalution()){
+                    queGG.questionEvaluation(inputCofiguration);
+                }
                
                 
             }
@@ -220,13 +223,6 @@ public class QueGG {
             tutleConverter = new English(inputDir, linkedData, language);
         }
         return tutleConverter.getConversionFlag();
-
-        /*if (TutleConverter.getConversionFlag()) {
-            init(language, inputDir, outputDir);
-        } else {
-            throw new Exception("no turle file is found to process!!" + language.name());
-        }*/
-
     }
     
      private void turtleToProto(InputCofiguration inputCofiguration) throws IOException {
@@ -236,31 +232,7 @@ public class QueGG {
         this.init(language, inputDir, outputDir);
     }
 
-    /*private void csvToProto(String[] args) throws Exception {
-        Language language = Language.stringToLanguage(args[0]);
-        String inputDir = Path.of(args[1]).toString();
-        String outputDir = Path.of(args[2]).toString();
-        String numberOfEntitiesString = Path.of(args[3]).toString();
-        //setSparqlEndpoint(endpoint);
-        String dataSetConfFile = args[5];
-        LinkedData linkedData = FileUtils.getLinkedDataConf(new File(dataSetConfFile));
-        setDataSet(linkedData);
-        TutleConverter TutleConverter = null;
-        FileFolderUtils.deleteFiles(inputDir,  ".ttl");
-       if (language.equals(Language.DE)) {
-            TutleConverter = new German(inputDir, linkedData, language);
-        } else if (language.equals(Language.EN)) {
-            TutleConverter = new English(inputDir, linkedData, language);
-        }
-
-        if (TutleConverter.getConversionFlag()) {
-            init(language, inputDir, outputDir);
-        } else {
-            throw new Exception("no turle file is found to process!!" + language.name());
-        }
-
-    }*/
-     
+  
              
         private void protoToReal(InputCofiguration inputCofiguration) throws Exception {
         Language language = inputCofiguration.getLanguage();
@@ -280,46 +252,14 @@ public class QueGG {
         readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir, externalEntittyListflag);
 
     }
-
-    /*private void protoToReal(String[] args) throws Exception {
-        Language language = Language.stringToLanguage(args[0]);
-        String inputDir = Path.of(args[2]).toString();
-        String numberOfEntitiesString = Path.of(args[3]).toString();
-        String dataSetConfFile = args[5];
-        LinkedData linkedData = FileUtils.getLinkedDataConf(new File(dataSetConfFile));
-        setDataSet(linkedData);
-
-        Integer maxNumberOfEntities = Integer.parseInt(numberOfEntitiesString);
-        List<File> fileList = FileUtils.getFiles(inputDir + "/", outputFileName + "_" + language.name(), ".json");
-        if (fileList.isEmpty()) {
-            throw new Exception("No files to process for question answering system!!");
-        }
-        String langCode = language.name().toLowerCase().trim();
-        String questionAnswerFile = inputDir + File.separator + QUESTION_ANSWER_FILE + "_" + langCode + ".csv";
-        String questionSummaryFile = inputDir + File.separator + QUESTION_SUMMARY_FILE + "_" + langCode + ".csv";
-        ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile, maxNumberOfEntities, langCode, linkedData.getEndpoint(), online);
-        readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir, externalEntittyListflag);
-
-    }*/
-
-    private void turtleToProto(String[] args) throws IOException {
-        Language language = Language.stringToLanguage(args[0]);
-        String inputDir = Path.of(args[1]).toString();
-        String outputDir = Path.of(args[2]).toString();
-        this.init(language, inputDir, outputDir);
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
-    
-    
-     private void RealToEva(String[] args) throws Exception {
-        String inputDir = Path.of(args[1]).toString();
-        String outputDir = Path.of(args[2]).toString();
-        String dataSetConfFile = args[5];
-        Double similarityMeasure = Double.parseDouble(Path.of(args[6]).toString());
-        Language language = Language.stringToLanguage(args[0]);
-        LinkedData linkedData = FileUtils.getLinkedDataConf(new File(dataSetConfFile));
-        evalution(inputDir, outputDir, language, linkedData.getEndpoint(), EvaluateAgainstQALD.REAL_QUESTION,similarityMeasure);
+     private void questionEvaluation(InputCofiguration inputCofiguration) throws Exception {
+        Language language = inputCofiguration.getLanguage();
+        String qaldDir = inputCofiguration.getQaldDir();
+        String outputDir = inputCofiguration.getOutputDir();
+        LinkedData linkedData =inputCofiguration.getLinkedData();
+        Double similarityMeasure = inputCofiguration.getSimilarityThresold();
+        evalution(qaldDir, outputDir, language, linkedData.getEndpoint(), EvaluateAgainstQALD.REAL_QUESTION,similarityMeasure);
 
     }
 
