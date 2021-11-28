@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
 import static java.util.Objects.isNull;
 import util.io.CsvFile;
 import util.io.FileUtils;
-import turtle.German;
+import turtle.GermanTurtle;
 import java.io.File;
 import java.io.IOException;
 import grammar.sparql.SparqlQuery;
@@ -94,7 +94,7 @@ public class QueGG {
                 if (fileType.equals("ttl")) {
                     queGG.init(language, inputDir, outputDir);
                 } else if (fileType.equals("csv")) {
-                    TutleConverter TutleConverter=new German(inputDir, linkedData, language);
+                    TutleConverter TutleConverter=new GermanTurtle(inputDir, linkedData, language);
                     if (TutleConverter.getConversionFlag()) {
                         queGG.init(language, inputDir, outputDir);
                     } else {

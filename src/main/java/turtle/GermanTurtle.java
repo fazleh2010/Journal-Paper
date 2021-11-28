@@ -25,7 +25,7 @@ import util.io.Tupples;
  *
  * @author elahi
  */
-public class German extends TurtleConverterImpl implements TutleConverter {
+public class GermanTurtle extends TurtleConverterImpl implements TutleConverter {
 
     private String lemonEntry = "";
     private String partOfSpeech = "";
@@ -41,7 +41,7 @@ public class German extends TurtleConverterImpl implements TutleConverter {
     private String preposition = "";
     private static Integer index = 0;
 
-    public German(String inputDir, LinkedData linkedData, Language language) throws Exception {
+    public GermanTurtle(String inputDir, LinkedData linkedData, Language language) throws Exception {
         super(inputDir, linkedData, language);
         this.generateTurtle();
     }
@@ -92,7 +92,7 @@ public class German extends TurtleConverterImpl implements TutleConverter {
                     }
 
                 } catch (Exception ex) {
-                    java.util.logging.Logger.getLogger(German.class.getName()).log(Level.SEVERE, null, ex);
+                    java.util.logging.Logger.getLogger(GermanTurtle.class.getName()).log(Level.SEVERE, null, ex);
                     throw new Exception(ex.getMessage());
                 }
 
@@ -126,30 +126,30 @@ public class German extends TurtleConverterImpl implements TutleConverter {
         Integer index = 0;
         for (String[] row : rows) {
             if (index == 0) {
-                this.partOfSpeech = row[GoogleXslSheet.NounPPFrame.getPartOfSpeechIndex()];
-                this.gender = row[GoogleXslSheet.NounPPFrame.getGenderIndex()];
-                this.writtenForm1 = row[GoogleXslSheet.NounPPFrame.getWrittenFormSingularIndex()];
-                this.writtenForm2 = row[GoogleXslSheet.NounPPFrame.getWrittenFormPluraIndex()];
-                this.writtenForm4 = row[GoogleXslSheet.NounPPFrame.getWrittenFormAccusativeIndex()];
-                this.writtenForm5 = row[GoogleXslSheet.NounPPFrame.getWrittenFormDativeIndex()];
-                this.writtenForm6 = row[GoogleXslSheet.NounPPFrame.getWrittenFormGenetiveIndex()];
-                this.preposition = row[GoogleXslSheet.NounPPFrame.getPrepositionIndex()];
+                this.partOfSpeech = row[GermanCsv.NounPPFrameCsv.getPartOfSpeechIndex()];
+                this.gender = row[GermanCsv.NounPPFrameCsv.getGenderIndex()];
+                this.writtenForm1 = row[GermanCsv.NounPPFrameCsv.getWrittenFormSingularIndex()];
+                this.writtenForm2 = row[GermanCsv.NounPPFrameCsv.getWrittenFormPluraIndex()];
+                this.writtenForm4 = row[GermanCsv.NounPPFrameCsv.getWrittenFormAccusativeIndex()];
+                this.writtenForm5 = row[GermanCsv.NounPPFrameCsv.getWrittenFormDativeIndex()];
+                this.writtenForm6 = row[GermanCsv.NounPPFrameCsv.getWrittenFormGenetiveIndex()];
+                this.preposition = row[GermanCsv.NounPPFrameCsv.getPrepositionIndex()];
             }
             Tupples tupple = new Tupples(this.lemonEntry,
                     index + 1,
-                    setReference(row[GoogleXslSheet.NounPPFrame.getReferenceIndex()]),
-                    setReference(row[GoogleXslSheet.NounPPFrame.getDomainIndex()]),
-                    setReference(row[GoogleXslSheet.NounPPFrame.getRangeIndex()]));
+                    setReference(row[GermanCsv.NounPPFrameCsv.getReferenceIndex()]),
+                    setReference(row[GermanCsv.NounPPFrameCsv.getDomainIndex()]),
+                    setReference(row[GermanCsv.NounPPFrameCsv.getRangeIndex()]));
             tupplesList.add(tupple);
             index = index + 1;
-            GoogleXslSheet.NounPPFrame.setArticle(tupple, this.gender, row);
+            GermanCsv.NounPPFrameCsv.setArticle(tupple, this.gender, row);
         }
         this.turtleString
-                = GoogleXslSheet.NounPPFrame.getNounPPFrameHeader(this.lemonEntry, TempConstants.preposition, this.language)
-                + GoogleXslSheet.NounPPFrame.getIndexing(this.lemonEntry, tupplesList)
-                + GoogleXslSheet.NounPPFrame.getWrittenFormAll(this.lemonEntry, this.gender, this.writtenForm1, this.writtenForm2, writtenForm4, this.writtenForm5, this.writtenForm6, this.language)
-                + GoogleXslSheet.getSenseDetail(tupplesList, TempConstants.NounPPFrame, this.lemonEntry, this.writtenForm1, this.preposition, this.language)
-                + GoogleXslSheet.NounPPFrame.getPreposition(TempConstants.preposition, this.preposition, language);
+                = GermanCsv.NounPPFrameCsv.getNounPPFrameHeader(this.lemonEntry, TempConstants.preposition, this.language)
+                + GermanCsv.NounPPFrameCsv.getIndexing(this.lemonEntry, tupplesList)
+                + GermanCsv.NounPPFrameCsv.getWrittenFormAll(this.lemonEntry, this.gender, this.writtenForm1, this.writtenForm2, writtenForm4, this.writtenForm5, this.writtenForm6, this.language)
+                + GermanCsv.getSenseDetail(tupplesList, TempConstants.NounPPFrame, this.lemonEntry, this.writtenForm1, this.preposition, this.language)
+                + GermanCsv.NounPPFrameCsv.getPreposition(TempConstants.preposition, this.preposition, language);
         this.tutleFileName = getFileName(syntacticFrame);
     }
 
@@ -160,29 +160,29 @@ public class German extends TurtleConverterImpl implements TutleConverter {
         Integer index = 0;
         for (String[] row : rows) {
             if (index == 0) {
-                this.partOfSpeech = row[GoogleXslSheet.partOfSpeechIndex];
-                this.writtenForm1 = row[GoogleXslSheet.writtenFormInfinitive];
-                this.writtenForm3rdPerson = row[GoogleXslSheet.TransitFrame.writtenForm3rdPerson];
-                this.writtenForm3 = row[GoogleXslSheet.TransitFrame.writtenFormPast];
-                this.preposition = row[GoogleXslSheet.TransitFrame.passivePrepositionIndex];
+                this.partOfSpeech = row[GermanCsv.partOfSpeechIndex];
+                this.writtenForm1 = row[GermanCsv.writtenFormInfinitive];
+                this.writtenForm3rdPerson = row[GermanCsv.TransitFrameCsv.writtenForm3rdPerson];
+                this.writtenForm3 = row[GermanCsv.TransitFrameCsv.writtenFormPast];
+                this.preposition = row[GermanCsv.TransitFrameCsv.passivePrepositionIndex];
             }
             Tupples tupple = new Tupples(this.lemonEntry,
                     index + 1,
-                    this.setReference(row[GoogleXslSheet.TransitFrame.referenceIndex]),
-                    this.setReference(row[GoogleXslSheet.TransitFrame.domainIndex]),
-                    this.setReference(row[GoogleXslSheet.TransitFrame.rangeIndex]));
+                    this.setReference(row[GermanCsv.TransitFrameCsv.referenceIndex]),
+                    this.setReference(row[GermanCsv.TransitFrameCsv.domainIndex]),
+                    this.setReference(row[GermanCsv.TransitFrameCsv.rangeIndex]));
 
-            GoogleXslSheet.TransitFrame.setArticle(tupple, this.gender, row);
+            GermanCsv.TransitFrameCsv.setArticle(tupple, this.gender, row);
             tupples.add(tupple);
             index = index + 1;
 
         }
         this.turtleString
-                = GoogleXslSheet.TransitFrame.getHeader(this.lemonEntry, TempConstants.preposition, this.preposition, this.language)
-                + GoogleXslSheet.TransitFrame.getSenseIndexing(tupples, lemonEntry)
-                + GoogleXslSheet.TransitFrame.getWritten(this.lemonEntry, this.writtenForm1, this.writtenForm3rdPerson, this.writtenForm3, this.language)
-                + GoogleXslSheet.getSenseDetail(tupples, TempConstants.TransitiveFrame, this.lemonEntry, this.writtenForm1, this.preposition, this.language)
-                + GoogleXslSheet.getPrepostion(TempConstants.preposition, this.preposition, this.language);
+                = GermanCsv.TransitFrameCsv.getHeader(this.lemonEntry, TempConstants.preposition, this.preposition, this.language)
+                + GermanCsv.TransitFrameCsv.getSenseIndexing(tupples, lemonEntry)
+                + GermanCsv.TransitFrameCsv.getWritten(this.lemonEntry, this.writtenForm1, this.writtenForm3rdPerson, this.writtenForm3, this.language)
+                + GermanCsv.getSenseDetail(tupples, TempConstants.TransitiveFrame, this.lemonEntry, this.writtenForm1, this.preposition, this.language)
+                + GermanCsv.getPrepostion(TempConstants.preposition, this.preposition, this.language);
         this.tutleFileName = getFileName(syntacticFrame);
     }
 
@@ -192,32 +192,32 @@ public class German extends TurtleConverterImpl implements TutleConverter {
         Integer index = 0;
         for (String[] row : rows) {
             if (index == 0) {
-                this.setLemonEntryId(row[GoogleXslSheet.lemonEntryIndex]);
-                this.partOfSpeech = row[GoogleXslSheet.partOfSpeechIndex];
-                this.writtenForm1 = row[GoogleXslSheet.writtenFormInfinitive];
-                this.writtenForm3rdPerson = row[GoogleXslSheet.InTransitFrame.writtenForm3rdPerson];
-                this.writtenForm3 = row[GoogleXslSheet.InTransitFrame.writtenFormPast];
-                this.writtenFormPerfect = row[GoogleXslSheet.InTransitFrame.writtenFormPerfect];
-                this.preposition = row[GoogleXslSheet.InTransitFrame.preposition];
+                this.setLemonEntryId(row[GermanCsv.lemonEntryIndex]);
+                this.partOfSpeech = row[GermanCsv.partOfSpeechIndex];
+                this.writtenForm1 = row[GermanCsv.writtenFormInfinitive];
+                this.writtenForm3rdPerson = row[GermanCsv.InTransitFrameCsv.writtenForm3rdPerson];
+                this.writtenForm3 = row[GermanCsv.InTransitFrameCsv.writtenFormPast];
+                this.writtenFormPerfect = row[GermanCsv.InTransitFrameCsv.writtenFormPerfect];
+                this.preposition = row[GermanCsv.InTransitFrameCsv.preposition];
 
             }
             Tupples tupple = new Tupples(this.lemonEntry,
                     index + 1,
-                    this.setReference(row[GoogleXslSheet.InTransitFrame.getReferenceIndex()]),
-                    this.setReference(row[GoogleXslSheet.InTransitFrame.getDomainIndex()]),
-                    this.setReference(row[GoogleXslSheet.InTransitFrame.getRangeIndex()]));
+                    this.setReference(row[GermanCsv.InTransitFrameCsv.getReferenceIndex()]),
+                    this.setReference(row[GermanCsv.InTransitFrameCsv.getDomainIndex()]),
+                    this.setReference(row[GermanCsv.InTransitFrameCsv.getRangeIndex()]));
             tupplesList.add(tupple);
             index = index + 1;
-            GoogleXslSheet.InTransitFrame.setArticle(tupple, this.gender, row);
-            GoogleXslSheet.InTransitFrame.setVerbInfo(partOfSpeech, writtenForm1, writtenForm3rdPerson, writtenForm3, writtenFormPerfect);
+            GermanCsv.InTransitFrameCsv.setArticle(tupple, this.gender, row);
+            GermanCsv.InTransitFrameCsv.setVerbInfo(partOfSpeech, writtenForm1, writtenForm3rdPerson, writtenForm3, writtenFormPerfect);
 
         }
         this.turtleString
-                = GoogleXslSheet.InTransitFrame.getHeader(lemonEntry, TempConstants.preposition, language)
-                + GoogleXslSheet.InTransitFrame.getSenseIndexing(tupplesList, this.lemonEntry)
-                + GoogleXslSheet.InTransitFrame.getWritten(lemonEntry, writtenForm1, writtenForm3rdPerson, writtenForm3, writtenFormPerfect, language)
-                + GoogleXslSheet.getSenseDetail(tupplesList, TempConstants.IntransitivePPFrame, lemonEntry, writtenForm1, preposition, language)
-                + GoogleXslSheet.getPrepostion(TempConstants.preposition, preposition, language);
+                = GermanCsv.InTransitFrameCsv.getHeader(lemonEntry, TempConstants.preposition, language)
+                + GermanCsv.InTransitFrameCsv.getSenseIndexing(tupplesList, this.lemonEntry)
+                + GermanCsv.InTransitFrameCsv.getWritten(lemonEntry, writtenForm1, writtenForm3rdPerson, writtenForm3, writtenFormPerfect, language)
+                + GermanCsv.getSenseDetail(tupplesList, TempConstants.IntransitivePPFrame, lemonEntry, writtenForm1, preposition, language)
+                + GermanCsv.getPrepostion(TempConstants.preposition, preposition, language);
         this.tutleFileName = getFileName(syntacticFrame);
     }
 
@@ -226,29 +226,29 @@ public class German extends TurtleConverterImpl implements TutleConverter {
         List<Tupples> tupples = new ArrayList<Tupples>();
         Integer index = 0;
         for (String[] row : rows) {
-            System.out.println(row[GoogleXslSheet.lemonEntryIndex]);
-            System.out.println(row[GoogleXslSheet.partOfSpeechIndex]);
-            System.out.println(row[GoogleXslSheet.writtenFormInfinitive]);
+            System.out.println(row[GermanCsv.lemonEntryIndex]);
+            System.out.println(row[GermanCsv.partOfSpeechIndex]);
+            System.out.println(row[GermanCsv.writtenFormInfinitive]);
             if (index == 0) {
-                this.setLemonEntryId(row[GoogleXslSheet.lemonEntryIndex]);
-                this.partOfSpeech = row[GoogleXslSheet.partOfSpeechIndex];
-                this.writtenForm1 = row[GoogleXslSheet.writtenFormInfinitive];
+                this.setLemonEntryId(row[GermanCsv.lemonEntryIndex]);
+                this.partOfSpeech = row[GermanCsv.partOfSpeechIndex];
+                this.writtenForm1 = row[GermanCsv.writtenFormInfinitive];
 
             }
 
             tupples.add(new Tupples(this.lemonEntry,
                     index + 1,
                     "",
-                    this.setReference(row[GoogleXslSheet.AttributiveAdjectiveFrame.owl_onPropertyIndex]),
-                    this.setReference(row[GoogleXslSheet.AttributiveAdjectiveFrame.owl_hasValueIndex])));
+                    this.setReference(row[GermanCsv.AttributiveAdjectiveFrameCsv.owl_onPropertyIndex]),
+                    this.setReference(row[GermanCsv.AttributiveAdjectiveFrameCsv.owl_hasValueIndex])));
             index = index + 1;
         }
         System.out.println(index + "  tupples:" + tupples.size());
         this.turtleString
-                = GoogleXslSheet.AttributiveAdjectiveFrame.getAtrributiveFrameHeader(this.lemonEntry, tupples, this.language)
-                + GoogleXslSheet.AttributiveAdjectiveFrame.getAtrributiveFrameIndexing(tupples, this.lemonEntry)
-                + GoogleXslSheet.AttributiveAdjectiveFrame.getAtrrtibutiveWrittenForm(lemonEntry, writtenForm1, this.language)
-                + GoogleXslSheet.getSenseDetail(tupples, syntacticFrame, this.lemonEntry, "", "", this.language);
+                = GermanCsv.AttributiveAdjectiveFrameCsv.getAtrributiveFrameHeader(this.lemonEntry, tupples, this.language)
+                + GermanCsv.AttributiveAdjectiveFrameCsv.getAtrributiveFrameIndexing(tupples, this.lemonEntry)
+                + GermanCsv.AttributiveAdjectiveFrameCsv.getAtrrtibutiveWrittenForm(lemonEntry, writtenForm1, this.language)
+                + GermanCsv.getSenseDetail(tupples, syntacticFrame, this.lemonEntry, "", "", this.language);
         this.tutleFileName = getFileName(syntacticFrame);
 
     }
@@ -262,7 +262,7 @@ public class German extends TurtleConverterImpl implements TutleConverter {
     }
 
     private void setLemonEntryId(String[] row) {
-        this.lemonEntry = row[GoogleXslSheet.lemonEntryIndex];
+        this.lemonEntry = row[GermanCsv.lemonEntryIndex];
     }
 
     private void setLemonEntryId(String writtenForm) {

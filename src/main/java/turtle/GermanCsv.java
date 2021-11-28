@@ -20,14 +20,14 @@ import util.io.Tupples;
  *
  * @author elahi
  */
-public class GoogleXslSheet {
+public class GermanCsv {
 
     public static Integer lemonEntryIndex = 0;
     public static Integer partOfSpeechIndex = 1;
     public static Integer writtenFormInfinitive = 2;
     public static Integer AdjectiveFrameIndex = 3;
 
-    public static class NounPPFrame {
+    public static class NounPPFrameCsv {
         //LemonEntry	partOfSpeech	writtenForm (singular)	writtenForm (plural)	preposition	SyntacticFrame	copulativeArg	prepositionalAdjunct	sense	reference	domain	range	GrammarRule1:question1	SPARQL	GrammarRule1: question2	SPARQL Question 2	GrammarRule 1: questions	SPARQL 	NP (Grammar Rule 2)		grammar rules	numberOfQuestions
         //birthPlace_of	noun	birth place	-	of	NounPPFrame	range	domain	1	dbo:birthPlace	dbo:Person	dbo:Place	#NAME?	#NAME?	#NAME?	#NAME?	#NAME?	#NAME?	#NAME?		2	
 
@@ -239,7 +239,7 @@ public class GoogleXslSheet {
 
     }
 
-    public static class TransitFrame {
+    public static class TransitFrameCsv {
         //LemonEntry	partOfSpeech	writtenFormInfinitive/2ndPerson	writtenForm3rdPerson	writtenFormPast	SyntacticFrame	subject	directObject	sense	reference	domain	range	GrammarRule 1:question1	GrammarRule 1:question2	GrammarRule 1:sparql	GrammarRule 2:question1	GrammarRule2: sparql
         //compose	        verb	compose	composes	composed	TransitiveFrame	range	domain	1	dbo:musicComposer	dbo:Work	dbo:Person	Which dbo:Person (X) composes,composed Y(dbo:Work)?	Who dbo:Person (X) composes,composed Y(dbo:Work)?	SELECT ?X WHERE { Y dbo:musicComposer ?X.}	Which dbo:Work(X) was composed by Y(dbo:Person)?	SELECT ?X WHERE { ?X dbo:Person Y.}
 
@@ -388,7 +388,7 @@ public class GoogleXslSheet {
 
     }
 
-    public static class InTransitFrame {
+    public static class InTransitFrameCsv {
 
         //LemonEntry	partOfSpeech	writtenFormInfinitive/2ndPerson	writtenForm3rdPerson	writtenFormPast	preposition	SyntacticFrame	subject	prepositionalAdjunct	sense	reference	domain	range	GrammarRule 1 :question 1	GrammarRule 1 :question 2	GrammarRule 1 :sparql	Grammar rule 2: question1	Grammar rule 2: question2	sparql2
         //flow_through	verb	flow	flows	flowed	through	IntransitivePPFrame	domain	range	1	dbo:country	dbo:River	dbo:Country	What dbo:River(X) flows through Y(dbo:Country)?	FALSE	SELECT ?X WHERE { ?X dbo:country Y.}	Which dbo:Country(X) does Y(dbo:River) flow through?	FALSE	SELECT ?X WHERE { Y dbo:country ?X.}
@@ -568,7 +568,7 @@ public class GoogleXslSheet {
 
     }
 
-    public static class AttributiveAdjectiveFrame {
+    public static class AttributiveAdjectiveFrameCsv {
         //LemonEntry	partOfSpeech	writtenForm	SyntacticFrame	copulativeSubject	
         //attributiveArg	sense	reference	owl:onProperty	owl:hasValue	
         //domain	range	question (attributive use)							

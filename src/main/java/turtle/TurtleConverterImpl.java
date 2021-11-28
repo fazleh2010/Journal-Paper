@@ -52,15 +52,15 @@ public class TurtleConverterImpl implements TempConstants {
     }
 
     public String findSyntacticFrame(String[] row) throws Exception {
-        String nounPPFrame = row[GoogleXslSheet.NounPPFrame.getSyntacticFrame()];
+        String nounPPFrame = row[GermanCsv.NounPPFrameCsv.getSyntacticFrame()];
         try {
             if (nounPPFrame.equals(NounPPFrame)) {
                 return TempConstants.NounPPFrame;
-            } else if (row[GoogleXslSheet.TransitFrame.getSyntacticFrame()].equals(TempConstants.TransitiveFrame)) {
+            } else if (row[GermanCsv.TransitFrameCsv.getSyntacticFrame()].equals(TempConstants.TransitiveFrame)) {
                 return TempConstants.TransitiveFrame;
-            } else if (row[GoogleXslSheet.InTransitFrame.getSyntacticFrame()].equals(TempConstants.IntransitivePPFrame)) {
+            } else if (row[GermanCsv.InTransitFrameCsv.getSyntacticFrame()].equals(TempConstants.IntransitivePPFrame)) {
                 return TempConstants.IntransitivePPFrame;
-            } else if (row[GoogleXslSheet.AdjectiveFrameIndex].equals(TempConstants.AdjectiveAttributiveFrame)) {
+            } else if (row[GermanCsv.AdjectiveFrameIndex].equals(TempConstants.AdjectiveAttributiveFrame)) {
                 return TempConstants.AdjectiveAttributiveFrame;
             } else {
                 throw new Exception("No grammar entry is found!!!!");
