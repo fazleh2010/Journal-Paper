@@ -39,6 +39,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.logging.Level;
 import org.apache.commons.text.similarity.CosineDistance;
+import turtle.EnglishTurtle;
 import util.io.GenderUtils;
 import util.io.LinkedData;
 import static util.io.ResourceHelper.loadResource;
@@ -94,11 +95,16 @@ public class QueGG {
                 if (fileType.equals("ttl")) {
                     queGG.init(language, inputDir, outputDir);
                 } else if (fileType.equals("csv")) {
-                    TutleConverter TutleConverter=new GermanTurtle(inputDir, linkedData, language);
+                    TutleConverter TutleConverter=null;
+                    if(language.equals(Language.DE))
+                      TutleConverter=new GermanTurtle(inputDir, linkedData, language);
+                    else if(language.equals(Language.EN))
+                        TutleConverter=new EnglishTurtle(inputDir, linkedData, language);
+                    
                     if (TutleConverter.getConversionFlag()) {
                         queGG.init(language, inputDir, outputDir);
                     } else {
-                        throw new Exception("no turle file is found to process!!");
+                        throw new Exception("no turle file is found to process!!"+language.name());
                     }
 
                 } else if (fileType.equals("qa")) {

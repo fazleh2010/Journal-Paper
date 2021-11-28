@@ -5,7 +5,7 @@
  */
 package turtle;
 
-import turtle.TurtleConverterImpl;
+import turtle.TurtleCreation;
 import turtle.TutleConverter;
 import grammar.datasets.sentencetemplates.TempConstants;
 import grammar.structure.component.Language;
@@ -25,7 +25,7 @@ import util.io.Tupples;
  *
  * @author elahi
  */
-public class GermanTurtle extends TurtleConverterImpl implements TutleConverter {
+public class GermanTurtle extends TurtleCreation implements TutleConverter {
 
     private String lemonEntry = "";
     private String partOfSpeech = "";
@@ -40,9 +40,15 @@ public class GermanTurtle extends TurtleConverterImpl implements TutleConverter 
     private String writtenFormPerfect = "";
     private String preposition = "";
     private static Integer index = 0;
+    private GermanCsv.NounPPFrameCsv nounPPFrameCsv = new GermanCsv.NounPPFrameCsv();
+    private GermanCsv.TransitFrameCsv transitiveFrameCsv = new GermanCsv.TransitFrameCsv();
+    private GermanCsv.InTransitFrameCsv IntransitiveFrameCsv = new GermanCsv.InTransitFrameCsv();
+    private GermanCsv.AttributiveAdjectiveFrameCsv attributiveAdjectiveFrame = new GermanCsv.AttributiveAdjectiveFrameCsv();
+
 
     public GermanTurtle(String inputDir, LinkedData linkedData, Language language) throws Exception {
         super(inputDir, linkedData, language);
+        super.setSyntacticFrameIndexes(nounPPFrameCsv.getSyntacticFrameIndex(),transitiveFrameCsv.getSyntacticFrameIndex(),IntransitiveFrameCsv.getSyntacticFrameIndex(),attributiveAdjectiveFrame.getSyntacticFrameIndex());
         this.generateTurtle();
     }
 
@@ -126,23 +132,23 @@ public class GermanTurtle extends TurtleConverterImpl implements TutleConverter 
         Integer index = 0;
         for (String[] row : rows) {
             if (index == 0) {
-                this.partOfSpeech = row[GermanCsv.NounPPFrameCsv.getPartOfSpeechIndex()];
-                this.gender = row[GermanCsv.NounPPFrameCsv.getGenderIndex()];
-                this.writtenForm1 = row[GermanCsv.NounPPFrameCsv.getWrittenFormSingularIndex()];
-                this.writtenForm2 = row[GermanCsv.NounPPFrameCsv.getWrittenFormPluraIndex()];
-                this.writtenForm4 = row[GermanCsv.NounPPFrameCsv.getWrittenFormAccusativeIndex()];
-                this.writtenForm5 = row[GermanCsv.NounPPFrameCsv.getWrittenFormDativeIndex()];
-                this.writtenForm6 = row[GermanCsv.NounPPFrameCsv.getWrittenFormGenetiveIndex()];
-                this.preposition = row[GermanCsv.NounPPFrameCsv.getPrepositionIndex()];
+                this.partOfSpeech = nounPPFrameCsv.getPartOfSpeechIndex(row);
+                this.gender = nounPPFrameCsv.getGenderIndex(row);
+                this.writtenForm1 = nounPPFrameCsv.getWrittenFormSingularIndex(row);
+                this.writtenForm2 = nounPPFrameCsv.getWrittenFormPluraIndex(row);
+                this.writtenForm4 = nounPPFrameCsv.getWrittenFormAccusativeIndex(row);
+                this.writtenForm5 = nounPPFrameCsv.getWrittenFormDativeIndex(row);
+                this.writtenForm6 = nounPPFrameCsv.getWrittenFormGenetiveIndex(row);
+                this.preposition = nounPPFrameCsv.getPrepositionIndex(row);
             }
             Tupples tupple = new Tupples(this.lemonEntry,
                     index + 1,
-                    setReference(row[GermanCsv.NounPPFrameCsv.getReferenceIndex()]),
-                    setReference(row[GermanCsv.NounPPFrameCsv.getDomainIndex()]),
-                    setReference(row[GermanCsv.NounPPFrameCsv.getRangeIndex()]));
+                    setReference(nounPPFrameCsv.getReferenceIndex(row)),
+                    setReference(nounPPFrameCsv.getDomainIndex(row)),
+                    setReference(nounPPFrameCsv.getRangeIndex(row)));
             tupplesList.add(tupple);
             index = index + 1;
-            GermanCsv.NounPPFrameCsv.setArticle(tupple, this.gender, row);
+            nounPPFrameCsv.setArticle(tupple, this.gender, row);
         }
         this.turtleString
                 = GermanCsv.NounPPFrameCsv.getNounPPFrameHeader(this.lemonEntry, TempConstants.preposition, this.language)
@@ -172,9 +178,10 @@ public class GermanTurtle extends TurtleConverterImpl implements TutleConverter 
                     this.setReference(row[GermanCsv.TransitFrameCsv.domainIndex]),
                     this.setReference(row[GermanCsv.TransitFrameCsv.rangeIndex]));
 
-            GermanCsv.TransitFrameCsv.setArticle(tupple, this.gender, row);
+            transitiveFrameCsv.setArticle(tupple, this.gender, row);
             tupples.add(tupple);
             index = index + 1;
+
 
         }
         this.turtleString
@@ -243,7 +250,6 @@ public class GermanTurtle extends TurtleConverterImpl implements TutleConverter 
                     this.setReference(row[GermanCsv.AttributiveAdjectiveFrameCsv.owl_hasValueIndex])));
             index = index + 1;
         }
-        System.out.println(index + "  tupples:" + tupples.size());
         this.turtleString
                 = GermanCsv.AttributiveAdjectiveFrameCsv.getAtrributiveFrameHeader(this.lemonEntry, tupples, this.language)
                 + GermanCsv.AttributiveAdjectiveFrameCsv.getAtrributiveFrameIndexing(tupples, this.lemonEntry)

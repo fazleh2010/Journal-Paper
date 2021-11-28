@@ -22,7 +22,7 @@ import util.io.LinkedData;
  *
  * @author elahi
  */
-public class TurtleConverterImpl implements TempConstants {
+public class TurtleCreation implements TempConstants {
 
     protected LinkedData linkedData = null;
     protected String language = null;
@@ -30,11 +30,22 @@ public class TurtleConverterImpl implements TempConstants {
     protected String turtleString = null;
     protected String tutleFileName = "";
     protected Boolean conversionFlag = false;
+    private Integer nounPPIndex=0;
+    private Integer transitiveIndex=0;
+    private Integer InTransitiveIndex=0;
+    private Integer adjectiveFrameIndex=0;
 
-    public TurtleConverterImpl(String inputDir, LinkedData linkedData, Language language) throws Exception {
+    public TurtleCreation(String inputDir, LinkedData linkedData, Language language) throws Exception {
         this.linkedData = linkedData;
         this.language = language.name().toLowerCase();
         this.inputDir = inputDir;
+    }
+    
+    public void setSyntacticFrameIndexes(Integer nounPPIndex, Integer transitiveIndex, Integer InTransitiveIndex, Integer adjectiveFrameIndex) throws Exception {
+        this.nounPPIndex = nounPPIndex;
+        this.transitiveIndex = transitiveIndex;
+        this.InTransitiveIndex = InTransitiveIndex;
+        this.adjectiveFrameIndex = adjectiveFrameIndex;
     }
 
     public String findSyntacticFrame(List<String[]> rows) throws Exception {
@@ -52,16 +63,16 @@ public class TurtleConverterImpl implements TempConstants {
     }
 
     public String findSyntacticFrame(String[] row) throws Exception {
-        String nounPPFrame = row[GermanCsv.NounPPFrameCsv.getSyntacticFrame()];
+        String nounPPFrame = row[nounPPIndex];
         try {
             if (nounPPFrame.equals(NounPPFrame)) {
-                return TempConstants.NounPPFrame;
-            } else if (row[GermanCsv.TransitFrameCsv.getSyntacticFrame()].equals(TempConstants.TransitiveFrame)) {
-                return TempConstants.TransitiveFrame;
-            } else if (row[GermanCsv.InTransitFrameCsv.getSyntacticFrame()].equals(TempConstants.IntransitivePPFrame)) {
-                return TempConstants.IntransitivePPFrame;
-            } else if (row[GermanCsv.AdjectiveFrameIndex].equals(TempConstants.AdjectiveAttributiveFrame)) {
-                return TempConstants.AdjectiveAttributiveFrame;
+                return NounPPFrame;
+            } else if (row[transitiveIndex].equals(TransitiveFrame)) {
+                return TransitiveFrame;
+            } else if (row[InTransitiveIndex].equals(IntransitivePPFrame)) {
+                return IntransitivePPFrame;
+            } else if (row[adjectiveFrameIndex].equals(AdjectiveAttributiveFrame)) {
+                return AdjectiveAttributiveFrame;
             } else {
                 throw new Exception("No grammar entry is found!!!!");
             }

@@ -139,100 +139,103 @@ public class GermanCsv {
                     + "  lexinfo:partOfSpeech lexinfo:preposition .";
         }
      
-        public static void setArticle(Tupples tupple, String gender, String[] row) {
+        public  void setArticle(Tupples tupple, String gender, String[] row) {
             GenderUtils.setArticles(tupple.getReference(), gender);
-            GenderUtils.setArticles(tupple.getDomain(), row[getDomainArticleIndex()]);
-            GenderUtils.setArticles(tupple.getRange(), row[getRangeArticleIndex()]);
-            GenderUtils.setWrittenForms(tupple.getDomain(), row[getDomainWrittenSingular()], row[getDomainWrittenPlural()]);
-            GenderUtils.setWrittenForms(tupple.getRange(), row[getRangeWrittenSingular()], row[getRangeWrittenPlural()]);
+            GenderUtils.setArticles(tupple.getDomain(), getDomainArticleIndex(row));
+            GenderUtils.setArticles(tupple.getRange(), getRangeArticleIndex(row));
+            GenderUtils.setWrittenForms(tupple.getDomain(), getDomainWrittenSingular(row), getDomainWrittenPlural(row));
+            GenderUtils.setWrittenForms(tupple.getRange(), getRangeWrittenSingular(row), getRangeWrittenPlural(row));
         }
 
-        public static Integer getLexicalIdIndex() {
-            return lexicalIdIndex;
+        public  String getLexicalIdIndex(String []row) {
+            return row[lexicalIdIndex];
         }
 
-        public static Integer getPartOfSpeechIndex() {
-            return partOfSpeechIndex;
+        public  String getPartOfSpeechIndex(String []row) {
+            return row[partOfSpeechIndex];
         }
 
-        public static Integer getGenderIndex() {
-            return genderIndex;
+        public  String getGenderIndex(String []row) {
+            return row[genderIndex];
         }
 
-        public static Integer getWrittenFormSingularIndex() {
-            return writtenFormSingularIndex;
+        public  String getWrittenFormSingularIndex(String []row) {
+            return row[writtenFormSingularIndex];
         }
 
-        public static Integer getWrittenFormPluraIndex() {
-            return writtenFormPluraIndex;
+        public  String getWrittenFormPluraIndex(String []row) {
+            return row[writtenFormPluraIndex];
         }
 
-        public static Integer getWrittenFormAccusativeIndex() {
-            return writtenFormAccusativeIndex;
+        public  String getWrittenFormAccusativeIndex(String []row) {
+            return row[writtenFormAccusativeIndex];
         }
 
-        public static Integer getWrittenFormDativeIndex() {
-            return writtenFormDativeIndex;
+        public  String getWrittenFormDativeIndex(String []row) {
+            return row[writtenFormDativeIndex];
         }
 
-        public static Integer getWrittenFormGenetiveIndex() {
-            return writtenFormGenetiveIndex;
+        public  String getWrittenFormGenetiveIndex(String []row) {
+            return row[writtenFormGenetiveIndex];
         }
 
-        public static Integer getPrepositionIndex() {
-            return prepositionIndex;
+        public  String getPrepositionIndex(String []row) {
+            return row[prepositionIndex];
         }
 
-        public static Integer getSyntacticFrame() {
+        public  String getSyntacticFrame(String []row) {
+            return row[SyntacticFrame];
+        }
+        public  Integer getSyntacticFrameIndex() {
             return SyntacticFrame;
         }
 
-        public static Integer getCopulativeArgIndex() {
-            return copulativeArgIndex;
+        public  String getCopulativeArgIndex(String []row) {
+            return row[copulativeArgIndex];
         }
 
-        public static Integer getPrepositionalAdjunctIndex() {
-            return prepositionalAdjunctIndex;
+        public  String getPrepositionalAdjunctIndex(String []row) {
+            return row[prepositionalAdjunctIndex];
         }
 
-        public static Integer getSenseIndex() {
-            return senseIndex;
+        public  String getSenseIndex(String []row) {
+            return row[senseIndex];
         }
 
-        public static Integer getReferenceIndex() {
-            return referenceIndex;
+        public  String getReferenceIndex(String []row) {
+            return row[referenceIndex];
         }
 
-        public static Integer getDomainIndex() {
-            return domainIndex;
+        public  String getDomainIndex(String []row) {
+            return row[domainIndex];
         }
 
-        public static Integer getRangeIndex() {
-            return rangeIndex;
+        public  String getRangeIndex(String []row) {
+            return row[rangeIndex];
         }
 
-        public static Integer getDomainArticleIndex() {
-            return domainArticleIndex;
+        public  String getDomainArticleIndex(String []row) {
+            return row[domainArticleIndex];
         }
 
-        public static Integer getDomainWrittenSingular() {
-            return domainWrittenSingular;
+        public  String getDomainWrittenSingular(String []row) {
+            return row[domainWrittenSingular];
         }
 
-        public static Integer getDomainWrittenPlural() {
-            return domainWrittenPlural;
+        public  String getDomainWrittenPlural(String []row) {
+            return row[domainWrittenPlural];
         }
 
-        public static Integer getRangeArticleIndex() {
-            return rangeArticleIndex;
+        public  String getRangeArticleIndex(String []row) {
+            return row[rangeArticleIndex];
         }
 
-        public static Integer getRangeWrittenSingular() {
-            return rangeWrittenSingular;
+        public  String getRangeWrittenSingular(String []row) {
+            return row[rangeWrittenSingular];
         }
 
-        public static Integer getRangeWrittenPlural() {
-            return rangeWrittenPlural;
+        public  String getRangeWrittenPlural(String []row) {
+            return row[rangeWrittenPlural];
         }
 
         
@@ -311,7 +314,7 @@ public class GermanCsv {
                     + "\n";
         }
        
-        public static void setArticle(Tupples tupple, String gender, String[] row) {
+        public  void setArticle(Tupples tupple, String gender, String[] row) {
             GenderUtils.setArticles(tupple.getReference(), gender);
             GenderUtils.setArticles(tupple.getDomain(), row[getDomainArticleIndex()]);
             GenderUtils.setArticles(tupple.getRange(), row[getRangeArticleIndex()]);
@@ -319,71 +322,73 @@ public class GermanCsv {
             GenderUtils.setWrittenForms(tupple.getRange(), row[getRangeWrittenSingular()], row[getRangeWrittenPlural()]);
         }
 
-        public static Integer getWrittenForm3rdPerson() {
+        public  Integer getWrittenForm3rdPerson() {
             return writtenForm3rdPerson;
         }
 
-        public static Integer getWrittenFormPast() {
+        public  Integer getWrittenFormPast() {
             return writtenFormPast;
         }
 
-        public static Integer getSyntacticFrame() {
+        public  Integer getSyntacticFrame() {
             return SyntacticFrame;
         }
 
-        public static Integer getSubjectIndex() {
+        public  Integer getSubjectIndex() {
             return subjectIndex;
         }
 
-        public static Integer getDirectObjectIndex() {
+        public  Integer getDirectObjectIndex() {
             return directObjectIndex;
         }
 
-        public static Integer getSenseIndex() {
+        public  Integer getSenseIndex() {
             return senseIndex;
         }
 
-        public static Integer getReferenceIndex() {
+        public  Integer getReferenceIndex() {
             return referenceIndex;
         }
 
-        public static Integer getDomainIndex() {
+        public  Integer getDomainIndex() {
             return domainIndex;
         }
 
-        public static Integer getRangeIndex() {
+        public  Integer getRangeIndex() {
             return rangeIndex;
         }
 
-        public static Integer getPassivePrepositionIndex() {
+        public  Integer getPassivePrepositionIndex() {
             return passivePrepositionIndex;
         }
 
-        public static Integer getDomainArticleIndex() {
+        public  Integer getDomainArticleIndex() {
             return domainArticleIndex;
         }
 
-        public static Integer getDomainWrittenSingular() {
+        public  Integer getDomainWrittenSingular() {
             return domainWrittenSingular;
         }
 
-        public static Integer getDomainWrittenPlural() {
+        public  Integer getDomainWrittenPlural() {
             return domainWrittenPlural;
         }
 
-        public static Integer getRangeArticleIndex() {
+        public  Integer getRangeArticleIndex() {
             return rangeArticleIndex;
         }
 
-        public static Integer getRangeWrittenSingular() {
+        public  Integer getRangeWrittenSingular() {
             return rangeWrittenSingular;
         }
 
-        public static Integer getRangeWrittenPlural() {
+        public  Integer getRangeWrittenPlural() {
             return rangeWrittenPlural;
         }
 
-        
+        public  Integer getSyntacticFrameIndex() {
+            return SyntacticFrame;
+        }
        
 
     }
@@ -562,7 +567,9 @@ public class GermanCsv {
             return rangeWrittenPlural;
         }
 
-       
+         public  Integer getSyntacticFrameIndex() {
+            return SyntacticFrame;
+        }
        
         
 
@@ -627,6 +634,57 @@ public class GermanCsv {
                     + "\n";
 
         }
+
+        public static Integer getSyntacticFrameIndex() {
+            return SyntacticFrameIndex;
+        }
+
+        public static Integer getCopulativeSubjectIndex() {
+            return copulativeSubjectIndex;
+        }
+
+        public static Integer getAttributiveArgIndex() {
+            return attributiveArgIndex;
+        }
+
+        public static Integer getSenseIndex() {
+            return senseIndex;
+        }
+
+        public static Integer getReferenceIndex() {
+            return referenceIndex;
+        }
+
+        public static Integer getOwl_onPropertyIndex() {
+            return owl_onPropertyIndex;
+        }
+
+        public static Integer getOwl_hasValueIndex() {
+            return owl_hasValueIndex;
+        }
+
+        public static Integer getDomainIndex() {
+            return domainIndex;
+        }
+
+        public static Integer getRangeIndex() {
+            return rangeIndex;
+        }
+
+        public static Integer getClassIndex() {
+            return classIndex;
+        }
+
+        public static Integer getOriginalIndex() {
+            return originalIndex;
+        }
+
+        public static Integer getSize() {
+            return size;
+        }
+        
+        
+
     }
 
     public static String getSenseId(List<Tupples> senseIds) {
@@ -772,11 +830,11 @@ public class GermanCsv {
         return writtenFormInfinitive;
     }
 
-   
+     public  Integer getSyntacticFrameIndex() {
+            return AdjectiveFrameIndex;
+        }
 
-    public static Integer getAdjectiveFrameIndex() {
-        return AdjectiveFrameIndex;
-    }
+   
     
       /*
                       "  lemon:otherForm    :" + lemonEntry+"_accusative_form" + " ;\n"

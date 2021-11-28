@@ -13,7 +13,7 @@ mvn clean install
 mvn clean package
 ```
 Run the system:
-- language: `EN` (English), `IT` (Italian)
+- language: `EN` (English), `DE` (German), `IT` (Italian)
 - input_directory: The directory that contains lemon (the turtle files) or csv files  that will be processed by QueGG. If csv file then the program will first create lemon and then generate grammar entry files. If lemon then it will generate grammar entry files. 
 - output_director: The output directory for the json grammar entry files that are produced by QueGG
 - number_of_entities: The number of entities in binding list. If the parameter is 10 then the maximum number of binding list is 10.
