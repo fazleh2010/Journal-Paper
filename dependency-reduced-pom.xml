@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>vbenz</groupId>
   <artifactId>question-answering</artifactId>
-  <name>question-answering-german2</name>
+  <name>question-answering-general</name>
   <version>1.3</version>
   <build>
     <plugins>

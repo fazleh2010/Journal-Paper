@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package util.io;
+package turtle;
 
 import grammar.datasets.sentencetemplates.TempConstants;
 import static grammar.datasets.sentencetemplates.TempConstants.past;
@@ -13,6 +13,8 @@ import static java.lang.System.exit;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import util.io.GenderUtils;
+import util.io.Tupples;
 
 /**
  *

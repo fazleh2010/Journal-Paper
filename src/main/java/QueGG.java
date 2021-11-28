@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
 import static java.util.Objects.isNull;
 import util.io.CsvFile;
 import util.io.FileUtils;
-import util.io.TurtleCreation;
+import turtle.German;
 import java.io.File;
 import java.io.IOException;
 import grammar.sparql.SparqlQuery;
@@ -42,6 +42,7 @@ import org.apache.commons.text.similarity.CosineDistance;
 import util.io.GenderUtils;
 import util.io.LinkedData;
 import static util.io.ResourceHelper.loadResource;
+import turtle.TutleConverter;
 
 @NoArgsConstructor
 public class QueGG {
@@ -93,7 +94,8 @@ public class QueGG {
                 if (fileType.equals("ttl")) {
                     queGG.init(language, inputDir, outputDir);
                 } else if (fileType.equals("csv")) {
-                    if (TurtleCreation.generateTurtle(inputDir, linkedData, language.toString().toLowerCase())) {
+                    TutleConverter TutleConverter=new German(inputDir, linkedData, language);
+                    if (TutleConverter.getConversionFlag()) {
                         queGG.init(language, inputDir, outputDir);
                     } else {
                         throw new Exception("no turle file is found to process!!");

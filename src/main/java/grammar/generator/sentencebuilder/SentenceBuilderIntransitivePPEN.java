@@ -98,7 +98,6 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder,TempCons
             List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                     language, new String[]{frameType.getName(), template, backward});
             sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable,sentenceTemplates);
-            exit(1);
         } else if (this.frameType.equals(FrameType.NPP)) {
             sentences = nounPhrase(bindingVariable, lexicalEntryUtil);
         }
