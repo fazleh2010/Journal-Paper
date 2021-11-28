@@ -52,8 +52,8 @@ public class QueGG {
 
     private static final Logger LOG = LogManager.getLogger(QueGG.class);
     private static String BaseDir = "";
-    private static String QUESTION_ANSWER_FILE = "questions";
-    private static String QUESTION_SUMMARY_FILE = "summary";
+    private static String questionsFile = "questions";
+    private static String summaryFile = "summary";
     private static String entityLabelDir = "src/main/resources/entityLabels/";
     private static Boolean externalEntittyListflag = true;
     private static String outputFileName = "grammar_FULL_DATASET";
@@ -81,7 +81,13 @@ public class QueGG {
                     queGG.protoToReal(inputCofiguration);
                 }
                 if(inputCofiguration.isEvalution()){
-                    queGG.questionEvaluation(inputCofiguration);
+                Language language = inputCofiguration.getLanguage();
+                String qaldDir =inputCofiguration.getQaldDir();
+                String outputDir = inputCofiguration.getOutputDir();
+                LinkedData linkedData = inputCofiguration.getLinkedData();
+                Double similarity=inputCofiguration.getSimilarityThresold();
+                //System.out.println("outputDir: " + outputDir + " qaldDir::" + qaldDir + " " + language + " linkedData.getEndpoint():" + linkedData.getEndpoint());
+                queGG.evalution(qaldDir, outputDir, language, linkedData.getEndpoint(),EvaluateAgainstQALD.REAL_QUESTION,similarity);
                 }
                
                 
@@ -94,57 +100,11 @@ public class QueGG {
             System.err.printf("Usage: <%s> <input directory> <output directory>%n", Arrays.toString(Language.values()));
         }
 
-        /*try {
-            if (args.length < 6) {
-                throw new IllegalArgumentException(String.format("Too few parameters (%s/%s)", args.length));
-            } 
-            if (args.length == 6) {
-                language = Language.stringToLanguage(args[0]);
-                LOG.info("Starting {} with language parameter '{}'", QueGG.class.getName(), language);
-                LOG.info("Input directory: {}", Path.of(args[1]).toString());
-                LOG.info("Output directory: {}", Path.of(args[2]).toString());
-                String fileType = args[4];
-
-                if (fileType.equals("all")) {
-                    if (fileType.equals("csv")) {
-                        queGG.csvToProto(args);
-                    }
-                    if (fileType.contains("qa")) {
-                        queGG.protoToReal(args);
-                    }
-                    if (fileType.contains("ev")) {
-                        queGG.RealToEva(args);
-                    }
-                } else {
-                    if (fileType.equals("csv")) {
-                        queGG.csvToProto(args);
-                    } else if (fileType.equals("ttl")) {
-                        queGG.turtleToProto(args);
-                    }
-                    if (fileType.contains("qa")) {
-                        queGG.protoToReal(args);
-                    }
-                    if (fileType.contains("ev")) {
-                        queGG.RealToEva(args);
-                    }
-                    
-                          
-                    
-                }
-
-            }
-
-            LOG.warn("To get optimal combinations of sentences please add the following types to {}\n{}",
-                    DomainOrRangeType.class.getName(), DomainOrRangeType.MISSING_TYPES.toString()
-            );
-        } catch (IllegalArgumentException | IOException e) {
-            System.err.printf("%s: %s%n", e.getClass().getSimpleName(), e.getMessage());
-            System.err.printf("Usage: <%s> <input directory> <output directory>%n", Arrays.toString(Language.values()));
-        }*/
+       
     }
 
     public void evalution(String qaldDir, String outputDir, Language language, String endpoint, String questionType,Double similarityMeasure) throws IOException, Exception {
-        QueGG evaluateAgainstQALDTest = new QueGG();
+       QueGG evaluateAgainstQALDTest = new QueGG();
         ObjectMapper objectMapper = new ObjectMapper();
         String[] fileList = new File(qaldDir).list();
         String queGGJson = null, queGGJsonCombined = null, qaldFile = null, qaldModifiedFile = null;
@@ -154,6 +114,7 @@ public class QueGG {
         List<String[]> questions = new ArrayList<String[]>();
         QALDImporter qaldImporter = new QALDImporter();
         EvaluateAgainstQALD evaluateAgainstQALD = new EvaluateAgainstQALD(languageCode, endpoint);
+        
 
         for (String fileName : new File(qaldDir).list()) {
             if (fileName.contains("qald")) {
@@ -164,12 +125,13 @@ public class QueGG {
                 }
             }
         }
-
-        String string = evaluateAgainstQALD.getQaldEntities(qaldFile, qaldModifiedFile, qaldRaw, languageCode);
-
-        //temporary code for qald entity creation...
-        //System.out.println(entityLabelDir+File.separator+"qaldEntities.txt");
-        //FileUtils.stringToFile(string, entityLabelDir+File.separator+"qaldEntities.txt");
+        
+       String string=evaluateAgainstQALD.getQaldEntities( qaldFile, qaldModifiedFile,  qaldRaw, languageCode);
+       
+       //temporary code for qald entity creation...
+       //System.out.println(entityLabelDir+File.separator+"qaldEntities.txt");
+       //FileUtils.stringToFile(string, entityLabelDir+File.separator+"qaldEntities.txt");
+    
         if (questionType.contains(PROTOTYPE_QUESTION)) {
             for (String fileName : new File(outputDir).list()) {
                 if (fileName.contains("grammar_FULL_DATASET") && fileName.contains(language.name())) {
@@ -184,25 +146,25 @@ public class QueGG {
             GrammarWrapper grammarWrapper = objectMapper.readValue(grammarEntriesFile, GrammarWrapper.class);
             GrammarWrapper gw2 = objectMapper.readValue(grammarEntriesFile2, GrammarWrapper.class);
             grammarWrapper.merge(gw2);
-            evaluateAgainstQALD.evaluateAndOutput(grammarWrapper, qaldFile, qaldModifiedFile, resultFileName, qaldRaw, languageCode, questionType,similarityMeasure);
+            evaluateAgainstQALD.evaluateAndOutput(grammarWrapper, qaldFile, qaldModifiedFile, resultFileName, qaldRaw, languageCode,questionType,similarityMeasure);
 
         } else if (questionType.contains(REAL_QUESTION)) {
             Map<String, String[]> queGGQuestions = new HashMap<String, String[]>();
             List<String[]> rows = new ArrayList<String[]>();
             String[] files = new File(outputDir).list();
             for (String fileName : files) {
-                if (fileName.contains(".csv")) {
+                if (fileName.contains(questionsFile)&&fileName.contains(".csv")) {
                     File file = new File(outputDir + File.separator + fileName);
                     CsvFile csvFile = new CsvFile(file);
                     rows = csvFile.getRows(file);
                     for (String[] row : rows) {
                         String question = row[1];
-                        String cleanQuestion = question.toLowerCase().trim().strip().stripLeading().stripTrailing();
+                        String cleanQuestion=question.toLowerCase().trim().strip().stripLeading().stripTrailing();
                         queGGQuestions.put(cleanQuestion, row);
                     }
                 }
             }
-
+           
             evaluateAgainstQALD.evaluateAndOutput(queGGQuestions, qaldFile, qaldModifiedFile, resultFileName, qaldRaw, languageCode, questionType,similarityMeasure);
         }
 
@@ -246,8 +208,8 @@ public class QueGG {
             throw new Exception("No files to process for question answering system!!");
         }
         String langCode = language.name().toLowerCase().trim();
-        String questionAnswerFile = inputDir + File.separator + QUESTION_ANSWER_FILE + "_" + langCode + ".csv";
-        String questionSummaryFile = inputDir + File.separator + QUESTION_SUMMARY_FILE + "_" + langCode + ".csv";
+        String questionAnswerFile = inputDir + File.separator + questionsFile + "_" + langCode + ".csv";
+        String questionSummaryFile = inputDir + File.separator + summaryFile + "_" + langCode + ".csv";
         ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile, maxNumberOfEntities, langCode, linkedData.getEndpoint(), online);
         readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir, externalEntittyListflag);
 

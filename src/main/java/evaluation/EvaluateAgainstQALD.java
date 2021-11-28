@@ -84,6 +84,7 @@ public class EvaluateAgainstQALD {
         QALD qaldOriginal = qaldImporter.readQald(qaldOriginalFile);
         entryComparisons = getAllSentenceMatchesCsv(qaldModified, questions, languageCode, BOG, similarityMeasure);
         EvaluationResult result = doEvaluation(qaldModified, entryComparisons, languageCode,questionType);
+        System.out.println("resultFileName:::"+resultFileName);
         Writer.writeResult(qaldImporter, qaldOriginal, result, resultFileName, languageCode);
 
     }
