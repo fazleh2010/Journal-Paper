@@ -20,13 +20,19 @@ Run the system:
 - input_type:  The input file indicator. `csv` or  `ttl`.If `csv` then the lexical entires are given in the form of rows in csv. If  `ttl` then the lexical entries are given in lemon format.                                         
 ````shell script
 java -jar <jar file> <language> <input_directory> <output_director> <number_of_entities> <input_type>
-java -jar target/QuestionGrammarGenerator.jar DE lexicon/de outputDB 10 csv dataset/dbpedia.json   
-java -jar target/QuestionGrammarGenerator.jar DE lexicon/de outputDB 10 qa dataset/dbpedia.json                                                               
+java -jar target/QuestionGrammarGenerator.jar DE lexicon/de output/de 10 csv dataset/dbpedia.json   
+java -jar target/QuestionGrammarGenerator.jar DE lexicon/de output 10 qa dataset/dbpedia.json  
+java -jar target/QuestionGrammarGenerator.jar DE qald output 80.0 ev dataset/dbpedia.json  
+
+java -jar target/QuestionGrammarGenerator.jar DE qald output 80.0 ev dataset/dbpedia.json 
+
+java -jar target/QuestionGrammarGenerator.jar inputConf.json dataset/dbpedia.json                                            
 ````  
 Run Evaluation
 
 ````shell script
 java -jar target/QuestionGrammarGenerator.jar DE qald outputDB dataset/dbpedia.json
+java -jar target/QuestionGrammarGenerator.jar DE qald output 80.0 ev dataset/dbpedia.json
 ````
 
 

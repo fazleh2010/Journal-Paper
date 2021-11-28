@@ -80,10 +80,7 @@ WHERE {
         ?uri dbp:nickname 'Frank The Tank'@en . 
 }"		"0.0"	"0.0"	"0.0"	"0.0"	"0.0"	"0.0"
 "24"	"false"	"Was ist das größte Land der Welt?"		"SELECT DISTINCT ?uri WHERE { ?uri a <http://dbpedia.org/ontology/Country> . ?uri <http://dbpedia.org/ontology/areaTotal> ?n . } ORDER BY DESC(?n) OFFSET 0 LIMIT 1"		"0.0"	"0.0"	"1.0"	"0.0"	"0.0"	"0.0"
-"25"	"true"	"Wer ist Bürgermeister von Paris?"	"Wer ist die B�rgermeister von Paris?"	"SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Paris> <http://dbpedia.org/ontology/mayor> ?uri . }"	"select  ?o    
-{
-    <http://dbpedia.org/resource/Paris> <http://dbpedia.org/ontology/mayor>  ?o    
-}"	"1.0"	"0.0"	"0.0"	"1.0"	"1.0"	"1.0"
+"25"	"false"	"Wer ist Bürgermeister von Paris?"		"SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Paris> <http://dbpedia.org/ontology/mayor> ?uri . }"		"0.0"	"0.0"	"1.0"	"0.0"	"0.0"	"0.0"
 "26"	"false"	"Wer ist der Trainer von Ankaras Eishockeymannschaft?"		"SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/city> <http://dbpedia.org/resource/Ankara> . ?x <http://dbpedia.org/ontology/league> <http://dbpedia.org/resource/Turkish_Ice_Hockey_First_League> . ?x <http://dbpedia.org/ontology/coach> ?uri . }"		"0.0"	"0.0"	"1.0"	"0.0"	"0.0"	"0.0"
 "27"	"false"	"Wer ist der Bürgermeister der Hauptstadt von Französisch-Polynesien?"		"PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX res: <http://dbpedia.org/resource/>
@@ -173,15 +170,12 @@ WHERE {
         FILTER (!BOUND(?date))
 }"		"0.0"	"0.0"	"1.0"	"0.0"	"0.0"	"0.0"
 "48"	"false"	"Wer hat sich Family Guy ausgedacht?"		"SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Family_Guy> <http://dbpedia.org/ontology/creator> ?uri . }  "		"0.0"	"0.0"	"1.0"	"0.0"	"0.0"	"0.0"
-"49"	"true"	"Was ist die Amtssprache Von Surinam?"	"Was ist die Amtssprache von China?"	"PREFIX dbo: <http://dbpedia.org/ontology/>
+"49"	"false"	"Was ist die Amtssprache Von Surinam?"		"PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX res: <http://dbpedia.org/resource/>
 SELECT DISTINCT ?uri
 WHERE { 
         res:Suriname dbo:officialLanguage ?uri .
-}"	"select  ?o    
-{
-    <http://dbpedia.org/resource/China> <http://dbpedia.org/ontology/officialLanguage>  ?o    
-}"	"0.0"	"1.0"	"1.0"	"0.0"	"0.0"	"0.0"
+}"		"0.0"	"0.0"	"1.0"	"0.0"	"0.0"	"0.0"
 "50"	"false"	"Wer hat das Lied Hotel California geschrieben?"		"SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Hotel_California> <http://dbpedia.org/ontology/writer> ?uri . }"		"0.0"	"0.0"	"3.0"	"0.0"	"0.0"	"0.0"
 "51"	"false"	"Gib mir alle Schauspieler von Filmen, in denen William Shatner Regie geführt hat."		"SELECT DISTINCT ?uri WHERE {  ?x <http://dbpedia.org/ontology/director> <http://dbpedia.org/resource/William_Shatner> .  ?x <http://dbpedia.org/ontology/starring> ?uri . } "		"0.0"	"0.0"	"19.0"	"0.0"	"0.0"	"0.0"
 "52"	"false"	"Was ist in Chocolate Chip Cookies drin?"		"SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Chocolate_chip_cookie> <http://dbpedia.org/ontology/ingredient> ?uri . }"		"0.0"	"0.0"	"10.0"	"0.0"	"0.0"	"0.0"
@@ -235,14 +229,11 @@ WHERE {
 	?uri dbo:series res:The_Sopranos  .
         ?uri dbo:seasonNumber 1 .
 }"		"0.0"	"0.0"	"0.0"	"0.0"	"0.0"	"0.0"
-"63"	"true"	"Was ist die Gesamteinwohnerzahl von Melbourne, Florida?"	"Was ist die Gesamteinwohnerzahl von Melbourne Florida?"	"PREFIX dbo: <http://dbpedia.org/ontology/> 
+"63"	"false"	"Was ist die Gesamteinwohnerzahl von Melbourne, Florida?"		"PREFIX dbo: <http://dbpedia.org/ontology/> 
 SELECT ?uri 
 WHERE { 
         <http://dbpedia.org/resource/Melbourne,_Florida> dbo:populationTotal ?uri .
-}"	"select  ?o    
-{
-    <http://dbpedia.org/resource/Melbourne,_Florida> <http://dbpedia.org/ontology/populationTotal>  ?o    
-}"	"1.0"	"0.0"	"0.0"	"1.0"	"1.0"	"1.0"
+}"		"0.0"	"0.0"	"1.0"	"0.0"	"0.0"	"0.0"
 "64"	"false"	"Hat Arnold Schwarzenegger eine Universität besucht?"		"PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX res: <http://dbpedia.org/resource/> 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -325,10 +316,7 @@ WHERE {
       ?uri dbo:publisher res:Mean_Hamster_Software . 
 }"		"0.0"	"0.0"	"1.0"	"0.0"	"0.0"	"0.0"
 "79"	"false"	"Wieviele Aldi-Filialen gibt es?"		"SELECT DISTINCT ?number WHERE {  <http://dbpedia.org/resource/Aldi> <http://dbpedia.org/ontology/numberOfLocations> ?number . } "		"0.0"	"0.0"	"1.0"	"0.0"	"0.0"	"0.0"
-"80"	"true"	"Was ist die Hauptstadt von Kamerun?"	"Was ist die Hauptstadt von Kamerun?"	"SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Cameroon> <http://dbpedia.org/ontology/capital> ?uri. } "	"select  ?o    
-{
-    <http://dbpedia.org/resource/Cameroon> <http://dbpedia.org/ontology/capital>  ?o    
-}"	"1.0"	"0.0"	"0.0"	"1.0"	"1.0"	"1.0"
+"80"	"false"	"Was ist die Hauptstadt von Kamerun?"		"SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Cameroon> <http://dbpedia.org/ontology/capital> ?uri. } "		"0.0"	"0.0"	"1.0"	"0.0"	"0.0"	"0.0"
 "81"	"false"	"Gibt es ein Videospiel, das Battle Chess heißt?"		"PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -674,15 +662,12 @@ ORDER BY DESC(?s)
 OFFSET 0 LIMIT 1"		"0.0"	"0.0"	"1.0"	"0.0"	"0.0"	"0.0"
 "152"	"false"	"Aus welchem Land kommt Sitecore?"		"SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Sitecore> <http://dbpedia.org/ontology/foundationPlace> ?uri . }"		"0.0"	"0.0"	"0.0"	"0.0"	"0.0"	"0.0"
 "153"	"false"	"Wen hat Lance Bass geheiratet?"		"SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/spouse> <http://dbpedia.org/resource/Lance_Bass> . } "		"0.0"	"0.0"	"0.0"	"0.0"	"0.0"	"0.0"
-"154"	"true"	"Was ist die Hauptstadt von Kanada?"	"Was ist die Hauptstadt von Kanada?"	"PREFIX dbo:  <http://dbpedia.org/ontology/>
+"154"	"false"	"Was ist die Hauptstadt von Kanada?"		"PREFIX dbo:  <http://dbpedia.org/ontology/>
 PREFIX res:  <http://dbpedia.org/resource/>
 SELECT DISTINCT ?uri 
 WHERE {
         res:Canada dbo:capital ?uri .
-}"	"select  ?o    
-{
-    <http://dbpedia.org/resource/Canada> <http://dbpedia.org/ontology/capital>  ?o    
-}"	"1.0"	"0.0"	"0.0"	"1.0"	"1.0"	"1.0"
+}"		"0.0"	"0.0"	"1.0"	"0.0"	"0.0"	"0.0"
 "155"	"false"	"Wer hat Vincent van Gogh inspiriert?"		"SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/influenced> <http://dbpedia.org/resource/Vincent_van_Gogh> . }"		"0.0"	"0.0"	"0.0"	"0.0"	"0.0"	"0.0"
 "156"	"false"	"In welcher Stadt ist John F. Kennedy gestorben?"		"PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX res: <http://dbpedia.org/resource/>
@@ -941,4 +926,4 @@ WHERE {
         ?uri dbo:wineProduced res:Sparkling_wine .
         ?uri dbo:location res:France .
 }"		"0.0"	"0.0"	"1.0"	"0.0"	"0.0"	"0.0"
-""	""	""	""	""	""	"4.0"	"1.0"	"503.0"	"0.8"	"0.007889546"	"0.015625"
+""	""	""	""	""	""	"0.0"	"0.0"	"507.0"	"NaN"	"0.0"	"NaN"

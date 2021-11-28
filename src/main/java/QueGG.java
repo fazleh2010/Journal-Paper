@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
 import static java.util.Objects.isNull;
 import util.io.CsvFile;
 import util.io.FileUtils;
-import turtle.GermanTurtle;
+import turtle.German;
 import java.io.File;
 import java.io.IOException;
 import grammar.sparql.SparqlQuery;
@@ -39,11 +39,13 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.logging.Level;
 import org.apache.commons.text.similarity.CosineDistance;
-import turtle.EnglishTurtle;
+import turtle.English;
 import util.io.GenderUtils;
 import util.io.LinkedData;
 import static util.io.ResourceHelper.loadResource;
 import turtle.TutleConverter;
+import util.io.FileFolderUtils;
+import util.io.InputCofiguration;
 
 @NoArgsConstructor
 public class QueGG {
@@ -60,81 +62,85 @@ public class QueGG {
     public static void main(String[] args) throws Exception {
         JenaSystem.init();
         QueGG queGG = new QueGG();
-        String questionAnswerFile = null, questionSummaryFile, languageStr = null, outputDir = null, qaldDir = null, dataSetConfFile = null;
-        Language language = null;
-        LinkedData linkedData = null;
-         String numberOfEntitiesString =null;
-      
-         try {
-            if (args.length < 4) {
-                throw new IllegalArgumentException(String.format("Too few parameters (%s/%s)", args.length, 3));
-            }  //if (args.length >4 && args.length <6) {
-            if (args.length == 4) {
-                language = Language.stringToLanguage(args[0]);
-                qaldDir = args[1];
-                outputDir = args[2];
-                dataSetConfFile = args[3];
-                linkedData = FileUtils.getLinkedDataConf(new File(dataSetConfFile));
-                //System.out.println("outputDir: " + outputDir + " qaldDir::" + qaldDir + " " + language + " linkedData.getEndpoint():" + linkedData.getEndpoint());
-                evalution(qaldDir, outputDir, language, linkedData.getEndpoint(),EvaluateAgainstQALD.REAL_QUESTION);
-            } else if (args.length == 6) {
+        String configFile = null, dataSetConfFile = null;
+        
+        try {
+            if (args.length < 2) {
+                throw new IllegalArgumentException(String.format("Too few parameters (%s/%s)", args.length));
+            }
+            else if (args.length == 2) {
+                configFile = args[0];
+                InputCofiguration inputCofiguration = FileUtils.getInputConfig(new File(configFile));
+                inputCofiguration.setLinkedData(args[1]);
+                if (inputCofiguration.isCsvToTurtle()) {
+                     if(queGG.csvToProto(inputCofiguration)){
+                         queGG.turtleToProto(inputCofiguration);
+                     }
+                }
+                if(inputCofiguration.isProtoTypeToQuestion()){
+                    queGG.protoToReal(inputCofiguration);
+                }
+               
+                
+            }
+           
+         
+
+        } catch (IllegalArgumentException | IOException e) {
+            System.err.printf("%s: %s%n", e.getClass().getSimpleName(), e.getMessage());
+            System.err.printf("Usage: <%s> <input directory> <output directory>%n", Arrays.toString(Language.values()));
+        }
+
+        /*try {
+            if (args.length < 6) {
+                throw new IllegalArgumentException(String.format("Too few parameters (%s/%s)", args.length));
+            } 
+            if (args.length == 6) {
                 language = Language.stringToLanguage(args[0]);
                 LOG.info("Starting {} with language parameter '{}'", QueGG.class.getName(), language);
                 LOG.info("Input directory: {}", Path.of(args[1]).toString());
                 LOG.info("Output directory: {}", Path.of(args[2]).toString());
-                language = Language.stringToLanguage(args[0]);
-                String inputDir = Path.of(args[1]).toString();
-                outputDir = Path.of(args[2]).toString();
-                numberOfEntitiesString = Path.of(args[3]).toString();
-                //setSparqlEndpoint(endpoint);
                 String fileType = args[4];
-                dataSetConfFile = args[5];
-                linkedData = FileUtils.getLinkedDataConf(new File(dataSetConfFile));
-                setDataSet(linkedData);
 
-                if (fileType.equals("ttl")) {
-                    queGG.init(language, inputDir, outputDir);
-                } else if (fileType.equals("csv")) {
-                    TutleConverter TutleConverter=null;
-                    if(language.equals(Language.DE))
-                      TutleConverter=new GermanTurtle(inputDir, linkedData, language);
-                    else if(language.equals(Language.EN))
-                        TutleConverter=new EnglishTurtle(inputDir, linkedData, language);
-                    
-                    if (TutleConverter.getConversionFlag()) {
-                        queGG.init(language, inputDir, outputDir);
-                    } else {
-                        throw new Exception("no turle file is found to process!!"+language.name());
+                if (fileType.equals("all")) {
+                    if (fileType.equals("csv")) {
+                        queGG.csvToProto(args);
                     }
-
-                } else if (fileType.equals("qa")) {
-                    Integer maxNumberOfEntities = Integer.parseInt(numberOfEntitiesString);
-                    List<File> fileList = FileUtils.getFiles(outputDir + "/", outputFileName + "_" + language, ".json");
-                    if (fileList.isEmpty()) {
-                        throw new Exception("No files to process for question answering system!!");
+                    if (fileType.contains("qa")) {
+                        queGG.protoToReal(args);
                     }
-
-                    questionAnswerFile = outputDir + File.separator + QUESTION_ANSWER_FILE + "_" + language + ".csv";
-                    questionSummaryFile = outputDir + File.separator + QUESTION_SUMMARY_FILE + "_" + language + ".csv";
-                    ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile, maxNumberOfEntities, args[0], linkedData.getEndpoint(), online);
-                    readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir, externalEntittyListflag);
-
+                    if (fileType.contains("ev")) {
+                        queGG.RealToEva(args);
+                    }
                 } else {
-                    throw new Exception("No file type is mentioned!!");
+                    if (fileType.equals("csv")) {
+                        queGG.csvToProto(args);
+                    } else if (fileType.equals("ttl")) {
+                        queGG.turtleToProto(args);
+                    }
+                    if (fileType.contains("qa")) {
+                        queGG.protoToReal(args);
+                    }
+                    if (fileType.contains("ev")) {
+                        queGG.RealToEva(args);
+                    }
+                    
+                          
+                    
                 }
 
             }
 
-                   LOG.warn("To get optimal combinations of sentences please add the following types to {}\n{}",
+            LOG.warn("To get optimal combinations of sentences please add the following types to {}\n{}",
                     DomainOrRangeType.class.getName(), DomainOrRangeType.MISSING_TYPES.toString()
             );
         } catch (IllegalArgumentException | IOException e) {
             System.err.printf("%s: %s%n", e.getClass().getSimpleName(), e.getMessage());
             System.err.printf("Usage: <%s> <input directory> <output directory>%n", Arrays.toString(Language.values()));
-        }
+        }*/
     }
 
-    public static void evalution(String qaldDir, String outputDir, Language language, String endpoint, String questionType) throws IOException, Exception {
+    public void evalution(String qaldDir, String outputDir, Language language, String endpoint, String questionType,Double similarityMeasure) throws IOException, Exception {
         QueGG evaluateAgainstQALDTest = new QueGG();
         ObjectMapper objectMapper = new ObjectMapper();
         String[] fileList = new File(qaldDir).list();
@@ -145,7 +151,6 @@ public class QueGG {
         List<String[]> questions = new ArrayList<String[]>();
         QALDImporter qaldImporter = new QALDImporter();
         EvaluateAgainstQALD evaluateAgainstQALD = new EvaluateAgainstQALD(languageCode, endpoint);
-        
 
         for (String fileName : new File(qaldDir).list()) {
             if (fileName.contains("qald")) {
@@ -156,13 +161,12 @@ public class QueGG {
                 }
             }
         }
-        
-       String string=evaluateAgainstQALD.getQaldEntities( qaldFile, qaldModifiedFile,  qaldRaw, languageCode);
-       
-       //temporary code for qald entity creation...
-       //System.out.println(entityLabelDir+File.separator+"qaldEntities.txt");
-       //FileUtils.stringToFile(string, entityLabelDir+File.separator+"qaldEntities.txt");
-    
+
+        String string = evaluateAgainstQALD.getQaldEntities(qaldFile, qaldModifiedFile, qaldRaw, languageCode);
+
+        //temporary code for qald entity creation...
+        //System.out.println(entityLabelDir+File.separator+"qaldEntities.txt");
+        //FileUtils.stringToFile(string, entityLabelDir+File.separator+"qaldEntities.txt");
         if (questionType.contains(PROTOTYPE_QUESTION)) {
             for (String fileName : new File(outputDir).list()) {
                 if (fileName.contains("grammar_FULL_DATASET") && fileName.contains(language.name())) {
@@ -177,7 +181,7 @@ public class QueGG {
             GrammarWrapper grammarWrapper = objectMapper.readValue(grammarEntriesFile, GrammarWrapper.class);
             GrammarWrapper gw2 = objectMapper.readValue(grammarEntriesFile2, GrammarWrapper.class);
             grammarWrapper.merge(gw2);
-            evaluateAgainstQALD.evaluateAndOutput(grammarWrapper, qaldFile, qaldModifiedFile, resultFileName, qaldRaw, languageCode,questionType);
+            evaluateAgainstQALD.evaluateAndOutput(grammarWrapper, qaldFile, qaldModifiedFile, resultFileName, qaldRaw, languageCode, questionType,similarityMeasure);
 
         } else if (questionType.contains(REAL_QUESTION)) {
             Map<String, String[]> queGGQuestions = new HashMap<String, String[]>();
@@ -190,25 +194,143 @@ public class QueGG {
                     rows = csvFile.getRows(file);
                     for (String[] row : rows) {
                         String question = row[1];
-                        String cleanQuestion=question.toLowerCase().trim().strip().stripLeading().stripTrailing();
+                        String cleanQuestion = question.toLowerCase().trim().strip().stripLeading().stripTrailing();
                         queGGQuestions.put(cleanQuestion, row);
                     }
                 }
             }
-           
-            evaluateAgainstQALD.evaluateAndOutput(queGGQuestions, qaldFile, qaldModifiedFile, resultFileName, qaldRaw, languageCode, questionType);
+
+            evaluateAgainstQALD.evaluateAndOutput(queGGQuestions, qaldFile, qaldModifiedFile, resultFileName, qaldRaw, languageCode, questionType,similarityMeasure);
         }
 
     }
+    
+    private Boolean csvToProto(InputCofiguration inputCofiguration) throws Exception {
+        Language language = inputCofiguration.getLanguage();
+        String inputDir = inputCofiguration.getInputDir();
+        String outputDir = inputCofiguration.getOutputDir();
+        Integer numberOfEntitiesString = inputCofiguration.getNumberOfEntities();
+        LinkedData linkedData = inputCofiguration.getLinkedData();
+        setDataSet(linkedData);
+        TutleConverter tutleConverter = null;
+        FileFolderUtils.deleteFiles(inputDir, ".ttl");
+        if (language.equals(Language.DE)) {
+            tutleConverter = new German(inputDir, linkedData, language);
+        } else if (language.equals(Language.EN)) {
+            tutleConverter = new English(inputDir, linkedData, language);
+        }
+        return tutleConverter.getConversionFlag();
 
-    public void init(Language language, String inputDir, String outputDir) throws IOException {
+        /*if (TutleConverter.getConversionFlag()) {
+            init(language, inputDir, outputDir);
+        } else {
+            throw new Exception("no turle file is found to process!!" + language.name());
+        }*/
+
+    }
+    
+     private void turtleToProto(InputCofiguration inputCofiguration) throws IOException {
+        Language language = inputCofiguration.getLanguage();
+        String inputDir = inputCofiguration.getInputDir();
+        String outputDir = inputCofiguration.getOutputDir();
+        this.init(language, inputDir, outputDir);
+    }
+
+    /*private void csvToProto(String[] args) throws Exception {
+        Language language = Language.stringToLanguage(args[0]);
+        String inputDir = Path.of(args[1]).toString();
+        String outputDir = Path.of(args[2]).toString();
+        String numberOfEntitiesString = Path.of(args[3]).toString();
+        //setSparqlEndpoint(endpoint);
+        String dataSetConfFile = args[5];
+        LinkedData linkedData = FileUtils.getLinkedDataConf(new File(dataSetConfFile));
+        setDataSet(linkedData);
+        TutleConverter TutleConverter = null;
+        FileFolderUtils.deleteFiles(inputDir,  ".ttl");
+       if (language.equals(Language.DE)) {
+            TutleConverter = new German(inputDir, linkedData, language);
+        } else if (language.equals(Language.EN)) {
+            TutleConverter = new English(inputDir, linkedData, language);
+        }
+
+        if (TutleConverter.getConversionFlag()) {
+            init(language, inputDir, outputDir);
+        } else {
+            throw new Exception("no turle file is found to process!!" + language.name());
+        }
+
+    }*/
+     
+             
+        private void protoToReal(InputCofiguration inputCofiguration) throws Exception {
+        Language language = inputCofiguration.getLanguage();
+        String inputDir = inputCofiguration.getOutputDir();
+        Integer maxNumberOfEntities =inputCofiguration.getNumberOfEntities();
+        LinkedData linkedData = inputCofiguration.getLinkedData();
+        setDataSet(linkedData);
+
+        List<File> fileList = FileUtils.getFiles(inputDir + "/", outputFileName + "_" + language.name(), ".json");
+        if (fileList.isEmpty()) {
+            throw new Exception("No files to process for question answering system!!");
+        }
+        String langCode = language.name().toLowerCase().trim();
+        String questionAnswerFile = inputDir + File.separator + QUESTION_ANSWER_FILE + "_" + langCode + ".csv";
+        String questionSummaryFile = inputDir + File.separator + QUESTION_SUMMARY_FILE + "_" + langCode + ".csv";
+        ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile, maxNumberOfEntities, langCode, linkedData.getEndpoint(), online);
+        readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir, externalEntittyListflag);
+
+    }
+
+    /*private void protoToReal(String[] args) throws Exception {
+        Language language = Language.stringToLanguage(args[0]);
+        String inputDir = Path.of(args[2]).toString();
+        String numberOfEntitiesString = Path.of(args[3]).toString();
+        String dataSetConfFile = args[5];
+        LinkedData linkedData = FileUtils.getLinkedDataConf(new File(dataSetConfFile));
+        setDataSet(linkedData);
+
+        Integer maxNumberOfEntities = Integer.parseInt(numberOfEntitiesString);
+        List<File> fileList = FileUtils.getFiles(inputDir + "/", outputFileName + "_" + language.name(), ".json");
+        if (fileList.isEmpty()) {
+            throw new Exception("No files to process for question answering system!!");
+        }
+        String langCode = language.name().toLowerCase().trim();
+        String questionAnswerFile = inputDir + File.separator + QUESTION_ANSWER_FILE + "_" + langCode + ".csv";
+        String questionSummaryFile = inputDir + File.separator + QUESTION_SUMMARY_FILE + "_" + langCode + ".csv";
+        ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile, maxNumberOfEntities, langCode, linkedData.getEndpoint(), online);
+        readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir, externalEntittyListflag);
+
+    }*/
+
+    private void turtleToProto(String[] args) throws IOException {
+        Language language = Language.stringToLanguage(args[0]);
+        String inputDir = Path.of(args[1]).toString();
+        String outputDir = Path.of(args[2]).toString();
+        this.init(language, inputDir, outputDir);
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
+    
+     private void RealToEva(String[] args) throws Exception {
+        String inputDir = Path.of(args[1]).toString();
+        String outputDir = Path.of(args[2]).toString();
+        String dataSetConfFile = args[5];
+        Double similarityMeasure = Double.parseDouble(Path.of(args[6]).toString());
+        Language language = Language.stringToLanguage(args[0]);
+        LinkedData linkedData = FileUtils.getLinkedDataConf(new File(dataSetConfFile));
+        evalution(inputDir, outputDir, language, linkedData.getEndpoint(), EvaluateAgainstQALD.REAL_QUESTION,similarityMeasure);
+
+    }
+
+     public void init(Language language, String inputDir, String outputDir) throws IOException {
         try {
             loadInputAndGenerate(language, inputDir, outputDir);
         } catch (InvocationTargetException | NoSuchMethodException | InstantiationException | IllegalAccessException e) {
             LOG.error("Could not create grammar: {}", e.getMessage());
         }
     }
-
+  
     private void loadInputAndGenerate(Language lang, String inputDir, String outputDir) throws
             IOException,
             InvocationTargetException,
@@ -341,4 +463,5 @@ public class QueGG {
 
     }
 
+   
 }

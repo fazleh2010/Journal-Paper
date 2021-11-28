@@ -25,7 +25,7 @@ import util.io.Tupples;
  *
  * @author elahi
  */
-public class GermanTurtle extends TurtleCreation implements TutleConverter {
+public class German extends TurtleCreation implements TutleConverter {
 
     private String lemonEntry = "";
     private String partOfSpeech = "";
@@ -46,7 +46,7 @@ public class GermanTurtle extends TurtleCreation implements TutleConverter {
     private GermanCsv.AttributiveAdjectiveFrameCsv attributiveAdjectiveFrame = new GermanCsv.AttributiveAdjectiveFrameCsv();
 
 
-    public GermanTurtle(String inputDir, LinkedData linkedData, Language language) throws Exception {
+    public German(String inputDir, LinkedData linkedData, Language language) throws Exception {
         super(inputDir, linkedData, language);
         super.setSyntacticFrameIndexes(nounPPFrameCsv.getSyntacticFrameIndex(),transitiveFrameCsv.getSyntacticFrameIndex(),IntransitiveFrameCsv.getSyntacticFrameIndex(),attributiveAdjectiveFrame.getSyntacticFrameIndex());
         this.generateTurtle();
@@ -98,7 +98,7 @@ public class GermanTurtle extends TurtleCreation implements TutleConverter {
                     }
 
                 } catch (Exception ex) {
-                    java.util.logging.Logger.getLogger(GermanTurtle.class.getName()).log(Level.SEVERE, null, ex);
+                    java.util.logging.Logger.getLogger(German.class.getName()).log(Level.SEVERE, null, ex);
                     throw new Exception(ex.getMessage());
                 }
 

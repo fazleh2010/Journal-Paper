@@ -46,7 +46,6 @@ public class EvaluateAgainstQALD {
     private final String BOG = "BOG";
     public static final String PROTOTYPE_QUESTION = "PROTOTYPE_QUESTION";
     public static final String REAL_QUESTION = "REAL_QUESTION";
-    private final double similarityPercentage = 80.0;
     private Map<String, GrammarEntry> matchedQueGGEntriesIds = new TreeMap<String, GrammarEntry>();
     private Set<String> qaldQuestions = new TreeSet<String>();
     private String endpoint=null;
@@ -65,25 +64,25 @@ public class EvaluateAgainstQALD {
 
     }
 
-    public void evaluateAndOutput(GrammarWrapper grammarWrapper, String qaldOriginalFile, String qaldModifiedFile, String resultFileName, String qaldRaw, String languageCode, String questionType) throws IOException {
+    public void evaluateAndOutput(GrammarWrapper grammarWrapper, String qaldOriginalFile, String qaldModifiedFile, String resultFileName, String qaldRaw, String languageCode, String questionType,Double similarityMeasure) throws IOException {
         QALDImporter qaldImporter = new QALDImporter();
         List<EntryComparison> entryComparisons = new ArrayList<EntryComparison>();
         qaldImporter.qaldToCSV(qaldOriginalFile, qaldRaw, languageCode);
         QALD qaldModified = qaldImporter.readQald(qaldModifiedFile);
         QALD qaldOriginal = qaldImporter.readQald(qaldOriginalFile);
-        entryComparisons = getProtoTypeMatchedQuestions(qaldModified, grammarWrapper, languageCode, BOG, similarityPercentage);
+        entryComparisons = getProtoTypeMatchedQuestions(qaldModified, grammarWrapper, languageCode, BOG, similarityMeasure);
         EvaluationResult result = doEvaluation(qaldModified, entryComparisons, languageCode,questionType);
         Writer.writeResult(qaldImporter, qaldOriginal, result, resultFileName, languageCode);
 
     }
     
-    public void evaluateAndOutput(Map<String, String[]> questions, String qaldOriginalFile, String qaldModifiedFile, String resultFileName, String qaldRaw, String languageCode, String questionType) throws IOException, Exception {
+    public void evaluateAndOutput(Map<String, String[]> questions, String qaldOriginalFile, String qaldModifiedFile, String resultFileName, String qaldRaw, String languageCode, String questionType,Double similarityMeasure) throws IOException, Exception {
         QALDImporter qaldImporter = new QALDImporter();
         List<EntryComparison> entryComparisons = new ArrayList<EntryComparison>();
         qaldImporter.qaldToCSV(qaldOriginalFile, qaldRaw, languageCode);
         QALD qaldModified = qaldImporter.readQald(qaldModifiedFile);
         QALD qaldOriginal = qaldImporter.readQald(qaldOriginalFile);
-        entryComparisons = getAllSentenceMatchesCsv(qaldModified, questions, languageCode, BOG, similarityPercentage);
+        entryComparisons = getAllSentenceMatchesCsv(qaldModified, questions, languageCode, BOG, similarityMeasure);
         EvaluationResult result = doEvaluation(qaldModified, entryComparisons, languageCode,questionType);
         Writer.writeResult(qaldImporter, qaldOriginal, result, resultFileName, languageCode);
 

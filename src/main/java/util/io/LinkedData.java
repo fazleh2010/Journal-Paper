@@ -59,4 +59,11 @@ public class LinkedData {
     public long getBindingLimit() {
         return bindingLimit;
     }
+
+    @Override
+    public String toString() {
+        return "LinkedData{" + "endpoint=" + endpoint + ", prefix=" + prefix + ", bindingLimit=" + bindingLimit + '}';
+    }
+    
+    
 }

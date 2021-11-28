@@ -563,6 +563,28 @@ public class FileFolderUtils {
         return false;
     }
     
+    public static void deleteFiles(String inputDir, String extension) {
+        File f = new File(inputDir);
+        String[] pathnames = f.list();
+        for (String pathname : pathnames) {
+            String[] files = new File(inputDir + File.separator + pathname).list();
+            for (String fileName : files) {
+                File file = new File(inputDir + File.separator + pathname + File.separator + fileName);
+                if (file.getName().contains(extension)) {
+                    if (file.delete()) {
+                        System.out.println(fileName + " deleted successfully");
+                    } else {
+                        System.out.println("Failed to delete the file");
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+    
     
     public static void main(String[] args) throws IOException {
         String dir = "/home/elahi/AHack/italian/question-grammar-generator/src/main/resources/it/base/";
@@ -585,6 +607,8 @@ public class FileFolderUtils {
         System.out.println(set.size());
          List<String> resultList = new ArrayList<String>(set);
         listToFiles(resultList,dir+genderNotLabeled);
+        
+        
 
     }
     

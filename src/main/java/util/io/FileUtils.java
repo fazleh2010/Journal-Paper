@@ -66,13 +66,15 @@ public class FileUtils {
     }
 
     public static List<File> getFiles(String fileDir, String category, String extension) {
-        //System.out.println("fileDir:"+fileDir);
+        System.out.println("fileDir:"+fileDir);
         String[] files = new File(fileDir).list();
         List<File> selectedFiles = new ArrayList<File>();
         for (String fileName : files) {
             if (fileName.contains(category) && fileName.contains(extension)) {
                 selectedFiles.add(new File(fileDir + fileName));
             }
+                    System.out.println(category+" fileName:"+fileName);
+
         }
 
         return selectedFiles;
@@ -135,6 +137,10 @@ public class FileUtils {
     public static LinkedData getLinkedDataConf(File file) throws Exception {
         ObjectMapper mapper = new ObjectMapper();
         return mapper.readValue(file, LinkedData.class);
+    }
+    public static InputCofiguration getInputConfig(File file) throws Exception {
+        ObjectMapper mapper = new ObjectMapper();
+        return mapper.readValue(file, InputCofiguration.class);
     }
 
     

@@ -1,0 +1,13 @@
+{
+  "languageCode" : "de",
+  "inputDir" : "lexicon",
+  "outputDir" : "output",
+  "numberOfEntities" : 10,
+  "similarityThresold" : 80.0,
+  "csvToTurtle" : true,
+  "turtleToProtoType" : true,
+  "protoTypeToQuestion" : true,
+  "evalution" : true
+}
+
+
