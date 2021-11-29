@@ -51,7 +51,6 @@ import util.io.InputCofiguration;
 public class QueGG {
 
     private static final Logger LOG = LogManager.getLogger(QueGG.class);
-    private static String BaseDir = "";
     private static String questionsFile = "questions";
     private static String summaryFile = "summary";
     private static String entityLabelDir = "src/main/resources/entityLabels/";
@@ -103,18 +102,13 @@ public class QueGG {
        
     }
 
-    public void evalution(String qaldDir, String outputDir, Language language, String endpoint, String questionType,Double similarityMeasure) throws IOException, Exception {
-       QueGG evaluateAgainstQALDTest = new QueGG();
+    public void evalution(String qaldDir, String outputDir, Language language, String endpoint, String questionType, Double similarityMeasure) throws IOException, Exception {
         ObjectMapper objectMapper = new ObjectMapper();
-        String[] fileList = new File(qaldDir).list();
         String queGGJson = null, queGGJsonCombined = null, qaldFile = null, qaldModifiedFile = null;
         String languageCode = language.name().toLowerCase();
-        String resultFileName = qaldDir + File.separator + "QALD-QueGG-Comparison_" + languageCode + ".csv";
-        String qaldRaw = qaldDir + File.separator + "QALD-2017-dataset-raw.csv";
-        List<String[]> questions = new ArrayList<String[]>();
-        QALDImporter qaldImporter = new QALDImporter();
+        String resultFileName = outputDir + File.separator + "QALD-QueGG-Comparison_" + languageCode + ".csv";
+        String qaldRaw = outputDir + File.separator + "QALD-2017-dataset-raw.csv";
         EvaluateAgainstQALD evaluateAgainstQALD = new EvaluateAgainstQALD(languageCode, endpoint);
-        
 
         for (String fileName : new File(qaldDir).list()) {
             if (fileName.contains("qald")) {
@@ -125,13 +119,12 @@ public class QueGG {
                 }
             }
         }
-        
-       String string=evaluateAgainstQALD.getQaldEntities( qaldFile, qaldModifiedFile,  qaldRaw, languageCode);
-       
-       //temporary code for qald entity creation...
-       //System.out.println(entityLabelDir+File.separator+"qaldEntities.txt");
-       //FileUtils.stringToFile(string, entityLabelDir+File.separator+"qaldEntities.txt");
-    
+
+        String string = evaluateAgainstQALD.getQaldEntities(qaldFile, qaldModifiedFile, qaldRaw, languageCode);
+
+        //temporary code for qald entity creation...
+        //System.out.println(entityLabelDir+File.separator+"qaldEntities.txt");
+        //FileUtils.stringToFile(string, entityLabelDir+File.separator+"qaldEntities.txt");
         if (questionType.contains(PROTOTYPE_QUESTION)) {
             for (String fileName : new File(outputDir).list()) {
                 if (fileName.contains("grammar_FULL_DATASET") && fileName.contains(language.name())) {
@@ -146,26 +139,26 @@ public class QueGG {
             GrammarWrapper grammarWrapper = objectMapper.readValue(grammarEntriesFile, GrammarWrapper.class);
             GrammarWrapper gw2 = objectMapper.readValue(grammarEntriesFile2, GrammarWrapper.class);
             grammarWrapper.merge(gw2);
-            evaluateAgainstQALD.evaluateAndOutput(grammarWrapper, qaldFile, qaldModifiedFile, resultFileName, qaldRaw, languageCode,questionType,similarityMeasure);
+            evaluateAgainstQALD.evaluateAndOutput(grammarWrapper, qaldFile, qaldModifiedFile, resultFileName, qaldRaw, languageCode, questionType, similarityMeasure);
 
         } else if (questionType.contains(REAL_QUESTION)) {
             Map<String, String[]> queGGQuestions = new HashMap<String, String[]>();
             List<String[]> rows = new ArrayList<String[]>();
             String[] files = new File(outputDir).list();
             for (String fileName : files) {
-                if (fileName.contains(questionsFile)&&fileName.contains(".csv")) {
+                if (fileName.contains(questionsFile) && fileName.contains(".csv")) {
                     File file = new File(outputDir + File.separator + fileName);
                     CsvFile csvFile = new CsvFile(file);
                     rows = csvFile.getRows(file);
                     for (String[] row : rows) {
                         String question = row[1];
-                        String cleanQuestion=question.toLowerCase().trim().strip().stripLeading().stripTrailing();
+                        String cleanQuestion = question.toLowerCase().trim().strip().stripLeading().stripTrailing();
                         queGGQuestions.put(cleanQuestion, row);
                     }
                 }
             }
-           
-            evaluateAgainstQALD.evaluateAndOutput(queGGQuestions, qaldFile, qaldModifiedFile, resultFileName, qaldRaw, languageCode, questionType,similarityMeasure);
+
+            evaluateAgainstQALD.evaluateAndOutput(queGGQuestions, qaldFile, qaldModifiedFile, resultFileName, qaldRaw, languageCode, questionType, similarityMeasure);
         }
 
     }

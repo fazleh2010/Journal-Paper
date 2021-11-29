@@ -11,29 +11,56 @@ build the jar file
 ```shell script
 mvn clean install
 mvn clean package
+
+inputConf.json: The file contains input parameter for the system
 ```
+- languageCode: `en` (English), `de` (German), `it` (Italian)
+- inputDir: The input directory that contains lemon csv files  that will be processed by QueGG. 
+- outputDir: The output directory for the json grammar entry files that are produced by QueGG.
+- qaldDir: The directory contains qald questions
+- numberOfEntities: The number of entities in binding list. 
+- similarityThresold: The thresold for similary check between questions for evalution.
+- csvToTurtle: the indicator for generating lemon from turtle file.
+- turtleToProtoType: the indicator for generating lemon from turtle file.
+- protoTypeToQuestion: the indicator for generating questions from prototype questions.
+- evalution: Mark true if we want evalution against qald
+````input configuration file
+{
+  "languageCode" : "de",
+  "inputDir" : "lexicon",
+  "outputDir" : "output",
+  "qaldDir" : "qald",
+  "numberOfEntities" : 10,
+  "similarityThresold" : 80.0,
+  "csvToTurtle" : true,
+  "turtleToProtoType" : true,
+  "protoTypeToQuestion" : true,
+  "evalution" : true
+}
+
+````
+dbpedia.json: The input configuration for linked data.
+```
+- endpoint: the sparql endpoint of the linked data.
+- prefix: the prefixes of Uris.
+````input configuration file
+{
+  "endpoint" : "https://dbpedia.org/sparql",
+  "prefix" : {
+    "dbc" : "http://dbpedia.org/resource/Category:",
+    "dbo" : "http://dbpedia.org/ontology/",
+    "dbp" : "http://dbpedia.org/property/"
+...
+}
+   
+````
+
+
 Run the system:
-- language: `EN` (English), `DE` (German), `IT` (Italian)
-- input_directory: The directory that contains lemon (the turtle files) or csv files  that will be processed by QueGG. If csv file then the program will first create lemon and then generate grammar entry files. If lemon then it will generate grammar entry files. 
-- output_director: The output directory for the json grammar entry files that are produced by QueGG
-- number_of_entities: The number of entities in binding list. If the parameter is 10 then the maximum number of binding list is 10.
-- input_type:  The input file indicator. `csv` or  `ttl`.If `csv` then the lexical entires are given in the form of rows in csv. If  `ttl` then the lexical entries are given in lemon format.                                         
 ````shell script
-java -jar <jar file> <language> <input_directory> <output_director> <number_of_entities> <input_type>
-java -jar target/QuestionGrammarGenerator.jar DE lexicon/de output/de 10 csv dataset/dbpedia.json   
-java -jar target/QuestionGrammarGenerator.jar DE lexicon/de output 10 qa dataset/dbpedia.json  
-java -jar target/QuestionGrammarGenerator.jar DE qald output 80.0 ev dataset/dbpedia.json  
-
-java -jar target/QuestionGrammarGenerator.jar DE qald output 80.0 ev dataset/dbpedia.json 
-
+java -jar <jar file> <input_configuration_file> <linked_data_configuration_file>
 java -jar target/QuestionGrammarGenerator.jar inputConf.json dataset/dbpedia.json                                            
 ````  
-Run Evaluation
-
-````shell script
-java -jar target/QuestionGrammarGenerator.jar DE qald outputDB dataset/dbpedia.json
-java -jar target/QuestionGrammarGenerator.jar DE qald output 80.0 ev dataset/dbpedia.json
-````
 
 
 ### Input example

@@ -26,6 +26,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.apache.jena.query.QueryType;
 import org.apache.logging.log4j.LogManager;
+import util.io.CsvFile;
 import util.io.MatcherExample;
 import util.io.Statistics;
 
@@ -85,14 +86,16 @@ public class ReadAndWriteQuestions {
         Integer index = 0;
         this.entityDir = entityDir;
 
-        this.csvWriterQuestions = new CSVWriter(new FileWriter(questionAnswerFile));
-        this.csvWriterSummary = new CSVWriter(new FileWriter(questionSummaryFile));
-        //this.csvWriter = new CSVWriter(new FileWriter(questionAnswerFile, true));
-        this.csvWriterQuestions.writeNext(questionHeader);
-        this.csvWriterSummary.writeNext(summaryHeader);
+        this.csvWriterQuestions = new CSVWriter(new FileWriter(questionAnswerFile,true));
+        this.csvWriterSummary = new CSVWriter(new FileWriter(questionSummaryFile,true));
+        //this.csvWriterQuestions.writeNext(questionHeader);
+        //this.csvWriterSummary.writeNext(summaryHeader);
 
         LOG.info("Number of Files!!'", fileList.size());
         Set<URI> lexicalEntries = new HashSet<URI>();
+        Set<String> existingEntries=this.getExistingLexicalEntries(questionSummaryFile);
+        System.out.println("existingEntries:::"+existingEntries);
+       
 
         for (File file : fileList) {
             index = index + 1;
@@ -104,6 +107,18 @@ public class ReadAndWriteQuestions {
             List<String> questions = new ArrayList<String>();
 
             for (GrammarEntryUnit grammarEntryUnit : grammarEntries.getGrammarEntries()) {
+                String uri = null;
+                if (grammarEntryUnit.getLexicalEntryUri() != null) {
+                    uri = grammarEntryUnit.getLexicalEntryUri().toString();
+                    if (existingEntries.isEmpty()&&existingEntries.contains(uri)) {
+                        continue;
+                    }
+                   
+                }
+                
+
+                 
+                
 
                 /*if (idIndex > 1) {
                     break;
@@ -151,7 +166,6 @@ public class ReadAndWriteQuestions {
                 if (externalEntittyListflag) {
                     String entityFileName = entityDir + File.separator + qaldFileBinding;
                     File entityFile = new File(entityFileName);
-                    System.out.println("entityFile::"+entityFile);
                     List<UriLabel>  qaldBindingList = this.getExtendedBindingList(grammarEntryUnit.getBindingList(), entityFile, 0, 2, bindingType.toLowerCase());
                     bindingList.addAll(qaldBindingList);
                     List<UriLabel>  qaldReturnList = this.getExtendedBindingList(grammarEntryUnit.getBindingList(), entityFile, 0, 2, returnType.toLowerCase()); 
@@ -175,7 +189,7 @@ public class ReadAndWriteQuestions {
                     //resultsOffline = getDataFromFile(propertyNameFile, 0, 100000);
                 }*/
                 if (grammarEntryUnit.getQueryType().equals(QueryType.SELECT)) {
-                    noIndex = this.replaceVariables(sparql, bindingList, property, returnSubjOrObj, questions, syntacticFrame, noIndex, "", resultsOffline, grammarEntryUnit.getQueryType());
+                    noIndex = this.replaceVariables(uri,sparql, bindingList, property, returnSubjOrObj, questions, syntacticFrame, noIndex, "", resultsOffline, grammarEntryUnit.getQueryType());
                     noIndex = noIndex + 1;
                     idIndex = idIndex + 1;
                 }
@@ -183,14 +197,13 @@ public class ReadAndWriteQuestions {
                     System.out.println("bindingList::"+bindingList);   
                        System.out.println("returnList::"+returnList);    
                     
-                    noIndex = this.replaceVariables(sparql, bindingList, property, returnList,returnSubjOrObj, questions, syntacticFrame, noIndex, "", resultsOffline, grammarEntryUnit.getQueryType());
+                    noIndex = this.replaceVariables(uri,sparql, bindingList, property, returnList,returnSubjOrObj, questions, syntacticFrame, noIndex, "", resultsOffline, grammarEntryUnit.getQueryType());
                     noIndex = noIndex + 1;
                     idIndex = idIndex + 1;
                 }
                 
-
                 if (grammarEntryUnit.getLexicalEntryUri() != null) {
-                    String uri = grammarEntryUnit.getLexicalEntryUri().toString();
+                   uri = grammarEntryUnit.getLexicalEntryUri().toString();
 
                     if (this.summary.containsKey(uri)) {
                         Statistics summary = this.summary.get(uri);
@@ -210,7 +223,7 @@ public class ReadAndWriteQuestions {
 
     }
 
-    private Integer replaceVariables(String sparqlQuery, List<UriLabel> uriLabels, String property, String returnSubjOrObj, List<String> questions, String syntacticFrame, Integer rowIndex, String lexicalEntry, Map<String, String[]> resultsOffline, QueryType queryType) throws IOException {
+    private Integer replaceVariables(String uri,String sparqlQuery, List<UriLabel> uriLabels, String property, String returnSubjOrObj, List<String> questions, String syntacticFrame, Integer rowIndex, String lexicalEntry, Map<String, String[]> resultsOffline, QueryType queryType) throws IOException {
         Integer index = 0;
         List< String[]> rows = new ArrayList<String[]>();
         //if(queryType.equals(QueryType.ASK)){
@@ -257,7 +270,7 @@ public class ReadAndWriteQuestions {
 
                         }
 
-                        String id = rowIndex.toString();
+                        String id = uri+"_"+rowIndex.toString();
                         //question = modifyQuestion(question, uriLabel);
                         String questionT = question.replaceAll("(X)", uriLabel.getLabel());
                         questionT = questionT.replace("(", "");
@@ -284,7 +297,7 @@ public class ReadAndWriteQuestions {
         return rowIndex;
     }
     
-    private Integer replaceVariables(String sparqlQuery, List<UriLabel> domainList, String property, List<UriLabel> rangeList, String returnSubjOrObj, List<String> questions, String syntacticFrame, Integer rowIndex, String lexicalEntry, Map<String, String[]> resultsOffline, QueryType queryType) throws IOException {
+    private Integer replaceVariables(String uri,String sparqlQuery, List<UriLabel> domainList, String property, List<UriLabel> rangeList, String returnSubjOrObj, List<String> questions, String syntacticFrame, Integer rowIndex, String lexicalEntry, Map<String, String[]> resultsOffline, QueryType queryType) throws IOException {
         Integer index = 0;
         for (UriLabel domainUriLabel : domainList) {
             String domainUri="";
@@ -320,7 +333,7 @@ public class ReadAndWriteQuestions {
             String answer = wikipediaAnswer[2];
             index = index + 1;
             sparql = this.modifySparql(sparql);
-            rowIndex=this.makeQuestions(answerUri,questions,index,rowIndex,rangeUriLabel.getLabel(),domainUriLabel.getLabel(),sparql,answer,syntacticFrame);
+            rowIndex=this.makeQuestions(uri,answerUri,questions,index,rowIndex,rangeUriLabel.getLabel(),domainUriLabel.getLabel(),sparql,answer,syntacticFrame);
             }
 
         }
@@ -437,7 +450,7 @@ public class ReadAndWriteQuestions {
         }
     }
 
-    private Integer makeQuestions(String answerUri, List<String> questions, Integer index, Integer rowIndex, String rangeLabel, String domainLabel, String sparql, String answer, String syntacticFrame) {
+    private Integer makeQuestions(String uri,String answerUri, List<String> questions, Integer index, Integer rowIndex, String rangeLabel, String domainLabel, String sparql, String answer, String syntacticFrame) {
         if (rangeLabel.isEmpty() || domainLabel.isEmpty()) {
             return rowIndex;
         }
@@ -455,7 +468,7 @@ public class ReadAndWriteQuestions {
                 String questionT = MatcherExample.replaceQuestion(question, new String[]{rangeLabel,domainLabel});
                 //System.out.println("questionT::" + questionT);
                 //String questionT=this.replaceQuestion(question,rangeUriLabel,domainUriLabel);
-                String id = rowIndex.toString();
+                String id = uri+"_"+rowIndex.toString();
 
                 System.out.println("index::" + index + " questionT::" + questionT + " sparql::" + sparql + " answer::" + answer + " syntacticFrame:" + syntacticFrame);
                 String[] record = {id, questionT, sparql, answerUri, answer, syntacticFrame};
@@ -499,6 +512,19 @@ public class ReadAndWriteQuestions {
                 .replace("?", "\\?")
                 .toLowerCase()
                 .trim());
+    }
+
+    private Set<String> getExistingLexicalEntries(String questionSummaryFile) {
+        Integer index = 0;
+        CsvFile csvFile = new CsvFile();
+        Set<String> lexicalEntries = new HashSet<String>();
+        List<String[]> rows = csvFile.getRows(new File(questionSummaryFile));
+        for (String[] row : rows) {
+            String column = row[0];
+            column = column.trim().strip().stripLeading().stripTrailing();
+            lexicalEntries.add(column);
+        }
+        return lexicalEntries;
     }
 
     
