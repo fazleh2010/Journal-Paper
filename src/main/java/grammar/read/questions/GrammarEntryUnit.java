@@ -7,7 +7,9 @@ package grammar.read.questions;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.net.URI;
 import java.util.List;
+import org.apache.jena.query.QueryType;
 
 /**
  *
@@ -18,8 +20,9 @@ public class GrammarEntryUnit {
 
     @JsonProperty("id")
     private Integer id;
-
-    @JsonProperty("language")
+    @JsonProperty("lexicalEntryUri")
+    private URI lexicalEntryUri ;
+    @JsonProperty("lanuage")
     private String language;
     @JsonProperty("type")
     private String type;
@@ -32,7 +35,7 @@ public class GrammarEntryUnit {
     @JsonProperty("sentences")
     private List<String> sentences;
     @JsonProperty("queryType")
-    private String queryType;
+    private QueryType queryType;
     @JsonProperty("sparqlQuery")
     private String sparqlQuery;
     @JsonProperty("sentenceToSparqlParameterMapping")
@@ -75,7 +78,7 @@ public class GrammarEntryUnit {
         return sentences;
     }
 
-    public String getQueryType() {
+    public QueryType getQueryType() {
         return queryType;
     }
 
@@ -101,6 +104,18 @@ public class GrammarEntryUnit {
 
     public Boolean getCombination() {
         return combination;
+    }
+
+    public URI getLexicalEntryUri() {
+        return lexicalEntryUri;
+    }
+
+    public SentenceToSparql getSentenceToSparqlParameterMapping() {
+        return sentenceToSparqlParameterMapping;
+    }
+
+    public SentenceBindings getSentenceBindings() {
+        return sentenceBindings;
     }
 
 }

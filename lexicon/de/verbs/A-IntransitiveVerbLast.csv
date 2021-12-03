@@ -1,0 +1,3 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive,writtenFormThridPerson,writtenFormPast,writtenFormPerfect,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural
+kosten_1,verb,kosten,kostet,kostete,gekostet,X,IntransitivePPFrame,domain,range,1,dbo:budget,dbo:Film,xsd:double,masculine,Film,Filme,"feminine
+",Nummer,Nummer

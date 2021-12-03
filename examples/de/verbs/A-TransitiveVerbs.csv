@@ -1,0 +1,3 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,SyntacticFrame,subject,directObject,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural,passivePreposition
+moderate_1,verb,moderieren,moderiert,moderiert,moderiert,TransitiveFrame,range,domain,1,dbo:presenter,dbo:TelevisionShow,dbo:Person,feminine,Fernsehsendung,Fernsehsendungen,masculine,Person,Personen,von
+Moderate_2,verb,moderieren,moderiert,moderiert,moderiert,TransitiveFrame,range,domain,1,dbo:presenter,dbo:Work,dbo:Person,neuter,Werk,Werke,masculine,Person,Personen,von

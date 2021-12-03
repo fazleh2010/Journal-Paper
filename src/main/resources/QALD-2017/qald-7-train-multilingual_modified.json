@@ -52,7 +52,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?date \nWHERE { \n       res:Battle_of_Gettysburg dbo:date ?date .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?date \nWHERE { \n       res:Battle_of_Gettysburg dbp:date ?date .\n}"
 			},
 			"answers": [
 				{
@@ -265,7 +265,7 @@
 				},
 				{
 					"language": "it",
-					"string": "Chi era la moglie del presidente degli Stati Uniti Lincoln?",
+					"string": "Chi era la moglie del Abraham Lincoln?",
 					"keywords": "presidente degli Stati Uniti, Lincoln, moglie"
 				},
 				{
@@ -14618,7 +14618,7 @@
 				},
 				{
 					"language": "de",
-					"string": "Hatte Che Guevara Kinder?",
+					"string": "Hat Abraham Lincolns Sterbeort Kinder?",
 					"keywords": "Kinder, Che Guevara"
 				},
 				{

@@ -1,10 +1,12 @@
 package grammar.structure.component;
 
+import eu.monnetproject.lemon.model.LexicalEntry;
 import lombok.Data;
 import org.apache.jena.query.QueryType;
 
 import java.beans.Transient;
 import java.io.Serializable;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -16,6 +18,7 @@ import static java.util.Objects.isNull;
 @Data
 public class GrammarEntry implements Serializable {
   private String id;
+  private URI lexicalEntryUri;
   private Language language;
   private SentenceType type;
   private DomainOrRangeType bindingType;
@@ -28,6 +31,9 @@ public class GrammarEntry implements Serializable {
   private String returnVariable; // aka selectVariable
   private boolean isCombination = false;
   private SentenceBindings sentenceBindings;
+  private String qaldMatchedQuestion;
+  
+ 
 
   /**
    * This is a convenience method to retrieve the mapped binding variable from
@@ -47,6 +53,7 @@ public class GrammarEntry implements Serializable {
   public GrammarEntry deepCopy() {
     GrammarEntry grammarEntry = new GrammarEntry();
     grammarEntry.id = this.id;
+    grammarEntry.lexicalEntryUri=this.lexicalEntryUri;
     grammarEntry.language = this.language;
     grammarEntry.type = this.type;
     grammarEntry.bindingType = this.bindingType;
@@ -57,6 +64,7 @@ public class GrammarEntry implements Serializable {
     grammarEntry.sparqlQuery = this.sparqlQuery;
     grammarEntry.returnVariable = this.returnVariable;
     grammarEntry.isCombination = this.isCombination;
+    grammarEntry.qaldMatchedQuestion=this.qaldMatchedQuestion;
     if (this.sentenceToSparqlParameterMapping != null) {
       grammarEntry.sentenceToSparqlParameterMapping = new HashMap<>(this.sentenceToSparqlParameterMapping);
     }

@@ -5,6 +5,9 @@
  */
 package util.io;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import grammar.read.questions.UriLabel;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -16,10 +19,14 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import static java.lang.System.exit;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -66,14 +73,16 @@ public class FileUtils {
             if (fileName.contains(category) && fileName.contains(extension)) {
                 selectedFiles.add(new File(fileDir + fileName));
             }
+                    System.out.println(category+" fileName:"+fileName);
+
         }
 
         return selectedFiles;
 
     }
 
-   public static List<UriLabel> getUriLabels(File classFile) {
-        List<UriLabel> uriLabels = new ArrayList<UriLabel>();
+    public static Map<String, String> getUriLabelsJson(File classFile) {
+        Map<String, String> map = new TreeMap<String, String>();
         Set<String> set = new TreeSet<String>();
         BufferedReader reader;
         String line = "";
@@ -87,8 +96,7 @@ public class FileUtils {
                     if (line.contains("=")) {
                         String uri = line.split("=")[0];
                         String label = line.split("=")[1];
-                        UriLabel uriLabel = new UriLabel(uri, label);
-                        uriLabels.add(uriLabel);
+                        map.put(uri, label);
                     }
                 }
             }
@@ -96,7 +104,45 @@ public class FileUtils {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return uriLabels;
+        return map;
     }
+
+   
+    public static Map<String, String[]> getDataFromFile(File file,Integer keyIndex, Integer classIndex,String  className) throws IOException {
+        Map<String, String[]> map = new TreeMap<String, String[]>();
+        String fileType=file.getName();
+         if (fileType.contains(".csv")) {
+            CsvFile csvFile = new CsvFile(file);
+             return csvFile.generateBindingMap( keyIndex,classIndex,className);
+        }
+        return new TreeMap<String, String[]>();
+    }
+
+    /*public static void deleteFiles(String inputDir, String extension) {
+        File f = new File(inputDir);
+        String[] pathnames = f.list();
+        for (String pathname : pathnames) {
+            //System.out.println("pathname::"+inputDir + File.separatorChar + pathname);
+            String[] files = new File(inputDir + pathname).list();
+            for (String file : files) {
+                //System.out.println("file::"+file);
+               
+
+            }
+
+        }
+
+    }*/
+   
+    public static LinkedData getLinkedDataConf(File file) throws Exception {
+        ObjectMapper mapper = new ObjectMapper();
+        return mapper.readValue(file, LinkedData.class);
+    }
+    public static InputCofiguration getInputConfig(File file) throws Exception {
+        ObjectMapper mapper = new ObjectMapper();
+        return mapper.readValue(file, InputCofiguration.class);
+    }
+
+    
 
 }

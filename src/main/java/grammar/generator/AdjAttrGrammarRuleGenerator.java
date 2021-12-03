@@ -3,9 +3,6 @@ package grammar.generator;
 import eu.monnetproject.lemon.model.LexicalEntry;
 import eu.monnetproject.lemon.model.LexicalSense;
 import eu.monnetproject.lemon.model.Lexicon;
-import grammar.generator.helper.BindingConstants;
-import grammar.generator.helper.SentenceBuilder;
-import grammar.generator.helper.SentenceBuilderAdjectiveAttributiveEN;
 import grammar.sparql.SPARQLRequest;
 import grammar.sparql.SelectVariable;
 import grammar.structure.component.Binding;
@@ -140,7 +137,7 @@ public class AdjAttrGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
       getLanguage(),
       lexicalEntryUtil
     );
-    List<String> generatedSentences = sentenceBuilder.generateNP(binding.getLabel(), new String[]{}, lexicalEntryUtil);
+    List<String> generatedSentences = sentenceBuilder.generateFullSentencesBackward(binding.getLabel(), new String[]{}, lexicalEntryUtil);
     generatedSentences = generatedSentences.stream().distinct().collect(Collectors.toList());
     fragmentEntry.setSentences(generatedSentences);
 
@@ -269,7 +266,7 @@ public class AdjAttrGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
 
     SentenceBuilderAdjectiveAttributiveEN sentenceBuilderAdjectiveAttributiveEN =
       new SentenceBuilderAdjectiveAttributiveEN(getLanguage(), lexicalEntryUtil);
-    return sentenceBuilderAdjectiveAttributiveEN.generateFullSentences(argUri, lexicalEntryUtil);
+    return sentenceBuilderAdjectiveAttributiveEN.generateFullSentencesForward(argUri, lexicalEntryUtil);
   }
 
 }

@@ -37,4 +37,9 @@ public class UriLabel {
         return uri;
     }
 
+    @Override
+    public String toString() {
+        return "UriLabel{" + "label=" + label + ", uri=" + uri + '}';
+    }
+
 }

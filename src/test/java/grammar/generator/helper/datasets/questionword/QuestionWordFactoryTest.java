@@ -1,5 +1,7 @@
 package grammar.generator.helper.datasets.questionword;
 
+import grammar.datasets.questionword.QuestionWordFactory;
+import grammar.datasets.questionword.QuestionWordRepository;
 import grammar.structure.component.Language;
 import org.junit.jupiter.api.Test;
 import util.exceptions.QueGGMissingFactoryClassException;

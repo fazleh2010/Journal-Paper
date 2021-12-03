@@ -1,0 +1,139 @@
+
+select  ?binding ?answerUri ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Country>.
+ ?binding <http://dbpedia.org/ontology/capital>   ?answerUri .
+?answerUri rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+select  ?binding ?answerUri ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Person>.
+ ?binding <http://dbpedia.org/ontology/creator>   ?answerUri .
+?answerUri rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+select  ?binding  ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Person>.
+ ?binding rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+select  ?binding  ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/TelevisionShow>.
+ ?binding rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+select  ?binding ?objOfProp ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/TelevisionShow>.
+ ?binding <http://dbpedia.org/ontology/creator>   ?objOfProp.
+?objOfProp rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+
+select  ?binding ?subjOfProp ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Person>.
+ ?subjOfProp <http://dbpedia.org/ontology/creator>   ?binding.
+?subjOfProp rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+select  ?binding  ?label {     
+ X <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>  ?class.
+ X rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+
+
+
+----------------
+select  ?class {     
+ <http://dbpediaorg/resource/Donald_Trump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>  ?class.
+  ?class rdfs:label ?label .
+  filter langMatches(lang(?label),"de")
+}
+
+PREFIX dbr: <http://dbpedia.org/resource/>
+SELECT DISTINCT ?c WHERE {
+  dbr:Tom_Hanks a/rdfs:subClassOf* ?c .
+} 
+
+
+Find entity of a class
+select  ?entity {     
+ ?entity <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Person>.
+}
+
+label find
+select  ?binding  ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/TelevisionShow>.
+ ?binding rdfs:label ?label .
+  filter langMatches(lang(?label),"de")
+}
+
+$$$$$$$$$$$$$$ get label @@@@@@@@@@@@@@@@@@@@
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+SELECT DISTINCT ?label WHERE {
+                <http://dbpedia.org/resource/The_Prodigy> rdfs:label ?label .
+                filter(langMatches(lang(?label),"de"))
+}
+
+
+
+select  ?binding  ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Country>.
+ ?binding rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+select  ?binding  ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Place>.
+ ?binding rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+select  ?binding  ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Location>.
+ ?binding rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+select  ?binding  ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/PopulatedPlace>.
+ ?binding rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+dbo:Country
+dbo:Place
+dbo:Location
+dbo:PopulatedPlace
+
+
+select  ?binding  ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Location>.
+ ?binding rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+
+select  ?binding  ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/TelevisionShow>.
+ ?binding rdfs:label ?label .
+  filter langMatches(lang(?label),"de")
+}
+
+
+
+Find labels
+select   ?label {     
+ <https://dbpedia.org/resource/BBC_Wildlife_Specials> rdfs:label ?label .
+  filter langMatches(lang(?label),"en")
+}
+
