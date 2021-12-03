@@ -16,6 +16,7 @@
   lemon:otherForm      :kosten_1_past ;
   lemon:otherForm      :kosten_1_perfect ;
   lemon:sense          :kosten_1_sense_1 ;
+  lemon:sense          :kosten_1_sense_2 ;
   lemon:synBehavior    :kosten_1_frame .
 
 :kosten_1_present a           lemon:Form ;
@@ -55,6 +56,17 @@
 :kosten_1_sense_1_condition a      lemon:condition ;
   lemon:propertyDomain <http://dbpedia.org/ontology/Film> ;
   lemon:propertyRange  <http://www.w3.org/2001/XMLSchema#double> .
+
+:kosten_1_sense_2 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :kosten_1_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/budget> ;
+  lemon:subjOfProp  :kosten_1_obj ;
+  lemon:objOfProp   :kosten_1_subj ;
+  lemon:condition   :kosten_1_sense_2_condition .
+
+:kosten_1_sense_2_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Work> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
 
 
 :kosten_1_obj lemon:marker :X .

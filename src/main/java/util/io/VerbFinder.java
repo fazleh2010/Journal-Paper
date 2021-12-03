@@ -166,19 +166,29 @@ public class VerbFinder implements TempConstants {
         return reflexiveFlag;
     }
 
+   /* private void setCategory(String reference) {
+        if (reference.contains(mainVerb)&&!this.verbTrenn()) {
+            this.mainVerbFlag = true;
+        } else if (reference.contains(TrennVerb) && this.verbTrenn()) {
+            this.trennVerbFlag = true;
+        } else if (reference.contains("component_be")||reference.contains("component_heißen")
+                ||reference.contains("component_haben")||reference.contains("component_werden")) {
+            this.auxilaryVerbFlag = true;
+        } else if (reference.contains(RefVerb)) {
+            this.reflexiveFlag = true;
+        } 
+    }*/
+    
     private void setCategory(String reference) {
         if (reference.contains(mainVerb)) {
             this.mainVerbFlag = true;
         } else if (reference.contains(TrennVerb)) {
-             String verbWrittenForm= getMainVerbPresent(past).trim().strip();
-             if(GenderUtils.trennVerb.containsKey(verbWrittenForm)){
-                this.trennVerbFlag = true;
-             }
-                   
+            this.trennVerbFlag = true;
+        } else if (reference.contains("component_be") || reference.contains("component_heißen")
+                || reference.contains("component_haben") || reference.contains("component_werden")) {
+            this.auxilaryVerbFlag = true;
         } else if (reference.contains(RefVerb)) {
             this.reflexiveFlag = true;
-        } else {
-            this.auxilaryVerbFlag = true;
         }
     }
 
@@ -203,6 +213,14 @@ public class VerbFinder implements TempConstants {
 
         }
           return word;
+    }
+
+    private Boolean verbTrenn() {
+        String verbWrittenForm = getMainVerbPresent(past).trim().strip();
+        if (GenderUtils.trennVerb.containsKey(verbWrittenForm)) {
+            return true;
+        }
+        return false;
     }
     
     

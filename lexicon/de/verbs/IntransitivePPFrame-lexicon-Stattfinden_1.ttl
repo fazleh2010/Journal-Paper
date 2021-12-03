@@ -1,0 +1,66 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :Stattfinden_1 ;
+  lemon:entry    :preposition .
+
+:Stattfinden_1 a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :Stattfinden_1_present ;
+  lemon:otherForm      :Stattfinden_1_past ;
+  lemon:otherForm      :Stattfinden_1_perfect ;
+  lemon:sense          :Stattfinden_1_sense_1 ;
+  lemon:synBehavior    :Stattfinden_1_frame .
+
+:Stattfinden_1_present a           lemon:Form ;
+  lemon:writtenRep     "stattfinden"@de ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:Stattfinden_1_present a      lemon:Form ;
+  lemon:writtenRep "findet statt"@de ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:Stattfinden_1_past a lemon:Form ;
+  lemon:writtenRep  "fand statt"@de ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:Stattfinden_1_perfect a lemon:Form ;
+  lemon:writtenRep  "stattgefunden"@de ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:perfect .
+
+:Stattfinden_1_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :Stattfinden_1_subj ;
+  lexinfo:prepositionalAdjunct :Stattfinden_1_obj .
+
+:Stattfinden_1_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :Stattfinden_1_ontomap ;
+  lemon:reference   <http://dbpedia.org/property/date> ;
+  lemon:subjOfProp  :Stattfinden_1_obj ;
+  lemon:objOfProp   :Stattfinden_1_subj ;
+  lemon:condition   :Stattfinden_1_sense_1_condition .
+
+:Stattfinden_1_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Event> ;
+  lemon:propertyRange  <http://www.w3.org/2001/XMLSchema#date> .
+
+
+:Stattfinden_1_obj lemon:marker :am .
+
+## Prepositions ##
+:preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "am"@de ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

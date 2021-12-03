@@ -90,6 +90,7 @@ public enum DomainOrRangeTypeCheck {
             URI.create("http://www.w3.org/2001/XMLSchema#date"),
             URI.create("http://www.w3.org/2001/XMLSchema#gYear"),
             URI.create("http://dbpedia.org/property/date"),
+            URI.create(DBO.getUri() + "date"),
             URI.create(DBP.getUri() + "date"),
             URI.create(DBO.getUri() + "draftYear"),
             URI.create(DBO.getUri() + "buildingStartDate"),
