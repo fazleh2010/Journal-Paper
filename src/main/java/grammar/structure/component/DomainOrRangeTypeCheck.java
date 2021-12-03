@@ -135,10 +135,13 @@ public enum DomainOrRangeTypeCheck {
             URI.create(DBO.getUri() + "Musical")
     )),
     
-    AmountCheck(List.of(
+    AmountPriceCheck(List.of(
             URI.create(DBO.getUri() + "budget"),
-            URI.create(DBO.getUri() + "language"),
             URI.create("http://www.w3.org/2001/XMLSchema#double")
+    )),
+    
+    AmountThingCheck(List.of(
+            URI.create(DBO.getUri() + "language")
     )),
     
     

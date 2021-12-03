@@ -76,8 +76,10 @@ public class TemplateFinder implements TempConstants{
             type = WHEN_WHO_PAST_PERSON;
         } else if (!isPerson(subjectUri) && isDate(referenceUri)) {
             type = WHEN_WHAT_PAST_THING;
-        }else if (isAmount(referenceUri) ) {
-            type = HOW_MANY_PRESENT_THING;
+        }else if (isAmountPriceCheck(referenceUri) ) {
+            type = HOW_MANY_PRICE;
+        }else if (isAmountThingCheck(referenceUri) ) {
+            type = HOW_MANY_THING;
         }else {
             type = WHAT_WHICH_PRESENT_THING;
         }
@@ -135,11 +137,11 @@ public class TemplateFinder implements TempConstants{
 
     }
      
-       public static Boolean isAmount(String string) {
+    public static Boolean isAmountPriceCheck(String string) {
         if (StringUtils.isBlank(string)) {
             return false;
         }
-        for (URI key : DomainOrRangeTypeCheck.AmountCheck.getReferences()) {
+        for (URI key : DomainOrRangeTypeCheck.AmountPriceCheck.getReferences()) {
             if (string.equals(key.toString())) {
                 return true;
             }
@@ -147,6 +149,21 @@ public class TemplateFinder implements TempConstants{
         return false;
 
     }
+    
+     public static Boolean isAmountThingCheck(String string) {
+        if (StringUtils.isBlank(string)) {
+            return false;
+        }
+        for (URI key : DomainOrRangeTypeCheck.AmountThingCheck.getReferences()) {
+            if (string.equals(key.toString())) {
+                return true;
+            }
+        }
+        return false;
+
+    }
+       
+       
      
      
 

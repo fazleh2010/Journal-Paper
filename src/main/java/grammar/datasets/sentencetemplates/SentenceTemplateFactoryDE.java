@@ -404,8 +404,7 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
       
           ///////////////////////////////
        sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
                  //"Wieviel hat Pulp Fiction gekostet?","Wieviele Sprachen werden in Turkmenistan gesprochen?"
          "interrogativeAmount(nominativeCase:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?"
@@ -420,14 +419,13 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
     
         ),
         IntransitivePPFrame,
-        HOW_MANY_PRESENT_THING,
+        HOW_MANY_PRICE,
         forward
       )
     );
    
       sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(  //Welches Buch kostet 10 Dollar?
         //"interrogativePronoun(nominativeCase:present:singular) verb(mainVerb:perfect:present) object(range)?",
         "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_haben:present:singular) object(range) verb(mainVerb:perfect:singular)?"      
@@ -435,7 +433,34 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
            
         ),
         IntransitivePPFrame,
-        HOW_MANY_PRESENT_THING,
+        HOW_MANY_PRICE,
+        backward
+      )
+    );
+      
+            ///////////////////////////////
+       sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+        ////Wieviele Sprachen werden in Turkmenistan gesprochen?
+        //"interrogativeAmount(nominativeCase:singular) interrogativeDeterminer(nominativeCase:range:singular) verb(component_werden:present:singular) preposition object(domain) verb(mainVerb:perfect:thridPerson)?",
+       //Wieviele Sprachen werden in Turkmenistan gesprochen?
+        "interrogativeAmount(nominativeCase:range:plural) verb(component_werden:present:plural) preposition object(domain) verb(mainVerb:perfect:thridPerson)?"
+    
+        ),
+        IntransitivePPFrame,
+        HOW_MANY_THING,
+        forward
+      )
+    );
+   
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(  //Welches Buch kostet 10 Dollar?
+             
+        ),
+        IntransitivePPFrame,
+        HOW_MANY_THING,
         backward
       )
     );

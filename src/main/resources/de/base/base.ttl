@@ -449,6 +449,15 @@
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
   lemon:otherForm      [ lemon:writtenRep "Wieviele"@de ;
+  lexinfo:gender                          lexinfo:masculine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lemon:otherForm      [ lemon:writtenRep "Wieviele"@de ;
+  lexinfo:gender                          lexinfo:feminine ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lemon:otherForm      [ lemon:writtenRep "Wieviele"@de ;
+  lexinfo:gender                          lexinfo:neuter ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:plural ] ;
   lexinfo:partOfSpeech lexinfo:article .

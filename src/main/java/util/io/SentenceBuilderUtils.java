@@ -153,12 +153,23 @@ public class SentenceBuilderUtils implements TempConstants {
 
         } else if (flagReference && isInterrogativeAmount(attribute).first) {
             SubjectType subjectType = isInterrogativeAmount(attribute).second;
+            if (reference.contains(colon)) {
+                String[] col = reference.split(colon);
+                if (col.length == 2) {
+                    word = this.getIntergativeAmountToken(subjectType, col[0], col[1]);
+                } else if (col.length == 3) {
+                    word = this.getDeteminerTokenManual(subjectType, col[0], col[1], col[2]);
+                }
+
+            }
+           
+            /*SubjectType subjectType = isInterrogativeAmount(attribute).second;
 
             if (reference.contains(colon)) {
                 String[] col = reference.split(colon);
                 subjectType = isInterrogativeAmount(attribute).second;
                 word = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil,subjectType.name(), TempConstants.number, col[1], TempConstants.gender, defaultGender);
-            }
+            }*/
 
         } else if (flagReference && isInterrogativePlace(attribute).first) {
             SubjectType subjectType = isInterrogativePlace(attribute).second;
@@ -321,7 +332,7 @@ public class SentenceBuilderUtils implements TempConstants {
         LexInfo lexInfo = this.lexicalEntryUtil.getLexInfo();
         LexicalEntry lexicalEntry = new LexiconSearch(this.lexicalEntryUtil.getLexicon()).getReferencedResource(reference);
         Collection<LexicalForm> forms = lexicalEntry.getForms();
-
+        
         for (LexicalForm lexicalForm : forms) {
             Boolean firstMatchFlag = false, secondMatchFlag = false, thirdMatchFlag = false;
             for (PropertyValue first : lexicalForm.getProperty(lexInfo.getProperty(attrFirst))) {
@@ -427,6 +438,35 @@ public class SentenceBuilderUtils implements TempConstants {
         } else {
 
         }
+
+        return determinerToken;
+    }
+    
+    private String getIntergativeAmountToken(SubjectType subjectType, String domainOrRange, String number) throws QueGGMissingFactoryClassException {
+        SelectVariable selectVariable = null;
+        String determinerToken = "";
+        /*if (domainOrRange.contains(range)) {
+            selectVariable = this.rangeSelectable;
+        } else if (domainOrRange.contains(domain)) {
+            selectVariable = this.domainSelectable;
+        } else {
+            selectVariable = this.domainSelectable;
+        }*/
+
+        if ((domainOrRange.contains(range) || domainOrRange.contains(domain))) {
+            if (domainOrRange.contains(range)) {
+                selectVariable = this.rangeSelectable;
+            } else {
+                selectVariable = this.domainSelectable;
+            }
+            String noun = lexicalEntryUtil.getReturnVariableConditionLabel(selectVariable);
+            if (noun == null || noun.isEmpty()) {
+                noun = this.getConditionLabelManually(domainOrRange, number);
+            }
+            String article = this.getArticleFromUri(domainOrRange);
+            String questionWord = getEntryOneAtrributeCheck(subjectType.name(), TempConstants.number, number, TempConstants.gender, article);
+            return determinerToken = questionWord + " " + noun;
+        } 
 
         return determinerToken;
     }

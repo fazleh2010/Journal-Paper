@@ -37,6 +37,12 @@ public class VerbFinder implements TempConstants {
         this.paramterFinder = new ParamterFinder(attribute, reference);
         this.setCategory(paramterFinder.getReference());
         
+        System.out.println("paramterFinder::"+paramterFinder);
+        System.out.println("mainVerbFlag::"+this.mainVerbFlag);
+        System.out.println("trennVerbFlag::"+this.trennVerbFlag);
+        System.out.println("auxilaryVerbFlag::"+this.auxilaryVerbFlag);
+        //exit(1);
+        
                   
         if (this.mainVerbFlag) {
             word = findMainVerb(attribute, reference);
@@ -182,7 +188,7 @@ public class VerbFinder implements TempConstants {
     private void setCategory(String reference) {
         if (reference.contains(mainVerb)) {
             this.mainVerbFlag = true;
-        } else if (reference.contains(TrennVerb)) {
+        } else if (reference.contains(TrennVerb)&&isTrenn()) {
             this.trennVerbFlag = true;
         } else if (reference.contains("component_be") || reference.contains("component_heißen")
                 || reference.contains("component_haben") || reference.contains("component_werden")) {
@@ -215,7 +221,7 @@ public class VerbFinder implements TempConstants {
           return word;
     }
 
-    private Boolean verbTrenn() {
+    private Boolean isTrenn() {
         String verbWrittenForm = getMainVerbPresent(past).trim().strip();
         if (GenderUtils.trennVerb.containsKey(verbWrittenForm)) {
             return true;

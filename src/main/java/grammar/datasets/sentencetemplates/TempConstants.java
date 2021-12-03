@@ -91,7 +91,8 @@ public interface TempConstants {
     public static final String WHEN_WHO_PAST_PERSON = "WHEN_WHO_PAST_PERSON";
     public static final String WHERE_WHO_PAST_PERSON = "WHERE_WHO_PAST_PERSON";
     public static final String WHAT_WHICH_PRESENT_THING = "WHAT_WHICH_PRESENT_THING";
-    public static final String HOW_MANY_PRESENT_THING = "HOW_MANY_PRESENT_THING";
+    public static final String HOW_MANY_PRICE = "HOW_MANY_PRICE";
+    public static final String HOW_MANY_THING = "HOW_MANY_THING";
     
     public static final String WHAT_PERSON_THING = "WHAT_PERSON_THING";
     public static final String WHO_PERSON_THING = "WHO_PERSON_THING";
