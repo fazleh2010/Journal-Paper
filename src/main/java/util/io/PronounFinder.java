@@ -22,14 +22,17 @@ public class PronounFinder implements TempConstants {
 
     public PronounFinder(LexicalEntryUtil lexicalEntryUtil, String attribute, String reference, TemplateFeatures templateFeatures) throws QueGGMissingFactoryClassException {
         this.lexicalEntryUtil = lexicalEntryUtil;
-       
-      
-        //if (TemplateFeatures.isPronounCategory(reference) && templateFeatures.isVerbReflexiveFlag()) {
+         if(reference!=null)
+            this.word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, reference);
+                  
+             
+        /*//if (TemplateFeatures.isPronounCategory(reference) && templateFeatures.isVerbReflexiveFlag()) {
              word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, reference);
         //}
         //else
            word ="XX"; 
-              System.out.println("attribute::"+attribute);
+         */
+             
         /*System.out.println("reference::"+reference);
         System.out.println("TemplateFeatures.isPronounCategory(reference)::"+TemplateFeatures.isPronounCategory(reference));
           System.out.println("templateFeatures.isVerbReflexiveFlag()::"+templateFeatures.isVerbReflexiveFlag());

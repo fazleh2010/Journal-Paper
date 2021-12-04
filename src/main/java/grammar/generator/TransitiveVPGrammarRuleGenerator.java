@@ -37,7 +37,7 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot i
     
         String bindingVar = getBindingVariable();
         try {
-            SentenceBuilderIntransitivePPEN sentenceBuilder = new SentenceBuilderIntransitivePPEN(
+            SentenceBuilderIntransitivePPDE sentenceBuilder = new SentenceBuilderIntransitivePPDE(
                     getLanguage(),
                     this.getFrameType(),
                     this.getSentenceTemplateRepository(),
@@ -57,7 +57,7 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot i
         List<String> generatedSentences = new ArrayList<String>();
         String bindingVar = getBindingVariable();
         try {
-             SentenceBuilderIntransitivePPEN sentenceBuilder = new SentenceBuilderIntransitivePPEN(
+             SentenceBuilderIntransitivePPDE sentenceBuilder = new SentenceBuilderIntransitivePPDE(
                     getLanguage(),
                     this.getFrameType(),
                     this.getSentenceTemplateRepository(),
@@ -76,7 +76,7 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot i
         List<String> generatedSentences = new ArrayList<String>();
         String bindingVar = getBindingVariable();
         try {
-             SentenceBuilderIntransitivePPEN sentenceBuilder = new SentenceBuilderIntransitivePPEN(
+             SentenceBuilderIntransitivePPDE sentenceBuilder = new SentenceBuilderIntransitivePPDE(
                     getLanguage(),
                     this.getFrameType(),
                     this.getSentenceTemplateRepository(),

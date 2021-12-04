@@ -33,7 +33,7 @@ public class NPPGrammarRuleGenerator extends GrammarRuleGeneratorRoot implements
     ) throws QueGGMissingFactoryClassException {
         List<String> generatedSentences = new ArrayList<>();
 
-        SentenceBuilder sentenceBuilder = new SentenceBuilderIntransitivePPEN(
+        SentenceBuilder sentenceBuilder = new SentenceBuilderIntransitivePPDE(
                 getLanguage(),
                 getFrameType(),
                 getSentenceTemplateRepository(),
@@ -49,7 +49,7 @@ public class NPPGrammarRuleGenerator extends GrammarRuleGeneratorRoot implements
     protected List<String> generateNounPhrase(LexicalEntryUtil lexicalEntryUtil,String type) throws
             QueGGMissingFactoryClassException {
         List<String> generatedSentences = new ArrayList<String>();
-        SentenceBuilder sentenceBuilder = new SentenceBuilderIntransitivePPEN(
+        SentenceBuilder sentenceBuilder = new SentenceBuilderIntransitivePPDE(
                 getLanguage(),
                 getFrameType(),
                 getSentenceTemplateRepository(),

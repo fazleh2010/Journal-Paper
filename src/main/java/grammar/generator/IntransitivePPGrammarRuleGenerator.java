@@ -26,7 +26,7 @@ public class IntransitivePPGrammarRuleGenerator extends GrammarRuleGeneratorRoot
     ) throws QueGGMissingFactoryClassException {
         List<String> generatedSentences = new ArrayList<>();
 
-        SentenceBuilder sentenceBuilder = new SentenceBuilderIntransitivePPEN(
+        SentenceBuilder sentenceBuilder = new SentenceBuilderIntransitivePPDE(
                 getLanguage(),
                 getFrameType(),
                 getSentenceTemplateRepository(),
@@ -42,7 +42,7 @@ public class IntransitivePPGrammarRuleGenerator extends GrammarRuleGeneratorRoot
     protected List<String> generateOppositeSentences(LexicalEntryUtil lexicalEntryUtil) throws
             QueGGMissingFactoryClassException {
         List<String> generatedSentences = new ArrayList<String>();
-        SentenceBuilder sentenceBuilder = new SentenceBuilderIntransitivePPEN(
+        SentenceBuilder sentenceBuilder = new SentenceBuilderIntransitivePPDE(
                 getLanguage(),
                 getFrameType(),
                 getSentenceTemplateRepository(),

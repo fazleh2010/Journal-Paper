@@ -35,7 +35,7 @@ import util.io.StringMatcher;
 import util.io.TemplateFeatures;
 import util.io.TemplateFinder;
 
-public class SentenceBuilderIntransitivePPEN implements SentenceBuilder, TempConstants {
+public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempConstants {
 
     private final Language language;
     private final FrameType frameType;
@@ -46,7 +46,7 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder, TempCon
     private static Map<String, String> templates = new HashMap<String, String>();
     private static List<PropertyValue> numberList = new ArrayList<PropertyValue>();
 
-    public SentenceBuilderIntransitivePPEN(
+    public SentenceBuilderIntransitivePPDE(
             Language language,
             FrameType frameType,
             SentenceTemplateRepository sentenceTemplateRepository,
@@ -287,7 +287,7 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder, TempCon
             TemplateFeatures templateFeatures = new TemplateFeatures(sentenceTemplate);
             List<String> positionTokens = templateFeatures.getPositionTokens();
             String str = "", positionWord = "";
-            //Boolean validFlag = true;
+            Boolean validFlag = true;
             for (String positionString : positionTokens) {
                 String[] parseToken = StringMatcher.parseToken(positionString);
                 positionWord = sentenceBuilderFromTemplates.getWords(parseToken, index, templateFeatures);
@@ -295,14 +295,14 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder, TempCon
                 str += positionWord;
                 index = index + 1;
                 System.out.println("positionString:::" + positionString + " positionWord:" + positionWord);
-                /*validFlag = this.checkValidity(positionWord);
+                validFlag = this.checkValidity(positionWord);
                 if (!validFlag) {
                     break;
-                }*/
+                }
             }
-            /*if(!validFlag){
+            if(!validFlag){
                     continue;
-                }*/
+             }
             String newsSentence = str.stripTrailing();
 
             String newSentence = sentenceBuilderFromTemplates.prepareSentence(positionTokens, templateFeatures);
@@ -351,8 +351,19 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder, TempCon
         if (word.equals("-")) {
             return false;
         }
+        else if(word.equals("XX")){
+            return false;
+        }
         return true;
     }
+    
+    /*private Boolean checkValidity(String word) {
+        word = word.strip().trim().stripLeading().stripTrailing();
+        if (word.equals("XX")) {
+            return false;
+        }
+        return true;
+    }*/
 
     private Boolean checkTokenValidity(String attribute, Integer index) {
         if (index == 1 && attribute.equals(preposition)) {

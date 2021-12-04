@@ -60,8 +60,11 @@ public class SentenceBuilderUtils implements TempConstants {
     private String subjectUri = null;
     private String objectUri = null;
     private String referenceUri = null;
+    private FrameType frameType = null;
+
 
     public SentenceBuilderUtils(FrameType frameType, Language language, LexicalEntryUtil lexicalEntryUtil, SelectVariable selectVariable, SelectVariable oppositeSelectVariable, String variable) {
+        this.frameType=frameType;
         this.lexicalEntryUtil = lexicalEntryUtil;
         this.language = language;
         this.rangeSelectable = selectVariable;
@@ -212,7 +215,7 @@ public class SentenceBuilderUtils implements TempConstants {
             }
 
         } else if (flagReference && attribute.contains(verb)) {
-            word = new VerbFinder(this.lexicalEntryUtil,attribute, reference).getWord();
+            word = new VerbFinder(this.frameType,this.lexicalEntryUtil,attribute, reference).getWord();
 
         } else if (flagReference && attribute.equals(determiner)) {
 

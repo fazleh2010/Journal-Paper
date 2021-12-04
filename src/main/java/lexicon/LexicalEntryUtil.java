@@ -1024,14 +1024,13 @@ public class LexicalEntryUtil {
         return result;
     }
     
-     public static String getSingle(LexicalEntryUtil lexicalEntryUtil,String reference) throws QueGGMissingFactoryClassException {
+    public static String getSingle(LexicalEntryUtil lexicalEntryUtil, String reference) throws QueGGMissingFactoryClassException {
         String writtenValue = "";
         LexInfo lexInfo = lexicalEntryUtil.getLexInfo();
         LexicalEntry lexicalEntry = new LexiconSearch(lexicalEntryUtil.getLexicon()).getReferencedResource(reference);
         Collection<LexicalForm> forms = lexicalEntry.getForms();
         LexicalForm lexicalForm = forms.iterator().next();
         writtenValue = lexicalForm.getWrittenRep().value;
-
         return writtenValue;
     }
 

@@ -12,6 +12,7 @@ import static grammar.datasets.sentencetemplates.TempConstants.mainVerb;
 import static grammar.datasets.sentencetemplates.TempConstants.past;
 import static grammar.datasets.sentencetemplates.TempConstants.perfect;
 import static grammar.datasets.sentencetemplates.TempConstants.present;
+import grammar.structure.component.FrameType;
 import static java.lang.System.exit;
 import java.util.List;
 import java.util.Map;
@@ -31,8 +32,10 @@ public class VerbFinder implements TempConstants {
     private String word = "XX";
     private LexicalEntryUtil lexicalEntryUtil = null;
     private ParamterFinder paramterFinder = null;
+    private FrameType frameType=null;
 
-    public VerbFinder(LexicalEntryUtil lexicalEntryUtil, String attribute, String reference) throws QueGGMissingFactoryClassException {
+    public VerbFinder(FrameType frameType,LexicalEntryUtil lexicalEntryUtil, String attribute, String reference) throws QueGGMissingFactoryClassException {
+        this.frameType=frameType;
         this.lexicalEntryUtil = lexicalEntryUtil;
         this.paramterFinder = new ParamterFinder(attribute, reference);
         this.setCategory(paramterFinder.getReference());
@@ -204,20 +207,24 @@ public class VerbFinder implements TempConstants {
     private void setCategory(String reference) {
         System.out.println("reference::" + reference);
         System.out.println("trennVerb hash::" + GenderUtils.trennVerb);
-        if (isTrenn()) {
-            if (reference.contains(TrennVerb)) {
-                this.trennVerbFlag = true;
-            }
-        } else {
-            if (reference.contains("component_be") || reference.contains("component_heißen")
-                    || reference.contains("component_haben") || reference.contains("component_werden")) {
-                this.auxilaryVerbFlag = true;
-            } else if (reference.contains(mainVerb)) {
-                this.mainVerbFlag = true;
-            } else if (reference.contains(RefVerb)) {
-                this.reflexiveFlag = true;
+        
+        if (frameType.equals(FrameType.VP) || frameType.equals(FrameType.IPP)) {
+            if (isTrenn()) {
+                if (reference.contains(TrennVerb)) {
+                    this.trennVerbFlag = true;
+                }
+            } else {
+                if (reference.contains(mainVerb)) {
+                    this.mainVerbFlag = true;
+                } else if (reference.contains(RefVerb)) {
+                    this.reflexiveFlag = true;
+                }
             }
         }
+        else
+          this.auxilaryVerbFlag = true;
+           
+        
 
     }
 
