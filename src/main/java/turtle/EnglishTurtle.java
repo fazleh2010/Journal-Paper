@@ -26,7 +26,7 @@ import util.io.Tupples;
  *
  * @author elahi
  */
-public class English extends TurtleCreation implements TutleConverter {
+public class EnglishTurtle extends TurtleCreation implements TutleConverter {
 
     private String lemonEntry = "";
     private String partOfSpeech = "";
@@ -41,10 +41,9 @@ public class English extends TurtleCreation implements TutleConverter {
     private EnglishCsv.InTransitFrame IntransitiveFrameCsv = new EnglishCsv.InTransitFrame();
     private EnglishCsv.AttributiveAdjectiveFrame attributiveAdjectiveFrame = new EnglishCsv.AttributiveAdjectiveFrame();
 
-    public English(String inputDir, LinkedData linkedData, Language language) throws Exception {
+    public EnglishTurtle(String inputDir, LinkedData linkedData, Language language) throws Exception {
         super(inputDir, linkedData, language);
         super.setSyntacticFrameIndexes(nounPPFrameCsv.getSyntacticFrameIndex(),transitiveFrameCsv.getSyntacticFrameIndex(),IntransitiveFrameCsv.getSyntacticFrameIndex(),attributiveAdjectiveFrame.getSyntacticFrameIndex());
-
         this.generateTurtle();
     }
 
@@ -109,7 +108,7 @@ public class English extends TurtleCreation implements TutleConverter {
         if (syntacticFrame.equals(NounPPFrame)) {
             setNounPPFrame(key, rows, syntacticFrame);
         } else if (syntacticFrame.equals(TransitiveFrame)) {
-            //setTransitiveFrame(key, rows, syntacticFrame, "da");
+            setTransitiveFrame(key, rows, syntacticFrame);
         } else if (syntacticFrame.equals(IntransitivePPFrame)) {
             setIntransitivePPFrame(key, rows, syntacticFrame);
         } else if (syntacticFrame.equals(AdjectiveAttributiveFrame)) {

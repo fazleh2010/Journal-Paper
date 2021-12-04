@@ -1,0 +1,3 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive,writtenForm3rdPerson,writtenFormPast,SyntacticFrame,subject,directObject,sense,reference,domain,range,passivePreposition
+develop,verb,develop,develops,developed,TransitiveFrame,range,domain,1,dbo:developer,dbo:Work,dbo:Agent,by
+play,verb,play,playes,played,TransitiveFrame,range,domain,1,dbo:portrayer,dbo:FictionalCharacter,dbo:Person,by

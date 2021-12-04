@@ -3,53 +3,58 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package util.io;
+package grammar.generator.sentencebuilder;
 
 import com.google.gdata.util.common.base.Pair;
-import eu.monnetproject.lemon.impl.LexicalEntryImpl;
-import eu.monnetproject.lemon.model.Frame;
 import eu.monnetproject.lemon.model.LexicalEntry;
 import eu.monnetproject.lemon.model.LexicalForm;
-import eu.monnetproject.lemon.model.Property;
 import eu.monnetproject.lemon.model.PropertyValue;
-import eu.monnetproject.lemon.model.SynArg;
-import eu.monnetproject.lemon.model.SyntacticRoleMarker;
 import grammar.datasets.annotated.AnnotatedNounOrQuestionWord;
 import grammar.datasets.annotated.AnnotatedVerb;
-import static grammar.datasets.questionword.QuestionWordFactoryDE.questionWords;
-import grammar.datasets.questionword.QuestionWordFactoryIT;
 import grammar.datasets.sentencetemplates.TempConstants;
+import static grammar.datasets.sentencetemplates.TempConstants.QuestionMark;
+import static grammar.datasets.sentencetemplates.TempConstants.adjunct;
+import static grammar.datasets.sentencetemplates.TempConstants.colon;
+import static grammar.datasets.sentencetemplates.TempConstants.component_be;
+import static grammar.datasets.sentencetemplates.TempConstants.defaultGender;
+import static grammar.datasets.sentencetemplates.TempConstants.directObject;
+import static grammar.datasets.sentencetemplates.TempConstants.domain;
+import static grammar.datasets.sentencetemplates.TempConstants.gender;
+import static grammar.datasets.sentencetemplates.TempConstants.object;
+import static grammar.datasets.sentencetemplates.TempConstants.plural;
+import static grammar.datasets.sentencetemplates.TempConstants.preposition;
+import static grammar.datasets.sentencetemplates.TempConstants.pronoun;
+import static grammar.datasets.sentencetemplates.TempConstants.range;
+import static grammar.datasets.sentencetemplates.TempConstants.singular;
+import static grammar.datasets.sentencetemplates.TempConstants.subject;
+import static grammar.datasets.sentencetemplates.TempConstants.verb;
 import static grammar.generator.BindingConstants.BINDING_TOKEN_TEMPLATE;
-import grammar.generator.SentenceBuilderTransitiveVPEN;
 import grammar.generator.SubjectType;
 import grammar.sparql.SelectVariable;
 import grammar.structure.component.DomainOrRangeType;
 import grammar.structure.component.FrameType;
 import grammar.structure.component.Language;
 import grammar.structure.component.SentenceType;
-import static java.lang.System.exit;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.NoSuchElementException;
-import static java.util.Objects.isNull;
-import java.util.TreeMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import lexicon.LexicalEntryUtil;
-import static lexicon.LexicalEntryUtil.getDeterminerTokenByNumber;
 import lexicon.LexiconSearch;
 import net.lexinfo.LexInfo;
-import org.apache.commons.lang3.StringUtils;
 import util.exceptions.QueGGMissingFactoryClassException;
+import util.io.GenderUtils;
+import util.io.ParamterFinder;
+import util.io.PronounFinder;
+import util.io.StringMatcher;
+import util.io.TemplateFeatures;
+import util.io.TemplateFinder;
+import util.io.VerbFinder;
 
 /**
  *
  * @author elahi
  */
-public class SentenceBuilderUtils implements TempConstants {
+public class EnglishSentenceBuilder implements TempConstants {
 
     private LexicalEntryUtil lexicalEntryUtil = null;
     private Language language = null;
@@ -63,7 +68,7 @@ public class SentenceBuilderUtils implements TempConstants {
     private FrameType frameType = null;
 
 
-    public SentenceBuilderUtils(FrameType frameType, Language language, LexicalEntryUtil lexicalEntryUtil, SelectVariable selectVariable, SelectVariable oppositeSelectVariable, String variable) {
+    public EnglishSentenceBuilder(FrameType frameType, Language language, LexicalEntryUtil lexicalEntryUtil, SelectVariable selectVariable, SelectVariable oppositeSelectVariable, String variable) {
         this.frameType=frameType;
         this.lexicalEntryUtil = lexicalEntryUtil;
         this.language = language;

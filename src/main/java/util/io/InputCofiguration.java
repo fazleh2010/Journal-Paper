@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Path;
 import java.util.LinkedHashMap;
-import turtle.English;
+import turtle.EnglishTurtle;
 import turtle.GermanTurtle;
 import turtle.TutleConverter;
 

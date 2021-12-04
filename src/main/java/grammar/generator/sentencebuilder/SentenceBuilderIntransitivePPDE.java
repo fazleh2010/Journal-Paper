@@ -8,6 +8,7 @@ import static grammar.generator.BindingConstants.BINDING_TOKEN_TEMPLATE;
 import grammar.datasets.annotated.AnnotatedVerb;
 import grammar.datasets.sentencetemplates.TempConstants;
 import static grammar.generator.SubjectType.interrogativePlace;
+import grammar.generator.sentencebuilder.EnglishSentenceBuilder;
 import grammar.sparql.SelectVariable;
 import grammar.structure.component.DomainOrRangeType;
 import grammar.structure.component.FrameType;
@@ -30,7 +31,7 @@ import java.util.TreeSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import static lexicon.LexicalEntryUtil.getDeterminerTokenByNumber;
-import util.io.SentenceBuilderUtils;
+import grammar.generator.sentencebuilder.GermanSentenceBuilder;
 import util.io.StringMatcher;
 import util.io.TemplateFeatures;
 import util.io.TemplateFinder;
@@ -72,7 +73,7 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
             SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
             List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                     language, new String[]{frameType.getName(), active});
-            sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
+            sentences = germanSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
             System.out.println(sentences);
             //exit(1);
 
@@ -84,7 +85,7 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
             SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
             List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                     language, new String[]{frameType.getName(), template, forward});
-            sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
+            sentences = germanSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
             System.out.println(template);
             System.out.println(sentences);
             //exit(1);
@@ -106,9 +107,9 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
             SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
             List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                     language, new String[]{frameType.getName(), passive});
-            sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
+            sentences = germanSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
 
-            sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
+            sentences = germanSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
             System.out.println(sentences);
             //sentences = nounPPframeSentence(bindingVariable, lexicalEntryUtil, passive);
         } else if (this.frameType.equals(FrameType.IPP)) {
@@ -120,7 +121,7 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
             SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
             List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                     language, new String[]{frameType.getName(), template, backward});
-            sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
+            sentences = germanSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
             System.out.println(template);
             System.out.println(sentences);
             //exit(1);
@@ -152,12 +153,73 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
 
     private List<String> generateSentences(String bindingVariable, LexicalEntryUtil lexicalEntryUtil, SelectVariable selectVariable, SelectVariable oppositeSelectVariable, List<String> sentenceTemplates) throws QueGGMissingFactoryClassException {
         Set<String> sentences = new TreeSet<String>();
+
+        //dirty code..for quick solution..
+        if (this.language.equals(Language.DE)) {
+            return this.germanSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
+        }
+        else if (this.language.equals(Language.EN)) {
+            return this.englishSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
+        }
+       
+        return new ArrayList<String>(sentences);
+    }
+
+    private List<String> germanSentences(String bindingVariable, LexicalEntryUtil lexicalEntryUtil, SelectVariable selectVariable, SelectVariable oppositeSelectVariable, List<String> sentenceTemplates) throws QueGGMissingFactoryClassException {
+        Set<String> sentences = new TreeSet<String>();
+
         Integer index = 0;
 
         for (String sentenceTemplate : sentenceTemplates) {
             System.out.println(sentenceTemplate);
             index = index + 1;
-            SentenceBuilderUtils sentenceBuilderFromTemplates = new SentenceBuilderUtils(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
+            GermanSentenceBuilder sentenceBuilderFromTemplates = new GermanSentenceBuilder(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
+            TemplateFeatures templateFeatures = new TemplateFeatures(sentenceTemplate);
+            List<String> positionTokens = templateFeatures.getPositionTokens();
+            String sentence = "", positionWord = "";
+            Boolean validSentence = true;
+            for (String positionString : positionTokens) {
+
+                String npCategory = findNounPhraseCategory(positionString);
+                if (npCategory.isEmpty()) {
+                    String[] parseToken = StringMatcher.parseToken(positionString);
+                    positionWord = sentenceBuilderFromTemplates.getWords(parseToken, index, templateFeatures);
+                } else if (npCategory.equals(nounPhrase)) {
+                    List<String> nps = nounPhrase(bindingVariable, lexicalEntryUtil);
+                    positionWord = nps.iterator().next();
+                } else if (npCategory.equals(noun)) {
+                    positionWord = noun(bindingVariable, lexicalEntryUtil);
+                }
+
+                positionWord = positionWord + " ";
+                sentence += positionWord;
+                index = index + 1;
+
+                if (positionWord.contains("XX")) {
+                    validSentence = false;
+                }
+            }
+
+            if (!validSentence) {
+                continue;
+            } else {
+                sentences.add(sentence.stripTrailing());
+            }
+        }
+        System.out.println(sentences);
+
+        return new ArrayList<String>(sentences);
+    }
+    
+    private List<String> englishSentences(String bindingVariable, LexicalEntryUtil lexicalEntryUtil, SelectVariable selectVariable, SelectVariable oppositeSelectVariable, List<String> sentenceTemplates) throws QueGGMissingFactoryClassException {
+        Set<String> sentences = new TreeSet<String>();
+
+        Integer index = 0;
+
+        for (String sentenceTemplate : sentenceTemplates) {
+            System.out.println(sentenceTemplate);
+            index = index + 1;
+            EnglishSentenceBuilder sentenceBuilderFromTemplates = new EnglishSentenceBuilder(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
             TemplateFeatures templateFeatures = new TemplateFeatures(sentenceTemplate);
             List<String> positionTokens = templateFeatures.getPositionTokens();
             String sentence = "", positionWord = "";
@@ -224,7 +286,7 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
         System.out.println("sentenceTemplates:::" + sentenceTemplates);
         for (String sentenceTemplate : sentenceTemplates) {
             index = index + 1;
-            SentenceBuilderUtils sentenceBuilderFromTemplates = new SentenceBuilderUtils(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
+            GermanSentenceBuilder sentenceBuilderFromTemplates = new GermanSentenceBuilder(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
             TemplateFeatures templateFeatures = new TemplateFeatures(sentenceTemplate);
             List<String> positionTokens = templateFeatures.getPositionTokens();
             String str = "", positionWord = "";
@@ -280,7 +342,7 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
         );*/
         List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                 language, new String[]{frameType.getName(), nounPhrase});
-        SentenceBuilderUtils sentenceBuilderFromTemplates = new SentenceBuilderUtils(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
+        GermanSentenceBuilder sentenceBuilderFromTemplates = new GermanSentenceBuilder(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
 
         for (String sentenceTemplate : sentenceTemplates) {
             index = index + 1;
@@ -300,9 +362,9 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
                     break;
                 }
             }
-            if(!validFlag){
-                    continue;
-             }
+            if (!validFlag) {
+                continue;
+            }
             String newsSentence = str.stripTrailing();
 
             String newSentence = sentenceBuilderFromTemplates.prepareSentence(positionTokens, templateFeatures);
@@ -333,7 +395,7 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
 
     private String findNounPhraseCategory(String stringPosition) {
         String result = "";
-        List<String> tokens = SentenceBuilderUtils.parseTemplate(stringPosition);
+        List<String> tokens = GermanSentenceBuilder.parseTemplate(stringPosition);
         for (String token : tokens) {
             token = token.replace("?", "");
             token = token.replace(".", "");
@@ -350,13 +412,12 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
         word = word.replace(" ", "").strip().trim().stripLeading().stripTrailing();
         if (word.equals("-")) {
             return false;
-        }
-        else if(word.equals("XX")){
+        } else if (word.equals("XX")) {
             return false;
         }
         return true;
     }
-    
+
     /*private Boolean checkValidity(String word) {
         word = word.strip().trim().stripLeading().stripTrailing();
         if (word.equals("XX")) {
@@ -364,7 +425,6 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
         }
         return true;
     }*/
-
     private Boolean checkTokenValidity(String attribute, Integer index) {
         if (index == 1 && attribute.equals(preposition)) {
             String uri = LexicalEntryUtil.getRange(lexicalEntryUtil);

@@ -39,7 +39,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.logging.Level;
 import org.apache.commons.text.similarity.CosineDistance;
-import turtle.English;
+import turtle.EnglishTurtle;
 import util.io.GenderUtils;
 import util.io.LinkedData;
 import static util.io.ResourceHelper.loadResource;
@@ -175,7 +175,7 @@ public class QueGG {
         if (language.equals(Language.DE)) {
             tutleConverter = new GermanTurtle(inputDir, linkedData, language);
         } else if (language.equals(Language.EN)) {
-            tutleConverter = new English(inputDir, linkedData, language);
+            tutleConverter = new EnglishTurtle(inputDir, linkedData, language);
         }
         return tutleConverter.getConversionFlag();
     }
