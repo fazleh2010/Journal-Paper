@@ -1,0 +1,9 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive,writtenForm3rdPresent,writtenFormPast,writtenFormPerfect,SyntacticFrame,subject,directObject,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural,passivePreposition
+moderate_1,verb,moderieren,moderiert,moderiert,moderiert,TransitiveFrame,range,domain,1,dbo:presenter,dbo:TelevisionShow,dbo:Person,feminine,Fernsehsendung,Fernsehsendungen,masculine,Person,Personen,von
+Moderate_2,verb,moderieren,moderiert,moderiert,moderiert,TransitiveFrame,range,domain,1,dbo:presenter,dbo:Work,dbo:Person,neuter,Werk,Werke,masculine,Person,Personen,von
+ausdenken_1,TrennVerb,ausdenken,dachte aus,denkt aus,ausgedacht,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Person,feminine,Fernsehsendung,Fernsehsendungen,masculine,Person,Personen,von
+ausdenken_2,TrennVerb,ausdenken,dachte aus,denkt aus,ausgedacht,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Person,neuter,Werk,Werke,masculine,Person,Personen,von
+spouse_1,verb,verheiraten,verheiratet,verheiratete,verheiratet,TransitiveFrame,range,domain,1,dbo:spouse,dbo:Person,dbo:Person,feminine,Person,Personen,feminine,Person,Personen,mit
+entwickeln_1,verb,entwickeln,entwickelt,entwickelte,entwickelt,TransitiveFrame,range,domain,1,dbo:product,dbo:Software,dbo:Company,feminine,feminine,Software,feminine,Gesellschaft,Gesellschaften,von
+entwickeln_2,verb,entwickeln,entwickelt,entwickelte,entwickelt,TransitiveFrame,range,domain,1,dbo:product,dbo:Software,dbo:Organisation,feminine,feminine,Software,feminine,Organisation,Organisationen,von
+entwickeln_3,verb,entwickeln,entwickelt,entwickelte,entwickelt,TransitiveFrame,range,domain,1,dbo:product,dbo:Software,dbo:Agent,masculine,feminine,Software,masculine,Agent,Agenten,von
