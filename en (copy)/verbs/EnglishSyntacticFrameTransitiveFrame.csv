@@ -1,2 +1,0 @@
-LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,SyntacticFrame,subject,directObject,sense,reference,domain,range
-develop,verb,develop,develops,developed,TransitiveFrame,range,domain,1,dbo:developer,dbo:Work,dbo:Agent
