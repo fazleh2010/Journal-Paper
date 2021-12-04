@@ -185,19 +185,43 @@ public class VerbFinder implements TempConstants {
         } 
     }*/
     
-    private void setCategory(String reference) {
-        if (reference.contains(mainVerb)) {
-            this.mainVerbFlag = true;
-        } else if (reference.contains(TrennVerb)&&isTrenn()) {
+    /*private void setCategory(String reference) {
+        System.out.println("trennVerb hash::"+GenderUtils.trennVerb);
+        if (reference.contains(TrennVerb)&&isTrenn()) {
             this.trennVerbFlag = true;
         } else if (reference.contains("component_be") || reference.contains("component_heißen")
                 || reference.contains("component_haben") || reference.contains("component_werden")) {
             this.auxilaryVerbFlag = true;
-        } else if (reference.contains(RefVerb)) {
+        }
+        else if(reference.contains(mainVerb)){
+            this.mainVerbFlag = true; 
+        }
+        else if (reference.contains(RefVerb)) {
             this.reflexiveFlag = true;
         }
+    }*/
+
+    private void setCategory(String reference) {
+        System.out.println("reference::" + reference);
+        System.out.println("trennVerb hash::" + GenderUtils.trennVerb);
+        if (isTrenn()) {
+            if (reference.contains(TrennVerb)) {
+                this.trennVerbFlag = true;
+            }
+        } else {
+            if (reference.contains("component_be") || reference.contains("component_heißen")
+                    || reference.contains("component_haben") || reference.contains("component_werden")) {
+                this.auxilaryVerbFlag = true;
+            } else if (reference.contains(mainVerb)) {
+                this.mainVerbFlag = true;
+            } else if (reference.contains(RefVerb)) {
+                this.reflexiveFlag = true;
+            }
+        }
+
     }
 
+    
     public String getWord() {
         return word;
     }
@@ -223,6 +247,8 @@ public class VerbFinder implements TempConstants {
 
     private Boolean isTrenn() {
         String verbWrittenForm = getMainVerbPresent(past).trim().strip();
+        System.out.println(verbWrittenForm);
+         System.out.println(GenderUtils.trennVerb.keySet());
         if (GenderUtils.trennVerb.containsKey(verbWrittenForm)) {
             return true;
         }

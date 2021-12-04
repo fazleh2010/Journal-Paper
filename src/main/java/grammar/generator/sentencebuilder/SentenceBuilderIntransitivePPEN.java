@@ -65,7 +65,18 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder, TempCon
     public List<String> generateFullSentencesForward(String bindingVariable, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
         List<String> sentences = new ArrayList<String>();
 
-        if (this.frameType.equals(FrameType.IPP)) {
+        if (this.frameType.equals(FrameType.NPP)) {
+            sentences = nounPPframeSentence(bindingVariable, lexicalEntryUtil, whQuestion);
+        } else if (this.frameType.equals(FrameType.VP)) {
+            SelectVariable selectVariable = this.lexicalEntryUtil.getSelectVariable();
+            SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
+            List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
+                    language, new String[]{frameType.getName(), active});
+            sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
+            System.out.println(sentences);
+            //exit(1);
+
+        } else if (this.frameType.equals(FrameType.IPP)) {
             String template = this.templateFinder.getSelectedTemplate();
             System.out.println("template:::" + template);
             //DomainOrRangeType domainOrRangeType = this.templateFinder.getForwardDomainOrRange();
@@ -74,21 +85,9 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder, TempCon
             List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                     language, new String[]{frameType.getName(), template, forward});
             sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
-             System.out.println(template);
-             System.out.println(sentences);
-             //exit(1);
-        } else if (this.frameType.equals(FrameType.NPP)) {
-            sentences = nounPPframeSentence(bindingVariable, lexicalEntryUtil, whQuestion);
-        } else if (this.frameType.equals(FrameType.VP)) {
-            DomainOrRangeType domainOrRangeType = this.templateFinder.getOppositeDomainOrRange();
-            SelectVariable selectVariable = this.lexicalEntryUtil.getSelectVariable();
-            SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
-            List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
-                    language, new String[]{frameType.getName(), active});
-            sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
+            System.out.println(template);
             System.out.println(sentences);
-            
-           
+            //exit(1);
         }
 
         /*List<String> sentenceTemplates = getSentenceTemplateRepository().findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
@@ -99,7 +98,20 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder, TempCon
     @Override
     public List<String> generateFullSentencesBackward(String bindingVariable, String[] argument, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
         List<String> sentences = new ArrayList<String>();
-        if (this.frameType.equals(FrameType.IPP)) {
+        if (this.frameType.equals(FrameType.NPP)) {
+            sentences = nounPhrase(bindingVariable, lexicalEntryUtil);
+        } else if (this.frameType.equals(FrameType.VP)) {
+            DomainOrRangeType domainOrRangeType = this.templateFinder.getOppositeDomainOrRange();
+            SelectVariable selectVariable = this.lexicalEntryUtil.getSelectVariable();
+            SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
+            List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
+                    language, new String[]{frameType.getName(), passive});
+            sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
+
+            sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
+            System.out.println(sentences);
+            //sentences = nounPPframeSentence(bindingVariable, lexicalEntryUtil, passive);
+        } else if (this.frameType.equals(FrameType.IPP)) {
             String template = this.templateFinder.getSelectedTemplate();
             System.out.println("template:::" + template);
 
@@ -109,13 +121,9 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder, TempCon
             List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                     language, new String[]{frameType.getName(), template, backward});
             sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
-           System.out.println(template);
-             System.out.println(sentences);
-             //exit(1);
-        } else if (this.frameType.equals(FrameType.NPP)) {
-            sentences = nounPhrase(bindingVariable, lexicalEntryUtil);
-        } else if (this.frameType.equals(FrameType.VP)) {
-            sentences = nounPPframeSentence(bindingVariable, lexicalEntryUtil, passive);
+            System.out.println(template);
+            System.out.println(sentences);
+            //exit(1);
         }
 
         return sentences;
@@ -150,7 +158,7 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder, TempCon
             System.out.println(sentenceTemplate);
             index = index + 1;
             SentenceBuilderUtils sentenceBuilderFromTemplates = new SentenceBuilderUtils(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
-            TemplateFeatures templateFeatures=new TemplateFeatures(sentenceTemplate);
+            TemplateFeatures templateFeatures = new TemplateFeatures(sentenceTemplate);
             List<String> positionTokens = templateFeatures.getPositionTokens();
             String sentence = "", positionWord = "";
             Boolean validSentence = true;
@@ -159,7 +167,7 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder, TempCon
                 String npCategory = findNounPhraseCategory(positionString);
                 if (npCategory.isEmpty()) {
                     String[] parseToken = StringMatcher.parseToken(positionString);
-                    positionWord = sentenceBuilderFromTemplates.getWords(parseToken, index,templateFeatures);
+                    positionWord = sentenceBuilderFromTemplates.getWords(parseToken, index, templateFeatures);
                 } else if (npCategory.equals(nounPhrase)) {
                     List<String> nps = nounPhrase(bindingVariable, lexicalEntryUtil);
                     positionWord = nps.iterator().next();
@@ -171,9 +179,9 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder, TempCon
                 sentence += positionWord;
                 index = index + 1;
 
-               /*if(positionWord.contains("XX")){
-                    validSentence=false;
-                }*/
+                if (positionWord.contains("XX")) {
+                    validSentence = false;
+                }
             }
 
             if (!validSentence) {
@@ -182,7 +190,6 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder, TempCon
                 sentences.add(sentence.stripTrailing());
             }
         }
-        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         System.out.println(sentences);
 
         return new ArrayList<String>(sentences);
@@ -218,7 +225,7 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder, TempCon
         for (String sentenceTemplate : sentenceTemplates) {
             index = index + 1;
             SentenceBuilderUtils sentenceBuilderFromTemplates = new SentenceBuilderUtils(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
-            TemplateFeatures templateFeatures=new TemplateFeatures(sentenceTemplate);
+            TemplateFeatures templateFeatures = new TemplateFeatures(sentenceTemplate);
             List<String> positionTokens = templateFeatures.getPositionTokens();
             String str = "", positionWord = "";
             Boolean validFlag = true;
@@ -230,7 +237,7 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder, TempCon
                 String npCategory = findNounPhraseCategory(positionString);
                 if (npCategory.isEmpty()) {
                     String[] parseToken = StringMatcher.parseToken(positionString);
-                    positionWord = sentenceBuilderFromTemplates.getWords(parseToken, index,templateFeatures);
+                    positionWord = sentenceBuilderFromTemplates.getWords(parseToken, index, templateFeatures);
                 } else if (npCategory.equals(nounPhrase)) {
                     List<String> nps = nounPhrase(bindingVariable, lexicalEntryUtil);
                     positionWord = nps.iterator().next();
@@ -277,13 +284,13 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder, TempCon
 
         for (String sentenceTemplate : sentenceTemplates) {
             index = index + 1;
-            TemplateFeatures templateFeatures=new TemplateFeatures(sentenceTemplate);
+            TemplateFeatures templateFeatures = new TemplateFeatures(sentenceTemplate);
             List<String> positionTokens = templateFeatures.getPositionTokens();
             String str = "", positionWord = "";
             //Boolean validFlag = true;
             for (String positionString : positionTokens) {
                 String[] parseToken = StringMatcher.parseToken(positionString);
-                positionWord = sentenceBuilderFromTemplates.getWords(parseToken, index,templateFeatures);
+                positionWord = sentenceBuilderFromTemplates.getWords(parseToken, index, templateFeatures);
                 positionWord = positionWord + " ";
                 str += positionWord;
                 index = index + 1;
@@ -298,7 +305,7 @@ public class SentenceBuilderIntransitivePPEN implements SentenceBuilder, TempCon
                 }*/
             String newsSentence = str.stripTrailing();
 
-            String newSentence = sentenceBuilderFromTemplates.prepareSentence(positionTokens,templateFeatures);
+            String newSentence = sentenceBuilderFromTemplates.prepareSentence(positionTokens, templateFeatures);
             sentences.add(newSentence);
         }
 

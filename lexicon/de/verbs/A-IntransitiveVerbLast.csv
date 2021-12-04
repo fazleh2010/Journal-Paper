@@ -1,3 +1,0 @@
-LemonEntry,partOfSpeech,writtenFormInfinitive,writtenFormThridPerson,writtenFormPast,writtenFormPerfect,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural
-sprechen_1,verb,sprechen,spricht,sprach,gesprochen,in,IntransitivePPFrame,domain,range,1,dbo:language,dbo:Country,dbo:Language,neuter,Land,L„nder,feminine,Sprache,Sprachen
-sprechen_2,veb,sprechen,spricht,sprach,gesprochen,in,IntransitivePPFrame,domain,range,1,dbo:language,dbo:Location,dbo:Language,feminine,Lage,Lagen,feminine,Sprache,Sprachen

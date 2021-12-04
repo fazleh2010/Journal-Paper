@@ -1,0 +1,89 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :to_ausdenken_2 ;
+  lemon:entry    :ausdenken_2ed ;
+  lemon:entry    :preposition .
+
+:to_ausdenken_2 a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_ausdenken_2 ;
+  lemon:otherForm      :form_ausdenken_2s ;
+  lemon:otherForm      :form_ausdenken_2ed ;
+  lemon:sense          :ausdenken_2_sense_1 ;
+  lemon:synBehavior    :ausdenken_2_frame_transitive .
+
+:form_ausdenken_2 a         lemon:Form ;
+  lemon:writtenRep     "ausdenken"@de ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_ausdenken_2s a    lemon:Form ;
+  lemon:writtenRep "dachte aus"@de ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+
+:form_ausdenken_2s a    lemon:Form ;
+  lemon:writtenRep "denkt aus"@de ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_ausdenken_2ed a   lemon:Form ;
+  lemon:writtenRep "ausgedacht"@de ;
+  lexinfo:tense    lexinfo:perfect ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:ausdenken_2_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :ausdenken_2_subj ;
+  lexinfo:directObject     :ausdenken_2_obj .
+
+:ausdenken_2_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :ausdenken_2_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/creator> ;
+  lemon:subjOfProp  :ausdenken_2_obj ;
+  lemon:objOfProp   :ausdenken_2_subj ;
+  lemon:condition   :ausdenken_2_sense_1_condition .
+
+
+:ausdenken_2_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/TelevisionShow> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:ausdenken_2ed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_ausdenken_2ed_canonical ;
+  lemon:otherForm      :form_ausdenken_2ed_by ;
+  lemon:synBehavior    :ausdenken_2ed_frame_adjectivepp ;
+  lemon:sense          :ausdenken_2ed_ontomap .
+
+:form_ausdenken_2ed_canonical a lemon:Form ;
+  lemon:writtenRep         "ausdenken"@de .
+
+:form_ausdenken_2ed_by a    lemon:Form ;
+  lemon:writtenRep     "ausdenken"@de ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:ausdenken_2ed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :ausdenken_2ed_subj ;
+  lexinfo:prepositionalAdjunct :ausdenken_2ed_obj .
+
+:ausdenken_2ed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :ausdenken_2ed_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/creator> ;
+  lemon:subjOfProp  :ausdenken_2ed_subj ;
+  lemon:objOfProp   :ausdenken_2ed_obj ;
+  lemon:condition   :ausdenken_2_sense_1_condition .
+:ausdenken_2ed_obj lemon:marker :von .
+
+## Prepositions ##
+:preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "von"@de ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
