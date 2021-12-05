@@ -189,38 +189,29 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       )
     );
     
-     // TransitiveFrame
+     // TransitiveFrame active
     sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(
          //Who presented BBC Wildlife Specials?
-         "interrogativePronoun(range) verb(mainVerb:past:thirdPerson) object(domain)?",
+        "interrogativePronoun(range) verb(mainVerb:past:thirdPerson) object(domain)?",
          //Which Person presented BBC Wildlife Specials?
         "interrogativeDeterminer(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
+        //Which Persons presented BBC Wildlife Specials?
         "interrogativeDeterminer(range:plural) verb(mainVerb:past:thridPerson) object(domain)?"      
         ),
        TransitiveFrame,
         active
       )
     );
-    
+    // TransitiveFrame passive
     sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(
         //"What was developed by X?
         "interrogativeDeterminer(domain:singular) verb(component_be:past:singular) verb(mainVerb:past:thridPerson) preposition(by) adjunct(range)?",
+        //"What were developed by X?
         "interrogativeDeterminer(domain:plural) verb(component_be:past:plural) verb(mainVerb:past:thridPerson) preposition(by) adjunct(range)?"
-
-        //Was wurde von ($x | PERSON_NP) entwickelt?
-        //"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
-        //"Werke werden von ($x | PERSON_NP) entwickelt?", 
-        //"Werke wurden von ($x | PERSON_NP) entwickelt?"
-        //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:singular) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
-        //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
-        //"interrogativeDeterminer(nominativeCase:domain:plural) verb(component_be:future:singular) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
-        //"interrogativeDeterminer(nominativeCase:domain:plural) verb(component_be:future:plural) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
-         //Wer war mit Präsident Chirac verheiratet?
-        //"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:past:singular) preposition(mit) object(domain) verb(mainVerb:perfect:thridPerson)??"     
         ),
         TransitiveFrame,
         passive
@@ -230,6 +221,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
     sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(
+                
         "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:singular) preposition object(range) verb(mainVerb:past:thridPerson)?",
         "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:past:thridPerson)?",
         "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:singular) preposition object(range) verb(mainVerb:past:thridPerson)?",
@@ -242,37 +234,29 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         APP.toString()
       )
     );
-    //In welchem Museum ist der Schrei ausgestellt?
     sentenceTemplateRepository.add(
       createSentenceTemplate(language,
-        List.of(   //Durch welches Land fließt der Rhein?
-         "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(mainVerb:present:thridPerson) adjunct(domain)?",
-         //In welchem Museum ist Der Schrei ausgestellt?
-         "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
-          //In welcher Stadt hört die Ruta 68 auf?",
-         "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(TrennVerbPart1:past:thridPerson) adjunct(domain) verb(TrennVerbPart2:past:thridPerson)?",
-         "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(TrennVerb:perfect:thridPerson)?"
-       
-               ),
+        List.of(           
+        //Which country does X flow through?
+        "interrogativeDeterminer(range:singular) verb(component_do:present:singular) object(domain) verb(mainVerb:infinitive:singular) preposition?" 
+                ),
         IntransitivePPFrame,
         WHAT_WHICH_PRESENT_THING,
         forward
       )
     );
-    //Durch welches Land fließt der Rhein?
       sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(
-             //
-                   //Was fließt durch...?
-        "interrogativePronoun(nominativeCase:domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
-         //Welcher Fluss fließt durch...?
-        "interrogativeDeterminer(nominativeCase:domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
-        //"interrogativeDeterminer(nominativeCase:domain:plural) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
-         //Trenn
-         "interrogativePronoun(nominativeCase:domain:singular) verb(TrennVerbPart1:past:thridPerson) preposition adjunct(range) verb(TrennVerbPart2:past:thridPerson)? "
-       
-        ),
+          //what flows through Germany?
+          "interrogativePronoun(domain) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+          //Which river flows through Germany?
+          "interrogativeDeterminer(domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+          //what flew through Germany?
+          "interrogativePronoun(domain) verb(mainVerb:past:thridPerson) preposition adjunct(range)?",
+          //Which rivers flow through Germany?
+          "interrogativeDeterminer(domain:plural) verb(mainVerb:past:thridPerson) preposition adjunct(range)?"
+            ),
         IntransitivePPFrame,
         WHAT_WHICH_PRESENT_THING,
         backward
@@ -283,10 +267,8 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       createSentenceTemplate(
         language,
         List.of(
-          //"Wann wurde die Titanic fertiggestellt?"
-          "interrogativeTemporal verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
-          //Wann fand die Schlacht von Gettysburg statt?
-          "interrogativeTemporal verb(TrennVerbPart1:past:thridPerson) object(domain) verb(TrennVerbPart2:past:thridPerson)?"
+          //When was the Battle of Gettysburg took place?
+          "interrogativeTemporal verb(component_be:past:singular) object(domain) verb(mainVerb:past:thridPerson)?"
         ),
         IntransitivePPFrame,
         WHEN_WHAT_PAST_THING,
@@ -298,18 +280,11 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       createSentenceTemplate(
         language,
         List.of(
-         //Was wurde 2010 fertiggestellt?
-         "interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
-         //"interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:plural) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
-         "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
-         //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:plural) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)",
-         //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:plural) preposition adjunct(range) verb(TrennVerb:perfect:thridPerson)",
-         "interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(TrennVerb:perfect:thridPerson)?",
-         //"interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:plural) preposition adjunct(range) verb(TrennVerb:perfect:thridPerson)?",
-         "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(TrennVerb:perfect:thridPerson)?"
-         //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:plural) preposition adjunct(range) verb(TrennVerb:perfect:thridPerson)",
-         //"interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:past:thridPerson)?"
-        ),
+         //what took place in Date?  
+        "interrogativePronoun(domain:singular) verb(mainVerb:past:thridPerson) preposition adjunct(range)?"
+         ////what happened in Date?
+        //"interrogativePronoun(domain:singular) verb(mainVerb:past:thridPerson) preposition adjunct(range)?"
+              ),
         IntransitivePPFrame,
         WHEN_WHAT_PAST_THING,
         backward

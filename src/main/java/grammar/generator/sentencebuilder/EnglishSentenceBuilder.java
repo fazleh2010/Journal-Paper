@@ -15,8 +15,6 @@ import grammar.datasets.sentencetemplates.TempConstants;
 import static grammar.datasets.sentencetemplates.TempConstants.QuestionMark;
 import static grammar.datasets.sentencetemplates.TempConstants.adjunct;
 import static grammar.datasets.sentencetemplates.TempConstants.colon;
-import static grammar.datasets.sentencetemplates.TempConstants.component_be;
-import static grammar.datasets.sentencetemplates.TempConstants.defaultGender;
 import static grammar.datasets.sentencetemplates.TempConstants.directObject;
 import static grammar.datasets.sentencetemplates.TempConstants.domain;
 import static grammar.datasets.sentencetemplates.TempConstants.gender;
@@ -49,8 +47,8 @@ import util.io.PronounFinder;
 import util.io.StringMatcher;
 import util.io.TemplateFeatures;
 import util.io.TemplateFinder;
-import util.io.VerbFinder;
-import util.io.VerbFinderEN;
+import util.io.GermanVerbFinder;
+import util.io.EnglishVerbFinder;
 
 /**
  *
@@ -186,7 +184,7 @@ public class EnglishSentenceBuilder implements TempConstants {
             }
 
         } else if (flagReference && attribute.contains(verb)) {
-            word = new VerbFinderEN(this.frameType,this.lexicalEntryUtil,attribute, reference).getWord();
+            word = new EnglishVerbFinder(this.frameType,this.lexicalEntryUtil,attribute, reference).getWord();
 
         } else if (flagReference && attribute.equals(determiner)) {
 
@@ -227,13 +225,7 @@ public class EnglishSentenceBuilder implements TempConstants {
                 word = this.domainVariable;
             }
 
-        } else if (flagReference && (attribute.contains(article))) {
-            if (reference.contains(colon)) {
-                String[] col = reference.split(colon);
-                word = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil,col[0], TempConstants.caseType, col[1], TempConstants.gender, col[2]);
-            }
-
-        }
+        } 
 
         if (attribute.contains(QuestionMark)) {
             word = word + QuestionMark;
@@ -556,8 +548,19 @@ public class EnglishSentenceBuilder implements TempConstants {
    
    
     private String findPreposition(String attribute, String reference, Boolean flagReference) throws QueGGMissingFactoryClassException {
-        String word = null;
+        String word = "XX";
         if (!flagReference) {
+             word = this.lexicalEntryUtil.getPreposition();
+
+        } else if (flagReference) {
+            word = this.getSingle(reference);
+
+        }
+       
+        return word;
+        
+        
+        /*if (!flagReference) {
             word = this.getSingle(attribute);
 
         } else if (flagReference) {
@@ -567,7 +570,19 @@ public class EnglishSentenceBuilder implements TempConstants {
          if(word.contains("X"))
                 word="";
 
-        return word;
+        return word;*/
+        
+        /*
+         LexInfo lexInfo = this.lexicalEntryUtil.getLexInfo();
+        String preposition = this.lexicalEntryUtil.getPreposition();
+        Map<String, String> auxilaries = this.getAuxilariesVerb(numberList, "component_aux_object_past", lexInfo);
+        SubjectType subjectType = this.lexicalEntryUtil.getSubjectType(this.lexicalEntryUtil.getSelectVariable(), domainOrRangeType);
+        String qWord = this.lexicalEntryUtil.getSubjectBySubjectType(subjectType, language, null);
+        String bindingString = DomainOrRangeType.getMatchingType(this.lexicalEntryUtil.getConditionUriBySelectVariable(
+                LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable())
+        )).name();
+
+        */
 
     }
 

@@ -1,0 +1,5 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive,writtenForm3rdPerson,writtenFormPast,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural
+end_1,verb,end,ends,ended,in,IntransitivePPFrame,domain,range,1,dbo:routeEnd,dbo:Road,dbo:Location,Road,Roads,Location,Locations
+end_2,verb,end,ends,ended,in,IntransitivePPFrame,domain,range,2,dbo:routeEnd,dbo:ArchitecturalStructure,dbo:Location,ArchitecturalStructure,ArchitecturalStructures,Location,Locations
+end_3,verb,end,ends,ended,in,IntransitivePPFrame,domain,range,3,dbo:routeEnd,dbo:Infrastructure,dbo:Location,Infrastructure,Infrastructures,Location,Locations
+end_4,verb,end,ends,ended,in,IntransitivePPFrame,domain,range,4,dbo:routeEnd,dbo:RouteOfTransportation,dbo:Location,Route of Transportation,Routes of Transportation,Location,Locations

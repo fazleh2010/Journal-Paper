@@ -7,7 +7,13 @@ package turtle;
 
 import grammar.datasets.sentencetemplates.TempConstants;
 import static grammar.datasets.sentencetemplates.TempConstants.NounPPFrame;
+import static grammar.datasets.sentencetemplates.TempConstants.past;
+import static grammar.datasets.sentencetemplates.TempConstants.perfect;
+import static grammar.datasets.sentencetemplates.TempConstants.present;
+import static grammar.datasets.sentencetemplates.TempConstants.present3rd;
+import static java.lang.System.exit;
 import java.util.List;
+import java.util.Map;
 import util.io.GenderUtils;
 import util.io.Tupples;
 
@@ -381,6 +387,10 @@ public class EnglishCsv implements TempConstants {
         private Integer referenceIndex = 10;
         private Integer domainIndex = 11;
         private Integer rangeIndex = 12;
+        private Integer domainWrittenSingularFormIndex=rangeIndex+1;
+        private Integer domainWrittenPluralFormIndex=domainWrittenSingularFormIndex+1;
+        private Integer rangeWrittenSingularFormIndex=domainWrittenPluralFormIndex+1;
+        private Integer rangeWrittenPluralFormIndex=rangeWrittenSingularFormIndex+1;
 
         public String getHeader(String lemonEntry, String proposition, String language) {
             return "@prefix :        <http://localhost:8080/lexicon#> .\n"
@@ -457,6 +467,47 @@ public class EnglishCsv implements TempConstants {
 
             return str;
         }
+        
+        public  void setArticle(Tupples tupple, String[] row) {
+           GenderUtils.setWrittenForms(tupple.getDomain(), row[getDomainWrittenSingular()], row[getDomainWrittenPlural()]);
+           GenderUtils.setWrittenForms(tupple.getRange(), row[getRangeWrittenSingular()], row[getRangeWrittenPlural()]);
+        }
+        
+        public  void setVerbInfo(String partOfSpeech, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast) {
+             Map<String, String> verbTypes = Map.of(
+                        infinitive, writtenFormInfinitive,
+                        present3rd, writtenForm3rdPerson,
+                        past, writtenFormPast
+                );
+             
+             String [] verbs=new String[]{writtenFormInfinitive,writtenForm3rdPerson,writtenFormPast};
+             
+              
+            GenderUtils.setVerbTypes(partOfSpeech, verbs,verbTypes);  
+            
+           
+            
+            /*Map<String, String> verb = Map.of(
+                        present, writtenFromIn,
+                        past, writtenFormPast,
+                        perfect, writtenFormPerfect
+                );
+              
+              
+              
+            if (writtenFormPast.contains(" ")) {
+                GenderUtils.setTrennVerbType(writtenFromIn, verb);
+                GenderUtils.setTrennVerbType(writtenForm3rd, verb);
+                GenderUtils.setTrennVerbType(writtenFormPast, verb);
+                GenderUtils.setTrennVerbType(writtenFormPerfect, verb);
+            }
+            
+            GenderUtils.setPerfectVerbType(writtenFromIn, verb);
+            GenderUtils.setPerfectVerbType(writtenForm3rd, verb);
+            GenderUtils.setPerfectVerbType(writtenFormPast, verb);
+            GenderUtils.setPerfectVerbType(writtenFormPerfect, verb);*/
+            
+        }
 
         public String getPrepostion(String preposition, String language) {
             return getPrepostionL(preposition, language);
@@ -516,6 +567,22 @@ public class EnglishCsv implements TempConstants {
 
         public String getRangeIndex(String[] row) {
             return row[rangeIndex];
+        }
+        
+        public Integer  getDomainWrittenSingular() {
+            return domainWrittenSingularFormIndex;
+        }
+
+        public Integer getDomainWrittenPlural() {
+            return domainWrittenPluralFormIndex;
+        }
+
+        public Integer getRangeWrittenSingular() {
+            return rangeWrittenSingularFormIndex;
+        }
+
+        public Integer getRangeWrittenPlural() {
+            return rangeWrittenPluralFormIndex;
         }
 
     }

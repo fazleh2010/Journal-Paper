@@ -49,7 +49,7 @@ import util.io.PronounFinder;
 import util.io.StringMatcher;
 import util.io.TemplateFeatures;
 import util.io.TemplateFinder;
-import util.io.VerbFinder;
+import util.io.GermanVerbFinder;
 
 /**
  *
@@ -221,7 +221,7 @@ public class GermanSentenceBuilder implements TempConstants {
             }
 
         } else if (flagReference && attribute.contains(verb)) {
-            word = new VerbFinder(this.frameType,this.lexicalEntryUtil,attribute, reference).getWord();
+            word = new GermanVerbFinder(this.frameType,this.lexicalEntryUtil,attribute, reference).getWord();
 
         } else if (flagReference && attribute.equals(determiner)) {
 

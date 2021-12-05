@@ -38,6 +38,7 @@ public interface TempConstants {
     public static String TrennVerbPart1 = "TrennVerbPart1";
     public static final String verb = "verb";
     public static final String pronounReflexive = "reflexive_pronoun";
+    
 
     public static String questionMark = "?";
     public static String space = " ";
@@ -83,7 +84,7 @@ public interface TempConstants {
     public static final String noun = "noun";
     public static final String location = "location";
 
-    public static Set<String> TENSES = new HashSet<String>(Arrays.asList(present, present3rd,past, perfect, future));
+    public static Set<String> TENSES = new HashSet<String>(Arrays.asList(infinitive,present, present3rd,past, perfect, future));
     public static Set<String> NUMBERS = new HashSet<String>(Arrays.asList(singular, plural));
     public static Set<String> PERSONS = new HashSet<String>(Arrays.asList(secondPerson, thirdPerson));
 

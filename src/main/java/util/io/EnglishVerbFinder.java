@@ -23,7 +23,7 @@ import util.exceptions.QueGGMissingFactoryClassException;
  *
  * @author elahi
  */
-public class VerbFinderEN implements TempConstants {
+public class EnglishVerbFinder implements TempConstants {
 
     private Boolean mainVerbFlag = false;
     private Boolean auxilaryVerbFlag = false;
@@ -32,17 +32,15 @@ public class VerbFinderEN implements TempConstants {
     private ParamterFinder paramterFinder = null;
     private FrameType frameType = null;
 
-    public VerbFinderEN(FrameType frameType, LexicalEntryUtil lexicalEntryUtil, String attribute, String reference) throws QueGGMissingFactoryClassException {
+    public EnglishVerbFinder(FrameType frameType, LexicalEntryUtil lexicalEntryUtil, String attribute, String reference) throws QueGGMissingFactoryClassException {
         this.frameType = frameType;
         this.lexicalEntryUtil = lexicalEntryUtil;
         this.paramterFinder = new ParamterFinder(attribute, reference);
         this.setCategory(paramterFinder.getReference());
-        System.out.println("paramterFinder::"+paramterFinder);
-         System.out.println("auxilaryVerbFlag::"+this.auxilaryVerbFlag);
-
+        
         //exit(1);
         if (this.mainVerbFlag) {
-            word = findMainVerb(attribute, reference);
+           word =findMainVerb( attribute,  reference);
         } else if (this.auxilaryVerbFlag) {
             if (paramterFinder.getParameterLength() == 2 && paramterFinder.getTensePair().first != null) {
                 word = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil, paramterFinder.getReference(), paramterFinder.getTensePair().first, paramterFinder.getTensePair().second);
@@ -53,17 +51,51 @@ public class VerbFinderEN implements TempConstants {
                 word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, paramterFinder.getReference());
             }
         }
+        
+        System.out.println("paramterFinder::"+paramterFinder);
+        System.out.println("auxilaryVerbFlag::"+this.auxilaryVerbFlag);
+        System.out.println("mainVerbFlag::"+this.mainVerbFlag);
+        System.out.println("word::"+word);
+
 
     }
 
     private String findMainVerb(String attribute, String reference) throws QueGGMissingFactoryClassException {
-
+        String word="XX";
         if (paramterFinder.getTensePair().second.contains(past) || paramterFinder.getTensePair().second.contains(present)) {
-            return word = getMainVerb();
+            word = getMainVerb();
         }
+        else if (paramterFinder.getTensePair().second.contains(infinitive)){
+              word=getInfinitiveVerb(infinitive);
+        }
+        
 
-        return "XX";
+        return word;
     }
+    
+     private String getInfinitiveVerb(String tense) {
+        String word = getMainVerbPresent(past);
+        Pair<Boolean, String> pair = GenderUtils.getPerfecterbType(word, tense);
+        if (pair.first) {
+            return word = pair.second;
+        } else {
+            return "XX";
+
+        }
+    }
+     
+      private String getMainVerbPresent(String tense) {
+        List<AnnotatedVerb> annotatedVerbs = lexicalEntryUtil.parseLexicalEntryToAnnotatedVerbs();
+
+        for (AnnotatedVerb annotatedVerb : annotatedVerbs) {
+            if (annotatedVerb.getTense().toString().contains(tense)) {
+                return annotatedVerb.getWrittenRepValue();
+            }
+
+        }
+        return null;
+    }
+
 
    
   
@@ -72,6 +104,7 @@ public class VerbFinderEN implements TempConstants {
         List<AnnotatedVerb> annotatedVerbs = lexicalEntryUtil.parseLexicalEntryToAnnotatedVerbs();
 
         for (AnnotatedVerb annotatedVerb : annotatedVerbs) {
+            System.out.println(annotatedVerb.getTense());
             if (annotatedVerb.getTense().toString().contains(paramterFinder.getTensePair().second) && annotatedVerb.getPerson().toString().contains(paramterFinder.getPersonPair().second)) {
                 word = annotatedVerb.getWrittenRepValue();
                 break;
