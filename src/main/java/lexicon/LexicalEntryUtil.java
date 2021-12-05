@@ -818,15 +818,18 @@ public class LexicalEntryUtil {
 
         for (LexicalForm lexicalForm : this.lexicalEntry.getForms()) {
             String uri = lexicalForm.toString();
+            System.out.println(uri);
             Pair<Boolean, String> pair = this.getLastPart(uri);
             if (pair.component1()) {
                 if (pair.component2().contains("form")) {
                     reference =pair.component2() + "_preposition";
+                     System.out.println(reference);
                     break;
                 }
             }
 
         }
+       
 
         return reference;
 

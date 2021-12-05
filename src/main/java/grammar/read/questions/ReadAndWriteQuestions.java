@@ -13,6 +13,7 @@ import static grammar.generator.BindingConstants.DEFAULT_BINDING_VARIABLE;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import static java.lang.System.exit;
 import java.net.URI;
 import java.net.URL;
 import java.util.ArrayList;
@@ -85,7 +86,9 @@ public class ReadAndWriteQuestions {
     public void readQuestionAnswers(List<File> fileList, String entityDir, Boolean externalEntittyListflag) throws Exception {
         String sparql = null;
         Integer index = 0;
-        this.entityDir = entityDir;
+        this.entityDir = entityDir+File.separator+ this.language;
+        System.out.println("this.entityDir ::"+this.entityDir );
+       
 
         this.csvWriterQuestions = new CSVWriter(new FileWriter(questionAnswerFile,true));
         this.csvWriterSummary = new CSVWriter(new FileWriter(questionSummaryFile,true));
@@ -166,7 +169,7 @@ public class ReadAndWriteQuestions {
 
      
                 if (externalEntittyListflag) {
-                    String entityFileName = entityDir + File.separator + qaldFileBinding;
+                    String entityFileName = this.entityDir + File.separator + qaldFileBinding;
                     File entityFile = new File(entityFileName);
                     List<UriLabel>  qaldBindingList = this.getExtendedBindingList(grammarEntryUnit.getBindingList(), entityFile, 0, 2, bindingType.toLowerCase());
                     bindingList.addAll(qaldBindingList);

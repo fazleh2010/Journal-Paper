@@ -221,7 +221,8 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       createSentenceTemplate(language,
         List.of(           
         //Which country does X flow through?
-        "interrogativeDeterminer(range:singular) verb(component_do:present:singular) object(domain) verb(mainVerb:infinitive:singular) preposition?" 
+        "interrogativeDeterminer(range:singular) verb(component_do:present:singular) object(domain) verb(mainVerb:infinitive:singular) preposition?", 
+        "interrogativeDeterminer(range:plural) verb(component_do:present:singular) object(domain) verb(mainVerb:infinitive:singular) preposition?"        
                 ),
         IntransitivePPFrame,
         WHAT_WHICH_PRESENT_THING,
@@ -238,7 +239,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
           //what flew through Germany?
           "interrogativePronoun(domain) verb(mainVerb:past:thridPerson) preposition adjunct(range)?",
           //Which rivers flow through Germany?
-          "interrogativeDeterminer(domain:plural) verb(mainVerb:past:thridPerson) preposition adjunct(range)?"
+          "interrogativeDeterminer(domain:plural) verb(mainVerb:infinitive:thridPerson) preposition adjunct(range)?"
             ),
         IntransitivePPFrame,
         WHAT_WHICH_PRESENT_THING,
