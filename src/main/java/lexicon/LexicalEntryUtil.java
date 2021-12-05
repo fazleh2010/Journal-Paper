@@ -20,6 +20,8 @@ import grammar.datasets.annotated.AnnotatedNoun;
 import grammar.datasets.annotated.AnnotatedNounOrQuestionWord;
 import grammar.datasets.annotated.AnnotatedVerb;
 import grammar.datasets.questionword.QuestionWordFactoryIT;
+import static grammar.datasets.sentencetemplates.TempConstants.plural;
+import static grammar.datasets.sentencetemplates.TempConstants.singular;
 import grammar.generator.SentenceToken;
 import grammar.sparql.Prefix;
 import grammar.sparql.SPARQLRequest;
@@ -391,15 +393,26 @@ public class LexicalEntryUtil {
     public List<AnnotatedNounOrQuestionWord> parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords(Collection<LexicalForm> lexicalForms) {
         List<AnnotatedNounOrQuestionWord> annotatedNouns = new ArrayList<>();
         for (LexicalForm lexicalForm : lexicalForms) {
+            //System.out.println("lexicalForm::" + lexicalForm);
+            //System.out.println("lexicalForm::" + lexicalForm.getWrittenRep().value);
+            String numberType = singular;
+            if (lexicalForm.toString().contains(singular)) {
+                numberType = singular;
+            } else if (lexicalForm.toString().contains(plural)) {
+                numberType = plural;
+            }
+
             AnnotatedNoun annotatedNoun
                     = new AnnotatedNoun(
                             lexicalForm.getWrittenRep().value,
-                            getPropertyValueOrDefaultFromLexicalForm("number", "singular", lexicalForm),
+                            getPropertyValueOrDefaultFromLexicalForm("number", numberType, lexicalForm),
                             language
                     );
             annotatedNoun.setGender(getPropertyValueOrDefaultFromLexicalForm("gender", null, lexicalForm));
             annotatedNoun.setGrammaticalCase(getPropertyValueOrDefaultFromLexicalForm("case", null, lexicalForm));
             annotatedNouns.add(annotatedNoun);
+            //System.out.println("annotatedNoun::"+annotatedNoun);
+
         }
         return annotatedNouns;
     }
@@ -800,29 +813,23 @@ public class LexicalEntryUtil {
      *
      * @return The preposition of the current frame's prepositionalAdjunct
      */
-    public String getPreposition() {
-        String preposition = null;
-        SynArg prepositionalAdjunct = lexInfo.getSynArg("prepositionalAdjunct");
-        Property POS = lexInfo.getProperty("partOfSpeech");
-        PropertyValue POSPreposition = lexInfo.getPropertyValue("preposition");
-        Frame frame = getFrameByGrammarType();      
-        //this is a temporary code for solving the problem. this code will be refactored in some point.
-        try {
-            if (!isNull(frame)) {
-                SyntacticRoleMarker synRoleMarker = frame.getSynArg(prepositionalAdjunct).iterator().next().getMarker();
-                PropertyValue POSValue = synRoleMarker.getProperty(POS).iterator().next();
-                if (POSValue.equals(POSPreposition)) {
-                    preposition = ((LexicalEntryImpl) synRoleMarker).getCanonicalForm().getWrittenRep().value;
-                    return preposition;
+    public String getPrepositionReference() {
+        String reference = null;
+
+        for (LexicalForm lexicalForm : this.lexicalEntry.getForms()) {
+            String uri = lexicalForm.toString();
+            Pair<Boolean, String> pair = this.getLastPart(uri);
+            if (pair.component1()) {
+                if (pair.component2().contains("form")) {
+                    reference =pair.component2() + "_preposition";
+                    break;
                 }
             }
-          
-        } catch (NoSuchElementException noSuchExp) {
-            System.err.println("Preposition is not found!!"+noSuchExp.getMessage());
 
         }
 
-        return preposition;
+        return reference;
+
     }
     
     public String getArticle() {
@@ -1031,6 +1038,23 @@ public class LexicalEntryUtil {
         LexicalForm lexicalForm = forms.iterator().next();
         writtenValue = lexicalForm.getWrittenRep().value;
         return writtenValue;
+    }
+    
+    /*public static String getPreposition(LexicalEntryUtil lexicalEntryUtil, String reference) throws QueGGMissingFactoryClassException {
+        String writtenValue = "";
+        LexInfo lexInfo = lexicalEntryUtil.getLexInfo();
+        LexicalEntry lexicalEntry = new LexiconSearch(lexicalEntryUtil.getLexicon()).getReferencedResource(reference);
+        Collection<LexicalForm> forms = lexicalEntry.getForms();
+        LexicalForm lexicalForm = forms.iterator().next();
+        writtenValue = lexicalForm.getWrittenRep().value;
+        return writtenValue;
+    }*/
+
+    private Pair<Boolean, String> getLastPart(String uri) {
+        if (uri.contains("#")) {
+            return new Pair<Boolean, String>(Boolean.TRUE, uri.split("#")[1]);
+        }
+        return new Pair<Boolean, String>(Boolean.FALSE,uri) ;
     }
 
 }

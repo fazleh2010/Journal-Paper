@@ -68,6 +68,8 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
 
         if (this.frameType.equals(FrameType.NPP)) {
             sentences = nounPPframeSentence(bindingVariable, lexicalEntryUtil, whQuestion);
+             System.out.println(sentences);
+             //exit(1);
         } else if (this.frameType.equals(FrameType.VP)) {
             SelectVariable selectVariable = this.lexicalEntryUtil.getSelectVariable();
             SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
@@ -101,6 +103,8 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
         List<String> sentences = new ArrayList<String>();
         if (this.frameType.equals(FrameType.NPP)) {
             sentences = nounPhrase(bindingVariable, lexicalEntryUtil);
+            System.out.println(sentences);
+            //exit(1);
         } else if (this.frameType.equals(FrameType.VP)) {
             SelectVariable selectVariable = this.lexicalEntryUtil.getSelectVariable();
             SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
@@ -274,6 +278,20 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
 
     }*/
     private List<String> nounPPframeSentence(String bindingVariable, LexicalEntryUtil lexicalEntryUtil, String template) throws QueGGMissingFactoryClassException {
+         List<String> sentences = new ArrayList<String>();
+        //dirty code..for quick solution..
+        if (this.language.equals(Language.DE)) {
+            sentences =this.germanNounPPframeSentence( bindingVariable,  lexicalEntryUtil,  template);
+        }
+        else if (this.language.equals(Language.EN)) {
+            sentences =this.englishNounPPframeSentence(bindingVariable,  lexicalEntryUtil,  template);
+        }
+     
+        return new ArrayList<String>(sentences);
+
+    }
+    
+    private List<String> germanNounPPframeSentence(String bindingVariable, LexicalEntryUtil lexicalEntryUtil, String template) throws QueGGMissingFactoryClassException {
         Set<String> sentences = new HashSet<String>();
         Integer index = 0;
         SelectVariable selectVariable = lexicalEntryUtil.getSelectVariable();
@@ -323,8 +341,73 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
         return new ArrayList<String>(sentences);
 
     }
+    
+     private List<String> englishNounPPframeSentence(String bindingVariable, LexicalEntryUtil lexicalEntryUtil, String template) throws QueGGMissingFactoryClassException {
+        Set<String> sentences = new HashSet<String>();
+        Integer index = 0;
+        SelectVariable selectVariable = lexicalEntryUtil.getSelectVariable();
+        SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(lexicalEntryUtil.getSelectVariable());
 
+        List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
+                language, new String[]{frameType.getName(), template});
+
+        System.out.println("sentenceTemplates:::" + sentenceTemplates);
+        for (String sentenceTemplate : sentenceTemplates) {
+            index = index + 1;
+            EnglishSentenceBuilder sentenceBuilderFromTemplates = new EnglishSentenceBuilder(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
+            TemplateFeatures templateFeatures = new TemplateFeatures(sentenceTemplate);
+            List<String> positionTokens = templateFeatures.getPositionTokens();
+            String str = "", positionWord = "";
+            Boolean validFlag = true;
+            for (String positionString : positionTokens) {
+                if (!checkTokenValidity(positionString, index)) {
+                    validFlag = false;
+                    break;
+                }
+                String npCategory = findNounPhraseCategory(positionString);
+                if (npCategory.isEmpty()) {
+                    String[] parseToken = StringMatcher.parseToken(positionString);
+                    positionWord = sentenceBuilderFromTemplates.getWords(parseToken, index, templateFeatures);
+                } else if (npCategory.equals(nounPhrase)) {
+                    List<String> nps = nounPhrase(bindingVariable, lexicalEntryUtil);
+                    positionWord = nps.iterator().next();
+                } else if (npCategory.equals(noun)) {
+                    positionWord = noun(bindingVariable, lexicalEntryUtil);
+                }
+
+                validFlag = this.checkValidity(positionWord);
+                if (!validFlag) {
+                    break;
+                }
+
+                positionWord = positionWord + " ";
+                str += positionWord;
+                index = index + 1;
+            }
+            if (!validFlag) {
+                continue;
+            }
+            sentences.add(str.stripTrailing());
+        }
+        return new ArrayList<String>(sentences);
+
+    }
+     
     private List<String> nounPhrase(String bindingVariable, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
+         List<String> sentences = new ArrayList<String>();
+        //dirty code..for quick solution..
+        if (this.language.equals(Language.DE)) {
+            sentences =this.germanNounPhrase( bindingVariable,  lexicalEntryUtil);
+        }
+        else if (this.language.equals(Language.EN)) {
+            sentences =this.englishNounPhrase(bindingVariable,  lexicalEntryUtil);
+        }
+     
+        return new ArrayList<String>(sentences);
+    }
+
+
+    private List<String> germanNounPhrase(String bindingVariable, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
         Set<String> sentences = new TreeSet<String>();
         Integer index = 0;
 
@@ -355,7 +438,46 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
                 positionWord = positionWord + " ";
                 str += positionWord;
                 index = index + 1;
-                System.out.println("positionString:::" + positionString + " positionWord:" + positionWord);
+                validFlag = this.checkValidity(positionWord);
+                if (!validFlag) {
+                    break;
+                }
+            }
+            if (!validFlag) {
+                continue;
+            }
+            String newsSentence = str.stripTrailing();
+
+            String newSentence = sentenceBuilderFromTemplates.prepareSentence(positionTokens, templateFeatures);
+            sentences.add(newSentence);
+        }
+
+        return new ArrayList<String>(sentences);
+    }
+    
+     private List<String> englishNounPhrase(String bindingVariable, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
+        Set<String> sentences = new TreeSet<String>();
+        Integer index = 0;
+
+        SelectVariable selectVariable = lexicalEntryUtil.getSelectVariable();
+        SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(lexicalEntryUtil.getSelectVariable());
+
+        List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
+                language, new String[]{frameType.getName(), nounPhrase});
+        EnglishSentenceBuilder sentenceBuilderFromTemplates = new EnglishSentenceBuilder(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
+
+        for (String sentenceTemplate : sentenceTemplates) {
+            index = index + 1;
+            TemplateFeatures templateFeatures = new TemplateFeatures(sentenceTemplate);
+            List<String> positionTokens = templateFeatures.getPositionTokens();
+            String str = "", positionWord = "";
+            Boolean validFlag = true;
+            for (String positionString : positionTokens) {
+                String[] parseToken = StringMatcher.parseToken(positionString);
+                positionWord = sentenceBuilderFromTemplates.getWords(parseToken, index, templateFeatures);
+                positionWord = positionWord + " ";
+                str += positionWord;
+                index = index + 1;
                 validFlag = this.checkValidity(positionWord);
                 if (!validFlag) {
                     break;

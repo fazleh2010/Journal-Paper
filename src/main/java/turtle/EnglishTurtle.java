@@ -143,9 +143,9 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
         this.turtleString
                 = nounPPFrameCsv.getNounPPFrameHeader(this.lemonEntry, this.preposition, this.language)
                 + nounPPFrameCsv.getIndexing(this.lemonEntry, tupples)
-                + nounPPFrameCsv.getWrittenTtl(this.lemonEntry, writtenFormInfinitive, this.language)
+                + nounPPFrameCsv.getWrittenTtl(this.lemonEntry, this.writtenFormInfinitive, this.writtenFormInfinitive,this.writtenForm_plural,this.language)
                 + nounPPFrameCsv.getSenseDetail(tupples, NounPPFrame, this.lemonEntry, this.writtenFormInfinitive, this.preposition, this.language)
-                + nounPPFrameCsv.getPreposition(this.preposition, language);
+                + nounPPFrameCsv.getPreposition(this.lemonEntry,this.preposition, language);
         this.tutleFileName = getFileName(syntacticFrame);
     }
 
@@ -179,7 +179,7 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
                 + transitiveFrameCsv.getSenseIndexing(tupples, lemonEntry)
                 + transitiveFrameCsv.getWritten(this.lemonEntry, this.writtenFormInfinitive, this.writtenForm3rdPerson, this.writtenFormPast, this.language)
                 + transitiveFrameCsv.getSenseDetail(tupples, syntacticFrame, this.lemonEntry, this.writtenFormInfinitive, this.preposition, this.language)
-                + transitiveFrameCsv.getPrepostion(this.preposition, this.language);
+                + transitiveFrameCsv.getPrepostion(this.lemonEntry,this.preposition, this.language);
         this.tutleFileName = getFileName(syntacticFrame);
     }
 
@@ -213,7 +213,7 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
                 + IntransitiveFrameCsv.getSenseIndexing(tupples, this.lemonEntry)
                 + IntransitiveFrameCsv.getWritten(lemonEntry, writtenFormInfinitive, writtenForm3rdPerson, writtenFormPast, this.language)
                 + IntransitiveFrameCsv.getSenseDetail(tupples, syntacticFrame, this.lemonEntry, this.writtenFormInfinitive, this.preposition, this.language)
-                + IntransitiveFrameCsv.getPrepostion(this.preposition, this.language);
+                + IntransitiveFrameCsv.getPrepostion(this.lemonEntry,this.preposition, this.language);
         this.tutleFileName = getFileName(syntacticFrame);
     }
 

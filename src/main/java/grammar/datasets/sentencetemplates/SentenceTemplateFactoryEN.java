@@ -56,31 +56,13 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       createSentenceTemplate(language,
         List.of(
           //What is the capital of Cameron?
+          "interrogativePronoun(range:singular) verb(component_be:present:singular) determiner(component_the) noun(singular) preposition adjunct(domain)?",
+          "interrogativePronoun(range:singular) verb(component_be:present:plural) determiner(component_the) noun(plural) preposition adjunct(domain)?"
+
+          //"interrogativePronoun verb(component_be:present:singular) determiner(component_the) noun(singular) preposition adjunct(domain)?",
           //"Who is the mayor of Paris?",
-          "interrogativePronoun verb(component_be:present:singular) determiner(component_the) noun(singular) preposition adjunct(domain)?",
-          "interrogativePronoun verb(component_be:present:plural) determiner(component_the) noun(singular) preposition adjunct(domain)?"
-                
-          /*"interrogativePronoun(nominativeCase:range:singular) verb(component_be:past:singular) determiner(component_the_nominative:reference) noun(nominativeCase:singular) preposition adjunct(domain)?",
-          "interrogativePronoun(nominativeCase:range:plural) verb(component_be:present:plural) noun(nominativeCase:plural) preposition adjunct(domain)?",
-          "interrogativePronoun(nominativeCase:range:plural) verb(component_be:past:plural) noun(nominativeCase:plural) preposition adjunct(domain)?",
-          "interrogativeDeterminer(nominativeCase:range:singular) verb(component_be:present:singular) nounPhrase?",
-          "interrogativeDeterminer(nominativeCase:range:singular) verb(component_be:past:singular) nounPhrase?",
-          "interrogativeDeterminer(nominativeCase:range:plural) verb(component_be:present:plural) nounPhrase?",
-          "interrogativeDeterminer(nominativeCase:range:plural) verb(component_be:past:plural) nounPhrase?",
-          //Gib mir die Enkel von Elvis Presley.
-           "verb(imperative_transitive:present:singular) pronoun(object_pronoun) determiner(component_the_accusative:reference:singular) noun(accusativeCase:singular) preposition adjunct(domain).",
-           "verb(imperative_transitive:present:singular) pronoun(object_pronoun) determiner(component_the_accusative:reference:plural) noun(accusativeCase:plural) preposition adjunct(domain).",
-          //Gib mir alle Bandmitglieder von Prodigy
-           "verb(imperative_transitive:present:singular) pronoun(object_pronoun) determiner(alle) noun(accusativeCase:plural) preposition adjunct(domain).",
-          //"In welchem Land ist der Mount Everest?", In welcher Stadt ist die Heinekenbrauerei?
-            "preposition interrogativeDeterminer(dativeCase:range:singular) verb(component_be:present:singular) determiner(component_the_nominative:domain:singular) adjunct(domain)?",
-            "interrogativePlace(nominativeCase:singular) verb(component_be:present:singular) determiner(component_the_nominative:domain:singular) object(domain)?"  ,
-           //"Liste die Kinder von Margaret Thatcher auf.",
-           "verb(imperative_verb:present:plural) determiner(component_the_nominative:reference:plural) noun(nominativeCase:plural) preposition adjunct(domain) preposition(auf)."  ,   
-           //"Liste die Kinder von Margaret Thatcher auf.",
-           "verb(imperative_verb:present:plural) determiner(alle) noun(nominativeCase:plural) preposition adjunct(domain) preposition(auf)."  
-               */  
-                 ),
+          //"interrogativePronoun verb(component_be:present:singular) determiner(component_the) noun(singular) preposition adjunct(domain)?"        
+        ),
         NounPPFrame,
         whQuestion
       )
@@ -128,7 +110,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       createSentenceTemplate(language,
         List.of(
           //"Hatte Che Guevara Kinder?",
-          "verb(component_haben:past:singular) object(domain) noun(nominativeCase)?" 
+         // "verb(component_haben:past:singular) object(domain) noun(nominativeCase)?" 
         
           //Gibt es ein Videospiel, das Battle Chess heißt?
           // "verb(imperative_transitive) pronoun(object_pronoun_es) article(definite_article:nominativeCase:neuter), noun(nominativeCase), article(component_the_nominative:nominativeCase:neuter) object(domain)"    
@@ -154,7 +136,8 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       createSentenceTemplate(language,
         List.of(
           //the capital of germany
-         "determiner(component_the) noun(singular) preposition adjunct(domain)?"
+         "determiner(component_the) noun(singular) preposition adjunct(domain)?",
+         "determiner(component_the) noun(plural) preposition adjunct(domain)?"
                 ),
         NounPPFrame,
         nounPhrase
@@ -375,7 +358,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         language,
         List.of(
         //Wo wurde Donald Trump geboren?
-         "interrogativePlace(nominativeCase:singular) verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?"
+         //"interrogativePlace(nominativeCase:singular) verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?"
         ),
         IntransitivePPFrame,
         WHERE_WHO_PAST_PERSON,
@@ -388,7 +371,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       createSentenceTemplate(language,
         List.of(
                  //"Wieviel hat Pulp Fiction gekostet?","Wieviele Sprachen werden in Turkmenistan gesprochen?"
-         "interrogativeAmount(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?"
+        // "interrogativeAmount(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?"
           //was kostet der film?
           //"interrogativePronoun(nominativeCase:present:singular) verb(mainVerb:present:thridPerson) determiner(component_the_nominative:domain) object(domain)?"
          //"Wieviele Sprachen werden in Turkmenistan gesprochen?"  

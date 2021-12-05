@@ -94,7 +94,8 @@ public class NPPGrammarRuleGenerator extends GrammarRuleGeneratorRoot implements
         sentences = generateNounPhrase(lexicalEntryUtil, nounPhrase);
         if (!sentences.isEmpty()) {
             GrammarEntry fragmentEntry = this.generateGrammarEntryforNP(grammarEntry, lexicalEntryUtil, SentenceType.NP, sentences,nounPhrase);
-            grammarEntries.add(fragmentEntry);
+            grammarEntry.setSentences(fragmentEntry.getSentences());
+            grammarEntries.add(grammarEntry);
         }
         return grammarEntries;
     }
@@ -113,6 +114,7 @@ public class NPPGrammarRuleGenerator extends GrammarRuleGeneratorRoot implements
         if (type.contains(booleanQuestionDomainRange) || type.contains(booleanQuestionDomain)) {
             fragmentEntry.setQueryType(QueryType.ASK);
         }
+        
 
         fragmentEntry.setSentences(generatedSentences);
         System.out.println("fragmentEntry.getSparqlQuery()::" + fragmentEntry.getSparqlQuery());

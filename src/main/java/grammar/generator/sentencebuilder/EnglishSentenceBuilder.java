@@ -142,7 +142,9 @@ public class EnglishSentenceBuilder implements TempConstants {
 
         if (flagReference && (attribute.equals(pronoun))) {
             word = new PronounFinder(this.lexicalEntryUtil,attribute,reference,templateFeatures).getWord();
-        } else if (attribute.contains(preposition)) {
+            
+        }   
+        else if (attribute.contains(preposition)) {
             word = this.findPreposition(attribute, reference, flagReference);
            
         } else if (flagReference && isIntergativePronoun(attribute).first) {
@@ -175,13 +177,8 @@ public class EnglishSentenceBuilder implements TempConstants {
               word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil,subjectType.name());
 
         }else if (flagReference && attribute.contains(noun)) {
-            //AnnotatedNounOrQuestionWord annotatedNoun = annotatedLexicalEntryNouns.iterator().next();
-
-            if (reference.contains(colon)) {
-                String[] col = reference.split(colon);
-                word = this.getReferenceWrttienForm(col[0], col[1]);
-
-            }
+                word = this.getReferenceWrttienForm(reference);
+               
 
         } else if (flagReference && attribute.contains(verb)) {
             word = new EnglishVerbFinder(this.frameType,this.lexicalEntryUtil,attribute, reference).getWord();
@@ -544,46 +541,33 @@ public class EnglishSentenceBuilder implements TempConstants {
         }
         return result;
     }
+    
+    private String getReferenceWrttienForm(String numberType) {
+        List<AnnotatedNounOrQuestionWord> annotatedLexicalEntryNouns = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords();
+        String result = "";
+        for (AnnotatedNounOrQuestionWord annotatedNounOrQuestionWord : annotatedLexicalEntryNouns) {
+            if (annotatedNounOrQuestionWord.getNumber().toString().contains(numberType)) {
+                result = annotatedNounOrQuestionWord.getWrittenRepValue();
+                break;
+            }
+
+        }
+
+        return result;
+    }
 
    
    
     private String findPreposition(String attribute, String reference, Boolean flagReference) throws QueGGMissingFactoryClassException {
         String word = "XX";
         if (!flagReference) {
-             word = this.lexicalEntryUtil.getPreposition();
-
+            reference = this.lexicalEntryUtil.getPrepositionReference();
+            word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, reference);
         } else if (flagReference) {
-            word = this.getSingle(reference);
+            word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, reference);
 
         }
-       
         return word;
-        
-        
-        /*if (!flagReference) {
-            word = this.getSingle(attribute);
-
-        } else if (flagReference) {
-            word = this.getSingle(reference);
-
-        }
-         if(word.contains("X"))
-                word="";
-
-        return word;*/
-        
-        /*
-         LexInfo lexInfo = this.lexicalEntryUtil.getLexInfo();
-        String preposition = this.lexicalEntryUtil.getPreposition();
-        Map<String, String> auxilaries = this.getAuxilariesVerb(numberList, "component_aux_object_past", lexInfo);
-        SubjectType subjectType = this.lexicalEntryUtil.getSubjectType(this.lexicalEntryUtil.getSelectVariable(), domainOrRangeType);
-        String qWord = this.lexicalEntryUtil.getSubjectBySubjectType(subjectType, language, null);
-        String bindingString = DomainOrRangeType.getMatchingType(this.lexicalEntryUtil.getConditionUriBySelectVariable(
-                LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable())
-        )).name();
-
-        */
-
     }
 
     /*private boolean isTrennVerb(String word) {
