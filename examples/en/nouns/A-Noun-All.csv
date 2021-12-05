@@ -1,0 +1,238 @@
+LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingularForm, domainWrittenPluralForm,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
+birthPlace_of,noun,birth place,-,of,NounPPFrame,range,domain,1,dbo:birthPlace,dbo:Person,dbo:Place,Person,Persons,Place,Places
+height_of,noun,height,-,of,NounPPFrame,range,domain,1,dbo:height,dbo:Person,xsd:double,Person,Persons,-,-
+deathPlace_of,noun,death place,-,of,NounPPFrame,range,domain,1,dbo:deathPlace,dbo:Person,dbo:Place,Person,Persons,Place,Places
+father_of,noun,father,-,of,NounPPFrame,range,domain,1,dbo:father,dbo:Person,dbo:Person,Person,Persons,Person,Persons
+successor-of,noun,successor,-,of,NounPPFrame,range,domain,1,dbo:successor,dbo:Person,dbo:Person,Person,Persons,Person,Persons
+residence-of,noun,residence,residences,of,NounPPFrame,range,domain,1,dbo:residence,dbo:Place,dbo:Person,Place,Places,Person,Persons
+partner-of,noun,partner,partners,of,NounPPFrame,range,domain,1,dbo:partner,dbo:Person,dbo:Person,Person,Persons,Person,Persons
+spouse-of,noun,spouse,spouses,of,NounPPFrame,range,domain,1,dbo:spouse,dbo:Person,dbo:Person,Person,Persons,Person,Persons
+birthDate-of,noun,birth date,-,of,NounPPFrame,range,domain,1,dbo:birthDate,dbo:Person,xsd:date,Person,Persons,-,-
+education-of,noun,education,-,of,NounPPFrame,range,domain,1,dbo:education,dbo:Person,xsd:string,Person,Persons,-,-
+nationality_of,noun,nationality,-,of,NounPPFrame,range,domain,1,dbo:nationality,dbo:Person,dbo:Country,Person,Persons,Person,Persons
+editor_of,noun,editor,editors,of,NounPPFrame,range,domain,1,dbo:editor,dbo:Work,dbo:Person,Work,Works,Person,Persons
+creator_of,noun,creator,creators,of,NounPPFrame,range,domain,1,dbo:creator,dbo:Person,dbo:Agent,Person,Persons,Agent,Agents
+capital-of,noun,capital,-,of,NounPPFrame,range,domain,1,dbo:capital,dbo:Country,dbo:City,Country,Countries,City,Cities
+city-of,noun,city,cities,of,NounPPFrame,range,domain,1,dbo:city,dbo:Country,dbo:City,Country,Countries,City,Cities
+formOfGovernment-of,noun,form of government,-,of,NounPPFrame,range,domain,1,dbo:governmentType,dbo:Country,dbo:GovernmentType,Country,Countries,Goverment type,Goverment types
+countryCode-of,noun,country code,-,of,NounPPFrame,range,domain,1,dbo:countryCode,dbo:Country,xsd:integer,Country,Countries,-,-
+assets-of,noun,assets,-,of,NounPPFrame,range,domain,1,dbo:assets,dbo:Company,xsd:double,Company,Companies,-,-
+subsidiary-of,noun,subsidiary,subsidiaries,of,NounPPFrame,range,domain,1,dbo:subsidiary,dbo:Company,dbo:Company,Company,Companies,Company,Companies
+predecessor-of,noun,predecessor,-,of,NounPPFrame,range,domain,1,dbo:predecessor,dbo:Person,dbo:Politician,Person,Persons,Politician,Politicians
+equity-of,noun,equity,-,of,NounPPFrame,range,domain,1,dbo:equity,dbo:Company,xsd:double,Company,Companies,-,-
+postalCode-of,noun,postal code,-,of,NounPPFrame,range,domain,1,dbo:postalCode,dbo:City,xsd:string,City,Cities,-,-
+populationTotal-of,noun,total population,-,of,NounPPFrame,range,domain,1,dbo:populationTotal,dbo:Place,xsd:nonNegativeInteger,Place,Places,-,-
+completionDate-of,noun,completion date,-,of,NounPPFrame,range,domain,1,dbo:completionDate,dbo:TelevisionShow,xsd:date,Television show,Television shows,-,-
+nearestCity-to,noun,nearest city,nearest cities,to,NounPPFrame,range,domain,1,dbo:nearestCity,dbo:Place,dbo:PopulatedPlace,Place,Places,populated Place,populated Places
+revenue-of,noun,revenue,-,of,NounPPFrame,range,domain,1,dbo:revenue,dbo:Organisation,xsd:double,Organisation,Organisations,-,-
+keyPerson-of,noun,key person,key persons,of,NounPPFrame,range,domain,1,dbo:keyPerson,dbo:Organisation,dbo:Person,Organisation,Organisations,Person,Persons
+formerName-of,noun,former name,-,of,NounPPFrame,range,domain,1,dbo:formerName,dbo:Organisation,rdf:langString,Organisation,Organisations,-,-
+abbreviation-of,noun,abbrevation,-,of,NounPPFrame,range,domain,1,dbo:abbreviation,dbo:Organisation,xsd:string,Organisation,Organisations,-,-
+formationDate-of,noun,formation date,-,of,NounPPFrame,range,domain,1,dbo:formationDate,dbo:Organisation,xsd:date,Organisation,Organisations,-,-
+runtime-of,noun,runtime,-,of,NounPPFrame,range,domain,2,dbo:runtime,dbo:TelevisionShow,xsd:double,Television show,Television shows,-,-
+associatedMusicalArtist-of,noun,associated musical artist ,associated musical artists,of,NounPPFrame,range,domain,1,dbo:associatedMusicalArtist,dbo:MusicalArtist,dbo:Person,Musician,Musicians,Person,Persons
+artist-of,noun,artist,artists,of,NounPPFrame,range,domain,1,dbo:artist,dbo:MusicalWork,dbo:Agent,Musical work,Musical works,Agent,Agents
+buidlingEndDate-of,noun,building end date,building end dates,of,NounPPFrame,range,domain,1,dbo:buildingEndDate,dbo:Location,xsd:date,Location,Locations,-,-
+occupation-of,noun,occupation,occupations,of,NounPPFrame,range,domain,1,dbo:occupation,dbo:Person,dbo:PersonFunction,Person,Persons,function of Person,function of Persons
+length_of,noun,length,-,of,NounPPFrame,range,domain,1,dbp:length,dbo:River,xsd:nonNegativeInteger,River,Rivers,-,-
+opponent-of,noun,opponent,opponents,of,NounPPFrame,range,domain,1,dbo:opponent,dbo:Person,dbo:Person,Person,Persons,Person,Persons
+showJudge-of,noun,show judge,show judges,of,NounPPFrame,range,domain,1,dbo:showJudge ,dbo:TelevisionShow,dbo:Person,Television show,Television shows,Person,Persons
+electoralDistrict-of,noun,electoral District,-,of,NounPPFrame,range,domain,1,dbo:region,dbo:Politician,dbo:Place,Politician,Politicians,Place,Places
+releaseDate-of,noun,realease date,-,of,NounPPFrame,range,domain,2,dbo:releaseDate,dbo:Song,xsd:date,Song,Songs,-,-
+publicationDate-of,noun,publication date,-,of,NounPPFrame,range,domain,1,dbo:publicationDate,dbo:WrittenWork,xsd:date,written work,written works,-,-
+numberOfPages-of,noun,number of pages,-,of,NounPPFrame,range,domain,1,dbo:numberOfPages,dbo:WrittenWork,xsd:positiveInteger,written work,written works,-,-
+genre-of,noun,genre,genres,of,NounPPFrame,range,domain,1,dbo:genre,dbo:Work,dbo:Genre,work,works,Genre,Genres
+composer-of,noun,composer,composers,of,NounPPFrame,range,domain,1,dbo:composer,dbo:Work,dbo:Person,work,works,Person,Persons
+director-of,noun,director,directors,of,NounPPFrame,range,domain,1,dbo:director,dbo:Film,dbo:Person,Film,Films,Person,Persons
+budget-of,noun,budget,budgets,of,NounPPFrame,range,domain,1,dbo:budget,dbo:Film,xsd:double,Film,Films,-,-
+musicComposer-of,noun,music composer,music composers,of,NounPPFrame,range,domain,1,dbo:musicComposer,dbo:Film,dbo:Person,Film,Films,Person,Persons
+alterEgo-of,noun,elevation,-,of,NounPPFrame,range,domain,1,dbo:areaUrban,dbo:PopulatedPlace,xsd:double,populated Place,populated Places,-,-
+areaCode_of,noun,area code,-,of,NounPPFrame,range,domain,1,dbo:areaCode,dbo:Place,xsd:string,Place,Places,-,-
+artisticMovement_of,noun,artistic movement,artistic movements,of,NounPPFrame,range,domain,1,dbo:movement,dbo:Artist,owl:Thing,Artist,Artists,Thing,Things
+author_of,noun,author,authors,of,NounPPFrame,range,domain,1,dbo:author,dbo:Work,dbo:Person,work,works,Person,Persons
+birthYear_of,noun,birth year,-,of,NounPPFrame,range,domain,1,dbo:birthYear,dbo:Person,xsd:gYear,Person,Persons,year,years
+causeOfDeath_of,noun,cause of death,causes of death,of ,NounPPFrame,range,domain,1,dbo:deathCause,dbo:Person,owl:Thing,Person,Persons,Thing,Things
+child_of,noun,child,children,of ,NounPPFrame,range,domain,1,dbo:child,dbo:Person,dbo:Person,Person,Persons,Person,Persons
+cost_of,noun,cost,-,of,NounPPFrame,range,domain,1,dbo:budget,dbo:Film,xsd:double,Film,Films,-,-
+currency_of,noun,currency,currencies,of,NounPPFrame,range,domain,1,dbo:currency,dbo:Country,dbo:Currency,Country,Countries,Currency,Currencies
+deathDate-of,noun,death date,-,of,NounPPFrame,range,domain,1,dbo:deathDate,dbo:Person,xsd:date,Person,Persons,-,-
+developer_of,noun,developer,developers,of,NounPPFrame,range,domain,1,dbo:developer,dbo:Work,dbo:Agent,work,works,Agent,Agents
+dissolutionDate_of,noun,dissolution date,-,of,NounPPFrame,range,domain,1,dbo:dissolutionDate,dbo:PopulatedPlace,xsd:date,populated Place,populated Places,-,-
+doctoralSupervisor_of,noun,doctoral supervisor,doctoral supervisors,of,NounPPFrame,range,domain,1,dbo: doctoralAdvisor,dbo:Scientist,dbo:Person,Scientist,Scientists,Person,Persons
+elevation_of,noun,elevation,-,of,NounPPFrame,range,domain,1,dbo:areaUrban,dbo:PopulatedPlace,xsd:double,populated Place,populated Places,-,-
+episode_of,noun,episode,episodes,of,NounPPFrame,range,domain,1,dbo:series,dbo:TelevisionEpisode,dbo:TelevisionShow,Television Episode,Television Episodes,Television show,Television shows
+foundationPlace_of,noun,foundation place,-,of,NounPPFrame,range,domain,1,dbo:foundationPlace,dbo:Organisation,dbo:City,Organisation,Organisations,City,Cities
+founder_of,noun,founder,founders,of,NounPPFrame,range,domain,1,dbo:parentCompany,dbo:Company,dbo:Company,Company,Companies,Company,Companies
+foundingYear_of,noun,founding year,-,of,NounPPFrame,range,domain,1,dbo:foundingYear,dbo:Company,xsd:gYear,Company,Companies,year,years
+headquarter_of,noun,headquarter,-,of,NounPPFrame,range,domain,1,dbo:headquarter,dbo:Organisation,dbo:PopulatedPlace,Organisation,Organisations,populated Place,populated Places
+homeStadium_of,noun,home stadium,home stadiums,of,NounPPFrame,range,domain,1,dbo:ground,dbo:SoccerClub,dbo:Building,Soccer Club,Soccer Clubs,Building,Buildings
+host_of,noun,host,hosts,of,NounPPFrame,range,domain,1,dbo:presenter,dbo:TelevisionShow,dbo:Person,Television show,Television shows,Person,Persons
+influencer_of,noun,influencer,influencers,of,NounPPFrame,range,domain,1,dbo:influenced,dbo:Person,dbo:Person,Person,Persons,Person,Persons
+ingredient_of,noun,ingredient,ingredients,of,NounPPFrame,range,domain,1,dbo:ingredient,dbo:Food,owl:Thing,Food,Foods,Thing,Things
+largestCity_of,noun,largest city,-,of,NounPPFrame,range,domain,1,dbo:largestCity,dbo:Country,dbo:City,Country,Countries,City,Cities
+leader-of,noun,leader,-,of,NounPPFrame,range,domain,1,dbo:leader,dbo:Country,dbo:Person,Country,Countries,Person,Persons
+location-of,noun,location,-,of,NounPPFrame,range,domain,1,dbo:location,dbo:Place,dbo:Place,Place,Places,Place,Places
+manufacturer-of,noun,manufacturer,manufacturers,of,NounPPFrame,range,domain,1,dbo:manufacturer,owl:Thing,dbo:Organisation,Thing,Things,Organisation,Organisations
+mayor_of,noun,mayor,-,of,NounPPFrame,range,domain,1,dbo:mayor,dbo:City,dbo:Person,City,Cities,Person,Persons
+almaMater-of,noun,Alma Mater,Alma Maters,of,NounPPFrame,range,domain,1,dbo:almaMater,dbo:Person,dbo:EducationalInstitution,Person,Persons,educational Institution,educational Institutions
+destination-of,noun,destination,destinations,of,NounPPFrame,range,domain,1,dbo:destination,dbo:PublicTransitSystem,dbo:PopulatedPlace,public TransitSystem,public TransitSystems,populated Place,populated Places
+distributor-of,noun,distributor,distributors,of,NounPPFrame,range,domain,1,dbo:distributor,dbo:Film,dbo:Organisation,Film,Films,Organisation,Organisations
+gross-of,noun,gross,-,of,NounPPFrame,range,domain,1,dbo:gross,dbo:Film,xsd:double,Film,Films,-,-
+productionCompany-of,noun,production company,production companies,of,NounPPFrame,range,domain,1,dbo:productionCompany,dbo:Work,dbo:Company,work,works,Company,Companies
+length-of,noun,length,-,of,NounPPFrame,range,domain,1,dbo:length,dbo:River,xsd:double,River,Rivers,-,-
+areaTotal-of,noun,total area,-,of,NounPPFrame,range,domain,1,dbo:areaTotal,dbo:Place,xsd:double,Place,Places,-,-
+governingBody-of,noun,governing body,governing bodies,of,NounPPFrame,range,domain,1,dbo:governingBody,dbo:Place,dbo:Organisation,Place,Places,Organisation,Organisations
+elevation-of,noun,elevation,-,of,NounPPFrame,range,domain,1,dbo:elevation,dbo:Place,xsd:double,Place,Places,-,-
+populationMetro-of,noun,population metro,population metros,of,NounPPFrame,range,domain,1,dbo:populationMetro,dbo:PopulatedPlace,xsd:nonNegativeInteger,populated Place,populated Places,-,-
+areaUrban-of,noun,urban area,urban areas,of,NounPPFrame,range,domain,1,dbo:areaUrban,dbo:PopulatedPlace,xsd:double,populated Place,populated Places,-,-
+populationDensity-of,noun,population density,-,of,NounPPFrame,range,domain,1,dbo:populationDensity,dbo:PopulatedPlace,xsd:double,populated Place,populated Places,-,-
+populationTotalRanking_of,noun,total population ranking,-,of,NounPPFrame,range,domain,1,dbo:populationTotalRanking,dbo:PopulatedPlace,xsd:positiveInteger,populated Place,populated Places,-,-
+soundRecording-of,noun,sound recording,sound recordings,of,NounPPFrame,range,domain,1,dbo:soundRecording,dbo:Work,dbo:Sound,work,works,dbo:Sound,
+originalName-of,noun,original name,-,of,NounPPFrame,range,domain,1,dbo:originalName ,dbo:Person,xsd:string,Person,Persons,-,-
+headquarter,noun,headquarter,-,of,NounPPFrame,range,domain,1,dbo:headquarter,dbo:Organisation,dbo:PopulatedPlace,Organisation,Organisations,dbo:PopulatedPlace,
+netIncome-of,noun,net Income,net incomes,of,NounPPFrame,range,domain,1,dbo:netIncome,dbo:Company,xsd:double,Company,Companies,-,-
+citizenship-of,noun,citizenship,citizenships,of,NounPPFrame,range,domain,1,dbo:citizenship,dbo:Person,dbo:Location,Person,Persons,Location,Locations
+deathCause-of,noun,death cause,death causes,of,NounPPFrame,range,domain,1,dbo:deathCause,dbo:Person,dbo:disease,Person,Persons,Disease,Diseases
+signature-of,noun,signature,-,of,NounPPFrame,range,domain,1,dbo:signature,dbo:Person,xsd:string,Person,Persons,-,-
+profession-of,noun,profession,professions,of,NounPPFrame,range,domain,1,dbo:profession,dbo:Person,dbo:PersonFunction,Person,Persons,function of Person,function of Persons
+recordLabel-of,noun,record label,record labels,of,NounPPFrame,range,domain,1,dbo:recordLabel,dbo:Work,dbo:RecordLabel,work,works,RecordLabel,RecordLabels
+previousWork-of,noun,previous work,previous works,of,NounPPFrame,range,domain,1,dbo:previousWork,dbo:Work,dbo:Work,work,works,work,works
+subsequentWork-of,noun,subsequent work,-,of,NounPPFrame,range,domain,1,dbo:subsequentWork,dbo:Work,dbo:Work,work,works,work,works
+dissolutionDate-of,noun,dissolution date,-,of,NounPPFrame,range,domain,1,dbo:DissolutionDate,dbo:PopulatedPlace,xsd:date,populated Place,populated Places,-,-
+wife-of,noun,wife,wives,of,NounPPFrame,range,domain,1,dbo:spouse,dbo:Person,dbo:Person,Person,Persons,Person,Persons
+producer-of,noun,producer,producers,of,NounPPFrame,range,domain,1,dbo:producer,dbo:Film,dbo:Person,Film,Films,Person,Persons
+narrator-of,noun,narrator,narrators,of,NounPPFrame,range,domain,1,dbo:narrator,dbo:Work,dbo:Person,work,works,Person,Persons
+portrayer-of,noun,portrayer,portrayers,of,NounPPFrame,range,domain,1,dbo:portrayer,dbo:FictionalCharacter,dbo:Person,fictional Character,fictional Characters,Person,Persons
+stateOfOrigin-of,noun,origin,-,of,NounPPFrame,range,domain,1,dbo:stateOfOrigin,dbo:Person,dbo:Country,Person,Persons,Country,Countries
+mostKnownWorks-of,noun,most known work,-,of,NounPPFrame,range,domain,1,dbo:knownFor,dbo:Person,dbo:Work,Person,Persons,work,works
+education-of,noun,education,-,of,NounPPFrame,range,domain,1,dbo:education,dbo:Person,xsd:string,Person,Persons,-,-
+runtimeSeconds-of,noun,runtime in seconds,-,of,NounPPFrame,range,domain,1,dbo:runtime,dbo:Work,xsd:double,work,works,-,-
+writer-of,noun,writer,-,of,NounPPFrame,range,domain,1,dbo:writer,dbo:Work,dbo:Person,work,works,Person,Persons
+foundingDate-of,noun,founding date ,-,of,NounPPFrame,range,domain,1,dbo:foundingDate,dbo:Organisation,xsd:date,Organisation,Organisations,-,-
+assets-of,noun,assets,-,of,NounPPFrame,range,domain,1,dbo:assets,dbo:Company,xsd:double,Company,Companies,-,-
+numberOfEmployees,noun,number of employees,-,of ,NounPPFrame,range,domain,1,dbo:numberOfEmployees,dbo:Organisation,xsd:nonNegativeInteger,Organisation,Organisations,-,-
+operatingIncome-of,noun,operating income,-,of,NounPPFrame,range,domain,1,dbo:operatingIncome,dbo:Company,xsd:double,Company,Companies,-,-
+aream_of,noun,area in mý,areas in mý,of,NounPPFrame,range,domain,1,dbo:area,dbo:Place,xsd:double,Place,Places,-,-
+currency-of,noun,currency,-,of,NounPPFrame,range,domain,1,dbo:currency,dbo:Country,dbo:Currency,Country,Countries,Currency,Currencies
+foundingYear-of,noun,founding year,-,of,NounPPFrame,range,domain,1,dbo:foundingYear,dbo:Country,xsd:gYear,Country,Countries,year,years
+deathDate-of,noun,death date,-,of,NounPPFrame,range,domain,1,dbo:deathDate,dbo:Person,xsd:date,Person,Persons,-,-
+endowment-of,noun,endowment,-,of,NounPPFrame,range,domain,1,dbo:endowment,dbo:Organisation,xsd:double,Organisation,Organisations,-,-
+area-of,noun,area,-,of,NounPPFrame,range,domain,1,dbo:area,dbo:Organisation,xsd:double,Organisation,Organisations,-,-
+networth-of,noun,networth,-,of,NounPPFrame,range,domain,1,dbo:networth,dbo:Person,xsd:double,Person,Persons,-,-
+parent-of,noun,parent,parents,of,NounPPFrame,range,domain,1,dbo:parent,dbo:Person,dbo:Person,Person,Persons,Person,Persons
+averageDepth-of,noun,average depth,-,of,NounPPFrame,range,domain,1,dbo:averageDepth,dbo:Place,xsd:double,Place,Places,-,-
+maximumDepth-of,noun,maximum depth,-,of,NounPPFrame,range,domain,1,dbo:maximumDepth,dbo:Place,xsd:double,Place,Places,-,-
+shoreLength-of,noun,shore length,-,of,NounPPFrame,range,domain,1,dbo:shoreLength,dbo:BodyOfWater,xsd:double,body of water,body of water,-,-
+volume-of,noun,volume,-,of,NounPPFrame,range,domain,1,dbo:volume,dbo:BodyOfWater,xsd:double,body of water,body of water,-,-
+width-of,noun,width,-,of,NounPPFrame,range,domain,1,dbo:width,dbo:BodyOfWater,xsd:double,body of water,body of water,-,-
+totalArea-of,noun,total area,-,of,NounPPFrame,range,domain,1,dbo:areaTotal,dbo:Place,xsd:double,Place,Places,-,-
+parentCompany-of,noun,parent company,parent companies,of,NounPPFrame,range,domain,1,dbo:parentCompany,dbo:Company,dbo:Company,Company,Companies,Company,Companies
+service-of,noun,service,services,of,NounPPFrame,range,domain,1,dbo:service,dbo:Organisation,dbo:PersonFunction,Organisation,Organisations,function of Person,function of Persons
+movie-of,noun,movie,movies,of,NounPPFrame,range,domain,1,dbo:Person,dbo:Person,dbo:Work,Person,Persons,work,works
+awards-of,noun,award,-,of,NounPPFrame,range,domain,1,dbo:award,dbo:Work,dbo:Award,work,works,Award,Awards
+producer-of,noun,producer,-,of,NounPPFrame,range,domain,2,dbo:producer,dbo:Song,dbo:Person,Song,Songs,Person,Persons
+bside-of,noun,B-side,-,of,NounPPFrame,range,domain,1,dbo:bsSde,dbo:Song,xsd:string,Song,Songs,-,-
+releaseType-of,noun,realease type,-,of,NounPPFrame,range,domain,1,dbo:type,dbo:Song,xsd:string,Song,Songs,-,-
+aside-of,noun,A-side,-,of,NounPPFrame,range,domain,1,dbo:aSide,dbo:Song,xsd:string,Song,Songs,-,-
+literaryGenre-of,noun,literary genre,-,of,NounPPFrame,range,domain,2,dbo:literaryGenre,dbo:WrittenWork,dbo:literaryGenre,written work,written works,literary Genre,literary Genres
+language-of,noun,language,-,of,NounPPFrame,range,domain,1,dbo:language,dbo:WrittenWork,dbo:Language,written work,written works,Language,Languages
+language-of,noun,language,-,of,NounPPFrame,range,domain,2,dbo:language,dbo:Organisation,dbo:Language,Organisation,Organisations,Language,Languages
+publisher-of,noun,publisher,-,of,NounPPFrame,range,domain,2,dbo:publisher,dbo:WrittenWork,dbo:Agent,written work,written works,Agent,Agents
+mediaType-of,noun,media type,-,of,NounPPFrame,range,domain,1,dbo:mediaType,dbo:WrittenWork,xsd:string,written work,written works,-,-
+colour-of,noun,colour,-,of,NounPPFrame,range,domain,1,dbo:colour,dbo:PoliticalParty,dbo:Colour,political Party,political Parties,Colour,Colours
+movie_of,noun,movie ,movies,of,NounPPFrame,range,domain,1,dbo:starring,dbo:Actor,dbo:Work,Actor,Actors,work,works
+show-of,noun,show,shows,of,NounPPFrame,range,domain,1,dbo:starring,dbo:Actor,dbo:Work,Actor,Actors,work,works
+membership-of,noun,membership,-,of,NounPPFrame,range,domain,1,dbo:membership,dbo:Organisation,rdf:langString,Organisation,Organisations,-,-
+purpose-of,noun,purpose,-,of,NounPPFrame,range,domain,1,dbo:purpose,dbo:Organisation,xsd:string,Organisation,Organisations,-,-
+revenueYear-of,noun,year of reported revenue,-,of,NounPPFrame,range,domain,1,dbo:revenueYear,dbo:Organisation,xsd:gYear,Organisation,Organisations,year,years
+anthem-of,noun,anthem,anthems,of,NounPPFrame,range,domain,1,dbo:anthem,dbo:Country,xsd:string,Country,Countries,-,-
+currencyCode-of,noun,currency code,-,of,NounPPFrame,range,domain,1,dbo:currencyCode,dbo:Currency,xsd:string,Currency,Currencies,-,-
+demonym-of,noun,demonym ,-,of,NounPPFrame,range,domain,1,dbo:demonym,dbo:Country,xsd:string,Country,Countries,-,-
+event-in,noun,event,events,in,NounPPFrame,range,domain,1,dbo:event,dbo:Country,xsd:string,Country,Countries,-,-
+giniCoefficient-of,noun,gini coefficient,-,of,NounPPFrame,range,domain,1,dbo:giniCoefficient,dbo:Country,xsd:double,Country,Countries,-,-
+house-of,noun,house,-,of,NounPPFrame,range,domain,1,dbo:house,dbo:Country,xsd:double,Country,Countries,-,-
+country-of,noun,country,-,of,NounPPFrame,range,domain,1,dbo:Country,dbo:City,xsd:string,City,Cities,-,-
+leaderName-of,noun,leader name,-,of,NounPPFrame,range,domain,1,dbo:leaderName,dbo:City,xsd:string,City,Cities,-,-
+leaderTitle-of,noun,leader title ,-,of,NounPPFrame,range,domain,1,dbo:leaderTitle,dbo:City,xsd:string,City,Cities,-,-
+licenseNumber-of,noun,license number,-,of,NounPPFrame,range,domain,1,dbo:licenseNumber,dbo:City,xsd:string,City,Cities,-,-
+motto-of,noun,motto,-,of,NounPPFrame,range,domain,1,dbo:motto,dbo:City,xsd:string,City,Cities,-,-
+percentageOfAreaWater-of,noun,percentage of area water,-,of,NounPPFrame,range,domain,1,dbo:percentageOfAreaWater,dbo:City,xsd:double,City,Cities,-,-
+subdivision-of,noun,subdivision,subdivisions,of,NounPPFrame,range,domain,1,dbo:subdivision,dbo:City,xsd:string,City,Cities,-,-
+timeZone-of,noun,time zone,time zones,of,NounPPFrame,range,domain,1,dbo:timezone,dbo:City,xsd:string,City,Cities,-,-
+child-of,noun,child,children,of,NounPPFrame,range,domain,1,dbo:child,dbo:Person,dbo:Person,Person,Persons,Person,Persons
+deathPlace-of,noun,death place,-,of,NounPPFrame,range,domain,1,dbo:deathPlace,dbo:Person,xsd:string,Person,Persons,-,-
+relative-of,noun,relative,relatives,of,NounPPFrame,range,domain,1,dbo:relative,dbo:Person,xsd:string,Person,Persons,-,-
+numberOfStudents-of,noun,number of students,-,of,NounPPFrame,range,domain,1,dbo:numberOfStudents,dbo:EducationalInstitution,xsd:nonNegativeInteger,educational Institution,educational Institutions,-,-
+numberOfPostgraduateStudents,noun,number of postgraduate students,-,of,NounPPFrame,range,domain,1,dbo:numberOfPostgraduateStudents,dbo:University,xsd:nonNegativeInteger,University,Universities,-,-
+numberOfUndergraduateStudents,noun,number of undergraduate students,-,of,NounPPFrame,range,domain,1,dbo:numberOfUndergraduateStudents,dbo:EducationalInstitution,xsd:nonNegativeInteger,educational Institution,educational Institutions,-,-
+numberOfStaff,noun,number of staff,-,of,NounPPFrame,range,domain,1,dbo:staff,dbo:Organisation,xsd:nonNegativeInteger,Organisation,Organisations,-,-
+officialSchoolColour-of,noun,official school colour,-,of,NounPPFrame,range,domain,1,dbo:officialSchoolColour,dbo:EducationalInstitution,xsd:string,educational Institution,educational Institutions,-,-
+deputy-of,noun,deputy,-,of,NounPPFrame,range,domain,1,dbo:deputy,dbo:Person,xsd:string,Person,Persons,-,-
+office-of,noun ,office,-,of,NounPPFrame,range,domain,1,dbo:office,dbo:Politician,xsd:string,Politician,Politicians,-,-
+otherParty-of,noun,other party,other parties,of,NounPPFrame,range,domain,1,dbo:otherParty,dbo:Politician,xsd:string,Politician,Politicians,-,-
+party-of,noun,party,parties,of,NounPPFrame,range,domain,1,dbo:party,dbo:Politician,xsd:string,Politician,Politicians,-,-
+notableWork-of,noun,notable work,notable works,of,NounPPFrame,range,domain,1,dbo:notableWork,dbo:Writer,xsd:string,Writer,Writers,-,-
+pseudonym-of,noun,pseudonym,pseudonyms,of,NounPPFrame,range,domain,1,dbo:pseudonym,dbo:Writer,xsd:string,Writer,Writers,-,-
+restingPlace-of,noun,resting place,-,of,NounPPFrame,range,domain,1,dbo:restingPlace,dbo:Person,xsd:string,Person,Persons,-,-
+company-of,noun,company ,companies,of,NounPPFrame,range,domain,1,dbo:company,dbo:TelevisionShow,xsd:string,Television show,Television shows,-,-
+creator-of,noun,creator,-,of,NounPPFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Person,Television show,Television shows,Person,Persons
+distributor-of,noun,distributor,distributors,of,NounPPFrame,range,domain,2,dbo:distributor,dbo:TelevisionShow,xsd:string,Television show,Television shows,-,-
+imdbld-of,noun,imdbld,-,of,NounPPFrame,range,domain,1,dbo:imdbld,dbo:TelevisionShow,xsd:Integer,Television show,Television shows,-,-
+network-of,noun,network,networks,of,NounPPFrame,range,domain,1,dbo:network,dbo:TelevisionShow,xsd:string,Television show,Television shows,-,-
+numberOfEpisodes-of,noun,number of episodes,-,of,NounPPFrame,range,domain,1,dbo:numberOfEpisodes,dbo:TelevisionShow,xsd:integer,Television show,Television shows,-,-
+numberOfSeasons-of,noun,number of seasons,-,of,NounPPFrame,range,domain,1,dbo:numberOfSeasons,dbo:TelevisionShow,xsd:integer,Television show,Television shows,-,-
+presenter-of,noun,presenter,presenters,of,NounPPFrame,range,domain,1,dbo:presenter,dbo:TelevisionShow,dbo:Person,Television show,Television shows,Person,Persons
+riverMouth-of,noun,river mouth,-,of,NounPPFrame,range,domain,1,dbo:riverMouth,dbo:River,dbo:Sea,River,Rivers,Sea,Seas
+mouthLevel-of,noun,mouth level,-,of,NounPPFrame,range,domain,1,dbp:mouthLevel,dbo:River,xsd:string,River,Rivers,-,-
+humanDevelopementIndex-of,noun,human developement index,-,of,NounPPFrame,range,domain,1,dbo:humanDevelopementIndex,dbo:Country,xsd:float,Country,Countries,-,-
+religion-of,noun,religion ,religions,of,NounPPFrame,range,domain,1,dbo:religion,dbo:Country,xsd:string,Country,Countries,-,-
+cinematography-of,noun,cinematography,-,of,NounPPFrame,range,domain,1,dbo:cinematography,dbo:Film,dbo:Person,Film,Films,Person,Persons
+designer-of,noun,designer,-,of,NounPPFrame,range,domain,1,dbo:designer,dbo:Work,dbo:Person,work,works,Person,Persons
+gameArtist-of,noun,game artist,-,of,NounPPFrame,range,domain,1,dbo:gameArtist,dbo:VideoGame,dbo:Person,video Game,video Games,Person,Persons
+field-of,noun,field,fields,of,NounPPFrame,range,domain,1,dbo:field,dbo:Artist,dbo:PersonFunction,Artist,Artists,function of Person,function of Persons
+birthName-of,noun,birth name ,birth names,of,NounPPFrame,range,domain,1,dbo:birthName,dbo:Person,rdf:langString,Person,Persons,-,-
+location-of,noun,location,locations,of,NounPPFrame,range,domain,1,dbo:location,dbo:BodyOfWater,dbo:Place,body of water,body of water,Place,Places
+island-of,noun,island,islands,of,NounPPFrame,range,domain,1,dbo:island,dbo:BodyOfWater,dbo:Island,body of water,body of water,Island,Islands
+originalName-of,noun,original name,-,of,NounPPFrame,range,domain,1,dbo:originalName,dbo:Company,rdf:langString,Company,Companies,-,-
+founder-of,noun,founder,founders,of,NounPPFrame,range,domain,1,dbo:foundedBy,dbo:Company,dbo:Agent,Company,Companies,Agent,Agents
+discharge_of,noun,discharge,discharges,of,NounPPFrame,range,domain,1,dbo:discharge,dbo:Stream,xsd:double,Stream,Streams,-,-
+hometown-of,noun,hometown,-,of,NounPPFrame,range,domain,1,dbo:hometown,dbo:Person,dbo:Settlement,Person,Persons,Settlement,Settlements
+rightTributary_of,noun,right tributary,right tributaries,of,NounPPFrame,range,domain,1,dbo:rightTributary,dbo:River,dbo:River,River,Rivers,River,Rivers
+sourceCountry_of,noun,source country,source countries,of,NounPPFrame,range,domain,1,dbo:sourceCountry,dbo:Stream,dbo:Country,Stream,Streams,Country,Countries
+mouthCountry_of,noun,mouth country,mouth countries,of,NounPPFrame,range,domain,1,dbo:mouthCountry,dbo:River,dbo:Country,River,Rivers,Country,Countries
+sourceElevation_of,noun,source elevation,source elevations,of,NounPPFrame,range,domain,1,dbo:sourceElevation,dbo:River,xsd:double,River,Rivers,-,-
+mouthElevation_of,noun,mouth elevation,mouth elevations,of,NounPPFrame,range,domain,1,dbo:mouthElevation,dbo:River,xsd:double,River,Rivers,-,-
+isoCodeRegion-of,noun,ISO code region,-,of,NounPPFrame,range,domain,1,dbo:isoCodeRegion,dbo:Settlement,xsd:string,Settlement,Settlements,-,-
+bridgeCarries-of,noun,bridge carrier,bridge carries,of,NounPPFrame,range,domain,1,dbo:bridgeCarries,dbo:Bridge,xsd:string,Bridge,Bridges,-,-
+alias-of,noun,alias,aliases,of,NounPPFrame,range,domain,1,dbo:alias,dbo:Person,rdf:langString,Person,Persons,-,-
+runwayLength-of,noun,runway length,-,of,NounPPFrame,range,domain,1,dbo:runwayLength,dbo:Airport,xsd:double,Airport,Airports,-,-
+runwayDesignation-of,noun,designation runway,designation runways,of ,NounPPFrame,range,domain,1,dbo:runwayDesignation,dbo:Airport,xsd:string,Airport,Airports,-,-
+runwaySurface-of,noun,surface runway,surface runways,of,NounPPFrame,range,domain,1,dbo:runwaySurface,dbo:Airport,xsd:string,Airport,Airports,-,-
+iataLocationIdentifer-of,noun,IATA Location Identifier,-,of,NounPPFrame,range,domain,1,dbo:iataLocationIdentifier,dbo:Infrastructure,xsd:string,Infrastructure,Infrastructures,-,-
+icaoLocationIdentifier-of,noun,ICAO Location Identifier,-,of,NounPPFrame,range,domain,1,dbo:icaoLocationIdentifier,dbo:Airport,xsd:string,Airport,Airports,-,-
+album-of,noun,album,albums,of,NounPPFrame,range,domain,1,dbo:Album,dbo:Work,dbo:Album,work,works,Album,Albums
+publisher-of,noun,publisher,publishers,of,NounPPFrame,range,domain,1,dbo:Publisher,dbo:Work,dbo:Agent,work,works,Agent,Agents
+deweyDecimalClassification,noun,Dewey Decimal Classification,Dewey Decimal Classifications,of,NounPPFrame,range,domain,1,dbo:Dcc,dbo:Work,xsd:string,work,works,-,-
+lcc-of,noun,LCC,-,of,NounPPFrame,range,domain,1,dbo:Lcc,dbo:WrittenWork,xsd:string,written work,written works,-,-
+oclc-of,noun,OCLC,-,of,NounPPFrame,range,domain,1,dbo:Oclc,dbo:WrittenWork,xsd:string,written work,written works,-,-
+headquarter-of,noun,headquarter,-,of,NounPPFrame,range,domain,1,dbo:Headquarter,dbo:Organisation,dbo:PopulatedPlace,Organisation,Organisations,populated Place,populated Places
+ideology-of,noun,ideology,ideologies,of,NounPPFrame,range,domain,1,dbo:Ideology,dbo:Agent,dbo:Ideology,Agent,Agents,Ideology,Ideologies
+recordLocation-of,noun,record location,record locations,of,NounPPFrame,range,domain,1,dbo:RecordedIn,dbo:MusicalWork,dbo:PopulatedPlace,musical work,musical works,populated Place,populated Places
+relation-of,noun,relation,relations,of,NounPPFrame,range,domain,1,dbo:relation,dbo:Person,dbo:Person,Person,Persons,Person,Persons
+governmentType-of,noun,government type,government types,of,NounPPFrame,range,domain,1,dbo:governmentType,dbo:City,dbo:GovernmentType,City,Cities,GovernmentType,government Types
+illustrator-of,noun,illustrator,illustrators,of,NounPPFrame,range,domain,1,dbo:Illustrator,dbo:WrittenWork,dbo:Person,written work,written works,Person,Persons
+isbn-of,noun,ISBN,-,of,NounPPFrame,range,domain,1,dbo:Isbn,dbo:WrittenWork,xsd:string,written work,written works,-,-
+formationYear-of,noun,formation year,-,of,NounPPFrame,range,domain,1,dbo:FormationYear,dbo:Organisation,xsd:gYear,Organisation,Organisations,year,years
+dissolutionYear-of,noun,dissolution year,-,of,NounPPFrame,range,domain,1,dbo:DissolutionYear,"dbo:Organisation,_PopulatedPlace",xsd:year,Organisation,Organisations,year,years
+actor-of,noun,actor,actors,of,NounPPFrame,range,domain,1,dbo:Actor,dbo:Film,dbo:Person,Film,Films,Person,Persons
+relation-of,noun,relation,relations,of,NounPPFrame,range,domain,1,dbo:relation,dbo:Person,dbo:Person,Person,Persons,Person,Persons
+owner-of,noun,owner,owners,of,NounPPFrame,range,domain,1,dbo:owner,dbo:Location,dbo:Agent,Location,Locations,Agent,Agents
+politicalLeader-of,noun,political leader,political leaders,of,NounPPFrame,range,domain,1,dbo:politicalLeader,dbo:Place,dbo:PersonFunction,Place,Places,function of Person,function of Person
+picture-of,noun,picture,pictures,of,NounPPFrame,range,domain,1,dbo:picture,dbo:Thing,dbo:Thing,Thing,Things,Thing,Things
+movie-of,noun,movie,movies,of,NounPPFrame,range,domain,1,dbo:Person,dbo:Person,dbo:Work,Person,Persons,work,works
+termStart-of,noun,starting term,-,of,NounPPFrame,range,domain,1,dbo:termStart,dbo:Person,xsd:integer,Person,Persons,-,-
+termEnd-of,noun,ending term,-,of,NounPPFrame,range,domain,1,dbo:termEnd,dbo:Person,xsd:integer,Person,Persons,-,-
+activeYearsStartYear-of,noun,active years start year,-,of,NounPPFrame,range,domain,1,dbo:activeYearsStartYear,dbo:Person,xsd:gYear,Person,Persons,year,years
+activeYearsEndYear-of,noun,active years end year,-,of,NounPPFrame,range,domain,1,dbo:activeYearsEndYear,dbo:Person,xsd:gYear,Person,Persons,year,years
+activeYearsEndDate-of,noun,active years end date,-,of,NounPPFrame,range,domain,1,dbo:activeYearsEndDate,dbo:Politician,xsd:date,Politician,Politicians,-,-
+activeYearsStartDate-of,noun,active years start date,-,of,NounPPFrame,range,domain,1,dbo:activeYearsStartDate,dbo:Politician,xsd:date,Politician,Politicians,-,-
