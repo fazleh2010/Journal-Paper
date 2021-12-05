@@ -16,7 +16,6 @@ import eu.monnetproject.lemon.model.SynArg;
 import eu.monnetproject.lemon.model.SyntacticRoleMarker;
 import grammar.datasets.annotated.AnnotatedNounOrQuestionWord;
 import grammar.datasets.annotated.AnnotatedVerb;
-import static grammar.datasets.questionword.QuestionWordFactoryDE.questionWords;
 import grammar.datasets.questionword.QuestionWordFactoryIT;
 import grammar.datasets.sentencetemplates.TempConstants;
 import static grammar.generator.BindingConstants.BINDING_TOKEN_TEMPLATE;

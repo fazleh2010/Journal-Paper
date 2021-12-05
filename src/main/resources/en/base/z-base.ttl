@@ -17,12 +17,6 @@
   lemon:entry    :component_a ;
   lemon:entry    :component_an ;
   lemon:entry    :object_pronoun;
-  lemon:entry    :interrogativeDeterminer ;
-  lemon:entry    :interrogativeAmount ;
-  lemon:entry    :interrogativePronounPerson ;
-  lemon:entry    :interrogativePronounThing ;
-  lemon:entry    :interrogativePlace ;
-  lemon:entry    :interrogativeTemporal ;
   lemon:entry    :for ;
   lemon:entry    :by ;
   lemon:entry    :from ;
@@ -112,33 +106,6 @@
 :component_have a      lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "have"@en ] ;
   lexinfo:partOfSpeech lexinfo:verb .
-
-## Question words ##
-
- :interrogativeDeterminer a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "Which"@en ] ;
-  lexinfo:partOfSpeech lexinfo:article .
-
- :interrogativeAmount a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "How many"@en ] ;
-  lexinfo:partOfSpeech lexinfo:article .
-
- :interrogativePronounPerson a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "Who"@en ] ;
-  lexinfo:partOfSpeech lexinfo:article .
-
- :interrogativePronounThing a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "What"@en ] ;
-  lexinfo:partOfSpeech lexinfo:article .
-
- :interrogativePlace a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "Where"@en ] ;
-  lexinfo:partOfSpeech lexinfo:article .
-
-  :interrogativeTemporal a               lemon:SynRoleMarker ;
-  lemon:canonicalForm  [ lemon:writtenRep "When"@de ] ;
-   lexinfo:partOfSpeech lexinfo:verb .
-
 
 
 ## Determiners ##

@@ -57,11 +57,15 @@ public class GenderUtils implements TempConstants{
     }
 
     public static String getWrittenFormSingular(String uri) {
-        return nounWrittenForms.get(uri)[0];
+        if(nounWrittenForms.containsKey(uri))
+           return nounWrittenForms.get(uri)[0];
+        return "XX";
     }
 
     public static String getWrittenFormPlural(String uri) {
+        if(nounWrittenForms.containsKey(uri))
         return nounWrittenForms.get(uri)[1];
+         return "XX";
     }
     
     public static Pair<Boolean, String> getTrennVerbType(String key, String tense, String type) {

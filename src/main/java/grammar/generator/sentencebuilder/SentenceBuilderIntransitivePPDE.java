@@ -73,7 +73,7 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
             SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
             List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                     language, new String[]{frameType.getName(), active});
-            sentences = germanSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
+            sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
             System.out.println(sentences);
             //exit(1);
 
@@ -102,16 +102,15 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
         if (this.frameType.equals(FrameType.NPP)) {
             sentences = nounPhrase(bindingVariable, lexicalEntryUtil);
         } else if (this.frameType.equals(FrameType.VP)) {
-            DomainOrRangeType domainOrRangeType = this.templateFinder.getOppositeDomainOrRange();
             SelectVariable selectVariable = this.lexicalEntryUtil.getSelectVariable();
             SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
             List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                     language, new String[]{frameType.getName(), passive});
-            sentences = germanSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
-
-            sentences = germanSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
+            sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
             System.out.println(sentences);
             //sentences = nounPPframeSentence(bindingVariable, lexicalEntryUtil, passive);
+                    //exit(1);
+
         } else if (this.frameType.equals(FrameType.IPP)) {
             String template = this.templateFinder.getSelectedTemplate();
             System.out.println("template:::" + template);
@@ -241,9 +240,9 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
                 sentence += positionWord;
                 index = index + 1;
 
-                if (positionWord.contains("XX")) {
+                /*if (positionWord.contains("XX")) {
                     validSentence = false;
-                }
+                }*/
             }
 
             if (!validSentence) {

@@ -19,7 +19,6 @@ import grammar.datasets.questionword.QuestionWordRepository;
 import grammar.datasets.annotated.AnnotatedNoun;
 import grammar.datasets.annotated.AnnotatedNounOrQuestionWord;
 import grammar.datasets.annotated.AnnotatedVerb;
-import static grammar.datasets.questionword.QuestionWordFactoryDE.questionWords;
 import grammar.datasets.questionword.QuestionWordFactoryIT;
 import grammar.generator.SentenceToken;
 import grammar.sparql.Prefix;
@@ -496,10 +495,10 @@ public class LexicalEntryUtil {
         return detectSubjectType(getReferenceUri(), domainOrRange,domainOrRangeType);
     }
     
-     public SubjectType getSubjectType(SelectVariable selectVariable,List<SentenceToken> sentenceTokens) {
+    /* public SubjectType getSubjectType(SelectVariable selectVariable,List<SentenceToken> sentenceTokens) {
         String domainOrRange = selectVariable.mapDomainOrRange();
         return detectSubjectType(getReferenceUri(), domainOrRange,sentenceTokens);
-    }
+    }*/
     
     public SubjectType getSubjectType(SelectVariable selectVariable) {
         String domainOrRange = selectVariable.mapDomainOrRange();
@@ -559,7 +558,7 @@ public class LexicalEntryUtil {
                 : SubjectType.interrogativePronounThing;
     }
     
-    private SubjectType detectSubjectType(String uri, String domainOrRange,List<SentenceToken> sentenceTokens) {
+    /*private SubjectType detectSubjectType(String uri, String domainOrRange,List<SentenceToken> sentenceTokens) {
         DomainOrRangeType domainOrRangeType=null;
        for(SentenceToken sentenceToken:sentenceTokens){
            domainOrRangeType=isSubject(sentenceToken);
@@ -608,7 +607,7 @@ public class LexicalEntryUtil {
         return mapsToWho.contains(domainOrRangeResponse)
                 ? SubjectType.interrogativePronounPerson
                 : SubjectType.interrogativePronounThing;
-    }
+    }*/
    
    
     private SubjectType detectSubjectType(String uri, String domainOrRange) {
@@ -917,7 +916,7 @@ public class LexicalEntryUtil {
         return "LexicalEntryUtil{" + "lexicon=" + lexicon + ", lexicalEntry=" + lexicalEntry + ", frameType=" + frameType + ", lexicalSense=" + lexicalSense + ", lexInfo=" + lexInfo + ", language=" + language + ", owlRestriction=" + owlRestriction + '}';
     }
 
-    private DomainOrRangeType isSubject(SentenceToken sentenceToken) {
+    /*private DomainOrRangeType isSubject(SentenceToken sentenceToken) {
         DomainOrRangeType domainOrRangeType = null;
         for (SubjectType subjectType :questionWords) {
             String nameSubjectType = subjectType.name();
@@ -928,7 +927,7 @@ public class LexicalEntryUtil {
             }
         }
         return null;
-    }
+    }*/
     
     public static String getEntryOneAtrributeCheck(LexicalEntryUtil lexicalEntryUtil,String reference, String attr, String value) {
 

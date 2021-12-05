@@ -1,14 +1,34 @@
 package grammar.datasets.sentencetemplates;
 
 import grammar.datasets.Factory;
+import static grammar.datasets.sentencetemplates.SentenceTemplate.createAPTemplate;
 import grammar.structure.component.Language;
 
 import java.util.List;
 
-import static grammar.datasets.sentencetemplates.SentenceTemplate.createAPTemplate;
 import static grammar.datasets.sentencetemplates.SentenceTemplate.createNPTemplate;
 import static grammar.datasets.sentencetemplates.SentenceTemplate.createSentenceTemplate;
 import static grammar.datasets.sentencetemplates.SentenceTemplate.createVPTemplate;
+import static grammar.datasets.sentencetemplates.TempConstants.HOW_MANY_PRICE;
+import static grammar.datasets.sentencetemplates.TempConstants.HOW_MANY_THING;
+import static grammar.datasets.sentencetemplates.TempConstants.IntransitivePPFrame;
+import static grammar.datasets.sentencetemplates.TempConstants.NounPPFrame;
+import static grammar.datasets.sentencetemplates.TempConstants.TransitiveFrame;
+import static grammar.datasets.sentencetemplates.TempConstants.WHAT_WHICH_PRESENT_THING;
+import static grammar.datasets.sentencetemplates.TempConstants.WHEN_WHAT_PAST_THING;
+import static grammar.datasets.sentencetemplates.TempConstants.WHEN_WHO_PAST_PERSON;
+import static grammar.datasets.sentencetemplates.TempConstants.WHERE_WHO_PAST_PERSON;
+import static grammar.datasets.sentencetemplates.TempConstants.active;
+import static grammar.datasets.sentencetemplates.TempConstants.backward;
+import static grammar.datasets.sentencetemplates.TempConstants.booleanQuestionDomain;
+import static grammar.datasets.sentencetemplates.TempConstants.booleanQuestionDomainRange;
+import static grammar.datasets.sentencetemplates.TempConstants.forward;
+import static grammar.datasets.sentencetemplates.TempConstants.location;
+import static grammar.datasets.sentencetemplates.TempConstants.noun;
+import static grammar.datasets.sentencetemplates.TempConstants.nounPhrase;
+import static grammar.datasets.sentencetemplates.TempConstants.passive;
+import static grammar.datasets.sentencetemplates.TempConstants.whQuestion;
+import static grammar.structure.component.FrameType.APP;
 
 class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
 
@@ -30,91 +50,487 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
   }
 
   private void initEN(Language language) {
-    // NounPPFrame
+
+    //NounPPFrame
     sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+          //What is the capital of Cameron?
+          //"Who is the mayor of Paris?",
+          "interrogativePronoun verb(component_be:present:singular) determiner(component_the) noun(singular) preposition adjunct(domain)?",
+          "interrogativePronoun verb(component_be:present:plural) determiner(component_the) noun(singular) preposition adjunct(domain)?"
+                
+          /*"interrogativePronoun(nominativeCase:range:singular) verb(component_be:past:singular) determiner(component_the_nominative:reference) noun(nominativeCase:singular) preposition adjunct(domain)?",
+          "interrogativePronoun(nominativeCase:range:plural) verb(component_be:present:plural) noun(nominativeCase:plural) preposition adjunct(domain)?",
+          "interrogativePronoun(nominativeCase:range:plural) verb(component_be:past:plural) noun(nominativeCase:plural) preposition adjunct(domain)?",
+          "interrogativeDeterminer(nominativeCase:range:singular) verb(component_be:present:singular) nounPhrase?",
+          "interrogativeDeterminer(nominativeCase:range:singular) verb(component_be:past:singular) nounPhrase?",
+          "interrogativeDeterminer(nominativeCase:range:plural) verb(component_be:present:plural) nounPhrase?",
+          "interrogativeDeterminer(nominativeCase:range:plural) verb(component_be:past:plural) nounPhrase?",
+          //Gib mir die Enkel von Elvis Presley.
+           "verb(imperative_transitive:present:singular) pronoun(object_pronoun) determiner(component_the_accusative:reference:singular) noun(accusativeCase:singular) preposition adjunct(domain).",
+           "verb(imperative_transitive:present:singular) pronoun(object_pronoun) determiner(component_the_accusative:reference:plural) noun(accusativeCase:plural) preposition adjunct(domain).",
+          //Gib mir alle Bandmitglieder von Prodigy
+           "verb(imperative_transitive:present:singular) pronoun(object_pronoun) determiner(alle) noun(accusativeCase:plural) preposition adjunct(domain).",
+          //"In welchem Land ist der Mount Everest?", In welcher Stadt ist die Heinekenbrauerei?
+            "preposition interrogativeDeterminer(dativeCase:range:singular) verb(component_be:present:singular) determiner(component_the_nominative:domain:singular) adjunct(domain)?",
+            "interrogativePlace(nominativeCase:singular) verb(component_be:present:singular) determiner(component_the_nominative:domain:singular) object(domain)?"  ,
+           //"Liste die Kinder von Margaret Thatcher auf.",
+           "verb(imperative_verb:present:plural) determiner(component_the_nominative:reference:plural) noun(nominativeCase:plural) preposition adjunct(domain) preposition(auf)."  ,   
+           //"Liste die Kinder von Margaret Thatcher auf.",
+           "verb(imperative_verb:present:plural) determiner(alle) noun(nominativeCase:plural) preposition adjunct(domain) preposition(auf)."  
+               */  
+                 ),
+        NounPPFrame,
+        whQuestion
+      )
+    );
+    
+     //NounPPFrame boolean question
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+          //"Ist Rita Wilson die Frau von Tom Hanks?"
+          //"verb(component_be:present:singular) subject(range) determiner(component_the_nominative:reference) noun(nominativeCase:singular) preposition adjunct(domain)?",
+          //"verb(component_be:present:plural) subject(range) determiner(component_the_nominative:reference:plural) noun(nominativeCase:plural) preposition adjunct(domain)?"
+          //Heißt die Frau von Präsident Obama Michelle?"
+          //"verb(component_heißen:present:singular) determiner(component_the_nominative:reference:singular) noun(nominativeCase:singular) preposition adjunct(domain) subject(range)?",
+          //"verb(component_heißen:present:plural) determiner(component_the_nominative:reference:plural) noun(nominativeCase:plural) preposition adjunct(domain) subject(range)?"    
+          //Ist Proinsulin ein Protein?
+          //"verb(component_be:present:singular) subject(range) noun(nominativeCase:singular) article(definite_article:nominativeCase:neuter) object(domain)?",   
+          //"Sind Laubfrösche Amphibien?"
+          //"verb(component_be:present:plural) subject(domain) noun(nominativeCase:singular) object(range)?",
+          //Hat Abraham Lincolns Sterbeort eine Webseite?", 
+          //"verb(component_haben:present:singular) object(domain) article(definite_article:nominativeCase:feminine) subject(range)?"
+              
+                
+          //"Hatte Che Guevara Kinder?",
+          //"verb(component_haben:past:singular) object(domain) noun(nominativeCase)?"
+          //Gibt es ein Videospiel, das Battle Chess heißt?
+          // "verb(imperative_transitive) pronoun(object_pronoun_es) article(definite_article:nominativeCase:neuter), noun(nominativeCase), article(component_the_nominative:nominativeCase:neuter) object(domain)"    
+           //"Was ist Batmans richtiger Name?",                
+           
+
+            // "interrogativePronoun(range:singular)  verb(component_be:present:singular) object(range) noun(nominativeCase)?"    
+            //"Welche Regierungsform hat Russland?",
+            //"interrogativeDeterminer(range:singular) verb(component_haben:present:singular) object(domain)?"   
+            //"Aus welcher Region ist der Melon de Bourgogne?"
+            // "preposition(auf) interrogativeDeterminer(range:singular) verb(component_be:present:singular) adjunct(domain)? "
+           // Wieviele Seiten hat Krieg und Frieden?
+           // "interrogativeAmount(range:singular) noun(nominativeCase:plural) verb(component_haben:present:singular) object(domain)?"        
+                 ),
+        NounPPFrame,
+        booleanQuestionDomainRange
+      )
+    );
+     //NounPPFrame boolean question
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+          //"Hatte Che Guevara Kinder?",
+          "verb(component_haben:past:singular) object(domain) noun(nominativeCase)?" 
+        
+          //Gibt es ein Videospiel, das Battle Chess heißt?
+          // "verb(imperative_transitive) pronoun(object_pronoun_es) article(definite_article:nominativeCase:neuter), noun(nominativeCase), article(component_the_nominative:nominativeCase:neuter) object(domain)"    
+          //Hat Abraham Lincolns Sterbeort eine Webseite?", 
+          //"verb(component_haben:present:singular) object(domain) article(definite_article:nominativeCase:feminine) noun(nominativeCase)?"
+           //"Was ist Batmans richtiger Name?",                
+           
+
+            // "interrogativePronoun(range:singular)  verb(component_be:present:singular) object(range) noun(nominativeCase)?"    
+            //"Welche Regierungsform hat Russland?",
+            //"interrogativeDeterminer(range:singular) verb(component_haben:present:singular) object(domain)?"   
+            //"Aus welcher Region ist der Melon de Bourgogne?"
+            // "preposition(auf) interrogativeDeterminer(range:singular) verb(component_be:present:singular) adjunct(domain)? "
+           // Wieviele Seiten hat Krieg und Frieden?
+           // "interrogativeAmount(range:singular) noun(nominativeCase:plural) verb(component_haben:present:singular) object(domain)?"        
+                 ),
+        NounPPFrame,
+        booleanQuestionDomain
+      )
+    );
+    //NounPPFrame
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+          //the capital of germany
+         "determiner(component_the) noun(singular) preposition adjunct(domain)?"
+                ),
+        NounPPFrame,
+        nounPhrase
+      )
+    );
+    
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+          //Was ist die Hauptstadt von Kamerun?
+         "noun(singular)"
+          //Welche Person ist das Mitglied von...?
+          //"interrogativeDeterminer noun(condition:copulativeArg) verb(reference:component_be) NP(prepositionalAdjunct)?"
+          //Wer ist das Mitglied von...?
+          //"interrogativePronoun verb(reference:component_be) NP(prepositionalAdjunct)?",
+          //Gib mir das Mitglied von...?
+          //"verb(reference:component_imperative_transitive) pronoun(reference:object_pronoun) determiner(reference:component_the_accusative) noun(root:accusativeCase) preposition prepositionalAdjunct"
+          ),
+        NounPPFrame,
+        noun
+      )
+    );
+    
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+          //Wo ist der Westminster-Palast?",
+          "interrogativePlace(nominativeCase:range:singular) verb(component_be:present:singular) object(domain)?"
+          ),
+        NounPPFrame,
+        location
+      )
+    );
+    
+     // TransitiveFrame
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+         //Who presented BBC Wildlife Specials?
+         "interrogativePronoun(range) verb(mainVerb:past:thirdPerson) object(domain)?",
+         //Which Person presented BBC Wildlife Specials?
+        "interrogativeDeterminer(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
+        "interrogativeDeterminer(range:plural) verb(mainVerb:past:thridPerson) object(domain)?"      
+        ),
+       TransitiveFrame,
+        active
+      )
+    );
+    
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+        //"What was developed by X?
+        "interrogativeDeterminer(domain:singular) verb(component_be:past:singular) verb(mainVerb:past:thridPerson) preposition(by) adjunct(range)?",
+        "interrogativeDeterminer(domain:plural) verb(component_be:past:plural) verb(mainVerb:past:thridPerson) preposition(by) adjunct(range)?"
+
+        //Was wurde von ($x | PERSON_NP) entwickelt?
+        //"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
+        //"Werke werden von ($x | PERSON_NP) entwickelt?", 
+        //"Werke wurden von ($x | PERSON_NP) entwickelt?"
+        //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:singular) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
+        //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
+        //"interrogativeDeterminer(nominativeCase:domain:plural) verb(component_be:future:singular) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
+        //"interrogativeDeterminer(nominativeCase:domain:plural) verb(component_be:future:plural) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
+         //Wer war mit Präsident Chirac verheiratet?
+        //"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:past:singular) preposition(mit) object(domain) verb(mainVerb:perfect:thridPerson)??"     
+        ),
+        TransitiveFrame,
+        passive
+      )
+    );
+    
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+        "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:singular) preposition object(range) verb(mainVerb:past:thridPerson)?",
+        "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:past:thridPerson)?",
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:singular) preposition object(range) verb(mainVerb:past:thridPerson)?",
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:past:thridPerson)?",
+        "interrogativeDeterminer(nominativeCase:domain:plural) verb(component_be:future:singular) preposition object(range) verb(mainVerb:past:thridPerson)?",
+        "interrogativeDeterminer(nominativeCase:domain:plural) verb(component_be:future:plural) preposition object(range) verb(mainVerb:past:thridPerson)?"
+    
+        ),
+        TransitiveFrame,
+        APP.toString()
+      )
+    );
+    //In welchem Museum ist der Schrei ausgestellt?
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(   //Durch welches Land fließt der Rhein?
+         "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(mainVerb:present:thridPerson) adjunct(domain)?",
+         //In welchem Museum ist Der Schrei ausgestellt?
+         "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+          //In welcher Stadt hört die Ruta 68 auf?",
+         "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(TrennVerbPart1:past:thridPerson) adjunct(domain) verb(TrennVerbPart2:past:thridPerson)?",
+         "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(TrennVerb:perfect:thridPerson)?"
+       
+               ),
+        IntransitivePPFrame,
+        WHAT_WHICH_PRESENT_THING,
+        forward
+      )
+    );
+    //Durch welches Land fließt der Rhein?
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+             //
+                   //Was fließt durch...?
+        "interrogativePronoun(nominativeCase:domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+         //Welcher Fluss fließt durch...?
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+        //"interrogativeDeterminer(nominativeCase:domain:plural) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+         //Trenn
+         "interrogativePronoun(nominativeCase:domain:singular) verb(TrennVerbPart1:past:thridPerson) preposition adjunct(range) verb(TrennVerbPart2:past:thridPerson)? "
+       
+        ),
+        IntransitivePPFrame,
+        WHAT_WHICH_PRESENT_THING,
+        backward
+      )
+    );
+      ///////////////////////////////
+       sentenceTemplateRepository.add(
       createSentenceTemplate(
         language,
         List.of(
-          "interrogativeDeterminer noun(condition:copulativeArg) verb(reference:component_be) NP(prepositionalAdjunct)?",
-          "interrogativePronoun verb(reference:component_be) NP(prepositionalAdjunct)?",
-          "verb(reference:component_imperative_transitive) pronoun(reference:object_pronoun) determiner(reference:component_the) noun(root) preposition prepositionalAdjunct",
-          "verb(reference:component_imperative_plural) determiner(reference:component_the) noun(root) preposition prepositionalAdjunct"
+          //"Wann wurde die Titanic fertiggestellt?"
+          "interrogativeTemporal verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+          //Wann fand die Schlacht von Gettysburg statt?
+          "interrogativeTemporal verb(TrennVerbPart1:past:thridPerson) object(domain) verb(TrennVerbPart2:past:thridPerson)?"
         ),
-        "copulativeArg",
-        "prepositionalAdjunct"
+        IntransitivePPFrame,
+        WHEN_WHAT_PAST_THING,
+        forward
       )
     );
-    // NP(prepositionalAdjunct)
-    sentenceTemplateRepository.add(
-      createNPTemplate(
-        language,
-        List.of(
-          "determiner(reference:component_the) noun(root) preposition prepositionalAdjunct"
-        ),
-        "prepositionalAdjunct"
-      )
-    );
-    // NP(attributiveArg)
-    sentenceTemplateRepository.add(
-      createNPTemplate(
-        language,
-        List.of(
-          "determiner adjective(root) attributiveArg(number:singular)",
-          "adjective(root) attributiveArg(number:plural)"
-        ),
-        "attributiveArg"
-      )
-    );
-    // AdjectiveAttributiveFrame
-    sentenceTemplateRepository.add(
+    
+      sentenceTemplateRepository.add(
       createSentenceTemplate(
         language,
         List.of(
-          "interrogativePronoun verb(reference:component_be) NP(attributiveArg)?"
+         //Was wurde 2010 fertiggestellt?
+         "interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         //"interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:plural) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:plural) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)",
+         //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:plural) preposition adjunct(range) verb(TrennVerb:perfect:thridPerson)",
+         "interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(TrennVerb:perfect:thridPerson)?",
+         //"interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:plural) preposition adjunct(range) verb(TrennVerb:perfect:thridPerson)?",
+         "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(TrennVerb:perfect:thridPerson)?"
+         //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:plural) preposition adjunct(range) verb(TrennVerb:perfect:thridPerson)",
+         //"interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:past:thridPerson)?"
         ),
-        "attributiveArg"
+        IntransitivePPFrame,
+        WHEN_WHAT_PAST_THING,
+        backward
       )
     );
-    // AdjectivePPFrame
-    sentenceTemplateRepository.add(
+    ///////////////////////////////
+       sentenceTemplateRepository.add(
       createSentenceTemplate(
         language,
         List.of(
-          "interrogativeDeterminer noun(condition:copulativeSubject) verb(reference:component_be) AP(prepositionalAdjunct)?",
-          "interrogativePronoun verb(reference:component_be) AP(prepositionalAdjunct)?"
+          //"In welchem Jahr wurde Rachel Stevens geboren?",
+         "preposition interrogativeDeterminer(dativeCase:range:singular) verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+          //"In welchem Jahr wurde Rachel Stevens geboren?",
+         "preposition interrogativeDeterminer(dativeCase:range:singular) verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+         //Wann wurde Abrham Lincon geboren?
+        "interrogativeTemporal verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?"
         ),
-        "copulativeSubject",
-        "prepositionalAdjunct"
+        IntransitivePPFrame,
+        WHEN_WHO_PAST_PERSON,
+        forward
       )
     );
-    // AdjectivePPFrame NP
-    sentenceTemplateRepository.add(
-      createNPTemplate(
+    //Welche Person wurde 2010 geboren?
+    //Wer ist 2010 geboren?
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(
         language,
         List.of(
-          "noun(condition:copulativeSubject,number:plural) AP(prepositionalAdjunct)"
+         "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?"
         ),
-        "copulativeSubject",
-        "prepositionalAdjunct"
+        IntransitivePPFrame,
+        WHEN_WHO_PAST_PERSON,
+        backward
       )
     );
-    // AP(prepositionalAdjunct)
-    sentenceTemplateRepository.add(
-      createAPTemplate(
+      
+       ///////////////////////////////
+       sentenceTemplateRepository.add(
+      createSentenceTemplate(
         language,
         List.of(
-          "adjective(root) preposition prepositionalAdjunct",
-          "verb(root,verbFormMood:participle) preposition prepositionalAdjunct"
-        ),
-        "prepositionalAdjunct"
+         //"Welche Profisurfer wurden auf den Philippinen geboren?",
+         "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?"
+
+             ),
+        IntransitivePPFrame,
+        WHERE_WHO_PAST_PERSON,
+        forward
       )
     );
+    //Welche Person wurde 2010 geboren?
+    //Wer ist 2010 geboren?
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+        //Wo wurde Donald Trump geboren?
+         "interrogativePlace(nominativeCase:singular) verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?"
+        ),
+        IntransitivePPFrame,
+        WHERE_WHO_PAST_PERSON,
+        backward
+      )
+    );
+      
+      
+          ///////////////////////////////
+       sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+         //"Welche Profisurfer wurden auf den Philippinen geboren?",
+         "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?"
+
+             ),
+        IntransitivePPFrame,
+        WHERE_WHO_PAST_PERSON,
+        forward
+      )
+    );
+    //Welche Person wurde 2010 geboren?
+    //Wer ist 2010 geboren?
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+        //Wo wurde Donald Trump geboren?
+         "interrogativePlace(nominativeCase:singular) verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?"
+        ),
+        IntransitivePPFrame,
+        WHERE_WHO_PAST_PERSON,
+        backward
+      )
+    );
+      
+          ///////////////////////////////
+       sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+                 //"Wieviel hat Pulp Fiction gekostet?","Wieviele Sprachen werden in Turkmenistan gesprochen?"
+         "interrogativeAmount(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?"
+          //was kostet der film?
+          //"interrogativePronoun(nominativeCase:present:singular) verb(mainVerb:present:thridPerson) determiner(component_the_nominative:domain) object(domain)?"
+         //"Wieviele Sprachen werden in Turkmenistan gesprochen?"  
+         //"interrogativeAmountDeterminer(nominativeCase:range:singular) verb(component_werden:present:singular) preposition determiner(component_the_nominative:domain) object(domain) verb(mainVerb:perfect:thridPerson)?"  
+
+       
+        //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_haben:present:singular) object(range) verb(mainVerb:perfect:singular)?"      
+       
+    
+        ),
+        IntransitivePPFrame,
+        HOW_MANY_PRICE,
+        forward
+      )
+    );
+   
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(  //Welches Buch kostet 10 Dollar?
+        //"interrogativePronoun(nominativeCase:present:singular) verb(mainVerb:perfect:present) object(range)?",
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_haben:present:singular) object(range) verb(mainVerb:perfect:singular)?"      
+
+           
+        ),
+        IntransitivePPFrame,
+        HOW_MANY_PRICE,
+        backward
+      )
+    );
+      
+            ///////////////////////////////
+       sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+        ////Wieviele Sprachen werden in Turkmenistan gesprochen?
+        //"interrogativeAmount(nominativeCase:singular) interrogativeDeterminer(nominativeCase:range:singular) verb(component_werden:present:singular) preposition object(domain) verb(mainVerb:perfect:thridPerson)?",
+       //Wieviele Sprachen werden in Turkmenistan gesprochen?
+        "interrogativeAmount(nominativeCase:range:plural) verb(component_werden:present:plural) preposition object(domain) verb(mainVerb:perfect:thridPerson)?"
+    
+        ),
+        IntransitivePPFrame,
+        HOW_MANY_THING,
+        forward
+      )
+    );
+   
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(  //Welches Buch kostet 10 Dollar?
+             
+        ),
+        IntransitivePPFrame,
+        HOW_MANY_THING,
+        backward
+      )
+    );
+      
+       //NounPPFrame
+     sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+          //Was ist die Hauptstadt von Kamerun?
+         "determiner(component_the_nominative:reference) noun(nominativeCase:singular) preposition adjunct(domain)?",
+         "noun(nominativeCase:plural) preposition adjunct(domain)"      
+         //"determiner(component_the_nominative:reference) noun(nominativeCase) preposition nounPhrase"
+          //Welche Person ist das Mitglied von...?
+          //"interrogativeDeterminer noun(condition:copulativeArg) verb(reference:component_be) NP(prepositionalAdjunct)?"
+          //Wer ist das Mitglied von...?
+          //"interrogativePronoun verb(reference:component_be) NP(prepositionalAdjunct)?",
+          //Gib mir das Mitglied von...?
+          //"verb(reference:component_imperative_transitive) pronoun(reference:object_pronoun) determiner(reference:component_the_accusative) noun(root:accusativeCase) preposition prepositionalAdjunct"
+          ),
+        NounPPFrame,
+        nounPhrase
+      )
+    );
+    
+    
+    
+    
+     /*sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+          //Welche Person entwickelte...?
+          "interrogativeDeterminer noun(condition:subject) VP(directObject)?",
+          //Wer entwickelte...?
+          "interrogativePronoun VP(directObject)?"
+        ),
+        "subject",
+        "directObject"
+      )
+    );
+    // VP(directObject)
+    sentenceTemplateRepository.add(
+      createVPTemplate(
+        language,
+        List.of(
+          //entwickelte...
+          "verb(root) directObject"
+        ),
+        "directObject"
+      )
+    );*/
+    
+    
+  
+  
+    /* Not working yet
     // IntransitivePPFrame
     sentenceTemplateRepository.add(
       createSentenceTemplate(
         language,
         List.of(
+          //Welcher Fluss fließt durch...?
           "interrogativeDeterminer noun(condition:subject) VP(prepositionalAdjunct)?",
+          //Was fließt durch...?
           "interrogativePronoun VP(prepositionalAdjunct)?"
         ),
         "subject",
@@ -126,6 +542,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       createVPTemplate(
         language,
         List.of(
+          //fließt durch...
           "verb(root) preposition prepositionalAdjunct"
         ),
         "prepositionalAdjunct"
@@ -140,28 +557,102 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         "subject",
         "temporalAdjunct"
       )
-    );
+    );*/
     // TransitiveFrame
+   
+      // AdjectiveAttributiveFrame
     sentenceTemplateRepository.add(
       createSentenceTemplate(
         language,
         List.of(
-          "interrogativeDeterminer noun(condition:subject) VP(directObject)?",
-          "interrogativePronoun VP(directObject)?"
+          "interrogativePronoun verb(reference:component_be) NP(attributiveArg)?"
         ),
-        "subject",
-        "directObject"
+        "attributiveArg"
       )
     );
-    // VP(directObject)
+    // AdjectivePPFrame
     sentenceTemplateRepository.add(
-      createVPTemplate(
+      createSentenceTemplate(
         language,
         List.of(
-          "verb(root) directObject"
+          //Welches Kunstwerk wird von ... ausgestellt
+          "interrogativeDeterminer noun(condition:copulativeSubject) verb(reference:component_be_passive) AP(prepositionalAdjunct)?",
+          //Was wird von ... ausgestellt
+          "interrogativePronoun verb(reference:component_be_passive) AP(prepositionalAdjunct)?"
         ),
-        "directObject"
+        "copulativeSubject",
+        "prepositionalAdjunct"
+      )
+    );
+    // AdjectivePPFrame NP
+    sentenceTemplateRepository.add(
+      createNPTemplate(
+        language,
+        List.of(
+          //Kunstwerke ausgestellt von...
+          "noun(condition:copulativeSubject,number:plural) verb(root,verbFormMood:participle) preposition prepositionalAdjunct"
+        ),
+        "copulativeSubject",
+        "prepositionalAdjunct"
+      )
+    );
+    // AP(prepositionalAdjunct)
+    sentenceTemplateRepository.add(
+      createAPTemplate(
+        language,
+        List.of(
+          //von ... ausgestellt
+          "preposition prepositionalAdjunct verb(root,verbFormMood:participle)"
+        ),
+        "prepositionalAdjunct"
       )
     );
   }
+  
+        
+           //"Hatte Che Guevara Kinder?",
+           //"verb(component_haben:past:singular) object(domain) noun(nominativeCase:singular)?",
+           //"verb(component_haben:past:plural) object(domain) noun(nominativeCase:plural)?"
+           //Hat Abraham Lincolns Sterbeort Kinder?", 
+           // "verb(component_haben:present:plural) object(domain) noun(nominativeCase:plural)?",
+           // "verb(component_haben:present:singular) object(domain) noun(nominativeCase:singular)?"     
+           //"Liste die Kinder von Margaret Thatcher auf.",
+           //"verb(imperative_plural) determiner(component_the_nominative:reference:plural) noun(nominativeCase:plural) preposition adjunct(domain) preposition(auf)."     
+           
+           //"Welche Regierungsform hat Russland?", 
+           //"interrogativeDeterminer(reference:singular) verb(component_haben:present:singular) object(domain)?"     
+           
+                
+                
+          //Gibt es ein Videospiel, das Battle Chess heißt?
+          // "verb(imperative_transitive) pronoun(object_pronoun_es) article(definite_article:nominativeCase:neuter), noun(nominativeCase), article(component_the_nominative:nominativeCase:neuter) object(domain)"    
+           //"Was ist Batmans richtiger Name?",                
+           // "interrogativePronoun(range:singular)  verb(component_be:present:singular) object(range) noun(nominativeCase)?"    
+            //"Welche Regierungsform hat Russland?",
+            //"interrogativeDeterminer(range:singular) verb(component_haben:present:singular) object(domain)?"   
+            //"Aus welcher Region ist der Melon de Bourgogne?"
+            // "preposition(auf) interrogativeDeterminer(range:singular) verb(component_be:present:singular) adjunct(domain)? "
+           // Wieviele Seiten hat Krieg und Frieden?
+           // "interrogativeAmount(range:singular) noun(nominativeCase:plural) verb(component_haben:present:singular) object(domain)?"
+               
+                
+                
+           //Gib mir das Mitglied von...?
+          //"verb(imperative_transitive) pronoun(object_pronoun) determiner(component_the_accusative) noun(accusativeCase) preposition adjunct(domain)."      
+          //Who are the children of the children of Elvis Presley?",      
+          //"interrogativePronoun(range:plural) verb(component_be:present:plural) nounPhrase?"   
+          //Wo verb(component_be:present:singular)  noun?
+         //  "interrogativePlace(range:singular) verb(component_be:present:singular) noun?"
+          //In welchem Land ist der Mount Everest?
+          //"preposition interrogativeDeterminer(range:singular) verb(component_be:present:singular) noun?"
+          //Wieviel hat Pulp Fiction gekostet?
+                
+
+  
+  
+         //Ist Proinsulin ein Protein?
+         // "verb(component_be:present:singular) subject(range) article(definite_article:nominativeCase:neuter) object(domain)?",   
+          //"Sind Laubfrösche Amphibien?"
+         // "verb(component_be:present:plural) subject(range) object(domain)?"
+          
 }

@@ -7,7 +7,6 @@ import eu.monnetproject.lemon.model.PropertyValue;
 import static grammar.generator.BindingConstants.BINDING_TOKEN_TEMPLATE;
 import grammar.datasets.sentencetemplates.SentenceTemplateRepository;
 import grammar.datasets.annotated.AnnotatedVerb;
-import static grammar.datasets.questionword.QuestionWordFactoryDE.questionWords;
 import grammar.datasets.questionword.QuestionWordFactoryIT;
 import grammar.datasets.sentencetemplates.TempConstants;
 import static grammar.generator.SentenceTemplateParser.QUESTION_MARK;

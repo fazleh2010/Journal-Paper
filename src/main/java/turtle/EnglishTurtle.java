@@ -162,11 +162,15 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
                 this.writtenFormPast = transitiveFrameCsv.getWrittenFormPast(row);
                 this.preposition = transitiveFrameCsv.getPassivePrepositionIndex(row);
             }
-            tupples.add(new Tupples(this.lemonEntry,
+            
+            Tupples tupple = new Tupples(this.lemonEntry,
                     index + 1,
                     this.setReference(transitiveFrameCsv.getReferenceIndex(row)),
                     this.setReference(transitiveFrameCsv.getDomainIndex(row)),
-                    this.setReference(transitiveFrameCsv.getRangeIndex(row))));
+                    this.setReference(transitiveFrameCsv.getRangeIndex(row)));
+
+            transitiveFrameCsv.setArticle(tupple, row);
+            tupples.add(tupple);
             index = index + 1;
 
         }

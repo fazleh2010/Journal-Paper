@@ -18,24 +18,10 @@ import java.util.TreeSet;
  */
 public class QuestionWordFactoryDE {
 
-   private final QuestionWordRepository questionWordRepository;
+    private final QuestionWordRepository questionWordRepository;
     private final Language language;
-    public static Set<SubjectType> questionWords = new TreeSet<SubjectType>();
-
     
-    static {
-        questionWords.add(SubjectType.interrogativePronoun);
-        questionWords.add(SubjectType.interrogativeDeterminer);
-        questionWords.add(SubjectType.interrogativeAmount);
-        questionWords.add(SubjectType.interrogativePronounPerson);
-        questionWords.add(SubjectType.interrogativePronounThing);
-        questionWords.add(SubjectType.interrogativePronounThingWhat);
-        questionWords.add(SubjectType.interrogativeDeterminerSingular);
-        questionWords.add(SubjectType.interrogativeDeterminerPlural);
-        questionWords.add(SubjectType.interrogativeTemporal);
-        questionWords.add(SubjectType.interrogativePlace);
-    }
-
+   
     QuestionWordFactoryDE() {
         this.language = Language.DE;
         this.questionWordRepository = new QuestionWordDataset();

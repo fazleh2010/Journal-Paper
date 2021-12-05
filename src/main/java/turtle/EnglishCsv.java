@@ -8,6 +8,7 @@ package turtle;
 import grammar.datasets.sentencetemplates.TempConstants;
 import static grammar.datasets.sentencetemplates.TempConstants.NounPPFrame;
 import java.util.List;
+import util.io.GenderUtils;
 import util.io.Tupples;
 
 /**
@@ -168,6 +169,11 @@ public class EnglishCsv implements TempConstants {
         private Integer domainIndex = 10;
         private Integer rangeIndex = 11;
         private Integer passivePrepositionIndex=12;
+        private Integer domainWrittenSingularFormIndex=passivePrepositionIndex+1;
+        private Integer domainWrittenPluralFormIndex=domainWrittenSingularFormIndex+1;
+        private Integer rangeWrittenSingularFormIndex=domainWrittenPluralFormIndex+1;
+        private Integer rangeWrittenPluralFormIndex=rangeWrittenSingularFormIndex+1;
+
 
         public String getHeader(String lemonEntry, String preposition, String language) {
             return "@prefix :        <http://localhost:8080/lexicon#> .\n"
@@ -274,6 +280,11 @@ public class EnglishCsv implements TempConstants {
 
             return str;
         }
+        
+        public  void setArticle(Tupples tupple, String[] row) {
+           GenderUtils.setWrittenForms(tupple.getDomain(), row[getDomainWrittenSingular()], row[getDomainWrittenPlural()]);
+           GenderUtils.setWrittenForms(tupple.getRange(), row[getRangeWrittenSingular()], row[getRangeWrittenPlural()]);
+        }
 
         public String getPrepostion(String preposition, String language) {
             return getPrepostionL(preposition, language);
@@ -334,8 +345,22 @@ public class EnglishCsv implements TempConstants {
         public String getPassivePrepositionIndex(String[] row) {
             return row[passivePrepositionIndex];
         }
-        
-        
+
+        public Integer  getDomainWrittenSingular() {
+            return domainWrittenSingularFormIndex;
+        }
+
+        public Integer getDomainWrittenPlural() {
+            return domainWrittenPluralFormIndex;
+        }
+
+        public Integer getRangeWrittenSingular() {
+            return rangeWrittenSingularFormIndex;
+        }
+
+        public Integer getRangeWrittenPlural() {
+            return rangeWrittenPluralFormIndex;
+        }
 
     }
 
