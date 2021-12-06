@@ -1,0 +1,68 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :exhibits_1 ;
+  lemon:entry    :form_exhibits_1_present_preposition .
+
+:exhibits_1 a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_exhibits_1_present ;
+  lemon:otherForm      :exhibits_1_past ;
+  lemon:otherForm      :exhibits_1_perfect ;
+  lemon:sense          :exhibits_1_sense_1 ;
+  lemon:synBehavior    :exhibits_1_frame .
+
+:form_exhibits_1_presentexhibits_1_present a           lemon:Form ;
+  lemon:writtenRep     "ausstellen"@de ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:exhibits_1_present a      lemon:Form ;
+  lemon:writtenRep "stellt aus"@de ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:exhibits_1_past a lemon:Form ;
+  lemon:writtenRep  "stellte aus"@de ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:exhibits_1_perfect a lemon:Form ;
+  lemon:writtenRep  "ausgestellt"@de ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:perfect .
+
+:exhibits_1_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :exhibits_1_subj ;
+  lexinfo:prepositionalAdjunct :exhibits_1_obj .
+
+:exhibits_1_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :exhibits_1_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/museum> ;
+  lemon:subjOfProp  :exhibits_1_obj ;
+  lemon:objOfProp   :exhibits_1_subj ;
+  lemon:condition   :exhibits_1_sense_1_condition .
+
+:exhibits_1_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Artwork> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Museum> .
+
+
+:exhibits_1_obj lemon:marker :in .
+
+:arg2 lemon:marker :form_exhibits_1_present_preposition .
+
+## Prepositions ##
+
+:form_exhibits_1_present_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "in"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

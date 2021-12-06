@@ -1,0 +1,68 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :durchf�hren_1 ;
+  lemon:entry    :form_durchf�hren_1_present_preposition .
+
+:durchf�hren_1 a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_durchf�hren_1_present ;
+  lemon:otherForm      :durchf�hren_1_past ;
+  lemon:otherForm      :durchf�hren_1_perfect ;
+  lemon:sense          :durchf�hren_1_sense_1 ;
+  lemon:synBehavior    :durchf�hren_1_frame .
+
+:form_durchf�hren_1_presentdurchf�hren_1_present a           lemon:Form ;
+  lemon:writtenRep     "durchf�hren"@de ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:durchf�hren_1_present a      lemon:Form ;
+  lemon:writtenRep "f�hrt durch"@de ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:durchf�hren_1_past a lemon:Form ;
+  lemon:writtenRep  "f�hrte durch"@de ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:durchf�hren_1_perfect a lemon:Form ;
+  lemon:writtenRep  "durchgef�hrt"@de ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:perfect .
+
+:durchf�hren_1_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :durchf�hren_1_subj ;
+  lexinfo:prepositionalAdjunct :durchf�hren_1_obj .
+
+:durchf�hren_1_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :durchf�hren_1_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/date> ;
+  lemon:subjOfProp  :durchf�hren_1_obj ;
+  lemon:objOfProp   :durchf�hren_1_subj ;
+  lemon:condition   :durchf�hren_1_sense_1_condition .
+
+:durchf�hren_1_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Event> ;
+  lemon:propertyRange  <http://www.w3.org/2001/XMLSchema#date> .
+
+
+:durchf�hren_1_obj lemon:marker :am .
+
+:arg2 lemon:marker :form_durchf�hren_1_present_preposition .
+
+## Prepositions ##
+
+:form_durchf�hren_1_present_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "am"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

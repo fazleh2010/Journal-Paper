@@ -1,0 +1,68 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :aufh�ren_4 ;
+  lemon:entry    :form_aufh�ren_4_present_preposition .
+
+:aufh�ren_4 a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_aufh�ren_4_present ;
+  lemon:otherForm      :aufh�ren_4_past ;
+  lemon:otherForm      :aufh�ren_4_perfect ;
+  lemon:sense          :aufh�ren_4_sense_1 ;
+  lemon:synBehavior    :aufh�ren_4_frame .
+
+:form_aufh�ren_4_presentaufh�ren_4_present a           lemon:Form ;
+  lemon:writtenRep     "aufh�ren"@de ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:aufh�ren_4_present a      lemon:Form ;
+  lemon:writtenRep "h�rt auf"@de ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:aufh�ren_4_past a lemon:Form ;
+  lemon:writtenRep  "h�rte auf"@de ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:aufh�ren_4_perfect a lemon:Form ;
+  lemon:writtenRep  "aufgeh�rt"@de ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:perfect .
+
+:aufh�ren_4_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :aufh�ren_4_subj ;
+  lexinfo:prepositionalAdjunct :aufh�ren_4_obj .
+
+:aufh�ren_4_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :aufh�ren_4_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/routeEnd> ;
+  lemon:subjOfProp  :aufh�ren_4_obj ;
+  lemon:objOfProp   :aufh�ren_4_subj ;
+  lemon:condition   :aufh�ren_4_sense_1_condition .
+
+:aufh�ren_4_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/RouteOfTransportation> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Location> .
+
+
+:aufh�ren_4_obj lemon:marker :in .
+
+:arg2 lemon:marker :form_aufh�ren_4_present_preposition .
+
+## Prepositions ##
+
+:form_aufh�ren_4_present_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "in"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

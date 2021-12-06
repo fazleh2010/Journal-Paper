@@ -743,7 +743,8 @@ public class EvaluateAgainstQALD {
             /*String id = row[0];
             String originalQuestion = row[1];
             String sparqlQuesry = row[2];*/
-            
+            qaldsentence=qaldsentence.replace("\"", "");
+            question=question.replace("\"", "");
             cosineDistance = new CosineDistance().apply(qaldsentence, question);
             cosineDistancePercentage = Math.round(cosineDistance * 100);
             cosineSimilarityPercentage = Math.round((1 - cosineDistance) * 100);

@@ -160,7 +160,7 @@
   lexinfo:tense                           lexinfo:present ;
   lexinfo:person                          lexinfo:firstPerson ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "wirst"@de ;
+  lemon:otherForm      [ lemon:writtenRep "wird"@de ;
   lexinfo:tense                           lexinfo:present ;
   lexinfo:person                          lexinfo:secondPerson ;
   lexinfo:number                          lexinfo:singular ] ;

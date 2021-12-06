@@ -1,0 +1,68 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :�berspannen_1 ;
+  lemon:entry    :form_�berspannen_1_present_preposition .
+
+:�berspannen_1 a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_�berspannen_1_present ;
+  lemon:otherForm      :�berspannen_1_past ;
+  lemon:otherForm      :�berspannen_1_perfect ;
+  lemon:sense          :�berspannen_1_sense_1 ;
+  lemon:synBehavior    :�berspannen_1_frame .
+
+:form_�berspannen_1_present�berspannen_1_present a           lemon:Form ;
+  lemon:writtenRep     "�berspannen"@de ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:�berspannen_1_present a      lemon:Form ;
+  lemon:writtenRep "�berspannt"@de ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:�berspannen_1_past a lemon:Form ;
+  lemon:writtenRep  "�berspannte"@de ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:�berspannen_1_perfect a lemon:Form ;
+  lemon:writtenRep  "�berspannt"@de ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:perfect .
+
+:�berspannen_1_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :�berspannen_1_subj ;
+  lexinfo:prepositionalAdjunct :�berspannen_1_obj .
+
+:�berspannen_1_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :�berspannen_1_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/crosses> ;
+  lemon:subjOfProp  :�berspannen_1_obj ;
+  lemon:objOfProp   :�berspannen_1_subj ;
+  lemon:condition   :�berspannen_1_sense_1_condition .
+
+:�berspannen_1_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Bridge> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/BodyOfWater> .
+
+
+:�berspannen_1_obj lemon:marker :in .
+
+:arg2 lemon:marker :form_�berspannen_1_present_preposition .
+
+## Prepositions ##
+
+:form_�berspannen_1_present_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "in"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

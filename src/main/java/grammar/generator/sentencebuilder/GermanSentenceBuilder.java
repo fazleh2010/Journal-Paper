@@ -44,12 +44,12 @@ import net.lexinfo.LexInfo;
 import org.apache.commons.lang3.StringUtils;
 import util.exceptions.QueGGMissingFactoryClassException;
 import util.io.GenderUtils;
+import util.io.GermanVerbFinder;
 import util.io.ParamterFinder;
 import util.io.PronounFinder;
 import util.io.StringMatcher;
 import util.io.TemplateFeatures;
 import util.io.TemplateFinder;
-import util.io.GermanVerbFinder;
 
 /**
  *
@@ -470,9 +470,10 @@ public class GermanSentenceBuilder implements TempConstants {
         String word = "XX";
         if (!flagReference) {
             reference = this.lexicalEntryUtil.getPrepositionReference();
+             //System.out.println("reference::"+reference);
+            
             word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, reference);
-            //System.out.println(reference);
-            //System.out.println(word);
+             ///System.out.println("word::"+word);
             //exit(1);
         } else if (flagReference) {
             word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, reference);

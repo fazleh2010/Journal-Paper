@@ -278,7 +278,7 @@ public class GermanCsv {
                     + "  lemon:language \"" + language + "\" ;\n"
                     + "  lemon:entry    :" + "to_" + lemonEntry + " ;\n"
                     + "  lemon:entry    :" + lemonEntry + "ed" + " ;\n"
-                    + "  lemon:entry    :" + prepositionAttr + " .\n"
+                    + "  lemon:entry    :" +"form_" + lemonEntry + "_preposition" + " .\n"
                     + "\n";
         }
 
@@ -296,7 +296,7 @@ public class GermanCsv {
         }
 
         public static String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast,String writtenFormPerfect, String language) {
-            return ":form_" + lemonEntry + " a         lemon:Form ;\n"
+            return ":"+"form_" + lemonEntry + " a         lemon:Form ;\n"
                     + "  lemon:writtenRep     \"" + writtenFormInfinitive + "\"@" + language + " ;\n"
                     + "  lexinfo:verbFormMood lexinfo:infinitive .\n"
                     + "\n"
@@ -321,6 +321,8 @@ public class GermanCsv {
                     + "  lexinfo:directObject     :" + lemonEntry + "_obj .\n"
                     + "\n";
         }
+
+      
        
         public  void setArticle(Tupples tupple, String gender, String[] row) {
             GenderUtils.setArticles(tupple.getReference(), gender);
@@ -344,6 +346,16 @@ public class GermanCsv {
             GenderUtils.setVerbTypes(partOfSpeech, verbs,verbTypes);  
            
             
+        }
+        
+         public  String getPreposition(String lemonEntry,String preposition, String language) {
+            return ":arg2 lemon:marker :" +"form_" + lemonEntry + "_form_preposition" + " .\n"
+                    + "\n"
+                    + "## Prepositions ##\n"
+                    + "\n"
+                    + ":" +"form_" + lemonEntry + "_preposition" + " a                  lemon:SynRoleMarker ;\n"
+                    + "  lemon:canonicalForm  [ lemon:writtenRep \"" + preposition + "\"@" + "en" + " ] ;\n"
+                    + "  lexinfo:partOfSpeech lexinfo:preposition .";
         }
 
         public  Integer getWrittenForm3rdPerson() {
@@ -452,7 +464,7 @@ public class GermanCsv {
                     + ":lexicon_en a    lemon:Lexicon ;\n"
                     + "  lemon:language \"" + language + "\" ;\n"
                     + "  lemon:entry    :" + lemonEntry + " ;\n"
-                    + "  lemon:entry    :" + proposition + " .\n"
+                    + "  lemon:entry    :" + "form_"+lemonEntry + "_present"+"_preposition"+ " .\n"
                     + "\n";
         }
 
@@ -460,7 +472,7 @@ public class GermanCsv {
             String senseIdStr = getSenseId(senseIds);
             senseIdStr = ":" + lemonEntry + " a             lemon:LexicalEntry ;\n"
                     + "  lexinfo:partOfSpeech lexinfo:verb ;\n"
-                    + "  lemon:canonicalForm  :" + lemonEntry + "_present"+" ;\n"
+                    + "  lemon:canonicalForm  :" + "form_"+lemonEntry + "_present"+" ;\n"
                     + "  lemon:otherForm      :" + lemonEntry + "_past"+" ;\n"
                     + "  lemon:otherForm      :" + lemonEntry + "_perfect"+" ;\n"
                     + senseIdStr
@@ -470,7 +482,7 @@ public class GermanCsv {
         }
 
         public static String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast, String writtenFormPerfect, String language) {
-            return ":" + lemonEntry + "_present"+ " a           lemon:Form ;\n"
+            return ":" + "form_"+lemonEntry + "_present"+ lemonEntry + "_present"+ " a           lemon:Form ;\n"
                     + "  lemon:writtenRep     \"" + writtenFormInfinitive + "\"@" + language + " ;\n"
                     + "  lexinfo:verbFormMood lexinfo:infinitive .\n"
                     + "\n"
@@ -541,6 +553,16 @@ public class GermanCsv {
             GenderUtils.setPerfectVerbType(writtenFormPerfect, verb);*/
             
         }
+        
+        public  String getPreposition(String lemonEntry, String preposition, String language) {
+            return ":arg2 lemon:marker :" + "form_"+lemonEntry + "_present_preposition"+ " .\n"
+                    + "\n"
+                    + "## Prepositions ##\n"
+                    + "\n"
+                    + ":" + "form_"+lemonEntry + "_present_preposition"+ " a                  lemon:SynRoleMarker ;\n"
+                    + "  lemon:canonicalForm  [ lemon:writtenRep \"" + preposition + "\"@" + "en" + " ] ;\n"
+                    + "  lexinfo:partOfSpeech lexinfo:preposition .";
+        }
 
         public static Integer getWrittenForm3rdPerson() {
             return writtenForm3rdPerson;
@@ -610,6 +632,8 @@ public class GermanCsv {
          public  Integer getSyntacticFrameIndex() {
             return SyntacticFrame;
         }
+
+       
        
         
 

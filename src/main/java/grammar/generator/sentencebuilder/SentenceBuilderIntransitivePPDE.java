@@ -113,7 +113,7 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
             sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
             System.out.println(sentences);
             //sentences = nounPPframeSentence(bindingVariable, lexicalEntryUtil, passive);
-                    //exit(1);
+            //exit(1);
 
         } else if (this.frameType.equals(FrameType.IPP)) {
             String template = this.templateFinder.getSelectedTemplate();

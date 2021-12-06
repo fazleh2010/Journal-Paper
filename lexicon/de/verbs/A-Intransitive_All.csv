@@ -26,3 +26,6 @@ geborn_on_1,verb,geb„ren,geb„rt,gebar,geboren,auf,IntransitivePPFrame,domain,ran
 geborn_on_2,verb,geb„ren,geb„rt,gebar,geboren,auf,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Person,dbo:Location,masculine,Person,Personen,feminine,Lage,Lagen
 geborn_on_3,verb,geb„ren,geb„rt,gebar,geboren,auf,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Person,dbo:PopulatedPlace,masculine,Person,Personen,neuter,Ort,™rter
 geborn_on_4,verb,geb„ren,geb„rt,gebar,geboren,auf,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Person,dbo:Country,masculine,Person,Personen,neuter,Land,L„nder
+complete_in,TrennVerb,fertigstellen,stellt fertig,stellte fertig,fertiggestellt,in,IntransitivePPFrame,domain,range,1,dbo:buildingEndDate,dbo:Ship,xsd:date,neuter,Schiff,Schiffe,neuter,Date,Dates
+exhibits_1,TrennVerb,ausstellen,stellt aus,stellte aus,ausgestellt,in,IntransitivePPFrame,domain,range,1,dbo:museum,dbo:Artwork,dbo:Museum,neuter,Kunstwerk,Kunstwerke,neuter,Museum,Museen
+exhibits_2,TrennVerb,ausstellen,stellt aus,stellte aus,ausgestellt,in,IntransitivePPFrame,domain,range,1,dbo:museum,dbo:Work,dbo:Museum,feminine,Aufgabe,Aufgaben,neuter,Museum,Museen

@@ -1,0 +1,68 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :storben_1 ;
+  lemon:entry    :form_storben_1_present_preposition .
+
+:storben_1 a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_storben_1_present ;
+  lemon:otherForm      :storben_1_past ;
+  lemon:otherForm      :storben_1_perfect ;
+  lemon:sense          :storben_1_sense_1 ;
+  lemon:synBehavior    :storben_1_frame .
+
+:form_storben_1_presentstorben_1_present a           lemon:Form ;
+  lemon:writtenRep     "sterben"@de ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:storben_1_present a      lemon:Form ;
+  lemon:writtenRep "stirbt"@de ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:storben_1_past a lemon:Form ;
+  lemon:writtenRep  "starb"@de ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:storben_1_perfect a lemon:Form ;
+  lemon:writtenRep  "gestorben"@de ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:perfect .
+
+:storben_1_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :storben_1_subj ;
+  lexinfo:prepositionalAdjunct :storben_1_obj .
+
+:storben_1_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :storben_1_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/deathCause> ;
+  lemon:subjOfProp  :storben_1_obj ;
+  lemon:objOfProp   :storben_1_subj ;
+  lemon:condition   :storben_1_sense_1_condition .
+
+:storben_1_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Person> ;
+  lemon:propertyRange  <http://www.w3.org/2001/XMLSchema#string> .
+
+
+:storben_1_obj lemon:marker :in .
+
+:arg2 lemon:marker :form_storben_1_present_preposition .
+
+## Prepositions ##
+
+:form_storben_1_present_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "in"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

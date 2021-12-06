@@ -32,43 +32,37 @@ public class GermanVerbFinder implements TempConstants {
     private String word = "XX";
     private LexicalEntryUtil lexicalEntryUtil = null;
     private ParamterFinder paramterFinder = null;
-    private FrameType frameType=null;
+    private FrameType frameType = null;
 
-    public GermanVerbFinder(FrameType frameType,LexicalEntryUtil lexicalEntryUtil, String attribute, String reference) throws QueGGMissingFactoryClassException {
-        this.frameType=frameType;
+    public GermanVerbFinder(FrameType frameType, LexicalEntryUtil lexicalEntryUtil, String attribute, String reference) throws QueGGMissingFactoryClassException {
+        this.frameType = frameType;
         this.lexicalEntryUtil = lexicalEntryUtil;
         this.paramterFinder = new ParamterFinder(attribute, reference);
         this.setCategory(paramterFinder.getReference());
-        
-        System.out.println("paramterFinder::"+paramterFinder);
-        System.out.println("mainVerbFlag::"+this.mainVerbFlag);
-        System.out.println("trennVerbFlag::"+this.trennVerbFlag);
-        System.out.println("auxilaryVerbFlag::"+this.auxilaryVerbFlag);
+
+        System.out.println("paramterFinder::" + paramterFinder);
+        System.out.println("mainVerbFlag::" + this.mainVerbFlag);
+        System.out.println("trennVerbFlag::" + this.trennVerbFlag);
+        System.out.println("auxilaryVerbFlag::" + this.auxilaryVerbFlag);
         //exit(1);
-        
-                  
+
         if (this.mainVerbFlag) {
             word = findMainVerb(attribute, reference);
-        }  
-        else if (this.trennVerbFlag) {
-            word = this.getTrennVerb();       
-        }  
-        else if (this.reflexiveFlag) {
+        } else if (this.trennVerbFlag) {
+            word = this.getTrennVerb();
+        } else if (this.reflexiveFlag) {
             word = findMainVerb(attribute, reference);
-        } 
-        else if(this.auxilaryVerbFlag) {
+        } else if (this.auxilaryVerbFlag) {
             if (paramterFinder.getParameterLength() == 2 && paramterFinder.getTensePair().first != null) {
-                word = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil,paramterFinder.getReference(), paramterFinder.getTensePair().first, paramterFinder.getTensePair().second);
+                word = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil, paramterFinder.getReference(), paramterFinder.getTensePair().first, paramterFinder.getTensePair().second);
             } else if (paramterFinder.getParameterLength() == 3 && paramterFinder.getTensePair().first != null && paramterFinder.getNumberPair().first != null) {
-                word = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil,paramterFinder.getReference(), paramterFinder.getTensePair().first, paramterFinder.getTensePair().second,
-                paramterFinder.getNumberPair().first, paramterFinder.getNumberPair().second);
+                word = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil, paramterFinder.getReference(), paramterFinder.getTensePair().first, paramterFinder.getTensePair().second,
+                        paramterFinder.getNumberPair().first, paramterFinder.getNumberPair().second);
             } else {
-                word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil,paramterFinder.getReference());
+                word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, paramterFinder.getReference());
             }
 
         }
-        
-       
 
     }
 
@@ -103,17 +97,17 @@ public class GermanVerbFinder implements TempConstants {
     }
 
     private String getMainVerb() {
-        String word="XX";
+        String word = "XX";
         List<AnnotatedVerb> annotatedVerbs = lexicalEntryUtil.parseLexicalEntryToAnnotatedVerbs();
 
         for (AnnotatedVerb annotatedVerb : annotatedVerbs) {
             if (annotatedVerb.getTense().toString().contains(paramterFinder.getTensePair().second) && annotatedVerb.getPerson().toString().contains(paramterFinder.getPersonPair().second)) {
-                word= annotatedVerb.getWrittenRepValue();
+                word = annotatedVerb.getWrittenRepValue();
                 break;
             }
 
         }
-        
+
         return word;
     }
 
@@ -140,10 +134,10 @@ public class GermanVerbFinder implements TempConstants {
     }
 
     private String getTrennVerb() {
-        String word="XX";
+        String word = "XX";
         if (paramterFinder.getTensePair().second.contains(past) || paramterFinder.getTensePair().second.contains(present)) {
             word = this.getMainVerb();
-            
+
             String[] info = word.split(" ");
             if (paramterFinder.getReference().contains(TrennVerbPart1)) {
                 word = info[0];
@@ -154,9 +148,72 @@ public class GermanVerbFinder implements TempConstants {
         } else if (paramterFinder.getTensePair().second.contains(perfect)) {
             return word = this.getPerfectTrennVerb(word);
         }
-       
+
         return word;
 
+    }
+
+    private void setCategory(String reference) {
+        //System.out.println("reference::" + reference);
+        //System.out.println("trennVerb hash::" + GenderUtils.trennVerb);
+
+        if (frameType.equals(FrameType.VP) || frameType.equals(FrameType.IPP)) {
+            if (reference.contains("component_be")
+                    ||reference.contains("component_haben")
+                    ||reference.contains("component_heißen")
+                    ||reference.contains("component_werden")) {
+                this.auxilaryVerbFlag = true;
+                return;
+            }
+            else if (isTrenn()) {
+                if (reference.contains(TrennVerb)) {
+                    this.trennVerbFlag = true;
+                }
+            } else {
+                if (reference.contains(mainVerb)) {
+                    this.mainVerbFlag = true;
+                } else if (reference.contains(RefVerb)) {
+                    this.reflexiveFlag = true;
+                }
+
+            }
+        } else {
+            this.auxilaryVerbFlag = true;
+        }
+
+    }
+
+    public String getWord() {
+        return word;
+    }
+
+    private String checkTrennOrPerfect(String word) {
+        String tense = this.paramterFinder.getTensePair().second;
+        if (isTrennVerb(word)) {
+            return word = this.getTrennVerb();
+
+        } else {
+            if (this.mainVerbFlag && tense.contains(perfect)) {
+                word = getPerfectMainVerb();
+            } else if (this.mainVerbFlag && (tense.contains(present)
+                    || tense.contains(past))) {
+                word = this.getMainVerb();
+            } else if (this.trennVerbFlag) {
+                return "XX";
+            }
+
+        }
+        return word;
+    }
+
+    private Boolean isTrenn() {
+        String verbWrittenForm = getMainVerbPresent(past).trim().strip();
+        System.out.println(verbWrittenForm);
+        System.out.println(GenderUtils.trennVerb.keySet());
+        if (GenderUtils.trennVerb.containsKey(verbWrittenForm)) {
+            return true;
+        }
+        return false;
     }
 
     public Boolean getMainVerbFlag() {
@@ -174,94 +231,5 @@ public class GermanVerbFinder implements TempConstants {
     public Boolean getReflexiveFlag() {
         return reflexiveFlag;
     }
-
-   /* private void setCategory(String reference) {
-        if (reference.contains(mainVerb)&&!this.verbTrenn()) {
-            this.mainVerbFlag = true;
-        } else if (reference.contains(TrennVerb) && this.verbTrenn()) {
-            this.trennVerbFlag = true;
-        } else if (reference.contains("component_be")||reference.contains("component_heißen")
-                ||reference.contains("component_haben")||reference.contains("component_werden")) {
-            this.auxilaryVerbFlag = true;
-        } else if (reference.contains(RefVerb)) {
-            this.reflexiveFlag = true;
-        } 
-    }*/
-    
-    /*private void setCategory(String reference) {
-        System.out.println("trennVerb hash::"+GenderUtils.trennVerb);
-        if (reference.contains(TrennVerb)&&isTrenn()) {
-            this.trennVerbFlag = true;
-        } else if (reference.contains("component_be") || reference.contains("component_heißen")
-                || reference.contains("component_haben") || reference.contains("component_werden")) {
-            this.auxilaryVerbFlag = true;
-        }
-        else if(reference.contains(mainVerb)){
-            this.mainVerbFlag = true; 
-        }
-        else if (reference.contains(RefVerb)) {
-            this.reflexiveFlag = true;
-        }
-    }*/
-
-    private void setCategory(String reference) {
-        System.out.println("reference::" + reference);
-        System.out.println("trennVerb hash::" + GenderUtils.trennVerb);
-        
-        if (frameType.equals(FrameType.VP) || frameType.equals(FrameType.IPP)) {
-            if (isTrenn()) {
-                if (reference.contains(TrennVerb)) {
-                    this.trennVerbFlag = true;
-                }
-            } else {
-                if (reference.contains(mainVerb)) {
-                    this.mainVerbFlag = true;
-                } else if (reference.contains(RefVerb)) {
-                    this.reflexiveFlag = true;
-                }
-            }
-        }
-        else
-          this.auxilaryVerbFlag = true;
-           
-        
-
-    }
-
-    
-    public String getWord() {
-        return word;
-    }
-
-    private String checkTrennOrPerfect(String word) {
-        String tense=this.paramterFinder.getTensePair().second;
-          if (isTrennVerb(word)) {
-            return word = this.getTrennVerb();
-
-        } else {
-            if (this.mainVerbFlag && tense.contains(perfect)) {
-                word = getPerfectMainVerb();
-            } else if (this.mainVerbFlag && (tense.contains(present)
-                    || tense.contains(past))) {
-                word = this.getMainVerb();
-            } else if (this.trennVerbFlag) {
-                return "XX";
-            }
-
-        }
-          return word;
-    }
-
-    private Boolean isTrenn() {
-        String verbWrittenForm = getMainVerbPresent(past).trim().strip();
-        System.out.println(verbWrittenForm);
-         System.out.println(GenderUtils.trennVerb.keySet());
-        if (GenderUtils.trennVerb.containsKey(verbWrittenForm)) {
-            return true;
-        }
-        return false;
-    }
-    
-    
 
 }
