@@ -1,0 +1,47 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural
+flow_through_1,verb,flow,flows,flowed,through,IntransitivePPFrame,domain,range,1,dbo:country,dbo:River,dbo:Country,river,rivers,country,countries
+flow_through_2,verb,flow,flows,flowed,through,IntransitivePPFrame,domain,range,2,dbo:city,dbo:River,dbo:City,river,rivers,city,cities
+take_place_in_1,verb,take place,takes place,took place,in,IntransitivePPFrame,domain,range,1,dbo:place,dbo:MilitaryConflict,dbo:PopulatedPlace,conflict,conflicts,place,places
+take_place_in_2,verb,take place,takes place,took place,in,IntransitivePPFrame,domain,range,1,dbp:date,dbo:MilitaryConflict,xsd:date,conflict,conflicts,date,dates
+commence_1,verb,commence,commences,commenced,in,IntransitivePPFrame,domain,range,1,dbo:date,dbo:Event,xsd:date,event,events,date,dates
+end_in_1,verb,end,ends,ended,in,IntransitivePPFrame,domain,range,1,dbo:routeEnd,dbo:Road,dbo:Location,road,roads,location,locations
+end_in_2,verb,end,ends,ended,in,IntransitivePPFrame,domain,range,2,dbo:routeEnd,dbo:ArchitecturalStructure,dbo:Location,architectural structure,architectural structures,location,locations
+end_in_3,verb,end,ends,ended,in,IntransitivePPFrame,domain,range,3,dbo:routeEnd,dbo:Infrastructure,dbo:Location,infrastructure,infrastructures,location,locations
+end_in_4,verb,end,ends,ended,in,IntransitivePPFrame,domain,range,4,dbo:routeEnd,dbo:RouteOfTransportation,dbo:Location,route of transportation,routes of transportation,location,locations
+grow_in_1,verb,grow,grows,grew,in,IntransitivePPFrame,range,domain,1,dbo:growingGrape,dbo:WineRegion,dbo:Grape,wine region,wine regions,grape,grape
+stand_for_2,verb,stand,stands,stood,for,IntransitivePPFrame,range,domain,1,dbo:abbreviation,owl:Thing,dbo:string,thing,things,-,-
+begin_at_1,verb,begin,begins,began,at,IntransitivePPFrame,domain,range,1,dbp:source1Location,dbo:River,dbo:Country,river,rivers,country,countries
+begin_at_2,verb,begin,begins,began,at,IntransitivePPFrame,domain,range,1,dbp:source2Location,dbo:River,dbo:City,river,rivers,city,cities
+flow_into,verb,flow,flows,flowed,into,IntransitivePPFrame,range,domain,1,dbo:inflow,dbo:BodyOfWater,dbo:BodyOfWater,body Of water,body Of water,body of water,body of water
+released_on_4,verb,release,releases,released,on,IntransitivePPFrame,domain,range,1,dbo:computingPlatform,dbo:Software,owl:Thing,software,softwares,thing,things
+relate_to_1,verb,relate,is related,related,to,IntransitivePPFrame,domain,range,1,dbo:related,dbo:Beverage,dbo:Beverage,beverage,beverages,beverage,beverages
+record_in_1,verb,record,records,recored,in,IntransitivePPFrame,domain,range,1,dbo:recordedIn,dbo:MusicalWork,dbo:PopulatedPlace,musical work,musical works,populated place,populated places
+locate_in_1,verb,locate,locates,located,in,IntransitivePPFrame,domain,range,2,dbo:location,dbo:City,dbo:Country ,city,cities,country ,countries
+locate_in_2,verb,locate,locates,located,in,IntransitivePPFrame,domain,range,4,dbo:location,dbo:Airport,dbo:Place,airport,airports,place,places
+locate_in_3,verb,locate,locates,located,in,IntransitivePPFrame,domain,range,9,dbo:location,dbo:BodyOfWater,dbo:Place,body of water,body of water,place,places
+locate_in_4,verb,locate,locates,located,in,IntransitivePPFrame,domain,range,5,dbo:country,dbo:Mountain,dbo:Country,mountain,mountains,country ,countries
+locate_in_5,verb,locate,locates,located,in,IntransitivePPFrame,domain,range,6,dbo:locatedInArea,dbo:Place,dbo:Place,place,places,place,places
+locate_in_6,verb,locate,locates,located,in,IntransitivePPFrame,domain,range,7,dbo:country,dbo:Settlement,dbo:Country,settlement,settlements,country ,countries
+locate_in_7,verb,locate,locates,located,in,IntransitivePPFrame,domain,range,8,dbo:country,dbo:BodyOfWater,dbo:Country,body of water,body of water,country ,countries
+locate_in_8,verb,locate,locates,located,in,IntransitivePPFrame,domain,range,1,dbo:location,dbo:Organisation,dbo:Place,organisation,organisations,place,places
+locate_in_9,verb,locate,locates,located,in,IntransitivePPFrame,domain,range,3,dbo:city,dbo:Airport,dbo:City,airport,airports,city,cities
+belong_to_1,verb,belong,belongs,belonged,to,IntransitivePPFrame,domain,range,3,dbp:album,dbo:Song,dbo:Album,song,songs,album,albums
+belong_to_3,verb,belong,belongs,belonged,to,IntransitivePPFrame,domain,range,2,dbp:genre,dbo:Album,dbo:Genre,album,albums,genre,genres
+belong_to_4,verb,belong,belongs,belonged,to,IntransitivePPFrame,domain,range,4,dbo:genre,dbo:Film,dbo:Genre,film,film,genre,genres
+belong_to_6,verb,belong,belongs,belonged,to,IntransitivePPFrame,domain,range,6,dbp:party,dbo:Agent,dbo:PoliticalParty,agent,agents,politicalParty,politicalParties
+belong_to_7,verb,belong,belongs,belonged,to,IntransitivePPFrame,domain,range,7,dbo:literaryGenre,dbo:WrittenWork,dbo:Genre,written work,written work,genre,genres
+belong_to_8,verb,belong,belongs,belonged,to,IntransitivePPFrame,domain,range,8,dbo:mountainRange,dbo:Mountain,dbo:MountainRange,mountain,mountains,mountain range,mountain ranges
+belong_to_9,verb,belong,belongs,belonged,to,IntransitivePPFrame,domain,range,9,dbo:genre,dbo:Band,dbo:Genre,band,bands,genre,genres
+belong_to_11,verb,belong,belongs,belonged,to,IntransitivePPFrame,domain,range,11,dbo:genre,dbo:Software,dbo:Genre,software,softwares,genre,genres
+belong_to_12,verb,belong,belongs,belonged,to,IntransitivePPFrame,domain,range,12,dbo:series,dbo:Software,owl:Thing,software,softwares,thing,things
+belong_to_13,verb,belong,belongs,belonged,to,IntransitivePPFrame,domain,range,13,dbo:genre,dbo:Artist,dbo:Genre,artist,artists,genre,genres
+belong_to_15,verb,belong,belongs,belonged,to,IntransitivePPFrame,domain,range,15,dbo:subdivision,dbo:Settlement,dbo:Place,settlement,settlements,place,places
+belong_to_17,verb,belong,belongs,belonged,to,IntransitivePPFrame,domain,range,17,dbo:architecturalStyle,dbo:ArchitecturalStructure,owl:Thing,architectural structure,architectural structures,thing,things
+belong_to_18,verb,belong,belongs,belonged,to,IntransitivePPFrame,domain,range,18,dbo:formerTeam,dbo:Athlete,dbo:SportsTeam,athlete,athlete,sports team,sports teams
+play_for_1,verb,play,plays,played,for,IntransitivePPFrame,domain,range,1,dbo:debutTeam,dbo:Athlete,dbo:SportsTeam,athlete,athlete,sports team,sports teams
+name_after_1,verb,name,named,named,after,IntransitivePPFrame,domain,range,1,dbo:namedAfter,dbo:Settlement,dbo:Agent,settlement,settlements,agent,agents
+originate_in_1,verb,originate,originates,originated,in,IntransitivePPFrame,domain,range,1,dbo:sourceCountry,dbo:Stream,dbo:Country,stream,streams,country,countries
+end_in_1,verb,end,ends,ended,in,IntransitivePPFrame,domain,range,1,dbo:mouthPlace,dbo:River,dbo:PopulatedPlace,river,rivers,populated place,populated places
+end_in_2,verb,end,ends,ended,in,IntransitivePPFrame,domain,range,2,dbo:mouthCountry,dbo:River,dbo:Country,river,rivers,country,countries
+be_from,verb,be,is,was,from,IntransitivePPFrame,domain,range,1,dbo:hometown,dbo:Agent,dbo:Settlement,agent,agents,settlement,settlements
+border_in_1,verb,border,borders,bordered,in,IntransitivePPFrame,domain,range,1,dbo:borderingstates,dbo:State,dbo:State,state,states,state,states

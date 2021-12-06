@@ -1,0 +1,71 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive,writtenForm3rdPerson,writtenFormPast,SyntacticFrame,subject,directObject,sense,reference,domain,range,passivePreposition,domainWrittenSingularForm, domainWrittenPluralForm,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
+develop_1,verb,develop,develops,developed,TransitiveFrame,range,domain,1,dbo:developer,dbo:Work,dbo:Agent,by,work,works,agent,agents
+play_1,verb,play,playes,played,TransitiveFrame,range,domain,1,dbo:portrayer,dbo:FictionalCharacter,dbo:Person,by,fictional character,fictional characters,person,persons
+play_2,verb,play,plays,played,TransitiveFrame,range,domain,2,dbo:portrayer,dbo:Work,dbo:Actor,by,work,works,actor,actors
+direct_1,verb,direct,directs,directed,TransitiveFrame,range,domain,1,dbo:director,dbo:Film,dbo:Person,by,film,films,person,persons
+direct_2,verb,direct,directs,directed,TransitiveFrame,range,domain,2,dbo:director,dbo:Software,dbo:Person,by,software,softwares,person,persons
+design_1,verb,design,designs,designed,TransitiveFrame,range,domain,1,dbo:architect,dbo:ArchitecturalStructure,dbo:Architect,by,architectural structure,architectural structures,architect,architects
+design_2,verb,design,designs,designed,TransitiveFrame,range,domain,2,dbo:designer,dbo:Building,dbo:Person,by,building,buildings,person,persons
+design_3,verb,design,designs,designed,TransitiveFrame,range,domain,3,dbo:designer,dbo:Software,dbo:Person,by,software,softwares,person,persons
+operate_1,verb,operate,designs,designed,TransitiveFrame,range,domain,1,dbo:operator,dbo:Organisation,dbo:LaunchPad,by,organisation,organisations,launch pad,launch pads
+exhibit_1,verb,exhibit,exhibits,exhibited,TransitiveFrame,range,domain,1,dbo:museum,dbo:Artwork,dbo: Museum,by,artwork,artworks,museum,museums
+discover_1,verb,discover,discovers,discovered,TransitiveFrame,range,domain,1,dbo:discoverer,dbo:Place,dbo:Person,by,place,places,person,persons
+produce_1,verb,produce,produces,produced,TransitiveFrame,range,domain,1,dbo:producer,dbo:Film,dbo:Person,by,film,films,person,persons
+produce_2,verb,produce,produces,produced,TransitiveFrame,range,domain,2,dbo:producer,dbo:Work,dbo:Person,by,work,works,person,persons
+produce_3,verb,produce,produces,produced,TransitiveFrame,range,domain,3,dbo:executiveProducer,dbo:TelevisionShow,dbo:Person,by,Television show,Television shows,person,persons
+produce_4,verb,produce,produces,produced,TransitiveFrame,range,domain,3,dbo:manufacturer,dbo:Beverage,dbo:Organisation,by,beverage,beverages,organisation,organisations
+publish_1,verb,publish,publishes,published,TransitiveFrame,range,domain,1,dbo:publisher,dbo:Book,dbo:Agent,by,book,books,agent,agents
+publish_2,verb,publish,publishes,published,TransitiveFrame,range,domain,2,dbo:publisher,dbo:VideoGame,dbo:Agent,by,video game,video games,agent,agents
+publish_3,verb,publish,publish,published,TransitiveFrame,range,domain,3,dbo:publisher,dbo:Work,dbo:Person,by,work,works,person,persons
+publish_4,verb,publish,publishes,published,TransitiveFrame,range,domain,4,dbp:publisher,dbo:Work,dbo:Agent,by,work,works,agent,agents
+serve_1,verb,serve,serves,served,TransitiveFrame,range,domain,1,dbo:targetAirport,dbo:Airline,dbo:Airport,by,airline,airlines,airport,airports
+write_1,verb,write,writes,wrote,TransitiveFrame,range,domain,1,dbo:writer,dbo:Song,dbo:Person,by,song,songs,person,persons
+write_2,verb,write,writes,wrote,TransitiveFrame,range,domain,2,dbo:writer,dbo:Book,dbo:Person,by,book,books,person,persons
+write_3,verb,write,writes,wrote,TransitiveFrame,range,domain,3,dbo:writer,dbo:MusicalWork,dbo:Person,by,musical work,musical works,person,persons
+write_4,verb,write,writes,wrote,TransitiveFrame,range,domain,4,dbo:author,dbo:Book,dbo:Agent,by,book,books,agent,agents
+write_5,verb,write,writes,wrote,TransitiveFrame,range,domain,5,dbo:writer,dbo:Work,dbo:Person,by,work,works,person,persons
+write_6,verb,write,writes,wrote,TransitiveFrame,range,domain,6,dbp:allLyrics,dbo:Album,dbo:Person,by,album,albums,person,persons
+write_7,verb,write,writes,wrote,TransitiveFrame,range,domain,7,dbp:writer,dbo:Work,dbo:Person,by,work,works,person,persons
+paint,verb,paint,paints,painted,TransitiveFrame,range,domain,1,dbo:artist,dbo:Work,dbo:Person,by,work,works,person,persons
+star_1,verb,star,stars,starred,TransitiveFrame,range,domain,1,dbo:starring,dbo:Work,dbo:Actor,by,work,works,actor,actors
+win_1,verb,win,wins,won,TransitiveFrame,range,domain,1,dbo:award,dbo:Person,dbo:Award,by,person,persons,award,awards
+win_2,verb,win,wins,won,TransitiveFrame,range,domain,1,dbo:award,dbo:Work,dbo:Person,by,work,works,person,persons
+found_1,verb,found,founds,founded,TransitiveFrame,range,domain,1,dbo:foundedBy,dbo:Organisation,dbo:Person,by,organisation,organisations,person,persons
+found_2,verb,found,founds,founded,TransitiveFrame,range,domain,2,dbp:founder,dbo:Organisation,dbo:Person,by,organisation,organisations,person,persons
+present_1,verb,present,presents,presented,TransitiveFrame,range,domain,1,dbo:presenter,dbo:TelevisionShow,dbo:Person,by,Television show,Television shows,person,persons
+perform_1,verb,perform,performs,performed,TransitiveFrame,range,domain,1,dbo:artist,dbo:MusicalWork,dbo:Agent,by,musical work,musical works,agent,agents
+succeed_1,verb,succeed,succeeds,succeeded,TransitiveFrame,range,domain,1,dbo:successor,dbo:Person,dbo:Person,by,person,persons,person,persons
+distribute_1,verb,distribute,distributes,distributed,TransitiveFrame,range,domain,1,dbo:distributor,dbo:TelevisionShow,dbo:Organisation,by,Television show,Television shows,organisation,organisations
+distribute_1,verb,distribute,distributes,distributed,TransitiveFrame,range,domain,2,dbo:distributor,dbo:Film,dbo:Organisation,by,film,films,organisation,organisations
+air_1,verb,air,airs,aired,TransitiveFrame,range,domain,1,dbo:network,dbo:Film,dbo:Broadcaster,by,film,films,broadcaster,broadcasters
+precede_1,verb,precede,precedes,preceded,TransitiveFrame,range,domain,1,dbp:prevTitle,dbo:Album,dbo:Album,by,album,albums,album,albums
+precede_2,verb,precede,precedes,preceded,TransitiveFrame,range,domain,2,dbo:previousWork,dbo:Work,dbo:Work,by,work,works,work,works
+precede_3,verb,precede,precedes,preceded,TransitiveFrame,range,domain,3,dbp:after,dbo:Politician,dbo:Politician,by,politician,politicians,politician,politicians
+precede_4,verb,precede,precedes,preceded,TransitiveFrame,range,domain,4,dbp:predecessor,dbo:Politician,dbo:Politician,by,politician,politicians,politician,politicians
+marry_1,verb,marry,marries,married,TransitiveFrame,range,domain,1,dbo:spouse,dbo:Person,dbo:Person,by,person,persons,person,persons
+own_1,verb,own,owns,owned,TransitiveFrame,range,domain,1,dbo:owner,dbo:Airport,dbo:Agent,by,airport,airports,agent,agents
+own_2,verb,own,owns,owned,TransitiveFrame,range,domain,2,dbo:owner,dbo:Animal,dbo:Agent,by,animal,animals,agent,agents
+operate_1,verb,operate,operates,operated,TransitiveFrame,range,domain,1,dbp:operator,dbo:Airport,dbo:Organisation,by,airport,airports,organisation,organisations
+control_1,verb,control,controls,controlled,TransitiveFrame,range,domain,1,dbp:controlledby,dbo:Airport,dbo:Organisation,by,airport,airports,organisation,organisations
+illustrate_1,verb,illustrate,illustrates,illustrated,TransitiveFrame,range,domain,1,dbo:illustrator,dbo:WrittenWork,dbo:Person,by,written work,written works,person,persons
+support_1,verb,support,supports,supported,TransitiveFrame,range,domain,1,dbo:ideology,dbo:Ideology,dbo:Agent,by,ideology,ideologies,agent,agents
+speak_1,verb,speak,speaks,spoke,TransitiveFrame,range,domain,1,dbo:officialLanguage,dbo:Language,dbo:PopulatedPlace,by,language,languages,populated place,populated place
+join_1,verb,join,joins,joined,TransitiveFrame,range,domain,1,dbo:riverMouth,dbo:BodyOfWater,dbo:River,by,body of water,body of water,river,rivers
+create_1,verb,create,creates,created,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Agent,by,Television show,Television shows,agent,agents
+create_1,verb,create,creates,created,TransitiveFrame,range,domain,1,dbo:notableWork,dbo:Work,dbo:Person,by,work,works,person,persons
+leave_1,verb,leave,leaves,left,TransitiveFrame,range,domain,1,dbo:formerBandMember,dbo:Band,dbo:Person,by,band,bands,person,persons
+program_1,verb,program,programs,programmed,TransitiveFrame,range,domain,1,dbp:programmer,dbo:Software,dbo:Person,by,software,softwares,person,persons
+cover_1,verb,cover,covers,covered,TransitiveFrame,range,domain,1,dbo:academicDiscipline,owl:Thing,dbo:AcademicJournal,by,thing,things,academic journal,academic journals
+edit_1,verb,edit,edits,edited,TransitiveFrame,range,domain,1,dbo:editor,dbo:AcademicJournal,dbo:Agent,by,academic journal,academic journals,agent,agents
+manage_1,verb,manage,manages,managed,TransitiveFrame,range,domain,1,dbo:managerClub,dbo:SportsTeam,dbo:Athlete,by,sports team,sports teams,athlete,athletes
+lead_1,verb,lead,leads,led,TransitiveFrame,range,domain,1,dbp:leaderName,dbo:Place,dbo:Person,by,place,places,person,persons
+drain_1,verb,drain,drains,drained,TransitiveFrame,range,domain,1,dbo:outflow,dbo:BodyOfWater,dbo:River,by,body of water,body of water,river,rivers
+maintain_1,verb,maintain,maintains,maintained,TransitiveFrame,range,domain,1,dbo:maintainedBy,dbo:ArchitecturalStructure,dbo:Agent,by,architectural structure,architectural structures,agent,agents
+rent_1,verb,rent,rents,rented,TransitiveFrame,range,domain,1,dbo:tenant,dbo:ArchitecturalStructure,dbo:Organisation,by,architectural structure,architectural structures,organisation,organisations
+breed_1,verb,breed,breeds,bred,TransitiveFrame,range,domain,1,dbo:breeder,dbo:Animal,dbo:Person,by,animal,animals,person,persons
+train_1,verb,train,trains,trained,TransitiveFrame,range,domain,1,dbo:trainer,dbo:Athlete,dbo:Person,by,athlete,athletes,person,persons
+follow_1,verb,follow,follows,followed,TransitiveFrame,range,domain,1,dbp:nextTitle,dbo:Album,dbo:Album,by,album,albums,album,albums
+follow_2,verb,follow,follows,followed,TransitiveFrame,range,domain,2,dbo:subsequentWork,dbo:Work,dbo:Work,by,work,works,work,works
+follow_3,verb,follow,follows,followed,TransitiveFrame,range,domain,3,dbp:before,dbo:Politician,dbo:Politician,by,politician,politicians,politician,politicians
+follow_4,verb,follow,follows,followed,TransitiveFrame,range,domain,4,dbp:successor,dbo:Politician,dbo:Politician,by,politician,politicians,politician,politicians
+compose_1,verb,compose,composes,composed,TransitiveFrame,range,domain,1,dbo:musicComposer,dbo:Work,dbo:Person,by,work,works,person,persons

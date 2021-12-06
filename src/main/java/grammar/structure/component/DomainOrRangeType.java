@@ -82,6 +82,7 @@ public enum DomainOrRangeType {
     Road(List.of(URI.create(DBO.getUri() + "Road"))),
     Infrastructure(List.of(URI.create(DBO.getUri() + "Infrastructure"))),
     RouteOfTransportation(List.of(URI.create(DBO.getUri() + "RouteOfTransportation"))),
+   
   
 
     Name(List.of(
@@ -223,6 +224,11 @@ public enum DomainOrRangeType {
     )),
     Thing(List.of(URI.create(DBO.getUri() + "Thing"))),
     VideoGame(List.of(URI.create(DBO.getUri() + "VideoGame"))),
+    Article(List.of(URI.create(DBO.getUri() + "Article"))),
+     Play(List.of(URI.create(DBO.getUri() + "Play"))),
+    EducationalInstitution(List.of(URI.create(DBO.getUri() + "EducationalInstitution"))),
+    Genre(List.of(URI.create(DBO.getUri() + "Genre"))),
+    MountainRange(List.of(URI.create(DBO.getUri() + "MountainRange"))),
     THING(List.of(URI.create("http://www.w3.org/2002/07/owl#Thing"))); // default if no other matches
     
 

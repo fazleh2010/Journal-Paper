@@ -192,9 +192,9 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       createSentenceTemplate(language,
         List.of(
         //"What was developed by X?
-        "interrogativeDeterminer(domain:singular) verb(component_be:past:singular) verb(mainVerb:past:thridPerson) preposition(by) adjunct(range)?",
+        "interrogativeDeterminer(domain:singular) verb(component_be:past:singular) verb(mainVerb:past:thridPerson) preposition adjunct(range)?",
         //"What were developed by X?
-        "interrogativeDeterminer(domain:plural) verb(component_be:past:plural) verb(mainVerb:past:thridPerson) preposition(by) adjunct(range)?"
+        "interrogativeDeterminer(domain:plural) verb(component_be:past:plural) verb(mainVerb:past:thridPerson) preposition adjunct(range)?"
         ),
         TransitiveFrame,
         passive
