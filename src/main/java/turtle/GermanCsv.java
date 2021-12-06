@@ -66,7 +66,7 @@ public class GermanCsv {
                     + ":lexicon_en a    lemon:Lexicon ;\n"
                     + "  lemon:language \"" + language + "\" ;\n"
                     + "  lemon:entry    :" + lemonEntry + " ;\n"
-                    + "  lemon:entry    :" + preposition + " .\n"
+                    + "  lemon:entry    :" + lemonEntry + "_form_preposition" + " .\n"
                     + "\n";
         }
 
@@ -130,12 +130,12 @@ public class GermanCsv {
 
        
 
-        public static String getPreposition(String prepositionAtt,String preposition, String language) {
-            return ":arg2 lemon:marker :" + prepositionAtt + " .\n"
+        public static String getPreposition(String lemonEntry,String preposition, String language) {
+            return ":arg2 lemon:marker :" + lemonEntry + "_form_preposition" + " .\n"
                     + "\n"
                     + "## Prepositions ##\n"
                     + "\n"
-                    + ":" + prepositionAtt + " a                  lemon:SynRoleMarker ;\n"
+                    + ":" + lemonEntry + "_form_preposition" + " a                  lemon:SynRoleMarker ;\n"
                     + "  lemon:canonicalForm  [ lemon:writtenRep \"" + preposition + "\"@" + "en" + " ] ;\n"
                     + "  lexinfo:partOfSpeech lexinfo:preposition .";
         }

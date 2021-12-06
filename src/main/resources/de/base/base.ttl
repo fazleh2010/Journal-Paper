@@ -429,6 +429,15 @@
   lexinfo:case                            lexinfo:dativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
   lemon:otherForm      [ lemon:writtenRep "Welchen"@de ;
+  lexinfo:gender                          lexinfo:feminine ;
+  lexinfo:case                            lexinfo:dativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lemon:otherForm      [ lemon:writtenRep "Welchen"@de ;
+  lexinfo:gender                          lexinfo:neuter ;
+  lexinfo:case                            lexinfo:dativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lemon:otherForm      [ lemon:writtenRep "Welchen"@de ;
+  lexinfo:gender                          lexinfo:feminine ;
   lexinfo:case                            lexinfo:dativeCase ;
   lexinfo:number                          lexinfo:plural ] ;
   lexinfo:partOfSpeech lexinfo:article .

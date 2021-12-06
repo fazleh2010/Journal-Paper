@@ -743,6 +743,7 @@ public class EvaluateAgainstQALD {
             /*String id = row[0];
             String originalQuestion = row[1];
             String sparqlQuesry = row[2];*/
+            
             cosineDistance = new CosineDistance().apply(qaldsentence, question);
             cosineDistancePercentage = Math.round(cosineDistance * 100);
             cosineSimilarityPercentage = Math.round((1 - cosineDistance) * 100);
@@ -758,6 +759,12 @@ public class EvaluateAgainstQALD {
 
     private List<String> getResultForQaldSparqlQuery(String qaldSparql) {
         LOG.debug("Executing QALD SPARQL Query:\n{}", qaldSparql);
+        
+        if (qaldSparql.length() >= 2 && qaldSparql.charAt(0) == '"' && qaldSparql.charAt(qaldSparql.length() - 1) == '"') {
+            qaldSparql = qaldSparql.substring(1, qaldSparql.length() - 1);
+        }
+          
+
         List<String> uriResultList = new ArrayList<String>();
         SPARQLRequest sparqlRequest = SPARQLRequest.fromString(qaldSparql);
         uriResultList = sparqlRequest.getSparqlResultList();

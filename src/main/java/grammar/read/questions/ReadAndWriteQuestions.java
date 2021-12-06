@@ -299,7 +299,8 @@ public class ReadAndWriteQuestions {
 
                         // System.out.println("index::" + index + " uriLabel::" + uriLabel.getLabel() + " questionForShow::" + questionForShow + " sparql::" + sparql + " answer::" + answer + " syntacticFrame:" + syntacticFrame);
                         String[] record = {id, questionT, sparql, answerUri, answer, syntacticFrame};
-                        this.csvWriterQuestions.writeNext(record);
+                        String[]newRecord= doubleQuote(record);
+                        this.csvWriterQuestions.writeNext(newRecord);
                         rowIndex = rowIndex + 1;
                     }
                 }
@@ -488,7 +489,8 @@ public class ReadAndWriteQuestions {
 
                 System.out.println("index::" + index + " questionT::" + questionT + " sparql::" + sparql + " answer::" + answer + " syntacticFrame:" + syntacticFrame);
                 String[] record = {id, questionT, sparql, answerUri, answer, syntacticFrame};
-                this.csvWriterQuestions.writeNext(record);
+                String[]newRecord= doubleQuote(record);
+                this.csvWriterQuestions.writeNext(newRecord);
                 rowIndex = rowIndex + 1;
             }
 
@@ -543,10 +545,20 @@ public class ReadAndWriteQuestions {
         return lexicalEntries;
     }
 
-   /* private String doubleQuote(String string) {
-        
+   private String[] doubleQuote(String []row) {
+       String []newRow=new String[row.length];
+       Integer index=0;
+        for(String string:row){
+            string=doubleQuote(string);
+            newRow[index]=string;
+            index=index+1;
+        }
+        return newRow;
+    }
+   
+    private String doubleQuote(String string) {
         return "\""+string+"\"";
-    }*/
+    }
 
     
 }

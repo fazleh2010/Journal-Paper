@@ -19,7 +19,7 @@ public enum DomainOrRangeType {
     Artist(List.of(URI.create(DBO.getUri() + "Artist"))),
     MusicalArtist(List.of(URI.create(DBO.getUri() + "MusicalArtist"))),
     Politician(List.of(URI.create(DBO.getUri() + "Politician"))),
-    Economist(List.of(URI.create(DBO.getUri() + "Economist"))),  
+    Economist(List.of(URI.create(DBO.getUri() + "Economist"))),
     Cleric(List.of(URI.create(DBO.getUri() + "Cleric"))),
     SoccerPlayer(List.of(URI.create(DBO.getUri() + "SoccerPlayer"))),
     Skier(List.of(URI.create(DBO.getUri() + "Skier"))),
@@ -60,8 +60,7 @@ public enum DomainOrRangeType {
     WinterSportPlayer(List.of(URI.create(DBO.getUri() + "WinterSportPlayer"))),
     Curler(List.of(URI.create(DBO.getUri() + "Curler"))),
     Saint(List.of(URI.create(DBO.getUri() + "Saint"))),
-    FictionalCharacter(List.of(URI.create(DBO.getUri() + "FictionalCharacter"))),  
-    
+    FictionalCharacter(List.of(URI.create(DBO.getUri() + "FictionalCharacter"))),
     Country(List.of(URI.create(DBO.getUri() + "Country"))),
     State(List.of(URI.create(DBO.getUri() + "State"))),
     PopulatedPlace(List.of(URI.create(DBO.getUri() + "PopulatedPlace"))),
@@ -77,14 +76,10 @@ public enum DomainOrRangeType {
     CollegeCoach(List.of(URI.create(DBO.getUri() + "CollegeCoach"))),
     IceHockeyLeague(List.of(URI.create(DBO.getUri() + "IceHockeyLeague"))),
     Tower(List.of(URI.create(DBO.getUri() + "Tower"))),
-    Language(List.of(URI.create(DBO.getUri() + "Language"))), 
-    
+    Language(List.of(URI.create(DBO.getUri() + "Language"))),
     Road(List.of(URI.create(DBO.getUri() + "Road"))),
     Infrastructure(List.of(URI.create(DBO.getUri() + "Infrastructure"))),
     RouteOfTransportation(List.of(URI.create(DBO.getUri() + "RouteOfTransportation"))),
-   
-  
-
     Name(List.of(
             URI.create(DBO.getUri() + "GivenName"),
             URI.create(DBO.getUri() + "Name")
@@ -162,7 +157,6 @@ public enum DomainOrRangeType {
             URI.create("http://www.w3.org/2001/XMLSchema#positiveInteger"),
             URI.create("http://www.w3.org/2001/XMLSchema#Integer")
     )),
-    
     Food(List.of(URI.create(DBO.getUri() + "Food"))),
     Beverage(List.of(URI.create(DBO.getUri() + "Beverage"))),
     Film(List.of(URI.create(DBO.getUri() + "Film"))),
@@ -174,7 +168,6 @@ public enum DomainOrRangeType {
     Artwork(List.of(URI.create(DBO.getUri() + "Artwork"))),
     WrittenWork(List.of(URI.create(DBO.getUri() + "WrittenWork"))),
     Single(List.of(URI.create(DBO.getUri() + "Single"))),
-   
     Software(List.of(
             URI.create(DBO.getUri() + "Software"),
             URI.create(DBO.getUri() + "VideoGame")
@@ -225,12 +218,11 @@ public enum DomainOrRangeType {
     Thing(List.of(URI.create(DBO.getUri() + "Thing"))),
     VideoGame(List.of(URI.create(DBO.getUri() + "VideoGame"))),
     Article(List.of(URI.create(DBO.getUri() + "Article"))),
-     Play(List.of(URI.create(DBO.getUri() + "Play"))),
+    Play(List.of(URI.create(DBO.getUri() + "Play"))),
     EducationalInstitution(List.of(URI.create(DBO.getUri() + "EducationalInstitution"))),
     Genre(List.of(URI.create(DBO.getUri() + "Genre"))),
     MountainRange(List.of(URI.create(DBO.getUri() + "MountainRange"))),
     THING(List.of(URI.create("http://www.w3.org/2002/07/owl#Thing"))); // default if no other matches
-    
 
     public static final List<URI> MISSING_TYPES = new ArrayList<>();
     private final List<URI> references;

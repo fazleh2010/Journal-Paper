@@ -531,9 +531,9 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
 
     private Boolean checkValidity(String word) {
         word = word.replace(" ", "").strip().trim().stripLeading().stripTrailing();
-        if (word.equals("-")) {
+        if (word.contains("-")) {
             return false;
-        } else if (word.equals("XX")) {
+        } else if (word.contains("XX")) {
             return false;
         }
         return true;

@@ -51,14 +51,13 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
            "verb(imperative_transitive:present:singular) pronoun(object_pronoun) determiner(component_the_accusative:reference:plural) noun(accusativeCase:plural) preposition adjunct(domain).",
           //Gib mir alle Bandmitglieder von Prodigy
            "verb(imperative_transitive:present:singular) pronoun(object_pronoun) determiner(alle) noun(accusativeCase:plural) preposition adjunct(domain).",
-          //"In welchem Land ist der Mount Everest?", In welcher Stadt ist die Heinekenbrauerei?
-            "preposition interrogativeDeterminer(dativeCase:range:singular) verb(component_be:present:singular) determiner(component_the_nominative:domain:singular) adjunct(domain)?",
-            "interrogativePlace(nominativeCase:singular) verb(component_be:present:singular) determiner(component_the_nominative:domain:singular) object(domain)?"  ,
            //"Liste die Kinder von Margaret Thatcher auf.",
            "verb(imperative_verb:present:plural) determiner(component_the_nominative:reference:plural) noun(nominativeCase:plural) preposition adjunct(domain) preposition(auf)."  ,   
            //"Liste die Kinder von Margaret Thatcher auf.",
-           "verb(imperative_verb:present:plural) determiner(alle) noun(nominativeCase:plural) preposition adjunct(domain) preposition(auf)."  
-                 
+           "verb(imperative_verb:present:plural) determiner(alle) noun(nominativeCase:plural) preposition adjunct(domain) preposition(auf)." 
+           //"In welchem Land ist der Mount Everest?", In welcher Stadt ist die Heinekenbrauerei?
+            //"preposition interrogativeDeterminer(dativeCase:range:singular) verb(component_be:present:singular) adjunct(domain)?"
+            //"interrogativePlace(nominativeCase:singular) verb(component_be:present:singular) determiner(component_the_nominative:domain:singular) object(domain)?"             
                  ),
         NounPPFrame,
         whQuestion
@@ -169,7 +168,7 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
       createSentenceTemplate(language,
         List.of(
           //Wo ist der Westminster-Palast?",
-          "interrogativePlace(nominativeCase:range:singular) verb(component_be:present:singular) object(domain)?"
+          //"interrogativePlace(nominativeCase:range:singular) verb(component_be:present:singular) object(domain)?"
           ),
         NounPPFrame,
         location

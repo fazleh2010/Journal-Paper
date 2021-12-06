@@ -155,7 +155,7 @@ public class GermanTurtle extends TurtleCreation implements TutleConverter {
                 + GermanCsv.NounPPFrameCsv.getIndexing(this.lemonEntry, tupplesList)
                 + GermanCsv.NounPPFrameCsv.getWrittenFormAll(this.lemonEntry, this.gender, this.writtenFormInfinitive, this.writtenForm2, writtenForm4, this.writtenForm5, this.writtenForm6, this.language)
                 + GermanCsv.getSenseDetail(tupplesList, TempConstants.NounPPFrame, this.lemonEntry, this.writtenFormInfinitive, this.preposition, this.language)
-                + GermanCsv.NounPPFrameCsv.getPreposition(TempConstants.preposition, this.preposition, language);
+                + GermanCsv.NounPPFrameCsv.getPreposition(this.lemonEntry, this.preposition, language);
         this.tutleFileName = getFileName(syntacticFrame);
     }
 

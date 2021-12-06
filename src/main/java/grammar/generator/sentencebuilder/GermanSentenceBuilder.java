@@ -240,7 +240,7 @@ public class GermanSentenceBuilder implements TempConstants {
                 }
 
             } else {
-                word = this.getSingle(reference);
+                word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil,reference);
             }
 
         } else if (flagReference && (attribute.equals(determiner) && reference.contains(subject))) {
@@ -277,129 +277,9 @@ public class GermanSentenceBuilder implements TempConstants {
 
         System.out.println("word:::" + word);
 
-
         return word;
     }
 
-    private String getEntryOneAtrributeCheck(String reference, String attr, String value) {
-
-        String result = "";
-        LexInfo lexInfo = this.lexicalEntryUtil.getLexInfo();
-        LexicalEntry lexicalEntry = new LexiconSearch(this.lexicalEntryUtil.getLexicon()).getReferencedResource(reference);
-        Collection<LexicalForm> forms = lexicalEntry.getForms();
-
-        for (LexicalForm lexicalForm : forms) {
-            Collection<PropertyValue> propertyValues = lexicalForm.getProperty(lexInfo.getProperty(attr));
-            for (PropertyValue propertyValue : propertyValues) {
-                if (propertyValue.toString().contains(value)) {
-                    result = lexicalForm.getWrittenRep().value;
-                    break;
-                }
-
-            }
-        }
-
-        return result;
-    }
-
-    private String getEntryOneAtrributeCheck(String reference, String attrFirst, String valueFirst, String attrSecond, String valueSecond) {
-
-        String result = "";
-        LexInfo lexInfo = this.lexicalEntryUtil.getLexInfo();
-        LexicalEntry lexicalEntry = new LexiconSearch(this.lexicalEntryUtil.getLexicon()).getReferencedResource(reference);
-        Collection<LexicalForm> forms = lexicalEntry.getForms();
-
-        for (LexicalForm lexicalForm : forms) {
-            Boolean firstMatchFlag = false, secondMatchFlag = false;
-            Collection<PropertyValue> propertyValuesFirst = lexicalForm.getProperty(lexInfo.getProperty(attrFirst));
-            Collection<PropertyValue> propertyValuesSecond = lexicalForm.getProperty(lexInfo.getProperty(attrSecond));
-            for (PropertyValue first : propertyValuesFirst) {
-                if (first.toString().contains(valueFirst)) {
-                    firstMatchFlag = true;
-                    break;
-                }
-
-            }
-            for (PropertyValue second : propertyValuesSecond) {
-                if (second.toString().contains(valueSecond)) {
-                    secondMatchFlag = true;
-                    break;
-                }
-
-            }
-            if (firstMatchFlag && secondMatchFlag) {
-                result = lexicalForm.getWrittenRep().value;
-            }
-        }
-
-        return result;
-    }
-
-    private String getEntryOneAtrributeCheck(String reference, String attrFirst, String valueFirst, String attrSecond, String valueSecond, String attrThrid, String valueThrid) {
-
-        String result = "";
-        LexInfo lexInfo = this.lexicalEntryUtil.getLexInfo();
-        LexicalEntry lexicalEntry = new LexiconSearch(this.lexicalEntryUtil.getLexicon()).getReferencedResource(reference);
-        Collection<LexicalForm> forms = lexicalEntry.getForms();
-        
-        for (LexicalForm lexicalForm : forms) {
-            Boolean firstMatchFlag = false, secondMatchFlag = false, thirdMatchFlag = false;
-            for (PropertyValue first : lexicalForm.getProperty(lexInfo.getProperty(attrFirst))) {
-                if (first.toString().contains(valueFirst)) {
-                    firstMatchFlag = true;
-                    break;
-                }
-
-            }
-            for (PropertyValue second : lexicalForm.getProperty(lexInfo.getProperty(attrSecond))) {
-
-                if (second.toString().contains(valueSecond)) {
-                    secondMatchFlag = true;
-                    break;
-                }
-
-            }
-
-            for (PropertyValue third : lexicalForm.getProperty(lexInfo.getProperty(attrThrid))) {
-                if (third.toString().contains(valueThrid)) {
-                    thirdMatchFlag = true;
-                    break;
-                }
-
-            }
-            if (firstMatchFlag && secondMatchFlag && thirdMatchFlag) {
-                result = lexicalForm.getWrittenRep().value;
-            }
-        }
-
-        return result;
-    }
-
-    /*private String getWrittenValueMatchedFromEntry(String reference) {
-        LexInfo lexInfo = this.lexicalEntryUtil.getLexInfo();
-        LexicalEntry lexicalEntry = new LexiconSearch(this.lexicalEntryUtil.getLexicon()).getReferencedResource(reference);
-        Collection<LexicalForm> forms = lexicalEntry.getForms();
-                      
-
-        for (LexicalForm lexicalForm : forms) {
-            String writtenValue = lexicalForm.getWrittenRep().value;
-            if (writtenValue.equals(reference)) {
-                return writtenValue;
-            }
-        }
-
-        return preposition;
-    }*/
-    private String getSingle(String reference) throws QueGGMissingFactoryClassException {
-        String writtenValue = "";
-        LexInfo lexInfo = this.lexicalEntryUtil.getLexInfo();
-        LexicalEntry lexicalEntry = new LexiconSearch(this.lexicalEntryUtil.getLexicon()).getReferencedResource(reference);
-        Collection<LexicalForm> forms = lexicalEntry.getForms();
-        LexicalForm lexicalForm = forms.iterator().next();
-        writtenValue = lexicalForm.getWrittenRep().value;
-
-        return writtenValue;
-    }
 
     private String getSubjectObjectBased(String reference) {
         if (reference != null) {
@@ -423,14 +303,7 @@ public class GermanSentenceBuilder implements TempConstants {
     private String getDeteminerToken(SubjectType subjectType, String domainOrRange, String number) throws QueGGMissingFactoryClassException {
         SelectVariable selectVariable = null;
         String determinerToken = "";
-        /*if (domainOrRange.contains(range)) {
-            selectVariable = this.rangeSelectable;
-        } else if (domainOrRange.contains(domain)) {
-            selectVariable = this.domainSelectable;
-        } else {
-            selectVariable = this.domainSelectable;
-        }*/
-
+       
         if ((domainOrRange.contains(range) || domainOrRange.contains(domain))) {
             if (domainOrRange.contains(range)) {
                 selectVariable = this.rangeSelectable;
@@ -442,7 +315,7 @@ public class GermanSentenceBuilder implements TempConstants {
                 noun = this.getConditionLabelManually(domainOrRange, number);
             }
             String article = this.getArticleFromUri(domainOrRange);
-            String questionWord = getEntryOneAtrributeCheck(subjectType.name(), TempConstants.number, number, TempConstants.gender, article);
+            String questionWord = LexicalEntryUtil.getEntryOneAtrributeCheck(lexicalEntryUtil,subjectType.name(), TempConstants.number, number, TempConstants.gender, article);
             return determinerToken = questionWord + " " + noun;
         } else {
 
@@ -454,14 +327,7 @@ public class GermanSentenceBuilder implements TempConstants {
     private String getIntergativeAmountToken(SubjectType subjectType, String domainOrRange, String number) throws QueGGMissingFactoryClassException {
         SelectVariable selectVariable = null;
         String determinerToken = "";
-        /*if (domainOrRange.contains(range)) {
-            selectVariable = this.rangeSelectable;
-        } else if (domainOrRange.contains(domain)) {
-            selectVariable = this.domainSelectable;
-        } else {
-            selectVariable = this.domainSelectable;
-        }*/
-
+       
         if ((domainOrRange.contains(range) || domainOrRange.contains(domain))) {
             if (domainOrRange.contains(range)) {
                 selectVariable = this.rangeSelectable;
@@ -473,62 +339,22 @@ public class GermanSentenceBuilder implements TempConstants {
                 noun = this.getConditionLabelManually(domainOrRange, number);
             }
             String article = this.getArticleFromUri(domainOrRange);
-            String questionWord = getEntryOneAtrributeCheck(subjectType.name(), TempConstants.number, number, TempConstants.gender, article);
+            String questionWord = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil,subjectType.name(), TempConstants.number, number, TempConstants.gender, article);
             return determinerToken = questionWord + " " + noun;
         } 
 
         return determinerToken;
     }
 
-    /*private String getDeteminerToken(SubjectType subjectType, String givenCase,String domainOrRange, String number) throws QueGGMissingFactoryClassException {
-        SelectVariable selectVariable = null;
-        String determinerToken ="";
-          System.out.println("number::"+number);
-                         System.out.println("givenCase.name()::"+givenCase);
-                          System.out.println("number::"+number);
-                         System.out.println("domainOrRange.name()::"+domainOrRange);
-                         
-
-        if ((domainOrRange.contains(range) || domainOrRange.contains(domain))) {
-            if (domainOrRange.contains(range)) {
-                selectVariable = this.rangeSelectable;
-            } else {
-                selectVariable = this.domainSelectable;
-            }
-            String noun = lexicalEntryUtil.getReturnVariableConditionLabel(selectVariable);
-            if (noun == null || noun.isEmpty()) {
-                noun = this.getConditionLabelManually(domainOrRange,number);
-            }
-            String article = this.getArticleFromUri(domainOrRange);
-                      
-
-            String questionWord = getEntryOneAtrributeCheck(subjectType.name(), TempConstants.number, number, TempConstants.gender, article,TempConstants.caseType, givenCase);
-            return determinerToken = questionWord + " " + noun;
-            
-        }
-        else {
-          
-        }
-
-        return determinerToken;
-    }*/
+  
     private String getDeteminerTokenManual(SubjectType subjectType, String givenCase, String domainOrRange, String number) throws QueGGMissingFactoryClassException {
         String noun = this.getConditionLabelManually(domainOrRange, number);
         String article = this.getArticleFromUri(domainOrRange);
-        String questionWord = getEntryOneAtrributeCheck(subjectType.name(), TempConstants.number, number, TempConstants.gender, article, TempConstants.caseType, givenCase);
+        String questionWord = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil,subjectType.name(), TempConstants.number, number, TempConstants.gender, article, TempConstants.caseType, givenCase);
         return questionWord + " " + noun;
 
     }
 
-    /*private String getConditionLabelManually(SelectVariable selectVariable, String numberType) {
-        String uri = lexicalEntryUtil.getConditionUriBySelectVariable(selectVariable).toString();
-        if (numberType.contains(singular)) {
-            return GenderUtils.getWrittenFormSingular(uri);
-        }
-        {
-            return GenderUtils.getWrittenFormPlural(uri);
-        }
-    }*/
     private String getConditionLabelManually(String domainOrRange, String numberType) {
         if (domainOrRange.contains(domain) && numberType.contains(singular)) {
             return GenderUtils.getWrittenFormSingular(this.subjectUri);
@@ -567,51 +393,6 @@ public class GermanSentenceBuilder implements TempConstants {
         return article;
     }
 
-
-    /*private String getArticleFromUri(String parameter) throws QueGGMissingFactoryClassException {
-        String uri = "", article = "";
-        if (parameter.contains(SelectVariable.reference.name())) {
-            uri = this.getReference();
-        } else if (parameter.contains(domain)) {
-            uri = this.getSubjectOfProperty();
-        } else if (parameter.contains(range)) {
-            uri = this.getObjectOfProperty();
-        }
-       
-
-        GenderUtils genderUtils = new GenderUtils(uri);
-        if (genderUtils.getArticle() != null) {
-            article = genderUtils.getArticle();
-        }
-
-        return article;
-
-    }*/
-    private Boolean isAuxilaryVerb(String reference) {
-        if (reference.contains(component_be)) {
-            return true;
-        }
-        return false;
-    }
-
-    private boolean isArticle(String reference) {
-        if (reference.contains("article")) {
-            return true;
-        }
-        return false;
-    }
-
-    public String getSubjectOfProperty() {
-        return this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.subjOfProp).toString();
-    }
-
-    public String getObjectOfProperty() {
-        return this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.objOfProp).toString();
-    }
-
-    public String getReference() {
-        return lexicalEntryUtil.getReferenceUri().toString();
-    }
 
     public static SubjectType findIntergativePronoun(LexicalEntryUtil lexicalEntryUtil, SelectVariable selectVariable) throws QueGGMissingFactoryClassException {
         String uri = null;
@@ -667,28 +448,7 @@ public class GermanSentenceBuilder implements TempConstants {
         return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
     }
 
-    private static String getQuestionWord(LexicalEntryUtil lexicalEntryUtil, Language language, SubjectType subjectType) throws QueGGMissingFactoryClassException {
-        String result = "";
-        result = lexicalEntryUtil.getSubjectBySubjectType(subjectType,
-                language,
-                null
-        );
-        return result;
-
-    }
-
-    /* private String getVariable(LexicalEntryUtil lexicalEntryUtil,String bindingVar) {
-        return String.format(
-                BINDING_TOKEN_TEMPLATE,
-                bindingVar,
-                DomainOrRangeType.getMatchingType(lexicalEntryUtil.getConditionUriBySelectVariable(
-                        LexicalEntryUtil.getOppositeSelectVariable(lexicalEntryUtil.getSelectVariable())
-                )).name(),
-                SentenceType.NP.toString()
-        );
-    }*/
-   
-
+  
     private String getReferenceWrttienForm(String caseType, String numberType) {
         List<AnnotatedNounOrQuestionWord> annotatedLexicalEntryNouns = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords();
         String result = "";
@@ -706,150 +466,32 @@ public class GermanSentenceBuilder implements TempConstants {
         return result;
     }
 
-    private String getMainVerb(ParamterFinder paramterFinder) {
-        List<AnnotatedVerb> annotatedVerbs = lexicalEntryUtil.parseLexicalEntryToAnnotatedVerbs();
-
-
-            for (AnnotatedVerb annotatedVerb : annotatedVerbs) {
-                if (annotatedVerb.getTense().toString().contains(paramterFinder.getTensePair().second) && annotatedVerb.getPerson().toString().contains(paramterFinder.getPersonPair().second)) {
-                    return annotatedVerb.getWrittenRepValue();
-                }
-
-            }
-        
-
-        return null;
-    }
-    
-     /*private String getMainVerbPresent(String tense) {
-        List<AnnotatedVerb> annotatedVerbs = lexicalEntryUtil.parseLexicalEntryToAnnotatedVerbs();
-
-        for (AnnotatedVerb annotatedVerb : annotatedVerbs) {
-            if (annotatedVerb.getTense().toString().contains(tense)) {
-                return annotatedVerb.getWrittenRepValue();
-            }
-
-        }
-        return null;
-    }*/
-
-
-    /*private String findVerb(String attribute, String reference) throws QueGGMissingFactoryClassException {
-        String word = null,wordDefault="XX";
-        ParamterFinder paramterFinder = new ParamterFinder(attribute, reference);
-        System.out.println("paramterFinder:::"+paramterFinder);
-        
-        if (paramterFinder.getReference().contains(mainVerb) || paramterFinder.getReference().contains(TrennVerb)) {
-            word = findMainVerb(attribute, reference);
-        } else {
-            if (paramterFinder.getParameterLength() == 2 && paramterFinder.getTensePair().first != null) {
-                word = getEntryOneAtrributeCheck(paramterFinder.getReference(), paramterFinder.getTensePair().first, paramterFinder.getTensePair().second);
-            } else if (paramterFinder.getParameterLength() == 3 && paramterFinder.getTensePair().first != null && paramterFinder.getNumberPair().first != null) {
-                word = getEntryOneAtrributeCheck(paramterFinder.getReference(), paramterFinder.getTensePair().first, paramterFinder.getTensePair().second,
-                        paramterFinder.getNumberPair().first, paramterFinder.getNumberPair().second);
-            } else {
-                word = getSingle(paramterFinder.getReference());
-            }
-
-        }
-        
-     
-        
-        return word;
-    }
-    
-    private String findMainVerb(String attribute, String reference) throws QueGGMissingFactoryClassException {
-        String word = null;
-        ParamterFinder paramterFinder = new ParamterFinder(attribute, reference);
-
-        if (paramterFinder.getTensePair().second.contains(perfect)) {
-            word = getMainVerbPresent(present);
-        } else if(paramterFinder.getTensePair().second.contains(past)||paramterFinder.getTensePair().second.contains(present)) {
-            word = getMainVerb(paramterFinder);
-        }
-       
-        if (this.isTrennVerb(word)) {
-            return word=this.findTrennVerb(word,paramterFinder);
-        
-        } else {
-            if (paramterFinder.getReference().contains(mainVerb)&& paramterFinder.getTensePair().second.contains(perfect)) {
-                word = getPerfectMainVerb(word);
-            }
-            else if(paramterFinder.getReference().contains(mainVerb)&& (paramterFinder.getTensePair().second.contains(present)
-                    || paramterFinder.getTensePair().second.contains(past))){
-                word = this.getMainVerb(paramterFinder);
-            }
-            else if(paramterFinder.getReference().contains(TrennVerb)){
-                return "XX";
-            }
-            
-           
-        }
-
-        return word;
-    }*/
-
-    /*word = this.lexicalEntryUtil.getPreposition();
-            System.out.println("word::"+word);
-            ;*/
     private String findPreposition(String attribute, String reference, Boolean flagReference) throws QueGGMissingFactoryClassException {
-        String word = null;
+        String word = "XX";
         if (!flagReference) {
-            word = this.getSingle(attribute);
-
+            reference = this.lexicalEntryUtil.getPrepositionReference();
+            word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, reference);
+            //System.out.println(reference);
+            //System.out.println(word);
+            //exit(1);
         } else if (flagReference) {
-            word = this.getSingle(reference);
+            word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, reference);
 
         }
-         if(word.contains("X"))
-                word="";
-
         return word;
-
+    }
+    
+    public String getSubjectOfProperty() {
+        return this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.subjOfProp).toString();
     }
 
-    /*private boolean isTrennVerb(String word) {
-      if(word.contains(" "))
-            return true;
-       return false;
-    }*/
+    public String getObjectOfProperty() {
+        return this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.objOfProp).toString();
+    }
 
-   
+    public String getReference() {
+        return lexicalEntryUtil.getReferenceUri().toString();
+    }
     
-     
-        
-        
-        
-
-        /* if (paramterFinder.getReference().contains(TrennVerbPart1) || paramterFinder.getReference().contains(TrennVerbPart2)) {
-            if (paramterFinder.getTensePair().second.contains(past)) {
-                word = this.getMainVerb(paramterFinder);
-                if (word.contains(" ")) {
-                    String[] info = word.split(" ");
-                    if (paramterFinder.getReference().contains(TrennVerbPart1)) {
-                        word = info[0];
-                    } else if (paramterFinder.getReference().contains(TrennVerbPart2)) {
-                        word = info[1];
-                    }
-
-                }
-            }
-
-        } else if (paramterFinder.getReference().equals(mainVerb)) {
-            if (paramterFinder.getTensePair().second.contains(perfect)&&!GenderUtils.trennVerbType.isEmpty()) {
-                word = getMainVerbPresent(present);
-                Pair<Boolean, String> pair = GenderUtils.getTrennVerbType(word, perfect, mainVerb);
-                if (pair.first) {
-                    word = pair.second;
-                }
-            } else {
-                word = this.getMainVerb(paramterFinder);
-            }
-
-        }*/
-
-    
-
-  
 
 }
