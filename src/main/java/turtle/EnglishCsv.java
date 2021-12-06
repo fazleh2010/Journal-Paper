@@ -195,10 +195,10 @@ public class EnglishCsv implements TempConstants {
         private Integer domainIndex = 10;
         private Integer rangeIndex = 11;
         private Integer passivePrepositionIndex=12;
-        private Integer domainWrittenSingularFormIndex=passivePrepositionIndex+1;
-        private Integer domainWrittenPluralFormIndex=domainWrittenSingularFormIndex+1;
-        private Integer rangeWrittenSingularFormIndex=domainWrittenPluralFormIndex+1;
-        private Integer rangeWrittenPluralFormIndex=rangeWrittenSingularFormIndex+1;
+        private Integer domainWrittenSingularFormIndex=13;
+        private Integer domainWrittenPluralFormIndex=14;
+        private Integer rangeWrittenSingularFormIndex=15;
+        private Integer rangeWrittenPluralFormIndex=16;
 
 
         public String getHeader(String lemonEntry, String preposition, String language) {
@@ -213,7 +213,7 @@ public class EnglishCsv implements TempConstants {
                     + "  lemon:language \"" + language + "\" ;\n"
                     + "  lemon:entry    :" + "to_" + lemonEntry + " ;\n"
                     + "  lemon:entry    :" + lemonEntry + "ed" + " ;\n"
-                    + "  lemon:entry    :" + preposition + " .\n"
+                    + "  lemon:entry    :" +"form_" + lemonEntry+"_preposition" + " .\n"
                     + "\n";
         }
 
@@ -313,7 +313,12 @@ public class EnglishCsv implements TempConstants {
         }
 
         public String getPrepostion(String lemonEntry,String preposition, String language) {
-            return getPrepostionL(lemonEntry,preposition, language);
+             return "## Prepositions ##\n"
+                + ":"+"form_" + lemonEntry+"_preposition" + " a                  lemon:SynRoleMarker ;\n"
+                + "  lemon:canonicalForm  [ lemon:writtenRep \"" + preposition + "\"@" + language + " ] ;\n"
+                + "  lexinfo:partOfSpeech lexinfo:preposition .\n"
+                + "\n"
+                + "";
         }
 
         public String getLemonEntryIndex(String[] row) {

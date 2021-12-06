@@ -121,7 +121,9 @@ public class ReadAndWriteQuestions {
                    
                 }
                 
-                
+                /* if(!grammarEntryUnit.getBindingType().contains("date")){
+                   continue; 
+                }*/
                  
                 
 
@@ -185,6 +187,10 @@ public class ReadAndWriteQuestions {
 
                 }
                 
+                if(grammarEntryUnit.getBindingType().contains("date")){
+                    bindingList = grammarEntryUnit.getBindingList();       
+                }
+                
              
 
                 /*if (!this.online) {
@@ -238,6 +244,8 @@ public class ReadAndWriteQuestions {
             return rowIndex;
         
         for (UriLabel uriLabel : uriLabels) {
+             System.out.println(uriLabel+ " uriLabel:" );
+            
             if (!isKbValid(uriLabel)) {
                 continue;
             }
@@ -300,6 +308,7 @@ public class ReadAndWriteQuestions {
                 System.err.println(ex.getMessage() + " " + sparql + " " + answer);
             }
         }
+        
 
         return rowIndex;
     }

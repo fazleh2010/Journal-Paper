@@ -111,6 +111,8 @@ public class SparqlQuery {
             parseResult(resultSparql);
 
         }
+        
+      
 
     }
     
