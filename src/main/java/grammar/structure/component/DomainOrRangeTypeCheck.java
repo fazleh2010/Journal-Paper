@@ -108,6 +108,7 @@ public enum DomainOrRangeTypeCheck {
             URI.create(DBO.getUri() + "firstPublicationYear"),
             URI.create(DBO.getUri() + "birthYear"),
             URI.create(DBO.getUri() + "publicationDate"),
+            URI.create(DBP.getUri() + "published"),        
             URI.create(DBO.getUri() + "discontinued"),
             URI.create(DBO.getUri() + "introduced"),
             URI.create(DBO.getUri() + "openingDate"),
@@ -123,6 +124,9 @@ public enum DomainOrRangeTypeCheck {
             URI.create(DBO.getUri() + "activeYearsEndYear"),
             URI.create(DBP.getUri() + "published")
     )),
+    
+
+
     
     WorkCheck(List.of(
             URI.create(DBO.getUri() + "Work"),

@@ -66,14 +66,12 @@ public class FileUtils {
     }
 
     public static List<File> getFiles(String fileDir, String category, String extension) {
-        System.out.println("fileDir:"+fileDir);
         String[] files = new File(fileDir).list();
         List<File> selectedFiles = new ArrayList<File>();
         for (String fileName : files) {
             if (fileName.contains(category) && fileName.contains(extension)) {
                 selectedFiles.add(new File(fileDir + fileName));
             }
-                    System.out.println(category+" fileName:"+fileName);
 
         }
 

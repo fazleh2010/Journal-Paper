@@ -52,10 +52,7 @@ public class EnglishVerbFinder implements TempConstants {
             }
         }
         
-        System.out.println("paramterFinder::"+paramterFinder);
-        System.out.println("auxilaryVerbFlag::"+this.auxilaryVerbFlag);
-        System.out.println("mainVerbFlag::"+this.mainVerbFlag);
-        System.out.println("word::"+word);
+        
 
 
     }
@@ -104,7 +101,6 @@ public class EnglishVerbFinder implements TempConstants {
         List<AnnotatedVerb> annotatedVerbs = lexicalEntryUtil.parseLexicalEntryToAnnotatedVerbs();
 
         for (AnnotatedVerb annotatedVerb : annotatedVerbs) {
-            System.out.println(annotatedVerb.getTense());
             if (annotatedVerb.getTense().toString().contains(paramterFinder.getTensePair().second) && annotatedVerb.getPerson().toString().contains(paramterFinder.getPersonPair().second)) {
                 word = annotatedVerb.getWrittenRepValue();
                 break;
@@ -124,8 +120,6 @@ public class EnglishVerbFinder implements TempConstants {
     }
 
     private void setCategory(String reference) {
-        System.out.println("reference::" + reference);
-        System.out.println("trennVerb hash::" + GenderUtils.trennVerb);
         if (reference.contains(mainVerb)) {
             this.mainVerbFlag = true;
         } else {

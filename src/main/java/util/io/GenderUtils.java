@@ -89,7 +89,6 @@ public class GenderUtils implements TempConstants{
     
     
     public static Pair<Boolean, String> getPerfecterbType(String key, String tense) {
-        System.out.println("perfectVerb::"+perfectVerb);
         Pair pair=new Pair<Boolean, String>(Boolean.FALSE, key);
         if (perfectVerb.containsKey(key)) {
             Map<String, String> verb = perfectVerb.get(key);

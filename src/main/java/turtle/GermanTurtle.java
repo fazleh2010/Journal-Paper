@@ -87,7 +87,6 @@ public class GermanTurtle extends TurtleCreation implements TutleConverter {
                     Integer count = 0;
                     for (String key : keyRows.keySet()) {
                         count = count + 1;
-                        System.out.println("key:" + key + " count:" + count);
                         List<String[]> values = keyRows.get(key);
                         setSyntacticFrame(key, values);
                         FileUtils.stringToFile(this.turtleString, directory + this.tutleFileName);
@@ -129,8 +128,10 @@ public class GermanTurtle extends TurtleCreation implements TutleConverter {
         this.setLemonEntryId(key);
 
         List<Tupples> tupplesList = new ArrayList<Tupples>();
+         String copulativeArg=null;
         Integer index = 0;
         for (String[] row : rows) {
+            
             if (index == 0) {
                 this.partOfSpeech = nounPPFrameCsv.getPartOfSpeechIndex(row);
                 this.gender = nounPPFrameCsv.getGenderIndex(row);
@@ -140,6 +141,7 @@ public class GermanTurtle extends TurtleCreation implements TutleConverter {
                 this.writtenForm5 = nounPPFrameCsv.getWrittenFormDativeIndex(row);
                 this.writtenForm6 = nounPPFrameCsv.getWrittenFormGenetiveIndex(row);
                 this.preposition = this.checkValidPreposition(nounPPFrameCsv.getPrepositionIndex(row));
+                copulativeArg=nounPPFrameCsv.getCopulativeArgIndex(row);
             }
             Tupples tupple = new Tupples(this.lemonEntry,
                     index + 1,
@@ -150,10 +152,11 @@ public class GermanTurtle extends TurtleCreation implements TutleConverter {
             index = index + 1;
             nounPPFrameCsv.setArticle(tupple, this.gender, row);
         }
+       
         this.turtleString
                 = GermanCsv.NounPPFrameCsv.getNounPPFrameHeader(this.lemonEntry, TempConstants.preposition, this.language)
                 + GermanCsv.NounPPFrameCsv.getIndexing(this.lemonEntry, tupplesList)
-                + GermanCsv.NounPPFrameCsv.getWrittenFormAll(this.lemonEntry, this.gender, this.writtenFormInfinitive, this.writtenForm2, writtenForm4, this.writtenForm5, this.writtenForm6, this.language)
+                + GermanCsv.NounPPFrameCsv.getWrittenFormAll(this.lemonEntry, this.gender, this.writtenFormInfinitive, this.writtenForm2, writtenForm4, this.writtenForm5, this.writtenForm6, this.language,copulativeArg)
                 + GermanCsv.getSenseDetail(tupplesList, TempConstants.NounPPFrame, this.lemonEntry, this.writtenFormInfinitive, this.preposition, this.language)
                 + GermanCsv.NounPPFrameCsv.getPreposition(this.lemonEntry, this.preposition, language);
         this.tutleFileName = getFileName(syntacticFrame);
@@ -164,20 +167,24 @@ public class GermanTurtle extends TurtleCreation implements TutleConverter {
         this.setLemonEntryId(key);
         List<Tupples> tupples = new ArrayList<Tupples>();
         Integer index = 0;
+                    String directObject=null;
+
         for (String[] row : rows) {
             if (index == 0) {
                 this.partOfSpeech = row[GermanCsv.partOfSpeechIndex];
                 this.writtenFormInfinitive = row[GermanCsv.writtenFormInfinitive];
-                this.writtenForm3rdPerson = row[GermanCsv.TransitFrameCsv.writtenForm3rdPerson];
-                this.writtenFormPast = row[GermanCsv.TransitFrameCsv.writtenFormPast];
-                this.writtenFormPerfect = row[GermanCsv.TransitFrameCsv.writtenFormPerfect];
-                this.preposition = this.checkValidPreposition(row[GermanCsv.TransitFrameCsv.passivePrepositionIndex]);
+                this.writtenForm3rdPerson = row[transitiveFrameCsv.writtenForm3rdPerson];
+                this.writtenFormPast = row[transitiveFrameCsv.writtenFormPast];
+                this.writtenFormPerfect = row[transitiveFrameCsv.writtenFormPerfect];
+                this.preposition = this.checkValidPreposition(row[transitiveFrameCsv.passivePrepositionIndex]);
+                directObject=  transitiveFrameCsv.getDirectObjectIndex(row);
+
             }
             Tupples tupple = new Tupples(this.lemonEntry,
                     index + 1,
-                    this.setReference(row[GermanCsv.TransitFrameCsv.referenceIndex]),
-                    this.setReference(row[GermanCsv.TransitFrameCsv.domainIndex]),
-                    this.setReference(row[GermanCsv.TransitFrameCsv.rangeIndex]));
+                    this.setReference(row[transitiveFrameCsv.referenceIndex]),
+                    this.setReference(row[transitiveFrameCsv.domainIndex]),
+                    this.setReference(row[transitiveFrameCsv.rangeIndex]));
 
             transitiveFrameCsv.setArticle(tupple, this.gender, row);
             transitiveFrameCsv.setVerbInfo(partOfSpeech, writtenFormInfinitive, writtenForm3rdPerson, writtenFormPast, writtenFormPerfect);
@@ -235,9 +242,7 @@ public class GermanTurtle extends TurtleCreation implements TutleConverter {
         List<Tupples> tupples = new ArrayList<Tupples>();
         Integer index = 0;
         for (String[] row : rows) {
-            System.out.println(row[GermanCsv.lemonEntryIndex]);
-            System.out.println(row[GermanCsv.partOfSpeechIndex]);
-            System.out.println(row[GermanCsv.writtenFormInfinitive]);
+            
             if (index == 0) {
                 this.setLemonEntryId(row[GermanCsv.lemonEntryIndex]);
                 this.partOfSpeech = row[GermanCsv.partOfSpeechIndex];

@@ -251,8 +251,10 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       createSentenceTemplate(
         language,
         List.of(
-          //When was the Battle of Gettysburg took place?
+          //When was X completed?
           "interrogativeTemporal verb(component_be:past:singular) object(domain) verb(mainVerb:past:thridPerson)?"
+           //When were X completed?
+          //"interrogativeTemporal verb(component_do:past:plural) object(domain) verb(mainVerb:past:thridPerson)?"
         ),
         IntransitivePPFrame,
         WHEN_WHAT_PAST_THING,
@@ -279,12 +281,8 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       createSentenceTemplate(
         language,
         List.of(
-          //"In welchem Jahr wurde Rachel Stevens geboren?",
-         "preposition interrogativeDeterminer(dativeCase:range:singular) verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
-          //"In welchem Jahr wurde Rachel Stevens geboren?",
-         "preposition interrogativeDeterminer(dativeCase:range:singular) verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
-         //Wann wurde Abrham Lincon geboren?
-        "interrogativeTemporal verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?"
+         //When was X completed?
+        //"interrogativeTemporal verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?"
         ),
         IntransitivePPFrame,
         WHEN_WHO_PAST_PERSON,
@@ -297,8 +295,8 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       createSentenceTemplate(
         language,
         List.of(
-         "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) adjunct(range) verb(mainVerb:perfect:thridPerson)?",
-         "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?"
+         //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         //"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?"
         ),
         IntransitivePPFrame,
         WHEN_WHO_PAST_PERSON,
@@ -312,8 +310,8 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         language,
         List.of(
          //"Welche Profisurfer wurden auf den Philippinen geboren?",
-         "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
-         "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?"
+         //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         //"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?"
 
              ),
         IntransitivePPFrame,
@@ -328,7 +326,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         language,
         List.of(
         //Wo wurde Donald Trump geboren?
-         "interrogativePlace(nominativeCase:singular) verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?"
+        // "interrogativePlace(nominativeCase:singular) verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?"
         ),
         IntransitivePPFrame,
         WHERE_WHO_PAST_PERSON,
@@ -343,8 +341,8 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         language,
         List.of(
          //"Welche Profisurfer wurden auf den Philippinen geboren?",
-         "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
-         "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?"
+         //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         //"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?"
 
              ),
         IntransitivePPFrame,

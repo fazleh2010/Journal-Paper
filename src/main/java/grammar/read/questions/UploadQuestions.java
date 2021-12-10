@@ -26,14 +26,14 @@ public class UploadQuestions {
     public static void main(String[] args) throws Exception {
         UploadQuestions uploadQuestions = new UploadQuestions(dataSet, scriptName, qaSystemUrl);
         if (uploadQuestions.processSuccessFlag) {
-            System.out.println("process run successfully!!!");
+            //System.out.println("process run successfully!!!");
         }
 
     }
 
     public UploadQuestions(String dataSet, String scriptName, String qaSystemUrl) throws Exception {
         //works
-            System.out.println("Reading DBpedia abstract and knowledge graph and corpus based lexicalization!!\n");
+            //System.out.println("Reading DBpedia abstract and knowledge graph and corpus based lexicalization!!\n");
             //System.out.println("Step 1. find frequent entities and process abstracts. Wait..." + "\n");
 
             String command = "curl -X POST -F file=@" + scriptName + " -F config=@" + dataSet + " \"" + qaSystemUrl + "\"";
@@ -73,10 +73,10 @@ public class UploadQuestions {
         // Read the output from the command
         String s = null;
         while ((s = stdInput.readLine()) != null) {
-            System.out.println(s);
+            //System.out.println(s);
         }
         // Read any errors from the attempted command
-        System.out.println("Error of the command (if any):\n");
+        //System.out.println("Error of the command (if any):\n");
         while ((s = stdError.readLine()) != null) {
             System.err.println(s);
         }

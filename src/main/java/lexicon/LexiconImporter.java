@@ -36,7 +36,6 @@ public class LexiconImporter {
             List<Path> list = filterFiles(paths);
             //System.out.println("turtle file size!!" + list.size());
             for (Path file : list) {
-                System.out.println("turtle file now processing!!" + file.getFileName());
                 try {
                     if (model == null) {
                         model = serializer.read(new FileReader(file.toString()));

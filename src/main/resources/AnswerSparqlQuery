@@ -137,3 +137,11 @@ select   ?label {
   filter langMatches(lang(?label),"en")
 }
 
+select   ?label {     
+ <https://dbpedia.org/resource/Suriname> rdfs:label ?label .
+  filter langMatches(lang(?label),"en")
+}
+
+
+
+

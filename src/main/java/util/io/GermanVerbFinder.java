@@ -40,11 +40,11 @@ public class GermanVerbFinder implements TempConstants {
         this.paramterFinder = new ParamterFinder(attribute, reference);
         this.setCategory(paramterFinder.getReference());
 
-        System.out.println("paramterFinder::" + paramterFinder);
+        /*System.out.println("paramterFinder::" + paramterFinder);
         System.out.println("mainVerbFlag::" + this.mainVerbFlag);
         System.out.println("trennVerbFlag::" + this.trennVerbFlag);
         System.out.println("auxilaryVerbFlag::" + this.auxilaryVerbFlag);
-        //exit(1);
+        //exit(1);*/
 
         if (this.mainVerbFlag) {
             word = findMainVerb(attribute, reference);
@@ -208,8 +208,6 @@ public class GermanVerbFinder implements TempConstants {
 
     private Boolean isTrenn() {
         String verbWrittenForm = getMainVerbPresent(past).trim().strip();
-        System.out.println(verbWrittenForm);
-        System.out.println(GenderUtils.trennVerb.keySet());
         if (GenderUtils.trennVerb.containsKey(verbWrittenForm)) {
             return true;
         }

@@ -82,7 +82,6 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
                     Integer count = 0;
                     for (String key : keyRows.keySet()) {
                         count = count + 1;
-                        System.out.println("key:" + key + " count:" + count);
                         List<String[]> values = keyRows.get(key);
                         setSyntacticFrame(key, values);
                         FileUtils.stringToFile(this.turtleString, directory + this.tutleFileName);
@@ -115,6 +114,7 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
             setAdjectiveFrame(key, rows, syntacticFrame);
         } else {
             System.out.println("no syntactic frame is found!!");
+            
             //syntacticFrame = row[GoogleXslSheet.TransitFrameSyntacticFrameIndex];
         }
 

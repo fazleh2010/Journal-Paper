@@ -604,7 +604,6 @@ public class FileFolderUtils {
         //System.out.println(common.size());
 
         set.removeAll(map.keySet());
-        System.out.println(set.size());
          List<String> resultList = new ArrayList<String>(set);
         listToFiles(resultList,dir+genderNotLabeled);
         

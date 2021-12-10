@@ -109,7 +109,6 @@ public class ParamterFinder implements TempConstants {
     }
 
     public static void main(String[] args) {
-        System.out.println("hallow world!!!");
         String template = "verb(mainVerb:past:thirdPerson)";
 
         ParamterFinder ParamterFinder = new ParamterFinder(template);

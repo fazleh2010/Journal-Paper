@@ -87,7 +87,6 @@ public class ReadAndWriteQuestions {
         String sparql = null;
         Integer index = 0;
         this.entityDir = entityDir+File.separator+ this.language;
-        System.out.println("this.entityDir ::"+this.entityDir );
        
 
         this.csvWriterQuestions = new CSVWriter(new FileWriter(questionAnswerFile,true));
@@ -244,13 +243,11 @@ public class ReadAndWriteQuestions {
             return rowIndex;
         
         for (UriLabel uriLabel : uriLabels) {
-             System.out.println(uriLabel+ " uriLabel:" );
             
             if (!isKbValid(uriLabel)) {
                 continue;
             }
             String questionForShow = questions.iterator().next();
-            System.out.println(questions.get(0) + " sparqlQuery:" + sparqlQuery + " property:" + property);
 
             if (questionForShow.contains("Where is $x located?")) {
                 continue;
@@ -324,11 +321,9 @@ public class ReadAndWriteQuestions {
                 domainUri=domainUriLabel.getUri();
             
             String questionForShow = questions.iterator().next();
-            System.out.println(questions.get(0) + " sparqlQuery:" + sparqlQuery + " property:" + property);
 
             if (questionForShow.contains("Where is $x located?")) 
                 continue;
-            System.out.println("domainUri:::" + domainUri);
             for (UriLabel rangeUriLabel : rangeList) {
                 String rangeUri="";
                 if (!isKbValid(rangeUriLabel)) {
@@ -342,7 +337,6 @@ public class ReadAndWriteQuestions {
                 }
              
            
-            System.out.println("rangeUri:::" + rangeUri);
             
             String[] wikipediaAnswer = this.getAnswerFromWikipedia(domainUriLabel.getUri(), property, rangeUriLabel.getUri(),returnSubjOrObj, endpoint, online, resultsOffline,queryType);
             String sparql = wikipediaAnswer[0];
@@ -506,7 +500,7 @@ public class ReadAndWriteQuestions {
         
         Matcher m = Pattern.compile("\\((.*?)\\)").matcher(question);
         while (m.find()) {
-            System.out.println(m.group(1));
+            //System.out.println(m.group(1));
         }
         /*if (question.contains("(") && question.contains(")")) {
             String result = StringUtils.substringBetween(question, "(", ")");

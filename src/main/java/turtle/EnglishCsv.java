@@ -231,7 +231,6 @@ public class EnglishCsv implements TempConstants {
         }
 
         public String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast, String language) {
-            System.out.println("----------------" + writtenFormPast);
 
             return ":form_" + lemonEntry + " a         lemon:Form ;\n"
                     + "  lemon:writtenRep     \"" + writtenFormInfinitive + "\"@" + language + " ;\n"

@@ -86,7 +86,21 @@ public class GermanCsv {
             return senseIdStr;
         }
 
-        public static String getWrittenFormAll(String lemonEntry,String gender, String singular, String plural, String accusativeForm, String dativeForm, String writtenGenitiveForm, String language) {
+        public static String getWrittenFormAll(String lemonEntry,String gender, String singular, String plural, String accusativeForm, String dativeForm, String writtenGenitiveForm, String language,String copulativeArg) {
+            String arg1=null,arg2=null;
+            
+            if(copulativeArg.contains("domain")){
+                 arg1="arg2";
+                 arg2="arg1";
+            }
+            else
+            {
+               arg1="arg1";
+               arg2="arg2";  
+            }
+               
+                        
+            
             String writtenForm
                     = ":" + lemonEntry + "_form" + " a lemon:Form ;\n"
                     + "  lemon:writtenRep \"" + singular + "\"@" + language + " ;\n"
@@ -120,8 +134,8 @@ public class GermanCsv {
                     + "\n";
            
             String copulativeStr= ":" + lemonEntry + "_nounpp"+" a        lexinfo:NounPPFrame ;\n"
-                    + "  lexinfo:copulativeArg        :arg1 ;\n"
-                    + "  lexinfo:prepositionalAdjunct :arg2 .\n"
+                    + "  lexinfo:copulativeArg        :"+arg1+" ;\n"
+                    + "  lexinfo:prepositionalAdjunct :"+arg2+" .\n"
                     + "\n";
 
             return writtenForm+copulativeStr;
@@ -358,15 +372,15 @@ public class GermanCsv {
                     + "  lexinfo:partOfSpeech lexinfo:preposition .";
         }
 
-        public  Integer getWrittenForm3rdPerson() {
+        public  Integer getWrittenForm3rdPerson(String[] row) {
             return writtenForm3rdPerson;
         }
 
-        public  Integer getWrittenFormPast() {
+        public  Integer getWrittenFormPast(String[] row) {
             return writtenFormPast;
         }
 
-        public  Integer getSyntacticFrame() {
+        public  Integer getSyntacticFrame(String[] row) {
             return SyntacticFrame;
         }
 
@@ -374,8 +388,8 @@ public class GermanCsv {
             return subjectIndex;
         }
 
-        public  Integer getDirectObjectIndex() {
-            return directObjectIndex;
+        public  String getDirectObjectIndex(String []row) {
+            return row[directObjectIndex];
         }
 
         public  Integer getSenseIndex() {

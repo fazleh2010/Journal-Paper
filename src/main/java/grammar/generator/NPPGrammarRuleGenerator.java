@@ -115,7 +115,6 @@ public class NPPGrammarRuleGenerator extends GrammarRuleGeneratorRoot implements
         }
 
         fragmentEntry.setSentences(generatedSentences);
-        System.out.println("fragmentEntry.getSparqlQuery()::" + fragmentEntry.getSparqlQuery());
         
         return fragmentEntry;
     }
