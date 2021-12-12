@@ -10,9 +10,11 @@ import util.io.FileUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.opencsv.CSVWriter;
 import static grammar.generator.BindingConstants.DEFAULT_BINDING_VARIABLE;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import static java.lang.System.exit;
 import java.net.URI;
 import java.net.URL;
@@ -22,6 +24,8 @@ import java.util.List;
 import java.util.Set;
 import org.apache.commons.lang3.StringUtils;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.apache.jena.query.QueryType;
@@ -82,8 +86,7 @@ public class ReadAndWriteQuestions {
         this.maxNumberOfEntities = maxNumberOfEntities;
         this.online = online;
     }
-
-    public void readQuestionAnswers(List<File> fileList, String entityDir, Boolean externalEntittyListflag) throws Exception {
+    public void readQuestionAnswers(List<File> protoSimpleQFiles,String entityDir, Boolean externalEntittyListflag) throws Exception {
         String sparql = null;
         Integer index = 0;
         this.entityDir = entityDir+File.separator+ this.language;
@@ -94,12 +97,13 @@ public class ReadAndWriteQuestions {
         //this.csvWriterQuestions.writeNext(questionHeader);
         //this.csvWriterSummary.writeNext(summaryHeader);
 
-        LOG.info("Number of Files!!'", fileList.size());
+        LOG.info("Number of Files!!'", protoSimpleQFiles.size());
         Set<URI> lexicalEntries = new HashSet<URI>();
         Set<String> existingEntries=this.getExistingLexicalEntries(questionSummaryFile);
        
 
-        for (File file : fileList) {
+        for (File file : protoSimpleQFiles) {
+               
             index = index + 1;
             ObjectMapper mapper = new ObjectMapper();
             GrammarEntries grammarEntries = mapper.readValue(file, GrammarEntries.class);
@@ -107,11 +111,10 @@ public class ReadAndWriteQuestions {
             Integer idIndex = 0, noIndex = 0;
             LOG.info("running file'", file.getName());
             List<String> questions = new ArrayList<String>();
-
+            
             for (GrammarEntryUnit grammarEntryUnit : grammarEntries.getGrammarEntries()) {
                 String uri = null;
-                
-                
+                 
                 if (grammarEntryUnit.getLexicalEntryUri() != null) {
                     uri = grammarEntryUnit.getLexicalEntryUri().toString();
                     if (existingEntries.isEmpty()&&existingEntries.contains(uri)) {
@@ -149,7 +152,7 @@ public class ReadAndWriteQuestions {
                 String bindingType = grammarEntryUnit.getBindingType();
                 String returnType = grammarEntryUnit.getReturnType();
                 String syntacticFrame = grammarEntryUnit.getFrameType();
-                String property = StringUtils.substringBetween(sparql, "<", ">");
+                //String property = StringUtils.substringBetween(sparql, "<", ">");
                 List<UriLabel> bindingList = new ArrayList<UriLabel>();
                 List<UriLabel> returnList=new ArrayList<UriLabel>();
                 Map<String, String[]> resultsOffline = new TreeMap<String, String[]>();
@@ -200,12 +203,12 @@ public class ReadAndWriteQuestions {
                     //resultsOffline = getDataFromFile(propertyNameFile, 0, 100000);
                 }*/
                 if (grammarEntryUnit.getQueryType().equals(QueryType.SELECT)) {
-                    noIndex = this.replaceVariables(uri,sparql, bindingList, property, returnSubjOrObj, questions, syntacticFrame, noIndex, "", resultsOffline, grammarEntryUnit.getQueryType());
+                    noIndex = this.replaceVariables(uri,sparql, bindingList, returnSubjOrObj, questions, syntacticFrame, noIndex, "", resultsOffline, grammarEntryUnit.getQueryType());
                     noIndex = noIndex + 1;
                     idIndex = idIndex + 1;
                 }
                 else if (grammarEntryUnit.getQueryType().equals(QueryType.ASK)) {                    
-                    noIndex = this.replaceVariables(uri,sparql, bindingList, property, returnList,returnSubjOrObj, questions, syntacticFrame, noIndex, "", resultsOffline, grammarEntryUnit.getQueryType());
+                    noIndex = this.replaceVariables(uri,sparql, bindingList, returnList,returnSubjOrObj, questions, syntacticFrame, noIndex, "", resultsOffline, grammarEntryUnit.getQueryType());
                     noIndex = noIndex + 1;
                     idIndex = idIndex + 1;
                 }
@@ -228,10 +231,11 @@ public class ReadAndWriteQuestions {
         this.writeSummary(this.summary);
         this.csvWriterQuestions.close();
         this.csvWriterSummary.close();
+        
 
     }
 
-    private Integer replaceVariables(String uri,String sparqlQuery, List<UriLabel> uriLabels, String property, String returnSubjOrObj, List<String> questions, String syntacticFrame, Integer rowIndex, String lexicalEntry, Map<String, String[]> resultsOffline, QueryType queryType) throws IOException {
+    private Integer replaceVariables(String uri,String sparqlQuery, List<UriLabel> uriLabels, String returnSubjOrObj, List<String> questions, String syntacticFrame, Integer rowIndex, String lexicalEntry, Map<String, String[]> resultsOffline, QueryType queryType) throws IOException {
         Integer index = 0;
         List< String[]> rows = new ArrayList<String[]>();
         //if(queryType.equals(QueryType.ASK)){
@@ -253,10 +257,11 @@ public class ReadAndWriteQuestions {
                 continue;
             }
 
-            String[] wikipediaAnswer = this.getAnswerFromWikipedia(uriLabel.getUri(), property, null,returnSubjOrObj, endpoint, online, resultsOffline,queryType);
+            String[] wikipediaAnswer = this.getAnswerFromWikipedia(uriLabel.getUri(), sparqlQuery, null,returnSubjOrObj, endpoint, online, resultsOffline,queryType);
             String sparql = wikipediaAnswer[0];
             String answerUri = wikipediaAnswer[1];
             String answer = wikipediaAnswer[2];
+            
             index = index + 1;
             sparql = this.modifySparql(sparql);
 
@@ -294,7 +299,7 @@ public class ReadAndWriteQuestions {
                             continue;
                         }
 
-                        // System.out.println("index::" + index + " uriLabel::" + uriLabel.getLabel() + " questionForShow::" + questionForShow + " sparql::" + sparql + " answer::" + answer + " syntacticFrame:" + syntacticFrame);
+                        System.out.println("index::" + index + " uriLabel::" + uriLabel.getLabel() + " questionForShow::" + questionForShow + " sparql::" + sparql + " answer::" + answer + " syntacticFrame:" + syntacticFrame);
                         String[] record = {id, questionT, sparql, answerUri, answer, syntacticFrame};
                         String[]newRecord= doubleQuote(record);
                         this.csvWriterQuestions.writeNext(newRecord);
@@ -311,7 +316,7 @@ public class ReadAndWriteQuestions {
         return rowIndex;
     }
     
-    private Integer replaceVariables(String uri,String sparqlQuery, List<UriLabel> domainList, String property, List<UriLabel> rangeList, String returnSubjOrObj, List<String> questions, String syntacticFrame, Integer rowIndex, String lexicalEntry, Map<String, String[]> resultsOffline, QueryType queryType) throws IOException {
+    private Integer replaceVariables(String uri,String sparqlQuery, List<UriLabel> domainList, List<UriLabel> rangeList, String returnSubjOrObj, List<String> questions, String syntacticFrame, Integer rowIndex, String lexicalEntry, Map<String, String[]> resultsOffline, QueryType queryType) throws IOException {
         Integer index = 0;
         for (UriLabel domainUriLabel : domainList) {
             String domainUri="";
@@ -338,7 +343,7 @@ public class ReadAndWriteQuestions {
              
            
             
-            String[] wikipediaAnswer = this.getAnswerFromWikipedia(domainUriLabel.getUri(), property, rangeUriLabel.getUri(),returnSubjOrObj, endpoint, online, resultsOffline,queryType);
+            String[] wikipediaAnswer = this.getAnswerFromWikipedia(domainUriLabel.getUri(), sparqlQuery, rangeUriLabel.getUri(),returnSubjOrObj, endpoint, online, resultsOffline,queryType);
             String sparql = wikipediaAnswer[0];
             String answerUri = wikipediaAnswer[1];
             String answer = wikipediaAnswer[2];
@@ -352,41 +357,22 @@ public class ReadAndWriteQuestions {
     }
 
 
-    public String[] getAnswerFromWikipedia(String domainEntityUri, String property, String rangeEntityUri, String returnSubjOrObj, String endpoint, Boolean online, Map<String, String[]> resultsOffline,QueryType queryType) throws IOException {
-        String answerUri = "";
-        String answerLabel = "";
-        SparqlQuery sparqlQuery = null;
-
-        /*if (!this.online && resultsOffline.containsKey(entityUri)) {
-            answerUri = resultsOffline.get(entityUri)[1];
-            answerLabel = resultsOffline.get(entityUri)[2];
-            sparqlQuery = new SparqlQuery(entityUri, property, SparqlQuery.FIND_ANY_ANSWER, returnSubjOrObj, language, endpoint, false);
-            //if (returnSubjOrObj.contains("subjOfProp")) {
-            //    System.out.println("subjProp:::" + entityUri);
-            //    System.out.println("property:::" + property);
-            //    System.out.println("returnType:::" + returnSubjOrObj);
-            //    System.out.println("answerUri:::" + answerUri);
-            //    System.out.println("answerLabel:::" + answerLabel);
-            //    System.out.println("sparqlQuery.getSparqlQuery():::" + sparqlQuery.getSparqlQuery());
-            //}
-
-            return new String[]{sparqlQuery.getSparqlQuery(), answerUri, answerLabel};
-        }*/
-       
-        sparqlQuery = new SparqlQuery(domainEntityUri, property, rangeEntityUri, SparqlQuery.FIND_ANY_ANSWER, returnSubjOrObj, language, endpoint, online,queryType);
+    public String[] getAnswerFromWikipedia(String domainEntityUri, String sparql, String rangeEntityUri, String returnSubjOrObj, String endpoint, Boolean online, Map<String, String[]> resultsOffline, QueryType queryType) throws IOException {
+         String answerLabel = null, answerUri = null;
+        SparqlQuery sparqlQuery = new SparqlQuery(domainEntityUri, sparql, rangeEntityUri, SparqlQuery.FIND_ANY_ANSWER, returnSubjOrObj, language, endpoint, online, queryType);
         answerUri = sparqlQuery.getObject();
         if (answerUri != null) {
             if (queryType.equals(QueryType.ASK)) {
                 answerLabel = answerUri;
             } else if (queryType.equals(QueryType.SELECT)) {
                 if (answerUri.contains("http:")) {
-                    SparqlQuery sparqlQueryLabel = new SparqlQuery(answerUri, property, rangeEntityUri, SparqlQuery.FIND_LABEL, null, language, endpoint, online, queryType);
+                    SparqlQuery sparqlQueryLabel = new SparqlQuery(answerUri, sparql, rangeEntityUri, SparqlQuery.FIND_LABEL, null, language, endpoint, online, queryType);
                     answerLabel = sparqlQueryLabel.getObject();
                 }
             }
-
         }
         return new String[]{sparqlQuery.getSparqlQuery(), answerUri, answerLabel};
+     
     }
     
    
@@ -553,6 +539,48 @@ public class ReadAndWriteQuestions {
     private String doubleQuote(String string) {
         return "\""+string+"\"";
     }
+
+    
+    
+
+    /*private String[] getSimpleSparqlResult(String domainEntityUri, String sparql, String rangeEntityUri, String returnSubjOrObj, String endpoint, Boolean online, Map<String, String[]> resultsOffline, QueryType queryType) {
+        String answerLabel = null, answerUri = null;
+        SparqlQuery sparqlQuery = new SparqlQuery(domainEntityUri, sparql, rangeEntityUri, SparqlQuery.FIND_ANY_ANSWER, returnSubjOrObj, language, endpoint, online, queryType);
+        answerUri = sparqlQuery.getObject();
+        if (answerUri != null) {
+            if (queryType.equals(QueryType.ASK)) {
+                answerLabel = answerUri;
+            } else if (queryType.equals(QueryType.SELECT)) {
+                if (answerUri.contains("http:")) {
+                    SparqlQuery sparqlQueryLabel = new SparqlQuery(answerUri, sparql, rangeEntityUri, SparqlQuery.FIND_LABEL, null, language, endpoint, online, queryType);
+                    answerLabel = sparqlQueryLabel.getObject();
+                }
+            }
+        }
+        return new String[]{sparqlQuery.getSparqlQuery(), answerUri, answerLabel};
+    }
+
+    private String[] getCompositeSparqlResult(String domainEntityUri, String sparql, String rangeEntityUri, String returnSubjOrObj, String endpoint, Boolean online, Map<String, String[]> resultsOffline, QueryType queryType) {
+        String answerLabel = null, answerUri = null;
+         String[] lines = sparql.split(System.getProperty("line.separator"));
+        
+        
+        SparqlQuery sparqlQuery = new SparqlQuery(domainEntityUri, sparql, rangeEntityUri, SparqlQuery.FIND_ANY_ANSWER, returnSubjOrObj, language, endpoint, online, queryType);
+        answerUri = sparqlQuery.getObject();
+        if (answerUri != null) {
+            if (queryType.equals(QueryType.ASK)) {
+                answerLabel = answerUri;
+            } else if (queryType.equals(QueryType.SELECT)) {
+                if (answerUri.contains("http:")) {
+                    SparqlQuery sparqlQueryLabel = new SparqlQuery(answerUri, sparql, rangeEntityUri, SparqlQuery.FIND_LABEL, null, language, endpoint, online, queryType);
+                    answerLabel = sparqlQueryLabel.getObject();
+                }
+            }
+        }
+        return new String[]{sparqlQuery.getSparqlQuery(), answerUri, answerLabel};
+    }*/
+
+    
 
     
 }

@@ -27,6 +27,7 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.query.QueryType;
 import util.io.FileUtils;
 
@@ -43,19 +44,128 @@ public class SparqlQuery {
     public static String RETURN_TYPE_OBJECT = "objOfProp";
     public static String RETURN_TYPE_SUBJECT = "subjOfProp";
     private String resultSparql = null;
+    private String command = null;
+
     private String type = null;
     private List<Binding> bindingList=new ArrayList<Binding>();
+    private Boolean online=false;
 
-    public SparqlQuery(String domainEntityUrl, String property, String rangeEntityUrl, String type, String returnType, String language, String endpoint, Boolean online, QueryType queryType) {
+    
+    public SparqlQuery(String domainEntityUrl, String sparqlQueryOrg, String rangeEntityUrl, String type, String returnType, String language, String endpoint, Boolean online, QueryType queryType) {
         this.endpoint = endpoint;
-        this.type=type;
+        this.type = type;
+        Integer index = isSimpleOrComposite(sparqlQueryOrg);
+        
         if (endpoint.contains("dbpedia.org")) {
-            if (type.contains(FIND_ANY_ANSWER)) {
+            if (type.contains(FIND_ANY_ANSWER) && index == 1) {
+                String property = StringUtils.substringBetween(sparqlQueryOrg, "<", ">");
                 if (queryType.equals(QueryType.SELECT)) {
                     if (returnType.contains("objOfProp")) {
                         sparqlQuery = this.setObjectWikiPedia(domainEntityUrl, property);
                     } else if (returnType.contains("subjOfProp")) {
                         sparqlQuery = this.setSubjectWikipedia(domainEntityUrl, property);
+                    }
+
+                } else if (queryType.equals(QueryType.ASK)) {
+                    sparqlQuery = this.setBooleanWikiPedia(domainEntityUrl, property, rangeEntityUrl);
+
+                }
+
+            } else if (type.contains(FIND_ANY_ANSWER) && index == 2) {
+                if (queryType.equals(QueryType.SELECT)) {
+                    if (returnType.contains("objOfProp")) {
+                        sparqlQuery = this.setObjectWikiPediaComposite(domainEntityUrl, sparqlQueryOrg,queryType,returnType);
+                    } else if (returnType.contains("subjOfProp")) {
+                        sparqlQuery = this.setSubjectWikipediaComposite(domainEntityUrl, sparqlQueryOrg);
+                    }
+
+                } else if (queryType.equals(QueryType.ASK)) {
+                    sparqlQuery = this.setBooleanWikiPedia(domainEntityUrl, sparqlQueryOrg, rangeEntityUrl);
+
+                }
+
+            } else if (type.contains(FIND_LABEL)) {
+                sparqlQuery = this.setLabelWikipedia(domainEntityUrl, language);
+            }
+           
+            if (online) {
+                if (queryType.equals(QueryType.SELECT)) {
+                    this.resultSparql = executeSparqlQuery(sparqlQuery);
+                    this.parseResult(resultSparql);
+                     /*System.out.println("sparqlQuery::"+sparqlQuery);
+                     System.out.println(this.command);
+                     System.out.println("resultSparql::"+resultSparql);
+                     System.out.println("objectOfProperty::"+this.objectOfProperty);
+                     //exit(1);*/
+                } else if (queryType.equals(QueryType.ASK)) {
+                    this.resultSparql = executeSparqlQuery(sparqlQuery);
+                    this.objectOfProperty = this.resultSparql;
+                }
+
+            } else {
+                return;
+            }
+
+        }
+        /*else if (endpoint.contains("wikidata.org")) {
+            if (type.contains(FIND_ANY_ANSWER)) {
+                if (returnType.contains("objOfProp")) {
+                    sparqlQuery = this.setObjectWikiData(domainEntityUrl, property, language);
+                } else if (returnType.contains("subjOfProp")) {
+                    sparqlQuery = this.setSubjectWikiData(domainEntityUrl, property, language);
+                }
+
+            } else if (type.contains(FIND_LABEL)) {
+                sparqlQuery = this.setLabelWikiData(domainEntityUrl, language);
+            }
+            this.resultSparql = executeSparqlQuery(sparqlQuery);
+            parseResult(resultSparql);
+
+        } else if (endpoint.contains("beniculturali")) {
+            if (type.contains(FIND_ANY_ANSWER)) {
+                if (returnType.contains("objOfProp")) {
+                    sparqlQuery = this.setObjectBen(domainEntityUrl, property, language);
+                } else if (returnType.contains("subjOfProp")) {
+                    sparqlQuery = this.setSubjectWikiData(domainEntityUrl, property, language);
+
+                }
+
+            } else if (type.contains(FIND_LABEL)) {
+                sparqlQuery = this.setLabelWikiData(domainEntityUrl, language);
+            }
+            this.resultSparql = executeSparqlQuery(sparqlQuery);
+            parseResult(resultSparql);
+
+        } */
+
+    }
+    
+    
+    /*public SparqlQuery(String domainEntityUrl, String sparqlQueryOrg, String rangeEntityUrl, String type, String returnType, String language, String endpoint, Boolean online, QueryType queryType) {
+        this.endpoint = endpoint;
+        this.type=type;
+        Integer index=isSimpleOrComposite(sparqlQueryOrg);
+        if (endpoint.contains("dbpedia.org")) {
+            if (type.contains(FIND_ANY_ANSWER)&&index==1) {
+                String property = StringUtils.substringBetween(sparqlQueryOrg, "<", ">");
+                if (queryType.equals(QueryType.SELECT)) {
+                    if (returnType.contains("objOfProp")) {
+                        sparqlQuery = this.setObjectWikiPedia(domainEntityUrl, property);
+                    } else if (returnType.contains("subjOfProp")) {
+                        sparqlQuery = this.setSubjectWikipedia(domainEntityUrl, property);
+                    }
+
+                } else if (queryType.equals(QueryType.ASK)) {
+                    sparqlQuery = this.setBooleanWikiPedia(domainEntityUrl, property, rangeEntityUrl);
+                    
+                }
+
+            } if (type.contains(FIND_ANY_ANSWER)&&index==2) {
+                if (queryType.equals(QueryType.SELECT)) {
+                    if (returnType.contains("objOfProp")) {
+                        sparqlQuery = this.setObjectWikiPediaComposite(domainEntityUrl, sparqlQueryOrg);
+                    } else if (returnType.contains("subjOfProp")) {
+                        sparqlQuery = this.setSubjectWikipediaComposite(domainEntityUrl, property);
                     }
 
                 } else if (queryType.equals(QueryType.ASK)) {
@@ -110,13 +220,22 @@ public class SparqlQuery {
             this.resultSparql = executeSparqlQuery(sparqlQuery);
             parseResult(resultSparql);
 
-        }
-        
-      
+        } 
 
+    }*/
+    
+    private Integer isSimpleOrComposite(String sparql) {
+        String[] lines = sparql.split(System.getProperty("line.separator"));
+        Integer index = 0;
+        for (String line : lines) {
+            if (line.contains("triple")) {
+                index = index + 1;
+            }
+        }
+       return index;
     }
     
-    
+   
     public SparqlQuery(String sparqlQuery) {
         endpoint = SPARQLRequest.getSPARQL_ENDPOINT_URL();
         
@@ -132,11 +251,11 @@ public class SparqlQuery {
    
 
     public String executeSparqlQuery(String query) {
-        String result = null, resultUnicode = null, command = null;
+        String result = null, resultUnicode = null;
         Process process = null;
         try {
             resultUnicode = this.stringToUrlUnicode(query);
-            command = "curl " + endpoint + "?query=" + resultUnicode;
+            this.command = "curl " + endpoint + "?query=" + resultUnicode;
             process = Runtime.getRuntime().exec(command);
         } catch (Exception ex) {
             Logger.getLogger(SparqlQuery.class.getName()).log(Level.SEVERE, null, ex);
@@ -235,6 +354,20 @@ public class SparqlQuery {
                 + "    }";
 
     }
+    
+    public String setObjectWikiPedia2(String entityUrl, String property) {
+        return " PREFIX dbo: <http://dbpedia.org/ontology/>\n"
+                + "PREFIX res: <http://dbpedia.org/resource/>\n"
+                + "SELECT DISTINCT ?uri \n"
+                + "WHERE { \n"
+                + "        res:French_Polynesia dbo:capital ?x .\n"
+                + "        ?x dbo:mayor ?uri .\n"
+                + "}";
+
+    }
+
+    
+   
 
     public String setObjectWikiData(String entityUrl, String propertyUrl,String language) {
         /*return "SELECT ?object ?objectLabel WHERE {\n"
@@ -488,6 +621,72 @@ public class SparqlQuery {
         return str;
     }*/
     
+    
+    /*
+    
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX res: <http://dbpedia.org/resource/>
+SELECT DISTINCT ?uri WHERE { 
+        res:French_Polynesia dbo:capital ?x .
+        ?x dbo:mayor ?uri .
+}
+    
+    
+    
+       sparqlQuery:::(bgp
+  
+  (triple ?subjOfPropx <http://dbpedia.org/ontology/capital> ?subjOfProp)
+  (triple ?subjOfProp <http://dbpedia.org/ontology/mayor> ?objOfProp)
+)
+    "bindingType" : "Country",
+    "returnType" : "Person",
+    */
+
+    private String setObjectWikiPediaComposite(String entityUrl, String sparqlOrg, QueryType queryType, String returnVariable) {
+        String[] lines = sparqlOrg.split(System.getProperty("line.separator"));
+        //entityUrl="http://dbpedia.org/resource/France";
+        String sparql = "";
+        for (String line : lines) {
+
+            if (line.contains("bgp") && queryType.equals(QueryType.SELECT)) {
+                line = "SELECT DISTINCT " + "?" + returnVariable + " WHERE { ";
+            } /*else if (queryType.equals(QueryType.SELECT) && type.contains(RETURN_TYPE_SUBJECT)) {
+                line = "SELECT DISTINCT " + "?" + RETURN_TYPE_SUBJECT + " WHERE { ";
+
+            }*/ else if (line.contains("triple") || line.contains("?subjOfPropx") || line.contains("?objOfPropx")) {
+                line = line.replace("triple", "");
+                line = line.replace("?subjOfPropx", "<" + entityUrl + ">");
+                line = line.replace("?objOfPropx", "<" + entityUrl + ">");
+                line = line + " .";
+            }
+
+            sparql += line;
+
+        }
+
+        sparql = sparql.replace("(", "").replace(")", "") + "}";
+        /*System.out.println("prepared:"+sparql);
+        sparql = " SELECT DISTINCT ?objOfProp WHERE {"
+                + "        <http://dbpedia.org/resource/France> <http://dbpedia.org/ontology/capital> ?subjOfProp ."
+                + "        ?subjOfProp <http://dbpedia.org/ontology/mayor> ?objOfProp ."
+                + "}";
+        System.out.println("working:"+sparql);
+        exit(1);*/
+        return sparql;
+    }
+    
+    /*
+    SELECT DISTINCT ?objOfProp WHERE { 
+        <http://dbpedia.org/resource/France> <http://dbpedia.org/ontology/capital> ?subjOfProp .
+        ?subjOfProp dbo:mayor ?objOfProp .
+}
+    */
+
+    private String setSubjectWikipediaComposite(String domainEntityUrl, String sparql) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+ 
    
 
    

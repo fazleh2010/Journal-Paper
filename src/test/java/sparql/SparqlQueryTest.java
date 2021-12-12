@@ -32,7 +32,7 @@ public class SparqlQueryTest {
         System.out.println(uri);
     }
 
-    @Test
+    /*@Test
     private static void answerTest() {
         String domainEntityUrl = "http://dbpedia.org/resource/Battle_of_Gettysburg";
         String property = "http://dbpedia.org/property/date";
@@ -45,6 +45,30 @@ public class SparqlQueryTest {
         assertEquals(sparqlQuery.getObject(), "2008-12-26");
 
        
-    }
+    }*/
+    
+       /*
+Gib mir den B�rgermeister von die Hauptstadt von ($x | Country_NP)?
+            
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX res: <http://dbpedia.org/resource/>
+SELECT DISTINCT ?uri 
+WHERE { 
+        res:French_Polynesia dbo:capital ?x .
+        ?x dbo:mayor ?uri .
+}
+            
+            
+            sparqlQuery:::(bgp
+  
+  (triple ?subjOfPropx <http://dbpedia.org/ontology/capital> ?subjOfProp)
+  (triple ?subjOfProp <http://dbpedia.org/ontology/mayor> ?objOfProp)
+)
+    "bindingType" : "Country",
+    "returnType" : "Person",
+"(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/mayor> ?objOfProp)\n  (triple ?subjOfPropx <http://dbpedia.org/ontology/capital> ?subjOfProp)\n)\n"
+
+             */
+          
 
 }

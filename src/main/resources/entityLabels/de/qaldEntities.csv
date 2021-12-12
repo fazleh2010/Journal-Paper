@@ -731,3 +731,6 @@
 "http://dbpedia.org/resource/Suriname","Suriname","Location"
 "http://dbpedia.org/resource/Suriname","Suriname","PopulatedPlace"
 "http://dbpedia.org/resource/Suriname","Suriname","Country"
+"http://dbpedia.org/resource/France","France","Place"
+"http://dbpedia.org/resource/France","France","Location"
+"http://dbpedia.org/resource/France","France","Country"

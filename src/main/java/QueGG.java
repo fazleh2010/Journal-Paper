@@ -55,7 +55,8 @@ public class QueGG {
     private static String summaryFile = "summary";
     private static String entityLabelDir = "src/main/resources/entityLabels/";
     private static Boolean externalEntittyListflag = true;
-    private static String outputFileName = "grammar_FULL_DATASET";
+    private static String grammar_FULL_DATASET = "grammar_FULL_DATASET";
+    private static String grammar_COMBINATIONS = "grammar_COMBINATIONS";
     private static Boolean online = true;
 
     public static void main(String[] args) throws Exception {
@@ -77,7 +78,7 @@ public class QueGG {
                      }
                 }
                 if(inputCofiguration.isProtoTypeToQuestion()){
-                    queGG.protoToReal(inputCofiguration);
+                    queGG.protoToReal(inputCofiguration,grammar_FULL_DATASET,grammar_COMBINATIONS);
                 }
                 if(inputCofiguration.isEvalution()){
                 Language language = inputCofiguration.getLanguage();
@@ -189,22 +190,28 @@ public class QueGG {
 
   
              
-        private void protoToReal(InputCofiguration inputCofiguration) throws Exception {
+        private void protoToReal(InputCofiguration inputCofiguration,String grammar_FULL_DATASET,String grammar_COMBINATIONS) throws Exception {
         Language language = inputCofiguration.getLanguage();
         String inputDir = inputCofiguration.getOutputDir();
         Integer maxNumberOfEntities =inputCofiguration.getNumberOfEntities();
         LinkedData linkedData = inputCofiguration.getLinkedData();
         setDataSet(linkedData);
 
-        List<File> fileList = FileUtils.getFiles(inputDir + "/", outputFileName + "_" + language.name(), ".json");
-        if (fileList.isEmpty()) {
-            throw new Exception("No files to process for question answering system!!");
-        }
+        List<File> protoSimpleQ = FileUtils.getFiles(inputDir + "/", grammar_FULL_DATASET + "_" + language.name(), ".json");
+       
+        List<File> protoCompositeQ = FileUtils.getFiles(inputDir + "/", grammar_COMBINATIONS + "_" + language.name(), ".json");
+        protoCompositeQ.addAll(protoSimpleQ);
+        //System.out.println("protoCompositeQ::"+protoCompositeQ.toString());
+         
+        //protoCompositeQ.addAll(protoSimpleQ);
+        //if (protoCompositeQ.isEmpty()) {
+        //    throw new Exception("No files to process for question answering system!!");
+        //}
         String langCode = language.name().toLowerCase().trim();
         String questionAnswerFile = inputDir + File.separator + questionsFile + "_" + langCode + ".csv";
         String questionSummaryFile = inputDir + File.separator + summaryFile + "_" + langCode + ".csv";
         ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile, maxNumberOfEntities, langCode, linkedData.getEndpoint(), online);
-        readAndWriteQuestions.readQuestionAnswers(fileList, entityLabelDir, externalEntittyListflag);
+        readAndWriteQuestions.readQuestionAnswers(protoCompositeQ, entityLabelDir, externalEntittyListflag);
 
     }
     
