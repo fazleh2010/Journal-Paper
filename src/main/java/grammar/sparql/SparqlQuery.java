@@ -73,10 +73,8 @@ public class SparqlQuery {
 
             } else if (type.contains(FIND_ANY_ANSWER) && index == 2) {
                 if (queryType.equals(QueryType.SELECT)) {
-                    if (returnType.contains("objOfProp")) {
+                    if (returnType.contains("objOfProp")||returnType.contains("subjOfProp")) {
                         sparqlQuery = this.setObjectWikiPediaComposite(domainEntityUrl, sparqlQueryOrg,queryType,returnType);
-                    } else if (returnType.contains("subjOfProp")) {
-                        sparqlQuery = this.setSubjectWikipediaComposite(domainEntityUrl, sparqlQueryOrg);
                     }
 
                 } else if (queryType.equals(QueryType.ASK)) {
@@ -681,13 +679,6 @@ SELECT DISTINCT ?uri WHERE {
         ?subjOfProp dbo:mayor ?objOfProp .
 }
     */
-
-    private String setSubjectWikipediaComposite(String domainEntityUrl, String sparql) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
- 
-   
 
    
 

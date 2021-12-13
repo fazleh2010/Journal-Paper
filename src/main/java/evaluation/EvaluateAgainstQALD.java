@@ -739,7 +739,7 @@ public class EvaluateAgainstQALD {
             queGGquestion = queGGquestion.replace("\"", "");
             Double value = StringSimilarity.similarity(qaldsentence, queGGquestion);
 
-            if (value > 0.7) {
+            if (value > 0.6) {
                 QueGGinfomation queGGinfomation = new QueGGinfomation(row, value);
                 sort.put(queGGinfomation.getQuestion(), value);
                 matchedQuestions.put(queGGinfomation.getQuestion(), queGGinfomation);
@@ -747,7 +747,7 @@ public class EvaluateAgainstQALD {
             }
             //System.out.println("MATCHED: "+qaldsentence + ":" + queGGquestion + " cosineSimilarityPercentage::" + value);
             //else
-            //System.out.println("NOT MATCHED:" + qaldsentence + ":" + question + " cosineSimilarityPercentage::" + cosineSimilarityPercentage);
+            //   System.out.println("NOT MATCHED: " + qaldsentence + ":" + queGGquestion + " cosineSimilarityPercentage::" + value);        
         }
 
         return matchedQuestions;

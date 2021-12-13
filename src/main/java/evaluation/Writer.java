@@ -68,7 +68,7 @@ public class Writer {
             list.add(
                     new String[]{
                         entryComparison.getQaldEntry().getId(),
-                        entryComparison.getMatchedFlag().toString(),
+                        entryComparison.getSimilarityCsore().toString(),
                         qaldQuestion,
                         entryComparison.getQueGGEntry().getQuestions(),
                         qaldSparql,

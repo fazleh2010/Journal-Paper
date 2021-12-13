@@ -1,5 +1,3 @@
 LemonEntry,partOfSpeech,gender,writtenFormNominative(singular),writtenFormNominative (plural),writtenFormSingular (accusative),writtenFormSingular (dative),writtenFormSingular (genetive),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,domain_article,domain_written_singular,domain_written_plural,rangeArticle,range_written_singular,range_written_plural
-Hauptstadt_von,noun,feminine,Hauptstadt,-,Hauptstadt,Hauptstadt,Hauptstadt,von,NounPPFrame,range,domain,1,dbo:capital,dbo:Country,dbo:City,neuter,Land,LÑnder,feminine,Stadt,-
-BÅrgermeister_von,noun,masculine,BÅrgermeister,-,BÅrgermeister,BÅrgermeister,BÅrgermeisters,von,NounPPFrame,range,domain,1,dbo:mayor,dbo:City,dbo:Person,feminine,Stadt,StÑdte,feminine,Person,Personen
-Hîhe_von,noun,feminine,Hîhe,-,Hîhe,Hîhe,Hîhe,von,NounPPFrame,range,domain,1,dbo:height,dbo:Lighthouse,xsd:integer,masculine,Leuchtturm,LeuchttÅrme,feminine,-,-
-Amtssprache_von,noun,feminine,Amtssprache,Amtssprachen,Amtssprache,Amtssprache,Amtssprache,von,NounPPFrame,range,domain,1,dbo:officialLanguage,dbo:Country,dbo:Language,neuter,Land,LÑnder,feminine,Sprache,Sprachen
+entwickler_von,noun,masculine,Entwickler,Entwickler,Entwickler,Entwickler,Entwicklers,von,NounPPFrame,range,domain,1,dbo:developer,dbo: Software,dbo:University,feminine,Software,Software,feminine,UniversitÑt,UniversitÑten
+vorwahl_von,noun,feminine,Vorwahl,Vorwahl,Vorwahl,Vorwahl,Vorwahl,von,NounPPFrame,range,domain,1,dbo:areaCode,dbo:Place,xsd:string,feminine,Lage,Lagen,-,-,-
