@@ -172,14 +172,6 @@ public class GermanSentenceBuilder implements TempConstants {
 
             }
            
-            /*SubjectType subjectType = isInterrogativeAmount(attribute).second;
-
-            if (reference.contains(colon)) {
-                String[] col = reference.split(colon);
-                subjectType = isInterrogativeAmount(attribute).second;
-                word = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil,subjectType.name(), TempConstants.number, col[1], TempConstants.gender, defaultGender);
-            }*/
-
         } else if (flagReference && isInterrogativePlace(attribute).first) {
             SubjectType subjectType = isInterrogativePlace(attribute).second;
 
@@ -395,15 +387,19 @@ public class GermanSentenceBuilder implements TempConstants {
 
 
     public static SubjectType findIntergativePronoun(LexicalEntryUtil lexicalEntryUtil, SelectVariable selectVariable) throws QueGGMissingFactoryClassException {
-        String uri = null;
+        String uri = null;SubjectType subjectType=null;
         uri = LexicalEntryUtil.getUri(lexicalEntryUtil, selectVariable);
+        //System.out.println("uri::"+uri);
+        //System.out.println("selectVariable::"+selectVariable);
         if (TemplateFinder.isPerson(uri)) {
-            return SubjectType.interrogativePronounPerson;
+            subjectType=SubjectType.interrogativePronounPerson;
         } else {
-            return SubjectType.interrogativePronounThing;
+            subjectType= SubjectType.interrogativePronounThing;
 
         }
-
+        //System.out.println("subjectType::"+subjectType);
+        //exit(1);
+      return subjectType;
     }
 
     public static Pair<Boolean, SubjectType> isIntergativePronoun(String questionType) throws QueGGMissingFactoryClassException {

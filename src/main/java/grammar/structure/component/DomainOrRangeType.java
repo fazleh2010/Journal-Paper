@@ -81,6 +81,9 @@ public enum DomainOrRangeType {
     Infrastructure(List.of(URI.create(DBO.getUri() + "Infrastructure"))),
     RouteOfTransportation(List.of(URI.create(DBO.getUri() + "RouteOfTransportation"))),
     Game(List.of(URI.create(DBO.getUri() + "Game"))),
+    CelestialBody(List.of(URI.create(DBO.getUri() + "CelestialBody"))),
+    Planet(List.of(URI.create(DBO.getUri() + "Planet"))),
+ 
     Name(List.of(
             URI.create(DBO.getUri() + "GivenName"),
             URI.create(DBO.getUri() + "Name")

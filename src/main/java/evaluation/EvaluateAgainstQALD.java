@@ -739,7 +739,7 @@ public class EvaluateAgainstQALD {
             queGGquestion = queGGquestion.replace("\"", "");
             Double value = StringSimilarity.similarity(qaldsentence, queGGquestion);
 
-            if (value > 0.6) {
+            if (value > 0.55) {
                 QueGGinfomation queGGinfomation = new QueGGinfomation(row, value);
                 sort.put(queGGinfomation.getQuestion(), value);
                 matchedQuestions.put(queGGinfomation.getQuestion(), queGGinfomation);
@@ -801,7 +801,7 @@ public class EvaluateAgainstQALD {
         ValueComparator bvc = new ValueComparator(map);
         TreeMap<String, Double> sorted_map = new TreeMap<String, Double>(bvc);
         sorted_map.putAll(map);
-        System.out.println("sorted_map: " + sorted_map);
+        //System.out.println("sorted_map: " + sorted_map);
         String key = sorted_map.firstKey();
         Double value = sorted_map.get(key);
         QueGGinfomation queGGinfomation = grammarEntities.get(key);

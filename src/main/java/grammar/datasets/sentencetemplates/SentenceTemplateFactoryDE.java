@@ -58,7 +58,7 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
            //"In welchem Land ist der Mount Everest?", In welcher Stadt ist die Heinekenbrauerei?
             //"preposition interrogativeDeterminer(dativeCase:range:singular) verb(component_be:present:singular) adjunct(domain)?"
             //"interrogativePlace(nominativeCase:singular) verb(component_be:present:singular) determiner(component_the_nominative:domain:singular) object(domain)?"             
-                 ),
+         ),
         NounPPFrame,
         whQuestion
       )
@@ -192,7 +192,9 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
         // Trenn Verb
          "interrogativePronoun(nominativeCase:range:singular) verb(TrennVerbPart1:past:thridPerson) object(domain) verb(TrennVerbPart2:past:thridPerson)?",
          "interrogativePronoun(nominativeCase:range:singular) verb(component_be:present:singular) object(domain) verb(TrennVerb:perfect:thridPerson)?"
-       
+         //Zeig mir das Buch, das Muhammad Ali geschrieben hat.
+         //"verb(imperative_transitive_show:present:singular) pronoun(object_pronoun) determiner(component_the_accusative:range:singular) noun(accusativeCase:singular), verb(mainVerb:perfect:thridPerson) verb(component_haben:present:singular)."
+  
         ),
        TransitiveFrame,
         active

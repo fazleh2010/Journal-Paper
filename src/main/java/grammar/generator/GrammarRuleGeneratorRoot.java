@@ -151,9 +151,9 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
             if (grammarEntry.getQueryType().equals(QueryType.ASK)) {
                 bindingList = new ArrayList<Binding>();
             } else {
-                SPARQLRequest sparqlRequest = getBindingSparqlRequest(grammarEntry, bindingQuery);
+                /*SPARQLRequest sparqlRequest = getBindingSparqlRequest(grammarEntry, bindingQuery);
                 List<Map<String, String>> sparqlSelectResultList = sparqlRequest.getSparqlSelectResultList();
-                bindingList = makeBindingsFromSPARQLRequestResult(sparqlSelectResultList);
+                bindingList = makeBindingsFromSPARQLRequestResult(sparqlSelectResultList);*/
             }
 
 

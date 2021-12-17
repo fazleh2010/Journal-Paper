@@ -1,0 +1,507 @@
+23:39:36.221 [main] DEBUG org.apache.jena.util.FileManager - Add location: LocatorFile
+23:39:36.222 [main] DEBUG org.apache.jena.util.FileManager - Add location: ClassLoaderLocator
+23:39:36.224 [main] DEBUG org.apache.jena.util.LocationMapper - Failed to find configuration: file:location-mapping.rdf;file:location-mapping.n3;file:location-mapping.ttl;file:etc/location-mapping.rdf;file:etc/location-mapping.n3;file:etc/location-mapping.ttl
+23:39:36.225 [main] DEBUG org.apache.jena.util.FileManager - Add location: LocatorFile
+23:39:36.226 [main] DEBUG org.apache.jena.util.FileManager - Add location: LocatorURL
+23:39:36.226 [main] DEBUG org.apache.jena.util.FileManager - Add location: ClassLoaderLocator
+23:39:36.229 [main] DEBUG org.apache.jena.riot.system.stream.JenaIOEnvironment - Failed to find configuration: location-mapping.ttl;location-mapping.rdf;location-mapping.n3;etc/location-mapping.rdf;etc/location-mapping.n3;etc/location-mapping.ttl
+23:39:36.364 [main] DEBUG org.apache.jena.info - System architecture: 64 bit
+23:39:36.374 [main] DEBUG org.apache.jena.info - System architecture: 64 bit
+TransitiveFrame-lexicon-Schreiben_3.ttl deleted successfully
+[INFO ] 2021-12-13 23:39:36.778 [main] QueGG - The input lexicon contains the following grammar frames:
+[INFO ] 2021-12-13 23:39:36.808 [main] QueGG - NounPPFrame: 0
+[INFO ] 2021-12-13 23:39:36.808 [main] QueGG - TransitiveFrame: 1
+[INFO ] 2021-12-13 23:39:36.808 [main] QueGG - AdjectiveAttributiveFrame: 0
+[INFO ] 2021-12-13 23:39:36.809 [main] QueGG - AdjectivePPFrame: 1
+[INFO ] 2021-12-13 23:39:36.809 [main] QueGG - IntransitivePPFrame: 0
+[INFO ] 2021-12-13 23:39:36.809 [main] QueGG - FULL_DATASET: 0
+[INFO ] 2021-12-13 23:39:36.812 [main] QueGG - Start generation for FrameType NounPPFrame
+[INFO ] 2021-12-13 23:39:36.814 [main] QueGG - Start generation for FrameType TransitiveFrame
+attribute::interrogativePronoun reference::nominativeCase:range:singular index::1
+word:::Wer
+attribute::verb reference::mainVerb:past:thirdPerson index::2
+word:::schrieb
+attribute::object? reference::domain index::3
+word:::($x | Film_NP)?
+attribute::interrogativeDeterminer reference::nominativeCase:range:singular index::5
+word:::Welcher Person
+attribute::verb reference::mainVerb:past:thridPerson index::6
+word:::schrieb
+attribute::object? reference::domain index::7
+word:::($x | Film_NP)?
+attribute::interrogativePronoun reference::nominativeCase:range:singular index::9
+word:::Wer
+attribute::verb reference::component_haben:present:singular index::10
+word:::hat
+attribute::object reference::domain index::11
+word:::($x | Film_NP)
+attribute::verb? reference::mainVerb:perfect:thridPerson index::12
+word:::geschrieben?
+attribute::interrogativeDeterminer reference::nominativeCase:range:singular index::14
+word:::Welcher Person
+attribute::verb reference::component_haben:present:singular index::15
+word:::hat
+attribute::object reference::domain index::16
+word:::($x | Film_NP)
+attribute::verb? reference::mainVerb:perfect:thridPerson index::17
+word:::geschrieben?
+attribute::interrogativePronoun reference::nominativeCase:range:singular index::19
+word:::Wer
+attribute::verb reference::TrennVerbPart1:past:thridPerson index::20
+word:::XX
+attribute::object reference::domain index::21
+word:::($x | Film_NP)
+attribute::verb? reference::TrennVerbPart2:past:thridPerson index::22
+word:::XX?
+attribute::interrogativePronoun reference::nominativeCase:range:singular index::24
+word:::Wer
+attribute::verb reference::component_be:present:singular index::25
+word:::ist
+attribute::object reference::domain index::26
+word:::($x | Film_NP)
+attribute::verb? reference::TrennVerb:perfect:thridPerson index::27
+word:::XX?
+attribute::verb reference::imperative_transitive_show:present:singular index::29
+word:::XX
+attribute::pronoun reference::object_pronoun index::30
+word:::mir
+attribute::determiner reference::component_the_accusative:range:singular index::31
+word:::den
+attribute::noun, reference::accusativeCase:singular index::32
+word:::schreiben
+attribute::verb reference::mainVerb:perfect:thridPerson index::33
+word:::geschrieben
+attribute::verb. reference::component_haben:present:singular index::34
+word:::hat
+attribute::interrogativePronoun reference::nominativeCase:domain:singular index::1
+word:::Was
+attribute::verb reference::component_be:future:singular index::2
+word:::wird
+attribute::preposition reference::null index::3
+form_Schreiben_3_preposition
+word:::von
+attribute::object reference::range index::4
+word:::($x | Person_NP)
+attribute::verb? reference::mainVerb:perfect:thridPerson index::5
+word:::geschrieben?
+attribute::interrogativeDeterminer reference::nominativeCase:domain:singular index::7
+word:::Welcher Film
+attribute::verb reference::component_be:future:singular index::8
+word:::wird
+attribute::preposition reference::null index::9
+form_Schreiben_3_preposition
+word:::von
+attribute::object reference::range index::10
+word:::($x | Person_NP)
+attribute::verb? reference::mainVerb:perfect:thridPerson index::11
+word:::geschrieben?
+attribute::interrogativePronoun reference::nominativeCase:domain:singular index::13
+word:::Was
+attribute::verb reference::component_be:future:singular index::14
+word:::wird
+attribute::preposition reference::null index::15
+form_Schreiben_3_preposition
+word:::von
+attribute::object reference::range index::16
+word:::($x | Person_NP)
+attribute::verb? reference::TrennVerb:perfect:thridPerson index::17
+word:::XX?
+attribute::interrogativeDeterminer reference::nominativeCase:domain:singular index::19
+word:::Welcher Film
+attribute::verb reference::component_be:future:singular index::20
+word:::wird
+attribute::preposition reference::null index::21
+form_Schreiben_3_preposition
+word:::von
+attribute::object reference::range index::22
+word:::($x | Person_NP)
+attribute::verb? reference::TrennVerb:perfect:thridPerson index::23
+word:::XX?
+[INFO ] 2021-12-13 23:39:37.160 [main] QueGG - Start generation for FrameType AdjectiveAttributiveFrame
+[INFO ] 2021-12-13 23:39:37.161 [main] QueGG - Start generation for FrameType AdjectivePPFrame
+this.getFrameType().getName()::AdjectivePPFrame
+this.getFrameType().getName()::AdjectivePPFrame
+this.getFrameType().getName()::AdjectivePPFrame
+[INFO ] 2021-12-13 23:39:37.322 [main] QueGG - Start generation for FrameType IntransitivePPFrame
+[INFO ] 2021-12-13 23:39:37.323 [main] QueGG - Start generation for FrameType FULL_DATASET
+[INFO ] 2021-12-13 23:39:37.324 [main] QueGG - Start generation of combined entries
+[ERROR] 2021-12-13 23:39:37.357 [main] GrammarEntryCombinationFactory - There are no sentences for (bgp (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp))
+
+[INFO ] 2021-12-13 23:39:37.358 [main] QueGG - Start generation of bindings
+[INFO ] 2021-12-13 23:39:37.383 [main] GrammarRuleGeneratorRoot - New file created: output/de/grammar_FULL_DATASET_DE.json
+[INFO ] 2021-12-13 23:39:37.388 [main] GrammarRuleGeneratorRoot - New file created: output/de/grammar_COMBINATIONS_DE.json
+[INFO ] 2021-12-13 23:39:37.388 [main] QueGG - Start resolving bindings
+[INFO ] 2021-12-13 23:39:37.391 [main] GrammarRuleGeneratorRoot - New file created: output/de/grammar_FULL_WITH_BINDINGS_DE.json
+[INFO ] 2021-12-13 23:39:37.399 [main] ReadAndWriteQuestions - Number of Files!!'
+[INFO ] 2021-12-13 23:39:37.407 [main] ReadAndWriteQuestions - running file'
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::personfunction
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::personfunction
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::personfunction
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::personfunction
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+[INFO ] 2021-12-13 23:39:37.427 [main] ReadAndWriteQuestions - running file'
+givenClassName::film bindingClass::film
+givenClassName::film bindingClass::film
+givenClassName::film bindingClass::film
+givenClassName::film bindingClass::film
+givenClassName::film bindingClass::film
+givenClassName::film bindingClass::film
+givenClassName::film bindingClass::film
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::personfunction
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::personfunction
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+index::1 uriLabel::Batman Begins questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Batman_Begins> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::Hans Zimmer syntacticFrame:VP
+index::1 uriLabel::Batman Begins questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Batman_Begins> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::Hans Zimmer syntacticFrame:VP
+index::1 uriLabel::Batman Begins questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Batman_Begins> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::Hans Zimmer syntacticFrame:VP
+index::1 uriLabel::Batman Begins questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Batman_Begins> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::Hans Zimmer syntacticFrame:VP
+index::2 uriLabel::Harold und Maude questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Harold_and_Maude> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::Cat Stevens syntacticFrame:VP
+index::2 uriLabel::Harold und Maude questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Harold_and_Maude> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::Cat Stevens syntacticFrame:VP
+index::2 uriLabel::Harold und Maude questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Harold_and_Maude> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::Cat Stevens syntacticFrame:VP
+index::2 uriLabel::Harold und Maude questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Harold_and_Maude> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::Cat Stevens syntacticFrame:VP
+index::3 uriLabel::Last Action Hero questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Last_Action_Hero> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::Michael Kamen syntacticFrame:VP
+index::3 uriLabel::Last Action Hero questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Last_Action_Hero> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::Michael Kamen syntacticFrame:VP
+index::3 uriLabel::Last Action Hero questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Last_Action_Hero> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::Michael Kamen syntacticFrame:VP
+index::3 uriLabel::Last Action Hero questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Last_Action_Hero> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::Michael Kamen syntacticFrame:VP
+index::4 uriLabel::Pulp Fiction questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Pulp_Fiction> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::null syntacticFrame:VP
+index::4 uriLabel::Pulp Fiction questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Pulp_Fiction> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::null syntacticFrame:VP
+index::4 uriLabel::Pulp Fiction questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Pulp_Fiction> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::null syntacticFrame:VP
+index::4 uriLabel::Pulp Fiction questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Pulp_Fiction> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::null syntacticFrame:VP
+index::5 uriLabel::The LEGO Movie questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/The_Lego_Movie> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::Mark Mothersbaugh syntacticFrame:VP
+index::5 uriLabel::The LEGO Movie questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/The_Lego_Movie> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::Mark Mothersbaugh syntacticFrame:VP
+index::5 uriLabel::The LEGO Movie questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/The_Lego_Movie> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::Mark Mothersbaugh syntacticFrame:VP
+index::5 uriLabel::The LEGO Movie questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/The_Lego_Movie> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::Mark Mothersbaugh syntacticFrame:VP
+index::6 uriLabel::Titanic questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Titanic_(1997_film)> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::James Horner syntacticFrame:VP
+index::6 uriLabel::Titanic questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Titanic_(1997_film)> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::James Horner syntacticFrame:VP
+index::6 uriLabel::Titanic questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Titanic_(1997_film)> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::James Horner syntacticFrame:VP
+index::6 uriLabel::Titanic questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Titanic_(1997_film)> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::James Horner syntacticFrame:VP
+index::7 uriLabel::Velvet Goldmine questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Velvet_Goldmine> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::Carter Burwell syntacticFrame:VP
+index::7 uriLabel::Velvet Goldmine questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Velvet_Goldmine> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::Carter Burwell syntacticFrame:VP
+index::7 uriLabel::Velvet Goldmine questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Velvet_Goldmine> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::Carter Burwell syntacticFrame:VP
+index::7 uriLabel::Velvet Goldmine questionForShow::Welcher Person hat ($x | Film_NP) geschrieben? sparql::select  ?o    {    <http://dbpedia.org/resource/Velvet_Goldmine> <http://dbpedia.org/ontology/musicComposer>  ?o    } answer::Carter Burwell syntacticFrame:VP
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::personfunction
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::personfunction
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::person bindingClass::person
+givenClassName::film bindingClass::film
+givenClassName::film bindingClass::film
+givenClassName::film bindingClass::film
+givenClassName::film bindingClass::film
+givenClassName::film bindingClass::film
+givenClassName::film bindingClass::film
+givenClassName::film bindingClass::film
+index::1 uriLabel::Abraham Lincoln questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Abraham_Lincoln>    } answer::null syntacticFrame:VP
+index::1 uriLabel::Abraham Lincoln questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Abraham_Lincoln>    } answer::null syntacticFrame:VP
+index::2 uriLabel::Aki Kaurismäki questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Aki_Kaurismäki>    } answer::null syntacticFrame:VP
+index::2 uriLabel::Aki Kaurismäki questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Aki_Kaurismäki>    } answer::null syntacticFrame:VP
+index::3 uriLabel::Akira Kurosawa questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Akira_Kurosawa>    } answer::null syntacticFrame:VP
+index::3 uriLabel::Akira Kurosawa questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Akira_Kurosawa>    } answer::null syntacticFrame:VP
+index::4 uriLabel::Albert Einstein questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Albert_Einstein>    } answer::null syntacticFrame:VP
+index::4 uriLabel::Albert Einstein questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Albert_Einstein>    } answer::null syntacticFrame:VP
+index::5 uriLabel::Alec Guinness questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Alec_Guinness>    } answer::null syntacticFrame:VP
+index::5 uriLabel::Alec Guinness questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Alec_Guinness>    } answer::null syntacticFrame:VP
+index::6 uriLabel::Erika Ervin questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Amazon_Eve>    } answer::null syntacticFrame:VP
+index::6 uriLabel::Erika Ervin questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Amazon_Eve>    } answer::null syntacticFrame:VP
+index::7 uriLabel::Andrew Jackson questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Andrew_Jackson>    } answer::null syntacticFrame:VP
+index::7 uriLabel::Andrew Jackson questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Andrew_Jackson>    } answer::null syntacticFrame:VP
+index::8 uriLabel::Aristoteles questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Aristotle>    } answer::null syntacticFrame:VP
+index::8 uriLabel::Aristoteles questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Aristotle>    } answer::null syntacticFrame:VP
+index::9 uriLabel::Arnold Schwarzenegger questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Arnold_Schwarzenegger>    } answer::null syntacticFrame:VP
+index::9 uriLabel::Arnold Schwarzenegger questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Arnold_Schwarzenegger>    } answer::null syntacticFrame:VP
+index::10 uriLabel::Barack Obama questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Barack_Obama>    } answer::null syntacticFrame:VP
+index::10 uriLabel::Barack Obama questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Barack_Obama>    } answer::null syntacticFrame:VP
+index::11 uriLabel::Benicio del Toro questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Benicio_del_Toro>    } answer::null syntacticFrame:VP
+index::11 uriLabel::Benicio del Toro questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Benicio_del_Toro>    } answer::null syntacticFrame:VP
+index::12 uriLabel::Benjamin Franklin questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Benjamin_Franklin>    } answer::null syntacticFrame:VP
+index::12 uriLabel::Benjamin Franklin questionForShow::Was wird von ($x | Person_NP) geschrieben? sparql::select  ?s    {   ?s <http://dbpedia.org/ontology/musicComposer>  <http://dbpedia.org/resource/Benjamin_Franklin>    } answer::null syntacticFrame:VP

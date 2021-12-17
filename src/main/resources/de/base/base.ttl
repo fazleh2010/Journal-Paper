@@ -10,6 +10,7 @@
   lemon:entry    :component_be ;
   lemon:entry    :component_be_passive ;
   lemon:entry    :imperative_transitive ;
+  lemon:entry    :imperative_transitive_show ;
   lemon:entry    :object_pronoun;
   lemon:entry    :object_pronoun_es ;
   lemon:entry    :component_the_nominative ;
@@ -119,6 +120,19 @@
   lexinfo:person                          lexinfo:secondPerson ;
   lexinfo:number                          lexinfo:singular ] ;
   lemon:otherForm      [ lemon:writtenRep "Gib"@de ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+:imperative_transitive_show a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "Zeig"@de ;
+  lexinfo:verbFormMood                    lexinfo:infinitive ] ;
+  lemon:otherForm      [ lemon:writtenRep "Zeig"@de ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "Zeig"@de ;
   lexinfo:tense                           lexinfo:present ;
   lexinfo:person                          lexinfo:secondPerson ;
   lexinfo:number                          lexinfo:plural ] ;

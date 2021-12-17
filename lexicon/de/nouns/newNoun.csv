@@ -1,3 +1,0 @@
-LemonEntry,partOfSpeech,gender,writtenFormNominative(singular),writtenFormNominative (plural),writtenFormSingular (accusative),writtenFormSingular (dative),writtenFormSingular (genetive),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,domain_article,domain_written_singular,domain_written_plural,rangeArticle,range_written_singular,range_written_plural
-entwickler_von,noun,masculine,Entwickler,Entwickler,Entwickler,Entwickler,Entwicklers,von,NounPPFrame,range,domain,1,dbo:developer,dbo: Software,dbo:University,feminine,Software,Software,feminine,Universit„t,Universit„ten
-vorwahl_von,noun,feminine,Vorwahl,Vorwahl,Vorwahl,Vorwahl,Vorwahl,von,NounPPFrame,range,domain,1,dbo:areaCode,dbo:Place,xsd:string,feminine,Lage,Lagen,-,-,-

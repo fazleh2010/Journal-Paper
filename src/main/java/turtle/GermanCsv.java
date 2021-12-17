@@ -309,7 +309,20 @@ public class GermanCsv {
             return senseIdStr;
         }
 
-        public static String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast,String writtenFormPerfect, String language) {
+        public static String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast,String writtenFormPerfect, String language,String subject) {
+            String subjectLemon=null,objectLemon=null;
+           
+            if (subject.contains("domain")) {
+                objectLemon = lemonEntry + "_subj";
+                subjectLemon = lemonEntry + "_obj";
+            } else {
+                subjectLemon = lemonEntry + "_subj";
+                objectLemon = lemonEntry + "_obj";
+            }
+
+            
+            
+            
             return ":"+"form_" + lemonEntry + " a         lemon:Form ;\n"
                     + "  lemon:writtenRep     \"" + writtenFormInfinitive + "\"@" + language + " ;\n"
                     + "  lexinfo:verbFormMood lexinfo:infinitive .\n"
@@ -331,8 +344,8 @@ public class GermanCsv {
                     + "  lexinfo:person   lexinfo:thirdPerson .\n"
                     + "\n"
                     + ":" + lemonEntry + "_frame_transitive a lexinfo:TransitiveFrame ;\n"
-                    + "  lexinfo:subject          :" + lemonEntry + "_subj ;\n"
-                    + "  lexinfo:directObject     :" + lemonEntry + "_obj .\n"
+                    + "  lexinfo:subject          :" + subjectLemon+" ;\n"
+                    + "  lexinfo:directObject     :" + objectLemon+" .\n"
                     + "\n";
         }
 
@@ -384,8 +397,8 @@ public class GermanCsv {
             return SyntacticFrame;
         }
 
-        public  Integer getSubjectIndex() {
-            return subjectIndex;
+        public  String getSubjectIndex(String []row) {
+            return row[subjectIndex];
         }
 
         public  String getDirectObjectIndex(String []row) {
