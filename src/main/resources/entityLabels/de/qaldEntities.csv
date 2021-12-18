@@ -751,3 +751,6 @@
 "http://dbpedia.org/resource/Brooklyn_Bridge","Brooklyn Bridge","ArchitecturalStructure"
 "http://dbpedia.org/resource/Brooklyn_Bridge","Brooklyn Bridge","Infrastructure"
 "http://dbpedia.org/resource/Brooklyn_Bridge","Brooklyn Bridge","RouteOfTransportation"
+"http://dbpedia.org/resource/Wikipedia","Wikipedia","Book"
+"http://dbpedia.org/resource/Wikipedia","Wikipedia","Website"
+"http://dbpedia.org/resource/Wikipedia","Wikipedia","Work"

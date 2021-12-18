@@ -27,6 +27,7 @@ public class GermanVerbFinder implements TempConstants {
 
     private Boolean mainVerbFlag = false;
     private Boolean auxilaryVerbFlag = false;
+    private Boolean imperativeVerbFlag = false;
     private Boolean trennVerbFlag = false;
     private Boolean reflexiveFlag = false;
     private String word = "XX";
@@ -44,7 +45,8 @@ public class GermanVerbFinder implements TempConstants {
         System.out.println("mainVerbFlag::" + this.mainVerbFlag);
         System.out.println("trennVerbFlag::" + this.trennVerbFlag);
         System.out.println("auxilaryVerbFlag::" + this.auxilaryVerbFlag);
-        //exit(1);*/
+         System.out.println("imperativeVerbFlag::" + this.imperativeVerbFlag);*/
+        //exit(1);
 
         if (this.mainVerbFlag) {
             word = findMainVerb(attribute, reference);
@@ -52,7 +54,7 @@ public class GermanVerbFinder implements TempConstants {
             word = this.getTrennVerb();
         } else if (this.reflexiveFlag) {
             word = findMainVerb(attribute, reference);
-        } else if (this.auxilaryVerbFlag) {
+        } else if (this.auxilaryVerbFlag||this.imperativeVerbFlag) {
             if (paramterFinder.getParameterLength() == 2 && paramterFinder.getTensePair().first != null) {
                 word = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil, paramterFinder.getReference(), paramterFinder.getTensePair().first, paramterFinder.getTensePair().second);
             } else if (paramterFinder.getParameterLength() == 3 && paramterFinder.getTensePair().first != null && paramterFinder.getNumberPair().first != null) {
@@ -164,6 +166,10 @@ public class GermanVerbFinder implements TempConstants {
                     ||reference.contains("component_werden")) {
                 this.auxilaryVerbFlag = true;
                 return;
+            }
+            else if(reference.contains("imperative_transitive")
+                    ||reference.contains("imperative_transitive_show")){
+                this.imperativeVerbFlag=true;
             }
             else if (isTrenn()) {
                 if (reference.contains(TrennVerb)) {

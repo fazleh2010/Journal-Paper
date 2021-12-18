@@ -1,2 +1,2 @@
 LemonEntry,partOfSpeech,writtenFormInfinitive,writtenForm3rdPresent,writtenFormPast,writtenFormPerfect,SyntacticFrame,subject,directObject,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural,passivePreposition
-besteigen,verb,besteigen,besteigt,bestieg,bestiegen,TransitiveFrame,range,domain,1,dbo:firstAscentPerson,dbo:Mountain,dbo:Person,neuter,Berg,Berg,masculine,Person,Personen,von
+Schreiben_5,verb,schreiben,schreibt,schrieb,geschrieben,TransitiveFrame,range,domain,1,dbo:author,dbo:Book,dbo:Person,masculine,Person,Personen,neuter,Buch,BÅcher,von

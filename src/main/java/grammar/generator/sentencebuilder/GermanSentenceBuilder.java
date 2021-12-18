@@ -162,6 +162,7 @@ public class GermanSentenceBuilder implements TempConstants {
 
         } else if (flagReference && isInterrogativeAmount(attribute).first) {
             SubjectType subjectType = isInterrogativeAmount(attribute).second;
+          
             if (reference.contains(colon)) {
                 String[] col = reference.split(colon);
                 if (col.length == 2) {
@@ -170,9 +171,14 @@ public class GermanSentenceBuilder implements TempConstants {
                     word = this.getDeteminerTokenManual(subjectType, col[0], col[1], col[2]);
                 }
 
+            } else {
+                word = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil, subjectType.name(),TempConstants.number,reference);
             }
-           
-        } else if (flagReference && isInterrogativePlace(attribute).first) {
+
+        } /*else if (!flagReference && isInterrogativeAmount(attribute).first) {
+            SubjectType subjectType = isInterrogativeAmount(attribute).second;
+            word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, subjectType.name());
+        }*/ else if (flagReference && isInterrogativePlace(attribute).first) {
             SubjectType subjectType = isInterrogativePlace(attribute).second;
 
             if (reference.contains(colon)) {

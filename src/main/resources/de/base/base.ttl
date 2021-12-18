@@ -458,16 +458,16 @@
 
 
   :interrogativeAmount a       lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "Wieviele"@de ] ;
-  lemon:otherForm      [ lemon:writtenRep "Wieviele"@de ;
+  lemon:canonicalForm  [ lemon:writtenRep "Wieviel"@de ] ;
+  lemon:otherForm      [ lemon:writtenRep "Wieviel"@de ;
   lexinfo:gender                          lexinfo:masculine ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Wieviele"@de ;
+  lemon:otherForm      [ lemon:writtenRep "Wieviel"@de ;
   lexinfo:gender                          lexinfo:feminine ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Wieviele"@de ;
+  lemon:otherForm      [ lemon:writtenRep "Wieviel"@de ;
   lexinfo:gender                          lexinfo:neuter ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:singular ] ;

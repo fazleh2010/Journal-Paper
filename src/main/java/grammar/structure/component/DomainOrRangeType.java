@@ -198,17 +198,15 @@ public enum DomainOrRangeType {
     TelevisionEpisode(List.of(URI.create(DBO.getUri() + "TelevisionEpisode"))),
     Award(List.of(URI.create(DBO.getUri() + "Award"))),
     Website(List.of(URI.create(DBO.getUri() + "Website"))),
+    University(List.of(URI.create(DBO.getUri() + "University"))),
+    EducationalInstitution(List.of(URI.create(DBO.getUri() + "EducationalInstitution"))),
+    School(List.of(URI.create(DBO.getUri() + "School"))),
     River(List.of(
             URI.create(DBO.getUri() + "River"),
             URI.create(DBO.getUri() + "Stream")
     )),
     Lake(List.of(URI.create(DBO.getUri() + "Lake"))),
     Bridge(List.of(URI.create(DBO.getUri() + "Bridge"))),
-    School(List.of(
-            URI.create(DBO.getUri() + "School"),
-            URI.create(DBO.getUri() + "EducationalInstitution"),
-            URI.create(DBO.getUri() + "University")
-    )),
     WineRegion(List.of(URI.create(DBO.getUri() + "WineRegion"))),
     Location(List.of(
             URI.create(DBO.getUri() + "Place"),
@@ -223,7 +221,6 @@ public enum DomainOrRangeType {
     VideoGame(List.of(URI.create(DBO.getUri() + "VideoGame"))),
     Article(List.of(URI.create(DBO.getUri() + "Article"))),
     Play(List.of(URI.create(DBO.getUri() + "Play"))),
-    EducationalInstitution(List.of(URI.create(DBO.getUri() + "EducationalInstitution"))),
     Genre(List.of(URI.create(DBO.getUri() + "Genre"))),
     MountainRange(List.of(URI.create(DBO.getUri() + "MountainRange"))),
     THING(List.of(URI.create("http://www.w3.org/2002/07/owl#Thing"))); // default if no other matches

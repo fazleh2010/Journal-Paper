@@ -76,7 +76,7 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
             List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                     language, new String[]{frameType.getName(), active});
             sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
-            //System.out.println(sentences);
+            System.out.println(sentences);
             //exit(1);
 
         } else if (this.frameType.equals(FrameType.IPP)) {
