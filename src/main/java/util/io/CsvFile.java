@@ -276,6 +276,7 @@ public class CsvFile implements CsvConstants {
         String line = null;
         Integer index = 0;
         List<String[]> rows = this.getRows(this.filename);
+        
         for (String[] data : rows) {
             String key = data[keyIndex];
             String className = data[classIindex];

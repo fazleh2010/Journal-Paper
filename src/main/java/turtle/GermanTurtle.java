@@ -206,6 +206,7 @@ public class GermanTurtle extends TurtleCreation implements TutleConverter {
     public void setIntransitivePPFrame(String key, List<String[]> rows, String syntacticFrame) {
         List<Tupples> tupplesList = new ArrayList<Tupples>();
         Integer index = 0;
+         String subject= null;
         for (String[] row : rows) {
             if (index == 0) {
                 this.setLemonEntryId(row[GermanCsv.lemonEntryIndex]);
@@ -215,6 +216,7 @@ public class GermanTurtle extends TurtleCreation implements TutleConverter {
                 this.writtenFormPast = row[GermanCsv.InTransitFrameCsv.writtenFormPast];
                 this.writtenFormPerfect = row[GermanCsv.InTransitFrameCsv.writtenFormPerfect];
                 this.preposition = this.checkValidPreposition(row[GermanCsv.InTransitFrameCsv.preposition]);
+                subject=  GermanCsv.InTransitFrameCsv.getSubjectIndex(row);
 
             }
             Tupples tupple = new Tupples(this.lemonEntry,
@@ -231,7 +233,7 @@ public class GermanTurtle extends TurtleCreation implements TutleConverter {
         this.turtleString
                 = intransitiveFrameCsv.getHeader(lemonEntry, TempConstants.preposition, language)
                 + intransitiveFrameCsv.getSenseIndexing(tupplesList, this.lemonEntry)
-                + intransitiveFrameCsv.getWritten(lemonEntry, writtenFormInfinitive, writtenForm3rdPerson, writtenFormPast, writtenFormPerfect, language)
+                + intransitiveFrameCsv.getWritten(lemonEntry, writtenFormInfinitive, writtenForm3rdPerson, writtenFormPast, writtenFormPerfect, language,subject)
                 + GermanCsv.getSenseDetail(tupplesList, TempConstants.IntransitivePPFrame, lemonEntry, writtenFormInfinitive, preposition, language)
                 + intransitiveFrameCsv.getPreposition(this.lemonEntry, this.preposition, language);
         this.tutleFileName = getFileName(syntacticFrame);
@@ -253,14 +255,14 @@ public class GermanTurtle extends TurtleCreation implements TutleConverter {
             tupples.add(new Tupples(this.lemonEntry,
                     index + 1,
                     "",
-                    this.setReference(row[GermanCsv.AttributiveAdjectiveFrameCsv.owl_onPropertyIndex]),
-                    this.setReference(row[GermanCsv.AttributiveAdjectiveFrameCsv.owl_hasValueIndex])));
+                    this.setReference(row[attributiveAdjectiveFrame.owl_onPropertyIndex]),
+                    this.setReference(row[attributiveAdjectiveFrame.owl_hasValueIndex])));
             index = index + 1;
         }
         this.turtleString
-                = GermanCsv.AttributiveAdjectiveFrameCsv.getAtrributiveFrameHeader(this.lemonEntry, tupples, this.language)
-                + GermanCsv.AttributiveAdjectiveFrameCsv.getAtrributiveFrameIndexing(tupples, this.lemonEntry)
-                + GermanCsv.AttributiveAdjectiveFrameCsv.getAtrrtibutiveWrittenForm(lemonEntry, writtenFormInfinitive, this.language)
+                = attributiveAdjectiveFrame.getAtrributiveFrameHeader(this.lemonEntry, tupples, this.language)
+                + attributiveAdjectiveFrame.getAtrributiveFrameIndexing(tupples, this.lemonEntry)
+                + attributiveAdjectiveFrame.getAtrrtibutiveWrittenForm(lemonEntry, writtenFormInfinitive, this.language)
                 + GermanCsv.getSenseDetail(tupples, syntacticFrame, this.lemonEntry, "", "", this.language);
         this.tutleFileName = getFileName(syntacticFrame);
 

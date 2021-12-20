@@ -1,0 +1,47 @@
+@prefix :        <http://localhost:8080/#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+@prefix oils:     <http://lemon-model.net/oils#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :high ;
+  lemon:entry    :high_res .
+
+:high a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :high_lemma ;
+  lemon:synBehavior    :high_predFrame ;
+  lemon:sense          :high_sense ;
+  lemon:sense          :high_sense_1 .
+
+:high_lemma lemon:writtenRep "alto"@it .
+
+:high_predFrame a        lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject :high_PredSynArg .
+
+
+:high_sense a  lemon:LexicalSense ;
+  lemon:reference :high_res ;
+  lemon:isA       :high_PredSynArg ;
+  lemon:condition :high_condition .
+
+:high_res a   oils:CovariantScalar ;
+  oils:boundTo  <http://dbpedia.org/ontology/height> ;
+  oils:degree   <http://lemon-model.net/oils/strong> .
+
+:high_condition a lemon:condition ;
+  lemon:propertyDomain   <http://dbpedia.org/ontology/River> ;
+  lemon:propertyRange    <http://www.w3.org/2001/XMLSchema#double> .
+
+:high_sense_1 a  lemon:LexicalSense ;
+  lemon:reference :high_sense_1_res ;
+  lemon:isA       :high_PredSynArg ;
+  lemon:condition :high_condition .
+
+:high_sense_1_res a   oils:CovariantScalar ;
+  oils:boundTo  <http://dbpedia.org/ontology/height> ;
+  oils:degree   <http://lemon-model.net/oils/weak> .

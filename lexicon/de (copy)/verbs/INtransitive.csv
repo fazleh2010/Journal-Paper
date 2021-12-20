@@ -1,0 +1,2 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive,writtenFormThridPerson,writtenFormPast,writtenFormPast,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural
+Stattfinden,TrennVerb,stattfinden,findet statt,fand statt,stattgefunden,am,IntransitivePPFrame,domain,range,1,dbp:date,dbo:Event,xsd:date,feminine,Veranstaltung,Veranstaltungen,neuter,Date,Dates

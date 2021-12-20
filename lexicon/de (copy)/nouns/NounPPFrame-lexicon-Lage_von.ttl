@@ -1,0 +1,75 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :Lage_von ;
+  lemon:entry    :Lage_von_form_preposition .
+
+:Lage_von a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :Lage_von_form ;
+  lemon:otherForm      :Lage_von_plural_form ;
+  lemon:otherForm      :Lage_von_accusative_form ;
+  lemon:otherForm      :Lage_von_dative_form ;
+  lemon:otherForm      :Lage_von_genitive_form ;
+  lemon:otherForm      :Lage_von_plural_form ;
+  lemon:sense          :Lage_von_sense_1 ;
+  lemon:synBehavior    :Lage_von_nounpp .
+
+:Lage_von_form a lemon:Form ;
+  lemon:writtenRep "Lage"@de ;
+  lexinfo:gender   lexinfo:neuter ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:nominativeCase .
+
+:Lage_von_plural_form a lemon:Form ;
+  lemon:writtenRep "Lagen"@de ;
+  lexinfo:gender   lexinfo:neuter ;
+  lexinfo:number   lexinfo:plural ;
+  lexinfo:case     lexinfo:nominativeCase .
+
+:Lage_von_accusative_form a lemon:Form ;
+  lemon:writtenRep "Land"@de ;
+  lexinfo:gender   lexinfo:neuter ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:accusativeCase .
+
+:Lage_von_dative_form a lemon:Form ;
+  lemon:writtenRep "Land"@de ;
+  lexinfo:gender   lexinfo:neuter ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:dativeCase .
+
+:Lage_von_genitive_form a lemon:Form ;
+  lemon:writtenRep "Landes"@de ;
+  lexinfo:gender   lexinfo:neuter ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:genitiveCase .
+
+:Lage_von_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:Lage_von_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :Lage_von_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/locatedInArea> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :Lage_von_sense_1_condition .
+
+:Lage_von_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Location> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Place> .
+
+:arg2 lemon:marker :Lage_von_form_preposition .
+
+## Prepositions ##
+
+:Lage_von_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "in"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

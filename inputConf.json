@@ -3,7 +3,7 @@
   "inputDir" : "lexicon",
   "outputDir" : "output",
   "qaldDir" : "qald",
-  "numberOfEntities" : 10,
+  "numberOfEntities" : 100,
   "similarityThresold" : 70.0,
   "csvToTurtle" : true,
   "turtleToProtoType" : true,

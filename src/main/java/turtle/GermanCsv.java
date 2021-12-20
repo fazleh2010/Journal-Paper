@@ -75,76 +75,70 @@ public class GermanCsv {
             senseIdStr = ":" + lemonEntry + " a       lemon:LexicalEntry ;\n"
                     + "  lexinfo:partOfSpeech lexinfo:noun ;\n"
                     + "  lemon:canonicalForm  :" + lemonEntry + "_form ;\n"
-                    + "  lemon:otherForm      :" + lemonEntry+"_plural_form" + " ;\n"
-                    + "  lemon:otherForm      :" + lemonEntry+"_accusative_form" + " ;\n"
-                    + "  lemon:otherForm      :" + lemonEntry+"_dative_form" + " ;\n"
-                    + "  lemon:otherForm      :" + lemonEntry+"_genitive_form" + " ;\n"
-                    + "  lemon:otherForm      :" + lemonEntry+"_plural_form" + " ;\n"
+                    + "  lemon:otherForm      :" + lemonEntry + "_plural_form" + " ;\n"
+                    + "  lemon:otherForm      :" + lemonEntry + "_accusative_form" + " ;\n"
+                    + "  lemon:otherForm      :" + lemonEntry + "_dative_form" + " ;\n"
+                    + "  lemon:otherForm      :" + lemonEntry + "_genitive_form" + " ;\n"
+                    + "  lemon:otherForm      :" + lemonEntry + "_plural_form" + " ;\n"
                     + senseIdStr
                     + "  lemon:synBehavior    :" + lemonEntry + "_nounpp .\n"
                     + "\n";
             return senseIdStr;
         }
 
-        public static String getWrittenFormAll(String lemonEntry,String gender, String singular, String plural, String accusativeForm, String dativeForm, String writtenGenitiveForm, String language,String copulativeArg) {
-            String arg1=null,arg2=null;
-            
-            if(copulativeArg.contains("domain")){
-                 arg1="arg2";
-                 arg2="arg1";
+        public static String getWrittenFormAll(String lemonEntry, String gender, String singular, String plural, String accusativeForm, String dativeForm, String writtenGenitiveForm, String language, String copulativeArg) {
+            String arg1 = null, arg2 = null;
+
+            if (copulativeArg.contains("domain")) {
+                arg1 = "arg2";
+                arg2 = "arg1";
+            } else {
+                arg1 = "arg1";
+                arg2 = "arg2";
             }
-            else
-            {
-               arg1="arg1";
-               arg2="arg2";  
-            }
-               
-                        
-            
+
             String writtenForm
                     = ":" + lemonEntry + "_form" + " a lemon:Form ;\n"
                     + "  lemon:writtenRep \"" + singular + "\"@" + language + " ;\n"
-                    + "  lexinfo:gender   lexinfo:"+gender+" ;\n"
+                    + "  lexinfo:gender   lexinfo:" + gender + " ;\n"
                     + "  lexinfo:number   lexinfo:singular ;\n"
-                    + "  lexinfo:case     lexinfo:nominativeCase"+" .\n"
+                    + "  lexinfo:case     lexinfo:nominativeCase" + " .\n"
                     + "\n"
-                    + ":" + lemonEntry+"_plural_form" + " a lemon:Form ;\n"
+                    + ":" + lemonEntry + "_plural_form" + " a lemon:Form ;\n"
                     + "  lemon:writtenRep \"" + plural + "\"@" + language + " ;\n"
-                    + "  lexinfo:gender   lexinfo:"+gender+" ;\n"
+                    + "  lexinfo:gender   lexinfo:" + gender + " ;\n"
                     + "  lexinfo:number   lexinfo:plural ;\n"
-                    + "  lexinfo:case     lexinfo:nominativeCase"+" .\n"
+                    + "  lexinfo:case     lexinfo:nominativeCase" + " .\n"
                     + "\n"
-                    + ":" + lemonEntry+"_accusative_form" + " a lemon:Form ;\n"
+                    + ":" + lemonEntry + "_accusative_form" + " a lemon:Form ;\n"
                     + "  lemon:writtenRep \"" + accusativeForm + "\"@" + language + " ;\n"
-                    + "  lexinfo:gender   lexinfo:"+gender+" ;\n"
+                    + "  lexinfo:gender   lexinfo:" + gender + " ;\n"
                     + "  lexinfo:number   lexinfo:singular ;\n"
-                    + "  lexinfo:case     lexinfo:accusativeCase"+" .\n"
+                    + "  lexinfo:case     lexinfo:accusativeCase" + " .\n"
                     + "\n"
-                    + ":" + lemonEntry+"_dative_form" + " a lemon:Form ;\n"
+                    + ":" + lemonEntry + "_dative_form" + " a lemon:Form ;\n"
                     + "  lemon:writtenRep \"" + dativeForm + "\"@" + language + " ;\n"
-                    + "  lexinfo:gender   lexinfo:"+gender+" ;\n"
+                    + "  lexinfo:gender   lexinfo:" + gender + " ;\n"
                     + "  lexinfo:number   lexinfo:singular ;\n"
-                    + "  lexinfo:case     lexinfo:dativeCase"+" .\n"
+                    + "  lexinfo:case     lexinfo:dativeCase" + " .\n"
                     + "\n"
-                    + ":" + lemonEntry+"_genitive_form" + " a lemon:Form ;\n"
+                    + ":" + lemonEntry + "_genitive_form" + " a lemon:Form ;\n"
                     + "  lemon:writtenRep \"" + writtenGenitiveForm + "\"@" + language + " ;\n"
-                    + "  lexinfo:gender   lexinfo:"+gender+" ;\n"
+                    + "  lexinfo:gender   lexinfo:" + gender + " ;\n"
                     + "  lexinfo:number   lexinfo:singular ;\n"
-                    + "  lexinfo:case     lexinfo:genitiveCase"+" .\n"
-                    + "\n";
-           
-            String copulativeStr= ":" + lemonEntry + "_nounpp"+" a        lexinfo:NounPPFrame ;\n"
-                    + "  lexinfo:copulativeArg        :"+arg1+" ;\n"
-                    + "  lexinfo:prepositionalAdjunct :"+arg2+" .\n"
+                    + "  lexinfo:case     lexinfo:genitiveCase" + " .\n"
                     + "\n";
 
-            return writtenForm+copulativeStr;
+            String copulativeStr = ":" + lemonEntry + "_nounpp" + " a        lexinfo:NounPPFrame ;\n"
+                    + "  lexinfo:copulativeArg        :" + arg1 + " ;\n"
+                    + "  lexinfo:prepositionalAdjunct :" + arg2 + " .\n"
+                    + "\n";
+
+            return writtenForm + copulativeStr;
 
         }
 
-       
-
-        public static String getPreposition(String lemonEntry,String preposition, String language) {
+        public static String getPreposition(String lemonEntry, String preposition, String language) {
             return ":arg2 lemon:marker :" + lemonEntry + "_form_preposition" + " .\n"
                     + "\n"
                     + "## Prepositions ##\n"
@@ -153,8 +147,8 @@ public class GermanCsv {
                     + "  lemon:canonicalForm  [ lemon:writtenRep \"" + preposition + "\"@" + "en" + " ] ;\n"
                     + "  lexinfo:partOfSpeech lexinfo:preposition .";
         }
-     
-        public  void setArticle(Tupples tupple, String gender, String[] row) {
+
+        public void setArticle(Tupples tupple, String gender, String[] row) {
             GenderUtils.setArticles(tupple.getReference(), gender);
             GenderUtils.setArticles(tupple.getDomain(), getDomainArticleIndex(row));
             GenderUtils.setArticles(tupple.getRange(), getRangeArticleIndex(row));
@@ -162,98 +156,97 @@ public class GermanCsv {
             GenderUtils.setWrittenForms(tupple.getRange(), getRangeWrittenSingular(row), getRangeWrittenPlural(row));
         }
 
-        public  String getLexicalIdIndex(String []row) {
+        public String getLexicalIdIndex(String[] row) {
             return row[lexicalIdIndex];
         }
 
-        public  String getPartOfSpeechIndex(String []row) {
+        public String getPartOfSpeechIndex(String[] row) {
             return row[partOfSpeechIndex];
         }
 
-        public  String getGenderIndex(String []row) {
+        public String getGenderIndex(String[] row) {
             return row[genderIndex];
         }
 
-        public  String getWrittenFormSingularIndex(String []row) {
+        public String getWrittenFormSingularIndex(String[] row) {
             return row[writtenFormSingularIndex];
         }
 
-        public  String getWrittenFormPluraIndex(String []row) {
+        public String getWrittenFormPluraIndex(String[] row) {
             return row[writtenFormPluraIndex];
         }
 
-        public  String getWrittenFormAccusativeIndex(String []row) {
+        public String getWrittenFormAccusativeIndex(String[] row) {
             return row[writtenFormAccusativeIndex];
         }
 
-        public  String getWrittenFormDativeIndex(String []row) {
+        public String getWrittenFormDativeIndex(String[] row) {
             return row[writtenFormDativeIndex];
         }
 
-        public  String getWrittenFormGenetiveIndex(String []row) {
+        public String getWrittenFormGenetiveIndex(String[] row) {
             return row[writtenFormGenetiveIndex];
         }
 
-        public  String getPrepositionIndex(String []row) {
+        public String getPrepositionIndex(String[] row) {
             return row[prepositionIndex];
         }
 
-        public  String getSyntacticFrame(String []row) {
+        public String getSyntacticFrame(String[] row) {
             return row[SyntacticFrame];
         }
-        public  Integer getSyntacticFrameIndex() {
+
+        public Integer getSyntacticFrameIndex() {
             return SyntacticFrame;
         }
 
-        public  String getCopulativeArgIndex(String []row) {
+        public String getCopulativeArgIndex(String[] row) {
             return row[copulativeArgIndex];
         }
 
-        public  String getPrepositionalAdjunctIndex(String []row) {
+        public String getPrepositionalAdjunctIndex(String[] row) {
             return row[prepositionalAdjunctIndex];
         }
 
-        public  String getSenseIndex(String []row) {
+        public String getSenseIndex(String[] row) {
             return row[senseIndex];
         }
 
-        public  String getReferenceIndex(String []row) {
+        public String getReferenceIndex(String[] row) {
             return row[referenceIndex];
         }
 
-        public  String getDomainIndex(String []row) {
+        public String getDomainIndex(String[] row) {
             return row[domainIndex];
         }
 
-        public  String getRangeIndex(String []row) {
+        public String getRangeIndex(String[] row) {
             return row[rangeIndex];
         }
 
-        public  String getDomainArticleIndex(String []row) {
+        public String getDomainArticleIndex(String[] row) {
             return row[domainArticleIndex];
         }
 
-        public  String getDomainWrittenSingular(String []row) {
+        public String getDomainWrittenSingular(String[] row) {
             return row[domainWrittenSingular];
         }
 
-        public  String getDomainWrittenPlural(String []row) {
+        public String getDomainWrittenPlural(String[] row) {
             return row[domainWrittenPlural];
         }
 
-        public  String getRangeArticleIndex(String []row) {
+        public String getRangeArticleIndex(String[] row) {
             return row[rangeArticleIndex];
         }
 
-        public  String getRangeWrittenSingular(String []row) {
+        public String getRangeWrittenSingular(String[] row) {
             return row[rangeWrittenSingular];
         }
 
-        public  String getRangeWrittenPlural(String []row) {
+        public String getRangeWrittenPlural(String[] row) {
             return row[rangeWrittenPlural];
         }
-
-        
 
     }
 
@@ -272,15 +265,14 @@ public class GermanCsv {
         public static Integer domainIndex = 11;
         public static Integer rangeIndex = 12;
         public static Integer domainArticleIndex = 13;
-        public static Integer domainWrittenSingular =14;
-        public static Integer domainWrittenPlural =15;
+        public static Integer domainWrittenSingular = 14;
+        public static Integer domainWrittenPlural = 15;
         public static Integer rangeArticleIndex = 16;
         public static Integer rangeWrittenSingular = 17;
         public static Integer rangeWrittenPlural = 18;
         public static Integer passivePrepositionIndex = 19;
 
-
-        public static String getHeader(String lemonEntry, String prepositionAttr,String preposition, String language) {
+        public static String getHeader(String lemonEntry, String prepositionAttr, String preposition, String language) {
             return "@prefix :        <http://localhost:8080/lexicon#> .\n"
                     + "\n"
                     + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
@@ -292,7 +284,7 @@ public class GermanCsv {
                     + "  lemon:language \"" + language + "\" ;\n"
                     + "  lemon:entry    :" + "to_" + lemonEntry + " ;\n"
                     + "  lemon:entry    :" + lemonEntry + "ed" + " ;\n"
-                    + "  lemon:entry    :" +"form_" + lemonEntry + "_preposition" + " .\n"
+                    + "  lemon:entry    :" + "form_" + lemonEntry + "_preposition" + " .\n"
                     + "\n";
         }
 
@@ -309,9 +301,9 @@ public class GermanCsv {
             return senseIdStr;
         }
 
-        public static String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast,String writtenFormPerfect, String language,String subject) {
-            String subjectLemon=null,objectLemon=null;
-           
+        public static String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast, String writtenFormPerfect, String language, String subject) {
+            String subjectLemon = null, objectLemon = null;
+
             if (subject.contains("domain")) {
                 objectLemon = lemonEntry + "_subj";
                 subjectLemon = lemonEntry + "_obj";
@@ -320,10 +312,7 @@ public class GermanCsv {
                 objectLemon = lemonEntry + "_obj";
             }
 
-            
-            
-            
-            return ":"+"form_" + lemonEntry + " a         lemon:Form ;\n"
+            return ":" + "form_" + lemonEntry + " a         lemon:Form ;\n"
                     + "  lemon:writtenRep     \"" + writtenFormInfinitive + "\"@" + language + " ;\n"
                     + "  lexinfo:verbFormMood lexinfo:infinitive .\n"
                     + "\n"
@@ -344,115 +333,110 @@ public class GermanCsv {
                     + "  lexinfo:person   lexinfo:thirdPerson .\n"
                     + "\n"
                     + ":" + lemonEntry + "_frame_transitive a lexinfo:TransitiveFrame ;\n"
-                    + "  lexinfo:subject          :" + subjectLemon+" ;\n"
-                    + "  lexinfo:directObject     :" + objectLemon+" .\n"
+                    + "  lexinfo:subject          :" + subjectLemon + " ;\n"
+                    + "  lexinfo:directObject     :" + objectLemon + " .\n"
                     + "\n";
         }
 
-      
-       
-        public  void setArticle(Tupples tupple, String gender, String[] row) {
+        public void setArticle(Tupples tupple, String gender, String[] row) {
             GenderUtils.setArticles(tupple.getReference(), gender);
             GenderUtils.setArticles(tupple.getDomain(), row[getDomainArticleIndex()]);
             GenderUtils.setArticles(tupple.getRange(), row[getRangeArticleIndex()]);
             GenderUtils.setWrittenForms(tupple.getDomain(), row[getDomainWrittenSingular()], row[getDomainWrittenPlural()]);
             GenderUtils.setWrittenForms(tupple.getRange(), row[getRangeWrittenSingular()], row[getRangeWrittenPlural()]);
         }
-        
-        public  void setVerbInfo(String partOfSpeech, String writtenFromIn, String writtenForm3rd, String writtenFormPast, String writtenFormPerfect) {
-              Map<String, String> verbTypes = Map.of(
-                        present, writtenFromIn,
-                        present3rd, writtenForm3rd,
-                        past, writtenFormPast,
-                        perfect, writtenFormPerfect
-                );
-             
-             String [] verbs=new String[]{writtenFromIn,writtenForm3rd,writtenFormPast,writtenFormPerfect};
-             
-              
-            GenderUtils.setVerbTypes(partOfSpeech, verbs,verbTypes);  
-           
-            
+
+        public void setVerbInfo(String partOfSpeech, String writtenFromIn, String writtenForm3rd, String writtenFormPast, String writtenFormPerfect) {
+            Map<String, String> verbTypes = Map.of(
+                    present, writtenFromIn,
+                    present3rd, writtenForm3rd,
+                    past, writtenFormPast,
+                    perfect, writtenFormPerfect
+            );
+
+            String[] verbs = new String[]{writtenFromIn, writtenForm3rd, writtenFormPast, writtenFormPerfect};
+
+            GenderUtils.setVerbTypes(partOfSpeech, verbs, verbTypes);
+
         }
-        
-         public  String getPreposition(String lemonEntry,String preposition, String language) {
-            return ":arg2 lemon:marker :" +"form_" + lemonEntry + "_form_preposition" + " .\n"
+
+        public String getPreposition(String lemonEntry, String preposition, String language) {
+            return ":arg2 lemon:marker :" + "form_" + lemonEntry + "_form_preposition" + " .\n"
                     + "\n"
                     + "## Prepositions ##\n"
                     + "\n"
-                    + ":" +"form_" + lemonEntry + "_preposition" + " a                  lemon:SynRoleMarker ;\n"
+                    + ":" + "form_" + lemonEntry + "_preposition" + " a                  lemon:SynRoleMarker ;\n"
                     + "  lemon:canonicalForm  [ lemon:writtenRep \"" + preposition + "\"@" + "en" + " ] ;\n"
                     + "  lexinfo:partOfSpeech lexinfo:preposition .";
         }
 
-        public  Integer getWrittenForm3rdPerson(String[] row) {
+        public Integer getWrittenForm3rdPerson(String[] row) {
             return writtenForm3rdPerson;
         }
 
-        public  Integer getWrittenFormPast(String[] row) {
+        public Integer getWrittenFormPast(String[] row) {
             return writtenFormPast;
         }
 
-        public  Integer getSyntacticFrame(String[] row) {
+        public Integer getSyntacticFrame(String[] row) {
             return SyntacticFrame;
         }
 
-        public  String getSubjectIndex(String []row) {
+        public String getSubjectIndex(String[] row) {
             return row[subjectIndex];
         }
 
-        public  String getDirectObjectIndex(String []row) {
+        public String getDirectObjectIndex(String[] row) {
             return row[directObjectIndex];
         }
 
-        public  Integer getSenseIndex() {
+        public Integer getSenseIndex() {
             return senseIndex;
         }
 
-        public  Integer getReferenceIndex() {
+        public Integer getReferenceIndex() {
             return referenceIndex;
         }
 
-        public  Integer getDomainIndex() {
+        public Integer getDomainIndex() {
             return domainIndex;
         }
 
-        public  Integer getRangeIndex() {
+        public Integer getRangeIndex() {
             return rangeIndex;
         }
 
-        public  Integer getPassivePrepositionIndex() {
+        public Integer getPassivePrepositionIndex() {
             return passivePrepositionIndex;
         }
 
-        public  Integer getDomainArticleIndex() {
+        public Integer getDomainArticleIndex() {
             return domainArticleIndex;
         }
 
-        public  Integer getDomainWrittenSingular() {
+        public Integer getDomainWrittenSingular() {
             return domainWrittenSingular;
         }
 
-        public  Integer getDomainWrittenPlural() {
+        public Integer getDomainWrittenPlural() {
             return domainWrittenPlural;
         }
 
-        public  Integer getRangeArticleIndex() {
+        public Integer getRangeArticleIndex() {
             return rangeArticleIndex;
         }
 
-        public  Integer getRangeWrittenSingular() {
+        public Integer getRangeWrittenSingular() {
             return rangeWrittenSingular;
         }
 
-        public  Integer getRangeWrittenPlural() {
+        public Integer getRangeWrittenPlural() {
             return rangeWrittenPlural;
         }
 
-        public  Integer getSyntacticFrameIndex() {
+        public Integer getSyntacticFrameIndex() {
             return SyntacticFrame;
         }
-       
 
     }
 
@@ -465,7 +449,7 @@ public class GermanCsv {
         public static Integer writtenFormPerfect = 5;
         public static Integer preposition = 6;
         public static Integer SyntacticFrame = 7;
-        public static Integer subject = 8;
+        public static Integer subjectIndex = 8;
         public static Integer prepositionalAdjunct = 9;
         public static Integer senseIndex = 10;
         public static Integer referenceIndex = 11;
@@ -478,8 +462,6 @@ public class GermanCsv {
         public static Integer rangeWrittenSingular = 18;
         public static Integer rangeWrittenPlural = 19;
 
-
-
         public static String getHeader(String lemonEntry, String proposition, String language) {
             return "@prefix :        <http://localhost:8080/lexicon#> .\n"
                     + "\n"
@@ -491,7 +473,7 @@ public class GermanCsv {
                     + ":lexicon_en a    lemon:Lexicon ;\n"
                     + "  lemon:language \"" + language + "\" ;\n"
                     + "  lemon:entry    :" + lemonEntry + " ;\n"
-                    + "  lemon:entry    :" + "form_"+lemonEntry + "_present"+"_preposition"+ " .\n"
+                    + "  lemon:entry    :" + "form_" + lemonEntry + "_present" + "_preposition" + " .\n"
                     + "\n";
         }
 
@@ -499,45 +481,68 @@ public class GermanCsv {
             String senseIdStr = getSenseId(senseIds);
             senseIdStr = ":" + lemonEntry + " a             lemon:LexicalEntry ;\n"
                     + "  lexinfo:partOfSpeech lexinfo:verb ;\n"
-                    + "  lemon:canonicalForm  :" + "form_"+lemonEntry + "_present"+" ;\n"
-                    + "  lemon:otherForm      :" + lemonEntry + "_past"+" ;\n"
-                    + "  lemon:otherForm      :" + lemonEntry + "_perfect"+" ;\n"
+                    + "  lemon:canonicalForm  :" + "form_" + lemonEntry + "_" + present + " ;\n"
+                    + "  lemon:otherForm      :" + lemonEntry + "_" + present3rd + " ;\n"
+                    + "  lemon:otherForm      :" + lemonEntry + "_" + past + " ;\n"
+                    + "  lemon:otherForm      :" + lemonEntry + "_" + perfect + " ;\n"
                     + senseIdStr
                     + "  lemon:synBehavior    :" + lemonEntry + "_frame .\n"
                     + "\n";
             return senseIdStr;
         }
 
-        public static String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast, String writtenFormPerfect, String language) {
-            return ":" + "form_"+lemonEntry + "_present"+ lemonEntry + "_present"+ " a           lemon:Form ;\n"
+        public static String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast, String writtenFormPerfect, String language, String subject) {
+            String subjectLemon = null, objectLemon = null;
+             //subjectLemon = lemonEntry + "_subj";
+             //objectLemon = lemonEntry + "_obj";
+             //System.out.println("subject:"+subject);
+          
+            if (subject.contains("domain")) {
+                subjectLemon = lemonEntry + "_subj";
+                objectLemon = lemonEntry + "_obj";
+            } else {
+                objectLemon = lemonEntry + "_subj";
+                subjectLemon = lemonEntry + "_obj";
+            }
+
+             
+            /*if (subject.contains("range")) {
+                subjectLemon = lemonEntry + "_subj";
+                objectLemon = lemonEntry + "_obj";
+            } else {
+                objectLemon = lemonEntry + "_subj";
+                subjectLemon = lemonEntry + "_obj";
+            }*/
+
+            return ":" + "form_" + lemonEntry + "_" + present + " a           lemon:Form ;\n"
                     + "  lemon:writtenRep     \"" + writtenFormInfinitive + "\"@" + language + " ;\n"
                     + "  lexinfo:verbFormMood lexinfo:infinitive .\n"
                     + "\n"
                     + "\n"
-                    + ":" + lemonEntry + "_present"+ " a      lemon:Form ;\n"
+                    + ":" + lemonEntry + "_" + present3rd + " a      lemon:Form ;\n"
                     + "  lemon:writtenRep \"" + writtenForm3rdPerson + "\"@" + language + " ;\n"
                     + "  lexinfo:number   lexinfo:singular ;\n"
                     + "  lexinfo:person   lexinfo:thirdPerson ;\n"
                     + "  lexinfo:tense    lexinfo:present .\n"
                     + "\n"
-                    + ":" + lemonEntry + "_past"+" a lemon:Form ;\n"
+                    + ":" + lemonEntry + "_" + past + " a lemon:Form ;\n"
                     + "  lemon:writtenRep  \"" + writtenFormPast + "\"@" + language + " ;\n"
                     + "  lexinfo:number    lexinfo:singular ;\n"
                     + "  lexinfo:person    lexinfo:thirdPerson ;\n"
                     + "  lexinfo:tense     lexinfo:past .\n"
                     + "\n"
-                    + ":" + lemonEntry + "_perfect"+" a lemon:Form ;\n"
+                    + ":" + lemonEntry + "_" + perfect + " a lemon:Form ;\n"
                     + "  lemon:writtenRep  \"" + writtenFormPerfect + "\"@" + language + " ;\n"
                     + "  lexinfo:number    lexinfo:singular ;\n"
                     + "  lexinfo:person    lexinfo:thirdPerson ;\n"
                     + "  lexinfo:tense     lexinfo:perfect .\n"
                     + "\n"
                     + ":" + lemonEntry + "_frame a  lexinfo:IntransitivePPFrame ;\n"
-                    + "  lexinfo:subject              :" + lemonEntry + "_subj ;\n"
-                    + "  lexinfo:prepositionalAdjunct :" + lemonEntry + "_obj .\n"
+                    + "  lexinfo:subject              :" + subjectLemon + " ;\n"
+                    + "  lexinfo:prepositionalAdjunct :" + objectLemon + " .\n"
                     + "\n";
         }
-        
+
         public static void setNoun(Tupples tupple, String gender, String[] row) {
             GenderUtils.setArticles(tupple.getReference(), gender);
             GenderUtils.setArticles(tupple.getDomain(), row[getDomainArticleIndex()]);
@@ -545,20 +550,19 @@ public class GermanCsv {
             GenderUtils.setWrittenForms(tupple.getDomain(), row[getDomainWrittenSingular()], row[getDomainWrittenPlural()]);
             GenderUtils.setWrittenForms(tupple.getRange(), row[getRangeWrittenSingular()], row[getRangeWrittenPlural()]);
         }
+
         public static void setVerbInfo(String partOfSpeech, String writtenFromIn, String writtenForm3rd, String writtenFormPast, String writtenFormPerfect) {
-             Map<String, String> verbTypes = Map.of(
-                        present, writtenFromIn,
-                        present3rd, writtenForm3rd,
-                        past, writtenFormPast,
-                        perfect, writtenFormPerfect
-                );
-             
-             String [] verbs=new String[]{writtenFromIn,writtenForm3rd,writtenFormPast,writtenFormPerfect};
-             
-              
-            GenderUtils.setVerbTypes(partOfSpeech, verbs,verbTypes);  
-            
-            
+            Map<String, String> verbTypes = Map.of(
+                    present, writtenFromIn,
+                    present3rd, writtenForm3rd,
+                    past, writtenFormPast,
+                    perfect, writtenFormPerfect
+            );
+
+            String[] verbs = new String[]{writtenFromIn, writtenForm3rd, writtenFormPast, writtenFormPerfect};
+
+            GenderUtils.setVerbTypes(partOfSpeech, verbs, verbTypes);
+
             /*Map<String, String> verb = Map.of(
                         present, writtenFromIn,
                         past, writtenFormPast,
@@ -578,15 +582,21 @@ public class GermanCsv {
             GenderUtils.setPerfectVerbType(writtenForm3rd, verb);
             GenderUtils.setPerfectVerbType(writtenFormPast, verb);
             GenderUtils.setPerfectVerbType(writtenFormPerfect, verb);*/
-            
         }
-        
-        public  String getPreposition(String lemonEntry, String preposition, String language) {
-            return ":arg2 lemon:marker :" + "form_"+lemonEntry + "_present_preposition"+ " .\n"
+
+        static String getSubjectIndex(String[] row) {
+            return row[subjectIndex];
+        }
+
+        public String getPreposition(String lemonEntry, String preposition, String language) {
+            if(preposition.contains("X")){
+               preposition=""; 
+            }
+            return ":arg2 lemon:marker :" + "form_" + lemonEntry + "_present_preposition" + " .\n"
                     + "\n"
                     + "## Prepositions ##\n"
                     + "\n"
-                    + ":" + "form_"+lemonEntry + "_present_preposition"+ " a                  lemon:SynRoleMarker ;\n"
+                    + ":" + "form_" + lemonEntry + "_present_preposition" + " a                  lemon:SynRoleMarker ;\n"
                     + "  lemon:canonicalForm  [ lemon:writtenRep \"" + preposition + "\"@" + "en" + " ] ;\n"
                     + "  lexinfo:partOfSpeech lexinfo:preposition .";
         }
@@ -608,13 +618,12 @@ public class GermanCsv {
         }
 
         public static Integer getSubject() {
-            return subject;
+            return subjectIndex;
         }
 
         public static Integer getPrepositionalAdjunct() {
             return prepositionalAdjunct;
         }
-        
 
         public static Integer getSenseIndex() {
             return senseIndex;
@@ -656,13 +665,9 @@ public class GermanCsv {
             return rangeWrittenPlural;
         }
 
-         public  Integer getSyntacticFrameIndex() {
+        public Integer getSyntacticFrameIndex() {
             return SyntacticFrame;
         }
-
-       
-       
-        
 
     }
 
@@ -773,8 +778,6 @@ public class GermanCsv {
         public static Integer getSize() {
             return size;
         }
-        
-        
 
     }
 
@@ -896,11 +899,28 @@ public class GermanCsv {
                 str += line;
             }
         }
+        else if (syntacticFrame.equals(TempConstants.AdjectivePPFrame)) {
+            for (Tupples tupple : tupples) {
+                String line = ":" + tupple.getSenseId() + " a  lemon:LexicalSense ;\n"
+                        + "  lemon:reference :" + tupple.getSenseId() + "_res ;\n"
+                        + "  lemon:isA       :" + lemonEntry + "_PredSynArg ;\n"
+                        + "  lemon:condition :" + lemonEntry + "_condition .\n"
+                        + "\n"
+                        + ":" + lemonEntry + "_res a   oils:CovariantScalar ;\n"
+                        + "  oils:boundTo  <" + tupple.getOils_boundTo() + "> ;\n"
+                        + "  oils:degree   <" + tupple.getOils_degree() + "> .\n"
+                        + "\n"
+                        + ":" + lemonEntry + "_condition a lemon:condition ;\n"
+                        + "  lemon:propertyDomain   <"+tupple.getDomain()+"> ;\n"
+                        + "  lemon:propertyRange    <"+tupple.getRange()+"> .";
+                str += line;
+            }
+        }
 
         return str;
     }
 
-    public static String getPrepostion(String preopistionAttr,String preposition, String language) {
+    public static String getPrepostion(String preopistionAttr, String preposition, String language) {
         return "## Prepositions ##\n"
                 + ":" + preopistionAttr + " a                  lemon:SynRoleMarker ;\n"
                 + "  lemon:canonicalForm  [ lemon:writtenRep \"" + preposition + "\"@" + language + " ] ;\n"
@@ -921,18 +941,103 @@ public class GermanCsv {
         return writtenFormInfinitive;
     }
 
-     public  Integer getSyntacticFrameIndex() {
-            return AdjectiveFrameIndex;
+    public Integer getSyntacticFrameIndex() {
+        return AdjectiveFrameIndex;
+    }
+
+    public static class GradbleAdjectiveFrameCsv {
+        //LemonEntry	partOfSpeech	writtenForm	comparative	superlative	
+        //SyntacticFrame	predFrame	sense	reference	oils:boundTo	oils:degree	domain	range						
+
+        public static Integer comparativeIndex = 3;
+        public static Integer superlativeIndex = 4;
+        public static Integer SyntacticFrameIndex = 5;
+        public static Integer predFrameIndex = 6;
+        public static Integer senseIndex = 7;
+        public static Integer referenceIndex = 8;
+        public static Integer oils_boundToIndex = 9;
+        public static Integer oils_degreeIndex = 10;
+        public static Integer domainIndex = 11;
+        public static Integer rangeIndex = 12;
+      
+
+        public static String getHeader(String lemonEntry, List<Tupples> senseIds, String language) {
+            return "@prefix :        <http://localhost:8080/#> .\n"
+                    + "\n"
+                    + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
+                    + "@prefix lemon:   <http://lemon-model.net/lemon#> .\n"
+                    + "@prefix oils:     <http://lemon-model.net/oils#> .\n"
+                    + "\n"
+                    + "@base            <http://localhost:8080#> .\n"
+                    + "\n"
+                    + ":lexicon_en a    lemon:Lexicon ;\n"
+                    + "  lemon:language \""+language+"\" ;\n"
+                    + "  lemon:entry    :"+lemonEntry+" ;\n"
+                    + "  lemon:entry    :"+lemonEntry+"_res .";
         }
 
-   
-    
-      /*
-                      "  lemon:otherForm    :" + lemonEntry+"_accusative_form" + " ;\n"
-                    + "  lemon:otherForm    :" + lemonEntry+"_dative_form" + " ;\n"
-                    + "  lemon:otherForm    :" + lemonEntry+"_genitive_form" + " ;\n"
-                    + "  lemon:otherForm    :" + lemonEntry+"_plural_form" + " ;\n"
-            */
+        public static String getSenseIndexing(List<Tupples> senseIds, String lemonEntry) {
+            String senseIdStr = ":"+lemonEntry+" a             lemon:LexicalEntry ;\n"
+                    + "  lexinfo:partOfSpeech lexinfo:adjective ;\n"
+                    + "  lemon:canonicalForm  :"+lemonEntry+"_lemma ;\n"
+                    + "  lemon:synBehavior    :"+lemonEntry+"_predFrame ;\n"
+                    + "  lemon:sense          :"+lemonEntry+"_sense .";
+            return senseIdStr;
+        }
 
-   
+        public static String getWritten(String lemonEntry, String writtenFormInfinitive, String language) {
+            String str
+                    = ":" + lemonEntry + "_lemma lemon:writtenRep \"" + writtenFormInfinitive + "\"@" + language + " .\n"
+                    + "\n"
+                    + ":" + lemonEntry + "_predFrame a        lexinfo:AdjectivePPFrame ;\n"
+                    + "  lexinfo:copulativeSubject :" + lemonEntry + "_PredSynArg .\n";
+
+            return str;
+        }
+
+
+        public String getComparativeIndex(String[] row) {
+            return row[comparativeIndex];
+        }
+
+        public String getSuperlativeIndex(String[] row) {
+            return row[superlativeIndex];
+
+        }
+
+        public String getSyntacticFrameIndex(String[] row) {
+            return row[SyntacticFrameIndex];
+        }
+
+        public String getPredFrameIndex(String[] row) {
+            return row[predFrameIndex];
+        }
+
+        public String getSenseIndex(String[] row) {
+            return row[senseIndex];
+        }
+
+        public String getReferenceIndex(String[] row) {
+            return row[referenceIndex];
+        }
+
+        public String getOils_boundToIndex(String[] row) {
+            return row[oils_boundToIndex];
+        }
+
+        public String getOils_degreeIndex(String[] row) {
+            return row[oils_degreeIndex];
+        }
+
+        public String getDomainIndex(String[] row) {
+            return row[domainIndex];
+        }
+
+        public String getRangeIndex(String[] row) {
+            return row[rangeIndex];
+        }
+        
+
+    }
+
 }

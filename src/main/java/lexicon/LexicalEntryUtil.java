@@ -456,7 +456,7 @@ public class LexicalEntryUtil {
             annotatedVerb.setVerbFormMood(getPropertyValueOrDefaultFromLexicalForm("verbFormMood", null, lexicalForm));
             annotatedVerb.setAspect(getPropertyValueOrDefaultFromLexicalForm("aspect", null, lexicalForm));
             annotatedVerbs.add(annotatedVerb);
-            //System.out.println("!!!!!!!!!!!annotatedVerb:::"+annotatedVerb);
+            //System.out.println("!!!!!!!!!!!annotatedVerb:::"+annotatedVerb.getWrittenRepValue());
         }
         return annotatedVerbs;
     }
@@ -830,6 +830,25 @@ public class LexicalEntryUtil {
         }
        
 
+        return reference;
+
+    }
+    
+    public String getVerbReference(String tense) {
+        String reference = null;
+
+        for (LexicalForm lexicalForm : this.lexicalEntry.getForms()) {
+            String uri = lexicalForm.toString();
+            Pair<Boolean, String> pair = this.getLastPart(uri);
+            if (pair.component1()) {
+                if (pair.component2().contains(tense)) {
+                    //reference = pair.component2() ;
+                    reference =uri ;
+                    break;
+                }
+            }
+        }
+        System.out.println("reference::"+reference);
         return reference;
 
     }

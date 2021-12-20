@@ -87,7 +87,9 @@ public enum DomainOrRangeTypeCheck {
       URI.create(DBO.getUri() + "birthPlace"),
       URI.create(DBO.getUri() + "deathPlace"),
       URI.create(DBO.getUri() +  "placeOfBurial"),
-      URI.create(DBO.getUri() +  "NaturalPlace")
+      URI.create(DBO.getUri() +  "NaturalPlace"),
+      URI.create(DBO.getUri() +  "routeStart"),
+      URI.create(DBO.getUri() +  "Road")
     )
   ),
     NameCheck(List.of(
@@ -173,14 +175,13 @@ public enum DomainOrRangeTypeCheck {
             URI.create(DBO.getUri() + "EducationalInstitution"),
             URI.create(DBO.getUri() + "University")
     )),
+    RdfsLabel(List.of(
+            URI.create(DBO.getUri() + "School"),
+            URI.create(DBO.getUri() + "EducationalInstitution"),
+            URI.create(DBO.getUri() + "University")
+    )),
     LocationCheck(List.of(
-            URI.create(DBO.getUri() + "Place"),
-            URI.create(DBO.getUri() + "Location"),
-            URI.create(DBO.getUri() + "PopulatedPlace"),
-            URI.create(DBO.getUri() + "Region"),
-            URI.create(DBO.getUri() + "Country"),
-            URI.create(DBO.getUri() + "City"),
-            URI.create(DBO.getUri() + "WineRegion")
+            URI.create(DBO.getUri() + "abbreviation")
     )),
     THING(List.of(URI.create("http://www.w3.org/2002/07/owl#Thing"))); // default if no other matches
     

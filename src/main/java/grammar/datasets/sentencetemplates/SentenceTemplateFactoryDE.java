@@ -69,8 +69,8 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
       createSentenceTemplate(language,
         List.of(
           //"Ist Rita Wilson die Frau von Tom Hanks?"
-          //"verb(component_be:present:singular) subject(range) determiner(component_the_nominative:reference) noun(nominativeCase:singular) preposition adjunct(domain)?",
-          //"verb(component_be:present:plural) subject(range) determiner(component_the_nominative:reference:plural) noun(nominativeCase:plural) preposition adjunct(domain)?"
+          "verb(component_be:present:singular) subject(range) determiner(component_the_nominative:reference) noun(nominativeCase:singular) preposition adjunct(domain)?",
+          "verb(component_be:present:plural) subject(range) determiner(component_the_nominative:reference:plural) noun(nominativeCase:plural) preposition adjunct(domain)?"
           //Heißt die Frau von Präsident Obama Michelle?"
           //"verb(component_heißen:present:singular) determiner(component_the_nominative:reference:singular) noun(nominativeCase:singular) preposition adjunct(domain) subject(range)?",
           //"verb(component_heißen:present:plural) determiner(component_the_nominative:reference:plural) noun(nominativeCase:plural) preposition adjunct(domain) subject(range)?"    
@@ -80,22 +80,12 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
           //"verb(component_be:present:plural) subject(domain) noun(nominativeCase:singular) object(range)?",
           //Hat Abraham Lincolns Sterbeort eine Webseite?", 
           //"verb(component_haben:present:singular) object(domain) article(definite_article:nominativeCase:feminine) subject(range)?"
-              
-                
           //"Hatte Che Guevara Kinder?",
           //"verb(component_haben:past:singular) object(domain) noun(nominativeCase)?"
           //Gibt es ein Videospiel, das Battle Chess heißt?
           // "verb(imperative_transitive) pronoun(object_pronoun_es) article(definite_article:nominativeCase:neuter), noun(nominativeCase), article(component_the_nominative:nominativeCase:neuter) object(domain)"    
            //"Was ist Batmans richtiger Name?",                
            
-
-            // "interrogativePronoun(range:singular)  verb(component_be:present:singular) object(range) noun(nominativeCase)?"    
-            //"Welche Regierungsform hat Russland?",
-            //"interrogativeDeterminer(range:singular) verb(component_haben:present:singular) object(domain)?"   
-            //"Aus welcher Region ist der Melon de Bourgogne?"
-            // "preposition(auf) interrogativeDeterminer(range:singular) verb(component_be:present:singular) adjunct(domain)? "
-           // Wieviele Seiten hat Krieg und Frieden?
-           // "interrogativeAmount(range:singular) noun(nominativeCase:plural) verb(component_haben:present:singular) object(domain)?"        
                  ),
         NounPPFrame,
         booleanQuestionDomainRange
@@ -236,6 +226,38 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
       )
     );
     
+     // TransitiveFrame
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+        /* //Wer moderiert die BBC Wildlife Specials?
+        "interrogativePronoun(nominativeCase:range:singular) verb(mainVerb:present:thirdPerson) object(domain)?",
+        //Wer moderiert die BBC Wildlife Specials?
+        "interrogativePronoun(nominativeCase:range:singular) verb(mainVerb:past:thirdPerson) object(domain)?",
+         //Welche Person moderiert die BBC Wildlife Specials?
+        "interrogativeDeterminer(nominativeCase:range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
+        //Wer hat Slack entwickelt?
+        "interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?",    
+        ///Welche Person hat Slack entwickelt?
+         "interrogativeDeterminer(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?" ,           
+        //Wer hat sich Family Guy ausgedacht?"
+         //"interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) pronoun(reflexive_pronoun) object(domain) verb(RefVerb:perfect:thridPerson)?",
+        // Trenn Verb
+         "interrogativePronoun(nominativeCase:range:singular) verb(TrennVerbPart1:past:thridPerson) object(domain) verb(TrennVerbPart2:past:thridPerson)?",
+         "interrogativePronoun(nominativeCase:range:singular) verb(component_be:present:singular) object(domain) verb(TrennVerb:perfect:thridPerson)?",
+         //Zeig mir das Buch, das Muhammad Ali geschrieben hat.
+         //"verb(imperative_transitive_show:present:singular) pronoun(object_pronoun) determiner(component_the_accusative:range:singular) noun(accusativeCase:singular), verb(mainVerb:perfect:thridPerson) verb(component_haben:present:singular)."
+           //Wieviel hat Pulp Fiction gekostet?
+         "interrogativeAmount(singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?"
+          //Zeig mir das Buch, das Muhammad Ali geschrieben hat.
+         //"verb(imperative_transitive_show:present:singular) pronoun(object_pronoun) determiner(component_the_accusative:range:singular) noun(accusativeCase:singular), verb(mainVerb:perfect:thridPerson) verb(component_haben:present:singular)."
+        */
+        ),
+       TransitiveFrame,
+        activeBoolean
+      )
+    );
+    
     sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(
@@ -255,10 +277,16 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
     sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(   //Durch welches Land fließt der Rhein?
-         "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(mainVerb:present:thridPerson) adjunct(domain)?",
-         //In welchem Museum ist Der Schrei ausgestellt?
+         "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(mainVerb:present3rd:thridPerson) adjunct(domain)?",
+           //In welchem Museum ist Der Schrei ausgestellt?
          "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
-          //In welcher Stadt hört die Ruta 68 auf?",
+           //Für was steht YiCM?
+         "preposition interrogativePronounThing(nominativeCase:masculine:singular) verb(mainVerb:present3rd:thridPerson) adjunct(domain)?",
+         "preposition interrogativePronounThing(nominativeCase:masculine:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+          //Woran ist Bruce Carver gestorben?
+         //"interrogativePrep(preposition) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+           //TrennVerb: In welcher Stadt hört die Ruta 68 auf?",
+         "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(TrennVerbPart1:present3rd:thridPerson) adjunct(domain) verb(TrennVerbPart2:present3rd:thridPerson)?",
          "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(TrennVerbPart1:past:thridPerson) adjunct(domain) verb(TrennVerbPart2:past:thridPerson)?",
          "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(TrennVerb:perfect:thridPerson)?"
        
@@ -272,12 +300,11 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
       sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(
-             //
-                   //Was fließt durch...?
+         //Was fließt durch...?
         "interrogativePronoun(nominativeCase:domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
          //Welcher Fluss fließt durch...?
         "interrogativeDeterminer(nominativeCase:domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
-        //"interrogativeDeterminer(nominativeCase:domain:plural) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+        "interrogativeDeterminer(nominativeCase:domain:plural) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
          //Trenn
          "interrogativePronoun(nominativeCase:domain:singular) verb(TrennVerbPart1:past:thridPerson) preposition adjunct(range) verb(TrennVerbPart2:past:thridPerson)? "
        
@@ -294,8 +321,10 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
         List.of(
           //"Wann wurde die Titanic fertiggestellt?"
           "interrogativeTemporal verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+         
           //Wann fand die Schlacht von Gettysburg statt?
-          "interrogativeTemporal verb(TrennVerbPart1:past:thridPerson) object(domain) verb(TrennVerbPart2:past:thridPerson)?"
+          "interrogativeTemporal verb(TrennVerbPart1:past:thridPerson) object(domain) verb(TrennVerbPart2:past:thridPerson)?",
+          "interrogativeTemporal verb(component_werden:past:singular) adjunct(domain) verb(TrennVerb:perfect:thridPerson)?"
         ),
         IntransitivePPFrame,
         WHEN_WHAT_PAST_THING,
@@ -334,7 +363,9 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
           //"In welchem Jahr wurde Rachel Stevens geboren?",
          "preposition interrogativeDeterminer(dativeCase:range:singular) verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
          //Wann wurde Abrham Lincon geboren?
-        "interrogativeTemporal verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?"
+        "interrogativeTemporal verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+        //Wann ist Draculas Sch├Âpfer gestorben?
+        "interrogativeTemporal verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?"
         ),
         IntransitivePPFrame,
         WHEN_WHO_PAST_PERSON,
@@ -356,47 +387,19 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
       )
     );
       
-       ///////////////////////////////
-       sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
-        List.of(
-         //"Welche Profisurfer wurden auf den Philippinen geboren?",
-         "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
-         "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?"
-
-             ),
-        IntransitivePPFrame,
-        WHERE_WHO_PAST_PERSON,
-        forward
-      )
-    );
-    //Welche Person wurde 2010 geboren?
-    //Wer ist 2010 geboren?
-      sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
-        List.of(
-        //Wo wurde Donald Trump geboren?
-         "interrogativePlace(nominativeCase:singular) verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?"
-        ),
-        IntransitivePPFrame,
-        WHERE_WHO_PAST_PERSON,
-        backward
-      )
-    );
-      
-      
           ///////////////////////////////
        sentenceTemplateRepository.add(
       createSentenceTemplate(
         language,
         List.of(
-         //"Welche Profisurfer wurden auf den Philippinen geboren?",
-         "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
-         "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?"
-
-             ),
+        //Wo wurde Donald Trump geboren?
+        "interrogativePlace verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+        //In welcher Stadt ist der Pr├ñsident von Montenegro geboren?
+        "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+        //In welcher Stadt wohnt Sylvester Stallone?
+        "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(mainVerb:present3rd:thridPerson) adjunct(domain)?"
+        
+               ),
         IntransitivePPFrame,
         WHERE_WHO_PAST_PERSON,
         forward
@@ -408,12 +411,41 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
       createSentenceTemplate(
         language,
         List.of(
-        //Wo wurde Donald Trump geboren?
-         "interrogativePlace(nominativeCase:singular) verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?"
-        ),
+        //"Welche Profisurfer wurden auf den Philippinen geboren?",
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+        "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?"
+          ),
         IntransitivePPFrame,
         WHERE_WHO_PAST_PERSON,
         backward
+      )
+    );
+      
+             ///////////////////////////////
+       sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+         //Wo f├ñngt Piccadilly an? Trenn example
+         "interrogativePlace verb(TrennVerbPart1:present3rd:thridPerson) object(domain) verb(TrennVerbPart2:present3rd:thridPerson)?",
+         "interrogativePlace verb(TrennVerbPart1:past:thridPerson) object(domain) verb(TrennVerbPart2:past:thridPerson)?"
+             ),
+        IntransitivePPFrame,
+        WHERE_WHAT_PRESENT_THING,
+        backward
+      )
+    );
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+        //Was beginnt in Piccadilly?      
+         "interrogativePronoun(nominativeCase:domain:singular) verb(TrennVerbPart1:present3rd:thridPerson) preposition adjunct(domain) verb(TrennVerbPart2:present3rd:thridPerson)?",
+         "interrogativePronoun(nominativeCase:domain:singular) verb(TrennVerbPart1:past:thridPerson) preposition adjunct(domain) verb(TrennVerbPart2:past:thridPerson)?"
+        ),
+        IntransitivePPFrame,
+        WHERE_WHAT_PRESENT_THING,
+        forward
       )
     );
       

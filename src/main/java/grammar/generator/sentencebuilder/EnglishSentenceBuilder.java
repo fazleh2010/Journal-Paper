@@ -46,8 +46,6 @@ import util.io.ParamterFinder;
 import util.io.PronounFinder;
 import util.io.StringMatcher;
 import util.io.TemplateFeatures;
-import util.io.TemplateFinder;
-import util.io.GermanVerbFinder;
 import util.io.EnglishVerbFinder;
 
 /**

@@ -133,12 +133,12 @@ select  ?binding  ?label {
 
 Find labels
 select   ?label {     
- <https://dbpedia.org/resource/BBC_Wildlife_Specials> rdfs:label ?label .
-  filter langMatches(lang(?label),"en")
+ <http://dbpedia.org/resource/RMS_Titanic> rdfs:label ?label .
+  filter langMatches(lang(?label),"de")
 }
 
 select   ?label {     
- <https://dbpedia.org/resource/Suriname> rdfs:label ?label .
+ <https://dbpedia.org/resource/Youth_Climate_Movement> rdfs:label ?label .
   filter langMatches(lang(?label),"en")
 }
 
@@ -147,6 +147,28 @@ select   ?label {
   filter langMatches(lang(?label),"de")
 }
 
+
+
+Intransitive
+select   ?label {     
+ <http://dbpedia.org/resource/Battle_of_Gettysburg> rdfs:label ?label .
+  filter langMatches(lang(?label),"de")
+}
+
+select   ?label {     
+ <http://dbpedia.org/resource/Chile_Route_68> rdfs:label ?label .
+  filter langMatches(lang(?label),"de")
+}
+
+
+-------------------------------
+no result in engpoint
+PREFIX res: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT DISTINCT ?uri
+WHERE {
+        res:Bruce_Carver dbo:deathCause ?uri .     
+}
 
 
 

@@ -5,11 +5,57 @@
  */
 package evaluation;
 
+import com.google.gdata.util.common.base.Pair;
+import static java.lang.System.exit;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
+import org.apache.commons.lang3.StringUtils;
+
 /**
  *
  * @author elahi
  */
 public class StringSimilarity {
+    
+    private boolean singleSparql=false;
+    private boolean multipleSparql=false;
+    private String singleProperty=null;
+    private String singleSubject=null;
+    private String singleObject=null;
+
+    
+    
+     public QueGGinfomation getMostSimilarMatch(Map<String, QueGGinfomation> grammarEntities) throws Exception {
+        HashMap<String, Double> map = new HashMap<String, Double>();
+        for (String question : grammarEntities.keySet()) {
+            QueGGinfomation queGGinfomation = grammarEntities.get(question);
+            map.put(question, queGGinfomation.getValue());
+        }
+        ValueComparator bvc = new ValueComparator(map);
+        TreeMap<String, Double> sorted_map = new TreeMap<String, Double>(bvc);
+        sorted_map.putAll(map);
+        //System.out.println("sorted_map: " + sorted_map);
+        String key = sorted_map.firstKey();
+        Double value = sorted_map.get(key);
+        QueGGinfomation queGGinfomation = grammarEntities.get(key);
+        return queGGinfomation;
+
+    }
+      public QueGGinfomation getMostSimilarMatchKB(Map<String, QueGGinfomation> grammarEntities,String qaldSparqlQuery) throws Exception {
+        HashMap<String, Double> map = new HashMap<String, Double>();
+        for (String question : grammarEntities.keySet()) {
+            QueGGinfomation queGGinfomation = grammarEntities.get(question);
+            map.put(question, queGGinfomation.getValue());
+        }
+        if(this.isSparqlMatched(grammarEntities,qaldSparqlQuery)){
+            
+        }
+        QueGGinfomation queGGinfomation = this.getBestMatchingWithOutKB(grammarEntities,map);
+      
+        return queGGinfomation;
+
+    }
 
     /**
      * Calculates the similarity (a number within 0 and 1) between two strings.
@@ -71,5 +117,96 @@ public class StringSimilarity {
         printSimilarity("was ist die amtssprache von surinam?", "was ist die amtssprache von suriname?");
        
     }
+
+   
+
+    private QueGGinfomation getBestMatchingWithOutKB(Map<String, QueGGinfomation> grammarEntities, HashMap<String, Double> map) {
+        ValueComparator bvc = new ValueComparator(map);
+        TreeMap<String, Double> sorted_map = new TreeMap<String, Double>(bvc);
+        sorted_map.putAll(map);
+        String key = sorted_map.firstKey();
+        Double value = sorted_map.get(key);
+        QueGGinfomation queGGinfomation = grammarEntities.get(key);
+        return queGGinfomation;
+    }
+
+   
+    private boolean isSparqlMatched(Map<String, QueGGinfomation> grammarEntities, String qaldSparqlQuery) {
+        Boolean sparqlMatchFlag=false;
+        for (String question : grammarEntities.keySet()) {
+             QueGGinfomation queGGinfomation = grammarEntities.get(question);
+             String queGGSparql=queGGinfomation.getSparqlQuery();
+             Pair<Boolean,String []> qaldSingleTriple=this.isSingle(queGGSparql);
+             Pair<Boolean,String []> queGGSingleTriple=this.isSingle(qaldSparqlQuery);
+             
+             if(qaldSingleTriple.first&&queGGSingleTriple.first){
+               for(Integer index=0;index<qaldSingleTriple.second.length;index++){
+                   if(index==0){
+                       
+                   }
+                   
+               }
+             }
+             return true;
+        }
+        return true;
+    }
+
+    ////SELECT DISTINCT ?d WHERE { <http://dbpedia.org/resource/Diana,_Princess_of_Wales> <http://dbpedia.org/ontology/deathDate> ?d . }
+    private Pair<Boolean, String[]> isSingle(String queGGSparql) {
+        String triples = null;
+        Boolean singleSparql = false;
+        String singleSubject = null, singleProperty = null;
+        String[] values = new String[3];
+
+        triples = StringUtils.substringBetween(queGGSparql, "{", "}");
+        Integer numOfTriple = this.characterCount(triples, '.');
+        if (numOfTriple == 1) {
+            singleSparql = true;
+            triples = triples.trim().stripLeading().stripTrailing();
+            triples = triples.replace(" ", "\n");
+            String[] lines = triples.split(System.getProperty("line.separator"));
+            Integer index = 0;
+            for (String line : lines) {
+
+                if (index == 0) {
+                    if (line.contains("http://dbpedia.org/resource/") || line.contains("res:")) {
+                       values[index] = line;
+                    }
+                } else if (index == 1) {
+                    if ((line.contains("http://dbpedia.org/ontology/") || line.contains("http://dbpedia.org/property/") || line.contains("dbo:") || line.contains("dbp:")) && index == 1) {
+                        values[index] = line;
+                    }
+                } else if (index == 2) {
+                    if (line.contains("http://dbpedia.org/resource/") || line.contains("res:")) {
+                        values[index] = line;
+                    }
+                }
+                index=index+1;
+
+            }
+
+        }
+      
+        return new Pair<Boolean, String[]>(singleSparql, values);
+
+    }
+   
+    
+    public Integer characterCount(String exampleString, Character symbol) {
+
+        int totalCharacters = 0;
+        char temp;
+        for (int i = 0; i < exampleString.length(); i++) {
+
+            temp = exampleString.charAt(i);
+            if (temp == symbol) {
+                totalCharacters++;
+            }
+        }
+
+        return totalCharacters;
+    }
+
 
 }

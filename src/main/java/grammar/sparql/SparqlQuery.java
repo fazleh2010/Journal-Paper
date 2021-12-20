@@ -5,6 +5,7 @@
  */
 package grammar.sparql;
 
+import grammar.generator.sentencebuilder.TemplateFinder;
 import grammar.sparql.SPARQLRequest;
 import grammar.structure.component.Binding;
 import java.io.BufferedReader;
@@ -60,10 +61,14 @@ public class SparqlQuery {
             if (type.contains(FIND_ANY_ANSWER) && index == 1) {
                 String property = StringUtils.substringBetween(sparqlQueryOrg, "<", ">");
                 if (queryType.equals(QueryType.SELECT)) {
-                    if (returnType.contains("objOfProp")) {
+                    if (returnType.contains(RETURN_TYPE_OBJECT)) {
                         sparqlQuery = this.setObjectWikiPedia(domainEntityUrl, property);
-                    } else if (returnType.contains("subjOfProp")) {
-                        sparqlQuery = this.setSubjectWikipedia(domainEntityUrl, property);
+                    } else if (returnType.contains(RETURN_TYPE_SUBJECT)) {
+                        if (TemplateFinder.isRdfsLabel(property)) {
+                            sparqlQuery = this.setSubjectLabelWikipedia(domainEntityUrl, property,language);
+                        } else {
+                            sparqlQuery = this.setSubjectWikipedia(domainEntityUrl, property);
+                        }
                     }
 
                 } else if (queryType.equals(QueryType.ASK)) {
@@ -415,6 +420,20 @@ public class SparqlQuery {
 
     }
     
+    public String setSubjectLabelWikipedia(String entityUrl, String property, String language) {
+        String sparql = setLabelWikipedia(entityUrl, language);
+        String resultSparql = executeSparqlQuery(sparql);
+        this.parseResult(resultSparql);
+        entityUrl = this.objectOfProperty;
+
+        sparql = "select  ?s\n"
+                + "    {\n"
+                + "   " + "?s" + " " + "<" + property + ">" + "  " + "'" + entityUrl + "'" + "\n"
+                + "    }";
+        return sparql;
+    }
+
+    
     public String setBooleanWikiPedia(String domainEntityUrl, String property, String rangeEntityUrl) {
         String sparql=
                       "ASK WHERE { "
@@ -680,6 +699,11 @@ SELECT DISTINCT ?uri WHERE {
 }
     */
 
+    private boolean isPropertyLabel(String property) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
    
 
 }

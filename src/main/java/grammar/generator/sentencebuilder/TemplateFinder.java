@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package util.io;
+package grammar.generator.sentencebuilder;
 
 import grammar.datasets.sentencetemplates.TempConstants;
 import grammar.sparql.SelectVariable;
@@ -72,13 +72,15 @@ public class TemplateFinder implements TempConstants{
         
         if (isPerson(subjectUri) && isPlace(objectUri)) {
             type = WHERE_WHO_PAST_PERSON;
+        } else if ((isPlace(subjectUri)||isPlace(objectUri)) && isPlace(referenceUri)) {
+            type = WHERE_WHAT_PRESENT_THING;
         } else if (isPerson(subjectUri) && isDate(referenceUri)) {
             type = WHEN_WHO_PAST_PERSON;
         } else if (!isPerson(subjectUri) && isDate(referenceUri)) {
             type = WHEN_WHAT_PAST_THING;
-        }else if (isAmountPriceCheck(referenceUri) ) {
+        } else if (isAmountPriceCheck(referenceUri)) {
             type = HOW_MANY_PRICE;
-        }else if (isAmountThingCheck(referenceUri) ) {
+        } else if (isAmountThingCheck(referenceUri)) {
             type = HOW_MANY_THING;
         }else {
             type = WHAT_WHICH_PRESENT_THING;
@@ -89,7 +91,6 @@ public class TemplateFinder implements TempConstants{
         System.out.println("isPerson(subjectUri)::"+isPerson(subjectUri));
         System.out.println("isDate(referenceUri)::"+isDate(referenceUri));
         System.out.println("isPlace(referenceUri)::"+isPlace(objectUri));
-         System.out.println("isAmount(referenceUri)::"+isAmount(referenceUri));
           System.out.println("type::"+type);
          exit(1);*/
         return type;
@@ -162,11 +163,21 @@ public class TemplateFinder implements TempConstants{
         return false;
 
     }
-       
-       
      
-     
+    public static Boolean isLocationCheck(String string) {
+        if (StringUtils.isBlank(string)) {
+            return false;
+        }
+        for (URI key : DomainOrRangeTypeCheck.AmountThingCheck.getReferences()) {
+            if (string.equals(key.toString())) {
+                return true;
+            }
+        }
+        return false;
 
+    }
+       
+  
     public static Boolean isPlace(String string) {
         if (StringUtils.isBlank(string)) {
             return false;
@@ -214,6 +225,21 @@ public class TemplateFinder implements TempConstants{
         }
         return determinerStr;
     }
+    
+    public static Boolean isRdfsLabel(String string) {
+        if (StringUtils.isBlank(string)) {
+            return false;
+        }
+        for (URI key : DomainOrRangeTypeCheck.LocationCheck.getReferences()) {
+
+            if (string.equals(key.toString())) {
+                return true;
+            }
+        }
+        return false;
+
+    }
+    
 
   
 }

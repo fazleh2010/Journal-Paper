@@ -34,7 +34,7 @@ import static lexicon.LexicalEntryUtil.getDeterminerTokenByNumber;
 import grammar.generator.sentencebuilder.GermanSentenceBuilder;
 import util.io.StringMatcher;
 import util.io.TemplateFeatures;
-import util.io.TemplateFinder;
+import grammar.generator.sentencebuilder.TemplateFinder;
 
 public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempConstants {
 
@@ -88,8 +88,8 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
             List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                     language, new String[]{frameType.getName(), template, forward});
             sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
-            //System.out.println(template);
-            //System.out.println(sentences);
+            System.out.println(template);
+            System.out.println(sentences);
             //exit(1);
         }
 
@@ -125,8 +125,8 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
             List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                     language, new String[]{frameType.getName(), template, backward});
             sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
-            //System.out.println(template);
-            //System.out.println(sentences);
+            System.out.println(template);
+            System.out.println(sentences);
             //exit(1);
         }
 
@@ -174,7 +174,7 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
         Integer index = 0;
 
         for (String sentenceTemplate : sentenceTemplates) {
-            //System.out.println(sentenceTemplate);
+            System.out.println(sentenceTemplate);
             index = index + 1;
             GermanSentenceBuilder sentenceBuilderFromTemplates = new GermanSentenceBuilder(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
             TemplateFeatures templateFeatures = new TemplateFeatures(sentenceTemplate);

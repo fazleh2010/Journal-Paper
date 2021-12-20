@@ -25,6 +25,7 @@
   lemon:entry    :interrogativePronounThing ;
   lemon:entry    :interrogativePlace ;
   lemon:entry    :interrogativeTemporal ;
+  lemon:entry    :interrogativePrep_an;
   lemon:entry    :component_heißen ;
   lemon:entry    :component_haben ;
   lemon:entry    :component_werden ;
@@ -524,60 +525,50 @@
   lexinfo:partOfSpeech lexinfo:article .
 
   :interrogativePronounPerson a       lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "Wer"@de ] ;
-  lemon:otherForm      [ lemon:writtenRep "Wer"@de ;
+  lemon:canonicalForm  [ lemon:writtenRep "wer"@de ] ;
+  lemon:otherForm      [ lemon:writtenRep "wer"@de ;
   lexinfo:gender                          lexinfo:masculine ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Wer"@de ;
+  lemon:otherForm      [ lemon:writtenRep "wer"@de ;
   lexinfo:gender                          lexinfo:feminine ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Wer"@de ;
+  lemon:otherForm      [ lemon:writtenRep "wer"@de ;
   lexinfo:gender                          lexinfo:neuter ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Wer"@de ;
+  lemon:otherForm      [ lemon:writtenRep "wer"@de ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:plural ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
 :interrogativePronounThing a       lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "Was"@de ] ;
-  lemon:otherForm      [ lemon:writtenRep "Was"@de ;
+  lemon:canonicalForm  [ lemon:writtenRep "was"@de ] ;
+  lemon:otherForm      [ lemon:writtenRep "was"@de ;
   lexinfo:gender                          lexinfo:masculine ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Was"@de ;
+  lemon:otherForm      [ lemon:writtenRep "was"@de ;
   lexinfo:gender                          lexinfo:feminine ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Was"@de ;
+  lemon:otherForm      [ lemon:writtenRep "was"@de ;
   lexinfo:gender                          lexinfo:neuter ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Was"@de ;
+  lemon:otherForm      [ lemon:writtenRep "was"@de ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:plural ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
-:interrogativePlace a       lemon:LexicalEntry ;
+:interrogativePrep_an a                 lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "woran"@de ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+
+:interrogativePlace a                 lemon:SynRoleMarker ;
   lemon:canonicalForm  [ lemon:writtenRep "Wo"@de ] ;
-  lemon:otherForm      [ lemon:writtenRep "Wo"@de ;
-  lexinfo:gender                          lexinfo:masculine ;
-  lexinfo:case                            lexinfo:nominativeCase ;
-  lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Wo"@de ;
-  lexinfo:gender                          lexinfo:feminine ;
-  lexinfo:case                            lexinfo:nominativeCase ;
-  lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Wo"@de ;
-  lexinfo:gender                          lexinfo:neuter ;
-  lexinfo:case                            lexinfo:nominativeCase ;
-  lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Wo"@de ;
-  lexinfo:case                            lexinfo:nominativeCase ;
-  lexinfo:number                          lexinfo:plural ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
 

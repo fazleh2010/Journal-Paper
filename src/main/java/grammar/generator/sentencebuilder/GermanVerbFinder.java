@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package util.io;
+package grammar.generator.sentencebuilder;
 
 import com.google.gdata.util.common.base.Pair;
 import grammar.datasets.annotated.AnnotatedVerb;
@@ -18,6 +18,8 @@ import java.util.List;
 import java.util.Map;
 import lexicon.LexicalEntryUtil;
 import util.exceptions.QueGGMissingFactoryClassException;
+import util.io.GenderUtils;
+import util.io.ParamterFinder;
 
 /**
  *
@@ -45,8 +47,8 @@ public class GermanVerbFinder implements TempConstants {
         System.out.println("mainVerbFlag::" + this.mainVerbFlag);
         System.out.println("trennVerbFlag::" + this.trennVerbFlag);
         System.out.println("auxilaryVerbFlag::" + this.auxilaryVerbFlag);
-         System.out.println("imperativeVerbFlag::" + this.imperativeVerbFlag);*/
-        //exit(1);
+        System.out.println("imperativeVerbFlag::" + this.imperativeVerbFlag);
+        exit(1);*/
 
         if (this.mainVerbFlag) {
             word = findMainVerb(attribute, reference);
@@ -54,7 +56,7 @@ public class GermanVerbFinder implements TempConstants {
             word = this.getTrennVerb();
         } else if (this.reflexiveFlag) {
             word = findMainVerb(attribute, reference);
-        } else if (this.auxilaryVerbFlag||this.imperativeVerbFlag) {
+        } else if (this.auxilaryVerbFlag || this.imperativeVerbFlag) {
             if (paramterFinder.getParameterLength() == 2 && paramterFinder.getTensePair().first != null) {
                 word = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil, paramterFinder.getReference(), paramterFinder.getTensePair().first, paramterFinder.getTensePair().second);
             } else if (paramterFinder.getParameterLength() == 3 && paramterFinder.getTensePair().first != null && paramterFinder.getNumberPair().first != null) {
@@ -65,18 +67,18 @@ public class GermanVerbFinder implements TempConstants {
             }
 
         }
-
     }
 
     private String findMainVerb(String attribute, String reference) throws QueGGMissingFactoryClassException {
+        String word = "XX";
 
         if (paramterFinder.getTensePair().second.contains(perfect)) {
-            return word = getPerfectMainVerb();
-        } else if (paramterFinder.getTensePair().second.contains(past) || paramterFinder.getTensePair().second.contains(present)) {
-            return word = getMainVerb();
+            word = getPerfectMainVerb();
+        } else {
+            word = this.getMainVerb(present);
         }
 
-        return "XX";
+        return word;
     }
 
     private boolean isTrennVerb(String word) {
@@ -98,19 +100,13 @@ public class GermanVerbFinder implements TempConstants {
         return null;
     }
 
-    private String getMainVerb() {
-        String word = "XX";
-        List<AnnotatedVerb> annotatedVerbs = lexicalEntryUtil.parseLexicalEntryToAnnotatedVerbs();
-
-        for (AnnotatedVerb annotatedVerb : annotatedVerbs) {
-            if (annotatedVerb.getTense().toString().contains(paramterFinder.getTensePair().second) && annotatedVerb.getPerson().toString().contains(paramterFinder.getPersonPair().second)) {
-                word = annotatedVerb.getWrittenRepValue();
-                break;
-            }
-
+    private String getMainVerb(String tense) throws QueGGMissingFactoryClassException {
+        String key=getMainVerbPresent(tense);
+        Pair<Boolean, String> pair = GenderUtils.getPerfecterbType(key, this.paramterFinder.getTensePair().second);
+        if (pair.first) {
+            return pair.second;
         }
-
-        return word;
+        return "XX";
     }
 
     private String getPerfectTrennVerb(String word) {
@@ -135,11 +131,10 @@ public class GermanVerbFinder implements TempConstants {
         }
     }
 
-    private String getTrennVerb() {
+    private String getTrennVerb() throws QueGGMissingFactoryClassException {
         String word = "XX";
         if (paramterFinder.getTensePair().second.contains(past) || paramterFinder.getTensePair().second.contains(present)) {
-            word = this.getMainVerb();
-
+            word = getMainVerb(past);
             String[] info = word.split(" ");
             if (paramterFinder.getReference().contains(TrennVerbPart1)) {
                 word = info[0];
@@ -159,19 +154,18 @@ public class GermanVerbFinder implements TempConstants {
         //System.out.println("reference::" + reference);
         //System.out.println("trennVerb hash::" + GenderUtils.trennVerb);
 
-        if (frameType.equals(FrameType.VP) || frameType.equals(FrameType.IPP)) {
+      
             if (reference.contains("component_be")
-                    ||reference.contains("component_haben")
-                    ||reference.contains("component_heißen")
-                    ||reference.contains("component_werden")) {
+                    || reference.contains("component_haben")
+                    || reference.contains("component_heißen")
+                    || reference.contains("component_werden")) {
                 this.auxilaryVerbFlag = true;
                 return;
-            }
-            else if(reference.contains("imperative_transitive")
-                    ||reference.contains("imperative_transitive_show")){
-                this.imperativeVerbFlag=true;
-            }
-            else if (isTrenn()) {
+            } else if (reference.contains("imperative_transitive")
+                    || reference.contains("imperative_transitive_show")
+                    ||reference.contains("imperative_verb")) {
+                this.imperativeVerbFlag = true;
+            } else if (isTrenn()) {
                 if (reference.contains(TrennVerb)) {
                     this.trennVerbFlag = true;
                 }
@@ -183,9 +177,7 @@ public class GermanVerbFinder implements TempConstants {
                 }
 
             }
-        } else {
-            this.auxilaryVerbFlag = true;
-        }
+        
 
     }
 
@@ -193,7 +185,7 @@ public class GermanVerbFinder implements TempConstants {
         return word;
     }
 
-    private String checkTrennOrPerfect(String word) {
+    private String checkTrennOrPerfect(String word) throws QueGGMissingFactoryClassException {
         String tense = this.paramterFinder.getTensePair().second;
         if (isTrennVerb(word)) {
             return word = this.getTrennVerb();
@@ -203,7 +195,7 @@ public class GermanVerbFinder implements TempConstants {
                 word = getPerfectMainVerb();
             } else if (this.mainVerbFlag && (tense.contains(present)
                     || tense.contains(past))) {
-                word = this.getMainVerb();
+                word = this.getMainVerb(tense);
             } else if (this.trennVerbFlag) {
                 return "XX";
             }

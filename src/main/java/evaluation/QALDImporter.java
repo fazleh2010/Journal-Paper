@@ -61,6 +61,12 @@ public class QALDImporter {
                                  .orElseThrow().string;
   }
   
+  public static String getQaldSparqlQuery(QALD.QALDQuestions qaldQuestions) {
+      String sparql=qaldQuestions.query.sparql;
+      return sparql;
+    
+  }
+  
   public static void main(String []args) throws IOException {
       
       QALDImporter qaldImporter=new QALDImporter();

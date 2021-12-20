@@ -19,6 +19,7 @@ public enum SubjectType {
   interrogativeDeterminerSingular,     // which
   interrogativeDeterminerPlural,     // which
   interrogativeTemporal,
+  interrogativePrep, //woran
   interrogativePlace;  // where
 
   /**

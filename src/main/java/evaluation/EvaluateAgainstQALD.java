@@ -612,6 +612,7 @@ public class EvaluateAgainstQALD {
 
         for (QALD.QALDQuestions qaldQuestions : qaldFile.questions) {
             String qaldQuestion = QALDImporter.getQaldQuestionString(qaldQuestions, languageCode);
+            String qaldSparqlQuery = QALDImporter.getQaldSparqlQuery(qaldQuestions);
             Map<String, QueGGinfomation> grammarEntities = this.matchedRealQuestions(qaldQuestion, realQuestions, similarityPercentage);
             EntryComparison entryComparison = new EntryComparison();
             String qaldSparql = qaldQuestions.query.sparql;
@@ -623,7 +624,8 @@ public class EvaluateAgainstQALD {
             qaldEntry.setSparql(qaldSparql);
 
             if (!grammarEntities.isEmpty()) {
-                QueGGinfomation queGGinfomation = this.getMostSimilarMatch(grammarEntities);
+                StringSimilarity stringSimilarity=new StringSimilarity();
+                QueGGinfomation queGGinfomation = stringSimilarity.getMostSimilarMatch(grammarEntities);
                 queGGEntry.setId(queGGinfomation.getId());
                 queGGEntry.setQuestions(queGGinfomation.getQuestion());
                 List<String> list = new ArrayList<String>();
@@ -744,10 +746,11 @@ public class EvaluateAgainstQALD {
                 sort.put(queGGinfomation.getQuestion(), value);
                 matchedQuestions.put(queGGinfomation.getQuestion(), queGGinfomation);
                 System.out.println("MATCHED: " + qaldsentence + ":" + queGGquestion + " cosineSimilarityPercentage::" + value);
+                //exit(1);
             }
             //System.out.println("MATCHED: "+qaldsentence + ":" + queGGquestion + " cosineSimilarityPercentage::" + value);
             //else
-            //   System.out.println("NOT MATCHED: " + qaldsentence + ":" + queGGquestion + " cosineSimilarityPercentage::" + value);        
+               //System.out.println("NOT MATCHED: " + qaldsentence + ":" + queGGquestion + " cosineSimilarityPercentage::" + value);        
         }
 
         return matchedQuestions;
@@ -792,22 +795,7 @@ public class EvaluateAgainstQALD {
     }
 
   
-    private QueGGinfomation getMostSimilarMatch(Map<String, QueGGinfomation> grammarEntities) throws Exception {
-        HashMap<String, Double> map = new HashMap<String, Double>();
-        for (String question : grammarEntities.keySet()) {
-            QueGGinfomation queGGinfomation = grammarEntities.get(question);
-            map.put(question, queGGinfomation.getValue());
-        }
-        ValueComparator bvc = new ValueComparator(map);
-        TreeMap<String, Double> sorted_map = new TreeMap<String, Double>(bvc);
-        sorted_map.putAll(map);
-        //System.out.println("sorted_map: " + sorted_map);
-        String key = sorted_map.firstKey();
-        Double value = sorted_map.get(key);
-        QueGGinfomation queGGinfomation = grammarEntities.get(key);
-        return queGGinfomation;
-
-    }
+   
 
     
 
