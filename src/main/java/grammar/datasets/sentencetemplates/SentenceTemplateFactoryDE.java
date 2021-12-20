@@ -226,37 +226,20 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
       )
     );
     
-     // TransitiveFrame
+
+    //TransitiveFrame boolean question
     sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(
-        /* //Wer moderiert die BBC Wildlife Specials?
-        "interrogativePronoun(nominativeCase:range:singular) verb(mainVerb:present:thirdPerson) object(domain)?",
-        //Wer moderiert die BBC Wildlife Specials?
-        "interrogativePronoun(nominativeCase:range:singular) verb(mainVerb:past:thirdPerson) object(domain)?",
-         //Welche Person moderiert die BBC Wildlife Specials?
-        "interrogativeDeterminer(nominativeCase:range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
-        //Wer hat Slack entwickelt?
-        "interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?",    
-        ///Welche Person hat Slack entwickelt?
-         "interrogativeDeterminer(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?" ,           
-        //Wer hat sich Family Guy ausgedacht?"
-         //"interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) pronoun(reflexive_pronoun) object(domain) verb(RefVerb:perfect:thridPerson)?",
-        // Trenn Verb
-         "interrogativePronoun(nominativeCase:range:singular) verb(TrennVerbPart1:past:thridPerson) object(domain) verb(TrennVerbPart2:past:thridPerson)?",
-         "interrogativePronoun(nominativeCase:range:singular) verb(component_be:present:singular) object(domain) verb(TrennVerb:perfect:thridPerson)?",
-         //Zeig mir das Buch, das Muhammad Ali geschrieben hat.
-         //"verb(imperative_transitive_show:present:singular) pronoun(object_pronoun) determiner(component_the_accusative:range:singular) noun(accusativeCase:singular), verb(mainVerb:perfect:thridPerson) verb(component_haben:present:singular)."
-           //Wieviel hat Pulp Fiction gekostet?
-         "interrogativeAmount(singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?"
-          //Zeig mir das Buch, das Muhammad Ali geschrieben hat.
-         //"verb(imperative_transitive_show:present:singular) pronoun(object_pronoun) determiner(component_the_accusative:range:singular) noun(accusativeCase:singular), verb(mainVerb:perfect:thridPerson) verb(component_haben:present:singular)."
-        */
-        ),
-       TransitiveFrame,
-        activeBoolean
+          //"Ist Rita Wilson die Frau von Tom Hanks?"
+          "verb(component_be:present:singular) subject(range) determiner(component_the_nominative:reference) noun(nominativeCase:singular) preposition adjunct(domain)?",
+          "verb(component_be:present:plural) subject(range) determiner(component_the_nominative:reference:plural) noun(nominativeCase:plural) preposition adjunct(domain)?"      
+                 ),
+        TransitiveFrame,
+        booleanQuestionDomainRange
       )
     );
+    
     
     sentenceTemplateRepository.add(
       createSentenceTemplate(language,
