@@ -1,0 +1,1914 @@
+{
+  "grammarEntries" : [ {
+    "id" : "1",
+    "lexicalEntryUri" : "http://localhost:8080#to_besteigen",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Mountain",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Person bestieg ($x | Mountain_NP)?", "Welcher Person hat ($x | Mountain_NP) bestiegen?", "Wieviel hat ($x | Mountain_NP) bestiegen?", "wer besteigen ($x | Mountain_NP)?", "wer bestieg ($x | Mountain_NP)?", "wer hat ($x | Mountain_NP) bestiegen?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/firstAscentPerson> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "2",
+    "lexicalEntryUri" : "http://localhost:8080#to_besteigen",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Mountain",
+    "frameType" : "VP",
+    "sentences" : [ "Welches Berg wird von ($x | Person_NP) bestiegen?", "was wird von ($x | Person_NP) bestiegen?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/firstAscentPerson> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "3",
+    "lexicalEntryUri" : "http://localhost:8080#to_entdecken",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "CelestialBody",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Person entdeckte ($x | CelestialBody_NP)?", "Welcher Person hat ($x | CelestialBody_NP) entdeckt?", "Wieviel hat ($x | CelestialBody_NP) entdeckt?", "wer entdecken ($x | CelestialBody_NP)?", "wer entdeckte ($x | CelestialBody_NP)?", "wer hat ($x | CelestialBody_NP) entdeckt?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/discoverer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "4",
+    "lexicalEntryUri" : "http://localhost:8080#to_entdecken",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "CelestialBody",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Himmelsk�rper wird von ($x | Person_NP) entdeckt?", "was wird von ($x | Person_NP) entdeckt?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/discoverer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "5",
+    "lexicalEntryUri" : "http://localhost:8080#to_entwickeln",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Software",
+    "returnType" : "Organisation",
+    "frameType" : "VP",
+    "sentences" : [ "Welche Gesellschaft entwickelte ($x | Software_NP)?", "Welche Gesellschaft hat ($x | Software_NP) entwickelt?", "Wieviel hat ($x | Software_NP) entwickelt?", "wer entwickeln ($x | Software_NP)?", "wer entwickelte ($x | Software_NP)?", "wer hat ($x | Software_NP) entwickelt?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "6",
+    "lexicalEntryUri" : "http://localhost:8080#to_entwickeln",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Organisation",
+    "returnType" : "Software",
+    "frameType" : "VP",
+    "sentences" : [ "Welche feminine wird von ($x | Organisation_NP) entwickelt?", "was wird von ($x | Organisation_NP) entwickelt?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "7",
+    "lexicalEntryUri" : "http://localhost:8080#to_�berspannen",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "River",
+    "returnType" : "Bridge",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Fluss hat ($x | River_NP) �berspannt?", "Welcher Fluss �berspannte ($x | River_NP)?", "Wieviel hat ($x | River_NP) �berspannt?", "was hat ($x | River_NP) �berspannt?", "was �berspannen ($x | River_NP)?", "was �berspannte ($x | River_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/crosses> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "8",
+    "lexicalEntryUri" : "http://localhost:8080#to_�berspannen",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Bridge",
+    "returnType" : "River",
+    "frameType" : "VP",
+    "sentences" : [ "Welche Br�cke wird vom ($x | Bridge_NP) �berspannt?", "was wird vom ($x | Bridge_NP) �berspannt?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/crosses> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "9",
+    "lexicalEntryUri" : "http://localhost:8080#to_erfinden",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "TelevisionShow",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Person erfand ($x | TelevisionShow_NP)?", "Welcher Person hat ($x | TelevisionShow_NP) erfunden?", "Wieviel hat ($x | TelevisionShow_NP) erfunden?", "wer erfand ($x | TelevisionShow_NP)?", "wer erfinden ($x | TelevisionShow_NP)?", "wer hat ($x | TelevisionShow_NP) erfunden?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "10",
+    "lexicalEntryUri" : "http://localhost:8080#to_erfinden",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "VP",
+    "sentences" : [ "Welche Fernsehsendung wird von ($x | Person_NP) erfunden?", "was wird von ($x | Person_NP) erfunden?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "11",
+    "lexicalEntryUri" : "http://localhost:8080#to_ausdenken",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "TelevisionShow",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentences" : [ "wer denkt ($x | TelevisionShow_NP) aus?", "wer ist ($x | TelevisionShow_NP) ausgedacht?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "12",
+    "lexicalEntryUri" : "http://localhost:8080#to_ausdenken",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "VP",
+    "sentences" : [ "Welche Fernsehsendung wird von ($x | Person_NP) ausgedacht?", "was wird von ($x | Person_NP) ausgedacht?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "13",
+    "lexicalEntryUri" : "http://localhost:8080#to_ausdenken",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "TelevisionShow",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentences" : [ "wer denkt ($x | TelevisionShow_NP) aus?", "wer ist ($x | TelevisionShow_NP) ausgedacht?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "14",
+    "lexicalEntryUri" : "http://localhost:8080#to_ausdenken",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "VP",
+    "sentences" : [ "Welche Fernsehsendung wird von ($x | Person_NP) ausgedacht?", "was wird von ($x | Person_NP) ausgedacht?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "15",
+    "lexicalEntryUri" : "http://localhost:8080#to_beeinflussen",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Person beeinflusste ($x | Person_NP)?", "Welcher Person hat ($x | Person_NP) beeinflusst?", "Wieviel hat ($x | Person_NP) beeinflusst?", "wer beeinflussen ($x | Person_NP)?", "wer beeinflusste ($x | Person_NP)?", "wer hat ($x | Person_NP) beeinflusst?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "16",
+    "lexicalEntryUri" : "http://localhost:8080#to_beeinflussen",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Person wird von ($x | Person_NP) beeinflusst?", "wer wird von ($x | Person_NP) beeinflusst?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "17",
+    "lexicalEntryUri" : "http://localhost:8080#to_komponieren",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Film",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Person hat ($x | Film_NP) komponiert?", "Welcher Person komponierte ($x | Film_NP)?", "Wieviel hat ($x | Film_NP) komponiert?", "wer hat ($x | Film_NP) komponiert?", "wer komponieren ($x | Film_NP)?", "wer komponierte ($x | Film_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "18",
+    "lexicalEntryUri" : "http://localhost:8080#to_komponieren",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Film",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Film wird von ($x | Person_NP) komponiert?", "was wird von ($x | Person_NP) komponiert?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "19",
+    "lexicalEntryUri" : "http://localhost:8080#to_drehen",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Film",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Person drehte ($x | Film_NP)?", "Welcher Person hat ($x | Film_NP) gedreht?", "Wieviel hat ($x | Film_NP) gedreht?", "wer drehen ($x | Film_NP)?", "wer drehte ($x | Film_NP)?", "wer hat ($x | Film_NP) gedreht?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "20",
+    "lexicalEntryUri" : "http://localhost:8080#to_drehen",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Film",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Film wird von ($x | Person_NP) gedreht?", "was wird von ($x | Person_NP) gedreht?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "21",
+    "lexicalEntryUri" : "http://localhost:8080#to_inspirieren",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Artist",
+    "returnType" : "Artist",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher K�nstler hat ($x | Artist_NP) insipriert?", "Welcher K�nstler inspirierte ($x | Artist_NP)?", "Wieviel hat ($x | Artist_NP) insipriert?", "wer hat ($x | Artist_NP) insipriert?", "wer inspirieren ($x | Artist_NP)?", "wer inspirierte ($x | Artist_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "22",
+    "lexicalEntryUri" : "http://localhost:8080#to_inspirieren",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Artist",
+    "returnType" : "Artist",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher K�nstler wird von ($x | Artist_NP) insipriert?", "wer wird von ($x | Artist_NP) insipriert?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "23",
+    "lexicalEntryUri" : "http://localhost:8080#to_moderate",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "TelevisionShow",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Person hat ($x | TelevisionShow_NP) moderiert?", "Welcher Person moderiert ($x | TelevisionShow_NP)?", "Wieviel hat ($x | TelevisionShow_NP) moderiert?", "wer hat ($x | TelevisionShow_NP) moderiert?", "wer moderieren ($x | TelevisionShow_NP)?", "wer moderiert ($x | TelevisionShow_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "24",
+    "lexicalEntryUri" : "http://localhost:8080#to_moderate",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "VP",
+    "sentences" : [ "Welche Fernsehsendung wird von ($x | Person_NP) moderiert?", "was wird von ($x | Person_NP) moderiert?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "25",
+    "lexicalEntryUri" : "http://localhost:8080#to_kosten",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Film",
+    "returnType" : "Number",
+    "frameType" : "VP",
+    "sentences" : [ " - hat ($x | Film_NP) gekostet?", " - kostete ($x | Film_NP)?", "Wieviel hat ($x | Film_NP) gekostet?", "was hat ($x | Film_NP) gekostet?", "was kosten ($x | Film_NP)?", "was kostete ($x | Film_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/budget> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "26",
+    "lexicalEntryUri" : "http://localhost:8080#to_kosten",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Number",
+    "returnType" : "Film",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Film wird von ($x | Number_NP) gekostet?", "was wird von ($x | Number_NP) gekostet?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/budget> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "27",
+    "lexicalEntryUri" : "http://localhost:8080#to_SchreibenTr_3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Film",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Person hat ($x | Film_NP) geschrieben?", "Welcher Person schrieb ($x | Film_NP)?", "Wieviel hat ($x | Film_NP) geschrieben?", "wer hat ($x | Film_NP) geschrieben?", "wer schreiben ($x | Film_NP)?", "wer schrieb ($x | Film_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "28",
+    "lexicalEntryUri" : "http://localhost:8080#to_SchreibenTr_3",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Film",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Film wird von ($x | Person_NP) geschrieben?", "was wird von ($x | Person_NP) geschrieben?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "29",
+    "lexicalEntryUri" : "http://localhost:8080#to_entwerfen",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Bridge",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Person entwarf ($x | Bridge_NP)?", "Welcher Person hat ($x | Bridge_NP) entworfen?", "Wieviel hat ($x | Bridge_NP) entworfen?", "wer entwarf ($x | Bridge_NP)?", "wer entwerfen ($x | Bridge_NP)?", "wer hat ($x | Bridge_NP) entworfen?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/architect> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "30",
+    "lexicalEntryUri" : "http://localhost:8080#to_entwerfen",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Bridge",
+    "frameType" : "VP",
+    "sentences" : [ "Welche Br�cke wird von ($x | Person_NP) entworfen?", "was wird von ($x | Person_NP) entworfen?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/architect> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "31",
+    "lexicalEntryUri" : "http://localhost:8080#to_malen",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Work",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Person hat ($x | Work_NP) gemalt?", "Welcher Person malte ($x | Work_NP)?", "Wieviel hat ($x | Work_NP) gemalt?", "wer hat ($x | Work_NP) gemalt?", "wer malen ($x | Work_NP)?", "wer malte ($x | Work_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/property/artist> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "32",
+    "lexicalEntryUri" : "http://localhost:8080#to_malen",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Work",
+    "frameType" : "VP",
+    "sentences" : [ "Welches Werk wird von ($x | Person_NP) gemalt?", "was wird von ($x | Person_NP) gemalt?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/property/artist> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "33",
+    "lexicalEntryUri" : "http://localhost:8080#to_spielen",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "FictionalCharacter",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Person hat ($x | FictionalCharacter_NP) gespielt?", "Welcher Person spielte ($x | FictionalCharacter_NP)?", "Wieviel hat ($x | FictionalCharacter_NP) gespielt?", "wer hat ($x | FictionalCharacter_NP) gespielt?", "wer spielen ($x | FictionalCharacter_NP)?", "wer spielte ($x | FictionalCharacter_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "34",
+    "lexicalEntryUri" : "http://localhost:8080#to_spielen",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "FictionalCharacter",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Charakter wird von ($x | Person_NP) gespielt?", "wer wird von ($x | Person_NP) gespielt?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "35",
+    "lexicalEntryUri" : "http://localhost:8080#to_verheiraten",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Person hat ($x | Person_NP) verheiratet?", "Welcher Person verheiratete ($x | Person_NP)?", "Wieviel hat ($x | Person_NP) verheiratet?", "wer hat ($x | Person_NP) verheiratet?", "wer verheiraten ($x | Person_NP)?", "wer verheiratete ($x | Person_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "36",
+    "lexicalEntryUri" : "http://localhost:8080#to_verheiraten",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Person wird mit ($x | Person_NP) verheiratet?", "wer wird mit ($x | Person_NP) verheiratet?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "37",
+    "lexicalEntryUri" : "http://localhost:8080#to_SchreibenTr_5",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Book",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Person hat ($x | Book_NP) geschrieben?", "Welcher Person schrieb ($x | Book_NP)?", "Wieviel hat ($x | Book_NP) geschrieben?", "wer hat ($x | Book_NP) geschrieben?", "wer schreiben ($x | Book_NP)?", "wer schrieb ($x | Book_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/author> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "38",
+    "lexicalEntryUri" : "http://localhost:8080#to_SchreibenTr_5",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Book",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Person wird von ($x | Person_NP) geschrieben?", "was wird von ($x | Person_NP) geschrieben?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/author> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "39",
+    "lexicalEntryUri" : "http://localhost:8080#to_SchreibenTr_2",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "TelevisionShow",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Person hat ($x | TelevisionShow_NP) geschrieben?", "Welcher Person schrieb ($x | TelevisionShow_NP)?", "Wieviel hat ($x | TelevisionShow_NP) geschrieben?", "wer hat ($x | TelevisionShow_NP) geschrieben?", "wer schreiben ($x | TelevisionShow_NP)?", "wer schrieb ($x | TelevisionShow_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/composer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "40",
+    "lexicalEntryUri" : "http://localhost:8080#to_SchreibenTr_2",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "VP",
+    "sentences" : [ "Welche Fernsehsendung wird von ($x | Person_NP) geschrieben?", "was wird von ($x | Person_NP) geschrieben?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/composer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "41",
+    "lexicalEntryUri" : "http://localhost:8080#to_gewinnen",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Scientist",
+    "returnType" : "Award",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Preis gewann ($x | Scientist_NP)?", "Welcher Preis hat ($x | Scientist_NP) gewonnen?", "Wieviel hat ($x | Scientist_NP) gewonnen?", "was gewann ($x | Scientist_NP)?", "was gewinnen ($x | Scientist_NP)?", "was hat ($x | Scientist_NP) gewonnen?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/award> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "42",
+    "lexicalEntryUri" : "http://localhost:8080#to_gewinnen",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Award",
+    "returnType" : "Scientist",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Wissenschaftlerin wird von ($x | Award_NP) gewonnen?", "wer wird von ($x | Award_NP) gewonnen?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/award> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "43",
+    "lexicalEntryUri" : "http://localhost:8080#to_SchreibenTr_1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Song",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Person hat ($x | Song_NP) geschrieben?", "Welcher Person schrieb ($x | Song_NP)?", "Wieviel hat ($x | Song_NP) geschrieben?", "wer hat ($x | Song_NP) geschrieben?", "wer schreiben ($x | Song_NP)?", "wer schrieb ($x | Song_NP)?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/writer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "44",
+    "lexicalEntryUri" : "http://localhost:8080#to_SchreibenTr_1",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Song",
+    "frameType" : "VP",
+    "sentences" : [ "Welches Lied wird von ($x | Person_NP) geschrieben?", "was wird von ($x | Person_NP) geschrieben?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/writer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "45",
+    "lexicalEntryUri" : "http://localhost:8080#to_gr�nden_2",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Website",
+    "returnType" : "Agent",
+    "frameType" : "VP",
+    "sentences" : [ "Welcher Agent gr�ndete ($x | Website_NP)?", "Welcher Agent hat ($x | Website_NP) gegr�ndet?", "Wieviel hat ($x | Website_NP) gegr�ndet?", "wer gr�nden ($x | Website_NP)?", "wer gr�ndete ($x | Website_NP)?", "wer hat ($x | Website_NP) gegr�ndet?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/author> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "46",
+    "lexicalEntryUri" : "http://localhost:8080#to_gr�nden_2",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Agent",
+    "returnType" : "Website",
+    "frameType" : "VP",
+    "sentences" : [ "Welche Webseite wird von ($x | Agent_NP) gegr�ndet?", "was wird von ($x | Agent_NP) gegr�ndet?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/author> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "47",
+    "lexicalEntryUri" : "http://localhost:8080#komponierened",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Film",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "48",
+    "lexicalEntryUri" : "http://localhost:8080#komponierened",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Person",
+    "returnType" : "Film",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "49",
+    "lexicalEntryUri" : "http://localhost:8080#entwickelned",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Software",
+    "returnType" : "Organisation",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "50",
+    "lexicalEntryUri" : "http://localhost:8080#entwickelned",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Software",
+    "returnType" : "Organisation",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/product> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "51",
+    "lexicalEntryUri" : "http://localhost:8080#beeinflussened",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "52",
+    "lexicalEntryUri" : "http://localhost:8080#beeinflussened",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "53",
+    "lexicalEntryUri" : "http://localhost:8080#entwerfened",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Bridge",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/architect> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "54",
+    "lexicalEntryUri" : "http://localhost:8080#entwerfened",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Person",
+    "returnType" : "Bridge",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/architect> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "55",
+    "lexicalEntryUri" : "http://localhost:8080#drehened",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Film",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "56",
+    "lexicalEntryUri" : "http://localhost:8080#drehened",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Person",
+    "returnType" : "Film",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "57",
+    "lexicalEntryUri" : "http://localhost:8080#ausdenkened",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "58",
+    "lexicalEntryUri" : "http://localhost:8080#ausdenkened",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "59",
+    "lexicalEntryUri" : "http://localhost:8080#�berspannened",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "River",
+    "returnType" : "Bridge",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/crosses> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "60",
+    "lexicalEntryUri" : "http://localhost:8080#�berspannened",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "River",
+    "returnType" : "Bridge",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/crosses> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "61",
+    "lexicalEntryUri" : "http://localhost:8080#besteigened",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Mountain",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/firstAscentPerson> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "62",
+    "lexicalEntryUri" : "http://localhost:8080#besteigened",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Person",
+    "returnType" : "Mountain",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/firstAscentPerson> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "63",
+    "lexicalEntryUri" : "http://localhost:8080#spielened",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "FictionalCharacter",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "64",
+    "lexicalEntryUri" : "http://localhost:8080#spielened",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Person",
+    "returnType" : "FictionalCharacter",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "65",
+    "lexicalEntryUri" : "http://localhost:8080#gr�nden_2ed",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Agent",
+    "returnType" : "Website",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/author> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "66",
+    "lexicalEntryUri" : "http://localhost:8080#gr�nden_2ed",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Agent",
+    "returnType" : "Website",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/author> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "67",
+    "lexicalEntryUri" : "http://localhost:8080#SchreibenTr_3ed",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Film",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "68",
+    "lexicalEntryUri" : "http://localhost:8080#SchreibenTr_3ed",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Person",
+    "returnType" : "Film",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "69",
+    "lexicalEntryUri" : "http://localhost:8080#SchreibenTr_2ed",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/composer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "70",
+    "lexicalEntryUri" : "http://localhost:8080#SchreibenTr_2ed",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/composer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "71",
+    "lexicalEntryUri" : "http://localhost:8080#SchreibenTr_1ed",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Song",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/writer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "72",
+    "lexicalEntryUri" : "http://localhost:8080#SchreibenTr_1ed",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Person",
+    "returnType" : "Song",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/writer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "73",
+    "lexicalEntryUri" : "http://localhost:8080#SchreibenTr_5ed",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Book",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/author> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "74",
+    "lexicalEntryUri" : "http://localhost:8080#SchreibenTr_5ed",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Person",
+    "returnType" : "Book",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/author> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "75",
+    "lexicalEntryUri" : "http://localhost:8080#erfindened",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "76",
+    "lexicalEntryUri" : "http://localhost:8080#erfindened",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "77",
+    "lexicalEntryUri" : "http://localhost:8080#verheiratened",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "78",
+    "lexicalEntryUri" : "http://localhost:8080#verheiratened",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "79",
+    "lexicalEntryUri" : "http://localhost:8080#entdeckened",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "CelestialBody",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/discoverer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "80",
+    "lexicalEntryUri" : "http://localhost:8080#entdeckened",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Person",
+    "returnType" : "CelestialBody",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/discoverer> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "81",
+    "lexicalEntryUri" : "http://localhost:8080#moderateed",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "82",
+    "lexicalEntryUri" : "http://localhost:8080#moderateed",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "83",
+    "lexicalEntryUri" : "http://localhost:8080#kostened",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Number",
+    "returnType" : "Film",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/budget> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "84",
+    "lexicalEntryUri" : "http://localhost:8080#kostened",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Number",
+    "returnType" : "Film",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/budget> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "85",
+    "lexicalEntryUri" : "http://localhost:8080#inspirierened",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Artist",
+    "returnType" : "Artist",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "86",
+    "lexicalEntryUri" : "http://localhost:8080#inspirierened",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Artist",
+    "returnType" : "Artist",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "87",
+    "lexicalEntryUri" : "http://localhost:8080#gewinnened",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Award",
+    "returnType" : "Scientist",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/award> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "88",
+    "lexicalEntryUri" : "http://localhost:8080#gewinnened",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Award",
+    "returnType" : "Scientist",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/ontology/award> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "89",
+    "lexicalEntryUri" : "http://localhost:8080#malened",
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Work",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/property/artist> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "90",
+    "lexicalEntryUri" : "http://localhost:8080#malened",
+    "language" : "DE",
+    "type" : "NP",
+    "bindingType" : "Person",
+    "returnType" : "Work",
+    "frameType" : "APP",
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp (triple ?subjOfProp <http://dbpedia.org/property/artist> ?objOfProp))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfProp"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  }, {
+    "id" : "91",
+    "lexicalEntryUri" : null,
+    "language" : "DE",
+    "type" : "SENTENCE",
+    "bindingType" : "Location",
+    "returnType" : "Location",
+    "frameType" : "FULL_DATASET",
+    "sentences" : [ "Where is $x located?" ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(join\n  (union\n    (bgp (triple ?subjOfProp <http://dbpedia.org/ontology/country> ?objOfProp))\n    (bgp (triple ?subjOfProp <http://dbpedia.org/ontology/location> ?objOfProp)))\n  (bgp\n    (triple ?objOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n    (triple ?subjOfProp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>)\n  ))\n",
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "subjOfProp"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : false
+  } ]
+}
