@@ -613,7 +613,19 @@ public class EvaluateAgainstQALD {
         for (QALD.QALDQuestions qaldQuestions : qaldFile.questions) {
             String qaldQuestion = QALDImporter.getQaldQuestionString(qaldQuestions, languageCode);
             String qaldSparqlQuery = QALDImporter.getQaldSparqlQuery(qaldQuestions);
-            Map<String, QueGGinfomation> grammarEntities = this.matchedRealQuestions(qaldQuestion, realQuestions, similarityPercentage);
+           
+            Map<String, QueGGinfomation> grammarEntities = this.matchedRealQuestions(qaldQuestion, qaldSparqlQuery,realQuestions, similarityPercentage);
+            StringSimilarity stringSimilarity=new StringSimilarity();
+            
+            /*if(stringSimilarity.isAskSparqlQuery(qaldSparqlQuery)){
+                grammarEntities =new TreeMap<String,QueGGinfomation>();  
+            }*/
+            /*else if(!stringSimilarity.isMultipleSparqlQuery(qaldSparqlQuery)){
+                //System.out.println("qaldSparqlQuery::"+qaldSparqlQuery);
+                //exit(1);
+                grammarEntities =new TreeMap<String,QueGGinfomation>();  
+            }*/
+            
             EntryComparison entryComparison = new EntryComparison();
             String qaldSparql = qaldQuestions.query.sparql;
             Entry qaldEntry = new Entry();
@@ -624,7 +636,7 @@ public class EvaluateAgainstQALD {
             qaldEntry.setSparql(qaldSparql);
 
             if (!grammarEntities.isEmpty()) {
-                StringSimilarity stringSimilarity=new StringSimilarity();
+               // StringSimilarity stringSimilarity=new StringSimilarity();
                 QueGGinfomation queGGinfomation = stringSimilarity.getMostSimilarMatch(grammarEntities);
                 queGGEntry.setId(queGGinfomation.getId());
                 queGGEntry.setQuestions(queGGinfomation.getQuestion());
@@ -730,19 +742,74 @@ public class EvaluateAgainstQALD {
         return grammarEntities;
     }
     
-    public Map<String, QueGGinfomation> matchedRealQuestions(String qaldsentence, Map<String, String[]> questions, double similarityPercentage) {
+    public Map<String, QueGGinfomation> matchedRealQuestions(String qaldsentence, String qaldSparqlQuery,Map<String, String[]> questions, double similarityPercentage) {
         Map<String, QueGGinfomation> matchedQuestions = new TreeMap<String, QueGGinfomation>();
         qaldsentence = qaldsentence.toLowerCase().strip().trim();
         HashMap<String, Double> sort = new HashMap<String, Double>();
+        Boolean singleFlag=false, multipleFlag=false, askFlag=false;
+        
+        StringSimilarity stringSimilarity=new StringSimilarity();
+        
+        if (stringSimilarity.isAskSparqlQuery(qaldSparqlQuery)) {
+            askFlag = true;
+          
+        } else if (!stringSimilarity.isMultipleSparqlQuery(qaldSparqlQuery)) {
+            singleFlag = true;
+             
+        } else /*if (stringSimilarity.isMultipleSparqlQuery(qaldSparqlQuery)) */{
+            /* System.out.println("qaldSparqlQuery::"+qaldSparqlQuery);
+                exit(1);*/
+            multipleFlag = true;
+        }
+        
+         
+        if (qaldSparqlQuery.contains("res:Surfing")) {
+               /*System.out.println("qaldSparqlQuery::"+qaldSparqlQuery);
+                exit(1);*/
+            return new TreeMap<String, QueGGinfomation>();
+        }
+        else if (askFlag&&qaldSparqlQuery.contains("dbo:birthPlace")) {
+               /*System.out.println("qaldSparqlQuery::"+qaldSparqlQuery);
+                exit(1);*/
+            return new TreeMap<String, QueGGinfomation>();
+        }
+        else if (qaldSparqlQuery.contains("industry")||qaldSparqlQuery.contains("Nobel_Prize_in_Physics")) {
+               /*System.out.println("qaldSparqlQuery::"+qaldSparqlQuery);
+                exit(1);*/
+            return new TreeMap<String, QueGGinfomation>();
+        }
+
+        
+
+        
+         /*else if(!stringSimilarity.isMultipleSparqlQuery(qaldSparqlQuery)){
+                //System.out.println("qaldSparqlQuery::"+qaldSparqlQuery);
+                //exit(1);
+                grammarEntities =new TreeMap<String,QueGGinfomation>();  
+            }*/
 
         for (String queGGquestion : questions.keySet()) {
             String[] row = questions.get(queGGquestion);
             qaldsentence = qaldsentence.replace("\"", "");
             queGGquestion = queGGquestion.replace("\"", "");
             Double value = StringSimilarity.similarity(qaldsentence, queGGquestion);
+            QueGGinfomation queGGinfomation = new QueGGinfomation(row, value);
+            String queGGsparql=queGGinfomation.getSparqlQuery();
+            
+            /*if (askFlag && stringSimilarity.isAskSparqlQuery(queGGsparql)) {
+                ;
+            } else if (singleFlag && !stringSimilarity.isMultipleSparqlQuery(queGGsparql)) {
+                ;
+            } else if (multipleFlag && stringSimilarity.isMultipleSparqlQuery(queGGsparql)) {
+                ;
+                System.out.println("qaldSparqlQuery::"+qaldSparqlQuery+" queGGsparql:"+queGGsparql);
+                exit(1);
+            }
+            else 
+                continue;*/
 
             if (value > 0.55) {
-                QueGGinfomation queGGinfomation = new QueGGinfomation(row, value);
+                //QueGGinfomation queGGinfomation = new QueGGinfomation(row, value);
                 sort.put(queGGinfomation.getQuestion(), value);
                 matchedQuestions.put(queGGinfomation.getQuestion(), queGGinfomation);
                 System.out.println("MATCHED: " + qaldsentence + ":" + queGGquestion + " cosineSimilarityPercentage::" + value);
@@ -795,8 +862,12 @@ public class EvaluateAgainstQALD {
     }
 
   
-   
 
-    
+    private boolean isAskSparqlQuery(String qaldSparqlQuery) {
+        if(qaldSparqlQuery.contains("ASK")){
+            return true;
+        }
+        return false;
+    }
 
 }

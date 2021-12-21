@@ -7,7 +7,7 @@
   "similarityThresold" : 70.0,
   "csvToTurtle" : false,
   "turtleToProtoType" : false,
-  "protoTypeToQuestion" : true,
+  "protoTypeToQuestion" : false,
   "evalution" : true
 }
 

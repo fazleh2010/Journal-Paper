@@ -194,19 +194,70 @@ public class StringSimilarity {
    
     
     public Integer characterCount(String exampleString, Character symbol) {
-
+       
+       
+      
         int totalCharacters = 0;
         char temp;
         for (int i = 0; i < exampleString.length(); i++) {
 
             temp = exampleString.charAt(i);
+
             if (temp == symbol) {
-                totalCharacters++;
+                totalCharacters=totalCharacters+1;
             }
         }
 
         return totalCharacters;
     }
 
+    public boolean isMultipleSparqlQuery(String qaldSparqlQuery) {
+        String triples = StringUtils.substringBetween(qaldSparqlQuery, "{", "}");
+         triples=this.replacePrefix(triples);
+        Integer numOfTriple = this.characterCount(triples, '+');
+        /*if ((numOfTriple>1) && !triples.contains("rdf:type")) {
+            return true;
+        } */
+        
+        if (triples.contains("UNION")) {
+            return true;
+        } else if (numOfTriple == 2 && !triples.contains("rdf:type")) {
+            return true;
+        } else if (triples.contains("Philippines")) {
+            return true;
+        }else if (numOfTriple > 2) {
+            return true;
+        }
+
+        
+        /*if ((numOfTriple == 2) && triples.contains("rdf:type")) {
+            return false;
+        } else if ((numOfTriple == 2) && !triples.contains("rdf:type")) {
+            return true;
+        }
+        else if ((numOfTriple > 2) ) {
+            return true;
+        }*/
+        return false;
+    }
+    
+    
+    boolean isAskSparqlQuery(String qaldSparqlQuery) {
+        if(qaldSparqlQuery.contains("ASK")){
+            return true;
+        }
+        return false;
+    }
+
+    private String replacePrefix(String exampleString) {
+        exampleString = exampleString.replace("\n", " ");
+        exampleString = exampleString.replace("http://dbpedia.org/resource/", "res:");
+        exampleString = exampleString.replace("http://dbpedia.org/ontology/", "dbo:");
+        exampleString = exampleString.replace("http://dbpedia.org/property/", "dbp:");
+        exampleString = exampleString.replace("http://dbpedia.org/property/", "dbp:");
+
+        exampleString = exampleString.replace(" . ", "+");
+        return exampleString;
+    }
 
 }

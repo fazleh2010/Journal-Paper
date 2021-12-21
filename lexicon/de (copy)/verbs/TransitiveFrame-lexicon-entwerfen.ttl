@@ -1,0 +1,91 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :to_entwerfen ;
+  lemon:entry    :entwerfened ;
+  lemon:entry    :form_entwerfen_preposition .
+
+:to_entwerfen a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_entwerfen ;
+  lemon:otherForm      :form_entwerfens ;
+  lemon:otherForm      :form_entwerfened ;
+  lemon:sense          :entwerfen_sense_1 ;
+  lemon:synBehavior    :entwerfen_frame_transitive .
+
+:form_entwerfen a         lemon:Form ;
+  lemon:writtenRep     "entwerfen"@de ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_entwerfens a    lemon:Form ;
+  lemon:writtenRep "entwirft"@de ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+
+:form_entwerfens a    lemon:Form ;
+  lemon:writtenRep "entwarf"@de ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_entwerfened a   lemon:Form ;
+  lemon:writtenRep "entworfen"@de ;
+  lexinfo:tense    lexinfo:perfect ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:entwerfen_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :entwerfen_subj ;
+  lexinfo:directObject     :entwerfen_obj .
+
+:entwerfen_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :entwerfen_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/architect> ;
+  lemon:subjOfProp  :entwerfen_obj ;
+  lemon:objOfProp   :entwerfen_subj ;
+  lemon:condition   :entwerfen_sense_1_condition .
+
+
+:entwerfen_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Bridge> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:entwerfened a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_entwerfened_canonical ;
+  lemon:otherForm      :form_entwerfened_by ;
+  lemon:synBehavior    :entwerfened_frame_adjectivepp ;
+  lemon:sense          :entwerfened_ontomap .
+
+:form_entwerfened_canonical a lemon:Form ;
+  lemon:writtenRep         "entwerfen"@de .
+
+:form_entwerfened_by a    lemon:Form ;
+  lemon:writtenRep     "entwerfen"@de ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:entwerfened_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :entwerfened_subj ;
+  lexinfo:prepositionalAdjunct :entwerfened_obj .
+
+:entwerfened_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :entwerfened_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/architect> ;
+  lemon:subjOfProp  :entwerfened_subj ;
+  lemon:objOfProp   :entwerfened_obj ;
+  lemon:condition   :entwerfen_sense_1_condition .
+:entwerfened_obj lemon:marker :von .
+
+:arg2 lemon:marker :form_entwerfen_form_preposition .
+
+## Prepositions ##
+
+:form_entwerfen_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "von"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

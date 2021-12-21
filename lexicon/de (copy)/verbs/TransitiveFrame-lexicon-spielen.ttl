@@ -1,0 +1,91 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :to_spielen ;
+  lemon:entry    :spielened ;
+  lemon:entry    :form_spielen_preposition .
+
+:to_spielen a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_spielen ;
+  lemon:otherForm      :form_spielens ;
+  lemon:otherForm      :form_spielened ;
+  lemon:sense          :spielen_sense_1 ;
+  lemon:synBehavior    :spielen_frame_transitive .
+
+:form_spielen a         lemon:Form ;
+  lemon:writtenRep     "spielen"@de ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_spielens a    lemon:Form ;
+  lemon:writtenRep "spielt"@de ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+
+:form_spielens a    lemon:Form ;
+  lemon:writtenRep "spielte"@de ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_spielened a   lemon:Form ;
+  lemon:writtenRep "gespielt"@de ;
+  lexinfo:tense    lexinfo:perfect ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:spielen_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :spielen_subj ;
+  lexinfo:directObject     :spielen_obj .
+
+:spielen_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :spielen_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/portrayer> ;
+  lemon:subjOfProp  :spielen_obj ;
+  lemon:objOfProp   :spielen_subj ;
+  lemon:condition   :spielen_sense_1_condition .
+
+
+:spielen_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/FictionalCharacter> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:spielened a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_spielened_canonical ;
+  lemon:otherForm      :form_spielened_by ;
+  lemon:synBehavior    :spielened_frame_adjectivepp ;
+  lemon:sense          :spielened_ontomap .
+
+:form_spielened_canonical a lemon:Form ;
+  lemon:writtenRep         "spielen"@de .
+
+:form_spielened_by a    lemon:Form ;
+  lemon:writtenRep     "spielen"@de ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:spielened_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :spielened_subj ;
+  lexinfo:prepositionalAdjunct :spielened_obj .
+
+:spielened_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :spielened_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/portrayer> ;
+  lemon:subjOfProp  :spielened_subj ;
+  lemon:objOfProp   :spielened_obj ;
+  lemon:condition   :spielen_sense_1_condition .
+:spielened_obj lemon:marker :von .
+
+:arg2 lemon:marker :form_spielen_form_preposition .
+
+## Prepositions ##
+
+:form_spielen_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "von"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
