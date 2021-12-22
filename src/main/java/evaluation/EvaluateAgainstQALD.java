@@ -763,21 +763,19 @@ public class EvaluateAgainstQALD {
         }
         
          
-        if (qaldSparqlQuery.contains("res:Surfing")) {
-               /*System.out.println("qaldSparqlQuery::"+qaldSparqlQuery);
-                exit(1);*/
+        /*if (multipleFlag&&qaldSparqlQuery.contains("res:Surfing")) {
+               
             return new TreeMap<String, QueGGinfomation>();
         }
         else if (askFlag&&qaldSparqlQuery.contains("dbo:birthPlace")) {
-               /*System.out.println("qaldSparqlQuery::"+qaldSparqlQuery);
-                exit(1);*/
+              
             return new TreeMap<String, QueGGinfomation>();
         }
-        else if (qaldSparqlQuery.contains("industry")||qaldSparqlQuery.contains("Nobel_Prize_in_Physics")) {
-               /*System.out.println("qaldSparqlQuery::"+qaldSparqlQuery);
-                exit(1);*/
+        else if (multipleFlag&&qaldSparqlQuery.contains("industry")||qaldSparqlQuery.contains("Nobel_Prize_in_Physics")||qaldSparqlQuery.contains("Mickey_Rourke")||qaldSparqlQuery.contains("Nobel_Peace_Prize")) {
+               System.out.println("qaldSparqlQuery::"+qaldSparqlQuery);
+                exit(1);
             return new TreeMap<String, QueGGinfomation>();
-        }
+        }*/
 
         
 

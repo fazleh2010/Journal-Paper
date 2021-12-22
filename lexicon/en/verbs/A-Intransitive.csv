@@ -1,0 +1,2 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural
+flow_through_1,verb,flow,flows,flowed,through,IntransitivePPFrame,domain,range,1,dbo:city,dbo:River,dbo:City,river,rivers,city,cities

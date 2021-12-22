@@ -57,11 +57,16 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         List.of(
           //What is the capital of Cameron?
           "interrogativePronoun(range:singular) verb(component_be:present:singular) determiner(component_the) noun(singular) preposition adjunct(domain)?",
-          "interrogativePronoun(range:singular) verb(component_be:present:plural) determiner(component_the) noun(plural) preposition adjunct(domain)?"
-
+          "interrogativePronoun(range:singular) verb(component_be:present:plural) determiner(component_the) noun(plural) preposition adjunct(domain)?",
+          "interrogativePronoun(range:singular) verb(component_be:past:singular) determiner(component_the) noun(singular) preposition adjunct(domain)?",
+          "interrogativePronoun(range:singular) verb(component_be:past:plural) determiner(component_the) noun(plural) preposition adjunct(domain)?",
           //"interrogativePronoun verb(component_be:present:singular) determiner(component_the) noun(singular) preposition adjunct(domain)?",
           //"Who is the mayor of Paris?",
-          //"interrogativePronoun verb(component_be:present:singular) determiner(component_the) noun(singular) preposition adjunct(domain)?"        
+          "interrogativePronoun verb(component_be:present:singular) determiner(component_the) noun(singular) preposition adjunct(domain)?", 
+          "interrogativePronoun verb(component_be:past:singular) determiner(component_the) noun(singular) preposition adjunct(domain)?",   
+           //List all the musicals with music by Elton John.
+          "verb(imperative_verb:present:plural) determiner(all) determiner(component_the) noun(range:plural) noun(singular) preposition adjunct(domain)." 
+
         ),
         NounPPFrame,
         whQuestion
@@ -177,11 +182,14 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       createSentenceTemplate(language,
         List.of(
          //Who presented BBC Wildlife Specials?
+        "interrogativePronoun(range) verb(mainVerb:preseant:thirdPerson) object(domain)?",
         "interrogativePronoun(range) verb(mainVerb:past:thirdPerson) object(domain)?",
-         //Which Person presented BBC Wildlife Specials?
+        //Which Person presented BBC Wildlife Specials?
+        "interrogativeDeterminer(range:singular) verb(mainVerb:present:thridPerson) object(domain)?",
         "interrogativeDeterminer(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
         //Which Persons presented BBC Wildlife Specials?
-        "interrogativeDeterminer(range:plural) verb(mainVerb:past:thridPerson) object(domain)?"      
+        "interrogativeDeterminer(range:plural) verb(mainVerb:past:thridPerson) object(domain)?",
+        "interrogativeDeterminer(range:plural) verb(mainVerb:present:thridPerson) object(domain)?"      
         ),
        TransitiveFrame,
         active

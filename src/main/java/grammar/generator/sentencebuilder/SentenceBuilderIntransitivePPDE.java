@@ -68,7 +68,7 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
 
         if (this.frameType.equals(FrameType.NPP)) {
             sentences = nounPPframeSentence(bindingVariable, lexicalEntryUtil, whQuestion);
-             //System.out.println(sentences);
+             System.out.println(sentences);
              //exit(1);
         } else if (this.frameType.equals(FrameType.VP)) {
             SelectVariable selectVariable = this.lexicalEntryUtil.getSelectVariable();
@@ -103,7 +103,7 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
         List<String> sentences = new ArrayList<String>();
         if (this.frameType.equals(FrameType.NPP)) {
             sentences = nounPhrase(bindingVariable, lexicalEntryUtil);
-            //System.out.println(sentences);
+            System.out.println(sentences);
             //exit(1);
         } else if (this.frameType.equals(FrameType.VP)) {
             SelectVariable selectVariable = this.lexicalEntryUtil.getSelectVariable();
@@ -387,7 +387,8 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
             if (!validFlag) {
                 continue;
             }
-            sentences.add(str.stripTrailing());
+            str=str.stripTrailing().replace("_", " ");
+            sentences.add(str);
         }
         return new ArrayList<String>(sentences);
 

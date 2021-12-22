@@ -10,7 +10,7 @@
   lemon:entry    :component_be ;
   lemon:entry    :component_do ;
   lemon:entry    :component_aux_object_past ;
-  lemon:entry    :component_imperative_plural ;
+  lemon:entry    :imperative_verb ;
   lemon:entry    :component_imperative_transitive ;
   lemon:entry    :component_have ;
   lemon:entry    :component_the ;
@@ -34,6 +34,7 @@
   lemon:entry    :to ;
   lemon:entry    :as ;
   lemon:entry    :since ;
+  lemon:entry    :all ;
   lemon:entry    :until .
 
 :component_be a        lemon:LexicalEntry ;
@@ -78,10 +79,14 @@
   lexinfo:number                          lexinfo:plural ] .
 
 
-:component_imperative_plural a        lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "List"@en ;
+:imperative_verb a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "List"@de ;
   lexinfo:verbFormMood                    lexinfo:infinitive ] ;
-  lemon:otherForm      [ lemon:writtenRep "List"@en ;
+  lemon:otherForm      [ lemon:writtenRep "List"@de ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "List"@de ;
   lexinfo:tense                           lexinfo:present ;
   lexinfo:person                          lexinfo:secondPerson ;
   lexinfo:number                          lexinfo:plural ] ;
@@ -154,6 +159,12 @@
 :component_an a        lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "an"@en ] ;
   lexinfo:partOfSpeech lexinfo:determiner .
+
+## other ##
+
+:all a                 lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "all"@en ] ;
+  lexinfo:partOfSpeech lexinfo:particle .
 
 ## Prepositions ##
 

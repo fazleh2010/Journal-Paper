@@ -98,6 +98,23 @@ public class GenderUtils implements TempConstants{
         }
         return pair;
     }
+    
+    public static String getConditionLabelManually(String domainOrRange, String numberType,String subjectUri,String objectUri) {
+        String word="XX";
+                  System.out.println("domainOrRange::"+domainOrRange);
+                     
+
+        if (domainOrRange.contains(domain) && numberType.contains(singular)) {
+            word= getWrittenFormSingular(subjectUri);
+        } else if (domainOrRange.contains(domain) && numberType.contains(plural)) {
+            word=  getWrittenFormPlural(subjectUri);
+        } else if (domainOrRange.contains(range) && numberType.contains(singular)) {
+            word=  getWrittenFormSingular(objectUri);
+        } else if (domainOrRange.contains(range) && numberType.contains(plural)){
+            word=  getWrittenFormPlural(objectUri);
+        }
+        return word;
+    }
 
     /*public static Boolean isTrennVerbType(String verb) {
         if (trennVerbType.containsKey(verb)) {

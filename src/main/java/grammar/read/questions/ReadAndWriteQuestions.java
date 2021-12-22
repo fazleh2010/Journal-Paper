@@ -114,14 +114,19 @@ public class ReadAndWriteQuestions {
             
             for (GrammarEntryUnit grammarEntryUnit : grammarEntries.getGrammarEntries()) {
                 String uri = null;
+                //System.out.println("uri::"+uri);
+                //System.out.println("existingEntries::"+existingEntries);
                  
                 if (grammarEntryUnit.getLexicalEntryUri() != null) {
                     uri = grammarEntryUnit.getLexicalEntryUri().toString();
                     if (existingEntries.isEmpty()&&existingEntries.contains(uri)) {
+                      
                         continue;
                     }
                    
                 }
+                
+                //exit(1);
                 
                 /* if(!grammarEntryUnit.getBindingType().contains("date")){
                    continue; 

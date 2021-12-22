@@ -108,6 +108,7 @@ public class GermanTurtle extends TurtleCreation implements TutleConverter {
 
     private void setSyntacticFrame(String key, List<String[]> rows) throws Exception {
         String syntacticFrame = super.findSyntacticFrame(rows);
+        key=key.trim().strip().stripLeading().stripTrailing();
         if (syntacticFrame.equals(NounPPFrame)) {
             setNounPPFrame(key, rows, syntacticFrame);
         } else if (syntacticFrame.equals(TransitiveFrame)) {

@@ -103,6 +103,7 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
 
     private void setSyntacticFrame(String key, List<String[]> rows) throws Exception {
         String syntacticFrame = findSyntacticFrame(rows);
+        key=key.trim().strip().stripLeading().stripTrailing();
 
         if (syntacticFrame.equals(NounPPFrame)) {
             setNounPPFrame(key, rows, syntacticFrame);
@@ -124,8 +125,8 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
     public void setNounPPFrame(String key, List<String[]> rows, String syntacticFrame) {
         this.setLemonEntryId(key);
 
-        List<Tupples> tupples = new ArrayList<Tupples>();
-        Integer index = 0;
+        List<Tupples> tupplesList = new ArrayList<Tupples>();
+        Integer index = 0;String copulativeArg=null;
         for (String[] row : rows) {
             if (index == 0) {
                 this.partOfSpeech = nounPPFrameCsv.getPartOfSpeechIndex(row);
@@ -133,18 +134,21 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
                 this.writtenForm_plural = nounPPFrameCsv.getWrittenFormPluralIndex(row);
                 this.preposition = nounPPFrameCsv.getPrepositionIndex(row);
             }
-            tupples.add(new Tupples(this.lemonEntry,
+            copulativeArg=nounPPFrameCsv.getCopulativeArgIndex(row);
+            Tupples tupple = new Tupples(this.lemonEntry,
                     index + 1,
-                    this.setReference(nounPPFrameCsv.getReferenceIndex(row)),
-                    this.setReference(nounPPFrameCsv.getDomainIndex(row)),
-                    this.setReference(nounPPFrameCsv.getRangeIndex(row))));
+                    setReference(nounPPFrameCsv.getReferenceIndex(row)),
+                    setReference(nounPPFrameCsv.getDomainIndex(row)),
+                    setReference(nounPPFrameCsv.getRangeIndex(row)));
+            tupplesList.add(tupple);
             index = index + 1;
+             nounPPFrameCsv.setArticle(tupple, row);
         }
         this.turtleString
                 = nounPPFrameCsv.getNounPPFrameHeader(this.lemonEntry, this.preposition, this.language)
-                + nounPPFrameCsv.getIndexing(this.lemonEntry, tupples)
-                + nounPPFrameCsv.getWrittenTtl(this.lemonEntry, this.writtenFormInfinitive, this.writtenFormInfinitive,this.writtenForm_plural,this.language)
-                + nounPPFrameCsv.getSenseDetail(tupples, NounPPFrame, this.lemonEntry, this.writtenFormInfinitive, this.preposition, this.language)
+                + nounPPFrameCsv.getIndexing(this.lemonEntry, tupplesList)
+                + nounPPFrameCsv.getWrittenTtl(this.lemonEntry, this.writtenFormInfinitive, this.writtenFormInfinitive,this.writtenForm_plural,this.language,copulativeArg)
+                + nounPPFrameCsv.getSenseDetail(tupplesList, NounPPFrame, this.lemonEntry, this.writtenFormInfinitive, this.preposition, this.language)
                 + nounPPFrameCsv.getPreposition(this.lemonEntry,this.preposition, language);
         this.tutleFileName = getFileName(syntacticFrame);
     }
@@ -153,6 +157,8 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
     public void setTransitiveFrame(String key, List<String[]> rows, String syntacticFrame) {
         this.setLemonEntryId(key);
         List<Tupples> tupples = new ArrayList<Tupples>();
+         String subject=null;
+         
         Integer index = 0;
         for (String[] row : rows) {
             if (index == 0) {
@@ -172,12 +178,13 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
             transitiveFrameCsv.setArticle(tupple, row);
             tupples.add(tupple);
             index = index + 1;
+            subject=  transitiveFrameCsv.getSubjectIndex(row);
 
         }
         this.turtleString
                 = transitiveFrameCsv.getHeader(this.lemonEntry, this.preposition, this.language)
                 + transitiveFrameCsv.getSenseIndexing(tupples, lemonEntry)
-                + transitiveFrameCsv.getWritten(this.lemonEntry, this.writtenFormInfinitive, this.writtenForm3rdPerson, this.writtenFormPast, this.language)
+                + transitiveFrameCsv.getWritten(this.lemonEntry, this.writtenFormInfinitive, this.writtenForm3rdPerson, this.writtenFormPast, this.language,subject)
                 + transitiveFrameCsv.getSenseDetail(tupples, syntacticFrame, this.lemonEntry, this.writtenFormInfinitive, this.preposition, this.language)
                 + transitiveFrameCsv.getPrepostion(this.lemonEntry,this.preposition, this.language);
         this.tutleFileName = getFileName(syntacticFrame);

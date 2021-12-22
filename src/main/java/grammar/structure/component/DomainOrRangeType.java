@@ -83,7 +83,11 @@ public enum DomainOrRangeType {
     Game(List.of(URI.create(DBO.getUri() + "Game"))),
     CelestialBody(List.of(URI.create(DBO.getUri() + "CelestialBody"))),
     Planet(List.of(URI.create(DBO.getUri() + "Planet"))),
- 
+    Publisher(List.of(URI.create(DBO.getUri() + "Publisher"))),
+    Loyalty(List.of(URI.create(DBO.getUri() + "Loyalty"))),
+    Color(List.of(URI.create(DBO.getUri() + "Color"))),
+    
+         
     Name(List.of(
             URI.create(DBO.getUri() + "GivenName"),
             URI.create(DBO.getUri() + "Name")
@@ -175,10 +179,6 @@ public enum DomainOrRangeType {
     Software(List.of(
             URI.create(DBO.getUri() + "Software"),
             URI.create(DBO.getUri() + "VideoGame")
-    )),
-    Publisher(List.of(
-            URI.create(DBO.getUri() + "Book"),
-            URI.create(DBO.getUri() + "Publisher")
     )),
     ProgrammingLanguage(List.of(URI.create(DBO.getUri() + "ProgrammingLanguage"))),
     Grape(List.of(URI.create(DBO.getUri() + "Grape"))),

@@ -803,7 +803,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What did Bruce Carver die from?",
+					"string": "What did Abraham Lincoln die from?",
 					"keywords": "Bruce Carver, die"
 				},
 				{
@@ -813,7 +813,7 @@
 				},
 				{
 					"language": "de",
-					"string": "Woran ist Bruce Carver gestorben?",
+					"string": "Woran ist Abraham Lincoln gestorben?",
 					"keywords": "Bruce Carver, gestorben an"
 				},
 				{
@@ -843,7 +843,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nSELECT DISTINCT ?uri\nWHERE {\n        res:Bruce_Carver dbo:deathCause ?uri .     \n}"
+				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nSELECT DISTINCT ?uri\nWHERE {\n        res:Abraham Lincoln dbo:deathCause ?uri .     \n}"
 			},
 			"answers": [{
 				"head": {
@@ -935,8 +935,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which cities does the Weser flow through?",
-					"keywords": "Weser, flow through, city"
+					"string": "Which cities does the Zeravshan flow through?",
+					"keywords": "Zeravshan, flow through, city"
 				},
 				{
 					"language": "pt_BR",
@@ -950,8 +950,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Durch welche Städte fließt die Weser?",
-					"keywords": "Weser, fließen, Stadt"
+					"string": "Durch welche Städte fließt die Zeravshan?",
+					"keywords": "Zeravshan, fließen, Stadt"
 				},
 				{
 					"language": "es",
@@ -985,7 +985,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE {  <http://dbpedia.org/resource/Weser> <http://dbpedia.org/ontology/city> ?uri . } "
+				"sparql": "SELECT DISTINCT ?uri WHERE {  <http://dbpedia.org/resource/Zeravshan_(river)> <http://dbpedia.org/ontology/city> ?uri . } "
 			},
 			"answers": [{
 				"head": {

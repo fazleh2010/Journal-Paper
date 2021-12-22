@@ -32,6 +32,7 @@ public interface TempConstants {
     public static String interrogativeDeterminer = "interrogativeDeterminer";
     public static String mainVerb = "mainVerb";
     public static String TrennVerb = "TrennVerb";
+     public static String imperative="imperative";
     public static String auxVerb = "auxVerb";
     public static String RefVerb = "RefVerb";
     public static String TrennVerbPart2 = "TrennVerbPart2";
