@@ -1,0 +1,4 @@
+LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingularForm,domainWrittenPluralForm,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
+height_of_1,noun,height,-,of,NounPPFrame,range,domain,1,dbo:height,dbo:Model,xsd:double,model,models,-,-
+populationTotal-of,noun,total population,-,of,NounPPFrame,domain,range,1,dbo:populationTotal,dbo:Place,xsd:nonNegativeInteger,place,places,-,-
+birthYear_of,noun,birth year,-,of,NounPPFrame,range,domain,1,dbo:birthYear,dbo:Person,xsd:gYear,person,persons,year,-

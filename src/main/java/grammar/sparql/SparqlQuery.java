@@ -52,24 +52,26 @@ public class SparqlQuery {
     private Boolean online=false;
 
     
-    public SparqlQuery(String domainEntityUrl, String sparqlQueryOrg, String rangeEntityUrl, String type, String returnType, String language, String endpoint, Boolean online, QueryType queryType) {
+    public SparqlQuery(String rdfProperty, String className, String domainEntityUrl, String sparqlQueryOrg, String rangeEntityUrl, String type, String returnType, String language, String endpoint, Boolean online, QueryType queryType) {
         this.endpoint = endpoint;
         this.type = type;
         Integer index = isSimpleOrComposite(sparqlQueryOrg);
-        
+
         if (endpoint.contains("dbpedia.org")) {
             if (type.contains(FIND_ANY_ANSWER) && index == 1) {
                 String property = StringUtils.substringBetween(sparqlQueryOrg, "<", ">");
                 if (queryType.equals(QueryType.SELECT)) {
                     if (returnType.contains(RETURN_TYPE_OBJECT)) {
-                        sparqlQuery = this.setObjectWikiPedia(domainEntityUrl, property);
+                        sparqlQuery = this.setObjectWikiPedia(domainEntityUrl, property, rdfProperty, className);
                     } else if (returnType.contains(RETURN_TYPE_SUBJECT)) {
                         if (TemplateFinder.isRdfsLabel(property)) {
-                            sparqlQuery = this.setSubjectLabelWikipedia(domainEntityUrl, property,language);
+                            sparqlQuery = this.setSubjectLabelWikipedia(domainEntityUrl, property, language);
                         } else {
-                            sparqlQuery = this.setSubjectWikipedia(domainEntityUrl, property);
+                            sparqlQuery = this.setSubjectWikipedia(domainEntityUrl, property, rdfProperty, className);
                         }
                     }
+                   
+                   
 
                 } else if (queryType.equals(QueryType.ASK)) {
                     sparqlQuery = this.setBooleanWikiPedia(domainEntityUrl, property, rangeEntityUrl);
@@ -78,8 +80,8 @@ public class SparqlQuery {
 
             } else if (type.contains(FIND_ANY_ANSWER) && index == 2) {
                 if (queryType.equals(QueryType.SELECT)) {
-                    if (returnType.contains("objOfProp")||returnType.contains("subjOfProp")) {
-                        sparqlQuery = this.setObjectWikiPediaComposite(domainEntityUrl, sparqlQueryOrg,queryType,returnType);
+                    if (returnType.contains("objOfProp") || returnType.contains("subjOfProp")) {
+                        sparqlQuery = this.setObjectWikiPediaComposite(domainEntityUrl, sparqlQueryOrg, queryType, returnType);
                     }
 
                 } else if (queryType.equals(QueryType.ASK)) {
@@ -90,12 +92,12 @@ public class SparqlQuery {
             } else if (type.contains(FIND_LABEL)) {
                 sparqlQuery = this.setLabelWikipedia(domainEntityUrl, language);
             }
-           
+
             if (online) {
                 if (queryType.equals(QueryType.SELECT)) {
                     this.resultSparql = executeSparqlQuery(sparqlQuery);
                     this.parseResult(resultSparql);
-                     /*System.out.println("sparqlQuery::"+sparqlQuery);
+                    /*System.out.println("sparqlQuery::"+sparqlQuery);
                      System.out.println(this.command);
                      System.out.println("resultSparql::"+resultSparql);
                      System.out.println("objectOfProperty::"+this.objectOfProperty);
@@ -350,13 +352,7 @@ public class SparqlQuery {
       
     }
 
-    public String setObjectWikiPedia(String entityUrl, String property) {
-        return "select  ?o\n"
-                + "    {\n"
-                + "    " + "<" + entityUrl + ">" + " " + "<" + property + ">" + "  " + "?o" + "\n"
-                + "    }";
-
-    }
+   
     
     public String setObjectWikiPedia2(String entityUrl, String property) {
         return " PREFIX dbo: <http://dbpedia.org/ontology/>\n"
@@ -403,19 +399,61 @@ public class SparqlQuery {
 
     }
 
-    public String setSubjectWikipedia(String entityUrl, String property) {
+    public String setSubjectWikipedia(String objectUri, String property, String rdfProperty, String objectClassUri) {
         String sparql = null;
-        if (entityUrl.contains("http:")) {
+        //className //        ?uri rdf:type dbo:Country .
+
+        if (objectClassUri.contains("Number") || objectClassUri.contains("THING") | objectClassUri.contains("date")) {
+            if (objectUri.contains("http:")) {
+                sparql = "select  ?s\n"
+                        + "    {\n"
+                        + "   " + "?s" + " " + "<" + property + ">" + "  " + "<" + objectUri + "> ." + "\n"
+                        + "   " + "?s" + " " + "<" + rdfProperty + ">" + "  " + "<" + objectClassUri + "> ." + "\n"
+                        + "    }";
+            } else {
+                sparql = "select  ?s\n"
+                        + "    {\n"
+                        + "   " + "?s" + " " + "<" + property + ">" + "  " + "<" + objectUri + "> ." + "\n"
+                        + "   " + "?s" + " " + "<" + rdfProperty + ">" + "  " + "<" + objectClassUri + "> ." + "\n"
+                        + "    }";
+
+            }
+
+        } else if (objectUri.contains("http:")) {
             sparql = "select  ?s\n"
                     + "    {\n"
-                    + "   " + "?s" + " " + "<" + property + ">" + "  " + "<" + entityUrl + ">" + "\n"
+                    + "   " + "?s" + " " + "<" + property + ">" + "  " + "<" + objectUri + "> ." + "\n"
                     + "    }";
         } else {
             sparql = "select  ?s\n"
                     + "    {\n"
-                    + "   " + "?s" + " " + "<" + property + ">" + "  " + entityUrl + "\n"
+                    + "   " + "?s" + " " + "<" + property + ">" + "  " + "<" + objectUri + "> ." + "\n"
                     + "    }";
+
         }
+
+        return sparql;
+
+    }
+
+    public String setObjectWikiPedia(String entityUrl, String property, String rdfProperty, String objectClassUri) {
+        String sparql = null;
+        if (objectClassUri.contains("Number")||objectClassUri.contains("THING")|objectClassUri.contains("date")) {
+            sparql = "select  ?o\n"
+                    + "    {\n"
+                    + "    " + "<" + entityUrl + ">" + " " + "<" + property + ">" + "  " + "?o ." + "\n"
+                    + "    }";
+            
+
+        } else {
+            sparql = "select  ?o\n"
+                    + "    {\n"
+                    + "    " + "<" + entityUrl + ">" + " " + "<" + property + ">" + "  " + "?o ." + "\n"
+                    + "   " + "?o" + " " + "<" + rdfProperty + ">" + "  " + "<" + objectClassUri + "> ." + "\n"
+                    + "    }";
+
+        }
+
         return sparql;
 
     }

@@ -35,6 +35,8 @@ public class LinkedData {
     public static String http = "http";
     @JsonIgnore
     public static String colon = ":";
+    
+    public static String rdfType = null;
 
     public LinkedData(String endpoint, LinkedHashMap<String, String> prefix) {
         this.endpoint = endpoint;
@@ -63,6 +65,19 @@ public class LinkedData {
     @Override
     public String toString() {
         return "LinkedData{" + "endpoint=" + endpoint + ", prefix=" + prefix + ", bindingLimit=" + bindingLimit + '}';
+    }
+
+    public String getRdfPropertyType() {
+        if(endpoint.contains("dbpedia")&&this.prefix.containsKey("rdf")){
+            return this.prefix.get("rdf")+"type";
+        }
+        return null;
+    }
+    public String getRdfPropertyClass(String className) {
+        if(endpoint.contains("dbpedia")&&this.prefix.containsKey("dbo")){
+            return this.prefix.get("dbo")+className;
+        }
+        return null;
     }
     
     

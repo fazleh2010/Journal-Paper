@@ -281,6 +281,7 @@ public class EnglishCsv implements TempConstants {
         public String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast, String language,String subject) {
             String subjectLemon = null, objectLemon = null;
 
+            
             if (subject.contains("domain")) {
                 objectLemon = lemonEntry + "_subj";
                 subjectLemon = lemonEntry + "_obj";
@@ -500,7 +501,16 @@ public class EnglishCsv implements TempConstants {
             return senseIdStr;
         }
 
-        public String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast, String language) {
+        public String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast, String language,String subject) {
+            String subjectLemon=null,objectLemon=null;
+            if (subject.contains("domain")) {
+                subjectLemon = lemonEntry + "_subj";
+                objectLemon = lemonEntry + "_obj";
+            } else {
+                objectLemon = lemonEntry + "_subj";
+                subjectLemon = lemonEntry + "_obj";
+            }
+            
             return ":"+"form_" + lemonEntry + " a           lemon:Form ;\n"
                     + "  lemon:writtenRep     \"" + writtenFormInfinitive + "\"@" + language + " ;\n"
                     + "  lexinfo:verbFormMood lexinfo:infinitive .\n"

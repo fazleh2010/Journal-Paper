@@ -182,7 +182,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       createSentenceTemplate(language,
         List.of(
          //Who presented BBC Wildlife Specials?
-        "interrogativePronoun(range) verb(mainVerb:preseant:thirdPerson) object(domain)?",
+        "interrogativePronoun(range) verb(mainVerb:present:thirdPerson) object(domain)?",
         "interrogativePronoun(range) verb(mainVerb:past:thirdPerson) object(domain)?",
         //Which Person presented BBC Wildlife Specials?
         "interrogativeDeterminer(range:singular) verb(mainVerb:present:thridPerson) object(domain)?",

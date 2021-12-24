@@ -1331,7 +1331,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the height of Amazon Eve?",
+					"string": "What is the height of Kelly Gale?",
 					"keywords": "Amazon Eve, tall"
 				},
 				{
@@ -1346,7 +1346,7 @@
 				},
 				{
 					"language": "de",
-					"string": "Wie groß ist Amazon Eve?",
+					"string": "Wie groß ist Kelly Gale?",
 					"keywords": "Amazon Eve, groß"
 				},
 				{
@@ -1381,7 +1381,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?height WHERE {  <http://dbpedia.org/resource/Amazon_Eve> <http://dbpedia.org/ontology/height> ?height . } "
+				"sparql": "SELECT DISTINCT ?height WHERE {  <http://dbpedia.org/resource/Kelly_Gale> <http://dbpedia.org/ontology/height> ?height . } "
 			},
 			"answers": [{
 				"head": {
@@ -2691,7 +2691,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nSELECT DISTINCT ?uri \nWHERE { \n        res:Ganges dbo:sourceCountry ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nSELECT DISTINCT ?uri \nWHERE { \n        res:Ganges <http://dbpedia.org/property/mouthLocation> ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -2717,8 +2717,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the birth year of Rachel Stevens?",
-					"keywords": "year, born, Rachel Stevens"
+					"string": "What is the birth year of Joanna MacGregor?",
+					"keywords": "year, born, Joanna MacGregor"
 				},
 				{
 					"language": "pt_BR",
@@ -2732,8 +2732,8 @@
 				},
 				{
 					"language": "de",
-					"string": "In welchem Jahr wurde Rachel Stevens geboren?",
-					"keywords": "Jahr, geboren, Rachel Stevens"
+					"string": "In welchem Jahr wurde Joanna MacGregor geboren?",
+					"keywords": "Jahr, geboren, Joanna MacGregor"
 				},
 				{
 					"language": "es",
@@ -2767,7 +2767,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE {  <http://dbpedia.org/resource/Rachel_Stevens> <http://dbpedia.org/ontology/birthYear> ?uri . } "
+				"sparql": "SELECT DISTINCT ?uri WHERE {  <http://dbpedia.org/resource/Joanna_MacGregor> <http://dbpedia.org/ontology/birthYear> ?uri . } "
 			},
 			"answers": [{
 				"head": {
@@ -4698,8 +4698,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the dissolution date of Ming dynasty?",
-					"keywords": "dissolve, Ming dynasty"
+					"string": "What is the dissolution date of Auckland City?",
+					"keywords": "dissolve, Auckland City"
 				},
 				{
 					"language": "pt_BR",
@@ -4708,8 +4708,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wann endete die Ming-Dynastie?",
-					"keywords": "Ende, Ming-Dynastie"
+					"string": "Wann endete die Stadt Auckland?",
+					"keywords": "Ende, Stadt Auckland"
 				},
 				{
 					"language": "es",
@@ -4743,7 +4743,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/> \nSELECT DISTINCT ?date\nWHERE {  \n        res:Ming_dynasty dbo:dissolutionDate ?date .\n}"
+				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/> \nSELECT DISTINCT ?date\nWHERE {  \n        res:Auckland_City dbo:dissolutionDate ?date .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -5292,8 +5292,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the mayor of Tel Aviv?",
-					"keywords": "Tel Aviv, mayor"
+					"string": "Who is the mayor of Florence?",
+					"keywords": "Florence, mayor"
 				},
 				{
 					"language": "pt_BR",
@@ -5302,8 +5302,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer ist der Bürgermeister von Tel Aviv?",
-					"keywords": "Tel Aviv, Bürgermeister"
+					"string": "Wer ist der Bürgermeister von Florence?",
+					"keywords": "Florence, Bürgermeister"
 				},
 				{
 					"language": "es",
@@ -5337,7 +5337,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE { \n        res:Tel_Aviv dbo:leaderName ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE { \n        res:Florence dbo:leaderName ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -8336,8 +8336,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What color expresses loyalty?",
-					"keywords": "color, express, loyalty"
+					"string": "What color expresses Wealth?",
+					"keywords": "color, express, Wealth"
 				},
 				{
 					"language": "pt_BR",
@@ -8351,8 +8351,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Welche Farbe steht für Loyalität?",
-					"keywords": "Farbe, stehen für, Loyalität"
+					"string": "Welche Farbe steht für den Reichtum?",
+					"keywords": "Farbe, stehen für, Reichtum"
 				},
 				{
 					"language": "es",
@@ -8386,7 +8386,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/connotation> <http://dbpedia.org/resource/Loyalty> . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/connotation> <http://dbpedia.org/resource/Wealth> . }"
 			},
 			"answers": [{
 				"head": {
@@ -8992,7 +8992,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the completion date of RMS Titanic?",
+					"string": "What is the completion date of Titanic?",
 					"keywords": "Titanic, completion date"
 				},
 				{
@@ -9037,7 +9037,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?date\nWHERE { \n        res:RMS_Titanic dbo:completionDate ?date . \n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?date\nWHERE { \n        res:Titanic dbo:completionDate ?date . \n}"
 			},
 			"answers": [{
 				"head": {
@@ -13265,8 +13265,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the elevation of Mount Everest?",
-					"keywords": "Mount Everest, high"
+					"string": "What is the elevation of Mount Kilimanjaro?",
+					"keywords": "Mount Kilimanjaro, high"
 				},
 				{
 					"language": "pt_BR",
@@ -13275,8 +13275,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wie hoch ist der Mount Everest?",
-					"keywords": "Mount Everest, hoch"
+					"string": "Wie hoch ist der Mount Kilimanjaro?",
+					"keywords": "Mount Kilimanjaro, hoch"
 				},
 				{
 					"language": "es",
@@ -13285,8 +13285,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Quanto è alto il Monte Everest?",
-					"keywords": "Monte Everest, altezza"
+					"string": "Quanto è alto il Mount Kilimanjaro?",
+					"keywords": "Mount Kilimanjaro, altezza"
 				},
 				{
 					"language": "fr",
@@ -13305,7 +13305,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?num \nWHERE {\n\tres:Mount_Everest dbo:elevation ?num.\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?num \nWHERE {\n\tres:Mount_Kilimanjaro dbo:elevation ?num.\n}"
 			},
 			"answers": [{
 				"head": {
@@ -16761,8 +16761,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the death date of Diana, Princess of Wales?",
-					"keywords": "date, princess Diana, died"
+					"string": "What is the death date of Elisabeth of Saxony?",
+					"keywords": "date, Elisabeth of Saxony, died"
 				},
 				{
 					"language": "pt_BR",
@@ -16776,8 +16776,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wann ist Prinzessin Diana gestorben?",
-					"keywords": "Prinzessin Diana, Todestag"
+					"string": "Wann ist Elisabeth von Saxony gestorben?",
+					"keywords": "Elisabeth von Saxony, Todestag"
 				},
 				{
 					"language": "es",
@@ -16811,7 +16811,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?d WHERE { <http://dbpedia.org/resource/Diana,_Princess_of_Wales> <http://dbpedia.org/ontology/deathDate> ?d . }"
+				"sparql": "SELECT DISTINCT ?d WHERE { <http://dbpedia.org/resource/Elisabeth_of_Saxony> <http://dbpedia.org/ontology/deathDate> ?d . }"
 			},
 			"answers": [{
 				"head": {

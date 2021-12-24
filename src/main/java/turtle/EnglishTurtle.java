@@ -193,7 +193,7 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
     @Override
     public void setIntransitivePPFrame(String key, List<String[]> rows, String syntacticFrame) {
         List<Tupples> tupples = new ArrayList<Tupples>();
-        Integer index = 0;
+        Integer index = 0;String   subject= null;
         for (String[] row : rows) {
             if (index == 0) {
                 this.setLemonEntryId(IntransitiveFrameCsv.getLemonEntryIndex(row));
@@ -213,12 +213,13 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
             IntransitiveFrameCsv.setArticle(tupple, row);
             IntransitiveFrameCsv.setVerbInfo(partOfSpeech,  writtenFormInfinitive,  writtenForm3rdPerson,  writtenFormPast);
             tupples.add(tupple);
+            subject=  GermanCsv.InTransitFrameCsv.getSubjectIndex(row);
             index = index + 1;
         }
         this.turtleString
                 = IntransitiveFrameCsv.getHeader(this.lemonEntry, this.preposition, this.language)
                 + IntransitiveFrameCsv.getSenseIndexing(tupples, this.lemonEntry)
-                + IntransitiveFrameCsv.getWritten(lemonEntry, writtenFormInfinitive, writtenForm3rdPerson, writtenFormPast, this.language)
+                + IntransitiveFrameCsv.getWritten(lemonEntry, writtenFormInfinitive, writtenForm3rdPerson, writtenFormPast, this.language,subject)
                 + IntransitiveFrameCsv.getSenseDetail(tupples, syntacticFrame, this.lemonEntry, this.writtenFormInfinitive, this.preposition, this.language)
                 + IntransitiveFrameCsv.getPrepostion(this.lemonEntry,this.preposition, this.language);
         this.tutleFileName = getFileName(syntacticFrame);

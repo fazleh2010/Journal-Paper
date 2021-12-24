@@ -48,6 +48,9 @@ public class InputCofiguration {
     private Boolean protoTypeToQuestion = false;
     @JsonProperty("evalution")
     private Boolean evalution;
+    @JsonProperty("composite")
+    private Boolean compositeFlag;
+     
     private LinkedData linkedData = null;
 
     public InputCofiguration() {
@@ -109,6 +112,22 @@ public class InputCofiguration {
 
     public String getQaldDir() {
         return qaldDir;
+    }
+
+    public Boolean getCsvToTurtle() {
+        return csvToTurtle;
+    }
+
+    public Boolean getProtoTypeToQuestion() {
+        return protoTypeToQuestion;
+    }
+
+    public Boolean getEvalution() {
+        return evalution;
+    }
+
+    public Boolean getCompositeFlag() {
+        return compositeFlag;
     }
     
     @Override

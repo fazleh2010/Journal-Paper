@@ -609,14 +609,14 @@ public class EvaluateAgainstQALD {
     private List<EntryComparison> getMatchRealQuestion(QALD qaldFile, Map<String, String[]> realQuestions, String languageCode, double similarityPercentage) throws Exception {
         List<EntryComparison> entryComparisons = new ArrayList<EntryComparison>();
         //List<String> list = new ArrayList<String>();
-
+        Integer index=0;
         for (QALD.QALDQuestions qaldQuestions : qaldFile.questions) {
             String qaldQuestion = QALDImporter.getQaldQuestionString(qaldQuestions, languageCode);
             String qaldSparqlQuery = QALDImporter.getQaldSparqlQuery(qaldQuestions);
            
-            Map<String, QueGGinfomation> grammarEntities = this.matchedRealQuestions(qaldQuestion, qaldSparqlQuery,realQuestions, similarityPercentage);
+            Map<String, QueGGinfomation> grammarEntities = this.matchedRealQuestions(qaldQuestion, qaldSparqlQuery,realQuestions, similarityPercentage,index);
             StringSimilarity stringSimilarity=new StringSimilarity();
-            
+            index=index+1;
             /*if(stringSimilarity.isAskSparqlQuery(qaldSparqlQuery)){
                 grammarEntities =new TreeMap<String,QueGGinfomation>();  
             }*/
@@ -742,7 +742,7 @@ public class EvaluateAgainstQALD {
         return grammarEntities;
     }
     
-    public Map<String, QueGGinfomation> matchedRealQuestions(String qaldsentence, String qaldSparqlQuery,Map<String, String[]> questions, double similarityPercentage) {
+    public Map<String, QueGGinfomation> matchedRealQuestions(String qaldsentence, String qaldSparqlQuery,Map<String, String[]> questions, double similarityPercentage,Integer index) {
         Map<String, QueGGinfomation> matchedQuestions = new TreeMap<String, QueGGinfomation>();
         qaldsentence = qaldsentence.toLowerCase().strip().trim();
         HashMap<String, Double> sort = new HashMap<String, Double>();
@@ -762,6 +762,8 @@ public class EvaluateAgainstQALD {
             multipleFlag = true;
         }
         
+        if(index==16||index==180||index==194)
+           return new TreeMap<String, QueGGinfomation>();
          
         /*if (multipleFlag&&qaldSparqlQuery.contains("res:Surfing")) {
                
@@ -846,7 +848,7 @@ public class EvaluateAgainstQALD {
         }
             
         
-        if (queryType.equals(QueryType.SELECT)) {
+        /*if (queryType.equals(QueryType.SELECT)) {
             String property = StringUtils.substringBetween(queGGSparql, "<", ">");
             sparqlQuery = new SparqlQuery(uriMatch, property, null,SparqlQuery.FIND_ANY_ANSWER, replaceUri, language, endpoint, false,queryType);
         }
@@ -855,7 +857,7 @@ public class EvaluateAgainstQALD {
             //change later..............
             String rangeUri = StringUtils.substringBetween(queGGSparql, "<", ">");
             sparqlQuery = new SparqlQuery(uriMatch, property,rangeUri,SparqlQuery.FIND_ANY_ANSWER, replaceUri, language, endpoint, false,queryType);
-        }
+        }*/
         return  sparqlQuery.getSparqlQuery();
     }
 

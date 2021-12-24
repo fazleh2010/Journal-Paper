@@ -63,44 +63,38 @@ public class QueGG {
         JenaSystem.init();
         QueGG queGG = new QueGG();
         String configFile = null, dataSetConfFile = null;
-        
+
         try {
             if (args.length < 2) {
                 throw new IllegalArgumentException(String.format("Too few parameters (%s/%s)", args.length));
-            }
-            else if (args.length == 2) {
+            } else if (args.length == 2) {
                 configFile = args[0];
                 InputCofiguration inputCofiguration = FileUtils.getInputConfig(new File(configFile));
                 inputCofiguration.setLinkedData(args[1]);
                 if (inputCofiguration.isCsvToTurtle()) {
-                     if(queGG.csvToProto(inputCofiguration)){
-                         queGG.turtleToProto(inputCofiguration);
-                     }
+                    if (queGG.csvToProto(inputCofiguration)) {
+                        queGG.turtleToProto(inputCofiguration);
+                    }
                 }
-                if(inputCofiguration.isProtoTypeToQuestion()){
-                    queGG.protoToReal(inputCofiguration,grammar_FULL_DATASET,grammar_COMBINATIONS);
+                if (inputCofiguration.isProtoTypeToQuestion()) {                   
+                    queGG.protoToReal(inputCofiguration, grammar_FULL_DATASET, grammar_COMBINATIONS);
                 }
-                if(inputCofiguration.isEvalution()){
-                Language language = inputCofiguration.getLanguage();
-                String qaldDir =inputCofiguration.getQaldDir();
-                String outputDir = inputCofiguration.getOutputDir();
-                LinkedData linkedData = inputCofiguration.getLinkedData();
-                Double similarity=inputCofiguration.getSimilarityThresold();
-                //System.out.println("outputDir: " + outputDir + " qaldDir::" + qaldDir + " " + language + " linkedData.getEndpoint():" + linkedData.getEndpoint());
-                queGG.evalution(qaldDir, outputDir, language, linkedData.getEndpoint(),EvaluateAgainstQALD.REAL_QUESTION,similarity);
+                if (inputCofiguration.isEvalution()) {
+                    Language language = inputCofiguration.getLanguage();
+                    String qaldDir = inputCofiguration.getQaldDir();
+                    String outputDir = inputCofiguration.getOutputDir();
+                    LinkedData linkedData = inputCofiguration.getLinkedData();
+                    Double similarity = inputCofiguration.getSimilarityThresold();
+                    queGG.evalution(qaldDir, outputDir, language, linkedData.getEndpoint(), EvaluateAgainstQALD.REAL_QUESTION, similarity);
                 }
-               
-                
+
             }
-           
-         
 
         } catch (IllegalArgumentException | IOException e) {
             System.err.printf("%s: %s%n", e.getClass().getSimpleName(), e.getMessage());
             System.err.printf("Usage: <%s> <input directory> <output directory>%n", Arrays.toString(Language.values()));
         }
 
-       
     }
 
     public void evalution(String qaldDir, String outputDir, Language language, String endpoint, String questionType, Double similarityMeasure) throws IOException, Exception {
@@ -126,6 +120,7 @@ public class QueGG {
         //temporary code for qald entity creation...
         //System.out.println(entityLabelDir+File.separator+"qaldEntities.txt");
         //FileUtils.stringToFile(string, entityLabelDir+File.separator+"qaldEntities.txt");
+        
         if (questionType.contains(PROTOTYPE_QUESTION)) {
             for (String fileName : new File(outputDir).list()) {
                 if (fileName.contains("grammar_FULL_DATASET") && fileName.contains(language.name())) {
@@ -140,9 +135,11 @@ public class QueGG {
             GrammarWrapper grammarWrapper = objectMapper.readValue(grammarEntriesFile, GrammarWrapper.class);
             GrammarWrapper gw2 = objectMapper.readValue(grammarEntriesFile2, GrammarWrapper.class);
             grammarWrapper.merge(gw2);
+        
             evaluateAgainstQALD.evaluateAndOutput(grammarWrapper, qaldFile, qaldModifiedFile, resultFileName, qaldRaw, languageCode, questionType, similarityMeasure);
 
         } else if (questionType.contains(REAL_QUESTION)) {
+             
             Map<String, String[]> queGGQuestions = new HashMap<String, String[]>();
             List<String[]> rows = new ArrayList<String[]>();
             String[] files = new File(outputDir).list();
@@ -163,7 +160,7 @@ public class QueGG {
         }
 
     }
-    
+
     private Boolean csvToProto(InputCofiguration inputCofiguration) throws Exception {
         Language language = inputCofiguration.getLanguage();
         String inputDir = inputCofiguration.getInputDir();
@@ -180,29 +177,29 @@ public class QueGG {
         }
         return tutleConverter.getConversionFlag();
     }
-    
-     private void turtleToProto(InputCofiguration inputCofiguration) throws IOException {
+
+    private void turtleToProto(InputCofiguration inputCofiguration) throws IOException {
         Language language = inputCofiguration.getLanguage();
         String inputDir = inputCofiguration.getInputDir();
         String outputDir = inputCofiguration.getOutputDir();
         this.init(language, inputDir, outputDir);
     }
 
-  
-             
-        private void protoToReal(InputCofiguration inputCofiguration,String grammar_FULL_DATASET,String grammar_COMBINATIONS) throws Exception {
+    private void protoToReal(InputCofiguration inputCofiguration, String grammar_FULL_DATASET, String grammar_COMBINATIONS) throws Exception {
         Language language = inputCofiguration.getLanguage();
         String inputDir = inputCofiguration.getOutputDir();
-        Integer maxNumberOfEntities =inputCofiguration.getNumberOfEntities();
+        Integer maxNumberOfEntities = inputCofiguration.getNumberOfEntities();
+        Boolean combinedFlag=inputCofiguration.getCompositeFlag();
         LinkedData linkedData = inputCofiguration.getLinkedData();
         setDataSet(linkedData);
 
         List<File> protoSimpleQ = FileUtils.getFiles(inputDir + "/", grammar_FULL_DATASET + "_" + language.name(), ".json");
-       
+
         List<File> protoCompositeQ = FileUtils.getFiles(inputDir + "/", grammar_COMBINATIONS + "_" + language.name(), ".json");
-        protoCompositeQ.addAll(protoSimpleQ);
-        //System.out.println("protoCompositeQ::"+protoCompositeQ.toString());
-         
+        
+        if(combinedFlag)
+           protoSimpleQ.addAll(protoCompositeQ);
+      
         //protoCompositeQ.addAll(protoSimpleQ);
         //if (protoCompositeQ.isEmpty()) {
         //    throw new Exception("No files to process for question answering system!!");
@@ -211,28 +208,29 @@ public class QueGG {
         String questionAnswerFile = inputDir + File.separator + questionsFile + "_" + langCode + ".csv";
         String questionSummaryFile = inputDir + File.separator + summaryFile + "_" + langCode + ".csv";
         ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile, maxNumberOfEntities, langCode, linkedData.getEndpoint(), online);
-        readAndWriteQuestions.readQuestionAnswers(protoCompositeQ, entityLabelDir, externalEntittyListflag);
+        readAndWriteQuestions.readQuestionAnswers(linkedData, protoSimpleQ, entityLabelDir, externalEntittyListflag);
 
     }
-    
-     private void questionEvaluation(InputCofiguration inputCofiguration) throws Exception {
+
+    private void questionEvaluation(InputCofiguration inputCofiguration) throws Exception {
         Language language = inputCofiguration.getLanguage();
         String qaldDir = inputCofiguration.getQaldDir();
         String outputDir = inputCofiguration.getOutputDir();
-        LinkedData linkedData =inputCofiguration.getLinkedData();
+        LinkedData linkedData = inputCofiguration.getLinkedData();
         Double similarityMeasure = inputCofiguration.getSimilarityThresold();
-        evalution(qaldDir, outputDir, language, linkedData.getEndpoint(), EvaluateAgainstQALD.REAL_QUESTION,similarityMeasure);
+        Boolean combinedFlag=inputCofiguration.getCompositeFlag();
+        evalution(qaldDir, outputDir, language, linkedData.getEndpoint(), EvaluateAgainstQALD.REAL_QUESTION, similarityMeasure);
 
     }
 
-     public void init(Language language, String inputDir, String outputDir) throws IOException {
+    public void init(Language language, String inputDir, String outputDir) throws IOException {
         try {
             loadInputAndGenerate(language, inputDir, outputDir);
         } catch (InvocationTargetException | NoSuchMethodException | InstantiationException | IllegalAccessException e) {
             LOG.error("Could not create grammar: {}", e.getMessage());
         }
     }
-  
+
     private void loadInputAndGenerate(Language lang, String inputDir, String outputDir) throws
             IOException,
             InvocationTargetException,
@@ -365,5 +363,4 @@ public class QueGG {
 
     }
 
-   
 }

@@ -171,5 +171,46 @@ WHERE {
 }
 
 
+qald change query
+
+select  ?binding ?answerUri  {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/River>.
+ ?binding <http://dbpedia.org/ontology/city>   ?answerUri .
+}
 
 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX res: <http://dbpedia.org/resource/> 
+SELECT DISTINCT ?uri 
+WHERE { 
+ res:Ganges <http://dbpedia.org/property/mouthLocation> ?uri .
+}
+
+------------------------------
+completion date
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX res: <http://dbpedia.org/resource/>
+SELECT DISTINCT  ?date
+WHERE { 
+        <http://dbpedia.org/resource/Titanic> dbo:completionDate ?date . 
+}
+
+------------------
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX res: <http://dbpedia.org/resource/>
+SELECT DISTINCT ?s ?num 
+WHERE {
+	?s dbo:elevation ?num .
+        ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Mountain>.
+}
+
+
+-------------------
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX res: <http://dbpedia.org/resource/>
+SELECT DISTINCT ?s ?num 
+WHERE {
+	?s dbo:elevation ?num .
+        ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Mountain>.
+}

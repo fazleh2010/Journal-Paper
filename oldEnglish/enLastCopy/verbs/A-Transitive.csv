@@ -1,0 +1,3 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,SyntacticFrame,subject,directObject,sense,reference,domain,range,passivePreposition,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural
+win,verb,win,wins,won,TransitiveFrame,range,domain,1,dbo:award,dbo:Scientist,dbo:Award,by,scientist,scientists,award,awards
+write_4,verb,write,writes,wrote,TransitiveFrame,range,domain,4,dbo:author,dbo:WrittenWork,dbo:Person,by,person,persons,written work,written works
