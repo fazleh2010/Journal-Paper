@@ -1,0 +1,4 @@
+LemonEntry,partOfSpeech,gender,writtenFormNominative(singular),writtenFormNominative (plural),writtenFormSingular (accusative),writtenFormSingular (dative),writtenFormSingular (genetive),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,domain_article,domain_written_singular,domain_written_plural,rangeArticle,range_written_singular,range_written_plural
+Trainer_von,noun,masculine,Trainer,Trainer,Trainer,Trainer,Trainers,von,NounPPFrame,range,domain,1,dbo:coach,dbo:IceHockeyLeague,dbo:CollegeCoach,feminine,Liga,Ligen,masculine,Trainer,Trainer
+Musik_von,noun,feminine,Musik,Musiken,Musik,Musik,Musik,von,NounPPFrame,domain,range,1,dbo:musicBy,dbo:Musical,dbo:Person,neuter,Musical,Musicals,masculine,Person,Personen
+Spiele_von,noun,neuter,Spiel,Spiele,Spiel,Spiel,Spieles,von,NounPPFrame,range,domain,1,dbo:publisher,dbo:Game,dbo:Publisher,neuter,Spiel,Spiele,masculine,Herausgeber,Herausgeber

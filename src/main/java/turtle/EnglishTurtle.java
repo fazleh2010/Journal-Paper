@@ -34,6 +34,7 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
     private String writtenFormInfinitive = "";
     private String writtenForm3rdPerson = "";
     private String writtenFormPast = "";
+    private String writtenFormPerfect = "";
     private String preposition = "";
     private static Integer index = 0;
     private EnglishCsv.NounPPFrameCsv nounPPFrameCsv = new EnglishCsv.NounPPFrameCsv();
@@ -166,6 +167,7 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
                 this.writtenFormInfinitive = transitiveFrameCsv.getWrittenFormInfinitive(row);
                 this.writtenForm3rdPerson = transitiveFrameCsv.getWrittenForm3rdPerson(row);
                 this.writtenFormPast = transitiveFrameCsv.getWrittenFormPast(row);
+                this.writtenFormPerfect = transitiveFrameCsv.getWrittenFormPerfect(row);
                 this.preposition = transitiveFrameCsv.getPassivePrepositionIndex(row);
             }
             
@@ -176,6 +178,7 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
                     this.setReference(transitiveFrameCsv.getRangeIndex(row)));
 
             transitiveFrameCsv.setArticle(tupple, row);
+            transitiveFrameCsv.setVerbInfo(partOfSpeech,  writtenFormInfinitive,  writtenForm3rdPerson,  writtenFormPast,writtenFormPerfect);
             tupples.add(tupple);
             index = index + 1;
             subject=  transitiveFrameCsv.getSubjectIndex(row);
@@ -184,7 +187,7 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
         this.turtleString
                 = transitiveFrameCsv.getHeader(this.lemonEntry, this.preposition, this.language)
                 + transitiveFrameCsv.getSenseIndexing(tupples, lemonEntry)
-                + transitiveFrameCsv.getWritten(this.lemonEntry, this.writtenFormInfinitive, this.writtenForm3rdPerson, this.writtenFormPast, this.language,subject)
+                + transitiveFrameCsv.getWritten(this.lemonEntry, this.partOfSpeech,this.writtenFormInfinitive, this.writtenForm3rdPerson, this.writtenFormPast, this.writtenFormPerfect,this.language,subject)
                 + transitiveFrameCsv.getSenseDetail(tupples, syntacticFrame, this.lemonEntry, this.writtenFormInfinitive, this.preposition, this.language)
                 + transitiveFrameCsv.getPrepostion(this.lemonEntry,this.preposition, this.language);
         this.tutleFileName = getFileName(syntacticFrame);
@@ -201,6 +204,7 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
                 this.writtenFormInfinitive = IntransitiveFrameCsv.getWrittenFormInfinitive(row);
                 this.writtenForm3rdPerson = IntransitiveFrameCsv.getWrittenForm3rdPerson(row);
                 this.writtenFormPast = IntransitiveFrameCsv.getWrittenFormPast(row);
+                this.writtenFormPerfect = IntransitiveFrameCsv.getWrittenFormPerfect(row);
                 this.preposition = IntransitiveFrameCsv.getPreposition(row);
 
             }
@@ -211,7 +215,7 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
                     this.setReference(IntransitiveFrameCsv.getRangeIndex(row)));
 
             IntransitiveFrameCsv.setArticle(tupple, row);
-            IntransitiveFrameCsv.setVerbInfo(partOfSpeech,  writtenFormInfinitive,  writtenForm3rdPerson,  writtenFormPast);
+            IntransitiveFrameCsv.setVerbInfo(partOfSpeech,  writtenFormInfinitive,  writtenForm3rdPerson,  writtenFormPast, this.writtenFormPerfect);
             tupples.add(tupple);
             subject=  GermanCsv.InTransitFrameCsv.getSubjectIndex(row);
             index = index + 1;
@@ -219,7 +223,7 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
         this.turtleString
                 = IntransitiveFrameCsv.getHeader(this.lemonEntry, this.preposition, this.language)
                 + IntransitiveFrameCsv.getSenseIndexing(tupples, this.lemonEntry)
-                + IntransitiveFrameCsv.getWritten(lemonEntry, writtenFormInfinitive, writtenForm3rdPerson, writtenFormPast, this.language,subject)
+                + IntransitiveFrameCsv.getWritten(lemonEntry, writtenFormInfinitive, writtenForm3rdPerson, writtenFormPast,this.writtenFormPerfect, this.language,subject)
                 + IntransitiveFrameCsv.getSenseDetail(tupples, syntacticFrame, this.lemonEntry, this.writtenFormInfinitive, this.preposition, this.language)
                 + IntransitiveFrameCsv.getPrepostion(this.lemonEntry,this.preposition, this.language);
         this.tutleFileName = getFileName(syntacticFrame);

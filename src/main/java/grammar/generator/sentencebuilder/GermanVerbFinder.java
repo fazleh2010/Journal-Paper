@@ -48,7 +48,7 @@ public class GermanVerbFinder implements TempConstants {
         System.out.println("trennVerbFlag::" + this.trennVerbFlag);
         System.out.println("auxilaryVerbFlag::" + this.auxilaryVerbFlag);
         System.out.println("imperativeVerbFlag::" + this.imperativeVerbFlag);
-        exit(1);*/
+        //exit(1);*/
 
         if (this.mainVerbFlag) {
             word = findMainVerb(attribute, reference);

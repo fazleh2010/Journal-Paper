@@ -1,0 +1,81 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :to_Climb_1 ;
+  lemon:entry    :Climb_1ed ;
+  lemon:entry    :form_Climb_1_preposition .
+
+:to_Climb_1 a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_Climb_1 ;
+  lemon:otherForm      :form_Climb_1s ;
+  lemon:otherForm      :form_Climb_1ed ;
+  lemon:sense          :Climb_1_sense_1 ;
+  lemon:synBehavior    :Climb_1_frame_transitive .
+
+:form_Climb_1 a         lemon:Form ;
+  lemon:writtenRep     "first person to climb"@en ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_Climb_1s a    lemon:Form ;
+  lemon:writtenRep "-"@en ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_Climb_1ed a   lemon:Form ;
+  lemon:writtenRep "-"@en ;
+  lexinfo:tense    lexinfo:past .
+
+:Climb_1_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :Climb_1_subj ;
+  lexinfo:directObject     :Climb_1_obj .
+
+:Climb_1_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :Climb_1_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/firstAscentPerson> ;
+  lemon:subjOfProp  :Climb_1_obj ;
+  lemon:objOfProp   :Climb_1_subj ;
+  lemon:condition   :Climb_1_sense_1_condition .
+
+
+:Climb_1_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Mountain> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:Climb_1ed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_Climb_1ed_canonical ;
+  lemon:otherForm      :form_Climb_1ed_by ;
+  lemon:synBehavior    :Climb_1ed_frame_adjectivepp ;
+  lemon:sense          :Climb_1ed_ontomap .
+
+:form_Climb_1ed_canonical a lemon:Form ;
+  lemon:writtenRep         "first person to climb"@en .
+
+:form_Climb_1ed_by a    lemon:Form ;
+  lemon:writtenRep     "first person to climb"@en ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:Climb_1ed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :Climb_1ed_subj ;
+  lexinfo:prepositionalAdjunct :Climb_1ed_obj .
+
+:Climb_1ed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :Climb_1ed_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/firstAscentPerson> ;
+  lemon:subjOfProp  :Climb_1ed_subj ;
+  lemon:objOfProp   :Climb_1ed_obj ;
+  lemon:condition   :Climb_1_sense_1_condition .
+:Climb_1ed_obj lemon:marker :by .
+
+## Prepositions ##
+:form_Climb_1_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "by"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

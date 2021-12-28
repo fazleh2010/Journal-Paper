@@ -24,6 +24,7 @@ public class GrammarEntry implements Serializable {
   private DomainOrRangeType bindingType;
   private DomainOrRangeType returnType;
   private FrameType frameType;
+  private String sentenceTemplate;
   private List<String> sentences = new ArrayList<>();
   private QueryType queryType;
   private String sparqlQuery;
@@ -59,6 +60,7 @@ public class GrammarEntry implements Serializable {
     grammarEntry.bindingType = this.bindingType;
     grammarEntry.returnType = this.returnType;
     grammarEntry.frameType = this.frameType;
+    grammarEntry.sentenceTemplate = this.sentenceTemplate;
     grammarEntry.sentences.addAll(this.sentences);
     grammarEntry.queryType = this.queryType;
     grammarEntry.sparqlQuery = this.sparqlQuery;

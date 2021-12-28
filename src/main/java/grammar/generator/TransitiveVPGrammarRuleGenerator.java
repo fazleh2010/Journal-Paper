@@ -94,11 +94,13 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot i
      * Generate an entry with sentence structure: Which _noun_ does $x _verb_
      * _preposition_?
      */
-    public List<GrammarEntry> generateFragmentEntry(GrammarEntry grammarEntry, LexicalEntryUtil lexicalEntryUtil) throws
+    //original one
+    /*public List<GrammarEntry> generateFragmentEntry(GrammarEntry grammarEntry, LexicalEntryUtil lexicalEntryUtil) throws
             QueGGMissingFactoryClassException {
         List<GrammarEntry> grammarEntries=new ArrayList<GrammarEntry>();
         GrammarEntry fragmentEntry = copyGrammarEntry(grammarEntry);
         fragmentEntry.setType(SentenceType.SENTENCE);
+        
         // Assign opposite values
         fragmentEntry.setReturnType(grammarEntry.getBindingType());
         fragmentEntry.setBindingType(grammarEntry.getReturnType());
@@ -112,9 +114,91 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot i
         List<String> generatedSentences = generateOppositeSentences(lexicalEntryUtil);
         fragmentEntry.setSentences(generatedSentences);
         grammarEntries.add(fragmentEntry);
+        
+        
+
+        return grammarEntries;
+    }*/
+    
+     /**
+     * Generate an entry with sentence structure: Which _noun_ does $x _verb_
+     * _preposition_?
+     */
+    //original one
+    public List<GrammarEntry> generateFragmentEntry(GrammarEntry grammarEntry, LexicalEntryUtil lexicalEntryUtil) throws
+            QueGGMissingFactoryClassException {
+        List<GrammarEntry> grammarEntries=new ArrayList<GrammarEntry>();
+        
+        GrammarEntry oppositeGrammarEntry = getOppositeGrammarEntry(grammarEntry, lexicalEntryUtil);
+        grammarEntries.add(oppositeGrammarEntry);
+        
+        GrammarEntry amountGrammarEntry = getAmountGrammarEntry(grammarEntry, lexicalEntryUtil);
+        grammarEntries.add(amountGrammarEntry);
+        
+        
 
         return grammarEntries;
     }
+
+    private GrammarEntry getOppositeGrammarEntry(GrammarEntry grammarEntry, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
+        GrammarEntry fragmentEntry = copyGrammarEntry(grammarEntry);
+        fragmentEntry.setType(SentenceType.SENTENCE);
+        // Assign opposite values
+        fragmentEntry.setReturnType(grammarEntry.getBindingType());
+        fragmentEntry.setBindingType(grammarEntry.getReturnType());
+        fragmentEntry.setReturnVariable(grammarEntry.getBindingVariable());
+        Map<String, String> sentenceToSparqlParameterMapping = new HashMap<String, String>();
+        sentenceToSparqlParameterMapping.put(grammarEntry.getSentenceBindings().getBindingVariableName(),
+                grammarEntry.getReturnVariable());
+        fragmentEntry.setSentenceToSparqlParameterMapping(sentenceToSparqlParameterMapping);
+        // sentences
+        List<String> generatedSentences = generateOppositeSentences(lexicalEntryUtil);
+        fragmentEntry.setSentences(generatedSentences);
+        return fragmentEntry;
+    }
+    
+     private GrammarEntry getAmountGrammarEntry(GrammarEntry grammarEntry, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
+        GrammarEntry fragmentEntry = copyGrammarEntry(grammarEntry);
+        
+        String bindingVar = getBindingVariable();
+        try {
+             SentenceBuilderIntransitivePPDE sentenceBuilder = new SentenceBuilderIntransitivePPDE(
+                    getLanguage(),
+                    this.getFrameType(),
+                    this.getSentenceTemplateRepository(),
+                    this.getSentenceTemplateParser(),
+                    lexicalEntryUtil);
+           List<String> generatedSentences = sentenceBuilder.generateBackwardAmount(bindingVar, new String[2], lexicalEntryUtil);
+            fragmentEntry.setType(SentenceType.SENTENCE);
+            fragmentEntry.setSentences(generateAmountSentences(lexicalEntryUtil));
+            fragmentEntry.setSentenceTemplate(sentenceBuilder.getTemplate());
+        } catch (Exception ex) {
+            java.util.logging.Logger.getLogger(TransitiveVPGrammarRuleGenerator.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return fragmentEntry;
+    }
+
+    private List<String> generateAmountSentences(LexicalEntryUtil lexicalEntryUtil) {
+        List<String> generatedSentences = new ArrayList<String>();
+        String bindingVar = getBindingVariable();
+        try {
+             SentenceBuilderIntransitivePPDE sentenceBuilder = new SentenceBuilderIntransitivePPDE(
+                    getLanguage(),
+                    this.getFrameType(),
+                    this.getSentenceTemplateRepository(),
+                    this.getSentenceTemplateParser(),
+                    lexicalEntryUtil);
+            generatedSentences = sentenceBuilder.generateBackwardAmount(bindingVar, new String[2], lexicalEntryUtil);
+            //generatedSentences.sort(String::compareToIgnoreCase);
+        } catch (Exception ex) {
+            java.util.logging.Logger.getLogger(TransitiveVPGrammarRuleGenerator.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return generatedSentences;
+    }
+        
+    
+    
     
     
    

@@ -92,7 +92,7 @@ public class TemplateFinder implements TempConstants{
         System.out.println("isDate(referenceUri)::"+isDate(referenceUri));
         System.out.println("isPlace(referenceUri)::"+isPlace(objectUri));
           System.out.println("type::"+type);
-         exit(1);*/
+         //exit(1);*/
         return type;
 
     }
@@ -212,6 +212,10 @@ public class TemplateFinder implements TempConstants{
 
     public String getSelectedTemplate() {
         return selectedTemplate;
+    }
+    
+     public void setSelectedTemplate(String template) {
+        this.selectedTemplate=template;
     }
 
     public String getDeterminer(Language language, DomainOrRangeType domainOrRangeType) {

@@ -726,7 +726,7 @@ SELECT DISTINCT ?uri WHERE {
                 + "        ?subjOfProp <http://dbpedia.org/ontology/mayor> ?objOfProp ."
                 + "}";
         System.out.println("working:"+sparql);
-        exit(1);*/
+        //exit(1);*/
         return sparql;
     }
     

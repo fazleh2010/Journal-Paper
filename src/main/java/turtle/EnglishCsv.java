@@ -7,6 +7,7 @@ package turtle;
 
 import grammar.datasets.sentencetemplates.TempConstants;
 import static grammar.datasets.sentencetemplates.TempConstants.NounPPFrame;
+import static grammar.datasets.sentencetemplates.TempConstants.infinitive;
 import static grammar.datasets.sentencetemplates.TempConstants.past;
 import static grammar.datasets.sentencetemplates.TempConstants.perfect;
 import static grammar.datasets.sentencetemplates.TempConstants.present;
@@ -126,6 +127,8 @@ public class EnglishCsv implements TempConstants {
         }
 
         public static String getPreposition(String lemonEntry,String preposition, String language) {
+            if(preposition.contains("X"))
+                preposition="";
             return getPrepostionL(lemonEntry,preposition, language);
         }
 
@@ -235,18 +238,19 @@ public class EnglishCsv implements TempConstants {
         private Integer writtenFormInfinitive = 2;
         private Integer writtenForm3rdPerson = 3;
         private Integer writtenFormPast = 4;
-        private Integer syntacticFrameIndex = 5;
-        private Integer subjectIndex = 6;
-        private Integer directObjectIndex = 7;
-        private Integer senseIndex = 8;
-        private Integer referenceIndex = 9;
-        private Integer domainIndex = 10;
-        private Integer rangeIndex = 11;
-        private Integer passivePrepositionIndex=12;
-        private Integer domainWrittenSingularFormIndex=13;
-        private Integer domainWrittenPluralFormIndex=14;
-        private Integer rangeWrittenSingularFormIndex=15;
-        private Integer rangeWrittenPluralFormIndex=16;
+        private Integer writtenFormPerfect = 5;
+        private Integer syntacticFrameIndex = 6;
+        private Integer subjectIndex = 7;
+        private Integer directObjectIndex = 8;
+        private Integer senseIndex = 9;
+        private Integer referenceIndex = 10;
+        private Integer domainIndex = 11;
+        private Integer rangeIndex = 12;
+        private Integer passivePrepositionIndex=13;
+        private Integer domainWrittenSingularFormIndex=14;
+        private Integer domainWrittenPluralFormIndex=15;
+        private Integer rangeWrittenSingularFormIndex=16;
+        private Integer rangeWrittenPluralFormIndex=17;
 
 
         public String getHeader(String lemonEntry, String preposition, String language) {
@@ -272,15 +276,15 @@ public class EnglishCsv implements TempConstants {
                     + "  lemon:canonicalForm  :form_" + lemonEntry + " ;\n"
                     + "  lemon:otherForm      :form_" + lemonEntry + "s ;\n"
                     + "  lemon:otherForm      :form_" + lemonEntry + "ed ;\n"
+                    + "  lemon:otherForm      :form_" + lemonEntry + "perfect"+" ;\n"
                     + senseIdStr
                     + "  lemon:synBehavior    :" + lemonEntry + "_frame_transitive .\n"
                     + "\n";
             return senseIdStr;
         }
 
-        public String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast, String language,String subject) {
+        public String getWritten(String lemonEntry, String partOfSpeech,String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast, String writtenFormPerfect,String language,String subject) {
             String subjectLemon = null, objectLemon = null;
-
             
             if (subject.contains("domain")) {
                 objectLemon = lemonEntry + "_subj";
@@ -301,6 +305,11 @@ public class EnglishCsv implements TempConstants {
                     + ":form_" + lemonEntry + "ed a   lemon:Form ;\n"
                     + "  lemon:writtenRep \"" + writtenFormPast + "\"@" + language + " ;\n"
                     + "  lexinfo:tense    lexinfo:past .\n"
+                    + "\n"
+                    + ":form_" + lemonEntry + "perfect"+" a   lemon:Form ;\n"
+                    + "  lemon:writtenRep \"" + writtenFormPerfect + "\"@" + language + " ;\n"
+                    + "  lexinfo:tense    lexinfo:perfect ;\n"
+                    + "  lexinfo:person   lexinfo:thirdPerson .\n"
                     + "\n"
                     + ":" + lemonEntry + "_frame_transitive a lexinfo:TransitiveFrame ;\n"
                     + "  lexinfo:subject          :" + subjectLemon + " ;\n"
@@ -368,6 +377,20 @@ public class EnglishCsv implements TempConstants {
            GenderUtils.setWrittenForms(tupple.getDomain(), row[getDomainWrittenSingular()], row[getDomainWrittenPlural()]);
            GenderUtils.setWrittenForms(tupple.getRange(), row[getRangeWrittenSingular()], row[getRangeWrittenPlural()]);
         }
+        
+        
+        
+        public void setVerbInfo(String partOfSpeech, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast,String writtenFormPerfect) {
+            Map<String, String> verbTypes = Map.of(
+                    present, writtenFormInfinitive,
+                    present3rd, writtenForm3rdPerson,
+                    past, writtenFormPast,
+                    perfect, writtenFormPerfect
+            );
+
+            String[] verbs = new String[]{writtenFormInfinitive, writtenForm3rdPerson, writtenFormPast,writtenFormPerfect};
+            GenderUtils.setVerbTypes(partOfSpeech, verbs, verbTypes);
+        }
 
         public String getPrepostion(String lemonEntry,String preposition, String language) {
              return "## Prepositions ##\n"
@@ -396,6 +419,10 @@ public class EnglishCsv implements TempConstants {
 
         public String getWrittenFormPast(String[] row) {
             return row[writtenFormPast];
+        }
+        
+        public String getWrittenFormPerfect(String[] row) {
+             return row[this.writtenFormPerfect];
         }
 
         public String getSyntacticFrameIndex(String[] row) {
@@ -450,6 +477,8 @@ public class EnglishCsv implements TempConstants {
             return rangeWrittenPluralFormIndex;
         }
 
+      
+
     }
 
     public static class InTransitFrame {
@@ -461,14 +490,15 @@ public class EnglishCsv implements TempConstants {
         private Integer writtenFormInfinitive = 2;
         private Integer writtenForm3rdPerson = 3;
         private Integer writtenFormPast = 4;
-        private Integer preposition = 5;
-        private Integer syntacticFrameIndex = 6;
-        private Integer subject = 7;
-        private Integer prepositionalAdjunct = 8;
-        private Integer senseIndex = 9;
-        private Integer referenceIndex = 10;
-        private Integer domainIndex = 11;
-        private Integer rangeIndex = 12;
+        private Integer writtenFormPerfect=5;
+        private Integer preposition = 6;
+        private Integer syntacticFrameIndex = 7;
+        private Integer subject = 8;
+        private Integer prepositionalAdjunct = 9;
+        private Integer senseIndex = 10;
+        private Integer referenceIndex = 11;
+        private Integer domainIndex = 12;
+        private Integer rangeIndex = 13;
         private Integer domainWrittenSingularFormIndex=rangeIndex+1;
         private Integer domainWrittenPluralFormIndex=domainWrittenSingularFormIndex+1;
         private Integer rangeWrittenSingularFormIndex=domainWrittenPluralFormIndex+1;
@@ -501,7 +531,7 @@ public class EnglishCsv implements TempConstants {
             return senseIdStr;
         }
 
-        public String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast, String language,String subject) {
+        public String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast, String writtenFormPerfect, String language,String subject) {
             String subjectLemon=null,objectLemon=null;
             if (subject.contains("domain")) {
                 subjectLemon = lemonEntry + "_subj";
@@ -527,6 +557,12 @@ public class EnglishCsv implements TempConstants {
                     + "  lexinfo:number    lexinfo:singular ;\n"
                     + "  lexinfo:person    lexinfo:thirdPerson ;\n"
                     + "  lexinfo:tense     lexinfo:past .\n"
+                    + "\n"
+                    + "\n"
+                    + ":form_" + lemonEntry + "perfect"+" a   lemon:Form ;\n"
+                    + "  lemon:writtenRep \"" + writtenFormPerfect + "\"@" + language + " ;\n"
+                    + "  lexinfo:tense    lexinfo:perfect ;\n"
+                    + "  lexinfo:person   lexinfo:thirdPerson .\n"
                     + "\n"
                     + ":" + lemonEntry + "_frame a  lexinfo:IntransitivePPFrame ;\n"
                     + "  lexinfo:subject              :" + lemonEntry + "_subj ;\n"
@@ -564,42 +600,20 @@ public class EnglishCsv implements TempConstants {
            GenderUtils.setWrittenForms(tupple.getRange(), row[getRangeWrittenSingular()], row[getRangeWrittenPlural()]);
         }
         
-        public  void setVerbInfo(String partOfSpeech, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast) {
-             Map<String, String> verbTypes = Map.of(
-                        infinitive, writtenFormInfinitive,
-                        present3rd, writtenForm3rdPerson,
-                        past, writtenFormPast
-                );
-             
-             String [] verbs=new String[]{writtenFormInfinitive,writtenForm3rdPerson,writtenFormPast};
-             
-              
-            GenderUtils.setVerbTypes(partOfSpeech, verbs,verbTypes);  
-            
-           
-            
-            /*Map<String, String> verb = Map.of(
-                        present, writtenFromIn,
-                        past, writtenFormPast,
-                        perfect, writtenFormPerfect
-                );
-              
-              
-              
-            if (writtenFormPast.contains(" ")) {
-                GenderUtils.setTrennVerbType(writtenFromIn, verb);
-                GenderUtils.setTrennVerbType(writtenForm3rd, verb);
-                GenderUtils.setTrennVerbType(writtenFormPast, verb);
-                GenderUtils.setTrennVerbType(writtenFormPerfect, verb);
-            }
-            
-            GenderUtils.setPerfectVerbType(writtenFromIn, verb);
-            GenderUtils.setPerfectVerbType(writtenForm3rd, verb);
-            GenderUtils.setPerfectVerbType(writtenFormPast, verb);
-            GenderUtils.setPerfectVerbType(writtenFormPerfect, verb);*/
-            
+        public void setVerbInfo(String partOfSpeech, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast, String writtenFormPerfect) {
+            Map<String, String> verbTypes = Map.of(
+                    present, writtenFormInfinitive,
+                    present3rd, writtenForm3rdPerson,
+                    past, writtenFormPast,
+                    perfect, writtenFormPerfect
+            );
+
+            String[] verbs = new String[]{writtenFormInfinitive, writtenForm3rdPerson, writtenFormPast, writtenFormPerfect};
+            GenderUtils.setVerbTypes(partOfSpeech, verbs, verbTypes);
         }
 
+        
+       
         public  String getPrepostion(String lemonEntry, String preposition, String language) {
             return "## Prepositions ##\n"
                     + ":"+"form_" + lemonEntry + "_preposition" + " a                  lemon:SynRoleMarker ;\n"
@@ -627,6 +641,10 @@ public class EnglishCsv implements TempConstants {
 
         public String getWrittenFormPast(String[] row) {
             return row[writtenFormPast];
+        }
+        
+        public String getWrittenFormPerfect(String[] row) {
+             return row[this.writtenFormPerfect];
         }
 
         public String getPreposition(String[] row) {

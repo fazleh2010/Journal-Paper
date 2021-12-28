@@ -1,0 +1,2 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive,writtenForm3rdPresent,writtenFormPast,writtenFormPerfect,SyntacticFrame,subject,directObject,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural,passivePreposition
+betreiben,verb,betreiben,betreibt,betrieb,betrieben,TransitiveFrame,domain,range,1,dbo:operator,dbo:LaunchPad,dbo:Company,feminine,Startrampen,Startrampe,feminine,Firma,Firmen,feminine

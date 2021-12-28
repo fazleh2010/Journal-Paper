@@ -182,14 +182,11 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       createSentenceTemplate(language,
         List.of(
          //Who presented BBC Wildlife Specials?
-        "interrogativePronoun(range) verb(mainVerb:present:thirdPerson) object(domain)?",
+        "interrogativePronoun(range) verb(mainVerb:present3rd:thirdPerson) object(domain)?",
         "interrogativePronoun(range) verb(mainVerb:past:thirdPerson) object(domain)?",
-        //Which Person presented BBC Wildlife Specials?
-        "interrogativeDeterminer(range:singular) verb(mainVerb:present:thridPerson) object(domain)?",
-        "interrogativeDeterminer(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
-        //Which Persons presented BBC Wildlife Specials?
-        "interrogativeDeterminer(range:plural) verb(mainVerb:past:thridPerson) object(domain)?",
-        "interrogativeDeterminer(range:plural) verb(mainVerb:present:thridPerson) object(domain)?"      
+        //Which person presented BBC Wildlife Specials?
+        "interrogativeDeterminer(range:singular) verb(mainVerb:present3rd:thridPerson) object(domain)?",
+        "interrogativeDeterminer(range:singular) verb(mainVerb:past:thridPerson) object(domain)?"
         ),
        TransitiveFrame,
         active
@@ -200,14 +197,40 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       createSentenceTemplate(language,
         List.of(
         //"What was developed by X?
-        "interrogativeDeterminer(domain:singular) verb(component_be:past:singular) verb(mainVerb:past:thridPerson) preposition adjunct(range)?",
+        "interrogativeDeterminer(domain:singular) verb(component_be:past:singular) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?",
         //"What were developed by X?
-        "interrogativeDeterminer(domain:plural) verb(component_be:past:plural) verb(mainVerb:past:thridPerson) preposition adjunct(range)?"
+        "interrogativeDeterminer(domain:plural) verb(component_be:past:plural) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?" 
         ),
         TransitiveFrame,
         passive
       )
     );
+    
+       // TransitiveFrame active
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+           ),
+       TransitiveFrame,
+       HOW_MANY_THING,
+       active
+      )
+    );
+    
+    // TransitiveFrame passive amount
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+        //How many languages are spoken in Turkmenistan? 
+        "interrogativeAmount(domain:plural) verb(component_be:present:plural) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?"  
+            ),
+        TransitiveFrame,
+        HOW_MANY_THING,
+        passive
+      )
+    );
+    
+    
     
     sentenceTemplateRepository.add(
       createSentenceTemplate(language,
@@ -237,6 +260,10 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         forward
       )
     );
+    
+    
+    
+    
       sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(
@@ -267,6 +294,19 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         IntransitivePPFrame,
         WHEN_WHAT_PAST_THING,
         forward
+      )
+    );
+       
+        // TransitiveFrame passive amount
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+        //How many languages are spoken in Turkmenistan? 
+        "interrogativeAmount(domain:plural) verb(component_be:present:plural) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?"  
+            ),
+        IntransitivePPFrame,
+        HOW_MANY_THING,
+        backward
       )
     );
     

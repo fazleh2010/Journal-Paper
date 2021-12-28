@@ -1,6 +1,0 @@
-LemonEntry,partOfSpeech,writtenFormInfinitive,writtenForm3rdPresent,writtenFormPast,writtenFormPerfect,SyntacticFrame,subject,directObject,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural,passivePreposition
-Schreiben_1,verb,schreiben,schreibt,schrieb,geschrieben,TransitiveFrame,range,domain,1,dbo:writer,dbo:Song,dbo:Person,neuter,Lied,Lieder,masculine,Person,Personen,von
-Schreiben_2,verb,schreiben,schreibt,schrieb,geschrieben,TransitiveFrame,range,domain,1,dbo:composer,dbo:TelevisionShow,dbo:Person,feminine,Fernsehsendung,Fernsehsendungen,masculine,Person,Personen,von
-Schreiben_3,verb,schreiben,schreibt,schrieb,geschrieben,TransitiveFrame,range,domain,1,dbo:musicComposer,dbo:Film,dbo:Person,masculine,Film,Filme,masculine,Person,Personen,von
-Schreiben_4,verb,schreiben,schreibt,schrieb,geschrieben,TransitiveFrame,range,domain,1,dbo:programmingLanguage,dbo:Software,dbo:ProgrammingLanguage,feminine,Software,Software,feminine,Programmiersprache,Programmiersprachen,von
-Schreiben_5,verb,schreiben,schreibt,schrieb,geschrieben,TransitiveFrame,range,domain,1,dbo:author,dbo:Book,dbo:Person,masculine,Person,Personen,neuter,Buch,BÅcher,von

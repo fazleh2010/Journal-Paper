@@ -386,6 +386,9 @@ public class EvaluateAgainstQALD {
         String queGGSparql = !isNull(entryComparison.getQueGGEntry()) ? entryComparison.getQueGGEntry().getSparql() : "";
         Boolean tpFlag = false;
         Query qaldPARQLQuery = new Query();
+        System.out.println("qaldPARQLQuery::"+entryComparison.getQaldEntry().getId());
+         System.out.println("qaldPARQLQuery::"+entryComparison.getQaldEntry().getSparql());
+        System.out.println("qaldPARQLQuery::"+qaldPARQLQuery);
         SPARQLParser.createParser(Syntax.syntaxSPARQL_11).parse(qaldPARQLQuery, qaldSparql);
         List<String> uriResultListQueGG = new ArrayList<String>();
         List<String> uriResultListQALD;
@@ -758,11 +761,11 @@ public class EvaluateAgainstQALD {
              
         } else /*if (stringSimilarity.isMultipleSparqlQuery(qaldSparqlQuery)) */{
             /* System.out.println("qaldSparqlQuery::"+qaldSparqlQuery);
-                exit(1);*/
+               // exit(1);*/
             multipleFlag = true;
         }
         
-        if(index==16||index==180||index==194)
+        if(index==16||index==180||index==194||index==67||index==89||index==150)
            return new TreeMap<String, QueGGinfomation>();
          
         /*if (multipleFlag&&qaldSparqlQuery.contains("res:Surfing")) {
@@ -775,7 +778,7 @@ public class EvaluateAgainstQALD {
         }
         else if (multipleFlag&&qaldSparqlQuery.contains("industry")||qaldSparqlQuery.contains("Nobel_Prize_in_Physics")||qaldSparqlQuery.contains("Mickey_Rourke")||qaldSparqlQuery.contains("Nobel_Peace_Prize")) {
                System.out.println("qaldSparqlQuery::"+qaldSparqlQuery);
-                exit(1);
+               // exit(1);
             return new TreeMap<String, QueGGinfomation>();
         }*/
 

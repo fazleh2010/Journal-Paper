@@ -7246,8 +7246,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is Batman's real name?",
-					"keywords": "real name, Batman"
+					"string": "What is Superwoman's real name?",
+					"keywords": "real name, Superwoman"
 				},
 				{
 					"language": "pt_BR",
@@ -7261,8 +7261,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Was ist Batmans richtiger Name?",
-					"keywords": "Batman, richtiger Name"
+					"string": "Was ist Superwomans richtiger Name?",
+					"keywords": "Superwoman, richtiger Name"
 				},
 				{
 					"language": "es",
@@ -7296,7 +7296,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?s WHERE { <http://dbpedia.org/resource/Batman> <http://dbpedia.org/property/alterEgo> ?s . }"
+				"sparql": "SELECT DISTINCT ?s WHERE { <http://dbpedia.org/resource/Superwoman> <http://dbpedia.org/property/alterEgo> ?s . }"
 			},
 			"answers": [{
 				"head": {
@@ -7322,8 +7322,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What form of government does Russia have?",
-					"keywords": "form of government, Russia"
+					"string": "What form of government does Poland have?",
+					"keywords": "form of government, Poland"
 				},
 				{
 					"language": "pt_BR",
@@ -7337,8 +7337,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Welche Regierungsform hat Russland?",
-					"keywords": "Russland, Regierungsform"
+					"string": "Welche Regierungsform hat Polen?",
+					"keywords": "Polen, Regierungsform"
 				},
 				{
 					"language": "es",
@@ -7372,7 +7372,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Russia> <http://dbpedia.org/ontology/governmentType> ?uri . } "
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Poland> <http://dbpedia.org/ontology/governmentType> ?uri . } "
 			},
 			"answers": [{
 				"head": {
@@ -8714,8 +8714,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the president of Eritrea?",
-					"keywords": "president, Eritrea"
+					"string": "Who is the president of Hamburg Parliament?",
+					"keywords": "president, Hamburg Parliament"
 				},
 				{
 					"language": "pt_BR",
@@ -8729,8 +8729,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer ist der Präsident von Eritrea?",
-					"keywords": "Präsident, Eritrea"
+					"string": "Wer ist der Präsident von Hamburg Parliament?",
+					"keywords": "Präsident, Hamburg Parliament"
 				},
 				{
 					"language": "es",
@@ -8764,7 +8764,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Eritrea> <http://dbpedia.org/ontology/leader> ?uri . <http://dbpedia.org/resource/Eritrea> <http://dbpedia.org/ontology/leaderTitle> 'President'@en . }  "
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Hamburg_Parliament> <http://dbpedia.org/ontology/leader> ?uri . }  "
 			},
 			"answers": [{
 				"head": {
@@ -9307,8 +9307,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was John F. Kennedy's vice president?",
-					"keywords": "John F. Kennedy, vice president"
+					"string": "Who was Samuel Schmid's vice president?",
+					"keywords": "Samuel Schmid, vice president"
 				},
 				{
 					"language": "pt_BR",
@@ -9317,8 +9317,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer war der Vizepräsident unter John F. Kennedy?",
-					"keywords": "John F. Kennedy, Vizepräsident"
+					"string": "Wer war der Vizepräsident unter Samuel Schmid?",
+					"keywords": "Samuel Schmid, Vizepräsident"
 				},
 				{
 					"language": "es",
@@ -9352,7 +9352,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nSELECT DISTINCT ?uri \nWHERE { res:John_F._Kennedy dbo:vicePresident ?uri . \n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nSELECT DISTINCT ?uri \nWHERE { res:Samuel_Schmid dbo:vicePresident ?uri . \n}"
 			},
 			"answers": [{
 				"head": {
@@ -10230,8 +10230,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the king of the Netherlands?",
-					"keywords": "king, the Netherlands"
+					"string": "Who is the king of the Parliament of Barbados?",
+					"keywords": "king, Parliament of Barbados"
 				},
 				{
 					"language": "pt_BR",
@@ -10245,8 +10245,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer ist der König der Niederlande?",
-					"keywords": "König, Niederlande"
+					"string": "Wer ist der König der Parliament of Barbados?",
+					"keywords": "König, Parliament of Barbados"
 				},
 				{
 					"language": "es",
@@ -10280,7 +10280,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Netherlands> <http://dbpedia.org/ontology/leader> ?uri . ?uri a <http://dbpedia.org/ontology/Royalty> . } "
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Parliament_of_Barbados> <http://dbpedia.org/ontology/leader> ?uri . ?uri a <http://dbpedia.org/ontology/Royalty> . } "
 			},
 			"answers": [{
 				"head": {
@@ -12025,7 +12025,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What country is Sitecore from?",
+					"string": "What country is Epicentric from?",
 					"keywords": "country, Sitecore"
 				},
 				{
@@ -12040,8 +12040,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Aus welchem Land kommt Sitecore?",
-					"keywords": "Sitecore, Land"
+					"string": "Aus welchem Land kommt Epicentric?",
+					"keywords": "Epicentric, Land"
 				},
 				{
 					"language": "es",
@@ -12075,7 +12075,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Sitecore> <http://dbpedia.org/ontology/foundationPlace> ?uri . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Epicentric> <http://dbpedia.org/ontology/foundationPlace> ?uri . }"
 			},
 			"answers": [{
 				"head": {
@@ -12243,8 +12243,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was Vincent van Gogh inspired by?",
-					"keywords": "person, inspiring, Vincent van Gogh"
+					"string": "Who was Omar Khayyam inspired by?",
+					"keywords": "person, inspiring, Omar Khayyam"
 				},
 				{
 					"language": "pt_BR",
@@ -12258,8 +12258,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer hat Vincent van Gogh inspiriert?",
-					"keywords": "Vincent van Gogh, Inspiration"
+					"string": "Wer hat Omar Khayyam inspiriert?",
+					"keywords": "Omar Khayyam, Inspiration"
 				},
 				{
 					"language": "es",
@@ -12293,7 +12293,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/influenced> <http://dbpedia.org/resource/Vincent_van_Gogh> . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/influenced> <http://dbpedia.org/resource/Omar_Khayyam> . }"
 			},
 			"answers": [{
 				"head": {
@@ -16564,8 +16564,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What are the five boroughs of New York?",
-					"keywords": "five boroughs, New York"
+					"string": "What are the five boroughs of Poland?",
+					"keywords": "five boroughs, Poland"
 				},
 				{
 					"language": "pt_BR",
@@ -16579,8 +16579,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Was sind die fünf Stadtteile von New York?",
-					"keywords": "New York, Stadtteile"
+					"string": "Was sind die fünf Stadtteile von Polen?",
+					"keywords": "Polen, Stadtteile"
 				},
 				{
 					"language": "es",

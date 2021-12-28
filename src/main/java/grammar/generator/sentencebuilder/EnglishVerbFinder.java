@@ -48,7 +48,7 @@ public class EnglishVerbFinder implements TempConstants {
 
         if (this.mainVerbFlag) {
             word = findMainVerb(attribute, reference);
-        } else if (this.auxilaryVerbFlag || this.imperativeVerbFlag) {
+        }  else if (this.auxilaryVerbFlag || this.imperativeVerbFlag) {
             if (paramterFinder.getParameterLength() == 2 && paramterFinder.getTensePair().first != null) {
                 word = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil, paramterFinder.getReference(), paramterFinder.getTensePair().first, paramterFinder.getTensePair().second);
             } else if (paramterFinder.getParameterLength() == 3 && paramterFinder.getTensePair().first != null && paramterFinder.getNumberPair().first != null) {
@@ -64,21 +64,45 @@ public class EnglishVerbFinder implements TempConstants {
         System.out.println("auxilaryVerbFlag::" + this.auxilaryVerbFlag);
         System.out.println("imperativeVerbFlag::" + this.imperativeVerbFlag);
         System.out.println("word::" + this.word);
-        exit(1);*/
+        //exit(1);*/
         
     }
 
     private String findMainVerb(String attribute, String reference) throws QueGGMissingFactoryClassException {
         String word = "XX";
-        if (paramterFinder.getTensePair().second.contains(past) || paramterFinder.getTensePair().second.contains(present)) {
-            word = getMainVerb();
-        } else if (paramterFinder.getTensePair().second.contains(infinitive)) {
-            word = getInfinitiveVerb(infinitive);
+
+        if (paramterFinder.getTensePair().second.contains(perfect)) {
+            word = this.getPerfectMainVerb();
+        } else {
+            word = this.getMainVerb(present);
         }
 
         return word;
     }
 
+    
+     private String getPerfectMainVerb() {
+        String word = getMainVerbPresent(past);
+        System.out.println(word);
+        Pair<Boolean, String> pair = GenderUtils.getPerfecterbType(word, perfect);
+        
+        if (pair.first) {
+            return word = pair.second;
+        } else {
+            return "XX";
+
+        }
+    }
+     
+      private String getMainVerb(String tense) throws QueGGMissingFactoryClassException {
+        String key=getMainVerbPresent(tense);
+        Pair<Boolean, String> pair = GenderUtils.getPerfecterbType(key, this.paramterFinder.getTensePair().second);
+        if (pair.first) {
+            return pair.second;
+        }
+        return "XX";
+    }
+      
     private String getInfinitiveVerb(String tense) {
         String word = getMainVerbPresent(past);
         Pair<Boolean, String> pair = GenderUtils.getPerfecterbType(word, tense);
@@ -125,14 +149,25 @@ public class EnglishVerbFinder implements TempConstants {
         return auxilaryVerbFlag;
     }
 
-    private void setCategory(String reference) {
-        System.out.println(reference);
+    /*private void setCategory(String reference) {
         if (reference.contains(mainVerb)) {
             this.mainVerbFlag = true;
         } else if (reference.contains(imperative)) {
             this.imperativeVerbFlag = true;
         } else {
             this.auxilaryVerbFlag = true;
+        }
+
+    }*/
+    
+    private void setCategory(String reference) {
+        if (reference.contains("component_be")) {
+            this.auxilaryVerbFlag = true;
+            return;
+        } else if (reference.contains("imperative")) {
+            this.imperativeVerbFlag = true;
+        } else if (reference.contains(mainVerb)) {
+            this.mainVerbFlag = true;
         }
 
     }

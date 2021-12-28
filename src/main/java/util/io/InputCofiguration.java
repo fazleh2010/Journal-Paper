@@ -50,6 +50,8 @@ public class InputCofiguration {
     private Boolean evalution;
     @JsonProperty("composite")
     private Boolean compositeFlag;
+    @JsonProperty("single")
+    private Boolean singleFlag;
      
     private LinkedData linkedData = null;
 
@@ -128,6 +130,10 @@ public class InputCofiguration {
 
     public Boolean getCompositeFlag() {
         return compositeFlag;
+    }
+
+    public Boolean getSingleFlag() {
+        return singleFlag;
     }
     
     @Override

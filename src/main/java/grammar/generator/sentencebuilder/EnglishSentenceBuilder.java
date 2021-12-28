@@ -154,11 +154,18 @@ public class EnglishSentenceBuilder implements TempConstants {
             
             word=LexicalEntryUtil.getSingle(lexicalEntryUtil, subjectType.name());
           
+        } else if (flagReference && isInterrogativeAmount(attribute).first) {
+            SubjectType subjectType = isInterrogativeAmount(attribute).second;
+            if (reference.contains(colon)) {
+                String[] col = reference.split(colon);
+                word = this.getDeteminerTokenManual(subjectType, col[0], col[1]);
+            }            
+
         } else if (isInterrogativeAmount(attribute).first) {
             SubjectType subjectType = isInterrogativeAmount(attribute).second;
             LexicalEntryUtil.getSingle(lexicalEntryUtil, subjectType.name());
 
-        } else if ( isInterrogativePlace(attribute).first) {
+        }else if ( isInterrogativePlace(attribute).first) {
             SubjectType subjectType = isInterrogativePlace(attribute).second;
             LexicalEntryUtil.getSingle(lexicalEntryUtil, attribute);
 

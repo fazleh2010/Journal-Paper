@@ -190,25 +190,23 @@ public class QueGG {
         String inputDir = inputCofiguration.getOutputDir();
         Integer maxNumberOfEntities = inputCofiguration.getNumberOfEntities();
         Boolean combinedFlag=inputCofiguration.getCompositeFlag();
+        Boolean singleFlag=inputCofiguration.getSingleFlag();
         LinkedData linkedData = inputCofiguration.getLinkedData();
+        List<File> protoToQuestions=new ArrayList<File>();
         setDataSet(linkedData);
 
-        List<File> protoSimpleQ = FileUtils.getFiles(inputDir + "/", grammar_FULL_DATASET + "_" + language.name(), ".json");
+        if (singleFlag) {
+            protoToQuestions.addAll(FileUtils.getFiles(inputDir + "/", grammar_FULL_DATASET + "_" + language.name(), ".json"));
+        }
+        if (combinedFlag) {
+            protoToQuestions.addAll(FileUtils.getFiles(inputDir + "/", grammar_COMBINATIONS + "_" + language.name(), ".json"));
+        }
 
-        List<File> protoCompositeQ = FileUtils.getFiles(inputDir + "/", grammar_COMBINATIONS + "_" + language.name(), ".json");
-        
-        if(combinedFlag)
-           protoSimpleQ.addAll(protoCompositeQ);
-      
-        //protoCompositeQ.addAll(protoSimpleQ);
-        //if (protoCompositeQ.isEmpty()) {
-        //    throw new Exception("No files to process for question answering system!!");
-        //}
         String langCode = language.name().toLowerCase().trim();
         String questionAnswerFile = inputDir + File.separator + questionsFile + "_" + langCode + ".csv";
         String questionSummaryFile = inputDir + File.separator + summaryFile + "_" + langCode + ".csv";
         ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile, maxNumberOfEntities, langCode, linkedData.getEndpoint(), online);
-        readAndWriteQuestions.readQuestionAnswers(linkedData, protoSimpleQ, entityLabelDir, externalEntittyListflag);
+        readAndWriteQuestions.readQuestionAnswers(linkedData, protoToQuestions, entityLabelDir, externalEntittyListflag);
 
     }
 

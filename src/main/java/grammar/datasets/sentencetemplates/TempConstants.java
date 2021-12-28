@@ -48,6 +48,7 @@ public interface TempConstants {
     public static String active = "active";
     public static String activeBoolean = "activeBoolean";
     public static String passive = "passive";
+    public static String amount = "amount";
 
     public static String caseType = "case";
     public static String gender = "gender";

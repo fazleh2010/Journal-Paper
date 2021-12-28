@@ -86,7 +86,12 @@ public enum DomainOrRangeType {
     Publisher(List.of(URI.create(DBO.getUri() + "Publisher"))),
     Loyalty(List.of(URI.create(DBO.getUri() + "Loyalty"))),
     Color(List.of(URI.create(DBO.getUri() + "Color"))),
+    ComicsCharacter(List.of(URI.create(DBO.getUri() + "ComicsCharacter"))),
+    Legislature(List.of(URI.create(DBO.getUri() + "Legislature"))),
+    Royalty(List.of(URI.create(DBO.getUri() + "Royalty"))),
     
+    
+
          
     Name(List.of(
             URI.create(DBO.getUri() + "GivenName"),
