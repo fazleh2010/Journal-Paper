@@ -8,6 +8,8 @@ package grammar.sparql;
 import grammar.generator.sentencebuilder.TemplateFinder;
 import grammar.sparql.SPARQLRequest;
 import grammar.structure.component.Binding;
+import grammar.structure.component.DomainOrRangeType;
+import grammar.structure.component.GrammarEntry;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -52,26 +54,32 @@ public class SparqlQuery {
     private Boolean online=false;
 
     
-    public SparqlQuery(String rdfProperty, String className, String domainEntityUrl, String sparqlQueryOrg, String rangeEntityUrl, String type, String returnType, String language, String endpoint, Boolean online, QueryType queryType) {
+    public SparqlQuery(String template,String rdfProperty, String className, String domainEntityUrl, String sparqlQueryOrg, String rangeEntityUrl, String type, String returnType, String language, String endpoint, Boolean online, QueryType queryType) {
         this.endpoint = endpoint;
         this.type = type;
         Integer index = isSimpleOrComposite(sparqlQueryOrg);
-
+       
+         
         if (endpoint.contains("dbpedia.org")) {
             if (type.contains(FIND_ANY_ANSWER) && index == 1) {
                 String property = StringUtils.substringBetween(sparqlQueryOrg, "<", ">");
                 if (queryType.equals(QueryType.SELECT)) {
-                    if (returnType.contains(RETURN_TYPE_OBJECT)) {
-                        sparqlQuery = this.setObjectWikiPedia(domainEntityUrl, property, rdfProperty, className);
-                    } else if (returnType.contains(RETURN_TYPE_SUBJECT)) {
+                    if (returnType.contains(RETURN_TYPE_OBJECT)&&template.contains(TemplateFinder.HOW_MANY_THING)) {
+                       sparqlQuery = this.setObjectWikiPediaCount(domainEntityUrl, property,returnType);
+                    } 
+                    else if (returnType.contains(RETURN_TYPE_OBJECT)) {
+                      sparqlQuery = this.setObjectWikiPedia(domainEntityUrl, property, rdfProperty, className);
+                    }
+                    else if (returnType.contains(RETURN_TYPE_SUBJECT)&&template.contains(TemplateFinder.HOW_MANY_THING)) {
+                        sparqlQuery = this.setSubjectWikiPediaCount(domainEntityUrl, property,returnType);
+                    }
+                    else if (returnType.contains(RETURN_TYPE_SUBJECT)) {
                         if (TemplateFinder.isRdfsLabel(property)) {
                             sparqlQuery = this.setSubjectLabelWikipedia(domainEntityUrl, property, language);
                         } else {
                             sparqlQuery = this.setSubjectWikipedia(domainEntityUrl, property, rdfProperty, className);
                         }
                     }
-                   
-                   
 
                 } else if (queryType.equals(QueryType.ASK)) {
                     sparqlQuery = this.setBooleanWikiPedia(domainEntityUrl, property, rangeEntityUrl);
@@ -92,6 +100,10 @@ public class SparqlQuery {
             } else if (type.contains(FIND_LABEL)) {
                 sparqlQuery = this.setLabelWikipedia(domainEntityUrl, language);
             }
+            
+             /*System.out.println("sparqlQuery::"+this.sparqlQuery);
+                        System.out.println("template::"+template);
+                        exit(1);*/
 
             if (online) {
                 if (queryType.equals(QueryType.SELECT)) {
@@ -458,6 +470,28 @@ public class SparqlQuery {
 
     }
     
+    private String setObjectWikiPediaCount(String entityUrl, String property,String variable) {
+        //SELECT (COUNT(DISTINCT ?x) as ?c) WHERE {  <http://dbpedia.org/resource/Turkmenistan> <http://dbpedia.org/ontology/language> ?x . } 
+        variable="?"+variable;
+        String sparql = "select "+"(COUNT(DISTINCT "+variable+") as ?c) WHERE"+"\n"
+                    + "    {\n"
+                    + "    " + "<" + entityUrl + ">" + " " + "<" + property + ">" + "  " +variable+" ." + "\n"
+                    + "    }";
+        return sparql;
+            
+    }
+    
+    private String setSubjectWikiPediaCount(String objectUri, String property,String variable) {
+        //SELECT (COUNT(DISTINCT ?x) as ?c) WHERE {  <http://dbpedia.org/resource/Turkmenistan> <http://dbpedia.org/ontology/language> ?x . } 
+        variable="?"+variable;
+        String sparql = "select  "+"(COUNT(DISTINCT "+variable+") as ?c) WHERE"+"\n"
+                    + "    {\n"
+                    + "   " + variable + " " + "<" + property + ">" + "  " + "<" + objectUri + "> ." + "\n"
+                    + "    }";
+        return sparql;
+            
+    }
+    
     public String setSubjectLabelWikipedia(String entityUrl, String property, String language) {
         String sparql = setLabelWikipedia(entityUrl, language);
         String resultSparql = executeSparqlQuery(sparql);
@@ -740,6 +774,8 @@ SELECT DISTINCT ?uri WHERE {
     private boolean isPropertyLabel(String property) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+   
 
     
    

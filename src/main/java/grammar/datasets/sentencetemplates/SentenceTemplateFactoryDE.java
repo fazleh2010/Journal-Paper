@@ -193,7 +193,7 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
         
         ),
        TransitiveFrame,
-        active
+        activeTransitive
       )
     );
       // TransitiveFrame
@@ -222,7 +222,7 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
 
         ),
         TransitiveFrame,
-        passive
+        passiveTransitive
       )
     );
     

@@ -78,10 +78,10 @@
   lemon:subjOfProp  :speak_1ed_subj ;
   lemon:objOfProp   :speak_1ed_obj ;
   lemon:condition   :speak_1_sense_1_condition .
-:speak_1ed_obj lemon:marker :by .
+:speak_1ed_obj lemon:marker :in .
 
 ## Prepositions ##
 :form_speak_1_preposition a                  lemon:SynRoleMarker ;
-  lemon:canonicalForm  [ lemon:writtenRep "by"@en ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "in"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
 

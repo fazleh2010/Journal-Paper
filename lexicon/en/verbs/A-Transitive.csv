@@ -1,2 +1,3 @@
 LemonEntry,,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPast,SyntacticFrame,subject,directObject,sense,reference,domain,range,passivePreposition,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural
-speak_1,verb,speak,speaks,spoke,spoken,TransitiveFrame,range,domain,1,dbo:language,dbo:Language,dbo:Country,by,language,languages,country,countries
+speak_1,verb,speak,speaks,spoke,spoken,TransitiveFrame,range,domain,1,dbo:language,dbo:Language,dbo:Country,in,language,languages,country,countries
+live_1,verb,live,lives,lived,lived,TransitiveFrame,range,domain,1,dbo:ethnicGroup,dbo:EthnicGroup,dbo:Country,in,ethnic group,ethnic groups,country,countries

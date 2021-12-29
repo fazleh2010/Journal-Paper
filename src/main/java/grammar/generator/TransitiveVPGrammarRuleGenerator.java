@@ -1,5 +1,6 @@
 package grammar.generator;
 
+import com.google.gdata.util.common.base.Pair;
 import grammar.datasets.annotated.AnnotatedVerb;
 import grammar.datasets.sentencetemplates.TempConstants;
 import static grammar.datasets.sentencetemplates.TempConstants.booleanQuestionDomain;
@@ -24,6 +25,7 @@ import org.apache.jena.query.QueryType;
 public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot implements TempConstants {
 
     private static final Logger LOG = LogManager.getLogger(TransitiveVPGrammarRuleGenerator.class);
+    private String template="";
 
     public TransitiveVPGrammarRuleGenerator(Language language) {
         super(FrameType.VP, language, BindingConstants.DEFAULT_BINDING_VARIABLE);
@@ -44,6 +46,7 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot i
                     this.getSentenceTemplateParser(),
                     lexicalEntryUtil);
             generatedSentences = sentenceBuilder.generateFullSentencesForward(bindingVar, lexicalEntryUtil);
+            this.template=sentenceBuilder.getTemplateFinder().getSelectedTemplate();
             //generatedSentences.sort(String::compareToIgnoreCase);
         } catch (Exception ex) {
             java.util.logging.Logger.getLogger(TransitiveVPGrammarRuleGenerator.class.getName()).log(Level.SEVERE, null, ex);
@@ -56,6 +59,7 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot i
             QueGGMissingFactoryClassException {
         List<String> generatedSentences = new ArrayList<String>();
         String bindingVar = getBindingVariable();
+        String sentenceTemplate=null;
         try {
              SentenceBuilderIntransitivePPDE sentenceBuilder = new SentenceBuilderIntransitivePPDE(
                     getLanguage(),
@@ -64,6 +68,7 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot i
                     this.getSentenceTemplateParser(),
                     lexicalEntryUtil);
             generatedSentences = sentenceBuilder.generateFullSentencesBackward(bindingVar, new String[2], lexicalEntryUtil);
+            this.template=sentenceBuilder.getTemplateFinder().getSelectedTemplate();
             //generatedSentences.sort(String::compareToIgnoreCase);
         } catch (Exception ex) {
             java.util.logging.Logger.getLogger(TransitiveVPGrammarRuleGenerator.class.getName()).log(Level.SEVERE, null, ex);
@@ -128,6 +133,7 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot i
     public List<GrammarEntry> generateFragmentEntry(GrammarEntry grammarEntry, LexicalEntryUtil lexicalEntryUtil) throws
             QueGGMissingFactoryClassException {
         List<GrammarEntry> grammarEntries=new ArrayList<GrammarEntry>();
+        grammarEntry.setSentenceTemplate(this.template);
         
         GrammarEntry oppositeGrammarEntry = getOppositeGrammarEntry(grammarEntry, lexicalEntryUtil);
         grammarEntries.add(oppositeGrammarEntry);
@@ -147,12 +153,15 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot i
         fragmentEntry.setReturnType(grammarEntry.getBindingType());
         fragmentEntry.setBindingType(grammarEntry.getReturnType());
         fragmentEntry.setReturnVariable(grammarEntry.getBindingVariable());
+        fragmentEntry.setSentenceTemplate(grammarEntry.getSentenceTemplate());
+
         Map<String, String> sentenceToSparqlParameterMapping = new HashMap<String, String>();
         sentenceToSparqlParameterMapping.put(grammarEntry.getSentenceBindings().getBindingVariableName(),
                 grammarEntry.getReturnVariable());
         fragmentEntry.setSentenceToSparqlParameterMapping(sentenceToSparqlParameterMapping);
         // sentences
         List<String> generatedSentences = generateOppositeSentences(lexicalEntryUtil);
+        fragmentEntry.setSentenceTemplate(this.template);
         fragmentEntry.setSentences(generatedSentences);
         return fragmentEntry;
     }
@@ -170,10 +179,10 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot i
                     lexicalEntryUtil);
            List<String> generatedSentences = sentenceBuilder.generateBackwardAmount(bindingVar, new String[2], lexicalEntryUtil);
             fragmentEntry.setType(SentenceType.SENTENCE);
-            fragmentEntry.setSentences(generateAmountSentences(lexicalEntryUtil));
+            fragmentEntry.setSentenceTemplate(sentenceBuilder.getTemplateFinder().getSelectedTemplate());
+            fragmentEntry.setSentences(generatedSentences);
             fragmentEntry.setBindingType(grammarEntry.getReturnType());
             fragmentEntry.setReturnType(grammarEntry.getBindingType());
-            fragmentEntry.setSentenceTemplate(sentenceBuilder.getTemplate());
         } catch (Exception ex) {
             java.util.logging.Logger.getLogger(TransitiveVPGrammarRuleGenerator.class.getName()).log(Level.SEVERE, null, ex);
         }

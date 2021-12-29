@@ -32,6 +32,8 @@ public class GrammarEntryUnit {
     private String returnType;
     @JsonProperty("frameType")
     private String frameType;
+    @JsonProperty("sentenceTemplate")
+    private String sentenceTemplate;
     @JsonProperty("sentences")
     private List<String> sentences;
     @JsonProperty("queryType")
@@ -116,6 +118,10 @@ public class GrammarEntryUnit {
 
     public SentenceBindings getSentenceBindings() {
         return sentenceBindings;
+    }
+
+    public String getSentenceTemplate() {
+        return sentenceTemplate;
     }
 
 }

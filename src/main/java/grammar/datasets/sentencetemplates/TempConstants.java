@@ -45,9 +45,9 @@ public interface TempConstants {
     public static String space = " ";
     public static String DETERMINER = "determiner";
 
-    public static String active = "active";
+    public static String activeTransitive = "active";
     public static String activeBoolean = "activeBoolean";
-    public static String passive = "passive";
+    public static String passiveTransitive = "passive";
     public static String amount = "amount";
 
     public static String caseType = "case";

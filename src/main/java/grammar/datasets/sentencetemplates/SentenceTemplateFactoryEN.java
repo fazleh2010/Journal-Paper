@@ -18,7 +18,6 @@ import static grammar.datasets.sentencetemplates.TempConstants.WHAT_WHICH_PRESEN
 import static grammar.datasets.sentencetemplates.TempConstants.WHEN_WHAT_PAST_THING;
 import static grammar.datasets.sentencetemplates.TempConstants.WHEN_WHO_PAST_PERSON;
 import static grammar.datasets.sentencetemplates.TempConstants.WHERE_WHO_PAST_PERSON;
-import static grammar.datasets.sentencetemplates.TempConstants.active;
 import static grammar.datasets.sentencetemplates.TempConstants.backward;
 import static grammar.datasets.sentencetemplates.TempConstants.booleanQuestionDomain;
 import static grammar.datasets.sentencetemplates.TempConstants.booleanQuestionDomainRange;
@@ -26,9 +25,10 @@ import static grammar.datasets.sentencetemplates.TempConstants.forward;
 import static grammar.datasets.sentencetemplates.TempConstants.location;
 import static grammar.datasets.sentencetemplates.TempConstants.noun;
 import static grammar.datasets.sentencetemplates.TempConstants.nounPhrase;
-import static grammar.datasets.sentencetemplates.TempConstants.passive;
 import static grammar.datasets.sentencetemplates.TempConstants.whQuestion;
 import static grammar.structure.component.FrameType.APP;
+import static grammar.datasets.sentencetemplates.TempConstants.activeTransitive;
+import static grammar.datasets.sentencetemplates.TempConstants.passiveTransitive;
 
 class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
 
@@ -178,8 +178,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
     );
     
      // TransitiveFrame active
-    sentenceTemplateRepository.add(
-      createSentenceTemplate(language,
+    sentenceTemplateRepository.add(createSentenceTemplate(language,
         List.of(
          //Who presented BBC Wildlife Specials?
         "interrogativePronoun(range) verb(mainVerb:present3rd:thirdPerson) object(domain)?",
@@ -189,12 +188,11 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         "interrogativeDeterminer(range:singular) verb(mainVerb:past:thridPerson) object(domain)?"
         ),
        TransitiveFrame,
-        active
+        activeTransitive
       )
     );
     // TransitiveFrame passive
-    sentenceTemplateRepository.add(
-      createSentenceTemplate(language,
+    sentenceTemplateRepository.add(createSentenceTemplate(language,
         List.of(
         //"What was developed by X?
         "interrogativeDeterminer(domain:singular) verb(component_be:past:singular) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?",
@@ -202,31 +200,33 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         "interrogativeDeterminer(domain:plural) verb(component_be:past:plural) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?" 
         ),
         TransitiveFrame,
-        passive
+        passiveTransitive
       )
     );
     
        // TransitiveFrame active
-    sentenceTemplateRepository.add(
-      createSentenceTemplate(language,
+    sentenceTemplateRepository.add(createSentenceTemplate(language,
         List.of(
+        //
            ),
        TransitiveFrame,
        HOW_MANY_THING,
-       active
+       activeTransitive
       )
     );
     
     // TransitiveFrame passive amount
-    sentenceTemplateRepository.add(
-      createSentenceTemplate(language,
+    sentenceTemplateRepository.add(createSentenceTemplate(language,
         List.of(
         //How many languages are spoken in Turkmenistan? 
-        "interrogativeAmount(domain:plural) verb(component_be:present:plural) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?"  
+        "interrogativeAmount(domain:plural) verb(component_be:present:plural) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?" ,
+        //How many ethnic groups live in Slovenia?
+        "interrogativeAmount(domain:plural) verb(mainVerb:present:thridPerson) preposition adjunct(range)?" 
+      
             ),
         TransitiveFrame,
         HOW_MANY_THING,
-        passive
+        passiveTransitive
       )
     );
     
