@@ -132,6 +132,8 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
         return sentences;
     }
     
+    
+    
     @Override
     public List<String> generateBackwardAmount(String bindingVariable, String[] argument, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
         List<String> sentences = new ArrayList<String>();
@@ -150,8 +152,8 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
             //exit(1);
 
         } else if (this.frameType.equals(FrameType.IPP)) {
-            SelectVariable selectVariable = this.lexicalEntryUtil.getSelectVariable();
-            SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
+            SelectVariable oppositeSelectVariable = this.lexicalEntryUtil.getSelectVariable();
+            SelectVariable selectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
             List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                     language, new String[]{frameType.getName(), this.templateFinder.getSelectedTemplate(), backward});
             System.out.println(sentenceTemplates);
@@ -164,6 +166,12 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
 
         return sentences;
     }
+    
+      @Override
+    public List<String> generateForwardAmount(String bindingVariable, String[] argument, LexicalEntryUtil lexicalEntryUtil) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 
     @Override
     public List<String> generateBooleanQuestionDomainRange(String bindingVariable, String[] string, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
@@ -606,6 +614,7 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
         return this.templateFinder.getSelectedTemplate();
     }
 
+  
    
 
 }
