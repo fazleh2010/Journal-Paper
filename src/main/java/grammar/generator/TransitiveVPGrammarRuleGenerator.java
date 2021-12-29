@@ -171,6 +171,8 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot i
            List<String> generatedSentences = sentenceBuilder.generateBackwardAmount(bindingVar, new String[2], lexicalEntryUtil);
             fragmentEntry.setType(SentenceType.SENTENCE);
             fragmentEntry.setSentences(generateAmountSentences(lexicalEntryUtil));
+            fragmentEntry.setBindingType(grammarEntry.getReturnType());
+            fragmentEntry.setReturnType(grammarEntry.getBindingType());
             fragmentEntry.setSentenceTemplate(sentenceBuilder.getTemplate());
         } catch (Exception ex) {
             java.util.logging.Logger.getLogger(TransitiveVPGrammarRuleGenerator.class.getName()).log(Level.SEVERE, null, ex);
