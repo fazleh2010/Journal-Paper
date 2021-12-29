@@ -161,7 +161,7 @@ public class EnglishVerbFinder implements TempConstants {
     }*/
     
     private void setCategory(String reference) {
-        if (reference.contains("component_be")) {
+        if (reference.contains("component_be")||reference.contains("component_do")) {
             this.auxilaryVerbFlag = true;
             return;
         } else if (reference.contains("imperative")) {

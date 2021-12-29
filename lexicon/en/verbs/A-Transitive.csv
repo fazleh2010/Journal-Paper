@@ -1,2 +1,0 @@
-LemonEntry,,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,SyntacticFrame,subject,directObject,sense,reference,domain,range,passivePreposition,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural
-design_2,verb,design,designs,designed,designed,TransitiveFrame,range,domain,2,dbo:designer,dbo:Building,dbo:Person,by,building,buildings,person,persons

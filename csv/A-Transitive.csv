@@ -1,3 +1,0 @@
-LemonEntry,,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,SyntacticFrame,subject,directObject,sense,reference,domain,range,passivePreposition,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural
-Develop_2,verb,develop,develops,developed,TransitiveFrame,range,domain,1,dbo:developer,dbo:VideoGame,dbo:Agent,by,video game,video games,agent,agents
-Develop_1,verb,develop,develops,developed,TransitiveFrame,domain,range,1,dbo:product,dbo:Company,dbo:Software,by,company,companies,software,software

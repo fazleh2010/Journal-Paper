@@ -8,9 +8,9 @@
   "csvToTurtle" : true,
   "turtleToProtoType" : true,
   "single": true,
-  "composite": false,
-  "protoTypeToQuestion" : false,
-  "evalution" : false
+  "composite": true,
+  "protoTypeToQuestion" : true,
+  "evalution" : true
 }
 
 
