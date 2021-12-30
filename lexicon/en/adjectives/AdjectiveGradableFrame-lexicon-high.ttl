@@ -9,21 +9,22 @@
 :lexicon_en a    lemon:Lexicon ;
   lemon:language "en" ;
   lemon:entry    :high ;
+  lemon:entry    :form_high_preposition ;
   lemon:entry    :high_res .
 
 :high a             lemon:LexicalEntry ;
   lexinfo:partOfSpeech lexinfo:adjective ;
-  lemon:canonicalForm  :high_lemma ;
-  lemon:otherForm      :high_comperative ;
-  lemon:otherForm      :high_superlative ;
+  lemon:canonicalForm  :form_high ;
+  lemon:otherForm      :form_high_comperative ;
+  lemon:otherForm      :form_high_superlative ;
   lemon:sense          :high_sense_1 ;
   lemon:synBehavior    :high_predFrame .
 
-:high_lemma lemon:writtenRep "high"@en .
+:form_high lemon:writtenRep "high"@en .
 
-:high_comperative lemon:writtenRep "higher"@en .
+:form_high_comperative lemon:writtenRep "higher"@en .
 
-:high_superlative lemon:writtenRep "higher"@en .
+:form_high_superlative lemon:writtenRep "highest"@en .
 
 :high_predFrame a        lexinfo:AdjectivePPFrame ;
   lexinfo:copulativeSubject :high_PredSynArg .
@@ -38,5 +39,9 @@
   oils:degree   <http://lemon-model.net/oils/high> .
 
 :high_sense_1_condition a lemon:condition ;
-  lemon:propertyDomain   <http://dbpedia.org/ontology/ArchitecturalStructure> ;
-  lemon:propertyRange    <http://www.w3.org/2001/XMLSchema#double> .
+  lemon:propertyDomain   <http://dbpedia.org/ontology/Country> ;
+  lemon:propertyRange    <http://dbpedia.org/ontology/Mountain> .## Prepositions ##
+:form_high_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "in"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

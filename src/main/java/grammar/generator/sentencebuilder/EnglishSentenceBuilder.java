@@ -141,6 +141,19 @@ public class EnglishSentenceBuilder implements TempConstants {
             word = new PronounFinder(this.lexicalEntryUtil,attribute,reference,templateFeatures).getWord();
             
         }   
+        //adjective(degree:superlative)
+        else if (flagReference &&attribute.contains(adjective)) {
+           word = this.lexicalEntryUtil.getAdjectiveReference(reference);
+  
+        } 
+        else if (flagReference &&attribute.equals(noun)) {
+             if (reference.contains(colon)) {
+                String[] col = reference.split(colon);
+                word = this.getNoun(col[0], col[1]);              
+             }
+           
+  
+        } 
         else if (attribute.contains(preposition)) {
             word = this.findPreposition(attribute, reference, flagReference);
            
@@ -294,6 +307,27 @@ public class EnglishSentenceBuilder implements TempConstants {
         return determinerToken;
     }
     
+    private String getNoun(String domainOrRange, String number) throws QueGGMissingFactoryClassException {
+        SelectVariable selectVariable = null;
+        String noun = "";
+      
+
+        if ((domainOrRange.contains(range) || domainOrRange.contains(domain))) {
+            if (domainOrRange.contains(range)) {
+                selectVariable = this.rangeSelectable;
+            } else {
+                selectVariable = this.domainSelectable;
+            }
+            noun = lexicalEntryUtil.getReturnVariableConditionLabel(selectVariable);
+            if (noun == null || noun.isEmpty()) {
+                noun = GenderUtils.getConditionLabelManually(domainOrRange, number,this.subjectUri,this.objectUri);
+            }
+            return noun;
+        } 
+
+        return noun;
+    }
+    
     private String getIntergativeAmountToken(SubjectType subjectType, String domainOrRange, String number) throws QueGGMissingFactoryClassException {
         SelectVariable selectVariable = null;
         String determinerToken = "";
@@ -315,6 +349,8 @@ public class EnglishSentenceBuilder implements TempConstants {
 
         return determinerToken;
     }
+    
+   
 
    
     private String getDeteminerTokenManual(SubjectType subjectType, String domainOrRange,String number) throws QueGGMissingFactoryClassException {
@@ -455,6 +491,7 @@ public class EnglishSentenceBuilder implements TempConstants {
         List<AnnotatedNounOrQuestionWord> annotatedLexicalEntryNouns = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords();
         String result = "";
         for (AnnotatedNounOrQuestionWord annotatedNounOrQuestionWord : annotatedLexicalEntryNouns) {
+             System.out.println(annotatedNounOrQuestionWord);
             if (annotatedNounOrQuestionWord.getNumber().toString().contains(numberType)) {
                 result = annotatedNounOrQuestionWord.getWrittenRepValue();
                 break;
@@ -470,12 +507,35 @@ public class EnglishSentenceBuilder implements TempConstants {
     private String findPreposition(String attribute, String reference, Boolean flagReference) throws QueGGMissingFactoryClassException {
         String word = "XX";
         if (!flagReference) {
-            reference = this.lexicalEntryUtil.getPrepositionReference();
+            reference = this.lexicalEntryUtil.getPrepositionReference() ;
             word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, reference);
         } else if (flagReference) {
             word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, reference);
 
         }
+        return word;
+    }
+
+    private String findAdjectivel(String attribute, String reference, Boolean flagReference) {
+        String word = "XX";
+        
+            String[] col = reference.split(colon);
+            String property = this.lexicalEntryUtil.getOlisRestriction().getProperty();
+            String value = this.lexicalEntryUtil.getOlisRestriction().getValue();
+             word = this.lexicalEntryUtil.getAdjectiveReference(reference);
+            /*String givenDegree = null;
+            System.out.println("property::" + property + " objectUri::" + this.objectUri + " subjectUri::" + this.subjectUri);
+            System.out.println("value::" + value);
+            System.out.println("col::" + col[0]);
+            System.out.println("col::" + col[1]);*/
+            System.out.println("word::" + word);
+
+      
+        exit(1);
+        /*if (reference.contains(colon)) {
+            String[] col = reference.split(colon);
+            word = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil, baseReference, gender, col[0], number, col[1]);
+        }*/
         return word;
     }
 
@@ -518,6 +578,10 @@ public class EnglishSentenceBuilder implements TempConstants {
             }
 
         }*/
+
+  
+
+    
 
     
 

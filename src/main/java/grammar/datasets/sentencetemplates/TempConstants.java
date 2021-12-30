@@ -117,8 +117,12 @@ public interface TempConstants {
 
     public static final String DIRECT_OBJECT = "directObject";
     public static String pronoun = "pronoun";
+    public static String adjective = "adjective";
     public static String baseForm = "baseForm";
     public static String comparative = "comparative";
     public static String superlative = "superlative";
+    public static String adjectiveBaseForm="adjectiveBaseForm";
+    public static String degree = "degree";
+
 
 }

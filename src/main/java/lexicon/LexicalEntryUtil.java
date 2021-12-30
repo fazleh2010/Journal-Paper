@@ -823,6 +823,7 @@ public class LexicalEntryUtil {
 
         for (LexicalForm lexicalForm : this.lexicalEntry.getForms()) {
             String uri = lexicalForm.toString();
+            System.out.println(uri);
             Pair<Boolean, String> pair = this.getLastPart(uri);
             if (pair.component1()) {
                 if (pair.component2().contains("form")) {
@@ -837,6 +838,17 @@ public class LexicalEntryUtil {
 
         return reference;
 
+    }
+    
+    public String getAdjectiveReference(String reference) {
+
+        for (LexicalForm lexicalForm : this.lexicalEntry.getForms()) {
+            Pair<Boolean, String> pair = getLastPart(lexicalForm.toString());
+            if (pair.component1() && pair.component2().contains(reference)) {
+                return lexicalForm.getWrittenRep().value;
+            }
+        }
+        return reference;
     }
     
     public String getVerbReference(String tense) {
@@ -1082,5 +1094,7 @@ public class LexicalEntryUtil {
         }
         return new Pair<Boolean, String>(Boolean.FALSE,uri) ;
     }
+    
+   
 
 }

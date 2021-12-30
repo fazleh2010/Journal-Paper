@@ -275,6 +275,7 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
                 this.writtenFormInfinitive=gradableAdjectiveFrameCsv.getWrittenFormIndex(row);
                 this.writtenForm3rdPerson=gradableAdjectiveFrameCsv.getComparativIndex(row);
                 this.writtenFormPast=gradableAdjectiveFrameCsv.getSuperlativeIndex(row);
+                this.preposition=gradableAdjectiveFrameCsv.getPrepostion(row);
 
             }
             Tupples tupple = new Tupples(this.lemonEntry,
@@ -293,7 +294,8 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
                 = gradableAdjectiveFrameCsv.getHeader(this.lemonEntry, this.language)
                 + gradableAdjectiveFrameCsv.getIndexing(this.lemonEntry, tupplesList)
                 + gradableAdjectiveFrameCsv.getWrittenTtl(this.lemonEntry, this.writtenFormInfinitive, this.writtenForm3rdPerson,this.writtenFormPast,this.language)
-                + gradableAdjectiveFrameCsv.getSenseDetail(lemonEntry, tupplesList, language);
+                + gradableAdjectiveFrameCsv.getSenseDetail(lemonEntry, tupplesList, language)
+                + gradableAdjectiveFrameCsv.getPrepostion(lemonEntry, this.preposition, language);
         this.tutleFileName = getFileName(syntacticFrame);
 
         /*for (String[] row : rows) {

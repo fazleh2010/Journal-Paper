@@ -864,10 +864,11 @@ public class EnglishCsv implements TempConstants {
         private Integer oils_degreeIndex = 10;
         private Integer domainIndex = 11;
         private Integer rangeIndex=12;
-        private Integer domainWrittenSingularFormIndex=13;
-        private Integer domainWrittenPluralFormIndex=14;
-        private Integer rangeWrittenSingularFormIndex=15;
-        private Integer rangeWrittenPluralFormIndex=16;
+        private Integer prepostionIndex=13;
+        private Integer domainWrittenSingularFormIndex=14;
+        private Integer domainWrittenPluralFormIndex=15;
+        private Integer rangeWrittenSingularFormIndex=16;
+        private Integer rangeWrittenPluralFormIndex=17;
         
         public String getHeader(String lemonEntry, String language) {
             return "@prefix :        <http://localhost:8080/#> .\n"
@@ -881,6 +882,7 @@ public class EnglishCsv implements TempConstants {
                     + ":lexicon_en a    lemon:Lexicon ;\n"
                     + "  lemon:language \"" + language + "\" ;\n"
                     + "  lemon:entry    :" + lemonEntry + " ;\n"
+                    + "  lemon:entry    :" + "form_" + lemonEntry + "_preposition"+ " ;\n"
                     + "  lemon:entry    :" + lemonEntry + "_res .\n"
                     + "\n";
         }
@@ -890,9 +892,9 @@ public class EnglishCsv implements TempConstants {
             senseIdStr
                     = ":" + lemonEntry + " a             lemon:LexicalEntry ;\n"
                     + "  lexinfo:partOfSpeech lexinfo:adjective ;\n"
-                    + "  lemon:canonicalForm  :" + lemonEntry + "_lemma" + " ;\n"
-                    + "  lemon:otherForm      :" + lemonEntry + "_comperative" + " ;\n"
-                    + "  lemon:otherForm      :" + lemonEntry + "_superlative" + " ;\n"
+                    + "  lemon:canonicalForm  :" + "form_"+ lemonEntry  + " ;\n"
+                    + "  lemon:otherForm      :" + "form_"+ lemonEntry + "_comperative" + " ;\n"
+                    + "  lemon:otherForm      :" + "form_"+ lemonEntry + "_superlative" + " ;\n"
                     + senseIdStr
                     + "  lemon:synBehavior    :" + lemonEntry + "_predFrame" + " .\n"
                    
@@ -902,15 +904,15 @@ public class EnglishCsv implements TempConstants {
         }
 
         public String getWrittenTtl(String lemonEntry, String baseForm,String comparative,String superlative,String language) {
-            String writtenLemma
-                    = ":" + lemonEntry + "_lemma" + " lemon:writtenRep \"" + baseForm + "\"@" + language + " .\n"
+            String written
+                    = ":" + "form_"+lemonEntry + " lemon:writtenRep \"" + baseForm + "\"@" + language + " .\n"
                     + "\n";
             String writtenFormComparative
-                    = ":" + lemonEntry + "_comperative" + " lemon:writtenRep \"" + comparative + "\"@" + language + " .\n"
+                    = ":" + "form_"+ lemonEntry + "_comperative" + " lemon:writtenRep \"" + comparative + "\"@" + language + " .\n"
                     + "\n";
             
             String writtenFormSuperlative
-                    = ":" + lemonEntry + "_superlative" + " lemon:writtenRep \"" + comparative + "\"@" + language + " .\n"
+                    = ":" + "form_"+ lemonEntry + "_superlative" + " lemon:writtenRep \"" + superlative + "\"@" + language + " .\n"
                     + "\n";
             
             String predFrame
@@ -918,7 +920,7 @@ public class EnglishCsv implements TempConstants {
                     + "  lexinfo:copulativeSubject :" + lemonEntry + "_PredSynArg .\n"
                     + "\n";
             
-            return writtenLemma+writtenFormComparative+writtenFormSuperlative+predFrame;
+            return written+writtenFormComparative+writtenFormSuperlative+predFrame;
         }
         
      
@@ -996,6 +998,15 @@ public class EnglishCsv implements TempConstants {
                     + "  lemon:propertyRange    <" + tupple.getRange() + "> .";
             return header+index+writtenFormLema+predFrame+sense+res+condition;
         }*/
+        
+        public String getPrepostion(String lemonEntry, String preposition, String language) {
+            return "## Prepositions ##\n"
+                    + ":" + "form_" + lemonEntry + "_preposition" + " a                  lemon:SynRoleMarker ;\n"
+                    + "  lemon:canonicalForm  [ lemon:writtenRep \"" + preposition + "\"@" + language + " ] ;\n"
+                    + "  lexinfo:partOfSpeech lexinfo:preposition .\n"
+                    + "\n"
+                    + "";
+        }
 
         public void setArticle(Tupples tupple, String[] row) {
             GenderUtils.setWrittenForms(tupple.getDomain(), getDomainWrittenSingularFormIndex(row), getRangeWrittenSingularFormIndex(row));
@@ -1029,6 +1040,10 @@ public class EnglishCsv implements TempConstants {
 
         public String getWrittenFormIndex(String []row) {
             return row[writtenFormIndex];
+        }
+
+        public String getPrepostion(String []row) {
+            return row[prepostionIndex];
         }
 
         public String getComparativIndex(String []row) {

@@ -93,6 +93,17 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
             System.out.println(sentences);
             //exit(1);
         }
+        else if (this.frameType.equals(FrameType.APP)) {
+            String template = this.templateFinder.getSelectedTemplate();
+            SelectVariable selectVariable = this.lexicalEntryUtil.getSelectVariable();
+            SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
+            List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
+                    language, new String[]{frameType.getName(), superlative});
+            sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
+            System.out.println(sentenceTemplates);
+            System.out.println(sentences);
+            //exit(1);
+        }
 
         /*List<String> sentenceTemplates = getSentenceTemplateRepository().findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                 getLanguage(), new String[]{getFrameType().getName(), FORWARD});*/

@@ -9,6 +9,7 @@ import java.util.List;
 import static grammar.datasets.sentencetemplates.SentenceTemplate.createNPTemplate;
 import static grammar.datasets.sentencetemplates.SentenceTemplate.createSentenceTemplate;
 import static grammar.datasets.sentencetemplates.SentenceTemplate.createVPTemplate;
+import static grammar.datasets.sentencetemplates.TempConstants.AdjectivePPFrame;
 import static grammar.datasets.sentencetemplates.TempConstants.HOW_MANY_PRICE;
 import static grammar.datasets.sentencetemplates.TempConstants.HOW_MANY_THING;
 import static grammar.datasets.sentencetemplates.TempConstants.IntransitivePPFrame;
@@ -28,7 +29,10 @@ import static grammar.datasets.sentencetemplates.TempConstants.nounPhrase;
 import static grammar.datasets.sentencetemplates.TempConstants.whQuestion;
 import static grammar.structure.component.FrameType.APP;
 import static grammar.datasets.sentencetemplates.TempConstants.activeTransitive;
+import static grammar.datasets.sentencetemplates.TempConstants.adjectiveBaseForm;
+import static grammar.datasets.sentencetemplates.TempConstants.comparative;
 import static grammar.datasets.sentencetemplates.TempConstants.passiveTransitive;
+import static grammar.datasets.sentencetemplates.TempConstants.superlative;
 
 class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
 
@@ -496,76 +500,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       )
     );
     
-    
-    
-    
-     /*sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
-        List.of(
-          //Welche Person entwickelte...?
-          "interrogativeDeterminer noun(condition:subject) VP(directObject)?",
-          //Wer entwickelte...?
-          "interrogativePronoun VP(directObject)?"
-        ),
-        "subject",
-        "directObject"
-      )
-    );
-    // VP(directObject)
-    sentenceTemplateRepository.add(
-      createVPTemplate(
-        language,
-        List.of(
-          //entwickelte...
-          "verb(root) directObject"
-        ),
-        "directObject"
-      )
-    );*/
-    
-    
-  
-  
-    /* Not working yet
-    // IntransitivePPFrame
-    sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
-        List.of(
-          //Welcher Fluss fließt durch...?
-          "interrogativeDeterminer noun(condition:subject) VP(prepositionalAdjunct)?",
-          //Was fließt durch...?
-          "interrogativePronoun VP(prepositionalAdjunct)?"
-        ),
-        "subject",
-        "prepositionalAdjunct"
-      )
-    );
-    // VP(prepositionalAdjunct)
-    sentenceTemplateRepository.add(
-      createVPTemplate(
-        language,
-        List.of(
-          //fließt durch...
-          "verb(root) preposition prepositionalAdjunct"
-        ),
-        "prepositionalAdjunct"
-      )
-    );
-    sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
-        List.of(
-          "TemporalDeterminer noun(condition:subject) VP(temporalAdjunct)?"
-        ),
-        "subject",
-        "temporalAdjunct"
-      )
-    );*/
-    // TransitiveFrame
-   
-      // AdjectiveAttributiveFrame
+    // AdjectiveAttributiveFrame
     sentenceTemplateRepository.add(
       createSentenceTemplate(
         language,
@@ -575,89 +510,46 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         "attributiveArg"
       )
     );
-    // AdjectivePPFrame
+    // AdjectivePPFrame...adjectiveBaseForm
     sentenceTemplateRepository.add(
       createSentenceTemplate(
         language,
         List.of(
-          //Welches Kunstwerk wird von ... ausgestellt
-          "interrogativeDeterminer noun(condition:copulativeSubject) verb(reference:component_be_passive) AP(prepositionalAdjunct)?",
-          //Was wird von ... ausgestellt
-          "interrogativePronoun verb(reference:component_be_passive) AP(prepositionalAdjunct)?"
-        ),
-        "copulativeSubject",
-        "prepositionalAdjunct"
-      )
-    );
-    // AdjectivePPFrame NP
-    sentenceTemplateRepository.add(
-      createNPTemplate(
-        language,
-        List.of(
-          //Kunstwerke ausgestellt von...
-          "noun(condition:copulativeSubject,number:plural) verb(root,verbFormMood:participle) preposition prepositionalAdjunct"
-        ),
-        "copulativeSubject",
-        "prepositionalAdjunct"
-      )
-    );
-    // AP(prepositionalAdjunct)
-    sentenceTemplateRepository.add(
-      createAPTemplate(
-        language,
-        List.of(
-          //von ... ausgestellt
-          "preposition prepositionalAdjunct verb(root,verbFormMood:participle)"
-        ),
-        "prepositionalAdjunct"
-      )
-    );
-  }
-  
-        
-           //"Hatte Che Guevara Kinder?",
-           //"verb(component_haben:past:singular) object(domain) noun(nominativeCase:singular)?",
-           //"verb(component_haben:past:plural) object(domain) noun(nominativeCase:plural)?"
-           //Hat Abraham Lincolns Sterbeort Kinder?", 
-           // "verb(component_haben:present:plural) object(domain) noun(nominativeCase:plural)?",
-           // "verb(component_haben:present:singular) object(domain) noun(nominativeCase:singular)?"     
-           //"Liste die Kinder von Margaret Thatcher auf.",
-           //"verb(imperative_plural) determiner(component_the_nominative:reference:plural) noun(nominativeCase:plural) preposition adjunct(domain) preposition(auf)."     
            
-           //"Welche Regierungsform hat Russland?", 
-           //"interrogativeDeterminer(reference:singular) verb(component_haben:present:singular) object(domain)?"     
-           
-                
-                
-          //Gibt es ein Videospiel, das Battle Chess heißt?
-          // "verb(imperative_transitive) pronoun(object_pronoun_es) article(definite_article:nominativeCase:neuter), noun(nominativeCase), article(component_the_nominative:nominativeCase:neuter) object(domain)"    
-           //"Was ist Batmans richtiger Name?",                
-           // "interrogativePronoun(range:singular)  verb(component_be:present:singular) object(range) noun(nominativeCase)?"    
-            //"Welche Regierungsform hat Russland?",
-            //"interrogativeDeterminer(range:singular) verb(component_haben:present:singular) object(domain)?"   
-            //"Aus welcher Region ist der Melon de Bourgogne?"
-            // "preposition(auf) interrogativeDeterminer(range:singular) verb(component_be:present:singular) adjunct(domain)? "
-           // Wieviele Seiten hat Krieg und Frieden?
-           // "interrogativeAmount(range:singular) noun(nominativeCase:plural) verb(component_haben:present:singular) object(domain)?"
-               
-                
-                
-           //Gib mir das Mitglied von...?
-          //"verb(imperative_transitive) pronoun(object_pronoun) determiner(component_the_accusative) noun(accusativeCase) preposition adjunct(domain)."      
-          //Who are the children of the children of Elvis Presley?",      
-          //"interrogativePronoun(range:plural) verb(component_be:present:plural) nounPhrase?"   
-          //Wo verb(component_be:present:singular)  noun?
-         //  "interrogativePlace(range:singular) verb(component_be:present:singular) noun?"
-          //In welchem Land ist der Mount Everest?
-          //"preposition interrogativeDeterminer(range:singular) verb(component_be:present:singular) noun?"
-          //Wieviel hat Pulp Fiction gekostet?
-                
+        ),
+        AdjectivePPFrame,
+        adjectiveBaseForm
+      )
+    );
 
-  
-  
-         //Ist Proinsulin ein Protein?
-         // "verb(component_be:present:singular) subject(range) article(definite_article:nominativeCase:neuter) object(domain)?",   
-          //"Sind Laubfrösche Amphibien?"
-         // "verb(component_be:present:plural) subject(range) object(domain)?"
+    // AdjectivePPFrame...comparative
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+         
+        ),
+        AdjectivePPFrame,
+        comparative
+      )
+    );
+    
+     // AdjectivePPFrame...superlative
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+        //What is the highest mountain in Australia?
+        //What is the capital of Cameron?
+        "interrogativePronoun(range:singular) verb(component_be:present:singular) determiner(component_the) adjective(superlative) noun(range:singular) preposition adjunct(domain)?"
+ 
+        ),
+        AdjectivePPFrame,
+        superlative
+      )
+    );
+    
+    
+  }
           
 }
