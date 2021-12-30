@@ -1,5 +1,8 @@
 {
   "endpoint" : "https://dbpedia.org/sparql",
+  "gradablePrefix" : {
+    "oils" : "http://lemon-model.net/oils/"
+      },
   "prefix" : {
     "address" : "http://schemas.talis.com/2005/address/schema#",
     "admin" : "http://webns.net/mvcb/",

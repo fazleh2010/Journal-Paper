@@ -22,6 +22,11 @@ public interface TutleConverter {
     public void setIntransitivePPFrame(String key, List<String[]> rows, String syntacticFrame);
 
     public void setAdjectiveFrame(String key, List<String[]> rows, String syntacticFrame);
+    
+    
+    public void setAdjectiveGradableFrame(String key, List<String[]> rows, String syntacticFrame);
+    
+    
 
     public String getTutleString();
 

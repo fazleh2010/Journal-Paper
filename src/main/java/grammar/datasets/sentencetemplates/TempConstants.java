@@ -23,6 +23,7 @@ public interface TempConstants {
     public static String IntransitivePPFrame = "IntransitivePPFrame";
     public static String AdjectiveAttributiveFrame = "AdjectiveAttributiveFrame";
     public static String AdjectivePPFrame = "AdjectivePPFrame";
+    public static String AdjectiveGradableFrame = "AdjectiveGradableFrame";
     public static String FULL_DATASET = "FULL_DATASET";
 
     public static String subject = "subject";
@@ -116,5 +117,8 @@ public interface TempConstants {
 
     public static final String DIRECT_OBJECT = "directObject";
     public static String pronoun = "pronoun";
+    public static String baseForm = "baseForm";
+    public static String comparative = "comparative";
+    public static String superlative = "superlative";
 
 }

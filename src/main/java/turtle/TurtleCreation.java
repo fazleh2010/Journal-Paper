@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
-import util.io.LinkedData;
+import linkeddata.LinkedData;
 
 /**
  *
@@ -34,6 +34,7 @@ public class TurtleCreation implements TempConstants {
     private Integer transitiveIndex=0;
     private Integer InTransitiveIndex=0;
     private Integer adjectiveFrameIndex=0;
+    private Integer gradableAdjectiveFrameIndex=0;
 
     public TurtleCreation(String inputDir, LinkedData linkedData, Language language) throws Exception {
         this.linkedData = linkedData;
@@ -41,11 +42,12 @@ public class TurtleCreation implements TempConstants {
         this.inputDir = inputDir;
     }
     
-    public void setSyntacticFrameIndexes(Integer nounPPIndex, Integer transitiveIndex, Integer InTransitiveIndex, Integer adjectiveFrameIndex) throws Exception {
+    public void setSyntacticFrameIndexes(Integer nounPPIndex, Integer transitiveIndex, Integer InTransitiveIndex, Integer adjectiveFrameIndex,Integer gradableAdjectiveFrameIndex) throws Exception {
         this.nounPPIndex = nounPPIndex;
         this.transitiveIndex = transitiveIndex;
         this.InTransitiveIndex = InTransitiveIndex;
         this.adjectiveFrameIndex = adjectiveFrameIndex;
+        this.gradableAdjectiveFrameIndex=gradableAdjectiveFrameIndex;
     }
 
     public String findSyntacticFrame(List<String[]> rows) throws Exception {
@@ -64,6 +66,7 @@ public class TurtleCreation implements TempConstants {
 
     public String findSyntacticFrame(String[] row) throws Exception {
         String nounPPFrame = row[nounPPIndex];
+    
         try {
             if (nounPPFrame.equals(NounPPFrame)) {
                 return NounPPFrame;
@@ -73,6 +76,8 @@ public class TurtleCreation implements TempConstants {
                 return IntransitivePPFrame;
             } else if (row[adjectiveFrameIndex].equals(AdjectiveAttributiveFrame)) {
                 return AdjectiveAttributiveFrame;
+            } else if (row[gradableAdjectiveFrameIndex].equals(AdjectiveGradableFrame)) {
+                return AdjectiveGradableFrame;
             } else {
                 throw new Exception("No grammar entry is found!!!!");
             }

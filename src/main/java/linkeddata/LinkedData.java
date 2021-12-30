@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package util.io;
+package linkeddata;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -24,6 +24,8 @@ public class LinkedData {
     private String endpoint = null;
     @JsonProperty("prefix")
     private LinkedHashMap<String, String> prefix = new LinkedHashMap<String, String>();
+    @JsonProperty("gradablePrefix")
+    private LinkedHashMap<String, String> gradablePrefix = new LinkedHashMap<String, String>();
     @JsonProperty("bindingLimit")
     private long bindingLimit;
 
@@ -52,6 +54,7 @@ public class LinkedData {
     }
 
     public LinkedHashMap<String, String> getPrefixes() {
+        this.prefix.putAll(this.gradablePrefix);
         return prefix;
     }
 

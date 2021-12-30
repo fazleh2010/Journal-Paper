@@ -845,6 +845,252 @@ public class EnglishCsv implements TempConstants {
         }
 
     }
+    
+    public static class GradbleAdjectiveFrameCsv {
+        
+        //LemonEntry	partOfSpeech	writtenForm	comparative	superlative	SyntacticFrame	
+        //predFrame	sense	reference	oils:boundTo	oils:degree	domain	range
+
+        private Integer lemonEntryIndex = 0;
+        private Integer partOfSpeechIndex = 1;
+        private Integer writtenFormIndex = 2;
+        private Integer comparativIndex = 3;
+        private Integer superlativeIndex = 4;
+        private Integer syntacticFrameIndex = 5;
+        private Integer predFrameIndex = 6;
+        private Integer senseIndex = 7;
+        private Integer referenceIndex = 8;
+        private Integer oils_boundToIndex = 9;
+        private Integer oils_degreeIndex = 10;
+        private Integer domainIndex = 11;
+        private Integer rangeIndex=12;
+        private Integer domainWrittenSingularFormIndex=13;
+        private Integer domainWrittenPluralFormIndex=14;
+        private Integer rangeWrittenSingularFormIndex=15;
+        private Integer rangeWrittenPluralFormIndex=16;
+        
+        public String getHeader(String lemonEntry, String language) {
+            return "@prefix :        <http://localhost:8080/#> .\n"
+                    + "\n"
+                    + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
+                    + "@prefix lemon:   <http://lemon-model.net/lemon#> .\n"
+                    + "@prefix oils:     <http://lemon-model.net/oils#> .\n"
+                    + "\n"
+                    + "@base            <http://localhost:8080#> .\n"
+                    + "\n"
+                    + ":lexicon_en a    lemon:Lexicon ;\n"
+                    + "  lemon:language \"" + language + "\" ;\n"
+                    + "  lemon:entry    :" + lemonEntry + " ;\n"
+                    + "  lemon:entry    :" + lemonEntry + "_res .\n"
+                    + "\n";
+        }
+
+        public String getIndexing(String lemonEntry, List<Tupples> senseIds) {
+            String senseIdStr = getSenseId(senseIds);
+            senseIdStr
+                    = ":" + lemonEntry + " a             lemon:LexicalEntry ;\n"
+                    + "  lexinfo:partOfSpeech lexinfo:adjective ;\n"
+                    + "  lemon:canonicalForm  :" + lemonEntry + "_lemma" + " ;\n"
+                    + "  lemon:otherForm      :" + lemonEntry + "_comperative" + " ;\n"
+                    + "  lemon:otherForm      :" + lemonEntry + "_superlative" + " ;\n"
+                    + senseIdStr
+                    + "  lemon:synBehavior    :" + lemonEntry + "_predFrame" + " .\n"
+                   
+                    + "\n";
+
+            return senseIdStr;
+        }
+
+        public String getWrittenTtl(String lemonEntry, String baseForm,String comparative,String superlative,String language) {
+            String writtenLemma
+                    = ":" + lemonEntry + "_lemma" + " lemon:writtenRep \"" + baseForm + "\"@" + language + " .\n"
+                    + "\n";
+            String writtenFormComparative
+                    = ":" + lemonEntry + "_comperative" + " lemon:writtenRep \"" + comparative + "\"@" + language + " .\n"
+                    + "\n";
+            
+            String writtenFormSuperlative
+                    = ":" + lemonEntry + "_superlative" + " lemon:writtenRep \"" + comparative + "\"@" + language + " .\n"
+                    + "\n";
+            
+            String predFrame
+                    = ":" + lemonEntry + "_predFrame" + " a        lexinfo:AdjectivePPFrame ;\n"
+                    + "  lexinfo:copulativeSubject :" + lemonEntry + "_PredSynArg .\n"
+                    + "\n";
+            
+            return writtenLemma+writtenFormComparative+writtenFormSuperlative+predFrame;
+        }
+        
+     
+        public String getSenseDetail(String lemonEntry,List<Tupples> tupples, String language) {
+            String str = "";
+
+            for (Tupples tupple : tupples) {
+                String line
+                        = ":" + tupple.getSenseId() + " a  lemon:LexicalSense ;\n"
+                        + "  lemon:reference :" + lemonEntry + "_res" + " ;\n"
+                        + "  lemon:isA       :" + lemonEntry + "_PredSynArg" + " ;\n"
+                        + "  lemon:condition :" +tupple.getSenseId() + "_condition" + " .\n"
+                        + "\n";
+                String res
+                        = ":" + lemonEntry + "_res" + " a   oils:CovariantScalar ;\n"
+                        + "  oils:boundTo  <" + tupple.getOils_boundTo() + "> ;\n"
+                        + "  oils:degree   <" + tupple.getOils_degree() + "> .\n"
+                        + "\n";
+                String condition
+                        = ":" + tupple.getSenseId() + "_condition" + " a lemon:condition ;\n"
+                        + "  lemon:propertyDomain   <" + tupple.getDomain() + "> ;\n"
+                        + "  lemon:propertyRange    <" + tupple.getRange() + "> .";
+
+                str += line + res + condition;
+            }
+
+            return str;
+        }
+
+        /*public String prepareTurtile(Tupples tupple,String row[],String language) {
+            String lemonEntry=this.getLemonEntryIndex(row);
+            String writtenForm=this.getWrittenFormIndex(row);
+            
+            String header = "@prefix :        <http://localhost:8080/#> .\n"
+                    + "\n"
+                    + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
+                    + "@prefix lemon:   <http://lemon-model.net/lemon#> .\n"
+                    + "@prefix oils:     <http://lemon-model.net/oils#> .\n"
+                    + "\n"
+                    + "@base            <http://localhost:8080#> .\n"
+                    + "\n"
+                    + ":lexicon_en a    lemon:Lexicon ;\n"
+                    + "  lemon:language \"" + language + "\" ;\n"
+                    + "  lemon:entry    :" + lemonEntry + " ;\n"
+                    + "  lemon:entry    :" + lemonEntry + "_res .\n";
+
+            String index
+                    = ":" + lemonEntry + " a             lemon:LexicalEntry ;\n"
+                    + "  lexinfo:partOfSpeech lexinfo:adjective ;\n"
+                    + "  lemon:canonicalForm  :" + lemonEntry + "_lemma" + " ;\n"
+                    + "  lemon:synBehavior    :" + lemonEntry + "_predFrame" + " ;\n"
+                    + "  lemon:sense          :" + lemonEntry + "_sense" + " .\n"
+                    + "\n";
+            String writtenFormLema
+                    = ":" + lemonEntry + "_lemma" + " lemon:writtenRep \"" + writtenForm + "\"@" + language + " .\n"
+                    + "\n";
+            String predFrame
+                    = ":" + lemonEntry + "_predFrame" + " a        lexinfo:AdjectivePPFrame ;\n"
+                    + "  lexinfo:copulativeSubject :" + lemonEntry + "_PredSynArg .\n"
+                    + "\n";
+            String sense
+                    = ":" + lemonEntry + "_sense" + " a  lemon:LexicalSense ;\n"
+                    + "  lemon:reference :" + lemonEntry + "_res" + " ;\n"
+                    + "  lemon:isA       :" + lemonEntry + "_PredSynArg" + " ;\n"
+                    + "  lemon:condition :" + lemonEntry + "_condition" + " .\n"
+                    + "\n";
+            String res
+                    = ":" + lemonEntry + "_res" + " a   oils:CovariantScalar ;\n"
+                    + "  oils:boundTo  <" +tupple.getReference() + "> ;\n"
+                    + "  oils:degree   <"+tupple.getOils_degree() + "> .\n"
+                    + "\n";
+            String condition
+                    = ":" + lemonEntry + "_condition" + " a lemon:condition ;\n"
+                    + "  lemon:propertyDomain   <" + tupple.getDomain() + "> ;\n"
+                    + "  lemon:propertyRange    <" + tupple.getRange() + "> .";
+            return header+index+writtenFormLema+predFrame+sense+res+condition;
+        }*/
+
+        public void setArticle(Tupples tupple, String[] row) {
+            GenderUtils.setWrittenForms(tupple.getDomain(), getDomainWrittenSingularFormIndex(row), getRangeWrittenSingularFormIndex(row));
+            GenderUtils.setWrittenForms(tupple.getRange(), getRangeWrittenSingularFormIndex(row), getRangeWrittenPluralFormIndex(row));
+        }
+        
+        public void setAdjectiveInfo(String partOfSpeech, String[] row) {
+            String writtenBaseForm = this.getWrittenFormIndex(row);
+            String writtenComparative = this.getComparativIndex(row);
+            String writtenSuperlative = this.getSuperlativeIndex(row);
+
+            Map<String, String> adjectiveTypes = Map.of(
+                    baseForm, writtenBaseForm,
+                    comparative, writtenComparative,
+                    superlative, writtenSuperlative
+            );
+
+            String[] adjectives = new String[]{writtenBaseForm, writtenComparative, writtenSuperlative};
+            GenderUtils.setAdjectiveTypes(partOfSpeech, adjectives, adjectiveTypes);
+        }
+
+
+        
+        public String getLemonEntryIndex(String []row) {
+            return row[lemonEntryIndex];
+        }
+
+        public String getPartOfSpeechIndex(String []row) {
+            return row[partOfSpeechIndex];
+        }
+
+        public String getWrittenFormIndex(String []row) {
+            return row[writtenFormIndex];
+        }
+
+        public String getComparativIndex(String []row) {
+            return row[comparativIndex];
+        }
+
+        public String getSuperlativeIndex(String []row) {
+            return row[superlativeIndex];
+        }
+
+        public Integer getSyntacticFrameIndex() {
+            return syntacticFrameIndex;
+        }
+
+        public String getPredFrameIndex(String []row) {
+            return row[predFrameIndex];
+        }
+
+        public String getSenseIndex(String []row) {
+            return row[senseIndex];
+        }
+
+        public String getReferenceIndex(String []row) {
+            return row[referenceIndex];
+        }
+
+        public String getOils_boundToIndex(String []row) {
+            return row[oils_boundToIndex];
+        }
+
+        public String getOils_degreeIndex(String []row) {
+            return row[oils_degreeIndex];
+        }
+
+        public String getDomainIndex(String []row) {
+            return row[domainIndex];
+        }
+
+        public String getRangeIndex(String []row) {
+            return row[rangeIndex];
+        }
+
+        public String getDomainWrittenSingularFormIndex(String []row) {
+            return row[domainWrittenSingularFormIndex];
+        }
+
+        public String getDomainWrittenPluralFormIndex(String []row) {
+            return row[domainWrittenPluralFormIndex];
+        }
+
+        public String getRangeWrittenSingularFormIndex(String []row) {
+            return row[rangeWrittenSingularFormIndex];
+        }
+
+        public String getRangeWrittenPluralFormIndex(String []row) {
+            return row[rangeWrittenPluralFormIndex];
+        }
+
+     
+
+       
+    }
 
     public static String getSenseId(List<Tupples> senseIds) {
         String str = "";

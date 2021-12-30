@@ -31,7 +31,7 @@ public class Tupples {
         this.reference = reference.replace(" ", "");
         this.domain = domain.replace(" ", "");
         this.range = range.replace(" ", "");
-        this.oils_boundTo = oils_degree.replace(" ", "");
+        this.oils_boundTo = oils_boundTo.replace(" ", "");
         this.oils_degree = oils_degree.replace(" ", "");
     }
 

@@ -31,7 +31,7 @@ import java.util.regex.Pattern;
 import org.apache.jena.query.QueryType;
 import org.apache.logging.log4j.LogManager;
 import util.io.CsvFile;
-import util.io.LinkedData;
+import linkeddata.LinkedData;
 import util.io.MatcherExample;
 import util.io.Statistics;
 

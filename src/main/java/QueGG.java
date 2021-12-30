@@ -41,7 +41,7 @@ import java.util.logging.Level;
 import org.apache.commons.text.similarity.CosineDistance;
 import turtle.EnglishTurtle;
 import util.io.GenderUtils;
-import util.io.LinkedData;
+import linkeddata.LinkedData;
 import static util.io.ResourceHelper.loadResource;
 import turtle.TutleConverter;
 import util.io.FileFolderUtils;

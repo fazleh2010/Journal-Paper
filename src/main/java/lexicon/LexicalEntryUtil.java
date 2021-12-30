@@ -22,6 +22,7 @@ import grammar.datasets.annotated.AnnotatedVerb;
 import grammar.datasets.questionword.QuestionWordFactoryIT;
 import static grammar.datasets.sentencetemplates.TempConstants.plural;
 import static grammar.datasets.sentencetemplates.TempConstants.singular;
+import grammar.generator.OlisRestriction;
 import grammar.generator.SentenceToken;
 import grammar.sparql.Prefix;
 import grammar.sparql.SPARQLRequest;
@@ -70,7 +71,8 @@ public class LexicalEntryUtil {
     private final LexicalSense lexicalSense;
     private final LexInfo lexInfo;
     private final Language language;
-    private final OWLRestriction owlRestriction;
+    private  OWLRestriction owlRestriction;
+    private  OlisRestriction olisRestriction;
 
     public LexicalEntryUtil(
             Lexicon lexicon,
@@ -84,7 +86,10 @@ public class LexicalEntryUtil {
         this.lexicalSense = lexicalSense;
         this.lexInfo = new LexInfo();
         this.language = Language.stringToLanguage(lexicon.getLanguage());
-        this.owlRestriction = new OWLRestriction(lexicon, lexicalSense.getReference()).invoke();
+        if(frameType.equals(FrameType.AA))
+           this.owlRestriction = new OWLRestriction(lexicon, lexicalSense.getReference()).invoke();
+        if(frameType.equals(FrameType.APP))
+          this.olisRestriction=new OlisRestriction(lexicon, lexicalSense.getReference()).invoke();
     }
 
     /*public List<AnnotatedVerb> loadToBeVerbs() {

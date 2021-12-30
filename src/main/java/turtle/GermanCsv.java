@@ -1005,8 +1005,8 @@ public class GermanCsv {
 
         }
 
-        public String getSyntacticFrameIndex(String[] row) {
-            return row[SyntacticFrameIndex];
+        public Integer getSyntacticFrameIndex() {
+            return SyntacticFrameIndex;
         }
 
         public String getPredFrameIndex(String[] row) {
@@ -1036,7 +1036,8 @@ public class GermanCsv {
         public String getRangeIndex(String[] row) {
             return row[rangeIndex];
         }
-        
+
+       
 
     }
 

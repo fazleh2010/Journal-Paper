@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import util.io.CsvFile;
 import util.io.FileUtils;
-import util.io.LinkedData;
+import linkeddata.LinkedData;
 import util.io.Tupples;
 
 /**
@@ -44,11 +44,13 @@ public class GermanTurtle extends TurtleCreation implements TutleConverter {
     private GermanCsv.TransitFrameCsv transitiveFrameCsv = new GermanCsv.TransitFrameCsv();
     private GermanCsv.InTransitFrameCsv intransitiveFrameCsv = new GermanCsv.InTransitFrameCsv();
     private GermanCsv.AttributiveAdjectiveFrameCsv attributiveAdjectiveFrame = new GermanCsv.AttributiveAdjectiveFrameCsv();
+    private GermanCsv.GradbleAdjectiveFrameCsv gradableAdjectiveFrameCsv = new GermanCsv.GradbleAdjectiveFrameCsv();
+
 
 
     public GermanTurtle(String inputDir, LinkedData linkedData, Language language) throws Exception {
         super(inputDir, linkedData, language);
-        super.setSyntacticFrameIndexes(nounPPFrameCsv.getSyntacticFrameIndex(),transitiveFrameCsv.getSyntacticFrameIndex(),intransitiveFrameCsv.getSyntacticFrameIndex(),attributiveAdjectiveFrame.getSyntacticFrameIndex());
+        super.setSyntacticFrameIndexes(nounPPFrameCsv.getSyntacticFrameIndex(),transitiveFrameCsv.getSyntacticFrameIndex(),intransitiveFrameCsv.getSyntacticFrameIndex(),attributiveAdjectiveFrame.getSyntacticFrameIndex(),gradableAdjectiveFrameCsv.getSyntacticFrameIndex());
         this.generateTurtle();
     }
 
@@ -295,6 +297,11 @@ public class GermanTurtle extends TurtleCreation implements TutleConverter {
         /*if(preposition.contains("X"))
           return "";*/
         return preposition;
+    }
+
+    @Override
+    public void setAdjectiveGradableFrame(String key, List<String[]> rows, String syntacticFrame) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

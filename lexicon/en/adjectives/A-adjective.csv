@@ -1,0 +1,2 @@
+LemonEntry,partOfSpeech,writtenForm,comparative,superlative,SyntacticFrame,predFrame,sense,reference,oils:boundTo,oils:degree,domain,range,domainWrittenSingularForm,domainWrittenPluralForm,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
+high,adjective,high,higher,highest,AdjectiveGradableFrame,PredSynArg,1,oils:CovariantScalar,dbo:height,oils:high,dbo:ArchitecturalStructure,xsd:double,architectural structure,architectural structures,-,-
