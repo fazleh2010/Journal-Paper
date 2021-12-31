@@ -1,0 +1,12 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural
+take_place_on,verb,take place,takes place,took place,taken place,on,IntransitivePPFrame,domain,range,1,dbp:date,dbo:MilitaryConflict,xsd:date,conflict,conflicts,year,years
+commence_on,verb,commence,commences,commenced,commenced,on,IntransitivePPFrame,domain,range,1,dbo:date,dbo:Event,xsd:date,event,events,year,years
+end_career_on,verb,end his active career,ends his active career,ended his active career,ended his active career,on,IntransitivePPFrame,domain,range,1,dbo:activeYearsEndDate,dbo:Athlete,xsd:date,athlete,athletes,year,years
+end_in,verb,end,ends,ended,ended,in,IntransitivePPFrame,domain,range,1,dbo:routeEnd,dbo:Road,dbo:City,road,roads,city,cities
+flow_through_1,verb,flow,flows,flowed,flown,through,IntransitivePPFrame,domain,range,1,dbo:city,dbo:River,dbo:City,river,rivers,city,cities
+flow_through_2,verb,flow,flows,flowed,flown,through,IntransitivePPFrame,domain,range,1,dbp:country,dbo:River,dbo:Country,river,rivers,country,countries
+start_in_1,verb,start,starts,started,started,in,IntransitivePPFrame,range,domain,1,dbo:routeStart,dbo:Road,dbo:Road,road,roads,road,roads
+start_in_2,verb,start,starts,started,started,in,IntransitivePPFrame,domain,range,1,dbp:mouthLocation,dbo:River,dbo:Country,river,rivers,country,countries
+flow_into,verb,flow,flows,flowed,flown,into,IntransitivePPFrame,range,domain,1,dbo:inflow,dbo:River,dbo:River,river,rivers,river,rivers
+grow_in_1,verb,grow,grows,grew,grown,in,IntransitivePPFrame,range,domain,1,dbo:growingGrape,dbo:WineRegion,dbo:Grape,wine region,wine regions,grape,grapes
+knownFor,verb,known,known,known,known,for,IntransitivePPFrame,range,domain,1,dbo:knownFor,dbo:Award,dbo:Person,award,awards,person,persons

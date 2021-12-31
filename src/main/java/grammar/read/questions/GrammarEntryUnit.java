@@ -21,7 +21,7 @@ public class GrammarEntryUnit {
     @JsonProperty("id")
     private Integer id;
     @JsonProperty("lexicalEntryUri")
-    private URI lexicalEntryUri ;
+    private URI lexicalEntryUri;
     @JsonProperty("lanuage")
     private String language;
     @JsonProperty("type")
@@ -40,6 +40,8 @@ public class GrammarEntryUnit {
     private QueryType queryType;
     @JsonProperty("sparqlQuery")
     private String sparqlQuery;
+    @JsonProperty("executable")
+    private String executable;
     @JsonProperty("sentenceToSparqlParameterMapping")
     private SentenceToSparql sentenceToSparqlParameterMapping;
     @JsonProperty("returnVariable")
@@ -99,7 +101,7 @@ public class GrammarEntryUnit {
     public List<UriLabel> getBindingList() {
         return sentenceBindings.getBindingList();
     }
-    
+
     public String getBindingVariableName() {
         return sentenceBindings.getBindingVariableName();
     }
@@ -122,6 +124,10 @@ public class GrammarEntryUnit {
 
     public String getSentenceTemplate() {
         return sentenceTemplate;
+    }
+
+    public String getExecutable() {
+        return executable;
     }
 
 }

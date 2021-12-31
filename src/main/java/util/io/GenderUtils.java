@@ -7,6 +7,8 @@ package util.io;
 
 import com.google.gdata.util.common.base.Pair;
 import grammar.datasets.sentencetemplates.TempConstants;
+import grammar.sparql.SelectVariable;
+import static grammar.sparql.SelectVariable.reference;
 import grammar.structure.component.Language;
 import static java.lang.System.exit;
 import java.util.Map;
@@ -109,9 +111,6 @@ public class GenderUtils implements TempConstants{
     
     public static String getConditionLabelManually(String domainOrRange, String numberType,String subjectUri,String objectUri) {
         String word="XX";
-                  System.out.println("domainOrRange::"+domainOrRange);
-                     
-
         if (domainOrRange.contains(domain) && numberType.contains(singular)) {
             word= getWrittenFormSingular(subjectUri);
         } else if (domainOrRange.contains(domain) && numberType.contains(plural)) {
@@ -121,6 +120,7 @@ public class GenderUtils implements TempConstants{
         } else if (domainOrRange.contains(range) && numberType.contains(plural)){
             word=  getWrittenFormPlural(objectUri);
         }
+       
         return word;
     }
 

@@ -69,13 +69,12 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
         if (this.frameType.equals(FrameType.NPP)) {
             sentences = nounPPframeSentence(bindingVariable, lexicalEntryUtil, whQuestion);
              System.out.println(sentences);
-             //exit(1);
+            
         } else if (this.frameType.equals(FrameType.VP)) {
             SelectVariable selectVariable = this.lexicalEntryUtil.getSelectVariable();
             SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
             List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                     language, new String[]{frameType.getName(), activeTransitive});
-            this.templateFinder.setSelectedTemplate(activeTransitive);
             sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
             System.out.println(sentences);
             //exit(1);
@@ -94,11 +93,11 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
             //exit(1);
         }
         else if (this.frameType.equals(FrameType.APP)) {
-            String template = this.templateFinder.getSelectedTemplate();
+            this.templateFinder.setSelectedTemplate(superlative);
             SelectVariable selectVariable = this.lexicalEntryUtil.getSelectVariable();
             SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
             List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
-                    language, new String[]{frameType.getName(), superlative});
+                    language, new String[]{frameType.getName(), superlative,forward});
             sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
             System.out.println(sentenceTemplates);
             System.out.println(sentences);
@@ -123,7 +122,6 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
             List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                     language, new String[]{frameType.getName(), passiveTransitive});
             sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
-            this.templateFinder.setSelectedTemplate(passiveTransitive);
             System.out.println(sentences);
             //exit(1);
 
@@ -139,6 +137,17 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
             sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
             System.out.println(template);
             System.out.println(sentences);
+            //exit(1);
+        }
+        else if (this.frameType.equals(FrameType.APP)) {
+            /*SelectVariable selectVariable = this.lexicalEntryUtil.getSelectVariable();
+            SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
+
+            List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
+                    language, new String[]{frameType.getName(), superlative,backward});
+            sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
+            System.out.println(sentenceTemplates);
+            System.out.println(sentences);*/
             //exit(1);
         }
 
@@ -400,12 +409,13 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
         Integer index = 0;
         SelectVariable selectVariable = lexicalEntryUtil.getSelectVariable();
         SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(lexicalEntryUtil.getSelectVariable());
-
+        
         List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                 language, new String[]{frameType.getName(), template});
-
+        
+     
         //System.out.println("sentenceTemplates:::" + sentenceTemplates);
-        for (String sentenceTemplate : sentenceTemplates) {
+        for (String sentenceTemplate : sentenceTemplates) {           
             index = index + 1;
             EnglishSentenceBuilder sentenceBuilderFromTemplates = new EnglishSentenceBuilder(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
             TemplateFeatures templateFeatures = new TemplateFeatures(sentenceTemplate);
@@ -442,6 +452,7 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
             }
             str=str.stripTrailing().replace("_", " ");
             sentences.add(str);
+             System.out.println(str);
         }
         return new ArrayList<String>(sentences);
 

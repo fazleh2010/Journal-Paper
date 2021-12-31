@@ -68,8 +68,10 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
           //"Who is the mayor of Paris?",
           "interrogativePronoun verb(component_be:present:singular) determiner(component_the) noun(singular) preposition adjunct(domain)?", 
           "interrogativePronoun verb(component_be:past:singular) determiner(component_the) noun(singular) preposition adjunct(domain)?",   
-           //List all the musicals with music by Elton John.
-          "verb(imperative_verb:present:plural) determiner(all) determiner(component_the) noun(range:plural) noun(singular) preposition adjunct(domain)." 
+           //List all the musicals von Elton John.
+          "verb(imperative_verb:present:plural) determiner(all) determiner(component_the) noun(range:plural) preposition adjunct(domain)." 
+          //List all the musicals with music by Elton John.
+          //"verb(imperative_verb:present:plural) determiner(all) determiner(component_the) noun(range:plural) noun(singular) preposition adjunct(domain)." 
 
         ),
         NounPPFrame,
@@ -545,7 +547,24 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
  
         ),
         AdjectivePPFrame,
-        superlative
+        superlative,
+        forward
+      )
+    );
+    
+      // AdjectivePPFrame...superlative
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+        //Where is Mount Everest Located?
+        "interrogativePlace verb(component_be:present:singular) adjunct(range) verb(verb_location:past:singular)?",
+        ////In which country is Mount Everest Located?
+        "preposition interrogativeDeterminer(domain:singular) adjunct(range) verb(component_be:present:singular) verb(verb_location:past:singular)?"
+        ),
+        AdjectivePPFrame,
+        superlative,
+        backward
       )
     );
     

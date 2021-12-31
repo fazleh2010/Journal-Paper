@@ -1,4 +1,0 @@
-LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural
-flow_through_1,verb,flow,flows,flowed,through,IntransitivePPFrame,domain,range,1,dbo:city,dbo:River,dbo:City,river,rivers,city,cities
-start_in_1,verb,start,starts,started,in,IntransitivePPFrame,range,domain,1,dbo:routeStart,dbo:Road,dbo:Road,road,roads,road,roads
-start_in_2,verb,start,starts,started,in,IntransitivePPFrame,domain,range,1,dbp:mouthLocation,dbo:River,dbo:Country,river,rivers,country,countries

@@ -73,9 +73,6 @@ public class AdjGradableGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
         GrammarEntry oppositeGrammarEntry = getSuperlativeGrammarEntry(grammarEntry, lexicalEntryUtil);
         grammarEntries.add(oppositeGrammarEntry);
 
-        GrammarEntry amountGrammarEntry = getComparativeGrammarEntry(grammarEntry, lexicalEntryUtil);
-        grammarEntries.add(amountGrammarEntry);
-
         return grammarEntries;
     }
 
@@ -87,6 +84,7 @@ public class AdjGradableGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
         fragmentEntry.setBindingType(grammarEntry.getReturnType());
         fragmentEntry.setReturnVariable(grammarEntry.getBindingVariable());
         fragmentEntry.setSentenceTemplate(grammarEntry.getSentenceTemplate());
+        fragmentEntry.setFrameType(FrameType.IPP);
 
         Map<String, String> sentenceToSparqlParameterMapping = new HashMap<String, String>();
         sentenceToSparqlParameterMapping.put(grammarEntry.getSentenceBindings().getBindingVariableName(),
@@ -99,46 +97,5 @@ public class AdjGradableGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
         return fragmentEntry;
     }
 
-    private GrammarEntry getComparativeGrammarEntry(GrammarEntry grammarEntry, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
-        GrammarEntry fragmentEntry = copyGrammarEntry(grammarEntry);
-
-        String bindingVar = getBindingVariable();
-        try {
-            SentenceBuilderIntransitivePPDE sentenceBuilder = new SentenceBuilderIntransitivePPDE(
-                    getLanguage(),
-                    this.getFrameType(),
-                    this.getSentenceTemplateRepository(),
-                    this.getSentenceTemplateParser(),
-                    lexicalEntryUtil);
-            List<String> generatedSentences = sentenceBuilder.generateBackwardAmount(bindingVar, new String[2], lexicalEntryUtil);
-            fragmentEntry.setType(SentenceType.SENTENCE);
-            fragmentEntry.setSentenceTemplate(sentenceBuilder.getTemplateFinder().getSelectedTemplate());
-            fragmentEntry.setSentences(generatedSentences);
-            fragmentEntry.setBindingType(grammarEntry.getReturnType());
-            fragmentEntry.setReturnType(grammarEntry.getBindingType());
-        } catch (Exception ex) {
-            java.util.logging.Logger.getLogger(TransitiveVPGrammarRuleGenerator.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        return fragmentEntry;
-    }
-
-    private List<String> generateAmountSentences(LexicalEntryUtil lexicalEntryUtil) {
-        List<String> generatedSentences = new ArrayList<String>();
-        String bindingVar = getBindingVariable();
-        try {
-            SentenceBuilderIntransitivePPDE sentenceBuilder = new SentenceBuilderIntransitivePPDE(
-                    getLanguage(),
-                    this.getFrameType(),
-                    this.getSentenceTemplateRepository(),
-                    this.getSentenceTemplateParser(),
-                    lexicalEntryUtil);
-            generatedSentences = sentenceBuilder.generateBackwardAmount(bindingVar, new String[2], lexicalEntryUtil);
-            //generatedSentences.sort(String::compareToIgnoreCase);
-        } catch (Exception ex) {
-            java.util.logging.Logger.getLogger(TransitiveVPGrammarRuleGenerator.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return generatedSentences;
-    }
-
+   
 }

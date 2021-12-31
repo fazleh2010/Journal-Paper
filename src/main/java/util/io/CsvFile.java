@@ -310,8 +310,6 @@ public class CsvFile implements CsvConstants {
         // System.out.println("givenClassName::"+givenClassName+" bindingClass::"+className);
 
         if (className.contains(givenClassName)) {
-            System.out.println("givenClassName::"+givenClassName+" bindingClass::"+className);
-
             return true;
         }
         return false;

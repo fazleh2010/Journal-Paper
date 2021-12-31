@@ -23,6 +23,7 @@
   lemon:entry    :interrogativePronounThing ;
   lemon:entry    :interrogativePlace ;
   lemon:entry    :interrogativeTemporal ;
+  lemon:entry    :verb_location ;
   lemon:entry    :for ;
   lemon:entry    :by ;
   lemon:entry    :from ;
@@ -90,6 +91,19 @@
   lexinfo:tense                           lexinfo:present ;
   lexinfo:person                          lexinfo:secondPerson ;
   lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+:verb_location a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "locate"@de ;
+  lexinfo:verbFormMood                    lexinfo:infinitive ] ;
+  lemon:otherForm      [ lemon:writtenRep "locates"@de ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "located"@de ;
+  lexinfo:tense                           lexinfo:past ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
   lexinfo:partOfSpeech lexinfo:verb .
 
 :component_imperative_transitive a        lemon:LexicalEntry ;

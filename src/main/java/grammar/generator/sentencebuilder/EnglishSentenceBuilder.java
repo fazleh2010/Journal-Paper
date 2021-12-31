@@ -146,14 +146,13 @@ public class EnglishSentenceBuilder implements TempConstants {
            word = this.lexicalEntryUtil.getAdjectiveReference(reference);
   
         } 
-        else if (flagReference &&attribute.equals(noun)) {
+        /*else if (flagReference &&attribute.equals(noun)) {
              if (reference.contains(colon)) {
                 String[] col = reference.split(colon);
                 word = this.getNoun(col[0], col[1]);              
-             }
-           
+             } 
   
-        } 
+        }*/ 
         else if (attribute.contains(preposition)) {
             word = this.findPreposition(attribute, reference, flagReference);
            
@@ -180,7 +179,7 @@ public class EnglishSentenceBuilder implements TempConstants {
 
         }else if ( isInterrogativePlace(attribute).first) {
             SubjectType subjectType = isInterrogativePlace(attribute).second;
-            LexicalEntryUtil.getSingle(lexicalEntryUtil, attribute);
+            word=LexicalEntryUtil.getSingle(lexicalEntryUtil, attribute);
 
         } else if (flagReference && isInterrogativeDeterminer(attribute).first) {
             SubjectType subjectType = isInterrogativeDeterminer(attribute).second;
@@ -199,6 +198,8 @@ public class EnglishSentenceBuilder implements TempConstants {
                     String[] col = reference.split(colon);
                     word = GenderUtils.getConditionLabelManually(col[0], col[1], this.subjectUri, this.objectUri);
                 }
+                else
+                  System.out.println("number of paramters are not correct::"+reference);  
             }
             else{
                word = this.getReferenceWrttienForm(reference); 

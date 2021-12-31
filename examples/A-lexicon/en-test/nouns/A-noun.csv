@@ -1,0 +1,4 @@
+LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingularForm,domainWrittenPluralForm,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
+height_of_1,noun,height,-,of,NounPPFrame,range,domain,1,dbo:height,dbo:Model,xsd:double,model,models,-,-
+formOfGovernment-of,noun,form of government,-,of,NounPPFrame,range,domain,1,dbo:governmentType,dbo:Country,dbo:Country,country,countries,government type,government types
+city-of,noun,city,cities,of,NounPPFrame,range,domain,1,dbo:isPartOf,dbo:AdministrativeRegion,dbo:City,administrative region,administrative regions,city,cities

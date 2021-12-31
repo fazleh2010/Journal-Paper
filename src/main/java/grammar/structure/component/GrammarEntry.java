@@ -28,6 +28,8 @@ public class GrammarEntry implements Serializable {
   private List<String> sentences = new ArrayList<>();
   private QueryType queryType;
   private String sparqlQuery;
+  private String executable;
+  private String bindingListType;
   private Map<String, String> sentenceToSparqlParameterMapping;
   private String returnVariable; // aka selectVariable
   private boolean isCombination = false;
@@ -64,7 +66,9 @@ public class GrammarEntry implements Serializable {
     grammarEntry.sentences.addAll(this.sentences);
     grammarEntry.queryType = this.queryType;
     grammarEntry.sparqlQuery = this.sparqlQuery;
+    grammarEntry.executable=this.executable;
     grammarEntry.returnVariable = this.returnVariable;
+    grammarEntry.bindingListType = this.bindingListType;
     grammarEntry.isCombination = this.isCombination;
     grammarEntry.qaldMatchedQuestion=this.qaldMatchedQuestion;
     if (this.sentenceToSparqlParameterMapping != null) {
@@ -81,6 +85,7 @@ public class GrammarEntry implements Serializable {
       "GrammarEntry(\n" +
       "  type =\t" + this.getType() + "\n" +
       "  bindingType =\t" + this.getBindingType() + "\n" +
+      "  bindingListType =\t" + this.getBindingListType() + "\n" +
       "  returnType =\t" + this.getReturnType() + "\n" +
       "  frameType =\t" + this.getFrameType() + ",\n" +
       "  S =\t" + this.getSentences() + ",\n" +
@@ -88,6 +93,8 @@ public class GrammarEntry implements Serializable {
       "-".repeat(30) + "\n" +
       "sparqlQuery =\n" +
       this.getSparqlQuery() + ",\n" +
+      "executableSparqlQuery =\n" +
+      this.getExecutable() + ",\n" +
       "-".repeat(30) + "\n" +
       "  sentenceToSparqlParameterMapping = \t" + this.getSentenceToSparqlParameterMapping() + ",\n" +
       "  returnVariable =\t" + this.getReturnVariable() + ",\n" +

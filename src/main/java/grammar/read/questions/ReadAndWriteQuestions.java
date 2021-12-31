@@ -10,6 +10,7 @@ import util.io.FileUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.opencsv.CSVWriter;
 import static grammar.generator.BindingConstants.DEFAULT_BINDING_VARIABLE;
+import grammar.structure.component.FrameType;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
@@ -103,10 +104,7 @@ public class ReadAndWriteQuestions {
         Set<String> existingEntries=this.getExistingLexicalEntries(questionSummaryFile);
         String rdfPropertyType=linkedData.getRdfPropertyType();
         
-        
-       
-    
-       
+     
 
         for (File file : protoSimpleQFiles) {
                
@@ -123,9 +121,7 @@ public class ReadAndWriteQuestions {
                 className=linkedData.getRdfPropertyClass(grammarEntryUnit.getReturnType());
                 String template=grammarEntryUnit.getSentenceTemplate();
 
-                //System.out.println("uri::"+uri);
-                //System.out.println("existingEntries::"+existingEntries);
-                 
+               
                 if (grammarEntryUnit.getLexicalEntryUri() != null) {
                     uri = grammarEntryUnit.getLexicalEntryUri().toString();
                     if (existingEntries.isEmpty()&&existingEntries.contains(uri)) {
@@ -191,11 +187,6 @@ public class ReadAndWriteQuestions {
                     bindingList.addAll(qaldBindingList);
                     List<UriLabel>  qaldReturnList = this.getExtendedBindingList(grammarEntryUnit.getBindingList(), entityFile, 0, 2, returnType.toLowerCase()); 
                     returnList.addAll(qaldReturnList);
-                    /*if(grammarEntryUnit.getQueryType().equals(QueryType.ASK)){
-                       returnList = this.getExtendedBindingList(grammarEntryUnit.getBindingList(), entityFile, 0, 2, returnType.toLowerCase()); 
-                       System.out.println("bindingList::"+bindingList);   
-                       System.out.println("returnList::"+returnList);    
-                    }*/
                 } else {
                     bindingList = grammarEntryUnit.getBindingList();       
 
@@ -205,8 +196,17 @@ public class ReadAndWriteQuestions {
                     bindingList = grammarEntryUnit.getBindingList();       
                 }
                 
-             
-
+                
+                if (grammarEntryUnit.getFrameType().contains(FrameType.APP.toString())) {
+                    sparql = grammarEntryUnit.getExecutable();
+                } 
+                else
+                    sparql = grammarEntryUnit.getSparqlQuery();
+                 
+                          
+                 //else
+                 //     sparql=grammarEntryUnit.getSparqlQuery();
+               
                 /*if (!this.online) {
                     String propertyFileName = new File(new URL(property).getPath()).getName();
                     propertyFileName = entityDir + propertyFileName + "_" + bindingType.toLowerCase() + "_" + returnSubjOrObj+ ".csv";       
@@ -268,6 +268,8 @@ public class ReadAndWriteQuestions {
             if (questionForShow.contains("Where is $x located?")) {
                 continue;
             }
+            
+           
 
             String[] wikipediaAnswer = this.getAnswerFromWikipedia(template,rdfTypeProperty,className,uriLabel.getUri(), sparqlQuery, null,returnSubjOrObj, endpoint, online, resultsOffline,queryType);
             String sparql = wikipediaAnswer[0];
@@ -473,10 +475,7 @@ public class ReadAndWriteQuestions {
             }
 
             for (String question : questions) {
-                //System.out.println("question::" + question);
                 String questionT = MatcherExample.replaceQuestion(question, new String[]{rangeLabel,domainLabel});
-                //System.out.println("questionT::" + questionT);
-                //String questionT=this.replaceQuestion(question,rangeUriLabel,domainUriLabel);
                 String id = uri+"_"+rowIndex.toString();
 
                 System.out.println("index::" + index + " questionT::" + questionT + " sparql::" + sparql + " answer::" + answer + " syntacticFrame:" + syntacticFrame);
@@ -498,7 +497,6 @@ public class ReadAndWriteQuestions {
         
         Matcher m = Pattern.compile("\\((.*?)\\)").matcher(question);
         while (m.find()) {
-            //System.out.println(m.group(1));
         }
         /*if (question.contains("(") && question.contains(")")) {
             String result = StringUtils.substringBetween(question, "(", ")");

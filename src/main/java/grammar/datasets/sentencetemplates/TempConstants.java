@@ -7,6 +7,7 @@ package grammar.datasets.sentencetemplates;
 
 import com.sun.xml.bind.v2.runtime.unmarshaller.XsiNilLoader;
 import grammar.generator.SubjectType;
+import static grammar.sparql.SelectVariable.reference;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -74,6 +75,7 @@ public interface TempConstants {
     public static String plural = "plural";
     public static String range = "range";
     public static String domain = "domain";
+    public static String property = "property";
     public static String defaultGender = "masculine";
     public static String defaultNumber = singular;
 

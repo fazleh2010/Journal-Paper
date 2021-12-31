@@ -8,8 +8,10 @@ import eu.monnetproject.lemon.model.LexicalSense;
 import eu.monnetproject.lemon.model.Lexicon;
 import grammar.datasets.sentencetemplates.SentenceTemplateFactory;
 import grammar.datasets.sentencetemplates.SentenceTemplateRepository;
+import static grammar.datasets.sentencetemplates.TempConstants.superlative;
 import grammar.sparql.SparqlQuery;
 import grammar.sparql.Prefix;
+import grammar.sparql.PrepareSparqlQuery;
 import grammar.sparql.SPARQLRequest;
 import grammar.sparql.SelectVariable;
 import grammar.structure.component.Binding;
@@ -226,10 +228,30 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
                     // generate SPARQL query
                     grammarEntry.setQueryType(QueryType.SELECT);
                     SPARQLRequest sparqlRequest = generateSPARQL(lexicalEntryUtil);
+                    String sparql=sparqlRequest.toString();
                     grammarEntry.setSparqlQuery(sparqlRequest.toString());
+                    //System.out.println(grammarEntry);
+                    
+                    if (grammarEntry.getFrameType().equals(FrameType.APP)) {
+                        //if (grammarEntry.getSentenceTemplate().contains(superlative)) {
+                        String domain = LexicalEntryUtil.getDomain(lexicalEntryUtil);
+                        String range = LexicalEntryUtil.getRange(lexicalEntryUtil);
+                        String reference = lexicalEntryUtil.getOlisRestriction().getProperty();
+                        sparql=this.generateSparql(reference);
+                        grammarEntry.setSparqlQuery(sparql);
+                        String executableSparql = generateExecutableSparql(lexicalEntryUtil, sparql);
+                        grammarEntry.setExecutable(executableSparql);
+                        //String sparqlBinding=this.generateBindingQueryL(lexicalEntryUtil,DEFAULT_LIMIT);
+                        grammarEntry.setBindingListType(domain);
+                        grammarEntry.setReturnVariable(SparqlQuery.RETURN_TYPE_OBJECT);
+                        //grammarEntry.setSparqlQuery(executableSparql);
+                        // }
+                    }
+                    else 
+                          grammarEntry.setReturnVariable(selectVariable.getVariableName());
 
                     // set return variable
-                    grammarEntry.setReturnVariable(selectVariable.getVariableName());
+                  
 
                     // generate bindings for result sentence
                     SentenceBindings sentenceBindings = new SentenceBindings();
@@ -376,5 +398,29 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
    
     public static void setEndpoint(String endpointT) {
         endpoint = endpointT;
+    }
+
+    private String generateExecutableSparql(LexicalEntryUtil lexicalEntryUtil, String sparql) {
+        String uri = null;
+        String domain = LexicalEntryUtil.getDomain(lexicalEntryUtil);
+        String range = LexicalEntryUtil.getRange(lexicalEntryUtil);
+        String reference = lexicalEntryUtil.getOlisRestriction().getProperty();
+
+        uri = lexicalEntryUtil.getOlisRestriction().getProperty();
+
+        if (lexicalEntryUtil.getOlisRestriction().getValue().equals("http://lemon-model.net/oils/strong")
+                || lexicalEntryUtil.getOlisRestriction().getValue().equals("http://lemon-model.net/oils/high")) {
+            return PrepareSparqlQuery.objDesc(range, reference, "?VARIABLE");
+        } else if (lexicalEntryUtil.getOlisRestriction().getValue().equals("http://lemon-model.net/oils/weak")
+                || lexicalEntryUtil.getOlisRestriction().getValue().equals("http://lemon-model.net/oils/low")) {
+            return PrepareSparqlQuery.objAsc(range, reference);
+        } else {
+            return sparql;
+        }
+
+    }
+
+    private String generateSparql(String reference) {
+        return "(bgp (triple ?subjOfProp <"+reference+"> ?objOfProp))\n";
     }
 }

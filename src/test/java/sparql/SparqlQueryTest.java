@@ -5,8 +5,8 @@
  */
 package sparql;
 
+import grammar.sparql.PrepareSparqlQuery;
 import grammar.sparql.SparqlQuery;
-import static grammar.sparql.SparqlQuery.setLabelWikipedia;
 import org.apache.jena.query.QueryType;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
@@ -26,7 +26,7 @@ public class SparqlQueryTest {
         SparqlQuery sparqlQuery = new SparqlQuery();
         String uri = "http://dbpedia.org/resource/Heineken";
         String language = "de";
-        String labelSprql = sparqlQuery.setLabelWikipedia(uri, language);
+        String labelSprql = PrepareSparqlQuery.setLabelWikipedia(uri, language);
         System.out.println("labelSprql::" + labelSprql);
         String resultSparql = sparqlQuery.executeSparqlQuery(labelSprql);
         System.out.println(uri);
