@@ -5,7 +5,6 @@
  */
 package grammar.sparql;
 
-import static grammar.datasets.sentencetemplates.TempConstants.superlative;
 import grammar.generator.sentencebuilder.TemplateFinder;
 import grammar.sparql.SPARQLRequest;
 import grammar.structure.component.Binding;
@@ -35,6 +34,7 @@ import java.util.logging.Logger;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.query.QueryType;
 import util.io.FileUtils;
+import static grammar.datasets.sentencetemplates.TempConstants.superlativeCountry;
 
 /**
  *
@@ -61,7 +61,6 @@ public class SparqlQuery {
         this.endpoint = endpoint;
         this.type = type;
         Integer index = isSimpleOrComposite(sparqlQueryOrg);
-      
 
         if (endpoint.contains("dbpedia.org")) {
             if (type.contains(FIND_ANY_ANSWER) && index == 1) {
@@ -85,7 +84,7 @@ public class SparqlQuery {
 
             } else if (type.contains(FIND_ANY_ANSWER) && index == 0) {
                 if (queryType.equals(QueryType.SELECT)) {
-                    if (template.contains(superlative)) {
+                    if (template.contains(superlativeCountry)) {
                         sparqlQuery = sparqlQueryOrg.replace(VARIABLE_SPARQL, "<" + domainEntityUrl + ">");
                     }
 
@@ -119,7 +118,8 @@ public class SparqlQuery {
     private String setSelect(String template, String rdfProperty, String className, String domainEntityUrl, String sparqlQueryOrg, String rangeEntityUrl, String type, String returnType, String language, String endpoint, Boolean online, QueryType queryType) {
         String property = StringUtils.substringBetween(sparqlQueryOrg, "<", ">");
         String sparqlQuery = null;
-
+        
+         
         if (template != null) {
             if (template.contains(TemplateFinder.HOW_MANY_THING)) {
                 if (returnType.contains(RETURN_TYPE_OBJECT)) {
@@ -128,8 +128,11 @@ public class SparqlQuery {
                     return sparqlQuery = PrepareSparqlQuery.setSubjectWikiPediaCount(domainEntityUrl, property, returnType);
                 }
             }
-            if (template.contains(TemplateFinder.superlative)) {
+            if (template.equals(TemplateFinder.superlativeCountry)) {
                 sparqlQuery = sparqlQueryOrg.replace(VARIABLE_SPARQL, "<" + domainEntityUrl + ">");
+            }
+            else if(template.equals(TemplateFinder.superlativeWorld)){
+                 return sparqlQueryOrg;
             }
 
         } else {
@@ -234,10 +237,19 @@ public class SparqlQuery {
     
     private Integer isSimpleOrComposite(String sparql) {
         Integer index = 0;
-        if (sparql != null) {
+        /*if (sparql != null) {
             String[] lines = sparql.split(System.getProperty("line.separator"));
             for (String line : lines) {
                 if (line.contains("triple")) {
+                    index = index + 1;
+                }
+            }
+        }*/
+        
+        if (sparql != null) {
+            String[] lines = sparql.split(System.getProperty("line.separator"));
+            for (String line : lines) {
+                if (line.contains(".")) {
                     index = index + 1;
                 }
             }

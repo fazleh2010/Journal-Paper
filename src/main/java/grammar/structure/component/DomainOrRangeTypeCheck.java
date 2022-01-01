@@ -8,6 +8,7 @@ import java.util.stream.Stream;
 
 import static grammar.sparql.Prefix.DBO;
 import static grammar.sparql.Prefix.DBP;
+import static grammar.sparql.Prefix.OWL;
 
 public enum DomainOrRangeTypeCheck {
     PersonCheck(
@@ -183,6 +184,10 @@ public enum DomainOrRangeTypeCheck {
     )),
     LocationCheck(List.of(
             URI.create(DBO.getUri() + "abbreviation")
+    )),
+    
+    ThingCheck(List.of(
+           URI.create(OWL.getUri() + "Thing")
     )),
     THING(List.of(URI.create("http://www.w3.org/2002/07/owl#Thing"))); // default if no other matches
     

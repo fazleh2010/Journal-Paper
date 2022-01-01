@@ -8,7 +8,6 @@ import eu.monnetproject.lemon.model.LexicalSense;
 import eu.monnetproject.lemon.model.Lexicon;
 import grammar.datasets.sentencetemplates.SentenceTemplateFactory;
 import grammar.datasets.sentencetemplates.SentenceTemplateRepository;
-import static grammar.datasets.sentencetemplates.TempConstants.superlative;
 import grammar.sparql.SparqlQuery;
 import grammar.sparql.Prefix;
 import grammar.sparql.PrepareSparqlQuery;
@@ -47,6 +46,9 @@ import static grammar.sparql.SPARQLRequest.DEFAULT_LIMIT;
 import static java.util.Objects.isNull;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import static grammar.datasets.sentencetemplates.TempConstants.superlativeCountry;
+import grammar.generator.sentencebuilder.TemplateFinder;
+import static java.lang.System.exit;
 
 @Getter
 @Setter
@@ -239,8 +241,13 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
                         String reference = lexicalEntryUtil.getOlisRestriction().getProperty();
                         sparql=this.generateSparql(reference);
                         grammarEntry.setSparqlQuery(sparql);
-                        String executableSparql = generateExecutableSparql(lexicalEntryUtil, sparql);
-                        grammarEntry.setExecutable(executableSparql);
+                        String executableSparql = generateExecutableSparql(lexicalEntryUtil, grammarEntry.getFrameType());
+                        if(executableSparql!=null)
+                           grammarEntry.setExecutable(executableSparql);
+                        else
+                            grammarEntry.setExecutable(sparql);
+                       
+                        
                         //String sparqlBinding=this.generateBindingQueryL(lexicalEntryUtil,DEFAULT_LIMIT);
                         grammarEntry.setBindingListType(domain);
                         grammarEntry.setReturnVariable(SparqlQuery.RETURN_TYPE_OBJECT);
@@ -400,27 +407,46 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
         endpoint = endpointT;
     }
 
-    private String generateExecutableSparql(LexicalEntryUtil lexicalEntryUtil, String sparql) {
+    private String generateExecutableSparql(LexicalEntryUtil lexicalEntryUtil, FrameType frameType) {
         String uri = null;
         String domain = LexicalEntryUtil.getDomain(lexicalEntryUtil);
         String range = LexicalEntryUtil.getRange(lexicalEntryUtil);
         String reference = lexicalEntryUtil.getOlisRestriction().getProperty();
 
-        uri = lexicalEntryUtil.getOlisRestriction().getProperty();
+        TemplateFinder templateFinder = new TemplateFinder(lexicalEntryUtil, frameType);
+        //System.out.println("templateFinder.getSelectedTemplate()::"+templateFinder.getSelectedTemplate());
+        //exit(1);
 
-        if (lexicalEntryUtil.getOlisRestriction().getValue().equals("http://lemon-model.net/oils/strong")
-                || lexicalEntryUtil.getOlisRestriction().getValue().equals("http://lemon-model.net/oils/high")) {
+        if (this.isHigh(lexicalEntryUtil) && templateFinder.getSelectedTemplate().equals(TemplateFinder.superlativeCountry)) {
             return PrepareSparqlQuery.objDesc(range, reference, "?VARIABLE");
-        } else if (lexicalEntryUtil.getOlisRestriction().getValue().equals("http://lemon-model.net/oils/weak")
-                || lexicalEntryUtil.getOlisRestriction().getValue().equals("http://lemon-model.net/oils/low")) {
+        } else if (isLow(lexicalEntryUtil) && templateFinder.getSelectedTemplate().equals(TemplateFinder.superlativeCountry)) {
             return PrepareSparqlQuery.objAsc(range, reference);
-        } else {
-            return sparql;
+        } else if (this.isHigh(lexicalEntryUtil) && templateFinder.getSelectedTemplate().equals(TemplateFinder.superlativeWorld)) {
+            return PrepareSparqlQuery.desc(range, reference);
+        } else if (isLow(lexicalEntryUtil) && templateFinder.getSelectedTemplate().equals(TemplateFinder.superlativeWorld)) {
+            return PrepareSparqlQuery.asc(range, reference);
         }
-
+        return null;
     }
 
     private String generateSparql(String reference) {
         return "(bgp (triple ?subjOfProp <"+reference+"> ?objOfProp))\n";
+    }
+
+    private boolean isHigh(LexicalEntryUtil lexicalEntryUtil) {
+         if (lexicalEntryUtil.getOlisRestriction().getValue().equals("http://lemon-model.net/oils/strong")
+                || lexicalEntryUtil.getOlisRestriction().getValue().equals("http://lemon-model.net/oils/high")) {
+            return true;
+        } 
+      
+       return false;
+    }
+    
+    private boolean isLow(LexicalEntryUtil lexicalEntryUtil) {
+        if (lexicalEntryUtil.getOlisRestriction().getValue().equals("http://lemon-model.net/oils/weak")
+                || lexicalEntryUtil.getOlisRestriction().getValue().equals("http://lemon-model.net/oils/low")) {
+            return true;
+        } 
+        return false;
     }
 }

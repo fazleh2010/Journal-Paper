@@ -1,0 +1,8 @@
+LemonEntry,partOfSpeech,writtenForm,comparative,superlative,SyntacticFrame,predFrame,sense,reference,oils:boundTo,oils:degree,domain,range,preposition,domainWrittenSingularForm,domainWrittenPluralForm,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
+high,adjective,high,higher,highest,AdjectiveGradableFrame,PredSynArg,1,oils:CovariantScalar,dbo:elevation,oils:high,dbo:Country,dbo:Mountain,in,country,countries,mountain,mountains
+old,adjective,old,older,oldest,AdjectiveGradableFrame,PredSynArg,1,oils:CovariantScalar,dbo:birthDate,oils:low,dbo:Person,xsd:date,of,person,persons,-,-
+long,adjective,long,longer,longest,AdjectiveGradableFrame,PredSynArg,1,oils:CovariantScalar,dbo:birthDate,oils:high,dbo:mainspan,dbo:Bridge,with,span,spans,bridge,bridges
+tall,adjective,tall,taller,tallest,AdjectiveGradableFrame,PredSynArg,1,oils:CovariantScalar,dbo:height,oils:high,dbo:BasketballPlayer,dbo:Person,-,basketball player,basketball players,person,persons
+big,adjective,big,bigger,biggest,AdjectiveGradableFrame,PredSynArg,1,oils:CovariantScalar,dbo:seatingCapacity,oils:high,dbo:location,dbo:Stadium,in,place,places,stadium,stadiums
+large,adjective,large,larger,largest,AdjectiveGradableFrame,PredSynArg,1,oils:CovariantScalar,dbo:areaTotal,oils:high,dbo:Country,dbo:Country,of,country,countries,country,countries
+lot,adjective,lot,more,most,AdjectiveGradableFrame,PredSynArg,1,oils:CovariantScalar,dbo:numberOfEmployees,oils:high,dbo:location,dbo:Company,-,place,places,company,companies

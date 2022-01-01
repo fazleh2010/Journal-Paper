@@ -7,7 +7,8 @@ public enum Prefix {
   DBP(DBPEDIA.getUri() + "property/"),
   DBR(DBPEDIA.getUri() + "resource/"),
   LEXINFO("http://www.lexinfo.net/ontology/2.0/lexinfo#"),
-  LEMON("http://lemon-model.net/lemon#");
+  LEMON("http://lemon-model.net/lemon#"),
+  OWL("http://www.w3.org/2002/07/owl#");
 
   private final String uri;
 

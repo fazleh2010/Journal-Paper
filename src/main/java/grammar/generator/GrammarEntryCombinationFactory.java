@@ -30,7 +30,7 @@ public class GrammarEntryCombinationFactory {
 
   public List<GrammarEntry> generateCombinations(List<GrammarEntry> grammarEntries, String bindingVariable) {
     final String newMappingForBindingVariable = "x";
-    List<GrammarEntry> combinations = new ArrayList<>();
+    List<GrammarEntry> combinations = new ArrayList<GrammarEntry>();
     List<GrammarEntry> sentenceGrammarEntries =
       grammarEntries.stream()
                     .filter(grammarEntry -> grammarEntry.getType().equals(SentenceType.SENTENCE))

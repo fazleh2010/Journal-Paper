@@ -33,7 +33,7 @@ public class NPPGrammarRuleGenerator extends GrammarRuleGeneratorRoot implements
     ) throws QueGGMissingFactoryClassException {
         List<String> generatedSentences = new ArrayList<>();
 
-        SentenceBuilder sentenceBuilder = new SentenceBuilderIntransitivePPDE(
+        SentenceBuilder sentenceBuilder = new SentenceBuilderAllFrame(
                 getLanguage(),
                 getFrameType(),
                 getSentenceTemplateRepository(),
@@ -49,7 +49,7 @@ public class NPPGrammarRuleGenerator extends GrammarRuleGeneratorRoot implements
     protected List<String> generateNounPhrase(LexicalEntryUtil lexicalEntryUtil,String type) throws
             QueGGMissingFactoryClassException {
         List<String> generatedSentences = new ArrayList<String>();
-        SentenceBuilder sentenceBuilder = new SentenceBuilderIntransitivePPDE(
+        SentenceBuilder sentenceBuilder = new SentenceBuilderAllFrame(
                 getLanguage(),
                 getFrameType(),
                 getSentenceTemplateRepository(),
@@ -62,6 +62,7 @@ public class NPPGrammarRuleGenerator extends GrammarRuleGeneratorRoot implements
         } else if (type.equals(booleanQuestionDomainRange)) {
             generatedSentences = new ArrayList<String>();
             generatedSentences.addAll(sentenceBuilder.generateBooleanQuestionDomainRange(getBindingVariable(), new String[]{}, lexicalEntryUtil));
+            System.out.println(generatedSentences);
         } else if (type.equals(booleanQuestionDomain)) {
             generatedSentences = new ArrayList<String>();
             generatedSentences.addAll(sentenceBuilder.generateBooleanQuestionsDomain(getBindingVariable(), new String[]{}, lexicalEntryUtil));

@@ -32,7 +32,8 @@ import static grammar.datasets.sentencetemplates.TempConstants.activeTransitive;
 import static grammar.datasets.sentencetemplates.TempConstants.adjectiveBaseForm;
 import static grammar.datasets.sentencetemplates.TempConstants.comparative;
 import static grammar.datasets.sentencetemplates.TempConstants.passiveTransitive;
-import static grammar.datasets.sentencetemplates.TempConstants.superlative;
+import static grammar.datasets.sentencetemplates.TempConstants.superlativeCountry;
+import static grammar.datasets.sentencetemplates.TempConstants.superlativeWorld;
 
 class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
 
@@ -83,34 +84,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
     sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(
-          //"Ist Rita Wilson die Frau von Tom Hanks?"
-          //"verb(component_be:present:singular) subject(range) determiner(component_the_nominative:reference) noun(nominativeCase:singular) preposition adjunct(domain)?",
-          //"verb(component_be:present:plural) subject(range) determiner(component_the_nominative:reference:plural) noun(nominativeCase:plural) preposition adjunct(domain)?"
-          //Heißt die Frau von Präsident Obama Michelle?"
-          //"verb(component_heißen:present:singular) determiner(component_the_nominative:reference:singular) noun(nominativeCase:singular) preposition adjunct(domain) subject(range)?",
-          //"verb(component_heißen:present:plural) determiner(component_the_nominative:reference:plural) noun(nominativeCase:plural) preposition adjunct(domain) subject(range)?"    
-          //Ist Proinsulin ein Protein?
-          //"verb(component_be:present:singular) subject(range) noun(nominativeCase:singular) article(definite_article:nominativeCase:neuter) object(domain)?",   
-          //"Sind Laubfrösche Amphibien?"
-          //"verb(component_be:present:plural) subject(domain) noun(nominativeCase:singular) object(range)?",
-          //Hat Abraham Lincolns Sterbeort eine Webseite?", 
-          //"verb(component_haben:present:singular) object(domain) article(definite_article:nominativeCase:feminine) subject(range)?"
-              
-                
-          //"Hatte Che Guevara Kinder?",
-          //"verb(component_haben:past:singular) object(domain) noun(nominativeCase)?"
-          //Gibt es ein Videospiel, das Battle Chess heißt?
-          // "verb(imperative_transitive) pronoun(object_pronoun_es) article(definite_article:nominativeCase:neuter), noun(nominativeCase), article(component_the_nominative:nominativeCase:neuter) object(domain)"    
-           //"Was ist Batmans richtiger Name?",                
-           
-
-            // "interrogativePronoun(range:singular)  verb(component_be:present:singular) object(range) noun(nominativeCase)?"    
-            //"Welche Regierungsform hat Russland?",
-            //"interrogativeDeterminer(range:singular) verb(component_haben:present:singular) object(domain)?"   
-            //"Aus welcher Region ist der Melon de Bourgogne?"
-            // "preposition(auf) interrogativeDeterminer(range:singular) verb(component_be:present:singular) adjunct(domain)? "
-           // Wieviele Seiten hat Krieg und Frieden?
-           // "interrogativeAmount(range:singular) noun(nominativeCase:plural) verb(component_haben:present:singular) object(domain)?"        
+      
                  ),
         NounPPFrame,
         booleanQuestionDomainRange
@@ -537,25 +511,30 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
     );
     
      // AdjectivePPFrame...superlative
-    sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+    sentenceTemplateRepository.add(createSentenceTemplate(language,
         List.of(
         //What is the highest mountain in Australia?
-        //What is the capital of Cameron?
         "interrogativePronoun(range:singular) verb(component_be:present:singular) determiner(component_the) adjective(superlative) noun(range:singular) preposition adjunct(domain)?"
- 
         ),
         AdjectivePPFrame,
-        superlative,
+        superlativeCountry,
+        forward
+      )
+    );
+     // AdjectivePPFrame...superlative
+    sentenceTemplateRepository.add(createSentenceTemplate(language,
+        List.of(
+         //What is the largest country in the world?
+        "interrogativePronoun(range:singular) verb(component_be:present:singular) determiner(component_the) adjective(superlative) noun(range:singular) preposition determiner(component_the) adjunct(domain)?"
+        ),
+        AdjectivePPFrame,
+        superlativeWorld,
         forward
       )
     );
     
       // AdjectivePPFrame...superlative
-    sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+    sentenceTemplateRepository.add(createSentenceTemplate(language,
         List.of(
         //Where is Mount Everest Located?
         "interrogativePlace verb(component_be:present:singular) adjunct(range) verb(verb_location:past:singular)?",
@@ -563,7 +542,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         "preposition interrogativeDeterminer(domain:singular) adjunct(range) verb(component_be:present:singular) verb(verb_location:past:singular)?"
         ),
         AdjectivePPFrame,
-        superlative,
+        superlativeCountry,
         backward
       )
     );

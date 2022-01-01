@@ -1018,10 +1018,9 @@ public class EnglishCsv implements TempConstants {
             String writtenComparative = this.getComparativIndex(row);
             String writtenSuperlative = this.getSuperlativeIndex(row);
 
-            Map<String, String> adjectiveTypes = Map.of(
-                    baseForm, writtenBaseForm,
+            Map<String, String> adjectiveTypes = Map.of(baseForm, writtenBaseForm,
                     comparative, writtenComparative,
-                    superlative, writtenSuperlative
+                    superlativeCountry, writtenSuperlative
             );
 
             String[] adjectives = new String[]{writtenBaseForm, writtenComparative, writtenSuperlative};

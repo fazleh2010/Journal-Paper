@@ -22,19 +22,28 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class TemplateFinder implements TempConstants{
 
-    private LexicalEntryUtil lexicalEntryUtil = null;
+    //private LexicalEntryUtil lexicalEntryUtil = null;
     private DomainOrRangeType forwardDomainOrRange = null;
     private String selectedTemplate = null;
     private DomainOrRangeType oppositeDomainOrRange = null;
+    private String subjectUri = null;
+    private String objectUri = null;
+    private String referenceUri = null;
+
 
     public TemplateFinder(LexicalEntryUtil lexicalEntryUtil, FrameType frameType) {
-        this.lexicalEntryUtil = lexicalEntryUtil;
+        this.subjectUri = lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.subjOfProp).toString();
+        this.objectUri = lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.objOfProp).toString();
+        this.referenceUri = lexicalEntryUtil.getReferenceUri();
         if (frameType.equals(FrameType.IPP)) {
             this.selectedTemplate = this.getSentenceTemplate();
             this.findForwardDomainAndRange();
         }
         else if (frameType.equals(FrameType.NPP)) {
             this.selectedTemplate = this.getSentenceTemplate();
+        }
+        else if (frameType.equals(FrameType.APP)) {
+            this.selectedTemplate =  this.findGradableTemplate(subjectUri);
         }
     }
 
@@ -58,9 +67,9 @@ public class TemplateFinder implements TempConstants{
 
     private String getSentenceTemplate() {
         String type = null;
-        String subjectUri = this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.subjOfProp).toString();
-        String objectUri = this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.objOfProp).toString();
-        String referenceUri = lexicalEntryUtil.getReferenceUri();
+        //String subjectUri = this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.subjOfProp).toString();
+        //String objectUri = this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.objOfProp).toString();
+        //String referenceUri = lexicalEntryUtil.getReferenceUri();
         //SubjectType subjectType = this.lexicalEntryUtil.getSubjectType(this.lexicalEntryUtil.getSelectVariable());
 
         /*String qWord = null;
@@ -235,6 +244,47 @@ public class TemplateFinder implements TempConstants{
             return false;
         }
         for (URI key : DomainOrRangeTypeCheck.LocationCheck.getReferences()) {
+
+            if (string.equals(key.toString())) {
+                return true;
+            }
+        }
+        return false;
+
+    }
+
+    private String findGradableTemplate(String string) {
+        System.out.println("string::"+string);
+
+        if (this.isSuperlativeCountry(string)) {
+            return superlativeCountry;
+        }
+        else if(isSuperlativeThing(string)){
+             return superlativeWorld;
+        }
+        
+       return null;
+    }
+    
+    public static Boolean isSuperlativeCountry(String string) {
+        if (StringUtils.isBlank(string)) {
+            return false;
+        }
+        for (URI key : DomainOrRangeTypeCheck.PlaceCheck.getReferences()) {
+
+            if (string.equals(key.toString())) {
+                return true;
+            }
+        }
+        return false;
+
+    }
+    
+    public static Boolean isSuperlativeThing(String string) {
+        if (StringUtils.isBlank(string)) {
+            return false;
+        }
+        for (URI key : DomainOrRangeTypeCheck.ThingCheck.getReferences()) {
 
             if (string.equals(key.toString())) {
                 return true;

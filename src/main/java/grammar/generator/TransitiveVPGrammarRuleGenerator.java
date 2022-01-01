@@ -39,7 +39,7 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot i
     
         String bindingVar = getBindingVariable();
         try {
-            SentenceBuilderIntransitivePPDE sentenceBuilder = new SentenceBuilderIntransitivePPDE(
+            SentenceBuilderAllFrame sentenceBuilder = new SentenceBuilderAllFrame(
                     getLanguage(),
                     this.getFrameType(),
                     this.getSentenceTemplateRepository(),
@@ -61,7 +61,7 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot i
         String bindingVar = getBindingVariable();
         String sentenceTemplate=null;
         try {
-             SentenceBuilderIntransitivePPDE sentenceBuilder = new SentenceBuilderIntransitivePPDE(
+             SentenceBuilderAllFrame sentenceBuilder = new SentenceBuilderAllFrame(
                     getLanguage(),
                     this.getFrameType(),
                     this.getSentenceTemplateRepository(),
@@ -81,7 +81,7 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot i
         List<String> generatedSentences = new ArrayList<String>();
         String bindingVar = getBindingVariable();
         try {
-             SentenceBuilderIntransitivePPDE sentenceBuilder = new SentenceBuilderIntransitivePPDE(
+             SentenceBuilderAllFrame sentenceBuilder = new SentenceBuilderAllFrame(
                     getLanguage(),
                     this.getFrameType(),
                     this.getSentenceTemplateRepository(),
@@ -171,7 +171,7 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot i
         
         String bindingVar = getBindingVariable();
         try {
-             SentenceBuilderIntransitivePPDE sentenceBuilder = new SentenceBuilderIntransitivePPDE(
+             SentenceBuilderAllFrame sentenceBuilder = new SentenceBuilderAllFrame(
                     getLanguage(),
                     this.getFrameType(),
                     this.getSentenceTemplateRepository(),
@@ -194,7 +194,7 @@ public class TransitiveVPGrammarRuleGenerator extends GrammarRuleGeneratorRoot i
         List<String> generatedSentences = new ArrayList<String>();
         String bindingVar = getBindingVariable();
         try {
-             SentenceBuilderIntransitivePPDE sentenceBuilder = new SentenceBuilderIntransitivePPDE(
+             SentenceBuilderAllFrame sentenceBuilder = new SentenceBuilderAllFrame(
                     getLanguage(),
                     this.getFrameType(),
                     this.getSentenceTemplateRepository(),

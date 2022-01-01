@@ -36,7 +36,7 @@ import util.io.StringMatcher;
 import util.io.TemplateFeatures;
 import grammar.generator.sentencebuilder.TemplateFinder;
 
-public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempConstants {
+public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
 
     private final Language language;
     private final FrameType frameType;
@@ -47,7 +47,7 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
     private static Map<String, String> templates = new HashMap<String, String>();
     private static List<PropertyValue> numberList = new ArrayList<PropertyValue>();
 
-    public SentenceBuilderIntransitivePPDE(
+    public SentenceBuilderAllFrame(
             Language language,
             FrameType frameType,
             SentenceTemplateRepository sentenceTemplateRepository,
@@ -93,15 +93,13 @@ public class SentenceBuilderIntransitivePPDE implements SentenceBuilder, TempCon
             //exit(1);
         }
         else if (this.frameType.equals(FrameType.APP)) {
-            this.templateFinder.setSelectedTemplate(superlative);
             SelectVariable selectVariable = this.lexicalEntryUtil.getSelectVariable();
             SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
             List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
-                    language, new String[]{frameType.getName(), superlative,forward});
+                    language, new String[]{frameType.getName(), this.getTemplateFinder().getSelectedTemplate(),forward});
             sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
             System.out.println(sentenceTemplates);
             System.out.println(sentences);
-            //exit(1);
         }
 
         /*List<String> sentenceTemplates = getSentenceTemplateRepository().findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,

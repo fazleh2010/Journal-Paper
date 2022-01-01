@@ -217,6 +217,10 @@ public class PrepareSparqlQuery {
         return sparql;
 
     }
+    
+    //SELECT DISTINCT ?uri WHERE { 
+         //?uri a <http://dbpedia.org/ontology/Country> . ?uri <http://dbpedia.org/ontology/areaTotal> ?n . } 
+         //ORDER BY DESC(?n) OFFSET 0 LIMIT 1
 
     public static String desc(String domain, String reference) {
         String newSparqlQuery = "SELECT DISTINCT ?" + RETURN_TYPE_SUBJECT + " "

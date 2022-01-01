@@ -28,7 +28,7 @@ public class AdjGradableGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
 
         String bindingVar = getBindingVariable();
         try {
-            SentenceBuilderIntransitivePPDE sentenceBuilder = new SentenceBuilderIntransitivePPDE(
+            SentenceBuilderAllFrame sentenceBuilder = new SentenceBuilderAllFrame(
                     getLanguage(),
                     this.getFrameType(),
                     this.getSentenceTemplateRepository(),
@@ -50,7 +50,7 @@ public class AdjGradableGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
         String bindingVar = getBindingVariable();
         String sentenceTemplate = null;
         try {
-            SentenceBuilderIntransitivePPDE sentenceBuilder = new SentenceBuilderIntransitivePPDE(
+            SentenceBuilderAllFrame sentenceBuilder = new SentenceBuilderAllFrame(
                     getLanguage(),
                     this.getFrameType(),
                     this.getSentenceTemplateRepository(),
