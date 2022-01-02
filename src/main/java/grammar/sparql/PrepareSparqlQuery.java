@@ -14,6 +14,8 @@ import grammar.structure.component.Language;
  * @author elahi
  */
 public class PrepareSparqlQuery {
+        private String rdfType = "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>";
+
 
     public static String setObjectWikiPedia2(String entityUrl, String property) {
         return " PREFIX dbo: <http://dbpedia.org/ontology/>\n"
@@ -230,8 +232,39 @@ public class PrepareSparqlQuery {
                 + "} " + "ORDER BY DESC(?num) LIMIT 1";
         return newSparqlQuery;
     }
+    
+    public static String descObj(String className, String locationProperty,String reference, String variable) {
+        String type = "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>";
+        //String locationProperty = "<http://dbpedia.org/ontology/locatedInArea>";
+        //locationProperty = "<http://dbpedia.org/ontology/location>";
+        //locationProperty = "<http://dbpedia.org/ontology/country>";
 
-    public static String objDesc(String className, String reference, String variable) {
+        String newSparqlQuery = "SELECT DISTINCT ?" + RETURN_TYPE_SUBJECT + " "
+                + "WHERE {" + " "
+                + "?" + RETURN_TYPE_SUBJECT + " " + type + " " + "<" + className + ">" + " ." + " "
+                + "?" + RETURN_TYPE_SUBJECT + " " + locationProperty + " " + "?" + variable + " ." + " "
+                + "?" + RETURN_TYPE_SUBJECT + " " + "<" + reference + ">" + " ?" + "num" + " ." + " "
+                + "} " + "ORDER BY DESC(?num) LIMIT 1";
+        return newSparqlQuery;
+    }
+    
+    public static String descObjOfPropPerson(String className, String property, String reference, String variable) {
+        return "SELECT DISTINCT ?" + RETURN_TYPE_OBJECT + " "
+                + "WHERE {" + " "
+                + "?" + variable + " " + property + " " + "?" + RETURN_TYPE_OBJECT + " ." + " "
+                + "?" + RETURN_TYPE_OBJECT + " " + "<" + reference + ">" + " ?" + "num" + " ." + " "
+                + "} " + "ORDER BY DESC(?num) LIMIT 1";
+    }
+    
+    public static String ascObjOfPropPerson(String className, String property, String reference, String variable) {
+        return "SELECT DISTINCT ?" + RETURN_TYPE_OBJECT + " "
+                + "WHERE {" + " "
+                + "?" + variable + " " + property + " " + "?" + RETURN_TYPE_OBJECT + " ." + " "
+                + "?" + RETURN_TYPE_OBJECT + " " + "<" + reference + ">" + " ?" + "num" + " ." + " "
+                + "} " + "ORDER BY ASC(?num) LIMIT 1";
+    }
+
+    /*public static String objDesc(String className, String reference, String variable) {
         String type = "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>";
         String locationProperty = "<http://dbpedia.org/ontology/locatedInArea>";
         //locationProperty = "<http://dbpedia.org/ontology/location>";
@@ -244,7 +277,7 @@ public class PrepareSparqlQuery {
                 + "?" + RETURN_TYPE_SUBJECT + " " + "<" + reference + ">" + " ?" + "num" + " ." + " "
                 + "} " + "ORDER BY DESC(?num) LIMIT 1";
         return newSparqlQuery;
-    }
+    }*/
 
     public static String asc(String domain, String reference) {
         String newSparqlQuery = "SELECT DISTINCT ?" + RETURN_TYPE_SUBJECT + " "
@@ -255,8 +288,21 @@ public class PrepareSparqlQuery {
         return newSparqlQuery;
     }
 
-    public static String objAsc(String domain, String reference) {
+    /*public static String objAsc(String domain, String reference) {
         String locationProperty = "<http://dbpedia.org/ontology/locatedInArea>";
+        //String locationObject = "<http://dbpedia.org/resource/Australia>";
+
+        String newSparqlQuery = "SELECT DISTINCT ?" + "num" + " "
+                + "WHERE {" + " "
+                + "?" + RETURN_TYPE_SUBJECT + " " + "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>" + " " + "<" + domain + ">" + " ." + " "
+                + "?" + RETURN_TYPE_SUBJECT + " " + locationProperty + " ?" + RETURN_TYPE_OBJECT + " ." + " "
+                + "?" + RETURN_TYPE_SUBJECT + " " + "<" + reference + ">" + " ?" + "num" + " ." + " "
+                + "} " + "ORDER BY ASC(?num) LIMIT 1";
+        return newSparqlQuery;
+    }*/
+    
+    public static String ascObj(String domain,String locationProperty,String reference,String variable) {
+        //String locationProperty = "<http://dbpedia.org/ontology/locatedInArea>";
         //String locationObject = "<http://dbpedia.org/resource/Australia>";
 
         String newSparqlQuery = "SELECT DISTINCT ?" + "num" + " "

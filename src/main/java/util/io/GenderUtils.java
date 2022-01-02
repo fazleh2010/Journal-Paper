@@ -26,7 +26,6 @@ public class GenderUtils implements TempConstants{
     public static Map<String, String[]> nounWrittenForms = new TreeMap<String, String[]>();
     public static Map<String,Map<String,String>> trennVerb = new TreeMap<String,Map<String,String>>();
     public static Map<String,Map<String,String>> perfectVerb = new TreeMap<String,Map<String,String>>();
-    public static Map<String,Map<String,String>> adjectiveForms = new TreeMap<String,Map<String,String>>();
     public static Map<String,Map<String,String>> refVerb = new TreeMap<String,Map<String,String>>();
 
     public static void setWrittenForms(String uri, String writtenSingular, String writtenPlural) {
@@ -49,12 +48,6 @@ public class GenderUtils implements TempConstants{
         }
         
 
-    }
-    
-    public static void setAdjectiveTypes(String partOfSpeech, String[] adjectives, Map<String, String> adjectiveTypes) {
-        for (String adjective : adjectives) {
-            adjectiveForms.put(adjective, adjectiveTypes);
-        }
     }
 
   

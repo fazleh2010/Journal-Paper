@@ -117,7 +117,7 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
             setIntransitivePPFrame(key, rows, syntacticFrame);
         } else if (syntacticFrame.equals(AdjectiveAttributiveFrame)) {
             setAdjectiveFrame(key, rows, syntacticFrame);
-        }else if (syntacticFrame.equals(AdjectiveGradableFrame)) {
+        }else if (syntacticFrame.equals(AdjectiveSuperlativeFrame)) {
             setAdjectiveGradableFrame(key, rows, syntacticFrame);
         }
         else {

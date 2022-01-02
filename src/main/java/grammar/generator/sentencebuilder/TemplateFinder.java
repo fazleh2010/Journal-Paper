@@ -6,6 +6,7 @@
 package grammar.generator.sentencebuilder;
 
 import grammar.datasets.sentencetemplates.TempConstants;
+import grammar.generator.SubjectType;
 import grammar.sparql.SelectVariable;
 import grammar.structure.component.DomainOrRangeType;
 import grammar.structure.component.DomainOrRangeTypeCheck;
@@ -22,19 +23,15 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class TemplateFinder implements TempConstants{
 
-    //private LexicalEntryUtil lexicalEntryUtil = null;
+    private LexicalEntryUtil lexicalEntryUtil = null;
     private DomainOrRangeType forwardDomainOrRange = null;
     private String selectedTemplate = null;
+    private String propertyReference = null;
     private DomainOrRangeType oppositeDomainOrRange = null;
-    private String subjectUri = null;
-    private String objectUri = null;
-    private String referenceUri = null;
 
 
     public TemplateFinder(LexicalEntryUtil lexicalEntryUtil, FrameType frameType) {
-        this.subjectUri = lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.subjOfProp).toString();
-        this.objectUri = lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.objOfProp).toString();
-        this.referenceUri = lexicalEntryUtil.getReferenceUri();
+       this.lexicalEntryUtil=lexicalEntryUtil;
         if (frameType.equals(FrameType.IPP)) {
             this.selectedTemplate = this.getSentenceTemplate();
             this.findForwardDomainAndRange();
@@ -42,8 +39,9 @@ public class TemplateFinder implements TempConstants{
         else if (frameType.equals(FrameType.NPP)) {
             this.selectedTemplate = this.getSentenceTemplate();
         }
-        else if (frameType.equals(FrameType.APP)) {
-            this.selectedTemplate =  this.findGradableTemplate(subjectUri);
+        else if (frameType.equals(FrameType.AG)) {
+            this.selectedTemplate =  this.findGradableTemplate();
+            this.propertyReference=this.findReference();
         }
     }
 
@@ -67,10 +65,10 @@ public class TemplateFinder implements TempConstants{
 
     private String getSentenceTemplate() {
         String type = null;
-        //String subjectUri = this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.subjOfProp).toString();
-        //String objectUri = this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.objOfProp).toString();
-        //String referenceUri = lexicalEntryUtil.getReferenceUri();
-        //SubjectType subjectType = this.lexicalEntryUtil.getSubjectType(this.lexicalEntryUtil.getSelectVariable());
+        String subjectUri = this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.subjOfProp).toString();
+        String objectUri = this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.objOfProp).toString();
+        String referenceUri = lexicalEntryUtil.getReferenceUri();
+        SubjectType subjectType = this.lexicalEntryUtil.getSubjectType(this.lexicalEntryUtil.getSelectVariable());
 
         /*String qWord = null;
         try {
@@ -253,11 +251,17 @@ public class TemplateFinder implements TempConstants{
 
     }
 
-    private String findGradableTemplate(String string) {
-        System.out.println("string::"+string);
+    private String findGradableTemplate() {
+        String subjectUri = this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.subjOfProp).toString();
+        String objectUri = this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.objOfProp).toString();
+        String referenceUri = this.lexicalEntryUtil.getReferenceUri();
+        String string=subjectUri;
 
-        if (this.isSuperlativeCountry(string)) {
-            return superlativeCountry;
+        if (this.isPlace(string)) {
+            return superlativePlace;
+        }
+        else if (this.isPerson(string)) {
+            return superlativePerson;
         }
         else if(isSuperlativeThing(string)){
              return superlativeWorld;
@@ -266,7 +270,22 @@ public class TemplateFinder implements TempConstants{
        return null;
     }
     
-    public static Boolean isSuperlativeCountry(String string) {
+    private String findReference() {
+
+        if (this.selectedTemplate.equals(superlativePerson)) {
+            return DomainOrRangeTypeCheck.child.getReferences().get(0).toString();
+        }
+        else if (this.selectedTemplate.equals(superlativePlace)) {
+           return DomainOrRangeTypeCheck.locatedInArea.getReferences().get(0).toString();
+        }
+        else if(this.selectedTemplate.equals(superlativeWorld)){
+             return "";
+        }
+        
+       return null;
+    }
+    
+    public static Boolean isSuperlativePlace(String string) {
         if (StringUtils.isBlank(string)) {
             return false;
         }
@@ -292,6 +311,10 @@ public class TemplateFinder implements TempConstants{
         }
         return false;
 
+    }
+
+    public String getPropertyReference() {
+        return propertyReference;
     }
     
 

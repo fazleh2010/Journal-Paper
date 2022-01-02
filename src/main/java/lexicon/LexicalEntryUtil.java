@@ -88,7 +88,7 @@ public class LexicalEntryUtil {
         this.language = Language.stringToLanguage(lexicon.getLanguage());
         if(frameType.equals(FrameType.AA))
            this.owlRestriction = new OWLRestriction(lexicon, lexicalSense.getReference()).invoke();
-        if(frameType.equals(FrameType.APP))
+        if(frameType.equals(FrameType.AG))
           this.olisRestriction=new OlisRestriction(lexicon, lexicalSense.getReference()).invoke();
     }
 

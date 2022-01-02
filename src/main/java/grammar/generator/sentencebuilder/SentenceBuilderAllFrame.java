@@ -92,7 +92,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
             System.out.println(sentences);
             //exit(1);
         }
-        else if (this.frameType.equals(FrameType.APP)) {
+        else if (this.frameType.equals(FrameType.AG)) {
             SelectVariable selectVariable = this.lexicalEntryUtil.getSelectVariable();
             SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
             List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
@@ -100,6 +100,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
             sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
             System.out.println(sentenceTemplates);
             System.out.println(sentences);
+           //exit(1);
         }
 
         /*List<String> sentenceTemplates = getSentenceTemplateRepository().findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
@@ -137,7 +138,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
             System.out.println(sentences);
             //exit(1);
         }
-        else if (this.frameType.equals(FrameType.APP)) {
+        else if (this.frameType.equals(FrameType.AG)) {
             /*SelectVariable selectVariable = this.lexicalEntryUtil.getSelectVariable();
             SelectVariable oppositeSelectVariable = LexicalEntryUtil.getOppositeSelectVariable(this.lexicalEntryUtil.getSelectVariable());
 

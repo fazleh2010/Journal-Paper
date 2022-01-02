@@ -10,6 +10,7 @@ import static grammar.datasets.sentencetemplates.SentenceTemplate.createNPTempla
 import static grammar.datasets.sentencetemplates.SentenceTemplate.createSentenceTemplate;
 import static grammar.datasets.sentencetemplates.SentenceTemplate.createVPTemplate;
 import static grammar.datasets.sentencetemplates.TempConstants.AdjectivePPFrame;
+import static grammar.datasets.sentencetemplates.TempConstants.AdjectiveSuperlativeFrame;
 import static grammar.datasets.sentencetemplates.TempConstants.HOW_MANY_PRICE;
 import static grammar.datasets.sentencetemplates.TempConstants.HOW_MANY_THING;
 import static grammar.datasets.sentencetemplates.TempConstants.IntransitivePPFrame;
@@ -32,7 +33,8 @@ import static grammar.datasets.sentencetemplates.TempConstants.activeTransitive;
 import static grammar.datasets.sentencetemplates.TempConstants.adjectiveBaseForm;
 import static grammar.datasets.sentencetemplates.TempConstants.comparative;
 import static grammar.datasets.sentencetemplates.TempConstants.passiveTransitive;
-import static grammar.datasets.sentencetemplates.TempConstants.superlativeCountry;
+import static grammar.datasets.sentencetemplates.TempConstants.superlativePerson;
+import static grammar.datasets.sentencetemplates.TempConstants.superlativePlace;
 import static grammar.datasets.sentencetemplates.TempConstants.superlativeWorld;
 
 class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
@@ -493,7 +495,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         List.of(
            
         ),
-        AdjectivePPFrame,
+        AdjectiveSuperlativeFrame,
         adjectiveBaseForm
       )
     );
@@ -505,7 +507,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         List.of(
          
         ),
-        AdjectivePPFrame,
+        AdjectiveSuperlativeFrame,
         comparative
       )
     );
@@ -516,8 +518,20 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         //What is the highest mountain in Australia?
         "interrogativePronoun(range:singular) verb(component_be:present:singular) determiner(component_the) adjective(superlative) noun(range:singular) preposition adjunct(domain)?"
         ),
-        AdjectivePPFrame,
-        superlativeCountry,
+        AdjectiveSuperlativeFrame,
+        superlativePlace,
+        forward
+      )
+    );
+    
+     // AdjectivePPFrame...superlative
+    sentenceTemplateRepository.add(createSentenceTemplate(language,
+        List.of(
+        //What is the highest mountain in Australia?
+        "interrogativePronoun(range:singular) verb(component_be:present:singular) determiner(component_the) adjective(superlative) noun(range:singular) preposition adjunct(domain)?"
+        ),
+        AdjectiveSuperlativeFrame,
+        superlativePerson,
         forward
       )
     );
@@ -527,7 +541,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
          //What is the largest country in the world?
         "interrogativePronoun(range:singular) verb(component_be:present:singular) determiner(component_the) adjective(superlative) noun(range:singular) preposition determiner(component_the) adjunct(domain)?"
         ),
-        AdjectivePPFrame,
+        AdjectiveSuperlativeFrame,
         superlativeWorld,
         forward
       )
@@ -541,8 +555,8 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         ////In which country is Mount Everest Located?
         "preposition interrogativeDeterminer(domain:singular) adjunct(range) verb(component_be:present:singular) verb(verb_location:past:singular)?"
         ),
-        AdjectivePPFrame,
-        superlativeCountry,
+        AdjectiveSuperlativeFrame,
+        superlativePlace,
         backward
       )
     );

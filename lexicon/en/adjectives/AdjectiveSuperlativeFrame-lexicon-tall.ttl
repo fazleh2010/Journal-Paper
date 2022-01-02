@@ -26,7 +26,7 @@
 
 :form_tall_superlative lemon:writtenRep "tallest"@en .
 
-:tall_predFrame a        lexinfo:AdjectivePPFrame ;
+:tall_predFrame a        lexinfo:AdjectiveSuperlativeFrame ;
   lexinfo:copulativeSubject :tall_PredSynArg .
 
 :tall_sense_1 a  lemon:LexicalSense ;

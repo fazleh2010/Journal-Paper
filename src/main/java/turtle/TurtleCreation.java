@@ -76,8 +76,8 @@ public class TurtleCreation implements TempConstants {
                 return IntransitivePPFrame;
             } else if (row[adjectiveFrameIndex].equals(AdjectiveAttributiveFrame)) {
                 return AdjectiveAttributiveFrame;
-            } else if (row[gradableAdjectiveFrameIndex].equals(AdjectiveGradableFrame)) {
-                return AdjectiveGradableFrame;
+            } else if (row[gradableAdjectiveFrameIndex].equals(AdjectiveSuperlativeFrame)) {
+                return AdjectiveSuperlativeFrame;
             } else {
                 throw new Exception("No grammar entry is found!!!!");
             }

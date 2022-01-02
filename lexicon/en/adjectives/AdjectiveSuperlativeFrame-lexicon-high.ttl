@@ -26,7 +26,7 @@
 
 :form_high_superlative lemon:writtenRep "highest"@en .
 
-:high_predFrame a        lexinfo:AdjectivePPFrame ;
+:high_predFrame a        lexinfo:AdjectiveSuperlativeFrame ;
   lexinfo:copulativeSubject :high_PredSynArg .
 
 :high_sense_1 a  lemon:LexicalSense ;

@@ -916,7 +916,7 @@ public class EnglishCsv implements TempConstants {
                     + "\n";
             
             String predFrame
-                    = ":" + lemonEntry + "_predFrame" + " a        lexinfo:AdjectivePPFrame ;\n"
+                    = ":" + lemonEntry + "_predFrame" + " a        lexinfo:"+TempConstants.AdjectiveSuperlativeFrame+" ;\n"
                     + "  lexinfo:copulativeSubject :" + lemonEntry + "_PredSynArg .\n"
                     + "\n";
             
@@ -1012,22 +1012,6 @@ public class EnglishCsv implements TempConstants {
             GenderUtils.setWrittenForms(tupple.getDomain(), getDomainWrittenSingularFormIndex(row), getRangeWrittenSingularFormIndex(row));
             GenderUtils.setWrittenForms(tupple.getRange(), getRangeWrittenSingularFormIndex(row), getRangeWrittenPluralFormIndex(row));
         }
-        
-        public void setAdjectiveInfo(String partOfSpeech, String[] row) {
-            String writtenBaseForm = this.getWrittenFormIndex(row);
-            String writtenComparative = this.getComparativIndex(row);
-            String writtenSuperlative = this.getSuperlativeIndex(row);
-
-            Map<String, String> adjectiveTypes = Map.of(baseForm, writtenBaseForm,
-                    comparative, writtenComparative,
-                    superlativeCountry, writtenSuperlative
-            );
-
-            String[] adjectives = new String[]{writtenBaseForm, writtenComparative, writtenSuperlative};
-            GenderUtils.setAdjectiveTypes(partOfSpeech, adjectives, adjectiveTypes);
-        }
-
-
         
         public String getLemonEntryIndex(String []row) {
             return row[lemonEntryIndex];

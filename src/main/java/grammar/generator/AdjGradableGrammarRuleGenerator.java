@@ -17,7 +17,7 @@ public class AdjGradableGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
     private String template = null;
 
     public AdjGradableGrammarRuleGenerator(Language language) {
-        super(FrameType.APP, language, BindingConstants.DEFAULT_BINDING_VARIABLE);
+        super(FrameType.AG, language, BindingConstants.DEFAULT_BINDING_VARIABLE);
     }
 
     @Override

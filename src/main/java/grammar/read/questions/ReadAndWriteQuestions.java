@@ -197,7 +197,7 @@ public class ReadAndWriteQuestions {
                 }
                 
                 
-                if (grammarEntryUnit.getFrameType().contains(FrameType.APP.toString())) {
+                if (grammarEntryUnit.getFrameType().contains(FrameType.AG.toString())) {
                     sparql = grammarEntryUnit.getExecutable();
                 } 
                 else

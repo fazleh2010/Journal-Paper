@@ -5,6 +5,8 @@
  */
 package grammar.sparql;
 
+import static grammar.datasets.sentencetemplates.TempConstants.superlativePerson;
+import static grammar.datasets.sentencetemplates.TempConstants.superlativePlace;
 import grammar.generator.sentencebuilder.TemplateFinder;
 import grammar.sparql.SPARQLRequest;
 import grammar.structure.component.Binding;
@@ -34,7 +36,6 @@ import java.util.logging.Logger;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.query.QueryType;
 import util.io.FileUtils;
-import static grammar.datasets.sentencetemplates.TempConstants.superlativeCountry;
 
 /**
  *
@@ -48,7 +49,8 @@ public class SparqlQuery {
     private String sparqlQuery = null;
     public static String RETURN_TYPE_OBJECT = "objOfProp";
     public static String RETURN_TYPE_SUBJECT = "subjOfProp";
-    public static String VARIABLE_SPARQL = "?VARIABLE";
+    public static String VARIABLE = "VARIABLE";
+    public static String QUESTION_MARK = "?";
     private String resultSparql = null;
     private String command = null;
 
@@ -61,6 +63,8 @@ public class SparqlQuery {
         this.endpoint = endpoint;
         this.type = type;
         Integer index = isSimpleOrComposite(sparqlQueryOrg);
+        
+       
 
         if (endpoint.contains("dbpedia.org")) {
             if (type.contains(FIND_ANY_ANSWER) && index == 1) {
@@ -84,8 +88,8 @@ public class SparqlQuery {
 
             } else if (type.contains(FIND_ANY_ANSWER) && index == 0) {
                 if (queryType.equals(QueryType.SELECT)) {
-                    if (template.contains(superlativeCountry)) {
-                        sparqlQuery = sparqlQueryOrg.replace(VARIABLE_SPARQL, "<" + domainEntityUrl + ">");
+                    if (template.contains(superlativePerson)||template.contains(superlativePlace)) {
+                        sparqlQuery = sparqlQueryOrg.replace(QUESTION_MARK+VARIABLE, "<" + domainEntityUrl + ">");
                     }
 
                 } else if (queryType.equals(QueryType.ASK)) {
@@ -119,6 +123,9 @@ public class SparqlQuery {
         String property = StringUtils.substringBetween(sparqlQueryOrg, "<", ">");
         String sparqlQuery = null;
         
+        System.out.println("template::"+template);
+        System.out.println("returnType::"+returnType);
+        
          
         if (template != null) {
             if (template.contains(TemplateFinder.HOW_MANY_THING)) {
@@ -128,8 +135,13 @@ public class SparqlQuery {
                     return sparqlQuery = PrepareSparqlQuery.setSubjectWikiPediaCount(domainEntityUrl, property, returnType);
                 }
             }
-            if (template.equals(TemplateFinder.superlativeCountry)) {
-                sparqlQuery = sparqlQueryOrg.replace(VARIABLE_SPARQL, "<" + domainEntityUrl + ">");
+            if (template.equals(superlativePerson)||template.equals(superlativePlace)) {
+               
+                sparqlQuery = sparqlQueryOrg.replace(QUESTION_MARK+VARIABLE, "<" + domainEntityUrl + ">");
+               
+               //  System.out.println("sparqlQueryOrg::"+sparqlQueryOrg);
+                // System.out.println("sparqlQuery::"+sparqlQuery);
+                // exit(1);
             }
             else if(template.equals(TemplateFinder.superlativeWorld)){
                  return sparqlQueryOrg;
@@ -147,6 +159,8 @@ public class SparqlQuery {
                 }
             }
         }
+        
+
 
         return sparqlQuery;
     }
