@@ -141,7 +141,13 @@ public class GermanSentenceBuilder implements TempConstants {
 
         if (flagReference && (attribute.equals(pronoun))) {
             word = new PronounFinder(this.lexicalEntryUtil,attribute,reference,templateFeatures).getWord();
-        } else if (attribute.contains(preposition)) {
+        } 
+        //adjective(degree:superlative)
+        else if (flagReference &&attribute.contains(adjective)) {
+           word = this.lexicalEntryUtil.getAdjectiveReference(reference);
+  
+        } 
+        else if (attribute.contains(preposition)) {
             word = this.findPreposition(attribute, reference, flagReference);
            
         } else if (flagReference && isIntergativePronoun(attribute).first) {
@@ -202,8 +208,6 @@ public class GermanSentenceBuilder implements TempConstants {
         }*/
         else if (flagReference && interrogativeCause(attribute).first) {
             SubjectType subjectType = interrogativeCause(attribute).second; 
-            System.out.println("subjectType::"+subjectType);
-            System.out.println("preposition::"+preposition);
             //String preposition = this.findPrepositionForQuestion(attribute, reference, flagReference);
             word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, subjectType.name());
              //System.out.println("subjectType::"+subjectType);
@@ -240,10 +244,19 @@ public class GermanSentenceBuilder implements TempConstants {
         }else if (flagReference && attribute.contains(noun)) {
             //AnnotatedNounOrQuestionWord annotatedNoun = annotatedLexicalEntryNouns.iterator().next();
 
-            if (reference.contains(colon)) {
-                String[] col = reference.split(colon);
-                word = this.getReferenceWrttienForm(col[0], col[1]);
+            if (reference.contains(range) || reference.contains(domain)) {
+                if (reference.contains(colon)) {
+                    String[] col = reference.split(colon);
+                    word = GenderUtils.getConditionLabelManually(col[0], col[1], this.subjectUri, this.objectUri);
+                } else {
+                    System.out.println("number of paramters are not correct::" + reference);
+                }
+            } else {
+                if (reference.contains(colon)) {
+                    String[] col = reference.split(colon);
+                    word = this.getReferenceWrttienForm(col[0], col[1]);
 
+                }
             }
 
         } else if (flagReference && attribute.contains(verb)) {
@@ -559,6 +572,21 @@ public class GermanSentenceBuilder implements TempConstants {
 
     public String getReference() {
         return lexicalEntryUtil.getReferenceUri().toString();
+    }
+
+    private String getReferenceWrttienForm(String numberType) {
+        List<AnnotatedNounOrQuestionWord> annotatedLexicalEntryNouns = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords();
+        String result = "";
+        for (AnnotatedNounOrQuestionWord annotatedNounOrQuestionWord : annotatedLexicalEntryNouns) {
+             System.out.println(annotatedNounOrQuestionWord);
+            if (annotatedNounOrQuestionWord.getNumber().toString().contains(numberType)) {
+                result = annotatedNounOrQuestionWord.getWrittenRepValue();
+                break;
+            }
+
+        }
+
+        return result;
     }
     
 

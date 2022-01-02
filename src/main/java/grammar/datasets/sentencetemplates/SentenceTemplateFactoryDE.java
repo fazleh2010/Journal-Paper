@@ -689,6 +689,84 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
         "prepositionalAdjunct"
       )
     );
+    
+        // AdjectivePPFrame...adjectiveBaseForm
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+           
+        ),
+        AdjectiveSuperlativeFrame,
+        adjectiveBaseForm
+      )
+    );
+
+    // AdjectivePPFrame...comparative
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+         
+        ),
+        AdjectiveSuperlativeFrame,
+        comparative
+      )
+    );
+    
+     // AdjectivePPFrame...superlative
+    sentenceTemplateRepository.add(createSentenceTemplate(language,
+        List.of(
+        //Was ist der h├Âchste Berg in Australien?
+        "interrogativePronoun(nominativeCase:range:singular) verb(component_be:present:singular) determiner(component_the_nominative:domain) adjective(superlative) noun(range:singular) preposition adjunct(domain)?"
+        ),
+        AdjectiveSuperlativeFrame,
+        superlativePlace,
+        forward
+      )
+    );
+    
+     // AdjectivePPFrame...superlative
+    sentenceTemplateRepository.add(createSentenceTemplate(language,
+        List.of(
+        "interrogativePronoun(range:singular) verb(component_be:present:singular) determiner(component_the) adjective(superlative) noun(range:singular) preposition adjunct(domain)?"
+        ),
+        AdjectiveSuperlativeFrame,
+        superlativePerson,
+        forward
+      )
+    );
+     // AdjectivePPFrame...superlative
+    sentenceTemplateRepository.add(createSentenceTemplate(language,
+        List.of(
+         //What is the largest country in the world?
+        "interrogativePronoun(range:singular) verb(component_be:present:singular) determiner(component_the) adjective(superlative) noun(range:singular) preposition determiner(component_the) adjunct(domain)?"
+        ),
+        AdjectiveSuperlativeFrame,
+        superlativeWorld,
+        forward
+      )
+    );
+    
+      // AdjectivePPFrame...superlative
+    sentenceTemplateRepository.add(createSentenceTemplate(language,
+        List.of(
+        //Where is Mount Everest Located?
+        "interrogativePlace verb(component_be:present:singular) adjunct(range) verb(verb_location:past:singular)?",
+        ////In which country is Mount Everest Located?
+        "preposition interrogativeDeterminer(domain:singular) adjunct(range) verb(component_be:present:singular) verb(verb_location:past:singular)?"
+        ),
+        AdjectiveSuperlativeFrame,
+        superlativePlace,
+        backward
+      )
+    );
+    
+    
+    
+    
+    
+    
   }
   
         

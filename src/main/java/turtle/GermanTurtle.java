@@ -11,6 +11,7 @@ import grammar.datasets.sentencetemplates.TempConstants;
 import grammar.structure.component.Language;
 import java.io.File;
 import java.io.IOException;
+import static java.lang.System.exit;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -110,7 +111,7 @@ public class GermanTurtle extends TurtleCreation implements TutleConverter {
 
     private void setSyntacticFrame(String key, List<String[]> rows) throws Exception {
         String syntacticFrame = super.findSyntacticFrame(rows);
-        key=key.trim().strip().stripLeading().stripTrailing();
+        key = key.trim().strip().stripLeading().stripTrailing();
         if (syntacticFrame.equals(NounPPFrame)) {
             setNounPPFrame(key, rows, syntacticFrame);
         } else if (syntacticFrame.equals(TransitiveFrame)) {
@@ -119,6 +120,8 @@ public class GermanTurtle extends TurtleCreation implements TutleConverter {
             setIntransitivePPFrame(key, rows, syntacticFrame);
         } else if (syntacticFrame.equals(AdjectiveAttributiveFrame)) {
             setAdjectiveFrame(key, rows, syntacticFrame);
+        } else if (syntacticFrame.equals(AdjectiveSuperlativeFrame)) {
+            setAdjectiveGradableFrame(key, rows, syntacticFrame);
         } else {
             System.out.println("no syntactic frame is found!!");
             //syntacticFrame = row[GoogleXslSheet.TransitFrameSyntacticFrameIndex];
@@ -270,6 +273,42 @@ public class GermanTurtle extends TurtleCreation implements TutleConverter {
         this.tutleFileName = getFileName(syntacticFrame);
 
     }
+    
+     @Override
+    public void setAdjectiveGradableFrame(String key, List<String[]> rows, String syntacticFrame) {
+        this.setLemonEntryId(key);
+
+        List<Tupples> tupplesList = new ArrayList<Tupples>();
+        Integer index = 0;
+        for (String[] row : rows) {
+            if (index == 0) {
+                this.partOfSpeech = gradableAdjectiveFrameCsv.getPartOfSpeechIndex(row);
+                this.writtenFormInfinitive=gradableAdjectiveFrameCsv.getWrittenFormIndex(row);
+                this.writtenForm3rdPerson=gradableAdjectiveFrameCsv.getComparativIndex(row);
+                this.writtenFormPast=gradableAdjectiveFrameCsv.getSuperlativeIndex(row);
+                this.preposition=gradableAdjectiveFrameCsv.getPrepostion(row);
+
+            }
+            Tupples tupple = new Tupples(this.lemonEntry,
+                    index + 1,
+                    setReference(gradableAdjectiveFrameCsv.getReferenceIndex(row)),
+                    setReference(gradableAdjectiveFrameCsv.getDomainIndex(row)),
+                    setReference(gradableAdjectiveFrameCsv.getRangeIndex(row)),
+                    setReference(gradableAdjectiveFrameCsv.getOils_boundToIndex(row)),
+                    setReference(gradableAdjectiveFrameCsv.getOils_degreeIndex(row)));
+
+            tupplesList.add(tupple);
+            index = index + 1;
+            gradableAdjectiveFrameCsv.setArticle(tupple, row);
+        }
+        this.turtleString
+                = gradableAdjectiveFrameCsv.getHeader(this.lemonEntry, this.language)
+                + gradableAdjectiveFrameCsv.getIndexing(this.lemonEntry, tupplesList)
+                + gradableAdjectiveFrameCsv.getWrittenTtl(this.lemonEntry, this.writtenFormInfinitive, this.writtenForm3rdPerson,this.writtenFormPast,this.language)
+                + gradableAdjectiveFrameCsv.getSenseDetail(lemonEntry, tupplesList, language)
+                + gradableAdjectiveFrameCsv.getPrepostion(lemonEntry, this.preposition, language);
+        this.tutleFileName = getFileName(syntacticFrame);
+    }
 
     private String modify(String string) {
         /*string = string.replaceAll("[^a-zA-Z0-9]", " ");
@@ -297,11 +336,6 @@ public class GermanTurtle extends TurtleCreation implements TutleConverter {
         /*if(preposition.contains("X"))
           return "";*/
         return preposition;
-    }
-
-    @Override
-    public void setAdjectiveGradableFrame(String key, List<String[]> rows, String syntacticFrame) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

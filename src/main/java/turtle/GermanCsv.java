@@ -14,6 +14,7 @@ import static java.lang.System.exit;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import static turtle.EnglishCsv.getSenseId;
 import util.io.GenderUtils;
 import util.io.Tupples;
 
@@ -493,10 +494,10 @@ public class GermanCsv {
 
         public static String getWritten(String lemonEntry, String writtenFormInfinitive, String writtenForm3rdPerson, String writtenFormPast, String writtenFormPerfect, String language, String subject) {
             String subjectLemon = null, objectLemon = null;
-             //subjectLemon = lemonEntry + "_subj";
-             //objectLemon = lemonEntry + "_obj";
-             //System.out.println("subject:"+subject);
-          
+            //subjectLemon = lemonEntry + "_subj";
+            //objectLemon = lemonEntry + "_obj";
+            //System.out.println("subject:"+subject);
+
             if (subject.contains("domain")) {
                 subjectLemon = lemonEntry + "_subj";
                 objectLemon = lemonEntry + "_obj";
@@ -505,7 +506,6 @@ public class GermanCsv {
                 subjectLemon = lemonEntry + "_obj";
             }
 
-             
             /*if (subject.contains("range")) {
                 subjectLemon = lemonEntry + "_subj";
                 objectLemon = lemonEntry + "_obj";
@@ -513,7 +513,6 @@ public class GermanCsv {
                 objectLemon = lemonEntry + "_subj";
                 subjectLemon = lemonEntry + "_obj";
             }*/
-
             return ":" + "form_" + lemonEntry + "_" + present + " a           lemon:Form ;\n"
                     + "  lemon:writtenRep     \"" + writtenFormInfinitive + "\"@" + language + " ;\n"
                     + "  lexinfo:verbFormMood lexinfo:infinitive .\n"
@@ -589,8 +588,8 @@ public class GermanCsv {
         }
 
         public String getPreposition(String lemonEntry, String preposition, String language) {
-            if(preposition.contains("X")){
-               preposition=""; 
+            if (preposition.contains("X")) {
+                preposition = "";
             }
             return ":arg2 lemon:marker :" + "form_" + lemonEntry + "_present_preposition" + " .\n"
                     + "\n"
@@ -898,8 +897,7 @@ public class GermanCsv {
                         + "  owl:hasValue   <" + tupple.getRange() + "> .\n";
                 str += line;
             }
-        }
-        else if (syntacticFrame.equals(TempConstants.AdjectivePPFrame)) {
+        } else if (syntacticFrame.equals(TempConstants.AdjectivePPFrame)) {
             for (Tupples tupple : tupples) {
                 String line = ":" + tupple.getSenseId() + " a  lemon:LexicalSense ;\n"
                         + "  lemon:reference :" + tupple.getSenseId() + "_res ;\n"
@@ -911,8 +909,8 @@ public class GermanCsv {
                         + "  oils:degree   <" + tupple.getOils_degree() + "> .\n"
                         + "\n"
                         + ":" + lemonEntry + "_condition a lemon:condition ;\n"
-                        + "  lemon:propertyDomain   <"+tupple.getDomain()+"> ;\n"
-                        + "  lemon:propertyRange    <"+tupple.getRange()+"> .";
+                        + "  lemon:propertyDomain   <" + tupple.getDomain() + "> ;\n"
+                        + "  lemon:propertyRange    <" + tupple.getRange() + "> .";
                 str += line;
             }
         }
@@ -946,22 +944,33 @@ public class GermanCsv {
     }
 
     public static class GradbleAdjectiveFrameCsv {
-        //LemonEntry	partOfSpeech	writtenForm	comparative	superlative	
-        //SyntacticFrame	predFrame	sense	reference	oils:boundTo	oils:degree	domain	range						
 
-        public static Integer comparativeIndex = 3;
-        public static Integer superlativeIndex = 4;
-        public static Integer SyntacticFrameIndex = 5;
-        public static Integer predFrameIndex = 6;
-        public static Integer senseIndex = 7;
-        public static Integer referenceIndex = 8;
-        public static Integer oils_boundToIndex = 9;
-        public static Integer oils_degreeIndex = 10;
-        public static Integer domainIndex = 11;
-        public static Integer rangeIndex = 12;
+        //LemonEntry	partOfSpeech	writtenForm	comparative	superlative	SyntacticFrame	
+        //predFrame	sense	reference	oils:boundTo	oils:degree	domain	range
+        private Integer lemonEntryIndex = 0;
+        private Integer partOfSpeechIndex = 1;
+        private Integer writtenFormIndex = 2;
+        private Integer comparativIndex = 3;
+        private Integer superlativeSingularIndex = 4;
+        private Integer superlativePluralIndex = 5;
+        private Integer syntacticFrameIndex = 6;
+        private Integer predFrameIndex = 7;
+        private Integer senseIndex = 8;
+        private Integer referenceIndex = 9;
+        private Integer oils_boundToIndex = 10;
+        private Integer oils_degreeIndex = 11;
+        private Integer domainIndex = 12;
+        private Integer rangeIndex = 13;
+        private Integer prepostionIndex = 14;
+        public  Integer domainArticleIndex = 15;
+        private Integer domainWrittenSingularFormIndex = 16;
+        private Integer domainWrittenPluralFormIndex = 17;
+        public  Integer rangeArticleIndex = 18;
+        private Integer rangeWrittenSingularFormIndex = 19;
+        private Integer rangeWrittenPluralFormIndex = 20;
       
 
-        public static String getHeader(String lemonEntry, List<Tupples> senseIds, String language) {
+        public String getHeader(String lemonEntry, String language) {
             return "@prefix :        <http://localhost:8080/#> .\n"
                     + "\n"
                     + "@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .\n"
@@ -971,42 +980,119 @@ public class GermanCsv {
                     + "@base            <http://localhost:8080#> .\n"
                     + "\n"
                     + ":lexicon_en a    lemon:Lexicon ;\n"
-                    + "  lemon:language \""+language+"\" ;\n"
-                    + "  lemon:entry    :"+lemonEntry+" ;\n"
-                    + "  lemon:entry    :"+lemonEntry+"_res .";
+                    + "  lemon:language \"" + language + "\" ;\n"
+                    + "  lemon:entry    :" + lemonEntry + " ;\n"
+                    + "  lemon:entry    :" + "form_" + lemonEntry + "_preposition" + " ;\n"
+                    + "  lemon:entry    :" + lemonEntry + "_res .\n"
+                    + "\n";
         }
 
-        public static String getSenseIndexing(List<Tupples> senseIds, String lemonEntry) {
-            String senseIdStr = ":"+lemonEntry+" a             lemon:LexicalEntry ;\n"
+        public String getIndexing(String lemonEntry, List<Tupples> senseIds) {
+            String senseIdStr = getSenseId(senseIds);
+            senseIdStr
+                    = ":" + lemonEntry + " a             lemon:LexicalEntry ;\n"
                     + "  lexinfo:partOfSpeech lexinfo:adjective ;\n"
-                    + "  lemon:canonicalForm  :"+lemonEntry+"_lemma ;\n"
-                    + "  lemon:synBehavior    :"+lemonEntry+"_predFrame ;\n"
-                    + "  lemon:sense          :"+lemonEntry+"_sense .";
+                    + "  lemon:canonicalForm  :" + "form_" + lemonEntry + " ;\n"
+                    + "  lemon:otherForm      :" + "form_" + lemonEntry + "_comperative" + " ;\n"
+                    + "  lemon:otherForm      :" + "form_" + lemonEntry + "_superlative" + " ;\n"
+                    + senseIdStr
+                    + "  lemon:synBehavior    :" + lemonEntry + "_predFrame" + " .\n"
+                    + "\n";
+
             return senseIdStr;
         }
 
-        public static String getWritten(String lemonEntry, String writtenFormInfinitive, String language) {
-            String str
-                    = ":" + lemonEntry + "_lemma lemon:writtenRep \"" + writtenFormInfinitive + "\"@" + language + " .\n"
-                    + "\n"
-                    + ":" + lemonEntry + "_predFrame a        lexinfo:AdjectivePPFrame ;\n"
-                    + "  lexinfo:copulativeSubject :" + lemonEntry + "_PredSynArg .\n";
+        public String getWrittenTtl(String lemonEntry, String baseForm, String comparative, String superlative, String language) {
+            String written
+                    = ":" + "form_" + lemonEntry + " lemon:writtenRep \"" + baseForm + "\"@" + language + " .\n"
+                    + "\n";
+            String writtenFormComparative
+                    = ":" + "form_" + lemonEntry + "_comperative" + " lemon:writtenRep \"" + comparative + "\"@" + language + " .\n"
+                    + "\n";
+
+            String writtenFormSuperlative
+                    = ":" + "form_" + lemonEntry + "_superlative" + " lemon:writtenRep \"" + superlative + "\"@" + language + " .\n"
+                    + "\n";
+
+            String predFrame
+                    = ":" + lemonEntry + "_predFrame" + " a        lexinfo:" + TempConstants.AdjectiveSuperlativeFrame + " ;\n"
+                    + "  lexinfo:copulativeSubject :" + lemonEntry + "_PredSynArg .\n"
+                    + "\n";
+
+            return written + writtenFormComparative + writtenFormSuperlative + predFrame;
+        }
+
+        public String getSenseDetail(String lemonEntry, List<Tupples> tupples, String language) {
+            String str = "";
+
+            for (Tupples tupple : tupples) {
+                String line
+                        = ":" + tupple.getSenseId() + " a  lemon:LexicalSense ;\n"
+                        + "  lemon:reference :" + lemonEntry + "_res" + " ;\n"
+                        + "  lemon:isA       :" + lemonEntry + "_PredSynArg" + " ;\n"
+                        + "  lemon:condition :" + tupple.getSenseId() + "_condition" + " .\n"
+                        + "\n";
+                String res
+                        = ":" + lemonEntry + "_res" + " a   oils:CovariantScalar ;\n"
+                        + "  oils:boundTo  <" + tupple.getOils_boundTo() + "> ;\n"
+                        + "  oils:degree   <" + tupple.getOils_degree() + "> .\n"
+                        + "\n";
+                String condition
+                        = ":" + tupple.getSenseId() + "_condition" + " a lemon:condition ;\n"
+                        + "  lemon:propertyDomain   <" + tupple.getDomain() + "> ;\n"
+                        + "  lemon:propertyRange    <" + tupple.getRange() + "> .";
+
+                str += line + res + condition;
+            }
 
             return str;
         }
 
+        public String getPrepostion(String lemonEntry, String preposition, String language) {
+            return "## Prepositions ##\n"
+                    + ":" + "form_" + lemonEntry + "_preposition" + " a                  lemon:SynRoleMarker ;\n"
+                    + "  lemon:canonicalForm  [ lemon:writtenRep \"" + preposition + "\"@" + language + " ] ;\n"
+                    + "  lexinfo:partOfSpeech lexinfo:preposition .\n"
+                    + "\n"
+                    + "";
+        }
 
-        public String getComparativeIndex(String[] row) {
-            return row[comparativeIndex];
+        public void setArticle(Tupples tupple, String[] row) {
+            //GenderUtils.setWrittenForms(tupple.getDomain(), getDomainWrittenSingularFormIndex(row), getRangeWrittenSingularFormIndex(row));
+            //GenderUtils.setWrittenForms(tupple.getRange(), getRangeWrittenSingularFormIndex(row), getRangeWrittenPluralFormIndex(row));
+            GenderUtils.setArticles(tupple.getDomain(), row[this.domainArticleIndex]);
+            GenderUtils.setArticles(tupple.getRange(), row[this.rangeArticleIndex]);
+            GenderUtils.setWrittenForms(tupple.getDomain(), row[this.domainWrittenSingularFormIndex], row[this.domainWrittenPluralFormIndex]);
+            GenderUtils.setWrittenForms(tupple.getRange(), row[this.rangeWrittenSingularFormIndex], row[this.rangeWrittenPluralFormIndex]);
+
+        }
+
+        public String getLemonEntryIndex(String[] row) {
+            return row[lemonEntryIndex];
+        }
+
+        public String getPartOfSpeechIndex(String[] row) {
+            return row[partOfSpeechIndex];
+        }
+
+        public String getWrittenFormIndex(String[] row) {
+            return row[writtenFormIndex];
+        }
+
+        public String getPrepostion(String[] row) {
+            return row[prepostionIndex];
+        }
+
+        public String getComparativIndex(String[] row) {
+            return row[comparativIndex];
         }
 
         public String getSuperlativeIndex(String[] row) {
-            return row[superlativeIndex];
-
+            return row[superlativeSingularIndex];
         }
 
         public Integer getSyntacticFrameIndex() {
-            return SyntacticFrameIndex;
+            return syntacticFrameIndex;
         }
 
         public String getPredFrameIndex(String[] row) {
@@ -1037,7 +1123,23 @@ public class GermanCsv {
             return row[rangeIndex];
         }
 
-       
+        public String getDomainWrittenSingularFormIndex(String[] row) {
+            return row[domainWrittenSingularFormIndex];
+        }
+
+        public String getDomainWrittenPluralFormIndex(String[] row) {
+            return row[domainWrittenPluralFormIndex];
+        }
+
+        public String getRangeWrittenSingularFormIndex(String[] row) {
+            return row[rangeWrittenSingularFormIndex];
+        }
+
+        public String getRangeWrittenPluralFormIndex(String[] row) {
+            return row[rangeWrittenPluralFormIndex];
+        }
+
+     
 
     }
 

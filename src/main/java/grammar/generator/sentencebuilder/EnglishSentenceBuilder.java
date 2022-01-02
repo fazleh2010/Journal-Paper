@@ -204,7 +204,6 @@ public class EnglishSentenceBuilder implements TempConstants {
             else{
                word = this.getReferenceWrttienForm(reference); 
             }
-         System.out.println("attribute::" + attribute + " reference::" + reference + " index::" + index);
 
         } else if (flagReference && attribute.contains(verb)) {
             word = new EnglishVerbFinder(this.frameType,this.lexicalEntryUtil,attribute, reference).getWord();

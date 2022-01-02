@@ -100,8 +100,8 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
             sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
             System.out.println(sentenceTemplates);
             System.out.println(sentences);
-           //exit(1);
         }
+
 
         /*List<String> sentenceTemplates = getSentenceTemplateRepository().findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                 getLanguage(), new String[]{getFrameType().getName(), FORWARD});*/
