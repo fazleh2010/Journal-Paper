@@ -83,9 +83,14 @@ public class TemplateFinder implements TempConstants{
             type = WHERE_WHAT_PRESENT_THING;
         } else if (isPerson(subjectUri) && isDate(referenceUri)) {
             type = WHEN_WHO_PAST_PERSON;
+        }  else if (isPerson(subjectUri) && isPerson(objectUri)) {
+            type = WHO_WHO_PERSON;
+        } else if (isPerson(subjectUri) && isCause(referenceUri)) {
+            type = WHAT_WHO_PERSON_THING;
         } else if (!isPerson(subjectUri) && isDate(referenceUri)) {
             type = WHEN_WHAT_PAST_THING;
-        } else if (isAmountPriceCheck(referenceUri)) {
+        } 
+        else if (isAmountPriceCheck(referenceUri)) {
             type = HOW_MANY_PRICE;
         } else if (isAmountThingCheck(referenceUri)) {
             type = HOW_MANY_THING;
@@ -99,7 +104,7 @@ public class TemplateFinder implements TempConstants{
         System.out.println("isDate(referenceUri)::"+isDate(referenceUri));
         System.out.println("isPlace(referenceUri)::"+isPlace(objectUri));
           System.out.println("type::"+type);
-         //exit(1);*/
+         exit(1);*/
         return type;
 
     }
@@ -208,6 +213,19 @@ public class TemplateFinder implements TempConstants{
         }
         return false;
     }
+    
+    private static Boolean isCause(String string) {
+        if (StringUtils.isBlank(string)) {
+            return false;
+        }
+        for (URI key : DomainOrRangeTypeCheck.CauseCheck.getReferences()) {
+            if (string.equals(key.toString())) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
 
     public DomainOrRangeType getForwardDomainOrRange() {
         return forwardDomainOrRange;
@@ -299,6 +317,8 @@ public class TemplateFinder implements TempConstants{
 
     }
     
+    
+    
     public static Boolean isSuperlativeThing(String string) {
         if (StringUtils.isBlank(string)) {
             return false;
@@ -316,7 +336,8 @@ public class TemplateFinder implements TempConstants{
     public String getPropertyReference() {
         return propertyReference;
     }
-    
+
+   
 
   
 }

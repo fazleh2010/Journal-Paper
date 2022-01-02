@@ -25,7 +25,7 @@
   lemon:entry    :interrogativePronounThing ;
   lemon:entry    :interrogativePlace ;
   lemon:entry    :interrogativeTemporal ;
-  lemon:entry    :interrogativePrep_an;
+  lemon:entry    :interrogativeCause;
   lemon:entry    :component_heißen ;
   lemon:entry    :component_haben ;
   lemon:entry    :component_werden ;
@@ -36,6 +36,7 @@
   lemon:entry    :von ;
   lemon:entry    :mit ;
   lemon:entry    :auf ;
+  lemon:entry    :an ;
   lemon:entry    :alle ;
   lemon:entry    :fiktiver_charakter_weak ;
   lemon:entry    :fiktiver_charakter_strong ;
@@ -406,52 +407,76 @@
 ## Question words ##
 
 :interrogativeDeterminer a       lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "Welche"@de ] ;
-  lemon:otherForm      [ lemon:writtenRep "Welcher"@de ;
+  lemon:canonicalForm  [ lemon:writtenRep "welche"@de ] ;
+  lemon:otherForm      [ lemon:writtenRep "welcher"@de ;
   lexinfo:gender                          lexinfo:masculine ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Welche"@de ;
+  lemon:otherForm      [ lemon:writtenRep "welche"@de ;
   lexinfo:gender                          lexinfo:feminine ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Welches"@de ;
+  lemon:otherForm      [ lemon:writtenRep "welches"@de ;
   lexinfo:gender                          lexinfo:neuter ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Welche"@de ;
+  lemon:otherForm      [ lemon:writtenRep "welche"@de ;
   lexinfo:gender                          lexinfo:masculine ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:plural ] ;
-  lemon:otherForm      [ lemon:writtenRep "Welche"@de ;
+  lemon:otherForm      [ lemon:writtenRep "welche"@de ;
+  lexinfo:gender                          lexinfo:neuter ;
+  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lemon:otherForm      [ lemon:writtenRep "welche"@de ;
   lexinfo:gender                          lexinfo:feminine ;
   lexinfo:case                            lexinfo:nominativeCase ;
   lexinfo:number                          lexinfo:plural ] ;
-  lemon:otherForm      [ lemon:writtenRep "Welche"@de ;
+  lemon:otherForm      [ lemon:writtenRep "welchen"@de ;
+  lexinfo:gender                          lexinfo:masculine ;
+  lexinfo:case                            lexinfo:accusativeCase ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "welche"@de ;
+  lexinfo:gender                          lexinfo:feminine ;
+  lexinfo:case                            lexinfo:accusativeCase ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "welches"@de ;
   lexinfo:gender                          lexinfo:neuter ;
-  lexinfo:case                            lexinfo:nominativeCase ;
+  lexinfo:case                            lexinfo:accusativeCase ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "welche"@de ;
+  lexinfo:gender                          lexinfo:masculine ;
+  lexinfo:case                            lexinfo:accusativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lemon:otherForm      [ lemon:writtenRep "welche"@de ;
+  lexinfo:gender                          lexinfo:neuter ;
+  lexinfo:case                            lexinfo:accusativeCase ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lemon:otherForm      [ lemon:writtenRep "welche"@de ;
+  lexinfo:gender                          lexinfo:feminine ;
+  lexinfo:case                            lexinfo:accusativeCase ;
   lexinfo:number                          lexinfo:plural ] ;
   lemon:otherForm      [ lemon:writtenRep "Welchem"@de ;
   lexinfo:gender                          lexinfo:masculine ;
   lexinfo:case                            lexinfo:dativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Welcher"@de ;
+  lemon:otherForm      [ lemon:writtenRep "welcher"@de ;
   lexinfo:gender                          lexinfo:feminine ;
   lexinfo:case                            lexinfo:dativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Welchem"@de ;
+  lemon:otherForm      [ lemon:writtenRep "welchem"@de ;
   lexinfo:gender                          lexinfo:neuter ;
   lexinfo:case                            lexinfo:dativeCase ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Welchen"@de ;
-  lexinfo:gender                          lexinfo:feminine ;
+  lemon:otherForm      [ lemon:writtenRep "welchen"@de ;
+  lexinfo:gender                          lexinfo:masculine ;
   lexinfo:case                            lexinfo:dativeCase ;
   lexinfo:number                          lexinfo:plural ] ;
-  lemon:otherForm      [ lemon:writtenRep "Welchen"@de ;
+  lemon:otherForm      [ lemon:writtenRep "welchen"@de ;
   lexinfo:gender                          lexinfo:neuter ;
   lexinfo:case                            lexinfo:dativeCase ;
   lexinfo:number                          lexinfo:plural ] ;
-  lemon:otherForm      [ lemon:writtenRep "Welchen"@de ;
+  lemon:otherForm      [ lemon:writtenRep "welchen"@de ;
   lexinfo:gender                          lexinfo:feminine ;
   lexinfo:case                            lexinfo:dativeCase ;
   lexinfo:number                          lexinfo:plural ] ;
@@ -562,7 +587,7 @@
   lexinfo:number                          lexinfo:plural ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
-:interrogativePrep_an a                 lemon:SynRoleMarker ;
+:interrogativeCause a                 lemon:SynRoleMarker ;
   lemon:canonicalForm  [ lemon:writtenRep "woran"@de ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
@@ -622,6 +647,10 @@
 
 :auf a                 lemon:SynRoleMarker ;
   lemon:canonicalForm  [ lemon:writtenRep "auf"@de ] ;
+  lexinfo:partOfSpeech lexinfo:particle .
+
+:an a                 lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "an"@de ] ;
   lexinfo:partOfSpeech lexinfo:particle .
 
 :alle a                 lemon:SynRoleMarker ;

@@ -20,13 +20,23 @@ import java.util.TreeSet;
  *
  * @author elahi
  */
-public class GenderUtils implements TempConstants{
+public class GenderUtils implements TempConstants {
 
     public static Map<String, String[]> referenceArticleMap = new TreeMap<String, String[]>();
     public static Map<String, String[]> nounWrittenForms = new TreeMap<String, String[]>();
-    public static Map<String,Map<String,String>> trennVerb = new TreeMap<String,Map<String,String>>();
-    public static Map<String,Map<String,String>> perfectVerb = new TreeMap<String,Map<String,String>>();
-    public static Map<String,Map<String,String>> refVerb = new TreeMap<String,Map<String,String>>();
+    public static Map<String, Map<String, String>> trennVerb = new TreeMap<String, Map<String, String>>();
+    public static Map<String, Map<String, String>> perfectVerb = new TreeMap<String, Map<String, String>>();
+    public static Map<String, Map<String, String>> refVerb = new TreeMap<String, Map<String, String>>();
+    public static Map<String, String> prepositionCase = new TreeMap<String, String>();
+
+    static {
+        prepositionCase.put("durch", accusativeCase);
+        prepositionCase.put("in", dativeCase);
+    }
+
+    public static void setPrepositionCase(String preposition, String genderCase) {
+        prepositionCase.put(preposition, genderCase);
+    }
 
     public static void setWrittenForms(String uri, String writtenSingular, String writtenPlural) {
         nounWrittenForms.put(uri, new String[]{writtenSingular, writtenPlural});
@@ -35,22 +45,20 @@ public class GenderUtils implements TempConstants{
     public static void setArticles(String uri, String artile) {
         referenceArticleMap.put(uri, new String[]{artile});
     }
-    
-    public static void setVerbTypes(String partOfSpeech,String[] verbs, Map<String, String> verbTypes) {
+
+    public static void setVerbTypes(String partOfSpeech, String[] verbs, Map<String, String> verbTypes) {
         for (String key : verbTypes.keySet()) {
             if (partOfSpeech.contains(RefVerb)) {
-                setRefVerb(verbs,verbTypes);
+                setRefVerb(verbs, verbTypes);
             } else if (partOfSpeech.contains(TrennVerb)) {
-                setTrennVerb(verbs,verbTypes);
-            } 
-                setPerfectVerb(verbs,verbTypes);
-            
+                setTrennVerb(verbs, verbTypes);
+            }
+            setPerfectVerb(verbs, verbTypes);
+
         }
-        
 
     }
 
-  
     public static String getArticle(String domain) {
         String article = "XX";
         if (referenceArticleMap.containsKey(domain)) {
@@ -60,17 +68,19 @@ public class GenderUtils implements TempConstants{
     }
 
     public static String getWrittenFormSingular(String uri) {
-        if(nounWrittenForms.containsKey(uri))
-           return nounWrittenForms.get(uri)[0];
+        if (nounWrittenForms.containsKey(uri)) {
+            return nounWrittenForms.get(uri)[0];
+        }
         return "XX";
     }
 
     public static String getWrittenFormPlural(String uri) {
-        if(nounWrittenForms.containsKey(uri))
-        return nounWrittenForms.get(uri)[1];
-         return "XX";
+        if (nounWrittenForms.containsKey(uri)) {
+            return nounWrittenForms.get(uri)[1];
+        }
+        return "XX";
     }
-    
+
     public static Pair<Boolean, String> getTrennVerbType(String key, String tense, String type) {
         Map<String, String> verb = trennVerb.get(key);
         if (verb.containsKey(tense)) {
@@ -89,31 +99,30 @@ public class GenderUtils implements TempConstants{
         return new Pair<Boolean, String>(Boolean.FALSE, key);
 
     }
-    
-    
+
     public static Pair<Boolean, String> getPerfecterbType(String key, String tense) {
-        Pair pair=new Pair<Boolean, String>(Boolean.FALSE, key);
+        Pair pair = new Pair<Boolean, String>(Boolean.FALSE, key);
         if (perfectVerb.containsKey(key)) {
             Map<String, String> verb = perfectVerb.get(key);
             if (verb.containsKey(tense)) {
-               pair=new Pair<Boolean, String>(Boolean.TRUE, verb.get(tense));
+                pair = new Pair<Boolean, String>(Boolean.TRUE, verb.get(tense));
             }
         }
         return pair;
     }
-    
-    public static String getConditionLabelManually(String domainOrRange, String numberType,String subjectUri,String objectUri) {
-        String word="XX";
+
+    public static String getConditionLabelManually(String domainOrRange, String numberType, String subjectUri, String objectUri) {
+        String word = "XX";
         if (domainOrRange.contains(domain) && numberType.contains(singular)) {
-            word= getWrittenFormSingular(subjectUri);
+            word = getWrittenFormSingular(subjectUri);
         } else if (domainOrRange.contains(domain) && numberType.contains(plural)) {
-            word=  getWrittenFormPlural(subjectUri);
+            word = getWrittenFormPlural(subjectUri);
         } else if (domainOrRange.contains(range) && numberType.contains(singular)) {
-            word=  getWrittenFormSingular(objectUri);
-        } else if (domainOrRange.contains(range) && numberType.contains(plural)){
-            word=  getWrittenFormPlural(objectUri);
+            word = getWrittenFormSingular(objectUri);
+        } else if (domainOrRange.contains(range) && numberType.contains(plural)) {
+            word = getWrittenFormPlural(objectUri);
         }
-       
+
         return word;
     }
 
@@ -124,7 +133,7 @@ public class GenderUtils implements TempConstants{
         return false;
     }*/
 
-    /*public static String getManuallyCreatedLabel(String uri) {
+ /*public static String getManuallyCreatedLabel(String uri) {
         if (dbpediaClassMap.containsKey(uri)) {
             return dbpediaClassMap.get(uri)[0];
         }
@@ -138,37 +147,44 @@ public class GenderUtils implements TempConstants{
                 System.out.println("article::" + article);
             }
         }
-        
-        for(String key:nounWrittenForms.keySet()){
-            String []values=nounWrittenForms.get(key);
-             System.out.println(key);
-            for(String value:values){
-               System.out.println(value);
+
+        for (String key : nounWrittenForms.keySet()) {
+            String[] values = nounWrittenForms.get(key);
+            System.out.println(key);
+            for (String value : values) {
+                System.out.println(value);
             }
         }
-        
-        
+
     }
 
-    private static void setRefVerb(String[] verbs,Map<String, String> verbTypes) {
-        for(String verb:verbs){
+    private static void setRefVerb(String[] verbs, Map<String, String> verbTypes) {
+        for (String verb : verbs) {
             refVerb.put(verb, verbTypes);
         }
     }
 
-    private static void setTrennVerb(String[] verbs,Map<String, String> verbTypes) {
-        for(String verb:verbs){
+    private static void setTrennVerb(String[] verbs, Map<String, String> verbTypes) {
+        for (String verb : verbs) {
             trennVerb.put(verb, verbTypes);
         }
     }
 
-    private static void setPerfectVerb(String[] verbs,Map<String, String> verbTypes) {
-        for(String verb:verbs){
+    private static void setPerfectVerb(String[] verbs, Map<String, String> verbTypes) {
+        for (String verb : verbs) {
             perfectVerb.put(verb, verbTypes);
         }
     }
 
-    
-    
+    public static Map<String, String> getPrepositionCase() {
+        return prepositionCase;
+    }
+
+    public static String getPrepositionCase(String key) {
+        if (prepositionCase.containsKey(key)) {
+            return prepositionCase.get(key);
+        }
+        return null;
+    }
 
 }

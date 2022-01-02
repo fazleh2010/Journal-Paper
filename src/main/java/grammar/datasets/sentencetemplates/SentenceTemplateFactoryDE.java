@@ -260,18 +260,19 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
     sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(   //Durch welches Land fließt der Rhein?
-         "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(mainVerb:present3rd:thridPerson) adjunct(domain)?",
-           //In welchem Museum ist Der Schrei ausgestellt?
-         "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
-           //Für was steht YiCM?
-         "preposition interrogativePronounThing(nominativeCase:masculine:singular) verb(mainVerb:present3rd:thridPerson) adjunct(domain)?",
-         "preposition interrogativePronounThing(nominativeCase:masculine:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
-          //Woran ist Bruce Carver gestorben?
-         //"interrogativePrep(preposition) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
-           //TrennVerb: In welcher Stadt hört die Ruta 68 auf?",
-         "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(TrennVerbPart1:present3rd:thridPerson) adjunct(domain) verb(TrennVerbPart2:present3rd:thridPerson)?",
-         "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(TrennVerbPart1:past:thridPerson) adjunct(domain) verb(TrennVerbPart2:past:thridPerson)?",
-         "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(TrennVerb:perfect:thridPerson)?"
+         "preposition interrogativeDeterminer(preposition:range:singular) verb(mainVerb:present3rd:thridPerson) adjunct(domain)?",
+         "preposition interrogativeDeterminer(preposition:range:plural) verb(mainVerb:present:thridPerson) adjunct(domain)?",
+          //In welchem Museum ist Der Schrei ausgestellt?
+         "preposition interrogativeDeterminer(preposition:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+         "preposition interrogativeDeterminer(preposition:range:plural) verb(component_be:present:plural) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+          /* //Für was steht YiCM?
+         "preposition interrogativePronounThing(dativeCase:masculine:singular) verb(mainVerb:present3rd:thridPerson) adjunct(domain)?",
+         "preposition interrogativePronounThing(dativeCase:masculine:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+         */ 
+         //TrennVerb: In welcher Stadt hört die Ruta 68 auf?",
+         "preposition interrogativeDeterminer(preposition:range:singular) verb(TrennVerbPart1:present3rd:thridPerson) adjunct(domain) verb(TrennVerbPart2:present3rd:thridPerson)?",
+         "preposition interrogativeDeterminer(preposition:range:singular) verb(TrennVerbPart1:past:thridPerson) adjunct(domain) verb(TrennVerbPart2:past:thridPerson)?",
+         "preposition interrogativeDeterminer(preposition:range:singular) verb(component_be:present:singular) adjunct(domain) verb(TrennVerb:perfect:thridPerson)?"
        
                ),
         IntransitivePPFrame,
@@ -370,6 +371,27 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
       )
     );
       
+    
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+        //Wer war mit Pr├ñsident Chirac verheiratet?
+         "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)??"
+
+
+        ),
+        IntransitivePPFrame,
+        WHO_WHO_PERSON,
+        forward
+      )
+    );
+      
+      
+      
           ///////////////////////////////
        sentenceTemplateRepository.add(
       createSentenceTemplate(
@@ -378,9 +400,9 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
         //Wo wurde Donald Trump geboren?
         "interrogativePlace verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
         //In welcher Stadt ist der Pr├ñsident von Montenegro geboren?
-        "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+        "preposition interrogativeDeterminer(dativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
         //In welcher Stadt wohnt Sylvester Stallone?
-        "preposition interrogativeDeterminer(nominativeCase:range:singular) verb(mainVerb:present3rd:thridPerson) adjunct(domain)?"
+        "preposition interrogativeDeterminer(dativeCase:range:singular) verb(mainVerb:present3rd:thridPerson) adjunct(domain)?"
         
                ),
         IntransitivePPFrame,
@@ -403,6 +425,42 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
         backward
       )
     );
+      
+              ///////////////////////////////
+       sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+        //Woran ist Bruce Carver gestorben?
+        "interrogativeCause(preposition) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+        //An was ist Bruce Carver gestorben?
+        "preposition interrogativePronoun(nominativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?"     
+               ),
+        IntransitivePPFrame,
+        WHAT_WHO_PERSON_THING,
+        forward
+      )
+    );
+    //Welche Person wurde 2010 geboren?
+    //Wer ist 2010 geboren?
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+        //"Wer ist an Malaria gestorben?
+        "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+        //"Wer war an Malaria gestorben?
+        "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?"
+      
+          ),
+        IntransitivePPFrame,
+        WHAT_WHO_PERSON_THING,
+        backward
+      )
+    );
+      
+      
+      
       
              ///////////////////////////////
        sentenceTemplateRepository.add(

@@ -1,0 +1,29 @@
+LemonEntry,partOfSpeech,gender,writtenFormNominative(singular),writtenFormNominative (plural),writtenFormSingular (accusative),writtenFormSingular (dative),writtenFormSingular (genetive),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,domain_article,domain_written_singular,domain_written_plural,rangeArticle,range_written_singular,range_written_plural
+Hauptstadt_von,noun,feminine,Hauptstadt,-,Hauptstadt,Hauptstadt,Hauptstadt,von,NounPPFrame,range,domain,1,dbo:capital,dbo:Country,dbo:City,neuter,Land,LÑnder,feminine,Stadt,-
+BÅrgermeister_von,noun,masculine,BÅrgermeister,-,BÅrgermeister,BÅrgermeister,BÅrgermeisters,von,NounPPFrame,range,domain,1,dbo:mayor,dbo:City,dbo:Person,feminine,Stadt,StÑdte,feminine,Person,Personen
+Hîhe_von,noun,feminine,Hîhe,-,Hîhe,Hîhe,Hîhe,von,NounPPFrame,range,domain,1,dbo:height,dbo:Lighthouse,xsd:integer,masculine,Leuchtturm,LeuchttÅrme,feminine,-,-
+Amtssprache_von,noun,feminine,Amtssprache,Amtssprachen,Amtssprache,Amtssprache,Amtssprache,von,NounPPFrame,range,domain,1,dbo:officialLanguage,dbo:Country,dbo:Language,neuter,Land,LÑnder,feminine,Sprache,Sprachen
+Gesamteinwohnerzahl_von,noun,feminine,Gesamteinwohnerzahl,-,Gesamteinwohnerzahl,Gesamteinwohnerzahl,Gesamteinwohnerzahl,von,NounPPFrame,range,domain,1,dbo:populationTotal,dbo:Location,xsd:double,feminine,Lage,Lagen,feminine,-,-
+Herausgeber_von,noun,masculine,Herausgeber,Herausgeber,Herausgeber,Herausgeber,Herausgebers,von,NounPPFrame,range,domain,1,dbo:editor,dbo:WrittenWork,dbo:Person,neuter,Werk,Werke,feminine,Person,Personen
+kinder_von,noun,neuter,Kind,Kinder,Kinder,Kinder,Kindes,von,NounPPFrame,range,domain,1,dbo:child,dbo:Person,dbo:Person,masculine,Person,Personen,masculine,Person,Personen
+Bandmitglieder_von,noun,masculine,Bandmitglieder,Bandmitglieder,Bandmitglieder,Bandmitglieder,Bandmitgliederes,von,NounPPFrame,range,domain,1,dbo:bandMember,dbo:Band,dbo:Person,neuter,Band,Bande,feminine,Person,Personen
+Frau_von,noun,feminine,Frau,Frauen,Frau,Frau,Frau,von,NounPPFrame,range,domain,1,dbo:spouse,dbo:Person,dbo:Person,masculine,Person,Personen,feminine,dbo:Person,Personen
+Trainer_von,noun,masculine,Trainer,Trainer,Trainer,Trainer,Trainers,von,NounPPFrame,range,domain,1,dbo:coach,dbo:IceHockeyLeague,dbo:CollegeCoach,feminine,Liga,Ligen,masculine,Trainer,Trainer
+Musik_von,noun,feminine,Musik,Musiken,Musik,Musik,Musik,von,NounPPFrame,domain,range,1,dbo:musicBy,dbo:Musical,dbo:Person,neuter,Musical,Musicals,masculine,Person,Personen
+sohn_von,noun,feminine,Sohn,Sîhne,Sohn,Sohn,Sohn,von,NounPPFrame,range,domain,1,dbo:child,dbo:Person,dbo:Person,masculine,Person,Personen,feminine,dbo:Person,Personen
+tocher_von,noun,feminine,Tochter,Tîchter,Tochter,Tochter,Tochter,von,NounPPFrame,range,domain,1,dbo:child,dbo:Person,dbo:Person,masculine,Person,Personen,feminine,dbo:Person,Personen
+Spiele_von,noun,neuter,Spiel,Spiele,Spiel,Spiel,Spieles,von,NounPPFrame,domain,range,1,dbo:publisher,dbo:Publisher,dbo:Company,masculine,Herausgeber,Herausgeber,feminine,Firma,Firmen
+spitzname_von,noun,masculine,Spitzname,Spitznamen,Spitzname,Spitznames,Spitznames,von,NounPPFrame,range,domain,1,dbp:nickname,dbo:City,xsd:String,feminine,Stadt,StÑdte,-,-,-
+government_type,noun,feminine,Regierungsform,Regierungsform,Regierungsform,Regierungsform,Regierungsform,von,NounPPFrame,range,domain,,dbo:governmentType,dbo:Country,dbo:GovernmentType,neuter,Land,LÑnder,masculine,Typ,Typen
+entwickler_von,noun,masculine,Entwickler,Entwickler,Entwickler,Entwickler,Entwicklers,von,NounPPFrame,range,domain,1,dbo:developer,dbo: Software,dbo:University,feminine,Software,Software,feminine,UniversitÑt,UniversitÑten
+vorwahl_von,noun,feminine,Vorwahl,Vorwahl,Vorwahl,Vorwahl,Vorwahl,von,NounPPFrame,range,domain,1,dbo:areaCode,dbo:Place,xsd:string,feminine,Lage,Lagen,-,-,-
+vizeprÑsident_von,noun,masculine,VizeprÑsident,VizeprÑsidenten,VizeprÑsident,VizeprÑsident,VizeprÑsident,von,NounPPFrame,range,domain,1,dbo:vicePresident,dbo:Person,dbo:Country,masculine,Person,Personen,neuter,Land,LÑnder
+vizeprÑsident_unter,noun,masculine,VizeprÑsident,VizeprÑsidenten,VizeprÑsident,VizeprÑsident,VizeprÑsident,unter,NounPPFrame,range,domain,1,dbo:vicePresident,dbo:Person,dbo:Person,masculine,Person,Personen,masculine,Person,Personen
+nachfolger_von,noun,masculine,Nachfolger,Nachfolger,Nachfolger,Nachfolger,Nachfolgers,von,NounPPFrame,range,domain,1,dbo:successor,dbo:Person,dbo:Person,masculine,Person,Personen,masculine,Person,Personen
+wÑhrung_von,noun,feminine,WÑhrung,WÑhrungen,WÑhrung,WÑhrung,WÑhrung,von,NounPPFrame,range,domain,1,dbo:currency,dbo:Country,dbo:Currency,neuter,Land,LÑnder,feminine,WÑhrung,WÑhrungen
+Doktorvater_von,noun,masculine,Doktorvater,DoktorvÑter,Doktorvater,Doktorvater,Doktorvaters,von,NounPPFrame,range,domain,1,dbo:doctoralAdvisor,dbo:Person,dbo:Person,masculine,Person,Personen,masculine,Person,Personen
+Enkel_von,noun,masculine,Enkel,Enkel,Enkel,Enkel,Enkels,von,NounPPFrame,range,domain,1,dbo:parent,dbo:Person,dbo:Person,masculine,Person,Personen,masculine,Person,Personen
+Lage_von,noun,neuter,Lage,Lagen,Land,Land,Landes,in,NounPPFrame,range,domain,1,dbo:locatedInArea,dbo:Location,dbo:Place,feminine,Lage,Lagen,feminine,Lage,Lagen
+zutaten_von,noun,feminine,Zutaten,Zutaten,Zutat,Zutat,Zutaten,von,NounPPFrame,range,domain,1,dbo:ingredient,dbo:Food,owl:Thing,neuter,Essen,Essen,neuter,Ding,Dinger
+hauptquartier_von,noun,neuter,Hauptquartier,Hauptquaritere,Hauptquartier,Hauptquartier,Hauptquartiers,von,NounPPFrame,range,domain,1,dbo:headquarter,dbo:Organisation,dbo:PopulatedPlace,dbo:Building,dbo:PopulatedPlace,neuter,GebÑude,GebÑude,feminine
+seitenanzahl_von,noun,feminine,Seitenzahl,Seitenzahlen,Seitenzahl,Seitenzahl,Seitenzahl,von,NounPPFrame,range,domain,1,dbo:numberOfPages,dbo:WrittenWork,xsd:positiveInteger,neuter,Werk,Werke,-,-,-

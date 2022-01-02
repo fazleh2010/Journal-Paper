@@ -193,12 +193,22 @@ public class GermanSentenceBuilder implements TempConstants {
           
 
         } 
-        else if (flagReference && isinterrogativePreposition(attribute).first) {
-            SubjectType subjectType = isinterrogativePreposition(attribute).second; 
+        /*else if (flagReference && interrogativeCause(attribute).first) {
+            SubjectType subjectType = interrogativeCause(attribute).second; 
             System.out.println("subjectType::"+subjectType);
             System.out.println("preposition::"+preposition);
             String preposition = this.findPrepositionForQuestion(attribute, reference, flagReference);
             word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, subjectType.name()+"_"+preposition);
+        }*/
+        else if (flagReference && interrogativeCause(attribute).first) {
+            SubjectType subjectType = interrogativeCause(attribute).second; 
+            System.out.println("subjectType::"+subjectType);
+            System.out.println("preposition::"+preposition);
+            //String preposition = this.findPrepositionForQuestion(attribute, reference, flagReference);
+            word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, subjectType.name());
+             //System.out.println("subjectType::"+subjectType);
+            //System.out.println("preposition::"+preposition);
+            //exit(1);
         }
         else if (!flagReference && isInterrogativePlace(attribute).first) {
             SubjectType subjectType = isInterrogativePlace(attribute).second;
@@ -366,7 +376,21 @@ public class GermanSentenceBuilder implements TempConstants {
     private String getDeteminerTokenManual(SubjectType subjectType, String givenCase, String domainOrRange, String number) throws QueGGMissingFactoryClassException {
         String noun = this.getConditionLabelManually(domainOrRange, number);
         String article = this.getArticleFromUri(domainOrRange);
-        String questionWord = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil,subjectType.name(), TempConstants.number, number, TempConstants.gender, article, TempConstants.caseType, givenCase);
+        String subjectString = subjectType.name();
+
+        if (givenCase.contains(preposition)) {
+            givenCase = this.findPreposition(preposition, null, false);
+            givenCase = givenCase.toLowerCase().stripLeading().stripTrailing().trim();
+            givenCase = GenderUtils.getPrepositionCase(givenCase);
+        }
+
+        String questionWord = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil, subjectType.name(), TempConstants.number, number, TempConstants.gender, article, TempConstants.caseType, givenCase);
+
+        /*System.out.println("article::"+article);
+        System.out.println("givenCase::"+givenCase);
+        System.out.println("questionWord::"+questionWord);
+        exit(1);*/
+         
         return questionWord + " " + noun;
 
     }
@@ -456,9 +480,9 @@ public class GermanSentenceBuilder implements TempConstants {
         return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
     }
     
-    public static Pair<Boolean, SubjectType> isinterrogativePreposition(String questionType) throws QueGGMissingFactoryClassException {
-        if (questionType.equals(SubjectType.interrogativePrep.toString())) {
-            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativePrep);
+    public static Pair<Boolean, SubjectType> interrogativeCause(String questionType) throws QueGGMissingFactoryClassException {
+        if (questionType.equals(SubjectType.interrogativeCause.toString())) {
+            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativeCause);
         }
         return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
     }

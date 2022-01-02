@@ -89,6 +89,8 @@ public enum DomainOrRangeType {
     ComicsCharacter(List.of(URI.create(DBO.getUri() + "ComicsCharacter"))),
     Legislature(List.of(URI.create(DBO.getUri() + "Legislature"))),
     Royalty(List.of(URI.create(DBO.getUri() + "Royalty"))),
+    Disease(List.of(URI.create(DBO.getUri() + "Disease"))),
+    
     
     
 
