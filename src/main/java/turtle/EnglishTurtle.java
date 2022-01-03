@@ -107,7 +107,7 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
     private void setSyntacticFrame(String key, List<String[]> rows) throws Exception {
         String syntacticFrame = findSyntacticFrame(rows);
         key=key.trim().strip().stripLeading().stripTrailing();
-        System.out.println(key);
+        System.out.println(syntacticFrame);
 
         if (syntacticFrame.equals(NounPPFrame)) {
             setNounPPFrame(key, rows, syntacticFrame);

@@ -78,11 +78,35 @@ public class AdjGradableGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
 
         GrammarEntry oppositeGrammarEntry = getSuperlativeGrammarEntry(grammarEntry, lexicalEntryUtil);
         grammarEntries.add(oppositeGrammarEntry);
+        
+        /*GrammarEntry baseFormGrammarEntry = getSuperlativeGrammarEntry(grammarEntry, lexicalEntryUtil);
+        grammarEntries.add(oppositeGrammarEntry);*/
 
         return grammarEntries;
     }
 
     private GrammarEntry getSuperlativeGrammarEntry(GrammarEntry grammarEntry, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
+        GrammarEntry fragmentEntry = copyGrammarEntry(grammarEntry);
+        fragmentEntry.setType(SentenceType.SENTENCE);
+        // Assign opposite values
+        fragmentEntry.setReturnType(grammarEntry.getBindingType());
+        fragmentEntry.setBindingType(grammarEntry.getReturnType());
+        fragmentEntry.setReturnVariable(grammarEntry.getBindingVariable());
+        fragmentEntry.setSentenceTemplate(grammarEntry.getSentenceTemplate());
+        fragmentEntry.setFrameType(FrameType.IPP);
+
+        Map<String, String> sentenceToSparqlParameterMapping = new HashMap<String, String>();
+        sentenceToSparqlParameterMapping.put(grammarEntry.getSentenceBindings().getBindingVariableName(),
+                grammarEntry.getReturnVariable());
+        fragmentEntry.setSentenceToSparqlParameterMapping(sentenceToSparqlParameterMapping);
+        // sentences
+        List<String> generatedSentences = generateOppositeSentences(lexicalEntryUtil);
+        fragmentEntry.setSentenceTemplate(this.template);
+        fragmentEntry.setSentences(generatedSentences);
+        return fragmentEntry;
+    }
+    
+    private GrammarEntry getAdjectiveBaseForm(GrammarEntry grammarEntry, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
         GrammarEntry fragmentEntry = copyGrammarEntry(grammarEntry);
         fragmentEntry.setType(SentenceType.SENTENCE);
         // Assign opposite values

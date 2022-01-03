@@ -695,10 +695,12 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
       createSentenceTemplate(
         language,
         List.of(
-           
-        ),
+        //Wie hoch ist der Leuchtturm in Colombo?
+        "interrogativeAmount(range:singular) adjective(adjectiveBaseForm) verb(component_be:present:singular) determiner(component_the_nominative:range) noun(range:singular) preposition adjunct(domain)?"
+      ),
         AdjectiveSuperlativeFrame,
-        adjectiveBaseForm
+        adjectiveBaseForm,
+        forward
       )
     );
 

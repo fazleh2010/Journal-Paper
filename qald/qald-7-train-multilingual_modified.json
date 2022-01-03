@@ -1,6 +1,6 @@
 {
 	"dataset": {
-		"id": "qald-7-train-multilingual_modified"
+		"id": "qald-7-train-multilingual"
 	},
 	"questions": [
 		{
@@ -14,45 +14,10 @@
 					"language": "en",
 					"string": "When was the Battle of Gettysburg?",
 					"keywords": "Battle of Gettysburg"
-				},
-				{
-					"language": "pt_BR",
-					"string": "Quando foi a batalha de Gettysburg?",
-					"keywords": "batalha de Gettysburg"
-				},
-				{
-					"language": "de",
-					"string": "Wann fand die Schlacht von Gettysburg statt?",
-					"keywords": "Schlacht von Gettysburg"
-				},
-				{
-					"language": "es",
-					"string": "¿Cuándo tuvo lugar la batalla de Gettysburg?",
-					"keywords": "batalla de Gettysburg"
-				},
-				{
-					"language": "it",
-					"string": "Quando ha avuto luogo la battaglia di Gettysburg?",
-					"keywords": "battaglia di Gettysburg"
-				},
-				{
-					"language": "fr",
-					"string": "Quand se déroula la bataille de Gettysburg?",
-					"keywords": "bataille de Gettysburg, quand"
-				},
-				{
-					"language": "nl",
-					"string": "Wanneer was de Slag bij Gettysburg?",
-					"keywords": "Slag bij Gettysburg"
-				},
-				{
-					"language": "hi_IN",
-					"string": "गेटिसबर्ग का युद्ध कब हुआ था?",
-					"keywords": "गेटिसबर्ग का युद्ध"
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbp: <http://dbpedia.org/property/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?date \nWHERE { \n       res:Battle_of_Gettysburg dbp:date ?date .\n}"
+				"sparql": "PREFIX dbp: <http://dbpedia.org/property/>\n PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?date \nWHERE { \n       res:Battle_of_Gettysburg dbp:date ?date .\n}"
 			},
 			"answers": [
 				{
@@ -169,7 +134,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the height of Colombo Lighthouse?",
+					"string": "How high is the lighthouse in Colombo?",
 					"keywords": "high, lighthouse in Colombo"
 				},
 				{
@@ -245,7 +210,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was the wife of Abraham Lincoln?",
+					"string": "Who was the wife of U.S. president Lincoln?",
 					"keywords": "U.S. president, Lincoln, wife"
 				},
 				{
@@ -311,7 +276,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the host of BBC Wildlife Specials?",
+					"string": "Who is the host of the BBC Wildlife Specials?",
 					"keywords": "host, BBC Wildlife Specials"
 				},
 				{
@@ -387,7 +352,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What were the costs of Pulp Fiction?",
+					"string": "How much did Pulp Fiction cost?",
 					"keywords": "cost, Pulp Fiction"
 				},
 				{
@@ -463,7 +428,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the location of the manufacturer of Heineken?",
+					"string": "In what city is the Heineken brewery?",
 					"keywords": "city, Heineken brewery"
 				},
 				{
@@ -767,7 +732,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was married to Jacques Chirac?",
+					"string": "Who was married to president Chirac?",
 					"keywords": "married to, president Chirac"
 				},
 				{
@@ -838,7 +803,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What was the cause of death of Abraham Lincoln?",
+					"string": "What did Abraham Lincoln die from?",
 					"keywords": "Bruce Carver, die"
 				},
 				{
@@ -970,7 +935,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which cities does Zeravshan flow through?",
+					"string": "Which cities does the Zeravshan flow through?",
 					"keywords": "Zeravshan, flow through, city"
 				},
 				{
@@ -1083,7 +1048,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the seating capacity of the home stadium of FC Porto?",
+					"string": "How many seats does the home stadium of FC Porto have?",
 					"keywords": "How many seats, stadium of FC Porto"
 				},
 				{
@@ -1159,7 +1124,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is married to the child of Robert F. Kennedy?",
+					"string": "Who is the daughter of Robert Kennedy married to?",
 					"keywords": "Robert Kennedy, daughter, married"
 				},
 				{
@@ -1331,7 +1296,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the height of Kelly Gale?",
+					"string": "How tall is Kelly Gale?",
 					"keywords": "Amazon Eve, tall"
 				},
 				{
@@ -1347,7 +1312,7 @@
 				{
 					"language": "de",
 					"string": "Wie groß ist Kelly Gale?",
-					"keywords": "Amazon Eve, groß"
+					"keywords": "Kelly Gale, groß"
 				},
 				{
 					"language": "es",
@@ -1407,7 +1372,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which museum exhibits The Scream?",
+					"string": "Which museum exhibits The Scream by Munch?",
 					"keywords": "museum, Scream, Munch"
 				},
 				{
@@ -1478,7 +1443,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who wrote Les Piliers de la terre?",
+					"string": "Who wrote the book Les Piliers de la terre?",
 					"keywords": "wrote, book, The pillars of the Earth"
 				},
 				{
@@ -1681,7 +1646,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which river is crossed by Brooklyn Bridge?",
+					"string": "Which river does the Brooklyn Bridge cross?",
 					"keywords": "river, cross, Brooklyn Bridge"
 				},
 				{
@@ -2117,7 +2082,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which awards were won by Douglas Hofstadter?",
+					"string": "Which awards did Douglas Hofstadter win?",
 					"keywords": "Douglas Hofstadter, award"
 				},
 				{
@@ -2201,7 +2166,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What were the costs of the Lego Movie?",
+					"string": "How much did the Lego Movie cost?",
 					"keywords": "Lego Movie, cost"
 				},
 				{
@@ -2409,7 +2374,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who played Agent Smith?",
+					"string": "Who played Agent Smith in Matrix?",
 					"keywords": "played, Agent Smith, Matrix"
 				},
 				{
@@ -2717,7 +2682,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the birth year of Joanna MacGregor?",
+					"string": "In which year was Joanna MacGregor born?",
 					"keywords": "year, born, Joanna MacGregor"
 				},
 				{
@@ -2854,7 +2819,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the birth place of Johann Sebastian Bach?",
+					"string": "Where was Bach born?",
 					"keywords": "birthplace, Bach"
 				},
 				{
@@ -3091,7 +3056,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the population of Poland?",
+					"string": "How many people live in Poland?",
 					"keywords": "How many people, Poland"
 				},
 				{
@@ -3167,7 +3132,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the location of Palace of Westminster?",
+					"string": "What is the location of the Houses of Parliament?",
 					"keywords": "location, Houses of Parliament"
 				},
 				{
@@ -3318,7 +3283,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Where is Limerick Lake located?",
+					"string": "In which country is the Limerick Lake?",
 					"keywords": "Limerick Lake, country"
 				},
 				{
@@ -3729,7 +3694,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who wrote Hotel California?",
+					"string": "Who wrote the song Hotel California?",
 					"keywords": "write, song, Hotel California"
 				},
 				{
@@ -3818,7 +3783,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which actors starred in movies directed by William Shatner?",
+					"string": "Give me all actors starring in movies directed by William Shatner.",
 					"keywords": "actor, starring, movie, direct, William Shatner"
 				},
 				{
@@ -3961,7 +3926,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What are the ingredients of chocolate chip cookie?",
+					"string": "What is in a chocolate chip cookie?",
 					"keywords": "ingredients, chocolate chip cookie"
 				},
 				{
@@ -4165,7 +4130,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What are the ingredients of carrot cake?",
+					"string": "Which ingredients do I need for carrot cake?",
 					"keywords": "carrot cake, ingredients"
 				},
 				{
@@ -4500,7 +4465,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the location of the headquarters of Secret Intelligence Service?",
+					"string": "In which UK city are the headquarters of the MI6?",
 					"keywords": "MI6, headquarters, city, UK"
 				},
 				{
@@ -4698,7 +4663,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the dissolution date of Auckland City?",
+					"string": "When did the Auckland City dissolve?",
 					"keywords": "dissolve, Auckland City"
 				},
 				{
@@ -4908,7 +4873,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the population of Melbourne, Florida?",
+					"string": "What is the total population of Melbourne, Florida?",
 					"keywords": "total population, Melbourne Florida"
 				},
 				{
@@ -5040,7 +5005,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the location of Mount Everest?",
+					"string": "What country is Mount Everest in?",
 					"keywords": "country, Mount Everest"
 				},
 				{
@@ -5184,7 +5149,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which launch pads are operated by NASA?",
+					"string": "Give me all launch pads operated by NASA.",
 					"keywords": "launch pad, operate, NASA"
 				},
 				{
@@ -5337,7 +5302,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE { \n        res:Florence dbo:leaderName ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE { \n        res:Tel_Aviv dbo:leaderName ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -5590,7 +5555,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who played Gus Fring?",
+					"string": "Who played Gus Fring in Breaking Bad?",
 					"keywords": "play, Gus Fring, Breaking Bad"
 				},
 				{
@@ -5666,7 +5631,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the programming language of GIMP?",
+					"string": "In which programming language is GIMP written?",
 					"keywords": "GIMP, programming language"
 				},
 				{
@@ -5893,7 +5858,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the population of the capital of Australia?",
+					"string": "How many people live in the capital of Australia?",
 					"keywords": "Australia, capital, people, live"
 				},
 				{
@@ -6118,7 +6083,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which video games were published by Mean Hamster Software?",
+					"string": "Give me all video games published by Mean Hamster Software.",
 					"keywords": "video game, publish, Mean Hamster Software"
 				},
 				{
@@ -6196,7 +6161,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the number of locations of Aldi?",
+					"string": "How many Aldi stores are there?",
 					"keywords": "own, Aldi"
 				},
 				{
@@ -6465,7 +6430,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which movies were directed by Francis Ford Coppola?",
+					"string": "Give me all movies directed by Francis Ford Coppola.",
 					"keywords": "movie, direct, Francis Ford Coppola"
 				},
 				{
@@ -6987,7 +6952,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who are the children of the children of Elvis Presley?",
+					"string": "Give me the grandchildren of Elvis Presley.",
 					"keywords": "Elvis Presley, grandchildren"
 				},
 				{
@@ -7139,7 +7104,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the death date of the creator of Count Dracula?",
+					"string": "When did Dracula's creator die?",
 					"keywords": "Dracula, creator, die"
 				},
 				{
@@ -7215,7 +7180,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the nationality of the creator of Miffy?",
+					"string": "Which country does the creator of Miffy come from?",
 					"keywords": "Miffy, creator, country"
 				},
 				{
@@ -7281,7 +7246,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the alter ego of Superwoman?",
+					"string": "What is Superwoman's real name?",
 					"keywords": "real name, Superwoman"
 				},
 				{
@@ -7357,7 +7322,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the form of government of Poland?",
+					"string": "What form of government does Poland have?",
 					"keywords": "form of government, Poland"
 				},
 				{
@@ -7651,7 +7616,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who are the children of Margaret Thatcher?",
+					"string": "List the children of Margaret Thatcher.",
 					"keywords": "Margaret Thatcher, child"
 				},
 				{
@@ -7724,7 +7689,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the wine region of Melon de Bourgogne?",
+					"string": "From which region is the Melon de Bourgogne?",
 					"keywords": "region, Melon de Bourgogne"
 				},
 				{
@@ -8007,7 +7972,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What was published by GMT?",
+					"string": "List all games by GMT.",
 					"keywords": "game, GMT"
 				},
 				{
@@ -8171,7 +8136,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which airports are served by Yeti Airlines?",
+					"string": "Which airports does Yeti Airlines serve?",
 					"keywords": "airports, Yeti Airlines"
 				},
 				{
@@ -8337,7 +8302,7 @@
 			"question": [{
 					"language": "en",
 					"string": "What color expresses Wealth?",
-					"keywords": "color, express, Wealth"
+					"keywords": "color, express, loyalty"
 				},
 				{
 					"language": "pt_BR",
@@ -8351,8 +8316,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Welche Farbe steht für den Reichtum?",
-					"keywords": "Farbe, stehen für, Reichtum"
+					"string": "Welche Farbe steht für Loyalität?",
+					"keywords": "Farbe, stehen für, Loyalität"
 				},
 				{
 					"language": "es",
@@ -8749,7 +8714,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the leader of Hamburg Parliament?",
+					"string": "Who is the president of Hamburg Parliament?",
 					"keywords": "president, Hamburg Parliament"
 				},
 				{
@@ -8799,7 +8764,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Hamburg_Parliament> <http://dbpedia.org/ontology/leader> ?uri }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Hamburg_Parliament> <http://dbpedia.org/ontology/leader> ?uri . }  "
 			},
 			"answers": [{
 				"head": {
@@ -8825,7 +8790,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which movies were directed by Stanley Kubrick?",
+					"string": "Which films did Stanley Kubrick direct?",
 					"keywords": "film, Stanley Kubrick, direct"
 				},
 				{
@@ -8992,7 +8957,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the completion date of Titanic?",
+					"string": "When was the Titanic completed?",
 					"keywords": "Titanic, completion date"
 				},
 				{
@@ -9063,7 +9028,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the number of pages of War and Peace?",
+					"string": "How many pages does War and Peace have?",
 					"keywords": "how many, pages, War and Peace"
 				},
 				{
@@ -9276,7 +9241,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the height of Claudia Schiffer?",
+					"string": "How tall is Claudia Schiffer?",
 					"keywords": "Claudia Schiffer, tall"
 				},
 				{
@@ -9342,8 +9307,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was the vice president of Samuel Schmid?",
-					"keywords": "Samuel_Schmid, vice president"
+					"string": "Who was Samuel Schmid's vice president?",
+					"keywords": "Samuel Schmid, vice president"
 				},
 				{
 					"language": "pt_BR",
@@ -9353,7 +9318,7 @@
 				{
 					"language": "de",
 					"string": "Wer war der Vizepräsident unter Samuel Schmid?",
-					"keywords": "Samuel_Schmid, Vizepräsident"
+					"keywords": "Samuel Schmid, Vizepräsident"
 				},
 				{
 					"language": "es",
@@ -9563,7 +9528,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was the music composer for Titanic?",
+					"string": "Who composed the soundtrack for Cameron's Titanic?",
 					"keywords": "compose, soundtrack, Cameron's Titanic"
 				},
 				{
@@ -9639,7 +9604,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which movies were directed by Akira Kurosawa?",
+					"string": "Which movies did Kurosawa direct?",
 					"keywords": "film, direct, Kurosawa"
 				},
 				{
@@ -9968,7 +9933,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the time zone of Rome?",
+					"string": "In which time zone is Rome?",
 					"keywords": "time zone, Rome"
 				},
 				{
@@ -10044,7 +10009,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the currency of China?",
+					"string": "Give me the currency of China.",
 					"keywords": "currency, China"
 				},
 				{
@@ -10265,8 +10230,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the leader of Netherlands?",
-					"keywords": "king, the Netherlands"
+					"string": "Who is the king of the Parliament of Barbados?",
+					"keywords": "king, Parliament of Barbados"
 				},
 				{
 					"language": "pt_BR",
@@ -10280,8 +10245,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer ist der König der Niederlande?",
-					"keywords": "König, Niederlande"
+					"string": "Wer ist der König der Parliament of Barbados?",
+					"keywords": "König, Parliament of Barbados"
 				},
 				{
 					"language": "es",
@@ -10315,7 +10280,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Netherlands> <http://dbpedia.org/ontology/leader> ?uri . ?uri a <http://dbpedia.org/ontology/Royalty> . } "
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Parliament_of_Barbados> <http://dbpedia.org/ontology/leader> ?uri . ?uri a <http://dbpedia.org/ontology/Royalty> . } "
 			},
 			"answers": [{
 				"head": {
@@ -10341,7 +10306,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What was the death place of Nikos Kazantzakis?",
+					"string": "In which city did Nikos Kazantzakis die?",
 					"keywords": "city, Nikos Kazantzakis, die"
 				},
 				{
@@ -10417,7 +10382,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was the father of Elizabeth II?",
+					"string": "Who was the father of Queen Elizabeth II?",
 					"keywords": "father, Queen Elizabeth II"
 				},
 				{
@@ -10559,7 +10524,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the population of the largest city of Canada?",
+					"string": "How many inhabitants does the largest city in Canada have?",
 					"keywords": "inhabitants, largest city, Canada"
 				},
 				{
@@ -10976,7 +10941,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which organisations are the producers of Hovercraft?",
+					"string": "Which companies produce hovercrafts?",
 					"keywords": "companies, produce, hovercrafts"
 				},
 				{
@@ -11131,7 +11096,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the birth place of the leader of Montenegro?",
+					"string": "In which city was the president of Montenegro born?",
 					"keywords": "city, born, president of Montenegro"
 				},
 				{
@@ -11207,7 +11172,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the birth place of Bill Gates?",
+					"string": "Which country was Bill Gates born in?",
 					"keywords": "country, born, Bill Gates"
 				},
 				{
@@ -11372,7 +11337,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which book was written by Muhammad Ali?",
+					"string": "Show me the book that Muhammad Ali wrote.",
 					"keywords": "book, wrote, Muhammad Ali"
 				},
 				{
@@ -11565,7 +11530,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which actors starred in Last Action Hero?",
+					"string": "Give me all actors starring in Last Action Hero.",
 					"keywords": "actor, starring, Last Action Hero"
 				},
 				{
@@ -11837,7 +11802,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which countries does Yenisei river flow through?",
+					"string": "Through which countries does the Yenisei river flow?",
 					"keywords": "Yenisei river, flow through, country"
 				},
 				{
@@ -12060,8 +12025,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the foundation place of Epicentric?",
-					"keywords": "country, Epicentric"
+					"string": "What country is Epicentric from?",
+					"keywords": "country, Sitecore"
 				},
 				{
 					"language": "pt_BR",
@@ -12136,7 +12101,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who married Lance Bass?",
+					"string": "Whom did Lance Bass marry?",
 					"keywords": "wife, Lance Bass"
 				},
 				{
@@ -12278,7 +12243,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was the influencer of Omar Khayyam?",
+					"string": "Who was Omar Khayyam inspired by?",
 					"keywords": "person, inspiring, Omar Khayyam"
 				},
 				{
@@ -12361,7 +12326,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the death place of John F. Kennedy?",
+					"string": "In which city did John F. Kennedy die?",
 					"keywords": "city, John F. Kennedy, die"
 				},
 				{
@@ -12483,7 +12448,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was the music composer for Game of Thrones?",
+					"string": "Who wrote the Game of Thrones theme?",
 					"keywords": "writer, Game of Thrones"
 				},
 				{
@@ -12559,7 +12524,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who designed Brooklyn Bridge?",
+					"string": "Who designed the Brooklyn Bridge?",
 					"keywords": "Brooklyn Bridge, design"
 				},
 				{
@@ -12706,7 +12671,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which grapes grow in Oregon?",
+					"string": "Which types of grapes grow in Oregon?",
 					"keywords": "grape types, grow, Oregon"
 				},
 				{
@@ -12981,7 +12946,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the height of Michael Jordan?",
+					"string": "How tall is Michael Jordan?",
 					"keywords": "tall, Michael Jordan"
 				},
 				{
@@ -13047,7 +13012,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the party of the mayor of Paris?",
+					"string": "To which party does the mayor of Paris belong?",
 					"keywords": "party, mayor, Paris, belong"
 				},
 				{
@@ -13123,7 +13088,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who wrote The Pillars of the Earth?",
+					"string": "Who wrote the book The Pillars of the Earth?",
 					"keywords": "wrote, book, The pillars of the Earth"
 				},
 				{
@@ -13265,8 +13230,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the elevation of Mount Kilimanjaro?",
-					"keywords": "Mount Kilimanjaro, high"
+					"string": "How high is the Mount Everest?",
+					"keywords": "Mount Everest, high"
 				},
 				{
 					"language": "pt_BR",
@@ -13275,8 +13240,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wie hoch ist der Mount Kilimanjaro?",
-					"keywords": "Mount Kilimanjaro, hoch"
+					"string": "Wie hoch ist der Mount Everest?",
+					"keywords": "Mount Everest, hoch"
 				},
 				{
 					"language": "es",
@@ -13285,8 +13250,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Quanto è alto il Mount Kilimanjaro?",
-					"keywords": "Mount Kilimanjaro, altezza"
+					"string": "Quanto è alto il Monte Everest?",
+					"keywords": "Monte Everest, altezza"
 				},
 				{
 					"language": "fr",
@@ -13305,7 +13270,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?num \nWHERE {\n\tres:Mount_Kilimanjaro dbo:elevation ?num.\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?num \nWHERE {\n\tres:Mount_Everest dbo:elevation ?num.\n}"
 			},
 			"answers": [{
 				"head": {
@@ -13407,7 +13372,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the residence of Sylvester Stallone?",
+					"string": "In which city does Sylvester Stallone live?",
 					"keywords": "city, live, Sylvester Stallone"
 				},
 				{
@@ -13483,7 +13448,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the currency of Czech Republic?",
+					"string": "What is the currency of the Czech Republic?",
 					"keywords": "Czech republic, currency"
 				},
 				{
@@ -13747,7 +13712,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the location of the headquarters of United Nations?",
+					"string": "In which city are the headquarters of the United Nations?",
 					"keywords": "city, headquarters of the United Nations"
 				},
 				{
@@ -13894,7 +13859,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the founding year of Jack Wolfskin?",
+					"string": "When was Jack Wolfskin founded?",
 					"keywords": "Jack Wolfskin, founded"
 				},
 				{
@@ -14041,7 +14006,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who are Swedish oceanographers?",
+					"string": "Give me all Swedish oceanographers.",
 					"keywords": "Swedish, oceanographer"
 				},
 				{
@@ -14188,7 +14153,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who are the parents of the wife of Juan Carlos I of Spain?",
+					"string": "Who are the parents of the wife of Juan Carlos I?",
 					"keywords": "Juan Carlos I, wife, parents"
 				},
 				{
@@ -14998,7 +14963,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Where is Fort Knox located?",
+					"string": "In which U.S. state is Fort Knox located?",
 					"keywords": "Fort Knox, located, U.S. state"
 				},
 				{
@@ -15064,7 +15029,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the resting place of Syngman Rhee?",
+					"string": "Where is Syngman Rhee buried?",
 					"keywords": "where, Syngman Rhee, buried"
 				},
 				{
@@ -15140,7 +15105,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the time zone of San Pedro de Atacama?",
+					"string": "What is the timezone in San Pedro de Atacama?",
 					"keywords": "timezone, San Pedro de Atacama"
 				},
 				{
@@ -15216,7 +15181,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What was the artistic movement of the author of The Three Dancers?",
+					"string": "To which artistic movement did the painter of The Three Dancers belong?",
 					"keywords": "artistic movement, painter, The Three Dancers"
 				},
 				{
@@ -15668,7 +15633,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the height of Yokohama Marine Tower?",
+					"string": "How high is the Yokohama Marine Tower?",
 					"keywords": "high, Yokohama Marine Tower"
 				},
 				{
@@ -15866,7 +15831,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who developed World of Warcraft?",
+					"string": "Who developed the video game World of Warcraft?",
 					"keywords": "video game, World of Warcraft, develop"
 				},
 				{
@@ -15932,7 +15897,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was the founder of Vatican Television Center?",
+					"string": "Who was the pope that founded the Vatican Television?",
 					"keywords": "pope, founded, Vatican Television"
 				},
 				{
@@ -16003,7 +15968,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was the music composer for Harold and Maude?",
+					"string": "Who composed the music for Harold and Maude?",
 					"keywords": "Harold and Maude, compose, music"
 				},
 				{
@@ -16069,7 +16034,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who are the members of The Prodigy?",
+					"string": "Give me all members of Prodigy.",
 					"keywords": "member, Prodigy"
 				},
 				{
@@ -16158,7 +16123,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who stars in Spanish movies produced by Benicio del Toro?",
+					"string": "Who is starring in Spanish movies produced by Benicio del Toro?",
 					"keywords": "starring, Spanish movies, produced, Benicio del Toro"
 				},
 				{
@@ -16310,7 +16275,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Where is Mecca located?",
+					"string": "In which country is Mecca located?",
 					"keywords": "country, located, Mecca"
 				},
 				{
@@ -16599,8 +16564,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What are the five boroughs of New York?",
-					"keywords": "five boroughs, New York"
+					"string": "What are the five boroughs of Poland?",
+					"keywords": "five boroughs, Poland"
 				},
 				{
 					"language": "pt_BR",
@@ -16614,8 +16579,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Was sind die fünf Stadtteile von New York?",
-					"keywords": "New York, Stadtteile"
+					"string": "Was sind die fünf Stadtteile von Polen?",
+					"keywords": "Polen, Stadtteile"
 				},
 				{
 					"language": "es",
@@ -16649,7 +16614,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/governmentType> <https://dbpedia.org/resource/Monarchy> . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/governmentType> <http://dbpedia.org/resource/Borough_(New_York_City)> . }"
 			},
 			"answers": [{
 				"head": {
@@ -16761,7 +16726,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the death date of Elisabeth of Saxony?",
+					"string": "When did Elisabeth of Saxony die?",
 					"keywords": "date, Elisabeth of Saxony, died"
 				},
 				{
@@ -16837,7 +16802,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the location of the wine production of Sparkling wine?",
+					"string": "Where in France is sparkling wine produced?",
 					"keywords": "produced, France, sparkling wine"
 				},
 				{

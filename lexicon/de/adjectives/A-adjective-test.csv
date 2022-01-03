@@ -1,2 +1,2 @@
 LemonEntry,partOfSpeech,writtenForm,comparative,superlativeSingular,superlativePlural,SyntacticFrame,predFrame,sense,reference,oils:boundTo,oils:degree,domain,range,preposition,domainArticleIndex,domainWrittenSingularForm,domainWrittenPluralForm,rangeArticleIndex,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
-hoch,adjective,hoch,h”her,h”chste,h”chsten,AdjectiveSuperlativeFrame,PredSynArg,1,oils:CovariantScalar,dbo:elevation,oils:high,dbo:Country,dbo:Mountain,in,,Land,L„nder,,Berg,Berge
+hoch,adjective,hoch,h”her,h”chste,h”chsten,AdjectiveSuperlativeFrame,PredSynArg,1,oils:CovariantScalar,dbo:elevation,oils:high,dbo:Country,dbo:Mountain,in,neuter,Land,L„nder,masculine,Berg,Berge

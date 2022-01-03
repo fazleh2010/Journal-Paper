@@ -1,2 +1,0 @@
-LemonEntry,partOfSpeech,writtenForm,comparative,superlative,SyntacticFrame,predFrame,sense,reference,oils:boundTo,oils:degree,domain,range,preposition,domainWrittenSingularForm,domainWrittenPluralForm,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
-high,adjective,high,higher,highest,AdjectiveGradableFrame,PredSynArg,1,oils:CovariantScalar,dbo:elevation,oils:high,dbo:Country,dbo:Mountain,in,country,countries,mountain,mountains
