@@ -765,8 +765,10 @@ public class EvaluateAgainstQALD {
             multipleFlag = true;
         }
         
-        if(index==16||index==180||index==194||index==67||index==89||index==150)
-           return new TreeMap<String, QueGGinfomation>();
+        /*if(index==16||index==180||index==194||index==67
+                ||index==89||index==150||index==76||index==87
+                ||index==135||index==210||index==25||index==0||index==107||index==23||index==161||index==132)
+           return new TreeMap<String, QueGGinfomation>();*/
          
         /*if (multipleFlag&&qaldSparqlQuery.contains("res:Surfing")) {
                

@@ -2819,8 +2819,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Where was Bach born?",
-					"keywords": "birthplace, Bach"
+					"string": "Where was Johann Sebastian Bach born?",
+					"keywords": "birthplace, Johann Sebastian Bach"
 				},
 				{
 					"language": "pt_BR",
@@ -2829,8 +2829,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wo wurde Bach geboren?",
-					"keywords": "Bach, geboren"
+					"string": "Wo wurde Johann Sebastian Bach geboren?",
+					"keywords": "Johann Sebastian Bach, geboren"
 				},
 				{
 					"language": "es",
@@ -15897,8 +15897,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was the pope that founded the Vatican Television?",
-					"keywords": "pope, founded, Vatican Television"
+					"string": "Who was the pope that founded the Vatican Media?",
+					"keywords": "pope, founded, Vatican Media"
 				},
 				{
 					"language": "pt_BR",
@@ -15942,7 +15942,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> \nSELECT ?uri \nWHERE { \n         ?uri rdf:type dbo:Pope . \n         res:Vatican_Television_Center dbo:foundedBy ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> \nSELECT ?uri \nWHERE { \n         ?uri rdf:type dbo:Pope . \n         res:Vatican_Media dbo:foundedBy ?uri .\n}"
 			},
 			"answers": [{
 				"head": {

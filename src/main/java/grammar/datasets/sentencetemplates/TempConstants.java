@@ -44,6 +44,7 @@ public interface TempConstants {
     
     public static final String dativeCase = "dativeCase";
     public static final String accusativeCase = "accusativeCase";
+    public static final String appos = "appos";
     
     
 
@@ -109,7 +110,6 @@ public interface TempConstants {
      public static final String WHERE_WHO_PAST_PERSON = "WHERE_WHO_PAST_PERSON";
      public static final String WHAT_WHO_PERSON_THING = "WHAT_WHO_PERSON_THING";
 
-
     
     //public static final String WHAT_PERSON_THING = "WHAT_PERSON_THING";
     //public static final String WHO_PERSON_THING = "WHO_PERSON_THING";
@@ -130,9 +130,12 @@ public interface TempConstants {
     public static String pronoun = "pronoun";
     public static String adjective = "adjective";
     public static String baseForm = "baseForm";
-    public static String comparative = "comparative";
-    public static String superlativePlace = "superlativePlace";
+    public static String superlative = "superlative";
+
+    public static String comperative = "comparative";
+    public static String superlativeCountry = "superlativeCountry";
     public static String superlativePerson = "superlativePerson";
+    public static String superlativeLocation="superlativeLocation";
 
     public static String superlativeWorld = "superlativeWorld";
     public static String adjectiveBaseForm="adjectiveBaseForm";

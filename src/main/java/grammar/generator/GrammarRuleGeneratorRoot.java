@@ -9,7 +9,6 @@ import eu.monnetproject.lemon.model.Lexicon;
 import grammar.datasets.sentencetemplates.SentenceTemplateFactory;
 import grammar.datasets.sentencetemplates.SentenceTemplateRepository;
 import static grammar.datasets.sentencetemplates.TempConstants.superlativePerson;
-import static grammar.datasets.sentencetemplates.TempConstants.superlativePlace;
 import grammar.sparql.SparqlQuery;
 import grammar.sparql.Prefix;
 import grammar.sparql.PrepareSparqlQuery;
@@ -51,6 +50,8 @@ import java.util.stream.Stream;
 import grammar.generator.sentencebuilder.TemplateFinder;
 import static grammar.sparql.SparqlQuery.VARIABLE;
 import static java.lang.System.exit;
+import static grammar.datasets.sentencetemplates.TempConstants.superlativeCountry;
+import static grammar.datasets.sentencetemplates.TempConstants.superlativeLocation;
 
 @Getter
 @Setter
@@ -252,7 +253,9 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
                         else
                             grammarEntry.setExecutable(sparql);
                        
-                        
+                       //System.out.println(executableSparql);
+                       //exit(1);
+
                         //String sparqlBinding=this.generateBindingQueryL(lexicalEntryUtil,DEFAULT_LIMIT);
                         grammarEntry.setBindingListType(domain);
                         grammarEntry.setReturnVariable(SparqlQuery.RETURN_TYPE_OBJECT);
@@ -416,6 +419,7 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
         String domain = LexicalEntryUtil.getDomain(lexicalEntryUtil);
         String range = LexicalEntryUtil.getRange(lexicalEntryUtil);
         String reference = lexicalEntryUtil.getOlisRestriction().getProperty();
+        String sparql=null;
        
 
         TemplateFinder templateFinder = new TemplateFinder(lexicalEntryUtil, frameType);
@@ -425,26 +429,26 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
             propertyReference="<"+propertyReference+">";
         
         if (this.isHigh(lexicalEntryUtil)) {
-            if (sentenceTemplate.equals(superlativePlace)) {
-                return PrepareSparqlQuery.descObj(range, propertyReference, reference, VARIABLE);
+            if (sentenceTemplate.equals(superlativeCountry)||sentenceTemplate.equals(superlativeLocation)) {
+                sparql= PrepareSparqlQuery.descObj(range, propertyReference, reference, VARIABLE);
             } else if (sentenceTemplate.equals(superlativePerson)) {
-                return PrepareSparqlQuery.descObjOfPropPerson(range, propertyReference, reference, VARIABLE);
+                sparql= PrepareSparqlQuery.descObjOfPropPerson(range, propertyReference, reference, VARIABLE);
             } else if (sentenceTemplate.equals(TemplateFinder.superlativeWorld)) {
-               return PrepareSparqlQuery.desc(range, reference);
+               sparql= PrepareSparqlQuery.desc(range, reference);
             }
 
         } else if (this.isLow(lexicalEntryUtil)) {
-            if (sentenceTemplate.equals(superlativePlace)) {
-                return PrepareSparqlQuery.ascObj(range, propertyReference, reference, VARIABLE);
+            if (sentenceTemplate.equals(superlativeCountry)||sentenceTemplate.equals(superlativeLocation)) {
+                sparql= PrepareSparqlQuery.ascObj(range, propertyReference, reference, VARIABLE);
             } else if (sentenceTemplate.contains(superlativePerson)) {
-                return PrepareSparqlQuery.ascObjOfPropPerson(range, propertyReference, reference, VARIABLE);
+                sparql= PrepareSparqlQuery.ascObjOfPropPerson(range, propertyReference, reference, VARIABLE);
 
             } else if (sentenceTemplate.equals(TemplateFinder.superlativeWorld)) {
-               return PrepareSparqlQuery.asc(range, reference);
+               sparql= PrepareSparqlQuery.asc(range, reference);
             }
         }
         
-        /*System.out.println("this.isLow(lexicalEntryUtil)::"+this.isLow(lexicalEntryUtil));
+         /*System.out.println("this.isLow(lexicalEntryUtil)::"+this.isLow(lexicalEntryUtil));
          System.out.println("templateFinder.getSelectedTemplate()::"+templateFinder.getSelectedTemplate());
          System.out.println("propertyReference::"+propertyReference);
          System.out.println("sparql::"+sparql);
@@ -470,7 +474,7 @@ public abstract class GrammarRuleGeneratorRoot implements GrammarRuleGenerator {
         } else if (isLow(lexicalEntryUtil) && templateFinder.getSelectedTemplate().equals(TemplateFinder.superlativeWorld)) {
             return PrepareSparqlQuery.asc(range, reference);
         }*/
-        return null;
+        return sparql;
     }
 
     private String generateSparql(String reference) {

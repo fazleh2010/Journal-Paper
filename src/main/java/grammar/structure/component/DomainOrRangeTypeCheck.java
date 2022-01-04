@@ -76,13 +76,15 @@ public enum DomainOrRangeTypeCheck {
                     URI.create(DBO.getUri() + "Scientist"),
                     URI.create(DBO.getUri() + "Architect"),
                     URI.create(DBO.getUri() + "Artist"),
-                    URI.create(DBO.getUri() + "Artist"),
+                    URI.create(DBO.getUri() + "Pope"),
                     URI.create("http://www.wikidata.org/entity/Q215627") // wiki data person
             )
     ),
     
     child(List.of(URI.create(DBO.getUri() + "child"))),
     locatedInArea(List.of(URI.create(DBO.getUri() + "locatedInArea"))),
+    location(List.of(URI.create(DBO.getUri() + "location"))),
+    Location(List.of(URI.create(DBO.getUri() + "Location"))),
    
     PlaceCheck(
     List.of(

@@ -16,14 +16,17 @@
   lemon:entry    :component_the ;
   lemon:entry    :component_a ;
   lemon:entry    :component_an ;
-  lemon:entry    :object_pronoun;
+  lemon:entry    :pronoun_personal;
   lemon:entry    :interrogativeDeterminer ;
   lemon:entry    :interrogativeAmount ;
+  lemon:entry    :interrogativeMuch ;
+  lemon:entry    :interrogativeEvalution ;
   lemon:entry    :interrogativePronounPerson ;
   lemon:entry    :interrogativePronounThing ;
   lemon:entry    :interrogativePlace ;
   lemon:entry    :interrogativeTemporal ;
   lemon:entry    :verb_location ;
+  lemon:entry    :appos ;
   lemon:entry    :for ;
   lemon:entry    :by ;
   lemon:entry    :from ;
@@ -65,7 +68,12 @@
   lemon:otherForm      [ lemon:writtenRep "does"@en ;
   lexinfo:tense                           lexinfo:present ;
   lexinfo:person                          lexinfo:thirdPerson ;
-  lexinfo:number                          lexinfo:singular ] .
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "did"@en ;
+  lexinfo:tense                           lexinfo:past ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
 
 :component_aux_object_past a        lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "be"@en ] ;
@@ -113,18 +121,14 @@
   lexinfo:tense                           lexinfo:present ;
   lexinfo:person                          lexinfo:secondPerson ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Give"@en ;
-  lexinfo:tense                           lexinfo:present ;
-  lexinfo:person                          lexinfo:secondPerson ;
-  lexinfo:number                          lexinfo:plural ] ;
-  lemon:otherForm      [ lemon:writtenRep "Tell"@en ;
-  lexinfo:tense                           lexinfo:present ;
+  lemon:otherForm      [ lemon:writtenRep "gave"@en ;
+  lexinfo:tense                           lexinfo:past ;
   lexinfo:person                          lexinfo:secondPerson ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Tell"@en ;
-  lexinfo:tense                           lexinfo:present ;
+  lemon:otherForm      [ lemon:writtenRep "given"@en ;
+  lexinfo:tense                           lexinfo:perfect ;
   lexinfo:person                          lexinfo:secondPerson ;
-  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:number                          lexinfo:singular ] ;
   lexinfo:partOfSpeech lexinfo:verb .
 
 
@@ -132,14 +136,28 @@
   lemon:canonicalForm  [ lemon:writtenRep "have"@en ] ;
   lexinfo:partOfSpeech lexinfo:verb .
 
+ ## Pronouns ##
+
+ :pronoun_personal a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "me"@en ] ;
+  lexinfo:partOfSpeech lexinfo:pronoun .
+
 ## Question words ##
 
  :interrogativeDeterminer a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "Which"@en ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "which"@en ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
  :interrogativeAmount a      lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "How many"@en ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativeMuch a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "How much"@en ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+:interrogativeEvalution a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "How"@en ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
  :interrogativePronounPerson a      lemon:LexicalEntry ;
@@ -178,6 +196,10 @@
 
 :all a                 lemon:SynRoleMarker ;
   lemon:canonicalForm  [ lemon:writtenRep "all"@en ] ;
+  lexinfo:partOfSpeech lexinfo:particle .
+
+ :appos a                 lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "'s"@en ] ;
   lexinfo:partOfSpeech lexinfo:particle .
 
 ## Prepositions ##
@@ -230,10 +252,6 @@
   lemon:canonicalForm  [ lemon:writtenRep "until"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
 
-## Pronouns ##
 
-:object_pronoun a        lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "me"@en ] ;
-  lexinfo:partOfSpeech lexinfo:pronoun .
 
 # partly taken from https://github.com/ag-sc/lemon.dbpedia/blob/master/en/extra.ttl

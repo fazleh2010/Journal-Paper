@@ -20,6 +20,7 @@ import grammar.datasets.annotated.AnnotatedNoun;
 import grammar.datasets.annotated.AnnotatedNounOrQuestionWord;
 import grammar.datasets.annotated.AnnotatedVerb;
 import grammar.datasets.questionword.QuestionWordFactoryIT;
+import grammar.datasets.sentencetemplates.TempConstants;
 import static grammar.datasets.sentencetemplates.TempConstants.plural;
 import static grammar.datasets.sentencetemplates.TempConstants.singular;
 import grammar.generator.OlisRestriction;
@@ -61,7 +62,7 @@ import java.util.NoSuchElementException;
 import static java.util.Objects.isNull;
 
 @Getter
-public class LexicalEntryUtil {
+public class LexicalEntryUtil implements TempConstants{
 
     private static final Logger LOG = LogManager.getLogger(LexicalEntryUtil.class);
 
@@ -841,15 +842,33 @@ public class LexicalEntryUtil {
     }
     
     public String getAdjectiveReference(String reference) {
-
+        
+        if(reference.contains(baseForm)){
+            return this.getAdjectiveReference();
+        }
         for (LexicalForm lexicalForm : this.lexicalEntry.getForms()) {
             Pair<Boolean, String> pair = getLastPart(lexicalForm.toString());
-            if (pair.component1() && pair.component2().contains(reference)) {
-                return lexicalForm.getWrittenRep().value;
+            if (reference.contains(superlative) || reference.contains(comperative)) {
+                if (pair.component1() && pair.component2().contains(reference)) {
+                    return lexicalForm.getWrittenRep().value;
+                }
             }
         }
         return reference;
     }
+    
+    public String getAdjectiveReference() {
+        for (LexicalForm lexicalForm : this.lexicalEntry.getForms()) {
+            if (lexicalForm.toString().contains(superlative) || lexicalForm.toString().contains(comperative)) {
+                continue;
+            } else {
+                return lexicalForm.getWrittenRep().value;
+            }
+        }
+        return null;
+    }
+
+   
     
     public String getVerbReference(String tense) {
         String reference = null;

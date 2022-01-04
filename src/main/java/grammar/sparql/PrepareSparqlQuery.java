@@ -58,8 +58,29 @@ public class PrepareSparqlQuery {
                 + "}";
 
     }
+    
+     public static String setSubjectWikipedia(String objectUri, String property, String rdfProperty, String objectClassUri) {
+        String sparql = null;
+        //className //        ?uri rdf:type dbo:Country .
 
-    public static String setSubjectWikipedia(String objectUri, String property, String rdfProperty, String objectClassUri) {
+        if (objectUri.contains("http:")) {
+            sparql = "select  ?s\n"
+                    + "    {\n"
+                    + "   " + "?s" + " " + "<" + property + ">" + "  " + "<" + objectUri + "> ." + "\n"
+                    + "    }";
+        } else {
+            sparql = "select  ?s\n"
+                    + "    {\n"
+                    + "   " + "?s" + " " + "<" + property + ">" + "  " + "<" + objectUri + "> ." + "\n"
+                    + "    }";
+
+        }
+
+        return sparql;
+
+    }
+
+    /*public static String setSubjectWikipedia(String objectUri, String property, String rdfProperty, String objectClassUri) {
         String sparql = null;
         //className //        ?uri rdf:type dbo:Country .
 
@@ -94,9 +115,9 @@ public class PrepareSparqlQuery {
 
         return sparql;
 
-    }
+    }*/
 
-    public static String setObjectWikiPedia(String entityUrl, String property, String rdfProperty, String objectClassUri) {
+    /*public static String setObjectWikiPedia(String entityUrl, String property, String rdfProperty, String objectClassUri) {
         String sparql = null;
         if (objectClassUri.contains("Number") || objectClassUri.contains("THING") | objectClassUri.contains("date")) {
             sparql = "select  ?o\n"
@@ -113,6 +134,19 @@ public class PrepareSparqlQuery {
 
         }
 
+        return sparql;
+
+    }*/
+    
+    public static String setObjectWikiPedia(String entityUrl, String property, String rdfProperty, String objectClassUri) {
+        String sparql = null;
+       
+            sparql = "select  ?o\n"
+                    + "    {\n"
+                    + "    " + "<" + entityUrl + ">" + " " + "<" + property + ">" + "  " + "?o ." + "\n"
+                    + "    }";
+
+       
         return sparql;
 
     }

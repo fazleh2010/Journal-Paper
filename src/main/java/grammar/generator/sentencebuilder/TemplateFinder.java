@@ -33,15 +33,20 @@ public class TemplateFinder implements TempConstants{
     public TemplateFinder(LexicalEntryUtil lexicalEntryUtil, FrameType frameType) {
        this.lexicalEntryUtil=lexicalEntryUtil;
         if (frameType.equals(FrameType.IPP)) {
-            this.selectedTemplate = this.getSentenceTemplate();
+            this.selectedTemplate = this.findINtransitiveTemplate();
+            this.findForwardDomainAndRange();
+        }
+        else if (frameType.equals(FrameType.VP)) {
+            this.selectedTemplate = this.findTransitiveTemplates();
             this.findForwardDomainAndRange();
         }
         else if (frameType.equals(FrameType.NPP)) {
-            this.selectedTemplate = this.getSentenceTemplate();
+            this.selectedTemplate = this.findINtransitiveTemplate();
         }
         else if (frameType.equals(FrameType.AG)) {
-            this.selectedTemplate =  this.findGradableTemplate();
-            this.propertyReference=this.findReference();
+          
+                this.selectedTemplate = this.findGradableTemplate();
+                this.propertyReference = this.findReference();
         }
     }
 
@@ -63,7 +68,7 @@ public class TemplateFinder implements TempConstants{
 
     }
 
-    private String getSentenceTemplate() {
+    private String findINtransitiveTemplate() {
         String type = null;
         String subjectUri = this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.subjOfProp).toString();
         String objectUri = this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.objOfProp).toString();
@@ -96,6 +101,39 @@ public class TemplateFinder implements TempConstants{
             type = HOW_MANY_THING;
         }else {
             type = WHAT_WHICH_PRESENT_THING;
+        }
+        /*System.out.println("subjectUri::"+subjectUri);
+        System.out.println("objectUri::"+objectUri);
+        System.out.println("referenceUri::"+referenceUri);
+        System.out.println("isPerson(subjectUri)::"+isPerson(subjectUri));
+        System.out.println("isDate(referenceUri)::"+isDate(referenceUri));
+        System.out.println("isPlace(referenceUri)::"+isPlace(objectUri));
+          System.out.println("type::"+type);
+         exit(1);*/
+        return type;
+
+    }
+    
+    private String findTransitiveTemplates() {
+        String type = null;
+        String subjectUri = this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.subjOfProp).toString();
+        String objectUri = this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.objOfProp).toString();
+        String referenceUri = lexicalEntryUtil.getReferenceUri();
+        SubjectType subjectType = this.lexicalEntryUtil.getSubjectType(this.lexicalEntryUtil.getSelectVariable());
+
+        /*String qWord = null;
+        try {
+            qWord = this.lexicalEntryUtil.getSubjectBySubjectType(subjectType, language, null);
+        } catch (QueGGMissingFactoryClassException ex) {
+            Logger.getLogger(SentenceBuilderIntransitivePPEN.class.getName()).log(Level.SEVERE, null, ex);
+        }*/
+        
+        if (isAmountPriceCheck(referenceUri)) {
+            type = HOW_MANY_PRICE;
+        } else if (isAmountThingCheck(referenceUri)) {
+            type = HOW_MANY_THING;
+        }else {
+            type = WHAT_WHO_PERSON_THING;
         }
         /*System.out.println("subjectUri::"+subjectUri);
         System.out.println("objectUri::"+objectUri);
@@ -201,6 +239,18 @@ public class TemplateFinder implements TempConstants{
         }
         return false;
     }
+    
+    public static boolean isLocation(String string) {
+        if (StringUtils.isBlank(string)) {
+            return false;
+        }
+        for (URI key : DomainOrRangeTypeCheck.Location.getReferences()) {
+            if (string.equals(key.toString())) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     public static Boolean isDate(String string) {
         if (StringUtils.isBlank(string)) {
@@ -274,18 +324,22 @@ public class TemplateFinder implements TempConstants{
         String objectUri = this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.objOfProp).toString();
         String referenceUri = this.lexicalEntryUtil.getReferenceUri();
         String string=subjectUri;
+        String type=null;
 
         if (this.isPlace(string)) {
-            return superlativePlace;
+            type= superlativeCountry;
+        }
+        else if (this.isLocation(string)) {
+            type= superlativeLocation;
         }
         else if (this.isPerson(string)) {
-            return superlativePerson;
+            type= superlativePerson;
         }
         else if(isSuperlativeThing(string)){
-             return superlativeWorld;
+             type= superlativeWorld;
         }
-        
-       return null;
+      
+       return type;
     }
     
     private String findReference() {
@@ -293,8 +347,14 @@ public class TemplateFinder implements TempConstants{
         if (this.selectedTemplate.equals(superlativePerson)) {
             return DomainOrRangeTypeCheck.child.getReferences().get(0).toString();
         }
-        else if (this.selectedTemplate.equals(superlativePlace)) {
+        else if (this.selectedTemplate.equals(superlativeCountry)) {
            return DomainOrRangeTypeCheck.locatedInArea.getReferences().get(0).toString();
+        }
+        else if (this.selectedTemplate.equals(superlativeLocation)) {
+            /* System.out.println(selectedTemplate);
+                System.out.println(DomainOrRangeTypeCheck.location.getReferences().get(0).toString());
+         exit(1);*/
+           return DomainOrRangeTypeCheck.location.getReferences().get(0).toString();
         }
         else if(this.selectedTemplate.equals(superlativeWorld)){
              return "";
@@ -336,6 +396,8 @@ public class TemplateFinder implements TempConstants{
     public String getPropertyReference() {
         return propertyReference;
     }
+
+   
 
    
 

@@ -706,13 +706,12 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
 
     // AdjectivePPFrame...comparative
     sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
          
         ),
         AdjectiveSuperlativeFrame,
-        comparative
+        comperative
       )
     );
     
@@ -723,7 +722,7 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
         "interrogativePronoun(nominativeCase:range:singular) verb(component_be:present:singular) determiner(component_the_nominative:domain) adjective(superlative) noun(range:singular) preposition adjunct(domain)?"
         ),
         AdjectiveSuperlativeFrame,
-        superlativePlace,
+        superlativeCountry,
         forward
       )
     );
@@ -759,7 +758,7 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
         "preposition interrogativeDeterminer(domain:singular) adjunct(range) verb(component_be:present:singular) verb(verb_location:past:singular)?"
         ),
         AdjectiveSuperlativeFrame,
-        superlativePlace,
+        superlativeCountry,
         backward
       )
     );

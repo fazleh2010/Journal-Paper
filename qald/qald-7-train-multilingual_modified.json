@@ -2819,8 +2819,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Where was Bach born?",
-					"keywords": "birthplace, Bach"
+					"string": "Where was Johann Sebastian Bach born?",
+					"keywords": "birthplace, Johann Sebastian Bach"
 				},
 				{
 					"language": "pt_BR",
@@ -2829,7 +2829,7 @@
 				},
 				{
 					"language": "de",
-					"string": "Wo wurde Bach geboren?",
+					"string": "Wo wurde Johann Sebastian Bach geboren?",
 					"keywords": "Bach, geboren"
 				},
 				{
@@ -15897,8 +15897,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was the pope that founded the Vatican Television?",
-					"keywords": "pope, founded, Vatican Television"
+					"string": "Who was the pope that founded the Vatican Media?",
+					"keywords": "pope, founded, Vatican Media"
 				},
 				{
 					"language": "pt_BR",
@@ -15942,7 +15942,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> \nSELECT ?uri \nWHERE { \n         ?uri rdf:type dbo:Pope . \n         res:Vatican_Television_Center dbo:foundedBy ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> \nSELECT ?uri \nWHERE { \n         ?uri rdf:type dbo:Pope . \n         res:Vatican_Media dbo:foundedBy ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -16564,8 +16564,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What are the five boroughs of Poland?",
-					"keywords": "five boroughs, Poland"
+					"string": "What are the boroughs of Indiana township trustee?",
+					"keywords": "boroughs, Indiana township trusteeand"
 				},
 				{
 					"language": "pt_BR",
@@ -16579,8 +16579,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Was sind die fünf Stadtteile von Polen?",
-					"keywords": "Polen, Stadtteile"
+					"string": "Was sind die fünf Stadtteile von Indiana township trustee?",
+					"keywords": "Indiana township trustee, Stadtteile"
 				},
 				{
 					"language": "es",
@@ -16614,7 +16614,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/governmentType> <http://dbpedia.org/resource/Borough_(New_York_City)> . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/governmentType> <http://dbpedia.org/resource/Indiana_township_trustee> . }"
 			},
 			"answers": [{
 				"head": {

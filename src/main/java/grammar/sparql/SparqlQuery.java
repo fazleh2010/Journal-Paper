@@ -6,7 +6,6 @@
 package grammar.sparql;
 
 import static grammar.datasets.sentencetemplates.TempConstants.superlativePerson;
-import static grammar.datasets.sentencetemplates.TempConstants.superlativePlace;
 import grammar.generator.sentencebuilder.TemplateFinder;
 import grammar.sparql.SPARQLRequest;
 import grammar.structure.component.Binding;
@@ -36,6 +35,8 @@ import java.util.logging.Logger;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.query.QueryType;
 import util.io.FileUtils;
+import static grammar.datasets.sentencetemplates.TempConstants.superlativeCountry;
+import static grammar.datasets.sentencetemplates.TempConstants.superlativeLocation;
 
 /**
  *
@@ -65,12 +66,15 @@ public class SparqlQuery {
         Integer index = isSimpleOrComposite(sparqlQueryOrg);
         
        
+        
+       
 
         if (endpoint.contains("dbpedia.org")) {
             if (type.contains(FIND_ANY_ANSWER) && index == 1) {
                 String property = StringUtils.substringBetween(sparqlQueryOrg, "<", ">");
                 if (queryType.equals(QueryType.SELECT)) {
                     this.sparqlQuery=setSelect(template,rdfProperty,className,domainEntityUrl,sparqlQueryOrg,rangeEntityUrl,type,returnType,language,endpoint, online, queryType);
+                
                 } else if (queryType.equals(QueryType.ASK)) {
                     this.sparqlQuery = PrepareSparqlQuery.setBooleanWikiPedia(domainEntityUrl, property, rangeEntityUrl);
                 }
@@ -88,7 +92,7 @@ public class SparqlQuery {
 
             } else if (type.contains(FIND_ANY_ANSWER) && index == 0) {
                 if (queryType.equals(QueryType.SELECT)) {
-                    if (template.contains(superlativePerson)||template.contains(superlativePlace)) {
+                    if (template.contains(superlativePerson)||template.contains(superlativeCountry)) {
                         sparqlQuery = sparqlQueryOrg.replace(QUESTION_MARK+VARIABLE, "<" + domainEntityUrl + ">");
                     }
 
@@ -123,10 +127,11 @@ public class SparqlQuery {
         String property = StringUtils.substringBetween(sparqlQueryOrg, "<", ">");
         String sparqlQuery = null;
         
-        System.out.println("template::"+template);
-        System.out.println("returnType::"+returnType);
-        
-         
+        /*System.out.println("sparqlQueryOrg::"+sparqlQueryOrg);
+                   System.out.println("sparqlQuery::"+sparqlQuery);
+                   System.out.println("template::"+template);
+                     exit(1);*/
+
         if (template != null) {
             if (template.contains(TemplateFinder.HOW_MANY_THING)) {
                 if (returnType.contains(RETURN_TYPE_OBJECT)) {
@@ -135,16 +140,20 @@ public class SparqlQuery {
                     return sparqlQuery = PrepareSparqlQuery.setSubjectWikiPediaCount(domainEntityUrl, property, returnType);
                 }
             }
-            if (template.equals(superlativePerson)||template.equals(superlativePlace)) {
-               
-                sparqlQuery = sparqlQueryOrg.replace(QUESTION_MARK+VARIABLE, "<" + domainEntityUrl + ">");
-               
-               //  System.out.println("sparqlQueryOrg::"+sparqlQueryOrg);
-                // System.out.println("sparqlQuery::"+sparqlQuery);
-                // exit(1);
-            }
-            else if(template.equals(TemplateFinder.superlativeWorld)){
-                 return sparqlQueryOrg;
+            if (template.contains(superlativePerson) || template.equals(superlativeCountry)|| template.equals(superlativeLocation)) {
+                sparqlQuery = sparqlQueryOrg.replace(QUESTION_MARK + VARIABLE, "<" + domainEntityUrl + ">");
+            } else if (template.equals(TemplateFinder.superlativeWorld)) {
+                return sparqlQueryOrg;
+            } else {
+                if (returnType.contains(RETURN_TYPE_OBJECT)) {
+                    sparqlQuery = PrepareSparqlQuery.setObjectWikiPedia(domainEntityUrl, property, rdfProperty, className);
+                } else if (returnType.contains(RETURN_TYPE_SUBJECT)) {
+                    if (TemplateFinder.isRdfsLabel(property)) {
+                        sparqlQuery = this.setSubjectLabelWikipedia(domainEntityUrl, property, language);
+                    } else {
+                        sparqlQuery = PrepareSparqlQuery.setSubjectWikipedia(domainEntityUrl, property, rdfProperty, className);
+                    }
+                }
             }
 
         } else {
@@ -159,8 +168,6 @@ public class SparqlQuery {
                 }
             }
         }
-        
-
 
         return sparqlQuery;
     }

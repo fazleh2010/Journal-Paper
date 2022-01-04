@@ -90,11 +90,11 @@ public enum DomainOrRangeType {
     Legislature(List.of(URI.create(DBO.getUri() + "Legislature"))),
     Royalty(List.of(URI.create(DBO.getUri() + "Royalty"))),
     Disease(List.of(URI.create(DBO.getUri() + "Disease"))),
-    
-    
-    
+    Colour(List.of(URI.create(DBO.getUri() + "Colour"))),
+    EthnicGroup(List.of(URI.create(DBO.getUri() + "EthnicGroup"))),
+    Pope(List.of(URI.create(DBO.getUri() + "Pope"))),
 
-         
+
     Name(List.of(
             URI.create(DBO.getUri() + "GivenName"),
             URI.create(DBO.getUri() + "Name")
@@ -183,10 +183,8 @@ public enum DomainOrRangeType {
     Artwork(List.of(URI.create(DBO.getUri() + "Artwork"))),
     WrittenWork(List.of(URI.create(DBO.getUri() + "WrittenWork"))),
     Single(List.of(URI.create(DBO.getUri() + "Single"))),
-    Software(List.of(
-            URI.create(DBO.getUri() + "Software"),
-            URI.create(DBO.getUri() + "VideoGame")
-    )),
+    Software(List.of(URI.create(DBO.getUri() + "Software"))),
+    VideoGame(List.of(URI.create(DBO.getUri() + "VideoGame"))),
     ProgrammingLanguage(List.of(URI.create(DBO.getUri() + "ProgrammingLanguage"))),
     Grape(List.of(URI.create(DBO.getUri() + "Grape"))),
     GovernmentType(List.of(URI.create(DBO.getUri() + "GovernmentType"))),
@@ -215,17 +213,8 @@ public enum DomainOrRangeType {
     Lake(List.of(URI.create(DBO.getUri() + "Lake"))),
     Bridge(List.of(URI.create(DBO.getUri() + "Bridge"))),
     WineRegion(List.of(URI.create(DBO.getUri() + "WineRegion"))),
-    Location(List.of(
-            URI.create(DBO.getUri() + "Place"),
-            URI.create(DBO.getUri() + "Location"),
-            URI.create(DBO.getUri() + "PopulatedPlace"),
-            URI.create(DBO.getUri() + "Region"),
-            URI.create(DBO.getUri() + "Country"),
-            URI.create(DBO.getUri() + "City"),
-            URI.create(DBO.getUri() + "WineRegion")
-    )),
+    Location(List.of(URI.create(DBO.getUri() + "Location"))),
     Thing(List.of(URI.create(DBO.getUri() + "Thing"))),
-    VideoGame(List.of(URI.create(DBO.getUri() + "VideoGame"))),
     Article(List.of(URI.create(DBO.getUri() + "Article"))),
     Play(List.of(URI.create(DBO.getUri() + "Play"))),
     Genre(List.of(URI.create(DBO.getUri() + "Genre"))),

@@ -140,12 +140,16 @@ public class EnglishSentenceBuilder implements TempConstants {
         if (flagReference && (attribute.equals(pronoun))) {
             word = new PronounFinder(this.lexicalEntryUtil,attribute,reference,templateFeatures).getWord();
             
-        }   
+        }  
+        /*else if (!flagReference&& attribute.equals(appos)) {
+             word=LexicalEntryUtil.getSingle(lexicalEntryUtil, appos);
+        }*/
         //adjective(degree:superlative)
         else if (flagReference &&attribute.contains(adjective)) {
-           word = this.lexicalEntryUtil.getAdjectiveReference(reference);
+            word = this.lexicalEntryUtil.getAdjectiveReference(reference);
   
         } 
+       
         /*else if (flagReference &&attribute.equals(noun)) {
              if (reference.contains(colon)) {
                 String[] col = reference.split(colon);
@@ -175,9 +179,29 @@ public class EnglishSentenceBuilder implements TempConstants {
 
         } else if (isInterrogativeAmount(attribute).first) {
             SubjectType subjectType = isInterrogativeAmount(attribute).second;
-            LexicalEntryUtil.getSingle(lexicalEntryUtil, subjectType.name());
+            word=LexicalEntryUtil.getSingle(lexicalEntryUtil, subjectType.name());
 
-        }else if ( isInterrogativePlace(attribute).first) {
+        }
+        else if (isInterrogativeMuch(attribute).first) {
+            SubjectType subjectType = isInterrogativeMuch(attribute).second;
+            word=LexicalEntryUtil.getSingle(lexicalEntryUtil, subjectType.name());
+
+        }
+        
+        else if (flagReference && isInterrogativeEvalution(attribute).first) {
+            SubjectType subjectType = isInterrogativeEvalution(attribute).second;
+            if (reference.contains(colon)) {
+                String[] col = reference.split(colon);
+                word = this.getDeteminerTokenManual(subjectType, col[0], col[1]);
+            }            
+
+        }
+        else if (isInterrogativeEvalution(attribute).first) {
+            SubjectType subjectType = isInterrogativeEvalution(attribute).second;
+            word=LexicalEntryUtil.getSingle(lexicalEntryUtil, subjectType.name());
+
+        }
+        else if ( isInterrogativePlace(attribute).first) {
             SubjectType subjectType = isInterrogativePlace(attribute).second;
             word=LexicalEntryUtil.getSingle(lexicalEntryUtil, attribute);
 
@@ -256,7 +280,7 @@ public class EnglishSentenceBuilder implements TempConstants {
         }
 
         System.out.println("word:::" + word);
-        // exit(1);
+        //exit(1);
 
 
         return word;
@@ -359,7 +383,8 @@ public class EnglishSentenceBuilder implements TempConstants {
         return questionWord + " " + noun;
 
     }
-
+    
+  
    
     /*private String getConditionLabelManually(String domainOrRange, String numberType) {
         if (domainOrRange.contains(domain) && numberType.contains(singular)) {
@@ -435,6 +460,20 @@ public class EnglishSentenceBuilder implements TempConstants {
     public static Pair<Boolean, SubjectType> isInterrogativeAmount(String questionType) throws QueGGMissingFactoryClassException {
         if (questionType.equals(SubjectType.interrogativeAmount.toString())) {
             return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativeAmount);
+        }
+        return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
+    }
+    
+    public static Pair<Boolean, SubjectType> isInterrogativeMuch(String questionType) throws QueGGMissingFactoryClassException {
+        if (questionType.equals(SubjectType.interrogativeMuch.toString())) {
+            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativeMuch);
+        }
+        return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
+    }
+    
+     public static Pair<Boolean, SubjectType> isInterrogativeEvalution(String questionType) throws QueGGMissingFactoryClassException {
+        if (questionType.equals(SubjectType.interrogativeEvalution.toString())) {
+            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativeEvalution);
         }
         return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
     }

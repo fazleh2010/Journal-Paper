@@ -9,6 +9,7 @@ import grammar.sparql.SparqlQuery;
 import util.io.FileUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.opencsv.CSVWriter;
+import static grammar.datasets.sentencetemplates.TempConstants.adjectiveBaseForm;
 import static grammar.generator.BindingConstants.DEFAULT_BINDING_VARIABLE;
 import grammar.structure.component.FrameType;
 import java.io.BufferedReader;
@@ -35,6 +36,7 @@ import util.io.CsvFile;
 import linkeddata.LinkedData;
 import util.io.MatcherExample;
 import util.io.Statistics;
+import util.io.StringMatcher;
 
 /**
  *
@@ -199,11 +201,17 @@ public class ReadAndWriteQuestions {
                 
                 if (grammarEntryUnit.getFrameType().contains(FrameType.AG.toString())) {
                     sparql = grammarEntryUnit.getExecutable();
+                     System.out.println(grammarEntryUnit.getFrameType());
+                     
+               
                 } 
-                else
-                    sparql = grammarEntryUnit.getSparqlQuery();
-                 
-                          
+                else{
+                     sparql = grammarEntryUnit.getSparqlQuery();
+                    
+                }
+                   
+                
+               
                  //else
                  //     sparql=grammarEntryUnit.getSparqlQuery();
                
@@ -382,6 +390,7 @@ public class ReadAndWriteQuestions {
                 if (answerUri.contains("http:")) {
                     SparqlQuery sparqlQueryLabel = new SparqlQuery(template,rdfPropertyType,className,answerUri, sparql, rangeEntityUri, SparqlQuery.FIND_LABEL, null, language, endpoint, online, queryType);
                     answerLabel = sparqlQueryLabel.getObject();
+                    answerLabel=StringMatcher.modifyLabels(answerLabel);
                 }
             }
         }
@@ -589,6 +598,8 @@ public class ReadAndWriteQuestions {
         }
         return new String[]{sparqlQuery.getSparqlQuery(), answerUri, answerLabel};
     }*/
+
+    
 
     
 

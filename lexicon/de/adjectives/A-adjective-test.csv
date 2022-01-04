@@ -1,2 +1,3 @@
-LemonEntry,partOfSpeech,writtenForm,comparative,superlativeSingular,superlativePlural,SyntacticFrame,predFrame,sense,reference,oils:boundTo,oils:degree,domain,range,preposition,domainArticleIndex,domainWrittenSingularForm,domainWrittenPluralForm,rangeArticleIndex,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
-hoch,adjective,hoch,h”her,h”chste,h”chsten,AdjectiveSuperlativeFrame,PredSynArg,1,oils:CovariantScalar,dbo:elevation,oils:high,dbo:Country,dbo:Mountain,in,neuter,Land,L„nder,masculine,Berg,Berge
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural
+take_place_on,verb,take place,takes place,took place,taken place,on,IntransitivePPFrame,domain,range,1,dbp:date,dbo:MilitaryConflict,xsd:date,conflict,conflicts,year,years
+commence_on,verb,commence,commences,commenced,commenced,on,IntransitivePPFrame,domain,range,1,dbo:date,dbo:Event,xsd:date,event,events,year,years
