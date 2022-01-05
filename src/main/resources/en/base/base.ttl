@@ -12,6 +12,7 @@
   lemon:entry    :component_aux_object_past ;
   lemon:entry    :imperative_verb ;
   lemon:entry    :component_imperative_transitive ;
+  lemon:entry    :component_imperative_show ;
   lemon:entry    :component_have ;
   lemon:entry    :component_the ;
   lemon:entry    :component_a ;
@@ -126,6 +127,23 @@
   lexinfo:person                          lexinfo:secondPerson ;
   lexinfo:number                          lexinfo:singular ] ;
   lemon:otherForm      [ lemon:writtenRep "given"@en ;
+  lexinfo:tense                           lexinfo:perfect ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+  :component_imperative_show a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "show"@en ;
+  lexinfo:verbFormMood                    lexinfo:infinitive ] ;
+  lemon:otherForm      [ lemon:writtenRep "show"@en ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "showed"@en ;
+  lexinfo:tense                           lexinfo:past ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "shown"@en ;
   lexinfo:tense                           lexinfo:perfect ;
   lexinfo:person                          lexinfo:secondPerson ;
   lexinfo:number                          lexinfo:singular ] ;

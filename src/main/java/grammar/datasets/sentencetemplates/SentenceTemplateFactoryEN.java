@@ -80,7 +80,9 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
           //List all the musicals with music by Elton John.
           //"verb(imperative_verb:present:plural) determiner(all) determiner(component_the) noun(range:plural) noun(singular) preposition adjunct(domain)." 
           //Give me all members of Prodigy.
-          "verb(component_imperative_transitive:present:singular) pronoun(pronoun_personal) determiner(all) noun(plural) preposition adjunct(domain)." 
+          "verb(component_imperative_transitive:present:singular) pronoun(pronoun_personal) determiner(all) noun(plural) preposition adjunct(domain).", 
+          //Show me all books in Asimov's Foundation series.
+          "verb(component_imperative_show:present:singular) pronoun(pronoun_personal) determiner(all) noun(plural) preposition adjunct(domain)." 
         ),
         NounPPFrame,
         whQuestion
@@ -452,8 +454,11 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
     sentenceTemplateRepository.add(createSentenceTemplate(language,
         List.of(
         //What did Abraham Lincoln die from?
-        "interrogativePronoun(range:singular) verb(component_do:past:singular) object(domain) verb(mainVerb:present:singular) preposition?" 
-             ),
+        "interrogativePronoun(range:singular) verb(component_do:past:singular) object(domain) verb(mainVerb:present:singular) preposition?",
+         //What did Abraham Lincoln die from?
+        "interrogativePronoun(range:singular) verb(component_do:present:singular) object(domain) verb(mainVerb:present:singular) preposition?" 
+      
+        ),
        IntransitivePPFrame,
        WHAT_WHO_PERSON_THING,
         forward
@@ -462,12 +467,13 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
     // IntransitivePPFrame 
     sentenceTemplateRepository.add(createSentenceTemplate(language,
         List.of(
-         //Which person died from X?
-        "interrogativeDeterminer(domain:singular) verb(mainVerb:past:singular) preposition adjunct(range)?",
-        "interrogativeDeterminer(domain:plural) verb(mainVerb:past:singular) preposition adjunct(range)?",
-         //Who die from X?
-         "interrogativePronoun(domain:singular) verb(mainVerb:past:singular) preposition adjunct(range)?",
-         "interrogativePronoun(domain:plural) verb(mainVerb:past:plural) preposition adjunct(range)?"
+         //Which person is died from X?
+        "interrogativeDeterminer(domain:singular) verb(component_be:past:singular) verb(mainVerb:perfect:singular) preposition adjunct(range)?",
+        "interrogativeDeterminer(domain:plural) verb(component_be:past:singular) verb(mainVerb:perfect:singular) preposition adjunct(range)?",
+         //Who is died from X?
+         "interrogativePronoun(domain:singular) verb(component_be:present:singular) verb(mainVerb:perfect:singular) preposition adjunct(range)?",
+         //Who was died from X?
+         "interrogativePronoun(domain:plural) verb(component_be:past:singular) verb(mainVerb:perfect:singular) preposition adjunct(range)?"
           ),
         IntransitivePPFrame,
         WHAT_WHO_PERSON_THING,
@@ -612,7 +618,9 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
     sentenceTemplateRepository.add(createSentenceTemplate(language,
         List.of(
         //What is the highest mountain in Australia?
-        "interrogativePronoun(range:singular) verb(component_be:present:singular) determiner(component_the) adjective(superlative) noun(range:singular) preposition adjunct(domain)?"
+        "interrogativePronoun(range:singular) verb(component_be:present:singular) determiner(component_the) adjective(superlative) noun(range:singular) preposition adjunct(domain)?",
+        //What is the highest mountain in Australia?
+        "interrogativePronoun(range:singular) verb(component_be:present:singular) determiner(component_the) adjective(superlative)?"
         ),
         AdjectiveSuperlativeFrame,
         superlativePerson,
@@ -623,7 +631,9 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
     sentenceTemplateRepository.add(createSentenceTemplate(language,
         List.of(
          //What is the largest country in the world?
-        "interrogativePronoun(range:singular) verb(component_be:present:singular) determiner(component_the) adjective(superlative) noun(range:singular) preposition determiner(component_the) adjunct(domain)?"
+        "interrogativePronoun(range:singular) verb(component_be:present:singular) determiner(component_the) adjective(superlative) noun(range:singular) preposition determiner(component_the) adjunct(domain)?",
+         //What is the largest country?
+        "interrogativePronoun(range:singular) verb(component_be:present:singular) determiner(component_the) adjective(superlative) noun(range:singular)?"
         ),
         AdjectiveSuperlativeFrame,
         superlativeWorld,

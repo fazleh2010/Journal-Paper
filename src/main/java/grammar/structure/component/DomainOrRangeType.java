@@ -219,6 +219,7 @@ public enum DomainOrRangeType {
     Play(List.of(URI.create(DBO.getUri() + "Play"))),
     Genre(List.of(URI.create(DBO.getUri() + "Genre"))),
     MountainRange(List.of(URI.create(DBO.getUri() + "MountainRange"))),
+    MilitaryUnit(List.of(URI.create(DBO.getUri() + "MilitaryUnit"))),
     THING(List.of(URI.create("http://www.w3.org/2002/07/owl#Thing"))); // default if no other matches
 
     public static final List<URI> MISSING_TYPES = new ArrayList<>();

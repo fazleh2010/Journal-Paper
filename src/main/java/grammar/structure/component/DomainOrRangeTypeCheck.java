@@ -107,7 +107,8 @@ public enum DomainOrRangeTypeCheck {
     )),
     
     CauseCheck(List.of(
-            URI.create(DBO.getUri() + "deathCause")
+            URI.create(DBO.getUri() + "deathCause"),
+            URI.create(DBO.getUri() + "knownFor")
     )),
     dateCheck(List.of(
             URI.create("http://www.w3.org/2001/XMLSchema#date"),
