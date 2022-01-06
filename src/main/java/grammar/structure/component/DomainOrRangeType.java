@@ -93,8 +93,10 @@ public enum DomainOrRangeType {
     Colour(List.of(URI.create(DBO.getUri() + "Colour"))),
     EthnicGroup(List.of(URI.create(DBO.getUri() + "EthnicGroup"))),
     Pope(List.of(URI.create(DBO.getUri() + "Pope"))),
-
-
+    WineRegion(List.of(URI.create(DBO.getUri() + "WineRegion"))),
+    Grape(List.of(URI.create(DBO.getUri() + "Grape"))),
+    Philosopher(List.of(URI.create(DBO.getUri() + "Philosopher"))),    
+  
     Name(List.of(
             URI.create(DBO.getUri() + "GivenName"),
             URI.create(DBO.getUri() + "Name")
@@ -186,7 +188,6 @@ public enum DomainOrRangeType {
     Software(List.of(URI.create(DBO.getUri() + "Software"))),
     VideoGame(List.of(URI.create(DBO.getUri() + "VideoGame"))),
     ProgrammingLanguage(List.of(URI.create(DBO.getUri() + "ProgrammingLanguage"))),
-    Grape(List.of(URI.create(DBO.getUri() + "Grape"))),
     GovernmentType(List.of(URI.create(DBO.getUri() + "GovernmentType"))),
     Airline(List.of(URI.create(DBO.getUri() + "Airline"))),
     Airport(List.of(URI.create(DBO.getUri() + "Airport"))),
@@ -212,7 +213,6 @@ public enum DomainOrRangeType {
     )),
     Lake(List.of(URI.create(DBO.getUri() + "Lake"))),
     Bridge(List.of(URI.create(DBO.getUri() + "Bridge"))),
-    WineRegion(List.of(URI.create(DBO.getUri() + "WineRegion"))),
     Location(List.of(URI.create(DBO.getUri() + "Location"))),
     Thing(List.of(URI.create(DBO.getUri() + "Thing"))),
     Article(List.of(URI.create(DBO.getUri() + "Article"))),

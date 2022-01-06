@@ -461,6 +461,9 @@ public class EnglishSentenceBuilder implements TempConstants {
         if (questionType.equals(SubjectType.interrogativeAmount.toString())) {
             return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativeAmount);
         }
+        else if(questionType.equals(SubjectType.interrogativePronounWhom.toString())){
+            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativePronounWhom);
+        }
         return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
     }
     

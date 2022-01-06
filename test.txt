@@ -1,0 +1,29 @@
+21:32:05.423 [main] DEBUG org.apache.jena.util.FileManager - Add location: LocatorFile
+21:32:05.424 [main] DEBUG org.apache.jena.util.FileManager - Add location: ClassLoaderLocator
+21:32:05.426 [main] DEBUG org.apache.jena.util.LocationMapper - Failed to find configuration: file:location-mapping.rdf;file:location-mapping.n3;file:location-mapping.ttl;file:etc/location-mapping.rdf;file:etc/location-mapping.n3;file:etc/location-mapping.ttl
+21:32:05.426 [main] DEBUG org.apache.jena.util.FileManager - Add location: LocatorFile
+21:32:05.427 [main] DEBUG org.apache.jena.util.FileManager - Add location: LocatorURL
+21:32:05.427 [main] DEBUG org.apache.jena.util.FileManager - Add location: ClassLoaderLocator
+21:32:05.430 [main] DEBUG org.apache.jena.riot.system.stream.JenaIOEnvironment - Failed to find configuration: location-mapping.ttl;location-mapping.rdf;location-mapping.n3;etc/location-mapping.rdf;etc/location-mapping.n3;etc/location-mapping.ttl
+21:32:05.589 [main] DEBUG org.apache.jena.info - System architecture: 64 bit
+21:32:05.601 [main] DEBUG org.apache.jena.info - System architecture: 64 bit
+nouns
+NounPPFrame-lexicon-vice_president_of.ttl deleted successfully
+NounPPFrame
+[INFO ] 2022-01-06 21:32:06.211 [main] QueGG - The input lexicon contains the following grammar frames:
+[INFO ] 2022-01-06 21:32:06.303 [main] QueGG - NounPPFrame: 1
+[INFO ] 2022-01-06 21:32:06.304 [main] QueGG - TransitiveFrame: 0
+[INFO ] 2022-01-06 21:32:06.305 [main] QueGG - AdjectiveAttributiveFrame: 0
+[INFO ] 2022-01-06 21:32:06.305 [main] QueGG - AdjectivePPFrame: 0
+[INFO ] 2022-01-06 21:32:06.306 [main] QueGG - AdjectiveSuperlativeFrame: 0
+[INFO ] 2022-01-06 21:32:06.306 [main] QueGG - IntransitivePPFrame: 0
+[INFO ] 2022-01-06 21:32:06.306 [main] QueGG - FULL_DATASET: 0
+[INFO ] 2022-01-06 21:32:06.313 [main] QueGG - Start generation for FrameType NounPPFrame
+21:32:06.635 [main] DEBUG org.apache.jena.riot.web.HttpOp - [1] GET https://dbpedia.org/sparql?query=PREFIX++rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%0ASELECT++%3Frange%0AWHERE%0A++%7B+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FvicePresident%3E%0A++++++++++++++rdfs%3Arange++%3Frange%0A++%7D%0A
+21:32:06.640 [main] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+21:32:06.643 [main] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+21:32:06.644 [main] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {s}->https://dbpedia.org:443][total kept alive: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+21:32:06.648 [main] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {s}->https://dbpedia.org:443][total kept alive: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+21:32:06.649 [main] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {s}->https://dbpedia.org:443
+21:32:06.656 [main] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to dbpedia.org/194.109.129.58:443
+21:32:06.656 [main] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Connecting socket to dbpedia.org/194.109.129.58:443 with timeout 0

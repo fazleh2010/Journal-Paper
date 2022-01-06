@@ -1,3 +1,0 @@
-LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural
-knownFor,verb,known,known,known,known,for,IntransitivePPFrame,domain,range,1,dbo:knownFor,dbo:Scientist ,dbo:MilitaryUnit,scientist ,scientists,military unit,military units
-knownFor,verb,known,known,known,known,for,IntransitivePPFrame,domain,range,1,dbo:knownFor,dbo:Award,dbo:Person,award,awards,person,persons

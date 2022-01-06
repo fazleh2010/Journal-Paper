@@ -15,6 +15,7 @@ public enum SubjectType {
   interrogativeAmount, //how many
   interrogativeMuch, //how much
   interrogativeEvalution, //how
+  interrogativePronounWhom, //whom
   interrogativePronounThing,  // what
   interrogativePronounThingWhat, //what
   interrogativePronounPerson, // who

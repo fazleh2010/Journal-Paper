@@ -77,6 +77,7 @@ public enum DomainOrRangeTypeCheck {
                     URI.create(DBO.getUri() + "Architect"),
                     URI.create(DBO.getUri() + "Artist"),
                     URI.create(DBO.getUri() + "Pope"),
+                    URI.create(DBO.getUri() + "Philosopher"),
                     URI.create("http://www.wikidata.org/entity/Q215627") // wiki data person
             )
     ),
@@ -146,10 +147,15 @@ public enum DomainOrRangeTypeCheck {
             URI.create(DBO.getUri() + "productionDate"),
             URI.create(DBO.getUri() + "activeYearsStartYear"),
             URI.create(DBO.getUri() + "activeYearsEndYear"),
+            URI.create(DBO.getUri() + "activeYearsStartYear"),
+            URI.create(DBO.getUri() + "activeYearsEndDate"),
+            URI.create(DBO.getUri() + "activeYearsStartDate"),
             URI.create(DBP.getUri() + "published")
     )),
     
-
+    GrowCheck(List.of(
+            URI.create(DBO.getUri() + "growingGrape")
+    )),
 
     
     WorkCheck(List.of(

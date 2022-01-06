@@ -131,7 +131,7 @@ public class SentenceTemplateFactoryTA implements Factory<SentenceTemplateReposi
         "subject(INTERROGATIVE_DETERMINER_SINGULAR) verb(present) preposition adjunct(X)?" //Quale uva cresce in [entity]?
         ),
         "IntransitivePPFrame",
-        WHAT_WHICH_PRESENT_THING,
+        WHAT_WHICH_PRESENT_THING_2,
         forward,
         Language.IT.toString()
       )
@@ -144,7 +144,7 @@ public class SentenceTemplateFactoryTA implements Factory<SentenceTemplateReposi
           "object(INTERROGATIVE_PLACE) verb(present) subject(X)?"//Dove cresce [entity]?
         ),
        "IntransitivePPFrame",
-        WHAT_WHICH_PRESENT_THING,
+        WHAT_WHICH_PRESENT_THING_2,
         backward,
         Language.IT.toString()
       )

@@ -16,8 +16,7 @@ import static grammar.datasets.sentencetemplates.TempConstants.HOW_MANY_THING;
 import static grammar.datasets.sentencetemplates.TempConstants.IntransitivePPFrame;
 import static grammar.datasets.sentencetemplates.TempConstants.NounPPFrame;
 import static grammar.datasets.sentencetemplates.TempConstants.TransitiveFrame;
-import static grammar.datasets.sentencetemplates.TempConstants.WHAT_WHICH_PRESENT_THING;
-import static grammar.datasets.sentencetemplates.TempConstants.WHAT_WHO_PERSON_THING;
+import static grammar.datasets.sentencetemplates.TempConstants.WHAT_WHICH_PRESENT_THING_1;
 import static grammar.datasets.sentencetemplates.TempConstants.WHEN_WHAT_PAST_THING;
 import static grammar.datasets.sentencetemplates.TempConstants.WHEN_WHO_PAST_PERSON;
 import static grammar.datasets.sentencetemplates.TempConstants.WHERE_WHO_PAST_PERSON;
@@ -37,6 +36,9 @@ import static grammar.datasets.sentencetemplates.TempConstants.superlativePerson
 import static grammar.datasets.sentencetemplates.TempConstants.superlativeWorld;
 import static grammar.datasets.sentencetemplates.TempConstants.comperative;
 import static grammar.datasets.sentencetemplates.TempConstants.superlativeCountry;
+import static grammar.datasets.sentencetemplates.TempConstants.WHAT_WHICH_PRESENT_THING_2;
+import static grammar.datasets.sentencetemplates.TempConstants.PERSON_PERSON;
+import static grammar.datasets.sentencetemplates.TempConstants.PERSON_THING;
 
 class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
 
@@ -76,7 +78,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
           //"interrogativePronoun verb(component_be:present:singular) determiner(component_the) adjunct(domain) appos noun(singular)?", 
           //"interrogativePronoun verb(component_be:past:singular) determiner(component_the) adjunct(domain) appos noun(singular)?",   
            //List all the musicals von Elton John.
-          "verb(imperative_verb:present:plural) determiner(all) determiner(component_the) noun(range:plural) preposition adjunct(domain)." ,
+          "verb(imperative_verb:present:plural) determiner(all) determiner(component_the) noun(plural) preposition adjunct(domain)." ,
           //List all the musicals with music by Elton John.
           //"verb(imperative_verb:present:plural) determiner(all) determiner(component_the) noun(range:plural) noun(singular) preposition adjunct(domain)." 
           //Give me all members of Prodigy.
@@ -173,18 +175,20 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
     sentenceTemplateRepository.add(createSentenceTemplate(language,
         List.of(
          //Who presented BBC Wildlife Specials?
-        "interrogativePronoun(range) verb(mainVerb:present3rd:thirdPerson) determiner(component_the) object(domain)?",
-        "interrogativePronoun(range) verb(mainVerb:past:thirdPerson) determiner(component_the) object(domain)?",
+        "interrogativePronoun(range) verb(mainVerb:present3rd:thirdPerson) object(domain)?",
+        "interrogativePronoun(range) verb(mainVerb:past:thirdPerson) object(domain)?",
         //Which person presented BBC Wildlife Specials?
         //"which river crosses Brooklyn Bridge?"
-        "interrogativeDeterminer(range:singular) verb(mainVerb:present3rd:thridPerson) determiner(component_the) object(domain)?",
-        "interrogativeDeterminer(range:singular) verb(mainVerb:past:thridPerson) determiner(component_the) object(domain)?",
+        "interrogativeDeterminer(range:singular) verb(mainVerb:present3rd:thridPerson) object(domain)?",
+        "interrogativeDeterminer(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
+        "interrogativeDeterminer(range:plural) verb(mainVerb:present:thridPerson) object(domain)?",
+        "interrogativeDeterminer(range:plural) verb(mainVerb:past:thridPerson) object(domain)?",
         //Which river does the Brooklyn Bridge cross?
-        "interrogativeDeterminer(range:singular) verb(component_do:present:singular) determiner(component_the) object(domain) verb(mainVerb:present:thridPerson)?",
-        "interrogativeDeterminer(range:plural) verb(component_do:present:singular) determiner(component_the) object(domain) verb(mainVerb:present:thridPerson)?"
+        "interrogativeDeterminer(range:singular) verb(component_do:present:singular) object(domain) verb(mainVerb:present:thridPerson)?",
+        "interrogativeDeterminer(range:plural) verb(component_do:present:singular) object(domain) verb(mainVerb:present:thridPerson)?"
         ),
        TransitiveFrame,
-       WHAT_WHO_PERSON_THING,
+       PERSON_THING,
         activeTransitive
       )
     );
@@ -202,10 +206,52 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       
         ),
         TransitiveFrame,
-        WHAT_WHO_PERSON_THING,
+        PERSON_THING,
         passiveTransitive
       )
     );
+    
+    
+       // TransitiveFrame active
+    sentenceTemplateRepository.add(createSentenceTemplate(language,
+        List.of(
+         //Who presented BBC Wildlife Specials?
+        "interrogativePronoun(range) verb(mainVerb:present3rd:thirdPerson) object(domain)?",
+        "interrogativePronoun(range) verb(mainVerb:past:thirdPerson) object(domain)?",
+        //Which person presented BBC Wildlife Specials?
+        //"which river crosses Brooklyn Bridge?"
+        "interrogativeDeterminer(range:singular) verb(mainVerb:present3rd:thridPerson) object(domain)?",
+        "interrogativeDeterminer(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
+        //Whom did Lance Bass marry?
+        "interrogativePronounWhom verb(component_be:past:singular) object(domain) verb(mainVerb:present:thridPerson)?",
+        "interrogativePronounWhom verb(component_be:present:singular) object(domain) verb(mainVerb:present:thridPerson)?"
+            ),
+       TransitiveFrame,
+       PERSON_PERSON,
+        activeTransitive
+      )
+    );
+    // TransitiveFrame passive
+    sentenceTemplateRepository.add(createSentenceTemplate(language,
+        List.of(
+        //"What was developed by X?
+        "interrogativePronoun(domain:singular) verb(component_be:past:singular) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?",
+        //"What were developed by X?
+        "interrogativePronoun(domain:plural) verb(component_be:past:plural) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?" ,
+        //"What was developed by X?
+        "interrogativeDeterminer(domain:singular) verb(component_be:past:singular) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?",
+        //"What were developed by X?
+        "interrogativeDeterminer(domain:plural) verb(component_be:past:plural) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?" ,
+        //Whom did Lance Bass marry?
+        "interrogativePronounWhom verb(component_do:past:singular) object(domain) verb(mainVerb:present:thridPerson)?",
+        "interrogativePronounWhom verb(component_do:present:singular) object(domain) verb(mainVerb:present:thridPerson)?"
+        ),
+        TransitiveFrame,
+        PERSON_PERSON,
+        passiveTransitive
+      )
+    );
+    
     
     //////////////////////////////////////// Transitive ///////////////////////////////////
     
@@ -270,8 +316,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         APP.toString()
       )
     );
-    sentenceTemplateRepository.add(
-      createSentenceTemplate(language,
+    sentenceTemplateRepository.add(createSentenceTemplate(language,
         List.of(           
         //Which country does X flow through?
         "interrogativeDeterminer(range:singular) verb(component_do:present:singular) object(domain) verb(mainVerb:present:singular) preposition?", 
@@ -281,11 +326,13 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         "preposition interrogativeDeterminer(range:plural) verb(component_do:present:plural) object(domain) verb(mainVerb:present:singular)?",
          //In which programming language is GIMP written?
         "preposition interrogativeDeterminer(range:plural) verb(component_be:present:plural) object(domain) verb(mainVerb:perfect:singular)?",
-        "preposition interrogativeDeterminer(range:singular) verb(component_be:present:singular) object(domain) verb(mainVerb:perfect:singular)?"
- 
+        "preposition interrogativeDeterminer(range:singular) verb(component_be:present:singular) object(domain) verb(mainVerb:perfect:singular)?",
+         //Where is Fort Knox located?
+         "interrogativePlace verb(component_be:present:singular) object(domain) verb(mainVerb:perfect:singular)?"
+                
                 ),
         IntransitivePPFrame,
-        WHAT_WHICH_PRESENT_THING,
+        WHAT_WHICH_PRESENT_THING_1,
         forward
       )
     );
@@ -293,8 +340,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
     
     
     
-      sentenceTemplateRepository.add(
-      createSentenceTemplate(language,
+      sentenceTemplateRepository.add(createSentenceTemplate(language,
         List.of(
           //what flows through Germany?
           "interrogativePronoun(domain) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
@@ -306,7 +352,47 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
           "interrogativeDeterminer(domain:plural) verb(mainVerb:present:thridPerson) preposition adjunct(range)?"             
             ),
         IntransitivePPFrame,
-        WHAT_WHICH_PRESENT_THING,
+        WHAT_WHICH_PRESENT_THING_1,
+        backward
+      )
+    );
+      
+      
+       sentenceTemplateRepository.add(createSentenceTemplate(language,
+        List.of(    
+         //Which types of grapes grow in Oregon?
+         "interrogativeDeterminer(range:singular) verb(mainVerb:present3rd:singular) preposition object(domain)?", 
+         //Which types of grapes grow in Oregon?
+         "interrogativeDeterminer(range:plural) verb(mainVerb:present:singular) preposition object(domain)?",
+         //What types of grapes grows in Oregon?
+         "interrogativePronoun(range:plural) verb(mainVerb:present:singular) preposition object(domain)?",
+          //Which types of grapes grow in Oregon?
+         "interrogativeDeterminer(range:singular) verb(mainVerb:past:singular) preposition object(domain)?", 
+         //Which types of grapes grow in Oregon?
+         "interrogativeDeterminer(range:plural) verb(mainVerb:past:singular) preposition object(domain)?",
+         //What types of grapes grows in Oregon?
+         "interrogativePronoun(range:plural) verb(mainVerb:past:singular) preposition object(domain)?"
+               ),
+        IntransitivePPFrame,
+        WHAT_WHICH_PRESENT_THING_2,
+        forward
+      )
+    );
+    
+    
+    
+    
+      sentenceTemplateRepository.add(createSentenceTemplate(language,
+        List.of(
+         //"In which city does the Chile Route 68 end?
+        "preposition interrogativeDeterminer(domain:singular) verb(component_do:present:singular) object(range) verb(mainVerb:present:singular)?",
+        "preposition interrogativeDeterminer(domain:plural) verb(component_do:present:singular) object(range) verb(mainVerb:present:singular)?",
+         //In which programming language is GIMP written?
+        "preposition interrogativeDeterminer(domain:plural) verb(component_be:present:plural) object(range) verb(mainVerb:perfect:singular)?",
+        "preposition interrogativeDeterminer(domain:singular) verb(component_be:present:singular) object(range) verb(mainVerb:perfect:singular)?"
+                 ),
+        IntransitivePPFrame,
+        WHAT_WHICH_PRESENT_THING_2,
         backward
       )
     );
@@ -392,11 +478,13 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       createSentenceTemplate(
         language,
         List.of(
-                 //Where was Bach born?
+         //Where was Bach born?
          "interrogativePlace verb(component_be:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
           //In which city did John F. Kennedy die?
-         "preposition interrogativeDeterminer(range:singular) verb(component_do:past:singular) adjunct(domain) verb(mainVerb:present:thridPerson)?"
-        
+         "preposition interrogativeDeterminer(range:singular) verb(component_do:past:singular) adjunct(domain) verb(mainVerb:present:thridPerson)?",
+          //Which country was Bill Gates born in?
+         "interrogativeDeterminer(range:singular) verb(component_be:past:singular) adjunct(domain) verb(mainVerb:present:thridPerson) preposition?"
+
              ),
         IntransitivePPFrame,
         WHERE_WHO_PAST_PERSON,
@@ -460,7 +548,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       
         ),
        IntransitivePPFrame,
-       WHAT_WHO_PERSON_THING,
+       PERSON_THING,
         forward
       )
     );
@@ -476,7 +564,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
          "interrogativePronoun(domain:plural) verb(component_be:past:singular) verb(mainVerb:perfect:singular) preposition adjunct(range)?"
           ),
         IntransitivePPFrame,
-        WHAT_WHO_PERSON_THING,
+        PERSON_THING,
         backward
       )
     );

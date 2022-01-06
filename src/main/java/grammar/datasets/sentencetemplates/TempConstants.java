@@ -100,15 +100,20 @@ public interface TempConstants {
     public static Set<String> PERSONS = new HashSet<String>(Arrays.asList(secondPerson, thirdPerson));
 
     public static final String WHEN_WHAT_PAST_THING = "WHEN_WHAT_PAST_THING";
-    public static final String WHAT_WHICH_PRESENT_THING = "WHAT_WHICH_PRESENT_THING";
+    public static final String WHAT_WHICH_PRESENT_THING_1 = "WHAT_WHICH_PRESENT_THING_1";
+    public static final String WHAT_WHICH_PRESENT_THING_2 = "WHAT_WHICH_PRESENT_THING_2";
     public static final String HOW_MANY_PRICE = "HOW_MANY_PRICE";
     public static final String HOW_MANY_THING = "HOW_MANY_THING";
     public static final String WHERE_WHAT_PRESENT_THING = "WHERE_WHAT_PRESENT_THING";
+    
+    public static final String PERSON_PERSON = "PERSON_PERSON";
+    
+    
      
     public static final String WHO_WHO_PERSON = "WHO_WHO_PERSON";
      public static final String WHEN_WHO_PAST_PERSON = "WHEN_WHO_PAST_PERSON";
      public static final String WHERE_WHO_PAST_PERSON = "WHERE_WHO_PAST_PERSON";
-     public static final String WHAT_WHO_PERSON_THING = "WHAT_WHO_PERSON_THING";
+     public static final String PERSON_THING = "PERSON_THING";
 
     
     //public static final String WHAT_PERSON_THING = "WHAT_PERSON_THING";

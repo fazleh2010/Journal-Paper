@@ -114,7 +114,7 @@ public class StringSimilarity {
     }
 
     public static void main(String[] args) {
-        printSimilarity("was ist die amtssprache von surinam?", "was ist die amtssprache von suriname?");
+        printSimilarity("who was samuel schmid vice president?", ":who was vice president of samuel schmid?");
        
     }
 

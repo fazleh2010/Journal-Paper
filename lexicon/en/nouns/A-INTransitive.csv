@@ -1,0 +1,2 @@
+LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingularForm,domainWrittenPluralForm,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
+game_by,noun,game,games,by,NounPPFrame,domain,range,1,dbo:publisher,dbo:Game,dbo:Publisher,video game,video games,publisher,publishers

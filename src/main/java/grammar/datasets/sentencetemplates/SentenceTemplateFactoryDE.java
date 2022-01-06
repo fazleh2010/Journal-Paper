@@ -276,7 +276,7 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
        
                ),
         IntransitivePPFrame,
-        WHAT_WHICH_PRESENT_THING,
+        WHAT_WHICH_PRESENT_THING_2,
         forward
       )
     );
@@ -294,7 +294,7 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
        
         ),
         IntransitivePPFrame,
-        WHAT_WHICH_PRESENT_THING,
+        WHAT_WHICH_PRESENT_THING_2,
         backward
       )
     );
@@ -428,8 +428,7 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
       
               ///////////////////////////////
        sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
         //Woran ist Bruce Carver gestorben?
         "interrogativeCause(preposition) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
@@ -437,15 +436,14 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
         "preposition interrogativePronoun(nominativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?"     
                ),
         IntransitivePPFrame,
-        WHAT_WHO_PERSON_THING,
+        PERSON_THING,
         forward
       )
     );
     //Welche Person wurde 2010 geboren?
     //Wer ist 2010 geboren?
       sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
         //"Wer ist an Malaria gestorben?
         "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
@@ -454,7 +452,7 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
       
           ),
         IntransitivePPFrame,
-        WHAT_WHO_PERSON_THING,
+        PERSON_THING,
         backward
       )
     );

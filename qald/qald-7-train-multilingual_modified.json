@@ -9449,7 +9449,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was the successor of John F. Kennedy?",
+					"string": "Who was the successor of Patrick F. Kennedy?",
 					"keywords": "John F. Kennedy, successor"
 				},
 				{
@@ -9459,8 +9459,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer war der Nachfolger von John F. Kennedy?",
-					"keywords": "John F. Kennedy, Nachfolger"
+					"string": "Wer war der Nachfolger von Patrick_F._Kennedy?",
+					"keywords": "Patrick_F._Kennedy, Nachfolger"
 				},
 				{
 					"language": "es",
@@ -9489,7 +9489,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE {\n\tres:John_F._Kennedy dbo:successor ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE {\n\tres:Patrick_F._Kennedy dbo:successor ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -10832,7 +10832,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {       \n        res:Nile dbo:sourceCountry ?uri .\n}"
+				"sparql": "PREFIX dbp: <http://dbpedia.org/property/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {       \n        res:Nile dbp:mouthLocation ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -11802,8 +11802,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Through which countries does the Yenisei river flow?",
-					"keywords": "Yenisei river, flow through, country"
+					"string": "Through which countries does the El Burguillo Reservoir flow?",
+					"keywords": "El Burguillo Reservoir, flow through, country"
 				},
 				{
 					"language": "pt_BR",
@@ -11812,8 +11812,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Durch welche Länder fließt der Yenisei?",
-					"keywords": "Yenisei, fließen, Land"
+					"string": "Durch welche Länder fließt derEl Burguillo Reservoir?",
+					"keywords": "El Burguillo Reservoir, fließen, Land"
 				},
 				{
 					"language": "es",
@@ -11842,7 +11842,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbp: <http://dbpedia.org/property/>\nSELECT DISTINCT ?uri \nWHERE {\n        res:Yenisei_River dbp:country ?uri .\n}"
+				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbp: <http://dbpedia.org/property/>\nSELECT DISTINCT ?uri \nWHERE {\n        res:El_Burguillo_Reservoir dbp:country ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -12101,8 +12101,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Whom did Lance Bass marry?",
-					"keywords": "wife, Lance Bass"
+					"string": "Whom did Donald Trump marry?",
+					"keywords": "wife, Donald Trump"
 				},
 				{
 					"language": "pt_BR",
@@ -12116,8 +12116,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wen hat Lance Bass geheiratet?",
-					"keywords": "Lance Bass, Ehemann"
+					"string": "Wen hat Donald Trump geheiratet?",
+					"keywords": "Donald Trump, Ehemann"
 				},
 				{
 					"language": "es",
@@ -12151,7 +12151,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/spouse> <http://dbpedia.org/resource/Lance_Bass> . } "
+				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/spouse> <http://dbpedia.org/resource/Donald_Trump> . } "
 			},
 			"answers": [{
 				"head": {

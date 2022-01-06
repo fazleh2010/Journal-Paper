@@ -822,7 +822,7 @@ public class EvaluateAgainstQALD {
             }
             //System.out.println("MATCHED: "+qaldsentence + ":" + queGGquestion + " cosineSimilarityPercentage::" + value);
             //else
-               //System.out.println("NOT MATCHED: " + qaldsentence + ":" + queGGquestion + " cosineSimilarityPercentage::" + value);        
+             //  System.out.println("NOT MATCHED: " + qaldsentence + ":" + queGGquestion + " cosineSimilarityPercentage::" + value);        
         }
 
         return matchedQuestions;

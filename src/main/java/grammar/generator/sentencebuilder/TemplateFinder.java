@@ -61,7 +61,7 @@ public class TemplateFinder implements TempConstants{
         } else if (selectedTemplate.equals(WHERE_WHO_PAST_PERSON)) {
             this.forwardDomainOrRange = DomainOrRangeType.Place;
             this.oppositeDomainOrRange = DomainOrRangeType.Person;
-        } else if (selectedTemplate.equals(WHAT_WHICH_PRESENT_THING)) {
+        } else if (selectedTemplate.equals(WHAT_WHICH_PRESENT_THING_2)) {
             this.forwardDomainOrRange = DomainOrRangeType.THING;
             this.oppositeDomainOrRange = DomainOrRangeType.THING;
         }
@@ -91,9 +91,9 @@ public class TemplateFinder implements TempConstants{
         }  else if (isPerson(subjectUri) && isPerson(objectUri)) {
             type = WHO_WHO_PERSON;
         } else if (isPerson(subjectUri) && isCause(referenceUri)) {
-            type = WHAT_WHO_PERSON_THING;
+            type = PERSON_THING;
         }else if (isPerson(objectUri) && isCause(referenceUri)) {
-            type = WHAT_WHO_PERSON_THING;
+            type = PERSON_THING;
         } else if (!isPerson(subjectUri) && isDate(referenceUri)) {
             type = WHEN_WHAT_PAST_THING;
         } 
@@ -101,8 +101,10 @@ public class TemplateFinder implements TempConstants{
             type = HOW_MANY_PRICE;
         } else if (isAmountThingCheck(referenceUri)) {
             type = HOW_MANY_THING;
-        }else {
-            type = WHAT_WHICH_PRESENT_THING;
+        }else if(isGrowing(referenceUri)){
+            type = WHAT_WHICH_PRESENT_THING_2;
+        }else{
+           type = WHAT_WHICH_PRESENT_THING_1; 
         }
         /*System.out.println("subjectUri::"+subjectUri);
         System.out.println("objectUri::"+objectUri);
@@ -125,20 +127,26 @@ public class TemplateFinder implements TempConstants{
         String referenceUri = lexicalEntryUtil.getReferenceUri();
         SubjectType subjectType = this.lexicalEntryUtil.getSubjectType(this.lexicalEntryUtil.getSelectVariable());
 
-        /*String qWord = null;
-        try {
-            qWord = this.lexicalEntryUtil.getSubjectBySubjectType(subjectType, language, null);
-        } catch (QueGGMissingFactoryClassException ex) {
-            Logger.getLogger(SentenceBuilderIntransitivePPEN.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
         
         if (isAmountPriceCheck(referenceUri)) {
             type = HOW_MANY_PRICE;
         } else if (isAmountThingCheck(referenceUri)) {
             type = HOW_MANY_THING;
-        }else {
-            type = WHAT_WHO_PERSON_THING;
+        }else if(isPerson(subjectUri) && isPerson(objectUri)) {
+            type = PERSON_PERSON;
+        }else  {
+            type=PERSON_THING;
         }
+        /*System.out.println("subjectUri::"+subjectUri);
+        System.out.println("objectUri::"+objectUri);
+        System.out.println("referenceUri::"+referenceUri);
+        System.out.println("isPerson(subjectUri)::"+isPerson(subjectUri));
+         System.out.println("isPerson(objectUri)::"+isPerson(objectUri));
+         System.out.println("isCause(referenceUri)::"+isCause(referenceUri));
+        System.out.println("isDate(referenceUri)::"+isDate(referenceUri));
+        System.out.println("isPlace(referenceUri)::"+isPlace(objectUri));
+          System.out.println("type::"+type);
+         exit(1);*/
        
         return type;
 
@@ -273,6 +281,19 @@ public class TemplateFinder implements TempConstants{
         return false;
     }
     
+    private boolean isGrowing(String string) {
+        if (StringUtils.isBlank(string)) {
+            return false;
+        }
+        for (URI key : DomainOrRangeTypeCheck.GrowCheck.getReferences()) {
+            if (string.equals(key.toString())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    
 
     public DomainOrRangeType getForwardDomainOrRange() {
         return forwardDomainOrRange;
@@ -394,6 +415,7 @@ public class TemplateFinder implements TempConstants{
         return propertyReference;
     }
 
+    
    
 
    

@@ -23,6 +23,7 @@
   lemon:entry    :interrogativeMuch ;
   lemon:entry    :interrogativeEvalution ;
   lemon:entry    :interrogativePronounPerson ;
+  lemon:entry    :interrogativePronounWhom ;
   lemon:entry    :interrogativePronounThing ;
   lemon:entry    :interrogativePlace ;
   lemon:entry    :interrogativeTemporal ;
@@ -180,6 +181,10 @@
 
  :interrogativePronounPerson a      lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "Who"@en ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativePronounWhom a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "Whom"@en ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
  :interrogativePronounThing a      lemon:LexicalEntry ;

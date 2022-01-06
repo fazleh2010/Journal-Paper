@@ -34,9 +34,9 @@ public class StringMatcher {
     }
        
     public static String modifyLabels(String answerLabel) {
-        if (answerLabel.contains("slack")) {
+        //if (answerLabel.contains("slack")) {
             System.out.println("Before:" + answerLabel);
-        }
+        //}
         if (answerLabel != null && answerLabel.contains("(")) {
             System.out.println("Before:" + answerLabel);
             String property = StringUtils.substringBetween(answerLabel, "(", ")");
