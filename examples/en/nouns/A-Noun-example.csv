@@ -1,3 +1,0 @@
-LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingularForm, domainWrittenPluralForm,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
-birthPlace_of,noun,birth place,-,of,NounPPFrame,range,domain,1,dbo:birthPlace,dbo:Person,dbo:Place,Person,Persons,Place,Places
-height_of,noun,height,-,of,NounPPFrame,range,domain,1,dbo:height,dbo:Person,xsd:double,Person,Persons,-,-

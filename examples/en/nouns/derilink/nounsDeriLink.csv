@@ -1,2 +1,0 @@
-LemonEntry,partOfSpeech,writtenFormSingular,writtenFormPlural,preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range
-timePeriod_of_1,noun,time period,time periods,of,NounPPFrame,range,domain,1,citizenProp:hasPeriod,citizenRes:Income,xsd:string

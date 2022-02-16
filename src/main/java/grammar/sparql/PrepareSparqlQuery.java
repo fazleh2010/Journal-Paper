@@ -8,6 +8,7 @@ package grammar.sparql;
 import static grammar.sparql.SparqlQuery.RETURN_TYPE_OBJECT;
 import static grammar.sparql.SparqlQuery.RETURN_TYPE_SUBJECT;
 import grammar.structure.component.Language;
+import static java.lang.System.exit;
 
 /**
  *
@@ -71,10 +72,13 @@ public class PrepareSparqlQuery {
         } else {
             sparql = "select  ?s\n"
                     + "    {\n"
-                    + "   " + "?s" + " " + "<" + property + ">" + "  " + "<" + objectUri + "> ." + "\n"
+                    + "   " + "?s" + " " + "<" + property + ">" + "  " +  objectUri + " ." + "\n"
                     + "    }";
 
         }
+        
+       //System.out.println(sparql);
+        //exit(1);
 
         return sparql;
 
@@ -138,15 +142,15 @@ public class PrepareSparqlQuery {
 
     }*/
     
-    public static String setObjectWikiPedia(String entityUrl, String property, String rdfProperty, String objectClassUri) {
+    public static String setObjectWikiPedia(String subjectUrl, String property, String rdfProperty, String objectClassUri) {
         String sparql = null;
-       
+
             sparql = "select  ?o\n"
                     + "    {\n"
-                    + "    " + "<" + entityUrl + ">" + " " + "<" + property + ">" + "  " + "?o ." + "\n"
+                    + "    " + "<" + subjectUrl + ">" + " " + "<" + property + ">" + "  " + "?o ." + "\n"
                     + "    }";
+        
 
-       
         return sparql;
 
     }

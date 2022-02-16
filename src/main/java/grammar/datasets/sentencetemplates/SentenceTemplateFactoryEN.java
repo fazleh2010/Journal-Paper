@@ -185,7 +185,9 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         "interrogativeDeterminer(range:plural) verb(mainVerb:past:thridPerson) object(domain)?",
         //Which river does the Brooklyn Bridge cross?
         "interrogativeDeterminer(range:singular) verb(component_do:present:singular) object(domain) verb(mainVerb:present:thridPerson)?",
-        "interrogativeDeterminer(range:plural) verb(component_do:present:singular) object(domain) verb(mainVerb:present:thridPerson)?"
+        "interrogativeDeterminer(range:plural) verb(component_do:present:singular) object(domain) verb(mainVerb:present:thridPerson)?",
+        //Which books did Muhammad Ali write?
+        "interrogativeDeterminer(range:plural) verb(component_do:past:singular) object(domain) verb(mainVerb:present:thridPerson)?"            
         ),
        TransitiveFrame,
        PERSON_THING,
@@ -202,8 +204,12 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         //"What was developed by X?
         "interrogativeDeterminer(domain:singular) verb(component_be:past:singular) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?",
         //"What were developed by X?
-        "interrogativeDeterminer(domain:plural) verb(component_be:past:plural) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?" 
-      
+        "interrogativeDeterminer(domain:plural) verb(component_be:past:plural) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?",
+        //Which movies did Kurosawa direct?
+         "interrogativeDeterminer(domain:singular) verb(component_do:past:singular) adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         //Which movies did Kurosawa direct?
+         "interrogativeDeterminer(domain:plural) verb(component_do:past:singular) adjunct(range) verb(mainVerb:perfect:thridPerson)?"
+     
         ),
         TransitiveFrame,
         PERSON_THING,
@@ -652,30 +658,25 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       )
     );
     
-    // AdjectiveAttributiveFrame
-    sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
-        List.of(
-          "interrogativePronoun verb(reference:component_be) NP(attributiveArg)?"
-        ),
-        "attributiveArg"
-      )
-    );
-    
+       
     sentenceTemplateRepository.add(
       createSentenceTemplate(
         language,
         List.of(
         //How high is the lighthouse in Colombo?
-        "interrogativeEvalution adjective(baseForm) verb(component_be:present:singular) determiner(component_the) noun(range:singular) preposition adjunct(domain)?",
+        //"interrogativeEvalution adjective(baseForm) verb(component_be:present:singular) determiner(component_the) noun(range:singular) preposition adjunct(domain)?",
         //How high is the lighthouse?
-        "interrogativeEvalution adjective(baseForm) verb(component_be:present:singular) determiner(component_the) noun(range:singular)?"
-    
+         "interrogativeEvalution adjective(baseForm) verb(component_be:present:singular) object(range)?"
+        /*
+        //How high is the lighthouse in Colombo?
+        "interrogativeEvalution adjective(baseForm) verb(component_be:present:singular) determiner(component_the) adjunct(range)?",
+        //How high is the lighthouse?
+        "interrogativeEvalution adjective(baseForm) verb(component_be:present:singular) determiner(component_the) noun(range) preposition adjunct(domain)?"
+        */
         ),
         AdjectiveSuperlativeFrame,
         adjectiveBaseForm,
-        backward
+        forward
       )
     );
 
@@ -732,9 +733,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       // AdjectivePPFrame...superlative
     sentenceTemplateRepository.add(createSentenceTemplate(language,
         List.of(
-        //Where is Mount Everest Located?
         "interrogativePlace verb(component_be:present:singular) adjunct(range) verb(verb_location:past:singular)?",
-        ////In which country is Mount Everest Located?
         "preposition interrogativeDeterminer(domain:singular) adjunct(range) verb(component_be:present:singular) verb(verb_location:past:singular)?"
         ),
         AdjectiveSuperlativeFrame,

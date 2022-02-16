@@ -1,3 +1,0 @@
-LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingularForm,domainWrittenPluralForm,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
-formOfGovernment-of,noun,form of government,-,of,NounPPFrame,range,domain,1,dbo:governmentType,dbo:Country,dbo:Country,country,countries,government type,government types
-child_of,noun,child,children,of ,NounPPFrame,range,domain,1,dbo:child,dbo:Person,dbo:Person,Person,Persons,Person,Persons

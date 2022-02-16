@@ -509,21 +509,7 @@ public class LexicalEntryUtil implements TempConstants{
      * object!)
      * @return The {@link SubjectType} of the provided lexicalSenseRefUri
      */
-    public SubjectType getSubjectType(SelectVariable selectVariable,DomainOrRangeType domainOrRangeType) {
-        String domainOrRange = selectVariable.mapDomainOrRange();
-        return detectSubjectType(getReferenceUri(), domainOrRange,domainOrRangeType);
-    }
     
-    /* public SubjectType getSubjectType(SelectVariable selectVariable,List<SentenceToken> sentenceTokens) {
-        String domainOrRange = selectVariable.mapDomainOrRange();
-        return detectSubjectType(getReferenceUri(), domainOrRange,sentenceTokens);
-    }*/
-    
-    public SubjectType getSubjectType(SelectVariable selectVariable) {
-        String domainOrRange = selectVariable.mapDomainOrRange();
-        return detectSubjectType(getReferenceUri(), domainOrRange);
-    }
-
     /**
      * Detects the SubjectType of the given LexicalEntry. This enables the
      * determination of the qWord that is being used in the sentence.

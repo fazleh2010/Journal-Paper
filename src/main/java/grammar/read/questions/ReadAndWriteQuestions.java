@@ -10,6 +10,7 @@ import util.io.FileUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.opencsv.CSVWriter;
 import static grammar.datasets.sentencetemplates.TempConstants.adjectiveBaseForm;
+import static grammar.datasets.sentencetemplates.TempConstants.superlative;
 import static grammar.generator.BindingConstants.DEFAULT_BINDING_VARIABLE;
 import grammar.structure.component.FrameType;
 import java.io.BufferedReader;
@@ -199,11 +200,9 @@ public class ReadAndWriteQuestions {
                 }
                 
                 
-                if (grammarEntryUnit.getFrameType().contains(FrameType.AG.toString())) {
+                if (grammarEntryUnit.getFrameType().contains(FrameType.AG.toString())&&grammarEntryUnit.getSentenceTemplate().contains(superlative)) {
                     sparql = grammarEntryUnit.getExecutable();
                      System.out.println(grammarEntryUnit.getFrameType());
-                     
-               
                 } 
                 else{
                      sparql = grammarEntryUnit.getSparqlQuery();

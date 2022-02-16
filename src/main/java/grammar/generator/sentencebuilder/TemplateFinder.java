@@ -73,7 +73,6 @@ public class TemplateFinder implements TempConstants{
         String subjectUri = this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.subjOfProp).toString();
         String objectUri = this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.objOfProp).toString();
         String referenceUri = lexicalEntryUtil.getReferenceUri();
-        SubjectType subjectType = this.lexicalEntryUtil.getSubjectType(this.lexicalEntryUtil.getSelectVariable());
 
         /*String qWord = null;
         try {
@@ -125,7 +124,6 @@ public class TemplateFinder implements TempConstants{
         String subjectUri = this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.subjOfProp).toString();
         String objectUri = this.lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.objOfProp).toString();
         String referenceUri = lexicalEntryUtil.getReferenceUri();
-        SubjectType subjectType = this.lexicalEntryUtil.getSubjectType(this.lexicalEntryUtil.getSelectVariable());
 
         
         if (isAmountPriceCheck(referenceUri)) {

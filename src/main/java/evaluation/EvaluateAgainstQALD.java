@@ -36,6 +36,7 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.text.similarity.CosineDistance;
+import org.apache.commons.text.similarity.JaccardSimilarity;
 import org.apache.jena.query.QueryType;
 import static org.apache.jena.sparql.syntax.ElementWalker.walk;
 
@@ -797,6 +798,9 @@ public class EvaluateAgainstQALD {
             String[] row = questions.get(queGGquestion);
             qaldsentence = qaldsentence.replace("\"", "");
             queGGquestion = queGGquestion.replace("\"", "");
+            
+            //JaccardSimilarity jaccardSimilarity = new JaccardSimilarity();
+            //Double value = jaccardSimilarity.apply(qaldsentence, queGGquestion);
             Double value = StringSimilarity.similarity(qaldsentence, queGGquestion);
             QueGGinfomation queGGinfomation = new QueGGinfomation(row, value);
             String queGGsparql=queGGinfomation.getSparqlQuery();
@@ -813,7 +817,7 @@ public class EvaluateAgainstQALD {
             else 
                 continue;*/
 
-            if (value > 0.55) {
+            if (value > similarityPercentage) {
                 //QueGGinfomation queGGinfomation = new QueGGinfomation(row, value);
                 sort.put(queGGinfomation.getQuestion(), value);
                 matchedQuestions.put(queGGinfomation.getQuestion(), queGGinfomation);

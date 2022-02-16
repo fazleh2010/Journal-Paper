@@ -77,7 +77,7 @@ public class AdjGradableGrammarRuleGenerator extends GrammarRuleGeneratorRoot im
             exit(1);
         }
 
-        //System.out.println("getLanguage:::"+getLanguage());
+        //System.out.println("generatedSentences:::"+generatedSentences);
         //exit(1);
         return generatedSentences;
     }
@@ -108,8 +108,8 @@ public class AdjGradableGrammarRuleGenerator extends GrammarRuleGeneratorRoot im
         List<GrammarEntry> grammarEntries = new ArrayList<GrammarEntry>();
         grammarEntry.setSentenceTemplate(this.template);
 
-        /*GrammarEntry baseGrammarEntry = getBasFormGrammarEntry(grammarEntry, lexicalEntryUtil);
-        grammarEntries.add(baseGrammarEntry);*/
+        GrammarEntry baseGrammarEntry = getBasFormGrammarEntry(grammarEntry, lexicalEntryUtil);
+        grammarEntries.add(baseGrammarEntry);
         
         /*GrammarEntry baseFormGrammarEntry = getSuperlativeGrammarEntry(grammarEntry, lexicalEntryUtil);
         grammarEntries.add(oppositeGrammarEntry);*/
@@ -121,11 +121,11 @@ public class AdjGradableGrammarRuleGenerator extends GrammarRuleGeneratorRoot im
         GrammarEntry fragmentEntry = copyGrammarEntry(grammarEntry);
         fragmentEntry.setType(SentenceType.SENTENCE);
         // Assign opposite values
-        //fragmentEntry.setReturnType(grammarEntry.getBindingType());
-        //fragmentEntry.setBindingType(grammarEntry.getReturnType());
+        fragmentEntry.setReturnType(grammarEntry.getBindingType());
+        fragmentEntry.setBindingType(grammarEntry.getReturnType());
         //fragmentEntry.setReturnVariable(grammarEntry.getBindingVariable());
-        //fragmentEntry.setSentenceTemplate(grammarEntry.getSentenceTemplate());
-        //fragmentEntry.setFrameType(FrameType.AG);
+        fragmentEntry.setSentenceTemplate(grammarEntry.getSentenceTemplate());
+        fragmentEntry.setFrameType(FrameType.AG);
 
         /*Map<String, String> sentenceToSparqlParameterMapping = new HashMap<String, String>();
         sentenceToSparqlParameterMapping.put(grammarEntry.getSentenceBindings().getBindingVariableName(),
@@ -139,10 +139,9 @@ public class AdjGradableGrammarRuleGenerator extends GrammarRuleGeneratorRoot im
         return fragmentEntry;
     }
     
-    private GrammarEntry getAdjectiveBaseForm(GrammarEntry grammarEntry, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
+    /*private GrammarEntry getAdjectiveBaseForm(GrammarEntry grammarEntry, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException {
         GrammarEntry fragmentEntry = copyGrammarEntry(grammarEntry);
         fragmentEntry.setType(SentenceType.SENTENCE);
-        // Assign opposite values
         fragmentEntry.setReturnType(grammarEntry.getBindingType());
         fragmentEntry.setBindingType(grammarEntry.getReturnType());
         fragmentEntry.setReturnVariable(grammarEntry.getBindingVariable());
@@ -158,7 +157,7 @@ public class AdjGradableGrammarRuleGenerator extends GrammarRuleGeneratorRoot im
         fragmentEntry.setSentenceTemplate(this.template);
         fragmentEntry.setSentences(generatedSentences);
         return fragmentEntry;
-    }
+    }*/
 
    
 }

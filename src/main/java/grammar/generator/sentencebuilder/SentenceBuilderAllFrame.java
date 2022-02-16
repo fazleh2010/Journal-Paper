@@ -119,6 +119,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
             if(template.contains(superlativeCountry)||template.contains(superlativeLocation)){
                 template=superlativeCountry;
             }
+                
             
             List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                     language, new String[]{frameType.getName(),template,forward});
@@ -126,13 +127,13 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
             
             
             sentences = generateSentences(bindingVariable, lexicalEntryUtil, selectVariable, oppositeSelectVariable, sentenceTemplates);
-            /*System.out.println(template);
-            System.out.println(sentenceTemplates);
-            System.out.println(sentences);
-            exit(1);*/
+            System.out.println("template::"+template);
+            System.out.println("sentenceTemplates::"+sentenceTemplates);
+            System.out.println("sentences::"+sentences);
+            //exit(1);
         }
 
-
+ 
         /*List<String> sentenceTemplates = getSentenceTemplateRepository().findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                 getLanguage(), new String[]{getFrameType().getName(), FORWARD});*/
         return sentences;
@@ -185,6 +186,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
              System.out.println(this.getTemplateFinder().getSelectedTemplate());
             //exit(1);*/
         }
+         //exit(1);
 
         return sentences;
     }

@@ -210,8 +210,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was the wife of U.S. president Lincoln?",
-					"keywords": "U.S. president, Lincoln, wife"
+					"string": "Who was the wife of Abraham Lincoln?",
+					"keywords": "Abraham Lincoln, wife"
 				},
 				{
 					"language": "pt_BR",
@@ -220,8 +220,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer war die Frau von US-Präsident Lincoln?",
-					"keywords": "US-Präsident, Lincoln, Frau"
+					"string": "Wer war die Frau von Abraham Lincoln?",
+					"keywords": "Abraham Lincoln, Frau"
 				},
 				{
 					"language": "es",
@@ -428,13 +428,13 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "In what city is the Heineken brewery?",
-					"keywords": "city, Heineken brewery"
+					"string": "In what city is the Goldstar brewery?",
+					"keywords": "city, Goldstar brewery"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Em que cidade fica a cervejaria Heineken?",
-					"keywords": "cidade, cervejaria Heineken"
+					"string": "Em que cidade fica a cervejaria Goldstar?",
+					"keywords": "cidade, cervejaria Goldstar"
 				},
 				{
 					"language": "fa",
@@ -443,8 +443,8 @@
 				},
 				{
 					"language": "de",
-					"string": "In welcher Stadt ist die Heinekenbrauerei?",
-					"keywords": "Stadt, Heinekenbrauerei"
+					"string": "In welcher Stadt ist die Goldstarbrauerei?",
+					"keywords": "Stadt, Goldstarbrauerei"
 				},
 				{
 					"language": "es",
@@ -453,8 +453,8 @@
 				},
 				{
 					"language": "it",
-					"string": "In quale città si trova il birrificio della Heiniken?",
-					"keywords": "città, birrificio della Heiniken"
+					"string": "In quale città si trova il birrificio della Goldstar?",
+					"keywords": "città, birrificio della Goldstar"
 				},
 				{
 					"language": "fr",
@@ -478,7 +478,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Heineken> <http://dbpedia.org/ontology/manufacturer> ?x . ?x <http://dbpedia.org/ontology/locationCity> ?uri . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Goldstar_(beer)> <http://dbpedia.org/ontology/manufacturer> ?x . ?x <http://dbpedia.org/ontology/locationCity> ?uri . }"
 			},
 			"answers": [{
 				"head": {
@@ -1443,7 +1443,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who wrote the book Les Piliers de la terre?",
+					"string": "Who wrote the book the Pillars of the Earth?",
 					"keywords": "wrote, book, The pillars of the Earth"
 				},
 				{
@@ -1712,8 +1712,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was called Frank The Tank?",
-					"keywords": "called, Frank The Tank"
+					"string": "Who was called the Tiger?",
+					"keywords": "called, the Tiger"
 				},
 				{
 					"language": "pt_BR",
@@ -1722,8 +1722,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer wurde Frank The Tank genannt?",
-					"keywords": "nennen, Frank The Tank"
+					"string": "Wer wurde Eagles genannt?",
+					"keywords": "nennen, Eagles"
 				},
 				{
 					"language": "es",
@@ -1732,8 +1732,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Chi venne chiamato Frank The Tank?",
-					"keywords": "chiamare, Frank The Tank"
+					"string": "Chi venne chiamato Eagles?",
+					"keywords": "chiamare, Eagles"
 				},
 				{
 					"language": "fr",
@@ -1757,7 +1757,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbp: <http://dbpedia.org/property/> \nSELECT DISTINCT ?uri \nWHERE { \n        ?uri dbp:nickname 'Frank The Tank'@en . \n}"
+				"sparql": "PREFIX dbp: <http://dbpedia.org/property/> \nSELECT DISTINCT ?uri \nWHERE { \n        ?uri dbp:nickname 'The Tiger'@en . \n}"
 			},
 			"answers": [{
 				"head": {
@@ -2011,8 +2011,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the mayor of the capital of French Polynesia?",
-					"keywords": "mayor, capital, French Polynesia"
+					"string": "Who is the mayor of the capital of Russia?",
+					"keywords": "mayor, capital, Russia"
 				},
 				{
 					"language": "pt_BR",
@@ -2056,7 +2056,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE { \n        res:French_Polynesia dbo:capital ?x .\n        ?x dbo:mayor ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE { \n        res:Russia dbo:capital ?x .\n        ?x dbo:leaderName ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -13230,8 +13230,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "How high is the Mount Everest?",
-					"keywords": "Mount Everest, high"
+					"string": "How high is the Mount Kilimanjaro?",
+					"keywords": "Mount Kilimanjaro, high"
 				},
 				{
 					"language": "pt_BR",
@@ -13240,8 +13240,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wie hoch ist der Mount Everest?",
-					"keywords": "Mount Everest, hoch"
+					"string": "Wie hoch ist der Mount Kilimanjaro?",
+					"keywords": "Mount Kilimanjaro, hoch"
 				},
 				{
 					"language": "es",
@@ -13250,8 +13250,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Quanto è alto il Monte Everest?",
-					"keywords": "Monte Everest, altezza"
+					"string": "Quanto è alto il Monte Kilimanjaro?",
+					"keywords": "Monte Kilimanjaro, altezza"
 				},
 				{
 					"language": "fr",
@@ -13270,7 +13270,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?num \nWHERE {\n\tres:Mount_Everest dbo:elevation ?num.\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?num \nWHERE {\n\tres:Mount_Kilimanjaro dbo:elevation ?num.\n}"
 			},
 			"answers": [{
 				"head": {
@@ -13935,8 +13935,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the mayor of Rotterdam?",
-					"keywords": "mayor, Rotterdam"
+					"string": "Who is the mayor of Moscow?",
+					"keywords": "mayor, Moscow"
 				},
 				{
 					"language": "pt_BR",
@@ -13945,8 +13945,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer ist der Bürgermeister von Rotterdam?",
-					"keywords": "Bürgermeister, Rotterdam"
+					"string": "Wer ist der Bürgermeister von Moscow?",
+					"keywords": "Bürgermeister, Moscow"
 				},
 				{
 					"language": "es",
@@ -13955,8 +13955,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Chi è il sindaco di Rotterdam?",
-					"keywords": "sindaco, Rotterdam"
+					"string": "Chi è il sindaco di Moscow?",
+					"keywords": "sindaco, Moscow"
 				},
 				{
 					"language": "fr",
@@ -15968,8 +15968,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who composed the music for Harold and Maude?",
-					"keywords": "Harold and Maude, compose, music"
+					"string": "Who composed the music for Dead Fish?",
+					"keywords": "Dead Fish, compose, music"
 				},
 				{
 					"language": "pt_BR",
@@ -15978,8 +15978,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer hat die Musik für Harold und Maude komponiert?",
-					"keywords": "Harold und Maude, komponieren, Musik"
+					"string": "Wer hat die Musik für Dead Fish komponiert?",
+					"keywords": "Dead Fish, komponieren, Musik"
 				},
 				{
 					"language": "es",
@@ -15988,7 +15988,7 @@
 				},
 				{
 					"language": "it",
-					"string": "Chi ha composto la musica per Harold e Maude?",
+					"string": "Chi ha composto la musica per Dead Fish?",
 					"keywords": "Harold e Maude, compositore, musica"
 				},
 				{
@@ -16008,7 +16008,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nSELECT DISTINCT ?uri \nWHERE {\n\tres:Harold_and_Maude dbo:musicComposer ?uri .\n}"
+				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nSELECT DISTINCT ?uri \nWHERE {\n\tres:Dead_Fish dbo:musicComposer ?uri .\n}"
 			},
 			"answers": [{
 				"head": {

@@ -49,6 +49,8 @@ select  ?binding  ?label {
 
 
 
+
+
 ----------------
 select  ?class {     
  <http://dbpediaorg/resource/Donald_Trump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>  ?class.
@@ -214,3 +216,10 @@ WHERE {
 	?s dbo:elevation ?num .
         ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Mountain>.
 }
+
+
+
+SELECT DISTINCT ?entity ?uri WHERE { 
+?entity <http://dbpedia.org/ontology/manufacturer> ?x . 
+ ?entity <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Beverage>.
+?x <http://dbpedia.org/ontology/location> ?uri . }
