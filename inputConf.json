@@ -5,10 +5,10 @@
   "qaldDir" : "qald",
   "numberOfEntities" : 100,
   "similarityThresold" : 0.65,
-  "csvToTurtle" : true,
-  "turtleToProtoType" : true,
+  "csvToTurtle" : false,
+  "turtleToProtoType" : false,
   "single": true,
-  "composite": false,
+  "composite": true,
   "protoTypeToQuestion" : true,
   "evalution" : true
 }

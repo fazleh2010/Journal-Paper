@@ -78,6 +78,8 @@ public enum DomainOrRangeTypeCheck {
                     URI.create(DBO.getUri() + "Artist"),
                     URI.create(DBO.getUri() + "Pope"),
                     URI.create(DBO.getUri() + "Philosopher"),
+                    URI.create(DBO.getUri() + "FormulaOneRacer"),
+                    URI.create(DBO.getUri() + "musicComposer"),
                     URI.create("http://www.wikidata.org/entity/Q215627") // wiki data person
             )
     ),
@@ -99,6 +101,7 @@ public enum DomainOrRangeTypeCheck {
       URI.create(DBO.getUri() +  "placeOfBurial"),
       URI.create(DBO.getUri() +  "NaturalPlace"),
       URI.create(DBO.getUri() +  "routeStart"),
+      URI.create(DBO.getUri() +  "HistoricPlace"),
       URI.create(DBO.getUri() +  "Road")
     )
   ),
@@ -112,6 +115,11 @@ public enum DomainOrRangeTypeCheck {
             URI.create(DBO.getUri() + "knownFor"),
             URI.create(DBP.getUri() + "nickname")
     )),
+    
+    ActivityCheck(List.of(
+            URI.create(DBO.getUri() + "musicComposer")
+    )),
+     
     dateCheck(List.of(
             URI.create("http://www.w3.org/2001/XMLSchema#date"),
             URI.create("http://www.w3.org/2001/XMLSchema#gYear"),

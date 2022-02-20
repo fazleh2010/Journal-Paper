@@ -90,9 +90,11 @@ public class TemplateFinder implements TempConstants{
         }  else if (isPerson(subjectUri) && isPerson(objectUri)) {
             type = WHO_WHO_PERSON;
         } else if (isPerson(subjectUri) && isCause(referenceUri)) {
-            type = PERSON_THING;
+            type = PERSON_CAUSE;
         }else if (isPerson(objectUri) && isCause(referenceUri)) {
-            type = PERSON_THING;
+            type = PERSON_CAUSE;
+        } else if (isPerson(objectUri) && isActivity(referenceUri)) {
+            type = PERSON_ACTIVITY;
         } else if (!isPerson(subjectUri) && isDate(referenceUri)) {
             type = WHEN_WHAT_PAST_THING;
         } 
@@ -105,16 +107,17 @@ public class TemplateFinder implements TempConstants{
         }else{
            type = WHAT_WHICH_PRESENT_THING_1; 
         }
-        /*System.out.println("subjectUri::"+subjectUri);
-        System.out.println("objectUri::"+objectUri);
-        System.out.println("referenceUri::"+referenceUri);
-        System.out.println("isPerson(subjectUri)::"+isPerson(subjectUri));
-         System.out.println("isPerson(objectUri)::"+isPerson(objectUri));
-         System.out.println("isCause(referenceUri)::"+isCause(referenceUri));
-        System.out.println("isDate(referenceUri)::"+isDate(referenceUri));
-        System.out.println("isPlace(referenceUri)::"+isPlace(objectUri));
-          System.out.println("type::"+type);
-         exit(1);*/
+        /*System.out.println("subjectUri::" + subjectUri);
+        System.out.println("objectUri::" + objectUri);
+        System.out.println("referenceUri::" + referenceUri);
+        System.out.println("isPerson(subjectUri)::" + isPerson(subjectUri));
+        System.out.println("isPerson(objectUri)::" + isPerson(objectUri));
+        System.out.println("isCause(referenceUri)::" + isCause(referenceUri));
+        System.out.println("isDate(referenceUri)::" + isDate(referenceUri));
+        System.out.println("isPlace(referenceUri)::" + isPlace(objectUri));
+          System.out.println("isActivity(referenceUri)::" + isActivity(referenceUri));
+        System.out.println("type::" + type);
+        exit(1);*/
         return type;
 
     }
@@ -133,7 +136,7 @@ public class TemplateFinder implements TempConstants{
         }else if(isPerson(subjectUri) && isPerson(objectUri)) {
             type = PERSON_PERSON;
         }else  {
-            type=PERSON_THING;
+            type=PERSON_CAUSE;
         }
         /*System.out.println("subjectUri::"+subjectUri);
         System.out.println("objectUri::"+objectUri);
@@ -272,6 +275,18 @@ public class TemplateFinder implements TempConstants{
             return false;
         }
         for (URI key : DomainOrRangeTypeCheck.CauseCheck.getReferences()) {
+            if (string.equals(key.toString())) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    private static Boolean isActivity(String string) {
+        if (StringUtils.isBlank(string)) {
+            return false;
+        }
+        for (URI key : DomainOrRangeTypeCheck.ActivityCheck.getReferences()) {
             if (string.equals(key.toString())) {
                 return true;
             }

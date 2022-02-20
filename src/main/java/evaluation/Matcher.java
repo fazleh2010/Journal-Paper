@@ -94,6 +94,8 @@ public class Matcher {
     
     
     public static QALD.QALDQuestions getMatchingOriginalQaldQuestions(QALD qaldOriginal, EntryComparison entryComparison) {
+        //System.out.println(qaldOriginal.questions);
+        //System.out.println(entryComparison.getQaldEntry());
         
         return qaldOriginal.questions.stream()
                 .filter(qaldQuestions -> qaldQuestions.id.equals(entryComparison.getQaldEntry()

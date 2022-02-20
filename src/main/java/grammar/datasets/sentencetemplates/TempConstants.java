@@ -113,7 +113,8 @@ public interface TempConstants {
     public static final String WHO_WHO_PERSON = "WHO_WHO_PERSON";
      public static final String WHEN_WHO_PAST_PERSON = "WHEN_WHO_PAST_PERSON";
      public static final String WHERE_WHO_PAST_PERSON = "WHERE_WHO_PAST_PERSON";
-     public static final String PERSON_THING = "PERSON_THING";
+     public static final String PERSON_CAUSE = "PERSON_CAUSE";
+     public static final String PERSON_ACTIVITY = "PERSON_ACTIVITY";
 
     
     //public static final String WHAT_PERSON_THING = "WHAT_PERSON_THING";

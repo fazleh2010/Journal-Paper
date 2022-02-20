@@ -107,6 +107,14 @@ public class EvaluateAgainstQALD {
                  System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!End!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                  index=index+1;
             }*/
+            
+             System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!Start!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+             System.out.println("qald id: "+entryComparison.getQaldEntry().getId());
+             System.out.println((index)+"  QaldEntry::::"+entryComparison.getQaldEntry().getQuestions()+" "+"QaldEntry::::"+entryComparison.getQaldEntry().getSparql());
+             System.out.println((index)+"   QueGGEntry::::"+entryComparison.getQueGGEntry().getQuestions()+" "+entryComparison.getQueGGEntry().getSparql());
+             System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!End!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                 
+                 
             if (questionType.contains(PROTOTYPE_QUESTION)) {
                 protoTypeQuestionComperison(entryComparison);
             }

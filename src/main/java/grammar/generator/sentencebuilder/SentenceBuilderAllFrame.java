@@ -133,7 +133,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
             //exit(1);
         }
 
- 
+        //exit(1);
         /*List<String> sentenceTemplates = getSentenceTemplateRepository().findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                 getLanguage(), new String[]{getFrameType().getName(), FORWARD});*/
         return sentences;

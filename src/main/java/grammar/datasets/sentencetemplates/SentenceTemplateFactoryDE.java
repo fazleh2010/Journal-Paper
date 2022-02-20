@@ -436,7 +436,7 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
         "preposition interrogativePronoun(nominativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?"     
                ),
         IntransitivePPFrame,
-        PERSON_THING,
+        PERSON_CAUSE,
         forward
       )
     );
@@ -452,7 +452,7 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
       
           ),
         IntransitivePPFrame,
-        PERSON_THING,
+        PERSON_CAUSE,
         backward
       )
     );

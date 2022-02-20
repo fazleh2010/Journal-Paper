@@ -95,7 +95,10 @@ public enum DomainOrRangeType {
     Pope(List.of(URI.create(DBO.getUri() + "Pope"))),
     WineRegion(List.of(URI.create(DBO.getUri() + "WineRegion"))),
     Grape(List.of(URI.create(DBO.getUri() + "Grape"))),
-    Philosopher(List.of(URI.create(DBO.getUri() + "Philosopher"))),    
+    Philosopher(List.of(URI.create(DBO.getUri() + "Philosopher"))),   
+    HockeyTeam(List.of(URI.create(DBO.getUri() + "HockeyTeam"))),   
+    HistoricPlace(List.of(URI.create(DBO.getUri() + "HistoricPlace"))), 
+    FormulaOneRacer(List.of(URI.create(DBO.getUri() + "HistoricPlace"))),
   
     Name(List.of(
             URI.create(DBO.getUri() + "GivenName"),
@@ -143,6 +146,8 @@ public enum DomainOrRangeType {
     AdministrativeRegion(List.of(URI.create(DBO.getUri() + "AdministrativeRegion"))),
     gYear(List.of(URI.create("http://www.w3.org/2001/XMLSchema#gYear"))),
     Currency(List.of(URI.create(DBO.getUri() + "Currency"))),
+    Organisation(List.of(URI.create(DBO.getUri() + "Organisation"))),
+    Company(List.of(URI.create(DBO.getUri() + "Company"))),
     SportsTeam(List.of(
             URI.create(DBO.getUri() + "SportsTeam"),
             URI.create(DBO.getUri() + "HockeyTeam")
@@ -163,10 +168,6 @@ public enum DomainOrRangeType {
             URI.create(DBO.getUri() + "AcademicJournal")
     )),
     Event(List.of(URI.create(DBO.getUri() + "Event"))),
-    Organisation(List.of(
-            URI.create(DBO.getUri() + "Organisation"),
-            URI.create(DBO.getUri() + "Company")
-    )),
     WikicatTimeZones(List.of(URI.create("http://dbpedia.org/class/yago/WikicatTimeZones"))),
     Number(List.of(
             URI.create("http://www.w3.org/2001/XMLSchema#nonNegativeInteger"),

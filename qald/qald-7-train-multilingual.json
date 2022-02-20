@@ -1859,8 +1859,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the mayor of Paris?",
-					"keywords": "mayor, Paris"
+					"string": "Who is the mayor of Bora-Bora?",
+					"keywords": "mayor, Bora-Bora"
 				},
 				{
 					"language": "pt_BR",
@@ -1874,8 +1874,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer ist Bürgermeister von Paris?",
-					"keywords": "Paris, Bürgermeister"
+					"string": "Wer ist Bürgermeister von Bora-Bora?",
+					"keywords": "Bora-Bora, Bürgermeister"
 				},
 				{
 					"language": "es",
@@ -1909,7 +1909,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Paris> <http://dbpedia.org/ontology/mayor> ?uri . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Bora-Bora_(commune)> <http://dbpedia.org/ontology/mayor> ?uri . }"
 			},
 			"answers": [{
 				"head": {
@@ -3132,8 +3132,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the location of the Houses of Parliament?",
-					"keywords": "location, Houses of Parliament"
+					"string": "What is the location of the Palace of Westminster?",
+					"keywords": "location, Palace of Westminster"
 				},
 				{
 					"language": "pt_BR",
@@ -9528,8 +9528,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who composed the soundtrack for Cameron's Titanic?",
-					"keywords": "compose, soundtrack, Cameron's Titanic"
+					"string": "Who composed the soundtrack for Titanic?",
+					"keywords": "compose, soundtrack,Titanic"
 				},
 				{
 					"language": "pt_BR",
@@ -9543,8 +9543,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer hat den Soundtrack für Camerons Titanic geschrieben?",
-					"keywords": "Cameron, Titanic, Soundtrack, geschrieben"
+					"string": "Wer hat den Soundtrack für Titanic geschrieben?",
+					"keywords": "Titanic, Soundtrack, geschrieben"
 				},
 				{
 					"language": "es",
@@ -9553,8 +9553,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Chi ha composto la colonna sonora di Titanic di Cameron?",
-					"keywords": "comporre, colonna sonora, Titanic, Cameron"
+					"string": "Chi ha composto la colonna sonora di Titanic?",
+					"keywords": "comporre, colonna sonora, Titanic"
 				},
 				{
 					"language": "fr",
@@ -13980,7 +13980,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n        res:Rotterdam dbo:leaderName ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n        res:Moscow dbo:leaderName ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -16498,7 +16498,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which professional surfers were born on the Philippines?",
+					"string": "Which actors were born on the Philippines?",
 					"keywords": "professional surfer, born, Philippines"
 				},
 				{
@@ -16538,7 +16538,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n\t?uri dbo:occupation res:Surfing .\n\t?uri dbo:birthPlace res:Philippines .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n\t?uri dbo:occupation res:Actor .\n\t?uri dbo:birthPlace res:Philippines .\n}"
 			},
 			"answers": [{
 				"head": {
