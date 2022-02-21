@@ -2011,7 +2011,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the mayor of the capital of Russia?",
+					"string": "Give me the mayor of the capital of Russia?",
 					"keywords": "mayor, capital, Russia"
 				},
 				{
@@ -6825,8 +6825,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was called Rodzilla?",
-					"keywords": "called, Rodzilla"
+					"string": "Who was called Bird?",
+					"keywords": "called, The Lion of Lemmer"
 				},
 				{
 					"language": "pt_BR",
@@ -6870,7 +6870,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbp: <http://dbpedia.org/property/> \nSELECT DISTINCT ?uri \nWHERE { \n         ?uri dbp:nickname \"Rodzilla\"@en .\n}"
+				"sparql": "PREFIX dbp: <http://dbpedia.org/property/> \nSELECT DISTINCT ?uri \nWHERE { \n         ?uri dbp:nickname 'Bird'@en .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -7246,8 +7246,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is Superwoman's real name?",
-					"keywords": "real name, Superwoman"
+					"string": "What is Batman's real name?",
+					"keywords": "real name, Batman"
 				},
 				{
 					"language": "pt_BR",
@@ -7261,8 +7261,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Was ist Superwomans richtiger Name?",
-					"keywords": "Superwoman, richtiger Name"
+					"string": "Was ist Batmans richtiger Name?",
+					"keywords": "Batman, richtiger Name"
 				},
 				{
 					"language": "es",
@@ -7296,7 +7296,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?s WHERE { <http://dbpedia.org/resource/Superwoman> <http://dbpedia.org/property/alterEgo> ?s . }"
+				"sparql": "SELECT DISTINCT ?s WHERE { <http://dbpedia.org/resource/Batman> <http://dbpedia.org/property/alterEgo> ?s . }"
 			},
 			"answers": [{
 				"head": {
@@ -7972,8 +7972,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "List all games by GMT.",
-					"keywords": "game, GMT"
+					"string": "List all games by GMT Games.",
+					"keywords": "game, GMT Games"
 				},
 				{
 					"language": "pt_BR",
@@ -7982,8 +7982,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Liste alle Spiele von GMT auf.",
-					"keywords": "Spiel, GMT"
+					"string": "Liste alle Spiele von GMT Games auf.",
+					"keywords": "Spiel, GMT Games"
 				},
 				{
 					"language": "es",
@@ -8448,38 +8448,38 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who created Wikipedia?",
-					"keywords": "Wikipedia, created"
+					"string": "Who created Gmail?",
+					"keywords": "Gmail, created"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Quem criou a Wikipedia?",
-					"keywords": "criador, Wikipedia"
+					"string": "Quem criou a Gmail?",
+					"keywords": "criador, Gmail"
 				},
 				{
 					"language": "de",
-					"string": "Wer hat Wikipedia gegründet?",
-					"keywords": "Wikipedia, gründen"
+					"string": "Wer hat Gmail gegründet?",
+					"keywords": "Gmail, gründen"
 				},
 				{
 					"language": "es",
-					"string": "¿Quién creó Wikipedia?",
-					"keywords": "Wikipedia, creador"
+					"string": "¿Quién creó Gmail?",
+					"keywords": "Gmail, creador"
 				},
 				{
 					"language": "it",
-					"string": "Chi ha creato Wikipedia?",
-					"keywords": "Wikipedia, creatore"
+					"string": "Chi ha creato Gmail?",
+					"keywords": "Gmail, creatore"
 				},
 				{
 					"language": "fr",
-					"string": "Qui est le créateur de Wikipedia?",
-					"keywords": "créateur, Wikipedia"
+					"string": "Qui est le créateur de Gmail?",
+					"keywords": "créateur, Gmail"
 				},
 				{
 					"language": "nl",
-					"string": "Wie heeft Wikipedia opgericht?",
-					"keywords": "Wikipedia, oprichter"
+					"string": "Wie heeft Gmail opgericht?",
+					"keywords": "Gmail, oprichter"
 				},
 				{
 					"language": "hi_IN",
@@ -8488,7 +8488,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n\tres:Wikipedia dbo:author ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n\tres:Gmail dbo:author ?uri .\n}"
 			},
 			"answers": [{
 				"head": {

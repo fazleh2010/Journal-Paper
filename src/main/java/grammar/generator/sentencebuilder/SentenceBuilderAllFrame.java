@@ -186,7 +186,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
              System.out.println(this.getTemplateFinder().getSelectedTemplate());
             //exit(1);*/
         }
-         //exit(1);
+        //exit(1);
 
         return sentences;
     }
@@ -454,7 +454,8 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
         
      
         //System.out.println("sentenceTemplates:::" + sentenceTemplates);
-        for (String sentenceTemplate : sentenceTemplates) {           
+        for (String sentenceTemplate : sentenceTemplates) {   
+             System.out.println("sentenceTemplate::"+sentenceTemplate);
             index = index + 1;
             EnglishSentenceBuilder sentenceBuilderFromTemplates = new EnglishSentenceBuilder(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
             TemplateFeatures templateFeatures = new TemplateFeatures(sentenceTemplate);
@@ -491,7 +492,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
             }
             str=str.stripTrailing().replace("_", " ");
             sentences.add(str);
-             System.out.println(str);
+            System.out.println("generated sentence::"+str);
         }
         return new ArrayList<String>(sentences);
 

@@ -160,7 +160,12 @@ public class EnglishSentenceBuilder implements TempConstants {
         else if (attribute.contains(preposition)) {
             word = this.findPreposition(attribute, reference, flagReference);
            
-        } else if (flagReference && isIntergativePronoun(attribute).first) {
+        }
+        else if (attribute.contains(Apostrophe)) {
+            word=LexicalEntryUtil.getSingle(lexicalEntryUtil, Apostrophe);
+        }
+        
+        else if (flagReference && isIntergativePronoun(attribute).first) {
             SubjectType subjectType = null;
             if (reference.contains(range)) {
                 subjectType = findIntergativePronoun(lexicalEntryUtil, this.rangeSelectable);
@@ -182,11 +187,17 @@ public class EnglishSentenceBuilder implements TempConstants {
             word=LexicalEntryUtil.getSingle(lexicalEntryUtil, subjectType.name());
 
         }
+        else if (isInterrogativeOften(attribute).first) {
+            SubjectType subjectType = isInterrogativeOften(attribute).second;
+            word=LexicalEntryUtil.getSingle(lexicalEntryUtil, subjectType.name());
+
+        }
         else if (isInterrogativeMuch(attribute).first) {
             SubjectType subjectType = isInterrogativeMuch(attribute).second;
             word=LexicalEntryUtil.getSingle(lexicalEntryUtil, subjectType.name());
 
         }
+        
         
         else if (flagReference && isInterrogativeEvalution(attribute).first) {
             SubjectType subjectType = isInterrogativeEvalution(attribute).second;
@@ -212,7 +223,18 @@ public class EnglishSentenceBuilder implements TempConstants {
                 word = this.getDeteminerTokenManual(subjectType, col[0], col[1]);
             }
 
-        } else if (interrogativeTemporal(attribute).first) {
+        } 
+        
+        else if (flagReference && isInterrogativePronounDeterminer(attribute).first) {
+            SubjectType subjectType = isInterrogativePronounDeterminer(attribute).second;
+            if (reference.contains(colon)) {
+                String[] col = reference.split(colon);
+                word = this.getDeteminerTokenManual(subjectType, col[0], col[1]);
+            }
+
+        } 
+        
+        else if (interrogativeTemporal(attribute).first) {
               SubjectType subjectType = interrogativeTemporal(attribute).second;
               word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil,subjectType.name());
 
@@ -467,6 +489,14 @@ public class EnglishSentenceBuilder implements TempConstants {
         return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
     }
     
+    public static Pair<Boolean, SubjectType> isInterrogativeOften(String questionType) throws QueGGMissingFactoryClassException {
+        if (questionType.equals(SubjectType.interrogativeOften.toString())) {
+            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativeOften);
+        }
+        else 
+        return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
+    }
+    
     public static Pair<Boolean, SubjectType> isInterrogativeMuch(String questionType) throws QueGGMissingFactoryClassException {
         if (questionType.equals(SubjectType.interrogativeMuch.toString())) {
             return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativeMuch);
@@ -491,6 +521,13 @@ public class EnglishSentenceBuilder implements TempConstants {
     public static Pair<Boolean, SubjectType> isInterrogativeDeterminer(String questionType) throws QueGGMissingFactoryClassException {
         if (questionType.equals(SubjectType.interrogativeDeterminer.toString())) {
             return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativeDeterminer);
+        }
+        return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
+    }
+    
+     public static Pair<Boolean, SubjectType> isInterrogativePronounDeterminer(String questionType) throws QueGGMissingFactoryClassException {
+        if (questionType.equals(SubjectType.interrogativePronounDeterminer.toString())) {
+            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativePronounDeterminer);
         }
         return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
     }

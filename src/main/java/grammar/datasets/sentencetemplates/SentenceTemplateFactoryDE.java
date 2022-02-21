@@ -505,7 +505,7 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
     
         ),
         IntransitivePPFrame,
-        HOW_MANY_PRICE,
+        HOW_MANY_TOTAL,
         forward
       )
     );
@@ -519,7 +519,7 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
            
         ),
         IntransitivePPFrame,
-        HOW_MANY_PRICE,
+        HOW_MANY_TOTAL,
         backward
       )
     );

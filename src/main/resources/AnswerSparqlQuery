@@ -223,3 +223,11 @@ SELECT DISTINCT ?entity ?uri WHERE {
 ?entity <http://dbpedia.org/ontology/manufacturer> ?x . 
  ?entity <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Beverage>.
 ?x <http://dbpedia.org/ontology/location> ?uri . }
+
+PREFIX dbp: <http://dbpedia.org/property/> 
+SELECT DISTINCT ?uri 
+WHERE { 
+         ?uri dbp:nickname 'The Tiger'@en .
+        ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Person>.
+
+}

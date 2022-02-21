@@ -102,9 +102,10 @@ public interface TempConstants {
     public static final String WHEN_WHAT_PAST_THING = "WHEN_WHAT_PAST_THING";
     public static final String WHAT_WHICH_PRESENT_THING_1 = "WHAT_WHICH_PRESENT_THING_1";
     public static final String WHAT_WHICH_PRESENT_THING_2 = "WHAT_WHICH_PRESENT_THING_2";
-    public static final String HOW_MANY_PRICE = "HOW_MANY_PRICE";
+    public static final String HOW_MANY_TOTAL = "HOW_MANY_TOTAL";
     public static final String HOW_MANY_THING = "HOW_MANY_THING";
     public static final String WHERE_WHAT_PRESENT_THING = "WHERE_WHAT_PRESENT_THING";
+    public static final String WHAT_WHICH_LOCATION = "WHAT_WHICH_LOCATION";
     
     public static final String PERSON_PERSON = "PERSON_PERSON";
     
@@ -127,6 +128,7 @@ public interface TempConstants {
     public static final String forward = "forward";
     public static final String backward = "backward";
     public static final String preposition = "preposition";
+    public static final String Apostrophe = "Apostrophe";
     public static final String adjunct = "adjunct";
     public static final String QuestionMark = "?";
     public static final String component_be = "component_be";

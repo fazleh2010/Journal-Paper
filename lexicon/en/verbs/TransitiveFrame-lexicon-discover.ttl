@@ -1,0 +1,87 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :to_discover ;
+  lemon:entry    :discovered ;
+  lemon:entry    :form_discover_preposition .
+
+:to_discover a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_discover ;
+  lemon:otherForm      :form_discovers ;
+  lemon:otherForm      :form_discovered ;
+  lemon:otherForm      :form_discoverperfect ;
+  lemon:sense          :discover_sense_1 ;
+  lemon:synBehavior    :discover_frame_transitive .
+
+:form_discover a         lemon:Form ;
+  lemon:writtenRep     "discover"@en ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_discovers a    lemon:Form ;
+  lemon:writtenRep "discovers"@en ;
+  lexinfo:person   lexinfo:secondPerson .
+
+:form_discovered a   lemon:Form ;
+  lemon:writtenRep "discovered"@en ;
+  lexinfo:tense    lexinfo:past .
+
+:form_discoverperfect a   lemon:Form ;
+  lemon:writtenRep "discovered"@en ;
+  lexinfo:tense    lexinfo:perfect ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:discover_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :discover_subj ;
+  lexinfo:directObject     :discover_obj .
+
+:discover_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :discover_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/discoverer> ;
+  lemon:subjOfProp  :discover_obj ;
+  lemon:objOfProp   :discover_subj ;
+  lemon:condition   :discover_sense_1_condition .
+
+
+:discover_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Planet> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:discovered a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_discovered_canonical ;
+  lemon:otherForm      :form_discovered_by ;
+  lemon:synBehavior    :discovered_frame_adjectivepp ;
+  lemon:sense          :discovered_ontomap .
+
+:form_discovered_canonical a lemon:Form ;
+  lemon:writtenRep         "discover"@en .
+
+:form_discovered_by a    lemon:Form ;
+  lemon:writtenRep     "discover"@en ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:discovered_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :discovered_subj ;
+  lexinfo:prepositionalAdjunct :discovered_obj .
+
+:discovered_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :discovered_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/discoverer> ;
+  lemon:subjOfProp  :discovered_subj ;
+  lemon:objOfProp   :discovered_obj ;
+  lemon:condition   :discover_sense_1_condition .
+:discovered_obj lemon:marker :form_discover_preposition .
+
+## Prepositions ##
+:form_discover_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "by"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

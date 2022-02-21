@@ -13,6 +13,7 @@ public enum SubjectType {
   interrogativePronoun,  // 
   interrogativeDeterminer,
   interrogativeAmount, //how many
+  interrogativeOften, //how often
   interrogativeMuch, //how much
   interrogativeEvalution, //how
   interrogativePronounWhom, //whom
@@ -21,6 +22,7 @@ public enum SubjectType {
   interrogativePronounPerson, // who
   interrogativeDeterminerSingular,     // which
   interrogativeDeterminerPlural,     // which
+  interrogativePronounDeterminer, //what country
   interrogativeTemporal,
   interrogativeCause, //woran
   interrogativePlace;  // where

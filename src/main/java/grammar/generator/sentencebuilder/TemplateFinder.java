@@ -84,7 +84,8 @@ public class TemplateFinder implements TempConstants{
         if (isPerson(subjectUri) && isPlace(objectUri)) {
             type = WHERE_WHO_PAST_PERSON;
         } else if ((isPlace(subjectUri)||isPlace(objectUri)) && isPlace(referenceUri)) {
-            type = WHERE_WHAT_PRESENT_THING;
+             type =WHAT_WHICH_LOCATION;
+            //type = WHERE_WHAT_PRESENT_THING;
         } else if (isPerson(subjectUri) && isDate(referenceUri)) {
             type = WHEN_WHO_PAST_PERSON;
         }  else if (isPerson(subjectUri) && isPerson(objectUri)) {
@@ -98,8 +99,8 @@ public class TemplateFinder implements TempConstants{
         } else if (!isPerson(subjectUri) && isDate(referenceUri)) {
             type = WHEN_WHAT_PAST_THING;
         } 
-        else if (isAmountPriceCheck(referenceUri)) {
-            type = HOW_MANY_PRICE;
+        else if (isAmountTotalCheck(referenceUri)) {
+            type = HOW_MANY_TOTAL;
         } else if (isAmountThingCheck(referenceUri)) {
             type = HOW_MANY_THING;
         }else if(isGrowing(referenceUri)){
@@ -114,7 +115,8 @@ public class TemplateFinder implements TempConstants{
         System.out.println("isPerson(objectUri)::" + isPerson(objectUri));
         System.out.println("isCause(referenceUri)::" + isCause(referenceUri));
         System.out.println("isDate(referenceUri)::" + isDate(referenceUri));
-        System.out.println("isPlace(referenceUri)::" + isPlace(objectUri));
+        System.out.println("isPlace(objectUri)::" + isPlace(objectUri));
+         System.out.println("isPlace(referenceUri)::" + isPlace(referenceUri));
           System.out.println("isActivity(referenceUri)::" + isActivity(referenceUri));
         System.out.println("type::" + type);
         exit(1);*/
@@ -129,8 +131,8 @@ public class TemplateFinder implements TempConstants{
         String referenceUri = lexicalEntryUtil.getReferenceUri();
 
         
-        if (isAmountPriceCheck(referenceUri)) {
-            type = HOW_MANY_PRICE;
+        if (isAmountTotalCheck(referenceUri)) {
+            type = HOW_MANY_TOTAL;
         } else if (isAmountThingCheck(referenceUri)) {
             type = HOW_MANY_THING;
         }else if(isPerson(subjectUri) && isPerson(objectUri)) {
@@ -194,11 +196,11 @@ public class TemplateFinder implements TempConstants{
 
     }
      
-    public static Boolean isAmountPriceCheck(String string) {
+    public static Boolean isAmountTotalCheck(String string) {
         if (StringUtils.isBlank(string)) {
             return false;
         }
-        for (URI key : DomainOrRangeTypeCheck.AmountPriceCheck.getReferences()) {
+        for (URI key : DomainOrRangeTypeCheck.AmountTotalCheck.getReferences()) {
             if (string.equals(key.toString())) {
                 return true;
             }
@@ -340,7 +342,7 @@ public class TemplateFinder implements TempConstants{
         if (StringUtils.isBlank(string)) {
             return false;
         }
-        for (URI key : DomainOrRangeTypeCheck.LocationCheck.getReferences()) {
+        for (URI key : DomainOrRangeTypeCheck.LabelCheck.getReferences()) {
 
             if (string.equals(key.toString())) {
                 return true;

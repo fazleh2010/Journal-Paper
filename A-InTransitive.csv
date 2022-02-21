@@ -1,0 +1,2 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural
+locate_in_5,verb,locate,locates,located,located,in,IntransitivePPFrame,range,domain,1,dbo:headquarter ,dbo:MilitaryUnit,dbo:Country,military unit,military units,country,countries

@@ -92,17 +92,21 @@ public enum DomainOrRangeTypeCheck {
     PlaceCheck(
     List.of(
       URI.create(DBO.getUri() + "Place"),
+      URI.create(DBO.getUri() + "Location"),
       URI.create(DBO.getUri() + "City"),
       URI.create(DBO.getUri() + "State"),
       URI.create(DBO.getUri() + "Country"),
       URI.create(DBO.getUri() + "PopulatedPlace"),
+      URI.create(DBO.getUri() +  "NaturalPlace"),
+      URI.create(DBO.getUri() +  "HistoricPlace"),
+      URI.create(DBO.getUri() +  "Road"),
+      URI.create(DBO.getUri() +  "locatedInArea"),
+      URI.create(DBO.getUri() + "country"),
+      URI.create(DBO.getUri() +  "placeOfBurial"),
       URI.create(DBO.getUri() + "birthPlace"),
       URI.create(DBO.getUri() + "deathPlace"),
-      URI.create(DBO.getUri() +  "placeOfBurial"),
-      URI.create(DBO.getUri() +  "NaturalPlace"),
-      URI.create(DBO.getUri() +  "routeStart"),
-      URI.create(DBO.getUri() +  "HistoricPlace"),
-      URI.create(DBO.getUri() +  "Road")
+      URI.create(DBO.getUri() +  "routeStart")
+
     )
   ),
     NameCheck(List.of(
@@ -178,8 +182,9 @@ public enum DomainOrRangeTypeCheck {
             URI.create(DBO.getUri() + "Musical")
     )),
     
-    AmountPriceCheck(List.of(
+    AmountTotalCheck(List.of(
             URI.create(DBO.getUri() + "budget"),
+            URI.create(DBO.getUri() + "populationTotal"),
             URI.create("http://www.w3.org/2001/XMLSchema#double")
     )),
     
@@ -209,7 +214,7 @@ public enum DomainOrRangeTypeCheck {
             URI.create(DBO.getUri() + "EducationalInstitution"),
             URI.create(DBO.getUri() + "University")
     )),
-    LocationCheck(List.of(
+    LabelCheck(List.of(
             URI.create(DBO.getUri() + "abbreviation")
     )),
     
