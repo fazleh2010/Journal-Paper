@@ -189,7 +189,7 @@ public enum DomainOrRangeTypeCheck {
     )),
     
     AmountThingCheck(List.of(
-            URI.create(DBO.getUri() + "language")
+            //URI.create(DBO.getUri() + "language")
     )),
     
     
@@ -197,7 +197,8 @@ public enum DomainOrRangeTypeCheck {
     ArchitecturalStructureCheck(List.of(
             URI.create(DBO.getUri() + "ArchitecturalStructure"),
             URI.create(DBO.getUri() + "HistoricBuilding"),
-            URI.create(DBO.getUri() + "Building")
+            URI.create(DBO.getUri() + "Building"),
+             URI.create(DBO.getUri() + "Stadium")
     )),
    
     RiverCheck(List.of(

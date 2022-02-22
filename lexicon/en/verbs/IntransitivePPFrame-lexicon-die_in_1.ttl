@@ -15,7 +15,6 @@
   lemon:canonicalForm  :form_die_in_1 ;
   lemon:otherForm      :form_die_in_1_past ;
   lemon:sense          :die_in_1_sense_1 ;
-  lemon:sense          :die_in_1_sense_2 ;
   lemon:synBehavior    :die_in_1_frame .
 
 :form_die_in_1 a           lemon:Form ;
@@ -55,17 +54,6 @@
 :die_in_1_sense_1_condition a      lemon:condition ;
   lemon:propertyDomain <http://dbpedia.org/ontology/Person> ;
   lemon:propertyRange  <http://www.w3.org/2001/XMLSchema#date> .
-
-:die_in_1_sense_2 a     lemon:OntoMap, lemon:LexicalSense ;
-  lemon:ontoMapping :die_in_1_ontomap ;
-  lemon:reference   <http://dbpedia.org/ontology/deathPlace> ;
-  lemon:subjOfProp  :die_in_1_obj ;
-  lemon:objOfProp   :die_in_1_subj ;
-  lemon:condition   :die_in_1_sense_2_condition .
-
-:die_in_1_sense_2_condition a      lemon:condition ;
-  lemon:propertyDomain <http://dbpedia.org/ontology/Politician> ;
-  lemon:propertyRange  <http://dbpedia.org/ontology/Place> .
 
 
 :die_in_1_obj lemon:marker :form_die_in_1_preposition .

@@ -1,2 +1,9 @@
 LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural
-locate_in_5,verb,locate,locates,located,located,in,IntransitivePPFrame,range,domain,1,dbo:headquarter ,dbo:MilitaryUnit,dbo:Country,military unit,military units,country,countries
+start_in_1,verb,start,starts,started,started,in,IntransitivePPFrame,domain,range,1,dbo:routeStart,dbo:Road,dbo:City,road,roads,city,cities
+start_in_2,verb,start,starts,started,started,in,IntransitivePPFrame,domain,range,1,dbp:mouthLocation,dbo:River,dbo:Country,river,rivers,country,countries
+end_in,verb,end,ends,ended,ended,in,IntransitivePPFrame,domain,range,1,dbo:routeEnd,dbo:Road,dbo:City,road,roads,city,cities
+locate_in_1,verb,locate,locates,located,located,in,IntransitivePPFrame,domain,range,1,dbo:country,dbo:City,dbo:Country,city,cities,Country,Countries
+locate_in_2,verb,locate,locates,located,located,in,IntransitivePPFrame,domain,range,1,dbp:location,dbo:MilitaryUnit,dbo:Location,military unit,military units,location,locations
+locate_in_3,verb,locate,locates,located,located,in,IntransitivePPFrame,domain,range,1,dbp:location,dbo:ArchitecturalStructure,dbo:Location,Architectural structure,ArchitecturalStructures,city,cities
+locate_in_4,verb,locate,locates,located,located,in,IntransitivePPFrame,domain,range,1,dbo:country,dbo:Lake,dbo:Country,lake,lakes,country,countries
+locate_in_5,verb,locate,locates,located,located,in,IntransitivePPFrame,domain,range,1, dbo:locatedInArea,dbo:Mountain,dbo:Country,lake,lakes,country,countries

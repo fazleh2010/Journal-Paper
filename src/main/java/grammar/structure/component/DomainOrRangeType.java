@@ -155,13 +155,11 @@ public enum DomainOrRangeType {
     SoccerClub(List.of(
             URI.create(DBO.getUri() + "SoccerClub")
     )),
-    SportsLeague(List.of(
-            URI.create(DBO.getUri() + "VolleyballLeague"),
-            URI.create(DBO.getUri() + "SoccerLeague"),
-            URI.create(DBO.getUri() + "SportsLeague"),
-            URI.create(DBO.getUri() + "BasketballLeague"),
-            URI.create(DBO.getUri() + "PoloLeague")
-    )),
+    SportsLeague(List.of(URI.create(DBO.getUri() + "SportsLeague"))),
+    VolleyballLeague(List.of(URI.create(DBO.getUri() + "VolleyballLeague"))),
+    SoccerLeague(List.of(URI.create(DBO.getUri() + "SoccerLeague"))),
+    BasketballLeague(List.of(URI.create(DBO.getUri() + "BasketballLeague"))),
+    PoloLeague(List.of(URI.create(DBO.getUri() + "PoloLeague"))),
     Band(List.of(URI.create(DBO.getUri() + "Band"))),
     Magazine(List.of(
             URI.create(DBO.getUri() + "Magazine"),

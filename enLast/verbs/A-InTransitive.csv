@@ -1,6 +1,0 @@
-LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural
-born_in_1,verb,born,-,born,born,in,IntransitivePPFrame,domain,range,1,dbo:birthYear,dbo:Person,xsd:date,person,persons,year,years
-born_in_2,verb,born,-,born,born,in,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Person,dbo:Place,person,persons,place,places
-born_in_3,verb,born,-,born,born,in,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Actor,dbo:Country,actor,actors,country,countries
-produced_in_1,verb,produce,produces,produced,produced,in,IntransitivePPFrame,domain,range,1,dbo:wineProduced,dbo:Location,dbo:Company,location,locations,company,company
-compose_for_1,verb,compose,composes,composed,composed,for,IntransitivePPFrame,range,domain,1,dbo:musicComposer,dbo:Film,dbo:Person,film,films,person,persons

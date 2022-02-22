@@ -52,7 +52,7 @@
   lemon:condition   :bury_in_1_sense_1_condition .
 
 :bury_in_1_sense_1_condition a      lemon:condition ;
-  lemon:propertyDomain <http://dbpedia.org/ontology/Politician> ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Person> ;
   lemon:propertyRange  <http://dbpedia.org/ontology/City> .
 
 

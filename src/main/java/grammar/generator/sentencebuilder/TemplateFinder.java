@@ -47,6 +47,10 @@ public class TemplateFinder implements TempConstants{
           
                 this.selectedTemplate = this.findGradableTemplate();
                 this.propertyReference = this.findReference();
+                System.out.println("selectedTemplate::::"+selectedTemplate);
+                System.out.println("propertyReference::::"+propertyReference);
+                //exit(1);
+
         }
     }
 
@@ -248,11 +252,11 @@ public class TemplateFinder implements TempConstants{
         return false;
     }
     
-    public static boolean isLocation(String string) {
+    public static boolean isArchitecturalStructureCheck(String string) {
         if (StringUtils.isBlank(string)) {
             return false;
         }
-        for (URI key : DomainOrRangeTypeCheck.Location.getReferences()) {
+        for (URI key : DomainOrRangeTypeCheck.ArchitecturalStructureCheck.getReferences()) {
             if (string.equals(key.toString())) {
                 return true;
             }
@@ -358,12 +362,18 @@ public class TemplateFinder implements TempConstants{
         String referenceUri = this.lexicalEntryUtil.getReferenceUri();
         String string=subjectUri;
         String type=null;
+        System.out.println("subjectUri::"+subjectUri);
+         System.out.println("objectUri::"+objectUri);
+         System.out.println("referenceUri::"+referenceUri);
+          System.out.println("string::"+string);
 
-        if (this.isPlace(string)) {
-            type= superlativeCountry;
-        }
-        else if (this.isLocation(string)) {
+        
+
+        if (this.isPlace(string)&&this.isArchitecturalStructureCheck(objectUri)) {
             type= superlativeLocation;
+        }
+        else if (this.isPlace(string)&&!this.isArchitecturalStructureCheck(objectUri)) {
+            type= superlativeCountry;
         }
         else if (this.isPerson(string)) {
             type= superlativePerson;

@@ -3056,7 +3056,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "How many people live in Poland?",
+					"string": "How many people live in Eurasian_Economic_Union?",
 					"keywords": "How many people, Poland"
 				},
 				{
@@ -9099,8 +9099,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the youngest player in the Premier League?",
-					"keywords": "player, Premier League, youngest"
+					"string": "Who is the youngest politician?",
+					"keywords": "player, politician, youngest"
 				},
 				{
 					"language": "pt_BR",
@@ -9144,7 +9144,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nSELECT DISTINCT ?uri \nWHERE { \n        ?uri dbo:team ?x . \n        ?x dbo:league res:Premier_League . \n        ?uri dbo:birthDate ?y . \n} \nORDER BY DESC(?y) \nOFFSET 0 LIMIT 1"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nSELECT DISTINCT ?uri \nWHERE {?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Politician> . \n        ?uri dbo:birthDate ?y . \n} \nORDER BY DESC(?y) \nOFFSET 0 LIMIT 1"
 			},
 			"answers": [{
 				"head": {
@@ -10230,8 +10230,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the king of the Parliament of Barbados?",
-					"keywords": "king, Parliament of Barbados"
+					"string": "Who is the king of Parliament of Australia?",
+					"keywords": "king, Parliament of Australia"
 				},
 				{
 					"language": "pt_BR",
@@ -10245,8 +10245,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer ist der König der Parliament of Barbados?",
-					"keywords": "König, Parliament of Barbados"
+					"string": "Wer ist der König der Parliament of Australia?",
+					"keywords": "König, Parliament of Australia"
 				},
 				{
 					"language": "es",
@@ -10280,7 +10280,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Parliament_of_Barbados> <http://dbpedia.org/ontology/leader> ?uri . ?uri a <http://dbpedia.org/ontology/Royalty> . } "
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Parliament_of_Australia> <http://dbpedia.org/ontology/leader> ?uri . ?uri a <http://dbpedia.org/ontology/Royalty> . } "
 			},
 			"answers": [{
 				"head": {
@@ -10356,7 +10356,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Nikos_Kazantzakis> <http://dbpedia.org/ontology/deathPlace> ?uri . ?uri a <http://dbpedia.org/ontology/Town> . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Nikos_Kazantzakis> <http://dbpedia.org/ontology/deathPlace> ?uri . ?uri a <http://dbpedia.org/ontology/City> . }"
 			},
 			"answers": [{
 				"head": {
@@ -10595,17 +10595,17 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "In which military conflicts did Lawrence of Arabia participate?",
+					"string": "In which military conflicts did Thomas Edward Lawrence participate?",
 					"keywords": "Lawrence of Arabia, military conflict"
 				},
 				{
 					"language": "pt_BR",
-					"string": "De quais conflitos militares Lawrence da Arábia participou?",
+					"string": "De quais conflitos militares Thomas Edward Lawrence participou?",
 					"keywords": "conflitos militares, Lawrence da Arabia"
 				},
 				{
 					"language": "de",
-					"string": "An welchen militärischen Auseinandersetzungen war Lawrence von Arabien beteiligt?",
+					"string": "An welchen militärischen Auseinandersetzungen war Thomas Edward Lawrence beteiligt?",
 					"keywords": "Lawrence von Arabien, militärische Auseinandersetzung"
 				},
 				{
@@ -10615,7 +10615,7 @@
 				},
 				{
 					"language": "it",
-					"string": "A quali conflitti militari ha partecipato Lawrence d'Arabia?",
+					"string": "A quali conflitti militari ha partecipato Thomas Edward Lawrence?",
 					"keywords": "Lawrence d'Arabia, conflitto militare"
 				},
 				{
@@ -11172,7 +11172,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which country was Bill Gates born in?",
+					"string": "Which city was Bill Gates born in?",
 					"keywords": "country, born, Bill Gates"
 				},
 				{
@@ -11187,7 +11187,7 @@
 				},
 				{
 					"language": "de",
-					"string": "In welchem Land ist Bill Gates geboren?",
+					"string": "In welcher Stadt ist Bill Gates geboren?",
 					"keywords": "Bill Gates, Land, geboren"
 				},
 				{
@@ -11222,7 +11222,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Bill_Gates> <http://dbpedia.org/ontology/birthPlace> ?x . ?x <http://dbpedia.org/ontology/country> ?uri . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Bill_Gates> <http://dbpedia.org/ontology/birthPlace> ?uri . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/City> . }"
 			},
 			"answers": [{
 				"head": {
@@ -12025,13 +12025,13 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What country is Epicentric from?",
-					"keywords": "country, Sitecore"
+					"string": "What country is MetaTV from?",
+					"keywords": "country, MetaTV"
 				},
 				{
 					"language": "pt_BR",
-					"string": "De que país é a Sitecore",
-					"keywords": "país, Sitecore"
+					"string": "De que país é a MetaTV",
+					"keywords": "país, MetaTV"
 				},
 				{
 					"language": "fa",
@@ -12040,8 +12040,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Aus welchem Land kommt Epicentric?",
-					"keywords": "Epicentric, Land"
+					"string": "Aus welchem Land kommt MetaTV?",
+					"keywords": "MetaTV, Land"
 				},
 				{
 					"language": "es",
@@ -12050,8 +12050,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Di che nazione è Sitecore?",
-					"keywords": "nazione, Sitecore"
+					"string": "Di che nazione è MetaTV?",
+					"keywords": "nazione, MetaTV"
 				},
 				{
 					"language": "fr",
@@ -12075,7 +12075,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Epicentric> <http://dbpedia.org/ontology/foundationPlace> ?uri . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/MetaTV> <http://dbpedia.org/ontology/foundationPlace> ?uri . }"
 			},
 			"answers": [{
 				"head": {
@@ -12243,13 +12243,13 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was Omar Khayyam inspired by?",
-					"keywords": "person, inspiring, Omar Khayyam"
+					"string": "Who was Friedrich Wilhelm Joseph Schelling inspired by?",
+					"keywords": "person, inspiring, Friedrich Wilhelm Joseph Schelling"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Em quem Vincent van Gogh inspirou-se?",
-					"keywords": "inspiração, Vincent van Gogh"
+					"string": "Em quem Friedrich Wilhelm Joseph Schelling inspirou-se?",
+					"keywords": "inspiração, Friedrich Wilhelm Joseph Schelling"
 				},
 				{
 					"language": "fa",
@@ -12258,8 +12258,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer hat Omar Khayyam inspiriert?",
-					"keywords": "Omar Khayyam, Inspiration"
+					"string": "Wer hat Friedrich Wilhelm Joseph Schelling inspiriert?",
+					"keywords": "Friedrich Wilhelm Joseph Schelling, Inspiration"
 				},
 				{
 					"language": "es",
@@ -12268,8 +12268,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Da chi fu inspirato Vincent van Gogh?",
-					"keywords": "persona, ispirare, Vincent van Gogh"
+					"string": "Da chi fu inspirato Friedrich Wilhelm Joseph Schelling?",
+					"keywords": "persona, ispirare, Friedrich Wilhelm Joseph Schelling"
 				},
 				{
 					"language": "fr",
@@ -12293,7 +12293,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/influenced> <http://dbpedia.org/resource/Omar_Khayyam> . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/influenced> <http://dbpedia.org/resource/Friedrich_Wilhelm_Joseph_Schelling> . }"
 			},
 			"answers": [{
 				"head": {
@@ -13372,13 +13372,13 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "In which city does Sylvester Stallone live?",
-					"keywords": "city, live, Sylvester Stallone"
+					"string": "In which city does Bruny Surin live?",
+					"keywords": "city, live, Bruny Surin"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Em que cidade Sylvester Stallone mora?",
-					"keywords": "cidade, Silvester Stallone, vive"
+					"string": "Em que cidade Bruny Surin mora?",
+					"keywords": "cidade, Bruny Surin, vive"
 				},
 				{
 					"language": "fa",
@@ -13387,8 +13387,8 @@
 				},
 				{
 					"language": "de",
-					"string": "In welcher Stadt wohnt Sylvester Stallone?",
-					"keywords": "Sylvester Stallone, wohnen, Stadt"
+					"string": "In welcher Stadt wohnt Bruny Surin?",
+					"keywords": "Bruny Surin, wohnen, Stadt"
 				},
 				{
 					"language": "es",
@@ -13397,8 +13397,8 @@
 				},
 				{
 					"language": "it",
-					"string": "In quale città vive Sylvester Stallone?",
-					"keywords": "città, vive, Sylvester Stallone"
+					"string": "In quale città vive Bruny Surin?",
+					"keywords": "città, vive, Bruny Surin"
 				},
 				{
 					"language": "fr",
@@ -13422,7 +13422,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri a <http://dbpedia.org/ontology/City> . <http://dbpedia.org/resource/Sylvester_Stallone> <http://dbpedia.org/ontology/residence> ?uri . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri a <http://dbpedia.org/ontology/City> . <http://dbpedia.org/resource/Bruny_Surin> <http://dbpedia.org/ontology/residence> ?uri . }"
 			},
 			"answers": [{
 				"head": {

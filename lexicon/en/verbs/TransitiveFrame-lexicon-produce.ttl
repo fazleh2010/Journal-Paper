@@ -38,8 +38,8 @@
   lexinfo:person   lexinfo:thirdPerson .
 
 :produce_frame_transitive a lexinfo:TransitiveFrame ;
-  lexinfo:subject          :produce_subj ;
-  lexinfo:directObject     :produce_obj .
+  lexinfo:subject          :produce_obj ;
+  lexinfo:directObject     :produce_subj .
 
 :produce_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
   lemon:ontoMapping :produce_sense_1 ;
@@ -50,8 +50,8 @@
 
 
 :produce_sense_1_condition a    lemon:condition ;
-  lemon:propertyDomain <http://dbpedia.org/ontology/Ship> ;
-  lemon:propertyRange  <http://dbpedia.org/ontology/Company> .
+  lemon:propertyDomain <http://dbpedia.org/ontology/Company> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Ship> .
 
 :produceed a            lemon:LexicalEntry ;
   lexinfo:partOfSpeech lexinfo:adjective ;

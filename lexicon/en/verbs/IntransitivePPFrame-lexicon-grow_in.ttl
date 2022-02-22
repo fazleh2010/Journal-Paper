@@ -15,6 +15,7 @@
   lemon:canonicalForm  :form_grow_in ;
   lemon:otherForm      :form_grow_in_past ;
   lemon:sense          :grow_in_sense_1 ;
+  lemon:sense          :grow_in_sense_2 ;
   lemon:synBehavior    :grow_in_frame .
 
 :form_grow_in a           lemon:Form ;
@@ -52,6 +53,17 @@
   lemon:condition   :grow_in_sense_1_condition .
 
 :grow_in_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/WineRegion> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Grape> .
+
+:grow_in_sense_2 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :grow_in_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/growingGrape> ;
+  lemon:subjOfProp  :grow_in_obj ;
+  lemon:objOfProp   :grow_in_subj ;
+  lemon:condition   :grow_in_sense_2_condition .
+
+:grow_in_sense_2_condition a      lemon:condition ;
   lemon:propertyDomain <http://dbpedia.org/ontology/WineRegion> ;
   lemon:propertyRange  <http://dbpedia.org/ontology/Grape> .
 

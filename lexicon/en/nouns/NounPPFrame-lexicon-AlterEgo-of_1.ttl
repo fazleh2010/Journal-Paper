@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :AlterEgo-of_1 ;
+  lemon:entry    :AlterEgo-of_1_form_preposition .
+
+:AlterEgo-of_1 a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :AlterEgo-of_1_form ;
+  lemon:otherForm  :AlterEgo-of_1_singular ;
+  lemon:otherForm  :AlterEgo-of_1_plural ;
+  lemon:sense          :AlterEgo-of_1_sense_1 ;
+  lemon:synBehavior    :AlterEgo-of_1_nounpp .
+
+:AlterEgo-of_1_form a lemon:Form ;
+  lemon:writtenRep "alter ego"@en .
+
+:AlterEgo-of_1_singular a    lemon:Form ;
+  lemon:writtenRep "alter ego"@en ;
+  lexinfo:number   lexinfo:singular .
+
+:AlterEgo-of_1_plural a   lemon:Form ;
+  lemon:writtenRep "XX"@en ;
+  lexinfo:number    lexinfo:plural .
+
+:AlterEgo-of_1_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:AlterEgo-of_1_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :AlterEgo-of_1_sense_1 ;
+  lemon:reference           <http://dbpedia.org/property/alterEgo> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :AlterEgo-of_1_sense_1_condition .
+
+:AlterEgo-of_1_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/ComicsCharacter> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Person> .
+
+:arg2 lemon:marker :AlterEgo-of_1_form_preposition .
+## Prepositions ##
+:AlterEgo-of_1_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "of"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

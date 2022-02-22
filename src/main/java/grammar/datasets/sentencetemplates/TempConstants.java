@@ -106,6 +106,8 @@ public interface TempConstants {
     public static final String HOW_MANY_THING = "HOW_MANY_THING";
     public static final String WHERE_WHAT_PRESENT_THING = "WHERE_WHAT_PRESENT_THING";
     public static final String WHAT_WHICH_LOCATION = "WHAT_WHICH_LOCATION";
+    public static final String WHAT_WHICH_LOCATION_COMPANY = "WHAT_WHICH_LOCATION_COMPANY";
+
     
     public static final String PERSON_PERSON = "PERSON_PERSON";
     

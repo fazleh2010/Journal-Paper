@@ -1,2 +1,0 @@
-LemonEntry,partOfSpeech,writtenForm,comparative,superlative,SyntacticFrame,predFrame,sense,reference,oils:boundTo,oils:degree,domain,range,preposition,domainWrittenSingularForm,domainWrittenPluralForm,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
-High_2,adjective,high,higher,highest,AdjectiveSuperlativeFrame,PredSynArg,1,oils:CovariantScalar,dbo:height,oils:high,dbo:Country,dbo:Lighthouse,in,country,countries,Lighthouse,Lighthouses

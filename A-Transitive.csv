@@ -1,3 +1,0 @@
-LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,SyntacticFrame,subject,directObject,sense,reference,domain,range,passivePreposition,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural,GrammarRule 1:question1
-live_1,verb,live,lives,lived,lived,TransitiveFrame,range,domain,1,dbo:ethnicGroup,dbo:EthnicGroup,dbo:Country,in,ethnic group,ethnic groups,country,countries,"Which dbo:Country (X) lives,lived Y(dbo:EthnicGroup)?"
-Live_2,verb,live,lives,lived,lived,TransitiveFrame,range,domain,1,dbo:populationTotal,dbo:Country,dbo:Person,in,country,countries,person,person,"Which dbo:Country (X) lives,lived Y(dbo:EthnicGroup)?"

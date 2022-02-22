@@ -42,6 +42,7 @@ import static grammar.datasets.sentencetemplates.TempConstants.WHERE_WHAT_PRESEN
 import static grammar.datasets.sentencetemplates.TempConstants.PERSON_CAUSE;
 import static grammar.datasets.sentencetemplates.TempConstants.WHAT_WHICH_LOCATION;
 import static grammar.datasets.sentencetemplates.TempConstants.HOW_MANY_TOTAL;
+import static grammar.datasets.sentencetemplates.TempConstants.WHAT_WHICH_LOCATION_COMPANY;
 
 class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
 
@@ -215,7 +216,6 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
          "interrogativeDeterminer(domain:singular) verb(component_do:past:singular) adjunct(range) verb(mainVerb:present:thridPerson)?",
          //Which movies did Kurosawa direct?
          "interrogativeDeterminer(domain:plural) verb(component_do:past:singular) adjunct(range) verb(mainVerb:present:thridPerson)?"
-     
         ),
         TransitiveFrame,
         PERSON_CAUSE,
@@ -256,7 +256,8 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         "interrogativeDeterminer(domain:plural) verb(component_be:past:plural) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?" ,
         //Whom did Lance Bass marry?
         "interrogativePronounWhom verb(component_do:past:singular) object(domain) verb(mainVerb:present:thridPerson)?",
-        "interrogativePronounWhom verb(component_do:present:singular) object(domain) verb(mainVerb:present:thridPerson)?"
+         // //Who was Omar Khayyam inspired by?
+         "interrogativePronoun(domain) verb(component_be:past:singular) adjunct(range) verb(mainVerb:perfect:thridPerson) preposition?"
         ),
         TransitiveFrame,
         PERSON_PERSON,
@@ -395,7 +396,10 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         "preposition interrogativeDeterminer(range:plural) verb(component_be:present:plural) object(domain) verb(mainVerb:perfect:singular)?",
         "preposition interrogativeDeterminer(range:singular) verb(component_be:present:singular) object(domain) verb(mainVerb:perfect:singular)?",
          //Where is Fort Knox located?
-         "interrogativePlace verb(component_be:present:singular) object(domain) verb(mainVerb:perfect:singular)?"
+         "interrogativePlace verb(component_be:present:singular) object(domain) verb(mainVerb:perfect:singular)?",
+         //In which countries do people speak Japanese?
+         "preposition interrogativeDeterminer(range:plural) verb(component_do:present:singular) verb(mainVerb:present:singular) object(domain)?"
+
                 
                 ),
         IntransitivePPFrame,
@@ -421,7 +425,9 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
           "interrogativeDeterminer(domain:plural) verb(mainVerb:present:thridPerson) preposition adjunct(range)?"
           //Give me all launch pads operated by NASA.
            //"verb(component_imperative_transitive:present:singular) pronoun(pronoun_personal) determiner(all) object(range) verb(mainVerb:present:thridPerson) preposition adjunct(domain)."
-            ),
+           //Where does Piccadilly start?   
+           //"interrogativePlace verb(component_do:present:singular) object(domain) verb(mainVerb:present:singular)?"
+        ),
         IntransitivePPFrame,
         WHAT_WHICH_PRESENT_THING_1,
         backward
@@ -469,6 +475,8 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         backward
       )
     );
+      
+      
       
       
       
