@@ -1124,8 +1124,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the daughter of Robert Kennedy married to?",
-					"keywords": "Robert Kennedy, daughter, married"
+					"string": "Who was marry to the daughter of  Abraham Lincoln?",
+					"keywords": "Abraham Lincoln, daughter, married"
 				},
 				{
 					"language": "pt_BR",
@@ -1174,7 +1174,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE {  <http://dbpedia.org/resource/Robert_F._Kennedy> <http://dbpedia.org/ontology/child> ?child .  ?child <http://dbpedia.org/ontology/spouse> ?uri . } "
+				"sparql": "SELECT DISTINCT ?uri WHERE {  <http://dbpedia.org/resource/Abraham_Lincoln> <http://dbpedia.org/ontology/child> ?child .  ?child <http://dbpedia.org/ontology/spouse> ?uri . } "
 			},
 			"answers": [{
 				"head": {
@@ -7180,18 +7180,18 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which country does the creator of Miffy come from?",
-					"keywords": "Miffy, creator, country"
+					"string": "Which country does the creator of Super-Chief come from?",
+					"keywords": "Super-Chief, creator, country"
 				},
 				{
 					"language": "pt_BR",
-					"string": "De que país vem o criador de Miffy?",
-					"keywords": "país, criador, Miffy"
+					"string": "De que país vem o criador de Superman Kal Kent?",
+					"keywords": "país, criador, Superman Kal Kent"
 				},
 				{
 					"language": "de",
-					"string": "Aus welchem Land kommt der Erfinder von Nijntje?",
-					"keywords": "Nijntje, Erfinder, Land"
+					"string": "Aus welchem Land kommt der Super-Chief?",
+					"keywords": "Super-Chief, Land"
 				},
 				{
 					"language": "es",
@@ -7220,7 +7220,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE {\n\tres:Miffy dbo:creator ?x .\n\t?x dbo:nationality ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE {\n\tres:Super-Chief dbo:creator ?x .\n\t?x dbo:nationality ?uri .\n}"
 			},
 			"answers": [{
 				"head": {

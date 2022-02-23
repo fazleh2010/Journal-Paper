@@ -104,8 +104,8 @@ public enum DomainOrRangeTypeCheck {
       URI.create(DBO.getUri() + "country"),
       URI.create(DBO.getUri() +  "placeOfBurial"),
       URI.create(DBO.getUri() + "birthPlace"),
-      URI.create(DBO.getUri() + "deathPlace"),
-      URI.create(DBO.getUri() +  "routeStart")
+      URI.create(DBO.getUri() + "deathPlace")
+      //URI.create(DBO.getUri() +  "routeStart")
 
     )
   ),
@@ -190,6 +190,7 @@ public enum DomainOrRangeTypeCheck {
     
     AmountThingCheck(List.of(
             //URI.create(DBO.getUri() + "language")
+            URI.create(DBO.getUri() + "numberOfPages")
     )),
     
     

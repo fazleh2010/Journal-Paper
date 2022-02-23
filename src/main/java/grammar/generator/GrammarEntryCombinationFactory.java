@@ -4,6 +4,7 @@ import grammar.structure.component.DomainOrRangeType;
 import grammar.structure.component.GrammarEntry;
 import grammar.structure.component.SentenceBindings;
 import grammar.structure.component.SentenceType;
+import static java.lang.System.exit;
 import lombok.NoArgsConstructor;
 import org.apache.jena.graph.Triple;
 import org.apache.jena.sparql.algebra.Algebra;
@@ -28,89 +29,104 @@ public class GrammarEntryCombinationFactory {
   private static final Logger LOG = LogManager.getLogger(GrammarEntryCombinationFactory.class);
 
 
-  public List<GrammarEntry> generateCombinations(List<GrammarEntry> grammarEntries, String bindingVariable) {
-    final String newMappingForBindingVariable = "x";
-    List<GrammarEntry> combinations = new ArrayList<GrammarEntry>();
-    List<GrammarEntry> sentenceGrammarEntries =
-      grammarEntries.stream()
-                    .filter(grammarEntry -> grammarEntry.getType().equals(SentenceType.SENTENCE))
-                    .collect(Collectors.toList());
+    public List<GrammarEntry> generateCombinations(List<GrammarEntry> grammarEntries, String bindingVariable) {
+        final String newMappingForBindingVariable = "x";
+        List<GrammarEntry> combinations = new ArrayList<GrammarEntry>();
+        List<GrammarEntry> sentenceGrammarEntries
+                = grammarEntries.stream()
+                        .filter(grammarEntry -> grammarEntry.getType().equals(SentenceType.SENTENCE))
+                        .collect(Collectors.toList());
+                     
 
-    for (GrammarEntry sentenceEntry : sentenceGrammarEntries) {
-      // Parse first sentence to determine the target type to filter for
-      if (isNull(sentenceEntry.getSentences()) || sentenceEntry.getSentences().isEmpty()) {
-        LOG.error("There are no sentences for {}", sentenceEntry.getSparqlQuery());
-        continue;
-      }
-      String targetType = getTargetTypeFromSentence(sentenceEntry.getSentences().get(0), bindingVariable);
-      SentenceType sentenceType = SentenceType.getMatchingType(targetType);
-      // Filter all grammar entries for matching types (sentenceEntry#bindingType = grammarEntry#returnType)
-      List<GrammarEntry> filteredEntries =
-        grammarEntries.stream()
-                      .filter(grammarEntry -> grammarEntry.getType().equals(sentenceType))
-                      .filter(grammarEntry -> matchSentenceBindingToNPReturn(sentenceEntry, grammarEntry))
-                      .collect(Collectors.toList());
+        for (GrammarEntry sentenceEntry : sentenceGrammarEntries) {
+            // Parse first sentence to determine the target type to filter for
+            if (isNull(sentenceEntry.getSentences()) || sentenceEntry.getSentences().isEmpty()) {
+                LOG.error("There are no sentences for {}", sentenceEntry.getSparqlQuery());
+                continue;
+            }
+            String targetType = getTargetTypeFromSentence(sentenceEntry.getSentences().get(0), bindingVariable);
+            SentenceType sentenceType = SentenceType.getMatchingType(targetType);
+            // Filter all grammar entries for matching types (sentenceEntry#bindingType = grammarEntry#returnType)
+            /*System.out.println("sentenceEntry.getSentences().get(0)::::" + sentenceEntry.getSentences().get(0));
+            System.out.println("bindingVariable::::" + bindingVariable);
+            System.out.println("current targetType.size()::::" + targetType);
+            System.out.println("sentenceType::::" + sentenceType);*/
+            List<GrammarEntry> filteredEntries
+                    = grammarEntries.stream()
+                            .filter(grammarEntry -> grammarEntry.getType().equals(sentenceType))
+                            .filter(grammarEntry -> matchSentenceBindingToNPReturn(sentenceEntry, grammarEntry))
+                            .collect(Collectors.toList());
+            //System.out.println("current sentenceGrammarEntries.size()::::" + sentenceGrammarEntries.size());
+            //System.out.println("current filteredEntries.size()::::" + filteredEntries.size());
+            //exit(1);
 
-      for (GrammarEntry filteredEntry : filteredEntries) {
-        GrammarEntry combinedEntry = new GrammarEntry();
-        for (String sentence : sentenceEntry.getSentences()) {
-          for (String npSentence : filteredEntry.getSentences()) {
+            for (GrammarEntry filteredEntry : filteredEntries) {
+                GrammarEntry combinedEntry = new GrammarEntry();
+                for (String sentence : sentenceEntry.getSentences()) {
+                    for (String npSentence : filteredEntry.getSentences()) {
 
-            String matchToken = String.format(
-              "\\(%s \\| %s_%s\\)",
-              sentenceEntry.getSentenceBindings().getBindingVariableName(),
-              sentenceEntry.getBindingType(),
-              sentenceType
-            );
-            String combinedSentence = combineSentences(
-              sentence,
-              npSentence,
-              matchToken
-            );
-            combinedEntry.getSentences().add(combinedSentence);
-          }
+                        String matchToken = String.format(
+                                "\\(%s \\| %s_%s\\)",
+                                sentenceEntry.getSentenceBindings().getBindingVariableName(),
+                                sentenceEntry.getBindingType(),
+                                sentenceType
+                        );
+                        String combinedSentence = combineSentences(
+                                sentence,
+                                npSentence,
+                                matchToken
+                        );
+                        combinedEntry.getSentences().add(combinedSentence);
+                    }
+                }
+                String newQueryPattern = combineSPARQL(
+                        sentenceEntry.getSparqlQuery(),
+                        sentenceEntry.getBindingVariable(),
+                        filteredEntry.getSparqlQuery(),
+                        filteredEntry.getReturnVariable(),
+                        newMappingForBindingVariable
+                );
+                combinedEntry.setSparqlQuery(newQueryPattern);
+
+                // Copy needed entries from base entry (sentenceEntry)
+                combinedEntry.setReturnVariable(sentenceEntry.getReturnVariable());
+                combinedEntry.setLanguage(sentenceEntry.getLanguage());
+                combinedEntry.setType(sentenceEntry.getType());
+                combinedEntry.setFrameType(sentenceEntry.getFrameType());
+                combinedEntry.setReturnType(sentenceEntry.getReturnType());
+                combinedEntry.setQueryType(sentenceEntry.getQueryType());
+                combinedEntry.setCombination(true);
+
+                // Get binding-related properties from filteredEntry
+                SentenceBindings combinedBindings = new SentenceBindings();
+                combinedBindings.setBindingVariableName(filteredEntry.getSentenceBindings().getBindingVariableName());
+                combinedEntry.setSentenceBindings(combinedBindings);
+                combinedEntry.setBindingType(filteredEntry.getBindingType());
+
+                if (!isNull(filteredEntry.getSentenceToSparqlParameterMapping())) {
+                    Map<String, String> combinedMap = new HashMap<>();
+                    combinedMap.put(filteredEntry.getSentenceBindings().getBindingVariableName(), filteredEntry.getBindingVariable() + newMappingForBindingVariable);
+                    combinedEntry.setSentenceToSparqlParameterMapping(combinedMap);
+                }
+
+                combinations.add(combinedEntry);
+            }
         }
-        String newQueryPattern = combineSPARQL(
-          sentenceEntry.getSparqlQuery(),
-          sentenceEntry.getBindingVariable(),
-          filteredEntry.getSparqlQuery(),
-          filteredEntry.getReturnVariable(),
-          newMappingForBindingVariable
-        );
-        combinedEntry.setSparqlQuery(newQueryPattern);
-
-        // Copy needed entries from base entry (sentenceEntry)
-        combinedEntry.setReturnVariable(sentenceEntry.getReturnVariable());
-        combinedEntry.setLanguage(sentenceEntry.getLanguage());
-        combinedEntry.setType(sentenceEntry.getType());
-        combinedEntry.setFrameType(sentenceEntry.getFrameType());
-        combinedEntry.setReturnType(sentenceEntry.getReturnType());
-        combinedEntry.setQueryType(sentenceEntry.getQueryType());
-        combinedEntry.setCombination(true);
-
-        // Get binding-related properties from filteredEntry
-        SentenceBindings combinedBindings = new SentenceBindings();
-        combinedBindings.setBindingVariableName(filteredEntry.getSentenceBindings().getBindingVariableName());
-        combinedEntry.setSentenceBindings(combinedBindings);
-        combinedEntry.setBindingType(filteredEntry.getBindingType());
-
-        if (!isNull(filteredEntry.getSentenceToSparqlParameterMapping())) {
-          Map<String, String> combinedMap = new HashMap<>();
-          combinedMap.put(filteredEntry.getSentenceBindings().getBindingVariableName(), filteredEntry.getBindingVariable() + newMappingForBindingVariable);
-          combinedEntry.setSentenceToSparqlParameterMapping(combinedMap);
-        }
-
-        combinations.add(combinedEntry);
-      }
+        return combinations;
     }
-    return combinations;
-  }
 
   protected boolean matchSentenceBindingToNPReturn(GrammarEntry sentenceEntry, GrammarEntry grammarEntry) {
     // E.g. sentenceEntry.getBindingType() = LOCATION
     // -> Also consider grammarEntry.getReturnType() = City as location because DomainOrRangeType.LOCATION also contains City!
     List<DomainOrRangeType> alternativeTypes = DomainOrRangeType.getAllAlternativeTypes(grammarEntry.getReturnType());
-    return alternativeTypes.contains(sentenceEntry.getBindingType());
+      /*System.out.println("sentenceEntry::" + sentenceEntry.getSentences());
+      System.out.println("grammarEntry::" + grammarEntry.getSentences());
+
+      System.out.println("alternativeTypes::" + alternativeTypes);
+      System.out.println("sentenceEntry.getBindingType()::" + sentenceEntry.getBindingType());
+      System.out.println("alternativeTypes.contains(sentenceEntry.getBindingType())::" + alternativeTypes.contains(sentenceEntry.getBindingType()));
+      */
+      return alternativeTypes.contains(sentenceEntry.getBindingType());
   }
 
   private String getTargetTypeFromSentence(String sentence, String bindingVariable) {
@@ -122,6 +138,12 @@ public class GrammarEntryCombinationFactory {
     if (!expressionToReplace.isEmpty()) {
       targetType = PatternMatchHelper.cleanPattern(expressionToReplace);
     }
+     /*System.out.println("sentence::" + sentence);
+     System.out.println("bindingVariable::" +bindingVariable);
+     System.out.println("matchPattern::" + matchPattern);
+     System.out.println("expressionToReplace::" +expressionToReplace);
+     System.out.println("targetType::" + targetType);*/
+   
     return targetType;
   }
 

@@ -490,7 +490,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
             if (!validFlag) {
                 continue;
             }
-            str=str.stripTrailing().replace("_", " ");
+            //str=str.stripTrailing().replace("_", " ");
             sentences.add(str);
             System.out.println("generated sentence::"+str);
         }

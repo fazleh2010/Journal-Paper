@@ -215,7 +215,11 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         //Which movies did Kurosawa direct?
          "interrogativeDeterminer(domain:singular) verb(component_do:past:singular) adjunct(range) verb(mainVerb:present:thridPerson)?",
          //Which movies did Kurosawa direct?
-         "interrogativeDeterminer(domain:plural) verb(component_do:past:singular) adjunct(range) verb(mainVerb:present:thridPerson)?"
+         "interrogativeDeterminer(domain:plural) verb(component_do:past:singular) adjunct(range) verb(mainVerb:present:thridPerson)?",
+         //Give me all video games published by Mean Hamster Software.
+         "verb(component_imperative_transitive:present:singular) pronoun(pronoun_personal) determiner(all) noun(domain:plural) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?",
+         //Give me all video games published by Mean Hamster Software.
+         "verb(imperative_verb:present:plural) determiner(all) noun(domain:plural) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?"
         ),
         TransitiveFrame,
         PERSON_CAUSE,
@@ -422,11 +426,11 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
           //what flew through Germany?
           "interrogativePronoun(domain) verb(mainVerb:past:thridPerson) preposition adjunct(range)?",
           //Which rivers flow through Germany?
-          "interrogativeDeterminer(domain:plural) verb(mainVerb:present:thridPerson) preposition adjunct(range)?"
+          "interrogativeDeterminer(domain:plural) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
           //Give me all launch pads operated by NASA.
            //"verb(component_imperative_transitive:present:singular) pronoun(pronoun_personal) determiner(all) object(range) verb(mainVerb:present:thridPerson) preposition adjunct(domain)."
-           //Where does Piccadilly start?   
-           //"interrogativePlace verb(component_do:present:singular) object(domain) verb(mainVerb:present:singular)?"
+           //Where does Piccadilly start? 
+           "interrogativePlace verb(component_do:present:singular) adjunct(range) verb(mainVerb:present:singular)?"
         ),
         IntransitivePPFrame,
         WHAT_WHICH_PRESENT_THING_1,
