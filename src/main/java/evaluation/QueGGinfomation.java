@@ -16,21 +16,22 @@ public class QueGGinfomation {
 
     private String id = null;
     private String question = null;
-    private String sparqlQuery = null;
+    private String queGGSparqlQuery = null;
+    private String qaldSparqlQuery = null;
     private String answerUri = null;
     private String answerLabel = null;
     private String syntacticFrame = null;
-    private Double value = null;
+    private Double similarityScore = null;
 
-
-    public QueGGinfomation(String[] row,Double value) {
+    public QueGGinfomation(String[] row, Double value,String qaldSparqlQuery) {
         this.id = row[0];
         this.question = row[1];
-        this.sparqlQuery = row[2];
+        this.queGGSparqlQuery = row[2];
         this.answerUri = row[3];
         this.answerLabel = row[4];
         this.syntacticFrame = row[5];
-        this.value=value;
+        this.similarityScore = value;
+        this.qaldSparqlQuery=qaldSparqlQuery;
     }
 
     public String getId() {
@@ -42,7 +43,7 @@ public class QueGGinfomation {
     }
 
     public String getSparqlQuery() {
-        return sparqlQuery;
+        return queGGSparqlQuery;
     }
 
     public String getAnswerUri() {
@@ -58,9 +59,20 @@ public class QueGGinfomation {
     }
 
     public Double getValue() {
-        return value;
+        return similarityScore;
     }
 
-    
+    public String getQueGGSparqlQuery() {
+        return queGGSparqlQuery;
+    }
+
+    public String getQaldSparqlQuery() {
+        return qaldSparqlQuery;
+    }
+
+    @Override
+    public String toString() {
+        return "QueGGinfomation{" + "id=" + id + ", question=" + question + ", queGGSparqlQuery=" + queGGSparqlQuery + ", qaldSparqlQuery=" + qaldSparqlQuery + ", answerUri=" + answerUri + ", answerLabel=" + answerLabel + ", syntacticFrame=" + syntacticFrame + ", similarityScore=" + similarityScore + '}';
+    }
 
 }

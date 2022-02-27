@@ -24,7 +24,7 @@ public class StringMatcher {
         return new String[]{string};
     }
      
-       public static List<String> modifySentences(List<String> sentences) {
+    public static List<String> modifySentences(List<String> sentences) {
         List<String> modifiedSentences=new ArrayList<String>();
         for(String sentence:sentences){
             sentence=sentence.replace("_", " ");

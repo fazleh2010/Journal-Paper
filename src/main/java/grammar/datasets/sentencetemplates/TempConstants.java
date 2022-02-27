@@ -131,6 +131,7 @@ public interface TempConstants {
     public static final String backward = "backward";
     public static final String preposition = "preposition";
     public static final String Apostrophe = "Apostrophe";
+    public static final String particleLocation="particleLocation";
     public static final String adjunct = "adjunct";
     public static final String QuestionMark = "?";
     public static final String component_be = "component_be";

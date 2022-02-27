@@ -185,6 +185,8 @@ public enum DomainOrRangeTypeCheck {
     AmountTotalCheck(List.of(
             URI.create(DBO.getUri() + "budget"),
             URI.create(DBO.getUri() + "populationTotal"),
+            URI.create(DBO.getUri() + "seatingCapacity"),
+            URI.create(DBO.getUri() + "numberOfLocations"),
             URI.create("http://www.w3.org/2001/XMLSchema#double")
     )),
     

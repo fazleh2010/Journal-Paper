@@ -97,7 +97,6 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
             System.out.println(sentences);
             System.out.println(this.templateFinder.getSelectedTemplate());
             System.out.println(activeTransitive);
-            //exit(1);
 
         } else if (this.frameType.equals(FrameType.IPP)) {
             String template = this.templateFinder.getSelectedTemplate();
@@ -266,7 +265,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
         
         
        
-        return StringMatcher.modifySentences(sentences);
+        return sentences;
     }
 
     private List<String> germanSentences(String bindingVariable, LexicalEntryUtil lexicalEntryUtil, SelectVariable selectVariable, SelectVariable oppositeSelectVariable, List<String> sentenceTemplates) throws QueGGMissingFactoryClassException {
@@ -357,6 +356,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
             }
         }
         //System.out.println(sentences);
+        //exit(1);
 
         return new ArrayList<String>(sentences);
     }
@@ -490,7 +490,6 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
             if (!validFlag) {
                 continue;
             }
-            //str=str.stripTrailing().replace("_", " ");
             sentences.add(str);
             System.out.println("generated sentence::"+str);
         }
@@ -677,10 +676,11 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
     public TemplateFinder getTemplateFinder() {
         return templateFinder;
     }
+    
+    public String  getTemplate() {
+        return templateFinder.getSelectedTemplate();
+    }
 
-   
-
-  
    
 
 }

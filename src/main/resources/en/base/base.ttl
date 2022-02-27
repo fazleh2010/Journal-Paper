@@ -30,6 +30,7 @@
   lemon:entry    :interrogativePronounThing ;
   lemon:entry    :interrogativePlace ;
   lemon:entry    :interrogativeTemporal ;
+  lemon:entry    :particleLocation ;
   lemon:entry    :verb_location ;
   lemon:entry    :appos ;
   lemon:entry    :for ;
@@ -216,6 +217,13 @@
   :Apostrophe a               lemon:SynRoleMarker ;
   lemon:canonicalForm  [ lemon:writtenRep "'s"@de ] ;
    lexinfo:partOfSpeech lexinfo:verb .
+
+## particle ##
+
+  :particleLocation a               lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "there"@de ] ;
+   lexinfo:partOfSpeech lexinfo:verb .
+
 
 
 ## Determiners ##

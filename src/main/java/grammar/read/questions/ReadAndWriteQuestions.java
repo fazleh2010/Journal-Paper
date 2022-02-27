@@ -199,15 +199,19 @@ public class ReadAndWriteQuestions {
                     bindingList = grammarEntryUnit.getBindingList();       
                 }
                 
-                
-                if (grammarEntryUnit.getFrameType().contains(FrameType.AG.toString())&&grammarEntryUnit.getSentenceTemplate().contains(superlative)) {
-                    sparql = grammarEntryUnit.getExecutable();
-                     System.out.println(grammarEntryUnit.getFrameType());
-                } 
-                else{
-                     sparql = grammarEntryUnit.getSparqlQuery();
-                    
+                try {
+                    if (grammarEntryUnit.getFrameType().contains(FrameType.AG.toString()) && grammarEntryUnit.getSentenceTemplate().contains(superlative)) {
+                        sparql = grammarEntryUnit.getExecutable();
+                        System.out.println(grammarEntryUnit.getFrameType());
+                    } else {
+                        sparql = grammarEntryUnit.getSparqlQuery();
+
+                    }
+                }catch(Exception ex){
+                    continue;
                 }
+              
+             
                    
                 
                

@@ -26,7 +26,6 @@ import java.util.stream.Collectors;
 import grammar.sparql.SparqlQuery;
 import grammar.structure.component.GrammarEntry;
 import grammar.structure.component.GrammarWrapper;
-import static java.lang.System.exit;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -810,7 +809,7 @@ public class EvaluateAgainstQALD {
             //JaccardSimilarity jaccardSimilarity = new JaccardSimilarity();
             //Double value = jaccardSimilarity.apply(qaldsentence, queGGquestion);
             Double value = StringSimilarity.similarity(qaldsentence, queGGquestion);
-            QueGGinfomation queGGinfomation = new QueGGinfomation(row, value);
+            QueGGinfomation queGGinfomation = new QueGGinfomation(row, value,qaldSparqlQuery);
             String queGGsparql=queGGinfomation.getSparqlQuery();
             
             /*if (askFlag && stringSimilarity.isAskSparqlQuery(queGGsparql)) {

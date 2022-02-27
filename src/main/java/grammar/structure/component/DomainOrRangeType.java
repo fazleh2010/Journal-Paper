@@ -99,6 +99,9 @@ public enum DomainOrRangeType {
     HockeyTeam(List.of(URI.create(DBO.getUri() + "HockeyTeam"))),   
     HistoricPlace(List.of(URI.create(DBO.getUri() + "HistoricPlace"))), 
     FormulaOneRacer(List.of(URI.create(DBO.getUri() + "HistoricPlace"))),
+    Stadium(List.of(URI.create(DBO.getUri() + "Stadium"))),
+    SportsClub(List.of(URI.create(DBO.getUri() + "SportsClub"))),
+
   
     Name(List.of(
             URI.create(DBO.getUri() + "GivenName"),

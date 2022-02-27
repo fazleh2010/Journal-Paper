@@ -164,6 +164,11 @@ public class EnglishSentenceBuilder implements TempConstants {
         else if (attribute.contains(Apostrophe)) {
             word=LexicalEntryUtil.getSingle(lexicalEntryUtil, Apostrophe);
         }
+        else if (attribute.contains(particleLocation)) {
+            word=LexicalEntryUtil.getSingle(lexicalEntryUtil, attribute);
+
+        }
+        
         
         else if (flagReference && isIntergativePronoun(attribute).first) {
             SubjectType subjectType = null;
@@ -187,6 +192,7 @@ public class EnglishSentenceBuilder implements TempConstants {
             word=LexicalEntryUtil.getSingle(lexicalEntryUtil, subjectType.name());
 
         }
+        
         else if (isInterrogativeOften(attribute).first) {
             SubjectType subjectType = isInterrogativeOften(attribute).second;
             word=LexicalEntryUtil.getSingle(lexicalEntryUtil, subjectType.name());

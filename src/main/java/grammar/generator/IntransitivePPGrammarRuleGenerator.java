@@ -15,6 +15,9 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class IntransitivePPGrammarRuleGenerator extends GrammarRuleGeneratorRoot {
+    
+    private String template = null;
+
 
     public IntransitivePPGrammarRuleGenerator(Language language) {
         super(FrameType.IPP, language, BindingConstants.DEFAULT_BINDING_VARIABLE);
@@ -34,6 +37,7 @@ public class IntransitivePPGrammarRuleGenerator extends GrammarRuleGeneratorRoot
                 lexicalEntryUtil
         );
         generatedSentences.addAll(sentenceBuilder.generateFullSentencesForward(getBindingVariable(), lexicalEntryUtil));
+         this.template=sentenceBuilder.getTemplate();
 
         //generatedSentences.sort(String::compareToIgnoreCase);
         return generatedSentences;
@@ -65,6 +69,7 @@ public class IntransitivePPGrammarRuleGenerator extends GrammarRuleGeneratorRoot
         GrammarEntry fragmentEntry = copyGrammarEntry(grammarEntry);
         fragmentEntry.setType(SentenceType.SENTENCE);
         // Assign opposite values
+        fragmentEntry.setSentenceTemplate(this.template);
         fragmentEntry.setReturnType(grammarEntry.getBindingType());
         fragmentEntry.setBindingType(grammarEntry.getReturnType());
         fragmentEntry.setReturnVariable(grammarEntry.getBindingVariable());

@@ -6,7 +6,6 @@
 package evaluation;
 
 import com.google.gdata.util.common.base.Pair;
-import static java.lang.System.exit;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
@@ -38,6 +37,7 @@ public class StringSimilarity {
         //System.out.println("sorted_map: " + sorted_map);
         String key = sorted_map.firstKey();
         Double value = sorted_map.get(key);
+   
         QueGGinfomation queGGinfomation = grammarEntities.get(key);
         return queGGinfomation;
 

@@ -18,4 +18,9 @@ public interface SentenceBuilder {
   List<String> generateBooleanQuestionDomainRange(String bindingVariable, String[] string, LexicalEntryUtil lexicalEntryUtil) throws QueGGMissingFactoryClassException;
 
   List<String> generateBooleanQuestionsDomain(String bindingVariable, String[] string, LexicalEntryUtil lexicalEntryUtil)  throws QueGGMissingFactoryClassException;
+  
+   public String  getTemplate();
+
+   
+
 }

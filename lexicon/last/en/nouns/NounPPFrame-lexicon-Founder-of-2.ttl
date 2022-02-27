@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :Founder-of-2 ;
+  lemon:entry    :Founder-of-2_form_preposition .
+
+:Founder-of-2 a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :Founder-of-2_form ;
+  lemon:otherForm  :Founder-of-2_singular ;
+  lemon:otherForm  :Founder-of-2_plural ;
+  lemon:sense          :Founder-of-2_sense_1 ;
+  lemon:synBehavior    :Founder-of-2_nounpp .
+
+:Founder-of-2_form a lemon:Form ;
+  lemon:writtenRep "founder"@en .
+
+:Founder-of-2_singular a    lemon:Form ;
+  lemon:writtenRep "founder"@en ;
+  lexinfo:number   lexinfo:singular .
+
+:Founder-of-2_plural a   lemon:Form ;
+  lemon:writtenRep "founders"@en ;
+  lexinfo:number    lexinfo:plural .
+
+:Founder-of-2_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:Founder-of-2_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :Founder-of-2_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/founder> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :Founder-of-2_sense_1_condition .
+
+:Founder-of-2_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Publisher> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Agent> .
+
+:arg2 lemon:marker :Founder-of-2_form_preposition .
+## Prepositions ##
+:Founder-of-2_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "of"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

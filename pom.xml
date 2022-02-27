@@ -236,16 +236,6 @@
             <artifactId>google-api-services-sheets</artifactId>
             <version>v4-rev581-1.25.0</version>
         </dependency>  
-
-<!-- https://mvnrepository.com/artifact/ont-app/sparql-client -->
-<!-- https://mvnrepository.com/artifact/com.bordercloud/SPARQL-JAVA -->
-<!-- https://mvnrepository.com/artifact/com.bordercloud/SPARQL-JAVA -->
-
-
-
-
-
-
         
     </dependencies>
     <name>question-answering-general</name>
