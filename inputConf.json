@@ -1,5 +1,5 @@
 {
-  "languageCode" : "en",
+  "languageCode" : "de",
   "inputDir" : "lexicon",
   "outputDir" : "output",
   "qaldDir" : "qald",
@@ -7,8 +7,8 @@
   "similarityThresold" : 0.65,
   "csvToTurtle" : true,
   "turtleToProtoType" : true,
-  "single": false,
-  "composite": true,
+  "single": true,
+  "composite": false,
   "protoTypeToQuestion" : true,
   "evalution" : true
 }

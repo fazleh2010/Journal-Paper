@@ -12,6 +12,7 @@ import java.util.stream.Stream;
 public enum SubjectType {
   interrogativePronoun,  // 
   interrogativeDeterminer,
+  interrogativeVariableDeterminer, //which X_NP
   interrogativeAmount, //how many
   interrogativeOften, //how often
   interrogativeMuch, //how much

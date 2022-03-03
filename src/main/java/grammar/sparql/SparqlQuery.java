@@ -123,6 +123,8 @@ public class SparqlQuery {
     private String setSingleSelect(String template, String rdfProperty, String className, String domainEntityUrl, String sparqlQueryOrg, String rangeEntityUrl, String type, String returnType, String language, String endpoint, Boolean online, QueryType queryType) {
         String property = StringUtils.substringBetween(sparqlQueryOrg, "<", ">");
         String sparqlQuery = null;
+        
+     
 
         if (template != null) {
             if (template.contains(TemplateFinder.HOW_MANY_THING)) {
@@ -137,12 +139,15 @@ public class SparqlQuery {
             } else if (template.equals(TemplateFinder.superlativeWorld)) {
                 return sparqlQueryOrg;
             } else {
+                   
                 if (returnType.contains(RETURN_TYPE_OBJECT)) {
                     sparqlQuery = PrepareSparqlQuery.setObjectWikiPedia(domainEntityUrl, property, rdfProperty, className);
                 } else if (returnType.contains(RETURN_TYPE_SUBJECT)) {
+                    
                     if (TemplateFinder.isRdfsLabel(property)) {
                         sparqlQuery = this.setSubjectLabelWikipedia(domainEntityUrl, property, language);
                     } else {
+                     
                         sparqlQuery = PrepareSparqlQuery.setSubjectWikipedia(domainEntityUrl, property, rdfProperty, className);
                     }
                 }
@@ -158,16 +163,19 @@ public class SparqlQuery {
                     sparqlQuery = this.setSubjectLabelWikipedia(domainEntityUrl, property, language);
                 } else {
                     sparqlQuery = PrepareSparqlQuery.setSubjectWikipedia(domainEntityUrl, property, rdfProperty, className);
-
+                   
                 }
+
             }
         }
-
-        /*System.out.println("sparqlQueryOrg::"+sparqlQueryOrg);
-                   System.out.println("sparqlQuery::"+sparqlQuery);
-                   System.out.println("template::"+template);
-                   System.out.println("returnType::"+returnType);
-                     exit(1);*/
+        
+        /*System.out.println("sparqlQueryOrg::" + sparqlQueryOrg);
+                        System.out.println("sparqlQuery::" + sparqlQuery);
+                        System.out.println("template::" + template);
+                        System.out.println("className::" + className);
+                        System.out.println("returnType::" + returnType);
+        */
+        
         return sparqlQuery;
     }
 

@@ -732,17 +732,17 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was married to president Chirac?",
-					"keywords": "married to, president Chirac"
+					"string": "Who was married to Jacques Chirac?",
+					"keywords": "married to, Jacques Chirac"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Quem foi casada com o presidente Chirac?",
+					"string": "Quem foi casada com o Jacques Chirac?",
 					"keywords": "casada, presidente Chirac"
 				},
 				{
 					"language": "de",
-					"string": "Wer war mit Präsident Chirac verheiratet?",
+					"string": "Wer war mit Jacques Chirac verheiratet?",
 					"keywords": "verheiratet mit, Päsident Chirac"
 				},
 				{
@@ -752,7 +752,7 @@
 				},
 				{
 					"language": "it",
-					"string": "Chi è stato sposato con il presidente Chirac?",
+					"string": "Chi è stato sposato con il Jacques Chirac?",
 					"keywords": "sposato con, presidente Chirac"
 				},
 				{
@@ -1124,8 +1124,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the daughter of Robert Kennedy married to?",
-					"keywords": "Robert Kennedy, daughter, married"
+					"string": "Who was marry to the daughter of  Abraham Lincoln?",
+					"keywords": "Abraham Lincoln, daughter, married"
 				},
 				{
 					"language": "pt_BR",
@@ -1174,7 +1174,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE {  <http://dbpedia.org/resource/Robert_F._Kennedy> <http://dbpedia.org/ontology/child> ?child .  ?child <http://dbpedia.org/ontology/spouse> ?uri . } "
+				"sparql": "SELECT DISTINCT ?uri WHERE {  <http://dbpedia.org/resource/Abraham_Lincoln> <http://dbpedia.org/ontology/child> ?child .  ?child <http://dbpedia.org/ontology/spouse> ?uri . } "
 			},
 			"answers": [{
 				"head": {
@@ -1207,8 +1207,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which books by Kerouac were published by Viking Press?",
-					"keywords": "book, Kerouac, publish, Viking Press"
+					"string": "Which books by Kerouac were published by Grove Press?",
+					"keywords": "book, Kerouac, publish, Grove Press"
 				},
 				{
 					"language": "pt_BR",
@@ -1222,8 +1222,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Welche Bücher von Kerouac wurden von Viking Press verlegt?",
-					"keywords": "Buch, Kerouac, verlegen, Viking Press"
+					"string": "Welche Bücher von Kerouac wurden von Grove Press verlegt?",
+					"keywords": "Buch, Kerouac, verlegen, Grove Press
 				},
 				{
 					"language": "es",
@@ -1232,8 +1232,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Quali libri di Kerouac furono pubblicati da Viking Press?",
-					"keywords": "libro, Kerouac, pubblicare, Viking Press"
+					"string": "Quali libri di Kerouac furono pubblicati da Grove Press?",
+					"keywords": "libro, Kerouac, pubblicare, Grove Press"
 				},
 				{
 					"language": "fr",
@@ -1257,7 +1257,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE {  ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Book> .  ?uri <http://dbpedia.org/ontology/publisher> <http://dbpedia.org/resource/Viking_Press> .  ?uri <http://dbpedia.org/ontology/author> <http://dbpedia.org/resource/Jack_Kerouac> . } "
+				"sparql": "SELECT DISTINCT ?uri WHERE {  ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Book> .  ?uri <http://dbpedia.org/ontology/publisher> <http://dbpedia.org/resource/Grove_Press> .  ?uri <http://dbpedia.org/ontology/author> <http://dbpedia.org/resource/Jack_Kerouac> . } "
 			},
 			"answers": [{
 				"head": {
@@ -1499,6 +1499,67 @@
 						}
 					}]
 				}
+			}]
+		},
+		{
+			"id": "20",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Is James Bond married?",
+					"keywords": "James Bond, married"
+				},
+				{
+					"language": "pt_BR",
+					"string": "James Bond é casado?",
+					"keywords": "James Bond, casado"
+				},
+				{
+					"language": "de",
+					"string": "Ist James Bond verheiratet?",
+					"keywords": "James Bond, verheiratet"
+				},
+				{
+					"language": "es",
+					"string": "¿Está James Bond casado?",
+					"keywords": "James Bond, casado"
+				},
+				{
+					"language": "it",
+					"string": "James è Bond sposato?",
+					"keywords": "James Bond, sposato"
+				},
+				{
+					"language": "fr",
+					"string": "James Bond est-il marié?",
+					"keywords": "James Bond, marié"
+				},
+				{
+					"language": "nl",
+					"string": "Is James Bond getrouwd?",
+					"keywords": "James Bond, getrouwd"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या जेम्स बांड ने शादी की है?",
+					"keywords": "जेम्स बांड, शादी"
+				},
+				{
+					"language": "ro",
+					"string": "James Bond este căsătorit?",
+					"keywords": "James Bond, căsătorit"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nASK \nWHERE {\n        res:James_Bond dbo:spouse ?uri . \n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": false
 			}]
 		},
 		{
@@ -1798,8 +1859,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the mayor of Paris?",
-					"keywords": "mayor, Paris"
+					"string": "Who is the mayor of Bora-Bora?",
+					"keywords": "mayor, Bora-Bora"
 				},
 				{
 					"language": "pt_BR",
@@ -1813,8 +1874,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer ist Bürgermeister von Paris?",
-					"keywords": "Paris, Bürgermeister"
+					"string": "Wer ist Bürgermeister von Bora-Bora?",
+					"keywords": "Bora-Bora, Bürgermeister"
 				},
 				{
 					"language": "es",
@@ -1848,7 +1909,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Paris> <http://dbpedia.org/ontology/mayor> ?uri . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Bora-Bora_(commune)> <http://dbpedia.org/ontology/mayor> ?uri . }"
 			},
 			"answers": [{
 				"head": {
@@ -1874,8 +1935,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the coach of Ankara's ice hockey team?",
-					"keywords": "coach, ice hockey team, Ankara"
+					"string": "Who is the coach of Ankara's ice hockey league?",
+					"keywords": "coach, ice hockey league, Ankara"
 				},
 				{
 					"language": "pt_BR",
@@ -1950,7 +2011,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the mayor of the capital of Russia?",
+					"string": "Give me the mayor of the capital of Russia?",
 					"keywords": "mayor, capital, Russia"
 				},
 				{
@@ -2245,6 +2306,67 @@
 			}]
 		},
 		{
+			"id": "31",
+			"answertype": "boolean",
+			"aggregation": true,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Do Prince Harry and Prince William have the same parents?",
+					"keywords": "Prince Harry, Prince William, same, parents"
+				},
+				{
+					"language": "pt_BR",
+					"string": "O Príncipe Harry e o Príncipe William têm os mesmos pais?",
+					"keywords": "Príncipe Harry, Príncipe William, mesma mãe"
+				},
+				{
+					"language": "de",
+					"string": "Haben Prinz Harry und Prinz William dieselben Eltern?",
+					"keywords": "Prinz Harry, Prinz William, selbe Eltern"
+				},
+				{
+					"language": "es",
+					"string": "¿Tienen el príncipe Harry y el prínciple William la misma madre?",
+					"keywords": "príncipe Harry, príncipe William, la misma madre"
+				},
+				{
+					"language": "it",
+					"string": "Il principe Harry e il principe William hanno gli stessi genitoris?",
+					"keywords": "principe Harry, principe William, stessi genitori"
+				},
+				{
+					"language": "fr",
+					"string": "Ont les princes Harry et William la même mère?",
+					"keywords": "prince Harry, Prince William, même mère"
+				},
+				{
+					"language": "nl",
+					"string": "Hebben prins Harry en prins William dezelfde ouders?",
+					"keywords": "prins Harry, prins William, dezelfde, ouders"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या प्रिंस हैरी और प्रिंस विलियम के माता-पिता एक हैं?",
+					"keywords": "प्रिंस हैरी, प्रिंस विलियम, माता, पिता"
+				},
+				{
+					"language": "ro",
+					"string": "Prințul Harry și Prințul William au aceiași părinți?",
+					"keywords": "Prințul Harry, Prințul William, aceiași, părinți"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nASK\nWHERE { \n        <http://dbpedia.org/resource/Prince_William,_Duke_of_Cambridge> dbo:parent ?x . \n        <http://dbpedia.org/resource/Prince_Harry> dbo:parent ?x .\n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": true
+			}]
+		},
+		{
 			"id": "32",
 			"answertype": "resource",
 			"aggregation": false,
@@ -2252,8 +2374,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who played Agent Smith in Matrix?",
-					"keywords": "played, Agent Smith, Matrix"
+					"string": "Who played Agent Smith?",
+					"keywords": "played, Agent Smith"
 				},
 				{
 					"language": "pt_BR",
@@ -2262,8 +2384,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer hat Agent Smith in Matrix gespielt?",
-					"keywords": "gespielt, Agent Smith, Matrix"
+					"string": "Wer hat Agent Smith gespielt?",
+					"keywords": "gespielt, Agent Smith"
 				},
 				{
 					"language": "es",
@@ -2629,6 +2751,67 @@
 			}]
 		},
 		{
+			"id": "37",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Is Barack Obama a democrat?",
+					"keywords": "Barack Obama, democrat"
+				},
+				{
+					"language": "pt_BR",
+					"string": "Barack Obama é um Democrata?",
+					"keywords": "Barack Obama, Demokrat"
+				},
+				{
+					"language": "de",
+					"string": "Ist Barack Obama ein Demokrat?",
+					"keywords": "Barack Obama, Demokrat"
+				},
+				{
+					"language": "es",
+					"string": "¿Es Barack Obama demócrata?",
+					"keywords": "Barack Obama, demócrata"
+				},
+				{
+					"language": "it",
+					"string": "Barack Obama è un democratico?",
+					"keywords": "Barack Obama, democratico"
+				},
+				{
+					"language": "fr",
+					"string": "Barack Obama est-il un démocrate?",
+					"keywords": "Barack Obama, démocrate"
+				},
+				{
+					"language": "nl",
+					"string": "Is Barack Obama een democraat?",
+					"keywords": "Barack Obama, democraat"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या बराक ओबामा एक डेमोक्रेट है?",
+					"keywords": "बराक ओबामा, डेमोक्रेट"
+				},
+				{
+					"language": "ro",
+					"string": "Barack Obama este un democrat?",
+					"keywords": "Barack Obama, democrat"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nASK\nWHERE { \n        res:Barack_Obama dbo:party <http://dbpedia.org/resource/Democratic_Party_(United_States)> . \n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": true
+			}]
+		},
+		{
 			"id": "38",
 			"answertype": "resource",
 			"aggregation": false,
@@ -2873,7 +3056,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "How many people live in Poland?",
+					"string": "How many people live in Eurasian_Economic_Union?",
 					"keywords": "How many people, Poland"
 				},
 				{
@@ -3034,6 +3217,62 @@
 						}
 					]
 				}
+			}]
+		},
+		{
+			"id": "43",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Is Christian Bale starring in Batman Begins?",
+					"keywords": "Christian Bale, starring, Batman Begins"
+				},
+				{
+					"language": "pt_BR",
+					"string": "Christian Bale atua em Batman Begins?",
+					"keywords": "Christian Bale, atua, Batman Begins"
+				},
+				{
+					"language": "de",
+					"string": "Spielt Christian Bale in Batman Begins mit?",
+					"keywords": "Christian Bale, mitspielen, Batman Begins"
+				},
+				{
+					"language": "es",
+					"string": "¿Actúa Christian Bale en Batman Begins?",
+					"keywords": "Christian Bale, actúa, Batman Begins"
+				},
+				{
+					"language": "it",
+					"string": "Christian Bale ha recitato in Batman Begins?",
+					"keywords": "Christian Bale, recitare, Batman Begins"
+				},
+				{
+					"language": "fr",
+					"string": "Christian Bale joue-t-il dans Batman Begins?",
+					"keywords": "Christian Bale, joue, Batman Begins"
+				},
+				{
+					"language": "nl",
+					"string": "Speelt Christian Bale in Batman Begins?",
+					"keywords": "Christian Bale, speelt in, Batman Begins"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या क्रिस्चियन बॉल बैटमैन बेगिंस में है?",
+					"keywords": "क्रिस्चियन बॉल, बैटमैन बेगिंस"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nASK \nWHERE {\n\tres:Batman_Begins dbo:starring res:Christian_Bale .\n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": false
 			}]
 		},
 		{
@@ -3242,6 +3481,62 @@
 						}
 					}]
 				}
+			}]
+		},
+		{
+			"id": "47",
+			"answertype": "boolean",
+			"aggregation": true,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Is Frank Herbert still alive?",
+					"keywords": "Frank Herbert, alive"
+				},
+				{
+					"language": "pt_BR",
+					"string": "Frank Herbert ainda vive?",
+					"keywords": "Frank Herbert, vive"
+				},
+				{
+					"language": "de",
+					"string": "Lebt Frank Herbert noch?",
+					"keywords": "Frank Herbert, leben"
+				},
+				{
+					"language": "es",
+					"string": "¿Todavía vive Frank Herbert?",
+					"keywords": "Frank Herbert, vive"
+				},
+				{
+					"language": "it",
+					"string": "Frank Herbert è ancora vivo?",
+					"keywords": "Frank Herbert, vivente"
+				},
+				{
+					"language": "fr",
+					"string": "Frank Herbert est-il encore en vie?",
+					"keywords": "Frank Herbert, en vie"
+				},
+				{
+					"language": "nl",
+					"string": "Leeft Frank Herbert nog?",
+					"keywords": "Frank Herbert, leeft"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या फ्रैंक हरबर्ट अभी भी जीवित है?",
+					"keywords": "फ्रैंक हरबर्ट, जीवित"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nASK \nWHERE {\n\tOPTIONAL { res:Frank_Herbert dbo:deathDate ?date . }\n        FILTER (!BOUND(?date))\n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": false
 			}]
 		},
 		{
@@ -3935,6 +4230,82 @@
 			}]
 		},
 		{
+			"id": "55",
+			"answertype": "resource",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Does Neymar play for Real Madrid?",
+					"keywords": "Neymar, play, Real Madrid"
+				},
+				{
+					"language": "pt_BR",
+					"string": "O Neymar joga no Real Madrid?",
+					"keywords": "Neymar, joga, Real Madrid"
+				},
+				{
+					"language": "fa",
+					"string": "آیا نیمار برای رئال مادرید بازی می کند؟",
+					"keywords": "نیمار، رئال مادرید، بازی"
+				},
+				{
+					"language": "de",
+					"string": "Spielt Neymar für Real Madrid?",
+					"keywords": "Neymar, spielen für, Real Madrid"
+				},
+				{
+					"language": "es",
+					"string": "¿juega Neymar en el Real Madrid?",
+					"keywords": "Neymar, jugador, Real Madrid"
+				},
+				{
+					"language": "it",
+					"string": "Neymar gioca per il Real Madrid?",
+					"keywords": "Neymar, giocare, Real Madrid"
+				},
+				{
+					"language": "fr",
+					"string": "Est-ce que Neymar joue pour Madrid?",
+					"keywords": "Neymar, joueur, Madrid"
+				},
+				{
+					"language": "nl",
+					"string": "Speelt Neymar bij Real Madrid?",
+					"keywords": "Neymar, spelen bij, Real Madrid"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या नेयमार रियल मैड्रिड के लिए खेलते हैं?",
+					"keywords": "नेयमार, रियल मैड्रिड, खेलते"
+				},
+				{
+					"language": "ro",
+					"string": "Neymar joacă pentru Real Madrid?",
+					"keywords": "Neymar, joacă, Real Madrid"
+				}
+			],
+			"query": {
+				"sparql": "ASK WHERE { <http://dbpedia.org/resource/Neymar> <http://dbpedia.org/ontology/team> <http://dbpedia.org/resource/Real_Madrid_C.F.> . }"
+			},
+			"answers": [{
+				"head": {
+					"vars": [
+						"uri"
+					]
+				},
+				"results": {
+					"bindings": [{
+						"uri": {
+							"type": "uri",
+							"value": "false"
+						}
+					}]
+				}
+			}]
+		},
+		{
 			"id": "56",
 			"answertype": "resource",
 			"aggregation": false,
@@ -4155,6 +4526,62 @@
 						}
 					}]
 				}
+			}]
+		},
+		{
+			"id": "59",
+			"answertype": "boolean",
+			"aggregation": true,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Was the Cuban Missile Crisis earlier than the Bay of Pigs Invasion?",
+					"keywords": "Cuban Missile Crisis, earlier, Bay of Pigs Invasion"
+				},
+				{
+					"language": "pt_BR",
+					"string": "A Crise dos Mísseis de Cuba ocorreu antes da Invasão da Baía dos Porcos?",
+					"keywords": "Crise dos Mísseis de Cuba, antes, Invasão da Baía dos Porcos"
+				},
+				{
+					"language": "de",
+					"string": "War die Kubakrise vor der Schweinebuchtinvasion?",
+					"keywords": "Kubakrise, vor, Schweinebuchtinvasion"
+				},
+				{
+					"language": "es",
+					"string": "¿Fué la crisis de cuba antes de la invasión de bahía de cochinos?",
+					"keywords": "crísis de cuba, anterior a la invasión de bahía de cochinos?"
+				},
+				{
+					"language": "it",
+					"string": "La crisi dei missili di Cuba avvenne prima dello sbarco nella Baia dei Porci?",
+					"keywords": "Crisi dei missili di Cuba, precedente, sbarco nella Baia dei Porci"
+				},
+				{
+					"language": "fr",
+					"string": "La crise des missiles de Cuba a-t-elle eu lieu avant the débarquement de la baie des Cochons?",
+					"keywords": "Débarquement de la baie des Cochons, crise des missiles de Cuba"
+				},
+				{
+					"language": "nl",
+					"string": "Was de Cubacrisis eerder dan de invasie in de Varkensbaai?",
+					"keywords": "Cubacrisis, eerder dan, invasie in de Varkensbaai"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या क्यूबाई मिसाइल संकट बे ऑफ़ पिग्स आक्रमण के पहले हुआ था?",
+					"keywords": "क्यूबाई मिसाइल संकट, बे ऑफ़ पिग्स आक्रमण, पहले हुआ"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nASK \nWHERE {\n        res:Cuban_Missile_Crisis dbo:date ?x .\n\tres:Bay_of_Pigs_Invasion dbo:date ?y .\n\tFILTER (?x < ?y)\n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": false
 			}]
 		},
 		{
@@ -4507,6 +4934,67 @@
 						}
 					}]
 				}
+			}]
+		},
+		{
+			"id": "64",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Did Arnold Schwarzenegger attend a university?",
+					"keywords": "Arnold Schwarzenegger, attend, university"
+				},
+				{
+					"language": "pt_BR",
+					"string": "Arnold Schwarzenegger frequentou uma universidade?",
+					"keywords": "Arnold Schwarzenegger, frequentou, universidade"
+				},
+				{
+					"language": "de",
+					"string": "Hat Arnold Schwarzenegger eine Universität besucht?",
+					"keywords": "Arnold Schwarzenegger, Universität, besucht"
+				},
+				{
+					"language": "es",
+					"string": "¿Fue Arnold Schwarzenegger a la universidad?",
+					"keywords": "Arnold Schwarzenegger, universidad"
+				},
+				{
+					"language": "it",
+					"string": "Arnold Schwarzenegger ha frequentato l'Università?",
+					"keywords": "Arnold Schwarzenegger, frequentare, Università"
+				},
+				{
+					"language": "fr",
+					"string": "Est-ce que Arnold Schwarzenegger a étudié à une université?",
+					"keywords": "Arnold Schwarzenegger, etudié, université"
+				},
+				{
+					"language": "nl",
+					"string": "Had Arnold Schwarzenegger aan een universiteit gestudeerd?",
+					"keywords": "Arnold Schwarzenegger, universiteit, gestudeerd"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या अर्नोल्ड श्वार्ज़नेगर विश्वविद्यालय गए थे?",
+					"keywords": "अर्नोल्ड श्वार्ज़नेगर, विश्वविद्यालय"
+				},
+				{
+					"language": "ro",
+					"string": "Arnold Schwarzenegger a frecventat o universitate?",
+					"keywords": "Arnold Schwarzenegger, frecventa, universitate"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/> \nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nASK\nWHERE {\n        res:Arnold_Schwarzenegger dbo:almaMater ?x .\n        ?x rdf:type dbo:University .\n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": true
 			}]
 		},
 		{
@@ -5441,8 +5929,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which professional surfers were born in Australia?",
-					"keywords": "professional surfer, born, Australia"
+					"string": "Which surfers were born in Australia?",
+					"keywords": "surfer, born, Australia"
 				},
 				{
 					"language": "pt_BR",
@@ -5451,7 +5939,7 @@
 				},
 				{
 					"language": "de",
-					"string": "Welche Profisurfer wurden in Australien geboren?",
+					"string": "Welche Surfer wurden in Australien geboren?",
 					"keywords": "Profisurfer, geboren, Australien"
 				},
 				{
@@ -5519,8 +6007,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which electronics companies were founded in Beijing?",
-					"keywords": "electronics companies, founded, Beijing"
+					"string": "Which Online shopping companies were founded in United Kingdom?",
+					"keywords": "electronics companies, founded, Amsterdam"
 				},
 				{
 					"language": "pt_BR",
@@ -5534,8 +6022,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Welche Elektronikunternehmen wurden in Peking gegründet?",
-					"keywords": "Elektronikunternehmen, gegründet in, Peking"
+					"string": "Welche Elektronikunternehmen wurden in Amsterdam gegründet?",
+					"keywords": "Elektronikunternehmen, gegründet in, Amsterdam"
 				},
 				{
 					"language": "es",
@@ -5569,7 +6057,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri a <http://dbpedia.org/ontology/Company> . ?uri <http://dbpedia.org/ontology/industry> <http://dbpedia.org/resource/Electronics> . ?uri <http://dbpedia.org/ontology/foundationPlace> <http://dbpedia.org/resource/Beijing> . }"
+				"sparql": "SELECT DISTINCT ?uri   WHERE { ?uri a <http://dbpedia.org/ontology/Company> . ?uri <http://dbpedia.org/ontology/industry> <http://dbpedia.org/resource/Online_shopping> . ?uri <http://dbpedia.org/ontology/foundationPlace> <http://dbpedia.org/resource/United_Kingdom>. }"
 			},
 			"answers": [{
 				"head": {
@@ -5815,6 +6303,123 @@
 						}
 					}]
 				}
+			}]
+		},
+		{
+			"id": "81",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Is there a video game called Battle Chess?",
+					"keywords": "video game, Battle Chess"
+				},
+				{
+					"language": "pt_BR",
+					"string": "Há algum jogo eletrônico chamado Battle Chess?",
+					"keywords": "jogo eletrônico, Battle Chess"
+				},
+				{
+					"language": "de",
+					"string": "Gibt es ein Videospiel, das Battle Chess heißt?",
+					"keywords": "Videospiel, Battle Chess"
+				},
+				{
+					"language": "es",
+					"string": "¿Hay algún videojuego que se llame Battle Chess?",
+					"keywords": "videojuego, Battle Chess"
+				},
+				{
+					"language": "it",
+					"string": "Esiste un videogioco che si chiama Battle Chess?",
+					"keywords": "videogioco, Battle Chess"
+				},
+				{
+					"language": "fr",
+					"string": "Existe-t-il un jeu vidéo appelé Battle Chess?",
+					"keywords": "jeu vidéo, Battle Chess"
+				},
+				{
+					"language": "nl",
+					"string": "Bestaat er een videospel met de naam Battle Chess?",
+					"keywords": "videospel, Battle Chess"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या बैटल चैस नामक वीडियो गेम है?",
+					"keywords": "बैटल चैस, वीडियो गेम"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nASK \nWHERE {\n\t?uri rdf:type dbo:VideoGame .\n        ?uri rdfs:label 'Battle Chess'@en .\n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": true
+			}]
+		},
+		{
+			"id": "82",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Was the wife of president Lincoln called Mary?",
+					"keywords": "Lincoln, president, wife, called, Mary"
+				},
+				{
+					"language": "pt_BR",
+					"string": "A esposa do Presidente Lincoln chamava-se Mary?",
+					"keywords": "mulher, Presidente Lincoln, chamava, Mary"
+				},
+				{
+					"language": "de",
+					"string": "Hieß die Frau von Präsident Lincoln Mary?",
+					"keywords": "Lincoln, Präsident, Frau, heißen, Mary"
+				},
+				{
+					"language": "es",
+					"string": "¿La mujer del presidente Lincoln se llama Mary?",
+					"keywords": "mujer, presidente, Lincoln, se lamma, Mary"
+				},
+				{
+					"language": "it",
+					"string": "La moglie del presidente Lincoln si chiamava Mary?",
+					"keywords": "moglie, presidente, Lincoln, si chiama, Mary"
+				},
+				{
+					"language": "fr",
+					"string": "Est-ce que l'épouse du président Lincoln s'appelait Mary?",
+					"keywords": "épouse, Lincoln, Mary, appelle"
+				},
+				{
+					"language": "nl",
+					"string": "Heette de echtgenote van president Lincoln Mary?",
+					"keywords": "echtgenote, Lincoln, Mary"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या राष्ट्रपति लिंकन की पत्नी का नाम मैरी था?",
+					"keywords": "राष्ट्रपति लिंकन, पत्नी, मैरी"
+				},
+				{
+					"language": "ro",
+					"string": "Este soția președintelui Lincoln numită Mary?",
+					"keywords": "Lincoln, președinte, soție, numită, Mary"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nASK \nWHERE {\n        res:Abraham_Lincoln dbo:spouse ?spouse .\n        ?spouse rdfs:label ?name .\n        FILTER(regex(?name,'Mary')) \n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": true
 			}]
 		},
 		{
@@ -6152,6 +6757,67 @@
 			}]
 		},
 		{
+			"id": "85",
+			"answertype": "boolean",
+			"aggregation": true,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Does Breaking Bad have more episodes than Game of Thrones?",
+					"keywords": "Breaking Bad, episodes, more than, Game of Thrones"
+				},
+				{
+					"language": "pt_BR",
+					"string": "Breaking Bad tem mais episódios do que Game of Thrones?",
+					"keywords": "Breaking Bad, mais, episódios, Game of Thrones"
+				},
+				{
+					"language": "de",
+					"string": "Hat Breaking Bad mehr Episoden als Game of Thrones?",
+					"keywords": "Breaking Bad, Episoden, mehr als, Game of Thrones"
+				},
+				{
+					"language": "es",
+					"string": "¿Tiene Breaking Bad más episodios que Game of Thrones?",
+					"keywords": "Breaking Bad, episodios, más que, Game of Thrones"
+				},
+				{
+					"language": "it",
+					"string": "Breaking Bad ha più episodi di Game of Thrones?",
+					"keywords": "Breaking Bad, eposido, più di, Game of Thrones"
+				},
+				{
+					"language": "fr",
+					"string": "A Breaking Bad plus d'épisodes que Game of Thrones?",
+					"keywords": "Breaking Bad, épisodes plus que, Game of Thrones"
+				},
+				{
+					"language": "nl",
+					"string": "Heeft Breaking Bad meer afleveringen dan Game of Thrones?",
+					"keywords": "Breaking Bad, afleveringen, meer dan, Game of Thrones"
+				},
+				{
+					"language": "hi_IN",
+					"string": "ब्रेकिंग बैड में गेम ऑफ़ थ्रोन्स की तुलना में अधिक एपिसोड हैं?",
+					"keywords": "ब्रेकिंग बैड, गेम ऑफ़ थ्रोन्स, अधिक एपिसोड"
+				},
+				{
+					"language": "ro",
+					"string": "Are Breaking Bad mai multe episoade decât Game of Thrones?",
+					"keywords": "Breaking Bad, episoade, mai multe decât, Game of Thrones"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nASK \nWHERE { \n        res:Breaking_Bad dbo:numberOfEpisodes ?x . \n        res:Game_of_Thrones dbo:numberOfEpisodes ?y . \n        FILTER (?y > ?x) \n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": false
+			}]
+		},
+		{
 			"id": "86",
 			"answertype": "resource",
 			"aggregation": false,
@@ -6159,8 +6825,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was called Rodzilla?",
-					"keywords": "called, Rodzilla"
+					"string": "Who was called Bird?",
+					"keywords": "called, Bird"
 				},
 				{
 					"language": "pt_BR",
@@ -6204,7 +6870,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbp: <http://dbpedia.org/property/> \nSELECT DISTINCT ?uri \nWHERE { \n         ?uri dbp:nickname \"Rodzilla\"@en .\n}"
+				"sparql": "PREFIX dbp: <http://dbpedia.org/property/> \nSELECT DISTINCT ?uri \nWHERE { \n         ?uri dbp:nickname 'Bird'@en .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -6220,6 +6886,62 @@
 						}
 					}]
 				}
+			}]
+		},
+		{
+			"id": "87",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Was Natalie Portman born in the United States?",
+					"keywords": "Natalie Portman, born, United States"
+				},
+				{
+					"language": "pt_BR",
+					"string": "Natalie Portman nasceu nos Estados Unidos?",
+					"keywords": "Natalie Portman, nasceu, Estados Unidos"
+				},
+				{
+					"language": "de",
+					"string": "Wurde Natalie Portman in den Vereinigten Staaten geboren?",
+					"keywords": "Natalie Portman, geboren, Vereinigte Staaten"
+				},
+				{
+					"language": "es",
+					"string": "¿Nació Natalie Portman en los estados unidos de américa?",
+					"keywords": "Natalie Portman"
+				},
+				{
+					"language": "it",
+					"string": "Natalie Portman, nata, Stati Uniti d'America",
+					"keywords": "Natalie Portman, nata, Stati Uniti d'America"
+				},
+				{
+					"language": "fr",
+					"string": "Natalie Portman est-elle née aux Etats-Unis?",
+					"keywords": "Natalie Portman, née, Etats-Unis"
+				},
+				{
+					"language": "nl",
+					"string": "Werd Natalie Portman geboren in de Verenigde Staten?",
+					"keywords": "Natalie Portman, geboren, Verenigde Staten"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या नेटली पोर्टमैन संयुक्त राज्य में पैदा हुइ थी ?",
+					"keywords": "नेटली पोर्टमैन, संयुक्त राज्य, पैदा"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nASK \nWHERE { \n\tres:Natalie_Portman dbo:birthPlace ?city .\n      \t?city dbo:country res:United_States .\n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": false
 			}]
 		},
 		{
@@ -6458,18 +7180,18 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which country does the creator of Miffy come from?",
-					"keywords": "Miffy, creator, country"
+					"string": "Which country does the creator of Super-Chief come from?",
+					"keywords": "Super-Chief, creator, country"
 				},
 				{
 					"language": "pt_BR",
-					"string": "De que país vem o criador de Miffy?",
+					"string": "De que país vem o criador de Superman Kal Kent?",
 					"keywords": "país, criador, Miffy"
 				},
 				{
 					"language": "de",
-					"string": "Aus welchem Land kommt der Erfinder von Nijntje?",
-					"keywords": "Nijntje, Erfinder, Land"
+					"string": "Aus welchem Land kommt der Super-Chief?",
+					"keywords": "Super-Chief, Land"
 				},
 				{
 					"language": "es",
@@ -6478,7 +7200,7 @@
 				},
 				{
 					"language": "it",
-					"string": "Da quale stato proviene il creatore di Miffy?",
+					"string": "Da quale stato proviene il creatore di Superman Kal Kent?",
 					"keywords": "Miffy, creatore, nazione"
 				},
 				{
@@ -6498,7 +7220,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE {\n\tres:Miffy dbo:creator ?x .\n\t?x dbo:nationality ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE {\n\tres:Super-Chief dbo:creator ?x .\n\t?x dbo:nationality ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -6524,8 +7246,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is Superwoman's real name?",
-					"keywords": "real name, Superwoman"
+					"string": "What is Batman's real name?",
+					"keywords": "real name, Batman"
 				},
 				{
 					"language": "pt_BR",
@@ -6539,8 +7261,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Was ist Superwomans richtiger Name?",
-					"keywords": "Superwoman, richtiger Name"
+					"string": "Was ist Batmans richtiger Name?",
+					"keywords": "Batman, richtiger Name"
 				},
 				{
 					"language": "es",
@@ -6574,7 +7296,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?s WHERE { <http://dbpedia.org/resource/Superwoman> <http://dbpedia.org/property/alterEgo> ?s . }"
+				"sparql": "SELECT DISTINCT ?s WHERE { <http://dbpedia.org/resource/Batman> <http://dbpedia.org/property/alterEgo> ?s . }"
 			},
 			"answers": [{
 				"head": {
@@ -7121,6 +7843,128 @@
 			}]
 		},
 		{
+			"id": "100",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Are tree frogs a type of amphibian?",
+					"keywords": "tree frog, amphibian"
+				},
+				{
+					"language": "pt_BR",
+					"string": "As rãs arborícolas são um tipo de anfíbio?",
+					"keywords": "rã arborícola, anfíbio"
+				},
+				{
+					"language": "de",
+					"string": "Sind Laubfrösche Amphibien?",
+					"keywords": "Laubfrosch, Amphibie"
+				},
+				{
+					"language": "es",
+					"string": "¿Son las ranas verdes un tipo de anfibio?",
+					"keywords": "rana verde, anfibio"
+				},
+				{
+					"language": "it",
+					"string": "Le rane verdi sono un tipo di anfibio?",
+					"keywords": "rana verde, anfibio"
+				},
+				{
+					"language": "fr",
+					"string": "Sont les grenouilles arboricoles un type d'amphibiens?",
+					"keywords": "grenouilles arboricoles, amphibien"
+				},
+				{
+					"language": "nl",
+					"string": "Zijn boomkikkers een soort amfibie?",
+					"keywords": "boomkikker, amfibie"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या वृक्ष के मेंढक एक प्रकार की उभयचर हैं?",
+					"keywords": "वृक्ष के मेंढक, प्रकार, उभयचर"
+				},
+				{
+					"language": "ro",
+					"string": "Sunt broaștele de copac un tip de amfibieni?",
+					"keywords": "broască de copac, amfibian"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nASK \nWHERE { \n        res:Hylidae dbo:class res:Amphibian . \n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": true
+			}]
+		},
+		{
+			"id": "101",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Is Christian Bale starring in Velvet Goldmine?",
+					"keywords": "Christian Bale, starring, Velvet Goldmine"
+				},
+				{
+					"language": "pt_BR",
+					"string": "Christian Bale atua em Velvet Goldmine?",
+					"keywords": "Christian Bale, estrelar, Velvet Goldmine"
+				},
+				{
+					"language": "de",
+					"string": "Spielt Christian Bale in Velvet Goldmine mit?",
+					"keywords": "Christian Bale, mitspielen, Velvet Goldmine"
+				},
+				{
+					"language": "es",
+					"string": "¿Actúa Christian Bale en Velvet Goldmine?",
+					"keywords": "Christian Bale, actúa, Velvet Goldmine"
+				},
+				{
+					"language": "it",
+					"string": "Christian Bale ha recitato in Velvet Goldmine?",
+					"keywords": "Christian Bale, recitare, Velvet Goldmine"
+				},
+				{
+					"language": "fr",
+					"string": "Christian Bale joue-t-il dans Velvet Goldmine?",
+					"keywords": "Christian Bale, joue, Velvet Goldmine"
+				},
+				{
+					"language": "nl",
+					"string": "Speelt Christian Bale in Velvet Goldmine?",
+					"keywords": "Christian Bale, speelt in, Velvet Goldmine"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या वेलवेट गोल्डमाइन में अभिनीता क्रिस्चियन बेल है?",
+					"keywords": "वेलवेट गोल्डमाइन, अभिनीता, क्रिस्चियन बेल"
+				},
+				{
+					"language": "ro",
+					"string": "Joacă Christian Bale un rol principal în Velvet Goldmine?",
+					"keywords": "Christian Bale, rol principal, Velevet Goldmine"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nASK\nWHERE {\n        res:Velvet_Goldmine dbo:starring res:Christian_Bale .\n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": true
+			}]
+		},
+		{
 			"id": "102",
 			"answertype": "resource",
 			"aggregation": false,
@@ -7128,8 +7972,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "List all games by GMT.",
-					"keywords": "game, GMT"
+					"string": "List all games by GMT Games.",
+					"keywords": "game, GMT Games"
 				},
 				{
 					"language": "pt_BR",
@@ -7138,8 +7982,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Liste alle Spiele von GMT auf.",
-					"keywords": "Spiel, GMT"
+					"string": "Liste alle Spiele von GMT Games auf.",
+					"keywords": "Spiel, GMT Games"
 				},
 				{
 					"language": "es",
@@ -7221,6 +8065,67 @@
 						}
 					]
 				}
+			}]
+		},
+		{
+			"id": "103",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Does the Isar flow into a lake?",
+					"keywords": "Isar, flow, lake"
+				},
+				{
+					"language": "pt_BR",
+					"string": "O Isar desemboca em um lago?",
+					"keywords": "Isar, desemboca, lago"
+				},
+				{
+					"language": "de",
+					"string": "Fließt die Isar in einen See?",
+					"keywords": "Isar, fließt, See"
+				},
+				{
+					"language": "es",
+					"string": "¿Desemboca el Isar en un lago?",
+					"keywords": "Isar, desemboca, lago"
+				},
+				{
+					"language": "it",
+					"string": "L'Isar sfocia in un lago?",
+					"keywords": "Isar, sfociare, lago"
+				},
+				{
+					"language": "fr",
+					"string": "L'Isar se déverse-t-il dans un lac?",
+					"keywords": "Isar, deverse, lac"
+				},
+				{
+					"language": "nl",
+					"string": "Mondt de Isar uit in een meer?",
+					"keywords": "Isar, uitmonden, meer"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या ईसार एक झील में प्रवाहित होती है?",
+					"keywords": "ईसार, झील, प्रवाहित"
+				},
+				{
+					"language": "ro",
+					"string": "Isarul se varsă într-un lac?",
+					"keywords": "Isar, varsă, lac"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nASK\nWHERE {\n        ?x dbo:inflow res:Isar .\n        ?x rdf:type dbo:Lake . \n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": true
 			}]
 		},
 		{
@@ -7543,38 +8448,38 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who created Wikipedia?",
-					"keywords": "Wikipedia, created"
+					"string": "Who created Gmail?",
+					"keywords": "Gmail, created"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Quem criou a Wikipedia?",
-					"keywords": "criador, Wikipedia"
+					"string": "Quem criou a Gmail?",
+					"keywords": "criador, Gmail"
 				},
 				{
 					"language": "de",
-					"string": "Wer hat Wikipedia gegründet?",
-					"keywords": "Wikipedia, gründen"
+					"string": "Wer hat Gmail gegründet?",
+					"keywords": "Gmail, gründen"
 				},
 				{
 					"language": "es",
-					"string": "¿Quién creó Wikipedia?",
-					"keywords": "Wikipedia, creador"
+					"string": "¿Quién creó Gmail?",
+					"keywords": "Gmail, creador"
 				},
 				{
 					"language": "it",
-					"string": "Chi ha creato Wikipedia?",
-					"keywords": "Wikipedia, creatore"
+					"string": "Chi ha creato Gmail?",
+					"keywords": "Gmail, creatore"
 				},
 				{
 					"language": "fr",
-					"string": "Qui est le créateur de Wikipedia?",
-					"keywords": "créateur, Wikipedia"
+					"string": "Qui est le créateur de Gmail?",
+					"keywords": "créateur, Gmail"
 				},
 				{
 					"language": "nl",
-					"string": "Wie heeft Wikipedia opgericht?",
-					"keywords": "Wikipedia, oprichter"
+					"string": "Wie heeft Gmail opgericht?",
+					"keywords": "Gmail, oprichter"
 				},
 				{
 					"language": "hi_IN",
@@ -7583,7 +8488,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n\tres:Wikipedia dbo:author ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n\tres:Gmail dbo:author ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -7606,6 +8511,123 @@
 						}
 					]
 				}
+			}]
+		},
+		{
+			"id": "109",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Is Rita Wilson the wife of Tom Hanks?",
+					"keywords": "Rita Wilson, wife, Tom Hanks"
+				},
+				{
+					"language": "pt_BR",
+					"string": "Rita Wilson é a esposa de Tom Hanks?",
+					"keywords": "Rita Wilson, esposa, Tom Hanks"
+				},
+				{
+					"language": "de",
+					"string": "Ist Rita Wilson die Frau von Tom Hanks?",
+					"keywords": "Rita Wilson, Frau, Tom Hanks"
+				},
+				{
+					"language": "es",
+					"string": "¿Es Rita Wilson la esposa de Tom Hanks?",
+					"keywords": "Rita Wilson, esposa, Tom Hanks"
+				},
+				{
+					"language": "it",
+					"string": "Rita Wilson è la moglie di Tom Hanks?",
+					"keywords": "Rita Wilson, moglie, Tom Hanks"
+				},
+				{
+					"language": "fr",
+					"string": "Rita Wilson est-elle l'épouse de Tom Hanks?",
+					"keywords": "Rita Wilson, épouse, Tom Hanks"
+				},
+				{
+					"language": "nl",
+					"string": "Is Rita Wilson de vrouw van Tom Hanks?",
+					"keywords": "Rita Wilson, vrouw, Tom Hanks"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या रीटा विल्सन टॉम हैंक्स की पत्नी है?",
+					"keywords": "रीटा विल्सन, टॉम हैंक्स, पत्नी"
+				},
+				{
+					"language": "ro",
+					"string": "Este Rita Wilson soția lui Tom Hanks?",
+					"keywords": "Rita Wilson, soție, Tom Hanks"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nASK \nWHERE { \n        res:Tom_Hanks dbo:spouse res:Rita_Wilson . \n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": true
+			}]
+		},
+		{
+			"id": "110",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Is the wife of president Obama called Michelle?",
+					"keywords": "Obama, president, wife, called, Michelle"
+				},
+				{
+					"language": "pt_BR",
+					"string": "A esposa do presidente Obama chama-se Michelle?",
+					"keywords": "esposa, presidente, Obama, chama, Michelle"
+				},
+				{
+					"language": "de",
+					"string": "Heißt die Frau von Präsident Obama Michelle?",
+					"keywords": "Obama, Präsident, Frau, heißen, Michelle"
+				},
+				{
+					"language": "es",
+					"string": "¿La mujer del presidente Obama se llama Michelle?",
+					"keywords": "mujer, presidente, Obama, se lamma, Michelle"
+				},
+				{
+					"language": "it",
+					"string": "La moglie del presidente Obama si chiama Michelle?",
+					"keywords": "moglie, presidente, Obama, si chiama, Michelle"
+				},
+				{
+					"language": "fr",
+					"string": "L'épouse du président Obama s'appelle-t-elle Michelle?",
+					"keywords": "épouse, Obama, Michelle, appelle"
+				},
+				{
+					"language": "nl",
+					"string": "Heet de echtgenote van president Barack Obama Michelle?",
+					"keywords": "echtgenote, Barack Obama, Michelle"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या राष्ट्रपति ओबामा की पत्नी का नाम मिशेल है?",
+					"keywords": "राष्ट्रपति ओबामा, पत्नी, मिशेल"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nASK \nWHERE {\n        res:Barack_Obama dbo:spouse ?spouse .\n        ?spouse rdfs:label ?name .\n        FILTER(regex(?name,'Michelle')) \n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": true
 			}]
 		},
 		{
@@ -7818,7 +8840,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/director> <http://dbpedia.org/resource/Stanley_Kubrick> . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/director> <http://dbpedia.org/resource/Stanley_Kubrick> . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>  <http://dbpedia.org/ontology/Film> . }"
 			},
 			"answers": [{
 				"head": {
@@ -8077,8 +9099,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the youngest player in the Premier League?",
-					"keywords": "player, Premier League, youngest"
+					"string": "Who is the youngest politician?",
+					"keywords": "player, politician, youngest"
 				},
 				{
 					"language": "pt_BR",
@@ -8122,7 +9144,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nSELECT DISTINCT ?uri \nWHERE { \n        ?uri dbo:team ?x . \n        ?x dbo:league res:Premier_League . \n        ?uri dbo:birthDate ?y . \n} \nORDER BY DESC(?y) \nOFFSET 0 LIMIT 1"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nSELECT DISTINCT ?uri \nWHERE {?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Politician> . \n        ?uri dbo:birthDate ?y . \n} \nORDER BY DESC(?y) \nOFFSET 0 LIMIT 1"
 			},
 			"answers": [{
 				"head": {
@@ -8506,8 +9528,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who composed the soundtrack for Cameron's Titanic?",
-					"keywords": "compose, soundtrack, Cameron's Titanic"
+					"string": "Who composed the soundtrack for Titanic?",
+					"keywords": "compose, soundtrack,Titanic"
 				},
 				{
 					"language": "pt_BR",
@@ -8521,8 +9543,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer hat den Soundtrack für Camerons Titanic geschrieben?",
-					"keywords": "Cameron, Titanic, Soundtrack, geschrieben"
+					"string": "Wer hat den Soundtrack für Titanic geschrieben?",
+					"keywords": "Titanic, Soundtrack, geschrieben"
 				},
 				{
 					"language": "es",
@@ -8531,8 +9553,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Chi ha composto la colonna sonora di Titanic di Cameron?",
-					"keywords": "comporre, colonna sonora, Titanic, Cameron"
+					"string": "Chi ha composto la colonna sonora di Titanic?",
+					"keywords": "comporre, colonna sonora, Titanic"
 				},
 				{
 					"language": "fr",
@@ -9140,6 +10162,67 @@
 			}]
 		},
 		{
+			"id": "128",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Does Abraham Lincoln's death place have a website?",
+					"keywords": "Abraham Lincoln, death place, website"
+				},
+				{
+					"language": "pt_BR",
+					"string": "O local onde Abraham Lincoln morreu tem um website?",
+					"keywords": "local, Abraham Lincoln, morreu, website"
+				},
+				{
+					"language": "de",
+					"string": "Hat Abraham Lincolns Sterbeort eine Webseite?",
+					"keywords": "Abraham Lincoln, Sterbeort, Webseite"
+				},
+				{
+					"language": "es",
+					"string": "¿Tiene el lugar de nacimiento de Abraham Lincol una página web?",
+					"keywords": "Abraham Lincoln, lugar de nacimiento, página web"
+				},
+				{
+					"language": "it",
+					"string": "Il luogo di morte di Abraham Lincoln ha un sito web?",
+					"keywords": "Abraham Lincoln, luogo di morte, website"
+				},
+				{
+					"language": "fr",
+					"string": "A le lieu de décès d'Abraham Lincoln une page Web?",
+					"keywords": "Abraham Lincoln, lieu de décès, page Web"
+				},
+				{
+					"language": "nl",
+					"string": "Heeft de stad waarin Abraham Lincoln is overleden een website?",
+					"keywords": "Abraham Lincoln, stad, gestorven, website"
+				},
+				{
+					"language": "hi_IN",
+					"string": "अब्राहम लिंकन की मौत की जगह की बसाइट है?",
+					"keywords": "अब्राहम लिंकन, मौत, जगह, बसाइट"
+				},
+				{
+					"language": "ro",
+					"string": "Locul morții lui Abraham Lincoln are un website?",
+					"keywords": "locul morții, Abraham Lincoln, website"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nASK \nWHERE {\n        res:Abraham_Lincoln dbo:deathPlace ?p .\n        ?p dbo:website ?w . \n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": false
+			}]
+		},
+		{
 			"id": "129",
 			"answertype": "resource",
 			"aggregation": false,
@@ -9147,8 +10230,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the king of the Parliament of Barbados?",
-					"keywords": "king, Parliament of Barbados"
+					"string": "Who is the king of Parliament of Australia?",
+					"keywords": "king, Parliament of Australia"
 				},
 				{
 					"language": "pt_BR",
@@ -9162,8 +10245,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer ist der König der Parliament of Barbados?",
-					"keywords": "König, Parliament of Barbados"
+					"string": "Wer ist der König der Parliament of Australia?",
+					"keywords": "König, Parliament of Australia"
 				},
 				{
 					"language": "es",
@@ -9197,7 +10280,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Parliament_of_Barbados> <http://dbpedia.org/ontology/leader> ?uri . ?uri a <http://dbpedia.org/ontology/Royalty> . } "
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Parliament_of_Australia> <http://dbpedia.org/ontology/leader> ?uri . ?uri a <http://dbpedia.org/ontology/Royalty> . } "
 			},
 			"answers": [{
 				"head": {
@@ -9273,7 +10356,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Nikos_Kazantzakis> <http://dbpedia.org/ontology/deathPlace> ?uri . ?uri a <http://dbpedia.org/ontology/Town> . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Nikos_Kazantzakis> <http://dbpedia.org/ontology/deathPlace> ?uri . ?uri a <http://dbpedia.org/ontology/City> . }"
 			},
 			"answers": [{
 				"head": {
@@ -9512,17 +10595,17 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "In which military conflicts did Lawrence of Arabia participate?",
+					"string": "In which military conflicts did Thomas Edward Lawrence participate?",
 					"keywords": "Lawrence of Arabia, military conflict"
 				},
 				{
 					"language": "pt_BR",
-					"string": "De quais conflitos militares Lawrence da Arábia participou?",
+					"string": "De quais conflitos militares Thomas Edward Lawrence participou?",
 					"keywords": "conflitos militares, Lawrence da Arabia"
 				},
 				{
 					"language": "de",
-					"string": "An welchen militärischen Auseinandersetzungen war Lawrence von Arabien beteiligt?",
+					"string": "An welchen militärischen Auseinandersetzungen war Thomas Edward Lawrence beteiligt?",
 					"keywords": "Lawrence von Arabien, militärische Auseinandersetzung"
 				},
 				{
@@ -9532,7 +10615,7 @@
 				},
 				{
 					"language": "it",
-					"string": "A quali conflitti militari ha partecipato Lawrence d'Arabia?",
+					"string": "A quali conflitti militari ha partecipato Thomas Edward Lawrence?",
 					"keywords": "Lawrence d'Arabia, conflitto militare"
 				},
 				{
@@ -9627,6 +10710,77 @@
 							}
 						}
 					]
+				}
+			}]
+		},
+		{
+			"id": "135",
+			"answertype": "resource",
+			"aggregation": true,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Which book has the most pages?",
+					"keywords": "book, the most pages"
+				},
+				{
+					"language": "pt_BR",
+					"string": "Qual o livro com maior número de páginas?",
+					"keywords": "livro, maior número de páginas"
+				},
+				{
+					"language": "de",
+					"string": "Welches Buch hat die meisten Seiten?",
+					"keywords": "Buch, meisten Seiten"
+				},
+				{
+					"language": "es",
+					"string": "¿Que libro tiene el mayor numero de paginas?",
+					"keywords": "libro, mayor numero paginas"
+				},
+				{
+					"language": "it",
+					"string": "Quale libro ha il maggior numero di pagine?",
+					"keywords": "libro, maggior numero di pagine"
+				},
+				{
+					"language": "fr",
+					"string": "Quel livre a le plus de pages?",
+					"keywords": "livre, le plus de pages"
+				},
+				{
+					"language": "nl",
+					"string": "Welk boek heeft de meeste pagina's?",
+					"keywords": "boek, meeste pagina's"
+				},
+				{
+					"language": "hi_IN",
+					"string": "कौन से पुस्तक में सबसे अधिक पृष्ठ हैं?",
+					"keywords": "पुस्तक, सबसे अधिक पृष्ठ"
+				},
+				{
+					"language": "ro",
+					"string": "Ce carte are cele mai multe pagini?",
+					"keywords": "carte, cele mai multe pagini"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> \nSELECT DISTINCT ?uri\nWHERE { \n        ?uri rdf:type dbo:Book . \n        ?uri dbo:numberOfPages ?n .\n}\nORDER BY DESC(?n)\nOFFSET 0 LIMIT 1"
+			},
+			"answers": [{
+				"head": {
+					"vars": [
+						"uri"
+					]
+				},
+				"results": {
+					"bindings": [{
+						"uri": {
+							"type": "uri",
+							"value": "http://dbpedia.org/resource/The_Tolkien_Reader"
+						}
+					}]
 				}
 			}]
 		},
@@ -9869,6 +11023,72 @@
 			}]
 		},
 		{
+			"id": "139",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Did Elvis Presley have children?",
+					"keywords": "Elvis Presley, children"
+				},
+				{
+					"language": "pt_BR",
+					"string": "Elvis Presley teve filhos?",
+					"keywords": "Elvis Presley, filhos"
+				},
+				{
+					"language": "fa",
+					"string": "آیا الویس پرسلی فرزند دارد؟",
+					"keywords": "الویس پرسلی، فرزند"
+				},
+				{
+					"language": "de",
+					"string": "Hatte Elvis Presley Kinder?",
+					"keywords": "Elvis Presley, Kinder"
+				},
+				{
+					"language": "es",
+					"string": "Tuvo hijos Elvis Presley?",
+					"keywords": "hijos, Elvis Presley"
+				},
+				{
+					"language": "it",
+					"string": "Elvis Presley ha avuto dei figli?",
+					"keywords": "Elvis Presley, figli"
+				},
+				{
+					"language": "fr",
+					"string": "Elvis Presley a-t-il eu des enfants?",
+					"keywords": "enfants, Elvis Presley"
+				},
+				{
+					"language": "nl",
+					"string": "Had Elvis Presley kinderen?",
+					"keywords": "Elvis Presley, kinderen"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या एल्विस प्रेस्ली के बच्चे थे ?",
+					"keywords": "एल्विस प्रेस्ली, बच्चे"
+				},
+				{
+					"language": "ro",
+					"string": "A avut Elvis Presley copii?",
+					"keywords": "Elvis Presly, copii"
+				}
+			],
+			"query": {
+				"sparql": "ASK WHERE { <http://dbpedia.org/resource/Elvis_Presley> <http://dbpedia.org/ontology/child> ?uri . } "
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": true
+			}]
+		},
+		{
 			"id": "140",
 			"answertype": "resource",
 			"aggregation": false,
@@ -9952,7 +11172,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which country was Bill Gates born in?",
+					"string": "Which city was Bill Gates born in?",
 					"keywords": "country, born, Bill Gates"
 				},
 				{
@@ -9967,7 +11187,7 @@
 				},
 				{
 					"language": "de",
-					"string": "In welchem Land ist Bill Gates geboren?",
+					"string": "In welcher Stadt ist Bill Gates geboren?",
 					"keywords": "Bill Gates, Land, geboren"
 				},
 				{
@@ -10002,7 +11222,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Bill_Gates> <http://dbpedia.org/ontology/birthPlace> ?x . ?x <http://dbpedia.org/ontology/country> ?uri . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Bill_Gates> <http://dbpedia.org/ontology/birthPlace> ?uri . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/City> . }"
 			},
 			"answers": [{
 				"head": {
@@ -10178,6 +11398,62 @@
 						}
 					}]
 				}
+			}]
+		},
+		{
+			"id": "144",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Is Michelle Obama the wife of Barack Obama?",
+					"keywords": "Michelle Obama, wife, Barack Obama"
+				},
+				{
+					"language": "pt_BR",
+					"string": "Michelle Obama é a esposa de Barack Obama?",
+					"keywords": "Michelle Obama, esposa, Barack Obama"
+				},
+				{
+					"language": "de",
+					"string": "Ist Michelle Obama die Frau von Barack Obama?",
+					"keywords": "Michelle Obama, Frau, Barack Obama"
+				},
+				{
+					"language": "es",
+					"string": "¿Es Michele Obama la esposa de Barack Obama?",
+					"keywords": "Michelle Obama, esposa, Barack Obama"
+				},
+				{
+					"language": "it",
+					"string": "Michelle Obama è la moglie di Barack Obama?",
+					"keywords": "Michelle Obama, moglie, Barack Obama"
+				},
+				{
+					"language": "fr",
+					"string": "Michelle Obama est-elle l'épouse de Barack Obama?",
+					"keywords": "Michelle Obama, épouse, Barack Obama"
+				},
+				{
+					"language": "nl",
+					"string": "Is Michelle Obama de vrouw van Barack Obama?",
+					"keywords": "Michelle Obama, vrouw van, Barack Obama"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या बराक ओबामा की पत्नी मिशेल ओबामा हैं?",
+					"keywords": "बराक ओबामा, पत्नी, मिशेल ओबामा"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nASK \nWHERE {\n\tres:Barack_Obama dbo:spouse res:Michelle_Obama .\n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": true
 			}]
 		},
 		{
@@ -10749,13 +12025,13 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What country is Epicentric from?",
-					"keywords": "country, Sitecore"
+					"string": "What country is MetaTV from?",
+					"keywords": "country, MetaTV"
 				},
 				{
 					"language": "pt_BR",
-					"string": "De que país é a Sitecore",
-					"keywords": "país, Sitecore"
+					"string": "De que país é a MetaTV",
+					"keywords": "país, MetaTV"
 				},
 				{
 					"language": "fa",
@@ -10764,8 +12040,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Aus welchem Land kommt Epicentric?",
-					"keywords": "Epicentric, Land"
+					"string": "Aus welchem Land kommt MetaTV?",
+					"keywords": "MetaTV, Land"
 				},
 				{
 					"language": "es",
@@ -10774,8 +12050,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Di che nazione è Sitecore?",
-					"keywords": "nazione, Sitecore"
+					"string": "Di che nazione è MetaTV?",
+					"keywords": "nazione, MetaTV"
 				},
 				{
 					"language": "fr",
@@ -10799,7 +12075,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Epicentric> <http://dbpedia.org/ontology/foundationPlace> ?uri . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/MetaTV> <http://dbpedia.org/ontology/foundationPlace> ?uri . }"
 			},
 			"answers": [{
 				"head": {
@@ -10967,13 +12243,13 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was Omar Khayyam inspired by?",
-					"keywords": "person, inspiring, Omar Khayyam"
+					"string": "Who was Friedrich Wilhelm Joseph Schelling inspired by?",
+					"keywords": "person, inspiring, Friedrich Wilhelm Joseph Schelling"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Em quem Vincent van Gogh inspirou-se?",
-					"keywords": "inspiração, Vincent van Gogh"
+					"string": "Em quem Friedrich Wilhelm Joseph Schelling inspirou-se?",
+					"keywords": "inspiração, Friedrich Wilhelm Joseph Schelling"
 				},
 				{
 					"language": "fa",
@@ -10982,8 +12258,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer hat Omar Khayyam inspiriert?",
-					"keywords": "Omar Khayyam, Inspiration"
+					"string": "Wer hat Friedrich Wilhelm Joseph Schelling inspiriert?",
+					"keywords": "Friedrich Wilhelm Joseph Schelling, Inspiration"
 				},
 				{
 					"language": "es",
@@ -10992,8 +12268,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Da chi fu inspirato Vincent van Gogh?",
-					"keywords": "persona, ispirare, Vincent van Gogh"
+					"string": "Da chi fu inspirato Friedrich Wilhelm Joseph Schelling?",
+					"keywords": "persona, ispirare, Friedrich Wilhelm Joseph Schelling"
 				},
 				{
 					"language": "fr",
@@ -11017,7 +12293,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/influenced> <http://dbpedia.org/resource/Omar_Khayyam> . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/influenced> <http://dbpedia.org/resource/Friedrich_Wilhelm_Joseph_Schelling> . }"
 			},
 			"answers": [{
 				"head": {
@@ -11106,6 +12382,62 @@
 						}
 					}]
 				}
+			}]
+		},
+		{
+			"id": "157",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Was U.S. president Jackson involved in a war?",
+					"keywords": "U.S. president, Jackson, war"
+				},
+				{
+					"language": "pt_BR",
+					"string": "O presidente Jackson dos EUA envolveu-se em uma guerra?",
+					"keywords": "presidente, Jackson, EUA"
+				},
+				{
+					"language": "de",
+					"string": "War US-Präsident Jackson in einen Krieg verwickelt?",
+					"keywords": "US-Präsident, Jackson, Krieg"
+				},
+				{
+					"language": "es",
+					"string": "¿Estuvo el el presidente de los estados unidos Jackson involucrado en una guerra?",
+					"keywords": "presidente de los estados unidos, Jackson, guerra"
+				},
+				{
+					"language": "it",
+					"string": "Il presidente degli Stati Uniti Jackson è stato coinvolto in una guerra?",
+					"keywords": "presidente degli Stati Uniti, Jackson, guerra"
+				},
+				{
+					"language": "fr",
+					"string": "Le président Jackson a-t-il participé à une guerre?",
+					"keywords": "président Jackson, guerre, participé"
+				},
+				{
+					"language": "nl",
+					"string": "Was president Jackson van de Verenigde Staten betrokken bij een oorlog?",
+					"keywords": "president van de Verenigde Staten, Jackson, oorlog, betrokken bij"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या अमेरिका के राष्ट्रपति जैक्सन किसी युद्ध में शामिल थे?",
+					"keywords": "अमेरिका, राष्ट्रपति जैक्सन, युद्ध"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nASK \nWHERE {\n\tres:Andrew_Jackson dbo:battle ?battle .    \n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": true
 			}]
 		},
 		{
@@ -12040,13 +13372,13 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "In which city does Sylvester Stallone live?",
-					"keywords": "city, live, Sylvester Stallone"
+					"string": "In which city does Bruny Surin live?",
+					"keywords": "city, live, Bruny Surin"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Em que cidade Sylvester Stallone mora?",
-					"keywords": "cidade, Silvester Stallone, vive"
+					"string": "Em que cidade Bruny Surin mora?",
+					"keywords": "cidade, Bruny Surin, vive"
 				},
 				{
 					"language": "fa",
@@ -12055,8 +13387,8 @@
 				},
 				{
 					"language": "de",
-					"string": "In welcher Stadt wohnt Sylvester Stallone?",
-					"keywords": "Sylvester Stallone, wohnen, Stadt"
+					"string": "In welcher Stadt wohnt Bruny Surin?",
+					"keywords": "Bruny Surin, wohnen, Stadt"
 				},
 				{
 					"language": "es",
@@ -12065,8 +13397,8 @@
 				},
 				{
 					"language": "it",
-					"string": "In quale città vive Sylvester Stallone?",
-					"keywords": "città, vive, Sylvester Stallone"
+					"string": "In quale città vive Bruny Surin?",
+					"keywords": "città, vive, Bruny Surin"
 				},
 				{
 					"language": "fr",
@@ -12090,7 +13422,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri a <http://dbpedia.org/ontology/City> . <http://dbpedia.org/resource/Sylvester_Stallone> <http://dbpedia.org/ontology/residence> ?uri . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri a <http://dbpedia.org/ontology/City> . <http://dbpedia.org/resource/Bruny_Surin> <http://dbpedia.org/ontology/residence> ?uri . }"
 			},
 			"answers": [{
 				"head": {
@@ -12172,6 +13504,62 @@
 						}
 					}]
 				}
+			}]
+		},
+		{
+			"id": "170",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Did Socrates influence Aristotle?",
+					"keywords": "Socrates, influence, Aristotle"
+				},
+				{
+					"language": "pt_BR",
+					"string": "Sócrates influenciou Aristóteles?",
+					"keywords": "Sócrates, influência, Aristóteles"
+				},
+				{
+					"language": "de",
+					"string": "Hat Sokrates Aristoteles beeinflusst?",
+					"keywords": "Sokrates, beeinflussen, Aristoteles"
+				},
+				{
+					"language": "es",
+					"string": "¿Tuvo Sócrates influencia sobre Aristóteles?",
+					"keywords": "Sócrates, influencia, Aristóteles"
+				},
+				{
+					"language": "it",
+					"string": "Socrate ha influenzato Aristotele?",
+					"keywords": "Socrate, influenzare, Aristotele"
+				},
+				{
+					"language": "fr",
+					"string": "Socrate a-t-il influencé Aristote?",
+					"keywords": "Socrate, influencer, Aristote"
+				},
+				{
+					"language": "nl",
+					"string": "Beïnvloedde Socrates Aristoteles?",
+					"keywords": "beïnvloeden, Socrates, Aristoteles"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या एरिस्टोटल सोक्रेटस से प्रभावित थे?",
+					"keywords": "एरिस्टोटल, सोक्रेटस, प्रभावित"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nASK \nWHERE {\n\tres:Aristotle dbo:influencedBy res:Socrates .\n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": true
 			}]
 		},
 		{
@@ -12592,7 +13980,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n        res:Rotterdam dbo:leaderName ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n        res:Moscow dbo:leaderName ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -12836,6 +14224,62 @@
 			}]
 		},
 		{
+			"id": "180",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Did Tesla win a nobel prize in physics?",
+					"keywords": "Tesla, nobel prize, physics"
+				},
+				{
+					"language": "pt_BR",
+					"string": "Tesla ganhou um Prêmio Nobel de Física?",
+					"keywords": "Tesla, Prêmio Nobel de Física"
+				},
+				{
+					"language": "de",
+					"string": "Hat Tesla den Nobelpreis für Physik gewonnen?",
+					"keywords": "Tesla, Nobelpreis, Physik"
+				},
+				{
+					"language": "es",
+					"string": "¿Obtuvo Tesla el premio nobel de física?",
+					"keywords": "Tesla, premio nobel, física"
+				},
+				{
+					"language": "it",
+					"string": "Tesla ha vinto un premio Nobel per la fisica?",
+					"keywords": "Tesla, premio nobel, fisica"
+				},
+				{
+					"language": "fr",
+					"string": "Tesla a-t-il recu le prix Nobel?",
+					"keywords": "Tesla, recu, prix Nobel"
+				},
+				{
+					"language": "nl",
+					"string": "Heeft Tesla ooit de Nobelprijs voor de Natuurkunde gewonnen?",
+					"keywords": "Nobelprijs voor de Natuurkunde, Tesla"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या टेस्ला ने भौतिक विज्ञान में नोबेल पुरस्कार जीता?",
+					"keywords": "टेस्ला, भौतिक विज्ञान, नोबेल पुरस्कार"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nASK \nWHERE {\n        res:Nikola_Tesla dbo:award res:Nobel_Prize_in_Physics .\n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": false
+			}]
+		},
+		{
 			"id": "181",
 			"answertype": "resource",
 			"aggregation": true,
@@ -12988,6 +14432,62 @@
 			}]
 		},
 		{
+			"id": "183",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Is proinsulin a protein?",
+					"keywords": "proinsulin, protein"
+				},
+				{
+					"language": "pt_BR",
+					"string": "A proinsulina é uma proteína?",
+					"keywords": "proinsulina, proteína"
+				},
+				{
+					"language": "de",
+					"string": "Ist Proinsulin ein Protein?",
+					"keywords": "Proinsulin, Protein"
+				},
+				{
+					"language": "es",
+					"string": "¿La proinsulina es una proteina?",
+					"keywords": "proinsulina, protein"
+				},
+				{
+					"language": "it",
+					"string": "a proinsulina è una proteina?",
+					"keywords": "proinsulina, proteina"
+				},
+				{
+					"language": "fr",
+					"string": "La pro-insuline est-elle une protéine?",
+					"keywords": "pro-insuline, protéine"
+				},
+				{
+					"language": "nl",
+					"string": "Is proinsuline een proteïne?",
+					"keywords": "proinsuline, proteïne"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या प्रोइन्सुलिन एक प्रोटीन है?",
+					"keywords": "प्रोइन्सुलिन, प्रोटीन"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nASK \nWHERE {\n\tres:Proinsulin rdf:type dbo:Protein .\n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": true
+			}]
+		},
+		{
 			"id": "184",
 			"answertype": "resource",
 			"aggregation": false,
@@ -13063,6 +14563,194 @@
 						}
 					]
 				}
+			}]
+		},
+		{
+			"id": "185",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Did Che Guevara have children?",
+					"keywords": "children, Che Guevara"
+				},
+				{
+					"language": "pt_BR",
+					"string": "Che Guevara teve filhos?",
+					"keywords": "Che Guevara, filhos"
+				},
+				{
+					"language": "de",
+					"string": "Hatte Che Guevara Kinder?",
+					"keywords": "Kinder, Che Guevara"
+				},
+				{
+					"language": "es",
+					"string": "¿Tuvo hijos el Che Guevara?",
+					"keywords": "hijos, Che Guevara"
+				},
+				{
+					"language": "it",
+					"string": "Che Guevara aveva dei figli?",
+					"keywords": "figli, Che Guevara"
+				},
+				{
+					"language": "fr",
+					"string": "Est-ce que Che Guevara a eu des enfants?",
+					"keywords": "enfants, Che Guevara"
+				},
+				{
+					"language": "nl",
+					"string": "Had Che Guevara kinderen?",
+					"keywords": "kinderen, Che Guevara"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या चे ग्वेरा के बच्चे हैं?",
+					"keywords": "चे ग्वेरा, बच्चे"
+				},
+				{
+					"language": "ro",
+					"string": "Che Guevara a avut copii?",
+					"keywords": "copii, Che Guevara"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nASK\nWHERE { \n        res:Che_Guevara dbo:child ?uri . \n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": true
+			}]
+		},
+		{
+			"id": "186",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Is Lake Baikal bigger than the Great Bear Lake?",
+					"keywords": "Lake Baikal, bigger than, Great Bear Lake"
+				},
+				{
+					"language": "pt_BR",
+					"string": "O lago Baikal é maior do que o lago Great Bear?",
+					"keywords": "lago Baikal, maior, lago Great Bear"
+				},
+				{
+					"language": "de",
+					"string": "Ist der Baikalsee größer als der Große Bärensee?",
+					"keywords": "Baikalsee, größer als, Großer Bärensee"
+				},
+				{
+					"language": "es",
+					"string": "¿Es el lago Baikal mayor que el lago Great Bear?",
+					"keywords": "lago Baikal mayor que lago Great Bear?"
+				},
+				{
+					"language": "it",
+					"string": "Il lago Baikal è più grande le lago Great Bear?",
+					"keywords": "lago Baikal, più grande, lago Great Bear"
+				},
+				{
+					"language": "fr",
+					"string": "Est-ce que Lake Baikal est plus grand que le Great Bear Lake?",
+					"keywords": "Lake Baikal, plus grand, Great Bear Lake"
+				},
+				{
+					"language": "nl",
+					"string": "Is het Baikalmeer groter dan het Groot Berenmeer?",
+					"keywords": "Baikalmeer, groter, Groot Berenmeer"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या जैक बेयर झील तुलना में बाइकाल झील बड़ी है?",
+					"keywords": "जैक बेयर झील, बाइकाल झील, बड़ी"
+				},
+				{
+					"language": "ro",
+					"string": "Lacul Baikal este mai mare decât lacul Great Bear?",
+					"keywords": "lacul Baikal, mai mare decât, lacul Great Bear"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/> \nASK\nWHERE {  \n        res:Lake_Baikal dbo:areaTotal ?a1 . \n        res:Great_Bear_Lake dbo:areaTotal ?a2 .\n        FILTER (?a1 > ?a2)\n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": true
+			}]
+		},
+		{
+			"id": "187",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Did Kaurismäki ever win the Grand Prix at Cannes?",
+					"keywords": "Kaurismäki, winner, Grand Prix at Cannes"
+				},
+				{
+					"language": "pt_BR",
+					"string": "Kaurismäki alguma vez venceu o Grand Prix de Cannes?",
+					"keywords": "Kaurismäki, vencedor, Grand Prix de Cannes"
+				},
+				{
+					"language": "fa",
+					"string": "آیا کوریسماکی تا بحال جایزه بزرگ  جشنواره کن را برده است؟",
+					"keywords": "کوریسماکی، جایزه بزرگ جشنواره کن"
+				},
+				{
+					"language": "de",
+					"string": "Hat Kaurismäki jemals den Großen Preis der Jury in Cannes gewonnen?",
+					"keywords": "Kaurismäki, Großer Preis der Jury, Cannes"
+				},
+				{
+					"language": "es",
+					"string": "¿Gano Kaurismäki alguna vez el Gran Prix de Cannes?",
+					"keywords": "Kaurismäki, ganador, Grand Prix de Cannes"
+				}, 
+				{
+					"language": "it",
+					"string": "Kaurismäki ha mai vinto il Grand Prix a Cannes?",
+					"keywords": "Kaurismäki, vincitore, Grand Prix a Cannes"
+				},
+				{
+					"language": "fr",
+					"string": "A Kaurismäki gagné le Grand Prix de Cannes?",
+					"keywords": "Kaurismäki, gagné, Grand Prix de Cannes"
+				},
+				{
+					"language": "nl",
+					"string": "Heeft Kaurismäki ooit de Grand Prix op het filmfestival van Cannes gewonnen?",
+					"keywords": "Kaurismäki, winnaar, Grand Prix, Cannes"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या कौरिस्म्की कभी कैनन्स में ग्रांड प्रिक्स जीते हैं?",
+					"keywords": "कौरिस्म्की, कैनन्स, ग्रांड प्रिक्स, जीत"
+				},
+				{
+					"language": "ro",
+					"string": "Kaurismäki a câștigat vreodată premiul Grand Prix la Cannes?",
+					"keywords": "Kaurismäki, câștigător, Grand Prix la Cannes"
+				}
+			],
+			"query": {
+				"sparql": "ASK WHERE { <http://dbpedia.org/resource/Aki_Kaurismäki> <http://dbpedia.org/ontology/award> <http://dbpedia.org/resource/Grand_Prix_(Cannes_Film_Festival)> . }"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": true
 			}]
 		},
 		{
@@ -13647,8 +15335,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Show me all books in Asimov's Foundation series.",
-					"keywords": "books, Asimov, Foundation series"
+					"string": "Show me all books in Foundation series.",
+					"keywords": "books, Foundation series"
 				},
 				{
 					"language": "pt_BR",
@@ -13662,8 +15350,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Zeig mir alle Bücher in Asimovs Foundation-Serie.",
-					"keywords": "Asimov, Foundation-Serie, Bücher"
+					"string": "Zeig mir alle Bücher in Foundation-Serie.",
+					"keywords": "Foundation-Serie, Bücher"
 				},
 				{
 					"language": "es",
@@ -14006,6 +15694,62 @@
 						}
 					}]
 				}
+			}]
+		},
+		{
+			"id": "199",
+			"answertype": "boolean",
+			"aggregation": true,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Does the new Battlestar Galactica series have more episodes than the old one?",
+					"keywords": "new BattleStar Galactica series, episodes, more, old Battle Star Galactica series"
+				},
+				{
+					"language": "pt_BR",
+					"string": "A nova série Battlestar Galactica tem mais episódios do que a anterior?",
+					"keywords": "nova série Battlestar Galactica, mais episódios do que a anterior"
+				},
+				{
+					"language": "de",
+					"string": "Hat die neue Battlestar-Galactica-Serie mehr Episoden als die alte?",
+					"keywords": "neue Battlestar-Galactica-Serie, Episoden, mehr, alte Battlestar-Galactica-Serie"
+				},
+				{
+					"language": "es",
+					"string": "¿Tiene la nueve serie de Battlestar-Galactica más episodios que la anterior?",
+					"keywords": "nueve serie de Battlestar-Galactica, más episodios que la anterior"
+				},
+				{
+					"language": "it",
+					"string": "La nuova serie di Battlestar Galactica ha più episodi di quella precedente?",
+					"keywords": "nuova serie di Battlestar Galactica, più episodi della precedente"
+				},
+				{
+					"language": "fr",
+					"string": "A la nouvelle série de Battlestar Galactica plus d'épisodes que l'ancienne?",
+					"keywords": "nouvelle série de Battlestar Galactica, plus d'épisodes que l'ancienne"
+				},
+				{
+					"language": "nl",
+					"string": "Heeft de nieuwe Battlestar Galactica-serie meer afleveringen dan de oude?",
+					"keywords": "nieuwe Battlestar Galactica-serie, meer afleveringen, oude Battlestar Galactica-serie"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या नई बट्ट्लैस्टार गैलेक्टिका सीरीज़ के पुराने संस्करणों की तुलना में अधिक एपिसोड हैं?",
+					"keywords": "नई बट्ट्लैस्टार गैलेक्टिका सीरीज़, पुराने संस्करणों, अधिक एपिसोड"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nASK \nWHERE {\n\t<http://dbpedia.org/resource/Battlestar_Galactica_%281978_TV_series%29> dbo:numberOfEpisodes ?x .\n\t<http://dbpedia.org/resource/Battlestar_Galactica_%282004_TV_series%29> dbo:numberOfEpisodes ?y .\n\tFILTER (?y > ?x)\n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": false
 			}]
 		},
 		{
@@ -14754,7 +16498,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which professional surfers were born on the Philippines?",
+					"string": "Which actors were born on the Philippines?",
 					"keywords": "professional surfer, born, Philippines"
 				},
 				{
@@ -14794,7 +16538,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n\t?uri dbo:occupation res:Surfing .\n\t?uri dbo:birthPlace res:Philippines .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n\t?uri dbo:occupation res:Actor .\n\t?uri dbo:birthPlace res:Philippines .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -14911,6 +16655,67 @@
 						}
 					]
 				}
+			}]
+		},
+		{
+			"id": "212",
+			"answertype": "boolean",
+			"aggregation": false,
+			"onlydbo": true,
+			"hybrid": false,
+			"question": [{
+					"language": "en",
+					"string": "Is Cola a beverage?",
+					"keywords": "Cola, beverage"
+				},
+				{
+					"language": "pt_BR",
+					"string": "Cola é uma bebida?",
+					"keywords": "Cola, bebida"
+				},
+				{
+					"language": "de",
+					"string": "Ist Cola ein Getränk?",
+					"keywords": "Cola, Getränk"
+				},
+				{
+					"language": "es",
+					"string": "¿La Coca Cola es una bebida?",
+					"keywords": "Coca Cola, bebida"
+				},
+				{
+					"language": "it",
+					"string": "La Cola è una bevanda?",
+					"keywords": "Cola, bevanda"
+				},
+				{
+					"language": "fr",
+					"string": "Le Coca est-il une boisson?",
+					"keywords": "Coca, boisson"
+				},
+				{
+					"language": "nl",
+					"string": "Is cola een drank?",
+					"keywords": "Cola, drank"
+				},
+				{
+					"language": "hi_IN",
+					"string": "क्या कोला एक पेय है?",
+					"keywords": "कोला, पेय"
+				},
+				{
+					"language": "ro",
+					"string": "Cola este o băutură?",
+					"keywords": "Cola, băutură"
+				}
+			],
+			"query": {
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nASK \nWHERE {\n        res:Cola rdf:type dbo:Beverage .\n}"
+			},
+			"answers": [{
+				"head": {},
+				"results": {},
+				"boolean": true
 			}]
 		},
 		{

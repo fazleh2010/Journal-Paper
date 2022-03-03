@@ -56,8 +56,8 @@ public class GrammarEntryCombinationFactory {
                             .filter(grammarEntry -> grammarEntry.getType().equals(sentenceType))
                             .filter(grammarEntry -> matchSentenceBindingToNPReturn(sentenceEntry, grammarEntry))
                             .collect(Collectors.toList());
-            //System.out.println("current sentenceGrammarEntries.size()::::" + sentenceGrammarEntries.size());
-            //System.out.println("current filteredEntries.size()::::" + filteredEntries.size());
+            System.out.println("current sentenceGrammarEntries.size()::::" + sentenceGrammarEntries.toString());
+            System.out.println("current filteredEntries.size()::::" + filteredEntries.toString());
             //exit(1);
 
             for (GrammarEntry filteredEntry : filteredEntries) {

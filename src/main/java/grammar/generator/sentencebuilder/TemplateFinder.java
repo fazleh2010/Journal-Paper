@@ -186,6 +186,31 @@ public class TemplateFinder implements TempConstants{
         return false;
 
     }
+     
+      public static Boolean isOccupation(String string) {
+        if (StringUtils.isBlank(string)) {
+            return false;
+        }
+        for (URI key : DomainOrRangeTypeCheck.OccupationCheck.getReferences()) {
+            if (string.equals(key.toString())) {
+                return true;
+            }
+        }
+        return false;
+
+    }
+      
+    public static boolean isClassTypeCheck(String string) {
+        if (StringUtils.isBlank(string)) {
+            return false;
+        }
+        for (URI key : DomainOrRangeTypeCheck.ClassTypeCheck.getReferences()) {
+            if (string.equals(key.toString())) {
+                return true;
+            }
+        }
+        return false;
+    }
 
      public static Boolean isWork(String string) {
         if (StringUtils.isBlank(string)) {

@@ -1207,8 +1207,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which books by Kerouac were published by Viking Press?",
-					"keywords": "book, Kerouac, publish, Viking Press"
+					"string": "Which books by Kerouac were published by Grove Press?",
+					"keywords": "book, Kerouac, publish, Grove Press"
 				},
 				{
 					"language": "pt_BR",
@@ -1222,8 +1222,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Welche Bücher von Kerouac wurden von Viking Press verlegt?",
-					"keywords": "Buch, Kerouac, verlegen, Viking Press"
+					"string": "Welche Bücher von Kerouac wurden von Grove Press verlegt?",
+					"keywords": "Buch, Kerouac, verlegen, Grove Press"
 				},
 				{
 					"language": "es",
@@ -1232,8 +1232,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Quali libri di Kerouac furono pubblicati da Viking Press?",
-					"keywords": "libro, Kerouac, pubblicare, Viking Press"
+					"string": "Quali libri di Kerouac furono pubblicati da Grove Press?",
+					"keywords": "libro, Kerouac, pubblicare, Grove Press"
 				},
 				{
 					"language": "fr",
@@ -1257,7 +1257,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE {  ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Book> .  ?uri <http://dbpedia.org/ontology/publisher> <http://dbpedia.org/resource/Viking_Press> .  ?uri <http://dbpedia.org/ontology/author> <http://dbpedia.org/resource/Jack_Kerouac> . } "
+				"sparql": "SELECT DISTINCT ?uri WHERE {  ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Book> .  ?uri <http://dbpedia.org/ontology/publisher> <http://dbpedia.org/resource/Grove_Press> .  ?uri <http://dbpedia.org/ontology/author> <http://dbpedia.org/resource/Jack_Kerouac> . } "
 			},
 			"answers": [{
 				"head": {

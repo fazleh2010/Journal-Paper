@@ -240,11 +240,27 @@ public class EnglishSentenceBuilder implements TempConstants {
 
         } 
         
+        else if (flagReference &&isInterrogativeVariableDeterminer(attribute).first) {
+             SubjectType subjectType = isInterrogativeVariableDeterminer(attribute).second;
+              String quesWord = LexicalEntryUtil.getSingle(this.lexicalEntryUtil,subjectType.name());
+            if (reference.contains(colon)) {
+                String[] col = reference.split(colon);
+                word = this.getTokenManual(col[0], col[1]);
+                word=quesWord+" ($x | "+word.substring(0, 1).toUpperCase() + word.substring(1)+"_NP"+")";
+            }
+
+        }
+        
         else if (interrogativeTemporal(attribute).first) {
               SubjectType subjectType = interrogativeTemporal(attribute).second;
               word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil,subjectType.name());
 
-        }else if (flagReference && attribute.contains(noun)) {
+        }
+       
+        
+        
+        
+        else if (flagReference && attribute.contains(noun)) {
             if (reference.contains(range) || reference.contains(domain)) {
                 if (reference.contains(colon)) {
                     String[] col = reference.split(colon);
@@ -412,6 +428,10 @@ public class EnglishSentenceBuilder implements TempConstants {
 
     }
     
+     private String getTokenManual(String domainOrRange,String number) throws QueGGMissingFactoryClassException {
+        return GenderUtils.getConditionLabelManually(domainOrRange, number,this.subjectUri,this.objectUri);
+    }
+    
   
    
     /*private String getConditionLabelManually(String domainOrRange, String numberType) {
@@ -527,6 +547,13 @@ public class EnglishSentenceBuilder implements TempConstants {
     public static Pair<Boolean, SubjectType> isInterrogativeDeterminer(String questionType) throws QueGGMissingFactoryClassException {
         if (questionType.equals(SubjectType.interrogativeDeterminer.toString())) {
             return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativeDeterminer);
+        }
+        return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
+    }
+    
+     public static Pair<Boolean, SubjectType> isInterrogativeVariableDeterminer(String questionType) throws QueGGMissingFactoryClassException {
+        if (questionType.equals(SubjectType.interrogativeVariableDeterminer.toString())) {
+            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativeVariableDeterminer);
         }
         return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
     }

@@ -8,6 +8,7 @@ import java.util.stream.Stream;
 
 import static grammar.sparql.Prefix.DBO;
 import static grammar.sparql.Prefix.DBP;
+import static grammar.sparql.Prefix.DBR;
 import static grammar.sparql.Prefix.OWL;
 
 public enum DomainOrRangeTypeCheck {
@@ -80,6 +81,8 @@ public enum DomainOrRangeTypeCheck {
                     URI.create(DBO.getUri() + "Philosopher"),
                     URI.create(DBO.getUri() + "FormulaOneRacer"),
                     URI.create(DBO.getUri() + "musicComposer"),
+                    URI.create(DBR.getUri() + "Surfing"),
+                    URI.create(DBR.getUri() + "Publisher"),
                     URI.create("http://www.wikidata.org/entity/Q215627") // wiki data person
             )
     ),
@@ -196,6 +199,11 @@ public enum DomainOrRangeTypeCheck {
     )),
     
     
+    OccupationCheck(List.of(
+            URI.create(DBO.getUri() + "Actor"),
+            URI.create(DBO.getUri() + "Surfing")
+    )),
+    
     
     ArchitecturalStructureCheck(List.of(
             URI.create(DBO.getUri() + "ArchitecturalStructure"),
@@ -221,14 +229,31 @@ public enum DomainOrRangeTypeCheck {
     LabelCheck(List.of(
             URI.create(DBO.getUri() + "abbreviation")
     )),
+    ClassTypeCheck(List.of(
+            URI.create(DBO.getUri() + "LaunchPad"),
+            URI.create(DBO.getUri() + "Country"),
+            URI.create(DBO.getUri() + "Film"),
+            URI.create(DBO.getUri() + "City"),
+            URI.create(DBO.getUri() + "TelevisionShow")
+    )),
     
     ThingCheck(List.of(
            URI.create(OWL.getUri() + "Thing")
     )),
+    
+    occupation(List.of(URI.create(DBO.getUri() + "occupation"))),
     THING(List.of(URI.create("http://www.w3.org/2002/07/owl#Thing"))); // default if no other matches
     
 
     public static final List<URI> MISSING_TYPES = new ArrayList<>();
+
+    public static String getUri(DomainOrRangeTypeCheck domainOrRangeTypeCheck) {
+        return DBO.getUri() + domainOrRangeTypeCheck.name();
+    }
+
+    public static String getResourceUri(String lastSegment) {
+        return DBR.getUri()+lastSegment;
+    }
     private final List<URI> references;
 
     DomainOrRangeTypeCheck(List<URI> refs) {

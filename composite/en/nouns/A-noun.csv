@@ -9,3 +9,4 @@ party-of,noun,party,parties,of,NounPPFrame,range,domain,1,dbo:party,dbo:Politici
 daughter_of,noun,daughter,daughters,of ,NounPPFrame,range,domain,1,dbo:child,dbo:Person,dbo:Person,Person,Persons,Person,Persons
 Creator-of-1,noun,creator,creators,of,NounPPFrame,range,domain,1,dbo:creator,dbo:FictionalCharacter,dbo:Person,fictional character,fictional characters,person,persons
 Creator-of-2,noun,creator,creators,of,NounPPFrame,range,domain,1,dbo:creator,dbo:Person,dbo:Person,person,persons,person,persons
+home_stadium_of ,noun,home stadium,home stadiums,of,NounPPFrame,range,domain,1,dbo:ground,dbo:SportsClub,dbo:Stadium,SportsClub,SportsClubs,Stadium,Stadiums

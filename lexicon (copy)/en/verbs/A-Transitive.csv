@@ -1,2 +1,0 @@
-LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,SyntacticFrame,subject,directObject,sense,reference,domain,range,passivePreposition,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural,GrammarRule 1:question1,GrammarRule 1:question2,GrammarRule 1:sparql,GrammarRule 2:question1,GrammarRule2: sparql
-Have_2,verb,have,has,had,had,TransitiveFrame,range,domain,1,dbo:numberOfLocations,dbo:Company,xsd:nonNegativeInteger,X,company,companies,place,places,,,,,

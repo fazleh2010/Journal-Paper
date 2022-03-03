@@ -8,6 +8,7 @@ import java.util.stream.Stream;
 
 import static grammar.sparql.Prefix.DBO;
 import static grammar.sparql.Prefix.DBP;
+import static grammar.sparql.Prefix.DBR;
 
 public enum DomainOrRangeType {
     Person(List.of(URI.create(DBO.getUri() + "Person"))),
@@ -101,6 +102,8 @@ public enum DomainOrRangeType {
     FormulaOneRacer(List.of(URI.create(DBO.getUri() + "HistoricPlace"))),
     Stadium(List.of(URI.create(DBO.getUri() + "Stadium"))),
     SportsClub(List.of(URI.create(DBO.getUri() + "SportsClub"))),
+    Surfing(List.of(URI.create(DBR.getUri() + "Surfing"))),
+    Brewery(List.of(URI.create(DBR.getUri() + "Brewery"))),
 
   
     Name(List.of(

@@ -11,3 +11,4 @@ live_in_3,verb,People live,People lives,People lived,People lived,in,Intransitiv
 live_in_4,verb,People live,People lives,People lived,People lived,in,IntransitivePPFrame,range,domain,1,dbo:populationTotal,dbo:City,xsd:double,city,countries,-,-
 belong_to_1,verb,belong,belongs,belonged,belonged,to,IntransitivePPFrame,domain,range,1,dbo:party,dbo:Person,dbo:PoliticalParty,person,persons,party,parties
 come_from,verb,come,comes,came,come,from,IntransitivePPFrame,range,domain,1,dbo:nationality,dbo:Country,dbo:Person,country,countries,person,persons
+Have_seat_1,verb,have,has,had,had,X,IntransitivePPFrame,range,domain,1,dbo:seatingCapacity,dbo:Stadium,xsd:nonNegativeInteger,Stadium,Stadiums,seat,seats

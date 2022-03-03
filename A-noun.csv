@@ -1,2 +1,2 @@
 LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingularForm,domainWrittenPluralForm,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
-creator-of,noun,create,creates,of,NounPPFrame,range,domain,1,dbo:creator,dbo:FictionalCharacter,dbo:Person,fictional character,fictional characters,person,persons
+book_by,noun,book,books,by,NounPPFrame,domain,range,1,dbo:author,dbo:Book,dbo:Agent,book,books,aagent,agent

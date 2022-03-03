@@ -21,6 +21,7 @@
   lemon:entry    :Apostrophe;
   lemon:entry    :interrogativeDeterminer ;
   lemon:entry    :interrogativePronounDeterminer ;
+  lemon:entry    :interrogativeVariableDeterminer ;
   lemon:entry    :interrogativeAmount ;
   lemon:entry    :interrogativeOften ;
   lemon:entry    :interrogativeMuch ;
@@ -168,6 +169,10 @@
 ## Question words ##
 
  :interrogativeDeterminer a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "which"@en ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+  :interrogativeVariableDeterminer a      lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "which"@en ] ;
   lexinfo:partOfSpeech lexinfo:article .
 

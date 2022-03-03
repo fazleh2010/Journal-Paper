@@ -201,12 +201,12 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         "interrogativeDeterminer(range:singular) verb(component_do:present:singular) object(domain) verb(mainVerb:present:thridPerson)?",
         "interrogativeDeterminer(range:plural) verb(component_do:present:singular) object(domain) verb(mainVerb:present:thridPerson)?",
         //Which books did Muhammad Ali write?
-        "interrogativeDeterminer(range:plural) verb(component_do:past:singular) object(domain) verb(mainVerb:present:thridPerson)?"          
-         /*//Give me all actors starring in X.
-        //"verb(component_imperative_transitive:present:singular) pronoun(pronoun_personal) determiner(all) noun(range:plural) verb(mainVerb:present:thridPerson) adjunct(domain)?",
+        "interrogativeDeterminer(range:plural) verb(component_do:past:singular) object(domain) verb(mainVerb:present:thridPerson)?",          
+         //Give me all actors starring in X.
+         "verb(component_imperative_transitive:present:singular) pronoun(pronoun_personal) determiner(all) noun(range:plural) verb(mainVerb:present:thridPerson) adjunct(domain)?",
         //List all actors starring in X.
-        //"verb(imperative_verb:present:plural) determiner(all) noun(range:plural) verb(mainVerb:present:thridPerson) adjunct(domain)?"
-        */),
+        "verb(imperative_verb:present:plural) determiner(all) noun(range:plural) verb(mainVerb:present:thridPerson) adjunct(domain)?"
+        ),
        TransitiveFrame,
        PERSON_CAUSE,
         activeTransitive
@@ -230,7 +230,16 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
          //Give me all video games published by Mean Hamster Software.
          "verb(component_imperative_transitive:present:singular) pronoun(pronoun_personal) determiner(all) noun(domain:plural) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?",
          //List all video games published by Mean Hamster Software.
-         "verb(imperative_verb:present:plural) determiner(all) noun(domain:plural) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?"
+         "verb(imperative_verb:present:plural) determiner(all) noun(domain:plural) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?",
+         //"Which books were developed by X?
+        "interrogativeDeterminer(domain:plural) verb(component_be:past:plural) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?",
+        //"Which books were developed by X?
+        "interrogativeDeterminer(domain:singular) verb(component_be:past:singular) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?",
+        //"Which books were developed by X?
+        "interrogativeDeterminer(domain:singular) verb(component_be:past:singular) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?",
+         //"Which (X_Book) were developed by X?
+        "interrogativeVariableDeterminer(domain:singular) verb(component_be:past:singular) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?"
+        
         ),
         TransitiveFrame,
         PERSON_CAUSE,
@@ -330,12 +339,8 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         //How much does Pulp Fiction cost?
         "interrogativeMuch verb(component_do:present:singular) object(domain) verb(mainVerb:present:thridPerson)?",
         //How much did Pulp Fiction cost?
-        "interrogativeMuch verb(component_do:past:singular) object(domain) verb(mainVerb:present:thridPerson)?",
-        //How many seats does (X_Statdium) have?        
-        "interrogativeAmount(range:singular) verb(component_do:present:singular) object(domain) verb(mainVerb:present:thridPerson)?",
-        //How many seats does (X_Statdium) have?        
-        "interrogativeAmount(range:singular) object(domain) verb(component_be:present:plural) particleLocation?"
-           
+        "interrogativeMuch verb(component_do:past:singular) object(domain) verb(mainVerb:present:thridPerson)?"
+              
         ),
        TransitiveFrame,
        HOW_MANY_TOTAL,
@@ -382,7 +387,12 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         //How many people live in Poland?
         "interrogativeAmount verb(mainVerb:present:thridPerson) preposition adjunct(domain)?",
         //How many people lived in Poland?
-        "interrogativeAmount verb(mainVerb:past:thridPerson) preposition adjunct(domain)?" 
+        "interrogativeAmount verb(mainVerb:past:thridPerson) preposition adjunct(domain)?",
+         //How many seats does (X_Statdium) have?        
+        "interrogativeAmount(range:singular) verb(component_do:present:singular) object(domain:plural) verb(mainVerb:present:thridPerson)?"
+        //       
+        //"interrogativeAmount(range:singular) object(domain) verb(component_be:present:plural) particleLocation?"
+   
            ),
        IntransitivePPFrame,
        HOW_MANY_TOTAL,
@@ -439,9 +449,9 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         "preposition interrogativeDeterminer(range:plural) verb(component_be:present:plural) object(domain) verb(mainVerb:perfect:singular)?",
         "preposition interrogativeDeterminer(range:singular) verb(component_be:present:singular) object(domain) verb(mainVerb:perfect:singular)?",
          //Where is Fort Knox located?
-         "interrogativePlace verb(component_be:present:singular) object(domain) verb(mainVerb:perfect:singular)?",
+         "interrogativePlace verb(component_be:present:singular) object(domain) verb(mainVerb:perfect:singular)?"
          //In which countries do people speak Japanese?
-         "preposition interrogativeDeterminer(range:plural) verb(component_do:present:singular) verb(mainVerb:present:singular) object(domain)?"
+         //"preposition interrogativeDeterminer(range:plural) verb(component_do:present:singular) verb(mainVerb:present:singular) object(domain)?"
           ),
         IntransitivePPFrame,
         WHAT_WHICH_PRESENT_THING_1,
@@ -668,8 +678,12 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
         language,
         List.of(
          //Who was born in X?
+         "interrogativePronoun(domain:singular) verb(component_be:past:singular) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?",
+         //Which actors were born on the Philippines?
          "interrogativeDeterminer(domain:singular) verb(component_be:past:singular) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?",
-         "interrogativePronoun(domain:singular) verb(component_be:past:singular) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?"
+         //Which actors were born on the Philippines?
+         "interrogativeDeterminer(domain:plural) verb(component_be:past:plural) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?"
+
         ),
         IntransitivePPFrame,
         WHERE_WHO_PAST_PERSON,
@@ -794,25 +808,7 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
       )
     );
       
-       //NounPPFrame
-     sentenceTemplateRepository.add(
-      createSentenceTemplate(language,
-        List.of(
-          //Was ist die Hauptstadt von Kamerun?
-         "determiner(component_the_nominative:reference) noun(nominativeCase:singular) preposition adjunct(domain)?",
-         "noun(nominativeCase:plural) preposition adjunct(domain)"      
-         //"determiner(component_the_nominative:reference) noun(nominativeCase) preposition nounPhrase"
-          //Welche Person ist das Mitglied von...?
-          //"interrogativeDeterminer noun(condition:copulativeArg) verb(reference:component_be) NP(prepositionalAdjunct)?"
-          //Wer ist das Mitglied von...?
-          //"interrogativePronoun verb(reference:component_be) NP(prepositionalAdjunct)?",
-          //Gib mir das Mitglied von...?
-          //"verb(reference:component_imperative_transitive) pronoun(reference:object_pronoun) determiner(reference:component_the_accusative) noun(root:accusativeCase) preposition prepositionalAdjunct"
-          ),
-        NounPPFrame,
-        nounPhrase
-      )
-    );
+    
     
        
     sentenceTemplateRepository.add(

@@ -5,80 +5,135 @@
  */
 package grammar.sparql;
 
+import grammar.generator.sentencebuilder.TemplateFinder;
 import static grammar.sparql.SparqlQuery.RETURN_TYPE_OBJECT;
 import static grammar.sparql.SparqlQuery.RETURN_TYPE_SUBJECT;
+import grammar.structure.component.DomainOrRangeTypeCheck;
 import grammar.structure.component.Language;
 import static java.lang.System.exit;
+import util.io.UrlUtils;
 
 /**
  *
  * @author elahi
  */
 public class PrepareSparqlQuery {
-        private String rdfType = "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>";
 
+    private String rdfType = "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>";
 
-    public static String setObjectWikiPedia2(String entityUrl, String property) {
-        return " PREFIX dbo: <http://dbpedia.org/ontology/>\n"
-                + "PREFIX res: <http://dbpedia.org/resource/>\n"
-                + "SELECT DISTINCT ?uri \n"
-                + "WHERE { \n"
-                + "        res:French_Polynesia dbo:capital ?x .\n"
-                + "        ?x dbo:mayor ?uri .\n"
-                + "}";
+    public static String setSubjectWikipedia(String objectUri, String property, String rdfProperty, String objectClassUri) {
+        String sparql = null;
+        
+        if (TemplateFinder.isOccupation(objectClassUri)) {
+            sparql=  setSubjectWikipediaWithOccupation(objectUri, property, rdfProperty, objectClassUri);
+        } else if (TemplateFinder.isClassTypeCheck(objectClassUri)) {
+             sparql = setSubjectWikipediaWithClassName(objectUri, property, rdfProperty, objectClassUri);
+        }
+        else{
+           sparql= "select  ?s\n"
+                    + "    {\n"
+                    + "   " + "?s" + " " + "<" + property + ">" + "  " + "<" + objectUri + "> ." + "\n"
+                    + "    }";
+        } 
 
-    }
-
-    public static String setObjectWikiData(String entityUrl, String propertyUrl, String language) {
-        /*return "SELECT ?object ?objectLabel WHERE {\n"
-                + "   "+"<"+entityUrl+">"+" "+"<"+property+">"+" ?object.\n"
-                + "   SERVICE wikibase:label {\n"
-                + "     bd:serviceParam wikibase:language \"en\" .\n"
-                + "   }\n"
-                + "}";*/
-
- /*return "SELECT ?objectLabel WHERE {\n"
-                + "    <" + entityUrl + "> <" + propertyUrl + "> ?object.\n"
-                + "   SERVICE wikibase:label {\n"
-                + "     bd:serviceParam wikibase:language \""+language+"\" .\n"
-                + "   }\n"
-                + "}\n"
-                + "";*/
-        return "SELECT ?label WHERE {\n"
-                + "    <" + entityUrl + "> <" + propertyUrl + "> ?object.\n"
-                + "  ?object rdfs:label ?label \n"
-                + "        FILTER (langMatches( lang(?label), \"" + language + "\" ) )\n"
-                + "}";
-
-    }
-
-    public static String setObjectBen(String entityUrl, String propertyUrl, String language) {
-
-        return "SELECT ?object WHERE {\n"
-                + "    <" + entityUrl + "> <" + propertyUrl + "> ?object.\n"
-                + "}";
+        
+        /*System.out.println(sparql);
+        System.out.println(objectClassUri);
+        exit(1);*/
+        return sparql;
 
     }
     
-     public static String setSubjectWikipedia(String objectUri, String property, String rdfProperty, String objectClassUri) {
+    public static String setObjectWikiPedia(String subjectUrl, String property, String rdfProperty, String objectClassUri) {
+        String sparql = null;
+
+        if (TemplateFinder.isOccupation(objectClassUri)) {
+            sparql = setObjectWikipediaWithOccupation(subjectUrl, property, rdfProperty, objectClassUri);
+        } else if (TemplateFinder.isClassTypeCheck(objectClassUri)) {
+            sparql = setObjectWikipediaWithClassName(subjectUrl, property, rdfProperty, objectClassUri);
+        } else {
+            sparql = "select  ?o\n"
+                    + "    {\n"
+                    + "    " + "<" + subjectUrl + ">" + " " + "<" + property + ">" + "  " + "?o ." + "\n"
+                    + "    }";
+
+        }
+
+        return sparql;
+
+    }
+
+    public static String setSubjectWikipediaWithClassName(String entityUri, String property, String rdfProperty, String entityClass) {
         String sparql = null;
         //className //        ?uri rdf:type dbo:Country .
-
-        if (objectUri.contains("http:")) {
+        if (entityUri.contains("http:")) {
             sparql = "select  ?s\n"
                     + "    {\n"
-                    + "   " + "?s" + " " + "<" + property + ">" + "  " + "<" + objectUri + "> ." + "\n"
+                    + "   " + "?s" + " " + "<" + property + ">" + "  " + "<" + entityUri + "> ." + "\n"
+                    + "   " + "?s" + " " + "<" + rdfProperty + ">" + "  " + "<" + entityClass + "> ." + "\n"
                     + "    }";
         } else {
             sparql = "select  ?s\n"
                     + "    {\n"
-                    + "   " + "?s" + " " + "<" + property + ">" + "  " +  objectUri + " ." + "\n"
+                    + "   " + "?s" + " " + "<" + property + ">" + "  " + "<" + entityUri + "> ." + "\n"
+                    + "   " + "?s" + " " + "<" + rdfProperty + ">" + "  " + "<" + entityClass + "> ." + "\n"
                     + "    }";
 
         }
-        
-       //System.out.println(sparql);
-        //exit(1);
+
+        return sparql;
+
+    }
+
+    public static String setSubjectWikipediaWithOccupation(String entityUri, String property, String otherProperty, String otherClass) {
+        String sparql = null;
+        otherProperty = DomainOrRangeTypeCheck.getUri(DomainOrRangeTypeCheck.occupation);
+        String lastSegment = UrlUtils.lastSegment(otherClass);
+        otherClass = DomainOrRangeTypeCheck.getResourceUri(lastSegment);
+
+        if (entityUri.contains("http:")) {
+            sparql = "select  ?s\n"
+                    + "    {\n"
+                    + "   " + "?s" + " " + "<" + property + ">" + "  " + "<" + entityUri + "> ." + "\n"
+                    + "   " + "?s" + " " + "<" + otherProperty + ">" + "  " + "<" + otherClass + "> ." + "\n"
+                    + "    }";
+        } else {
+            sparql = "select  ?s\n"
+                    + "    {\n"
+                    + "   " + "?s" + " " + "<" + property + ">" + "  " + "<" + entityUri + "> ." + "\n"
+                    + "   " + "?s" + " " + "<" + otherProperty + ">" + "  " + "<" + otherClass + "> ." + "\n"
+                    + "    }";
+
+        }
+
+        return sparql;
+
+    }
+
+    public static String setObjectWikipediaWithClassName(String entityUri, String property, String rdfProperty, String entityClass) {
+        String sparql = null;
+        //className //        ?uri rdf:type dbo:Country .
+        sparql = "select  ?o\n"
+                + "    {\n"
+                + "    " + "<" + entityUri + ">" + " " + "<" + property + ">" + "  " + "?o ." + "\n"
+                + "   " + "?o" + " " + "<" + rdfProperty + ">" + "  " + "<" + entityClass + "> ." + "\n"
+                + "    }";
+
+        return sparql;
+
+    }
+
+    public static String setObjectWikipediaWithOccupation(String entityUri, String property, String otherProperty, String otherClass) {
+        String sparql = null;
+        otherProperty = DomainOrRangeTypeCheck.getUri(DomainOrRangeTypeCheck.occupation);
+        String lastSegment = UrlUtils.lastSegment(otherClass);
+        otherClass = DomainOrRangeTypeCheck.getResourceUri(lastSegment);
+
+        sparql = "select  ?o\n"
+                + "    {\n"
+                + "    " + "<" + entityUri + ">" + " " + "<" + property + ">" + "  " + "?o ." + "\n"
+                + "   " + "?o" + " " + "<" + otherProperty + ">" + "  " + "<" + otherClass + "> ." + "\n"
+                + "    }";
 
         return sparql;
 
@@ -121,7 +176,7 @@ public class PrepareSparqlQuery {
 
     }*/
 
-    /*public static String setObjectWikiPedia(String entityUrl, String property, String rdfProperty, String objectClassUri) {
+ /*public static String setObjectWikiPedia(String entityUrl, String property, String rdfProperty, String objectClassUri) {
         String sparql = null;
         if (objectClassUri.contains("Number") || objectClassUri.contains("THING") | objectClassUri.contains("date")) {
             sparql = "select  ?o\n"
@@ -141,19 +196,7 @@ public class PrepareSparqlQuery {
         return sparql;
 
     }*/
-    
-    public static String setObjectWikiPedia(String subjectUrl, String property, String rdfProperty, String objectClassUri) {
-        String sparql = null;
-
-            sparql = "select  ?o\n"
-                    + "    {\n"
-                    + "    " + "<" + subjectUrl + ">" + " " + "<" + property + ">" + "  " + "?o ." + "\n"
-                    + "    }";
-        
-
-        return sparql;
-
-    }
+   
 
     public static String setObjectWikiPediaCount(String entityUrl, String property, String variable) {
         //SELECT (COUNT(DISTINCT ?x) as ?c) WHERE {  <http://dbpedia.org/resource/Turkmenistan> <http://dbpedia.org/ontology/language> ?x . } 
@@ -257,11 +300,10 @@ public class PrepareSparqlQuery {
         return sparql;
 
     }
-    
-    //SELECT DISTINCT ?uri WHERE { 
-         //?uri a <http://dbpedia.org/ontology/Country> . ?uri <http://dbpedia.org/ontology/areaTotal> ?n . } 
-         //ORDER BY DESC(?n) OFFSET 0 LIMIT 1
 
+    //SELECT DISTINCT ?uri WHERE { 
+    //?uri a <http://dbpedia.org/ontology/Country> . ?uri <http://dbpedia.org/ontology/areaTotal> ?n . } 
+    //ORDER BY DESC(?n) OFFSET 0 LIMIT 1
     public static String desc(String domain, String reference) {
         String newSparqlQuery = "SELECT DISTINCT ?" + RETURN_TYPE_SUBJECT + " "
                 + "WHERE {" + " "
@@ -270,8 +312,8 @@ public class PrepareSparqlQuery {
                 + "} " + "ORDER BY DESC(?num) LIMIT 1";
         return newSparqlQuery;
     }
-    
-    public static String descObj(String className, String locationProperty,String reference, String variable) {
+
+    public static String descObj(String className, String locationProperty, String reference, String variable) {
         String type = "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>";
         //String locationProperty = "<http://dbpedia.org/ontology/locatedInArea>";
         //locationProperty = "<http://dbpedia.org/ontology/location>";
@@ -285,7 +327,7 @@ public class PrepareSparqlQuery {
                 + "} " + "ORDER BY DESC(?num) LIMIT 1";
         return newSparqlQuery;
     }
-    
+
     public static String descObjOfPropPerson(String className, String property, String reference, String variable) {
         return "SELECT DISTINCT ?" + RETURN_TYPE_OBJECT + " "
                 + "WHERE {" + " "
@@ -293,7 +335,7 @@ public class PrepareSparqlQuery {
                 + "?" + RETURN_TYPE_OBJECT + " " + "<" + reference + ">" + " ?" + "num" + " ." + " "
                 + "} " + "ORDER BY DESC(?num) LIMIT 1";
     }
-    
+
     public static String ascObjOfPropPerson(String className, String property, String reference, String variable) {
         return "SELECT DISTINCT ?" + RETURN_TYPE_OBJECT + " "
                 + "WHERE {" + " "
@@ -316,7 +358,6 @@ public class PrepareSparqlQuery {
                 + "} " + "ORDER BY DESC(?num) LIMIT 1";
         return newSparqlQuery;
     }*/
-
     public static String asc(String domain, String reference) {
         String newSparqlQuery = "SELECT DISTINCT ?" + RETURN_TYPE_SUBJECT + " "
                 + "WHERE {" + " "
@@ -338,8 +379,7 @@ public class PrepareSparqlQuery {
                 + "} " + "ORDER BY ASC(?num) LIMIT 1";
         return newSparqlQuery;
     }*/
-    
-    public static String ascObj(String domain,String locationProperty,String reference,String variable) {
+    public static String ascObj(String domain, String locationProperty, String reference, String variable) {
         //String locationProperty = "<http://dbpedia.org/ontology/locatedInArea>";
         //String locationObject = "<http://dbpedia.org/resource/Australia>";
 
@@ -366,4 +406,47 @@ public class PrepareSparqlQuery {
         return sparqlQuery;
 
     }
+
+    public static String setObjectWikiPedia2(String entityUrl, String property) {
+        return " PREFIX dbo: <http://dbpedia.org/ontology/>\n"
+                + "PREFIX res: <http://dbpedia.org/resource/>\n"
+                + "SELECT DISTINCT ?uri \n"
+                + "WHERE { \n"
+                + "        res:French_Polynesia dbo:capital ?x .\n"
+                + "        ?x dbo:mayor ?uri .\n"
+                + "}";
+
+    }
+
+    public static String setObjectWikiData(String entityUrl, String propertyUrl, String language) {
+        /*return "SELECT ?object ?objectLabel WHERE {\n"
+                + "   "+"<"+entityUrl+">"+" "+"<"+property+">"+" ?object.\n"
+                + "   SERVICE wikibase:label {\n"
+                + "     bd:serviceParam wikibase:language \"en\" .\n"
+                + "   }\n"
+                + "}";*/
+
+ /*return "SELECT ?objectLabel WHERE {\n"
+                + "    <" + entityUrl + "> <" + propertyUrl + "> ?object.\n"
+                + "   SERVICE wikibase:label {\n"
+                + "     bd:serviceParam wikibase:language \""+language+"\" .\n"
+                + "   }\n"
+                + "}\n"
+                + "";*/
+        return "SELECT ?label WHERE {\n"
+                + "    <" + entityUrl + "> <" + propertyUrl + "> ?object.\n"
+                + "  ?object rdfs:label ?label \n"
+                + "        FILTER (langMatches( lang(?label), \"" + language + "\" ) )\n"
+                + "}";
+
+    }
+
+    public static String setObjectBen(String entityUrl, String propertyUrl, String language) {
+
+        return "SELECT ?object WHERE {\n"
+                + "    <" + entityUrl + "> <" + propertyUrl + "> ?object.\n"
+                + "}";
+
+    }
+
 }
