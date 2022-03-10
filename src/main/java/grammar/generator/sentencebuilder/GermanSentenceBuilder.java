@@ -173,7 +173,7 @@ public class GermanSentenceBuilder implements TempConstants {
 
         }else if (flagReference && isInterrogativeAmount(attribute).first) {
             SubjectType subjectType = isInterrogativeAmount(attribute).second;
-          
+           
             if (reference.contains(colon)) {
                 String[] col = reference.split(colon);
                 if (col.length == 2) {
@@ -396,14 +396,20 @@ public class GermanSentenceBuilder implements TempConstants {
             givenCase = givenCase.toLowerCase().stripLeading().stripTrailing().trim();
             givenCase = GenderUtils.getPrepositionCase(givenCase);
         }
+        
+       
 
         String questionWord = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil, subjectType.name(), TempConstants.number, number, TempConstants.gender, article, TempConstants.caseType, givenCase);
 
-        /*System.out.println("article::"+article);
-        System.out.println("givenCase::"+givenCase);
-        System.out.println("questionWord::"+questionWord);
+        if (noun.contains("-")) {
+            questionWord = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, subjectType.name());
+            noun="";
+        }
+        /*System.out.println("subjectType.name()::" + subjectType.name());
+        System.out.println("noun::" + noun);
+        System.out.println("questionWord::" + questionWord);
         exit(1);*/
-         
+
         return questionWord + " " + noun;
 
     }

@@ -17,7 +17,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbp: <http://dbpedia.org/property/>\n PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?date \nWHERE { \n       res:Battle_of_Gettysburg dbp:date ?date .\n}"
+				"sparql": "PREFIX dbp: <http://dbpedia.org/property/> PREFIX dbo: <http://dbpedia.org/ontology/> PREFIX res: <http://dbpedia.org/resource/> SELECT DISTINCT ?date  WHERE {res:Battle_of_Gettysburg dbp:date ?date .}"
 			},
 			"answers": [
 				{
@@ -210,8 +210,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was the wife of Abraham Lincoln?",
-					"keywords": "Abraham Lincoln, wife"
+					"string": "Who was the wife of U.S. president Lincoln?",
+					"keywords": "U.S. president, Lincoln, wife"
 				},
 				{
 					"language": "pt_BR",
@@ -220,8 +220,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer war die Frau von Abraham Lincoln?",
-					"keywords": "Abraham Lincoln, Frau"
+					"string": "Wer war die Frau von US-Präsident Lincoln?",
+					"keywords": "US-Präsident, Lincoln, Frau"
 				},
 				{
 					"language": "es",
@@ -428,13 +428,13 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "In what city is the Goldstar brewery?",
-					"keywords": "city, Goldstar brewery"
+					"string": "In what city is the Heineken brewery?",
+					"keywords": "city, Heineken brewery"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Em que cidade fica a cervejaria Goldstar?",
-					"keywords": "cidade, cervejaria Goldstar"
+					"string": "Em que cidade fica a cervejaria Heineken?",
+					"keywords": "cidade, cervejaria Heineken"
 				},
 				{
 					"language": "fa",
@@ -443,8 +443,8 @@
 				},
 				{
 					"language": "de",
-					"string": "In welcher Stadt ist die Goldstarbrauerei?",
-					"keywords": "Stadt, Goldstarbrauerei"
+					"string": "In welcher Stadt ist die Heinekenbrauerei?",
+					"keywords": "Stadt, Heinekenbrauerei"
 				},
 				{
 					"language": "es",
@@ -453,8 +453,8 @@
 				},
 				{
 					"language": "it",
-					"string": "In quale città si trova il birrificio della Goldstar?",
-					"keywords": "città, birrificio della Goldstar"
+					"string": "In quale città si trova il birrificio della Heiniken?",
+					"keywords": "città, birrificio della Heiniken"
 				},
 				{
 					"language": "fr",
@@ -478,7 +478,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Goldstar_(beer)> <http://dbpedia.org/ontology/manufacturer> ?x . ?x <http://dbpedia.org/ontology/locationCity> ?uri . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Heineken> <http://dbpedia.org/ontology/manufacturer> ?x . ?x <http://dbpedia.org/ontology/locationCity> ?uri . }"
 			},
 			"answers": [{
 				"head": {
@@ -733,17 +733,17 @@
 			"question": [{
 					"language": "en",
 					"string": "Who was married to president Chirac?",
-					"keywords": "married to, president Chirac"
+					"keywords": "married to, Jacques Chirac"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Quem foi casada com o presidente Chirac?",
-					"keywords": "casada, presidente Chirac"
+					"string": "Quem foi casada com o Jacques Chirac?",
+					"keywords": "casada, Jacques Chirac"
 				},
 				{
 					"language": "de",
-					"string": "Wer war mit Präsident Chirac verheiratet?",
-					"keywords": "verheiratet mit, Päsident Chirac"
+					"string": "Wer war mit Jacques Chirac verheiratet?",
+					"keywords": "verheiratet mit, Jacques Chirac"
 				},
 				{
 					"language": "es",
@@ -752,8 +752,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Chi è stato sposato con il presidente Chirac?",
-					"keywords": "sposato con, presidente Chirac"
+					"string": "Chi è stato sposato con il Jacques Chirac?",
+					"keywords": "sposato con, Jacques Chirac"
 				},
 				{
 					"language": "fr",
@@ -843,7 +843,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nSELECT DISTINCT ?uri\nWHERE {\n        res:Abraham Lincoln dbo:deathCause ?uri .     \n}"
+				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nSELECT DISTINCT ?uri\nWHERE {\n        res:Abraham_Lincoln dbo:deathCause ?uri .     \n}"
 			},
 			"answers": [{
 				"head": {
@@ -940,8 +940,8 @@
 				},
 				{
 					"language": "pt_BR",
-					"string": "Em quais cidades o rio Weser passa?",
-					"keywords": "cidades, rio Weser, passa"
+					"string": "Em quais cidades o rio Zeravshan passa?",
+					"keywords": "cidades, rio WesZeravshaner, passa"
 				},
 				{
 					"language": "fa",
@@ -955,23 +955,23 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Por qué ciudades pasa el río Weser?",
-					"keywords": "cuidad, pasa, Weser"
+					"string": "¿Por qué ciudades pasa el río Zeravshan?",
+					"keywords": "cuidad, pasa, Zeravshan"
 				},
 				{
 					"language": "it",
-					"string": "Attraverso quali città scorre il fiume Weser?",
-					"keywords": "città, scorrere, fiume Weser"
+					"string": "Attraverso quali città scorre il fiume Zeravshan?",
+					"keywords": "città, scorrere, fiume Zeravshan"
 				},
 				{
 					"language": "fr",
-					"string": "Quels sont les villes traversées par la Weser?",
-					"keywords": "villes, traverser, Weser"
+					"string": "Quels sont les villes traversées par la Zeravshan?",
+					"keywords": "villes, traverser, Zeravshan"
 				},
 				{
 					"language": "nl",
-					"string": "Door welke steden loopt de Weser?",
-					"keywords": "stad, loopt door, Weser"
+					"string": "Door welke steden loopt de Zeravshan?",
+					"keywords": "stad, loopt door, Zeravshan"
 				},
 				{
 					"language": "hi_IN",
@@ -1124,8 +1124,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was marry to the daughter of  Abraham Lincoln?",
-					"keywords": "Abraham Lincoln, daughter, married"
+					"string": "Who is the daughter of Robert Kennedy married to?",
+					"keywords": "Robert Kennedy, daughter, married"
 				},
 				{
 					"language": "pt_BR",
@@ -1174,7 +1174,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE {  <http://dbpedia.org/resource/Abraham_Lincoln> <http://dbpedia.org/ontology/child> ?child .  ?child <http://dbpedia.org/ontology/spouse> ?uri . } "
+				"sparql": "SELECT DISTINCT ?uri WHERE {  <http://dbpedia.org/resource/Robert_F._Kennedy> <http://dbpedia.org/ontology/child> ?child .  ?child <http://dbpedia.org/ontology/spouse> ?uri . } "
 			},
 			"answers": [{
 				"head": {
@@ -1207,13 +1207,13 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which books by Kerouac were published by Grove Press?",
-					"keywords": "book, Kerouac, publish, Grove Press"
+					"string": "Which books by Kerouac were published by Viking Press?",
+					"keywords": "book, Kerouac, publish, Viking Press"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Que livros de Kerouac foram publicados pela Grove Press?",
-					"keywords": "livros, Kerouac, publicados,Grove Press"
+					"string": "Que livros de Kerouac foram publicados pela Viking Press?",
+					"keywords": "livros, Kerouac, publicados,Viking Press"
 				},
 				{
 					"language": "fa",
@@ -1222,8 +1222,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Welche Bücher von Kerouac wurden von Grove Press verlegt?",
-					"keywords": "Buch, Kerouac, verlegen, Grove Press"
+					"string": "Welche Bücher von Kerouac wurden von Viking Press verlegt?",
+					"keywords": "Buch, Kerouac, verlegen, Viking Press"
 				},
 				{
 					"language": "es",
@@ -1232,8 +1232,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Quali libri di Kerouac furono pubblicati da Grove Press?",
-					"keywords": "libro, Kerouac, pubblicare, Grove Press"
+					"string": "Quali libri di Kerouac furono pubblicati da Viking Press?",
+					"keywords": "libro, Kerouac, pubblicare, Viking Press"
 				},
 				{
 					"language": "fr",
@@ -1257,7 +1257,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE {  ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Book> .  ?uri <http://dbpedia.org/ontology/publisher> <http://dbpedia.org/resource/Grove_Press> .  ?uri <http://dbpedia.org/ontology/author> <http://dbpedia.org/resource/Jack_Kerouac> . } "
+				"sparql": "SELECT DISTINCT ?uri WHERE {  ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Book> .  ?uri <http://dbpedia.org/ontology/publisher> <http://dbpedia.org/resource/Viking_Press> .  ?uri <http://dbpedia.org/ontology/author> <http://dbpedia.org/resource/Jack_Kerouac> . } "
 			},
 			"answers": [{
 				"head": {
@@ -1296,7 +1296,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "How tall is Kelly Gale?",
+					"string": "How tall is Amazon Eve?",
 					"keywords": "Amazon Eve, tall"
 				},
 				{
@@ -1311,8 +1311,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wie groß ist Kelly Gale?",
-					"keywords": "Kelly Gale, groß"
+					"string": "Wie groß ist Amazon Eve?",
+					"keywords": "Amazon Eve, groß"
 				},
 				{
 					"language": "es",
@@ -1346,7 +1346,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?height WHERE {  <http://dbpedia.org/resource/Kelly_Gale> <http://dbpedia.org/ontology/height> ?height . } "
+				"sparql": "SELECT DISTINCT ?height WHERE {  <http://dbpedia.org/resource/Amazon_Eve> <http://dbpedia.org/ontology/height> ?height . } "
 			},
 			"answers": [{
 				"head": {
@@ -1443,7 +1443,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who wrote the book the Pillars of the Earth?",
+					"string": "Who wrote the book The Pillars of the Earth?",
 					"keywords": "wrote, book, The pillars of the Earth"
 				},
 				{
@@ -1859,8 +1859,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the mayor of Bora-Bora?",
-					"keywords": "mayor, Bora-Bora"
+					"string": "Who is the mayor of Paris?",
+					"keywords": "mayor, Paris"
 				},
 				{
 					"language": "pt_BR",
@@ -1874,8 +1874,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer ist Bürgermeister von Bora-Bora?",
-					"keywords": "Bora-Bora, Bürgermeister"
+					"string": "Wer ist Bürgermeister von Paris?",
+					"keywords": "Paris, Bürgermeister"
 				},
 				{
 					"language": "es",
@@ -1909,7 +1909,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Bora-Bora_(commune)> <http://dbpedia.org/ontology/mayor> ?uri . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Paris> <http://dbpedia.org/ontology/mayor> ?uri . }"
 			},
 			"answers": [{
 				"head": {
@@ -2011,8 +2011,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Give me the mayor of the capital of Russia?",
-					"keywords": "mayor, capital, Russia"
+					"string": "Who is the mayor of the capital of French Polynesia?",
+					"keywords": "mayor, capital, French Polynesia"
 				},
 				{
 					"language": "pt_BR",
@@ -2056,7 +2056,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE { \n        res:Russia dbo:capital ?x .\n        ?x dbo:leaderName ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE { \n        res:French_Polynesia dbo:capital ?x .\n        ?x dbo:mayor ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -2656,7 +2656,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nSELECT DISTINCT ?uri \nWHERE { \n        res:Ganges <http://dbpedia.org/property/mouthLocation> ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nSELECT DISTINCT ?uri \nWHERE { \n        res:Ganges dbo:mouthLocation ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -2682,8 +2682,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "In which year was Joanna MacGregor born?",
-					"keywords": "year, born, Joanna MacGregor"
+					"string": "In which year was Rachel Stevens born?",
+					"keywords": "year, born, Rachel Stevens"
 				},
 				{
 					"language": "pt_BR",
@@ -2697,8 +2697,8 @@
 				},
 				{
 					"language": "de",
-					"string": "In welchem Jahr wurde Joanna MacGregor geboren?",
-					"keywords": "Jahr, geboren, Joanna MacGregor"
+					"string": "In welchem Jahr wurde Rachel Stevens geboren?",
+					"keywords": "Jahr, geboren, Rachel Stevens"
 				},
 				{
 					"language": "es",
@@ -2732,7 +2732,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE {  <http://dbpedia.org/resource/Joanna_MacGregor> <http://dbpedia.org/ontology/birthYear> ?uri . } "
+				"sparql": "SELECT DISTINCT ?uri WHERE {  <http://dbpedia.org/resource/Rachel_Stevens> <http://dbpedia.org/ontology/birthYear> ?uri . } "
 			},
 			"answers": [{
 				"head": {
@@ -3056,7 +3056,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "How many people live in Eurasian_Economic_Union?",
+					"string": "How many people live in Poland?",
 					"keywords": "How many people, Poland"
 				},
 				{
@@ -3132,8 +3132,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the location of the Palace of Westminster?",
-					"keywords": "location, Palace of Westminster"
+					"string": "What is the location of the Houses of Parliament?",
+					"keywords": "location, Houses of Parliament"
 				},
 				{
 					"language": "pt_BR",
@@ -4602,7 +4602,7 @@
 				},
 				{
 					"language": "de",
-					"string": "Wofür steht IYCM?",
+					"string": "Für was steht IYCM?",
 					"keywords": "IYCM, stehen für"
 				},
 				{
@@ -4663,8 +4663,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "When did the Auckland City dissolve?",
-					"keywords": "dissolve, Auckland City"
+					"string": "When did the Empire of Japan?",
+					"keywords": "dissolve, Empire of Japan"
 				},
 				{
 					"language": "pt_BR",
@@ -4673,7 +4673,7 @@
 				},
 				{
 					"language": "de",
-					"string": "Wann endete die Stadt Auckland?",
+					"string": "Wann endete die Japanisches Kaiserreich?",
 					"keywords": "Ende, Stadt Auckland"
 				},
 				{
@@ -4708,7 +4708,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/> \nSELECT DISTINCT ?date\nWHERE {  \n        res:Auckland_City dbo:dissolutionDate ?date .\n}"
+				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/> \nSELECT DISTINCT ?date\nWHERE {  \n        res:Empire_of_Japan dbo:dissolutionDate ?date .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -5257,8 +5257,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the mayor of Florence?",
-					"keywords": "Florence, mayor"
+					"string": "Who is the mayor of Tel Aviv?",
+					"keywords": "Tel Aviv, mayor"
 				},
 				{
 					"language": "pt_BR",
@@ -5267,8 +5267,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer ist der Bürgermeister von Florence?",
-					"keywords": "Florence, Bürgermeister"
+					"string": "Wer ist der Bürgermeister von Tel Aviv?",
+					"keywords": "Tel Aviv, Bürgermeister"
 				},
 				{
 					"language": "es",
@@ -6825,8 +6825,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was called Bird?",
-					"keywords": "called, Bird"
+					"string": "Who was called Rodzilla?",
+					"keywords": "called, Rodzilla"
 				},
 				{
 					"language": "pt_BR",
@@ -6870,7 +6870,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbp: <http://dbpedia.org/property/> \nSELECT DISTINCT ?uri \nWHERE { \n         ?uri dbp:nickname 'Bird'@en .\n}"
+				"sparql": "PREFIX dbp: <http://dbpedia.org/property/> \nSELECT DISTINCT ?uri \nWHERE { \n         ?uri dbp:nickname \"Rodzilla\"@en .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -7180,18 +7180,18 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which country does the creator of Super-Chief come from?",
-					"keywords": "Super-Chief, creator, country"
+					"string": "Which country does the creator of Miffy come from?",
+					"keywords": "Miffy, creator, country"
 				},
 				{
 					"language": "pt_BR",
-					"string": "De que país vem o criador de Superman Kal Kent?",
+					"string": "De que país vem o criador de Miffy?",
 					"keywords": "país, criador, Miffy"
 				},
 				{
 					"language": "de",
-					"string": "Aus welchem Land kommt der Super-Chief?",
-					"keywords": "Super-Chief, Land"
+					"string": "Aus welchem Land kommt der Erfinder von Nijntje?",
+					"keywords": "Nijntje, Erfinder, Land"
 				},
 				{
 					"language": "es",
@@ -7200,7 +7200,7 @@
 				},
 				{
 					"language": "it",
-					"string": "Da quale stato proviene il creatore di Superman Kal Kent?",
+					"string": "Da quale stato proviene il creatore di Miffy?",
 					"keywords": "Miffy, creatore, nazione"
 				},
 				{
@@ -7220,7 +7220,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE {\n\tres:Super-Chief dbo:creator ?x .\n\t?x dbo:nationality ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE {\n\tres:Miffy dbo:creator ?x .\n\t?x dbo:nationality ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -7322,8 +7322,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What form of government does Poland have?",
-					"keywords": "form of government, Poland"
+					"string": "What form of government does Russia have?",
+					"keywords": "form of government, Russia"
 				},
 				{
 					"language": "pt_BR",
@@ -7337,8 +7337,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Welche Regierungsform hat Polen?",
-					"keywords": "Polen, Regierungsform"
+					"string": "Welche Regierungsform hat Russland?",
+					"keywords": "Russland, Regierungsform"
 				},
 				{
 					"language": "es",
@@ -7372,7 +7372,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Poland> <http://dbpedia.org/ontology/governmentType> ?uri . } "
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Russia> <http://dbpedia.org/ontology/governmentType> ?uri . } "
 			},
 			"answers": [{
 				"head": {
@@ -7972,8 +7972,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "List all games by GMT Games.",
-					"keywords": "game, GMT Games"
+					"string": "List all games by GMT.",
+					"keywords": "game, GMT"
 				},
 				{
 					"language": "pt_BR",
@@ -7982,8 +7982,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Liste alle Spiele von GMT Games auf.",
-					"keywords": "Spiel, GMT Games"
+					"string": "Liste alle Spiele von GMT auf.",
+					"keywords": "Spiel, GMT"
 				},
 				{
 					"language": "es",
@@ -8301,7 +8301,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What color expresses Wealth?",
+					"string": "What color expresses loyalty?",
 					"keywords": "color, express, loyalty"
 				},
 				{
@@ -8351,7 +8351,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/connotation> <http://dbpedia.org/resource/Wealth> . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/connotation> <http://dbpedia.org/resource/Loyalty> . }"
 			},
 			"answers": [{
 				"head": {
@@ -8448,38 +8448,38 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who created Gmail?",
-					"keywords": "Gmail, created"
+					"string": "Who created Wikipedia?",
+					"keywords": "Wikipedia, created"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Quem criou a Gmail?",
-					"keywords": "criador, Gmail"
+					"string": "Quem criou a Wikipedia?",
+					"keywords": "criador, Wikipedia"
 				},
 				{
 					"language": "de",
-					"string": "Wer hat Gmail gegründet?",
-					"keywords": "Gmail, gründen"
+					"string": "Wer hat Wikipedia gegründet?",
+					"keywords": "Wikipedia, gründen"
 				},
 				{
 					"language": "es",
-					"string": "¿Quién creó Gmail?",
-					"keywords": "Gmail, creador"
+					"string": "¿Quién creó Wikipedia?",
+					"keywords": "Wikipedia, creador"
 				},
 				{
 					"language": "it",
-					"string": "Chi ha creato Gmail?",
-					"keywords": "Gmail, creatore"
+					"string": "Chi ha creato Wikipedia?",
+					"keywords": "Wikipedia, creatore"
 				},
 				{
 					"language": "fr",
-					"string": "Qui est le créateur de Gmail?",
-					"keywords": "créateur, Gmail"
+					"string": "Qui est le créateur de Wikipedia?",
+					"keywords": "créateur, Wikipedia"
 				},
 				{
 					"language": "nl",
-					"string": "Wie heeft Gmail opgericht?",
-					"keywords": "Gmail, oprichter"
+					"string": "Wie heeft Wikipedia opgericht?",
+					"keywords": "Wikipedia, oprichter"
 				},
 				{
 					"language": "hi_IN",
@@ -8488,7 +8488,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n\tres:Gmail dbo:author ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n\tres:Wikipedia dbo:author ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -8714,8 +8714,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the president of Hamburg Parliament?",
-					"keywords": "president, Hamburg Parliament"
+					"string": "Who is the president of Eritrea?",
+					"keywords": "president, Eritrea"
 				},
 				{
 					"language": "pt_BR",
@@ -8729,8 +8729,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer ist der Präsident von Hamburg Parliament?",
-					"keywords": "Präsident, Hamburg Parliament"
+					"string": "Wer ist der Präsident von Eritrea?",
+					"keywords": "Präsident, Eritrea"
 				},
 				{
 					"language": "es",
@@ -8764,7 +8764,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Hamburg_Parliament> <http://dbpedia.org/ontology/leader> ?uri . }  "
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Eritrea> <http://dbpedia.org/ontology/leader> ?uri . <http://dbpedia.org/resource/Eritrea> <http://dbpedia.org/ontology/leaderTitle> 'President'@en . }  "
 			},
 			"answers": [{
 				"head": {
@@ -9002,7 +9002,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?date\nWHERE { \n        res:Titanic dbo:completionDate ?date . \n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?date\nWHERE { \n        res:RMS_Titanic dbo:completionDate ?date . \n}"
 			},
 			"answers": [{
 				"head": {
@@ -9099,8 +9099,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the youngest politician?",
-					"keywords": "player, politician, youngest"
+					"string": "Who is the youngest player in the Premier League?",
+					"keywords": "player, Premier League, youngest"
 				},
 				{
 					"language": "pt_BR",
@@ -9144,7 +9144,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nSELECT DISTINCT ?uri \nWHERE {?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Politician> . \n        ?uri dbo:birthDate ?y . \n} \nORDER BY DESC(?y) \nOFFSET 0 LIMIT 1"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nSELECT DISTINCT ?uri \nWHERE { \n        ?uri dbo:team ?x . \n        ?x dbo:league res:Premier_League . \n        ?uri dbo:birthDate ?y . \n} \nORDER BY DESC(?y) \nOFFSET 0 LIMIT 1"
 			},
 			"answers": [{
 				"head": {
@@ -9307,8 +9307,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was Samuel Schmid's vice president?",
-					"keywords": "Samuel Schmid, vice president"
+					"string": "Who was John F. Kennedy's vice president?",
+					"keywords": "John F. Kennedy, vice president"
 				},
 				{
 					"language": "pt_BR",
@@ -9317,8 +9317,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer war der Vizepräsident unter Samuel Schmid?",
-					"keywords": "Samuel Schmid, Vizepräsident"
+					"string": "Wer war der Vizepräsident unter John F. Kennedy?",
+					"keywords": "John F. Kennedy, Vizepräsident"
 				},
 				{
 					"language": "es",
@@ -9352,7 +9352,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nSELECT DISTINCT ?uri \nWHERE { res:Samuel_Schmid dbo:vicePresident ?uri . \n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nSELECT DISTINCT ?uri \nWHERE { res:John_F._Kennedy dbo:vicePresident ?uri . \n}"
 			},
 			"answers": [{
 				"head": {
@@ -9449,8 +9449,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was the successor of Patrick F. Kennedy?",
-					"keywords": "Patrick F. Kennedy, successor"
+					"string": "Who was the successor of John F. Kennedy?",
+					"keywords": "John F. Kennedy, successor"
 				},
 				{
 					"language": "pt_BR",
@@ -9459,8 +9459,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer war der Nachfolger von Patrick F. Kennedy?",
-					"keywords": "Patrick F. Kennedy, Nachfolger"
+					"string": "Wer war der Nachfolger von John F. Kennedy?",
+					"keywords": "John F. Kennedy, Nachfolger"
 				},
 				{
 					"language": "es",
@@ -9489,7 +9489,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE {\n\tres:Patrick_F._Kennedy dbo:successor ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE {\n\tres:John_F._Kennedy dbo:successor ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -9528,8 +9528,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who composed the soundtrack for Titanic?",
-					"keywords": "compose, soundtrack,Titanic"
+					"string": "Who composed the soundtrack for Cameron's Titanic?",
+					"keywords": "compose, soundtrack, Cameron's Titanic"
 				},
 				{
 					"language": "pt_BR",
@@ -9543,8 +9543,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer hat den Soundtrack für Titanic geschrieben?",
-					"keywords": "Titanic, Soundtrack, geschrieben"
+					"string": "Wer hat den Soundtrack für Camerons Titanic geschrieben?",
+					"keywords": "Cameron, Titanic, Soundtrack, geschrieben"
 				},
 				{
 					"language": "es",
@@ -9553,8 +9553,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Chi ha composto la colonna sonora di Titanic?",
-					"keywords": "comporre, colonna sonora, Titanic"
+					"string": "Chi ha composto la colonna sonora di Titanic di Cameron?",
+					"keywords": "comporre, colonna sonora, Titanic, Cameron"
 				},
 				{
 					"language": "fr",
@@ -10230,8 +10230,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the king of Parliament of Australia?",
-					"keywords": "king, Parliament of Australia"
+					"string": "Who is the king of the Netherlands?",
+					"keywords": "king, the Netherlands"
 				},
 				{
 					"language": "pt_BR",
@@ -10245,8 +10245,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer ist der König der Parliament of Australia?",
-					"keywords": "König, Parliament of Australia"
+					"string": "Wer ist der König der Niederlande?",
+					"keywords": "König, Niederlande"
 				},
 				{
 					"language": "es",
@@ -10280,7 +10280,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Parliament_of_Australia> <http://dbpedia.org/ontology/leader> ?uri . ?uri a <http://dbpedia.org/ontology/Royalty> . } "
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Netherlands> <http://dbpedia.org/ontology/leader> ?uri . ?uri a <http://dbpedia.org/ontology/Royalty> . } "
 			},
 			"answers": [{
 				"head": {
@@ -10356,7 +10356,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Nikos_Kazantzakis> <http://dbpedia.org/ontology/deathPlace> ?uri . ?uri a <http://dbpedia.org/ontology/City> . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Nikos_Kazantzakis> <http://dbpedia.org/ontology/deathPlace> ?uri . ?uri a <http://dbpedia.org/ontology/Town> . }"
 			},
 			"answers": [{
 				"head": {
@@ -10595,17 +10595,17 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "In which military conflicts did Thomas Edward Lawrence participate?",
+					"string": "In which military conflicts did Lawrence of Arabia participate?",
 					"keywords": "Lawrence of Arabia, military conflict"
 				},
 				{
 					"language": "pt_BR",
-					"string": "De quais conflitos militares Thomas Edward Lawrence participou?",
+					"string": "De quais conflitos militares Lawrence da Arábia participou?",
 					"keywords": "conflitos militares, Lawrence da Arabia"
 				},
 				{
 					"language": "de",
-					"string": "An welchen militärischen Auseinandersetzungen war Thomas Edward Lawrence beteiligt?",
+					"string": "An welchen militärischen Auseinandersetzungen war Lawrence von Arabien beteiligt?",
 					"keywords": "Lawrence von Arabien, militärische Auseinandersetzung"
 				},
 				{
@@ -10615,7 +10615,7 @@
 				},
 				{
 					"language": "it",
-					"string": "A quali conflitti militari ha partecipato Thomas Edward Lawrence?",
+					"string": "A quali conflitti militari ha partecipato Lawrence d'Arabia?",
 					"keywords": "Lawrence d'Arabia, conflitto militare"
 				},
 				{
@@ -10832,7 +10832,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbp: <http://dbpedia.org/property/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {       \n        res:Nile dbp:mouthLocation ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {       \n        res:Nile dbo:sourceCountry ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -11172,7 +11172,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which city was Bill Gates born in?",
+					"string": "Which country was Bill Gates born in?",
 					"keywords": "country, born, Bill Gates"
 				},
 				{
@@ -11187,7 +11187,7 @@
 				},
 				{
 					"language": "de",
-					"string": "In welcher Stadt ist Bill Gates geboren?",
+					"string": "In welchem Land ist Bill Gates geboren?",
 					"keywords": "Bill Gates, Land, geboren"
 				},
 				{
@@ -11222,7 +11222,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Bill_Gates> <http://dbpedia.org/ontology/birthPlace> ?uri . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/City> . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Bill_Gates> <http://dbpedia.org/ontology/birthPlace> ?x . ?x <http://dbpedia.org/ontology/country> ?uri . }"
 			},
 			"answers": [{
 				"head": {
@@ -11802,8 +11802,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Through which countries does the El Burguillo Reservoir river flow?",
-					"keywords": "El Burguillo Reservoir, flow through, country"
+					"string": "Through which countries does the Yenisei river flow?",
+					"keywords": "Yenisei river, flow through, country"
 				},
 				{
 					"language": "pt_BR",
@@ -11812,8 +11812,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Durch welche Länder fließt der El Burguillo Reservoir?",
-					"keywords": "El Burguillo Reservoir, fließen, Land"
+					"string": "Durch welche Länder fließt der Yenisei?",
+					"keywords": "Yenisei, fließen, Land"
 				},
 				{
 					"language": "es",
@@ -11842,7 +11842,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbp: <http://dbpedia.org/property/>\nSELECT DISTINCT ?uri \nWHERE {\n        res:El_Burguillo_Reservoir dbp:country ?uri .\n}"
+				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbp: <http://dbpedia.org/property/>\nSELECT DISTINCT ?uri \nWHERE {\n        res:Yenisei_River dbp:country ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -12025,13 +12025,13 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What country is MetaTV from?",
-					"keywords": "country, MetaTV"
+					"string": "What country is Sitecore from?",
+					"keywords": "country, Sitecore"
 				},
 				{
 					"language": "pt_BR",
-					"string": "De que país é a MetaTV",
-					"keywords": "país, MetaTV"
+					"string": "De que país é a Sitecore",
+					"keywords": "país, Sitecore"
 				},
 				{
 					"language": "fa",
@@ -12040,8 +12040,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Aus welchem Land kommt MetaTV?",
-					"keywords": "MetaTV, Land"
+					"string": "Aus welchem Land kommt Sitecore?",
+					"keywords": "Sitecore, Land"
 				},
 				{
 					"language": "es",
@@ -12050,8 +12050,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Di che nazione è MetaTV?",
-					"keywords": "nazione, MetaTV"
+					"string": "Di che nazione è Sitecore?",
+					"keywords": "nazione, Sitecore"
 				},
 				{
 					"language": "fr",
@@ -12075,7 +12075,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/MetaTV> <http://dbpedia.org/ontology/foundationPlace> ?uri . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Sitecore> <http://dbpedia.org/ontology/foundationPlace> ?uri . }"
 			},
 			"answers": [{
 				"head": {
@@ -12101,8 +12101,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Whom did Donald_Trump marry?",
-					"keywords": "wife, Donald_Trump"
+					"string": "Whom did Lance Bass marry?",
+					"keywords": "wife, Lance Bass"
 				},
 				{
 					"language": "pt_BR",
@@ -12117,7 +12117,7 @@
 				{
 					"language": "de",
 					"string": "Wen hat Lance Bass geheiratet?",
-					"keywords": "Donald_Trump, Ehemann"
+					"keywords": "Lance Bass, Ehemann"
 				},
 				{
 					"language": "es",
@@ -12243,13 +12243,13 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was Friedrich Wilhelm Joseph Schelling inspired by?",
-					"keywords": "person, inspiring, Friedrich Wilhelm Joseph Schelling"
+					"string": "Who was Vincent van Gogh inspired by?",
+					"keywords": "person, inspiring, Vincent van Gogh"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Em quem Friedrich Wilhelm Joseph Schelling inspirou-se?",
-					"keywords": "inspiração, Friedrich Wilhelm Joseph Schelling"
+					"string": "Em quem Vincent van Gogh inspirou-se?",
+					"keywords": "inspiração, Vincent van Gogh"
 				},
 				{
 					"language": "fa",
@@ -12258,8 +12258,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer hat Friedrich Wilhelm Joseph Schelling inspiriert?",
-					"keywords": "Friedrich Wilhelm Joseph Schelling, Inspiration"
+					"string": "Wer hat Vincent van Gogh inspiriert?",
+					"keywords": "Vincent van Gogh, Inspiration"
 				},
 				{
 					"language": "es",
@@ -12268,8 +12268,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Da chi fu inspirato Friedrich Wilhelm Joseph Schelling?",
-					"keywords": "persona, ispirare, Friedrich Wilhelm Joseph Schelling"
+					"string": "Da chi fu inspirato Vincent van Gogh?",
+					"keywords": "persona, ispirare, Vincent van Gogh"
 				},
 				{
 					"language": "fr",
@@ -12293,7 +12293,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/influenced> <http://dbpedia.org/resource/Friedrich_Wilhelm_Joseph_Schelling> . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/influenced> <http://dbpedia.org/resource/Vincent_van_Gogh> . }"
 			},
 			"answers": [{
 				"head": {
@@ -13230,8 +13230,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "How high is the Mount Kilimanjaro?",
-					"keywords": "Mount Kilimanjaro, high"
+					"string": "How high is the Mount Everest?",
+					"keywords": "Mount Everest, high"
 				},
 				{
 					"language": "pt_BR",
@@ -13240,8 +13240,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wie hoch ist der Mount Kilimanjaro?",
-					"keywords": "Mount Kilimanjaro, hoch"
+					"string": "Wie hoch ist der Mount Everest?",
+					"keywords": "Mount Everest, hoch"
 				},
 				{
 					"language": "es",
@@ -13250,8 +13250,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Quanto è alto il Monte Kilimanjaro?",
-					"keywords": "Monte Kilimanjaro, altezza"
+					"string": "Quanto è alto il Monte Everest?",
+					"keywords": "Monte Everest, altezza"
 				},
 				{
 					"language": "fr",
@@ -13270,7 +13270,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?num \nWHERE {\n\tres:Mount_Kilimanjaro dbo:elevation ?num.\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?num \nWHERE {\n\tres:Mount_Everest dbo:elevation ?num.\n}"
 			},
 			"answers": [{
 				"head": {
@@ -13372,13 +13372,13 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "In which city does Bruny Surin live?",
-					"keywords": "city, live, Bruny Surin"
+					"string": "In which city does Sylvester Stallone live?",
+					"keywords": "city, live, Sylvester Stallone"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Em que cidade Bruny Surin mora?",
-					"keywords": "cidade, Bruny Surin, vive"
+					"string": "Em que cidade Sylvester Stallone mora?",
+					"keywords": "cidade, Silvester Stallone, vive"
 				},
 				{
 					"language": "fa",
@@ -13387,8 +13387,8 @@
 				},
 				{
 					"language": "de",
-					"string": "In welcher Stadt wohnt Bruny Surin?",
-					"keywords": "Bruny Surin, wohnen, Stadt"
+					"string": "In welcher Stadt wohnt Sylvester Stallone?",
+					"keywords": "Sylvester Stallone, wohnen, Stadt"
 				},
 				{
 					"language": "es",
@@ -13397,8 +13397,8 @@
 				},
 				{
 					"language": "it",
-					"string": "In quale città vive Bruny Surin?",
-					"keywords": "città, vive, Bruny Surin"
+					"string": "In quale città vive Sylvester Stallone?",
+					"keywords": "città, vive, Sylvester Stallone"
 				},
 				{
 					"language": "fr",
@@ -13422,7 +13422,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri a <http://dbpedia.org/ontology/City> . <http://dbpedia.org/resource/Bruny_Surin> <http://dbpedia.org/ontology/residence> ?uri . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri a <http://dbpedia.org/ontology/City> . <http://dbpedia.org/resource/Sylvester_Stallone> <http://dbpedia.org/ontology/residence> ?uri . }"
 			},
 			"answers": [{
 				"head": {
@@ -13935,8 +13935,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the mayor of Moscow?",
-					"keywords": "mayor, Moscow"
+					"string": "Who is the mayor of Rotterdam?",
+					"keywords": "mayor, Rotterdam"
 				},
 				{
 					"language": "pt_BR",
@@ -13945,8 +13945,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer ist der Bürgermeister von Moscow?",
-					"keywords": "Bürgermeister, Moscow"
+					"string": "Wer ist der Bürgermeister von Rotterdam?",
+					"keywords": "Bürgermeister, Rotterdam"
 				},
 				{
 					"language": "es",
@@ -13955,8 +13955,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Chi è il sindaco di Moscow?",
-					"keywords": "sindaco, Moscow"
+					"string": "Chi è il sindaco di Rotterdam?",
+					"keywords": "sindaco, Rotterdam"
 				},
 				{
 					"language": "fr",
@@ -13980,7 +13980,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n        res:Moscow dbo:leaderName ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n        res:Rotterdam dbo:leaderName ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -14302,7 +14302,7 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer ist der größte Basketballspieler?",
+					"string": "Wer ist der höchste Basketballspieler?",
 					"keywords": "größter, Basketballspieler"
 				},
 				{
@@ -15897,8 +15897,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was the pope that founded the Vatican Media?",
-					"keywords": "pope, founded, Vatican Media"
+					"string": "Who was the pope that founded the Vatican Television?",
+					"keywords": "pope, founded, Vatican Television"
 				},
 				{
 					"language": "pt_BR",
@@ -15942,7 +15942,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> \nSELECT ?uri \nWHERE { \n         ?uri rdf:type dbo:Pope . \n         res:Vatican_Media dbo:foundedBy ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> \nSELECT ?uri \nWHERE { \n         ?uri rdf:type dbo:Pope . \n         res:Vatican_Television_Center dbo:foundedBy ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -15968,8 +15968,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who composed the music for Dead Fish?",
-					"keywords": "Dead Fish, compose, music"
+					"string": "Who composed the music for Harold and Maude?",
+					"keywords": "Harold and Maude, compose, music"
 				},
 				{
 					"language": "pt_BR",
@@ -15978,8 +15978,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer hat die Musik für Dead Fish komponiert?",
-					"keywords": "Dead Fish, komponieren, Musik"
+					"string": "Wer hat die Musik für Harold und Maude komponiert?",
+					"keywords": "Harold und Maude, komponieren, Musik"
 				},
 				{
 					"language": "es",
@@ -15988,7 +15988,7 @@
 				},
 				{
 					"language": "it",
-					"string": "Chi ha composto la musica per Dead Fish?",
+					"string": "Chi ha composto la musica per Harold e Maude?",
 					"keywords": "Harold e Maude, compositore, musica"
 				},
 				{
@@ -16008,7 +16008,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nSELECT DISTINCT ?uri \nWHERE {\n\tres:Dead_Fish dbo:musicComposer ?uri .\n}"
+				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nSELECT DISTINCT ?uri \nWHERE {\n\tres:Harold_and_Maude dbo:musicComposer ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -16498,7 +16498,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which actors were born on the Philippines?",
+					"string": "Which professional surfers were born on the Philippines?",
 					"keywords": "professional surfer, born, Philippines"
 				},
 				{
@@ -16538,7 +16538,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n\t?uri dbo:occupation res:Actor .\n\t?uri dbo:birthPlace res:Philippines .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n\t?uri dbo:occupation res:Surfing .\n\t?uri dbo:birthPlace res:Philippines .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -16564,8 +16564,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What are the five boroughs of Poland?",
-					"keywords": "five boroughs, Poland"
+					"string": "What are the five boroughs of New York?",
+					"keywords": "five boroughs, New York"
 				},
 				{
 					"language": "pt_BR",
@@ -16579,8 +16579,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Was sind die fünf Stadtteile von Polen?",
-					"keywords": "Polen, Stadtteile"
+					"string": "Was sind die fünf Stadtteile von New York?",
+					"keywords": "New York, Stadtteile"
 				},
 				{
 					"language": "es",
@@ -16726,8 +16726,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "When did Elisabeth of Saxony die?",
-					"keywords": "date, Elisabeth of Saxony, died"
+					"string": "When did princess Diana die?",
+					"keywords": "date, princess Diana, died"
 				},
 				{
 					"language": "pt_BR",
@@ -16741,8 +16741,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wann ist Elisabeth von Saxony gestorben?",
-					"keywords": "Elisabeth von Saxony, Todestag"
+					"string": "Wann ist Prinzessin Diana gestorben?",
+					"keywords": "Prinzessin Diana, Todestag"
 				},
 				{
 					"language": "es",
@@ -16776,7 +16776,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?d WHERE { <http://dbpedia.org/resource/Elisabeth_of_Saxony> <http://dbpedia.org/ontology/deathDate> ?d . }"
+				"sparql": "SELECT DISTINCT ?d WHERE { <http://dbpedia.org/resource/Diana,_Princess_of_Wales> <http://dbpedia.org/ontology/deathDate> ?d . }"
 			},
 			"answers": [{
 				"head": {

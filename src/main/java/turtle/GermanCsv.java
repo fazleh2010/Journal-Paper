@@ -968,7 +968,7 @@ public class GermanCsv {
         public  Integer rangeArticleIndex = 18;
         private Integer rangeWrittenSingularFormIndex = 19;
         private Integer rangeWrittenPluralFormIndex = 20;
-      
+              
 
         public String getHeader(String lemonEntry, String language) {
             return "@prefix :        <http://localhost:8080/#> .\n"
@@ -1060,6 +1060,9 @@ public class GermanCsv {
         public void setArticle(Tupples tupple, String[] row) {
             //GenderUtils.setWrittenForms(tupple.getDomain(), getDomainWrittenSingularFormIndex(row), getRangeWrittenSingularFormIndex(row));
             //GenderUtils.setWrittenForms(tupple.getRange(), getRangeWrittenSingularFormIndex(row), getRangeWrittenPluralFormIndex(row));
+            System.out.println("domainArticleIndex::"+domainArticleIndex);
+            System.out.println("rangeArticleIndex::"+rangeArticleIndex);
+            
             GenderUtils.setArticles(tupple.getDomain(), row[this.domainArticleIndex]);
             GenderUtils.setArticles(tupple.getRange(), row[this.rangeArticleIndex]);
             GenderUtils.setWrittenForms(tupple.getDomain(), row[this.domainWrittenSingularFormIndex], row[this.domainWrittenPluralFormIndex]);

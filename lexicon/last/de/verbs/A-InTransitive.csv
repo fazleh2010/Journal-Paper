@@ -1,0 +1,19 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive,writtenFormThridPerson,writtenFormPast,writtenFormPast,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural
+Stattfinden,TrennVerb,stattfinden,findet statt,fand statt,stattgefunden,am,IntransitivePPFrame,domain,range,1,dbp:date,dbo:MilitaryConflict,xsd:date,feminine,Veranstaltung,Veranstaltungen,neuter,-,-
+durchfhren,TrennVerb,durchfhren,fhrt durch,fhrte durch,durchgefhrt,am,IntransitivePPFrame,domain,range,1,dbo:date,dbo:MilitaryConflict,xsd:date,masculine,Milit„rKonflikt,Milit„rKonflikte,neuter,-,-
+verheiraten_mit,verb,verheiraten,verheiratet,verheiratete,verheiratet,mit,IntransitivePPFrame,domain,range,1,dbo:spouse,dbo:Person,dbo:Person,masculine,Person,Personen,masculine,Person,Personen
+aufh”ren,TrennVerb,aufh”ren,h”rt auf,h”rte auf,aufgeh”rt,in,IntransitivePPFrame,domain,range,1,dbo:routeEnd,dbo:Road,dbo:Location,feminine,Straáe,Straáen,feminine,Stadt,Stadte
+storben_an,verb,sterben,stirbt,starb,gestorben,an,IntransitivePPFrame,domain,range,1,dbo:deathCause,dbo:Person,dbo:Disease,masculine,Person,Personen,feminine,Erkrankung,Erkrankungen
+Storben_am,verb,sterben,stirbt,starb,gestorben,am,IntransitivePPFrame,domain,range,1,dbo:deathDate,dbo:Person,xsd:date,feminine,Person,Personen,neuter,Datum,Datum
+Storben_in,verb,sterben,stirbt,starb,gestorben,in,IntransitivePPFrame,domain,range,1,dbo:deathPlace,dbo:Person,dbo:City,feminine,Person,Personen,feminine,Stadt,St„dte
+fliessen_durch,verb,flieáen,flieát,floss,geflossen,durch,IntransitivePPFrame,domain,range,1,dbo:city,dbo:River,dbo:City,masculine,Fluss,Flsse,neuter,Stadt,St„dte
+šberspannen,verb,berspannen,berspannt,berspannte,berspannt,in,IntransitivePPFrame,domain,range,1,dbo:crosses,dbo:Bridge,dbo:BodyOfWater,feminine,Brcke,Brcken,masculine,Fluss,Fluss
+sprechen,verb,sprechen,spricht,sprach,gesprochen,in,IntransitivePPFrame,domain,range,1,dbo:language,dbo:Country,dbo:Language,neuter,Land,L„nder,feminine,Sprache,Sprachen
+entspringen,veb,entspringen,entspringt,entsprang,entsprungen,in,IntransitivePPFrame,domain,range,1,dbo:sourceCountry,dbo:River,dbo:Country,masculine,Fluss,Flsse,neuter,Land,L„nder
+geborn_on_1,verb,geb„ren,geb„rt,gebar,geboren,in,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Person,dbo:Place,masculine,Person,Personen,neuter,Stadt,St„dte
+geborn_on_2,verb,geb„ren,geb„rt,gebar,geboren,in,IntransitivePPFrame,domain,range,1,dbo:birthYear,dbo:Person,xsd:date,masculine,Person,Personen,neuter,Jahr,Jahren
+fertigstellen_in,TrennVerb,fertigstellen,stellt fertig,stellte fertig,fertiggestellt,in,IntransitivePPFrame,domain,range,1,dbo:buildingEndDate,dbo:Ship,xsd:date,neuter,Schiff,Schiffe,neuter,-,-
+ausstellen,TrennVerb,ausstellen,stellt aus,stellte aus,ausgestellt,in,IntransitivePPFrame,domain,range,1,dbo:museum,dbo:Artwork,dbo:Museum,neuter,Kunstwerk,Kunstwerke,neuter,Museum,Museen
+befinden,RefVerb,befinden,befindet,befand,befunden,in,IntransitivePPFrame,domain,range,1,dbo:locationCity,dbo:Food,dbo:City,neuter,Essen,Essen,feminine,Stadt,St„dte
+schreiben_in,verb,schreiben,schreibt,schrieb,geschrieben,in,IntransitivePPFrame,domain,range,1,dbo:programmingLanguage,dbo:Software,dbo:Language,feminine,Software,Software,feminine,Programmiersprache,Programmiersprachen
+wohnen_in,verb,wohnen,wohnt,wohnte,gewohnt,in,IntransitivePPFrame,domain,range,1,dbo:residence,dbo:Person,dbo:City,masculine,Person,Personen,feminine,Stadt,Stadte

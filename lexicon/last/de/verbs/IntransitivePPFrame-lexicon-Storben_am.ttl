@@ -1,0 +1,69 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :Storben_am ;
+  lemon:entry    :form_Storben_am_present_preposition .
+
+:Storben_am a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_Storben_am_present ;
+  lemon:otherForm      :Storben_am_present3rd ;
+  lemon:otherForm      :Storben_am_past ;
+  lemon:otherForm      :Storben_am_perfect ;
+  lemon:sense          :Storben_am_sense_1 ;
+  lemon:synBehavior    :Storben_am_frame .
+
+:form_Storben_am_present a           lemon:Form ;
+  lemon:writtenRep     "sterben"@de ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:Storben_am_present3rd a      lemon:Form ;
+  lemon:writtenRep "stirbt"@de ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:Storben_am_past a lemon:Form ;
+  lemon:writtenRep  "starb"@de ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:Storben_am_perfect a lemon:Form ;
+  lemon:writtenRep  "gestorben"@de ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:perfect .
+
+:Storben_am_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :Storben_am_subj ;
+  lexinfo:prepositionalAdjunct :Storben_am_obj .
+
+:Storben_am_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :Storben_am_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/deathDate> ;
+  lemon:subjOfProp  :Storben_am_obj ;
+  lemon:objOfProp   :Storben_am_subj ;
+  lemon:condition   :Storben_am_sense_1_condition .
+
+:Storben_am_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Person> ;
+  lemon:propertyRange  <http://www.w3.org/2001/XMLSchema#date> .
+
+
+:Storben_am_obj lemon:marker :am .
+
+:arg2 lemon:marker :form_Storben_am_present_preposition .
+
+## Prepositions ##
+
+:form_Storben_am_present_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "am"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

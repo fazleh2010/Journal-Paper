@@ -1,2 +1,0 @@
-LemonEntry,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingularForm,domainWrittenPluralForm,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
-manufacturer_of,noun,manufacturer,manufacturers,of,NounPPFrame,range,domain,1,dbo:manufacturer,dbo:Beverage,dbo:Brewery,beverage,beverage,brewery,brewery

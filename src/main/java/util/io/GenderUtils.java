@@ -31,6 +31,7 @@ public class GenderUtils implements TempConstants {
 
     static {
         prepositionCase.put("durch", accusativeCase);
+        prepositionCase.put("fuer", accusativeCase);
         prepositionCase.put("in", dativeCase);
     }
 

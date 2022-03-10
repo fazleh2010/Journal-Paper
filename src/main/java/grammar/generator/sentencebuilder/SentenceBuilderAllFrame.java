@@ -97,6 +97,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
             System.out.println(sentences);
             System.out.println(this.templateFinder.getSelectedTemplate());
             System.out.println(activeTransitive);
+            //exit(1);
 
         } else if (this.frameType.equals(FrameType.IPP)) {
             String template = this.templateFinder.getSelectedTemplate();

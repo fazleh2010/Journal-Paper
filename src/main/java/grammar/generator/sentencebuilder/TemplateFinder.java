@@ -47,9 +47,9 @@ public class TemplateFinder implements TempConstants{
           
                 this.selectedTemplate = this.findGradableTemplate();
                 this.propertyReference = this.findReference();
-                System.out.println("selectedTemplate::::"+selectedTemplate);
+                /*System.out.println("selectedTemplate::::"+selectedTemplate);
                 System.out.println("propertyReference::::"+propertyReference);
-                //exit(1);
+                exit(1);*/
 
         }
     }
@@ -387,11 +387,11 @@ public class TemplateFinder implements TempConstants{
         String referenceUri = this.lexicalEntryUtil.getReferenceUri();
         String string=subjectUri;
         String type=null;
-        System.out.println("subjectUri::"+subjectUri);
+        /*System.out.println("subjectUri::"+subjectUri);
          System.out.println("objectUri::"+objectUri);
          System.out.println("referenceUri::"+referenceUri);
           System.out.println("string::"+string);
-
+        */
         
 
         if (this.isPlace(string)&&this.isArchitecturalStructureCheck(objectUri)) {

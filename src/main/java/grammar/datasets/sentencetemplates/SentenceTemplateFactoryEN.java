@@ -29,22 +29,9 @@ import static grammar.datasets.sentencetemplates.TempConstants.noun;
 import static grammar.datasets.sentencetemplates.TempConstants.nounPhrase;
 import static grammar.datasets.sentencetemplates.TempConstants.whQuestion;
 import static grammar.structure.component.FrameType.APP;
-import static grammar.datasets.sentencetemplates.TempConstants.activeTransitive;
-import static grammar.datasets.sentencetemplates.TempConstants.adjectiveBaseForm;
-import static grammar.datasets.sentencetemplates.TempConstants.passiveTransitive;
-import static grammar.datasets.sentencetemplates.TempConstants.superlativePerson;
-import static grammar.datasets.sentencetemplates.TempConstants.superlativeWorld;
-import static grammar.datasets.sentencetemplates.TempConstants.comperative;
-import static grammar.datasets.sentencetemplates.TempConstants.superlativeCountry;
-import static grammar.datasets.sentencetemplates.TempConstants.WHAT_WHICH_PRESENT_THING_2;
-import static grammar.datasets.sentencetemplates.TempConstants.PERSON_PERSON;
-import static grammar.datasets.sentencetemplates.TempConstants.WHERE_WHAT_PRESENT_THING;
-import static grammar.datasets.sentencetemplates.TempConstants.PERSON_CAUSE;
-import static grammar.datasets.sentencetemplates.TempConstants.WHAT_WHICH_LOCATION;
-import static grammar.datasets.sentencetemplates.TempConstants.HOW_MANY_TOTAL;
-import static grammar.datasets.sentencetemplates.TempConstants.WHAT_WHICH_LOCATION_COMPANY;
 
-class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository> {
+
+class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository>,TempConstants{
 
   private final SentenceTemplateRepository sentenceTemplateRepository;
   private final Language language;
