@@ -1,2 +1,0 @@
-LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural
-publish,verb,publish,publishes,published,published,by,IntransitivePPFrame,domain,range,1,dbo:publisher,dbo:Book,dbo:Agent,book,books,agent,agent

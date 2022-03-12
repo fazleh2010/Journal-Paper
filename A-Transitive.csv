@@ -1,3 +1,0 @@
-LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,SyntacticFrame,subject,directObject,sense,reference,domain,range,passivePreposition,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural,GrammarRule 1:question1,GrammarRule 1:question2,GrammarRule 1:sparql,GrammarRule 2:question1,GrammarRule2: sparql
-publish_1,verb,publish,publishes,published,published,TransitiveFrame,range,domain,1,dbo:publisher,dbo:Book,dbo:Person,by,book,books,agent,agents,,,,,
-Play_3,verb,play,playes,played,played,TransitiveFrame,range,domain,1,dbo:starring,dbo:Film,dbo:person,in,film,films,person,persons,,,,,

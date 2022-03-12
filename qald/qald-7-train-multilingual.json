@@ -2374,8 +2374,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who played Agent Smith in Matrix?",
-					"keywords": "played, Agent Smith, Matrix"
+					"string": "Who played Agent Smith?",
+					"keywords": "played, Agent Smith"
 				},
 				{
 					"language": "pt_BR",
@@ -2384,8 +2384,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer hat Agent Smith in Matrix gespielt?",
-					"keywords": "gespielt, Agent Smith, Matrix"
+					"string": "Wer hat Agent Smith gespielt?",
+					"keywords": "gespielt, Agent Smith"
 				},
 				{
 					"language": "es",
@@ -5257,8 +5257,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the mayor of Tel Aviv?",
-					"keywords": "Tel Aviv, mayor"
+					"string": "Who is the mayor of Florence?",
+					"keywords": "Florence, mayor"
 				},
 				{
 					"language": "pt_BR",
@@ -5267,8 +5267,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer ist der Bürgermeister von Tel Aviv?",
-					"keywords": "Tel Aviv, Bürgermeister"
+					"string": "Wer ist der Bürgermeister von Florenz?",
+					"keywords": "Florence, Bürgermeister"
 				},
 				{
 					"language": "es",
@@ -5302,7 +5302,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE { \n        res:Tel_Aviv dbo:leaderName ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE { \n        res:Florence dbo:leaderName ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -5555,8 +5555,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who played Gus Fring in Breaking Bad?",
-					"keywords": "play, Gus Fring, Breaking Bad"
+					"string": "Who played Gus Fring?",
+					"keywords": "play, Gus Fring"
 				},
 				{
 					"language": "pt_BR",
@@ -5570,8 +5570,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer hat Gus Fring in Breaking Bad gespielt?",
-					"keywords": "Gus Fring, Breaking Bad, Schauspieler"
+					"string": "Wer hat Gus Fring gespielt?",
+					"keywords": "Gus Fring, Schauspieler"
 				},
 				{
 					"language": "es",
@@ -7972,28 +7972,28 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "List all games by GMT.",
-					"keywords": "game, GMT"
+					"string": "List all games by GMT Games.",
+					"keywords": "game, GMT Games"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Liste todos os jogos da GMT.",
-					"keywords": "jogos, GMT"
+					"string": "Liste todos os jogos da GMT Games.",
+					"keywords": "jogos, GMT Games"
 				},
 				{
 					"language": "de",
-					"string": "Liste alle Spiele von GMT auf.",
-					"keywords": "Spiel, GMT"
+					"string": "Liste alle Spiele von GMT Games auf.",
+					"keywords": "Spiel, GMT Games"
 				},
 				{
 					"language": "es",
-					"string": "Dame todos los juegos de GMT.",
-					"keywords": "juegos, GMT"
+					"string": "Dame todos los juegos de GMT Games.",
+					"keywords": "juegos, GMT Games"
 				},
 				{
 					"language": "it",
-					"string": "Elenca tutti i giochi di GMT.",
-					"keywords": "gioco, GMT"
+					"string": "Elenca tutti i giochi di GMT Games.",
+					"keywords": "gioco, GMT Games"
 				},
 				{
 					"language": "fr",
@@ -8714,8 +8714,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the president of Eritrea?",
-					"keywords": "president, Eritrea"
+					"string": "Who is the president of Hamburg Parliament?",
+					"keywords": "president, Hamburg Parliament"
 				},
 				{
 					"language": "pt_BR",
@@ -8729,8 +8729,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer ist der Präsident von Eritrea?",
-					"keywords": "Präsident, Eritrea"
+					"string": "Wer ist der Präsident von Hamburgische Bürgerschaft?",
+					"keywords": "Präsident, Hamburgische Bürgerschaft"
 				},
 				{
 					"language": "es",
@@ -8764,7 +8764,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Eritrea> <http://dbpedia.org/ontology/leader> ?uri . <http://dbpedia.org/resource/Eritrea> <http://dbpedia.org/ontology/leaderTitle> 'President'@en . }  "
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Hamburg_Parliament> <http://dbpedia.org/ontology/leader> ?uri . }  "
 			},
 			"answers": [{
 				"head": {
@@ -9307,8 +9307,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was John F. Kennedy's vice president?",
-					"keywords": "John F. Kennedy, vice president"
+					"string": "Who was Samuel Schmid's vice president?",
+					"keywords": "Samuel Schmid, vice president"
 				},
 				{
 					"language": "pt_BR",
@@ -9317,8 +9317,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer war der Vizepräsident unter John F. Kennedy?",
-					"keywords": "John F. Kennedy, Vizepräsident"
+					"string": "Wer war der Vizepräsident unter Samuel Schmid?",
+					"keywords": "Samuel Schmid, Vizepräsident"
 				},
 				{
 					"language": "es",
@@ -9352,7 +9352,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nSELECT DISTINCT ?uri \nWHERE { res:John_F._Kennedy dbo:vicePresident ?uri . \n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nSELECT DISTINCT ?uri \nWHERE { res:Samuel_Schmid dbo:vicePresident ?uri . \n}"
 			},
 			"answers": [{
 				"head": {
@@ -9449,8 +9449,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was the successor of John F. Kennedy?",
-					"keywords": "John F. Kennedy, successor"
+					"string": "Who was the successor of Patrick F. Kennedy?",
+					"keywords": "Patrick F. Kennedy, successor"
 				},
 				{
 					"language": "pt_BR",
@@ -9459,8 +9459,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer war der Nachfolger von John F. Kennedy?",
-					"keywords": "John F. Kennedy, Nachfolger"
+					"string": "Wer war der Nachfolger von Patrick F. Kennedy?",
+					"keywords": "Patrick F. Kennedy, Nachfolger"
 				},
 				{
 					"language": "es",
@@ -9489,7 +9489,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE {\n\tres:John_F._Kennedy dbo:successor ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE {\n\tres:Patrick_F._Kennedy dbo:successor ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -10230,8 +10230,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the king of the Netherlands?",
-					"keywords": "king, the Netherlands"
+					"string": "Who is the king of Parliament of Australia?",
+					"keywords": "king, Parliament of Australia"
 				},
 				{
 					"language": "pt_BR",
@@ -10245,8 +10245,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer ist der König der Niederlande?",
-					"keywords": "König, Niederlande"
+					"string": "Wer ist der König der Australisches Parlament?",
+					"keywords": "König, Australisches Parlament"
 				},
 				{
 					"language": "es",
@@ -10280,7 +10280,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Netherlands> <http://dbpedia.org/ontology/leader> ?uri . ?uri a <http://dbpedia.org/ontology/Royalty> . } "
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Parliament_of_Australia> <http://dbpedia.org/ontology/leader> ?uri . ?uri a <http://dbpedia.org/ontology/Royalty> . } "
 			},
 			"answers": [{
 				"head": {
@@ -13935,8 +13935,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the mayor of Rotterdam?",
-					"keywords": "mayor, Rotterdam"
+					"string": "Who is the mayor of Moscow?",
+					"keywords": "mayor, Moscow"
 				},
 				{
 					"language": "pt_BR",
@@ -13945,8 +13945,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer ist der Bürgermeister von Rotterdam?",
-					"keywords": "Bürgermeister, Rotterdam"
+					"string": "Wer ist der Bürgermeister von Moskau?",
+					"keywords": "Bürgermeister, Moscow"
 				},
 				{
 					"language": "es",
@@ -13955,8 +13955,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Chi è il sindaco di Rotterdam?",
-					"keywords": "sindaco, Rotterdam"
+					"string": "Chi è il sindaco di Moscow?",
+					"keywords": "sindaco, Moscow"
 				},
 				{
 					"language": "fr",
@@ -13980,7 +13980,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n        res:Rotterdam dbo:leaderName ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n        res:Moscow dbo:leaderName ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -16564,8 +16564,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What are the five boroughs of New York?",
-					"keywords": "five boroughs, New York"
+					"string": "What are the boroughs of Constitutional monarchy?",
+					"keywords": "five boroughs, Poland"
 				},
 				{
 					"language": "pt_BR",
@@ -16579,17 +16579,17 @@
 				},
 				{
 					"language": "de",
-					"string": "Was sind die fünf Stadtteile von New York?",
-					"keywords": "New York, Stadtteile"
+					"string": "Was sind die Stadtteile von Parlamentarische Monarchie?",
+					"keywords": "Parlamentarische, Stadtteile"
 				},
 				{
 					"language": "es",
-					"string": "¿Cuáles son los cinco condados de Nueva York?",
+					"string": "¿Cuáles son los condados de Monarquía constitucional?",
 					"keywords": "cinco condados, Nueva York"
 				},
 				{
 					"language": "it",
-					"string": "Quali sono i cinque quartieri di New York?",
+					"string": "Quali sono i quartieri di Monarchia costituzionale?",
 					"keywords": "cinque quartieri, New York"
 				},
 				{
@@ -16614,7 +16614,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/governmentType> <http://dbpedia.org/resource/Borough_(New_York_City)> . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/governmentType> <http://dbpedia.org/resource/Constitutional_monarchy> . }"
 			},
 			"answers": [{
 				"head": {

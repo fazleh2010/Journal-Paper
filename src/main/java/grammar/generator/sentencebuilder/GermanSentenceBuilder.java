@@ -147,6 +147,9 @@ public class GermanSentenceBuilder implements TempConstants {
            word = this.lexicalEntryUtil.getAdjectiveReference(reference);
   
         } 
+        else if (attribute.contains(Apostrophe)) {
+            word=LexicalEntryUtil.getSingle(lexicalEntryUtil, Apostrophe);
+        }
         else if (attribute.contains(preposition)) {
             word = this.findPreposition(attribute, reference, flagReference);
            

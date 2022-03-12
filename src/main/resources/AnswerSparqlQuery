@@ -271,6 +271,29 @@ optional{
 }
 }
 
+
+
+----------------------------
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX res: <http://dbpedia.org/resource/>
+SELECT DISTINCT ?labelEn ?labelDe ?labelIt ?labelEs  
+WHERE {
+ res:The_Pillars_of_the_Earth rdfs:label ?labelEn .
+  filter langMatches(lang(?labelEn),"en")
+optional{
+   res:The_Pillars_of_the_Earth rdfs:label ?labelDe .
+  filter langMatches(lang(?labelDe),"de")
+}
+optional{
+   res:The_Pillars_of_the_Earth rdfs:label ?labelIt .
+  filter langMatches(lang(?labelIt),"it")
+}
+optional{
+   res:The_Pillars_of_the_Earth rdfs:label ?labelEs .
+  filter langMatches(lang(?labelEs),"es")
+}
+}
+
 ------------nick name------------
 
 PREFIX dbp: <http://dbpedia.org/property/> 

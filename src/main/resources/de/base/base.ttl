@@ -30,6 +30,7 @@
   lemon:entry    :component_haben ;
   lemon:entry    :component_werden ;
   lemon:entry    :definite_article ;
+  lemon:entry    :Apostrophe;
   lemon:entry    :reflexive_pronoun ;
   lemon:entry    :aus ;
   lemon:entry    :fuer ;
@@ -657,6 +658,12 @@
   lemon:canonicalForm  [ lemon:writtenRep "alle"@de ] ;
   lexinfo:partOfSpeech lexinfo:particle .
 
+
+## Apostrophe ##
+
+  :Apostrophe a               lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "s"@de ] ;
+   lexinfo:partOfSpeech lexinfo:verb .
 
 ## Prepositions ##
 
