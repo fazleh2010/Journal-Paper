@@ -179,7 +179,7 @@
   lexinfo:number                          lexinfo:singular ] ;
   lemon:otherForm      [ lemon:writtenRep "wird"@de ;
   lexinfo:tense                           lexinfo:present ;
-  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:person                          lexinfo:thirdPerson ;
   lexinfo:number                          lexinfo:singular ] ;
   lemon:otherForm      [ lemon:writtenRep "wird"@de ;
   lexinfo:tense                           lexinfo:present ;
@@ -195,7 +195,7 @@
   lexinfo:number                          lexinfo:singular ] ;
   lemon:otherForm      [ lemon:writtenRep "wurde"@de ;
   lexinfo:tense                           lexinfo:past ;
-  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:person                          lexinfo:thirdPerson ;
   lexinfo:number                          lexinfo:singular ] ;
   lemon:otherForm      [ lemon:writtenRep "wurde"@de ;
   lexinfo:tense                           lexinfo:past ;

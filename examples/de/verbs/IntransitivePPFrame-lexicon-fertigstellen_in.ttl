@@ -48,7 +48,7 @@
 
 :fertigstellen_in_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
   lemon:ontoMapping :fertigstellen_in_ontomap ;
-  lemon:reference   <http://dbpedia.org/ontology/buildingEndDate> ;
+  lemon:reference   <http://dbpedia.org/ontology/completionDate> ;
   lemon:subjOfProp  :fertigstellen_in_obj ;
   lemon:objOfProp   :fertigstellen_in_subj ;
   lemon:condition   :fertigstellen_in_sense_1_condition .

@@ -6,6 +6,8 @@
 package evaluation;
 
 import com.google.gdata.util.common.base.Pair;
+import info.debatty.java.stringsimilarity.Cosine;
+import info.debatty.java.stringsimilarity.RatcliffObershelp;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
@@ -57,25 +59,7 @@ public class StringSimilarity {
 
     }
 
-    /**
-     * Calculates the similarity (a number within 0 and 1) between two strings.
-     */
-    public static double similarity(String s1, String s2) {
-        String longer = s1, shorter = s2;
-        if (s1.length() < s2.length()) { // longer should always have greater length
-            longer = s2;
-            shorter = s1;
-        }
-        int longerLength = longer.length();
-        if (longerLength == 0) {
-            return 1.0;
-            /* both strings are zero length */ }
-        /* // If you have StringUtils, you can use it to calculate the edit distance:
-        return (longerLength - StringUtils.getLevenshteinDistance(longer, shorter)) /
-                                                             (double) longerLength; */
-        return (longerLength - editDistance(longer, shorter)) / (double) longerLength;
-
-    }
+    
 
     // Example implementation of the Levenshtein Edit Distance
     // See http://r...content-available-to-author-only...e.org/wiki/Levenshtein_distance#Java
@@ -110,14 +94,10 @@ public class StringSimilarity {
 
     public static void printSimilarity(String s, String t) {
         System.out.println(String.format(
-                "%.3f is the similarity between \"%s\" and \"%s\"", similarity(s, t), s, t));
+                "%.3f is the similarity between \"%s\" and \"%s\"", generalSimilarity(s, t), s, t));
     }
 
-    public static void main(String[] args) {
-        printSimilarity("who was samuel schmid vice president?", ":who was vice president of samuel schmid?");
-       
-    }
-
+  
    
 
     private QueGGinfomation getBestMatchingWithOutKB(Map<String, QueGGinfomation> grammarEntities, HashMap<String, Double> map) {
@@ -258,6 +238,70 @@ public class StringSimilarity {
 
         exampleString = exampleString.replace(" . ", "+");
         return exampleString;
+    }
+    
+  
+    
+     /**
+     * Calculates the similarity (a number within 0 and 1) between two strings.
+     */
+    public static double zacrdSimilarity(String string1, String string2) {
+        RatcliffObershelp ro = new RatcliffObershelp();
+        return ro.similarity(string1, string2);
+    }
+    
+    public static double cosineSimilarity(String string1, String string2) {
+        Cosine cosine = new Cosine(2);
+        Map<String, Integer> profile1 = cosine.getProfile(string1);
+        Map<String, Integer> profile2 = cosine.getProfile(string2);
+        return cosine.similarity(profile1, profile2);
+    }
+
+    /**
+     * Calculates the similarity (a number within 0 and 1) between two strings.
+     */
+    public static double generalSimilarity(String s1, String s2) {
+        String longer = s1, shorter = s2;
+        if (s1.length() < s2.length()) { // longer should always have greater length
+            longer = s2;
+            shorter = s1;
+        }
+        int longerLength = longer.length();
+        if (longerLength == 0) {
+            return 1.0;
+            /* both strings are zero length */ }
+        /* // If you have StringUtils, you can use it to calculate the edit distance:
+        return (longerLength - StringUtils.getLevenshteinDistance(longer, shorter)) /
+                                                             (double) longerLength; */
+        return (longerLength - editDistance(longer, shorter)) / (double) longerLength;
+
+    }
+
+  public static void main(String[] args) {
+        RatcliffObershelp ro = new RatcliffObershelp();
+
+        System.out.println("zcard similarity");
+        // substitution of s and t
+        System.out.println(ro.similarity("My string", "My tsring"));
+
+        // substitution of s and n
+        System.out.println(ro.similarity("My string", "My ntrisg"));
+
+        System.out.println("cosine similarity");
+
+        String s1 = "My first string";
+        String s2 = "My other string...";
+
+        // Let's work with sequences of 2 characters...
+        Cosine cosine = new Cosine(2);
+
+        // Pre-compute the profile of strings
+        Map<String, Integer> profile1 = cosine.getProfile(s1);
+        Map<String, Integer> profile2 = cosine.getProfile(s2);
+
+        // Prints 0.516185
+        System.out.println(cosine.similarity(profile1, profile2));
+
     }
 
 }

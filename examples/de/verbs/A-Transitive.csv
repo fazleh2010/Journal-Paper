@@ -27,5 +27,8 @@ Spielen_2,verb,spielen,spielt,spielte,gespielt,TransitiveFrame,range,domain,1,db
 drehen,verb,drehen,dreht,drehte,gedreht,TransitiveFrame,range,domain,1,dbo:director,dbo:Film,dbo:Person,masculine,Film,Filme,masculine,Person,Personen,von
 beeinflussen,verb,beeinflussen,beeinflusst,beeinflusste,beeinflusst,TransitiveFrame,range,domain,1,dbo:influencedBy,dbo:Person,dbo:Person,masculine,Person,Personen,masculine,Person,Personen,von
 inspirieren,verb,inspirieren,inspiriert,inspirierte,insipriert,TransitiveFrame,domain,range,1,dbo:influenced,dbo:Artist,dbo:Artist,masculine,K］stler,K］stler,masculine,K］stler,K］stler,von
-entwerfen,verb,entwerfen,entwirft,entwarf,entworfen,TransitiveFrame,range,domain,1,dbo:architect,dbo:Bridge,dbo:Person,feminine,Br…ke,Br…ken,masculine,Person,Personen,von
+Entwerfen_1,verb,entwerfen,entwirft,entwarf,entworfen,TransitiveFrame,range,domain,1,dbo:architect,dbo:Bridge,dbo:Person,feminine,Br…ke,Br…ken,masculine,Person,Personen,von
+Entwerfen_2,verb,entwerfen,entwirft,entwarf,entworfen,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Agent,feminine,Fernsehserie,Fernsehserien,masculine,agents,Agenten,von
+Entwerfen_3,verb,entwerfen,entwirft,entwarf,entworfen,TransitiveFrame,range,domain,1,dbo:author,dbo:Website,dbo:Person,feminine,Website,Websites,feminine,Person,Personen,von
 betreiben,verb,betreiben,betreibt,betrieb,betrieben,TransitiveFrame,domain,range,1,dbo:operator,dbo:LaunchPad,dbo:Organisation,feminine,Startrampe,Startrampen,feminine,Organisation,Organisationen,von
+stellen,verb,stellen,stellt,stellte,gestellt,TransitiveFrame,domain,range,1,dbo:product,dbo:Company,dbo:Ship,neuter,Schiff,Schiffe,feminine,Firma,Firmen,von

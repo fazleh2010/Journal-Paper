@@ -753,37 +753,33 @@ public class EvaluateAgainstQALD {
         return grammarEntities;
     }
     
-    public Map<String, QueGGinfomation> matchedRealQuestions(String qaldsentence, String qaldSparqlQuery,Map<String, String[]> questions, double similarityPercentage,Integer index) {
+    public Map<String, QueGGinfomation> matchedRealQuestions(String qaldsentence, String qaldSparqlQuery, Map<String, String[]> questions, double similarityPercentage, Integer index) {
         Map<String, QueGGinfomation> matchedQuestions = new TreeMap<String, QueGGinfomation>();
         qaldsentence = qaldsentence.toLowerCase().strip().trim();
         HashMap<String, Double> sort = new HashMap<String, Double>();
-        Boolean singleFlag=false, multipleFlag=false, askFlag=false;
-        
-        StringSimilarity stringSimilarity=new StringSimilarity();
-        
+        Boolean singleFlag = false, multipleFlag = false, askFlag = false;
+
+        StringSimilarity stringSimilarity = new StringSimilarity();
+
         if (stringSimilarity.isAskSparqlQuery(qaldSparqlQuery)) {
             askFlag = true;
-          
+
         } else if (!stringSimilarity.isMultipleSparqlQuery(qaldSparqlQuery)) {
             singleFlag = true;
-             
-        } else /*if (stringSimilarity.isMultipleSparqlQuery(qaldSparqlQuery)) */{
+
+        } else /*if (stringSimilarity.isMultipleSparqlQuery(qaldSparqlQuery)) */ {
             /* System.out.println("qaldSparqlQuery::"+qaldSparqlQuery);
                // exit(1);*/
             multipleFlag = true;
         }
-        
-          /*if(index==210||index==16||index==180)
+
+        /*if(index==210||index==16||index==180)
            return new TreeMap<String, QueGGinfomation>();*/
-        
-        
-        
-        /*if(index==16||index==180||index==194||index==67
+ /*if(index==16||index==180||index==194||index==67
                 ||index==89||index==150||index==76||index==87
                 ||index==135||index==210||index==25||index==0||index==107||index==23||index==161||index==132)
            return new TreeMap<String, QueGGinfomation>();*/
-         
-        /*if (multipleFlag&&qaldSparqlQuery.contains("res:Surfing")) {
+ /*if (multipleFlag&&qaldSparqlQuery.contains("res:Surfing")) {
                
             return new TreeMap<String, QueGGinfomation>();
         }
@@ -796,38 +792,18 @@ public class EvaluateAgainstQALD {
                // exit(1);
             return new TreeMap<String, QueGGinfomation>();
         }*/
-
-        
-
-        
-         /*else if(!stringSimilarity.isMultipleSparqlQuery(qaldSparqlQuery)){
+ /*else if(!stringSimilarity.isMultipleSparqlQuery(qaldSparqlQuery)){
                 //System.out.println("qaldSparqlQuery::"+qaldSparqlQuery);
                 //exit(1);
                 grammarEntities =new TreeMap<String,QueGGinfomation>();  
             }*/
-
         for (String queGGquestion : questions.keySet()) {
             String[] row = questions.get(queGGquestion);
             qaldsentence = qaldsentence.replace("\"", "");
             queGGquestion = queGGquestion.replace("\"", "");
-            
-            //JaccardSimilarity jaccardSimilarity = new JaccardSimilarity();
-            //Double value = jaccardSimilarity.apply(qaldsentence, queGGquestion);
-            Double value = StringSimilarity.similarity(qaldsentence, queGGquestion);
-            QueGGinfomation queGGinfomation = new QueGGinfomation(row, value,qaldSparqlQuery);
-            String queGGsparql=queGGinfomation.getSparqlQuery();
-            
-            /*if (askFlag && stringSimilarity.isAskSparqlQuery(queGGsparql)) {
-                ;
-            } else if (singleFlag && !stringSimilarity.isMultipleSparqlQuery(queGGsparql)) {
-                ;
-            } else if (multipleFlag && stringSimilarity.isMultipleSparqlQuery(queGGsparql)) {
-                ;
-                System.out.println("qaldSparqlQuery::"+qaldSparqlQuery+" queGGsparql:"+queGGsparql);
-                exit(1);
-            }
-            else 
-                continue;*/
+            Double value = StringSimilarity.zacrdSimilarity(qaldsentence, queGGquestion);
+            QueGGinfomation queGGinfomation = new QueGGinfomation(row, value, qaldSparqlQuery);
+            String queGGsparql = queGGinfomation.getSparqlQuery();
 
             if (value > similarityPercentage) {
                 //QueGGinfomation queGGinfomation = new QueGGinfomation(row, value);
@@ -836,9 +812,6 @@ public class EvaluateAgainstQALD {
                 System.out.println("MATCHED: " + qaldsentence + ":" + queGGquestion + " cosineSimilarityPercentage::" + value);
                 //exit(1);
             }
-            //System.out.println("MATCHED: "+qaldsentence + ":" + queGGquestion + " cosineSimilarityPercentage::" + value);
-            //else
-             //  System.out.println("NOT MATCHED: " + qaldsentence + ":" + queGGquestion + " cosineSimilarityPercentage::" + value);        
         }
 
         return matchedQuestions;

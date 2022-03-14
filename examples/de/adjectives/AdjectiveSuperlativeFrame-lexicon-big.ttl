@@ -19,6 +19,7 @@
   lemon:otherForm      :form_big_superlative ;
   lemon:sense          :big_sense_1 ;
   lemon:sense          :big_sense_2 ;
+  lemon:sense          :big_sense_3 ;
   lemon:synBehavior    :big_predFrame .
 
 :form_big lemon:writtenRep "gr��"@de .
@@ -51,6 +52,17 @@
   oils:degree   <http://lemon-model.net/oils/high> .
 
 :big_sense_2_condition a lemon:condition ;
+  lemon:propertyDomain   <http://dbpedia.org/ontology/Country> ;
+  lemon:propertyRange    <http://dbpedia.org/ontology/Stadium> .:big_sense_3 a  lemon:LexicalSense ;
+  lemon:reference :big_res ;
+  lemon:isA       :big_PredSynArg ;
+  lemon:condition :big_sense_3_condition .
+
+:big_res a   oils:CovariantScalar ;
+  oils:boundTo  <http://dbpedia.org/ontology/seatingCapacity> ;
+  oils:degree   <http://lemon-model.net/oils/high> .
+
+:big_sense_3_condition a lemon:condition ;
   lemon:propertyDomain   <http://dbpedia.org/ontology/Country> ;
   lemon:propertyRange    <http://dbpedia.org/ontology/Stadium> .## Prepositions ##
 :form_big_preposition a                  lemon:SynRoleMarker ;

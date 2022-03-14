@@ -8301,7 +8301,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What color expresses loyalty?",
+					"string": "What color expresses Wealth?",
 					"keywords": "color, express, loyalty"
 				},
 				{
@@ -8316,7 +8316,7 @@
 				},
 				{
 					"language": "de",
-					"string": "Welche Farbe steht für Loyalität?",
+					"string": "Welche Farbe steht für den Reichtum?",
 					"keywords": "Farbe, stehen für, Loyalität"
 				},
 				{
@@ -8351,7 +8351,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/connotation> <http://dbpedia.org/resource/Loyalty> . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/connotation> <http://dbpedia.org/resource/Wealth> . }"
 			},
 			"answers": [{
 				"head": {
@@ -9002,7 +9002,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?date\nWHERE { \n        res:RMS_Titanic dbo:completionDate ?date . \n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?date\nWHERE { \n        res:Titanic dbo:completionDate ?date . \n}"
 			},
 			"answers": [{
 				"head": {
@@ -10356,7 +10356,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Nikos_Kazantzakis> <http://dbpedia.org/ontology/deathPlace> ?uri . ?uri a <http://dbpedia.org/ontology/Town> . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Nikos_Kazantzakis> <http://dbpedia.org/ontology/deathPlace> ?uri . ?uri a <http://dbpedia.org/ontology/City> . }"
 			},
 			"answers": [{
 				"head": {
@@ -10832,7 +10832,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {       \n        res:Nile dbo:sourceCountry ?uri .\n}"
+				"sparql": "PREFIX dbp: <http://dbpedia.org/property/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {       \n        res:Nile dbp:mouthLocation ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -11172,7 +11172,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which country was Bill Gates born in?",
+					"string": "Which city was Bill Gates born in?",
 					"keywords": "country, born, Bill Gates"
 				},
 				{
@@ -11187,7 +11187,7 @@
 				},
 				{
 					"language": "de",
-					"string": "In welchem Land ist Bill Gates geboren?",
+					"string": "In welcher Stadt ist Bill Gates geboren?",
 					"keywords": "Bill Gates, Land, geboren"
 				},
 				{
@@ -11222,7 +11222,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Bill_Gates> <http://dbpedia.org/ontology/birthPlace> ?x . ?x <http://dbpedia.org/ontology/country> ?uri . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Bill_Gates> <http://dbpedia.org/ontology/birthPlace> ?uri . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/City> . }"
 			},
 			"answers": [{
 				"head": {
@@ -11802,8 +11802,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Through which countries does the Yenisei river flow?",
-					"keywords": "Yenisei river, flow through, country"
+					"string": "Through which countries does the El Burguillo Reservoir river flow?",
+					"keywords": "El Burguillo Reservoir, flow through, country"
 				},
 				{
 					"language": "pt_BR",
@@ -11812,8 +11812,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Durch welche Länder fließt der Yenisei?",
-					"keywords": "Yenisei, fließen, Land"
+					"string": "Durch welche Länder fließt der Talsperre El Burguillo?",
+					"keywords": "El Burguillo Reservoir, fließen, Land"
 				},
 				{
 					"language": "es",
@@ -11842,7 +11842,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbp: <http://dbpedia.org/property/>\nSELECT DISTINCT ?uri \nWHERE {\n        res:Yenisei_River dbp:country ?uri .\n}"
+				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbp: <http://dbpedia.org/property/>\nSELECT DISTINCT ?uri \nWHERE {\n        res:El_Burguillo_Reservoir dbp:country ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -12243,13 +12243,13 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was Vincent van Gogh inspired by?",
-					"keywords": "person, inspiring, Vincent van Gogh"
+					"string": "Who was Friedrich Wilhelm Joseph Schelling inspired by?",
+					"keywords": "person, inspiring, Friedrich Wilhelm Joseph Schelling"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Em quem Vincent van Gogh inspirou-se?",
-					"keywords": "inspiração, Vincent van Gogh"
+					"string": "Em quem Friedrich Wilhelm Joseph Schelling inspirou-se?",
+					"keywords": "inspiração, Friedrich Wilhelm Joseph Schelling"
 				},
 				{
 					"language": "fa",
@@ -12258,8 +12258,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer hat Vincent van Gogh inspiriert?",
-					"keywords": "Vincent van Gogh, Inspiration"
+					"string": "Wer hat Friedrich Wilhelm Joseph Schelling inspiriert?",
+					"keywords": "Friedrich Wilhelm Joseph Schelling, Inspiration"
 				},
 				{
 					"language": "es",
@@ -12268,8 +12268,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Da chi fu inspirato Vincent van Gogh?",
-					"keywords": "persona, ispirare, Vincent van Gogh"
+					"string": "Da chi fu inspirato Friedrich Wilhelm Joseph Schelling?",
+					"keywords": "persona, ispirare, Friedrich Wilhelm Joseph Schelling"
 				},
 				{
 					"language": "fr",
@@ -12293,7 +12293,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/influenced> <http://dbpedia.org/resource/Vincent_van_Gogh> . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/influenced> <http://dbpedia.org/resource/Friedrich_Wilhelm_Joseph_Schelling> . }"
 			},
 			"answers": [{
 				"head": {
@@ -16498,7 +16498,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which professional surfers were born on the Philippines?",
+					"string": "Which actors were born on the Philippines?",
 					"keywords": "professional surfer, born, Philippines"
 				},
 				{
@@ -16508,7 +16508,7 @@
 				},
 				{
 					"language": "de",
-					"string": "Welche Profisurfer wurden auf den Philippinen geboren?",
+					"string": "Welche Schauspieler wurden auf den Philippinen geboren?",
 					"keywords": "Profisurfer, geboren, Philippinen"
 				},
 				{
@@ -16538,7 +16538,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n\t?uri dbo:occupation res:Surfing .\n\t?uri dbo:birthPlace res:Philippines .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri\nWHERE {\n\t?uri dbo:occupation res:Actor .\n\t?uri dbo:birthPlace res:Philippines .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -16726,8 +16726,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "When did princess Diana die?",
-					"keywords": "date, princess Diana, died"
+					"string": "When did Elisabeth of Saxony die?",
+					"keywords": "date, Elisabeth of Saxony, died"
 				},
 				{
 					"language": "pt_BR",
@@ -16741,8 +16741,8 @@
 				},
 				{
 					"language": "de",
-					"string": "Wann ist Prinzessin Diana gestorben?",
-					"keywords": "Prinzessin Diana, Todestag"
+					"string": "Wann ist Elisabeth von Sachsen gestorben?",
+					"keywords": "Elisabeth von Sachsen, Todestag"
 				},
 				{
 					"language": "es",
@@ -16776,7 +16776,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?d WHERE { <http://dbpedia.org/resource/Diana,_Princess_of_Wales> <http://dbpedia.org/ontology/deathDate> ?d . }"
+				"sparql": "SELECT DISTINCT ?d WHERE { <http://dbpedia.org/resource/Elisabeth_of_Saxony> <http://dbpedia.org/ontology/deathDate> ?d . }"
 			},
 			"answers": [{
 				"head": {
