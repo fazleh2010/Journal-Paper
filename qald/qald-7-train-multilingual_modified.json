@@ -12706,7 +12706,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which grapes grow in Oregon?",
+					"string": "Which types of grapes grow in Oregon?",
 					"keywords": "grape types, grow, Oregon"
 				},
 				{

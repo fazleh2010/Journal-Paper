@@ -425,6 +425,63 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
       )
     );
       
+       //In welchem Museum ist der Schrei ausgestellt?
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(   //Durch welches Land fließt der Rhein?
+         "preposition interrogativeDeterminer(preposition:range:singular) verb(mainVerb:present3rd:thridPerson) adjunct(domain)?",
+         "preposition interrogativeDeterminer(preposition:range:plural) verb(mainVerb:present:thridPerson) adjunct(domain)?",
+         // welches Land fließt Durch der Rhein?
+         "interrogativeDeterminer(preposition:range:singular) verb(mainVerb:present3rd:thridPerson) preposition adjunct(domain)?",
+         "interrogativeDeterminer(preposition:range:plural) verb(mainVerb:present:thridPerson) preposition adjunct(domain)?",
+          //In welchem Museum ist Der Schrei ausgestellt?
+         "preposition interrogativeDeterminer(preposition:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+         "preposition interrogativeDeterminer(preposition:range:plural) verb(component_be:present:plural) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+           
+         //TrennVerb: In welcher Stadt hört die Ruta 68 auf?",
+         "preposition interrogativeDeterminer(preposition:range:singular) verb(TrennVerbPart1:present3rd:thridPerson) adjunct(domain) verb(TrennVerbPart2:present3rd:thridPerson)?",
+         "preposition interrogativeDeterminer(preposition:range:singular) verb(TrennVerbPart1:past:thridPerson) adjunct(domain) verb(TrennVerbPart2:past:thridPerson)?",
+         "preposition interrogativeDeterminer(preposition:range:singular) verb(component_be:present:singular) adjunct(domain) verb(TrennVerb:perfect:thridPerson)?",
+          //Wo f├ñngt Piccadilly an?
+         "interrogativePlace verb(TrennVerbPart1:present3rd:thridPerson) adjunct(domain) verb(TrennVerbPart2:present3rd:thridPerson)?",
+         //Wo ist der Westminster-Palast?  
+         "interrogativePlace verb(component_be:present:singular) adjunct(domain)?",
+         // Wo liegt Fort Knox?
+          "interrogativePlace verb(mainVerb:present3rd:thridPerson) adjunct(domain)?"     
+
+        ),
+        IntransitivePPFrame,
+        WHAT_WHICH_PRESENT_THING_2,
+        forward
+      )
+    );
+    //Durch welches Land fließt der Rhein?
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+         //Was fließt durch...?
+        "interrogativePronoun(nominativeCase:domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+         //Welcher Fluss fließt durch...?
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(mainVerb:present3rd:thridPerson) preposition adjunct(range)?",
+        "interrogativeDeterminer(nominativeCase:domain:plural) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+         //Trenn
+         "interrogativePronoun(nominativeCase:domain:singular) verb(TrennVerbPart1:past:thridPerson) preposition adjunct(range) verb(TrennVerbPart2:past:thridPerson)? ",
+          //Für was steht YiCM?
+         "preposition interrogativePronoun(nominativeCase:domain:singular) verb(mainVerb:present3rd:thridPerson) adjunct(range)?",
+         //In welcher Ländern wird Japanisch gesprochen?
+         "preposition interrogativeDeterminer(preposition:domain:singular) verb(component_werden:present:singular) adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         "preposition interrogativeDeterminer(preposition:domain:plural) verb(component_werden:present:plural) adjunct(range) verb(mainVerb:perfect:thridPerson)?" 
+         //"preposition interrogativePronounThing(dativeCase:masculine:singular) verb(component_be:present:singular) adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+       
+        ),
+        IntransitivePPFrame,
+        WHAT_WHICH_PRESENT_THING_2,
+        backward
+      )
+    );
+      
+      
+      
        sentenceTemplateRepository.add(createSentenceTemplate(language,
         List.of(           
         "preposition interrogativeDeterminer(preposition:range:singular) verb(mainVerb:present3rd:thridPerson) adjunct(domain)?",
