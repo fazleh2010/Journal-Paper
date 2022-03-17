@@ -19,7 +19,6 @@
   lemon:otherForm      :Staatsangeh�rigkeit_of_genitive_form ;
   lemon:otherForm      :Staatsangeh�rigkeit_of_plural_form ;
   lemon:sense          :Staatsangeh�rigkeit_of_sense_1 ;
-  lemon:sense          :Staatsangeh�rigkeit_of_sense_2 ;
   lemon:synBehavior    :Staatsangeh�rigkeit_of_nounpp .
 
 :Staatsangeh�rigkeit_of_form a lemon:Form ;
@@ -64,17 +63,6 @@
   lemon:condition           :Staatsangeh�rigkeit_of_sense_1_condition .
 
 :Staatsangeh�rigkeit_of_sense_1_condition a lemon:condition ;
-  lemon:propertyDomain  <http://dbpedia.org/ontology/Person> ;
-  lemon:propertyRange   <http://dbpedia.org/ontology/Country> .
-
-:Staatsangeh�rigkeit_of_sense_2 a lemon:OntoMap, lemon:LexicalSense ;
-  lemon:ontoMapping         :Staatsangeh�rigkeit_of_sense_2 ;
-  lemon:reference           <http://dbpedia.org/ontology/nationality> ;
-  lemon:subjOfProp          :arg2 ;
-  lemon:objOfProp           :arg1 ;
-  lemon:condition           :Staatsangeh�rigkeit_of_sense_2_condition .
-
-:Staatsangeh�rigkeit_of_sense_2_condition a lemon:condition ;
   lemon:propertyDomain  <http://dbpedia.org/ontology/Person> ;
   lemon:propertyRange   <http://dbpedia.org/ontology/Country> .
 
