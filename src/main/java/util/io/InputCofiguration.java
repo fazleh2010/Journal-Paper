@@ -17,8 +17,6 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Path;
 import java.util.LinkedHashMap;
-import turtle.EnglishTurtle;
-import turtle.GermanTurtle;
 import turtle.TutleConverter;
 
 /**
@@ -69,6 +67,10 @@ public class InputCofiguration {
             return Language.DE;
         } else if (languageCode.contains("en")) {
             return Language.EN;
+        } else if (languageCode.contains("es")) {
+            return Language.ES;
+        } else if (languageCode.contains("it")) {
+            return Language.IT;
         }
         return Language.EN;
     }

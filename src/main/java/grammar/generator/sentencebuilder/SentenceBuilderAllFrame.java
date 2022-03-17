@@ -8,7 +8,7 @@ import static grammar.generator.BindingConstants.BINDING_TOKEN_TEMPLATE;
 import grammar.datasets.annotated.AnnotatedVerb;
 import grammar.datasets.sentencetemplates.TempConstants;
 import static grammar.generator.SubjectType.interrogativePlace;
-import grammar.generator.sentencebuilder.EnglishSentenceBuilder;
+import grammar.generator.sentencebuilder.English;
 import grammar.sparql.SelectVariable;
 import grammar.structure.component.DomainOrRangeType;
 import grammar.structure.component.FrameType;
@@ -31,7 +31,7 @@ import java.util.TreeSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import static lexicon.LexicalEntryUtil.getDeterminerTokenByNumber;
-import grammar.generator.sentencebuilder.GermanSentenceBuilder;
+import grammar.generator.sentencebuilder.German;
 import util.io.StringMatcher;
 import util.io.TemplateFeatures;
 import grammar.generator.sentencebuilder.TemplateFinder;
@@ -277,7 +277,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
         for (String sentenceTemplate : sentenceTemplates) {
             System.out.println(sentenceTemplate);
             index = index + 1;
-            GermanSentenceBuilder sentenceBuilderFromTemplates = new GermanSentenceBuilder(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
+            German sentenceBuilderFromTemplates = new German(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
             TemplateFeatures templateFeatures = new TemplateFeatures(sentenceTemplate);
             List<String> positionTokens = templateFeatures.getPositionTokens();
             String sentence = "", positionWord = "";
@@ -323,7 +323,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
         for (String sentenceTemplate : sentenceTemplates) {
             //System.out.println(sentenceTemplate);
             index = index + 1;
-            EnglishSentenceBuilder sentenceBuilderFromTemplates = new EnglishSentenceBuilder(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
+            English sentenceBuilderFromTemplates = new English(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
             TemplateFeatures templateFeatures = new TemplateFeatures(sentenceTemplate);
             List<String> positionTokens = templateFeatures.getPositionTokens();
             String sentence = "", positionWord = "";
@@ -405,7 +405,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
         //System.out.println("sentenceTemplates:::" + sentenceTemplates);
         for (String sentenceTemplate : sentenceTemplates) {
             index = index + 1;
-            GermanSentenceBuilder sentenceBuilderFromTemplates = new GermanSentenceBuilder(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
+            German sentenceBuilderFromTemplates = new German(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
             TemplateFeatures templateFeatures = new TemplateFeatures(sentenceTemplate);
             List<String> positionTokens = templateFeatures.getPositionTokens();
             String str = "", positionWord = "";
@@ -458,7 +458,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
         for (String sentenceTemplate : sentenceTemplates) {   
              System.out.println("sentenceTemplate::"+sentenceTemplate);
             index = index + 1;
-            EnglishSentenceBuilder sentenceBuilderFromTemplates = new EnglishSentenceBuilder(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
+            English sentenceBuilderFromTemplates = new English(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
             TemplateFeatures templateFeatures = new TemplateFeatures(sentenceTemplate);
             List<String> positionTokens = templateFeatures.getPositionTokens();
             String str = "", positionWord = "";
@@ -529,7 +529,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
         );*/
         List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                 language, new String[]{frameType.getName(), nounPhrase});
-        GermanSentenceBuilder sentenceBuilderFromTemplates = new GermanSentenceBuilder(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
+        German sentenceBuilderFromTemplates = new German(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
 
         for (String sentenceTemplate : sentenceTemplates) {
             index = index + 1;
@@ -569,7 +569,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
 
         List<String> sentenceTemplates = sentenceTemplateRepository.findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
                 language, new String[]{frameType.getName(), nounPhrase});
-        EnglishSentenceBuilder sentenceBuilderFromTemplates = new EnglishSentenceBuilder(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
+        English sentenceBuilderFromTemplates = new English(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
 
         for (String sentenceTemplate : sentenceTemplates) {
             index = index + 1;
@@ -621,7 +621,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
 
     private String findNounPhraseCategory(String stringPosition) {
         String result = "";
-        List<String> tokens = GermanSentenceBuilder.parseTemplate(stringPosition);
+        List<String> tokens = German.parseTemplate(stringPosition);
         for (String token : tokens) {
             token = token.replace("?", "");
             token = token.replace(".", "");

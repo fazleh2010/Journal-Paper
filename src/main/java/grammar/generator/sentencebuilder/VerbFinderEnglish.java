@@ -25,7 +25,7 @@ import util.io.ParamterFinder;
  *
  * @author elahi
  */
-public class EnglishVerbFinder implements TempConstants {
+public class VerbFinderEnglish implements TempConstants {
 
     private Boolean mainVerbFlag = false;
     private Boolean auxilaryVerbFlag = false;
@@ -35,7 +35,7 @@ public class EnglishVerbFinder implements TempConstants {
     private ParamterFinder paramterFinder = null;
     private FrameType frameType = null;
 
-    public EnglishVerbFinder(FrameType frameType, LexicalEntryUtil lexicalEntryUtil, String attribute, String reference) throws QueGGMissingFactoryClassException {
+    public VerbFinderEnglish(FrameType frameType, LexicalEntryUtil lexicalEntryUtil, String attribute, String reference) throws QueGGMissingFactoryClassException {
         this.frameType = frameType;
         this.lexicalEntryUtil = lexicalEntryUtil;
         this.paramterFinder = new ParamterFinder(attribute, reference);

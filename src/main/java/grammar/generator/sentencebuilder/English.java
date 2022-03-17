@@ -51,7 +51,7 @@ import util.io.TemplateFeatures;
  *
  * @author elahi
  */
-public class EnglishSentenceBuilder implements TempConstants {
+public class English implements TempConstants {
 
     private LexicalEntryUtil lexicalEntryUtil = null;
     private Language language = null;
@@ -65,7 +65,7 @@ public class EnglishSentenceBuilder implements TempConstants {
     private FrameType frameType = null;
 
 
-    public EnglishSentenceBuilder(FrameType frameType, Language language, LexicalEntryUtil lexicalEntryUtil, SelectVariable selectVariable, SelectVariable oppositeSelectVariable, String variable) {
+    public English(FrameType frameType, Language language, LexicalEntryUtil lexicalEntryUtil, SelectVariable selectVariable, SelectVariable oppositeSelectVariable, String variable) {
         this.frameType=frameType;
         this.lexicalEntryUtil = lexicalEntryUtil;
         this.language = language;
@@ -274,7 +274,7 @@ public class EnglishSentenceBuilder implements TempConstants {
             }
 
         } else if (flagReference && attribute.contains(verb)) {
-            word = new EnglishVerbFinder(this.frameType,this.lexicalEntryUtil,attribute, reference).getWord();
+            word = new VerbFinderEnglish(this.frameType,this.lexicalEntryUtil,attribute, reference).getWord();
 
         } else if (flagReference && attribute.equals(determiner)) {
 

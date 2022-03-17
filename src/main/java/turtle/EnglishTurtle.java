@@ -46,7 +46,7 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
 
     public EnglishTurtle(String inputDir, LinkedData linkedData, Language language) throws Exception {
         super(inputDir, linkedData, language);
-        super.setSyntacticFrameIndexes(nounPPFrameCsv.getSyntacticFrameIndex(),transitiveFrameCsv.getSyntacticFrameIndex(),IntransitiveFrameCsv.getSyntacticFrameIndex(),attributiveAdjectiveFrame.getSyntacticFrameIndex(),gradableAdjectiveFrameCsv.getSyntacticFrameIndex());
+        super.setSyntacticFrameIndexes(nounPPFrameCsv.getSyntacticFrameIndex(), transitiveFrameCsv.getSyntacticFrameIndex(), IntransitiveFrameCsv.getSyntacticFrameIndex(), attributiveAdjectiveFrame.getSyntacticFrameIndex(), gradableAdjectiveFrameCsv.getSyntacticFrameIndex());
         this.generateTurtle();
     }
 
@@ -95,7 +95,7 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
                     }
 
                 } catch (Exception ex) {
-                    java.util.logging.Logger.getLogger(GermanTurtle.class.getName()).log(Level.SEVERE, null, ex);
+                    java.util.logging.Logger.getLogger(EnglishTurtle.class.getName()).log(Level.SEVERE, null, ex);
                     throw new Exception(ex.getMessage());
                 }
 

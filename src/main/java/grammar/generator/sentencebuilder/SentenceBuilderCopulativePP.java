@@ -36,7 +36,7 @@ import java.util.TreeSet;
 import java.util.logging.Level;
 import static lexicon.LexicalEntryUtil.getDeterminerTokenByNumber;
 import util.io.GenderUtils;
-import grammar.generator.sentencebuilder.GermanSentenceBuilder;
+import grammar.generator.sentencebuilder.German;
 import grammar.generator.sentencebuilder.TemplateFinder;
 
 public class SentenceBuilderCopulativePP extends SentenceBuilderImpl implements TempConstants  {
