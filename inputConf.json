@@ -1,16 +1,16 @@
 {
-  "languageCode" : "de",
+  "languageCode" : "en",
   "inputDir" : "lexicon",
   "outputDir" : "output",
   "qaldDir" : "qald",
   "numberOfEntities" : 100,
-  "similarityThresold" : 0.75,
-  "csvToTurtle" : false,
+  "similarityThresold" : 0.7,
+  "csvToTurtle" : true,
   "turtleToProtoType" : false,
   "single": false,
   "composite": false,
   "protoTypeToQuestion" : false,
-  "evalution" : true
+  "evalution" : false
 }
 
 

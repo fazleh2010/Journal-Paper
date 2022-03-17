@@ -1,3 +1,4 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive,writtenFormThridPerson,writtenFormPast,writtenFormPast,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural
 Stattfinden,TrennVerb,stattfinden,findet statt,fand statt,stattgefunden,am,IntransitivePPFrame,domain,range,1,dbp:date,dbo:MilitaryConflict,xsd:date,feminine,Veranstaltung,Veranstaltungen,neuter,-,-
 durchfÅhren,TrennVerb,durchfÅhren,fÅhrt durch,fÅhrte durch,durchgefÅhrt,am,IntransitivePPFrame,domain,range,1,dbo:date,dbo:MilitaryConflict,xsd:date,masculine,MilitÑrKonflikt,MilitÑrKonflikte,neuter,-,-
 verheiraten_mit,verb,verheiraten,verheiratet,verheiratete,verheiratet,mit,IntransitivePPFrame,domain,range,1,dbo:spouse,dbo:Person,dbo:Person,masculine,Person,Personen,masculine,Person,Personen
@@ -30,3 +31,7 @@ Liegen_4,verb,liegen,liegt,lag,gelegen,in,IntransitivePPFrame,domain,range,1,dbo
 Liegen_5,verb,liegen,liegt,lag,gelegen,in,IntransitivePPFrame,domain,range,1,dbo:locatedInArea,dbo:Mountain,dbo:Country,masculine,Berg,Berg,feminine,Land,LÑnder
 Stehen_1,verb,stehen,steht,stand,gestanden,fuer,IntransitivePPFrame,domain,range,1,dbo:abbreviation,owl:Thing,xsd:string,-,-,-,-,-,-
 Stehen_2,verb,stehen,steht,standen,gestanden,fuer,IntransitivePPFrame,domain,range,1,dbo:connotation,dbo:Colour,owl:Thing,masculine,Farbe,Farben,masculine,Reichtum,ReichtÅmer
+leben_in_3,verb,Menschen leben,lebt,lebte,gelebt,in,IntransitivePPFrame,domain,range,1,dbo:populationTotal,dbo:Country,xsd:double,feminine,Land,LÑnder,-,-,-
+leben_in_4,verb,Menschen leben,lebt,lebte,gelebt,in,IntransitivePPFrame,domain,range,1,dbo:populationTotal,dbo:City,xsd:double,feminine,Stadt,StÑdte,-,-,-
+wachsen_in_1,verb,wachsen,wÑchst,wuchs,gewachsen,in,IntransitivePPFrame,domain,range,1,dbo:growingGrape,dbo:WineRegion,dbo:Grape,feminine,weinregion,weinregionen,feminine,Traubenarte,Traubenarten
+wachsen_in_2,verb,wachsen,wÑchst,wuchs,gewachsen,in,IntransitivePPFrame,range,domain,1,dbo:wineRegion,dbo:Grape,dbo:WineRegion,feminine,Traubenarte,Traubenarten,feminine,weinregion,weinregionen

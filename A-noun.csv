@@ -1,0 +1,6 @@
+LemonEntry,partOfSpeech,gender,writtenFormNominative(singular),writtenFormNominative (plural),writtenFormSingular (accusative),writtenFormSingular (dative),writtenFormSingular (genetive),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,domain_article,domain_written_singular,domain_written_plural,rangeArticle,range_written_singular,range_written_plural
+Frau_von,noun,feminine,Frau,Frauen,Frau,Frau,Frau,von,NounPPFrame,range,domain,1,dbo:spouse,dbo:Person,dbo:Person,masculine,Person,Personen,feminine,dbo:Person,Personen
+Hauptstadt_von,noun,feminine,Hauptstadt,-,Hauptstadt,Hauptstadt,Hauptstadt,von,NounPPFrame,range,domain,1,dbo:capital,dbo:Country,dbo:City,neuter,Land,LÑnder,feminine,Stadt,-
+BÅrgermeister_von_1,noun,masculine,BÅrgermeister,-,BÅrgermeister,BÅrgermeister,BÅrgermeisters,von,NounPPFrame,range,domain,1,dbo:mayor,dbo:City,dbo:Person,feminine,Stadt,StÑdte,feminine,Person,Personen
+BÅrgermeister_von_2,noun,masculine,BÅrgermeister,-,BÅrgermeister,BÅrgermeister,BÅrgermeisters,von,NounPPFrame,range,domain,1,dbo:leaderName,dbo:City,dbo:Person,feminine,Stadt,StÑdte,feminine,Person,Personen
+tocher_von,noun,feminine,Tochter,Tîchter,Tochter,Tochter,Tochter,von,NounPPFrame,range,domain,1,dbo:child,dbo:Person,dbo:Person,masculine,Person,Personen,feminine,dbo:Person,Personen

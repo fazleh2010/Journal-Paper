@@ -189,7 +189,12 @@ public class GermanSentenceBuilder implements TempConstants {
                 word = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil, subjectType.name(),TempConstants.number,reference);
             }
 
-        } /*else if (!flagReference && isInterrogativeAmount(attribute).first) {
+        }
+        else if (isInterrogativeAmount(attribute).first) {
+            SubjectType subjectType = isInterrogativeAmount(attribute).second;
+            word=LexicalEntryUtil.getSingle(lexicalEntryUtil, subjectType.name());
+
+        }/*else if (!flagReference && isInterrogativeAmount(attribute).first) {
             SubjectType subjectType = isInterrogativeAmount(attribute).second;
             word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, subjectType.name());
         }*/ else if (flagReference && isInterrogativePlace(attribute).first) {
@@ -488,12 +493,16 @@ public class GermanSentenceBuilder implements TempConstants {
         return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
     }
 
-    public static Pair<Boolean, SubjectType> isInterrogativeAmount(String questionType) throws QueGGMissingFactoryClassException {
+     public static Pair<Boolean, SubjectType> isInterrogativeAmount(String questionType) throws QueGGMissingFactoryClassException {
         if (questionType.equals(SubjectType.interrogativeAmount.toString())) {
             return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativeAmount);
         }
+        else if(questionType.equals(SubjectType.interrogativePronounWhom.toString())){
+            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativePronounWhom);
+        }
         return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
     }
+    
 
     public static Pair<Boolean, SubjectType> isInterrogativePlace(String questionType) throws QueGGMissingFactoryClassException {
         if (questionType.equals(SubjectType.interrogativePlace.toString())) {

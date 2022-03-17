@@ -26,6 +26,7 @@
   lemon:entry    :interrogativePlace ;
   lemon:entry    :interrogativeTemporal ;
   lemon:entry    :interrogativeCause;
+  lemon:entry    :interrogativePronounWhom ;
   lemon:entry    :component_heißen ;
   lemon:entry    :component_haben ;
   lemon:entry    :component_werden ;
@@ -595,6 +596,11 @@
 
 :interrogativePlace a                 lemon:SynRoleMarker ;
   lemon:canonicalForm  [ lemon:writtenRep "Wo"@de ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+
+ :interrogativePronounWhom a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "Wen"@en ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
 

@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :Location-of_2 ;
+  lemon:entry    :Location-of_2_form_preposition .
+
+:Location-of_2 a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :Location-of_2_form ;
+  lemon:otherForm  :Location-of_2_singular ;
+  lemon:otherForm  :Location-of_2_plural ;
+  lemon:sense          :Location-of_2_sense_1 ;
+  lemon:synBehavior    :Location-of_2_nounpp .
+
+:Location-of_2_form a lemon:Form ;
+  lemon:writtenRep "location"@en .
+
+:Location-of_2_singular a    lemon:Form ;
+  lemon:writtenRep "location"@en ;
+  lexinfo:number   lexinfo:singular .
+
+:Location-of_2_plural a   lemon:Form ;
+  lemon:writtenRep "XX"@en ;
+  lexinfo:number    lexinfo:plural .
+
+:Location-of_2_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:Location-of_2_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :Location-of_2_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/locatedInArea> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :Location-of_2_sense_1_condition .
+
+:Location-of_2_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Mountain> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Country> .
+
+:arg2 lemon:marker :Location-of_2_form_preposition .
+## Prepositions ##
+:Location-of_2_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "of"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

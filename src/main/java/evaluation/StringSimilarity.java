@@ -92,12 +92,7 @@ public class StringSimilarity {
         return costs[s2.length()];
     }
 
-    public static void printSimilarity(String s, String t) {
-        System.out.println(String.format(
-                "%.3f is the similarity between \"%s\" and \"%s\"", generalSimilarity(s, t), s, t));
-    }
-
-  
+   
    
 
     private QueGGinfomation getBestMatchingWithOutKB(Map<String, QueGGinfomation> grammarEntities, HashMap<String, Double> map) {
@@ -260,7 +255,7 @@ public class StringSimilarity {
     /**
      * Calculates the similarity (a number within 0 and 1) between two strings.
      */
-    public static double generalSimilarity(String s1, String s2) {
+    /*public static double generalSimilarity(String s1, String s2) {
         String longer = s1, shorter = s2;
         if (s1.length() < s2.length()) { // longer should always have greater length
             longer = s2;
@@ -269,13 +264,11 @@ public class StringSimilarity {
         int longerLength = longer.length();
         if (longerLength == 0) {
             return 1.0;
-            /* both strings are zero length */ }
-        /* // If you have StringUtils, you can use it to calculate the edit distance:
-        return (longerLength - StringUtils.getLevenshteinDistance(longer, shorter)) /
-                                                             (double) longerLength; */
+         }
+      
         return (longerLength - editDistance(longer, shorter)) / (double) longerLength;
 
-    }
+    }*/
 
   public static void main(String[] args) {
         RatcliffObershelp ro = new RatcliffObershelp();
@@ -303,5 +296,12 @@ public class StringSimilarity {
         System.out.println(cosine.similarity(profile1, profile2));
 
     }
+   /*public static void printSimilarity(String s, String t) {
+        System.out.println(String.format(
+                "%.3f is the similarity between \"%s\" and \"%s\"", generalSimilarity(s, t), s, t));
+    }*/
+
+  
+  
 
 }
