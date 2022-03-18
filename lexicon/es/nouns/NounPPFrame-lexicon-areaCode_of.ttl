@@ -47,6 +47,6 @@
 :arg2 lemon:marker :areaCode_of_form_preposition .
 ## Prepositions ##
 :areaCode_of_form_preposition a                  lemon:SynRoleMarker ;
-  lemon:canonicalForm  [ lemon:writtenRep "preposition"@es ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "de"@es ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
 

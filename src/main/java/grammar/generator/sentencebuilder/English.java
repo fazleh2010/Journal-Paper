@@ -51,7 +51,7 @@ import util.io.TemplateFeatures;
  *
  * @author elahi
  */
-public class English implements TempConstants {
+public class English implements TempConstants,MultilingualBuilder {
 
     private LexicalEntryUtil lexicalEntryUtil = null;
     private Language language = null;

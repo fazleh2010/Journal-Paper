@@ -1,6 +1,3 @@
 LemonEntry,partOfSpeech,article,writtenForm (singular),spanish_writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,article,reference_dbpedia,domain_dbpedia,domainWrittenSingularForm,domainWrittenPluralForm,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
-areaCode_of,noun,los,c¢digo de  rea,c¢digos de  rea,de,NounPPFrame,range,domain,1,dbo:areaCode,dbo:Place,xsd:string,test,test,test,test
-birthPlace_of,noun,los,lugar de nacimiento,lugares de nacimiento,de,NounPPFrame,range,domain,1,dbo:birthPlace,dbo:Person,dbo:Place,test,test,test,test
-deathPlace-of,noun,los,lugar de fallecimiento,lugares de fallecimiento,de,NounPPFrame,range,domain,1,dbo:deathPlace,dbo:Person,xsd:string,test,test,test,test
-capital_of,noun,las,capital,capitales,de,NounPPFrame,range,domain,1,dbo:capital,dbo:Country,dbo:City,test,test,test,test
-father_of,noun,los,padre,padres,de,NounPPFrame,range,domain,1,dbo:father,dbo:Person,dbo:Person,test,test,test,test
+areaCode_of,noun,masculine,c¢digo de  rea,c¢digos de  rea,de,NounPPFrame,range,domain,1,dbo:areaCode,dbo:Place,xsd:string,test,test,test,test
+capital_of,noun,feminine,capital,capitales,de,NounPPFrame,range,domain,1,dbo:capital,dbo:Country,dbo:City,test,test,test,test

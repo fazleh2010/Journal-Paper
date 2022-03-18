@@ -7,10 +7,10 @@
   "similarityThresold" : 0.7,
   "csvToTurtle" : true,
   "turtleToProtoType" : false,
-  "single": false,
+  "single": true,
   "composite": false,
-  "protoTypeToQuestion" : false,
-  "evalution" : false
+  "protoTypeToQuestion" : true,
+  "evalution" : true
 }
 
 

@@ -112,7 +112,7 @@ public class FileUtils {
         String fileType=file.getName();
          if (fileType.contains(".csv")) {
             CsvFile csvFile = new CsvFile(file);
-             return csvFile.generateBindingMap( keyIndex,classIndex,className);
+             return csvFile.generateBindingMapL( keyIndex,classIndex,className);
         }
         return new TreeMap<String, String[]>();
     }

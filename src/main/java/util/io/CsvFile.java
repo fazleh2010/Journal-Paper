@@ -271,7 +271,7 @@ public class CsvFile implements CsvConstants {
         return map;
     }
      
-    public Map<String, String[]> generateBindingMap(Integer keyIndex, Integer classIindex, String givenClassName) throws FileNotFoundException, IOException {
+    public Map<String, String[]> generateBindingMapL(Integer keyIndex, Integer classIindex, String givenClassName) throws FileNotFoundException, IOException {
         Map<String, String[]> map = new TreeMap<String, String[]>();
         String line = null;
         Integer index = 0;
@@ -279,6 +279,7 @@ public class CsvFile implements CsvConstants {
         
         for (String[] data : rows) {
             String key = data[keyIndex];
+            //System.out.println("key:"+key);
             String className = data[classIindex];
             if (index == 0) {
                 index = index + 1;

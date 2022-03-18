@@ -51,7 +51,7 @@ import util.io.TemplateFeatures;
  *
  * @author elahi
  */
-public class Spanish implements TempConstants {
+public class Spanish implements TempConstants,MultilingualBuilder {
 
     private LexicalEntryUtil lexicalEntryUtil = null;
     private Language language = null;
@@ -177,7 +177,6 @@ public class Spanish implements TempConstants {
             } else {
                 subjectType = findIntergativePronoun(lexicalEntryUtil, this.domainSelectable);
             }
-            
             word=LexicalEntryUtil.getSingle(lexicalEntryUtil, subjectType.name());
           
         } else if (flagReference && isInterrogativeAmount(attribute).first) {

@@ -53,7 +53,7 @@ import util.io.TemplateFeatures;
  *
  * @author elahi
  */
-public class German implements TempConstants {
+public class German implements TempConstants,MultilingualBuilder {
 
     private LexicalEntryUtil lexicalEntryUtil = null;
     private Language language = null;

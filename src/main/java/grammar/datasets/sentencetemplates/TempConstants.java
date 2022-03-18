@@ -151,6 +151,9 @@ public interface TempConstants {
     public static String superlativeWorld = "superlativeWorld";
     public static String adjectiveBaseForm="adjectiveBaseForm";
     public static String degree = "degree";
+    
+    public static String past_imperfect="past_imperfect";
+    public static String past_indefinite="past_indefinite";
 
 
 }

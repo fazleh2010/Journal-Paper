@@ -32,92 +32,142 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
     }
 
     private void init(Language language) {
-    // NounPPFrame
+   //NounPPFrame
     sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
-           //"interrogativeDeterminer verb(reference:component_be)  NP(prepositionalAdjunct)?"
-              "interrogativePronoun verb(reference:component_be)  NP(prepositionalAdjunct)?"
+          //"¿Cuál es la capital de Camerún?",
+          "interrogativePronoun(range:singular) verb(component_be:present:singular) noun(singular) preposition adjunct(domain)?",
+          "interrogativePronoun(range:plural) verb(component_be:present:plural) noun(plural) preposition adjunct(domain)?",
+          "interrogativePronoun(range:singular) verb(component_be:past:singular) noun(singular) preposition adjunct(domain)?",
+          "interrogativePronoun(range:plural) verb(component_be:past:plural) noun(plural) preposition adjunct(domain)?",
+           //Wer war der Vizepräsident unter Samuel Schmid?
+           "interrogativePronoun(range:plural) verb(component_be:past:plural) noun(plural) preposition adjunct(domain)?"
+
+           //"Wer ist der Bürgermeister von Tel Aviv?",
+          /*"interrogativeDeterminer(range:singular) verb(component_be:present:singular) nounPhrase?",
+          "interrogativeDeterminer(range:singular) verb(component_be:past:singular) nounPhrase?",
+          "interrogativeDeterminer(range:plural) verb(component_be:present:plural) nounPhrase?",
+          "interrogativeDeterminer(range:plural) verb(component_be:past:plural) nounPhrase?",
+           
+          //Gib mir die Enkel von Elvis Presley.
+           "verb(imperative_transitive:present:singular) pronoun(object_pronoun) noun(singular) preposition adjunct(domain).",
+           "verb(imperative_transitive:present:singular) pronoun(object_pronoun) noun(plural) preposition adjunct(domain).",
+          //Gib mir alle Bandmitglieder von Prodigy
+           "verb(imperative_transitive:present:singular) pronoun(object_pronoun) determiner(alle) noun(plural) preposition adjunct(domain).",
+           //"Liste die Kinder von Margaret Thatcher auf.",
+           "verb(imperative_verb:present:plural) determiner(component_the_nominative:reference:plural) noun(plural) preposition adjunct(domain) preposition(auf)."  ,   
+           //"Liste die Kinder von Margaret Thatcher auf.",
+           "verb(imperative_verb:present:plural) determiner(alle) noun(plural) preposition adjunct(domain) preposition(auf)." ,
+           //"In welchem Land ist der Mount Everest?", In welcher Stadt ist die Heinekenbrauerei?
+            //"preposition interrogativeDeterminer(dativeCase:range:singular) verb(component_be:present:singular) adjunct(domain)?"
+            //"interrogativePlace(nominativeCase:singular) verb(component_be:present:singular) determiner(component_the_nominative:domain:singular) object(domain)?"             
+            //Was ist Batmans richtiger Name?
+           "interrogativePronoun(range:singular) verb(component_be:present:singular) adjunct(domain) Apostrophe noun(nominativeCase:singular)?" */
         ),
-        "copulativeArg",
-        "prepositionalAdjunct"
+        NounPPFrame,
+        whQuestion
       )
     );
-    // NP(prepositionalAdjunct)
+    
+     //NounPPFrame boolean question
     sentenceTemplateRepository.add(
-      createNPTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
-          "determiner(reference:component_el) noun(root) preposition prepositionalAdjunct"
-        ),
-        "prepositionalAdjunct"
+          //"Ist Rita Wilson die Frau von Tom Hanks?"
+          "verb(component_be:present:singular) subject(range) determiner(component_the_nominative:reference) noun(nominativeCase:singular) preposition adjunct(domain)?",
+          "verb(component_be:present:plural) subject(range) determiner(component_the_nominative:reference:plural) noun(nominativeCase:plural) preposition adjunct(domain)?"
+          //Heißt die Frau von Präsident Obama Michelle?"
+          //"verb(component_heißen:present:singular) determiner(component_the_nominative:reference:singular) noun(nominativeCase:singular) preposition adjunct(domain) subject(range)?",
+          //"verb(component_heißen:present:plural) determiner(component_the_nominative:reference:plural) noun(nominativeCase:plural) preposition adjunct(domain) subject(range)?"    
+          //Ist Proinsulin ein Protein?
+          //"verb(component_be:present:singular) subject(range) noun(nominativeCase:singular) article(definite_article:nominativeCase:neuter) object(domain)?",   
+          //"Sind Laubfrösche Amphibien?"
+          //"verb(component_be:present:plural) subject(domain) noun(nominativeCase:singular) object(range)?",
+          //Hat Abraham Lincolns Sterbeort eine Webseite?", 
+          //"verb(component_haben:present:singular) object(domain) article(definite_article:nominativeCase:feminine) subject(range)?"
+          //"Hatte Che Guevara Kinder?",
+          //"verb(component_haben:past:singular) object(domain) noun(nominativeCase)?"
+          //Gibt es ein Videospiel, das Battle Chess heißt?
+          // "verb(imperative_transitive) pronoun(object_pronoun_es) article(definite_article:nominativeCase:neuter), noun(nominativeCase), article(component_the_nominative:nominativeCase:neuter) object(domain)"    
+           //"Was ist Batmans richtiger Name?",                
+           
+                 ),
+        NounPPFrame,
+        booleanQuestionDomainRange
       )
     );
-    // NP(attributiveArg)
+     //NounPPFrame boolean question
     sentenceTemplateRepository.add(
-      createNPTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
-          "determiner adjective(root) attributiveArg(number:singular)",
-          "adjective(root) attributiveArg(number:plural)"
-        ),
-        "attributiveArg"
+          //"Hatte Che Guevara Kinder?",
+          "verb(component_haben:past:singular) object(domain) noun(nominativeCase)?" 
+        
+          //Gibt es ein Videospiel, das Battle Chess heißt?
+          // "verb(imperative_transitive) pronoun(object_pronoun_es) article(definite_article:nominativeCase:neuter), noun(nominativeCase), article(component_the_nominative:nominativeCase:neuter) object(domain)"    
+          //Hat Abraham Lincolns Sterbeort eine Webseite?", 
+          //"verb(component_haben:present:singular) object(domain) article(definite_article:nominativeCase:feminine) noun(nominativeCase)?"
+           //"Was ist Batmans richtiger Name?",                
+           
+
+            // "interrogativePronoun(range:singular)  verb(component_be:present:singular) object(range) noun(nominativeCase)?"    
+            //"Welche Regierungsform hat Russland?",
+            //"interrogativeDeterminer(range:singular) verb(component_haben:present:singular) object(domain)?"   
+            //"Aus welcher Region ist der Melon de Bourgogne?"
+            // "preposition(auf) interrogativeDeterminer(range:singular) verb(component_be:present:singular) adjunct(domain)? "
+           // Wieviele Seiten hat Krieg und Frieden?
+           // "interrogativeAmount(range:singular) noun(nominativeCase:plural) verb(component_haben:present:singular) object(domain)?"        
+                 ),
+        NounPPFrame,
+        booleanQuestionDomain
       )
     );
-     // NP(attributiveArg)
+    //NounPPFrame
     sentenceTemplateRepository.add(
-      createNPTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
-          "determiner adjective(root) attributiveArg(number:singular)",
-          "adjective(root) attributiveArg(number:plural)"
-        ),
-        "attributiveArg"
+          //Was ist die Hauptstadt von Kamerun?
+         "determiner(component_the_nominative:reference) noun(nominativeCase:singular) preposition adjunct(domain)?"
+         //"noun(nominativeCase:plural) preposition adjunct(domain)"      
+         //"determiner(component_the_nominative:reference) noun(nominativeCase) preposition nounPhrase"
+          //Welche Person ist das Mitglied von...?
+          //"interrogativeDeterminer noun(condition:copulativeArg) verb(reference:component_be) NP(prepositionalAdjunct)?"
+          //Wer ist das Mitglied von...?
+          //"interrogativePronoun verb(reference:component_be) NP(prepositionalAdjunct)?",
+          //Gib mir das Mitglied von...?
+          //"verb(reference:component_imperative_transitive) pronoun(reference:object_pronoun) determiner(reference:component_the_accusative) noun(root:accusativeCase) preposition prepositionalAdjunct"
+          ),
+        NounPPFrame,
+        nounPhrase
       )
     );
-    // AdjectiveAttributiveFrame
+    
     sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
-          "interrogativePronoun verb(reference:component_be) NP(attributiveArg)?"
-        ),
-        "attributiveArg"
+          //Was ist die Hauptstadt von Kamerun?
+         "determiner(component_the_nominative:reference) noun(nominativeCase)"
+          //Welche Person ist das Mitglied von...?
+          //"interrogativeDeterminer noun(condition:copulativeArg) verb(reference:component_be) NP(prepositionalAdjunct)?"
+          //Wer ist das Mitglied von...?
+          //"interrogativePronoun verb(reference:component_be) NP(prepositionalAdjunct)?",
+          //Gib mir das Mitglied von...?
+          //"verb(reference:component_imperative_transitive) pronoun(reference:object_pronoun) determiner(reference:component_the_accusative) noun(root:accusativeCase) preposition prepositionalAdjunct"
+          ),
+        NounPPFrame,
+        noun
       )
     );
-    // AdjectivePPFrame
+    
     sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      createSentenceTemplate(language,
         List.of(
-          "interrogativeDeterminer noun(condition:copulativeSubject) verb(reference:component_be) AP(prepositionalAdjunct)?",
-          "interrogativePronoun verb(reference:component_be) AP(prepositionalAdjunct)?"
-        ),
-        "copulativeSubject",
-        "prepositionalAdjunct"
-      )
-    );
-    // AdjectivePPFrame NP
-    sentenceTemplateRepository.add(
-      createNPTemplate(
-        language,
-        List.of(
-          "noun(condition:copulativeSubject,number:plural) AP(prepositionalAdjunct)"
-        ),
-        "copulativeSubject",
-        "prepositionalAdjunct"
-      )
-    );
-    // AP(prepositionalAdjunct)
-    sentenceTemplateRepository.add(
-      createAPTemplate(
-        language,
-        List.of(
-          "adjective(root) preposition prepositionalAdjunct",
-          "verb(root,verbFormMood:participle) preposition prepositionalAdjunct"
-        ),
-        "prepositionalAdjunct"
+          //Wo ist der Westminster-Palast?",
+          //"interrogativePlace(nominativeCase:range:singular) verb(component_be:present:singular) object(domain)?"
+          ),
+        NounPPFrame,
+        location
       )
     );
  
