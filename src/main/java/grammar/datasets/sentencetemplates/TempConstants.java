@@ -30,8 +30,6 @@ public interface TempConstants {
     public static String subject = "subject";
     public static String directObject = "directObject";
     public static String object = "object";
-    public static String interrogativePronoun = "interrogativePronoun";
-    public static String interrogativeDeterminer = "interrogativeDeterminer";
     public static String mainVerb = "mainVerb";
     public static String TrennVerb = "TrennVerb";
      public static String imperative="imperative";
@@ -154,6 +152,10 @@ public interface TempConstants {
     
     public static String past_imperfect="past_imperfect";
     public static String past_indefinite="past_indefinite";
-
+    
+    public static String interrogativePronounPerson = "interrogativePronounPerson";
+    public static String interrogativePronounThing = "interrogativePronounThing";
+    public static String interrogativePronoun = "interrogativePronoun";
+    public static String interrogativeDeterminer = "interrogativeDeterminer";
 
 }

@@ -1382,12 +1382,12 @@
 				},
 				{
 					"language": "de",
-					"string": "In welchem Museum ist Der Schrei von Munch ausgestellt?",
-					"keywords": "Museum, Schrei, Munch"
+					"string": "In welchem Museum ist Der Schrei ausgestellt?",
+					"keywords": "Museum, Schrei"
 				},
 				{
 					"language": "es",
-					"string": "¿En qué museo está expuesto el Grito de Munch?",
+					"string": "¿En qué museo está expuesto el Grito?",
 					"keywords": "museo, El Grito, Munch"
 				},
 				{
@@ -3567,8 +3567,8 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Quién creó Family Guy?",
-					"keywords": "creador, Family Guy"
+					"string": "¿Quién creó Padre de familia?",
+					"keywords": "creador, Padre de familia"
 				},
 				{
 					"language": "it",

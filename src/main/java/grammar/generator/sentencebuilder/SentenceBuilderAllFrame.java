@@ -100,7 +100,6 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
             System.out.println(sentences);
             System.out.println(this.templateFinder.getSelectedTemplate());
             System.out.println(activeTransitive);
-            //exit(1);
 
         } else if (this.frameType.equals(FrameType.IPP)) {
             String template = this.templateFinder.getSelectedTemplate();
@@ -135,6 +134,8 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
             System.out.println("sentences::"+sentences);
             //exit(1);
         }
+        
+        System.out.println("sentences::"+sentences);
 
         //exit(1);
         /*List<String> sentenceTemplates = getSentenceTemplateRepository().findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,
@@ -362,9 +363,9 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
             } else {
                 sentences.add(sentence.stripTrailing());
             }
+            System.out.println(sentence);
         }
         //System.out.println(sentences);
-        //exit(1);
 
         return new ArrayList<String>(sentences);
     }

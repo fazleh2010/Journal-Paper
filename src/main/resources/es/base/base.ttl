@@ -17,8 +17,12 @@
   lemon:entry    :component_la ;
   lemon:entry    :component_un ;
   lemon:entry    :component_una ;
+  lemon:entry    :component_lista ;
+  lemon:entry    :component_todos ;
+  lemon:entry    :component_tiene ;
   lemon:entry    :object_pronoun;
-  lemon:entry    :interrogativeDeterminer ;
+  lemon:entry    :interrogativeDeterminerEn ;
+  lemon:entry    :interrogativeDeterminerPor ;
   lemon:entry    :interrogativeVariableDeterminer ;
   lemon:entry    :interrogativeAmount ;
   lemon:entry    :interrogativeOften ;
@@ -41,6 +45,8 @@
   lemon:entry    :dentro ; 
   lemon:entry    :sobre ;
   lemon:entry    :como ;
+  lemon:entry    :los ;
+  lemon:entry    :appos ;
   lemon:entry    :hasta .
 
 ## Determiners ##
@@ -127,21 +133,21 @@
   lexinfo:partOfSpeech lexinfo:verb .
 
 :component_imperative_transitive a        lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "dar"@es ;
+  lemon:canonicalForm  [ lemon:writtenRep "Dame"@es ;
   lexinfo:verbFormMood                    lexinfo:infinitive ] ;
-  lemon:otherForm      [ lemon:writtenRep "Da"@es ;   
+  lemon:otherForm      [ lemon:writtenRep "Dame"@es ;   
   lexinfo:tense                           lexinfo:present ;
   lexinfo:person                          lexinfo:secondPerson ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Den"@es ;
+  lemon:otherForm      [ lemon:writtenRep "Dame"@es ;
   lexinfo:tense                           lexinfo:present ;
   lexinfo:person                          lexinfo:secondPerson ;
   lexinfo:number                          lexinfo:plural ] ;
-  lemon:otherForm      [ lemon:writtenRep "Di"@es ;   
+  lemon:otherForm      [ lemon:writtenRep "Dame"@es ;   
   lexinfo:tense                           lexinfo:present ;
   lexinfo:person                          lexinfo:secondPerson ;
   lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "Digan"@es ;
+  lemon:otherForm      [ lemon:writtenRep "Dame"@es ;
   lexinfo:tense                           lexinfo:present ;
   lexinfo:person                          lexinfo:secondPerson ;
   lexinfo:number                          lexinfo:plural ] ;
@@ -171,18 +177,35 @@
   lemon:canonicalForm  [ lemon:writtenRep "una"@es ] ; 
   lexinfo:partOfSpeech lexinfo:determiner .
 
+:component_lista a         lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "lista"@es ] ; 
+  lexinfo:partOfSpeech lexinfo:determiner .
+
+:component_todos a         lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "todos"@es ] ; 
+  lexinfo:partOfSpeech lexinfo:determiner .
+
+:component_tiene a         lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "tiene"@es ] ; 
+  lexinfo:partOfSpeech lexinfo:determiner .
+
+
 ## Question words ##
 
- :interrogativeDeterminer a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "which"@es ] ;
+ :interrogativeDeterminerEn a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿En qué"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+  :interrogativeDeterminerPor a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Por qué"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
   :interrogativeVariableDeterminer a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "which"@es ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Qué"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
  :interrogativePronounDeterminer a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "what"@es ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Qué"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
 
@@ -203,15 +226,23 @@
   lexinfo:partOfSpeech lexinfo:article .
 
  :interrogativePronounPerson a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "Who"@es ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Quién"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
- :interrogativePronounWhom a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "Whom"@es ] ;
+ :interrogativePronounPerson a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Quién"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
  :interrogativePronounThing a      lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "¿Cuál"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativePronounThing a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Cual"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativePronounWhom a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "Whom"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
  :interrogativePlace a      lemon:LexicalEntry ;
@@ -221,6 +252,16 @@
   :interrogativeTemporal a               lemon:SynRoleMarker ;
   lemon:canonicalForm  [ lemon:writtenRep "When"@es ] ;
    lexinfo:partOfSpeech lexinfo:verb .
+
+## other ##
+
+  :los a                 lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "los"@en ] ;
+  lexinfo:partOfSpeech lexinfo:particle .
+
+ :appos a                 lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "'s"@en ] ;
+  lexinfo:partOfSpeech lexinfo:particle .
 
 
 ## Prepositions ##
@@ -280,6 +321,6 @@
 ## Pronouns ##
 
 :object_pronoun a        lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "me"@es ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "todos"@es ] ;
   lexinfo:partOfSpeech lexinfo:pronoun .
 

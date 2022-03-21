@@ -42,18 +42,29 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
           "interrogativePronoun(range:singular) verb(component_be:past:singular) noun(singular) preposition adjunct(domain)?",
           "interrogativePronoun(range:plural) verb(component_be:past:plural) noun(plural) preposition adjunct(domain)?",
            //Wer war der Vizepräsident unter Samuel Schmid?
-           "interrogativePronoun(range:plural) verb(component_be:past:plural) noun(plural) preposition adjunct(domain)?"
+           "interrogativePronoun(range:plural) verb(component_be:past:plural) noun(plural) preposition adjunct(domain)?",
+          
+          //Gib mir die Enkel von Elvis Presley.Dame una lista de los hijos de Margaret Thatcher.
+           "verb(component_imperative_transitive:present:singular) determiner(component_una) determiner(component_lista) noun(singular) preposition adjunct(domain).",
+           "verb(component_imperative_transitive:present:singular) determiner(component_una) determiner(component_lista) noun(plural) preposition adjunct(domain).",
+           //Dame todos los miembros de la banda Prodigy.
+           "verb(component_imperative_transitive:present:singular) determiner(component_todos) noun(singular) preposition adjunct(domain).",
+           "verb(component_imperative_transitive:present:singular) determiner(component_todos) noun(plural) preposition adjunct(domain).",
+            //¿Qué forma de gobierno tiene Rusia?¿Qué pa�ses de gobierno lo hace ($x | Country_NP)?
+           "interrogativeVariableDeterminer noun(singular) determiner(component_tiene) adjunct(domain)?"
+           //"interrogativeDeterminer(range:singular) preposition  noun(singular) verb(component_do:present:singular) adjunct(domain)?"
 
-           //"Wer ist der Bürgermeister von Tel Aviv?",
-          /*"interrogativeDeterminer(range:singular) verb(component_be:present:singular) nounPhrase?",
-          "interrogativeDeterminer(range:singular) verb(component_be:past:singular) nounPhrase?",
-          "interrogativeDeterminer(range:plural) verb(component_be:present:plural) nounPhrase?",
-          "interrogativeDeterminer(range:plural) verb(component_be:past:plural) nounPhrase?",
+                
+          /*//"Wer ist der Bürgermeister von Tel Aviv?",
+          "interrogativeDeterminer(range:singular) verb(component_be:present:singular) preposition adjunct(domain)?",
+          "interrogativeDeterminer(range:singular) verb(component_be:past:singular) preposition adjunct(domain)?",
+          "interrogativeDeterminer(range:plural) verb(component_be:present:plural) preposition adjunct(domain)?",
+          "interrogativeDeterminer(range:plural) verb(component_be:past:plural) preposition adjunct(domain)?",*/
+
+           //"verb(imperative_transitive:present:singular) pronoun(object_pronoun) noun(singular) preposition adjunct(domain).",
+           //"verb(imperative_transitive:present:singular) pronoun(object_pronoun) noun(plural) preposition adjunct(domain)."
            
-          //Gib mir die Enkel von Elvis Presley.
-           "verb(imperative_transitive:present:singular) pronoun(object_pronoun) noun(singular) preposition adjunct(domain).",
-           "verb(imperative_transitive:present:singular) pronoun(object_pronoun) noun(plural) preposition adjunct(domain).",
-          //Gib mir alle Bandmitglieder von Prodigy
+          /*//Gib mir alle Bandmitglieder von Prodigy
            "verb(imperative_transitive:present:singular) pronoun(object_pronoun) determiner(alle) noun(plural) preposition adjunct(domain).",
            //"Liste die Kinder von Margaret Thatcher auf.",
            "verb(imperative_verb:present:plural) determiner(component_the_nominative:reference:plural) noun(plural) preposition adjunct(domain) preposition(auf)."  ,   
@@ -168,6 +179,140 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
           ),
         NounPPFrame,
         location
+      )
+    );
+    
+     // TransitiveFrame
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+        //Wer moderiert die BBC Wildlife Specials?
+        "interrogativePronoun(range:singular) verb(mainVerb:present:thirdPerson) object(domain)?",
+        //¿En qué museo está expuesto el Grito?
+        "interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
+        "interrogativeDeterminerEn(range:plural) verb(mainVerb:present:thridPerson) object(domain)?",
+        "interrogativeDeterminerPor(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
+        "interrogativeDeterminerPor(range:plural) verb(mainVerb:present:thridPerson) object(domain)?"
+        //Dame todos los actores que hayan actuado en Last Action Hero.
+        //"verb(component_imperative_transitive:present:singular) pronoun(pronoun_personal) determiner(all) noun(plural) verb(mainVerb:present:thridPerson) object(domain)"
+        //Wer hat Slack entwickelt?
+        /*"interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?",    
+        ///Welche Person hat Slack entwickelt?
+         "interrogativeDeterminer(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?" ,           
+        //Wer hat sich Family Guy ausgedacht?"
+         //"interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) pronoun(reflexive_pronoun) object(domain) verb(RefVerb:perfect:thridPerson)?"
+         //"interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(RefVerb:perfect:thridPerson)?"
+         // Trenn Verb
+        "interrogativePronoun(nominativeCase:range:singular) verb(TrennVerbPart1:past:thridPerson) object(domain) verb(TrennVerbPart2:past:thridPerson)?",
+         "interrogativePronoun(nominativeCase:range:singular) verb(component_be:present:singular) object(domain) verb(TrennVerb:perfect:thridPerson)?",
+         "interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(TrennVerb:perfect:thridPerson)?",
+         "interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) pronoun(reflexive_pronoun) object(domain) verb(TrennVerb:perfect:thridPerson)?",
+         //Gib mir alle von der NASA betriebenen Startrampen.
+          "verb(imperative_transitive:present:singular) pronoun(object_pronoun) determiner(alle) preposition(von) adjunct(domain) verb(mainVerb:perfect:thridPerson) noun(domain:singular).",
+          "verb(imperative_transitive:present:singular) pronoun(object_pronoun) determiner(alle) preposition(von) adjunct(domain) verb(mainVerb:perfect:thridPerson) noun(domain:plural).",
+          //What is Batman"s real name?
+          "interrogativePronoun(nominativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) Apostrophe noun(singular)?",
+          "interrogativePronoun(nominativeCase:range:singular) verb(component_be:past:singular) adjunct(domain) Apostrophe noun(singular)?"
+      */        
+        ),
+       TransitiveFrame,
+        PERSON_CAUSE,
+        activeTransitive
+      )
+    );
+      // TransitiveFrame
+      //"Was wird von ($x | PERSON_NP) entwickelt?", "Was wurde von ($x | PERSON_NP) entwickelt?", 
+      //"Werk wird von ($x | PERSON_NP) entwickelt?", "Werk wurde von ($x | PERSON_NP) entwickelt?", 
+      //"Werke werden von ($x | PERSON_NP) entwickelt?", 
+      //"Werke wurden von ($x | PERSON_NP) entwickelt?"
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+        //"¿Qué series televisivas ideó Walt Disney?"?"
+        "interrogativePronounDeterminer(domain:singular) verb(mainVerb:past:thridPerson) object(range)?"
+         //Was wurde von ($x | PERSON_NP) entwickelt?
+        /*"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
+        //"Werke werden von ($x | PERSON_NP) entwickelt?", 
+        //"Werke wurden von ($x | PERSON_NP) entwickelt?"
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:singular) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
+        "interrogativeDeterminer(nominativeCase:domain:plural) verb(component_be:future:singular) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
+        "interrogativeDeterminer(nominativeCase:domain:plural) verb(component_be:future:plural) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
+         //Wer war mit Präsident Chirac verheiratet?
+        "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:past:singular) preposition(mit) object(domain) verb(mainVerb:perfect:thridPerson)?", 
+        //Trenn
+        "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:singular) preposition object(range) verb(TrennVerb:perfect:thridPerson)?",
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:singular) preposition object(range) verb(TrennVerb:perfect:thridPerson)?"
+        */
+        ),
+        TransitiveFrame,
+        PERSON_CAUSE,
+        passiveTransitive
+      )
+    );
+    
+         // TransitiveFrame
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+       //Wer moderiert die BBC Wildlife Specials?
+        "interrogativePronoun(range:singular) verb(mainVerb:present:thirdPerson) object(domain)?",
+        //¿En qué museo está expuesto el Grito?
+        "interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
+        "interrogativeDeterminerEn(range:plural) verb(mainVerb:present:thridPerson) object(domain)?",
+        "interrogativeDeterminerPor(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
+        "interrogativeDeterminerPor(range:plural) verb(mainVerb:present:thridPerson) object(domain)?"
+        //Wer hat Slack entwickelt?
+        /*"interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?",    
+        ///Welche Person hat Slack entwickelt?
+         "interrogativeDeterminer(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?" ,           
+        //Wer hat sich Family Guy ausgedacht?"
+         //"interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) pronoun(reflexive_pronoun) object(domain) verb(RefVerb:perfect:thridPerson)?"
+         //"interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(RefVerb:perfect:thridPerson)?"
+         // Trenn Verb
+        "interrogativePronoun(nominativeCase:range:singular) verb(TrennVerbPart1:past:thridPerson) object(domain) verb(TrennVerbPart2:past:thridPerson)?",
+         "interrogativePronoun(nominativeCase:range:singular) verb(component_be:present:singular) object(domain) verb(TrennVerb:perfect:thridPerson)?",
+         "interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(TrennVerb:perfect:thridPerson)?",
+         "interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) pronoun(reflexive_pronoun) object(domain) verb(TrennVerb:perfect:thridPerson)?",
+         //Gib mir alle von der NASA betriebenen Startrampen.
+          "verb(imperative_transitive:present:singular) pronoun(object_pronoun) determiner(alle) preposition(von) adjunct(domain) verb(mainVerb:perfect:thridPerson) noun(domain:singular).",
+          "verb(imperative_transitive:present:singular) pronoun(object_pronoun) determiner(alle) preposition(von) adjunct(domain) verb(mainVerb:perfect:thridPerson) noun(domain:plural).",
+          //What is Batman"s real name?
+          "interrogativePronoun(nominativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) Apostrophe noun(singular)?",
+          "interrogativePronoun(nominativeCase:range:singular) verb(component_be:past:singular) adjunct(domain) Apostrophe noun(singular)?"
+      */        
+         ),
+       TransitiveFrame,
+        PERSON_PERSON,
+        activeTransitive
+      )
+    );
+    
+    
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+        //"¿Qué series televisivas ideó Walt Disney?"?"
+        "interrogativePronounDeterminer(domain:singular) verb(mainVerb:past:thridPerson) object(range)?"
+         //Was wurde von ($x | PERSON_NP) entwickelt?
+        /*"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
+        //"Werke werden von ($x | PERSON_NP) entwickelt?", 
+        //"Werke wurden von ($x | PERSON_NP) entwickelt?"
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:singular) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
+        "interrogativeDeterminer(nominativeCase:domain:plural) verb(component_be:future:singular) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
+        "interrogativeDeterminer(nominativeCase:domain:plural) verb(component_be:future:plural) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
+         //Wer war mit Präsident Chirac verheiratet?
+        "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:past:singular) preposition(mit) object(domain) verb(mainVerb:perfect:thridPerson)?", 
+        //Trenn
+        "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:singular) preposition object(range) verb(TrennVerb:perfect:thridPerson)?",
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_be:future:singular) preposition object(range) verb(TrennVerb:perfect:thridPerson)?"
+        */
+    
+        ),
+        TransitiveFrame,
+        PERSON_CAUSE,
+        passiveTransitive
       )
     );
  

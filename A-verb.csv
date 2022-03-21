@@ -1,0 +1,2 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,SyntacticFrame,subject,directObject,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural,passivePreposition
+starr,verb,protagonizar,protagoniza,protagoniz¢,protagonizado,TransitiveFrame,range,domain,5,dbo:starring,dbo:Film,dbo:Actor,feminine,pel¡cula,pel¡culas,musculine,actor,actores,by

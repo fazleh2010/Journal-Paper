@@ -6,7 +6,7 @@
   "numberOfEntities" : 100,
   "similarityThresold" : 0.7,
   "csvToTurtle" : true,
-  "turtleToProtoType" : false,
+  "turtleToProtoType" : true,
   "single": true,
   "composite": false,
   "protoTypeToQuestion" : true,

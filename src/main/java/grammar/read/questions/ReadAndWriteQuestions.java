@@ -63,7 +63,6 @@ public class ReadAndWriteQuestions {
     private static final String Reason = "numberOfQuestions";
     private static String language = "en";
     private String entityDir = null;
-    //public static String qaldFileBinding = "qaldEntities.csv";
     public static String qaldFileBinding = "qaldEntities.csv";
 
 
@@ -95,6 +94,8 @@ public class ReadAndWriteQuestions {
         String sparql = null;
         Integer index = 0;
         this.entityDir = entityDir+File.separator+ this.language;
+        //System.out.println("this.entityDir::"+this.entityDir);
+        //exit(1);
        
 
         this.csvWriterQuestions = new CSVWriter(new FileWriter(questionAnswerFile,true));

@@ -1,9 +1,5 @@
 package grammar.generator;
 
-import grammar.structure.component.DomainOrRangeType;
-
-import java.util.stream.Stream;
-
 /**
  * A classification of question words.<br>
  * The ending "PRONOUN" implicitly suggests the usage of a single question word as subject,

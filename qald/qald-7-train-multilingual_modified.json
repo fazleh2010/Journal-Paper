@@ -255,12 +255,12 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer war die Frau von US-Präsident Lincoln?",
+					"string": "Wer war die Frau von Abraham Lincoln?",
 					"keywords": "US-Präsident, Lincoln, Frau"
 				},
 				{
 					"language": "es",
-					"string": "¿Quién fué la mujer del presidente americano Lincoln?",
+					"string": "¿Quién fué la mujer del Abraham Lincoln?",
 					"keywords": "presidente Americano, Lincoln, mujer"
 				},
 				{
@@ -1417,12 +1417,12 @@
 				},
 				{
 					"language": "de",
-					"string": "In welchem Museum ist Der Schrei von Munch ausgestellt?",
+					"string": "In welchem Museum ist Der Schrei ausgestellt?",
 					"keywords": "Museum, Schrei, Munch"
 				},
 				{
 					"language": "es",
-					"string": "¿En qué museo está expuesto el Grito de Munch?",
+					"string": "¿En qué museo está expuesto el Grito?",
 					"keywords": "museo, El Grito, Munch"
 				},
 				{
@@ -3602,8 +3602,8 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Quién creó Family Guy?",
-					"keywords": "creador, Family Guy"
+					"string": "¿Quién creó  Padre de familia?",
+					"keywords": "creador,  Padre de familia"
 				},
 				{
 					"language": "it",
@@ -9357,7 +9357,7 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Quién fué el vicepresidente de John F. Kennedy?",
+					"string": "¿Quién fué el vicepresidente de Samuel Schmid?",
 					"keywords": "John F. Kennedy, vicepresidente"
 				},
 				{
@@ -9499,12 +9499,12 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Quién fué el sucesor de John F. Kennedy?",
+					"string": "¿Quién fué el sucesor de Patrick_F._Kennedy?",
 					"keywords": "sucesor, John F. Kennedy"
 				},
 				{
 					"language": "it",
-					"string": "Chi fu il successore di John F. Kennedy?",
+					"string": "Chi fu il successore di Patrick_F._Kennedy?",
 					"keywords": "John F. Kennedy, successore"
 				},
 				{
@@ -11514,7 +11514,7 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Cuál es el prefijo de Berlin?",
+					"string": "¿Cuál es el código de área de Berlín?",
 					"keywords": "prefijo, Berlin"
 				},
 				{

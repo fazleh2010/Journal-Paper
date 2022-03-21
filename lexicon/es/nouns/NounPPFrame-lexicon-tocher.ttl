@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :tocher ;
+  lemon:entry    :tocher_form_preposition .
+
+:tocher a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :tocher_form ;
+  lemon:otherForm  :tocher_singular ;
+  lemon:otherForm  :tocher_plural ;
+  lemon:sense          :tocher_sense_1 ;
+  lemon:synBehavior    :tocher_nounpp .
+
+:tocher_form a lemon:Form ;
+  lemon:writtenRep "hija"@es .
+
+:tocher_singular a    lemon:Form ;
+  lemon:writtenRep "hija"@es ;
+  lexinfo:number   lexinfo:singular .
+
+:tocher_plural a   lemon:Form ;
+  lemon:writtenRep "hijas"@es ;
+  lexinfo:number    lexinfo:plural .
+
+:tocher_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:tocher_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :tocher_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/child> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :tocher_sense_1_condition .
+
+:tocher_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Person> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Person> .
+
+:arg2 lemon:marker :tocher_form_preposition .
+## Prepositions ##
+:tocher_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "de"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

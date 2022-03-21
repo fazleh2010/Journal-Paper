@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :vicepresidente_2 ;
+  lemon:entry    :vicepresidente_2_form_preposition .
+
+:vicepresidente_2 a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :vicepresidente_2_form ;
+  lemon:otherForm  :vicepresidente_2_singular ;
+  lemon:otherForm  :vicepresidente_2_plural ;
+  lemon:sense          :vicepresidente_2_sense_1 ;
+  lemon:synBehavior    :vicepresidente_2_nounpp .
+
+:vicepresidente_2_form a lemon:Form ;
+  lemon:writtenRep "vicepresidente"@es .
+
+:vicepresidente_2_singular a    lemon:Form ;
+  lemon:writtenRep "vicepresidente"@es ;
+  lexinfo:number   lexinfo:singular .
+
+:vicepresidente_2_plural a   lemon:Form ;
+  lemon:writtenRep "vicepresidentes"@es ;
+  lexinfo:number    lexinfo:plural .
+
+:vicepresidente_2_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:vicepresidente_2_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :vicepresidente_2_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/vicePresident> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :vicepresidente_2_sense_1_condition .
+
+:vicepresidente_2_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Politician> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Person> .
+
+:arg2 lemon:marker :vicepresidente_2_form_preposition .
+## Prepositions ##
+:vicepresidente_2_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "bajo"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

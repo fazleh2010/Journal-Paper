@@ -7,46 +7,46 @@
 
 :lexicon_en a    lemon:Lexicon ;
   lemon:language "es" ;
-  lemon:entry    :capital_of ;
-  lemon:entry    :capital_of_form_preposition .
+  lemon:entry    :capital ;
+  lemon:entry    :capital_form_preposition .
 
-:capital_of a       lemon:LexicalEntry ;
+:capital a       lemon:LexicalEntry ;
   lexinfo:partOfSpeech lexinfo:noun ;
-  lemon:canonicalForm  :capital_of_form ;
-  lemon:otherForm  :capital_of_singular ;
-  lemon:otherForm  :capital_of_plural ;
-  lemon:sense          :capital_of_sense_1 ;
-  lemon:synBehavior    :capital_of_nounpp .
+  lemon:canonicalForm  :capital_form ;
+  lemon:otherForm  :capital_singular ;
+  lemon:otherForm  :capital_plural ;
+  lemon:sense          :capital_sense_1 ;
+  lemon:synBehavior    :capital_nounpp .
 
-:capital_of_form a lemon:Form ;
+:capital_form a lemon:Form ;
   lemon:writtenRep "capital"@es .
 
-:capital_of_singular a    lemon:Form ;
+:capital_singular a    lemon:Form ;
   lemon:writtenRep "capital"@es ;
   lexinfo:number   lexinfo:singular .
 
-:capital_of_plural a   lemon:Form ;
+:capital_plural a   lemon:Form ;
   lemon:writtenRep "capitales"@es ;
   lexinfo:number    lexinfo:plural .
 
-:capital_of_nounpp a        lexinfo:NounPPFrame ;
+:capital_nounpp a        lexinfo:NounPPFrame ;
   lexinfo:copulativeArg        :arg1 ;
   lexinfo:prepositionalAdjunct :arg2 .
 
-:capital_of_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
-  lemon:ontoMapping         :capital_of_sense_1 ;
+:capital_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :capital_sense_1 ;
   lemon:reference           <http://dbpedia.org/ontology/capital> ;
   lemon:subjOfProp          :arg2 ;
   lemon:objOfProp           :arg1 ;
-  lemon:condition           :capital_of_sense_1_condition .
+  lemon:condition           :capital_sense_1_condition .
 
-:capital_of_sense_1_condition a lemon:condition ;
+:capital_sense_1_condition a lemon:condition ;
   lemon:propertyDomain  <http://dbpedia.org/ontology/Country> ;
   lemon:propertyRange   <http://dbpedia.org/ontology/City> .
 
-:arg2 lemon:marker :capital_of_form_preposition .
+:arg2 lemon:marker :capital_form_preposition .
 ## Prepositions ##
-:capital_of_form_preposition a                  lemon:SynRoleMarker ;
+:capital_form_preposition a                  lemon:SynRoleMarker ;
   lemon:canonicalForm  [ lemon:writtenRep "de"@es ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
 

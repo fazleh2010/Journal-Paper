@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :richtiger ;
+  lemon:entry    :richtiger_form_preposition .
+
+:richtiger a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :richtiger_form ;
+  lemon:otherForm  :richtiger_singular ;
+  lemon:otherForm  :richtiger_plural ;
+  lemon:sense          :richtiger_sense_1 ;
+  lemon:synBehavior    :richtiger_nounpp .
+
+:richtiger_form a lemon:Form ;
+  lemon:writtenRep "verdadero nombre"@es .
+
+:richtiger_singular a    lemon:Form ;
+  lemon:writtenRep "verdadero nombre"@es ;
+  lexinfo:number   lexinfo:singular .
+
+:richtiger_plural a   lemon:Form ;
+  lemon:writtenRep "verdaderos nombres"@es ;
+  lexinfo:number    lexinfo:plural .
+
+:richtiger_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:richtiger_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :richtiger_sense_1 ;
+  lemon:reference           <http://dbpedia.org/property/alterEgo> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :richtiger_sense_1_condition .
+
+:richtiger_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/FictionalCharacter> ;
+  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#string> .
+
+:arg2 lemon:marker :richtiger_form_preposition .
+## Prepositions ##
+:richtiger_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "de"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

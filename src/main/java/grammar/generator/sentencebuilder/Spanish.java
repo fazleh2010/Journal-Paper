@@ -27,7 +27,7 @@ import static grammar.datasets.sentencetemplates.TempConstants.singular;
 import static grammar.datasets.sentencetemplates.TempConstants.subject;
 import static grammar.datasets.sentencetemplates.TempConstants.verb;
 import static grammar.generator.BindingConstants.BINDING_TOKEN_TEMPLATE;
-import grammar.generator.SubjectType;
+import static grammar.generator.sentencebuilder.Spanish.isInterrogative;
 import grammar.sparql.SelectVariable;
 import grammar.structure.component.DomainOrRangeType;
 import grammar.structure.component.FrameType;
@@ -170,78 +170,30 @@ public class Spanish implements TempConstants,MultilingualBuilder {
         }
         
         
-        else if (flagReference && isIntergativePronoun(attribute).first) {
-            SubjectType subjectType = null;
+        else if (flagReference && isInterrogativePronoun(attribute)) {
+            String subjectType = null;
             if (reference.contains(range)) {
                 subjectType = findIntergativePronoun(lexicalEntryUtil, this.rangeSelectable);
             } else {
                 subjectType = findIntergativePronoun(lexicalEntryUtil, this.domainSelectable);
             }
-            word=LexicalEntryUtil.getSingle(lexicalEntryUtil, subjectType.name());
+            word=LexicalEntryUtil.getSingle(lexicalEntryUtil, subjectType); 
           
-        } else if (flagReference && isInterrogativeAmount(attribute).first) {
-            SubjectType subjectType = isInterrogativeAmount(attribute).second;
+        } else if (flagReference && isInterrogative(attribute)) {
+           
             if (reference.contains(colon)) {
                 String[] col = reference.split(colon);
-                word = this.getDeteminerTokenManual(subjectType, col[0], col[1]);
-            }            
+                word = this.getDeteminerTokenManual(attribute, col[0], col[1]);
+            }    
+          
 
-        } else if (isInterrogativeAmount(attribute).first) {
-            SubjectType subjectType = isInterrogativeAmount(attribute).second;
-            word=LexicalEntryUtil.getSingle(lexicalEntryUtil, subjectType.name());
-
-        }
-        
-        else if (isInterrogativeOften(attribute).first) {
-            SubjectType subjectType = isInterrogativeOften(attribute).second;
-            word=LexicalEntryUtil.getSingle(lexicalEntryUtil, subjectType.name());
-
-        }
-        else if (isInterrogativeMuch(attribute).first) {
-            SubjectType subjectType = isInterrogativeMuch(attribute).second;
-            word=LexicalEntryUtil.getSingle(lexicalEntryUtil, subjectType.name());
-
-        }
-        
-        
-        else if (flagReference && isInterrogativeEvalution(attribute).first) {
-            SubjectType subjectType = isInterrogativeEvalution(attribute).second;
-            if (reference.contains(colon)) {
-                String[] col = reference.split(colon);
-                word = this.getDeteminerTokenManual(subjectType, col[0], col[1]);
-            }            
-
-        }
-        else if (isInterrogativeEvalution(attribute).first) {
-            SubjectType subjectType = isInterrogativeEvalution(attribute).second;
-            word=LexicalEntryUtil.getSingle(lexicalEntryUtil, subjectType.name());
-
-        }
-        else if ( isInterrogativePlace(attribute).first) {
-            SubjectType subjectType = isInterrogativePlace(attribute).second;
+        } else if (isInterrogative(attribute)) {
             word=LexicalEntryUtil.getSingle(lexicalEntryUtil, attribute);
 
-        } else if (flagReference && isInterrogativeDeterminer(attribute).first) {
-            SubjectType subjectType = isInterrogativeDeterminer(attribute).second;
-            if (reference.contains(colon)) {
-                String[] col = reference.split(colon);
-                word = this.getDeteminerTokenManual(subjectType, col[0], col[1]);
-            }
-
-        } 
+        }
         
-        else if (flagReference && isInterrogativePronounDeterminer(attribute).first) {
-            SubjectType subjectType = isInterrogativePronounDeterminer(attribute).second;
-            if (reference.contains(colon)) {
-                String[] col = reference.split(colon);
-                word = this.getDeteminerTokenManual(subjectType, col[0], col[1]);
-            }
-
-        } 
-        
-        else if (flagReference &&isInterrogativeVariableDeterminer(attribute).first) {
-             SubjectType subjectType = isInterrogativeVariableDeterminer(attribute).second;
-              String quesWord = LexicalEntryUtil.getSingle(this.lexicalEntryUtil,subjectType.name());
+        else if (flagReference &&isInterrogative(attribute)) {
+              String quesWord = LexicalEntryUtil.getSingle(this.lexicalEntryUtil,attribute);
             if (reference.contains(colon)) {
                 String[] col = reference.split(colon);
                 word = this.getTokenManual(col[0], col[1]);
@@ -249,15 +201,6 @@ public class Spanish implements TempConstants,MultilingualBuilder {
             }
 
         }
-        
-        else if (interrogativeTemporal(attribute).first) {
-              SubjectType subjectType = interrogativeTemporal(attribute).second;
-              word = LexicalEntryUtil.getSingle(this.lexicalEntryUtil,subjectType.name());
-
-        }
-       
-        
-        
         
         else if (flagReference && attribute.contains(noun)) {
             if (reference.contains(range) || reference.contains(domain)) {
@@ -349,7 +292,7 @@ public class Spanish implements TempConstants,MultilingualBuilder {
         return null;
     }
 
-    private String getDeteminerToken(SubjectType subjectType, String domainOrRange, String number) throws QueGGMissingFactoryClassException {
+    private String getDeteminerTokenDataBase(String subjectType, String domainOrRange, String number) throws QueGGMissingFactoryClassException {
         SelectVariable selectVariable = null;
         String determinerToken = "";
       
@@ -365,7 +308,7 @@ public class Spanish implements TempConstants,MultilingualBuilder {
                 noun = GenderUtils.getConditionLabelManually(domainOrRange, number,this.subjectUri,this.objectUri);
             }
             String article = this.getArticleFromUri(domainOrRange);
-            String questionWord = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil,subjectType.name(), TempConstants.number, number, TempConstants.gender, article);
+            String questionWord = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil,subjectType, TempConstants.number, number, TempConstants.gender, article);
             return determinerToken = questionWord + " " + noun;
         } else {
 
@@ -395,7 +338,7 @@ public class Spanish implements TempConstants,MultilingualBuilder {
         return noun;
     }
     
-    private String getIntergativeAmountToken(SubjectType subjectType, String domainOrRange, String number) throws QueGGMissingFactoryClassException {
+    private String getIntergativeAmountToken(String subjectType, String domainOrRange, String number) throws QueGGMissingFactoryClassException {
         SelectVariable selectVariable = null;
         String determinerToken = "";
       
@@ -410,7 +353,7 @@ public class Spanish implements TempConstants,MultilingualBuilder {
                 noun = GenderUtils.getConditionLabelManually(domainOrRange, number,this.subjectUri, this.objectUri);
             }
             String article = this.getArticleFromUri(domainOrRange);
-            String questionWord = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil,subjectType.name(), TempConstants.number, number, TempConstants.gender, article);
+            String questionWord = LexicalEntryUtil.getEntryOneAtrributeCheck(this.lexicalEntryUtil,subjectType, TempConstants.number, number, TempConstants.gender, article);
             return determinerToken = questionWord + " " + noun;
         } 
 
@@ -420,9 +363,9 @@ public class Spanish implements TempConstants,MultilingualBuilder {
    
 
    
-    private String getDeteminerTokenManual(SubjectType subjectType, String domainOrRange,String number) throws QueGGMissingFactoryClassException {
+    private String getDeteminerTokenManual(String subjectType, String domainOrRange,String number) throws QueGGMissingFactoryClassException {
         String noun = GenderUtils.getConditionLabelManually(domainOrRange, number,this.subjectUri,this.objectUri);
-        String questionWord = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, subjectType.name());
+        String questionWord = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, subjectType);
         return questionWord + " " + noun;
 
     }
@@ -485,101 +428,38 @@ public class Spanish implements TempConstants,MultilingualBuilder {
         return lexicalEntryUtil.getReferenceUri().toString();
     }
 
-    public static SubjectType findIntergativePronoun(LexicalEntryUtil lexicalEntryUtil, SelectVariable selectVariable) throws QueGGMissingFactoryClassException {
-        String uri = null;
-        uri = LexicalEntryUtil.getUri(lexicalEntryUtil, selectVariable);
+    public static String findIntergativePronoun(LexicalEntryUtil lexicalEntryUtil, SelectVariable selectVariable) throws QueGGMissingFactoryClassException {
+        String subjectType = null;
+        String uri = LexicalEntryUtil.getUri(lexicalEntryUtil, selectVariable);
+
         if (TemplateFinder.isPerson(uri)) {
-            return SubjectType.interrogativePronounPerson;
+            subjectType = interrogativePronounPerson;
         } else {
-            return SubjectType.interrogativePronounThing;
+            subjectType = interrogativePronounThing;
 
         }
-
+        // System.out.println("subjectType::"+subjectType+" uri:"+uri);
+        // exit(1);
+        return subjectType;
     }
 
-    public static Pair<Boolean, SubjectType> isIntergativePronoun(String questionType) throws QueGGMissingFactoryClassException {
-        if (questionType.equals(SubjectType.interrogativePronoun.toString())) {
-            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativePronoun);
-        }
-        return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
-    }
 
-    public static Pair<Boolean, SubjectType> isInterrogativeAmount(String questionType) throws QueGGMissingFactoryClassException {
-        if (questionType.equals(SubjectType.interrogativeAmount.toString())) {
-            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativeAmount);
+    public static Boolean isInterrogativePronoun(String questionType) throws QueGGMissingFactoryClassException {
+        if (questionType.contains(interrogativePronoun)) {
+            return true;
         }
-        else if(questionType.equals(SubjectType.interrogativePronounWhom.toString())){
-            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativePronounWhom);
-        }
-        return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
+        return false;
     }
     
-    public static Pair<Boolean, SubjectType> isInterrogativeOften(String questionType) throws QueGGMissingFactoryClassException {
-        if (questionType.equals(SubjectType.interrogativeOften.toString())) {
-            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativeOften);
+    public static Boolean isInterrogative(String questionType) throws QueGGMissingFactoryClassException {
+        if (questionType.contains("interrogative")) {
+            return true;
         }
-        else 
-        return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
-    }
-    
-    public static Pair<Boolean, SubjectType> isInterrogativeMuch(String questionType) throws QueGGMissingFactoryClassException {
-        if (questionType.equals(SubjectType.interrogativeMuch.toString())) {
-            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativeMuch);
-        }
-        return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
-    }
-    
-     public static Pair<Boolean, SubjectType> isInterrogativeEvalution(String questionType) throws QueGGMissingFactoryClassException {
-        if (questionType.equals(SubjectType.interrogativeEvalution.toString())) {
-            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativeEvalution);
-        }
-        return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
+        return false;
     }
 
-    public static Pair<Boolean, SubjectType> isInterrogativePlace(String questionType) throws QueGGMissingFactoryClassException {
-        if (questionType.equals(SubjectType.interrogativePlace.toString())) {
-            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativePlace);
-        }
-        return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
-    }
 
-    public static Pair<Boolean, SubjectType> isInterrogativeDeterminer(String questionType) throws QueGGMissingFactoryClassException {
-        if (questionType.equals(SubjectType.interrogativeDeterminer.toString())) {
-            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativeDeterminer);
-        }
-        return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
-    }
-    
-     public static Pair<Boolean, SubjectType> isInterrogativeVariableDeterminer(String questionType) throws QueGGMissingFactoryClassException {
-        if (questionType.equals(SubjectType.interrogativeVariableDeterminer.toString())) {
-            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativeVariableDeterminer);
-        }
-        return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
-    }
-    
-     public static Pair<Boolean, SubjectType> isInterrogativePronounDeterminer(String questionType) throws QueGGMissingFactoryClassException {
-        if (questionType.equals(SubjectType.interrogativePronounDeterminer.toString())) {
-            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativePronounDeterminer);
-        }
-        return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
-    }
 
-    public static Pair<Boolean, SubjectType> interrogativePlace(String questionType) throws QueGGMissingFactoryClassException {
-        if (questionType.equals(SubjectType.interrogativePlace.toString())) {
-            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativePlace);
-        }
-        return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
-    }
-    
-     public static Pair<Boolean, SubjectType> interrogativeTemporal(String questionType) throws QueGGMissingFactoryClassException {
-        if (questionType.equals(SubjectType.interrogativeTemporal.toString())) {
-            return new Pair<Boolean, SubjectType>(Boolean.TRUE, SubjectType.interrogativeTemporal);
-        }
-        return new Pair<Boolean, SubjectType>(Boolean.FALSE, null);
-    }
-
-  
-    
 
     private String getReferenceWrttienForm(String caseType, String numberType) {
         List<AnnotatedNounOrQuestionWord> annotatedLexicalEntryNouns = lexicalEntryUtil.parseLexicalEntryToAnnotatedAnnotatedNounOrQuestionWords();
