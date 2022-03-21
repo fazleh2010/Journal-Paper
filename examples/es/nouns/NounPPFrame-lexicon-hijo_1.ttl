@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :hijo_1 ;
+  lemon:entry    :hijo_1_form_preposition .
+
+:hijo_1 a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :hijo_1_form ;
+  lemon:otherForm  :hijo_1_singular ;
+  lemon:otherForm  :hijo_1_plural ;
+  lemon:sense          :hijo_1_sense_1 ;
+  lemon:synBehavior    :hijo_1_nounpp .
+
+:hijo_1_form a lemon:Form ;
+  lemon:writtenRep "hijo"@es .
+
+:hijo_1_singular a    lemon:Form ;
+  lemon:writtenRep "hijo"@es ;
+  lexinfo:number   lexinfo:singular .
+
+:hijo_1_plural a   lemon:Form ;
+  lemon:writtenRep "hijos"@es ;
+  lexinfo:number    lexinfo:plural .
+
+:hijo_1_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:hijo_1_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :hijo_1_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/child> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :hijo_1_sense_1_condition .
+
+:hijo_1_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Person> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Person> .
+
+:arg2 lemon:marker :hijo_1_form_preposition .
+## Prepositions ##
+:hijo_1_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "de"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :sucesor ;
+  lemon:entry    :sucesor_form_preposition .
+
+:sucesor a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :sucesor_form ;
+  lemon:otherForm  :sucesor_singular ;
+  lemon:otherForm  :sucesor_plural ;
+  lemon:sense          :sucesor_sense_1 ;
+  lemon:synBehavior    :sucesor_nounpp .
+
+:sucesor_form a lemon:Form ;
+  lemon:writtenRep "sucesor"@es .
+
+:sucesor_singular a    lemon:Form ;
+  lemon:writtenRep "sucesor"@es ;
+  lexinfo:number   lexinfo:singular .
+
+:sucesor_plural a   lemon:Form ;
+  lemon:writtenRep "sucesores"@es ;
+  lexinfo:number    lexinfo:plural .
+
+:sucesor_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:sucesor_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :sucesor_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/successor> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :sucesor_sense_1_condition .
+
+:sucesor_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Politician> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Person> .
+
+:arg2 lemon:marker :sucesor_form_preposition .
+## Prepositions ##
+:sucesor_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "de"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
