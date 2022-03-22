@@ -13,6 +13,7 @@
   lemon:entry    :component_imperative_plural ;
   lemon:entry    :component_imperative_transitive ;
   lemon:entry    :component_have ;
+  lemon:entry    :component_hayan ;
   lemon:entry    :component_el ;
   lemon:entry    :component_la ;
   lemon:entry    :component_un ;
@@ -24,6 +25,8 @@
   lemon:entry    :interrogativeDeterminerEn ;
   lemon:entry    :interrogativeDeterminerPor ;
   lemon:entry    :interrogativeVariableDeterminer ;
+  lemon:entry    :interrogativeRelative1 ;
+  lemon:entry    :interrogativeRelative2 ;
   lemon:entry    :interrogativeAmount ;
   lemon:entry    :interrogativeOften ;
   lemon:entry    :interrogativeMuch ;
@@ -158,6 +161,10 @@
   lemon:canonicalForm  [ lemon:writtenRep "tener"@es ] ;
   lexinfo:partOfSpeech lexinfo:verb .
 
+:component_hayan a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "hayan"@es ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
 
 ## Determiners ##
 
@@ -206,6 +213,14 @@
 
  :interrogativePronounDeterminer a      lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "¿Qué"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativeRelative1 a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "qué"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+  :interrogativeRelative2 a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "que"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
 

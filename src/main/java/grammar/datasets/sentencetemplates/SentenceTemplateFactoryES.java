@@ -192,9 +192,11 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
         "interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
         "interrogativeDeterminerEn(range:plural) verb(mainVerb:present:thridPerson) object(domain)?",
         "interrogativeDeterminerPor(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
-        "interrogativeDeterminerPor(range:plural) verb(mainVerb:present:thridPerson) object(domain)?"
-        //Dame todos los actores que hayan actuado en Last Action Hero.
-        //"verb(component_imperative_transitive:present:singular) pronoun(pronoun_personal) determiner(all) noun(plural) verb(mainVerb:present:thridPerson) object(domain)"
+        "interrogativeDeterminerPor(range:plural) verb(mainVerb:present:thridPerson) object(domain)?",
+        //Dame todos los actores que hayan actuado en Last Action Hero.Dame todos protagonizar protagonizar ($x | Film_NP)
+         //"verb(component_imperative_transitive:present:singular) pronoun(pronoun_personal) determiner(all) noun(plural) verb(mainVerb:present:thridPerson) object(domain)"
+         "verb(component_imperative_transitive:present:singular) determiner(component_todos) noun(singular) interrogativeRelative1 determiner(component_hayan) verb(mainVerb:present:thridPerson) object(domain)"
+      
         //Wer hat Slack entwickelt?
         /*"interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?",    
         ///Welche Person hat Slack entwickelt?
@@ -228,8 +230,11 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
     sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(
-        //"¿Qué series televisivas ideó Walt Disney?"?"
-        "interrogativePronounDeterminer(domain:singular) verb(mainVerb:past:thridPerson) object(range)?"
+        //"¿Qué series televisivas ideó Walt Disney?"?"¿Qué series televisivas ideó Walt Disney?
+        "interrogativeVariableDeterminer(domain:singular) verb(mainVerb:past:thridPerson) object(range)?",
+        //Dame todas las plataformas de lanzamiento operadas por la NASA.    Dame todos operar operar por ($x | LaunchPad_NP) 
+         "verb(component_imperative_transitive:present:singular) determiner(component_todos) noun(domain:singular) verb(mainVerb:perfect:thridPerson) preposition object(range)"
+
          //Was wurde von ($x | PERSON_NP) entwickelt?
         /*"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
         //"Werke werden von ($x | PERSON_NP) entwickelt?", 

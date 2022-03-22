@@ -1,0 +1,46 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,SyntacticFrame,subject,directObject,sense,reference,domain,range,domainArticleSingular,domainWrittenSingular,domainWrittenPlural,rangeArticleSingular,rangeWrittenSingular,rangeWrittenPlural,passivePreposition
+create_1,verb,crear,crea,cre¢,creado,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Agent,feminine,serie televisiva,series televisivas,masculine,agente,agentes,by
+starr,verb,protagonizar,protagoniza,protagoniz¢,protagonizado,TransitiveFrame,range,domain,5,dbo:starring,dbo:Film,dbo:Actor,feminine,pel°cula,pel°culas,masculine,actor,actores,by
+operate_1,verb,operar,opera,oper¢,operado,TransitiveFrame,domain,range,1,dbp:operator,dbo:LaunchPad,dbo:Organisation,feminine,plataforma de lanzamiento ,plataformas de lanzamiento,feminine,organizaci¢n,organizaciones,by
+play_1,verb,actuar,act£a,act£o,actuado,TransitiveFrame,range,domain,1,dbo:portrayer,dbo:FictionalCharacter,dbo:Person,masculine,car†cter ficticio,caracteres ficticios,feminine,ciudad,ciudades,by
+publish_1,verb,publicar,publica,public¢,publicado,TransitiveFrame,range,domain,1,dbo:publisher,dbo:Book,dbo:Agent,masculine,libro,libros,masculine,agente,agentes,by
+direct_1,verb,dirigir,dirige,dirigi¢,dirigido,TransitiveFrame,range,domain,1,dbo:director,dbo:Film,dbo:Person,feminine,pel°cula,pel°culas,feminine,ciudad,ciudades,by
+serve_1,verb,atender,atiende,atendi¢,atendido,TransitiveFrame,range,domain,1,dbo:targetAirport,dbo:Airline,dbo:Airport,feminine,aerol°nea,aerol°neas,masculine,aeropuerto,aeropuertos,by
+design_1,verb,dise§ar,dise§a,dise§¢,dise§ado,TransitiveFrame,range,domain,1,dbo:architect,dbo:ArchitecturalStructure,dbo:Architect,feminine,estructura arquitect¢nica,estructuras arquitect¢nicas,masculine,arquitecto,arquitectos,by
+speak_1,verb,hablar,habla,habl¢,hablado,TransitiveFrame,range,domain,1,dbo:language,dbo:Language,dbo:Country,masculine,idioma,idiomas,masculine,pa°s,pa°ses,in
+live_1,verb,vivir,vive,vivi¢,vivido,TransitiveFrame,range,domain,1,dbo:ethnicGroup,dbo:EthnicGroup,dbo:Country,masculine,grupo Çtnico,grupos Çtnicos,masculine,pa°s,pa°ses,in
+cost,verb,costar,cuesta,cost¢,costado,TransitiveFrame,range,domain,1,dbo:budget,dbo:Film,xsd:double,feminine,pel°cula,pel°culas,-,-,-,by
+write_1,verb,escribir,escribe,escribi¢,escrito,TransitiveFrame,range,domain,1,dbo:writer,dbo:Song,dbo:Person,feminine,canci¢n,canciones,feminine,ciudad,ciudades,by
+express,verb,expresar,expresa,expres¢,expresado,TransitiveFrame,domain,range,1,dbo:connotation,dbo:Colour,owl:Thing,masculine,color,colores,-,-,-,by
+call_1,verb,llamarse,se_llama,llam¢,llamado,TransitiveFrame,range,domain,1,dbp:nickname,dbo:Person,xsd:String,feminine,ciudad,ciudades,-,-,-,by
+compose_1,verb,componer,compone,compuso,compuesto,TransitiveFrame,range,domain,1,dbo:musicComposer,dbo:Film,dbo:Person,feminine,pel°cula,pel°culas,feminine,ciudad,ciudades,by
+found,verb,fundar,funda,fund¢,fundado,TransitiveFrame,range,domain,1,dbo:foundedBy,dbo:Organisation,dbo:Pope,feminine,organizaci¢n,organizaciones,masculine,Papa,Papas,by
+Develop_3,verb,desarrollar,desarrolla,desarroll¢,desarrollado,TransitiveFrame,range,domain,1,dbo:developer,dbo:VideoGame,dbo:Agent,masculine,videojuego,videojuegos,masculine,agente,agentes,by
+inspire,verb,inspirar,inspira,inspir¢,inspirado,TransitiveFrame,range,domain,1,dbo:influenced,dbo:Person,dbo:Person,feminine,ciudad,ciudades,feminine,ciudad,ciudades,by
+produce,verb,producir,produce,produjo,producido,TransitiveFrame,range,domain,1,dbo:product,dbo:Ship,dbo:Company,masculine,barco,barcos,feminine,compa§ia,compa§ias,by
+marry_1,verb,casarse_con,se_casa_con,se_cas¢_con,casado_con,TransitiveFrame,range,domain,1,dbo:spouse,dbo:Person,dbo:Person,feminine,ciudad,ciudades,feminine,ciudad,ciudades,by
+marry_2,verb,casarse,se_casa,se_cas¢,casado,TransitiveFrame,range,domain,1,dbo:spouse,dbo:Person,dbo:Person,feminine,ciudad,ciudades,feminine,ciudad,ciudades,by
+moderate,verb,moderar,modera,moder¢,moderado,TransitiveFrame,range,domain,1,dbo:presenter,dbo:TelevisionShow,dbo:Person,feminine,serie televisiva,series televisivas,feminine,persona,personas,von
+verlegen,verb,publicar,publica,public¢,publicado,TransitiveFrame,range,domain,1,dbo:publisher,dbo:Work,dbo:Person,feminine,obra,obras,feminine,persona,personas,von
+gewinnen,verb,obtener,obtiene,obtuvo,obtenido,TransitiveFrame,range,domain,1,dbo:award,dbo:Scientist,dbo:Award,masculine,cient°fico,cient°ficos,masculine,premio,premios,von
+kosten,verb,costar,cuesta,cost¢,costado,TransitiveFrame,range,domain,1,dbo:budget,dbo:Film,xsd:double,feminine,pel°cula,pel°culas,-,-,-,von
+Schreiben_1,verb,escribir,escribe,escribi¢,escrito,TransitiveFrame,range,domain,1,dbo:writer,dbo:Song,dbo:Person,neuter,canci¢n,canciones,feminine,persona,personas,von
+Schreiben_2,verb,escribir,escribe,escribi¢,escrito,TransitiveFrame,range,domain,1,dbo:composer,dbo:TelevisionShow,dbo:Person,feminine,serie televisiva,series televisivas,feminine,persona,personas,von
+Schreiben_3,verb,escribir,escribe,escribi¢,escrito,TransitiveFrame,range,domain,1,dbo:musicComposer,dbo:Film,dbo:Person,feminine,pel°cula,pel°culas,feminine,persona,personas,von
+Schreiben_4,verb,escribir,escribe,escribi¢,escrito,TransitiveFrame,range,domain,1,dbo:author,dbo:Book,dbo:Person,feminine,persona,personas,masculine,libro,libros,von
+erfinden,verb,inventar,inventa,invent¢,inventado,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Person,feminine,serie televisiva,series televisivas,feminine,persona,personas,von
+besuchen,verb,visitar,visita,visit¢,visitado,TransitiveFrame,range,domain,1,dbo:almaMater,dbo:Person,dbo:University,feminine,persona,personas,feminine,universidad,universidades,von
+nennen,RefVerb,llamarse,se llama,se llam¢,llamado,TransitiveFrame,domain,range,1,dbp:nickname,dbo:Person,xsd:String,feminine,persona,personas,-,-,-,von
+grÅnden_1,verb,fundar,funda,fund¢,fundado,TransitiveFrame,domain,range,1,dbo:foundedBy,dbo:Company,dbo:Pope,feminine,compa§ia,compa§ias,masculine,Papa,Papas,von
+grÅnden_2,verb,fundar,funda,fund¢,fundado,TransitiveFrame,range,domain,1,dbo:author,dbo:Website,dbo:Agent,masculine,sitio web,sitios web,masculine,agente,agentes,von
+grÅnden_3,verb,fundar,funda,fund¢,fundado,TransitiveFrame,range,domain,1,dbo:founder,dbo:Publisher,dbo:Person,masculine,editor,editor,feminine,persona,personas,von
+besteigen,verb,ascender,asciende,asendi¢,ascendido,TransitiveFrame,range,domain,1,dbo:firstAscentPerson,dbo:Mountain,dbo:Person,feminine,monta§a,monta§as,feminine,persona,personas,von
+entdecken_1,verb,descubrir,descubre,descubri¢,descubierto,TransitiveFrame,range,domain,1,dbo:discoverer,dbo:CelestialBody,dbo:Person,masculine,cuerpo celeste,cuerpos celestes,feminine,persona,personas,von
+entdecken_2,verb,descubrir,descubre,descubri¢,descubierto,TransitiveFrame,range,domain,1,dbp:portrayer,dbo:FictionalCharacter,dbo:Person,masculine,car†cter ficticio,caracteres ficticios,feminine,persona,personas,von
+entdecken_3,verb,descubrir,descubre,descubri¢,descubierto,TransitiveFrame,range,domain,1,dbp:portrayer,dbo:FictionalCharacter,dbo:Person,masculine,car†cter ficticio,caracteres ficticios,feminine,persona,personas,von
+beeinflussen,verb,influenciar,influencia,influenci¢,influenciado,TransitiveFrame,range,domain,1,dbo:influencedBy,dbo:Person,dbo:Person,feminine,persona,personas,feminine,persona,personas,von
+inspirieren,verb,inspirar,inspira,inspir¢,inspirado,TransitiveFrame,domain,range,1,dbo:influenced,dbo:Artist,dbo:Artist,masculine,artista,artistas,masculine,artista,artistas,von
+Entwerfen_1,verb,dise§ar,dise§a,dise§¢,dise§ado,TransitiveFrame,range,domain,1,dbo:architect,dbo:Bridge,dbo:Person,masculine,puente,puentes,feminine,persona,personas,von
+Entwerfen_2,verb,dise§ar,dise§a,dise§¢,dise§ado,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Agent,feminine,serie televisiva,series televisivas,masculine,agente,agentes,von
+Entwerfen_3,verb,dise§ar,dise§a,dise§¢,dise§ado,TransitiveFrame,range,domain,1,dbo:author,dbo:Website,dbo:Person,masculine,sitio web,sitios web,feminine,persona,personas,von
+betreiben,verb,operar,opera,oper¢,operado,TransitiveFrame,domain,range,1,dbo:operator,dbo:LaunchPad,dbo:Organisation,feminine,plataforma de lanzamiento,plataformas de lanzamiento,feminine,organizaci¢n,organizaciones,von

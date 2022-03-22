@@ -1,0 +1,2 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,SyntacticFrame,subject,directObject,sense,reference,domain,range,domainArticleSingular,domainWrittenSingular,domainWrittenPlural,rangeArticleSingular,rangeWrittenSingular,rangeWrittenPlural,passivePreposition
+operate_1,verb,operar,opera,oper¢,operado,TransitiveFrame,range,domain,1,dbo:operator,dbo:LaunchPad,dbo:Organisation,feminine,plataforma de lanzamiento ,plataformas de lanzamiento,feminine,organizaci¢n,organizaciones,por

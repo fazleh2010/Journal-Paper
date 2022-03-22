@@ -26,7 +26,7 @@
   lexinfo:number   lexinfo:singular .
 
 :capital-of_plural a   lemon:Form ;
-  lemon:writtenRep "XX"@en ;
+  lemon:writtenRep "capitals"@en ;
   lexinfo:number    lexinfo:plural .
 
 :capital-of_nounpp a        lexinfo:NounPPFrame ;
