@@ -311,13 +311,13 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who is the host of BBC Wildlife Specials?",
-					"keywords": "host, BBC Wildlife Specials"
+					"string": "Who is the host of American Idol?",
+					"keywords": "host, American Idol"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Quem é o apresentador do BBC Wildlife Specials?",
-					"keywords": "apresentador, BBC Wildlife Specials"
+					"string": "Quem é o apresentador do American Idol?",
+					"keywords": "apresentador, American_Idol"
 				},
 				{
 					"language": "fa",
@@ -326,17 +326,17 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer moderiert die BBC Wildlife Specials?",
-					"keywords": "BBC Wildlife Specials, Moderator"
+					"string": "Wer moderiert die American Idol?",
+					"keywords": "American Idol, Moderator"
 				},
 				{
 					"language": "es",
-					"string": "¿Quién es el anfitrión de los especiales de la BBC Wildlife?",
-					"keywords": "anfitrión, BBC Wildlife"
+					"string": "¿Quién es el anfitrión de los especiales de la American Idol?",
+					"keywords": "anfitrión, American Idol"
 				},
 				{
 					"language": "it",
-					"string": "Chi è il presentatore degli speciali della BBC Wildlife?",
+					"string": "Chi è il presentatore degli speciali della American Idol?",
 					"keywords": "presentatore, speciali, BBC Wildlife"
 				},
 				{
@@ -361,7 +361,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/BBC_Wildlife_Specials> <http://dbpedia.org/ontology/presenter> ?uri . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/American_Idol> <http://dbpedia.org/ontology/presenter> ?uri . }"
 			},
 			"answers": [{
 				"head": {
@@ -768,7 +768,7 @@
 			"question": [{
 					"language": "en",
 					"string": "Who was married to Jacques Chirac?",
-					"keywords": "married to, president Chirac"
+					"keywords": "married to, Jacques Chirac"
 				},
 				{
 					"language": "pt_BR",
@@ -782,8 +782,8 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Quién estuvo casado con el presidente Chirac?",
-					"keywords": "casado con, presidented Chirac"
+					"string": "¿Quién estuvo casado con el Jacques Chirac?",
+					"keywords": "casado con, Jacques Chirac"
 				},
 				{
 					"language": "it",
@@ -2424,8 +2424,8 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Quien actuó como el agente Smith en Matrix?",
-					"keywords": "actor, agente Smith, Matrix"
+					"string": "¿Quien actuó como el agente Smith?",
+					"keywords": "actor, agente Smith"
 				},
 				{
 					"language": "it",
@@ -5610,7 +5610,7 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Quién interpreto a Gus Fring en Breaking Bad?",
+					"string": "¿Quién interpreto a Gus Fring?",
 					"keywords": "actor, Gus Fring, Breaking Bad"
 				},
 				{
@@ -8356,13 +8356,13 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Qué color expresa lealtad?",
-					"keywords": "color, expresa, lealtad"
+					"string": "¿Qué color expresa Riqueza?",
+					"keywords": "color, expresa, Riqueza"
 				},
 				{
 					"language": "it",
-					"string": "Quale colore esprime lealtà?",
-					"keywords": "colore, esprimere, lealtà"
+					"string": "Quale colore esprime Ricchezza?",
+					"keywords": "colore, esprimere, Ricchezza"
 				},
 				{
 					"language": "fr",
@@ -9568,8 +9568,8 @@
 				},
 				{
 					"language": "pt_BR",
-					"string": "Quem compôs a trilha sonora do Titanic de Cameron?",
-					"keywords": "compositor, trilha sonora, Titanic, Cameron"
+					"string": "Quem compôs a trilha sonora do Titanic?",
+					"keywords": "compositor, trilha sonora, Titanic"
 				},
 				{
 					"language": "fa",
@@ -9578,13 +9578,13 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer hat den Soundtrack für Camerons Titanic geschrieben?",
-					"keywords": "Cameron, Titanic, Soundtrack, geschrieben"
+					"string": "Wer hat den Soundtrack für Titanic geschrieben?",
+					"keywords": "Titanic, Soundtrack, geschrieben"
 				},
 				{
 					"language": "es",
-					"string": "¿Quién compuso la banda sonora del Titanic de Cameron?",
-					"keywords": "compositor, banda sonora, Titanic de Cameron"
+					"string": "¿Quién compuso la banda sonora del Titanic?",
+					"keywords": "compositor, banda sonora, Titanic"
 				},
 				{
 					"language": "it",
@@ -12141,8 +12141,8 @@
 				},
 				{
 					"language": "pt_BR",
-					"string": "Com quem Lance Bass casou-se?",
-					"keywords": "esposa, Lance Bass"
+					"string": "Com quem Donald Trump casou-se?",
+					"keywords": "esposa, Donald Trump"
 				},
 				{
 					"language": "fa",
@@ -12156,13 +12156,13 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Con quien se casó Lance Bass?",
-					"keywords": "esposa, Lance Bass"
+					"string": "¿Con quien se casó Donald Trump?",
+					"keywords": "esposa, Donald Trump"
 				},
 				{
 					"language": "it",
-					"string": "Chi ha sposato Lance Bass?",
-					"keywords": "moglie, Lance Bass"
+					"string": "Chi ha sposato Donald Trump?",
+					"keywords": "moglie, Donald Trump"
 				},
 				{
 					"language": "fr",
@@ -12298,7 +12298,7 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Quién inspiro a Vincent van Gogh?",
+					"string": "¿Quién inspiro a Wilhelm Joseph Schelling?",
 					"keywords": "persona, inpiracion, Vincent van Gogh"
 				},
 				{
@@ -12574,7 +12574,7 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Quién diseñó la Brooklyn Bridge?",
+					"string": "¿Quién diseñó la Puente de Brooklyn?",
 					"keywords": "diseñador, Brooklyn Bridge"
 				},
 				{
@@ -15932,8 +15932,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was the founder of Vatican Television Center?",
-					"keywords": "pope, founded, Vatican Television"
+					"string": "Who was the founder of Vatican Media?",
+					"keywords": "pope, founded, Vatican_Media"
 				},
 				{
 					"language": "pt_BR",
@@ -15942,18 +15942,18 @@
 				},
 				{
 					"language": "de",
-					"string": "Welcher Papst hat das Vatikanische Fernsehen gegründet?",
-					"keywords": "Papst, gegründet, Vatikanisches Fernsehen"
+					"string": "Welcher Papst hat das Vatican Media gegründet?",
+					"keywords": "Papst, gegründet, Vatican Media"
 				},
 				{
 					"language": "es",
-					"string": "¿Quien fue el papa que fundo la televisión Vaticana?",
-					"keywords": "papa, fundo, televisión Vaticana"
+					"string": "¿Quien fue el papa que fundo la Vatican Media?",
+					"keywords": "papa, fundo, Vatican Media"
 				},
 				{
 					"language": "it",
-					"string": "Quale papa ha fondato la televisione vaticana?",
-					"keywords": "papa, fondare, televisione vaticana"
+					"string": "Quale papa ha fondato la Vatican Media?",
+					"keywords": "papa, fondare, Vatican Media"
 				},
 				{
 					"language": "fr",
@@ -15977,7 +15977,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> \nSELECT ?uri \nWHERE { \n         ?uri rdf:type dbo:Pope . \n         res:Vatican_Television_Center dbo:foundedBy ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> \nPREFIX res: <http://dbpedia.org/resource/> \nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> \nSELECT ?uri \nWHERE { \n         ?uri rdf:type dbo:Pope . \n         res:Vatican_Media dbo:foundedBy ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -16003,8 +16003,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was the music composer for Harold and Maude?",
-					"keywords": "Harold and Maude, compose, music"
+					"string": "Who was the music composer for Hearth Fires?",
+					"keywords": "Hearth Fires, compose, music"
 				},
 				{
 					"language": "pt_BR",
@@ -16013,17 +16013,17 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer hat die Musik für Harold und Maude komponiert?",
+					"string": "Wer hat die Musik für Kerzenlicht komponiert?",
 					"keywords": "Harold und Maude, komponieren, Musik"
 				},
 				{
 					"language": "es",
-					"string": "¿Quién compuso la música para Harold y Maude?",
+					"string": "¿Quién compuso la música para Amor en rebeldía?",
 					"keywords": "Harold y Maude, música, compositor"
 				},
 				{
 					"language": "it",
-					"string": "Chi ha composto la musica per Harold e Maude?",
+					"string": "Chi ha composto la musica per La divorziata?",
 					"keywords": "Harold e Maude, compositore, musica"
 				},
 				{
@@ -16043,7 +16043,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nSELECT DISTINCT ?uri \nWHERE {\n\tres:Harold_and_Maude dbo:musicComposer ?uri .\n}"
+				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nSELECT DISTINCT ?uri \nWHERE {\n\tres:Hearth_Fires  dbo:musicComposer ?uri .\n}"
 			},
 			"answers": [{
 				"head": {

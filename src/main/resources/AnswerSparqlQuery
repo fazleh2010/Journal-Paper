@@ -304,3 +304,35 @@ WHERE {
        ?o rdfs:label ?label .
        filter langMatches(lang(?label),"de")
 }
+
+PREFIX res: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT DISTINCT ?uri  ?label
+WHERE {
+        res:Brooklyn_Bridge dbo:architect ?uri .
+        res:Brooklyn rdfs:label ?label .
+       filter langMatches(lang(?label),"es")
+}
+
+Multilingual entity
+
+PREFIX res: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT DISTINCT ?uri ?labelEn ?labelDe ?labelIt ?labelEs
+WHERE {
+	?s  dbo:musicComposer ?uri .
+        ?s  rdfs:label ?labelEn .
+        filter langMatches(lang(?labelEn),"en")
+      optional{
+    ?s  rdfs:label ?labelDe .
+  filter langMatches(lang(?labelDe),"de")
+}
+  optional{
+    ?s  rdfs:label ?labelIt .
+  filter langMatches(lang(?labelIt),"it")
+}
+  optional{
+    ?s  rdfs:label ?labelEs .
+  filter langMatches(lang(?labelEs),"es")
+}
+}

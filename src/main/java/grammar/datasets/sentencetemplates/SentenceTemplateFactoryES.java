@@ -188,6 +188,7 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
         List.of(
         //Wer moderiert die BBC Wildlife Specials?
         "interrogativePronoun(range:singular) verb(mainVerb:present:thirdPerson) object(domain)?",
+        "interrogativePronoun(range:singular) verb(mainVerb:past:thirdPerson) object(domain)?",
         //¿En qué museo está expuesto el Grito?
         "interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
         "interrogativeDeterminerEn(range:plural) verb(mainVerb:present:thridPerson) object(domain)?",
@@ -196,8 +197,8 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
         //Dame todos los actores que hayan actuado en Last Action Hero.Dame todos protagonizar protagonizar ($x | Film_NP)
          //"verb(component_imperative_transitive:present:singular) pronoun(pronoun_personal) determiner(all) noun(plural) verb(mainVerb:present:thridPerson) object(domain)"
          "verb(component_imperative_transitive:present:singular) determiner(component_todos) noun(singular) interrogativeRelative1 determiner(component_hayan) verb(mainVerb:present:thridPerson) object(domain)"
-      
-        //Wer hat Slack entwickelt?
+         //¿Qué color expresa Riqueza?
+         //"interrogativeDeterminerPor(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
         /*"interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?",    
         ///Welche Person hat Slack entwickelt?
          "interrogativeDeterminer(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?" ,           
@@ -266,7 +267,13 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
         "interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
         "interrogativeDeterminerEn(range:plural) verb(mainVerb:present:thridPerson) object(domain)?",
         "interrogativeDeterminerPor(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
-        "interrogativeDeterminerPor(range:plural) verb(mainVerb:present:thridPerson) object(domain)?"
+        "interrogativeDeterminerPor(range:plural) verb(mainVerb:present:thridPerson) object(domain)?",
+        //"verb(component_imperative_transitive:present:singular) pronoun(pronoun_personal) determiner(all) noun(plural) verb(mainVerb:present:thridPerson) object(domain)"
+         "verb(component_imperative_transitive:present:singular) determiner(component_todos) noun(singular) interrogativeRelative1 determiner(component_hayan) verb(mainVerb:present:thridPerson) object(domain)",
+         //┬┐Quien fue el papa que fundo la televisi├│n Vaticana?
+         //"interrogativePronoun(range:singular) verb(component_be:was:thirdPerson) noun(range:singular)? interrogativeRelative2 verb(mainVerb:past:thridPerson) object(domain)?"
+         "interrogativePronoun(range:singular) verb(component_be:past:plural) noun(range:singular) interrogativeRelative2 verb(mainVerb:past:thridPerson) object(domain)?"
+
         //Wer hat Slack entwickelt?
         /*"interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?",    
         ///Welche Person hat Slack entwickelt?

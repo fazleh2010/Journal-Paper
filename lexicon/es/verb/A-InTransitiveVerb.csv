@@ -1,0 +1,4 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson(?),writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,domainArticleSingular,domainWrittenSingular,domainWrittenPlural,range,rangeArticleSingular,rangeWrittenSingular,rangeWrittenPlural
+Morir_1,verb,morir,muere,muri¢,muerto,de,IntransitivePPFrame,domain,range,1,dbo:deathCause,feminine,persona,feminine,Personen,dbo:Disease,feminine,enfermedad,enfermedades
+Morir_1,verb,morir,muere,muri¢,muerto,de,IntransitivePPFrame,domain,range,1,dbo:deathDate,feminine,persona,feminine,Personen,xsd:date,masculine,a¤o,a¤os
+Morir_1,verb,morir,muere,muri¢,muerto,en,IntransitivePPFrame,range,domain,1,dbo:deathPlace,feminine,persona,feminine,Personen,dbo:City,feminine,ciudad,ciudades

@@ -732,7 +732,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who was married to president Chirac?",
+					"string": "Who was married to Jacques Chirac?",
 					"keywords": "married to, Jacques Chirac"
 				},
 				{
@@ -747,7 +747,7 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Quién estuvo casado con el presidente Chirac?",
+					"string": "¿Quién estuvo casado con el Jacques Chirac?",
 					"keywords": "casado con, presidented Chirac"
 				},
 				{
@@ -9528,12 +9528,12 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Who composed the soundtrack for Cameron's Titanic?",
-					"keywords": "compose, soundtrack, Cameron's Titanic"
+					"string": "Who composed the soundtrack for Titanic?",
+					"keywords": "compose, soundtrack,Titanic"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Quem compôs a trilha sonora do Titanic de Cameron?",
+					"string": "Quem compôs a trilha sonora do Titanic?",
 					"keywords": "compositor, trilha sonora, Titanic, Cameron"
 				},
 				{
@@ -9543,12 +9543,12 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer hat den Soundtrack für Camerons Titanic geschrieben?",
+					"string": "Wer hat den Soundtrack für Titanic geschrieben?",
 					"keywords": "Cameron, Titanic, Soundtrack, geschrieben"
 				},
 				{
 					"language": "es",
-					"string": "¿Quién compuso la banda sonora del Titanic de Cameron?",
+					"string": "¿Quién compuso la banda sonora del Titanic?",
 					"keywords": "compositor, banda sonora, Titanic de Cameron"
 				},
 				{
@@ -12106,7 +12106,7 @@
 				},
 				{
 					"language": "pt_BR",
-					"string": "Com quem Lance Bass casou-se?",
+					"string": "Com quem Donald Trump casou-se?",
 					"keywords": "esposa, Lance Bass"
 				},
 				{
@@ -12121,13 +12121,13 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Con quien se casó Lance Bass?",
-					"keywords": "esposa, Lance Bass"
+					"string": "¿Con quien se casó Donald Trump?",
+					"keywords": "esposa, Donald Trump"
 				},
 				{
 					"language": "it",
-					"string": "Chi ha sposato Lance Bass?",
-					"keywords": "moglie, Lance Bass"
+					"string": "Chi ha sposato Donald Trump?",
+					"keywords": "moglie, Donald Trump"
 				},
 				{
 					"language": "fr",
@@ -12263,7 +12263,7 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Quién inspiro a Vincent van Gogh?",
+					"string": "¿Quién inspiro a Wilhelm Joseph Schelling?",
 					"keywords": "persona, inpiracion, Vincent van Gogh"
 				},
 				{

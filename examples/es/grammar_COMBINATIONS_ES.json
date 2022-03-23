@@ -1,0 +1,5787 @@
+{
+  "grammarEntries" : [ {
+    "id" : "260",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "261",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "262",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "263",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "264",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "265",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "266",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "267",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "268",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/deathPlace> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "269",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/alterEgo> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "270",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/alterEgo> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "271",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/alterEgo> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/portrayer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "272",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/alterEgo> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/portrayer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "273",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/alterEgo> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/portrayer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "274",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "THING",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/alterEgo> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/portrayer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "275",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "276",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "277",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "278",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "279",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "280",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "281",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "282",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "283",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "284",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "285",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "286",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "287",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "288",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "289",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "290",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "291",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "292",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "293",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Country",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/vicePresident> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "294",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Country",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/vicePresident> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "295",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Country",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/vicePresident> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "296",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Country",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/vicePresident> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "297",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Country",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/vicePresident> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "298",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Country",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/vicePresident> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "299",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Country",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/vicePresident> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "300",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Country",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/vicePresident> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "301",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Country",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/vicePresident> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "302",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Musical",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicBy> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "303",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Musical",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicBy> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "304",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Musical",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicBy> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "305",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Musical",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicBy> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "306",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Musical",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicBy> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "307",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Musical",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicBy> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "308",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Musical",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicBy> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "309",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Musical",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicBy> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "310",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Musical",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicBy> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "311",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/doctoralAdvisor> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "312",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/doctoralAdvisor> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "313",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/doctoralAdvisor> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "314",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/doctoralAdvisor> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "315",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/doctoralAdvisor> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "316",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/doctoralAdvisor> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "317",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/doctoralAdvisor> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "318",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/doctoralAdvisor> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "319",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/doctoralAdvisor> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "320",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/parent> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "321",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/parent> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "322",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/parent> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "323",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/parent> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "324",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/parent> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "325",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/parent> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "326",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/parent> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "327",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/parent> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "328",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/parent> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "329",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/father> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "330",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/father> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "331",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/father> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "332",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/father> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "333",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/father> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "334",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/father> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "335",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/father> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "336",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/father> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "337",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/property/father> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "338",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "339",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "340",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "341",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "342",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "343",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "344",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "345",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "346",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "347",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/parent> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "348",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/parent> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "349",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/parent> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "350",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/parent> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "351",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/parent> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "352",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/parent> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "353",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/parent> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "354",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/parent> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "355",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/parent> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "356",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "357",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "358",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "359",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "360",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "361",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "362",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "363",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "364",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/child> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "365",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Place",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "366",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Place",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "367",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Place",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "368",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Place",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "369",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Place",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "370",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Place",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "371",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Place",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "372",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Place",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "373",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Place",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/birthPlace> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "374",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Agent",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "375",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/composer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "376",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Agent",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "377",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "378",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "379",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Agent",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "380",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/composer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "381",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Agent",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "382",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "383",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/presenter> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "384",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Agent",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "385",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/composer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "386",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Agent",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "387",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "388",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/presenter> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "389",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Software",
+    "returnType" : "VideoGame",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/publisher> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/developer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "390",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Software",
+    "returnType" : "VideoGame",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/publisher> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "391",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Software",
+    "returnType" : "VideoGame",
+    "frameType" : "NPP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "ASK",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/publisher> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "392",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Award",
+    "returnType" : "Award",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/award> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/award> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "393",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Agent",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/publisher> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/author> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "394",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Agent",
+    "returnType" : "Agent",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/publisher> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/publisher> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "395",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Pope",
+    "returnType" : "Book",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/publisher> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/foundedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "396",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/author> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/author> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "397",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Website",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/author> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "398",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Website",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/author> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "399",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Website",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/author> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "400",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/architect> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/architect> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "401",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "River",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/architect> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/crosses> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "402",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Bridge",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/architect> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "403",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Bridge",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/architect> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "404",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Bridge",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/architect> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "405",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Agent",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "406",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/composer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "407",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Agent",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "408",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "409",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "410",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "411",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "412",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "413",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Artist",
+    "returnType" : "Artist",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "414",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Agent",
+    "returnType" : "Agent",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "415",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Agent",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/composer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "416",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Agent",
+    "returnType" : "Agent",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "417",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Agent",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "418",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Agent",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "419",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Pope",
+    "returnType" : "TelevisionShow",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/foundedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "420",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "River",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/crosses> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/architect> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "421",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "River",
+    "returnType" : "River",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/crosses> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/crosses> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "422",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "423",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/starring> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "424",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "425",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Film",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "426",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Film",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "427",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Film",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "428",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "429",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "430",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/starring> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "431",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/starring> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/starring> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "432",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/starring> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "433",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Film",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/starring> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "434",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Film",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/starring> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "435",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Film",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/starring> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "436",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Organisation",
+    "returnType" : "Organisation",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/operator> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/operator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "437",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "438",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/portrayer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "439",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/musicComposer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "440",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/starring> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "441",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "442",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Film",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "443",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Film",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "444",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Film",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/director> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "445",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "446",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "447",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "448",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Agent",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "449",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/composer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "450",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Agent",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "451",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "452",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "453",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "454",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "455",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "456",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Agent",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/composer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "457",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/composer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/composer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "458",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Agent",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/composer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "459",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/composer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "460",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/composer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "461",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/composer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "462",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/composer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "463",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "TelevisionShow",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/composer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "464",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Pope",
+    "returnType" : "Pope",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/foundedBy> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/foundedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "465",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "THING",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/connotation> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/connotation> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "466",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "THING",
+    "returnType" : "THING",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/connotation> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/connotation> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "467",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Planet",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/discoverer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "468",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Planet",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/discoverer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "469",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Planet",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/discoverer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "470",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/discoverer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/discoverer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "471",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "CelestialBody",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/discoverer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "472",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "CelestialBody",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/discoverer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "473",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "CelestialBody",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/discoverer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "474",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Architect",
+    "returnType" : "Architect",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/architect> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/architect> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "475",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Pope",
+    "returnType" : "VideoGame",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/foundedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "476",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Software",
+    "returnType" : "Software",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/product> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/developer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "477",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "478",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "479",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/spouse> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "480",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/author> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/author> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "481",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Agent",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/author> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/publisher> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "482",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Book",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/author> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "483",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Book",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/author> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "484",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Book",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/author> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "485",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "486",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "487",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/influenced> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "488",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Person",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/writer> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/writer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "489",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Song",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/writer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influencedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "490",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Song",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/writer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/spouse> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "491",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Song",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/writer> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/influenced> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "492",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Museum",
+    "returnType" : "Museum",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/museum> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/museum> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "493",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Country",
+    "returnType" : "Country",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/language> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/language> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "494",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Airport",
+    "returnType" : "Airport",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/targetAirport> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/targetAirport> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "495",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Agent",
+    "returnType" : "Agent",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "496",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Agent",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/composer> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "497",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Agent",
+    "returnType" : "Agent",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "498",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Agent",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "499",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Person",
+    "returnType" : "Agent",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp)\n  (triple ?subjOfProp <http://dbpedia.org/ontology/presenter> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "objOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  }, {
+    "id" : "500",
+    "lexicalEntryUri" : null,
+    "language" : "ES",
+    "type" : "SENTENCE",
+    "bindingType" : "Pope",
+    "returnType" : "TelevisionShow",
+    "frameType" : "VP",
+    "sentenceTemplate" : null,
+    "sentences" : [ ],
+    "queryType" : "SELECT",
+    "sparqlQuery" : "(bgp\n  (triple ?subjOfProp <http://dbpedia.org/ontology/creator> ?objOfProp)\n  (triple ?objOfProp <http://dbpedia.org/ontology/foundedBy> ?objOfPropx)\n)\n",
+    "executable" : null,
+    "bindingListType" : null,
+    "sentenceToSparqlParameterMapping" : {
+      "$x" : "objOfPropx"
+    },
+    "returnVariable" : "subjOfProp",
+    "sentenceBindings" : {
+      "bindingVariableName" : "$x",
+      "bindingList" : [ ]
+    },
+    "qaldMatchedQuestion" : null,
+    "combination" : true
+  } ]
+}
