@@ -133,6 +133,9 @@ public interface TempConstants {
     public static final String adjunct = "adjunct";
     public static final String QuestionMark = "?";
     public static final String component_be = "component_be";
+    public static final String component_do ="component_do";
+    public static final String component_se = "component_se";
+    
     public static final String component_aux_object_past = "component_aux_object_past";
 
     public static final String DIRECT_OBJECT = "directObject";

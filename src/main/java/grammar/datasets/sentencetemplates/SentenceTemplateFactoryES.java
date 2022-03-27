@@ -197,6 +197,8 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
         //Dame todos los actores que hayan actuado en Last Action Hero.Dame todos protagonizar protagonizar ($x | Film_NP)
          //"verb(component_imperative_transitive:present:singular) pronoun(pronoun_personal) determiner(all) noun(plural) verb(mainVerb:present:thridPerson) object(domain)"
          "verb(component_imperative_transitive:present:singular) determiner(component_todos) noun(singular) interrogativeRelative1 determiner(component_hayan) verb(mainVerb:present:thridPerson) object(domain)"
+        
+
          //¿Qué color expresa Riqueza?
          //"interrogativeDeterminerPor(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
         /*"interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?",    
@@ -234,9 +236,10 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
         //"¿Qué series televisivas ideó Walt Disney?"?"¿Qué series televisivas ideó Walt Disney?
         "interrogativeVariableDeterminer(domain:singular) verb(mainVerb:past:thridPerson) object(range)?",
         //Dame todas las plataformas de lanzamiento operadas por la NASA.    Dame todos operar operar por ($x | LaunchPad_NP) 
-         "verb(component_imperative_transitive:present:singular) determiner(component_todos) noun(domain:singular) verb(mainVerb:perfect:thridPerson) preposition object(range)"
-
-         //Was wurde von ($x | PERSON_NP) entwickelt?
+         "verb(component_imperative_transitive:present:singular) determiner(component_todos) noun(domain:singular) verb(mainVerb:perfect:thridPerson) preposition object(range)",
+          //¿En qué conflictos militares participó Lawrence de Arabia?
+         "interrogativeDeterminerEn(domain:singular) verb(mainVerb:past:thridPerson) object(range)?"
+         //Was wurde von ($x | PERSON_NP) entwickelt
         /*"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
         //"Werke werden von ($x | PERSON_NP) entwickelt?", 
         //"Werke wurden von ($x | PERSON_NP) entwickelt?"
@@ -300,12 +303,26 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
       )
     );
     
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+        //¿Con quien se casó Donald Trump?
+        "interrogativePronounWhom verb(component_be:present:singular) verb(mainVerb:past:thridPerson) object(domain)?"
+            ),
+        TransitiveFrame,
+        PERSON_PERSON,
+        passiveTransitive
+      )
+    );
+    
+    
     
       sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(
         //"¿Qué series televisivas ideó Walt Disney?"?"
         "interrogativePronounDeterminer(domain:singular) verb(mainVerb:past:thridPerson) object(range)?"
+        
          //Was wurde von ($x | PERSON_NP) entwickelt?
         /*"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:future:plural) preposition object(range) verb(mainVerb:perfect:thridPerson)?",
         //"Werke werden von ($x | PERSON_NP) entwickelt?", 
@@ -328,274 +345,436 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
       )
     );
  
+     //In welchem Museum ist der Schrei ausgestellt?
     sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
-        List.of(
-        "subject(INTERROGATIVE_DETERMINER_SINGULAR) verb(present) preposition adjunct(X)?" //Quale uva cresce in [entity]?
+      createSentenceTemplate(language,
+        List.of(   
+         //¿En que ciudad termina la ruta Chilena 68?
+         "interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
+         //¿Por qué ciudades pasa el río Zeravshan?
+         "interrogativeDeterminerPor(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
+         //¿Dónde empieza Piccadilly?
+         "interrogativePlace verb(mainVerb:past:thridPerson) adjunct(domain)?",
+          //¿Donde están situadas las Casas del Parlamento?
+         "interrogativePlace2 verb(mainVerb:past:thridPerson) adjunct(domain)?",
+         //¿En qué lenguaje de programación esta programado GIMP?
+          "interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) object(domain)?"
+         /*"preposition interrogativeDeterminer(preposition:range:plural) verb(mainVerb:present:thridPerson) adjunct(domain)?",
+          //In welchem Museum ist Der Schrei ausgestellt?
+         "preposition interrogativeDeterminer(preposition:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+         "preposition interrogativeDeterminer(preposition:range:plural) verb(component_be:present:plural) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+          // Wo liegt Fort Knox?
+          "interrogativePlace verb(mainVerb:present3rd:thridPerson) adjunct(domain)?"  */   
+
         ),
         IntransitivePPFrame,
         WHAT_WHICH_PRESENT_THING_1,
         forward
       )
     );
-    
-     // IntransitivePPFrame
-    sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+    //Durch welches Land fließt der Rhein?
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
         List.of(
-          "object(INTERROGATIVE_PLACE) verb(present) subject(X)?"//Dove cresce [entity]?
+        /* //Was fließt durch...?
+        "interrogativePronoun(nominativeCase:domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+         //Welcher Fluss fließt durch...?
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(mainVerb:present3rd:thridPerson) preposition adjunct(range)?",
+        "interrogativeDeterminer(nominativeCase:domain:plural) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+         //Trenn
+         "interrogativePronoun(nominativeCase:domain:singular) verb(TrennVerbPart1:past:thridPerson) preposition adjunct(range) verb(TrennVerbPart2:past:thridPerson)? ",
+          //Für was steht YiCM?
+         "preposition interrogativePronoun(nominativeCase:domain:singular) verb(mainVerb:present3rd:thridPerson) adjunct(domain)?",
+         //In welcher Ländern wird Japanisch gesprochen?
+         "preposition interrogativeDeterminer(preposition:domain:singular) verb(component_werden:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+         "preposition interrogativeDeterminer(preposition:domain:plural) verb(component_werden:present:plural) adjunct(domain) verb(mainVerb:perfect:thridPerson)?" 
+         //"preposition interrogativePronounThing(dativeCase:masculine:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+         */
         ),
-       IntransitivePPFrame,
+        IntransitivePPFrame,
         WHAT_WHICH_PRESENT_THING_1,
         backward
       )
     );
-    //Quando è stato arruolato [entity]?
+      
+       //In welchem Museum ist der Schrei ausgestellt?
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(   
+         //¿Que tipo de uva crece en Oregon?
+         "interrogativeVariableDeterminer(range:singular) verb(mainVerb:past:thridPerson) preposition object(domain)?"
+       
+        ),
+        IntransitivePPFrame,
+        WHAT_WHICH_PRESENT_THING_2,
+        forward
+      )
+    );
+    //Durch welches Land fließt der Rhein?
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+        /* //Was fließt durch...?
+        "interrogativePronoun(nominativeCase:domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+         //Welcher Fluss fließt durch...?
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(mainVerb:present3rd:thridPerson) preposition adjunct(range)?",
+        "interrogativeDeterminer(nominativeCase:domain:plural) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+         //Trenn
+         "interrogativePronoun(nominativeCase:domain:singular) verb(TrennVerbPart1:past:thridPerson) preposition adjunct(range) verb(TrennVerbPart2:past:thridPerson)? ",
+          //Für was steht YiCM?
+         "preposition interrogativePronoun(nominativeCase:domain:singular) verb(mainVerb:present3rd:thridPerson) adjunct(range)?",
+         //In welcher Ländern wird Japanisch gesprochen?
+         "preposition interrogativeDeterminer(preposition:domain:singular) verb(component_werden:present:singular) adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         "preposition interrogativeDeterminer(preposition:domain:plural) verb(component_werden:present:plural) adjunct(range) verb(mainVerb:perfect:thridPerson)?" 
+         //"preposition interrogativePronounThing(dativeCase:masculine:singular) verb(component_be:present:singular) adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+       */
+        ),
+        IntransitivePPFrame,
+        WHAT_WHICH_PRESENT_THING_2,
+        backward
+      )
+    );
+      
+      
+      
+       sentenceTemplateRepository.add(createSentenceTemplate(language,
+        List.of(           
+      //¿En que ciudad termina la ruta Chilena 68?
+         "interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
+         //¿Por qué ciudades pasa el río Zeravshan?
+         "interrogativeDeterminerPor(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
+         //¿Dónde empieza Piccadilly?
+          "interrogativePlace verb(mainVerb:past:thridPerson) adjunct(domain)?",
+          //¿En qué país se encuentra el lago Limerick?
+           "interrogativeDeterminerEn(range:singular) verb(component_se:present:singular) verb(mainVerb:past:thridPerson) object(domain)?"
+          //¿En qué estado american se encuentra Fort Knox?
+                
+                ),
+        IntransitivePPFrame,
+        WHAT_WHICH_LOCATION,
+        forward
+      )
+    );
+    
+    
+    
+    
+      sentenceTemplateRepository.add(createSentenceTemplate(language,
+        List.of(
+            //Was fließt durch...?
+       /* "interrogativePronoun(nominativeCase:domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+         //Welcher Fluss fließt durch...?
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+        "interrogativeDeterminer(nominativeCase:domain:plural) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+         //Trenn
+         "interrogativePronoun(nominativeCase:domain:singular) verb(TrennVerbPart1:past:thridPerson) preposition adjunct(range) verb(TrennVerbPart2:past:thridPerson)? "
+          */  ),
+        IntransitivePPFrame,
+        WHAT_WHICH_LOCATION,
+        backward
+      )
+    );
+      
+      ///////////////////////////////
+       sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+          //"¿Cuando se completo el Titanic?
+          "interrogativeTemporal verb(component_se:present:singular) verb(mainVerb:present:thridPerson) adjunct(domain)?",
+          "interrogativeTemporal verb(component_se:present:singular) verb(mainVerb:past:thridPerson) adjunct(domain)?"
+          //Wann endete die Ming-Dynastie?
+          //"interrogativeTemporal verb(mainVerb:past:thridPerson) adjunct(domain)?"
+        ),
+        IntransitivePPFrame,
+        WHEN_WHAT_PAST_THING,
+        forward
+      )
+    );
+    
       sentenceTemplateRepository.add(
       createSentenceTemplate(
         language,
-        List.of(      
-        "object(INTERROGATIVE_TEMPORAL) component_aux_object_past(singular) verb(present) subject(X)?" ,
-        "object(INTERROGATIVE_TEMPORAL) component_aux_object_past(plural) verb(present) subject(X)?" 
-        ),
-        "IntransitivePPFrame",
-        WHEN_WHAT_PAST_THING,
-        forward
-      )
-    );
-    
-     // IntransitivePPFrame
-    sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
         List.of(
-        "subject(INTERROGATIVE_DETERMINER_SINGULAR) component_aux_object_past(singular) verb(past) preposition adjunct(X)?"
-        //"subject(INTERROGATIVE_DETERMINER_PLURAL) component_aux_object_past(plural) verb(past) preposition adjunct(X)?"
-        ),
+         /*//Was wurde 2010 fertiggestellt?
+         "interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         //"interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:plural) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:plural) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)",
+         //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:plural) preposition adjunct(range) verb(TrennVerb:perfect:thridPerson)",
+         "interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(TrennVerb:perfect:thridPerson)?",
+         //"interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:plural) preposition adjunct(range) verb(TrennVerb:perfect:thridPerson)?",
+         "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(TrennVerb:perfect:thridPerson)?"
+         //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:plural) preposition adjunct(range) verb(TrennVerb:perfect:thridPerson)",
+         //"interrogativePronoun(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:past:thridPerson)?"
+        */),
         IntransitivePPFrame,
         WHEN_WHAT_PAST_THING,
         backward
       )
     );
-    sentenceTemplateRepository.add(
-      createVPTemplate(
-        language,
-        List.of(
-          "verb(root) preposition prepositionalAdjunct"
-        ),
-        "prepositionalAdjunct"
-      )
-    );
-    sentenceTemplateRepository.add(
+    ///////////////////////////////
+       sentenceTemplateRepository.add(
       createSentenceTemplate(
         language,
         List.of(
-          "TemporalDeterminer noun(condition:subject) VP(temporalAdjunct)?"
+          //"¿En qué ciudad murió John F. Kennedy?",
+         "interrogativeDeterminerEn(range:plural) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+         //"¿Cuándo murió la princesa Diana?
+         "interrogativeTemporal verb(mainVerb:past:thridPerson) adjunct(domain)?",
+         //¿Cúando se fundó Jack Wolfskin?
+          "interrogativeTemporal verb(component_se:present:singular) verb(mainVerb:present:thridPerson) adjunct(domain)?",
+          "interrogativeTemporal verb(component_se:present:singular) verb(mainVerb:past:thridPerson) adjunct(domain)?"
+        // "preposition interrogativeDeterminer(dativeCase:range:singular) verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+         //Wann wurde Abrham Lincon geboren?
+        //"interrogativeTemporal verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+        //Wann ist Draculas Sch├Âpfer gestorben?
+        //"interrogativeTemporal verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?"
+        /* "interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
+        "interrogativeDeterminerEn(range:plural) verb(mainVerb:present:thridPerson) object(domain)?",
+        "interrogativeDeterminerPor(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
+        "interrogativeDeterminerPor(range:plural) verb(mainVerb:present:thridPerson) object(domain)?",*/
         ),
-        "subject",
-        "temporalAdjunct"
-      )
-    );
-    // TransitiveFrame
-    //Qald-7: Che film ha diretto Kurosawa?,
-    sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
-        List.of(
-          "subject(PERSON_INTERROGATIVE_PRONOUN) verb(present) determiner(directObject) directObject(X)?",
-          "subject(PERSON_INTERROGATIVE_PRONOUN) verb(past) determiner(directObject) directObject(X)?",
-          "subject(INTERROGATIVE_DETERMINER_SINGULAR) verb(present) determiner(directObject) directObject(X)?",
-          "subject(INTERROGATIVE_DETERMINER_SINGULAR) verb(past) determiner(directObject) directObject(X)?"
-          
-        ),
-        TransitiveFrame,
+        IntransitivePPFrame,
+        WHEN_WHO_PAST_PERSON,
         forward
       )
     );
-    // TransitiveFrame
-    sentenceTemplateRepository.add(
+    //Welche Person wurde 2010 geboren?
+    //Wer ist 2010 geboren?
+      sentenceTemplateRepository.add(
       createSentenceTemplate(
         language,
         List.of(
-      // Da chi è stata costruita [entity]?	
-      // Da chi è stata costruita l'['entity]?	
-      // Da qualle persona è stata costruita [entity]?	
-      // Da quale persona è stata costruita l'['entity]?
-      // Qald-7: Che film ha diretto Kurosawa?,
-       //Qald-7: Dammi tutti i film diretti da Francis Ford Coppola.
-       //Qald-7: Quanti film ha diretto Stanley Kubrick?",
-      "directObject(INTERROGATIVE_DETERMINER_SINGULAR) verb(past) subject(X)?",
-      "directObject(PERSON_INTERROGATIVE_PRONOUN) verb(past) subject(X)?",
-      "verb(component_imperative_transitive:present) determiner(determiner_plural) verb(past) preposition(da) subject(X)."
-      //"preposition(In) subject(INTERROGATIVE_DETERMINER_PLURAL) verb(present) preposition(si) directObject(X)."
+         //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         //"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?"
         ),
-        TransitiveFrame,
+        IntransitivePPFrame,
+        WHEN_WHO_PAST_PERSON,
         backward
       )
     );
-    // TransitiveFrame
-    /*sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
-        List.of(
-          "subject(INTERROGATIVE_PRONOUN) verb(past) directObject(X)?",
-          "subject(INTERROGATIVE_PRONOUN) verb(past) determiner directObject(X)?",
-          "subject(INTERROGATIVE_DETERMINER) verb(past) directObject(X)?",
-          "subject(INTERROGATIVE_DETERMINER) verb(past) determiner directObject(X)"
-        ),
-        "TransitiveFrame",
-        "active",
-        Language.IT.toString()
-      )
-    );*/
-    // TransitiveFrame
-    /*sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
-        List.of(
-      // Da chi è stata costruita [entity]?	
-      // Da chi è stata costruita l'['entity]?	
-      // Da qualle persona è stata costruita [entity]?	
-      // Da quale persona è stata costruita l'['entity]?	
+      
     
-          "Da subject(INTERROGATIVE_PRONOUN) è stata verb(past) directObject(X)?",
-          "Da subject(INTERROGATIVE_PRONOUN) è stata verb(past) determiner directObject(X)?",
-          "Da subject(INTERROGATIVE_DETERMINER) è stata verb(past) directObject(X)?",
-          "Da subject(INTERROGATIVE_DETERMINER) è stata verb(past) determiner directObject(X)"
-        ),
-        "TransitiveFrame",
-        "passive",
-        Language.IT.toString()
-      )
-    );*/
-    
-    /*sentenceTemplateRepository.add(
+      sentenceTemplateRepository.add(
       createSentenceTemplate(
         language,
         List.of(
-          "subject(interrogativeDeterminer) verb(past) directObject(X)?",
-          "subject(interrogativeDeterminer) verb(past) determiner(component_the) directObject(X)",
-          "subject(PersonInterrogativePronoun) verb(past) directObject(X)?",
-          "subject(PersonInterrogativePronoun) verb(past) determiner(component_the) directObject(X)",
-          "verb(past) directObject(X)?",
-          "verb(past) determiner(component_the) directObject(X)"
-        ),
-        "TransitiveFrame",
-        "active",
-        Language.IT.toString()
-      )
-    );*/
-    // VP(directObject)
-    sentenceTemplateRepository.add(
-      createVPTemplate(
-        language,
-        List.of(
-          "verb(root) directObject",
-          "verb(root) determiner(reference:component_the) directObject"
-        ),
-        "directObject"
-      )
-    );
-  }
-   //  TransitiveFrame active
-   // WP transitiveverb [domain] Chi ha costruito [entity]? 	
-   // WDT dbo:range transitiveverb [domain]? Quale persona ha costruito [entity]?
-   // WDT dbo:range transitiveverb DT [domain] Quale persona ha costruito l'[entity]?	
-   // WP transitiveverb DT [domain]  Chi ha costruiito l'[entiy]?	
-   // generated [Chi ha creato ($x | TELEVISIONSHOW_NP), Chi ha creato IL ($x | TELEVISIONSHOW_NP), Quale agente ha creato ($x | TELEVISIONSHOW_NP), Quale agente ha creato IL ($x | TELEVISIONSHOW_NP)]
+        //¿En qué ciudad murió John F. Kennedy?
+         //"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         //"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+         "interrogativeDeterminerEn(domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+         "interrogativeDeterminerEn(domain:singular) verb(mainVerb:past:thridPerson) preposition adjunct(range)?"
 
+
+        ),
+        IntransitivePPFrame,
+        WHO_WHO_PERSON,
+        forward
+      )
+    );
+      
+      
+      
+          ///////////////////////////////
+       sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+         //┬┐En qu├® ciudad vive Bruny Surin?
+         //"interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) adjunct(domain)?",
+         //"interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) adjunct(domain)?"
+        /*"preposition interrogativeDeterminer(dativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+        //In welcher Stadt wohnt Sylvester Stallone?
+        "preposition interrogativeDeterminer(dativeCase:range:singular) verb(mainVerb:present3rd:thridPerson) adjunct(domain)?"
+        */
+               ),
+        IntransitivePPFrame,
+        WHERE_WHO_PAST_PERSON,
+        forward
+      )
+    );
+    //Welche Person wurde 2010 geboren?
+    //Wer ist 2010 geboren?
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+         //¿En qué ciudad murió John F. Kennedy?
+        "interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) adjunct(domain)?",
+        "interrogativeDeterminerEn(range:singular) verb(mainVerb:present:thridPerson) adjunct(domain)?",
+        //¿Dónde está enterrado Syngman Rhee?
+        "interrogativePlace verb(component_be:past:singular) verb(mainVerb:past:thridPerson) adjunct(range)?"
+      
+            ),
+        IntransitivePPFrame,
+        WHERE_WHO_PAST_PERSON,
+        backward
+      )
+    );
+      
+              ///////////////////////////////
+       sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+        //¿De qué murió Abraham Lincoln?
+        "interrogativeCause verb(mainVerb:past:thridPerson) adjunct(domain)?",
+        //¿Quién era llamado Frank The Tank?
+        "interrogativePronounPerson verb(component_be:present:singular) verb(mainVerb:past:thridPerson) adjunct(domain)?"
+        //An was ist Bruce Carver gestorben?
+        //"preposition interrogativePronoun(nominativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?"     
+               ),
+        IntransitivePPFrame,
+        PERSON_CAUSE,
+        forward
+      )
+    );
+    //Welche Person wurde 2010 geboren?
+    //Wer ist 2010 geboren?
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+        //"Wer ist an Malaria gestorben?
+        //"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+        //"Wer war an Malaria gestorben?
+        //"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?"
+      
+          ),
+        IntransitivePPFrame,
+        PERSON_CAUSE,
+        backward
+      )
+    );
+      
+      
+      
+      
+             ///////////////////////////////
+       sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+         //Wo f├ñngt Piccadilly an? Trenn example
+         "interrogativePlace verb(TrennVerbPart1:present3rd:thridPerson) object(domain) verb(TrennVerbPart2:present3rd:thridPerson)?",
+         "interrogativePlace verb(TrennVerbPart1:past:thridPerson) object(domain) verb(TrennVerbPart2:past:thridPerson)?"
+             ),
+        IntransitivePPFrame,
+        WHERE_WHAT_PRESENT_THING,
+        backward
+      )
+    );
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+        //Was beginnt in Piccadilly?      
+         "interrogativePronoun(nominativeCase:domain:singular) verb(TrennVerbPart1:present3rd:thridPerson) preposition adjunct(domain) verb(TrennVerbPart2:present3rd:thridPerson)?",
+         "interrogativePronoun(nominativeCase:domain:singular) verb(TrennVerbPart1:past:thridPerson) preposition adjunct(domain) verb(TrennVerbPart2:past:thridPerson)?"
+        ),
+        IntransitivePPFrame,
+        WHERE_WHAT_PRESENT_THING,
+        forward
+      )
+    );
+      
+          ///////////////////////////////
+       sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+         //"Wieviel hat Pulp Fiction gekostet?","Wieviele Sprachen werden in Turkmenistan gesprochen?"
+         "interrogativeAmount(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?",
+         //Wieviele Menschen leben in Polen? 
+          "interrogativeAmount(nominativeCase:range:plural) verb(mainVerb:present:thridPerson) preposition object(domain)"  
+         //was kostet der film?
+          //"interrogativePronoun(nominativeCase:present:singular) verb(mainVerb:present:thridPerson) determiner(component_the_nominative:domain) object(domain)?"
+         //"Wieviele Sprachen werden in Turkmenistan gesprochen?"  
+         //"interrogativeAmountDeterminer(nominativeCase:range:singular) verb(component_werden:present:singular) preposition determiner(component_the_nominative:domain) object(domain) verb(mainVerb:perfect:thridPerson)?"  
+
+       
+        //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_haben:present:singular) object(range) verb(mainVerb:perfect:singular)?"      
+       
+    
+        ),
+        IntransitivePPFrame,
+        HOW_MANY_TOTAL,
+        forward
+      )
+    );
    
-   // Transitive passive
-      // Da chi è stata costruita [entity]?	
-      // Da qualle persona è stata costruita [entity]?	
-      // Da quale persona è stata costruita l'['entity]?	
-      // Da chi è stata costruita l'['entity]?	
-    
-    
-   //Intransitive
-     //WRB intransitiveverb [domain]	Dove cresce [entity]?
-     //WDT dbo:range intransitiveverb IN DT [domain] Quale uva cresce nella [entity]?	
-     //WDT dbo:domain intransitiveverb IN [range] Quale uva cresce in [entity]?
-     //IN WDT dbo:domain intransitiveverb [range]? In quale regione cresce [entity]?	
-    
-    
-    //WRB intransitiveverb [domain]	Dove cresce [X|Grape]?
-    //IN WDT dbo:domain intransitiveverb [range]? In quale regione cresce (X|grape)?	
-    //WDT dbo:range intransitiveverb IN DT [domain] Quale uva cresce nella (X|region)?	 
-    //WDT dbo:domain intransitiveverb IN [range] Quale uva cresce in (X|Region)?
-    
-    //"Qual cresceva nel ($x | WINEREGION_NP)?", "Quale uva cresceva nel ($x | WINEREGION_NP)?"
-    
-    
-     
-     
-      //"verb(root) preposition prepositionalAdjunct"
-    
-     // WRB intransitiveverb [domain] Where does [X | Grape] grow?
-     // IN WDT dbo: domain intransitiveverb [range]? In which region does (X | grape) grow?
-     // WDT dbo: range intransitiveverb IN DT [domain] Which grapes grow in the (X | region)?
-     // WDT dbo: domain intransitiveverb IN [range] Which grapes grow in (X | Region)?
-     
-    
-     /*
-    // TransitiveFrame
-    sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
-        List.of(
-           //Chi ha creato Y?
-           //Who created Y?
-          "chi (interrogativePronoun) ha creato (verb) subject?",
-          //quale Y è stata creata da X?
-          //Which Y was created by X?
-          "quale (interrogativeDeterminer) directObject è stata creata (verb) da directObject?",
-          // cosa rappresenta l'opera Y?
-          // what does Y represent?
-          "cosa (interrogativePronoun) rappresenta (verb) directObject?",
-          // Quale Y rappresenta X?
-          // Which Y represent X?
-          "quale (interrogativeDeterminer) directObject rappresenta(verb) subject?",
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(  //Welches Buch kostet 10 Dollar?
+        //"interrogativePronoun(nominativeCase:present:singular) verb(mainVerb:perfect:present) object(range)?",
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_haben:present:singular) object(range) verb(mainVerb:perfect:singular)?"      
+
+           
         ),
-        "subject",
-        "directObject"
+        IntransitivePPFrame,
+        HOW_MANY_TOTAL,
+        backward
       )
     );
-// IntransitivePPFrame
-    sentenceTemplateRepository.add(
-      createSentenceTemplate(
-        language,
+      
+       // InTransitiveFrame 
+    /*sentenceTemplateRepository.add(createSentenceTemplate(language,
         List.of(
-           //Quando è stata costruita Y?
-           //When was Y built?
-          "quando (interrogativePronoun) è stata costruita (verb) subject?",
-          //Cos'è (Y) è stato costruito nell'X?
-          // Which Y was built in X?
-          "cosa (interrogativePronoun) è stato costruito (verb) nel (prepositionalAdjunct)?",
-          //Dove si trova Y?
-          // Where is Y located?
-          "dove (interrogativePronoun) si trova (verb) subject?",
-        ),
-        "subject",
-        "prepositionalAdjunct"
+        //How many people live in Poland?
+        "interrogativeAmount verb(mainVerb:present:thridPerson) preposition adjunct(domain)?",
+        //How many people lived in Poland?
+        "interrogativeAmount verb(mainVerb:past:thridPerson) preposition adjunct(domain)?",
+         //How many seats does (X_Statdium) have?        
+        "interrogativeAmount(range:singular) verb(component_do:present:singular) object(domain:plural) verb(mainVerb:present:thridPerson)?"
+        //       
+        //"interrogativeAmount(range:singular) object(domain) verb(component_be:present:plural) particleLocation?"
+   
+           ),
+       IntransitivePPFrame,
+       HOW_MANY_TOTAL,
+       forward
       )
     );
-     */
     
-    /*
-    For Male gender:
-- IL is the one used by default
-- LO is used when the noun it precedes begins with z, s+consonant, gn, ps, x
-- L' is used when the noun it precedes begins with a vowel
-For Female gender:
--LA is the one used by default
--L' is used when the noun it precedes begins with a vowel
-For Plural number:
-- I for words starting with consonant
-- GLI for words starting with z,s + consonant, gn,ps, x and for words starting with a vowel
-- LE if every entity is of female gender
-    */
+     // InTransitiveFrame active
+    sentenceTemplateRepository.add(createSentenceTemplate(language,
+        List.of(
+        //Which flim costed X?
+        //"interrogativeDeterminer(domain:singular) verb(mainVerb:past:thridPerson) preposition adjunct(range)?"
+           ),
+       IntransitivePPFrame,
+       HOW_MANY_TOTAL,
+       backward
+      )
+    );*/
+      
+            ///////////////////////////////
+       sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(
+        ////Wieviele Sprachen werden in Turkmenistan gesprochen?
+        //"interrogativeAmount(nominativeCase:singular) interrogativeDeterminer(nominativeCase:range:singular) verb(component_werden:present:singular) preposition object(domain) verb(mainVerb:perfect:thridPerson)?",
+       //Wieviele Sprachen werden in Turkmenistan gesprochen?
+        "interrogativeAmount(nominativeCase:range:plural) verb(component_werden:present:plural) preposition object(domain) verb(mainVerb:perfect:thridPerson)?"
+    
+        ),
+        IntransitivePPFrame,
+        HOW_MANY_THING,
+        forward
+      )
+    );
+   
+      sentenceTemplateRepository.add(
+      createSentenceTemplate(language,
+        List.of(  //Welches Buch kostet 10 Dollar?
+             
+        ),
+        IntransitivePPFrame,
+        HOW_MANY_THING,
+        backward
+      )
+    );
+      
+      
+   }
 
 
 }

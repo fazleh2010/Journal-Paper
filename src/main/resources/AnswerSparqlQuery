@@ -336,3 +336,48 @@ WHERE {
   filter langMatches(lang(?labelEs),"es")
 }
 }
+
+--------------------------------
+--------------------------------
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX res: <http://dbpedia.org/resource/>
+SELECT DISTINCT ?labelEn ?labelDe ?labelIt ?labelEs  
+WHERE {
+ res:Empire_of_Japan rdfs:label ?labelEn .
+  filter langMatches(lang(?labelEn),"en")
+optional{
+    res:Empire_of_Japan rdfs:label ?labelDe .
+  filter langMatches(lang(?labelDe),"de")
+}
+optional{
+    res:Empire_of_Japan rdfs:label ?labelIt .
+  filter langMatches(lang(?labelIt),"it")
+}
+optional{
+    res:Empire_of_Japan rdfs:label ?labelEs .
+  filter langMatches(lang(?labelEs),"es")
+}
+}
+
+----called
+
+PREFIX res: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT DISTINCT ?uri ?s ?labelEn ?labelDe ?labelIt ?labelEs
+WHERE {
+	 ?uri dbp:nickname ?s . 
+        ?s  rdfs:label ?labelEn .
+        filter langMatches(lang(?labelEn),"en")
+      optional{
+    ?s  rdfs:label ?labelDe .
+  filter langMatches(lang(?labelDe),"de")
+}
+  optional{
+    ?s  rdfs:label ?labelIt .
+  filter langMatches(lang(?labelIt),"it")
+}
+  optional{
+    ?s  rdfs:label ?labelEs .
+  filter langMatches(lang(?labelEs),"es")
+}
+}

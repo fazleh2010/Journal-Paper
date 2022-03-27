@@ -559,8 +559,8 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Cuándo comenzó la operación Overlord?",
-					"keywords": "comienzo, operación Overlord "
+					"string": "¿Cuándo comenzó la Batalla de Normandía?",
+					"keywords": "comienzo, Batalla de Normandía "
 				},
 				{
 					"language": "it",
@@ -843,7 +843,7 @@
 				},
 				{
 					"language": "pt_BR",
-					"string": "De que morreu Bruce Carver?",
+					"string": "De que  Abraham Lincoln Carver?",
 					"keywords": "morreu, Bruce Carver"
 				},
 				{
@@ -853,8 +853,8 @@
 				},
 				{
 					"language": "es",
-					"string": "¿De qué murió Bruce Carver?",
-					"keywords": "Bruce Caver, muerte"
+					"string": "¿De qué murió Abraham Lincoln?",
+					"keywords": "Abraham Lincoln, muerte"
 				},
 				{
 					"language": "it",
@@ -1762,7 +1762,7 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Quién era llamado Frank The Tank?",
+					"string": "¿Quién era llamado Bulldog?",
 					"keywords": "llamado, Frank The Tank"
 				},
 				{
@@ -1792,7 +1792,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbp: <http://dbpedia.org/property/> \nSELECT DISTINCT ?uri \nWHERE { \n        ?uri dbp:nickname 'The Tiger'@en . \n}"
+				"sparql": "PREFIX dbp: <http://dbpedia.org/property/> \nSELECT DISTINCT ?uri \nWHERE { \n        ?uri dbp:nickname 'Bulldog'@es . \n}"
 			},
 			"answers": [{
 				"head": {
@@ -3187,7 +3187,7 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Donde están situadas las Casas del Parlamento?",
+					"string": "¿Donde están situadas las Casas de Westminster?",
 					"keywords": "localización, casas del parlamento"
 				},
 				{
@@ -3318,8 +3318,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Where is Limerick Lake located?",
-					"keywords": "Limerick Lake, country"
+					"string": "Where is Lake Baikal located?",
+					"keywords": "Lake Baikal, country"
 				},
 				{
 					"language": "pt_BR",
@@ -3328,18 +3328,18 @@
 				},
 				{
 					"language": "de",
-					"string": "In welchem Land befindet sich der Limerick Lake?",
-					"keywords": "Limerick Lake, Land"
+					"string": "In welchem Land befindet sich der Baikal Lake?",
+					"keywords": "Baikal Lake, Land"
 				},
 				{
 					"language": "es",
-					"string": "¿En qué país se encuentra el lago Limerick?",
-					"keywords": "lago Limerick, país"
+					"string": "¿En qué país se encuentra el lago Baikal?",
+					"keywords": "lago Baikal, país"
 				},
 				{
 					"language": "it",
-					"string": "In quale stato si trova il lago Limerick?",
-					"keywords": "lago Limerick, stato"
+					"string": "In quale stato si trova il lago Baikal?",
+					"keywords": "lago Baikal, stato"
 				},
 				{
 					"language": "fr",
@@ -3358,7 +3358,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE { \n\tres:Limerick_Lake dbo:country ?uri .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE { \n\tres:Lake_Baikal dbo:country ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -4713,7 +4713,7 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Cuándo se disolvió la dinastía de Ming?",
+					"string": "¿Cuándo se disolvió Imperio del Japón?",
 					"keywords": "disolvió, dinastía de Ming"
 				},
 				{
@@ -12726,7 +12726,7 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Que tipo de uva crece en Oregon?",
+					"string": "¿Que tipo de uva crece en Oregón?",
 					"keywords": "tipo uva, crece, Oregon"
 				},
 				{
@@ -13407,13 +13407,13 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the residence of Sylvester Stallone?",
-					"keywords": "city, live, Sylvester Stallone"
+					"string": "What is the residence of Bruny Surin?",
+					"keywords": "city, live, Bruny Surin"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Em que cidade Sylvester Stallone mora?",
-					"keywords": "cidade, Silvester Stallone, vive"
+					"string": "Em que cidade Bruny Surin mora?",
+					"keywords": "cidade, Bruny Surin, vive"
 				},
 				{
 					"language": "fa",
@@ -13422,13 +13422,13 @@
 				},
 				{
 					"language": "de",
-					"string": "In welcher Stadt wohnt Sylvester Stallone?",
-					"keywords": "Sylvester Stallone, wohnen, Stadt"
+					"string": "In welcher Stadt wohnt Bruny Surin?",
+					"keywords": "Bruny Surin, wohnen, Stadt"
 				},
 				{
 					"language": "es",
-					"string": "¿En qué ciudad vive Sylvester Stallone?",
-					"keywords": "ciudad, vive, Sylvester Stallone"
+					"string": "¿En qué ciudad vive Bruny Surin?",
+					"keywords": "ciudad, vive, Bruny Surin"
 				},
 				{
 					"language": "it",
@@ -13457,7 +13457,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri a <http://dbpedia.org/ontology/City> . <http://dbpedia.org/resource/Sylvester_Stallone> <http://dbpedia.org/ontology/residence> ?uri . }"
+				"sparql": "SELECT DISTINCT ?uri WHERE { ?uri a <http://dbpedia.org/ontology/City> . <http://dbpedia.org/resource/Bruny_Surin> <http://dbpedia.org/ontology/residence> ?uri . }"
 			},
 			"answers": [{
 				"head": {
@@ -13894,8 +13894,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the founding year of Jack Wolfskin?",
-					"keywords": "Jack Wolfskin, founded"
+					"string": "What is the founding year of Seagate Technology?",
+					"keywords": "Seagate Technology, founded"
 				},
 				{
 					"language": "pt_BR",
@@ -13909,17 +13909,17 @@
 				},
 				{
 					"language": "de",
-					"string": "Wann wurde Jack Wolfskin gegründet?",
-					"keywords": "Jack Wolfskin, gründen"
+					"string": "Wann wurde Seagate Technology gegründet?",
+					"keywords": "Seagate Technology, gründen"
 				},
 				{
 					"language": "es",
-					"string": "¿Cúando se fundó Jack Wolfskin?",
-					"keywords": "Jack Wolfskin, fundada"
+					"string": "¿Cúando se fundó Seagate Technology?",
+					"keywords": "Seagate Technology, fundada"
 				},
 				{
 					"language": "it",
-					"string": "Quando è stata fondata Jack Wolfskin?",
+					"string": "Quando è stata fondata Seagate Technology?",
 					"keywords": "Jack Wolfskin, fondata"
 				},
 				{
@@ -13944,7 +13944,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?year WHERE {  <http://dbpedia.org/resource/Jack_Wolfskin> <http://dbpedia.org/ontology/foundingYear> ?year . } "
+				"sparql": "SELECT DISTINCT ?year WHERE {  <http://dbpedia.org/resource/Seagate_Technology> <http://dbpedia.org/ontology/foundingYear> ?year . } "
 			},
 			"answers": [{
 				"head": {
@@ -16781,12 +16781,12 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Cuándo murió la princesa Diana?",
+					"string": "¿Cuándo murió la Isabel de Sajonia?",
 					"keywords": "fecha fallecimiento, princesa Diana"
 				},
 				{
 					"language": "it",
-					"string": "Quando è morta la principessa Diana?",
+					"string": "Quando è morta la Elisabetta di Sassonia?",
 					"keywords": "data di morte, principessa Diana"
 				},
 				{

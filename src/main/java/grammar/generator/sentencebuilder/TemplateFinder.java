@@ -52,6 +52,8 @@ public class TemplateFinder implements TempConstants{
                 exit(1);*/
 
         }
+        //System.out.println("selectedTemplate::::"+selectedTemplate);
+        //exit(1);
     }
 
     private void findForwardDomainAndRange() {
