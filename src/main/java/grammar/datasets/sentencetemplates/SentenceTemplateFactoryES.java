@@ -749,11 +749,38 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
       // AdjectivePPFrame...superlative
     sentenceTemplateRepository.add(createSentenceTemplate(language,
         List.of(
-        //¿Cuál es la montaña más alta de Australia? ¿Cuál es monta�a m�s alta in ($x | Country_NP)?
+        //¿Cuál es la montaña más alta de Australia? 
         "interrogativePronounThing verb(component_be:present:singular) noun(range:singular) adjective(superlative) preposition adjunct(domain)?"
         ),
         AdjectiveSuperlativeFrame,
         superlativeCountry,
+        forward
+      )
+    );
+    
+        // AdjectivePPFrame...superlative
+    sentenceTemplateRepository.add(createSentenceTemplate(language,
+        List.of(
+        //¿Quién es el jugador mas jóven de dardos?
+       "interrogativePronounPerson verb(component_be:present:singular) adjective(superlative) noun(range:singular)?",
+        //Quien es el jugador de baloncesto mas alto?
+       "interrogativePronounPerson verb(component_be:present:singular) noun(range:singular) adjective(superlative)?"
+           
+        ),
+        AdjectiveSuperlativeFrame,
+        superlativeWorld,
+        forward
+      )
+    );
+    
+     // AdjectivePPFrame...superlative
+    sentenceTemplateRepository.add(createSentenceTemplate(language,
+        List.of(
+        //¿Cuál es el hijo mas mayor de Meryl Streep? ¿Cuál es m�s viejo ni�o of ($x | Person_NP)?
+        "interrogativePronounThing verb(component_be:present:singular) noun(range:singular) adjective(superlative) preposition adjunct(domain)?"
+        ),
+        AdjectiveSuperlativeFrame,
+        superlativePerson,
         forward
       )
     );
@@ -764,9 +791,14 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
         language,
         List.of(
         //¿Cómo de alta el faro de Colombo? How es adjectiveBaseForm XX faro?
-        "interrogativeEvalution verb(component_be:present:singular) adjective(adjectiveBaseForm)  noun(range:singular) preposition adjunct(domain)?",
-        "interrogativeEvalution verb(component_be:present:singular) adjective(adjectiveBaseForm) noun(range:singular) preposition adjunct(domain)?"
-
+         "interrogativeEvalution verb(component_be:present:singular) adjective(adjectiveBaseForm)  noun(range:singular) preposition adjunct(range)?",
+         "interrogativeEvalution verb(component_be:present:singular) adjective(adjectiveBaseForm) noun(range:singular) preposition adjunct(range)?",
+        //¿Cómo de alta es Claudia Schiffer?"¿Cómo adjectiveBaseForm es ($x | THING_NP)?
+        "interrogativeEvalution preposition adjective(adjectiveBaseForm) verb(component_be:present:singular) adjunct(range)?",
+        //¿Cómo de alta el faro de Colombo?
+         "interrogativeEvalution preposition preposition adjective(adjectiveBaseForm) noun(range:singular) adjunct(range)?",
+         //¿Cómo de alta el la torre Yokohama Marine?
+          "interrogativeEvalution preposition preposition adjective(adjectiveBaseForm) adjunct(range)?"
       ),
         AdjectiveSuperlativeFrame,
         adjectiveBaseForm,

@@ -147,16 +147,8 @@ public class Spanish implements TempConstants,MultilingualBuilder {
         //adjective(degree:superlative)
         else if (flagReference &&attribute.contains(adjective)) {
             word = this.lexicalEntryUtil.getAdjectiveReference(reference);
-  
         } 
        
-        /*else if (flagReference &&attribute.equals(noun)) {
-             if (reference.contains(colon)) {
-                String[] col = reference.split(colon);
-                word = this.getNoun(col[0], col[1]);              
-             } 
-  
-        }*/ 
         else if (attribute.contains(preposition)) {
             word = this.findPreposition(attribute, reference, flagReference);
            

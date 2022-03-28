@@ -260,10 +260,6 @@
   lemon:canonicalForm  [ lemon:writtenRep "¿Quién"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
- :interrogativePronounPerson a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "¿Quién"@es ] ;
-  lexinfo:partOfSpeech lexinfo:article .
-
  :interrogativePronounThing a      lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "¿Cuál"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .

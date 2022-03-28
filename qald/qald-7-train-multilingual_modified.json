@@ -169,8 +169,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What is the height of Colombo Lighthouse?",
-					"keywords": "high, lighthouse in Colombo"
+					"string": "What is the height of California Lighthouse?",
+					"keywords": "high, California Lighthouse"
 				},
 				{
 					"language": "pt_BR",
@@ -184,18 +184,18 @@
 				},
 				{
 					"language": "de",
-					"string": "Wie hoch ist der Leuchtturm in Colombo?",
-					"keywords": "hoch, Leuchtturm in Colombo"
+					"string": "Wie hoch ist der Leuchtturm in California?",
+					"keywords": "hoch, Leuchtturm in California"
 				},
 				{
 					"language": "es",
-					"string": "¿Cómo de alta el faro de Cape Agulhas?",
-					"keywords": "alta, Faro de Cape Agulhas?"
+					"string": "¿Cómo de alta el faro de California?",
+					"keywords": "alta, faro de California?"
 				},
 				{
 					"language": "it",
-					"string": "Quanto è alto il faro di Cape Agulhas?",
-					"keywords": "altezza, faro di Cape Agulhas"
+					"string": "Quanto è alto il faro di California?",
+					"keywords": "altezza, faro di California"
 				},
 				{
 					"language": "fr",
@@ -219,7 +219,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?num WHERE {  <http://dbpedia.org/resource/Cape_Agulhas_Lighthouse> <http://dbpedia.org/ontology/height> ?num . } "
+				"sparql": "SELECT DISTINCT ?num WHERE {  <http://dbpedia.org/resource/California_Lighthouse> <http://dbpedia.org/ontology/height> ?num . } "
 			},
 			"answers": [{
 				"head": {
@@ -1346,28 +1346,28 @@
 				},
 				{
 					"language": "de",
-					"string": "Wie groß ist Amazon Eve?",
-					"keywords": "Amazon Eve, groß"
+					"string": "Wie groß ist Charlee Fraser?",
+					"keywords": "Charlee Fraser, groß"
 				},
 				{
 					"language": "es",
-					"string": "¿Cómo de alta es Amazon Eve?",
-					"keywords": "Amazon Eve, altura"
+					"string": "¿Cómo de alta es Charlee Fraser?",
+					"keywords": "Charlee Fraser, altura"
 				},
 				{
 					"language": "it",
-					"string": "Quanto è alta Amazon Eve?",
-					"keywords": "Amazon Eve, altezza"
+					"string": "Quanto è alta Charlee Fraser?",
+					"keywords": "Charlee Fraser, altezza"
 				},
 				{
 					"language": "fr",
-					"string": "Quelle est la taille de Amazon Eve?",
-					"keywords": "taille, Amazon Eve"
+					"string": "Quelle est la taille de Charlee Fraser?",
+					"keywords": "taille, Charlee Fraser"
 				},
 				{
 					"language": "nl",
-					"string": "Hoe lang is Amazon Eve?",
-					"keywords": "lengte, Amazon Eve"
+					"string": "Hoe lang is Charlee Fraser?",
+					"keywords": "lengte, Charlee Fraser"
 				},
 				{
 					"language": "hi_IN",
@@ -1376,12 +1376,12 @@
 				},
 				{
 					"language": "ro",
-					"string": "Ce înălțime are Amazon Eve?",
-					"keywords": "Amazon Eve, înălțime"
+					"string": "Ce înălțime are Charlee Fraser?",
+					"keywords": "Charlee Fraser, înălțime"
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?height WHERE {  <http://dbpedia.org/resource/Amazon_Eve> <http://dbpedia.org/ontology/height> ?height . } "
+				"sparql": "SELECT DISTINCT ?height WHERE {  <http://dbpedia.org/resource/Charlee_Fraser> <http://dbpedia.org/ontology/height> ?height . } "
 			},
 			"answers": [{
 				"head": {

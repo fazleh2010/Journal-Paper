@@ -9,7 +9,6 @@ import grammar.sparql.SparqlQuery;
 import util.io.FileUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.opencsv.CSVWriter;
-import static grammar.datasets.sentencetemplates.TempConstants.adjectiveBaseForm;
 import static grammar.datasets.sentencetemplates.TempConstants.superlative;
 import static grammar.generator.BindingConstants.DEFAULT_BINDING_VARIABLE;
 import grammar.structure.component.FrameType;

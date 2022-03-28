@@ -1,0 +1,47 @@
+@prefix :        <http://localhost:8080/#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+@prefix oils:     <http://lemon-model.net/oils#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :mayor ;
+  lemon:entry    :form_mayor_preposition ;
+  lemon:entry    :mayor_res .
+
+:mayor a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_mayor ;
+  lemon:otherForm      :form_mayor_comperative ;
+  lemon:otherForm      :form_mayor_superlative ;
+  lemon:sense          :mayor_sense_1 ;
+  lemon:synBehavior    :mayor_predFrame .
+
+:form_mayor lemon:writtenRep "mas mayor"@es .
+
+:form_mayor_comperative lemon:writtenRep "mas mayor"@es .
+
+:form_mayor_superlative lemon:writtenRep "mas mayor"@es .
+
+:mayor_predFrame a        lexinfo:AdjectiveSuperlativeFrame ;
+  lexinfo:copulativeSubject :mayor_PredSynArg .
+
+:mayor_sense_1 a  lemon:LexicalSense ;
+  lemon:reference :mayor_res ;
+  lemon:isA       :mayor_PredSynArg ;
+  lemon:condition :mayor_sense_1_condition .
+
+:mayor_res a   oils:CovariantScalar ;
+  oils:boundTo  <http://dbpedia.org/ontology/birthDate> ;
+  oils:degree   <http://lemon-model.net/oils/low> .
+
+:mayor_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain   <http://dbpedia.org/ontology/Person> ;
+  lemon:propertyRange    <http://dbpedia.org/ontology/Person> .## Prepositions ##
+:form_mayor_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "de"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
