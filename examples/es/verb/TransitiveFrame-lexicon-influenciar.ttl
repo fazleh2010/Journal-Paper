@@ -1,0 +1,91 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :to_influenciar ;
+  lemon:entry    :influenciared ;
+  lemon:entry    :form_influenciar_preposition .
+
+:to_influenciar a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_influenciar ;
+  lemon:otherForm      :form_influenciars ;
+  lemon:otherForm      :form_influenciared ;
+  lemon:sense          :influenciar_sense_1 ;
+  lemon:synBehavior    :influenciar_frame_transitive .
+
+:form_influenciar a         lemon:Form ;
+  lemon:writtenRep     "influenciar"@es ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_influenciars a    lemon:Form ;
+  lemon:writtenRep "influencia"@es ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+
+:form_influenciars a    lemon:Form ;
+  lemon:writtenRep "influenci�"@es ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_influenciared a   lemon:Form ;
+  lemon:writtenRep "influenciado"@es ;
+  lexinfo:tense    lexinfo:perfect ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:influenciar_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :influenciar_subj ;
+  lexinfo:directObject     :influenciar_obj .
+
+:influenciar_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :influenciar_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/influencedBy> ;
+  lemon:subjOfProp  :influenciar_obj ;
+  lemon:objOfProp   :influenciar_subj ;
+  lemon:condition   :influenciar_sense_1_condition .
+
+
+:influenciar_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Person> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:influenciared a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_influenciared_canonical ;
+  lemon:otherForm      :form_influenciared_by ;
+  lemon:synBehavior    :influenciared_frame_adjectivepp ;
+  lemon:sense          :influenciared_ontomap .
+
+:form_influenciared_canonical a lemon:Form ;
+  lemon:writtenRep         "influenciar"@es .
+
+:form_influenciared_by a    lemon:Form ;
+  lemon:writtenRep     "influenciar"@es ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:influenciared_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :influenciared_subj ;
+  lexinfo:prepositionalAdjunct :influenciared_obj .
+
+:influenciared_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :influenciared_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/influencedBy> ;
+  lemon:subjOfProp  :influenciared_subj ;
+  lemon:objOfProp   :influenciared_obj ;
+  lemon:condition   :influenciar_sense_1_condition .
+:influenciared_obj lemon:marker :por .
+
+:arg2 lemon:marker :form_influenciar_form_preposition .
+
+## Prepositions ##
+
+:form_influenciar_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "por"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

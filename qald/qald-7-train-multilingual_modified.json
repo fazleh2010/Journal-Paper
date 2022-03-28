@@ -189,13 +189,13 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Cómo de alta el faro de Colombo?",
-					"keywords": "alta, Faro de Colombo?"
+					"string": "¿Cómo de alta el faro de Cape Agulhas?",
+					"keywords": "alta, Faro de Cape Agulhas?"
 				},
 				{
 					"language": "it",
-					"string": "Quanto è alto il faro di Colombo?",
-					"keywords": "altezza, faro di Colombo"
+					"string": "Quanto è alto il faro di Cape Agulhas?",
+					"keywords": "altezza, faro di Cape Agulhas"
 				},
 				{
 					"language": "fr",
@@ -219,7 +219,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?num WHERE {  <http://dbpedia.org/resource/Colombo_Lighthouse> <http://dbpedia.org/ontology/height> ?num . } "
+				"sparql": "SELECT DISTINCT ?num WHERE {  <http://dbpedia.org/resource/Cape_Agulhas_Lighthouse> <http://dbpedia.org/ontology/height> ?num . } "
 			},
 			"answers": [{
 				"head": {

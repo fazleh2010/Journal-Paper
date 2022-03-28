@@ -745,6 +745,35 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
        backward
       )
     );*/
+    
+      // AdjectivePPFrame...superlative
+    sentenceTemplateRepository.add(createSentenceTemplate(language,
+        List.of(
+        //¿Cuál es la montaña más alta de Australia? ¿Cuál es monta�a m�s alta in ($x | Country_NP)?
+        "interrogativePronounThing verb(component_be:present:singular) noun(range:singular) adjective(superlative) preposition adjunct(domain)?"
+        ),
+        AdjectiveSuperlativeFrame,
+        superlativeCountry,
+        forward
+      )
+    );
+    
+         // AdjectivePPFrame...adjectiveBaseForm
+    sentenceTemplateRepository.add(
+      createSentenceTemplate(
+        language,
+        List.of(
+        //¿Cómo de alta el faro de Colombo? How es adjectiveBaseForm XX faro?
+        "interrogativeEvalution verb(component_be:present:singular) adjective(adjectiveBaseForm)  noun(range:singular) preposition adjunct(domain)?",
+        "interrogativeEvalution verb(component_be:present:singular) adjective(adjectiveBaseForm) noun(range:singular) preposition adjunct(domain)?"
+
+      ),
+        AdjectiveSuperlativeFrame,
+        adjectiveBaseForm,
+        forward
+      )
+    );
+    
       
             ///////////////////////////////
        sentenceTemplateRepository.add(

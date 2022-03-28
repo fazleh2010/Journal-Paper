@@ -1,0 +1,2 @@
+LemonEntry,partOfSpeech,writtenForm,comparative,superlative_singular,superlative_plural,SyntacticFrame,predFrame,sense,reference,oils:boundTo,oils:degree,domain,range,preposition,domainArticleIndex,domainWrittenSingularForm,domainWrittenPluralForm,rangeArticleIndex,rangeWrittenSingularForm,rangeWrittenPluralForm
+Alta_2,adjective,m s alta,m s alta,m s alta,m s alta,AdjectiveSuperlativeFrame,PredSynArg,1,oils:CovariantScalar,dbo:height,oils:high,dbo:City,dbo:ArchitecturalStructure,de,masculine,pa¡s,pa¡ses,masculine,faro,faros

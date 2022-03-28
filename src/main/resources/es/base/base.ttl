@@ -253,7 +253,7 @@
   lexinfo:partOfSpeech lexinfo:article .
 
 :interrogativeEvalution a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "How"@es ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Cómo"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
  :interrogativePronounPerson a      lemon:LexicalEntry ;
@@ -266,10 +266,6 @@
 
  :interrogativePronounThing a      lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "¿Cuál"@es ] ;
-  lexinfo:partOfSpeech lexinfo:article .
-
- :interrogativePronounThing a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "¿Cual"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
  :interrogativePronounWhom a      lemon:LexicalEntry ;

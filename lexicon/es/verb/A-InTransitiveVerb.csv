@@ -1,2 +1,0 @@
-LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,SyntacticFrame,subject,directObject,sense,reference,domain,range,domainArticleSingular,domainWrittenSingular,domainWrittenPlural,rangeArticleSingular,rangeWrittenSingular,rangeWrittenPlural,passivePreposition
-participate_in_2,verb,participar,participa,particip¢,participado,TransitiveFrame,domain,range,1,dbo:battle,dbo:MilitaryPerson,dbo:MilitaryConflict,masculine,soldado,soldados,masculine,conflictos militares,conflictos militares,en

@@ -1,0 +1,91 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :to_dise�ar ;
+  lemon:entry    :dise�ared ;
+  lemon:entry    :form_dise�ar_preposition .
+
+:to_dise�ar a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_dise�ar ;
+  lemon:otherForm      :form_dise�ars ;
+  lemon:otherForm      :form_dise�ared ;
+  lemon:sense          :dise�ar_sense_1 ;
+  lemon:synBehavior    :dise�ar_frame_transitive .
+
+:form_dise�ar a         lemon:Form ;
+  lemon:writtenRep     "dise�ar"@es ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_dise�ars a    lemon:Form ;
+  lemon:writtenRep "dise�a"@es ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+
+:form_dise�ars a    lemon:Form ;
+  lemon:writtenRep "dise��"@es ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_dise�ared a   lemon:Form ;
+  lemon:writtenRep "dise�ado"@es ;
+  lexinfo:tense    lexinfo:perfect ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:dise�ar_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :dise�ar_subj ;
+  lexinfo:directObject     :dise�ar_obj .
+
+:dise�ar_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :dise�ar_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/architect> ;
+  lemon:subjOfProp  :dise�ar_obj ;
+  lemon:objOfProp   :dise�ar_subj ;
+  lemon:condition   :dise�ar_sense_1_condition .
+
+
+:dise�ar_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/ArchitecturalStructure> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Architect> .
+
+:dise�ared a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_dise�ared_canonical ;
+  lemon:otherForm      :form_dise�ared_by ;
+  lemon:synBehavior    :dise�ared_frame_adjectivepp ;
+  lemon:sense          :dise�ared_ontomap .
+
+:form_dise�ared_canonical a lemon:Form ;
+  lemon:writtenRep         "dise�ar"@es .
+
+:form_dise�ared_by a    lemon:Form ;
+  lemon:writtenRep     "dise�ar"@es ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:dise�ared_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :dise�ared_subj ;
+  lexinfo:prepositionalAdjunct :dise�ared_obj .
+
+:dise�ared_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :dise�ared_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/architect> ;
+  lemon:subjOfProp  :dise�ared_subj ;
+  lemon:objOfProp   :dise�ared_obj ;
+  lemon:condition   :dise�ar_sense_1_condition .
+:dise�ared_obj lemon:marker :por .
+
+:arg2 lemon:marker :form_dise�ar_form_preposition .
+
+## Prepositions ##
+
+:form_dise�ar_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "por"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

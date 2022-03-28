@@ -1,0 +1,25 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson(?),writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainArticleSingular,domainWrittenSingular,domainWrittenPlural,rangeArticleSingular,rangeWrittenSingular,rangeWrittenPlural
+end_in,verb,terminar,termina,termin¢,terminado,en,IntransitivePPFrame,domain,range,1,dbo:routeEnd,dbo:Road,dbo:City,masculine,camino,caminos,feminine,ciudad,ciudades
+grow_in_1,verb,crecer,crece,creci¢,crecido,en,IntransitivePPFrame,domain,range,1,dbo:growingGrape,dbo:WineRegion,dbo:Grape,feminine,regi¢n vitivin°cola,regiones vitivin°colas,feminine,tipo de uva,tipo de uva
+die_from_1,verb,morir,muere_de,muri¢,muerto,de,IntransitivePPFrame,domain,range,1,dbo:deathCause,dbo:Person,owl:Thing,feminine,persona,personas,feminine,cosa,cosas
+dissolve_on_1,verb,disolver,disuelve,disolvi¢,disuelto,en,IntransitivePPFrame,domain,range,1,dbo:dissolutionDate,dbo:PopulatedPlace,xsd:date,feminine,regi¢n administrativa,regiones administrativas,-,-,-
+complete_in_1,verb,completar,completo,complet¢,completado,in,IntransitivePPFrame,domain,range,2,dbo:completionDate,dbo:Ship,xsd:date,masculine,barco,barcos,masculine,a§o,a§os
+bury_in_1,verb,enterrar,entierra,enterr¢,enterrado,en,IntransitivePPFrame,range,domain,1,dbo:restingPlace,dbo:Person,dbo:Place,feminine,persona,personas,feminine,ciudad,ciudades
+founded_in_1,verb,fundar,finds,fund¢,fundado,en,IntransitivePPFrame,domain,range,1,dbo:foundingYear,dbo:Company,xsd:gYear,feminine,organizaci¢n,organizaciones,masculine,a§o,a§os
+celebrarse,verb,celebrarse,celebra,celebr¢,celebrado,en,IntransitivePPFrame,domain,range,1,dbp:date,dbo:MilitaryConflict,xsd:date,masculine,conflicto,conflictos,masculine,a§o,a§os
+comenzar,verb,comenzar,comienza,comenz¢,comenzado,en,IntransitivePPFrame,domain,range,1,dbo:date,dbo:MilitaryConflict,xsd:date,masculine,conflicto,conflictos,-,-,-
+live_in_1,verb,vivir,vive,viv°a,vivido,en,IntransitivePPFrame,domain,range,1,dbo:residence,dbo:Person,dbo:City,feminine,persona,personas,feminine,ciudad,ciudades
+flow_through_1,verb,pasa,pasa,pasa,pasa,por,IntransitivePPFrame,domain,range,1,dbo:city,dbo:River,dbo:City,masculine,r°o,r°os,feminine,ciudad,ciudades
+start_in_1,verb,empezar,empieza,empez¢,empezado,en,IntransitivePPFrame,range,domain,1,dbo:routeStart,dbo:Road,dbo:Road,masculine,camino,caminos,masculine,camino,caminos
+gestorben_am,verb,morir,muere,muri¢,muerto,am,IntransitivePPFrame,domain,range,1,dbo:deathDate,dbo:Person,xsd:date,feminine,persona,Personen,masculine,a§o,a§os
+morir_en,verb,morir,muere,muri¢,muerto,en,IntransitivePPFrame,range,domain,1,dbo:deathPlace,dbo:Person,dbo:City,feminine,persona,Personen,feminine,ciudad,ciudades
+born_in_1,verb,nacer,nace,naci¢,nacido,en,IntransitivePPFrame,domain,range,1,dbo:birthYear,dbo:Person,xsd:date,feminine,persona,personas,masculine,a§o,a§os
+complete_in_1,verb,completar,completo,complet¢,completado,in,IntransitivePPFrame,domain,range,2,dbo:completionDate,dbo:Ship,xsd:date,masculine,barco,barcos,-,-,-
+fliessen_durch_1,verb,fluir,fluye,fluy¢,fluido,por,IntransitivePPFrame,domain,range,1,dbo:city,dbo:River,dbo:City,masculine,r°o,r°os,feminine,ciudad,ciudades
+fliessen_durch_2,verb,fluir,fluye,fluy¢,fluido,por,IntransitivePPFrame,domain,range,1,dbp:country,dbo:River,dbo:Country,masculine,Fluss,FlÅsse,feminine,pa°s,pa°ses
+locate_in_1,verb,localizar,localiza,localizaba,localizado,en,IntransitivePPFrame,domain,range,1,dbo:location,dbo:Location,dbo:Place,feminine,localizaci¢n,localizaciones,masculine,lugar,lugares
+locate_in_2,verb,encuentra,encuentra,encuentra,encuentra,en,IntransitivePPFrame,domain,range,1,dbp:location,dbo:MilitaryUnit,dbo:Location,masculine,conflicto,conflictos,masculine,estado,estado
+locate_in_3,verb,situadas,situadas,situadas,situadas,en,IntransitivePPFrame,domain,range,1,dbo:location,dbo:HistoricPlace,dbo:Location,masculine,Lugar,Lugar,feminine,localizaci¢n,localizaciones
+locate_in_4,verb,encuentra,encuentra,encuentra,encuentra,en,IntransitivePPFrame,domain,range,1,dbo:country,dbo:Lake,dbo:Country,masculine,lago,lagos,masculine,pa°s,pa°ses
+locate_in_5,verb,sit£a,sit£a,sit£a,sit£a,en,IntransitivePPFrame,domain,range,1,dbo:country,dbo:City,dbo:Country,feminine,ciudad,ciudades,masculine,pa°s,pa°ses
+programado_en,verb,programado,programado,programado,programado,en,IntransitivePPFrame,domain,range,1,dbo:programmingLanguage,dbo:Work,dbo:Language,masculine,Unidad militar,Unidad militar,masculine,lenguaje de programaci¢n,lenguaje de programaci¢n

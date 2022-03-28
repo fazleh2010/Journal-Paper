@@ -1,0 +1,91 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :to_dise�ar_2 ;
+  lemon:entry    :dise�ar_2ed ;
+  lemon:entry    :form_dise�ar_2_preposition .
+
+:to_dise�ar_2 a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_dise�ar_2 ;
+  lemon:otherForm      :form_dise�ar_2s ;
+  lemon:otherForm      :form_dise�ar_2ed ;
+  lemon:sense          :dise�ar_2_sense_1 ;
+  lemon:synBehavior    :dise�ar_2_frame_transitive .
+
+:form_dise�ar_2 a         lemon:Form ;
+  lemon:writtenRep     "dise�ar"@es ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_dise�ar_2s a    lemon:Form ;
+  lemon:writtenRep "dise�a"@es ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+
+:form_dise�ar_2s a    lemon:Form ;
+  lemon:writtenRep "dise��"@es ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_dise�ar_2ed a   lemon:Form ;
+  lemon:writtenRep "dise�ado"@es ;
+  lexinfo:tense    lexinfo:perfect ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:dise�ar_2_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :dise�ar_2_subj ;
+  lexinfo:directObject     :dise�ar_2_obj .
+
+:dise�ar_2_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :dise�ar_2_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/creator> ;
+  lemon:subjOfProp  :dise�ar_2_obj ;
+  lemon:objOfProp   :dise�ar_2_subj ;
+  lemon:condition   :dise�ar_2_sense_1_condition .
+
+
+:dise�ar_2_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/TelevisionShow> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Agent> .
+
+:dise�ar_2ed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_dise�ar_2ed_canonical ;
+  lemon:otherForm      :form_dise�ar_2ed_by ;
+  lemon:synBehavior    :dise�ar_2ed_frame_adjectivepp ;
+  lemon:sense          :dise�ar_2ed_ontomap .
+
+:form_dise�ar_2ed_canonical a lemon:Form ;
+  lemon:writtenRep         "dise�ar"@es .
+
+:form_dise�ar_2ed_by a    lemon:Form ;
+  lemon:writtenRep     "dise�ar"@es ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:dise�ar_2ed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :dise�ar_2ed_subj ;
+  lexinfo:prepositionalAdjunct :dise�ar_2ed_obj .
+
+:dise�ar_2ed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :dise�ar_2ed_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/creator> ;
+  lemon:subjOfProp  :dise�ar_2ed_subj ;
+  lemon:objOfProp   :dise�ar_2ed_obj ;
+  lemon:condition   :dise�ar_2_sense_1_condition .
+:dise�ar_2ed_obj lemon:marker :por .
+
+:arg2 lemon:marker :form_dise�ar_2_form_preposition .
+
+## Prepositions ##
+
+:form_dise�ar_2_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "por"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
