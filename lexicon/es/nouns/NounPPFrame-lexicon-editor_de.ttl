@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :editor_de ;
+  lemon:entry    :editor_de_form_preposition .
+
+:editor_de a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :editor_de_form ;
+  lemon:otherForm  :editor_de_singular ;
+  lemon:otherForm  :editor_de_plural ;
+  lemon:sense          :editor_de_sense_1 ;
+  lemon:synBehavior    :editor_de_nounpp .
+
+:editor_de_form a lemon:Form ;
+  lemon:writtenRep "editor"@es .
+
+:editor_de_singular a    lemon:Form ;
+  lemon:writtenRep "editor"@es ;
+  lexinfo:number   lexinfo:singular .
+
+:editor_de_plural a   lemon:Form ;
+  lemon:writtenRep "editores"@es ;
+  lexinfo:number    lexinfo:plural .
+
+:editor_de_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:editor_de_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :editor_de_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/editor> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :editor_de_sense_1_condition .
+
+:editor_de_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/WrittenWork> ;
+  lemon:propertyRange   <masculine> .
+
+:arg2 lemon:marker :editor_de_form_preposition .
+## Prepositions ##
+:editor_de_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "de"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

@@ -2854,38 +2854,38 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Where was Johann Sebastian Bach born?",
-					"keywords": "birthplace, Johann Sebastian Bach"
+					"string": "Where was Sebastian Bach born?",
+					"keywords": "birthplace, Sebastian Bach"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Onde nasceu Bach?",
-					"keywords": "Bach, geboren"
+					"string": "Onde nasceu Sebastian Bach?",
+					"keywords": "Sebastian Bach, geboren"
 				},
 				{
 					"language": "de",
-					"string": "Wo wurde Johann Sebastian Bach geboren?",
+					"string": "Wo wurde Sebastian Bach geboren?",
 					"keywords": "Johann Sebastian Bach, geboren"
 				},
 				{
 					"language": "es",
-					"string": "¿Dónde nació Bach?",
-					"keywords": "Bach, lugar de nacimiento"
+					"string": "¿Dónde nació Sebastian Bach?",
+					"keywords": "Sebastian Bach, lugar de nacimiento"
 				},
 				{
 					"language": "it",
-					"string": "Dove è nato Bach?",
-					"keywords": "Bach, luogo di nascita"
+					"string": "Dove è nato Sebastian Bach?",
+					"keywords": "Sebastian Bach, luogo di nascita"
 				},
 				{
 					"language": "fr",
-					"string": "Où est né Bach?",
+					"string": "Où est né Sebastian Bach?",
 					"keywords": "Lieu de naissance, Bach"
 				},
 				{
 					"language": "nl",
-					"string": "Waar was Bach geboren?",
-					"keywords": "Bach, geboorteplaats"
+					"string": "Waar was Sebastian Bach geboren?",
+					"keywords": "Sebastian Bach, geboorteplaats"
 				},
 				{
 					"language": "hi_IN",
@@ -2894,8 +2894,8 @@
 				},
 				{
 					"language": "ro",
-					"string": "Unde s-a născut Bach?",
-					"keywords": "locul nașterii, Bach"
+					"string": "Unde s-a născut Sebastian Bach?",
+					"keywords": "locul nașterii, Sebastian Bach"
 				}
 			],
 			"query": {
@@ -5302,12 +5302,12 @@
 				},
 				{
 					"language": "de",
-					"string": "Wer ist der Bürgermeister von Florenz?",
+					"string": "Wer ist der Bürgermeister von Florence?",
 					"keywords": "Florence, Bürgermeister"
 				},
 				{
 					"language": "es",
-					"string": "¿Quién es el alcalde de Tel Aviv?",
+					"string": "¿Quién es el alcalde de Florence?",
 					"keywords": "Tel Aviv, alcalde"
 				},
 				{
@@ -6118,38 +6118,38 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which video games were published by Mean Hamster Software?",
+					"string": "Which video games were published by Sirius Software?",
 					"keywords": "video game, publish, Mean Hamster Software"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Mostre todos os jogos da Mean Hamster Software.",
-					"keywords": "Videospiel, Mean Hamster Software"
+					"string": "Mostre todos os jogos da Sirius Software.",
+					"keywords": "Videospiel, Sirius Software"
 				},
 				{
 					"language": "de",
-					"string": "Gib mir alle Videospiele von Mean Hamster Software.",
-					"keywords": "Videospiel, Mean Hamster Software"
+					"string": "Gib mir alle Videospiele von Sirius Software.",
+					"keywords": "Videospiel, Sirius Software"
 				},
 				{
 					"language": "es",
-					"string": "Dame todos los videojuegos de Mean Hamster Software.",
-					"keywords": "videojuego, Mean Hamster Software"
+					"string": "Dame todos los videojuegos de Sirius Software.",
+					"keywords": "videojuego, Sirius Software"
 				},
 				{
 					"language": "it",
-					"string": "Dammi tutti i videogiochi di Mean Hamster Software.",
-					"keywords": "videogioco, prodotto, Mean Hamster Software"
+					"string": "Dammi tutti i videogiochi di Sirius Software.",
+					"keywords": "videogioco, prodotto, Sirius Software"
 				},
 				{
 					"language": "fr",
-					"string": "Donnes-moi tous les jeux vidéos publiés par Mean Hamster Software.",
-					"keywords": "jeux vidéos, publiés, Mean Hamster Software"
+					"string": "Donnes-moi tous les jeux vidéos publiés par Sirius Software.",
+					"keywords": "jeux vidéos, publiés, Sirius Software"
 				},
 				{
 					"language": "nl",
-					"string": "Geef me alle videogames van Mean Hamster Software.",
-					"keywords": "videogame, Mean Hamster Software"
+					"string": "Geef me alle videogames van Sirius Software.",
+					"keywords": "videogame, Sirius Software"
 				},
 				{
 					"language": "hi_IN",
@@ -6158,12 +6158,12 @@
 				},
 				{
 					"language": "ro",
-					"string": "Dă-mi toate jocurile video publicate de Mean Hamster Software",
-					"keywords": "joc video, publicat, Mean Hamster Software"
+					"string": "Dă-mi toate jocurile video publicate de Sirius Software",
+					"keywords": "joc video, publicat, Sirius Software"
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nSELECT DISTINCT ?uri \nWHERE {\n      ?uri rdf:type dbo:VideoGame .\n      ?uri dbo:publisher res:Mean_Hamster_Software . \n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nSELECT DISTINCT ?uri \nWHERE {\n      ?uri rdf:type dbo:VideoGame .\n      ?uri dbo:publisher res:Sirius_Software . \n}"
 			},
 			"answers": [{
 				"head": {
@@ -8007,38 +8007,38 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "What was published by GMT Games?",
-					"keywords": "game, GMT Games"
+					"string": "What was published by Johns Hopkins University Press?",
+					"keywords": "game, Johns Hopkins University Press"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Liste todos os jogos da GMT Games.",
-					"keywords": "jogos, GMT Games"
+					"string": "Liste todos os jogos da Johns Hopkins University Press.",
+					"keywords": "jogos, Johns Hopkins University Press"
 				},
 				{
 					"language": "de",
-					"string": "Liste alle Spiele von GMT Games auf.",
-					"keywords": "Spiel, GMT Games"
+					"string": "Liste alle Spiele von Johns Hopkins University Press.",
+					"keywords": "Spiel, Johns Hopkins University Press"
 				},
 				{
 					"language": "es",
-					"string": "Dame todos los juegos de GMT Games.",
-					"keywords": "juegos, GMT Games"
+					"string": "Dame todos los juegos de Johns Hopkins University Press.",
+					"keywords": "juegos, Johns Hopkins University Press"
 				},
 				{
 					"language": "it",
-					"string": "Elenca tutti i giochi di GMT Games.",
-					"keywords": "gioco, GMT Games"
+					"string": "Elenca tutti i giochi di Johns Hopkins University Press.",
+					"keywords": "gioco, Johns Hopkins University Press"
 				},
 				{
 					"language": "fr",
-					"string": "Donne-moi tous les jeux de GMT Games.",
-					"keywords": "jeux, GMT Games"
+					"string": "Donne-moi tous les jeux de Johns Hopkins University Press.",
+					"keywords": "jeux, Johns Hopkins University Press"
 				},
 				{
 					"language": "nl",
-					"string": "Noem alle spelen van GMT.",
-					"keywords": "spel, GMT"
+					"string": "Noem alle spelen van Johns Hopkins University Press.",
+					"keywords": "spel, Johns Hopkins University Press"
 				},
 				{
 					"language": "hi_IN",
@@ -8047,7 +8047,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE {\t\n        ?uri dbo:publisher res:GMT_Games .\n}"
+				"sparql": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX res: <http://dbpedia.org/resource/>\nSELECT DISTINCT ?uri \nWHERE {\t\n        ?uri dbo:publisher res:Johns_Hopkins_University_Press .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -8769,12 +8769,12 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Quién es el presidente de Eritrea?",
+					"string": "¿Quién es el presidente de Parlamento de Hamburgo?",
 					"keywords": "presidente Eritrea"
 				},
 				{
 					"language": "it",
-					"string": "Chi è il presidente dell'Eritrea?",
+					"string": "Chi è il presidente Parlamento di Amburgo?",
 					"keywords": "presidente, Eritrea"
 				},
 				{
@@ -10630,8 +10630,8 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "In which military conflicts did Lawrence of Arabia participate?",
-					"keywords": "Lawrence of Arabia, military conflict"
+					"string": "In which military conflicts did Edward Lawrence participate?",
+					"keywords": "Edward Lawrence, military conflict"
 				},
 				{
 					"language": "pt_BR",
@@ -10640,18 +10640,18 @@
 				},
 				{
 					"language": "de",
-					"string": "An welchen militärischen Auseinandersetzungen war Lawrence von Arabien beteiligt?",
-					"keywords": "Lawrence von Arabien, militärische Auseinandersetzung"
+					"string": "An welchen militärischen Auseinandersetzungen war Edward Lawrence beteiligt?",
+					"keywords": "Edward Lawrence, militärische Auseinandersetzung"
 				},
 				{
 					"language": "es",
-					"string": "¿En qué conflictos militares participó Lawrence de Arabia?",
-					"keywords": "Lawrence de Arabia, conflicto militar"
+					"string": "¿En qué conflictos militares participó Edward Lawrence?",
+					"keywords": "Edward Lawrence, conflicto militar"
 				},
 				{
 					"language": "it",
-					"string": "A quali conflitti militari ha partecipato Lawrence d'Arabia?",
-					"keywords": "Lawrence d'Arabia, conflitto militare"
+					"string": "A quali conflitti militari ha partecipato Edward Lawrence?",
+					"keywords": "Edward Lawrence, conflitto militare"
 				},
 				{
 					"language": "fr",

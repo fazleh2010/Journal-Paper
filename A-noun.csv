@@ -1,5 +1,0 @@
-LemonEntry,partOfSpeech,article_singular,writtenForm (singular),spanish_writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference_dbpedia,domain_dbpedia,range_dbpedia,domainSingularArticle,domainWrittenSingularForm,domainWrittenPluralForm,rangeSingularArticle,rangeWrittenSingularForm,rangeWrittenPluralFormIndex,
-w„hrung,noun,feminine,moneda,monedas,de,NounPPFrame,range,domain,1,dbo:currency,dbo:Country,dbo:Currency,feminine,pa¡s,pa¡ses,feminine,moneda,monedas,¨Cual
-Doktorvater,noun,masculine,supervisor de doctorado,supervisores de doctorado,de,NounPPFrame,range,domain,1,dbo:doctoralAdvisor,dbo:Person,dbo:Person,feminine,persona,personas,feminine,persona,personas,
-Enkel,noun,masculine,padres,padres,de,NounPPFrame,range,domain,1,dbo:parent,dbo:Person,dbo:Person,feminine,persona,personas,feminine,persona,personas,
-Videospiele,noun,masculine,videojuego,videojuegos,de,NounPPFrame,domain,range,1,dbo:publisher,dbo:VideoGame,dbo:Company,masculine,videojuego,videojuegos,feminine,empresa,empresas,Dame todos los videojuegos de Mean Hamster Software.

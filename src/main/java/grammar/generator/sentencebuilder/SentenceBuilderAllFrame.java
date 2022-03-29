@@ -357,7 +357,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
                     validSentence = false;
                 }*/
             }
-
+             sentence=modify(sentence);
             if (!validSentence) {
                 continue;
             } else {
@@ -648,6 +648,10 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
             return false;
         }
         return true;
+    }
+    
+    private String modify(String word) {
+       return word.replace("-", " ");
     }
 
     /*private Boolean checkValidity(String word) {

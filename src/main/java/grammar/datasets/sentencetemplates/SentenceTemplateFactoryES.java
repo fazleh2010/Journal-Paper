@@ -51,9 +51,13 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
            "verb(component_imperative_transitive:present:singular) determiner(component_todos) noun(singular) preposition adjunct(domain).",
            "verb(component_imperative_transitive:present:singular) determiner(component_todos) noun(plural) preposition adjunct(domain).",
             //¿Qué forma de gobierno tiene Rusia?¿Qué pa�ses de gobierno lo hace ($x | Country_NP)?
-           "interrogativeVariableDeterminer noun(singular) determiner(component_tiene) adjunct(domain)?"
+           "interrogativeVariableDeterminer noun(singular) determiner(component_tiene) adjunct(domain)?",
            //"interrogativeDeterminer(range:singular) preposition  noun(singular) verb(component_do:present:singular) adjunct(domain)?"
-
+           //¿Quién es el editor de Forbes?
+           "interrogativePronounPerson(range:singular) verb(component_be:present:singular) noun(singular) preposition adjunct(domain)?",
+           //¿En qué zona horaria esta Roma?
+           "interrogativeDeterminerEn noun(singular) verb(component_esta:present:singular) object(domain)?"
+   
                 
           /*//"Wer ist der Bürgermeister von Tel Aviv?",
           "interrogativeDeterminer(range:singular) verb(component_be:present:singular) preposition adjunct(domain)?",
@@ -196,9 +200,9 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
         "interrogativeDeterminerPor(range:plural) verb(mainVerb:present:thridPerson) object(domain)?",
         //Dame todos los actores que hayan actuado en Last Action Hero.Dame todos protagonizar protagonizar ($x | Film_NP)
          //"verb(component_imperative_transitive:present:singular) pronoun(pronoun_personal) determiner(all) noun(plural) verb(mainVerb:present:thridPerson) object(domain)"
-         "verb(component_imperative_transitive:present:singular) determiner(component_todos) noun(singular) interrogativeRelative1 determiner(component_hayan) verb(mainVerb:present:thridPerson) object(domain)"
-        
-
+         "verb(component_imperative_transitive:present:singular) determiner(component_todos) noun(singular) interrogativeRelative1 determiner(component_hayan) verb(mainVerb:present:thridPerson) object(domain)",
+         //¿Qué contiene una galleta de chocolate? 
+         "interrogativeVariableDeterminer verb(mainVerb:present:thirdPerson) object(domain)?"
          //¿Qué color expresa Riqueza?
          //"interrogativeDeterminerPor(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
         /*"interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?",    
@@ -275,8 +279,10 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
          "verb(component_imperative_transitive:present:singular) determiner(component_todos) noun(singular) interrogativeRelative1 determiner(component_hayan) verb(mainVerb:present:thridPerson) object(domain)",
          //┬┐Quien fue el papa que fundo la televisi├│n Vaticana?
          //"interrogativePronoun(range:singular) verb(component_be:was:thirdPerson) noun(range:singular)? interrogativeRelative2 verb(mainVerb:past:thridPerson) object(domain)?"
-         "interrogativePronoun(range:singular) verb(component_be:past:plural) noun(range:singular) interrogativeRelative2 verb(mainVerb:past:thridPerson) object(domain)?"
-
+         "interrogativePronoun(range:singular) verb(component_be:past:singular) noun(range:singular) interrogativeRelative2 verb(mainVerb:past:thridPerson) object(domain)?",
+         //¿Quién estuvo casado con el Jacques Chirac?
+         "interrogativePronoun(range:singular) verb(component_estuvo:present:singular) verb(mainVerb:perfect:thridPerson) object(domain)?"
+  
         //Wer hat Slack entwickelt?
         /*"interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?",    
         ///Welche Person hat Slack entwickelt?
@@ -344,6 +350,24 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
         passiveTransitive
       )
     );
+      
+       // TransitiveFrame passive amount
+    sentenceTemplateRepository.add(createSentenceTemplate(language,
+        List.of(
+        //How many languages are spoken in Turkmenistan? 
+        //"interrogativeAmount(domain:plural) verb(component_be:present:plural) verb(mainVerb:perfect:thridPerson) preposition adjunct(range)?" ,
+        //How many ethnic groups live in Slovenia?
+        //"interrogativeAmount(domain:plural) verb(mainVerb:present:thridPerson) preposition adjunct(range)?" ,
+        ///¿Cuántas veces ha estado casada Jane Fonda?
+        "interrogativeOften verb(component_ha:present:singular) verb(component_estado:present:singular) verb(mainVerb:past:thridPerson) adjunct(range)?"         
+                
+            ),
+        TransitiveFrame,
+        HOW_MANY_THING,
+        passiveTransitive
+      )
+    );
+    
  
      //In welchem Museum ist der Schrei ausgestellt?
     sentenceTemplateRepository.add(
@@ -358,8 +382,15 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
           //¿Donde están situadas las Casas del Parlamento?
          "interrogativePlace2 verb(mainVerb:past:thridPerson) adjunct(domain)?",
          //¿En qué lenguaje de programación esta programado GIMP?
-          "interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) object(domain)?"
-         /*"preposition interrogativeDeterminer(preposition:range:plural) verb(mainVerb:present:thridPerson) adjunct(domain)?",
+          "interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
+         //¿En qué país nace el Ganges?
+         "interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
+         //¿De que región es el vino Melon de Bourgogne?..De que regi�n es vino ($x | Grape_NP)?
+          "interrogativeDeterminerDe(range:singular) verb(component_be:present:singular) verb(mainVerb:past:thridPerson) object(domain)?",
+         //¿En qué países se habla japonés?
+         "interrogativeDeterminerEn(range:singular) verb(component_se:present:singular) verb(mainVerb:present:thridPerson) object(domain)?"
+
+          /*"preposition interrogativeDeterminer(preposition:range:plural) verb(mainVerb:present:thridPerson) adjunct(domain)?",
           //In welchem Museum ist Der Schrei ausgestellt?
          "preposition interrogativeDeterminer(preposition:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
          "preposition interrogativeDeterminer(preposition:range:plural) verb(component_be:present:plural) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
@@ -376,6 +407,8 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
       sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(
+         //¿Qué ingredientes son necesarios para una tarta de zanahorias?
+          "interrogativeVariableDeterminer(range:singular) verb(component_be:present:plural) verb(mainVerb:past:thridPerson) preposition object(range)?"
         /* //Was fließt durch...?
         "interrogativePronoun(nominativeCase:domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
          //Welcher Fluss fließt durch...?
@@ -561,12 +594,9 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
         language,
         List.of(
         //¿En qué ciudad murió John F. Kennedy?
-         //"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
-         //"interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
          "interrogativeDeterminerEn(domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
          "interrogativeDeterminerEn(domain:singular) verb(mainVerb:past:thridPerson) preposition adjunct(range)?"
-
-
+         
         ),
         IntransitivePPFrame,
         WHO_WHO_PERSON,
@@ -601,10 +631,12 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
         language,
         List.of(
          //¿En qué ciudad murió John F. Kennedy?
-        "interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) adjunct(domain)?",
-        "interrogativeDeterminerEn(range:singular) verb(mainVerb:present:thridPerson) adjunct(domain)?",
+        "interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) adjunct(range)?",
+        "interrogativeDeterminerEn(range:singular) verb(mainVerb:present:thridPerson) adjunct(range)?",
         //¿Dónde está enterrado Syngman Rhee?
-        "interrogativePlace verb(component_be:past:singular) verb(mainVerb:past:thridPerson) adjunct(range)?"
+        "interrogativePlace verb(component_be:past:singular) verb(mainVerb:past:thridPerson) adjunct(range)?",
+         //¿Dónde nació Bach?
+         "interrogativePlace verb(mainVerb:past:thridPerson) adjunct(range)?"
       
             ),
         IntransitivePPFrame,
@@ -682,9 +714,9 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
       createSentenceTemplate(language,
         List.of(
          //"Wieviel hat Pulp Fiction gekostet?","Wieviele Sprachen werden in Turkmenistan gesprochen?"
-         "interrogativeAmount(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?",
-         //Wieviele Menschen leben in Polen? 
-          "interrogativeAmount(nominativeCase:range:plural) verb(mainVerb:present:thridPerson) preposition object(domain)"  
+         //"interrogativeAmount(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?",
+         //¿Cuántas personas viven en Polonia?
+          "interrogativeAmount(range:plural) verb(mainVerb:present:thridPerson) preposition object(domain)?"  
          //was kostet der film?
           //"interrogativePronoun(nominativeCase:present:singular) verb(mainVerb:present:thridPerson) determiner(component_the_nominative:domain) object(domain)?"
          //"Wieviele Sprachen werden in Turkmenistan gesprochen?"  
@@ -705,8 +737,8 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
       createSentenceTemplate(language,
         List.of(  //Welches Buch kostet 10 Dollar?
         //"interrogativePronoun(nominativeCase:present:singular) verb(mainVerb:perfect:present) object(range)?",
-        "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_haben:present:singular) object(range) verb(mainVerb:perfect:singular)?"      
-
+        //"interrogativeDeterminer(nominativeCase:domain:singular) verb(component_haben:present:singular) object(range) verb(mainVerb:perfect:singular)?"      
+        //¿Que ciudad tiene la mayor población?
            
         ),
         IntransitivePPFrame,

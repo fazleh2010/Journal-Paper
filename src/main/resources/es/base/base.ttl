@@ -8,8 +8,10 @@
 :lexicon_en a    lemon:Lexicon ;
   lemon:language "es" ;
   lemon:entry    :component_be ;
+  lemon:entry    :component_be ;
   lemon:entry    :component_do ;
   lemon:entry    :component_se ;
+  lemon:entry    :component_estuvo ;
   lemon:entry    :component_aux_object_past ;
   lemon:entry    :component_imperative_plural ;
   lemon:entry    :component_imperative_transitive ;
@@ -25,6 +27,7 @@
   lemon:entry    :object_pronoun;
   lemon:entry    :interrogativeDeterminerEn ;
   lemon:entry    :interrogativeDeterminerPor ;
+  lemon:entry    :interrogativeDeterminerDe ;
   lemon:entry    :interrogativeVariableDeterminer ;
   lemon:entry    :interrogativeRelative1 ;
   lemon:entry    :interrogativeRelative2 ;
@@ -40,6 +43,9 @@
   lemon:entry    :interrogativePlace2 ;
   lemon:entry    :interrogativeTemporal ;
   lemon:entry    :component_the_nominative ;
+  lemon:entry    :component_ha ;
+  lemon:entry    :component_estado ;
+  lemon:entry    :component_esta ;
   lemon:entry    :para ;
   lemon:entry    :por ;
   lemon:entry    :desde ;  
@@ -122,7 +128,39 @@
   lemon:otherForm      [ lemon:writtenRep "se"@es ;
   lexinfo:tense                           lexinfo:present ;
   lexinfo:person                          lexinfo:thirdPerson ;
-  lexinfo:number                          lexinfo:singular ] . 
+  lexinfo:number                          lexinfo:singular ] .
+
+  :component_ha a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "ha"@es ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:otherForm      [ lemon:writtenRep "ha"@es ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] .
+
+  :component_estado a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "estado"@es ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:otherForm      [ lemon:writtenRep "estado"@es ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] .
+
+  :component_esta a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "esta"@es ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:otherForm      [ lemon:writtenRep "esta"@es ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] .
+
+  :component_estuvo a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "estuvo"@es ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:otherForm      [ lemon:writtenRep "estuvo"@es ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] .
  
 
 :component_aux_object_past a        lemon:LexicalEntry ;
@@ -219,6 +257,10 @@
   lemon:canonicalForm  [ lemon:writtenRep "¿Por qué"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
+  :interrogativeDeterminerDe a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "De que"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
   :interrogativeVariableDeterminer a      lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "¿Qué"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
@@ -241,11 +283,11 @@
 
 
  :interrogativeAmount a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "How many"@es ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Cuántas"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
  :interrogativeOften a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "How often"@es ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Cuántas veces"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
  :interrogativeMuch a      lemon:LexicalEntry ;
