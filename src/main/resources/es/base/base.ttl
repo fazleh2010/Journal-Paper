@@ -39,6 +39,7 @@
   lemon:entry    :interrogativePronounPerson ;
   lemon:entry    :interrogativePronounWhom ;
   lemon:entry    :interrogativePronounThing ;
+  lemon:entry    :interrogativePronounThingPlural ;
   lemon:entry    :interrogativePlace ;
   lemon:entry    :interrogativePlace2 ;
   lemon:entry    :interrogativeTemporal ;
@@ -304,6 +305,10 @@
 
  :interrogativePronounThing a      lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "¿Cuál"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativePronounThingPlural a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Cuáles"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
  :interrogativePronounWhom a      lemon:LexicalEntry ;

@@ -43,8 +43,8 @@
   lexinfo:tense     lexinfo:perfect .
 
 :bury_in_1_frame a  lexinfo:IntransitivePPFrame ;
-  lexinfo:subject              :bury_in_1_obj ;
-  lexinfo:prepositionalAdjunct :bury_in_1_subj .
+  lexinfo:subject              :bury_in_1_subj ;
+  lexinfo:prepositionalAdjunct :bury_in_1_obj .
 
 :bury_in_1_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
   lemon:ontoMapping :bury_in_1_ontomap ;

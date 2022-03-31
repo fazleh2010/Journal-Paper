@@ -23,6 +23,7 @@ public class PrepareSparqlQuery {
 
     public static String setSubjectWikipedia(String objectUri, String property, String rdfProperty, String objectClassUri) {
         String sparql = null;
+       
         
         if (TemplateFinder.isOccupation(objectClassUri)) {
             sparql=  setSubjectWikipediaWithOccupation(objectUri, property, rdfProperty, objectClassUri);

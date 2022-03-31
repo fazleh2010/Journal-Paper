@@ -14,7 +14,9 @@ start_in_1,verb,empezar,empieza,empez¢,empezado,en,IntransitivePPFrame,range,dom
 gestorben_am,verb,morir,muere,muri¢,muerto,am,IntransitivePPFrame,domain,range,1,dbo:deathDate,dbo:Person,xsd:date,feminine,persona,Personen,masculine,a§o,a§os
 morir_en,verb,morir,muere,muri¢,muerto,en,IntransitivePPFrame,range,domain,1,dbo:deathPlace,dbo:Person,dbo:City,feminine,persona,Personen,feminine,ciudad,ciudades
 born_in_1,verb,nacer,nace,naci¢,nacido,en,IntransitivePPFrame,domain,range,1,dbo:birthYear,dbo:Person,xsd:date,feminine,persona,personas,masculine,a§o,a§os
-born_on_1,verb,nacer,nace,naci¢,nacido,en,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Person,dbo:Place,feminine,persona,personas,masculine,pa°s,pa°ses
+born_on_1,verb,nacer,nace,naci¢,nacido,en,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Person,dbo:Place,feminine,persona,Personen,masculine,pa°s,pa°ses
+born_on_2,verb,nacer,nace,naci¢,nacido,en,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Actor,dbo:Place,masculine,actor,actores,masculine,pa°s,pa°ses
+born_on_3,verb,nacer,nace,naci¢,nacido,en,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Surfing,dbo:Place,masculine,surfistas profesionales,surfistas profesionales,masculine,pa°s,pa°ses
 complete_in_1,verb,completar,completo,complet¢,completado,in,IntransitivePPFrame,domain,range,2,dbo:completionDate,dbo:Ship,xsd:date,masculine,barco,barcos,-,-,-
 fliessen_durch_1,verb,fluir,fluye,fluy¢,fluido,por,IntransitivePPFrame,domain,range,1,dbo:city,dbo:River,dbo:City,masculine,r°o,r°os,feminine,ciudad,ciudades
 fliessen_durch_2,verb,fluir,fluye,fluy¢,fluido,por,IntransitivePPFrame,domain,range,1,dbp:country,dbo:River,dbo:Country,masculine,Fluss,FlÅsse,feminine,pa°s,pa°ses

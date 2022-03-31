@@ -190,6 +190,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
              System.out.println(this.getTemplateFinder().getSelectedTemplate());
             //exit(1);*/
         }
+        //System.out.println(sentences);
         //exit(1);
 
         return sentences;

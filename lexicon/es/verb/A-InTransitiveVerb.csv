@@ -4,7 +4,7 @@ grow_in_1,verb,crecer,crece,creci¢,crecido,en,IntransitivePPFrame,domain,range,1
 die_from_1,verb,morir,muere_de,muri¢,muerto,de,IntransitivePPFrame,domain,range,1,dbo:deathCause,dbo:Person,owl:Thing,feminine,persona,personas,feminine,cosa,cosas
 dissolve_on_1,verb,disolver,disuelve,disolvi¢,disuelto,en,IntransitivePPFrame,domain,range,1,dbo:dissolutionDate,dbo:PopulatedPlace,xsd:date,feminine,regi¢n administrativa,regiones administrativas,-,-,-
 complete_in_1,verb,completar,completo,complet¢,completado,in,IntransitivePPFrame,domain,range,2,dbo:completionDate,dbo:Ship,xsd:date,masculine,barco,barcos,masculine,a§o,a§os
-bury_in_1,verb,enterrar,entierra,enterr¢,enterrado,en,IntransitivePPFrame,range,domain,1,dbo:restingPlace,dbo:Person,dbo:Place,feminine,persona,personas,feminine,ciudad,ciudades
+bury_in_1,verb,enterrar,entierra,enterr¢,enterrado,en,IntransitivePPFrame,domain,range,1,dbo:restingPlace,dbo:Person,dbo:Place,feminine,persona,personas,feminine,ciudad,ciudades
 founded_in_1,verb,fundar,finds,fund¢,fundado,en,IntransitivePPFrame,domain,range,1,dbo:foundingYear,dbo:Company,xsd:gYear,feminine,organizaci¢n,organizaciones,masculine,a§o,a§os
 celebrarse,verb,celebrarse,celebra,celebr¢,celebrado,en,IntransitivePPFrame,domain,range,1,dbp:date,dbo:MilitaryConflict,xsd:date,masculine,conflicto,conflictos,masculine,a§o,a§os
 comenzar,verb,comenzar,comienza,comenz¢,comenzado,en,IntransitivePPFrame,domain,range,1,dbo:date,dbo:MilitaryConflict,xsd:date,masculine,conflicto,conflictos,-,-,-
@@ -12,9 +12,11 @@ live_in_1,verb,vivir,vive,viv°a,vivido,en,IntransitivePPFrame,domain,range,1,dbo
 flow_through_1,verb,pasa,pasa,pasa,pasa,por,IntransitivePPFrame,domain,range,1,dbo:city,dbo:River,dbo:City,masculine,r°o,r°os,feminine,ciudad,ciudades
 start_in_1,verb,empezar,empieza,empez¢,empezado,en,IntransitivePPFrame,range,domain,1,dbo:routeStart,dbo:Road,dbo:Road,masculine,camino,caminos,masculine,camino,caminos
 gestorben_am,verb,morir,muere,muri¢,muerto,am,IntransitivePPFrame,domain,range,1,dbo:deathDate,dbo:Person,xsd:date,feminine,persona,Personen,masculine,a§o,a§os
-morir_en,verb,morir,muere,muri¢,muerto,en,IntransitivePPFrame,range,domain,1,dbo:deathPlace,dbo:Person,dbo:City,feminine,persona,Personen,feminine,ciudad,ciudades
+morir_en,verb,morir,muere,muri¢,muerto,en,IntransitivePPFrame,domain,range,1,dbo:deathPlace,dbo:Person,dbo:City,feminine,persona,Personen,feminine,ciudad,ciudades
 born_in_1,verb,nacer,nace,naci¢,nacido,en,IntransitivePPFrame,domain,range,1,dbo:birthYear,dbo:Person,xsd:date,feminine,persona,personas,masculine,a§o,a§os
-born_on_1,verb,nacer,nace,naci¢,nacido,en,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Person,dbo:Place,feminine,persona,personas,masculine,pa°s,pa°ses
+born_on_1,verb,nacer,nace,naci¢,nacido,en,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Person,dbo:Place,feminine,persona,Personen,masculine,pa°s,pa°ses
+born_on_2,verb,nacer,nace,naci¢,nacido,en,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Actor,dbo:Place,masculine,actor,actores,masculine,pa°s,pa°ses
+born_on_3,verb,nacer,nace,naci¢,nacido,en,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Surfing,dbo:Place,masculine,surfistas profesionales,surfistas profesionales,masculine,pa°s,pa°ses
 complete_in_1,verb,completar,completo,complet¢,completado,in,IntransitivePPFrame,domain,range,2,dbo:completionDate,dbo:Ship,xsd:date,masculine,barco,barcos,-,-,-
 fliessen_durch_1,verb,fluir,fluye,fluy¢,fluido,por,IntransitivePPFrame,domain,range,1,dbo:city,dbo:River,dbo:City,masculine,r°o,r°os,feminine,ciudad,ciudades
 fliessen_durch_2,verb,fluir,fluye,fluy¢,fluido,por,IntransitivePPFrame,domain,range,1,dbp:country,dbo:River,dbo:Country,masculine,Fluss,FlÅsse,feminine,pa°s,pa°ses

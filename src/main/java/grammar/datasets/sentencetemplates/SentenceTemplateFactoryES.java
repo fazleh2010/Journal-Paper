@@ -56,8 +56,9 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
            //¿Quién es el editor de Forbes?
            "interrogativePronounPerson(range:singular) verb(component_be:present:singular) noun(singular) preposition adjunct(domain)?",
            //¿En qué zona horaria esta Roma?
-           "interrogativeDeterminerEn noun(singular) verb(component_esta:present:singular) object(domain)?"
-   
+           "interrogativeDeterminerEn noun(singular) verb(component_esta:present:singular) object(domain)?",
+           //¿Cuáles son los condados de Monarquía constitucional? ¿Cuáles son condados ($x | Country_NP)?
+           "interrogativePronounThingPlural verb(component_be:present:plural) noun(plural) preposition object(domain)?"
                 
           /*//"Wer ist der Bürgermeister von Tel Aviv?",
           "interrogativeDeterminer(range:singular) verb(component_be:present:singular) preposition adjunct(domain)?",
@@ -595,7 +596,7 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
         List.of(
         //¿En qué ciudad murió John F. Kennedy?
          "interrogativeDeterminerEn(domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
-         "interrogativeDeterminerEn(domain:singular) verb(mainVerb:past:thridPerson) preposition adjunct(range)?"
+         "interrogativeDeterminerEn(domain:plural) verb(mainVerb:past:thridPerson) preposition adjunct(range)?"
          
         ),
         IntransitivePPFrame,
@@ -611,14 +612,14 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
       createSentenceTemplate(
         language,
         List.of(
-         //┬┐En qu├® ciudad vive Bruny Surin?
-         //"interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) adjunct(domain)?",
-         //"interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) adjunct(domain)?"
-        /*"preposition interrogativeDeterminer(dativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
-        //In welcher Stadt wohnt Sylvester Stallone?
-        "preposition interrogativeDeterminer(dativeCase:range:singular) verb(mainVerb:present3rd:thridPerson) adjunct(domain)?"
-        */
-               ),
+          //¿Qué surfistas profesionales nacieron en las Filipinas?
+         "interrogativeVariableDeterminer(range:singular) verb(mainVerb:present:thridPerson) preposition adjunct(domain)?",   
+         "interrogativeVariableDeterminer(range:plural) verb(mainVerb:present:thridPerson) preposition adjunct(domain)?",
+         //¿Dónde está enterrado Syngman Rhee?
+        "interrogativePlace verb(component_be:past:singular) verb(mainVerb:past:thridPerson) adjunct(domain)?",
+         //¿Dónde nació Bach?
+         "interrogativePlace verb(mainVerb:past:thridPerson) adjunct(domain)?"
+                   ),
         IntransitivePPFrame,
         WHERE_WHO_PAST_PERSON,
         forward
@@ -626,24 +627,28 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
     );
     //Welche Person wurde 2010 geboren?
     //Wer ist 2010 geboren?
+    
+    //Welche Person wurde 2010 geboren?
+    //Wer ist 2010 geboren?
       sentenceTemplateRepository.add(
       createSentenceTemplate(
         language,
-        List.of(
-         //¿En qué ciudad murió John F. Kennedy?
-        "interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) adjunct(range)?",
-        "interrogativeDeterminerEn(range:singular) verb(mainVerb:present:thridPerson) adjunct(range)?",
-        //¿Dónde está enterrado Syngman Rhee?
-        "interrogativePlace verb(component_be:past:singular) verb(mainVerb:past:thridPerson) adjunct(range)?",
-         //¿Dónde nació Bach?
-         "interrogativePlace verb(mainVerb:past:thridPerson) adjunct(range)?"
-      
+        List.of(     
+          //¿En qué ciudad murió John F. Kennedy?
+        "interrogativeDeterminerEn(domain:singular) verb(mainVerb:past:thridPerson) adjunct(range)?",
+        "interrogativeDeterminerEn(domain:singular) verb(mainVerb:present:thridPerson) adjunct(range)?",
+        //¿Qué surfistas profesionales nacieron en las Filipinas?
+        "interrogativeVariableDeterminer noun(domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
+        "interrogativeVariableDeterminer noun(domain:plural) verb(mainVerb:present:thridPerson) preposition adjunct(range)?"
+        
             ),
         IntransitivePPFrame,
         WHERE_WHO_PAST_PERSON,
         backward
       )
     );
+      
+    /* 
       
               ///////////////////////////////
        sentenceTemplateRepository.add(
@@ -660,7 +665,7 @@ class SentenceTemplateFactoryES  implements Factory<SentenceTemplateRepository>,
         PERSON_CAUSE,
         forward
       )
-    );
+    );*/
     //Welche Person wurde 2010 geboren?
     //Wer ist 2010 geboren?
       sentenceTemplateRepository.add(

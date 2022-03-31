@@ -169,7 +169,17 @@ public class Spanish implements TempConstants,MultilingualBuilder {
             } else {
                 subjectType = findIntergativePronoun(lexicalEntryUtil, this.domainSelectable);
             }
-            word=LexicalEntryUtil.getSingle(lexicalEntryUtil, subjectType); 
+            
+          
+            if(subjectType.equals(interrogativePronoun))
+                word=LexicalEntryUtil.getSingle(lexicalEntryUtil, interrogativePronoun); 
+            else if(subjectType.equals(interrogativePronounThing))
+                 word=LexicalEntryUtil.getSingle(lexicalEntryUtil, interrogativePronounThing); 
+            else if(subjectType.equals("interrogativePronounThingPlural"))
+                 word=LexicalEntryUtil.getSingle(lexicalEntryUtil, "interrogativePronounThingPlural"); 
+            //System.out.println("subjectType::"+subjectType);
+            //System.out.println("attribute::"+attribute);
+            //exit(1);
           
         } else if (flagReference && isInterrogative(attribute)) {
            

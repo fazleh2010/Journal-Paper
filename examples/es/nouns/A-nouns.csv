@@ -32,3 +32,7 @@ deathPlace,noun,masculine,lugar de fallecimiento,lugares de fallecimiento,de,Nou
 poplaci¢n_total_de,noun,feminine,poplaci¢n total,poblaciones totales,de,NounPPFrame,range,domain,1,dbo:populationTotal,dbo:Location,xsd:double,feminine,ubicacion,ubicaciones,-,-,-
 editor_de,noun,masculine,editor,editores,de,NounPPFrame,range,domain,1,dbo:editor,dbo:WrittenWork,masculine,trabajo escrito,trabajos escritos,dbo:Person,feminine,persona,personas
 pr„sident_von,noun,masculine,presidente,presidentes,de,NounPPFrame,range,domain,1,dbo:leader,dbo:Legislature,dbo:Person,masculine,legislador,legisladores,feminine,persona,personas
+forma_de_gobierno,noun,masculine,forma de gobierno,forma de gobiernos,de,NounPPFrame,range,domain,,dbo:governmentType,dbo:Country,dbo:GovernmentType,masculine,pa¡s,pa¡ses,masculine,tipo,tipos
+condados_de,noun,masculine,condados,condados,de,NounPPFrame,domain,range,1,dbo:governmentType,dbo:Country,dbo:Country,masculine,pa¡s,pa¡ses,masculine,tipo,tipos
+fundador_de,noun,masculine,fundador,fundador,de,NounPPFrame,range,domain,1,dbo:founder,dbo:Publisher,dbo:Person,masculine,editor,editor,feminine,persona,personas
+anfitri¢n_de,noun,feminine,anfitri¢n,anfitri¢n,de,NounPPFrame,range,domain,1,dbo:presenter,dbo:TelevisionShow,dbo:Person,feminine,serie televisiva,series televisivas,feminine,persona,personas

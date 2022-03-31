@@ -43,8 +43,8 @@
   lexinfo:tense     lexinfo:perfect .
 
 :morir_en_frame a  lexinfo:IntransitivePPFrame ;
-  lexinfo:subject              :morir_en_obj ;
-  lexinfo:prepositionalAdjunct :morir_en_subj .
+  lexinfo:subject              :morir_en_subj ;
+  lexinfo:prepositionalAdjunct :morir_en_obj .
 
 :morir_en_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
   lemon:ontoMapping :morir_en_ontomap ;
