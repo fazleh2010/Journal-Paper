@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :c�digo ;
+  lemon:entry    :c�digo_form_preposition .
+
+:c�digo a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :c�digo_form ;
+  lemon:otherForm  :c�digo_singular ;
+  lemon:otherForm  :c�digo_plural ;
+  lemon:sense          :c�digo_sense_1 ;
+  lemon:synBehavior    :c�digo_nounpp .
+
+:c�digo_form a lemon:Form ;
+  lemon:writtenRep "c�digo de �rea"@it .
+
+:c�digo_singular a    lemon:Form ;
+  lemon:writtenRep "c�digo de �rea"@it ;
+  lexinfo:number   lexinfo:singular .
+
+:c�digo_plural a   lemon:Form ;
+  lemon:writtenRep "c�digos de �rea"@it ;
+  lexinfo:number    lexinfo:plural .
+
+:c�digo_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:c�digo_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :c�digo_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/areaCode> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :c�digo_sense_1_condition .
+
+:c�digo_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Place> ;
+  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#string> .
+
+:arg2 lemon:marker :c�digo_form_preposition .
+## Prepositions ##
+:c�digo_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "de"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

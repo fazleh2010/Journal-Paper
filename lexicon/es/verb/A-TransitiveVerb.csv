@@ -6,6 +6,7 @@ cruzar,verb,cruzar,cruza,cruz¢,cruzado,TransitiveFrame,range,domain,1,dbo:crosse
 ganar,verb,ganar,gana,gan¢,ganado,TransitiveFrame,range,domain,1,dbo:award,dbo:Scientist,dbo:Award,masculine,cient¡fico,cient¡ficos,masculine,premio,premios,por
 crear_1,verb,crear,crea,cre¢,creado,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Agent,feminine,serie televisiva,series televisivas,masculine,agente,agentes,por
 crear_2,verb,ide¢,ide¢,ide¢,ide¢,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Person,feminine,serie televisiva,series televisivas,feminine,persona,personas,por
+crear_3,verb,crear,crea,cre¢,creado,TransitiveFrame,range,domain,1,dbo:author,dbo:Website,dbo:Agent,masculine,sitio web,sitio web,masculine,agente,agentes,por
 actuado,verb,actuado,actuado,actuado,actuado,TransitiveFrame,range,domain,5,dbo:starring,dbo:Film,dbo:Person,feminine,pel¡cula,pel¡culas,masculine,actor,actores,por
 operate_1,verb,operar,opera,oper¢,operado,TransitiveFrame,range,domain,1,dbo:operator,dbo:LaunchPad,dbo:Organisation,feminine,plataforma de lanzamiento,plataformas de lanzamiento,feminine,organizaci¢n,organizaciones,por
 play_1,verb,interpreto,interpreto,interpreto,interpreto,TransitiveFrame,range,domain,1,dbo:portrayer,dbo:FictionalCharacter,dbo:Person,masculine,car cter ficticio,caracteres ficticios,feminine,ciudad,ciudades,por
@@ -37,3 +38,6 @@ paint,verb,pintar,pinta,pint¢,pintado,TransitiveFrame,range,domain,1,dbp:artist,
 primero_en_ascender_al,verb,primero-en-ascender-al,primero-en-asciende-al,primero-en-asendi¢-al,primero-en-ascendido-al,TransitiveFrame,range,domain,1,dbo:firstAscentPerson,dbo:Mountain,feminine,monta¤a,monta¤as,dbo:Person,feminine,persona,personas,por
 contiene,verb,contiene,contiene,contiene,contiene,TransitiveFrame,domain,range,1,dbo:ingredient,dbo:Food,owl:Thing,feminine,comida,comida,-,-,-,por
 participate_in_2,verb,participar,participa,particip¢,participado,TransitiveFrame,range,domain,1,dbo:battle,dbo:Person,dbo:MilitaryConflict,masculine,soldado,soldados,masculine,conflicto militar,conflictos militares,por
+cuesta,verb,costar,cuesta,cost¢,costado,TransitiveFrame,range,domain,1,dbo:budget,dbo:Film,xsd:double,feminine,pel¡cula,pel¡culas,-,-,-,por
+actu¢,verb,actu¢-como,actu¢-como,actu¢-como,actu¢-como,TransitiveFrame,range,domain,1,dbp:portrayer,dbo:FictionalCharacter,dbo:Person,masculine,car cter ficticio,caracteres ficticios,feminine,persona,personas,por
+producen,verb,producen,producen,producen,desarrollado,TransitiveFrame,domain,range,1,dbo:product,dbo:Company,dbo:Ship,feminine,compa¤ia,compa¤ias,masculine,barco,barcos,por

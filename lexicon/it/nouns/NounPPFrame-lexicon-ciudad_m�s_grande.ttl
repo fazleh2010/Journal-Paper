@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :ciudad_m�s_grande ;
+  lemon:entry    :ciudad_m�s_grande_form_preposition .
+
+:ciudad_m�s_grande a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :ciudad_m�s_grande_form ;
+  lemon:otherForm  :ciudad_m�s_grande_singular ;
+  lemon:otherForm  :ciudad_m�s_grande_plural ;
+  lemon:sense          :ciudad_m�s_grande_sense_1 ;
+  lemon:synBehavior    :ciudad_m�s_grande_nounpp .
+
+:ciudad_m�s_grande_form a lemon:Form ;
+  lemon:writtenRep "ciudad m�s grande"@it .
+
+:ciudad_m�s_grande_singular a    lemon:Form ;
+  lemon:writtenRep "ciudad m�s grande"@it ;
+  lexinfo:number   lexinfo:singular .
+
+:ciudad_m�s_grande_plural a   lemon:Form ;
+  lemon:writtenRep "ciudades m�s grandes"@it ;
+  lexinfo:number    lexinfo:plural .
+
+:ciudad_m�s_grande_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:ciudad_m�s_grande_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :ciudad_m�s_grande_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/largestCity> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :ciudad_m�s_grande_sense_1_condition .
+
+:ciudad_m�s_grande_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Country> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/City> .
+
+:arg2 lemon:marker :ciudad_m�s_grande_form_preposition .
+## Prepositions ##
+:ciudad_m�s_grande_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "de"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

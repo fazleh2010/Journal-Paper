@@ -65,7 +65,6 @@ public class TurtleCreation implements TempConstants {
 
     public String findSyntacticFrame(String[] row) throws Exception {
         String nounPPFrame = row[nounPPIndex];
-        System.out.println("row[nounPPIndex]::"+nounPPIndex);
     
         try {
             if (nounPPFrame.equals(NounPPFrame)) {

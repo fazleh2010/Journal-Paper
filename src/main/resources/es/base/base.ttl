@@ -15,6 +15,7 @@
   lemon:entry    :component_aux_object_past ;
   lemon:entry    :component_imperative_plural ;
   lemon:entry    :component_imperative_transitive ;
+  lemon:entry    :component_imperative_show ;
   lemon:entry    :component_have ;
   lemon:entry    :component_hayan ;
   lemon:entry    :component_el ;
@@ -207,6 +208,27 @@
   lexinfo:number                          lexinfo:plural ] ;
   lexinfo:partOfSpeech lexinfo:verb .
 
+  :component_imperative_show a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "Muéstrame"@es ;
+  lexinfo:verbFormMood                    lexinfo:infinitive ] ;
+  lemon:otherForm      [ lemon:writtenRep "Muéstrame"@es ;   
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "Muéstrame"@es ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lemon:otherForm      [ lemon:writtenRep "Muéstrame"@es ;   
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "Muéstrame"@es ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
 
 :component_have a      lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "tener"@es ] ;
@@ -292,7 +314,7 @@
   lexinfo:partOfSpeech lexinfo:article .
 
  :interrogativeMuch a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "How much"@es ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Cuanto"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
 :interrogativeEvalution a      lemon:LexicalEntry ;

@@ -42,6 +42,7 @@ import org.apache.commons.text.similarity.CosineDistance;
 import turtle.EnglishTurtle;
 import util.io.GenderUtils;
 import linkeddata.LinkedData;
+import turtle.ItalianTurtle;
 import turtle.SpanishTurtle;
 import static util.io.ResourceHelper.loadResource;
 import turtle.TutleConverter;
@@ -177,6 +178,8 @@ public class QueGG {
             tutleConverter = new EnglishTurtle(inputDir, linkedData, language);
         }else if (language.equals(Language.ES)) {
             tutleConverter = new SpanishTurtle(inputDir, linkedData, language);
+        }else if (language.equals(Language.IT)) {
+            tutleConverter = new ItalianTurtle(inputDir, linkedData, language);
         }
         return tutleConverter.getConversionFlag();
     }

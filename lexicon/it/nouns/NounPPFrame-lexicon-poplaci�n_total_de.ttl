@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :poplaci�n_total_de ;
+  lemon:entry    :poplaci�n_total_de_form_preposition .
+
+:poplaci�n_total_de a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :poplaci�n_total_de_form ;
+  lemon:otherForm  :poplaci�n_total_de_singular ;
+  lemon:otherForm  :poplaci�n_total_de_plural ;
+  lemon:sense          :poplaci�n_total_de_sense_1 ;
+  lemon:synBehavior    :poplaci�n_total_de_nounpp .
+
+:poplaci�n_total_de_form a lemon:Form ;
+  lemon:writtenRep "poplaci�n total"@it .
+
+:poplaci�n_total_de_singular a    lemon:Form ;
+  lemon:writtenRep "poplaci�n total"@it ;
+  lexinfo:number   lexinfo:singular .
+
+:poplaci�n_total_de_plural a   lemon:Form ;
+  lemon:writtenRep "poblaciones totales"@it ;
+  lexinfo:number    lexinfo:plural .
+
+:poplaci�n_total_de_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:poplaci�n_total_de_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :poplaci�n_total_de_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/populationTotal> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :poplaci�n_total_de_sense_1_condition .
+
+:poplaci�n_total_de_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Location> ;
+  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#double> .
+
+:arg2 lemon:marker :poplaci�n_total_de_form_preposition .
+## Prepositions ##
+:poplaci�n_total_de_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "de"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

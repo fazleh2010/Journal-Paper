@@ -1,3 +1,0 @@
-LemonEntry,partOfSpeech,article_singular,writtenForm (singular),spanish_writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference_dbpedia,domain_dbpedia,range_dbpedia,domainSingularArticle,domainWrittenSingularForm,domainWrittenPluralForm,rangeSingularArticle,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
-forma_de_gobierno,noun,masculine,forma de gobierno,forma de gobiernos,de,NounPPFrame,range,domain,,dbo:governmentType,dbo:Country,dbo:GovernmentType,masculine,pa¡s,pa¡ses,masculine,tipo,tipos
-condados_de,noun,masculine,condados,condados,de,NounPPFrame,domain,range,1,dbo:governmentType,dbo:Country,dbo:Country,masculine,pa¡s,pa¡ses,masculine,tipo,tipos
