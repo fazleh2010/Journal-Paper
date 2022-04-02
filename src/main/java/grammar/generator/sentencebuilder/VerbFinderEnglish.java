@@ -38,9 +38,7 @@ public class VerbFinderEnglish implements TempConstants {
     public VerbFinderEnglish(FrameType frameType, LexicalEntryUtil lexicalEntryUtil, String attribute, String reference) throws QueGGMissingFactoryClassException {
         this.frameType = frameType;
         this.lexicalEntryUtil = lexicalEntryUtil;
-        this.paramterFinder = new ParamterFinder(attribute, reference);
-         System.out.println("paramterFinder::" + paramterFinder);
-        
+        this.paramterFinder = new ParamterFinder(attribute, reference);        
         this.setCategory(paramterFinder.getReference());
       
       

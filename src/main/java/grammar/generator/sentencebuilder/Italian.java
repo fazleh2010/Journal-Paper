@@ -157,14 +157,15 @@ public class Italian implements TempConstants,MultilingualBuilder {
             }
             
           
-            if(subjectType.equals(interrogativePronoun))
-                word=LexicalEntryUtil.getSingle(lexicalEntryUtil, interrogativePronoun); 
+            if(subjectType.equals(interrogativePronounPerson))
+                word=LexicalEntryUtil.getSingle(lexicalEntryUtil, interrogativePronounPerson); 
             else if(subjectType.equals(interrogativePronounThing))
                  word=LexicalEntryUtil.getSingle(lexicalEntryUtil, interrogativePronounThing); 
-            else if(subjectType.equals("interrogativePronounThingPlural"))
-                 word=LexicalEntryUtil.getSingle(lexicalEntryUtil, "interrogativePronounThingPlural"); 
+            else if(subjectType.equals(interrogativePronounThingPlural))
+                 word=LexicalEntryUtil.getSingle(lexicalEntryUtil, interrogativePronounThingPlural); 
             //System.out.println("subjectType::"+subjectType);
             //System.out.println("attribute::"+attribute);
+            //System.out.println("word::"+word);
             //exit(1);
           
         } else if (flagReference && isInterrogative(attribute)) {
@@ -204,7 +205,6 @@ public class Italian implements TempConstants,MultilingualBuilder {
 
         } else if (flagReference && attribute.contains(verb)) {
             word = new VerbFinderEnglish(this.frameType,this.lexicalEntryUtil,attribute, reference).getWord();
-
         } else if (flagReference && attribute.equals(determiner)) {
 
             if (reference.contains(colon)) {

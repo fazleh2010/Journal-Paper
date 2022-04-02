@@ -43,77 +43,30 @@ public class SentenceTemplateFactoryIT  implements Factory<SentenceTemplateRepos
         List.of(
           //"Qual è la capitale del Cameroon",
           "interrogativePronoun(range:singular) verb(component_be:present:singular) noun(singular) preposition adjunct(domain)?",
-          "interrogativePronoun(range:plural) verb(component_be:present:plural) noun(plural) preposition adjunct(domain)?",
           "interrogativePronoun(range:singular) verb(component_be:past:singular) noun(singular) preposition adjunct(domain)?",
-          "interrogativePronoun(range:plural) verb(component_be:past:plural) noun(plural) preposition adjunct(domain)?"
-          /*//Gib mir die Enkel von Elvis Presley.Dame una lista de los hijos de Margaret Thatcher.
-           "verb(component_imperative_transitive:present:singular) determiner(component_una) determiner(component_lista) noun(singular) preposition adjunct(domain).",
-           "verb(component_imperative_transitive:present:singular) determiner(component_una) determiner(component_lista) noun(plural) preposition adjunct(domain).",
-           //Dame todos los miembros de la banda Prodigy.
-           "verb(component_imperative_transitive:present:singular) determiner(component_todos) noun(singular) preposition adjunct(domain).",
-           "verb(component_imperative_transitive:present:singular) determiner(component_todos) noun(plural) preposition adjunct(domain).",
-            //¿Qué forma de gobierno tiene Rusia?¿Qué pa�ses de gobierno lo hace ($x | Country_NP)?
-           "interrogativeVariableDeterminer noun(singular) determiner(component_tiene) adjunct(domain)?",
-           //"interrogativeDeterminer(range:singular) preposition  noun(singular) verb(component_do:present:singular) adjunct(domain)?"
-           //¿Quién es el editor de Forbes?
-           "interrogativePronounPerson(range:singular) verb(component_be:present:singular) noun(singular) preposition adjunct(domain)?",
-           //¿En qué zona horaria esta Roma?
-           "interrogativeDeterminerEn noun(singular) verb(component_esta:present:singular) object(domain)?",
-           //¿Cuáles son los condados de Monarquía constitucional? ¿Cuáles son condados ($x | Country_NP)?
-           "interrogativePronounThingPlural verb(component_be:present:plural) noun(plural) preposition object(domain)?",
-           //¿Qué ingredientes son necesarios para una tarta de zanahorias?
-            "interrogativeVariableDeterminer(range:singular) verb(component_be:present:plural) noun(singular) preposition adjunct(domain)?",
-            ///Muéstrame todos los libros en la serie Fundación de Asimov
-            "verb(component_imperative_show:present:singular) determiner(component_todos) noun(singular) preposition adjunct(domain).",
-   
-          //"Wer ist der Bürgermeister von Tel Aviv?",
-          "interrogativeDeterminer(range:singular) verb(component_be:present:singular) preposition adjunct(domain)?",
-          "interrogativeDeterminer(range:singular) verb(component_be:past:singular) preposition adjunct(domain)?",
-          "interrogativeDeterminer(range:plural) verb(component_be:present:plural) preposition adjunct(domain)?",
-          "interrogativeDeterminer(range:plural) verb(component_be:past:plural) preposition adjunct(domain)?",
-
-           //"verb(imperative_transitive:present:singular) pronoun(object_pronoun) noun(singular) preposition adjunct(domain).",
-           //"verb(imperative_transitive:present:singular) pronoun(object_pronoun) noun(plural) preposition adjunct(domain)."
-           
-          //Gib mir alle Bandmitglieder von Prodigy
-           "verb(imperative_transitive:present:singular) pronoun(object_pronoun) determiner(alle) noun(plural) preposition adjunct(domain).",
-           //"Liste die Kinder von Margaret Thatcher auf.",
-           "verb(imperative_verb:present:plural) determiner(component_the_nominative:reference:plural) noun(plural) preposition adjunct(domain) preposition(auf)."  ,   
-           //"Liste die Kinder von Margaret Thatcher auf.",
-           "verb(imperative_verb:present:plural) determiner(alle) noun(plural) preposition adjunct(domain) preposition(auf)." ,
-           //"In welchem Land ist der Mount Everest?", In welcher Stadt ist die Heinekenbrauerei?
-            //"preposition interrogativeDeterminer(dativeCase:range:singular) verb(component_be:present:singular) adjunct(domain)?"
-            //"interrogativePlace(nominativeCase:singular) verb(component_be:present:singular) determiner(component_the_nominative:domain:singular) object(domain)?"             
-            //Was ist Batmans richtiger Name?
-           "interrogativePronoun(range:singular) verb(component_be:present:singular) adjunct(domain) Apostrophe noun(nominativeCase:singular)?" */
+          "interrogativePronoun(range:plural) verb(component_be:present:plural) noun(plural) preposition adjunct(domain)?",
+          "interrogativePronoun(range:plural) verb(component_be:past:plural) noun(plural) preposition adjunct(domain)?",
+           //"Dammi la valuta della Cina."
+           "verb(component_imperative_transitive:present:singular) determiner(component_la) noun(singular) preposition adjunct(domain).",
+           "verb(component_imperative_transitive:present:plural) determiner(component_la) noun(plural) preposition adjunct(domain).",
+           //Dammi tutti i membri dei Prodigy.
+           "verb(component_imperative_transitive:present:singular) determiner(component_tutti) determiner(component_i) noun(singular) preposition adjunct(domain).",
+           "verb(component_imperative_transitive:present:plural) determiner(component_tutti) determiner(component_i) noun(plural) preposition adjunct(domain).",
+            //Elenca tutti i musicals con musiche di Elton John.
+           "verb(component_imperative_list:present:singular) determiner(component_tutti) determiner(component_i) noun(plural) preposition adjunct(domain).",
+           //Mostrami l'autobiografia di Hemingway.
+           "verb(component_imperative_show:present:singular) determiner(component_li) noun(singular) preposition adjunct(domain).",
+           "verb(component_imperative_show:present:singular) determiner(component_li) noun(plural) preposition adjunct(domain)."
         ),
         NounPPFrame,
         whQuestion
       )
     );
     
-     //NounPPFrame boolean question
     sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(
-          //"Ist Rita Wilson die Frau von Tom Hanks?"
-          //"verb(component_be:present:singular) subject(range) determiner(reference:singular) noun(singular) preposition adjunct(domain)?",
-          //"verb(component_be:present:plural) subject(range) determiner(reference:plural) noun(plural) preposition adjunct(domain)?"
-          //Heißt die Frau von Präsident Obama Michelle?"
-          //"verb(component_heißen:present:singular) determiner(component_the_nominative:reference:singular) noun(nominativeCase:singular) preposition adjunct(domain) subject(range)?",
-          //"verb(component_heißen:present:plural) determiner(component_the_nominative:reference:plural) noun(nominativeCase:plural) preposition adjunct(domain) subject(range)?"    
-          //Ist Proinsulin ein Protein?
-          //"verb(component_be:present:singular) subject(range) noun(nominativeCase:singular) article(definite_article:nominativeCase:neuter) object(domain)?",   
-          //"Sind Laubfrösche Amphibien?"
-          //"verb(component_be:present:plural) subject(domain) noun(nominativeCase:singular) object(range)?",
-          //Hat Abraham Lincolns Sterbeort eine Webseite?", 
-          //"verb(component_haben:present:singular) object(domain) article(definite_article:nominativeCase:feminine) subject(range)?"
-          //"Hatte Che Guevara Kinder?",
-          //"verb(component_haben:past:singular) object(domain) noun(nominativeCase)?"
-          //Gibt es ein Videospiel, das Battle Chess heißt?
-          // "verb(imperative_transitive) pronoun(object_pronoun_es) article(definite_article:nominativeCase:neuter), noun(nominativeCase), article(component_the_nominative:nominativeCase:neuter) object(domain)"    
-           //"Was ist Batmans richtiger Name?",                
-           
+             
                  ),
         NounPPFrame,
         booleanQuestionDomainRange
@@ -123,24 +76,7 @@ public class SentenceTemplateFactoryIT  implements Factory<SentenceTemplateRepos
     sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(
-          //"Hatte Che Guevara Kinder?",
-          "verb(component_haben:past:singular) object(domain) noun(nominativeCase)?" 
-        
-          //Gibt es ein Videospiel, das Battle Chess heißt?
-          // "verb(imperative_transitive) pronoun(object_pronoun_es) article(definite_article:nominativeCase:neuter), noun(nominativeCase), article(component_the_nominative:nominativeCase:neuter) object(domain)"    
-          //Hat Abraham Lincolns Sterbeort eine Webseite?", 
-          //"verb(component_haben:present:singular) object(domain) article(definite_article:nominativeCase:feminine) noun(nominativeCase)?"
-           //"Was ist Batmans richtiger Name?",                
-           
-
-            // "interrogativePronoun(range:singular)  verb(component_be:present:singular) object(range) noun(nominativeCase)?"    
-            //"Welche Regierungsform hat Russland?",
-            //"interrogativeDeterminer(range:singular) verb(component_haben:present:singular) object(domain)?"   
-            //"Aus welcher Region ist der Melon de Bourgogne?"
-            // "preposition(auf) interrogativeDeterminer(range:singular) verb(component_be:present:singular) adjunct(domain)? "
-           // Wieviele Seiten hat Krieg und Frieden?
-           // "interrogativeAmount(range:singular) noun(nominativeCase:plural) verb(component_haben:present:singular) object(domain)?"        
-                 ),
+                      ),
         NounPPFrame,
         booleanQuestionDomain
       )
@@ -151,15 +87,7 @@ public class SentenceTemplateFactoryIT  implements Factory<SentenceTemplateRepos
         List.of(
           //la capitale del Cameroon"
          "determiner(reference) noun(singular) preposition adjunct(domain)?"
-         //"noun(nominativeCase:plural) preposition adjunct(domain)"      
-         //"determiner(component_the_nominative:reference) noun(nominativeCase) preposition nounPhrase"
-          //Welche Person ist das Mitglied von...?
-          //"interrogativeDeterminer noun(condition:copulativeArg) verb(reference:component_be) NP(prepositionalAdjunct)?"
-          //Wer ist das Mitglied von...?
-          //"interrogativePronoun verb(reference:component_be) NP(prepositionalAdjunct)?",
-          //Gib mir das Mitglied von...?
-          //"verb(reference:component_imperative_transitive) pronoun(reference:object_pronoun) determiner(reference:component_the_accusative) noun(root:accusativeCase) preposition prepositionalAdjunct"
-          ),
+                ),
         NounPPFrame,
         nounPhrase
       )
@@ -168,15 +96,9 @@ public class SentenceTemplateFactoryIT  implements Factory<SentenceTemplateRepos
     sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(
-          //Was ist die Hauptstadt von Kamerun?
+          //del Cameroon?
          "determiner(reference) noun(singular)"
-          //Welche Person ist das Mitglied von...?
-          //"interrogativeDeterminer noun(condition:copulativeArg) verb(reference:component_be) NP(prepositionalAdjunct)?"
-          //Wer ist das Mitglied von...?
-          //"interrogativePronoun verb(reference:component_be) NP(prepositionalAdjunct)?",
-          //Gib mir das Mitglied von...?
-          //"verb(reference:component_imperative_transitive) pronoun(reference:object_pronoun) determiner(reference:component_the_accusative) noun(root:accusativeCase) preposition prepositionalAdjunct"
-          ),
+            ),
         NounPPFrame,
         noun
       )
@@ -197,11 +119,11 @@ public class SentenceTemplateFactoryIT  implements Factory<SentenceTemplateRepos
     sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(
-        //Wer moderiert die BBC Wildlife Specials?
-        "interrogativePronoun(range:singular) verb(mainVerb:present:thirdPerson) object(domain)?",
-        "interrogativePronoun(range:singular) verb(mainVerb:past:thirdPerson) object(domain)?",
+        //Who hosts the BBC Wildlife Specials?
+        //"interrogativePronoun(range:singular) verb(mainVerb:present:thirdPerson) object(domain)?",
+        //"interrogativePronoun(range:singular) verb(mainVerb:past:thirdPerson) object(domain)?"
         //¿En qué museo está expuesto el Grito?
-        "interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
+        /*"interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
         "interrogativeDeterminerEn(range:plural) verb(mainVerb:present:thridPerson) object(domain)?",
         "interrogativeDeterminerPor(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
         "interrogativeDeterminerPor(range:plural) verb(mainVerb:present:thridPerson) object(domain)?",
@@ -209,7 +131,7 @@ public class SentenceTemplateFactoryIT  implements Factory<SentenceTemplateRepos
          //"verb(component_imperative_transitive:present:singular) pronoun(pronoun_personal) determiner(all) noun(plural) verb(mainVerb:present:thridPerson) object(domain)"
          "verb(component_imperative_transitive:present:singular) determiner(component_todos) noun(singular) interrogativeRelative1 determiner(component_hayan) verb(mainVerb:present:thridPerson) object(domain)",
          //¿Qué contiene una galleta de chocolate? 
-         "interrogativeVariableDeterminer verb(mainVerb:present:thirdPerson) object(domain)?"
+         "interrogativeVariableDeterminer verb(mainVerb:present:thirdPerson) object(domain)?"*/
          //¿Qué color expresa Riqueza?
          //"interrogativeDeterminerPor(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
         /*"interrogativePronoun(nominativeCase:range:singular) verb(component_haben:present:singular) object(domain) verb(mainVerb:perfect:thridPerson)?",    

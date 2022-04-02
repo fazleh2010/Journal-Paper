@@ -162,5 +162,6 @@ public interface TempConstants {
     public static String interrogativePronounThing = "interrogativePronounThing";
     public static String interrogativePronoun = "interrogativePronoun";
     public static String interrogativeDeterminer = "interrogativeDeterminer";
+    public static String interrogativePronounThingPlural="interrogativePronounThingPlural";
 
 }
