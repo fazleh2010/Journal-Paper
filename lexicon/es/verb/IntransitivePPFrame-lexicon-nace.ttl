@@ -1,0 +1,69 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :nace ;
+  lemon:entry    :form_nace_present_preposition .
+
+:nace a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_nace_present ;
+  lemon:otherForm      :nace_present3rd ;
+  lemon:otherForm      :nace_past ;
+  lemon:otherForm      :nace_perfect ;
+  lemon:sense          :nace_sense_1 ;
+  lemon:synBehavior    :nace_frame .
+
+:form_nace_present a           lemon:Form ;
+  lemon:writtenRep     "nace"@es ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:nace_present3rd a      lemon:Form ;
+  lemon:writtenRep "nace"@es ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:nace_past a lemon:Form ;
+  lemon:writtenRep  "nace"@es ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:nace_perfect a lemon:Form ;
+  lemon:writtenRep  "nace"@es ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:perfect .
+
+:nace_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :nace_subj ;
+  lexinfo:prepositionalAdjunct :nace_obj .
+
+:nace_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :nace_ontomap ;
+  lemon:reference   <http://dbpedia.org/property/mouthLocation> ;
+  lemon:subjOfProp  :nace_obj ;
+  lemon:objOfProp   :nace_subj ;
+  lemon:condition   :nace_sense_1_condition .
+
+:nace_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/River> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Place> .
+
+
+:nace_obj lemon:marker :en .
+
+:arg2 lemon:marker :form_nace_present_preposition .
+
+## Prepositions ##
+
+:form_nace_present_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "en"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

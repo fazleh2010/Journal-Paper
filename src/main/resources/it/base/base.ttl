@@ -6,17 +6,19 @@
 @base            <http://localhost:8080#> .
 
 :lexicon_en a    lemon:Lexicon ;
-  lemon:language "bn" ;
+  lemon:language "it" ;
   lemon:entry    :component_be ;
   lemon:entry    :component_do ;
   lemon:entry    :component_aux_object_past ;
   lemon:entry    :component_imperative_plural ;
   lemon:entry    :component_imperative_transitive ;
-  lemon:entry    :interrogativePronoun ;
   lemon:entry    :interrogativeDeterminer ;
   lemon:entry    :interrogativePronounThingWhat ;
-  lemon:entry    :interrogativePronounPerson ;
   lemon:entry    :interrogativePlace ;
+  lemon:entry    :interrogativePronounPerson ;
+  lemon:entry    :interrogativePronounWhom ;
+  lemon:entry    :interrogativePronounThing ;
+  lemon:entry    :interrogativePronounThingPlural ;
   lemon:entry    :component_have ;
   lemon:entry    :component_the ;
   lemon:entry    :determiner_plural ;
@@ -131,17 +133,82 @@
 
 ## Question words ##
 
-:interrogativePronounThingWhat a       lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "Cosa"@en ] ;
+:interrogativeDeterminerEn a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿En qué"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
-:interrogativePronounPerson a       lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "Chi"@en ] ;
+  :interrogativeDeterminerPor a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Por qué"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
-:interrogativePlace a       lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "Dove"@en ] ;
+  :interrogativeDeterminerDe a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "De que"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
+
+  :interrogativeVariableDeterminer a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Qué"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativePronounDeterminer a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Qué"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativeRelative1 a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "qué"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+  :interrogativeRelative2 a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "que"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativeCause a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿De qué"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+
+ :interrogativeAmount a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Cuántas"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativeOften a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Cuántas veces"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativeMuch a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Cuanto"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+:interrogativeEvalution a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Cómo"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativePronounPerson a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Quién"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativePronounThing a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "Qual"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativePronounThingPlural a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Cuáles"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativePronounWhom a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Con quien"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativePlace a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Dónde"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativePlace2 a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Donde están"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article . 
+
+  :interrogativeTemporal a               lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Cuándo"@es ] ;
+   lexinfo:partOfSpeech lexinfo:verb .
 
 
 

@@ -1,0 +1,91 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :to_actuado ;
+  lemon:entry    :actuadoed ;
+  lemon:entry    :form_actuado_preposition .
+
+:to_actuado a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_actuado ;
+  lemon:otherForm      :form_actuados ;
+  lemon:otherForm      :form_actuadoed ;
+  lemon:sense          :actuado_sense_1 ;
+  lemon:synBehavior    :actuado_frame_transitive .
+
+:form_actuado a         lemon:Form ;
+  lemon:writtenRep     "actuado"@es ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_actuados a    lemon:Form ;
+  lemon:writtenRep "actuado"@es ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+
+:form_actuados a    lemon:Form ;
+  lemon:writtenRep "actuado"@es ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_actuadoed a   lemon:Form ;
+  lemon:writtenRep "actuado"@es ;
+  lexinfo:tense    lexinfo:perfect ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:actuado_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :actuado_subj ;
+  lexinfo:directObject     :actuado_obj .
+
+:actuado_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :actuado_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/starring> ;
+  lemon:subjOfProp  :actuado_obj ;
+  lemon:objOfProp   :actuado_subj ;
+  lemon:condition   :actuado_sense_1_condition .
+
+
+:actuado_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Film> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:actuadoed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_actuadoed_canonical ;
+  lemon:otherForm      :form_actuadoed_by ;
+  lemon:synBehavior    :actuadoed_frame_adjectivepp ;
+  lemon:sense          :actuadoed_ontomap .
+
+:form_actuadoed_canonical a lemon:Form ;
+  lemon:writtenRep         "actuado"@es .
+
+:form_actuadoed_by a    lemon:Form ;
+  lemon:writtenRep     "actuado"@es ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:actuadoed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :actuadoed_subj ;
+  lexinfo:prepositionalAdjunct :actuadoed_obj .
+
+:actuadoed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :actuadoed_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/starring> ;
+  lemon:subjOfProp  :actuadoed_subj ;
+  lemon:objOfProp   :actuadoed_obj ;
+  lemon:condition   :actuado_sense_1_condition .
+:actuadoed_obj lemon:marker :por .
+
+:arg2 lemon:marker :form_actuado_form_preposition .
+
+## Prepositions ##
+
+:form_actuado_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "por"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

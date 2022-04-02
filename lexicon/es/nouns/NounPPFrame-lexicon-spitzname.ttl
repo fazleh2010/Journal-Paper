@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :spitzname ;
+  lemon:entry    :spitzname_form_preposition .
+
+:spitzname a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :spitzname_form ;
+  lemon:otherForm  :spitzname_singular ;
+  lemon:otherForm  :spitzname_plural ;
+  lemon:sense          :spitzname_sense_1 ;
+  lemon:synBehavior    :spitzname_nounpp .
+
+:spitzname_form a lemon:Form ;
+  lemon:writtenRep "apodo"@es .
+
+:spitzname_singular a    lemon:Form ;
+  lemon:writtenRep "apodo"@es ;
+  lexinfo:number   lexinfo:singular .
+
+:spitzname_plural a   lemon:Form ;
+  lemon:writtenRep "apodos"@es ;
+  lexinfo:number    lexinfo:plural .
+
+:spitzname_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:spitzname_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :spitzname_sense_1 ;
+  lemon:reference           <http://dbpedia.org/property/nickname> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :spitzname_sense_1_condition .
+
+:spitzname_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/City> ;
+  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#string> .
+
+:arg2 lemon:marker :spitzname_form_preposition .
+## Prepositions ##
+:spitzname_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "de"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

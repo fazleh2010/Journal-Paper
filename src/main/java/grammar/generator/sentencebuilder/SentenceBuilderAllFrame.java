@@ -32,6 +32,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import static lexicon.LexicalEntryUtil.getDeterminerTokenByNumber;
 import grammar.generator.sentencebuilder.German;
+import grammar.generator.sentencebuilder.Italian;
 import grammar.generator.sentencebuilder.MultilingualBuilder;
 import grammar.generator.sentencebuilder.Spanish;
 import util.io.StringMatcher;
@@ -400,6 +401,8 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
             bultilingualBuilder = new German(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
         } else if (this.language.equals(Language.ES)) {
             bultilingualBuilder = new Spanish(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
+        }else if (this.language.equals(Language.IT)) {
+            bultilingualBuilder = new Italian(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
         }
         sentences = this.getNounPPframeSentence(bindingVariable, bultilingualBuilder, sentenceTemplates);
 

@@ -1,0 +1,91 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :to_ganar ;
+  lemon:entry    :ganared ;
+  lemon:entry    :form_ganar_preposition .
+
+:to_ganar a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_ganar ;
+  lemon:otherForm      :form_ganars ;
+  lemon:otherForm      :form_ganared ;
+  lemon:sense          :ganar_sense_1 ;
+  lemon:synBehavior    :ganar_frame_transitive .
+
+:form_ganar a         lemon:Form ;
+  lemon:writtenRep     "ganar"@es ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_ganars a    lemon:Form ;
+  lemon:writtenRep "gana"@es ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+
+:form_ganars a    lemon:Form ;
+  lemon:writtenRep "gan�"@es ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_ganared a   lemon:Form ;
+  lemon:writtenRep "ganado"@es ;
+  lexinfo:tense    lexinfo:perfect ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:ganar_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :ganar_subj ;
+  lexinfo:directObject     :ganar_obj .
+
+:ganar_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :ganar_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/award> ;
+  lemon:subjOfProp  :ganar_obj ;
+  lemon:objOfProp   :ganar_subj ;
+  lemon:condition   :ganar_sense_1_condition .
+
+
+:ganar_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Scientist> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Award> .
+
+:ganared a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_ganared_canonical ;
+  lemon:otherForm      :form_ganared_by ;
+  lemon:synBehavior    :ganared_frame_adjectivepp ;
+  lemon:sense          :ganared_ontomap .
+
+:form_ganared_canonical a lemon:Form ;
+  lemon:writtenRep         "ganar"@es .
+
+:form_ganared_by a    lemon:Form ;
+  lemon:writtenRep     "ganar"@es ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:ganared_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :ganared_subj ;
+  lexinfo:prepositionalAdjunct :ganared_obj .
+
+:ganared_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :ganared_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/award> ;
+  lemon:subjOfProp  :ganared_subj ;
+  lemon:objOfProp   :ganared_obj ;
+  lemon:condition   :ganar_sense_1_condition .
+:ganared_obj lemon:marker :por .
+
+:arg2 lemon:marker :form_ganar_form_preposition .
+
+## Prepositions ##
+
+:form_ganar_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "por"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

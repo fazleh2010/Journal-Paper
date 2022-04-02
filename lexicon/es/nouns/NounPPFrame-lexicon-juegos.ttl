@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :juegos ;
+  lemon:entry    :juegos_form_preposition .
+
+:juegos a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :juegos_form ;
+  lemon:otherForm  :juegos_singular ;
+  lemon:otherForm  :juegos_plural ;
+  lemon:sense          :juegos_sense_1 ;
+  lemon:synBehavior    :juegos_nounpp .
+
+:juegos_form a lemon:Form ;
+  lemon:writtenRep "juego"@es .
+
+:juegos_singular a    lemon:Form ;
+  lemon:writtenRep "juego"@es ;
+  lexinfo:number   lexinfo:singular .
+
+:juegos_plural a   lemon:Form ;
+  lemon:writtenRep "juegos"@es ;
+  lexinfo:number    lexinfo:plural .
+
+:juegos_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg2 ;
+  lexinfo:prepositionalAdjunct :arg1 .
+
+:juegos_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :juegos_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/publisher> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :juegos_sense_1_condition .
+
+:juegos_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/VideoGame> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Publisher> .
+
+:arg2 lemon:marker :juegos_form_preposition .
+## Prepositions ##
+:juegos_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "de"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
