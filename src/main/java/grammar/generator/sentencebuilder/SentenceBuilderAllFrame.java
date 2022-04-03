@@ -275,6 +275,9 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
         } else if (this.language.equals(Language.ES)) {
             multilingualBuilder = new Spanish(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
         }
+        else if (this.language.equals(Language.IT)) {
+            multilingualBuilder = new Italian(this.frameType, this.language, this.lexicalEntryUtil, selectVariable, oppositeSelectVariable, bindingVariable);
+        }
         sentences = this.generateSentences(bindingVariable, sentenceTemplates, multilingualBuilder);
         return sentences;
     }
@@ -515,6 +518,12 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
             sentences =this.germanNounPhrase( bindingVariable,  lexicalEntryUtil);
         }
         else if (this.language.equals(Language.EN)) {
+            sentences =this.englishNounPhrase(bindingVariable,  lexicalEntryUtil);
+        }
+         else if (this.language.equals(Language.ES)) {
+            sentences =this.englishNounPhrase(bindingVariable,  lexicalEntryUtil);
+        }
+        else if (this.language.equals(Language.IT)) {
             sentences =this.englishNounPhrase(bindingVariable,  lexicalEntryUtil);
         }
      

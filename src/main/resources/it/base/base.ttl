@@ -23,6 +23,7 @@
   lemon:entry    :interrogativePronounThingPlural ;
   lemon:entry    :interrogativeDeterminerSingular ;
   lemon:entry    :interrogativeDeterminerPlural ;
+  lemon:entry    :pronoun_that ;
   lemon:entry    :interrogativeTemporal ;
   lemon:entry    :component_la ;
   lemon:entry    :component_i ;
@@ -31,6 +32,7 @@
   lemon:entry    :component_have ;
   lemon:entry    :component_the ;
   lemon:entry    :object_pronoun;
+  lemon:entry    :component_un ;
   lemon:entry    :da ;
   lemon:entry    :si ;
   lemon:entry    :from ;
@@ -149,9 +151,13 @@
   lexinfo:partOfSpeech lexinfo:pronoun .
 
  :interrogativeDeterminer a        lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "Chi"@en ;
+  lemon:canonicalForm  [ lemon:writtenRep "Quale"@en ;
   lexinfo:verbFormMood                    lexinfo:infinitive ] ;
-  lemon:otherForm      [ lemon:writtenRep "Chi"@en ;
+  lemon:otherForm      [ lemon:writtenRep "Quale"@en ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "Quali"@en ;
   lexinfo:tense                           lexinfo:present ;
   lexinfo:person                          lexinfo:secondPerson ;
   lexinfo:number                          lexinfo:plural ] ;
@@ -160,7 +166,7 @@
 
 
 :component_have a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "have"@en ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "hanno"@en ] ;
   lexinfo:partOfSpeech lexinfo:verb .
 
 ## Question words ##
@@ -255,7 +261,6 @@
   lexinfo:partOfSpeech lexinfo:verb .
 
 
-
 ## Determiners ##
 
 :component_la a         lemon:LexicalEntry ;
@@ -273,6 +278,15 @@
 :component_tutti a        lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "tutti"@it ] ;
   lexinfo:partOfSpeech lexinfo:determiner .
+
+:pronoun_that a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "che"@it ] ;
+  lexinfo:partOfSpeech lexinfo:determiner .
+
+:component_un a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "un"@it ] ;
+  lexinfo:partOfSpeech lexinfo:determiner .
+
 
 ## Prepositions ##
 
