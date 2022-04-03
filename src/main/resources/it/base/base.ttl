@@ -23,6 +23,7 @@
   lemon:entry    :interrogativePronounThingPlural ;
   lemon:entry    :interrogativeDeterminerSingular ;
   lemon:entry    :interrogativeDeterminerPlural ;
+  lemon:entry    :interrogativeEvalution ;
   lemon:entry    :pronoun_that ;
   lemon:entry    :interrogativeTemporal ;
   lemon:entry    :component_la ;
