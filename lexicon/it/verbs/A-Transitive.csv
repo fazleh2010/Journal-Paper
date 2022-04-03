@@ -1,27 +1,9 @@
-LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPastPassive,SyntacticFrame,subject,directObject,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural,passivePreposition,,,,
-Develop_1,verb,sviluppare,sviluppa,ha sviluppato,Š stato sviluppato,TransitiveFrame,domain,range,1,dbo:product,dbo:Company,dbo:Software,masculine,compagnia,compagnie,masculine,softwaree,software,da,,,,
-Develop_2,verb,sviluppare,sviluppa,ha sviluppato,Š stato sviluppato,TransitiveFrame,domain,range,1,dbo:developer,dbo:Work,dbo:Agent,masculine,opera,opere,masculine,agente,agenti,da,,,,
-marry,verb,sposare,sposa,ha sposato,Š stato sposato,TransitiveFrame,range,domain,1,dbo:spouse,dbo:Person,dbo:Person,masculine,persona,persone,masculine,persona,persone,da,,,,
-paint,verb,dipingere,dipinge,ha dipinto,Š stato dipinto,TransitiveFrame,range,domain,1,dbp:artist,dbo:Work,dbo:Person,masculine,opera,opere,masculine,persona,persone,da,,,,
-exhibit,verb,mostrare,mostra,ha mostrato,Š mostrato,TransitiveFrame,range,domain,1,dbo:museum,dbo:Artwork,dbo: Museum,masculine,opera,opere,masculine,museo,musei,da,,,,
-discover,verb,scoprire,scopre,ha scoperto,Š stato scoperto,TransitiveFrame,range,domain,1,dbo:discoverer,dbo:Planet,dbo:Person,masculine,pianeta,pianeti,masculine,persona,persone,da,,,,
-cross,verb,attraversare,attraversa,ha attraversato,Š attraversato,TransitiveFrame,range,domain,1,dbo:crosses,dbo:Bridge,dbo:River,masculine,ponte,pont,masculine,fiume,fiumi,da,,,,
-win,verb,vincere,vince,ha vinto,Š stato vinto,TransitiveFrame,range,domain,1,dbo:award,dbo:Scientist,dbo:Award,masculine,scienziato,scienziati,masculine,premio,premi,da,,,,
-create_1,verb,creare,creatii,ha creato,Š stato creato,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Agent,masculine,show televisivo,show televisivi,masculine,agente,agenti,da,,,,
-write_1,verb,scrivere,scrive,ha scritto,Š stata scritta,TransitiveFrame,range,domain,1,dbo:writer,dbo:Song,dbo:Person,masculine,canzone,canzoni,masculine,persona,persone,da,,,,
-write_2,verb,scrivere,scrivere,ha scritto,Š stato scritto,TransitiveFrame,range,domain,2,dbo:writer,dbo:Book,dbo:Person,masculine,libro,libri,masculine,persona,persone,da,,,,
-write_3,verb,scrivere,scrive,ha scritto,Š stata scritta,TransitiveFrame,range,domain,3,dbo:writer,dbo:MusicalWork,dbo:Person,masculine,opera musicale,opere musicali,masculine,persona,persone,da,,,,
-write_4,verb,scrivere,scrive,ha scritto,Š stata scritta,TransitiveFrame,range,domain,4,dbo:author,dbo:WrittenWork,dbo:Person,masculine,persona,persone,masculine,opera scritta,opere scritte,da,,,,
-write_5,verb,scrivere,scrive,ha scritto,Š stata scritta,TransitiveFrame,range,domain,5,dbo:writer,dbo:Work,dbo:Person,masculine,opera,opere,masculine,persona,persone,da,,,,
-starr,verb,recitare in,recita in,ha recitato in,Š recitato,TransitiveFrame,range,domain,5,dbo:starring,dbo:Film,dbo:Actor,masculine,film,films,masculine,attore,attori,da,,,,
-operate_1,verb,operare,opera,ha operato,Š operato,TransitiveFrame,domain,range,1,dbp:operator,dbo:LaunchPad,dbo:Organisation,masculine,piattaforma di lancio,piattaforme di lancio,masculine,organizzazione,organizzazioni,da,,,,
-play_1,verb,interpretare,interpreta,ha interpretato,Š interpretato,TransitiveFrame,range,domain,1,dbo:portrayer,dbo:FictionalCharacter,dbo:Person,masculine,personaggio fittizio,personaggi fittizi,masculine,persona,persone,da,,,,
-play_2,verb,interpretare,interpreta,ha interpretato,Š interpretata,TransitiveFrame,range,domain,2,dbo:portrayer,dbo:Work,dbo:Actor,masculine,opera,opere,masculine,attore,attori,da,,,,
-publish_1,verb,pubblicare,pubblica,ha pubblicato,Š pubblicato,TransitiveFrame,range,domain,1,dbo:publisher,dbo:Book,dbo:Agent,masculine,libro,libri,masculine,agente,agenti,da,,,,
-publish_2,verb,pubblicare,pubblica,ha pubblicato,Š pubblicato,TransitiveFrame,range,domain,2,dbo:publisher,dbo:Publisher,dbo:Agent,masculine,videogioco,videogiochi,masculine,agente,agenti,da,,,,
-direct_1,verb,dirigere,dirige,ha diretto,Š stato diretto,TransitiveFrame,range,domain,1,dbo:director,dbo:Film,dbo:Person,masculine,film,film,masculine,persona,persone,da,,,,
-serve_1,verb,servire,serve,ha servito,Š servito,TransitiveFrame,range,domain,1,dbo:targetAirport,dbo:Airline,dbo:Airport,masculine,compagnia aerea,compagnie aeree,masculine,aeroporto,aeroporti,da,,,,
-speak_1,verb,parlare,parla,ha parlato,Š parlato,TransitiveFrame,range,domain,1,dbo:language,dbo:Language,dbo:Country,masculine,lingua,lingue,masculine,paese,paesi,da,,,,
-design_1,verb,progettare,progetta,ha progettato,Š stato progettato,TransitiveFrame,range,domain,1,dbo:architect,dbo:ArchitecturalStructure,dbo:Architect,masculine,struttura ,struttura,masculine,architetto,architetti,da,,,,
-design_2,verb,progettare,progetta,ha progettato,Š stato progettato,TransitiveFrame,range,domain,2,dbo:designer,dbo:Building,dbo:Person,masculine,edificio,edifici,masculine,persona,persone,da,,,,
-produce,verb,produrre,produce,ha prodotto,Š stato prodotto,TransitiveFrame,domain,range,1,dbo:product,dbo:Company,dbo:Software,masculine,compagnia,compagnie,masculine,softwaree,software,da,"Chi dbo:Company(X) sviluppa,ha sviluppatoY(dbo:Company)?",SELECT ?X WHERE { ?X dbo:product Y.},Quale dbo:Software (X) Š stato sviluppato da Y(dbo:Company)?,SELECT ?X WHERE { Y dbo:Company ?X.}
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural
+end_in,verb,finire,finisce,ha finito,ha finito,in,IntransitivePPFrame,domain,range,1,dbo:routeEnd,dbo:Road,dbo:City,feminine,strada,strade,feminine,citt…,citt…
+flow_through_1,verb,scorrere,scorre,scorreva,scorreva,attraverso,IntransitivePPFrame,domain,range,1,dbo:city,dbo:River,dbo:City,feminine,fiume,fiumi,feminine,citt…,citt…
+flow_through_2,verb,scorrere,scorre,scorreva,scorreva,attraverso,IntransitivePPFrame,domain,range,1,dbp:country,dbo:River,dbo:Country,feminine,fiume,fiumi,feminine,paese,paesi
+start_in_1,verb,iniziare,inizia,ha inizio,ha inizio,in,IntransitivePPFrame,range,domain,1,dbo:routeStart,dbo:Road,dbo:Road,feminine,strada,strade,feminine,strada,strade
+start_in_2,verb,iniziare,inizia,ha inizio,ha inizio,in,IntransitivePPFrame,domain,range,1,dbp:mouthLocation,dbo:River,dbo:Country,feminine,fiume,fiumi,feminine,paese,paesi
+flow_into,verb,confluire,confluisce,ha confluito,ha confluito,in,IntransitivePPFrame,range,domain,1,dbo:inflow,dbo:River,dbo:River,feminine,fiume,fiumi,feminine,fiume,fiumi
+grow_in_1,verb,crescere,cresce,cresceva,cresceva,in,IntransitivePPFrame,range,domain,1,dbo:growingGrape,dbo:WineRegion,dbo:Grape,feminine,regione del vino,regioni del vino,feminine,uva,uva
+knownFor,verb,essere noto,Š noto,era noto,era noto,per,IntransitivePPFrame,range,domain,1,dbo:knownFor,dbo:Award,dbo:Person,feminine,premio,premi,feminine,persona,persone

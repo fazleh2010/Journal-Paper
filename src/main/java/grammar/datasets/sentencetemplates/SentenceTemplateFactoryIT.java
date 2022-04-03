@@ -335,30 +335,23 @@ public class SentenceTemplateFactoryIT  implements Factory<SentenceTemplateRepos
     sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(   
-         //¿En que ciudad termina la ruta Chilena 68?
-         "interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
-         //¿Por qué ciudades pasa el río Zeravshan?
-         "interrogativeDeterminerPor(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
-         //¿Dónde empieza Piccadilly?
-         "interrogativePlace verb(mainVerb:past:thridPerson) adjunct(domain)?",
-          //¿Donde están situadas las Casas del Parlamento?
-         "interrogativePlace2 verb(mainVerb:past:thridPerson) adjunct(domain)?",
-         //¿En qué lenguaje de programación esta programado GIMP?
-          "interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
-         //¿En qué país nace el Ganges?
-         "interrogativeDeterminerEn(range:singular) verb(mainVerb:past:thridPerson) object(domain)?",
-         //¿De que región es el vino Melon de Bourgogne?..De que regi�n es vino ($x | Grape_NP)?
-          "interrogativeDeterminerDe(range:singular) verb(component_be:present:singular) verb(mainVerb:past:thridPerson) object(domain)?",
+         //In quale città termina la Route 68 in Cile?
+         "preposition interrogativeDeterminer(range:singular) verb(mainVerb:present:thridPerson) adjunct(domain)?",
+         "preposition interrogativeDeterminer(range:singular) verb(mainVerb:past:thridPerson) adjunct(domain)?",
+         //Dove inizia Piccadilly?
+         "interrogativePlace verb(mainVerb:past:thridPerson) adjunct(domain)?"
+         /*//"Da quale regione proviene il Melon de Bourgogne?"
+          "interrogativeDeterminerDe(range:singular) verb(component_be:present:singular) verb(mainVerb:past:thridPerson) object(domain)?"
          //¿En qué países se habla japonés?
          "interrogativeDeterminerEn(range:singular) verb(component_se:present:singular) verb(mainVerb:present:thridPerson) object(domain)?"
 
-          /*"preposition interrogativeDeterminer(preposition:range:plural) verb(mainVerb:present:thridPerson) adjunct(domain)?",
+          "preposition interrogativeDeterminer(preposition:range:plural) verb(mainVerb:present:thridPerson) adjunct(domain)?",
           //In welchem Museum ist Der Schrei ausgestellt?
          "preposition interrogativeDeterminer(preposition:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
          "preposition interrogativeDeterminer(preposition:range:plural) verb(component_be:present:plural) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
           // Wo liegt Fort Knox?
-          "interrogativePlace verb(mainVerb:present3rd:thridPerson) adjunct(domain)?"  */   
-
+          "interrogativePlace verb(mainVerb:present3rd:thridPerson) adjunct(domain)?"   
+          */
         ),
         IntransitivePPFrame,
         WHAT_WHICH_PRESENT_THING_1,
@@ -370,7 +363,7 @@ public class SentenceTemplateFactoryIT  implements Factory<SentenceTemplateRepos
       createSentenceTemplate(language,
         List.of(
          //¿Qué ingredientes son necesarios para una tarta de zanahorias?
-          "interrogativeVariableDeterminer(range:singular) verb(component_be:present:plural) verb(mainVerb:past:thridPerson) preposition object(range)?"
+         // "interrogativeVariableDeterminer(range:singular) verb(component_be:present:plural) verb(mainVerb:past:thridPerson) preposition object(range)?"
         /* //Was fließt durch...?
         "interrogativePronoun(nominativeCase:domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
          //Welcher Fluss fließt durch...?
@@ -397,7 +390,7 @@ public class SentenceTemplateFactoryIT  implements Factory<SentenceTemplateRepos
       createSentenceTemplate(language,
         List.of(   
          //¿Que tipo de uva crece en Oregon?
-         "interrogativeVariableDeterminer(range:singular) verb(mainVerb:past:thridPerson) preposition object(domain)?"
+         //"interrogativeVariableDeterminer(range:singular) verb(mainVerb:past:thridPerson) preposition object(domain)?"
        
         ),
         IntransitivePPFrame,
@@ -621,9 +614,9 @@ public class SentenceTemplateFactoryIT  implements Factory<SentenceTemplateRepos
       createSentenceTemplate(language,
         List.of(
         //¿De qué murió Abraham Lincoln?
-        "interrogativeCause verb(mainVerb:past:thridPerson) adjunct(domain)?",
+        //"interrogativeCause verb(mainVerb:past:thridPerson) adjunct(domain)?",
         //¿Quién era llamado Frank The Tank?
-        "interrogativePronounPerson verb(component_be:present:singular) verb(mainVerb:past:thridPerson) adjunct(domain)?"
+        //"interrogativePronounPerson verb(component_be:present:singular) verb(mainVerb:past:thridPerson) adjunct(domain)?"
         //An was ist Bruce Carver gestorben?
         //"preposition interrogativePronoun(nominativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?"     
                ),
