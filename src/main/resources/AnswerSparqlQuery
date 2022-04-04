@@ -381,3 +381,23 @@ WHERE {
   filter langMatches(lang(?labelEs),"es")
 }
 }
+
+==============================================================
+
+select  ?s  ?labelEn ?labelDe ?labelIt ?labelEs ?uri{     
+?s dbp:country ?uri .
+ ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/BodyOfWater>.
+ ?s rdfs:label ?labelEn .
+  filter langMatches(lang(?labelEn),"en")
+  optional{
+    ?s  rdfs:label ?labelIt .
+  filter langMatches(lang(?labelIt),"it")
+}
+  optional{
+    ?s  rdfs:label ?labelEs .
+  filter langMatches(lang(?labelEs),"es")
+}  optional{
+    ?s  rdfs:label ?labelDe .
+  filter langMatches(lang(?labelDe),"de")
+}
+}

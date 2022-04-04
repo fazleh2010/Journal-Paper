@@ -17,6 +17,7 @@
   lemon:entry    :interrogativeDeterminer ;
   lemon:entry    :interrogativePronounThingWhat ;
   lemon:entry    :interrogativePlace ;
+  lemon:entry    :interrogativePlace2 ;
   lemon:entry    :interrogativePronounPerson ;
   lemon:entry    :interrogativePronounWhom ;
   lemon:entry    :interrogativePronounThing ;
@@ -26,6 +27,8 @@
   lemon:entry    :interrogativeEvalution ;
   lemon:entry    :pronoun_that ;
   lemon:entry    :interrogativeTemporal ;
+  lemon:entry    :interrogativeCause ;
+  lemon:entry    :interrogativeVariableDeterminer ;
   lemon:entry    :component_la ;
   lemon:entry    :component_i ;
   lemon:entry    :component_li ;
@@ -185,7 +188,7 @@
   lexinfo:partOfSpeech lexinfo:article .
 
   :interrogativeVariableDeterminer a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "¿Qué"@es ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "Quali"@it ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
  :interrogativePronounDeterminer a      lemon:LexicalEntry ;
@@ -201,7 +204,7 @@
   lexinfo:partOfSpeech lexinfo:article .
 
  :interrogativeCause a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "¿De qué"@es ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "cosa"@it ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
 

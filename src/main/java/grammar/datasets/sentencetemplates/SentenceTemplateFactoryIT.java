@@ -55,8 +55,8 @@ public class SentenceTemplateFactoryIT  implements Factory<SentenceTemplateRepos
             //Elenca tutti i musicals con musiche di Elton John.
            "verb(component_imperative_list:present:singular) determiner(component_tutti) determiner(component_i) noun(plural) preposition adjunct(domain).",
            //Mostrami l'autobiografia di Hemingway.
-           "verb(component_imperative_show:present:singular) determiner(component_li) noun(singular) preposition adjunct(domain).",
-           "verb(component_imperative_show:present:singular) determiner(component_li) noun(plural) preposition adjunct(domain)."
+           "verb(component_imperative_show:present:singular) determiner(component_li) noun(singular) preposition adjunct(domain)."
+           //"verb(component_imperative_show:present:singular) determiner(component_li) noun(plural) preposition adjunct(domain)"
         ),
         NounPPFrame,
         whQuestion
@@ -389,9 +389,26 @@ public class SentenceTemplateFactoryIT  implements Factory<SentenceTemplateRepos
     sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(   
-         //¿Que tipo de uva crece en Oregon?
-         //"interrogativeVariableDeterminer(range:singular) verb(mainVerb:past:thridPerson) preposition object(domain)?"
-       
+       //In quale città termina la Route 68 in Cile?
+         "preposition interrogativeDeterminer(range:singular) verb(mainVerb:present:thridPerson) adjunct(domain)?",
+         "preposition interrogativeDeterminer(range:singular) verb(mainVerb:past:thridPerson) adjunct(domain)?",
+         //Dove inizia Piccadilly?
+         "interrogativePlace verb(mainVerb:past:thridPerson) adjunct(domain)?",
+         //Quali tipi di uva crescono in Oregon?
+         "interrogativeDeterminer(range:singular) verb(mainVerb:present:thridPerson) preposition adjunct(domain)?"    
+         /*//"Da quale regione proviene il Melon de Bourgogne?"
+          "interrogativeDeterminerDe(range:singular) verb(component_be:present:singular) verb(mainVerb:past:thridPerson) object(domain)?"
+         //¿En qué países se habla japonés?
+         "interrogativeDeterminerEn(range:singular) verb(component_se:present:singular) verb(mainVerb:present:thridPerson) object(domain)?"
+
+          "preposition interrogativeDeterminer(preposition:range:plural) verb(mainVerb:present:thridPerson) adjunct(domain)?",
+          //In welchem Museum ist Der Schrei ausgestellt?
+         "preposition interrogativeDeterminer(preposition:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+         "preposition interrogativeDeterminer(preposition:range:plural) verb(component_be:present:plural) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+          // Wo liegt Fort Knox?
+          "interrogativePlace verb(mainVerb:present3rd:thridPerson) adjunct(domain)?"   
+          */
+   
         ),
         IntransitivePPFrame,
         WHAT_WHICH_PRESENT_THING_2,
@@ -468,9 +485,9 @@ public class SentenceTemplateFactoryIT  implements Factory<SentenceTemplateRepos
       createSentenceTemplate(
         language,
         List.of(
-          //"¿Cuando se completo el Titanic?
-          "interrogativeTemporal verb(component_se:present:singular) verb(mainVerb:present:thridPerson) object(domain)?",
-          "interrogativeTemporal verb(component_se:present:singular) verb(mainVerb:past:thridPerson) object(domain)?"
+          //"Quando ha avuto luogo la battaglia di Gettysburg?"
+          "interrogativeTemporal verb(mainVerb:present:thridPerson) object(domain)?",
+          "interrogativeTemporal verb(mainVerb:past:thridPerson) object(domain)?"
           //┬┐Cu├índo tuvo lugar la batalla de Gettysburg?
           //"interrogativeTemporal verb(mainVerb:past:thridPerson) adjunct(domain)?",
           //¿Quién es el anfitrión de la American Idol?
@@ -574,10 +591,10 @@ public class SentenceTemplateFactoryIT  implements Factory<SentenceTemplateRepos
           //¿Qué surfistas profesionales nacieron en las Filipinas?
          "interrogativeVariableDeterminer(range:singular) verb(mainVerb:present:thridPerson) preposition adjunct(domain)?",   
          "interrogativeVariableDeterminer(range:plural) verb(mainVerb:present:thridPerson) preposition adjunct(domain)?",
-         //¿Dónde está enterrado Syngman Rhee?
-        "interrogativePlace verb(component_be:past:singular) verb(mainVerb:past:thridPerson) adjunct(domain)?",
-         //¿Dónde nació Bach?
-         "interrogativePlace verb(mainVerb:past:thridPerson) adjunct(domain)?"
+         //Dove è sepolto Syngman Rhee?
+        "interrogativePlace2 verb(component_be:past:singular) verb(mainVerb:past:thridPerson) adjunct(domain)?",
+         //Dove è nato Sebastian Bach?",
+         "interrogativePlace2 verb(mainVerb:past:thridPerson) adjunct(domain)?"
                    ),
         IntransitivePPFrame,
         WHERE_WHO_PAST_PERSON,
@@ -593,9 +610,9 @@ public class SentenceTemplateFactoryIT  implements Factory<SentenceTemplateRepos
       createSentenceTemplate(
         language,
         List.of(     
-          //¿En qué ciudad murió John F. Kennedy?
-        "interrogativeDeterminerEn(domain:singular) verb(mainVerb:past:thridPerson) adjunct(range)?",
-        "interrogativeDeterminerEn(domain:singular) verb(mainVerb:present:thridPerson) adjunct(range)?",
+          //In quale città morì John F. Kennedy?
+        "preposition interrogativeDeterminer(domain:singular) verb(mainVerb:past:thridPerson) adjunct(range)?",
+        "preposition interrogativeDeterminer(domain:plural) verb(mainVerb:present:thridPerson) adjunct(range)?",
         //¿Qué surfistas profesionales nacieron en las Filipinas?
         "interrogativeVariableDeterminer noun(domain:singular) verb(mainVerb:present:thridPerson) preposition adjunct(range)?",
         "interrogativeVariableDeterminer noun(domain:plural) verb(mainVerb:present:thridPerson) preposition adjunct(range)?"
@@ -613,13 +630,11 @@ public class SentenceTemplateFactoryIT  implements Factory<SentenceTemplateRepos
        sentenceTemplateRepository.add(
       createSentenceTemplate(language,
         List.of(
-        //¿De qué murió Abraham Lincoln?
-        //"interrogativeCause verb(mainVerb:past:thridPerson) adjunct(domain)?",
+        //Di cosa è morto Bruce Carver?"
+        "preposition interrogativeCause verb(component_be:present:singular) verb(mainVerb:past:thridPerson) adjunct(domain)?"
         //¿Quién era llamado Frank The Tank?
         //"interrogativePronounPerson verb(component_be:present:singular) verb(mainVerb:past:thridPerson) adjunct(domain)?"
-        //An was ist Bruce Carver gestorben?
-        //"preposition interrogativePronoun(nominativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?"     
-               ),
+                ),
         IntransitivePPFrame,
         PERSON_CAUSE,
         forward

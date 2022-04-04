@@ -175,9 +175,6 @@ public class Italian implements TempConstants,MultilingualBuilder {
                 word = this.getDeteminerTokenManual(attribute, col[0], col[1]);
             }
 
-        } else if (isInterrogative(attribute)) {
-            word = LexicalEntryUtil.getSingle(lexicalEntryUtil, attribute);
-
         }
         
         else if (flagReference &&isInterrogative(attribute)) {
@@ -187,6 +184,10 @@ public class Italian implements TempConstants,MultilingualBuilder {
                 word = this.getTokenManual(col[0], col[1]);
                 word=quesWord+" ($x | "+word.substring(0, 1).toUpperCase() + word.substring(1)+"_NP"+")";
             }
+
+        }
+        else if (isInterrogative(attribute)) {
+            word = LexicalEntryUtil.getSingle(lexicalEntryUtil, attribute);
 
         }
         

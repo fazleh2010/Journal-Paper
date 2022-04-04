@@ -1,9 +1,2 @@
 LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural
-end_in,verb,finire,finisce,ha finito,ha finito,in,IntransitivePPFrame,domain,range,1,dbo:routeEnd,dbo:Road,dbo:City,feminine,strada,strade,feminine,citt…,citt…
-flow_through_1,verb,scorrere,scorre,scorreva,scorreva,attraverso,IntransitivePPFrame,domain,range,1,dbo:city,dbo:River,dbo:City,feminine,fiume,fiumi,feminine,citt…,citt…
-flow_through_2,verb,scorrere,scorre,scorreva,scorreva,attraverso,IntransitivePPFrame,domain,range,1,dbp:country,dbo:River,dbo:Country,feminine,fiume,fiumi,feminine,paese,paesi
-start_in_1,verb,iniziare,inizia,ha inizio,ha inizio,in,IntransitivePPFrame,range,domain,1,dbo:routeStart,dbo:Road,dbo:Road,feminine,strada,strade,feminine,strada,strade
-start_in_2,verb,iniziare,inizia,ha inizio,ha inizio,in,IntransitivePPFrame,domain,range,1,dbp:mouthLocation,dbo:River,dbo:Country,feminine,fiume,fiumi,feminine,paese,paesi
-flow_into,verb,confluire,confluisce,ha confluito,ha confluito,in,IntransitivePPFrame,range,domain,1,dbo:inflow,dbo:River,dbo:River,feminine,fiume,fiumi,feminine,fiume,fiumi
-grow_in_1,verb,crescere,cresce,cresceva,cresceva,in,IntransitivePPFrame,range,domain,1,dbo:growingGrape,dbo:WineRegion,dbo:Grape,feminine,regione del vino,regioni del vino,feminine,uva,uva
 knownFor,verb,essere noto,Š noto,era noto,era noto,per,IntransitivePPFrame,range,domain,1,dbo:knownFor,dbo:Award,dbo:Person,feminine,premio,premi,feminine,persona,persone

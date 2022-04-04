@@ -1,0 +1,2 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural
+live_in,verb,vivere,vive,vissuto,vissuto,in,IntransitivePPFrame,domain,range,1,dbo:residence,dbo:Person,dbo:Place,feminine_la,persona,persone,feminine_la,luogo,luoghi

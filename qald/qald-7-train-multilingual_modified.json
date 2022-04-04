@@ -858,8 +858,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Di cosa è morto Bruce Carver?",
-					"keywords": "Bruce Caver, morire"
+					"string": "Di cosa è morto Abraham Lincoln?",
+					"keywords": "Abraham Lincoln, morire"
 				},
 				{
 					"language": "fr",
@@ -4718,7 +4718,7 @@
 				},
 				{
 					"language": "it",
-					"string": "Quando è scomparsa la dinastia Ming?",
+					"string": "Quando è scomparsa la Impero del Giappone?",
 					"keywords": "anno scomparsa, dinastia Ming"
 				},
 				{
@@ -11837,7 +11837,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Through which countries does the El Burguillo Reservoir river flow?",
+					"string": "Through which countries does the Lake Bosumtwi flow?",
 					"keywords": "El Burguillo Reservoir, flow through, country"
 				},
 				{
@@ -11847,17 +11847,17 @@
 				},
 				{
 					"language": "de",
-					"string": "Durch welche Länder fließt der Talsperre El Burguillo?",
+					"string": "Durch welche Länder fließt der Bosumtwi?",
 					"keywords": "Talsperre El Burguillo, fließen, Land"
 				},
 				{
 					"language": "es",
-					"string": "¿Por qué países fluye el río Burguillo?",
+					"string": "¿Por qué países fluye el Lago Bosumtwi?",
 					"keywords": "países, fluye, río Yenisei"
 				},
 				{
 					"language": "it",
-					"string": "Attraverso quali stati scorre il fiume Yenisei?",
+					"string": "Attraverso quali stati scorre il Lago Bosumtwi?",
 					"keywords": "fiume Yenisei, scorrere attraverso, stato"
 				},
 				{
@@ -11877,7 +11877,7 @@
 				}
 			],
 			"query": {
-				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbp: <http://dbpedia.org/property/>\nSELECT DISTINCT ?uri \nWHERE {\n        res:El_Burguillo_Reservoir dbp:country ?uri .\n}"
+				"sparql": "PREFIX res: <http://dbpedia.org/resource/>\nPREFIX dbp: <http://dbpedia.org/property/>\nSELECT DISTINCT ?uri \nWHERE {\n        res:Lake_Bosumtwi dbp:country ?uri .\n}"
 			},
 			"answers": [{
 				"head": {
@@ -16553,7 +16553,7 @@
 				},
 				{
 					"language": "it",
-					"string": "Quali surfisti professionisti sono nati nelle Filippine?",
+					"string": "Quali attori professionisti sono nati nelle Filippine?",
 					"keywords": "surfista professionista, nato, Filippine"
 				},
 				{
