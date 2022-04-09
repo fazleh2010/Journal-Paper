@@ -1,0 +1,69 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :bury_in ;
+  lemon:entry    :form_bury_in_present_preposition .
+
+:bury_in a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_bury_in_present ;
+  lemon:otherForm      :bury_in_present3rd ;
+  lemon:otherForm      :bury_in_past ;
+  lemon:otherForm      :bury_in_perfect ;
+  lemon:sense          :bury_in_sense_1 ;
+  lemon:synBehavior    :bury_in_frame .
+
+:form_bury_in_present a           lemon:Form ;
+  lemon:writtenRep     "� sepolto"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:bury_in_present3rd a      lemon:Form ;
+  lemon:writtenRep "� sepolto"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:bury_in_past a lemon:Form ;
+  lemon:writtenRep  "� sepolto"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:bury_in_perfect a lemon:Form ;
+  lemon:writtenRep  "� sepolto"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:perfect .
+
+:bury_in_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :bury_in_subj ;
+  lexinfo:prepositionalAdjunct :bury_in_obj .
+
+:bury_in_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :bury_in_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/restingPlace> ;
+  lemon:subjOfProp  :bury_in_obj ;
+  lemon:objOfProp   :bury_in_subj ;
+  lemon:condition   :bury_in_sense_1_condition .
+
+:bury_in_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Person> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Place> .
+
+
+:bury_in_obj lemon:marker :di .
+
+:arg2 lemon:marker :form_bury_in_present_preposition .
+
+## Prepositions ##
+
+:form_bury_in_present_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "di"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

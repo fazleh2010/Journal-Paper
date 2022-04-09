@@ -1,0 +1,69 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :cost ;
+  lemon:entry    :form_cost_present_preposition .
+
+:cost a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_cost_present ;
+  lemon:otherForm      :cost_present3rd ;
+  lemon:otherForm      :cost_past ;
+  lemon:otherForm      :cost_perfect ;
+  lemon:sense          :cost_sense_1 ;
+  lemon:synBehavior    :cost_frame .
+
+:form_cost_present a           lemon:Form ;
+  lemon:writtenRep     "costare"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:cost_present3rd a      lemon:Form ;
+  lemon:writtenRep "costa"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:cost_past a lemon:Form ;
+  lemon:writtenRep  "costato"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:cost_perfect a lemon:Form ;
+  lemon:writtenRep  "costato"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:perfect .
+
+:cost_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :cost_subj ;
+  lexinfo:prepositionalAdjunct :cost_obj .
+
+:cost_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :cost_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/budget> ;
+  lemon:subjOfProp  :cost_obj ;
+  lemon:objOfProp   :cost_subj ;
+  lemon:condition   :cost_sense_1_condition .
+
+:cost_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Film> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Double> .
+
+
+:cost_obj lemon:marker :in .
+
+:arg2 lemon:marker :form_cost_present_preposition .
+
+## Prepositions ##
+
+:form_cost_present_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "in"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

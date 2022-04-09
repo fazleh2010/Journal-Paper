@@ -25,10 +25,14 @@
   lemon:entry    :interrogativeDeterminerSingular ;
   lemon:entry    :interrogativeDeterminerPlural ;
   lemon:entry    :interrogativeEvalution ;
+  lemon:entry    :interrogativeAmount ;
+  lemon:entry    :interrogativePronounPersonCosa ;
+  lemon:entry    :interrogativePronounPersonFu ;
   lemon:entry    :pronoun_that ;
   lemon:entry    :interrogativeTemporal ;
   lemon:entry    :interrogativeCause ;
   lemon:entry    :interrogativeVariableDeterminer ;
+  lemon:entry    :component_ha ;
   lemon:entry    :component_la ;
   lemon:entry    :component_i ;
   lemon:entry    :component_li ;
@@ -50,6 +54,7 @@
   lemon:entry    :place ;
   lemon:entry    :as ;
   lemon:entry    :since ;
+  lemon:entry    :al ;
   lemon:entry    :until .
 
 :component_be a        lemon:LexicalEntry ;
@@ -68,6 +73,27 @@
   lexinfo:person                          lexinfo:thirdPerson ;
   lexinfo:number                          lexinfo:plural ] ;
   lemon:otherForm      [ lemon:writtenRep "erano"@en ;
+  lexinfo:tense                           lexinfo:past ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+:component_ha a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "ha"@en ;
+  lexinfo:verbFormMood                    lexinfo:infinitive ] ;
+  lemon:otherForm      [ lemon:writtenRep "ha"@en ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "ha"@en ;
+  lexinfo:tense                           lexinfo:past ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "ha"@en ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lemon:otherForm      [ lemon:writtenRep "ha"@en ;
   lexinfo:tense                           lexinfo:past ;
   lexinfo:person                          lexinfo:thirdPerson ;
   lexinfo:number                          lexinfo:plural ] ;
@@ -209,7 +235,7 @@
 
 
  :interrogativeAmount a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "¿Cuántas"@es ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "Quante"@it ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
  :interrogativeOften a      lemon:LexicalEntry ;
@@ -221,11 +247,19 @@
   lexinfo:partOfSpeech lexinfo:article .
 
 :interrogativeEvalution a      lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "¿Cómo"@es ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "Quanto"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
  :interrogativePronounPerson a      lemon:LexicalEntry ;
   lemon:canonicalForm  [ lemon:writtenRep "Chi"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativePronounPersonCosa a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "Chi cosa"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativePronounPersonFu a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "Chi fu"@es ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
  :interrogativePronounThing a      lemon:LexicalEntry ;
@@ -350,6 +384,11 @@
 :until a               lemon:SynRoleMarker ;
   lemon:canonicalForm  [ lemon:writtenRep "until"@it ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
+
+:al a               lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "al"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
 
 ## Pronouns ##
 

@@ -1,0 +1,69 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :abrevia ;
+  lemon:entry    :form_abrevia_present_preposition .
+
+:abrevia a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_abrevia_present ;
+  lemon:otherForm      :abrevia_present3rd ;
+  lemon:otherForm      :abrevia_past ;
+  lemon:otherForm      :abrevia_perfect ;
+  lemon:sense          :abrevia_sense_1 ;
+  lemon:synBehavior    :abrevia_frame .
+
+:form_abrevia_present a           lemon:Form ;
+  lemon:writtenRep     "significa"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:abrevia_present3rd a      lemon:Form ;
+  lemon:writtenRep "significa"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:abrevia_past a lemon:Form ;
+  lemon:writtenRep  "significa"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:abrevia_perfect a lemon:Form ;
+  lemon:writtenRep  "significa"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:perfect .
+
+:abrevia_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :abrevia_obj ;
+  lexinfo:prepositionalAdjunct :abrevia_subj .
+
+:abrevia_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :abrevia_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/abbreviation> ;
+  lemon:subjOfProp  :abrevia_obj ;
+  lemon:objOfProp   :abrevia_subj ;
+  lemon:condition   :abrevia_sense_1_condition .
+
+:abrevia_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://www.w3.org/2002/07/owl#Thing> ;
+  lemon:propertyRange  <http://www.w3.org/2001/XMLSchema#string> .
+
+
+:abrevia_obj lemon:marker :X .
+
+:arg2 lemon:marker :form_abrevia_present_preposition .
+
+## Prepositions ##
+
+:form_abrevia_present_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep ""@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

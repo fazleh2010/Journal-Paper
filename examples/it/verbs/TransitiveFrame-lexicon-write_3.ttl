@@ -45,14 +45,14 @@
 
 :write_3_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
   lemon:ontoMapping :write_3_sense_1 ;
-  lemon:reference   <http://dbpedia.org/ontology/writer> ;
+  lemon:reference   <http://dbpedia.org/ontology/composer> ;
   lemon:subjOfProp  :write_3_obj ;
   lemon:objOfProp   :write_3_subj ;
   lemon:condition   :write_3_sense_1_condition .
 
 
 :write_3_sense_1_condition a    lemon:condition ;
-  lemon:propertyDomain <http://dbpedia.org/ontology/MusicalWork> ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/TelevisionShow> ;
   lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
 
 :write_3ed a            lemon:LexicalEntry ;
@@ -76,7 +76,7 @@
 
 :write_3ed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
   lemon:ontoMapping :write_3ed_ontomap ;
-  lemon:reference   <http://dbpedia.org/ontology/writer> ;
+  lemon:reference   <http://dbpedia.org/ontology/composer> ;
   lemon:subjOfProp  :write_3ed_subj ;
   lemon:objOfProp   :write_3ed_obj ;
   lemon:condition   :write_3_sense_1_condition .

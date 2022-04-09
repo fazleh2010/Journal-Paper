@@ -401,3 +401,24 @@ select  ?s  ?labelEn ?labelDe ?labelIt ?labelEs ?uri{
   filter langMatches(lang(?labelDe),"de")
 }
 }
+
+----not contains labels
+
+select   ?s ?labelEn  ?labelDe ?labelIt ?labelEs ?uri {     
+?s <http://dbpedia.org/ontology/ingredient> ?uri .
+?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Food>.
+ ?s rdfs:label ?labelEn .
+  filter langMatches(lang(?labelEn),"en")
+optional{
+   ?s rdfs:label ?labelDe .
+  filter langMatches(lang(?labelDe),"de")
+}
+optional{
+   ?s rdfs:label ?labelIt .
+  filter langMatches(lang(?labelIt),"it")
+}
+optional{
+   ?s rdfs:label ?labelEs .
+  filter langMatches(lang(?labelEs),"es")
+}
+}

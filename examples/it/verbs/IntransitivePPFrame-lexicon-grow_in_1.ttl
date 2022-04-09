@@ -20,31 +20,31 @@
   lemon:synBehavior    :grow_in_1_frame .
 
 :form_grow_in_1_present a           lemon:Form ;
-  lemon:writtenRep     "crescere"@it ;
+  lemon:writtenRep     "crescono"@it ;
   lexinfo:verbFormMood lexinfo:infinitive .
 
 
 :grow_in_1_present3rd a      lemon:Form ;
-  lemon:writtenRep "cresce"@it ;
+  lemon:writtenRep "crescono"@it ;
   lexinfo:number   lexinfo:singular ;
   lexinfo:person   lexinfo:thirdPerson ;
   lexinfo:tense    lexinfo:present .
 
 :grow_in_1_past a lemon:Form ;
-  lemon:writtenRep  "cresceva"@it ;
+  lemon:writtenRep  "crescono"@it ;
   lexinfo:number    lexinfo:singular ;
   lexinfo:person    lexinfo:thirdPerson ;
   lexinfo:tense     lexinfo:past .
 
 :grow_in_1_perfect a lemon:Form ;
-  lemon:writtenRep  "cresceva"@it ;
+  lemon:writtenRep  "crescono"@it ;
   lexinfo:number    lexinfo:singular ;
   lexinfo:person    lexinfo:thirdPerson ;
   lexinfo:tense     lexinfo:perfect .
 
 :grow_in_1_frame a  lexinfo:IntransitivePPFrame ;
-  lexinfo:subject              :grow_in_1_obj ;
-  lexinfo:prepositionalAdjunct :grow_in_1_subj .
+  lexinfo:subject              :grow_in_1_subj ;
+  lexinfo:prepositionalAdjunct :grow_in_1_obj .
 
 :grow_in_1_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
   lemon:ontoMapping :grow_in_1_ontomap ;

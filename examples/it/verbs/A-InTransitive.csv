@@ -1,2 +1,33 @@
 LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural
-knownFor,verb,essere noto,ä noto,era noto,era noto,per,IntransitivePPFrame,range,domain,1,dbo:knownFor,dbo:Award,dbo:Person,feminine,premio,premi,feminine,persona,persone
+take_place_on,verb,avere luogo,ha luogo,ha avuto luogo,ha avuto luogo,in,IntransitivePPFrame,domain,range,1,dbp:date,dbo:MilitaryConflict,xsd:date,feminine_la,conflitto,conflitti,feminine_la,anno,anni
+commence_on,verb,iniziare,inizia,ä iniziato,ä iniziato,in,IntransitivePPFrame,domain,range,1,dbo:date,dbo:Event,xsd:date,feminine_la,evento,eventi,feminine_la,anno,anni
+end_in,verb,finire,finisce,ha finito,ha finito,in,IntransitivePPFrame,domain,range,1,dbo:routeEnd,dbo:Road,dbo:City,feminine_la,strada,strade,feminine_la,cittÖ,cittÖ
+flow_through_1,verb,scorrere,scorre,scorreva,scorreva,attraverso,IntransitivePPFrame,domain,range,1,dbo:city,dbo:River,dbo:City,feminine_la,fiume,fiumi,feminine_la,cittÖ,cittÖ
+flow_through_2,verb,scorrere,scorre,scorreva,scorreva,attraverso,IntransitivePPFrame,domain,range,1,dbp:country,dbo:BodyOfWater,dbo:Country,feminine_la,fiume,fiumi,feminine_la,paese,paesi
+start_in_1,verb,iniziare,inizia,ha inizio,ha inizio,in,IntransitivePPFrame,range,domain,1,dbo:routeStart,dbo:Road,dbo:Road,feminine_la,strada,strade,feminine_la,strada,strade
+start_in_2,verb,stato nasce,stato nasce,stato nasce,stato nasce,in,IntransitivePPFrame,domain,range,1,dbp:mouthLocation,dbo:River,dbo:Country,feminine_la,fiume,fiumi,feminine_la,paese,paesi
+grow_in_1,verb,crescono,crescono,crescono,crescono,in,IntransitivePPFrame,domain,range,1,dbo:growingGrape,dbo:WineRegion,dbo:Grape,feminine_la,regione del vino,regioni del vino,feminine_la,tipi di uva,tipi di uva
+die_from,verb,morire,muore,morto,morto,di,IntransitivePPFrame,domain,range,1,dbo:deathCause,dbo:Person,xsd:string,feminine_la,persona,persone,-,-,-
+dissolve_on,verb,sciogliere,scioglie,sciolta,sciolta,di,IntransitivePPFrame,domain,range,1,dbo:dissolutionDate,dbo:PopulatedPlace,xsd:date,feminine_la,luogo popolato,luoghi popolati,feminine_la,Anno,Anno
+dissolve_in,verb,sciogliere,scioglie,sciolta,sciolta,di,IntransitivePPFrame,domain,range,1,dbo:dissolutionDate,dbo:PopulatedPlace,xsd:gYear,feminine_la,luogo popolato,luoghi popolati,feminine_la,Anno,Anno
+complete_in_1,verb,essere completato,ä completato,ä stato completato,ä stato completato,di,IntransitivePPFrame,domain,range,1,dbo:completionDate,dbo:Ship,xsd:date,feminine_la,Nave,Nave,feminine_la,Anno,Anno
+bury_in,verb,ä sepolto,ä sepolto,ä sepolto,ä sepolto,di,IntransitivePPFrame,domain,range,1,dbo:restingPlace,dbo:Person,dbo:Place,feminine_la,persona,persone,feminine_la,luogo,luoghi
+born_in_actor,verb,sono nati,sono nati,sono nati,sono nati,nelle,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Actor,dbo:Place,masculine_il,attore,attore,feminine_la,luogo,luoghi
+born_in_person,verb,nascere,nasce,ä nata,ä nata,in,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Person,dbo:Place,feminine_la,persona,persone,feminine_la,luogo,luoghi
+born_in_surfer,verb,sono nati,sono nati,sono nati,sono nati,nelle,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Surfing,dbo:Place,masculine_il,surfisti,surfisti,feminine_la,luogo,luoghi
+dieIn_1,verb,morire,ä morto,morç,morç,in,IntransitivePPFrame,domain,range,1,dbo:deathPlace,dbo:Person,dbo:Place,feminine_la,persona,persone,feminine_la,luogo,luoghi
+dieIn_2,verb,morire,ä morto,morç,morç,in,IntransitivePPFrame,domain,range,1,dbo:deathPlace,dbo:Person,dbo:City,feminine_la,persona,persone,feminine_la,cittÖ,cittÖ
+live_in_1,verb,vivere,vive,vissuto,vissuto,in,IntransitivePPFrame,domain,range,1,dbo:residence,dbo:Person,dbo:City,feminine_la,persona,persone,feminine_la,cittÖ,cittÖ
+live_in_2,verb,vivere,vive,vissuto,vissuto,in,IntransitivePPFrame,domain,range,1,dbo:residence,dbo:Single,dbo:City,feminine_la,persona,persone,feminine_la,cittÖ,cittÖ
+founded_in,verb,fondare,fonda,fondato,fondato,in,IntransitivePPFrame,domain,range,1,dbo:foundingYear,dbo:Organisation,xsd:gYear,feminine_la,organizzazione,organizzazioni,feminine_la,anno,anno
+die_on,verb,morire,muore,morto,morto,in,IntransitivePPFrame,domain,range,1,dbo:deathDate,dbo:Person,xsd:gYear,feminine_la,persona,persone,feminine_la,anno,anno
+born_in,verb,ä nata,ä nata,ä nata,ä nata,in,IntransitivePPFrame,domain,range,1,dbo:birthYear,dbo:Person,xsd:gYear,feminine_la,persona,persone,feminine_la,anno,anno
+locate_in_1,verb,trovarsi,si trova,si trovava,si trovava,in,IntransitivePPFrame,domain,range,1,dbo:location,dbo:Location,dbo:Place,feminine_la,luogo,luoghi,feminine_la,luogo,luoghi
+locate_in_2,verb,si trova,si trova,si trova,si trova,en,IntransitivePPFrame,domain,range,1,dbp:location,dbo:MilitaryUnit,dbo:Location,feminine,UnitÖ militare,UnitÖ militare,feminine_la,luogo,luoghi
+locate_in_3,verb,trovarsi,si trova,si trovava,si trovava,in,IntransitivePPFrame,domain,range,1,dbo:location,dbo:HistoricPlace,dbo:Place,feminine,Posto storico,Posto storico,feminine_la,cittÖ,cittÖ
+locate_in_4,verb,trovarsi,si trova,si trovava,si trovava,in,IntransitivePPFrame,domain,range,1,dbo:country,dbo:City,dbo:Country,feminine,Posto storico,Posto storico,feminine_la,stato,stato
+locate_in_5,verb,trovarsi,si trova,si trovava,si trovava,in,IntransitivePPFrame,domain,range,1,dbo:country,dbo:Lake,dbo:Country,feminine,lago,lago,feminine_la,stato,stato
+locate_in_6,verb,trovarsi,si trova,trovata,trovata,in,IntransitivePPFrame,domain,range,1,dbo:locatedInArea,dbo:Mountain,dbo:Country,masculine,monta§a,monta§a,feminine_la,luogo,luoghi
+writeIn,verb,scrivere,scrive,scritto,scritto,in,IntransitivePPFrame,domain,range,1,dbo:programmingLanguage,dbo:Software,dbo:Language,feminine_la,Software,Software,feminine_la,linguaggio di programmazione,linguaggio di programmazione
+live_in,verb,persone vivere,persone vivono,persone vivevano,persone vivevano,in,IntransitivePPFrame,domain,range,1,dbo:populationTotal,dbo:Country,xsd:double,feminine_la,stato,stato,-,-,-
+cost,verb,costare,costa,costato,costato,in,IntransitivePPFrame,domain,range,1,dbo:budget,dbo:Film,dbo:Double,feminine_la,film,film,-,-,-

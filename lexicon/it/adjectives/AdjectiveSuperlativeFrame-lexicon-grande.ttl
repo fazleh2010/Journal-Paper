@@ -1,0 +1,47 @@
+@prefix :        <http://localhost:8080/#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+@prefix oils:     <http://lemon-model.net/oils#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :grande ;
+  lemon:entry    :form_grande_preposition ;
+  lemon:entry    :grande_res .
+
+:grande a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_grande ;
+  lemon:otherForm      :form_grande_comperative ;
+  lemon:otherForm      :form_grande_superlative ;
+  lemon:sense          :grande_sense_1 ;
+  lemon:synBehavior    :grande_predFrame .
+
+:form_grande lemon:writtenRep "grande"@it .
+
+:form_grande_comperative lemon:writtenRep "pi� grande"@it .
+
+:form_grande_superlative lemon:writtenRep "il pi� grande"@it .
+
+:grande_predFrame a        lexinfo:AdjectiveSuperlativeFrame ;
+  lexinfo:copulativeSubject :grande_PredSynArg .
+
+:grande_sense_1 a  lemon:LexicalSense ;
+  lemon:reference :grande_res ;
+  lemon:isA       :grande_PredSynArg ;
+  lemon:condition :grande_sense_1_condition .
+
+:grande_res a   oils:CovariantScalar ;
+  oils:boundTo  <http://dbpedia.org/ontology/seatingCapacity> ;
+  oils:degree   <http://lemon-model.net/oils/high> .
+
+:grande_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain   <http://dbpedia.org/ontology/Country> ;
+  lemon:propertyRange    <http://dbpedia.org/ontology/Stadium> .## Prepositions ##
+:form_grande_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "de"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

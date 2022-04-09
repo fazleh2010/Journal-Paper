@@ -1,0 +1,69 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :dissolve_in ;
+  lemon:entry    :form_dissolve_in_present_preposition .
+
+:dissolve_in a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_dissolve_in_present ;
+  lemon:otherForm      :dissolve_in_present3rd ;
+  lemon:otherForm      :dissolve_in_past ;
+  lemon:otherForm      :dissolve_in_perfect ;
+  lemon:sense          :dissolve_in_sense_1 ;
+  lemon:synBehavior    :dissolve_in_frame .
+
+:form_dissolve_in_present a           lemon:Form ;
+  lemon:writtenRep     "sciogliere"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:dissolve_in_present3rd a      lemon:Form ;
+  lemon:writtenRep "scioglie"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:dissolve_in_past a lemon:Form ;
+  lemon:writtenRep  "sciolta"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:dissolve_in_perfect a lemon:Form ;
+  lemon:writtenRep  "sciolta"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:perfect .
+
+:dissolve_in_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :dissolve_in_subj ;
+  lexinfo:prepositionalAdjunct :dissolve_in_obj .
+
+:dissolve_in_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :dissolve_in_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/dissolutionDate> ;
+  lemon:subjOfProp  :dissolve_in_obj ;
+  lemon:objOfProp   :dissolve_in_subj ;
+  lemon:condition   :dissolve_in_sense_1_condition .
+
+:dissolve_in_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/PopulatedPlace> ;
+  lemon:propertyRange  <http://www.w3.org/2001/XMLSchema#gYear> .
+
+
+:dissolve_in_obj lemon:marker :di .
+
+:arg2 lemon:marker :form_dissolve_in_present_preposition .
+
+## Prepositions ##
+
+:form_dissolve_in_present_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "di"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

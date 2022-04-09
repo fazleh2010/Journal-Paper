@@ -161,7 +161,7 @@ public class VerbFinderEnglish implements TempConstants {
     private void setCategory(String reference) {
         if (reference.contains(component_be)||reference.contains(component_do)||reference.contains(component_se)
                 ||reference.contains(component_ha)||reference.contains(component_estado)
-                ||reference.contains(component_esta)) {
+                ||reference.contains(component_esta)||reference.contains(component_aux_object_past)) {
             this.auxilaryVerbFlag = true;
             return;
         } else if (reference.contains(imperative)||reference.contains(verb)) {

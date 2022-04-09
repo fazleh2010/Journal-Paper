@@ -1242,12 +1242,12 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Which books by Kerouac were published by Viking Press?",
+					"string": "Which books by Kerouac were published by Grove Press?",
 					"keywords": "book, Kerouac, publish, Viking Press"
 				},
 				{
 					"language": "pt_BR",
-					"string": "Que livros de Kerouac foram publicados pela Viking Press?",
+					"string": "Que livros de Kerouac foram publicados pela Grove Press?",
 					"keywords": "livros, Kerouac, publicados,Viking Press"
 				},
 				{
@@ -1257,17 +1257,17 @@
 				},
 				{
 					"language": "de",
-					"string": "Welche Bücher von Kerouac wurden von Viking Press verlegt?",
+					"string": "Welche Bücher von Kerouac wurden von Grove Press verlegt?",
 					"keywords": "Buch, Kerouac, verlegen, Viking Press"
 				},
 				{
 					"language": "es",
-					"string": "¿Qué libros de Kerouac han sido publicados por Viking Press?",
+					"string": "¿Qué libros de Kerouac han sido publicados por Grove Press?",
 					"keywords": "libro, Kerouac, publicado, Viking Press"
 				},
 				{
 					"language": "it",
-					"string": "Quali libri di Kerouac furono pubblicati da Viking Press?",
+					"string": "Quali libri di Kerouac furono pubblicati da Grove Press?",
 					"keywords": "libro, Kerouac, pubblicare, Viking Press"
 				},
 				{
@@ -1292,7 +1292,7 @@
 				}
 			],
 			"query": {
-				"sparql": "SELECT DISTINCT ?uri WHERE {  ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Book> .  ?uri <http://dbpedia.org/ontology/publisher> <http://dbpedia.org/resource/Viking_Press> .  ?uri <http://dbpedia.org/ontology/author> <http://dbpedia.org/resource/Jack_Kerouac> . } "
+				"sparql": "SELECT DISTINCT ?uri WHERE {  ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Book> .  ?uri <http://dbpedia.org/ontology/publisher> <http://dbpedia.org/resource/Grove_Press> .  ?uri <http://dbpedia.org/ontology/author> <http://dbpedia.org/resource/Jack_Kerouac> . } "
 			},
 			"answers": [{
 				"head": {
@@ -1427,8 +1427,8 @@
 				},
 				{
 					"language": "it",
-					"string": "In quale museo è esposto l'Urlo di Munch?",
-					"keywords": "museo, l'Urlo, Munch"
+					"string": "In quale museo è esposto l'Urlo?",
+					"keywords": "museo, l'Urlo"
 				},
 				{
 					"language": "fr",
@@ -2429,8 +2429,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Chi interpretava l'agente Smith in Matrix?",
-					"keywords": "attore, agente Smith, Matrix"
+					"string": "Chi interpretava Agent Smith",
+					"keywords": "attore, agente Smith"
 				},
 				{
 					"language": "fr",
@@ -5312,7 +5312,7 @@
 				},
 				{
 					"language": "it",
-					"string": "Chi è il sindaco di Tel Aviv?",
+					"string": "Chi è il sindaco di Firenze?",
 					"keywords": "Tel Aviv, sindaco"
 				},
 				{
@@ -5615,8 +5615,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Chi ha interpretato Gustavo Fring in Breaking Bad - Reazioni collaterali?",
-					"keywords": "interpretare, Gustavo Fring, Breaking Bad - Reazioni collaterali"
+					"string": "Chi ha interpretato Gustavo Fring?",
+					"keywords": "interpretare, Gustavo Fring"
 				},
 				{
 					"language": "fr",
@@ -9362,7 +9362,7 @@
 				},
 				{
 					"language": "it",
-					"string": "Chi fu il vicepresidente di John F. Kennedy?",
+					"string": "Chi fu il vicepresidente di Samuel Schmid?",
 					"keywords": "John F. Kennedy, vicepresidente"
 				},
 				{
@@ -9499,12 +9499,12 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Quién fué el sucesor de Patrick_F._Kennedy?",
+					"string": "¿Quién fué el sucesor de Patrick F. Kennedy?",
 					"keywords": "sucesor, John F. Kennedy"
 				},
 				{
 					"language": "it",
-					"string": "Chi fu il successore di Patrick_F._Kennedy?",
+					"string": "Chi fu il successore di Patrick F. Kennedy?",
 					"keywords": "John F. Kennedy, successore"
 				},
 				{
@@ -9588,7 +9588,7 @@
 				},
 				{
 					"language": "it",
-					"string": "Chi ha composto la colonna sonora di Titanic di Cameron?",
+					"string": "Chi ha composto la colonna sonora di Titanic?",
 					"keywords": "comporre, colonna sonora, Titanic, Cameron"
 				},
 				{
@@ -10285,12 +10285,12 @@
 				},
 				{
 					"language": "es",
-					"string": "¿Quién es el rey de los Países Bajos?",
+					"string": "¿Quién es el rey de los parlamento australiano?",
 					"keywords": "rey, Países Bajos"
 				},
 				{
 					"language": "it",
-					"string": "Chi è il re dei Paesi Bassi?",
+					"string": "Chi è il re dei Parlamento australiano?",
 					"keywords": "re, Paesi Bassi"
 				},
 				{
@@ -11001,8 +11001,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Quali società producono aeroscafi?",
-					"keywords": "società produrre, aeroscafi"
+					"string": "Quali società producono Hovercraft?",
+					"keywords": "società produrre, Hovercraft"
 				},
 				{
 					"language": "fr",
@@ -12381,7 +12381,7 @@
 				},
 				{
 					"language": "it",
-					"string": "In quale città morì John F. Kennedy?",
+					"string": "In quale città morì John Fitzgerald Kennedy?",
 					"keywords": "città, John F. Kennedy, morto"
 				},
 				{
@@ -12508,7 +12508,7 @@
 				},
 				{
 					"language": "it",
-					"string": "Chi ha scritto Game of Thrones?",
+					"string": "Chi ha scritto Il Trono di Spade?",
 					"keywords": "scrittore, Game of Thrones"
 				},
 				{
@@ -13432,7 +13432,7 @@
 				},
 				{
 					"language": "it",
-					"string": "In quale città vive Sylvester Stallone?",
+					"string": "In quale città vive Bruny Surin?",
 					"keywords": "città, vive, Sylvester Stallone"
 				},
 				{
@@ -13772,8 +13772,8 @@
 				},
 				{
 					"language": "it",
-					"string": "In quale città si trova il quartier generale delle Nazioni Unite?",
-					"keywords": "città, quartier generale delle Nazioni Unite"
+					"string": "In quale città si trova il Ufficio delle Nazioni Unite a New York?",
+					"keywords": "città, Ufficio delle Nazioni Unite a New York"
 				},
 				{
 					"language": "fr",
@@ -15370,7 +15370,7 @@
 			"hybrid": false,
 			"question": [{
 					"language": "en",
-					"string": "Show me all books in Asimov's Foundation series.",
+					"string": "Show me all books in Foundation series.",
 					"keywords": "books, Asimov, Foundation series"
 				},
 				{
@@ -15390,12 +15390,12 @@
 				},
 				{
 					"language": "es",
-					"string": "Muéstrame todos los libros en la serie Fundación de Asimov",
+					"string": "Muéstrame todos los libros en la serie Fundación",
 					"keywords": "libros, serie Fundación Asimov"
 				},
 				{
 					"language": "it",
-					"string": "Mostrami tutti i libri del Ciclo della Fondazione di Asimov",
+					"string": "Mostrami tutti i libri del Ciclo della Fondazione",
 					"keywords": "libri, Ciclo della Fondazione, Asimov"
 				},
 				{
@@ -15688,8 +15688,8 @@
 				},
 				{
 					"language": "it",
-					"string": "Quanto è alta la torre Yokohama Marine?",
-					"keywords": "altezza, torre Yokohama Marine"
+					"string": "Quanto è alta la torre di Yokohama?",
+					"keywords": "altezza, torre di Yokohama"
 				},
 				{
 					"language": "fr",
@@ -16553,7 +16553,7 @@
 				},
 				{
 					"language": "it",
-					"string": "Quali attori professionisti sono nati nelle Filippine?",
+					"string": "Quali attori sono nati nelle Filippine?",
 					"keywords": "surfista professionista, nato, Filippine"
 				},
 				{

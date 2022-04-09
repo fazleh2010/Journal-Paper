@@ -20,24 +20,24 @@
   lemon:synBehavior    :start_in_2_frame .
 
 :form_start_in_2_present a           lemon:Form ;
-  lemon:writtenRep     "iniziare"@it ;
+  lemon:writtenRep     "stato nasce"@it ;
   lexinfo:verbFormMood lexinfo:infinitive .
 
 
 :start_in_2_present3rd a      lemon:Form ;
-  lemon:writtenRep "inizia"@it ;
+  lemon:writtenRep "stato nasce"@it ;
   lexinfo:number   lexinfo:singular ;
   lexinfo:person   lexinfo:thirdPerson ;
   lexinfo:tense    lexinfo:present .
 
 :start_in_2_past a lemon:Form ;
-  lemon:writtenRep  "ha inizio"@it ;
+  lemon:writtenRep  "stato nasce"@it ;
   lexinfo:number    lexinfo:singular ;
   lexinfo:person    lexinfo:thirdPerson ;
   lexinfo:tense     lexinfo:past .
 
 :start_in_2_perfect a lemon:Form ;
-  lemon:writtenRep  "ha inizio"@it ;
+  lemon:writtenRep  "stato nasce"@it ;
   lexinfo:number    lexinfo:singular ;
   lexinfo:person    lexinfo:thirdPerson ;
   lexinfo:tense     lexinfo:perfect .

@@ -20,22 +20,22 @@
   lemon:synBehavior    :exhibit_frame_transitive .
 
 :form_exhibit a         lemon:Form ;
-  lemon:writtenRep     "mostrare"@it ;
+  lemon:writtenRep     "� esposto"@it ;
   lexinfo:verbFormMood lexinfo:infinitive .
 
 :form_exhibits a    lemon:Form ;
-  lemon:writtenRep "mostra"@it ;
+  lemon:writtenRep "� esposto"@it ;
   lexinfo:tense    lexinfo:past ;
   lexinfo:person   lexinfo:thirdPerson .
 
 
 :form_exhibits a    lemon:Form ;
-  lemon:writtenRep "ha mostrato"@it ;
+  lemon:writtenRep "� esposto"@it ;
   lexinfo:tense    lexinfo:past ;
   lexinfo:person   lexinfo:thirdPerson .
 
 :form_exhibited a   lemon:Form ;
-  lemon:writtenRep "� mostrato"@it ;
+  lemon:writtenRep "� esposto"@it ;
   lexinfo:tense    lexinfo:perfect ;
   lexinfo:person   lexinfo:thirdPerson .
 
@@ -63,10 +63,10 @@
   lemon:sense          :exhibited_ontomap .
 
 :form_exhibited_canonical a lemon:Form ;
-  lemon:writtenRep         "mostrare"@it .
+  lemon:writtenRep         "� esposto"@it .
 
 :form_exhibited_by a    lemon:Form ;
-  lemon:writtenRep     "mostrare"@it ;
+  lemon:writtenRep     "� esposto"@it ;
   lexinfo:verbFormMood lexinfo:participle .
 
 

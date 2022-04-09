@@ -1807,9 +1807,6 @@ http://dbpedia.org/resource/Walt_Disney,Walt Disney,Animal
 http://dbpedia.org/resource/Walt_Disney,Walt Disney,Eukaryote
 http://dbpedia.org/resource/Walt_Disney,Walt Disney,Person
 http://dbpedia.org/resource/Walt_Disney,Walt Disney,Species
-http://dbpedia.org/resource/Sitecore,Sitecore,Agent
-http://dbpedia.org/resource/Sitecore,Sitecore,Company
-http://dbpedia.org/resource/Sitecore,Sitecore,Organisation
 http://dbpedia.org/resource/Lance_Bass,Lance Bass,MusicalArtist
 http://dbpedia.org/resource/Lance_Bass,Lance Bass,Animal
 http://dbpedia.org/resource/Lance_Bass,Lance Bass,Eukaryote
@@ -1973,26 +1970,6 @@ http://dbpedia.org/resource/Michael_Jordan,Michael Jordan,Athlete
 http://dbpedia.org/resource/Michael_Jordan,Michael Jordan,Person
 http://dbpedia.org/resource/Michael_Jordan,Michael Jordan,Species
 http://dbpedia.org/resource/Michael_Jordan,Michael Jordan,BasketballPlayer
-http://dbpedia.org/resource/Paris,París,Settlement
-http://dbpedia.org/resource/Paris,París,City
-http://dbpedia.org/resource/Paris,París,Place
-http://dbpedia.org/resource/Paris,París,Location
-http://dbpedia.org/resource/Paris,París,PopulatedPlace
-http://dbpedia.org/resource/Paris,París,Settlement
-http://dbpedia.org/resource/Paris,París,City
-http://dbpedia.org/resource/Paris,París,Place
-http://dbpedia.org/resource/Paris,París,Location
-http://dbpedia.org/resource/Paris,París,PopulatedPlace
-http://dbpedia.org/resource/Paris,París,Settlement
-http://dbpedia.org/resource/Paris,París,City
-http://dbpedia.org/resource/Paris,París,Place
-http://dbpedia.org/resource/Paris,París,Location
-http://dbpedia.org/resource/Paris,París,PopulatedPlace
-http://dbpedia.org/resource/Paris,París,Settlement
-http://dbpedia.org/resource/Paris,París,City
-http://dbpedia.org/resource/Paris,París,Place
-http://dbpedia.org/resource/Paris,París,Location
-http://dbpedia.org/resource/Paris,París,PopulatedPlace
 http://dbpedia.org/resource/Paris,París,Settlement
 http://dbpedia.org/resource/Paris,París,City
 http://dbpedia.org/resource/Paris,París,Place
@@ -2859,3 +2836,19 @@ http://dbpedia.org/resource/San_Pedro_de_Atacama,San Pedro de Atacama,Town
 http://dbpedia.org/resource/T._E._Lawrence,Thomas Edward Lawrence,Person
 "http://dbpedia.org/resource/Lake_Bosumtwi","Lago Bosumtwi","BodyOfWater"
 "http://dbpedia.org/resource/Lake_Bosumtwi","Lago Bosumtwi","NaturalPlace"
+"http://dbpedia.org/resource/Colombia","Colombia","Country"
+"http://dbpedia.org/resource/Colombia","Colombia","Place"
+"http://dbpedia.org/resource/Colombia","Colombia","Location"
+"http://dbpedia.org/resource/Colombia","Colombia","PopulatedPlace"
+"http://dbpedia.org/resource/Colombia","Colombia","MusicalArtist"
+"http://dbpedia.org/resource/Colombia","Repubblica della Nuova Granada","Country"
+"http://dbpedia.org/resource/Colombia","Repubblica della Nuova Granada","Place"
+"http://dbpedia.org/resource/Colombia","Repubblica della Nuova Granada","Location"
+"http://dbpedia.org/resource/Colombia","Repubblica della Nuova Granada","PopulatedPlace"
+"http://dbpedia.org/resource/Colombia","Repubblica della Nuova Granada","MusicalArtist"
+"http://dbpedia.org/resource/Headquarters_of_the_United_Nations","Ufficio delle Nazioni Unite a New York","ArchitecturalStructure"
+"http://dbpedia.org/resource/Headquarters_of_the_United_Nations","Ufficio delle Nazioni Unite a New York","Building"
+"http://dbpedia.org/resource/Friedrich_Wilhelm_Joseph_Schelling","Friedrich Wilhelm Joseph Schelling","Person"
+"http://dbpedia.org/resource/Sitecore","Sitecore","Agent"
+"http://dbpedia.org/resource/Sitecore","Sitecore","Company"
+"http://dbpedia.org/resource/Sitecore","Sitecore","Organisation"

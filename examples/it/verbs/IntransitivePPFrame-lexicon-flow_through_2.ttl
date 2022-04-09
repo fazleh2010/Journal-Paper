@@ -54,7 +54,7 @@
   lemon:condition   :flow_through_2_sense_1_condition .
 
 :flow_through_2_sense_1_condition a      lemon:condition ;
-  lemon:propertyDomain <http://dbpedia.org/ontology/River> ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/BodyOfWater> ;
   lemon:propertyRange  <http://dbpedia.org/ontology/Country> .
 
 
