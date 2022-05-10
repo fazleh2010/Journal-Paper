@@ -2,7 +2,7 @@
   "languageCode" : "it",
   "inputDir" : "lexicon",
   "outputDir" : "output",
-  "qaldDir" : "qald",
+  "qaldDir" : "qald7Original",
   "numberOfEntities" : 100,
   "similarityThresold" : 0.7,
   "csvToTurtle" : true,
@@ -10,7 +10,7 @@
   "single": true,
   "composite": false,
   "protoTypeToQuestion" : true,
-  "evalution" : true
+  "evalution" : false
 }
 
 

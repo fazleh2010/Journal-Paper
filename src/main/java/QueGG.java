@@ -1,371 +1,482 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import eu.monnetproject.lemon.LemonModel;
-import evaluation.EvaluateAgainstQALD;
-import static evaluation.EvaluateAgainstQALD.PROTOTYPE_QUESTION;
-import static evaluation.EvaluateAgainstQALD.REAL_QUESTION;
-import evaluation.QALD;
-import evaluation.QALDImporter;
-import grammar.generator.BindingResolver;
-import grammar.generator.GrammarRuleGeneratorRoot;
-import grammar.generator.GrammarRuleGeneratorRootImpl;
-import grammar.read.questions.ReadAndWriteQuestions;
-import grammar.structure.component.DomainOrRangeType;
-import grammar.structure.component.FrameType;
-import grammar.structure.component.GrammarEntry;
-import grammar.structure.component.GrammarWrapper;
-import grammar.structure.component.Language;
-import lexicon.LexiconImporter;
-import lombok.NoArgsConstructor;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.apache.jena.sys.JenaSystem;
-import java.lang.reflect.InvocationTargetException;
-import java.nio.file.Path;
-import java.util.*;
-import java.util.List;
-import java.util.stream.Collectors;
-import static java.util.Objects.isNull;
-import util.io.CsvFile;
-import util.io.FileUtils;
-import turtle.GermanTurtle;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import grammar.sparql.SparqlQuery;
-import grammar.sparql.SPARQLRequest;
-import static java.lang.System.exit;
-import java.net.URL;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
 import java.util.logging.Level;
-import org.apache.commons.text.similarity.CosineDistance;
-import turtle.EnglishTurtle;
-import util.io.GenderUtils;
-import linkeddata.LinkedData;
-import turtle.ItalianTurtle;
-import turtle.SpanishTurtle;
-import static util.io.ResourceHelper.loadResource;
-import turtle.TutleConverter;
-import util.io.FileFolderUtils;
-import util.io.InputCofiguration;
+import java.util.logging.Logger;
+import org.apache.commons.lang3.StringUtils;
 
-@NoArgsConstructor
+/**
+ *
+ * @author elahi
+ */
 public class QueGG {
 
-    private static final Logger LOG = LogManager.getLogger(QueGG.class);
-    private static String questionsFile = "questions";
-    private static String summaryFile = "summary";
-    private static String entityLabelDir = "src/main/resources/entityLabels/";
-    private static Boolean externalEntittyListflag = true;
-    private static String grammar_FULL_DATASET = "grammar_FULL_DATASET";
-    private static String grammar_COMBINATIONS = "grammar_COMBINATIONS";
-    private static Boolean online = true;
+    private static Map<String, String> labels = new TreeMap<String, String>();
 
-    public static void main(String[] args) throws Exception {
-        JenaSystem.init();
-        QueGG queGG = new QueGG();
-        String configFile = null, dataSetConfFile = null;
+    public static void generateProperty(String propertyInputDir, String labelFileName,Integer numberOfTriples,String language) {
+        Set<String> properties = getFiles(propertyInputDir);
 
-        try {
-            if (args.length < 2) {
-                throw new IllegalArgumentException(String.format("Too few parameters (%s/%s)", args.length));
-            } else if (args.length == 2) {
-                configFile = args[0];
-                InputCofiguration inputCofiguration = FileUtils.getInputConfig(new File(configFile));
-                inputCofiguration.setLinkedData(args[1]);
-                if (inputCofiguration.isCsvToTurtle()) {
-                    if (queGG.csvToProto(inputCofiguration)) {
-                        queGG.turtleToProto(inputCofiguration);
-                    }
-                }
-                if (inputCofiguration.isProtoTypeToQuestion()) {                   
-                    queGG.protoToReal(inputCofiguration, grammar_FULL_DATASET, grammar_COMBINATIONS);
-                }
-                if (inputCofiguration.isEvalution()) {
-                    Language language = inputCofiguration.getLanguage();
-                    String qaldDir = inputCofiguration.getQaldDir();
-                    String outputDir = inputCofiguration.getOutputDir();
-                    LinkedData linkedData = inputCofiguration.getLinkedData();
-                    Double similarity = inputCofiguration.getSimilarityThresold();
-                    queGG.evalution(qaldDir, outputDir, language, linkedData.getEndpoint(), EvaluateAgainstQALD.REAL_QUESTION, similarity);
-                }
-
+        for (String property : properties) {
+            String propertyFile = propertyInputDir + property;
+            System.out.println(propertyFile);
+             String content = matchLabelsWithEntities(propertyFile, labelFileName, numberOfTriples);
+            try {
+                propertyFile=propertyFile.replace(".ttl", "_" + language + ".txt");
+                stringToFile(content, propertyFile);
+            } catch (IOException ex) {
+                Logger.getLogger(QueGG.class.getName()).log(Level.SEVERE, null, ex);
             }
-
-        } catch (IllegalArgumentException | IOException e) {
-            System.err.printf("%s: %s%n", e.getClass().getSimpleName(), e.getMessage());
-            System.err.printf("Usage: <%s> <input directory> <output directory>%n", Arrays.toString(Language.values()));
         }
+        System.out.println(labelFileName);
+
+        //String propertyFile = getPropertyFile(inputDir, property);
+        //String labelFileName = tripleDir + language + "_labels.ttl";
+        //labels = tripleFileToHashLabels(labelFileName, numberOfTriples);
+        //System.out.println("labels:" + labels.size());
+    }
+    
+    public static Set<String> getFiles(String propertyInputDir) {
+        Set<String> properties = new TreeSet<String>();
+        File file = new File(propertyInputDir);
+        String[] propertyFiles = file.list();
+
+        for (String propertyFile : propertyFiles) {
+            if (propertyFile.contains(".ttl")) {
+                properties.add(propertyFile);
+            }
+        }
+        return properties;
 
     }
 
-    public void evalution(String qaldDir, String outputDir, Language language, String endpoint, String questionType, Double similarityMeasure) throws IOException, Exception {
-        ObjectMapper objectMapper = new ObjectMapper();
-        String queGGJson = null, queGGJsonCombined = null, qaldFile = null, qaldModifiedFile = null;
-        String languageCode = language.name().toLowerCase();
-        String resultFileName = outputDir + File.separator + "QALD-QueGG-Comparison_" + languageCode + ".csv";
-        String qaldRaw = outputDir + File.separator + "QALD-2017-dataset-raw.csv";
-        EvaluateAgainstQALD evaluateAgainstQALD = new EvaluateAgainstQALD(languageCode, endpoint);
+    public static void stringToFile(String content, String fileName)
+            throws IOException {
+        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
+        writer.write(content);
+        writer.close();
 
-        for (String fileName : new File(qaldDir).list()) {
-            if (fileName.contains("qald")) {
-                if (fileName.contains("train-multilingual_modified.json")) {
-                    qaldModifiedFile = qaldDir + File.separator + fileName;
-                } else if (fileName.contains("train-multilingual.json")) {
-                    qaldFile = qaldDir + File.separator + fileName;
-                }
+    }
+
+    public static String fileToString(String fileName) {
+        InputStream is;
+        String fileAsString = null;
+        try {
+            is = new FileInputStream(fileName);
+            BufferedReader buf = new BufferedReader(new InputStreamReader(is));
+            String line = buf.readLine();
+            StringBuilder sb = new StringBuilder();
+            while (line != null) {
+                sb.append(line).append("\n");
+                line = buf.readLine();
             }
+            fileAsString = sb.toString();
+            //System.out.println("Contents : " + fileAsString);
+        } catch (Exception ex) {
+            Logger.getLogger(QueGG.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        String string = evaluateAgainstQALD.getQaldEntities(qaldFile, qaldModifiedFile, qaldRaw, languageCode);
+        return fileAsString;
+    }
 
-        //temporary code for qald entity creation...
-        //System.out.println(entityLabelDir+File.separator+"qaldEntities.txt");
-        //FileUtils.stringToFile(string, entityLabelDir+File.separator+"qaldEntities.txt");
-        
-        if (questionType.contains(PROTOTYPE_QUESTION)) {
-            for (String fileName : new File(outputDir).list()) {
-                if (fileName.contains("grammar_FULL_DATASET") && fileName.contains(language.name())) {
-                    queGGJson = outputDir + File.separator + fileName;
-                } else if (fileName.contains("grammar_COMBINATIONS") && fileName.contains(language.name())) {
-                    queGGJsonCombined = outputDir + File.separator + fileName;
-                }
-
-            }
-            File grammarEntriesFile = new File(queGGJson);
-            File grammarEntriesFile2 = new File(queGGJsonCombined);
-            GrammarWrapper grammarWrapper = objectMapper.readValue(grammarEntriesFile, GrammarWrapper.class);
-            GrammarWrapper gw2 = objectMapper.readValue(grammarEntriesFile2, GrammarWrapper.class);
-            grammarWrapper.merge(gw2);
-        
-            evaluateAgainstQALD.evaluateAndOutput(grammarWrapper, qaldFile, qaldModifiedFile, resultFileName, qaldRaw, languageCode, questionType, similarityMeasure);
-
-        } else if (questionType.contains(REAL_QUESTION)) {
-             
-            Map<String, String[]> queGGQuestions = new HashMap<String, String[]>();
-            List<String[]> rows = new ArrayList<String[]>();
-            String[] files = new File(outputDir).list();
-            for (String fileName : files) {
-                if (fileName.contains(questionsFile) && fileName.contains(".csv")) {
-                    File file = new File(outputDir + File.separator + fileName);
-                    CsvFile csvFile = new CsvFile(file);
-                    rows = csvFile.getRows(file);
-                    for (String[] row : rows) {
-                        String question = row[1];
-                        String cleanQuestion = question.toLowerCase().trim().strip().stripLeading().stripTrailing();
-                        queGGQuestions.put(cleanQuestion, row);
+    public static Map<String, String> getUriLabelsJson(File classFile) {
+        Map<String, String> map = new TreeMap<String, String>();
+        Set<String> set = new TreeSet<String>();
+        BufferedReader reader;
+        String line = "";
+        try {
+            reader = new BufferedReader(new FileReader(classFile));
+            //line = reader.readLine();
+            while (line != null) {
+                line = reader.readLine();
+                if (line != null) {
+                    line = line.strip().trim();
+                    if (line.contains("=")) {
+                        String uri = line.split("=")[0];
+                        String label = line.split("=")[1];
+                        map.put(uri, label);
                     }
                 }
             }
-
-            evaluateAgainstQALD.evaluateAndOutput(queGGQuestions, qaldFile, qaldModifiedFile, resultFileName, qaldRaw, languageCode, questionType, similarityMeasure);
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-
+        return map;
     }
 
-    private Boolean csvToProto(InputCofiguration inputCofiguration) throws Exception {
-        Language language = inputCofiguration.getLanguage();
-        String inputDir = inputCofiguration.getInputDir();
-        String outputDir = inputCofiguration.getOutputDir();
-        Integer numberOfEntitiesString = inputCofiguration.getNumberOfEntities();
-        LinkedData linkedData = inputCofiguration.getLinkedData();
-        setDataSet(linkedData);
-        TutleConverter tutleConverter = null;
-        FileFolderUtils.deleteFiles(inputDir, ".ttl");
-        if (language.equals(Language.DE)) {
-            tutleConverter = new GermanTurtle(inputDir, linkedData, language);
-        } else if (language.equals(Language.EN)) {
-            tutleConverter = new EnglishTurtle(inputDir, linkedData, language);
-        }else if (language.equals(Language.ES)) {
-            tutleConverter = new SpanishTurtle(inputDir, linkedData, language);
-        }else if (language.equals(Language.IT)) {
-            tutleConverter = new ItalianTurtle(inputDir, linkedData, language);
-        }
-        return tutleConverter.getConversionFlag();
-    }
-
-    private void turtleToProto(InputCofiguration inputCofiguration) throws IOException {
-        Language language = inputCofiguration.getLanguage();
-        String inputDir = inputCofiguration.getInputDir();
-        String outputDir = inputCofiguration.getOutputDir();
-        this.init(language, inputDir, outputDir);
-    }
-
-    private void protoToReal(InputCofiguration inputCofiguration, String grammar_FULL_DATASET, String grammar_COMBINATIONS) throws Exception {
-        Language language = inputCofiguration.getLanguage();
-        String inputDir = inputCofiguration.getOutputDir();
-        Integer maxNumberOfEntities = inputCofiguration.getNumberOfEntities();
-        Boolean combinedFlag=inputCofiguration.getCompositeFlag();
-        Boolean singleFlag=inputCofiguration.getSingleFlag();
-        LinkedData linkedData = inputCofiguration.getLinkedData();
-        List<File> protoToQuestions=new ArrayList<File>();
-        setDataSet(linkedData);
-
-        if (singleFlag) {
-            protoToQuestions.addAll(FileUtils.getFiles(inputDir + "/", grammar_FULL_DATASET + "_" + language.name(), ".json"));
-        }
-        if (combinedFlag) {
-            protoToQuestions.addAll(FileUtils.getFiles(inputDir + "/", grammar_COMBINATIONS + "_" + language.name(), ".json"));
-        }
-
-        String langCode = language.name().toLowerCase().trim();
-        String questionAnswerFile = inputDir + File.separator + questionsFile + "_" + langCode + ".csv";
-        String questionSummaryFile = inputDir + File.separator + summaryFile + "_" + langCode + ".csv";
-        ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile, maxNumberOfEntities, langCode, linkedData.getEndpoint(), online);
-        readAndWriteQuestions.readQuestionAnswers(linkedData, protoToQuestions, entityLabelDir, externalEntittyListflag);
-
-    }
-
-    private void questionEvaluation(InputCofiguration inputCofiguration) throws Exception {
-        Language language = inputCofiguration.getLanguage();
-        String qaldDir = inputCofiguration.getQaldDir();
-        String outputDir = inputCofiguration.getOutputDir();
-        LinkedData linkedData = inputCofiguration.getLinkedData();
-        Double similarityMeasure = inputCofiguration.getSimilarityThresold();
-        Boolean combinedFlag=inputCofiguration.getCompositeFlag();
-        evalution(qaldDir, outputDir, language, linkedData.getEndpoint(), EvaluateAgainstQALD.REAL_QUESTION, similarityMeasure);
-
-    }
-
-    public void init(Language language, String inputDir, String outputDir) throws IOException {
-        try {
-            loadInputAndGenerate(language, inputDir, outputDir);
-        } catch (InvocationTargetException | NoSuchMethodException | InstantiationException | IllegalAccessException e) {
-            LOG.error("Could not create grammar: {}", e.getMessage());
-        }
-    }
-
-    private void loadInputAndGenerate(Language lang, String inputDir, String outputDir) throws
-            IOException,
-            InvocationTargetException,
-            NoSuchMethodException,
-            InstantiationException,
-            IllegalAccessException {
-        LexiconImporter lexiconImporter = new LexiconImporter();
-        LemonModel lemonModel = lexiconImporter.loadModelFromDir(inputDir, lang.toString().toLowerCase());
-        printInputSummary(lemonModel);
-        generateByFrameType(lang, lemonModel, outputDir);
-    }
-
-    private void printInputSummary(LemonModel lemonModel) {
-        lemonModel
-                .getLexica()
-                .forEach(
-                        lexicon
-                        -> {
-                    LOG.info("The input lexicon contains the following grammar frames:");
-                    Arrays.stream(FrameType.values()).forEach(
-                            frameType -> {
-                                LOG.info(
-                                        "{}: {}",
-                                        frameType.getName(),
-                                        // count of elements that have that frame
-                                        lexicon.getEntrys()
-                                                .stream()
-                                                .filter(lexicalEntry
-                                                        -> lexicalEntry.getSynBehaviors()
-                                                        .stream()
-                                                        .anyMatch(frame
-                                                                -> frame.getTypes()
-                                                                .stream()
-                                                                .anyMatch(
-                                                                        uri -> uri.getFragment().equals(frameType.getName())
-                                                                )
-                                                        )
-                                                )
-                                                .count()
-                                );
-                            });
-                }
-                );
-    }
-
-    private void generateByFrameType(Language language, LemonModel lemonModel, String outputDir) throws
-            IOException,
-            NoSuchMethodException,
-            IllegalAccessException,
-            InvocationTargetException,
-            InstantiationException {
-        GrammarWrapper grammarWrapper = new GrammarWrapper();
-        for (FrameType frameType : FrameType.values()) {
-            if (!isNull(frameType.getImplementingClass())) {
-                GrammarWrapper gw = generateGrammarGeneric(
-                        lemonModel,
-                        (GrammarRuleGeneratorRoot) frameType.getImplementingClass()
-                                .getDeclaredConstructor(Language.class)
-                                .newInstance(language)
-                );
-                grammarWrapper.merge(gw);
-            }
-        }
-        // Make a GrammarRuleGeneratorRoot instance to use the combination function
-        GrammarRuleGeneratorRoot generatorRoot = new GrammarRuleGeneratorRootImpl(language);
-        LOG.info("Start generation of combined entries");
-        grammarWrapper.getGrammarEntries().addAll(generatorRoot.generateCombinations(grammarWrapper.getGrammarEntries()));
-
-        for (GrammarEntry grammarEntry : grammarWrapper.getGrammarEntries()) {
-            System.out.println("grammarEntry::"+grammarEntry);
-            grammarEntry.setId(String.valueOf(grammarWrapper.getGrammarEntries().indexOf(grammarEntry) + 1));
-        }
-
-        // Output file is too big, make two files
-        GrammarWrapper regularEntries = new GrammarWrapper();
-        regularEntries.setGrammarEntries(
-                grammarWrapper.getGrammarEntries()
-                        .stream()
-                        .filter(grammarEntry -> !grammarEntry.isCombination())
-                        .collect(Collectors.toList())
-        );
-        GrammarWrapper combinedEntries = new GrammarWrapper();
-        combinedEntries.setGrammarEntries(
-                grammarWrapper.getGrammarEntries().stream().filter(GrammarEntry::isCombination).collect(Collectors.toList())
-        );
-
-        // Generate bindings
-        LOG.info("Start generation of bindings");
-        grammarWrapper.getGrammarEntries().forEach(generatorRoot::generateBindings);
-
-        generatorRoot.dumpToJSON(
-                Path.of(
-                        outputDir,
-                        "grammar_" + generatorRoot.getFrameType().getName() + "_" + language + ".json"
-                ).toString(),
-                regularEntries
-        );
-        generatorRoot.dumpToJSON(
-                Path.of(outputDir, "grammar_COMBINATIONS" + "_" + language + ".json").toString(),
-                combinedEntries
-        );
-
-        // Insert those bindings and write new files
-        LOG.info("Start resolving bindings");
-        BindingResolver bindingResolver = new BindingResolver(grammarWrapper.getGrammarEntries());
-        grammarWrapper = bindingResolver.resolve();
-        generatorRoot.dumpToJSON(
-                Path.of(outputDir, "grammar_FULL_WITH_BINDINGS_" + language + ".json").toString(),
-                grammarWrapper
-        );
+    public static Map<String, String> tripleFileToHash(String fileName, Integer numberOfTriples) {
+        Map<String, String> results = new TreeMap<String, String>();
+        BufferedReader reader;
+        String line = "";
+        File file = new File(fileName);
+        Integer lineNumber = 0;
         
+               
 
-    }
 
-    private GrammarWrapper generateGrammarGeneric(LemonModel lemonModel, GrammarRuleGeneratorRoot grammarRuleGenerator) {
-        GrammarWrapper grammarWrapper = new GrammarWrapper();
-        lemonModel.getLexica().forEach(lexicon -> {
-            LOG.info("Start generation for FrameType {}", grammarRuleGenerator.getFrameType().getName());
-            grammarRuleGenerator.setLexicon(lexicon);
-            grammarWrapper.setGrammarEntries(grammarRuleGenerator.generate(lexicon));
-        });
-        return grammarWrapper;
-    }
+        try {
+            reader = new BufferedReader(new FileReader(fileName));
+            line = reader.readLine();
+            while (line != null) {
+                line = reader.readLine();
+                lineNumber = lineNumber + 1;
+                String subject = null;
+                String object = null, property = null;
+                if (line != null) {
+                    line = line.replace("<", "\n" + "<");
+                    line = line.replace(">", ">" + "\n");
+                    line = line.replace("\"", "\n" + "\"");
+                    String[] lines = line.split(System.getProperty("line.separator"));
 
-    private static void setDataSet(LinkedData linkedData) throws Exception {
-        String endpoint = linkedData.getEndpoint();
-        if (linkedData.getEndpoint().contains("dbpedia")) {
-            SPARQLRequest.setEndpoint(endpoint);
+                    Integer index = 0;
+                    for (String value : lines) {
+                        index = index + 1;
+                        if (index == 2) {
+                            subject = clean(value);
+                        } else if (index == 6) {
+                            object = clean(value);
+                        }
+                    }
+                    System.out.println("subject:" + subject + " " + "object:" + object+ "  property:" + fileName);
+                    
+                    if (lineNumber == -1)
+                         ; 
+                    else if (lineNumber == numberOfTriples) {
+                        break;
+                    }
+
+                    results.put(subject, object);
+
+                }
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        GrammarRuleGeneratorRoot.setEndpoint(endpoint);
 
+        return results;
+
+    }
+    
+     public static Map<String, String> tripleFileToHashLabels(String fileName, Integer numberOfTriples) {
+        Map<String, String> results = new TreeMap<String, String>();
+        BufferedReader reader;
+        String line = "";
+        File file = new File(fileName);
+        Integer lineNumber = 0;
+        
+               
+
+
+        try {
+            reader = new BufferedReader(new FileReader(fileName));
+            line = reader.readLine();
+            while (line != null) {
+                line = reader.readLine();
+                lineNumber = lineNumber + 1;
+                String subject = null;
+                String object = null, property = null;
+                if (line != null) {
+                    line = line.replace("<", "\n" + "<");
+                    line = line.replace(">", ">" + "\n");
+                    line = line.replace("\"", "\n" + "\"");
+                    String[] lines = line.split(System.getProperty("line.separator"));
+
+                    Integer index = 0;
+                    for (String value : lines) {
+                        index = index + 1;
+                        if (index == 2) {
+                            subject = clean(value);
+                        } else if (index == 6) {
+                            object = clean(value);
+                        }
+                    }
+                    
+                    if (lineNumber == -1)
+                         ; 
+                    else if (lineNumber == numberOfTriples) {
+                        break;
+                    }
+                    
+                    subject=cleanNotation(subject);
+                    object=cleanNotation(object);
+                    System.out.println("subject:" + subject + " " + "object:" + object);
+
+
+                    results.put(subject, object);
+
+                }
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return results;
+
+    }
+
+    public static String matchLabelsWithEntities(String propertyFile, String labelFileName, Integer numberOfTriples) {
+        BufferedReader reader;
+        String line = "";
+        File file = new File(labelFileName);
+        Map<String, String> propertySubObjEntities = tripleFileToHash(propertyFile, numberOfTriples);
+        Map<String, String> propertyObjSubjEntities = reverseHash(propertySubObjEntities);
+        Map<String, String> objectLabelHash = new TreeMap<String, String>();
+
+        List<OffLineResult> offLineResults = new ArrayList<OffLineResult>();
+        String content = "";
+        Integer lineNumber = 0;
+        try {
+            reader = new BufferedReader(new FileReader(labelFileName));
+            line = reader.readLine();
+            while (line != null) {
+                line = reader.readLine();
+                String uri = null, label = null, subjectUri = null;
+                String subjectLabel = null, objectUri = null, objectLabel = null;
+                if (line != null) {
+                    line = line.replace("<", "\n" + "<");
+                    line = line.replace(">", ">" + "\n");
+                    line = line.replace("\"", "\n" + "\"");
+                    String[] lines = line.split(System.getProperty("line.separator"));
+
+                    Integer index = 0;
+                    Boolean flag = false;
+                    for (String value : lines) {
+                        index = index + 1;
+                        if (index == 2) {
+                            uri = clean(value);
+                        } else if (index == 6) {
+                            label = clean(value);
+                        }
+                    }
+
+                    if (!propertySubObjEntities.containsKey(uri)) {
+                        subjectUri = null;
+                    } else {
+                        subjectUri = uri;
+                        subjectLabel = label;
+                        objectUri = propertySubObjEntities.get(subjectUri);
+                    }
+                    if (propertyObjSubjEntities.containsKey(uri)) {
+                        objectLabelHash.put(uri, label);
+                    }
+
+                    if (subjectUri != null) {
+                        lineNumber = lineNumber + 1;
+                        OffLineResult offLineResult = new OffLineResult(subjectUri, subjectLabel, objectUri, objectLabel);
+                        offLineResults.add(offLineResult);
+
+                        if (numberOfTriples == -1)
+                            ; 
+                        else if (lineNumber >= numberOfTriples) {
+                            break;
+                        }
+
+                        System.out.println(lineNumber + " subject:" + offLineResult.getSubjectUri() + " subjectLabel:");
+
+                    }
+
+                }
+            }
+            Integer index = 0;
+            for (OffLineResult offLineResult : offLineResults) {
+                String key = offLineResult.getObjectUri().trim().strip().stripLeading().stripTrailing();
+                String objectLabel = null;
+                //if (objectLabelHash.containsKey(key)) {
+                index = index + 1;
+                objectLabel = objectLabelHash.get(key);
+                String fileLine = offLineResult.getSubjectUri() + "=" + offLineResult.getSubjectLabel()
+                        + "=" + offLineResult.getObjectUri() + "=" + objectLabel;
+                fileLine = fileLine + "\n";
+                content += fileLine;
+
+                System.out.println(index + " subject:" + offLineResult.getSubjectUri() + " subjectLabel:" + offLineResult.getSubjectLabel()
+                        + " " + " objectUri:" + offLineResult.getObjectUri() + " " + " objectLabel:" + objectLabel);
+
+                //}
+            }
+
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return content;
+
+    }
+
+    public static Map<String, OffLineResult> getEntityLabels(String propertyFile) {
+        Map<String, OffLineResult> entityLabels = new TreeMap<String, OffLineResult>();
+        BufferedReader reader;
+        String line = "";
+        File file = new File(propertyFile);
+        String content = "";
+        Integer lineNumber = 0;
+        try {
+            reader = new BufferedReader(new FileReader(propertyFile));
+            line = reader.readLine();
+            while (line != null) {
+                line = reader.readLine();
+                String subjectUri = null;
+                String subjectLabel = null, objectUri = null, objectLabel = null;
+                if (line != null) {
+                    String[] lines = line.split("=");
+
+                    Integer index = 0;
+                    Boolean flag = false;
+                    for (String value : lines) {
+                        index = index + 1;
+                        value = value.replace("<", "");
+                        value = value.replace(">", "");
+                        value = value.replace("\"", "");
+                        if (index == 1) {
+                            subjectUri = clean(value);
+                        } else if (index == 2) {
+                            subjectLabel = clean(value);
+                        } else if (index == 2) {
+                            subjectLabel = clean(value);
+                        } else if (index == 3) {
+                            objectUri = clean(value);
+                        } else if (index == 4) {
+                            objectLabel = clean(value);
+                        }
+                    }
+
+                    lineNumber = lineNumber + 1;
+                    OffLineResult offLineResult = new OffLineResult(subjectUri, subjectLabel, objectUri, objectLabel);
+                    //System.out.println(lineNumber+" subject:" + subjectUri + " subjectLabel:" + subjectLabel
+                    //        + " " + " objectUri:" + objectUri + " " + " objectLabel:" + objectLabel);
+                    entityLabels.put(line, offLineResult);
+
+                }
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return entityLabels;
+    }
+
+    private static String clean(String value) {
+        //value = value.replace("<", "");
+        //value = value.replace(">", "");
+        //value = value.replace("http://dbpedia.org/resource/", "");
+        //value = value.replace("http://dbpedia.org/ontology/", "");
+        //value = value.replace("^^<http://www.w3.org/2001/XMLSchema#date>", "");
+        //value = value.replace("\"", "");
+        value = value.trim().strip().stripLeading().stripTrailing();
+        return value;
+    }
+
+    public static Map<String, List<String>> FileToHashList(String fileName) {
+        Map<String, List<String>> results = new TreeMap<String, List<String>>();
+        BufferedReader reader;
+        String line = "";
+        File file = new File(fileName);
+
+        try {
+            reader = new BufferedReader(new FileReader(fileName));
+            line = reader.readLine();
+            while (line != null) {
+                line = reader.readLine();
+                System.out.println("line:" + line);
+                String subject = null;
+                String object = null;
+                if (line != null) {
+                    line = line.replace("?o", "\n" + "?o");
+                    line = line.replace("?s", "\n" + "?s");
+                    System.out.println("line:" + line);
+                    String[] lines = line.split(System.getProperty("line.separator"));
+
+                    for (String value : lines) {
+                        if (value.contains("?o")) {
+                            object = StringUtils.substringBetween(value, "<", ">");
+                        } else if (value.contains("?s")) {
+                            subject = StringUtils.substringBetween(value, "<", ">");
+                        }
+                    }
+                    String property = file.getName().replace(".txt", "");
+                    if (property.contains("dbo")) {
+                        property = "http://dbpedia.org/ontology/" + property;
+                    } else if (property.contains("dbp")) {
+                        property = "http://dbpedia.org/property/" + property;
+                    }
+                    results = parseLine(property, subject, object, results);
+
+                    /*String property=file.getName().replace(".txt", "");
+                    String id1=property+"_"+subject+"_"+"?o";
+                    List<String> listo=new ArrayList<String>();
+                    listo.add(object);
+                    String id2=file.getName()+"_"+object+"_"+"?s";
+                    List<String> lists=new ArrayList<String>();
+                    lists.add(subject);
+                    System.out.println("id1:" + id1);
+                    System.out.println("id2:" + id2);
+                    results.put(id1, listo);
+                    results.put(id2, lists);*/
+                }
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return results;
+
+    }
+
+    public static Map<String, List<String>> parseLine(String property, String subject, String object, Map<String, List<String>> results) {
+        String id1 = property + "_" + subject + "_" + "?o";
+        List<String> listo = new ArrayList<String>();
+        listo.add(object);
+        String id2 = property + "_" + object + "_" + "?s";
+        List<String> lists = new ArrayList<String>();
+        lists.add(subject);
+        System.out.println("id1:" + id1);
+        System.out.println("id2:" + id2);
+        results.put(id1, listo);
+        results.put(id2, lists);
+        return results;
+
+    }
+
+    private static Map<String, String> reverseHash(Map<String, String> propertySubObjEntities) {
+        Map<String, String> reverseHash = new TreeMap<String, String>();
+        for (String key : propertySubObjEntities.keySet()) {
+            String value = propertySubObjEntities.get(key);
+            reverseHash.put(value, key);
+        }
+        return reverseHash;
+    }
+
+    /*private static String getPropertyFile(String entityDir, String property) {
+        return entityDir + property + ".ttl";
+    }*/
+
+    private static String cleanNotation(String line) {
+        line = line.replace("http://dbpedia.org/resource/", "");
+        line = line.replace("<", "");
+        line = line.replace(">", "");
+        line=line.strip().stripLeading().stripTrailing().trim();
+        return line;
     }
 
 }

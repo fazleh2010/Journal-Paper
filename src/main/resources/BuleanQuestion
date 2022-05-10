@@ -1,5 +1,0 @@
-Regarding boolean question, we have the following patterns:
-- for NounPPFrame: [range] V* DT [noun] IIN (DT) [domain]? Rita Wiilson è la moglie di Tom Hanks? (is Rita WIlson Tom Hanks' Wife?)
-- for AdjectiveAttributive: [domain] VB (DT) [adjective] Barack Obama è un democratico? (Is Barack Obama a Democrat?)
-- for Transitive: [domain] V* [range] Socrate ha influenzato Aristotele? (Did Socrates influence Aristotele?)
-- for Intransitive: [domain] V* IN [range] Christian Bale ha recitato in Batman? (Did Christian Bale star in Batman?)

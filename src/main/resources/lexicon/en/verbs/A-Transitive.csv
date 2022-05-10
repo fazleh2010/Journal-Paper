@@ -1,5 +1,0 @@
-LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,SyntacticFrame,subject,directObject,sense,reference,domain,range,passivePreposition,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural
-Develop_1,verb,develop,develops,developed,developed,TransitiveFrame,domain,range,1,dbo:product,dbo:Company,dbo:Software,by,company,companies,software,software
-publish_2,verb,publish,publishes,published,published,TransitiveFrame,range,domain,2,dbo:publisher,dbo:Publisher,dbo:Agent,by,video game,video games,agent,agents
-speak_1,verb,speak,speaks,spoke,spoken,TransitiveFrame,range,domain,1,dbo:language,dbo:Language,dbo:Country,in,language,languages,country,countries
-live_1,verb,live,lives,lived,lived,TransitiveFrame,range,domain,1,dbo:ethnicGroup,dbo:EthnicGroup,dbo:Country,in,ethnic group,ethnic groups,country,countries

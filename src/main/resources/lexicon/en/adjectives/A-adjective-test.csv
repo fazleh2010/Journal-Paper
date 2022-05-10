@@ -1,4 +1,0 @@
-LemonEntry,partOfSpeech,writtenForm,comparative,superlative,SyntacticFrame,predFrame,sense,reference,oils:boundTo,oils:degree,domain,range,preposition,domainWrittenSingularForm,domainWrittenPluralForm,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
-high,adjective,high,higher,highest,AdjectiveGradableFrame,PredSynArg,1,oils:CovariantScalar,dbo:elevation,oils:high,dbo:Country,dbo:Mountain,in,country,countries,mountain,mountains
-large,adjective,large,larger,largest,AdjectiveGradableFrame,PredSynArg,1,oils:CovariantScalar,dbo:areaTotal,oils:high,owl:Thing,dbo:Country,in,world,world,country,countries
-tall,adjective,tall,taller,tallest,AdjectiveGradableFrame,PredSynArg,1,oils:CovariantScalar,dbo:height,oils:high,owl:Thing,dbo:BasketballPlayer,in,world,world,basketball player,basketball players
