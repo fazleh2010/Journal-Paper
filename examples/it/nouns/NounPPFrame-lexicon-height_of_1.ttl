@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :height_of_1 ;
+  lemon:entry    :height_of_1_form_preposition .
+
+:height_of_1 a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :height_of_1_form ;
+  lemon:otherForm  :height_of_1_singular ;
+  lemon:otherForm  :height_of_1_plural ;
+  lemon:sense          :height_of_1_sense_1 ;
+  lemon:synBehavior    :height_of_1_nounpp .
+
+:height_of_1_form a lemon:Form ;
+  lemon:writtenRep "altezza"@it .
+
+:height_of_1_singular a    lemon:Form ;
+  lemon:writtenRep "altezza"@it ;
+  lexinfo:number   lexinfo:singular .
+
+:height_of_1_plural a   lemon:Form ;
+  lemon:writtenRep "XX"@it ;
+  lexinfo:number    lexinfo:plural .
+
+:height_of_1_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:height_of_1_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :height_of_1_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/height> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :height_of_1_sense_1_condition .
+
+:height_of_1_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Model> ;
+  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#double> .
+
+:arg2 lemon:marker :height_of_1_form_preposition .
+## Prepositions ##
+:height_of_1_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "di"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

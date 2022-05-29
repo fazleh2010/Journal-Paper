@@ -1,0 +1,6 @@
+LemonEntry,partOfSpeech,writtenForm,comparative,superlative,SyntacticFrame,predFrame,sense,reference,oils:boundTo,oils:degree,domain,range,preposition,domainWrittenSingularForm,domainWrittenPluralForm,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
+high,adjective,high,higher,highest,AdjectiveSuperlativeFrame,PredSynArg,1,oils:CovariantScalar,dbo:elevation,oils:high,dbo:Country,dbo:Mountain,in,country,countries,mountain,mountains
+Large_2,adjective,large,larger,largest,AdjectiveSuperlativeFrame,PredSynArg,1,oils:CovariantScalar,dbo:areaTotal,oils:high,owl:Thing,dbo:Country,in,world,world,country,countries
+tall,adjective,tall,taller,tallest,AdjectiveSuperlativeFrame,PredSynArg,1,oils:CovariantScalar,dbo:height,oils:high,owl:Thing,dbo:BasketballPlayer,in,world,world,basketball player,basketball players
+young,adjective,young,younger,youngest,AdjectiveSuperlativeFrame,PredSynArg,1,oils:CovariantScalar,dbo:birthDate,oils:high,owl:Thing,dbo:DartsPlayer,in,world,world,DartsPlayer,DartsPlayers
+old,adjective,old,older,oldest,AdjectiveSuperlativeFrame,PredSynArg,1,oils:CovariantScalar,dbo:birthDate,oils:low,dbo:Person,dbo:Person,of,person,persons,child,child

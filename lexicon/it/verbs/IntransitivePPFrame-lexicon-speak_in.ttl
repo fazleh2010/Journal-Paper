@@ -1,0 +1,69 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :speak_in ;
+  lemon:entry    :form_speak_in_present_preposition .
+
+:speak_in a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_speak_in_present ;
+  lemon:otherForm      :speak_in_present3rd ;
+  lemon:otherForm      :speak_in_past ;
+  lemon:otherForm      :speak_in_perfect ;
+  lemon:sense          :speak_in_sense_1 ;
+  lemon:synBehavior    :speak_in_frame .
+
+:form_speak_in_present a           lemon:Form ;
+  lemon:writtenRep     "parlare"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:speak_in_present3rd a      lemon:Form ;
+  lemon:writtenRep "parla"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:speak_in_past a lemon:Form ;
+  lemon:writtenRep  "ha parlato"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:speak_in_perfect a lemon:Form ;
+  lemon:writtenRep  "� parlato"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:perfect .
+
+:speak_in_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :speak_in_obj ;
+  lexinfo:prepositionalAdjunct :speak_in_subj .
+
+:speak_in_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :speak_in_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/language> ;
+  lemon:subjOfProp  :speak_in_obj ;
+  lemon:objOfProp   :speak_in_subj ;
+  lemon:condition   :speak_in_sense_1_condition .
+
+:speak_in_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Country> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Language> .
+
+
+:speak_in_obj lemon:marker :in .
+
+:arg2 lemon:marker :form_speak_in_present_preposition .
+
+## Prepositions ##
+
+:form_speak_in_present_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "in"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

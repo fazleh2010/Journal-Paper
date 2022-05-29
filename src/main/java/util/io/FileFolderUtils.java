@@ -47,7 +47,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
-import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream;
 import org.apache.commons.lang3.StringUtils;
 
 
@@ -93,7 +92,7 @@ public class FileFolderUtils {
             }
 
         } catch (Exception exp) {
-            System.out.println("file not found!!");
+            System.err.println("file not found!!");
             return new ArrayList<File>();
         }
 
@@ -111,7 +110,7 @@ public class FileFolderUtils {
             }
 
         } catch (Exception exp) {
-            System.out.println("file not found!!");
+            System.err.println("file not found!!");
             return new ArrayList<File>();
         }
 
@@ -155,7 +154,7 @@ public class FileFolderUtils {
                 }
             }
         } catch (Exception exp) {
-            System.out.println("file not found!!");
+            System.err.println("file not found!!");
             return new ArrayList<String>();
         }
         return selectedFiles;
@@ -188,7 +187,7 @@ public class FileFolderUtils {
         return lists;
     }
 
-    public static LinkedHashMap<String, String> fileToHashOrg(String fileName) throws FileNotFoundException, IOException {
+    public static LinkedHashMap<String, String> fileToHashOrg(String fileName,String seperator) throws FileNotFoundException, IOException {
         LinkedHashMap<String, String> hash = new LinkedHashMap<String, String>();
         BufferedReader reader;
         String line = "";
@@ -198,12 +197,14 @@ public class FileFolderUtils {
             while (line != null) {
                 line = reader.readLine();
                 if (line != null) {
-                    if (line.contains(" ")) {
-                        String[] info = line.split(" ");
-                        String key = info[0];
-                        String value = info[1];
+                    if (line.contains(seperator)) {
+                        String[] info = line.split(seperator);
+                        String key = info[0].trim().stripLeading().stripTrailing().strip();
+                        String value = info[1].trim().stripLeading().stripTrailing().strip();
                         hash.put(key, value);
                     }
+                    else
+                       System.out.println("line::"+line);
 
                 }
 
@@ -213,6 +214,19 @@ public class FileFolderUtils {
             e.printStackTrace();
         }
         return hash;
+    }
+    
+    public static void hashOrgToFile(LinkedHashMap<String, String> orgHash, String fileName) throws FileNotFoundException, IOException {
+        BufferedReader reader;
+        String str = "";
+
+        for (String key : orgHash.keySet()) {
+            String value = orgHash.get(key);
+            String line = key + "=" + value+ "\n" ;
+            str += line;
+        }
+        stringToFiles(str, fileName);
+
     }
 
     public static Set<String> fileToSet(String fileName) throws FileNotFoundException, IOException {
@@ -278,7 +292,7 @@ public class FileFolderUtils {
             }
             reader.close();
         } catch (IOException e) {
-            System.out.println("the file " + fileName + " does not exist" + e.getMessage());
+            System.err.println("the file " + fileName + " does not exist" + e.getMessage());
             e.printStackTrace();
         }
         return selectedWords;
@@ -325,8 +339,8 @@ public class FileFolderUtils {
             }
             size = size + 1;
         }
-        System.out.println("finalWords:" + finalWords.size());
-        System.out.println("finalWords:" + finalWords);
+        //System.out.println("finalWords:" + finalWords.size());
+        //System.out.println("finalWords:" + finalWords);
 
         return finalWords;
     }
@@ -347,7 +361,7 @@ public class FileFolderUtils {
         }
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
-            System.out.println(str);
+            //System.out.println(str);
             writer.write(str);
             writer.close();
         } catch (IOException ex) {
@@ -411,7 +425,7 @@ public class FileFolderUtils {
                             }
 
                             index = index + 1;
-                            System.out.println(index + "line= " + line);
+                            //System.out.println(index + "line= " + line);
                             //anchor=anchor.toLowerCase().replaceAll(" ", "_").strip();
                             //kb=kb.strip();
                             anchor = anchor.stripLeading();
@@ -421,7 +435,7 @@ public class FileFolderUtils {
                     }
                 }
             }
-            System.out.println("total= " + index);
+            //System.out.println("total= " + index);
             reader.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -446,7 +460,7 @@ public class FileFolderUtils {
         FileFolderUtils.createDirectory(location);
         for (String word : interestingEntitities.keySet()) {
             String finalFileName = location + word + ".json";
-            System.out.println("finalFileName:" + finalFileName);
+            //System.out.println("finalFileName:" + finalFileName);
             List<String> entityList = interestingEntitities.get(word);
             ObjectMapper mapper = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT);
             mapper.writeValue(Paths.get(finalFileName).toFile(), entityList);
@@ -473,16 +487,7 @@ public class FileFolderUtils {
         mapper.writeValue(Paths.get(fileName).toFile(), units);
     }
 
-    public static void deleteFiles(List<File> files) {
-        for (File file : files) {
-            if (file.delete()) {
-                System.out.println("File deleted successfully");
-            } else {
-                System.out.println("Failed to delete the file");
-            }
-        }
-
-    }
+    
 
     public static String urlUnicodeToString(String url) throws Exception {
         URI uri = new URI(url);
@@ -545,7 +550,7 @@ public class FileFolderUtils {
             if (fileType.contains("mb")) {
                 Double fileSizeNumber = Double.parseDouble(info[0]);
                 if (fileSizeNumber > limit) {
-                    System.out.println("fileSize:::::::" + fileSize);
+                    //System.out.println("fileSize:::::::" + fileSize);
                     return true;
                 }
             } else {
@@ -556,6 +561,54 @@ public class FileFolderUtils {
         return false;
     }
     
+    public static void deleteFiles(String inputDir, String extension) {
+        File f = new File(inputDir);
+        String[] pathnames = f.list();
+        for (String pathname : pathnames) {
+            System.out.println(pathname);
+            String[] files = new File(inputDir + File.separator + pathname).list();
+            for (String fileName : files) {
+                File file = new File(inputDir + File.separator + pathname + File.separator + fileName);
+                if (file.getName().contains(extension)) {
+                    if (file.delete()) {
+                        System.out.println(fileName + " deleted successfully");
+                    } else {
+                        System.out.println("Failed to delete the file");
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+    
+    
+    public static void main(String[] args) throws IOException {
+        String dir = "/home/elahi/AHack/italian/question-grammar-generator/src/main/resources/it/base/";
+        String genderFileName = "gender.txt";
+        String labeledGenderFileName = "genderLabeled.txt";
+        String allFileName = "all.txt";
+        String genderNotLabeled = "genderNotLabeled.txt";
+        String seperator = "=";
+        LinkedHashMap<String, String> map = FileFolderUtils.fileToHashOrg(dir + genderFileName, seperator);
+        FileFolderUtils.hashOrgToFile(map, dir+labeledGenderFileName);
+        //System.out.println(map);
+        List<String> list = getList(dir + allFileName);
+        Set<String> set = new HashSet<String>(list);
+        System.out.println(set.size());
+
+        //Set<String> common=Sets.intersection(map.keySet(), set);
+        //System.out.println(common.size());
+
+        set.removeAll(map.keySet());
+         List<String> resultList = new ArrayList<String>(set);
+        listToFiles(resultList,dir+genderNotLabeled);
+        
+        
+
+    }
     
    
 

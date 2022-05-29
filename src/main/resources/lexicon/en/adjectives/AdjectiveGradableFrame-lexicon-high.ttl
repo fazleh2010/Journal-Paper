@@ -1,0 +1,47 @@
+@prefix :        <http://localhost:8080/#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+@prefix oils:     <http://lemon-model.net/oils#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :high ;
+  lemon:entry    :form_high_preposition ;
+  lemon:entry    :high_res .
+
+:high a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_high ;
+  lemon:otherForm      :form_high_comperative ;
+  lemon:otherForm      :form_high_superlative ;
+  lemon:sense          :high_sense_1 ;
+  lemon:synBehavior    :high_predFrame .
+
+:form_high lemon:writtenRep "high"@en .
+
+:form_high_comperative lemon:writtenRep "higher"@en .
+
+:form_high_superlative lemon:writtenRep "highest"@en .
+
+:high_predFrame a        lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject :high_PredSynArg .
+
+:high_sense_1 a  lemon:LexicalSense ;
+  lemon:reference :high_res ;
+  lemon:isA       :high_PredSynArg ;
+  lemon:condition :high_sense_1_condition .
+
+:high_res a   oils:CovariantScalar ;
+  oils:boundTo  <http://dbpedia.org/ontology/elevation> ;
+  oils:degree   <http://lemon-model.net/oils/high> .
+
+:high_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain   <http://dbpedia.org/ontology/Country> ;
+  lemon:propertyRange    <http://dbpedia.org/ontology/Mountain> .## Prepositions ##
+:form_high_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "in"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

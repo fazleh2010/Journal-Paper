@@ -1,0 +1,19 @@
+{
+  "languageCode" : "de",
+  "inputDir"     : "lexicon",
+  "outputDir"    : "../resources/",
+  "entityDir"    : "../resources/de/property/",
+  "questionDir"  : "../resources/de/questions/",
+  "classDir"     : "../resources/de/entity/",
+  "qaldDir"      : "qald7Original",
+  "numberOfEntities" : 100,
+  "similarityThresold" : 0.7,
+  "csvToTurtle" : true,
+  "turtleToProtoType" : true,
+  "single": false,
+  "composite": false,
+  "protoTypeToQuestion" : false,
+  "evalution" : false
+}
+
+

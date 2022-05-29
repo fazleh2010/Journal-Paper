@@ -1,0 +1,69 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :take_place_on ;
+  lemon:entry    :form_take_place_on_present_preposition .
+
+:take_place_on a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_take_place_on_present ;
+  lemon:otherForm      :take_place_on_present3rd ;
+  lemon:otherForm      :take_place_on_past ;
+  lemon:otherForm      :take_place_on_perfect ;
+  lemon:sense          :take_place_on_sense_1 ;
+  lemon:synBehavior    :take_place_on_frame .
+
+:form_take_place_on_present a           lemon:Form ;
+  lemon:writtenRep     "avere luogo"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:take_place_on_present3rd a      lemon:Form ;
+  lemon:writtenRep "ha luogo"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:take_place_on_past a lemon:Form ;
+  lemon:writtenRep  "ha avuto luogo"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:take_place_on_perfect a lemon:Form ;
+  lemon:writtenRep  "ha avuto luogo"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:perfect .
+
+:take_place_on_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :take_place_on_subj ;
+  lexinfo:prepositionalAdjunct :take_place_on_obj .
+
+:take_place_on_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :take_place_on_ontomap ;
+  lemon:reference   <http://dbpedia.org/property/date> ;
+  lemon:subjOfProp  :take_place_on_obj ;
+  lemon:objOfProp   :take_place_on_subj ;
+  lemon:condition   :take_place_on_sense_1_condition .
+
+:take_place_on_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/MilitaryConflict> ;
+  lemon:propertyRange  <http://www.w3.org/2001/XMLSchema#date> .
+
+
+:take_place_on_obj lemon:marker :nel .
+
+:arg2 lemon:marker :form_take_place_on_present_preposition .
+
+## Prepositions ##
+
+:form_take_place_on_present_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "nel"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

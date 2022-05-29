@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :King-of-2 ;
+  lemon:entry    :King-of-2_form_preposition .
+
+:King-of-2 a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :King-of-2_form ;
+  lemon:otherForm  :King-of-2_singular ;
+  lemon:otherForm  :King-of-2_plural ;
+  lemon:sense          :King-of-2_sense_1 ;
+  lemon:synBehavior    :King-of-2_nounpp .
+
+:King-of-2_form a lemon:Form ;
+  lemon:writtenRep "king"@en .
+
+:King-of-2_singular a    lemon:Form ;
+  lemon:writtenRep "king"@en ;
+  lexinfo:number   lexinfo:singular .
+
+:King-of-2_plural a   lemon:Form ;
+  lemon:writtenRep "kings"@en ;
+  lexinfo:number    lexinfo:plural .
+
+:King-of-2_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:King-of-2_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :King-of-2_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/leader> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :King-of-2_sense_1_condition .
+
+:King-of-2_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Place> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Person> .
+
+:arg2 lemon:marker :King-of-2_form_preposition .
+## Prepositions ##
+:King-of-2_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "of"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

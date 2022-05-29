@@ -1,7 +1,6 @@
 package grammar.generator;
 
 import eu.monnetproject.lemon.model.Lexicon;
-import grammar.generator.helper.BindingConstants;
 import grammar.sparql.SelectVariable;
 import grammar.structure.component.DomainOrRangeType;
 import grammar.structure.component.FrameType;
@@ -66,8 +65,8 @@ public class GrammarRuleGeneratorRootImpl extends GrammarRuleGeneratorRoot {
     grammarEntry.setLanguage(getLanguage());
     grammarEntry.setType(SentenceType.SENTENCE);
     grammarEntry.setFrameType(getFrameType());
-    grammarEntry.setBindingType(DomainOrRangeType.LOCATION);
-    grammarEntry.setReturnType(DomainOrRangeType.LOCATION);
+    grammarEntry.setBindingType(DomainOrRangeType.Location);
+    grammarEntry.setReturnType(DomainOrRangeType.Location);
     grammarEntry.getSentences().add(
       String.format(
         "Where is %s located?",
@@ -75,8 +74,8 @@ public class GrammarRuleGeneratorRootImpl extends GrammarRuleGeneratorRoot {
       )
     );
     grammarEntry.setQueryType(QueryType.SELECT);
-    String bindingVariableName = SelectVariable.SUBJECT_OF_PROPERTY.getVariableName();
-    String returnVariableName = SelectVariable.OBJECT_OF_PROPERTY.getVariableName();
+    String bindingVariableName = SelectVariable.subjOfProp.getVariableName();
+    String returnVariableName = SelectVariable.objOfProp.getVariableName();
     Map<String, String> sentenceSparqlMap = new HashMap<>();
     sentenceSparqlMap.put(getBindingVariable(), bindingVariableName);
     grammarEntry.setSentenceToSparqlParameterMapping(sentenceSparqlMap);

@@ -39,7 +39,7 @@ public interface GrammarRuleGenerator {
     LexicalEntryUtil lexicalEntryUtil
   ) throws QueGGMissingFactoryClassException;
 
-  GrammarEntry generateFragmentEntry(
+  List<GrammarEntry> generateFragmentEntry(
     GrammarEntry grammarEntry,
     LexicalEntryUtil lexicalEntryUtil
   ) throws QueGGMissingFactoryClassException;

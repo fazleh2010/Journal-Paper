@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :race_driver_with ;
+  lemon:entry    :race_driver_with_form_preposition .
+
+:race_driver_with a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :race_driver_with_form ;
+  lemon:otherForm  :race_driver_with_singular ;
+  lemon:otherForm  :race_driver_with_plural ;
+  lemon:sense          :race_driver_with_sense_1 ;
+  lemon:synBehavior    :race_driver_with_nounpp .
+
+:race_driver_with_form a lemon:Form ;
+  lemon:writtenRep "pilota"@it .
+
+:race_driver_with_singular a    lemon:Form ;
+  lemon:writtenRep "pilota"@it ;
+  lexinfo:number   lexinfo:singular .
+
+:race_driver_with_plural a   lemon:Form ;
+  lemon:writtenRep "piloti"@it ;
+  lexinfo:number    lexinfo:plural .
+
+:race_driver_with_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:race_driver_with_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :race_driver_with_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/races> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :race_driver_with_sense_1_condition .
+
+:race_driver_with_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/FormulaOneRacer> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Person> .
+
+:arg2 lemon:marker :race_driver_with_form_preposition .
+## Prepositions ##
+:race_driver_with_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "con"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

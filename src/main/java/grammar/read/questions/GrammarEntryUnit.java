@@ -7,7 +7,9 @@ package grammar.read.questions;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.net.URI;
 import java.util.List;
+import org.apache.jena.query.QueryType;
 
 /**
  *
@@ -18,8 +20,9 @@ public class GrammarEntryUnit {
 
     @JsonProperty("id")
     private Integer id;
-
-    @JsonProperty("language")
+    @JsonProperty("lexicalEntryUri")
+    private URI lexicalEntryUri;
+    @JsonProperty("lanuage")
     private String language;
     @JsonProperty("type")
     private String type;
@@ -29,12 +32,16 @@ public class GrammarEntryUnit {
     private String returnType;
     @JsonProperty("frameType")
     private String frameType;
+    @JsonProperty("sentenceTemplate")
+    private String sentenceTemplate;
     @JsonProperty("sentences")
     private List<String> sentences;
     @JsonProperty("queryType")
-    private String queryType;
+    private QueryType queryType;
     @JsonProperty("sparqlQuery")
     private String sparqlQuery;
+    @JsonProperty("executable")
+    private String executable;
     @JsonProperty("sentenceToSparqlParameterMapping")
     private SentenceToSparql sentenceToSparqlParameterMapping;
     @JsonProperty("returnVariable")
@@ -75,7 +82,7 @@ public class GrammarEntryUnit {
         return sentences;
     }
 
-    public String getQueryType() {
+    public QueryType getQueryType() {
         return queryType;
     }
 
@@ -94,13 +101,33 @@ public class GrammarEntryUnit {
     public List<UriLabel> getBindingList() {
         return sentenceBindings.getBindingList();
     }
-    
+
     public String getBindingVariableName() {
         return sentenceBindings.getBindingVariableName();
     }
 
     public Boolean getCombination() {
         return combination;
+    }
+
+    public URI getLexicalEntryUri() {
+        return lexicalEntryUri;
+    }
+
+    public SentenceToSparql getSentenceToSparqlParameterMapping() {
+        return sentenceToSparqlParameterMapping;
+    }
+
+    public SentenceBindings getSentenceBindings() {
+        return sentenceBindings;
+    }
+
+    public String getSentenceTemplate() {
+        return sentenceTemplate;
+    }
+
+    public String getExecutable() {
+        return executable;
     }
 
 }

@@ -1,0 +1,24 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural
+end_career_on,verb,end his active career,ends his active career,ended his active career,ended his active career,on,IntransitivePPFrame,domain,range,1,dbo:activeYearsEndDate,dbo:Athlete,xsd:date,athlete,athletes,year,years
+die_from_1,verb,die,dies,died,died,from,IntransitivePPFrame,domain,range,1,dbo:deathCause,dbo:Person,owl:Thing,person,persons,thing,things
+born_in_1,verb,born,-,born,born,in,IntransitivePPFrame,range,domain,1,dbo:birthYear,dbo:Person,xsd:date,person,persons,year,years
+born_in_2,verb,born,-,born,born,in,IntransitivePPFrame,range,domain,1,dbo:birthPlace,dbo:Person,dbo:Place,person,persons,place,places
+born_in_3,verb,born,-,born,born,in,IntransitivePPFrame,range,domain,1,dbo:birthPlace,dbo:Person,dbo:City,person,persons,city,cities
+born_in_4,verb,born,-,born,born,in,IntransitivePPFrame,range,domain,1,dbo:birthPlace,dbo:Person,dbo:Country,person,persons,country,countries
+born_in_5,verb,born,-,born,born,in,IntransitivePPFrame,range,domain,1,dbo:birthPlace,dbo:Actor,dbo:Country,actor,actors,country,countries
+born_in_6,verb,born,-,born,born,in,IntransitivePPFrame,range,domain,1,dbo:birthPlace,dbo:Actor,dbo:Country,actor,actors,country,countries
+born_in_7,verb,born,-,born,born,in,IntransitivePPFrame,range,domain,1,dbo:birthPlace,res:Surfing,dbo:Country,surfer,surfers,country,countries
+participate_in_1,verb,participate,participates,participated,participated,in,IntransitivePPFrame,range,domain,1,dbo:battle,dbo:MilitaryPerson,dbo:MilitaryConflict,person,persons,military conflict,military conflicts
+die_on_1,verb,die,dies,died,died,on,IntransitivePPFrame,domain,range,1,dbo:deathDate,dbo:Person,xsd:date,person,persons,-,-
+die_in_1,verb,die,dies,died,died,in,IntransitivePPFrame,domain,range,1,dbo:deathDate,dbo:Person,xsd:date,person,persons,-,-
+die_in_2,verb,die,dies,died,died,in,IntransitivePPFrame,domain,range,1,dbo:deathPlace,dbo:Writer,dbo:Place,writer,writers,place,place
+die_in_3,verb,die,dies,died,died,in,IntransitivePPFrame,domain,range,1,dbo:deathPlace,dbo:Politician,dbo:Place,politician,politicians,place,place
+die_in_4,verb,die,dies,died,died,in,IntransitivePPFrame,domain,range,1,dbo:deathPlace,dbo:Writer,dbo:City,writer,writers,city,cities
+die_in_5,verb,die,dies,died,died,in,IntransitivePPFrame,domain,range,1,dbo:deathPlace,dbo:Politician,dbo:City,politician,politicians,city,cities
+die_from_1,verb,die,dies,died,died,from,IntransitivePPFrame,domain,range,1,dbo:deathCause,dbo:Person,owl:Thing,person,persons,thing,things
+bury_in_1,verb,bury,buries,buried,buried,in,IntransitivePPFrame,domain,range,1,dbo:restingPlace,dbo:Person,dbo:City,person,persons,city,cities
+call_1,verb,call,calls,called,called,X,IntransitivePPFrame,domain,range,1,dbp:nickname,dbo:Person,xsd:String,person,persons,-,-
+KnownFor_1,verb,known,known,known,known,for,IntransitivePPFrame,domain,range,1,dbo:knownFor,dbo:Scientist,dbo:MilitaryUnit,scientist,scientists,military unit,military units
+live_in_1,verb,live,lives,lived,lived,in,IntransitivePPFrame,domain,range,1,dbo:residence,dbo:Person,dbo:City,person,persons,city,cities
+live_in_2,verb,live,lives,lived,lived,in,IntransitivePPFrame,domain,range,1,dbo:residence,dbo:Single,dbo:City,person,persons,city,cities
+belong_to_1,verb,belong,belongs,belonged,belonged,to,IntransitivePPFrame,domain,range,1,dbo:party,dbo:Person,dbo:PoliticalParty,person,persons,party,parties

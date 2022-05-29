@@ -1,0 +1,91 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :to_contiene ;
+  lemon:entry    :contieneed ;
+  lemon:entry    :form_contiene_preposition .
+
+:to_contiene a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_contiene ;
+  lemon:otherForm      :form_contienes ;
+  lemon:otherForm      :form_contieneed ;
+  lemon:sense          :contiene_sense_1 ;
+  lemon:synBehavior    :contiene_frame_transitive .
+
+:form_contiene a         lemon:Form ;
+  lemon:writtenRep     "contiene"@es ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_contienes a    lemon:Form ;
+  lemon:writtenRep "contiene"@es ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+
+:form_contienes a    lemon:Form ;
+  lemon:writtenRep "contiene"@es ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_contieneed a   lemon:Form ;
+  lemon:writtenRep "contiene"@es ;
+  lexinfo:tense    lexinfo:perfect ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:contiene_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :contiene_obj ;
+  lexinfo:directObject     :contiene_subj .
+
+:contiene_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :contiene_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/ingredient> ;
+  lemon:subjOfProp  :contiene_obj ;
+  lemon:objOfProp   :contiene_subj ;
+  lemon:condition   :contiene_sense_1_condition .
+
+
+:contiene_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Food> ;
+  lemon:propertyRange  <http://www.w3.org/2002/07/owl#Thing> .
+
+:contieneed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_contieneed_canonical ;
+  lemon:otherForm      :form_contieneed_by ;
+  lemon:synBehavior    :contieneed_frame_adjectivepp ;
+  lemon:sense          :contieneed_ontomap .
+
+:form_contieneed_canonical a lemon:Form ;
+  lemon:writtenRep         "contiene"@es .
+
+:form_contieneed_by a    lemon:Form ;
+  lemon:writtenRep     "contiene"@es ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:contieneed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :contieneed_subj ;
+  lexinfo:prepositionalAdjunct :contieneed_obj .
+
+:contieneed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :contieneed_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/ingredient> ;
+  lemon:subjOfProp  :contieneed_subj ;
+  lemon:objOfProp   :contieneed_obj ;
+  lemon:condition   :contiene_sense_1_condition .
+:contieneed_obj lemon:marker :por .
+
+:arg2 lemon:marker :form_contiene_form_preposition .
+
+## Prepositions ##
+
+:form_contiene_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "por"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

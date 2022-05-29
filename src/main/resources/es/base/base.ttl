@@ -1,0 +1,422 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :component_be ;
+  lemon:entry    :component_be ;
+  lemon:entry    :component_do ;
+  lemon:entry    :component_se ;
+  lemon:entry    :component_estuvo ;
+  lemon:entry    :component_aux_object_past ;
+  lemon:entry    :component_imperative_plural ;
+  lemon:entry    :component_imperative_transitive ;
+  lemon:entry    :component_imperative_show ;
+  lemon:entry    :component_have ;
+  lemon:entry    :component_hayan ;
+  lemon:entry    :component_el ;
+  lemon:entry    :component_la ;
+  lemon:entry    :component_un ;
+  lemon:entry    :component_una ;
+  lemon:entry    :component_lista ;
+  lemon:entry    :component_todos ;
+  lemon:entry    :component_tiene ;
+  lemon:entry    :object_pronoun;
+  lemon:entry    :interrogativeDeterminerEn ;
+  lemon:entry    :interrogativeDeterminerPor ;
+  lemon:entry    :interrogativeDeterminerDe ;
+  lemon:entry    :interrogativeVariableDeterminer ;
+  lemon:entry    :interrogativeRelative1 ;
+  lemon:entry    :interrogativeRelative2 ;
+  lemon:entry    :interrogativeCause ;
+  lemon:entry    :interrogativeAmount ;
+  lemon:entry    :interrogativeOften ;
+  lemon:entry    :interrogativeMuch ;
+  lemon:entry    :interrogativeEvalution ;
+  lemon:entry    :interrogativePronounPerson ;
+  lemon:entry    :interrogativePronounWhom ;
+  lemon:entry    :interrogativePronounThing ;
+  lemon:entry    :interrogativePronounThingPlural ;
+  lemon:entry    :interrogativePlace ;
+  lemon:entry    :interrogativePlace2 ;
+  lemon:entry    :interrogativeTemporal ;
+  lemon:entry    :component_the_nominative ;
+  lemon:entry    :component_ha ;
+  lemon:entry    :component_estado ;
+  lemon:entry    :component_esta ;
+  lemon:entry    :para ;
+  lemon:entry    :por ;
+  lemon:entry    :desde ;  
+  lemon:entry    :con ;
+  lemon:entry    :en ;
+  lemon:entry    :de ;   
+  lemon:entry    :hacia ; 
+  lemon:entry    :a ; 
+  lemon:entry    :dentro ; 
+  lemon:entry    :sobre ;
+  lemon:entry    :como ;
+  lemon:entry    :los ;
+  lemon:entry    :appos ;
+  lemon:entry    :hasta .
+
+## Determiners ##
+
+:component_the_nominative a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "der"@es ] ;
+  lemon:otherForm      [ lemon:writtenRep "der"@es ;
+  lexinfo:gender                          lexinfo:masculine ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "die"@de ;
+  lexinfo:gender                          lexinfo:feminine ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "das"@de ;
+  lexinfo:gender                          lexinfo:neuter ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "die"@de ;
+  lexinfo:gender                          lexinfo:masculine ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lemon:otherForm      [ lemon:writtenRep "die"@de ;
+  lexinfo:gender                          lexinfo:feminine ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lemon:otherForm      [ lemon:writtenRep "die"@de ;
+  lexinfo:gender                          lexinfo:neuter ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+:component_be a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "ser"@es ;
+  lexinfo:verbFormMood                    lexinfo:infinitive ] ;
+  lemon:otherForm      [ lemon:writtenRep "es"@es ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "era"@es ;
+  lexinfo:tense                           lexinfo:past ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "son"@es ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lemon:otherForm      [ lemon:writtenRep "eran"@es ;
+  lexinfo:tense                           lexinfo:past ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lemon:otherForm      [ lemon:writtenRep "fue"@es ;
+  lexinfo:tense                           lexinfo:past; 
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "fueron"@es ;
+  lexinfo:tense                           lexinfo:past;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+:component_do a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "hacer"@es ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:otherForm      [ lemon:writtenRep "lo hace"@es ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] . 
+
+ :component_se a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "se"@es ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:otherForm      [ lemon:writtenRep "se"@es ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] .
+
+  :component_ha a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "ha"@es ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:otherForm      [ lemon:writtenRep "ha"@es ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] .
+
+  :component_estado a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "estado"@es ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:otherForm      [ lemon:writtenRep "estado"@es ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] .
+
+  :component_esta a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "esta"@es ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:otherForm      [ lemon:writtenRep "esta"@es ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] .
+
+  :component_estuvo a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "estuvo"@es ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:otherForm      [ lemon:writtenRep "estuvo"@es ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] .
+ 
+
+:component_aux_object_past a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "ser"@es ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:otherForm      [ lemon:writtenRep "era"@es ;
+  lexinfo:tense                           lexinfo:past ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "eran"@es ;
+  lexinfo:tense                           lexinfo:past ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:plural ] .
+
+
+:component_imperative_plural a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "List"@es ;
+  lexinfo:verbFormMood                    lexinfo:infinitive ] ;
+  lemon:otherForm      [ lemon:writtenRep "List"@es ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+:component_imperative_transitive a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "Dame"@es ;
+  lexinfo:verbFormMood                    lexinfo:infinitive ] ;
+  lemon:otherForm      [ lemon:writtenRep "Dame"@es ;   
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "Dame"@es ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lemon:otherForm      [ lemon:writtenRep "Dame"@es ;   
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "Dame"@es ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+  :component_imperative_show a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "Muéstrame"@es ;
+  lexinfo:verbFormMood                    lexinfo:infinitive ] ;
+  lemon:otherForm      [ lemon:writtenRep "Muéstrame"@es ;   
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "Muéstrame"@es ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lemon:otherForm      [ lemon:writtenRep "Muéstrame"@es ;   
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "Muéstrame"@es ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:secondPerson ;
+  lexinfo:number                          lexinfo:plural ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+
+:component_have a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "tener"@es ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+:component_hayan a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "hayan"@es ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+
+## Determiners ##
+
+:component_el a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "el"@es ] ; 
+  lexinfo:partOfSpeech lexinfo:article .
+
+:component_la a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "la"@es ] ; 
+  lexinfo:partOfSpeech lexinfo:article .
+
+:component_un a         lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "un"@es ] ;
+  lexinfo:partOfSpeech lexinfo:determiner .
+
+:component_una a         lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "una"@es ] ; 
+  lexinfo:partOfSpeech lexinfo:determiner .
+
+:component_lista a         lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "lista"@es ] ; 
+  lexinfo:partOfSpeech lexinfo:determiner .
+
+:component_todos a         lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "todos"@es ] ; 
+  lexinfo:partOfSpeech lexinfo:determiner .
+
+:component_tiene a         lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "tiene"@es ] ; 
+  lexinfo:partOfSpeech lexinfo:determiner .
+
+
+## Question words ##
+
+ :interrogativeDeterminerEn a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿En qué"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+  :interrogativeDeterminerPor a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Por qué"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+  :interrogativeDeterminerDe a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "De que"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+  :interrogativeVariableDeterminer a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Qué"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativePronounDeterminer a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Qué"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativeRelative1 a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "qué"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+  :interrogativeRelative2 a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "que"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativeCause a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿De qué"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+
+ :interrogativeAmount a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Cuántas"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativeOften a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Cuántas veces"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativeMuch a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Cuanto"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+:interrogativeEvalution a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Cómo"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativePronounPerson a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Quién"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativePronounThing a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Cuál"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativePronounThingPlural a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Cuáles"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativePronounWhom a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Con quien"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativePlace a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Dónde"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+ :interrogativePlace2 a      lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Donde están"@es ] ;
+  lexinfo:partOfSpeech lexinfo:article . 
+
+  :interrogativeTemporal a               lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "¿Cuándo"@es ] ;
+   lexinfo:partOfSpeech lexinfo:verb .
+
+## other ##
+
+  :los a                 lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "los"@en ] ;
+  lexinfo:partOfSpeech lexinfo:particle .
+
+ :appos a                 lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "'s"@en ] ;
+  lexinfo:partOfSpeech lexinfo:particle .
+
+
+## Prepositions ##
+
+:para a                 lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "para"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
+:por a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "por"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
+:desde a                lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "desde"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
+:con a                lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "con"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
+:en a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "en"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
+:dentro a                lemon:SynRoleMarker ;               
+  lemon:canonicalForm  [ lemon:writtenRep "dentro"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
+:de a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "de"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
+:a a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "a"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
+:hacia a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "hacia"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
+:como a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "como"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
+:desde a               lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "desde"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
+:hasta a               lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "hasta"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
+:sobre a               lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "sobre"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+  
+## Pronouns ##
+
+:object_pronoun a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "todos"@es ] ;
+  lexinfo:partOfSpeech lexinfo:pronoun .
+

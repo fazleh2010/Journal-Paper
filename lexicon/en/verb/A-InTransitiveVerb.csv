@@ -1,0 +1,57 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,preposition,SyntacticFrame,subject,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural
+end_career_on,verb,end his active career,ends his active career,ended his active career,ended his active career,on,IntransitivePPFrame,domain,range,1,dbo:activeYearsEndDate,dbo:Athlete,xsd:date,athlete,athletes,year,years
+end_in,verb,end,ends,ended,ended,in,IntransitivePPFrame,domain,range,1,dbo:routeEnd,dbo:Road,dbo:City,road,roads,city,cities
+come_from,verb,come,comes,came,come,from,IntransitivePPFrame,range,domain,1,dbo:nationality,dbo:Person,dbo:Country,person,persons,country,countries
+flow_into,verb,flow,flows,flowed,flown,into,IntransitivePPFrame,range,domain,1,dbo:inflow,dbo:River,dbo:River,river,rivers,river,rivers
+grow_in,verb,grow,grows,grew,grown,in,IntransitivePPFrame,range,domain,1,dbo:growingGrape,dbo:WineRegion,dbo:Grape,wine region,wine regions,type of grape,types of grapes
+die_from_1,verb,die,dies,died,died,from,IntransitivePPFrame,domain,range,1,dbo:deathCause,dbo:Person,owl:Thing,person,persons,thing,things
+born_in_1,verb,born,-,born,born,in,IntransitivePPFrame,range,domain,1,dbo:birthYear,dbo:Person,xsd:date,person,persons,year,years
+born_in_2,verb,born,-,born,born,in,IntransitivePPFrame,range,domain,1,dbo:birthPlace,dbo:Person,dbo:Place,person,persons,place,places
+born_in_3,verb,born,-,born,born,in,IntransitivePPFrame,range,domain,1,dbo:birthPlace,dbo:Person,dbo:City,person,persons,city,cities
+born_in_4,verb,born,-,born,born,in,IntransitivePPFrame,range,domain,1,dbo:birthPlace,dbo:Person,dbo:Country,person,persons,country,countries
+born_in_5,verb,born,-,born,born,in,IntransitivePPFrame,range,domain,1,dbo:birthPlace,dbo:Actor,dbo:Country,actor,actors,country,countries
+born_in_6,verb,born,-,born,born,in,IntransitivePPFrame,range,domain,1,dbo:birthPlace,dbo:Actor,dbo:Country,actor,actors,country,countries
+born_in_7,verb,born,-,born,born,in,IntransitivePPFrame,range,domain,1,dbo:birthPlace,res:Surfing,dbo:Country,surfer,surfers,country,countries
+dissolve_on_1,verb,dissolve,dissolves,dissolved,dissolved,on,IntransitivePPFrame,domain,range,1,dbo:dissolutionDate,dbo:Place,xsd:date,place,places,-,-
+written_in,verb,write,writes,wrote,written,in,IntransitivePPFrame,range,domain,1,dbo:programmingLanguage,dbo:Work,dbo:Language,work,works,language,languages
+complete_in_1,verb,complete,completes,completed,completed,in,IntransitivePPFrame,domain,range,2,dbo:completionDate,dbo:Ship,xsd:date,work,works,year,years
+participate_in_1,verb,participate,participates,participated,participated,in,IntransitivePPFrame,range,domain,1,dbo:battle,dbo:MilitaryPerson,dbo:MilitaryConflict,person,persons,military conflict,military conflicts
+die_on_1,verb,die,dies,died,died,on,IntransitivePPFrame,domain,range,1,dbo:deathDate,dbo:Person,xsd:date,person,persons,-,-
+die_in_1,verb,die,dies,died,died,in,IntransitivePPFrame,domain,range,1,dbo:deathDate,dbo:Person,xsd:date,person,persons,-,-
+die_in_2,verb,die,dies,died,died,in,IntransitivePPFrame,domain,range,1,dbo:deathPlace,dbo:Writer,dbo:Place,writer,writers,place,place
+die_in_3,verb,die,dies,died,died,in,IntransitivePPFrame,domain,range,1,dbo:deathPlace,dbo:Politician,dbo:Place,politician,politicians,place,place
+die_in_4,verb,die,dies,died,died,in,IntransitivePPFrame,domain,range,1,dbo:deathPlace,dbo:Writer,dbo:City,writer,writers,city,cities
+die_in_5,verb,die,dies,died,died,in,IntransitivePPFrame,domain,range,1,dbo:deathPlace,dbo:Politician,dbo:City,politician,politicians,city,cities
+die_from_1,verb,die,dies,died,died,from,IntransitivePPFrame,domain,range,1,dbo:deathCause,dbo:Person,owl:Thing,person,persons,thing,things
+bury_in_1,verb,bury,buries,buried,buried,in,IntransitivePPFrame,domain,range,1,dbo:restingPlace,dbo:Person,dbo:City,person,persons,city,cities
+locate_in_1,verb,locate,locates,located,located,in,IntransitivePPFrame,domain,range,1,dbo:country,dbo:City,dbo:Country,city,cities,Country,Countries
+locate_in_2,verb,locate,locates,located,located,in,IntransitivePPFrame,domain,range,1,dbp:location,dbo:MilitaryUnit,dbo:Location,military unit,military units,location,locations
+locate_in_3,verb,locate,locates,located,located,in,IntransitivePPFrame,domain,range,1,dbp:location,dbo:ArchitecturalStructure,dbo:Location,Architectural structure,ArchitecturalStructures,city,cities
+locate_in_4,verb,locate,locates,located,located,in,IntransitivePPFrame,domain,range,1,dbo:country,dbo:Lake,dbo:Country,lake,lakes,country,countries
+locate_in_5,verb,locate,locates,located,located,in,IntransitivePPFrame,domain,range,1,dbo:locatedInArea,dbo:Mountain,dbo:Country,mountain,mountains,country,countries
+found_in_1,verb,found,found,founded,founded,in,IntransitivePPFrame,domain,range,1,dbo:foundingYear,dbo:Organisation,xsd:gYear,organisation,organisations,year,years
+found_in_2,verb,found,found,founded,founded,in,IntransitivePPFrame,domain,range,1,dbo:foundationPlace,dbo:Company,dbo:Country,company,companies,country,countries
+commence_on_1,verb,commence,commences,commenced,commenced,on,IntransitivePPFrame,domain,range,1,dbp:date,dbo:MilitaryConflict,xsd:date,conflict,conflicts,year,years
+commence_on_2,verb,commence,commences,commenced,commenced,on,IntransitivePPFrame,domain,range,1,dbo:date,dbo:Event,xsd:date,event,events,year,years
+call_1,verb,call,calls,called,called,X,IntransitivePPFrame,domain,range,1,dbp:nickname,dbo:Person,xsd:String,person,persons,-,-
+KnownFor_1,verb,known,known,known,known,for,IntransitivePPFrame,domain,range,1,dbo:knownFor,dbo:Scientist,dbo:MilitaryUnit,scientist,scientists,military unit,military units
+KnownFor_2,verb,known,known,known,known,for,IntransitivePPFrame,domain,range,1,dbo:knownFor,dbo:Award,dbo:Person,award,awards,person,persons
+locate_in_1,verb,locate,locates,located,located,in,IntransitivePPFrame,domain,range,1,dbo:country,dbo:City,dbo:Country,city,cities,Country,Countries
+locate_in_2,verb,locate,locates,located,located,in,IntransitivePPFrame,domain,range,1,dbp:location,dbo:MilitaryUnit,dbo:Location,military unit,military units,location,locations
+locate_in_3,verb,locate,locates,located,located,in,IntransitivePPFrame,domain,range,1,dbp:location,dbo:ArchitecturalStructure,dbo:Location,Architectural structure,ArchitecturalStructures,city,cities
+live_in_1,verb,live,lives,lived,lived,in,IntransitivePPFrame,domain,range,1,dbo:residence,dbo:Person,dbo:City,person,persons,city,cities
+live_in_2,verb,live,lives,lived,lived,in,IntransitivePPFrame,domain,range,1,dbo:residence,dbo:Single,dbo:City,person,persons,city,cities
+live_in_3,verb,People live,People lives,People lived,People lived,in,IntransitivePPFrame,range,domain,1,dbo:populationTotal,dbo:Country,xsd:double,country,countries,-,-
+live_in_4,verb,People live,People lives,People lived,People lived,in,IntransitivePPFrame,range,domain,1,dbo:populationTotal,dbo:City,xsd:double,city,countries,-,-
+grow_in_2,verb,grow,grows,grew,grown,in,IntransitivePPFrame,range,domain,1,dbo:growingGrape,dbo:WineRegion,dbo:Grape,wine region,wine regions,grape,grapes
+flow_through_1,verb,flow,flows,flowed,flown,through,IntransitivePPFrame,domain,range,1,dbo:city,dbo:River,dbo:City,river,rivers,city,cities
+flow_through_2,verb,flow,flows,flowed,flown,through,IntransitivePPFrame,domain,range,1,dbp:country,dbo:River,dbo:Country,river,rivers,country,countries
+start_in_1,verb,start,starts,started,started,in,IntransitivePPFrame,domain,range,1,dbo:routeStart,dbo:Road,dbo:Road,road,roads,road,roads
+start_in_2,verb,start,starts,started,started,in,IntransitivePPFrame,domain,range,1,dbp:mouthLocation,dbo:River,dbo:Country,river,rivers,country,countries
+flow_into,verb,flow,flows,flowed,flown,into,IntransitivePPFrame,range,domain,1,dbo:inflow,dbo:River,dbo:River,river,rivers,river,rivers
+fight_in,verb,fight,fights,fought,fought,in,IntransitivePPFrame,domain,range,1,dbp:date,dbo:MilitaryConflict,xsd:date,conflict,conflicts,-,-
+produced_in_1,verb,produce,produces,produced,produced,in,IntransitivePPFrame,domain,range,1,dbo:wineProduced,dbo:Company,dbo:Location,company,company,location,locations
+stand_for_2,verb,stand,stands,stood,stood,for,IntransitivePPFrame,domain,range,1,dbo:abbreviation,owl:Thing,xsd:string,-,-,thing,thing
+operate_1,verb,operate,operates,operated,operated,by,IntransitivePPFrame,domain,range,1,dbo:operator,dbo:LaunchPad,dbo:Organisation,launch pad,launch pads,organisation,organisations
+belong_to_1,verb,belong,belongs,belonged,belonged,to,IntransitivePPFrame,domain,range,1,dbo:party,dbo:Person,dbo:PoliticalParty,person,persons,party,parties
+Have_seat_1,verb,have,has,had,had,X,IntransitivePPFrame,range,domain,1,dbo:seatingCapacity,dbo:Stadium,xsd:nonNegativeInteger,Stadium,Stadiums,seat,seats

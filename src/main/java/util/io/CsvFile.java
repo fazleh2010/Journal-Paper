@@ -34,10 +34,8 @@ import java.util.logging.Logger;
 import java.io.File;  
 import java.io.FileInputStream;  
 import java.io.IOException;  
-import org.apache.poi.hssf.usermodel.HSSFSheet;  
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;  
-import org.apache.poi.ss.usermodel.FormulaEvaluator;  
-import org.apache.poi.ss.usermodel.Row;  
+import static java.lang.System.exit;
+ 
 
 /**
  *
@@ -71,25 +69,25 @@ public class CsvFile implements CsvConstants {
 
     public void writeToCSV(List<String[]> csvData) {
         if (csvData.isEmpty()) {
-            System.out.println("writing csv file failed!!!");
+            System.err.println("writing csv file failed!!!");
             return;
         }
         try ( CSVWriter writer = new CSVWriter(new FileWriter(this.filename))) {
             writer.writeAll(csvData);
         } catch (IOException ex) {
-            System.out.println("writing csv file failed!!!" + ex.getMessage());
+            System.err.println("writing csv file failed!!!" + ex.getMessage());
         }
     }
 
     public void writeToCSV(File newQaldFile, List<String[]> csvData) {
         if (csvData.isEmpty()) {
-            System.out.println("writing csv file failed!!!");
+            System.err.println("writing csv file failed!!!");
             return;
         }
         try ( CSVWriter writer = new CSVWriter(new FileWriter(newQaldFile))) {
             writer.writeAll(csvData);
         } catch (IOException ex) {
-            System.out.println("writing csv file failed!!!" + ex.getMessage());
+            System.err.println("writing csv file failed!!!" + ex.getMessage());
         }
     }
 
@@ -121,7 +119,7 @@ public class CsvFile implements CsvConstants {
             
             if (FileFolderUtils.isFileBig(qaldFile, limit)) {
                 rows = generateLinebyLine(qaldFile,lineLimit);
-                System.out.println("@@@@@@@@@@@@@@@@@@@@@@" + qaldFile.getName()+" size:"+rows.size());
+                //System.out.println("@@@@@@@@@@@@@@@@@@@@@@" + qaldFile.getName()+" size:"+rows.size());
             } else {
                 reader = new CSVReader(new FileReader(qaldFile));
                 rows = reader.readAll();
@@ -150,7 +148,7 @@ public class CsvFile implements CsvConstants {
         List<String[]> rows = new ArrayList<String[]>();
 
         /*if (FileFolderUtils.isFileSizeManageable(qaldFile, 40.0)) {
-            System.out.println("..........." + qaldFile.getName());
+            //System.out.println("..........." + qaldFile.getName());
             return rows;
         }*/
         Stack<String> stack = new Stack<String>();
@@ -158,7 +156,7 @@ public class CsvFile implements CsvConstants {
         try {
             /*if (!FileFolderUtils.isFileBig(qaldFile, 100.0)) {
                 rows = generateLinebyLine(qaldFile);
-                 System.out.println("@@@@@@@@@@@@@@@@@@@@@@" + qaldFile.getName()+" size:"+rows.size());
+                 //System.out.println("@@@@@@@@@@@@@@@@@@@@@@" + qaldFile.getName()+" size:"+rows.size());
             } else*/ {
                 reader = new CSVReader(new FileReader(qaldFile));
                 rows = reader.readAll();
@@ -248,11 +246,77 @@ public class CsvFile implements CsvConstants {
         csvReader.close();
         return rows;
     }
+    
+     private Map<String,String[]> generateLinebyLine(File pathToCsv, Integer lineLimit,Integer keyIndex) throws FileNotFoundException, IOException {
+        Map<String,String[]> map = new TreeMap<String,String[]>();
+        BufferedReader csvReader = new BufferedReader(new FileReader(pathToCsv));
+        String line = null;
+        Integer index = 0;
+        while ((line = csvReader.readLine()) != null) {
+            try {
+                String[] data = line.split(",");
+                String key=data[keyIndex];
+                map.put(key, data);
+
+            } catch (Exception ex) {
+                ;
+            }
+            index = index + 1;
+            if (index > lineLimit) {
+                break;
+            }
+            // do something with the data
+        }
+        csvReader.close();
+        return map;
+    }
+     
+    public Map<String, String[]> generateBindingMapL(Integer keyIndex, Integer classIindex, String givenClassName) throws FileNotFoundException, IOException {
+        Map<String, String[]> map = new TreeMap<String, String[]>();
+        String line = null;
+        Integer index = 0;
+        List<String[]> rows = this.getRows(this.filename);
+        
+        for (String[] data : rows) {
+            String key = data[keyIndex];
+            //System.out.println("key:"+key);
+            String className = data[classIindex];
+            if (index == 0) {
+                index = index + 1;
+                continue;
+
+            } else {
+                if (this.isClassMatched(className, givenClassName)) {
+                    map.put(key, data);
+                }
+                index = index + 1;
+            }
+           
+          
+        }
+        return map;
+    }
+
+
+    
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
         String fileLocation = resources + xslDir + nounDir;
 
     }
+
+    private boolean isClassMatched(String className, String givenClassName) {
+        className = className.toLowerCase().trim().strip().stripLeading().stripTrailing().replace(" ", "_");
+        givenClassName = givenClassName.toLowerCase().trim().strip().stripLeading().stripTrailing().replace(" ", "_");
+        // System.out.println("givenClassName::"+givenClassName+" bindingClass::"+className);
+
+        if (className.contains(givenClassName)) {
+            return true;
+        }
+        return false;
+
+    }
+
     
    
 

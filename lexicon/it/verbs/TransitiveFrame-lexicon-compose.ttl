@@ -1,0 +1,91 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :to_compose ;
+  lemon:entry    :composeed ;
+  lemon:entry    :form_compose_preposition .
+
+:to_compose a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_compose ;
+  lemon:otherForm      :form_composes ;
+  lemon:otherForm      :form_composeed ;
+  lemon:sense          :compose_sense_1 ;
+  lemon:synBehavior    :compose_frame_transitive .
+
+:form_compose a         lemon:Form ;
+  lemon:writtenRep     "comporre la colonna sonora"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_composes a    lemon:Form ;
+  lemon:writtenRep "comporre la colonna sonora"@it ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+
+:form_composes a    lemon:Form ;
+  lemon:writtenRep "ha composto la colonna sonora"@it ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_composeed a   lemon:Form ;
+  lemon:writtenRep "ha composto la colonna sonora"@it ;
+  lexinfo:tense    lexinfo:perfect ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:compose_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :compose_subj ;
+  lexinfo:directObject     :compose_obj .
+
+:compose_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :compose_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/musicComposer> ;
+  lemon:subjOfProp  :compose_obj ;
+  lemon:objOfProp   :compose_subj ;
+  lemon:condition   :compose_sense_1_condition .
+
+
+:compose_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Film> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Person> .
+
+:composeed a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_composeed_canonical ;
+  lemon:otherForm      :form_composeed_by ;
+  lemon:synBehavior    :composeed_frame_adjectivepp ;
+  lemon:sense          :composeed_ontomap .
+
+:form_composeed_canonical a lemon:Form ;
+  lemon:writtenRep         "comporre la colonna sonora"@it .
+
+:form_composeed_by a    lemon:Form ;
+  lemon:writtenRep     "comporre la colonna sonora"@it ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:composeed_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :composeed_subj ;
+  lexinfo:prepositionalAdjunct :composeed_obj .
+
+:composeed_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :composeed_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/musicComposer> ;
+  lemon:subjOfProp  :composeed_subj ;
+  lemon:objOfProp   :composeed_obj ;
+  lemon:condition   :compose_sense_1_condition .
+:composeed_obj lemon:marker :da .
+
+:arg2 lemon:marker :form_compose_form_preposition .
+
+## Prepositions ##
+
+:form_compose_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :Zeitzone_1 ;
+  lemon:entry    :Zeitzone_1_form_preposition .
+
+:Zeitzone_1 a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :Zeitzone_1_form ;
+  lemon:otherForm  :Zeitzone_1_singular ;
+  lemon:otherForm  :Zeitzone_1_plural ;
+  lemon:sense          :Zeitzone_1_sense_1 ;
+  lemon:synBehavior    :Zeitzone_1_nounpp .
+
+:Zeitzone_1_form a lemon:Form ;
+  lemon:writtenRep "zona horaria"@es .
+
+:Zeitzone_1_singular a    lemon:Form ;
+  lemon:writtenRep "zona horaria"@es ;
+  lexinfo:number   lexinfo:singular .
+
+:Zeitzone_1_plural a   lemon:Form ;
+  lemon:writtenRep "zonas horarias"@es ;
+  lexinfo:number    lexinfo:plural .
+
+:Zeitzone_1_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:Zeitzone_1_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :Zeitzone_1_sense_1 ;
+  lemon:reference           <http://dbpedia.org/property/timezone> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :Zeitzone_1_sense_1_condition .
+
+:Zeitzone_1_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/City> ;
+  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#string> .
+
+:arg2 lemon:marker :Zeitzone_1_form_preposition .
+## Prepositions ##
+:Zeitzone_1_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "de"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

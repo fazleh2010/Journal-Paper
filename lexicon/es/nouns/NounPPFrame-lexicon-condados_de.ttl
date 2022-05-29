@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :condados_de ;
+  lemon:entry    :condados_de_form_preposition .
+
+:condados_de a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :condados_de_form ;
+  lemon:otherForm  :condados_de_singular ;
+  lemon:otherForm  :condados_de_plural ;
+  lemon:sense          :condados_de_sense_1 ;
+  lemon:synBehavior    :condados_de_nounpp .
+
+:condados_de_form a lemon:Form ;
+  lemon:writtenRep "condados"@es .
+
+:condados_de_singular a    lemon:Form ;
+  lemon:writtenRep "condados"@es ;
+  lexinfo:number   lexinfo:singular .
+
+:condados_de_plural a   lemon:Form ;
+  lemon:writtenRep "condados"@es ;
+  lexinfo:number    lexinfo:plural .
+
+:condados_de_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg2 ;
+  lexinfo:prepositionalAdjunct :arg1 .
+
+:condados_de_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :condados_de_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/governmentType> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :condados_de_sense_1_condition .
+
+:condados_de_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Country> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Country> .
+
+:arg2 lemon:marker :condados_de_form_preposition .
+## Prepositions ##
+:condados_de_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "de"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

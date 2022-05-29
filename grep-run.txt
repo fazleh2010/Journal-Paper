@@ -1,0 +1,6 @@
+#!/bin/sh
+
+java -jar target/QuestionGrammarGenerator.jar inputConf_de.json dataset/dbpedia.json
+java -jar target/QuestionGrammarGenerator.jar inputConf_es.json dataset/dbpedia.json
+java -jar target/QuestionGrammarGenerator.jar inputConf_it.json dataset/dbpedia.json
+java -jar target/QuestionGrammarGenerator.jar inputConf_en.json dataset/dbpedia.json

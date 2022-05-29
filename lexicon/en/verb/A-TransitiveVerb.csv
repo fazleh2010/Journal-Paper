@@ -1,0 +1,41 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive/2ndPerson,writtenForm3rdPerson,writtenFormPast,writtenFormPerfect,SyntacticFrame,subject,directObject,sense,reference,domain,range,passivePreposition,domainWrittenSingular,domainWrittenPlural,rangeWrittenSingular,rangeWrittenPlural
+Develop_1,verb,develop,develops,developed,developed,TransitiveFrame,domain,range,1,dbo:product,dbo:Company,dbo:Software,by,company,companies,software,software
+Develop_2,verb,develop,develops,developed,developed,TransitiveFrame,range,domain,1,dbo:developer,dbo:VideoGame,dbo:Agent,by,video game,video games,agent,agents
+Develop_3,verb,develop,develops,developed,developed,TransitiveFrame,domain,range,1,dbo:product,dbo:Company,dbo:Software,by,company,companies,software,software
+paint,verb,paint,paints,painted,painted,TransitiveFrame,range,domain,1,dbp:artist,dbo:Work,dbo:Person,by,work,works,person,persons
+exhibit,verb,exhibit,exhibits,exhibited,exhibited,TransitiveFrame,range,domain,1,dbo:museum,dbo:Artwork,dbo: Museum,by,artwork,artworks,museum,museums
+discover,verb,discover,discovers,discovered,discovered,TransitiveFrame,range,domain,1,dbo:discoverer,dbo:Planet,dbo:Person,by,plant,planets,person,persons
+cross,verb,cross,crosses,crossed,crossed,TransitiveFrame,range,domain,1,dbo:crosses,dbo:Bridge,dbo:River,by,bridge,bridges,river,rivers
+win,verb,win,wins,won,won,TransitiveFrame,range,domain,1,dbo:award,dbo:Scientist,dbo:Award,by,scientist,scientists,award,awards
+create_1,verb,create,creates,created,created,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Agent,by,Television show,Television shows,agent,agents
+create_2,verb,create,creates,created,created,TransitiveFrame,range,domain,1,dbo:author,dbo:Website,dbo:Person,by,Website,Websites,person,persons
+starr_in_1,verb,starring in,starring in,starred in,starred_in,TransitiveFrame,range,domain,5,dbo:starring,dbo:Film,dbo:Person,by,film,films,person,persons
+starr_in_2,verb,starring in,starring in,starred_in,starred_in,TransitiveFrame,range,domain,5,dbo:starring,dbo:Film,dbo:Actor,by,film,films,actor,actors
+play_1,verb,play,playes,played,played,TransitiveFrame,range,domain,1,dbp:portrayer,dbo:FictionalCharacter,dbo:Person,by,fictional character,fictional characters,person,persons
+play_2,verb,play,plays,played,played,TransitiveFrame,range,domain,2,dbo:portrayer,dbo:Work,dbo:Actor,by,work,works,actor,actors
+Play_3,verb,play,playes,played,played,TransitiveFrame,range,domain,1,dbo:starring,dbo:Film,dbo:Person,by,film,film,person,persons
+publish_1,verb,publish,publishes,published,published,TransitiveFrame,range,domain,1,dbo:publisher,dbo:Book,dbo:Publisher,by,book,books,publisher,publishers
+publish_2,verb,publish,publishes,published,published,TransitiveFrame,range,domain,2,dbo:publisher,dbo:Publisher,dbo:Agent,by,publisher,publishers,agent,agents
+Publish_3,verb,publish,publishes,published,published,TransitiveFrame,range,domain,2,dbo:publisher,dbo:VideoGame,dbo:Company,by,video game,video games,company,companies
+direct_1,verb,direct,directs,directed,directed,TransitiveFrame,range,domain,1,dbo:director,dbo:Film,dbo:Person,by,film,films,person,persons
+serve_1,verb,serve,serves,served,served,TransitiveFrame,range,domain,1,dbo:targetAirport,dbo:Airline,dbo:Airport,by,airline,airlines,airport,airports
+design_1,verb,design,designs,designed,designed,TransitiveFrame,range,domain,1,dbo:architect,dbo:ArchitecturalStructure,dbo:Architect,by,architectural structure,architectural structures,architect,architects
+design_2,verb,design,designs,designed,designed,TransitiveFrame,range,domain,2,dbo:designer,dbo:Building,dbo:Person,by,building,buildings,person,persons
+speak_1,verb,speak,speaks,spoke,spoken,TransitiveFrame,range,domain,1,dbo:language,dbo:Language,dbo:Country,in,language,languages,country,countries
+live_1,verb,live,lives,lived,lived,TransitiveFrame,range,domain,1,dbo:ethnicGroup,dbo:EthnicGroup,dbo:Country,in,ethnic group,ethnic groups,country,countries
+cost,verb,cost,costs,costed,costed,TransitiveFrame,range,domain,1,dbo:budget,dbo:Film,xsd:double,by,Film,Films,-,cost
+write_1,verb,write,writes,wrote,written,TransitiveFrame,range,domain,1,dbo:writer,dbo:Song,dbo:Person,by,song,songs,person,persons
+write_2,verb,write,writes,wrote,written,TransitiveFrame,range,domain,2,dbo:composer,dbo:TelevisionShow,dbo:Person,by,book,books,person,persons
+write_3,verb,write,writes,wrote,written,TransitiveFrame,range,domain,4,dbo:author,dbo:Book,dbo:Person,by,book,books,person,persons
+express,verb,express,expresses,expressed,expressed,TransitiveFrame,domain,range,1,dbo:connotation,dbo:Colour,owl:Thing,by,color,colors,thing,things
+call_1,verb,call,calls,called,called,TransitiveFrame,range,domain,1,dbp:nickname,dbo:Person,xsd:String,by,person,persons,-,-
+found_1,verb,found,found,founded,founded,TransitiveFrame,range,domain,1,dbo:foundedBy,dbo:Organisation,dbo:Pope,by,organisation,organisations,pope,popes
+found_2,verb,found,found,founded,founded,TransitiveFrame,range,domain,1,dbo:foundedBy,dbo:Agent,dbo:Pope,by,Agent,Agents,pope,popes
+Develop_3,verb,develop,develops,developed,developed,TransitiveFrame,range,domain,1,dbo:developer,dbo:VideoGame,dbo:Agent,by,video game,video games,agent,agents
+Develop_1,verb,develop,develops,developed,developed,TransitiveFrame,domain,range,1,dbo:product,dbo:Company,dbo:Software,by,company,companies,software,software
+inspire,verb,inspire,inspires,inspired,inspired,TransitiveFrame,range,domain,1,dbo:influenced,dbo:Person,dbo:Person,by,person,persons,person,persons
+marry,verb,marry to,marries to,married to,married to,TransitiveFrame,range,domain,1,dbo:spouse,dbo:Person,dbo:Person,by,person,persons,person,persons
+produce,verb,produce,produces,produced,produced,TransitiveFrame,domain,range,1,dbo:product,dbo:Company,dbo:Ship,by,company,companies,ship,ships
+create_1,verb,create,creates,created,created,TransitiveFrame,range,domain,1,dbo:author,dbo:Book,dbo:Person,by,book,books,person,persons
+compose_for_1,verb,compose the music for,compose the music for,compose the music for,compose the music for,TransitiveFrame,range,domain,1,dbo:musicComposer,dbo:Film,dbo:Person,by,film,films,person,persons
+Compose_for_2,verb,compose the soundtrack for,compose the soundtrack for,compose the soundtrack for,compose the soundtrack for,TransitiveFrame,range,domain,1,dbo:musicComposer,dbo:Film,dbo:Person,by,film,films,person,persons

@@ -1,0 +1,521 @@
+cd /media/elahi/My Passport/general/lucene/QAInterface; JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64 /usr/local/netbeans-12.4/netbeans/java/maven/bin/mvn -Dexec.vmArgs= "-Dexec.args=${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}" -Dexec.executable=/usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java -Dexec.mainClass=Main -Dexec.classpathScope=runtime -Dexec.appArgs= org.codehaus.mojo:exec-maven-plugin:3.0.0:exec
+Running NetBeans Compile On Save execution. Phase execution is skipped and output directories of dependency projects (with Compile on Save turned on) will be used instead of their jar artifacts.
+Scanning for projects...
+
+Some problems were encountered while building the effective model for com.howtodoinjava.demo:LuceneExamples:jar:0.0.1-SNAPSHOT
+'build.plugins.plugin.version' for org.apache.maven.plugins:maven-shade-plugin is missing. @ line 32, column 33
+
+It is highly recommended to fix these problems because they threaten the stability of your build.
+
+For this reason, future Maven versions might no longer support building such malformed projects.
+
+
+---------------< com.howtodoinjava.demo:LuceneExamples >----------------
+Building QAInterface-lucene 0.0.1-SNAPSHOT
+--------------------------------[ jar ]---------------------------------
+
+--- exec-maven-plugin:3.0.0:exec (default-cli) @ LuceneExamples ---
+search::president of
+!!!!!!!!!!!find results!!!!!!!!!!!!!!!!! :: 
+Toral Results :: 130987
+result!!!!!!!
+the president of Abdus Sattar president?
+which President was won by President | Award_NP?
+the president of James Strong college president?
+the president of Paul Mooney college president?
+What is the president of Abdus Sattar president?
+What was the president of Abdus Sattar president?
+the location of The President?
+the president of A. A. Fredericks?
+the president of A. A. MacLeod?
+the president of A. Aiyappan?
+the president of A. Amirthalingam?
+the president of A. Krishnaswamy?
+the president of A. Ravichandran?
+the president of A. Sampath?
+the president of A. Soundararajan?
+the president of A. Tamilarasi?
+the president of A. Venkatachalam?
+the president of Ambareesh?
+the president of Amirmachmud?
+the president of An Le?
+the president of Anandacharlu?
+the president of Andrew To?
+the president of Assaat?
+the president of Baabar?
+the president of Bajkam?
+the president of Bayanqolu?
+the president of Boediardjo?
+the president of Boediono?
+the president of Chiranjeevi?
+the president of Crixus?
+the president of Ebilun?
+the president of Fatmawati?
+the president of Fukanggan?
+the president of Gannicus?
+the president of Haalilio?
+the president of Hazairin?
+the president of Heshen?
+the president of Jayalalithaa?
+the president of Karunanidhi?
+the president of Kayode Are?
+the president of Maladi?
+the president of Mayawati?
+the president of Moeljatno?
+the president of Oboi?
+the president of Pompey?
+the president of Raghunathrao?
+the president of Rainilaiarivony?
+the president of Ronglu?
+the president of Sahardjo?
+the president of Samonas?
+the president of Soekarwo?
+the president of Soepomo?
+the president of Spartacus?
+the president of Subandrio?
+the president of Sudharmono?
+the president of Suksaha?
+the president of Sushun?
+the president of Suswono?
+the president of Sutanto?
+the president of Sutomo?
+the president of Sveneld?
+the president of U.Thaniyarasu?
+the president of Vanlalzawma?
+the president of Vijayakanth?
+the president of Vijayashanti?
+the president of Will Duckworth?
+the president of Will Hodgman?
+the president of Will Sessoms?
+the president of Will Weatherford?
+the president of Will Wilson?
+the president of Will Wynn?
+the president of Wilopo?
+the president of Wongsonegoro?
+What is Paul Mooney college president 's president?
+What is the president of Paul Mooney college president?
+What was Paul Mooney college president 's president?
+What was the president of Paul Mooney college president?
+What is James Strong college president 's president?
+What is the president of James Strong college president?
+What was James Strong college president 's president?
+What was the president of James Strong college president?
+What is Abdus Sattar president 's president?
+What was Abdus Sattar president 's president?
+the location of The President Alberta?
+the location of The Vice President?
+What is The President 's location?
+What is the location of The President?
+What was The President 's location?
+What was the location of The President?
+What is the location of The President Alberta?
+What was the location of The President Alberta?
+What is the location of The Vice President?
+What was the location of The Vice President?
+Where is The President located?
+in which countries are The President located?
+in which country are the The President?
+in which country is The President located?
+in which country is the The President?
+what country is The President in?
+Where is The President Alberta located?
+in which country are the The President Alberta?
+in which country is the The President Alberta?
+what country is The President Alberta in?
+Where is The Vice President located?
+in which country are the The Vice President?
+in which country is the The Vice President?
+what country is The Vice President in?
+Who was President founded by?
+Who was founded by President?
+Who were founded by President?
+Whom did President found?
+which organisation was founded by President?
+which Agent was founded by President?
+Who was won by President?
+Who were won by President?
+which scientist was won by President?
+the game by Vice president?
+the games by Vice president?
+What speaks A Planet for the President?
+What spoke A Planet for the President?
+the king of Office of the President of Croatia?
+the kings of Office of the President of Croatia?
+What is the headquarter of President Airlines?
+What was the headquarter of President Airlines?
+the headquarter of Office of the President of Croatia?
+the headquarter of President Airlines?
+the vice president of Abdirahman Farole?
+the vice president of Abdurrahman Wahid?
+the vice president of Afonso Pena?
+the vice president of Agha Shahi?
+the vice president of Ahmad Behzad?
+the vice president of Albert Hale?
+the vice president of Alberto Fujimori?
+the vice president of Alejandro Toledo?
+the vice president of Alexander Ankvab?
+the vice president of Alfredo Baldomir?
+the vice president of Alfredo Palacio?
+the vice president of Andrew Jackson?
+the vice president of Anerood Jugnauth?
+the vice president of Anil Bachoo?
+the vice president of Anote Tong?
+the vice president of Antonio Saca?
+the vice president of Arif Alvi?
+the vice president of Arthur Barclay?
+the vice president of Arturo Alessandri?
+the vice president of Ashraf Qazi?
+the vice president of Asian University?
+the vice president of Bailey Olter?
+the vice president of Barack Obama?
+the vice president of Ben Shelly?
+the vice president of Benigno Ferreira?
+the vice president of Benjamin Franklin?
+the vice president of Benjamin Harrison?
+the vice president of Benjamin Mkapa?
+the vice president of Benyoucef Benkhedda?
+the vice president of Bill Clinton?
+the vice president of Boris Yeltsin?
+the vice president of Branko Hrg?
+the vice president of Calvin Coolidge?
+the vice president of Carlos Garaikoetxea?
+the vice president of Carlos Menem?
+the vice president of Cassam Uteem?
+the vice president of Cezar Peluso?
+the vice president of Charles Burson?
+the vice president of Charlie Vig?
+the vice president of Choummaly Sayasone?
+the vice president of Corazon Aquino?
+the vice president of Cynthia Hogan?
+the vice president of Daniel Ortega?
+the vice president of Danilo Medina?
+the vice president of David Addington?
+the vice president of Dilma Rousseff?
+the vice president of Diosdado Macapagal?
+the vice president of Doris Leuthard?
+the vice president of Dzhokhar Dudayev?
+the vice president of Edna Madzongwe?
+the vice president of Eduardo Lonardi?
+the vice president of Eduardo Zaplana?
+the vice president of Edwin Barclay?
+the vice president of Edwin Foulke?
+the vice president of Eligio Ayala?
+the vice president of Elpidio Quirino?
+the vice president of Emilio Aceval?
+the vice president of Emilio Aguinaldo?
+the vice president of Enomoto Takeaki?
+the vice president of Enrique Hertzog?
+the vice president of Ernesto Geisel?
+the vice president of Ernesto Samper?
+the vice president of Evan Ryan?
+the vice president of Evo Morales?
+the vice president of Federico Franco?
+the vice president of Ferdinand Marcos?
+the vice president of Fernando Lugo?
+the vice president of Festus Mogae?
+the vice president of Fidel Castro?
+the vice president of Florencio Randazzo?
+the vice president of Francisco Rabanal?
+the vice president of Francisco Robles?
+the vice president of Franklin Pierce?
+the vice president of Fulgencio Batista?
+the vice president of Garry Mallett?
+the vice president of George Washington?
+the vice president of Georgi Parvanov?
+the vice president of Gerald Ford?
+the vice president of Gerardo Machado?
+the vice president of Goodluck Jonathan?
+the vice president of Gregorio Pacheco?
+the vice president of Grover Cleveland?
+the vice president of Guadalupe Victoria?
+the vice president of Gualberto Villarroel?
+the vice president of Guillermo Endara?
+the vice president of Gustavo Noboa?
+the vice president of Hamid Karzai?
+the vice president of Herbert Hoover?
+the vice president of Hilla Limann?
+the vice president of Hosni Mubarak?
+the vice president of Hu Jintao?
+the vice president of Hubert Maga?
+the vice president of Hugo Banzer?
+the vice president of Hussein Mwinyi?
+the vice president of Ian Khama?
+the vice president of Idi Amin?
+the vice president of Ieremia Tabai?
+the vice president of Igor Smirnov?
+the vice president of Imran Khan?
+the vice president of Itamar Franco?
+the vice president of Jabulani Sibanda?
+the vice president of Jacob Nena?
+the vice president of Jakaya Kikwete?
+the vice president of Jalal Talabani?
+the vice president of James A. Garfield?
+the vice president of James Buchanan?
+the vice president of James Madison?
+the vice president of James Michel?
+the vice president of James Monroe?
+the vice president of Jamil Mahuad?
+the vice president of Jared Bernstein?
+the vice president of Javed Hashmi?
+the vice president of Jefferson Davis?
+the vice president of Jerry Rawlings?
+the vice president of Jiang Zemin?
+the vice president of Jimmy Carter?
+the vice president of John Adams?
+the vice president of John Garang?
+the vice president of John Kufuor?
+the vice president of John Momis?
+the vice president of Johnson Toribiong?
+the vice president of Jomo Kenyatta?
+the vice president of Josefa Iloilo?
+the vice president of Joseph Deiss?
+the vice president of Joseph Estrada?
+the vice president of Joseph Kabui?
+the vice president of Joyce Banda?
+the vice president of Julius Malema?
+the vice president of Julius Nyerere?
+the vice president of Juscelino Kubitschek?
+the vice president of Kailash Purryag?
+the vice president of Karl Offmann?
+the vice president of Kaspar Villiger?
+the vice president of Kelsey Begaye?
+the vice president of Khamtai Siphandon?
+the vice president of Kuniwo Nakamura?
+the vice president of Larry Balow?
+the vice president of Laura Chinchilla?
+the vice president of Lazarus Salii?
+the vice president of Leo Falcam?
+the vice president of Levy Mwanawasa?
+the vice president of Li Xiannian?
+the vice president of Li Yuanhong?
+the vice president of Loyola Schools?
+the vice president of Macario Sakay?
+the vice president of Mahmoud Ahmadinejad?
+the vice president of Makarios III?
+the vice president of Manny Mori?
+the vice president of Manuel Bulnes?
+the vice president of Manuel Quintana?
+the vice president of Manuel Roxas?
+the vice president of Manuel Zelaya?
+the vice president of Mario Draghi?
+the vice president of Mark Mwandosya?
+the vice president of Massoud Barzani?
+the vice president of Mauricio Funes?
+the vice president of Megawati Sukarnoputri?
+the vice president of Michael Crozier?
+the vice president of Michael Sata?
+the vice president of Mike Donilon?
+the vice president of Mikhail Gorbachev?
+the vice president of Mireya Moscoso?
+the vice president of Mohamed Morsi?
+the vice president of Mohamed Nasheed?
+the vice president of Mohammad Khatami?
+the vice president of Moises Vela?
+the vice president of Moritz Leuenberger?
+the vice president of Mwai Kibaki?
+the vice president of Nicanor Duarte?
+the vice president of Nicolas Sarkozy?
+the vice president of Nkululeko Sibanda?
+the vice president of Ollanta Humala?
+the vice president of Olusegun Obasanjo?
+the vice president of Omar Bongo?
+the vice president of Osvaldo Hurtado?
+the vice president of Pascal Couchepin?
+the vice president of Petar Stoyanov?
+the vice president of Peterson Zah?
+the vice president of Phil Schubert?
+the vice president of Pierre Nkurunziza?
+the vice president of Pranab Mukherjee?
+the vice president of Pratibha Patil?
+the vice president of R. Venkataraman?
+the vice president of Rafael Correa?
+the vice president of Rafael Reyes?
+the vice president of Rajendra Prasad?
+the vice president of Ramon Magsaysay?
+the vice president of Rashid Beebeejaun?
+the vice president of Ricardo Martinelli?
+the vice president of Robert Mugabe?
+the vice president of Robert Wilkie?
+the vice president of Romano Prodi?
+the vice president of Ron Klain?
+the vice president of Ronald Reagan?
+the vice president of Ronald Rodgers?
+the vice president of Ronald Venetiaan?
+the vice president of Rosen Plevneliev?
+the vice president of Rupiah Banda?
+the vice president of Ruth Dreifuss?
+the vice president of Sam Houston?
+the vice president of Samia Suluhu?
+the vice president of Samuel Doe?
+the vice president of Samuel Schmid?
+the vice president of Santiago Derqui?
+the vice president of Sarvepalli Radhakrishnan?
+the vice president of Sarwar Danish?
+the vice president of Saw Maung?
+the vice president of Scooter Libby?
+the vice president of Seretse Khama?
+the vice president of Sergei Bagapsh?
+the vice president of Shehu Shagari?
+the vice president of Siad Barre?
+the vice president of Stanley Crooks?
+the vice president of Sudafi Henry?
+the vice president of Suharto?
+the vice president of Sukarno?
+the vice president of Syngman Rhee?
+the vice president of Tancredo Neves?
+the vice president of Teatao Teannaki?
+the vice president of Teburoro Tito?
+the vice president of Terezya Huvisa?
+the vice president of Thein Sein?
+the vice president of Theodore Roosevelt?
+the vice president of Thomas Atcitty?
+the vice president of Thomas Jefferson?
+the vice president of Tommy Remengesau?
+the vice president of Tony Benn?
+the vice president of Ueli Maurer?
+the vice president of Vicente Guerrero?
+the vice president of Vicente Rocafuerte?
+the vice president of Violeta Chamorro?
+the vice president of Vyacheslav Shtyrov?
+the vice president of Wang Jingwei?
+the vice president of William Kristol?
+the vice president of William Tubman?
+the vice president of Wim Duisenberg?
+the vice president of Woodrow Wilson?
+the vice president of Xi Jinping?
+the vice president of Yahya Jammeh?
+the vice president of Yang Shangkun?
+the vice president of Yordan Sokolov?
+the vice president of Yoweri Museveni?
+the vice president of Yuan Shikai?
+the vice president of Zachary Taylor?
+the vice president of Zail Singh?
+the vice president of Zhang Jilong?
+the vice president of Zhelyu Zhelev?
+Who created A Planet for the President?
+Who creates A Planet for the President?
+Who writes A Planet for the President?
+Who wrote A Planet for the President?
+What published A Planet for the President?
+What publishes A Planet for the President?
+Who created Duck for President?
+Who creates Duck for President?
+Who writes Duck for President?
+Who wrote Duck for President?
+Who are the members of Electric President?
+Who is the member of Electric President?
+Who was the member of Electric President?
+What served President Airlines?
+What serves President Airlines?
+the member of Black President band?
+the members of Black President band?
+the member of Electric President?
+the members of Electric President?
+the member of Head Phones President?
+the members of Head Phones President?
+Who designed Shadow President?
+Who designs Shadow President?
+the headquarter of American President Lines?
+the headquarter of Hotel President?
+What is the president of Lucius Fairchild?
+What was the president of Lucius Fairchild?
+What is the president of Lucky Igbinedion?
+What was the president of Lucky Igbinedion?
+What is the president of Lucy Baxley?
+What was the president of Lucy Baxley?
+What is the president of Lucy Kibaki?
+What was the president of Lucy Kibaki?
+What is the president of Lucy Torres?
+What was the president of Lucy Torres?
+What is the president of Ludovic Orban?
+What was the president of Ludovic Orban?
+What is the president of Ludwig Erhard?
+What was the president of Ludwig Erhard?
+What is the president of Ludwig Scotty?
+What was the president of Ludwig Scotty?
+What is the president of Ludwig Steeg?
+What was the president of Ludwig Steeg?
+What is the president of Luis Alejo?
+What was the president of Luis Alejo?
+What is the president of Luis Castiglioni?
+What was the president of Luis Castiglioni?
+What is the president of Luis CdeBaca?
+What was the president of Luis CdeBaca?
+What is the president of Luis Durnwalder?
+What was the president of Luis Durnwalder?
+What is the president of Luis Juez?
+What was the president of Luis Juez?
+What is the president of Luis Miquilena?
+What was the president of Luis Miquilena?
+What is the president of Luis Negreiros?
+What was the president of Luis Negreiros?
+What is the president of Luis Ossio?
+What was the president of Luis Ossio?
+What is the president of Luis Villafuerte?
+What was the president of Luis Villafuerte?
+What is the president of Luit Bieringa?
+What was the president of Luit Bieringa?
+What is the president of Luiz Fux?
+What was the president of Luiz Fux?
+What is the president of Luiz Gushiken?
+What was the president of Luiz Gushiken?
+What is the president of Luke Donnellan?
+What was the president of Luke Donnellan?
+What is the president of Luke Foley?
+What was the president of Luke Foley?
+What is the president of Luke McNamee?
+What was the president of Luke McNamee?
+What is the president of Luke Ouellette?
+What was the president of Luke Ouellette?
+What is the president of Luke Ravenstahl?
+What was the president of Luke Ravenstahl?
+What is the president of Lula Wardlow?
+What was the president of Lula Wardlow?
+What is the president of Lulama Xingwana?
+What was the president of Lulama Xingwana?
+What is the president of Lulzim Basha?
+What was the president of Lulzim Basha?
+What is the president of Luo Huining?
+What was the president of Luo Huining?
+What is the president of Lupe Valdez?
+What was the president of Lupe Valdez?
+What is the president of Lutfozzaman Babar?
+What was the president of Lutfozzaman Babar?
+What is the president of Luther Bradish?
+What was the president of Luther Bradish?
+What is the president of Luther Day?
+What was the president of Luther Day?
+What is the president of Luther Lawrence?
+What was the president of Luther Lawrence?
+What is the president of Luther Olsen?
+What was the president of Luther Olsen?
+What is the president of Luzviminda Ilagan?
+What was the president of Luzviminda Ilagan?
+What is the president of Luzviminda Tancangco?
+What was the president of Luzviminda Tancangco?
+What is the president of Lyda Verstegen?
+What was the president of Lyda Verstegen?
+What is the president of Lydia Arsens?
+What was the president of Lydia Arsens?
+What is the president of Lykke Friis?
+What was the president of Lykke Friis?
+What is the president of Lyle Oberg?
+What was the president of Lyle Oberg?
+What is the president of Lyle Vanclief?
+What was the president of Lyle Vanclief?
+What is the president of Lyman Duff?
+What was the president of Lyman Duff?
+What is the president of Lyn McLeod?
+What was the president of Lyn McLeod?
+What is the president of Lynda Haverstock?
+What was the president of Lynda Haverstock?
+What is the president of Lynden Pindling?
+What was the president of Lynden Pindling?
+What is the president of Lyndon A. Smith?
+------------------------------------------------------------------------
+BUILD SUCCESS
+------------------------------------------------------------------------
+Total time:  1.694 s
+Finished at: 2022-05-12T10:02:47+02:00
+------------------------------------------------------------------------
+

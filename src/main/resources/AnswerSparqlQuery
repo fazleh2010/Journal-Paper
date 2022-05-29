@@ -1,0 +1,492 @@
+
+select  ?binding ?answerUri ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Country>.
+ ?binding <http://dbpedia.org/ontology/capital>   ?answerUri .
+?answerUri rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+select  ?binding ?answerUri ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Person>.
+ ?binding <http://dbpedia.org/ontology/creator>   ?answerUri .
+?answerUri rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+select  ?binding  ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Person>.
+ ?binding rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+select  ?binding  ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/TelevisionShow>.
+ ?binding rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+select  ?binding ?objOfProp ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/TelevisionShow>.
+ ?binding <http://dbpedia.org/ontology/creator>   ?objOfProp.
+?objOfProp rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+
+select  ?binding ?subjOfProp ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Person>.
+ ?subjOfProp <http://dbpedia.org/ontology/creator>   ?binding.
+?subjOfProp rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+select  ?binding  ?label {     
+ X <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>  ?class.
+ X rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+
+
+
+
+
+----------------
+select  ?class {     
+ <http://dbpediaorg/resource/Donald_Trump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>  ?class.
+  ?class rdfs:label ?label .
+  filter langMatches(lang(?label),"de")
+}
+
+PREFIX dbr: <http://dbpedia.org/resource/>
+SELECT DISTINCT ?c WHERE {
+  dbr:Tom_Hanks a/rdfs:subClassOf* ?c .
+} 
+
+
+Find entity of a class
+select  ?entity {     
+ ?entity <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Person>.
+}
+
+label find
+select  ?binding  ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/TelevisionShow>.
+ ?binding rdfs:label ?label .
+  filter langMatches(lang(?label),"de")
+}
+
+$$$$$$$$$$$$$$ get label @@@@@@@@@@@@@@@@@@@@
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+SELECT DISTINCT ?label WHERE {
+                <http://dbpedia.org/resource/The_Prodigy> rdfs:label ?label .
+                filter(langMatches(lang(?label),"de"))
+}
+
+
+
+select  ?binding  ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Country>.
+ ?binding rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+select  ?binding  ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Place>.
+ ?binding rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+select  ?binding  ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Location>.
+ ?binding rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+select  ?binding  ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/PopulatedPlace>.
+ ?binding rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+dbo:Country
+dbo:Place
+dbo:Location
+dbo:PopulatedPlace
+
+
+select  ?binding  ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Location>.
+ ?binding rdfs:label ?label .
+  filter langMatches(lang(?label),"it")
+}
+
+
+select  ?binding  ?label {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/TelevisionShow>.
+ ?binding rdfs:label ?label .
+  filter langMatches(lang(?label),"de")
+}
+
+
+
+Find labels
+select   ?label {     
+ <http://dbpedia.org/resource/RMS_Titanic> rdfs:label ?label .
+  filter langMatches(lang(?label),"de")
+}
+
+select   ?label {     
+ <https://dbpedia.org/resource/Youth_Climate_Movement> rdfs:label ?label .
+  filter langMatches(lang(?label),"en")
+}
+
+select   ?label {     
+ <http://dbpedia.org/ontology/Country> rdfs:label ?label .
+  filter langMatches(lang(?label),"de")
+}
+
+
+
+Intransitive
+select   ?label {     
+ <http://dbpedia.org/resource/Battle_of_Gettysburg> rdfs:label ?label .
+  filter langMatches(lang(?label),"de")
+}
+
+select   ?label {     
+ <http://dbpedia.org/resource/Chile_Route_68> rdfs:label ?label .
+  filter langMatches(lang(?label),"de")
+}
+
+
+-------------------------------
+no result in engpoint
+PREFIX res: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT DISTINCT ?uri
+WHERE {
+        res:Bruce_Carver dbo:deathCause ?uri .     
+}
+
+
+qald change query
+
+select  ?binding ?answerUri  {     
+ ?binding <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/River>.
+ ?binding <http://dbpedia.org/ontology/city>   ?answerUri .
+}
+
+
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX res: <http://dbpedia.org/resource/> 
+SELECT DISTINCT ?uri 
+WHERE { 
+ res:Ganges <http://dbpedia.org/property/mouthLocation> ?uri .
+}
+
+------------------------------
+completion date
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX res: <http://dbpedia.org/resource/>
+SELECT DISTINCT  ?date
+WHERE { 
+        <http://dbpedia.org/resource/Titanic> dbo:completionDate ?date . 
+}
+
+------------------
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX res: <http://dbpedia.org/resource/>
+SELECT DISTINCT ?s ?num 
+WHERE {
+	?s dbo:elevation ?num .
+        ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Mountain>.
+}
+
+
+-------------------
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX res: <http://dbpedia.org/resource/>
+SELECT DISTINCT ?s ?num 
+WHERE {
+	?s dbo:elevation ?num .
+        ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Mountain>.
+}
+
+
+
+SELECT DISTINCT ?entity ?uri WHERE { 
+?entity <http://dbpedia.org/ontology/manufacturer> ?x . 
+ ?entity <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Beverage>.
+?x <http://dbpedia.org/ontology/location> ?uri . }
+
+PREFIX dbp: <http://dbpedia.org/property/> 
+SELECT DISTINCT ?uri 
+WHERE { 
+         ?uri dbp:nickname 'The Tiger'@en .
+        ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Person>.
+
+}
+
+------
+label plus result
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX res: <http://dbpedia.org/resource/>
+SELECT DISTINCT ?label ?uri 
+WHERE {
+ res:The_Pillars_of_the_Earth dbo:author ?uri .
+ res:The_Pillars_of_the_Earth rdfs:label ?label .
+  filter langMatches(lang(?label),"en")
+}
+
+------------------------------------------------------------------------------------------------
+Mulitilingual Labels
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX res: <http://dbpedia.org/resource/>
+SELECT DISTINCT ?labelEn ?labelDe ?labelIt ?labelEs ?uri 
+WHERE {
+ res:The_Pillars_of_the_Earth dbo:author ?uri .
+ res:The_Pillars_of_the_Earth rdfs:label ?labelEn .
+  filter langMatches(lang(?labelEn),"en")
+optional{
+   res:The_Pillars_of_the_Earth dbo:author ?uri .
+   res:The_Pillars_of_the_Earth rdfs:label ?labelDe .
+  filter langMatches(lang(?labelDe),"de")
+}
+optional{
+   res:The_Pillars_of_the_Earth dbo:author ?uri .
+   res:The_Pillars_of_the_Earth rdfs:label ?labelIt .
+  filter langMatches(lang(?labelIt),"it")
+}
+optional{
+   res:The_Pillars_of_the_Earth dbo:author ?uri .
+   res:The_Pillars_of_the_Earth rdfs:label ?labelEs .
+  filter langMatches(lang(?labelEs),"es")
+}
+}
+
+
+
+----------------------------
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX res: <http://dbpedia.org/resource/>
+SELECT DISTINCT ?labelEn ?labelDe ?labelIt ?labelEs  
+WHERE {
+ res:The_Pillars_of_the_Earth rdfs:label ?labelEn .
+  filter langMatches(lang(?labelEn),"en")
+optional{
+   res:The_Pillars_of_the_Earth rdfs:label ?labelDe .
+  filter langMatches(lang(?labelDe),"de")
+}
+optional{
+   res:The_Pillars_of_the_Earth rdfs:label ?labelIt .
+  filter langMatches(lang(?labelIt),"it")
+}
+optional{
+   res:The_Pillars_of_the_Earth rdfs:label ?labelEs .
+  filter langMatches(lang(?labelEs),"es")
+}
+}
+
+------------nick name------------
+
+PREFIX dbp: <http://dbpedia.org/property/> 
+SELECT DISTINCT ?uri ?o ?label
+WHERE { 
+        ?uri dbp:nickname ?o . 
+       ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Person> .
+       ?o rdfs:label ?label .
+       filter langMatches(lang(?label),"de")
+}
+
+PREFIX res: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT DISTINCT ?uri  ?label
+WHERE {
+        res:Brooklyn_Bridge dbo:architect ?uri .
+        res:Brooklyn rdfs:label ?label .
+       filter langMatches(lang(?label),"es")
+}
+
+Multilingual entity
+
+PREFIX res: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT DISTINCT ?uri ?labelEn ?labelDe ?labelIt ?labelEs
+WHERE {
+	?s  dbo:musicComposer ?uri .
+        ?s  rdfs:label ?labelEn .
+        filter langMatches(lang(?labelEn),"en")
+      optional{
+    ?s  rdfs:label ?labelDe .
+  filter langMatches(lang(?labelDe),"de")
+}
+  optional{
+    ?s  rdfs:label ?labelIt .
+  filter langMatches(lang(?labelIt),"it")
+}
+  optional{
+    ?s  rdfs:label ?labelEs .
+  filter langMatches(lang(?labelEs),"es")
+}
+}
+
+--------------------------------
+--------------------------------
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX res: <http://dbpedia.org/resource/>
+SELECT DISTINCT ?labelEn ?labelDe ?labelIt ?labelEs  
+WHERE {
+ res:Empire_of_Japan rdfs:label ?labelEn .
+  filter langMatches(lang(?labelEn),"en")
+optional{
+    res:Empire_of_Japan rdfs:label ?labelDe .
+  filter langMatches(lang(?labelDe),"de")
+}
+optional{
+    res:Empire_of_Japan rdfs:label ?labelIt .
+  filter langMatches(lang(?labelIt),"it")
+}
+optional{
+    res:Empire_of_Japan rdfs:label ?labelEs .
+  filter langMatches(lang(?labelEs),"es")
+}
+}
+
+----called
+
+PREFIX res: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT DISTINCT ?uri ?s ?labelEn ?labelDe ?labelIt ?labelEs
+WHERE {
+	 ?uri dbp:nickname ?s . 
+        ?s  rdfs:label ?labelEn .
+        filter langMatches(lang(?labelEn),"en")
+      optional{
+    ?s  rdfs:label ?labelDe .
+  filter langMatches(lang(?labelDe),"de")
+}
+  optional{
+    ?s  rdfs:label ?labelIt .
+  filter langMatches(lang(?labelIt),"it")
+}
+  optional{
+    ?s  rdfs:label ?labelEs .
+  filter langMatches(lang(?labelEs),"es")
+}
+}
+
+==============================================================
+
+select  ?s  ?labelEn ?labelDe ?labelIt ?labelEs ?uri{     
+?s dbp:country ?uri .
+ ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/BodyOfWater>.
+ ?s rdfs:label ?labelEn .
+  filter langMatches(lang(?labelEn),"en")
+  optional{
+    ?s  rdfs:label ?labelIt .
+  filter langMatches(lang(?labelIt),"it")
+}
+  optional{
+    ?s  rdfs:label ?labelEs .
+  filter langMatches(lang(?labelEs),"es")
+}  optional{
+    ?s  rdfs:label ?labelDe .
+  filter langMatches(lang(?labelDe),"de")
+}
+}
+
+----not contains labels
+
+select   ?s ?labelEn  ?labelDe ?labelIt ?labelEs ?uri {     
+?s <http://dbpedia.org/ontology/ingredient> ?uri .
+?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://dbpedia.org/ontology/Food>.
+ ?s rdfs:label ?labelEn .
+  filter langMatches(lang(?labelEn),"en")
+optional{
+   ?s rdfs:label ?labelDe .
+  filter langMatches(lang(?labelDe),"de")
+}
+optional{
+   ?s rdfs:label ?labelIt .
+  filter langMatches(lang(?labelIt),"it")
+}
+optional{
+   ?s rdfs:label ?labelEs .
+  filter langMatches(lang(?labelEs),"es")
+}
+}
+
+
+
+
+
+# Fetch a default representation of a Triple Pattern Fragment
+curl 'http://fragments.dbpedia.org/2015/en'
+
+# Fetch a Turtle representation of a Triple Pattern Fragment
+curl -H 'Accept: text/turtle' 'http://fragments.dbpedia.org/2015/en'
+
+# Fetch a TriG representation of a Triple Pattern Fragment
+curl -H 'Accept: application/trig' 'http://fragments.dbpedia.org/2015/en'
+
+
+
+# Some handy shortcuts
+alias curtle='curl -H "Accept: text/turtle"'
+alias curltrig='curl -H "Accept: application/trig"'
+alias curltriples='curl -H "Accept: application/n-triples"'
+alias curlquads='curl -H "Accept: application/n-quads"'
+alias curlson='curl -H "Accept: application/json"'
+alias curld='curl -H "Accept: application/ld+json"'
+
+curtle   'http://fragments.dbpedia.org/2015/en'
+curltrig 'http://fragments.dbpedia.org/2015/en'
+
+curl -H 'Accept: text/turtle' 'http://client.linkeddatafragments.org/#transientDatasources=http%3A%2F%2Ffragments.dbpedia.org%2F2016-04%2Fen&query=SELECT%20DISTINCT%20%3Fd%20WHERE%20%7B%20%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FDiana%2C_Princess_of_Wales%3E%20%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FdeathDate%3E%20%3Fd%20.%20%7D'
+
+
+select  ?s ?o   {    ?s <http://dbpedia.org/ontology/birthPlace>  ?o . 
+                      ?s rdfs:label ?labelDe .
+                      filter langMatches(lang(?labelDe),"de") 
+} Limit 100
+
+
+select ?subjectUri ?subjecLabel ?objectUri 
+{   ?subjectUri <http://dbpedia.org/ontology/birthPlace>  ?o . 
+    ?subjectUri <http://www.w3.org/2000/01/rdf-schema#label> ?labelSubjectUri .
+    filter langMatches(lang(?labelSubjectUri),"en") 
+} Limit 100
+
+
+select  ?labelDe   {    
+                      <http://dbpedia.org/resource/Germany> <http://www.w3.org/2000/01/rdf-schema#label> ?labelDe .
+                      filter langMatches(lang(?labelDe),"en") 
+} 
+
+
+
+select ?subjectUri ?subjectLabel ?objectUri  ?objectLabel 
+{   ?subjectUri <http://dbpedia.org/ontology/birthPlace>  ?objectUri  . 
+    ?subjectUri <http://www.w3.org/2000/01/rdf-schema#label> ?subjectLabel .
+     ?objectUri  <http://www.w3.org/2000/01/rdf-schema#label> ?objectLabel .
+    filter langMatches(lang(?labelSubjectUri),"en") 
+} Limit 100
+
+select ?subjectUri ?subjectLabel ?objectUri 
+{   ?subjectUri <http://dbpedia.org/ontology/birthPlace>  ?objectUri  . 
+    ?subjectUri <http://www.w3.org/2000/01/rdf-schema#label> ?subjectLabel .
+    filter langMatches(lang(?labelSubjectUri),"en") 
+} Limit 100
+
+
+select  ?binding  ?label {     
+  ?binding <http://dbpedia.org/ontology/birthPlace>  ?objectUri  
+  ?binding <http://www.w3.org/2000/01/rdf-schema#label> ?label .
+}

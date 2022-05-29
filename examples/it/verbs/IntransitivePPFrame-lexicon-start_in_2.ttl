@@ -1,0 +1,69 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :start_in_2 ;
+  lemon:entry    :form_start_in_2_present_preposition .
+
+:start_in_2 a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_start_in_2_present ;
+  lemon:otherForm      :start_in_2_present3rd ;
+  lemon:otherForm      :start_in_2_past ;
+  lemon:otherForm      :start_in_2_perfect ;
+  lemon:sense          :start_in_2_sense_1 ;
+  lemon:synBehavior    :start_in_2_frame .
+
+:form_start_in_2_present a           lemon:Form ;
+  lemon:writtenRep     "nascere"@it ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:start_in_2_present3rd a      lemon:Form ;
+  lemon:writtenRep "nasce"@it ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:start_in_2_past a lemon:Form ;
+  lemon:writtenRep  "� nato"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:start_in_2_perfect a lemon:Form ;
+  lemon:writtenRep  "� nato"@it ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:perfect .
+
+:start_in_2_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :start_in_2_subj ;
+  lexinfo:prepositionalAdjunct :start_in_2_obj .
+
+:start_in_2_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :start_in_2_ontomap ;
+  lemon:reference   <http://dbpedia.org/property/mouthLocation> ;
+  lemon:subjOfProp  :start_in_2_obj ;
+  lemon:objOfProp   :start_in_2_subj ;
+  lemon:condition   :start_in_2_sense_1_condition .
+
+:start_in_2_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/River> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Place> .
+
+
+:start_in_2_obj lemon:marker :in .
+
+:arg2 lemon:marker :form_start_in_2_present_preposition .
+
+## Prepositions ##
+
+:form_start_in_2_present_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "in"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

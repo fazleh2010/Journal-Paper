@@ -20,6 +20,10 @@ public class UriLabel {
     @JsonProperty("uri")
     private String uri;
     
+    private String answerUri;
+    private String answerLabel;
+
+    
     public UriLabel() {
         
     }
@@ -28,6 +32,13 @@ public class UriLabel {
         this.uri = uri;
         this.label = label;
     }
+    
+    public UriLabel(String uri, String label, String answerUri, String answerLabel) {
+        this.uri = uri;
+        this.label = label;
+        this.answerUri = answerUri;
+        this.answerLabel = answerLabel;
+    }
 
     public String getLabel() {
         return label;
@@ -35,6 +46,20 @@ public class UriLabel {
 
     public String getUri() {
         return uri;
+    }
+
+    public String getAnswerUri() {
+        return answerUri;
+    }
+
+    public String getAnswerLabel() {
+        return answerLabel;
+    }
+    
+
+    @Override
+    public String toString() {
+        return "UriLabel{" + "label=" + label + ", uri=" + uri + '}';
     }
 
 }

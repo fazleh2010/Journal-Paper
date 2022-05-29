@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "it" ;
+  lemon:entry    :quartieri_de ;
+  lemon:entry    :quartieri_de_form_preposition .
+
+:quartieri_de a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :quartieri_de_form ;
+  lemon:otherForm  :quartieri_de_singular ;
+  lemon:otherForm  :quartieri_de_plural ;
+  lemon:sense          :quartieri_de_sense_1 ;
+  lemon:synBehavior    :quartieri_de_nounpp .
+
+:quartieri_de_form a lemon:Form ;
+  lemon:writtenRep "quartiere"@it .
+
+:quartieri_de_singular a    lemon:Form ;
+  lemon:writtenRep "quartiere"@it ;
+  lexinfo:number   lexinfo:singular .
+
+:quartieri_de_plural a   lemon:Form ;
+  lemon:writtenRep "quartieri"@it ;
+  lexinfo:number    lexinfo:plural .
+
+:quartieri_de_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg2 ;
+  lexinfo:prepositionalAdjunct :arg1 .
+
+:quartieri_de_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :quartieri_de_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/governmentType> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :quartieri_de_sense_1_condition .
+
+:quartieri_de_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/GovernmentType> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Country> .
+
+:arg2 lemon:marker :quartieri_de_form_preposition .
+## Prepositions ##
+:quartieri_de_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "di"@it ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

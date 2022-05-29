@@ -1,0 +1,91 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :to_cruzar ;
+  lemon:entry    :cruzared ;
+  lemon:entry    :form_cruzar_preposition .
+
+:to_cruzar a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_cruzar ;
+  lemon:otherForm      :form_cruzars ;
+  lemon:otherForm      :form_cruzared ;
+  lemon:sense          :cruzar_sense_1 ;
+  lemon:synBehavior    :cruzar_frame_transitive .
+
+:form_cruzar a         lemon:Form ;
+  lemon:writtenRep     "cruzar"@es ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_cruzars a    lemon:Form ;
+  lemon:writtenRep "cruza"@es ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+
+:form_cruzars a    lemon:Form ;
+  lemon:writtenRep "cruz�"@es ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_cruzared a   lemon:Form ;
+  lemon:writtenRep "cruzado"@es ;
+  lexinfo:tense    lexinfo:perfect ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:cruzar_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :cruzar_subj ;
+  lexinfo:directObject     :cruzar_obj .
+
+:cruzar_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :cruzar_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/crosses> ;
+  lemon:subjOfProp  :cruzar_obj ;
+  lemon:objOfProp   :cruzar_subj ;
+  lemon:condition   :cruzar_sense_1_condition .
+
+
+:cruzar_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Bridge> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/River> .
+
+:cruzared a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_cruzared_canonical ;
+  lemon:otherForm      :form_cruzared_by ;
+  lemon:synBehavior    :cruzared_frame_adjectivepp ;
+  lemon:sense          :cruzared_ontomap .
+
+:form_cruzared_canonical a lemon:Form ;
+  lemon:writtenRep         "cruzar"@es .
+
+:form_cruzared_by a    lemon:Form ;
+  lemon:writtenRep     "cruzar"@es ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:cruzared_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :cruzared_subj ;
+  lexinfo:prepositionalAdjunct :cruzared_obj .
+
+:cruzared_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :cruzared_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/crosses> ;
+  lemon:subjOfProp  :cruzared_subj ;
+  lemon:objOfProp   :cruzared_obj ;
+  lemon:condition   :cruzar_sense_1_condition .
+:cruzared_obj lemon:marker :por .
+
+:arg2 lemon:marker :form_cruzar_form_preposition .
+
+## Prepositions ##
+
+:form_cruzar_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "por"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
