@@ -13,17 +13,17 @@ anfangen,TrennVerb,anfangen,f„ngt an,f„ngt an,angefangen,in,IntransitivePPFrame,
 sprechen,verb,sprechen,spricht,sprach,gesprochen,in,IntransitivePPFrame,domain,range,1,dbo:language,dbo:Country,dbo:Language,neuter,Land,L„nder,feminine,Sprache,Sprachen
 entspringen,veb,entspringen,entspringt,entsprang,entsprungen,in,IntransitivePPFrame,domain,range,1,dbp:mouthLocation,dbo:River,dbo:Place,masculine,Fluss,Flsse,neuter,Land,L„nder
 geborn_am_1,verb,geb„ren,geb„rt,gebar,geboren,am,IntransitivePPFrame,domain,range,1,dbo:birthYear,dbo:Person,xsd:date,masculine,Person,Personen,neuter,Jahr,Jahren
-geborn_in_1,verb,geb„ren,geb„rt,gebar,geboren,in,IntransitivePPFrame,range,domain,1,dbo:birthPlace,dbo:Person,dbo:Place,masculine,Person,Personen,neuter,Stadt,St„dte
-geborn_in_2,verb,geb„ren,geb„rt,gebar,geboren,in,IntransitivePPFrame,range,domain,1,dbo:birthPlace,dbo:Person,dbo:City,feminine,Person,Personen,feminine,Stadt,Stadte
-geborn_in_3,verb,geb„ren,geb„rt,gebar,geboren,in,IntransitivePPFrame,range,domain,1,dbo:birthPlace,dbo:Person,dbo:Country,feminine,Person,Personen,neuter,Land,L„nder
-geborn_in_4,verb,geb„ren,geb„rt,gebar,geboren,in,IntransitivePPFrame,range,domain,1,dbo:birthPlace,dbo:Actor,dbo:Country,masculine,Schauspieler,Schauspieler,neuter,Land,L„nder
-geborn_in_5,verb,geb„ren,geb„rt,gebar,geboren,in,IntransitivePPFrame,range,domain,1,dbo:birthPlace,res:Surfing,dbo:Country,masculine,Surfer,Surfer,neuter,Land,L„nder
+geborn_in_1,verb,geb„ren,geb„rt,gebar,geboren,in,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Person,dbo:Place,masculine,Person,Personen,neuter,Stadt,St„dte
+geborn_in_2,verb,geb„ren,geb„rt,gebar,geboren,in,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Person,dbo:City,feminine,Person,Personen,feminine,Stadt,Stadte
+geborn_in_3,verb,geb„ren,geb„rt,gebar,geboren,in,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Person,dbo:Country,feminine,Person,Personen,neuter,Land,L„nder
+geborn_in_4,verb,geb„ren,geb„rt,gebar,geboren,in,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Actor,dbo:Country,masculine,Schauspieler,Schauspieler,neuter,Land,L„nder
+geborn_in_5,verb,geb„ren,geb„rt,gebar,geboren,in,IntransitivePPFrame,domain,range,1,dbo:birthPlace,dbo:Surfer,dbo:Country,masculine,Surfer,Surfer,neuter,Land,L„nder
 fertigstellen_in,TrennVerb,fertigstellen,stellt fertig,stellte fertig,fertiggestellt,in,IntransitivePPFrame,domain,range,1,dbo:completionDate,dbo:Ship,xsd:date,neuter,Schiff,Schiffe,neuter,-,-
 ausstellen,TrennVerb,ausstellen,stellt aus,stellte aus,ausgestellt,in,IntransitivePPFrame,domain,range,1,dbo:museum,dbo:Artwork,dbo:Museum,neuter,Kunstwerk,Kunstwerke,neuter,Museum,Museen
 befinden,RefVerb,befinden,befindet,befand,befunden,in,IntransitivePPFrame,domain,range,1,dbo:country,dbo:Lake,dbo:Country,masculine,See,Seen,feminine,Land,L„nder
 schreiben_in,verb,schreiben,schreibt,schrieb,geschrieben,in,IntransitivePPFrame,domain,range,1,dbo:programmingLanguage,dbo:Software,dbo:Language,feminine,Software,Software,feminine,Programmiersprache,Programmiersprachen
 wohnen_in,verb,wohnen,wohnt,wohnte,gewohnt,in,IntransitivePPFrame,domain,range,1,dbo:residence,dbo:Person,dbo:City,masculine,Person,Personen,feminine,Stadt,Stadte
-enden,verb,enden,endet,endete,geendet,in,IntransitivePPFrame,domain,range,1,dbo:dissolutionDate,dbo:Country,xsd:date,feminine,Land,L„nder,neuter,Jahr,Jahre
+enden,verb,enden,endet,endete,geendet,am,IntransitivePPFrame,domain,range,1,dbo:dissolutionDate,dbo:Country,xsd:date,feminine,Land,L„nder,neuter,Jahr,Jahre
 Liegen_1,verb,liegen,liegt,lag,gelegen,in,IntransitivePPFrame,domain,range,1,dbo:country,dbo:City,dbo:Country,feminine,Stadt,St„dte,neuter,Land,L„nder
 Liegen_2,verb,liegen,liegt,lag,gelegen,in,IntransitivePPFrame,domain,range,1,dbp:location,dbo:MilitaryUnit,dbo:Location,feminine,Milit„reinheit,Milit„reinheit,feminine,Lage,Lage
 Liegen_3,verb,liegen,liegt,lag,gelegen,in,IntransitivePPFrame,domain,range,1,dbp:location,dbo:HistoricPlace,dbo:Location,neuter,historischer Ort,historischer Orten,feminine,Stadt,St„dte

@@ -84,6 +84,7 @@ public enum DomainOrRangeTypeCheck {
                     URI.create(DBO.getUri() + "Surfing"),
                     URI.create(DBR.getUri() + "Publisher"),
                     URI.create(DBR.getUri() + "Broadcaster"),
+                    URI.create(DBO.getUri() + "Surfer"),
                     URI.create("http://www.wikidata.org/entity/Q215627") // wiki data person
             )
     ),

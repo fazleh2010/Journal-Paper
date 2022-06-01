@@ -103,6 +103,7 @@ public enum DomainOrRangeType {
     Stadium(List.of(URI.create(DBO.getUri() + "Stadium"))),
     SportsClub(List.of(URI.create(DBO.getUri() + "SportsClub"))),
     Surfing(List.of(URI.create(DBO.getUri() + "Surfing"))),
+    Surfer(List.of(URI.create(DBO.getUri() + "Surfer"))),
     Brewery(List.of(URI.create(DBR.getUri() + "Brewery"))),
 
   
