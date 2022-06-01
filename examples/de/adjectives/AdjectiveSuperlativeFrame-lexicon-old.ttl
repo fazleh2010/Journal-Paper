@@ -18,7 +18,6 @@
   lemon:otherForm      :form_old_comperative ;
   lemon:otherForm      :form_old_superlative ;
   lemon:sense          :old_sense_1 ;
-  lemon:sense          :old_sense_2 ;
   lemon:synBehavior    :old_predFrame .
 
 :form_old lemon:writtenRep "�lt"@de .
@@ -40,17 +39,6 @@
   oils:degree   <http://lemon-model.net/oils/low> .
 
 :old_sense_1_condition a lemon:condition ;
-  lemon:propertyDomain   <http://dbpedia.org/ontology/Person> ;
-  lemon:propertyRange    <http://dbpedia.org/ontology/Person> .:old_sense_2 a  lemon:LexicalSense ;
-  lemon:reference :old_res ;
-  lemon:isA       :old_PredSynArg ;
-  lemon:condition :old_sense_2_condition .
-
-:old_res a   oils:CovariantScalar ;
-  oils:boundTo  <http://dbpedia.org/ontology/birthDate> ;
-  oils:degree   <http://lemon-model.net/oils/low> .
-
-:old_sense_2_condition a lemon:condition ;
   lemon:propertyDomain   <http://dbpedia.org/ontology/Person> ;
   lemon:propertyRange    <http://dbpedia.org/ontology/Person> .## Prepositions ##
 :form_old_preposition a                  lemon:SynRoleMarker ;

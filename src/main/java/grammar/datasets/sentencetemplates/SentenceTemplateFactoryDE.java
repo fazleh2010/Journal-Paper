@@ -601,29 +601,27 @@ class SentenceTemplateFactoryDE implements Factory<SentenceTemplateRepository>, 
       createSentenceTemplate(
         language,
         List.of(
-                  //"Welche Profisurfer wurden auf den Philippinen geboren?",
-        "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
-        "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?"
-     
+        //Wo wurde Donald Trump geboren?
+        "interrogativePlace verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+        //In welcher Stadt ist der Pr├ñsident von Montenegro geboren?
+        "preposition interrogativeDeterminer(dativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
+         //In welcher Stadt wohnt Sylvester Stallone?
+        "preposition interrogativeDeterminer(dativeCase:range:singular) verb(mainVerb:present3rd:thridPerson) adjunct(domain)?"
+            
                ),
         IntransitivePPFrame,
         WHERE_WHO_PAST_PERSON,
         forward
       )
     );
-    //Welche Person wurde 2010 geboren?
-    //Wer ist 2010 geboren?
       sentenceTemplateRepository.add(
       createSentenceTemplate(
         language,
-        List.of(
-                //Wo wurde Donald Trump geboren?
-        "interrogativePlace verb(component_werden:past:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
-        //In welcher Stadt ist der Pr├ñsident von Montenegro geboren?
-        "preposition interrogativeDeterminer(dativeCase:range:singular) verb(component_be:present:singular) adjunct(domain) verb(mainVerb:perfect:thridPerson)?",
-        //In welcher Stadt wohnt Sylvester Stallone?
-        "preposition interrogativeDeterminer(dativeCase:range:singular) verb(mainVerb:present3rd:thridPerson) adjunct(domain)?"
-       
+        List.of(             
+        // welcher Person wurde in ($x | Place_NP) geboren?
+        "interrogativeDeterminer(nominativeCase:domain:singular) verb(component_werden:past:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?",
+        //wer ist in ($x | Place_NP) geboren?
+        "interrogativePronoun(nominativeCase:domain:singular) verb(component_be:present:singular) preposition adjunct(range) verb(mainVerb:perfect:thridPerson)?"
             ),
         IntransitivePPFrame,
         WHERE_WHO_PAST_PERSON,

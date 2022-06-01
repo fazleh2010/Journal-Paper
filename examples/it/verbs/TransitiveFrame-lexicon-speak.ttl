@@ -30,12 +30,12 @@
 
 
 :form_speaks a    lemon:Form ;
-  lemon:writtenRep "ha parlato"@it ;
+  lemon:writtenRep "parlato"@it ;
   lexinfo:tense    lexinfo:past ;
   lexinfo:person   lexinfo:thirdPerson .
 
 :form_speaked a   lemon:Form ;
-  lemon:writtenRep "� parlato"@it ;
+  lemon:writtenRep "parlato"@it ;
   lexinfo:tense    lexinfo:perfect ;
   lexinfo:person   lexinfo:thirdPerson .
 

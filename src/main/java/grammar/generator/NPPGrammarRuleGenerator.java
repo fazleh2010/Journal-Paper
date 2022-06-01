@@ -59,14 +59,16 @@ public class NPPGrammarRuleGenerator extends GrammarRuleGeneratorRoot implements
         if (type.equals(nounPhrase)) {
             generatedSentences = new ArrayList<String>();
             generatedSentences.addAll(sentenceBuilder.generateFullSentencesBackward(getBindingVariable(), new String[]{}, lexicalEntryUtil));
-        } else if (type.equals(booleanQuestionDomainRange)) {
+        }
+        //temporary closed of boolean question
+        /*else if (type.equals(booleanQuestionDomainRange)) {
             generatedSentences = new ArrayList<String>();
             generatedSentences.addAll(sentenceBuilder.generateBooleanQuestionDomainRange(getBindingVariable(), new String[]{}, lexicalEntryUtil));
             System.out.println(generatedSentences);
         } else if (type.equals(booleanQuestionDomain)) {
             generatedSentences = new ArrayList<String>();
             generatedSentences.addAll(sentenceBuilder.generateBooleanQuestionsDomain(getBindingVariable(), new String[]{}, lexicalEntryUtil));
-        }        generatedSentences = generatedSentences.stream().distinct().collect(Collectors.toList());
+        }   */     generatedSentences = generatedSentences.stream().distinct().collect(Collectors.toList());
         generatedSentences.sort(String::compareToIgnoreCase);
         return generatedSentences;
     }
@@ -82,7 +84,8 @@ public class NPPGrammarRuleGenerator extends GrammarRuleGeneratorRoot implements
         List<GrammarEntry> grammarEntries = new ArrayList<GrammarEntry>();
         List<String> sentences = new ArrayList<String>();
 
-        sentences = generateNounPhrase(lexicalEntryUtil, booleanQuestionDomainRange);
+        //temporary close of boolean questions
+        /*sentences = generateNounPhrase(lexicalEntryUtil, booleanQuestionDomainRange);
         if (!sentences.isEmpty()) {
             GrammarEntry booleanGrammarEntryDomainRange = this.generateGrammarEntryforNP(grammarEntry, lexicalEntryUtil, SentenceType.SENTENCE, sentences,booleanQuestionDomainRange);
             grammarEntries.add(booleanGrammarEntryDomainRange);
@@ -91,7 +94,7 @@ public class NPPGrammarRuleGenerator extends GrammarRuleGeneratorRoot implements
         if (!sentences.isEmpty()) {
             GrammarEntry booleanGrammarEntryDomain = this.generateGrammarEntryforNP(grammarEntry, lexicalEntryUtil, SentenceType.SENTENCE, sentences,booleanQuestionDomain);
             grammarEntries.add(booleanGrammarEntryDomain);
-        }
+        }*/
         sentences = generateNounPhrase(lexicalEntryUtil, nounPhrase);
         if (!sentences.isEmpty()) {
             GrammarEntry fragmentEntry = this.generateGrammarEntryforNP(grammarEntry, lexicalEntryUtil, SentenceType.NP, sentences,nounPhrase);

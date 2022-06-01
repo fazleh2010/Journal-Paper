@@ -60,7 +60,7 @@ public class TemplateFinder implements TempConstants{
 
         if (selectedTemplate.equals(WHEN_WHAT_PAST_THING)) {
             this.forwardDomainOrRange = DomainOrRangeType.date;
-            this.oppositeDomainOrRange = DomainOrRangeType.THING;
+            this.oppositeDomainOrRange = DomainOrRangeType.Thing;
         } else if (selectedTemplate.equals(WHEN_WHO_PAST_PERSON)) {
             this.forwardDomainOrRange = DomainOrRangeType.date;
             this.oppositeDomainOrRange = DomainOrRangeType.Person;
@@ -68,8 +68,8 @@ public class TemplateFinder implements TempConstants{
             this.forwardDomainOrRange = DomainOrRangeType.Place;
             this.oppositeDomainOrRange = DomainOrRangeType.Person;
         } else if (selectedTemplate.equals(WHAT_WHICH_PRESENT_THING_2)) {
-            this.forwardDomainOrRange = DomainOrRangeType.THING;
-            this.oppositeDomainOrRange = DomainOrRangeType.THING;
+            this.forwardDomainOrRange = DomainOrRangeType.Thing;
+            this.oppositeDomainOrRange = DomainOrRangeType.Thing;
         }
 
     }

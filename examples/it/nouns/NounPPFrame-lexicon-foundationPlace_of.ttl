@@ -20,14 +20,14 @@
   lemon:synBehavior    :foundationPlace_of_nounpp .
 
 :foundationPlace_of_form a lemon:Form ;
-  lemon:writtenRep "luogo di fondazione"@it .
+  lemon:writtenRep "nazione"@it .
 
 :foundationPlace_of_singular a    lemon:Form ;
-  lemon:writtenRep "luogo di fondazione"@it ;
+  lemon:writtenRep "nazione"@it ;
   lexinfo:number   lexinfo:singular .
 
 :foundationPlace_of_plural a   lemon:Form ;
-  lemon:writtenRep "XX"@it ;
+  lemon:writtenRep "nazione"@it ;
   lexinfo:number    lexinfo:plural .
 
 :foundationPlace_of_nounpp a        lexinfo:NounPPFrame ;
@@ -43,7 +43,7 @@
 
 :foundationPlace_of_sense_1_condition a lemon:condition ;
   lemon:propertyDomain  <http://dbpedia.org/ontology/Organisation> ;
-  lemon:propertyRange   <http://dbpedia.org/ontology/City> .
+  lemon:propertyRange   <http://dbpedia.org/ontology/Place> .
 
 :foundationPlace_of_sense_2 a lemon:OntoMap, lemon:LexicalSense ;
   lemon:ontoMapping         :foundationPlace_of_sense_2 ;
@@ -54,7 +54,7 @@
 
 :foundationPlace_of_sense_2_condition a lemon:condition ;
   lemon:propertyDomain  <http://dbpedia.org/ontology/Organisation> ;
-  lemon:propertyRange   <http://dbpedia.org/ontology/Place> .
+  lemon:propertyRange   <http://dbpedia.org/ontology/City> .
 
 :arg2 lemon:marker :foundationPlace_of_form_preposition .
 ## Prepositions ##

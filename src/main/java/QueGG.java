@@ -77,6 +77,7 @@ public class QueGG {
                 configFile = args[0];
                 InputCofiguration inputCofiguration = FileUtils.getInputConfig(new File(configFile));
                 inputCofiguration.setLinkedData(args[1]);
+                online=inputCofiguration.getOnline();
                 if (inputCofiguration.isCsvToTurtle()) {
                     if (queGG.csvToProto(inputCofiguration)) {
                         queGG.turtleToProto(inputCofiguration);

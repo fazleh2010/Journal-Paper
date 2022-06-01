@@ -30,12 +30,12 @@
 
 
 :form_create_1s a    lemon:Form ;
-  lemon:writtenRep "ha creato"@it ;
+  lemon:writtenRep "creato"@it ;
   lexinfo:tense    lexinfo:past ;
   lexinfo:person   lexinfo:thirdPerson .
 
 :form_create_1ed a   lemon:Form ;
-  lemon:writtenRep "� stato creato"@it ;
+  lemon:writtenRep "creato"@it ;
   lexinfo:tense    lexinfo:perfect ;
   lexinfo:person   lexinfo:thirdPerson .
 

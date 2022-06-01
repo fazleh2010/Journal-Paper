@@ -31,13 +31,13 @@
   lexinfo:tense    lexinfo:present .
 
 :dieIn_1_past a lemon:Form ;
-  lemon:writtenRep  "� morto"@it ;
+  lemon:writtenRep  "morto"@it ;
   lexinfo:number    lexinfo:singular ;
   lexinfo:person    lexinfo:thirdPerson ;
   lexinfo:tense     lexinfo:past .
 
 :dieIn_1_perfect a lemon:Form ;
-  lemon:writtenRep  "� morto"@it ;
+  lemon:writtenRep  "morto"@it ;
   lexinfo:number    lexinfo:singular ;
   lexinfo:person    lexinfo:thirdPerson ;
   lexinfo:tense     lexinfo:perfect .

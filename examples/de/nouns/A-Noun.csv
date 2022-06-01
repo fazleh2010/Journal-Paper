@@ -39,7 +39,6 @@ Staatsangeh”rigkeit_of,noun,feminine,Staatsangeh”rigkeit,Staatsangeh”rigkeit,Sta
 Elternteil_of,noun,masculine,Elternteil,Elternteile,Elternteil,Elternteil,Elternteiles,von,NounPPFrame,range,domain,1,dbo:parent,dbo:Person,dbo:Person,feminine,dbo:Person,Personen,masculine,Person,Personen
 Partei-von,noun,feminine,Partei,Parteien,Partei,Partei,Partei,von,NounPPFrame,range,domain,1,dbo:party,dbo:Politician,xsd:string,masculine,Politiker,Politiker,-,-,-
 tocher_von,noun,feminine,Tochter,T”chter,Tochter,Tochter,Tochter,von,NounPPFrame,range,domain,1,dbo:child,dbo:Person,dbo:Person,masculine,Person,Personen,masculine,Person,Personen
-Sch”pfer_von,noun,masculine,Sch”pfer,Sch”pfer,Sch”pfer,Sch”pfer,Sch”pfer,von,NounPPFrame,range,domain,1,dbo:creator,dbo:FictionalCharacter,dbo:Person,masculine,"erfundener Charakter
-",Erfundener Charakter,masculine,Person,Personen
-HeimStadion_of ,noun,neuter,HeimStadion,HeimStadien,HeimStadion,HeimStadion,HeimStadion,von,NounPPFrame,range,domain,1,dbo:ground,dbo:SportsClub,dbo:Stadium,masculine,Sportclub,Sportclubs,neuter,Stadion,Stadien
+Sch”pfer_von,noun,masculine,Sch”pfer,Sch”pfer,Sch”pfer,Sch”pfer,Sch”pfer,von,NounPPFrame,range,domain,1,dbo:creator,dbo:FictionalCharacter,dbo:Person,masculine,erfundener Charakter,Erfundener Charakter,masculine,Person,Personen
+HeimStadion_of,noun,neuter,HeimStadion,HeimStadien,HeimStadion,HeimStadion,HeimStadion,von,NounPPFrame,range,domain,1,dbo:ground,dbo:SportsClub,dbo:Stadium,masculine,Sportclub,Sportclubs,neuter,Stadion,Stadien
 Staatsangeh”rigkeit_of,noun,feminine,Staatsangeh”rigkeit,Staatsangeh”rigkeit,Staatsangeh”rigkeit,Staatsangeh”rigkeit,Staatsangeh”rigkeit,von,NounPPFrame,range,domain,1,dbo:nationality,dbo:Person,dbo:Country,masculine,Person,Personen,neuter,Land,L„nder

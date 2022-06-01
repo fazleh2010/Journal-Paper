@@ -20,14 +20,14 @@
   lemon:synBehavior    :currency_of_nounpp .
 
 :currency_of_form a lemon:Form ;
-  lemon:writtenRep "moneta"@it .
+  lemon:writtenRep "valuta"@it .
 
 :currency_of_singular a    lemon:Form ;
-  lemon:writtenRep "moneta"@it ;
+  lemon:writtenRep "valuta"@it ;
   lexinfo:number   lexinfo:singular .
 
 :currency_of_plural a   lemon:Form ;
-  lemon:writtenRep "monete"@it ;
+  lemon:writtenRep "valuta"@it ;
   lexinfo:number    lexinfo:plural .
 
 :currency_of_nounpp a        lexinfo:NounPPFrame ;
@@ -59,6 +59,6 @@
 :arg2 lemon:marker :currency_of_form_preposition .
 ## Prepositions ##
 :currency_of_form_preposition a                  lemon:SynRoleMarker ;
-  lemon:canonicalForm  [ lemon:writtenRep "di"@it ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "della"@it ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
 

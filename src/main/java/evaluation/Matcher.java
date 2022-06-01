@@ -128,5 +128,11 @@ public class Matcher {
        String result= string.trim().strip().stripLeading().stripTrailing();
        return result;
     }
+    public static String cleanPrefix(String string) throws MalformedURLException {
+        string=string.replace("http://dbpedia.org/ontology/", "dbo_");
+        string=string.replace("http://dbpedia.org/property/", "dbp_");
+        String result = string.trim().strip().stripLeading().stripTrailing();
+        return result;
+    }
     
 }

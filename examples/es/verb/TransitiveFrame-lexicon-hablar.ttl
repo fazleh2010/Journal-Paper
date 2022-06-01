@@ -1,0 +1,91 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :to_hablar ;
+  lemon:entry    :hablared ;
+  lemon:entry    :form_hablar_preposition .
+
+:to_hablar a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_hablar ;
+  lemon:otherForm      :form_hablars ;
+  lemon:otherForm      :form_hablared ;
+  lemon:sense          :hablar_sense_1 ;
+  lemon:synBehavior    :hablar_frame_transitive .
+
+:form_hablar a         lemon:Form ;
+  lemon:writtenRep     "hablar"@es ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_hablars a    lemon:Form ;
+  lemon:writtenRep "habla"@es ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+
+:form_hablars a    lemon:Form ;
+  lemon:writtenRep "habl�"@es ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_hablared a   lemon:Form ;
+  lemon:writtenRep "hablado"@es ;
+  lexinfo:tense    lexinfo:perfect ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:hablar_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :hablar_subj ;
+  lexinfo:directObject     :hablar_obj .
+
+:hablar_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :hablar_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/language> ;
+  lemon:subjOfProp  :hablar_obj ;
+  lemon:objOfProp   :hablar_subj ;
+  lemon:condition   :hablar_sense_1_condition .
+
+
+:hablar_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Language> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Country> .
+
+:hablared a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_hablared_canonical ;
+  lemon:otherForm      :form_hablared_by ;
+  lemon:synBehavior    :hablared_frame_adjectivepp ;
+  lemon:sense          :hablared_ontomap .
+
+:form_hablared_canonical a lemon:Form ;
+  lemon:writtenRep         "hablar"@es .
+
+:form_hablared_by a    lemon:Form ;
+  lemon:writtenRep     "hablar"@es ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:hablared_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :hablared_subj ;
+  lexinfo:prepositionalAdjunct :hablared_obj .
+
+:hablared_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :hablared_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/language> ;
+  lemon:subjOfProp  :hablared_subj ;
+  lemon:objOfProp   :hablared_obj ;
+  lemon:condition   :hablar_sense_1_condition .
+:hablared_obj lemon:marker :por .
+
+:arg2 lemon:marker :form_hablar_form_preposition .
+
+## Prepositions ##
+
+:form_hablar_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "por"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

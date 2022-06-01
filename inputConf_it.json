@@ -1,6 +1,7 @@
 {
   "languageCode" : "it",
   "inputDir"     : "lexicon",
+   "online" : "true",
   "outputDir"    : "../resources/",
   "entityDir"    : "../resources/it/property/",
   "questionDir"  : "../resources/it/questions/",

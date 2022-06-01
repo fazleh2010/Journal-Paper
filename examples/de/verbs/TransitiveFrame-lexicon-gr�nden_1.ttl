@@ -40,8 +40,8 @@
   lexinfo:person   lexinfo:thirdPerson .
 
 :gr�nden_1_frame_transitive a lexinfo:TransitiveFrame ;
-  lexinfo:subject          :gr�nden_1_subj ;
-  lexinfo:directObject     :gr�nden_1_obj .
+  lexinfo:subject          :gr�nden_1_obj ;
+  lexinfo:directObject     :gr�nden_1_subj .
 
 :gr�nden_1_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
   lemon:ontoMapping :gr�nden_1_sense_1 ;
@@ -53,7 +53,7 @@
 
 :gr�nden_1_sense_1_condition a    lemon:condition ;
   lemon:propertyDomain <http://dbpedia.org/ontology/Company> ;
-  lemon:propertyRange  <http://dbpedia.org/ontology/Agent> .
+  lemon:propertyRange  <http://dbpedia.org/ontology/Pope> .
 
 :gr�nden_1ed a            lemon:LexicalEntry ;
   lexinfo:partOfSpeech lexinfo:adjective ;

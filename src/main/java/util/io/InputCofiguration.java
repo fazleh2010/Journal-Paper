@@ -57,6 +57,8 @@ public class InputCofiguration {
     private Boolean compositeFlag;
     @JsonProperty("single")
     private Boolean singleFlag;
+    @JsonProperty("online")
+    private Boolean online;
     
     
      
@@ -157,6 +159,10 @@ public class InputCofiguration {
     
     public String getClassDir() {
         return classDir;
+    }
+
+    public Boolean getOnline() {
+        return online;
     }
 
     

@@ -1,6 +1,7 @@
 {
   "languageCode" : "de",
   "inputDir"     : "lexicon",
+   "online" : "true",
   "outputDir"    : "../resources/",
   "entityDir"    : "../resources/de/property/",
   "questionDir"  : "../resources/de/questions/",
@@ -10,7 +11,7 @@
   "similarityThresold" : 0.7,
   "csvToTurtle" : true,
   "turtleToProtoType" : true,
-  "single": false,
+  "single": true,
   "composite": false,
   "protoTypeToQuestion" : false,
   "evalution" : false

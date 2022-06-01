@@ -16,7 +16,6 @@
   lemon:otherForm  :foundation_series_of_singular ;
   lemon:otherForm  :foundation_series_of_plural ;
   lemon:sense          :foundation_series_of_sense_1 ;
-  lemon:sense          :foundation_series_of_sense_2 ;
   lemon:synBehavior    :foundation_series_of_nounpp .
 
 :foundation_series_of_form a lemon:Form ;
@@ -31,8 +30,8 @@
   lexinfo:number    lexinfo:plural .
 
 :foundation_series_of_nounpp a        lexinfo:NounPPFrame ;
-  lexinfo:copulativeArg        :arg2 ;
-  lexinfo:prepositionalAdjunct :arg1 .
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
 
 :foundation_series_of_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
   lemon:ontoMapping         :foundation_series_of_sense_1 ;
@@ -44,17 +43,6 @@
 :foundation_series_of_sense_1_condition a lemon:condition ;
   lemon:propertyDomain  <http://dbpedia.org/ontology/Foundation_series> ;
   lemon:propertyRange   <http://dbpedia.org/ontology/Person> .
-
-:foundation_series_of_sense_2 a lemon:OntoMap, lemon:LexicalSense ;
-  lemon:ontoMapping         :foundation_series_of_sense_2 ;
-  lemon:reference           <http://dbpedia.org/ontology/series> ;
-  lemon:subjOfProp          :arg2 ;
-  lemon:objOfProp           :arg1 ;
-  lemon:condition           :foundation_series_of_sense_2_condition .
-
-:foundation_series_of_sense_2_condition a lemon:condition ;
-  lemon:propertyDomain  <http://dbpedia.org/ontology/Person> ;
-  lemon:propertyRange   <http://dbpedia.org/ontology/TelevisionShow> .
 
 :arg2 lemon:marker :foundation_series_of_form_preposition .
 ## Prepositions ##

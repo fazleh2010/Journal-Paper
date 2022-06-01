@@ -1,0 +1,69 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :vino ;
+  lemon:entry    :form_vino_present_preposition .
+
+:vino a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_vino_present ;
+  lemon:otherForm      :vino_present3rd ;
+  lemon:otherForm      :vino_past ;
+  lemon:otherForm      :vino_perfect ;
+  lemon:sense          :vino_sense_1 ;
+  lemon:synBehavior    :vino_frame .
+
+:form_vino_present a           lemon:Form ;
+  lemon:writtenRep     "vino"@es ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+
+:vino_present3rd a      lemon:Form ;
+  lemon:writtenRep "vino"@es ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:person   lexinfo:thirdPerson ;
+  lexinfo:tense    lexinfo:present .
+
+:vino_past a lemon:Form ;
+  lemon:writtenRep  "vino"@es ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:past .
+
+:vino_perfect a lemon:Form ;
+  lemon:writtenRep  "vino"@es ;
+  lexinfo:number    lexinfo:singular ;
+  lexinfo:person    lexinfo:thirdPerson ;
+  lexinfo:tense     lexinfo:perfect .
+
+:vino_frame a  lexinfo:IntransitivePPFrame ;
+  lexinfo:subject              :vino_subj ;
+  lexinfo:prepositionalAdjunct :vino_obj .
+
+:vino_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :vino_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/wineRegion> ;
+  lemon:subjOfProp  :vino_obj ;
+  lemon:objOfProp   :vino_subj ;
+  lemon:condition   :vino_sense_1_condition .
+
+:vino_sense_1_condition a      lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Grape> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Location> .
+
+
+:vino_obj lemon:marker :de .
+
+:arg2 lemon:marker :form_vino_present_preposition .
+
+## Prepositions ##
+
+:form_vino_present_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "de"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

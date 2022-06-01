@@ -43,8 +43,8 @@
   lexinfo:tense     lexinfo:perfect .
 
 :geborn_in_2_frame a  lexinfo:IntransitivePPFrame ;
-  lexinfo:subject              :geborn_in_2_obj ;
-  lexinfo:prepositionalAdjunct :geborn_in_2_subj .
+  lexinfo:subject              :geborn_in_2_subj ;
+  lexinfo:prepositionalAdjunct :geborn_in_2_obj .
 
 :geborn_in_2_sense_1 a     lemon:OntoMap, lemon:LexicalSense ;
   lemon:ontoMapping :geborn_in_2_ontomap ;

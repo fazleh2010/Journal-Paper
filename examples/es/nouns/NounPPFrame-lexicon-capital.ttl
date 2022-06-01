@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :capital ;
+  lemon:entry    :capital_form_preposition .
+
+:capital a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :capital_form ;
+  lemon:otherForm  :capital_singular ;
+  lemon:otherForm  :capital_plural ;
+  lemon:sense          :capital_sense_1 ;
+  lemon:synBehavior    :capital_nounpp .
+
+:capital_form a lemon:Form ;
+  lemon:writtenRep "capital"@es .
+
+:capital_singular a    lemon:Form ;
+  lemon:writtenRep "capital"@es ;
+  lexinfo:number   lexinfo:singular .
+
+:capital_plural a   lemon:Form ;
+  lemon:writtenRep "capitales"@es ;
+  lexinfo:number    lexinfo:plural .
+
+:capital_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:capital_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :capital_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/capital> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :capital_sense_1_condition .
+
+:capital_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Country> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Place> .
+
+:arg2 lemon:marker :capital_form_preposition .
+## Prepositions ##
+:capital_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "de"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

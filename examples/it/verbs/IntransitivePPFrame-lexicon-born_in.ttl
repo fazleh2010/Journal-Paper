@@ -20,24 +20,24 @@
   lemon:synBehavior    :born_in_frame .
 
 :form_born_in_present a           lemon:Form ;
-  lemon:writtenRep     "� nata"@it ;
+  lemon:writtenRep     "nascere"@it ;
   lexinfo:verbFormMood lexinfo:infinitive .
 
 
 :born_in_present3rd a      lemon:Form ;
-  lemon:writtenRep "� nata"@it ;
+  lemon:writtenRep "nasce"@it ;
   lexinfo:number   lexinfo:singular ;
   lexinfo:person   lexinfo:thirdPerson ;
   lexinfo:tense    lexinfo:present .
 
 :born_in_past a lemon:Form ;
-  lemon:writtenRep  "� nata"@it ;
+  lemon:writtenRep  "nato"@it ;
   lexinfo:number    lexinfo:singular ;
   lexinfo:person    lexinfo:thirdPerson ;
   lexinfo:tense     lexinfo:past .
 
 :born_in_perfect a lemon:Form ;
-  lemon:writtenRep  "� nata"@it ;
+  lemon:writtenRep  "nato"@it ;
   lexinfo:number    lexinfo:singular ;
   lexinfo:person    lexinfo:thirdPerson ;
   lexinfo:tense     lexinfo:perfect .

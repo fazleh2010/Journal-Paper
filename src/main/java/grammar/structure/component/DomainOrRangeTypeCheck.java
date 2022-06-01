@@ -243,7 +243,7 @@ public enum DomainOrRangeTypeCheck {
     )),
     
     occupation(List.of(URI.create(DBO.getUri() + "occupation"))),
-    THING(List.of(URI.create("http://www.w3.org/2002/07/owl#Thing"))); // default if no other matches
+    Thing(List.of(URI.create("http://www.w3.org/2002/07/owl#Thing"))); // default if no other matches
     
 
     public static final List<URI> MISSING_TYPES = new ArrayList<>();
@@ -269,7 +269,7 @@ public enum DomainOrRangeTypeCheck {
                     if (!uri.toString().isBlank() && !MISSING_TYPES.contains(uri)) {
                         MISSING_TYPES.add(uri);
                     }
-                    return THING;
+                    return Thing;
                 });
     }
 

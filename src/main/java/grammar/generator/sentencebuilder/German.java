@@ -90,6 +90,9 @@ public class German implements TempConstants,MultilingualBuilder {
         this.subjectUri = lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.subjOfProp).toString();
         this.objectUri = lexicalEntryUtil.getConditionUriBySelectVariable(SelectVariable.objOfProp).toString();
         this.referenceUri = lexicalEntryUtil.getReferenceUri();
+        
+        
+        
     }
 
     public static List<String> parseTemplate(String sentenceTemplate) {
@@ -323,6 +326,8 @@ public class German implements TempConstants,MultilingualBuilder {
         }
 
         System.out.println("word:::" + word);
+         System.out.println("domainVariable:::" + this.domainVariable);
+         System.out.println("rangeVariable:::" + this.rangeVariable);
 
         return word;
     }
@@ -413,16 +418,20 @@ public class German implements TempConstants,MultilingualBuilder {
             questionWord = LexicalEntryUtil.getSingle(this.lexicalEntryUtil, subjectType.name());
             noun="";
         }
-        /*System.out.println("subjectType.name()::" + subjectType.name());
+        System.out.println("subjectType.name()::" + subjectType.name());
         System.out.println("noun::" + noun);
         System.out.println("questionWord::" + questionWord);
-        exit(1);*/
+        //exit(1);
 
         return questionWord + " " + noun;
 
     }
 
     private String getConditionLabelManually(String domainOrRange, String numberType) {
+        System.out.println("domainOrRange::"+domainOrRange);
+        System.out.println("subjectUri::"+subjectUri);
+        System.out.println("objectUri::"+objectUri);
+
         if (domainOrRange.contains(domain) && numberType.contains(singular)) {
             return GenderUtils.getWrittenFormSingular(this.subjectUri);
         } else if (domainOrRange.contains(domain) && numberType.contains(plural)) {

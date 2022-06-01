@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :libros_en ;
+  lemon:entry    :libros_en_form_preposition .
+
+:libros_en a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :libros_en_form ;
+  lemon:otherForm  :libros_en_singular ;
+  lemon:otherForm  :libros_en_plural ;
+  lemon:sense          :libros_en_sense_1 ;
+  lemon:synBehavior    :libros_en_nounpp .
+
+:libros_en_form a lemon:Form ;
+  lemon:writtenRep "libro"@es .
+
+:libros_en_singular a    lemon:Form ;
+  lemon:writtenRep "libro"@es ;
+  lexinfo:number   lexinfo:singular .
+
+:libros_en_plural a   lemon:Form ;
+  lemon:writtenRep "libros"@es ;
+  lexinfo:number    lexinfo:plural .
+
+:libros_en_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg2 ;
+  lexinfo:prepositionalAdjunct :arg1 .
+
+:libros_en_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :libros_en_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/series> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :libros_en_sense_1_condition .
+
+:libros_en_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/WrittenWork> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/TelevisionShow> .
+
+:arg2 lemon:marker :libros_en_form_preposition .
+## Prepositions ##
+:libros_en_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "en"@es ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

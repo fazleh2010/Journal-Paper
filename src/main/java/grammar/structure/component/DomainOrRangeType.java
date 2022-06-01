@@ -219,13 +219,13 @@ public enum DomainOrRangeType {
     Lake(List.of(URI.create(DBO.getUri() + "Lake"))),
     Bridge(List.of(URI.create(DBO.getUri() + "Bridge"))),
     Location(List.of(URI.create(DBO.getUri() + "Location"))),
-    Thing(List.of(URI.create(DBO.getUri() + "Thing"))),
+    //Thing(List.of(URI.create(DBO.getUri() + "Thing"))),
     Article(List.of(URI.create(DBO.getUri() + "Article"))),
     Play(List.of(URI.create(DBO.getUri() + "Play"))),
     Genre(List.of(URI.create(DBO.getUri() + "Genre"))),
     MountainRange(List.of(URI.create(DBO.getUri() + "MountainRange"))),
     MilitaryUnit(List.of(URI.create(DBO.getUri() + "MilitaryUnit"))),
-    THING(List.of(URI.create("http://www.w3.org/2002/07/owl#Thing"))); // default if no other matches
+    Thing(List.of(URI.create("http://www.w3.org/2002/07/owl#Thing"))); // default if no other matches
 
     public static final List<URI> MISSING_TYPES = new ArrayList<>();
     private final List<URI> references;
@@ -242,7 +242,7 @@ public enum DomainOrRangeType {
                     if (!uri.toString().isBlank() && !MISSING_TYPES.contains(uri)) {
                         MISSING_TYPES.add(uri);
                     }
-                    return THING;
+                    return Thing;
                 });
     }
 

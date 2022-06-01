@@ -8,9 +8,12 @@ exhibit,verb,esporre,espone,ha esposto,Š esposto,TransitiveFrame,range,domain,1,
 discover,verb,scoprire,scopre,ha scoperto,Š stato scoperto,TransitiveFrame,range,domain,1,dbo:discoverer,dbo:Planet,dbo:Person,masculine_il,pianeta,pianeti,feminine_la,persona,persone,da
 cross,verb,attraversare,attraversa,ha attraversato,Š attraversato,TransitiveFrame,range,domain,1,dbo:crosses,dbo:Bridge,dbo:River,masculine_il,ponte,pont,masculine_il,fiume,fiumi,da
 win,verb,vincere,vince,ha vinto,Š stato vinto,TransitiveFrame,range,domain,1,dbo:award,dbo:Scientist,dbo:Award,masculine_lo,scienziato,scienziati,masculine_il,premio,premi,da
-create_1,verb,creare,creato,ha creato,Š stato creato,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Agent,masculine_lo,show televisivo,show televisivi,masculine_l,agente,agenti,da
+create_1,verb,creare,creato,creato,creato,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Agent,masculine_lo,show televisivo,show televisivi,masculine_l,agente,agenti,da
+create_2,verb,creare,creato,creato,creato,TransitiveFrame,range,domain,1,dbo:author,dbo:Website,dbo:Agent,masculine_lo,luogo,luogo,masculine_l,agente,agenti,da
+create_3,verb,creare,creato,creato,creato,TransitiveFrame,range,domain,1,dbo:developer,dbo:VideoGame,dbo:Agent,masculine_il,videogioco,videogioco,masculine_l,agente,agenti,da
+create_4,verb,creare,creato,creato,creato,TransitiveFrame,domain,range,1,dbo:creator,dbo:TelevisionShow,dbo:Person,masculine_lo,serie televisive,serie televisive,feminine_la,persona,persone,da
 write_1,verb,scrivere,scrive,ha scritto,Š stata scritta,TransitiveFrame,range,domain,1,dbo:writer,dbo:Song,dbo:Person,feminine_la,canzone,canzoni,feminine_la,persona,persone,da
-write_2,verb,scrivere,scrive,ha scritto,Š stata scritta,TransitiveFrame,range,domain,1,dbo:author,dbo:WrittenWork,dbo:Person,feminine_la,persona,persone,feminine_l,opera,opere,da
+write_2,verb,scrivere,scrive,ha scritto,Š stata scritta,TransitiveFrame,range,domain,1,dbo:author,dbo:WrittenWork,dbo:Person,feminine_la,libro,libro,feminine_la,persona,persone,da
 write_3,verb,scrivere,scrive,ha scritto,Š stato scritto,TransitiveFrame,range,domain,1,dbo:composer,dbo:TelevisionShow,dbo:Person,masculine_lo,show televisivo,show televisivi,feminine_la,persona,persone,da
 starr,verb,recitare in,recita in,ha recitato in,Š recitato,TransitiveFrame,range,domain,1,dbo:starring,dbo:Film,dbo:Person,masculine_il,film,films,masculine_l,attore,attori,da
 operate_1,verb,operare,opera,ha operato,Š operato,TransitiveFrame,range,domain,1,dbp:operator,dbo:LaunchPad,dbo:Organisation,feminine_la,rampa di lancio,rampe di lancio,masculine_l,organizzazione,organizzazioni,da
@@ -24,9 +27,9 @@ design_1,verb,progettare,progetta,ha progettato,Š stato progettato,TransitiveFra
 publish_1,verb,pubblicare,pubblica,ha pubblicato,Š stato pubblicato,TransitiveFrame,range,domain,1,dbo:publisher,dbo:Book,dbo:Agent,masculine_il,libro,libri,masculine_l,agente,agenti,da
 publish_2,verb,pubblicare,pubblica,ha pubblicato,Š stato pubblicato,TransitiveFrame,range,domain,1,dbo:publisher,dbo:Book,dbo:Publisher,masculine_il,libro,libri,feminine_l,azienda,azienda,da
 present,verb,presentare,presenta,ha presentato,Š presentato da,TransitiveFrame,range,domain,1,dbo:presenter,dbo:TelevisionShow,dbo:Person,masculine_lo,show televisivo,show televisivi,feminine_la,persona,persone,da
-speak,verb,parlare,parla,ha parlato,Š parlato,TransitiveFrame,range,domain,1,dbo:language,dbo:Language,dbo:Country,masculine,Lingua,Lingua,masculine,Lingua,Lingua,in
+speak,verb,parlare,parla,parlato,parlato,TransitiveFrame,range,domain,1,dbo:language,dbo:Language,dbo:Country,masculine,Lingua,Lingua,masculine,Lingua,Lingua,in
 live_1,verb,vivono,vivono,vivono,vivono,TransitiveFrame,range,domain,1,dbo:ethnicGroup,dbo:EthnicGroup,dbo:Country,masculine,grupo ‚tnico,grupos ‚tnicos,masculine,paese,paesi,in
-express,verb,esprime,esprime,esprime,esprime,TransitiveFrame,range,domain,1,dbo:connotation,dbo:Colour,owl:Thing,masculine,colore,colore,-,-,-,por
+express,verb,esprime,esprime,esprime,esprime,TransitiveFrame,range,domain,1,dbo:connotation,dbo:Colour,owl:Thing,masculine,colore,colore,-,-,-,da
 compose,verb,comporre la colonna sonora,comporre la colonna sonora,ha composto la colonna sonora,ha composto la colonna sonora,TransitiveFrame,range,domain,1,dbo:musicComposer,dbo:Film,dbo:Person,masculine_il,film,films,feminine,persona,personas,da
 producono,verb,producono,producono,producono,producono,TransitiveFrame,range,domain,1,dbo:product,dbo:Company,dbo:Ship,feminine_la,compagnia,compagnie,feminine,Nave,Nave,da
 inspirar_1,verb,inspirato,inspirato,ha inspirato,ha inspirato,TransitiveFrame,range,domain,1,dbo:influenced,dbo:Person,dbo:Person,feminine_la,persona,persone,feminine_la,persona,persone,Da

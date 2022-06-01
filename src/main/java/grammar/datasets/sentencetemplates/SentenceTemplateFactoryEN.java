@@ -919,15 +919,19 @@ class SentenceTemplateFactoryEN implements Factory<SentenceTemplateRepository>,T
       createSentenceTemplate(
         language,
         List.of(
-        //How high is the lighthouse in Colombo?
-        //"interrogativeEvalution adjective(baseForm) verb(component_be:present:singular) determiner(component_the) noun(range:singular) preposition adjunct(domain)?",
-        //How high is the lighthouse?
-         "interrogativeEvalution adjective(baseForm) verb(component_be:present:singular) object(range)?"
+        /*//How high is the lighthouse in Colombo?
+         //"interrogativeEvalution adjective(adjectiveBaseForm) verb(component_be:present:singular) determiner(component_the) noun(range:singular) preposition adjunct(domain)?",
+        */
+         //temporay closed       
+         //How high is the lighthouse?
+         //"interrogativeEvalution adjective(adjectiveBaseForm) verb(component_be:present:singular) object(range)?"
+        
+                
         /*
         //How high is the lighthouse in Colombo?
-        "interrogativeEvalution adjective(baseForm) verb(component_be:present:singular) determiner(component_the) adjunct(range)?",
+        "interrogativeEvalution adjective(adjectiveBaseForm) verb(component_be:present:singular) determiner(component_the) adjunct(range)?",
         //How high is the lighthouse?
-        "interrogativeEvalution adjective(baseForm) verb(component_be:present:singular) determiner(component_the) noun(range) preposition adjunct(domain)?"
+        "interrogativeEvalution adjective(adjectiveBaseForm) verb(component_be:present:singular) determiner(component_the) noun(range) preposition adjunct(domain)?"
         */
         ),
         AdjectiveSuperlativeFrame,

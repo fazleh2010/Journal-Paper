@@ -80,12 +80,12 @@
   lemon:subjOfProp  :expressed_subj ;
   lemon:objOfProp   :expressed_obj ;
   lemon:condition   :express_sense_1_condition .
-:expressed_obj lemon:marker :por .
+:expressed_obj lemon:marker :da .
 
 :arg2 lemon:marker :form_express_form_preposition .
 
 ## Prepositions ##
 
 :form_express_preposition a                  lemon:SynRoleMarker ;
-  lemon:canonicalForm  [ lemon:writtenRep "por"@en ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "da"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .

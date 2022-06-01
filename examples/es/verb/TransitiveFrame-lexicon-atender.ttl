@@ -1,0 +1,91 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "es" ;
+  lemon:entry    :to_atender ;
+  lemon:entry    :atendered ;
+  lemon:entry    :form_atender_preposition .
+
+:to_atender a           lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm  :form_atender ;
+  lemon:otherForm      :form_atenders ;
+  lemon:otherForm      :form_atendered ;
+  lemon:sense          :atender_sense_1 ;
+  lemon:synBehavior    :atender_frame_transitive .
+
+:form_atender a         lemon:Form ;
+  lemon:writtenRep     "atender"@es ;
+  lexinfo:verbFormMood lexinfo:infinitive .
+
+:form_atenders a    lemon:Form ;
+  lemon:writtenRep "atiende"@es ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+
+:form_atenders a    lemon:Form ;
+  lemon:writtenRep "atendi�"@es ;
+  lexinfo:tense    lexinfo:past ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:form_atendered a   lemon:Form ;
+  lemon:writtenRep "atendido"@es ;
+  lexinfo:tense    lexinfo:perfect ;
+  lexinfo:person   lexinfo:thirdPerson .
+
+:atender_frame_transitive a lexinfo:TransitiveFrame ;
+  lexinfo:subject          :atender_subj ;
+  lexinfo:directObject     :atender_obj .
+
+:atender_sense_1 a   lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :atender_sense_1 ;
+  lemon:reference   <http://dbpedia.org/ontology/targetAirport> ;
+  lemon:subjOfProp  :atender_obj ;
+  lemon:objOfProp   :atender_subj ;
+  lemon:condition   :atender_sense_1_condition .
+
+
+:atender_sense_1_condition a    lemon:condition ;
+  lemon:propertyDomain <http://dbpedia.org/ontology/Airline> ;
+  lemon:propertyRange  <http://dbpedia.org/ontology/Airport> .
+
+:atendered a            lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_atendered_canonical ;
+  lemon:otherForm      :form_atendered_by ;
+  lemon:synBehavior    :atendered_frame_adjectivepp ;
+  lemon:sense          :atendered_ontomap .
+
+:form_atendered_canonical a lemon:Form ;
+  lemon:writtenRep         "atender"@es .
+
+:form_atendered_by a    lemon:Form ;
+  lemon:writtenRep     "atender"@es ;
+  lexinfo:verbFormMood lexinfo:participle .
+
+
+:atendered_frame_adjectivepp a  lexinfo:AdjectivePPFrame ;
+  lexinfo:copulativeSubject    :atendered_subj ;
+  lexinfo:prepositionalAdjunct :atendered_obj .
+
+:atendered_ontomap a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping :atendered_ontomap ;
+  lemon:reference   <http://dbpedia.org/ontology/targetAirport> ;
+  lemon:subjOfProp  :atendered_subj ;
+  lemon:objOfProp   :atendered_obj ;
+  lemon:condition   :atender_sense_1_condition .
+:atendered_obj lemon:marker :por .
+
+:arg2 lemon:marker :form_atender_form_preposition .
+
+## Prepositions ##
+
+:form_atender_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "por"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

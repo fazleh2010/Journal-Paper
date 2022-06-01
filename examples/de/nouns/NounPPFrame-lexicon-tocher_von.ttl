@@ -19,6 +19,7 @@
   lemon:otherForm      :tocher_von_genitive_form ;
   lemon:otherForm      :tocher_von_plural_form ;
   lemon:sense          :tocher_von_sense_1 ;
+  lemon:sense          :tocher_von_sense_2 ;
   lemon:synBehavior    :tocher_von_nounpp .
 
 :tocher_von_form a lemon:Form ;
@@ -63,6 +64,17 @@
   lemon:condition           :tocher_von_sense_1_condition .
 
 :tocher_von_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Person> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Person> .
+
+:tocher_von_sense_2 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :tocher_von_sense_2 ;
+  lemon:reference           <http://dbpedia.org/ontology/child> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :tocher_von_sense_2_condition .
+
+:tocher_von_sense_2_condition a lemon:condition ;
   lemon:propertyDomain  <http://dbpedia.org/ontology/Person> ;
   lemon:propertyRange   <http://dbpedia.org/ontology/Person> .
 

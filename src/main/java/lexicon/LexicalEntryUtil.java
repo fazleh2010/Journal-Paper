@@ -829,10 +829,10 @@ public class LexicalEntryUtil implements TempConstants{
     
     public String getAdjectiveReference(String reference) {
 
-        if(reference.contains(adjectiveBaseForm)){
-            return this.getAdjectiveReference();        }
-        
-        
+        if (reference.contains(adjectiveBaseForm)) {
+            return this.getAdjectiveReference();
+        }
+
         for (LexicalForm lexicalForm : this.lexicalEntry.getForms()) {
             Pair<Boolean, String> pair = getLastPart(lexicalForm.toString());
             if (reference.contains(superlative) || reference.contains(comperative)) {
@@ -843,7 +843,7 @@ public class LexicalEntryUtil implements TempConstants{
         }
         return reference;
     }
-    
+
     public String getAdjectiveReference() {
 
         for (LexicalForm lexicalForm : this.lexicalEntry.getForms()) {

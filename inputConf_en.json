@@ -1,5 +1,6 @@
 {
   "languageCode" : "en",
+   "online" : "true",
   "inputDir"     : "lexicon",
   "outputDir"    : "../resources/",
   "entityDir"    : "../resources/en/property/",

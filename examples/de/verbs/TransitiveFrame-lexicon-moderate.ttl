@@ -35,7 +35,7 @@
   lexinfo:person   lexinfo:thirdPerson .
 
 :form_moderateed a   lemon:Form ;
-  lemon:writtenRep "hat moderiert"@de ;
+  lemon:writtenRep "moderiert"@de ;
   lexinfo:tense    lexinfo:perfect ;
   lexinfo:person   lexinfo:thirdPerson .
 

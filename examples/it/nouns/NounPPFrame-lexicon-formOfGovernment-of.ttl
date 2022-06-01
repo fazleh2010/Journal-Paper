@@ -42,8 +42,8 @@
   lemon:condition           :formOfGovernment-of_sense_1_condition .
 
 :formOfGovernment-of_sense_1_condition a lemon:condition ;
-  lemon:propertyDomain  <http://dbpedia.org/ontology/Country> ;
-  lemon:propertyRange   <http://dbpedia.org/ontology/GovernmentType> .
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Place> ;
+  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#string> .
 
 :formOfGovernment-of_sense_2 a lemon:OntoMap, lemon:LexicalSense ;
   lemon:ontoMapping         :formOfGovernment-of_sense_2 ;
@@ -53,8 +53,8 @@
   lemon:condition           :formOfGovernment-of_sense_2_condition .
 
 :formOfGovernment-of_sense_2_condition a lemon:condition ;
-  lemon:propertyDomain  <http://dbpedia.org/ontology/Place> ;
-  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#string> .
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Country> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/GovernmentType> .
 
 :arg2 lemon:marker :formOfGovernment-of_form_preposition .
 ## Prepositions ##
