@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :year_of ;
+  lemon:entry    :year_of_form_preposition .
+
+:year_of a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :year_of_form ;
+  lemon:otherForm  :year_of_singular ;
+  lemon:otherForm  :year_of_plural ;
+  lemon:sense          :year_of_sense_1 ;
+  lemon:synBehavior    :year_of_nounpp .
+
+:year_of_form a lemon:Form ;
+  lemon:writtenRep "year"@en .
+
+:year_of_singular a    lemon:Form ;
+  lemon:writtenRep "year"@en ;
+  lexinfo:number   lexinfo:singular .
+
+:year_of_plural a   lemon:Form ;
+  lemon:writtenRep "years"@en ;
+  lexinfo:number    lexinfo:plural .
+
+:year_of_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:year_of_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :year_of_sense_1 ;
+  lemon:reference           <http://swrc.ontoware.org/ontology#year> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :year_of_sense_1_condition .
+
+:year_of_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://swrc.ontoware.org/ontology#Publication> ;
+  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#string> .
+
+:arg2 lemon:marker :year_of_form_preposition .
+## Prepositions ##
+:year_of_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "of"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

@@ -1,0 +1,36 @@
+LemonEntry,partOfSpeech,writtenFormInfinitive,writtenForm3rdPresent,writtenFormPast,writtenFormPerfect,SyntacticFrame,subject,directObject,sense,reference,domain,range,domainArticle,domainWrittenSingular,domainWrittenPlural,rangeArticle,rangeWrittenSingular,rangeWrittenPlural,passivePreposition
+moderate,verb,moderieren,moderiert,moderiert,moderiert,TransitiveFrame,range,domain,1,dbo:presenter,dbo:TelevisionShow,dbo:Person,feminine,Fernsehsendung,Fernsehsendungen,masculine,Person,Personen,von
+ausdenken,TrennVerb,ausdenken,dachte aus,denkt aus,ausgedacht,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Person,feminine,Fernsehsendung,Fernsehsendungen,masculine,Person,Personen,von
+entwickeln,verb,entwickeln,entwickelt,entwickelte,entwickelt,TransitiveFrame,domain,range,1,dbo:product,dbo:Company,dbo:Software,feminine,feminine,Software,feminine,Gesellschaft,Gesellschaften,von
+komponieren,verb,komponieren,komponiert,komponierte,komponiert,TransitiveFrame,range,domain,1,dbo:musicComposer,dbo:Film,dbo:Person,masculine,Film,Filme,feminine,Person,Personen,von
+malen,verb,malen,malt,malte,gemalt,TransitiveFrame,range,domain,1,dbp:artist,dbo:Work,dbo:Person,neuter,Werk,Werke,masculine,Person,Personen,von
+verlegen,verb,verlegen,verlegt,verlegte,verlegt,TransitiveFrame,range,domain,1,dbo:publisher,dbo:Work,dbo:Person,neuter,Werk,Werke,masculine,Person,Personen,von
+｜erspannen,verb,｜erspannen,｜erspannt,｜erspannte,｜erspannt,TransitiveFrame,domain,range,1,dbo:crosses,dbo:Bridge,dbo:River,feminine,Br…ke,Br…ken,masculine,Fluss,Fl《se,vom
+gewinnen,verb,gewinnen,gewinnt,gewann,gewonnen,TransitiveFrame,range,domain,1,dbo:award,dbo:Scientist,dbo:Award,masculine,Wissenschaftlerin,Wissenschaftlerin,masculine,Preis,Preise,von
+kosten,verb,kosten,kostet,kostete,gekostet,TransitiveFrame,range,domain,1,dbo:budget,dbo:Film,xsd:double,masculine,Film,Filme,-,-,-,von
+Schreiben_1,verb,schreiben,schreibt,schrieb,geschrieben,TransitiveFrame,range,domain,1,dbo:writer,dbo:Song,dbo:Person,neuter,Lied,Lieder,masculine,Person,Personen,von
+Schreiben_2,verb,schreiben,schreibt,schrieb,geschrieben,TransitiveFrame,range,domain,1,dbo:composer,dbo:TelevisionShow,dbo:Person,feminine,Fernsehsendung,Fernsehsendungen,masculine,Person,Personen,von
+Schreiben_3,verb,schreiben,schreibt,schrieb,geschrieben,TransitiveFrame,range,domain,1,dbo:musicComposer,dbo:Film,dbo:Person,masculine,Film,Filme,masculine,Person,Personen,von
+Schreiben_5,verb,schreiben,schreibt,schrieb,geschrieben,TransitiveFrame,range,domain,1,dbo:author,dbo:Book,dbo:Person,masculine,Person,Personen,neuter,Buch,B…her,von
+erfinden,verb,erfinden,erfindet,erfand,erfunden,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Person,feminine,Fernsehsendung,Fernsehsendungen,masculine,Person,Personen,von
+ausdenken,RefVerb,ausdenken,denkt aus,dachte aus,ausgedacht,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Person,feminine,Fernsehsendung,Fernsehsendungen,feminine,Person,Personen,von
+besuchen,verb,besuchen,besucht,besuchte,besucht,TransitiveFrame,range,domain,1,dbo:almaMater,dbo:Person,dbo:University,feminine,Person,Personen,feminine,Universitд,Universitд,von
+betreiben,verb,betreiben,betreibt,betrieb,betrieben,TransitiveFrame,domain,range,1,dbo:operator,dbo:Company,dbo:LaunchPad,feminine,Firma,Firmen,feminine,Startrampe,Startrampen,von
+nennen,RefVerb,sich nennen,nennt,nannte,genannt,TransitiveFrame,domain,range,1,dbp:nickname,dbo:Person,xsd:String,masculine,Person,Personen,-,-,-,von
+gr］den_1,verb,gr］den,gr］det,gr］dete,gegr］det,TransitiveFrame,domain,range,1,dbo:foundedBy,dbo:Company,dbo:Pope,masculine,Firma,Firmen,masculine,Papst,Papst,von
+Gr］den_2,verb,gr］den,gr］det,gr］dete,gegr］det,TransitiveFrame,range,domain,1,dbo:author,dbo:Website,dbo:Agent,feminine,Webseite,Webseiten,masculine,Agent,Agenten,von
+Gr］den_3,verb,gr］den,gr］det,gr］dete,gegr］det,TransitiveFrame,range,domain,1,dbo:founder,dbo:Publisher,dbo:Person,masculine,Herausgeber,Herausgeber,masculine,Person,Personen,von
+besteigen,verb,besteigen,besteigt,bestieg,bestiegen,TransitiveFrame,range,domain,1,dbo:firstAscentPerson,dbo:Mountain,dbo:Person,neuter,Berg,Berg,masculine,Person,Personen,von
+entdecken,verb,entdecken,entdeckt,entdeckte,entdeckt,TransitiveFrame,range,domain,1,dbo:discoverer,dbo:CelestialBody,dbo:Person,masculine,Himmelsk排per,Himmelsk排per,masculine,Person,Personen,von
+Spielen_1,verb,spielen,spielt,spielte,gespielt,TransitiveFrame,range,domain,1,dbp:portrayer,dbo:FictionalCharacter,dbo:Person,masculine,Charakter,Charaktere,masculine,Person,Personen,von
+Spielen_2,verb,spielen,spielt,spielte,gespielt,TransitiveFrame,range,domain,1,dbp:portrayer,dbo:FictionalCharacter,dbo:Person,masculine,Charakter,Charaktere,masculine,Person,Personen,von
+drehen,verb,drehen,dreht,drehte,gedreht,TransitiveFrame,range,domain,1,dbo:director,dbo:Film,dbo:Person,masculine,Film,Filme,masculine,Person,Personen,von
+beeinflussen,verb,beeinflussen,beeinflusst,beeinflusste,beeinflusst,TransitiveFrame,range,domain,1,dbo:influencedBy,dbo:Person,dbo:Person,masculine,Person,Personen,masculine,Person,Personen,von
+inspirieren,verb,inspirieren,inspiriert,inspirierte,insipriert,TransitiveFrame,domain,range,1,dbo:influenced,dbo:Artist,dbo:Artist,masculine,K］stler,K］stler,masculine,K］stler,K］stler,von
+Entwerfen_1,verb,entwerfen,entwirft,entwarf,entworfen,TransitiveFrame,range,domain,1,dbo:architect,dbo:Bridge,dbo:Person,feminine,Br…ke,Br…ken,masculine,Person,Personen,von
+Entwerfen_2,verb,entwerfen,entwirft,entwarf,entworfen,TransitiveFrame,range,domain,1,dbo:creator,dbo:TelevisionShow,dbo:Agent,feminine,Fernsehserie,Fernsehserien,masculine,agents,Agenten,von
+Entwerfen_3,verb,entwerfen,entwirft,entwarf,entworfen,TransitiveFrame,range,domain,1,dbo:author,dbo:Website,dbo:Person,feminine,Website,Websites,feminine,Person,Personen,von
+betreiben,verb,betreiben,betreibt,betrieb,betrieben,TransitiveFrame,domain,range,1,dbo:operator,dbo:LaunchPad,dbo:Organisation,feminine,Startrampe,Startrampen,feminine,Organisation,Organisationen,von
+stellen,verb,stellen,stellt,stellte,gestellt,TransitiveFrame,domain,range,1,dbo:product,dbo:Company,dbo:Ship,neuter,Schiff,Schiffe,feminine,Firma,Firmen,von
+heiraten,verb,heiraten,heiratet,heiratete,geheiratet,TransitiveFrame,range,domain,1,dbo:spouse,dbo:Person,dbo:Person,feminine,Person,Personen,feminine,Person,Personen,mit
+verheiraten,verb,verheiraten,verheirat,verheirate,verheiratet,TransitiveFrame,range,domain,1,dbo:spouse,dbo:Person,dbo:Person,feminine,Person,Personen,feminine,Person,Personen,mit

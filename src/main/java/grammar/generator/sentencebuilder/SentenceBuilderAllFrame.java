@@ -141,7 +141,7 @@ public class SentenceBuilderAllFrame implements SentenceBuilder, TempConstants {
         }
         
         //System.out.println("this.templateFinder.getSelectedTemplate()::"+this.templateFinder.getSelectedTemplate());
-        //System.out.println("sentences::"+sentences);
+        System.out.println("sentences::"+sentences);
 
       
         /*List<String> sentenceTemplates = getSentenceTemplateRepository().findOneByEntryTypeAndLanguageAndArguments(SentenceType.SENTENCE,

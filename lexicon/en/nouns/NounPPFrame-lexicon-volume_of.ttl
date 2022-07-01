@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :volume_of ;
+  lemon:entry    :volume_of_form_preposition .
+
+:volume_of a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :volume_of_form ;
+  lemon:otherForm  :volume_of_singular ;
+  lemon:otherForm  :volume_of_plural ;
+  lemon:sense          :volume_of_sense_1 ;
+  lemon:synBehavior    :volume_of_nounpp .
+
+:volume_of_form a lemon:Form ;
+  lemon:writtenRep "volume"@en .
+
+:volume_of_singular a    lemon:Form ;
+  lemon:writtenRep "volume"@en ;
+  lexinfo:number   lexinfo:singular .
+
+:volume_of_plural a   lemon:Form ;
+  lemon:writtenRep "volumes"@en ;
+  lexinfo:number    lexinfo:plural .
+
+:volume_of_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:volume_of_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :volume_of_sense_1 ;
+  lemon:reference           <http://swrc.ontoware.org/ontology#volume> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :volume_of_sense_1_condition .
+
+:volume_of_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://swrc.ontoware.org/ontology#Publication> ;
+  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#string> .
+
+:arg2 lemon:marker :volume_of_form_preposition .
+## Prepositions ##
+:volume_of_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "of"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

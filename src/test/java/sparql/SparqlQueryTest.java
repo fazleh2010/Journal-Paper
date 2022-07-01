@@ -18,11 +18,11 @@ import org.junit.jupiter.api.Test;
 public class SparqlQueryTest {
 
     public static void main(String[] args) {
-        labelTest();
+        //labelTest();
         //answerTest();
            }
 
-    private static void labelTest() {
+    /*private static void labelTest() {
         SparqlQuery sparqlQuery = new SparqlQuery();
         String uri = "http://dbpedia.org/resource/Heineken";
         String language = "de";
@@ -30,7 +30,7 @@ public class SparqlQueryTest {
         System.out.println("labelSprql::" + labelSprql);
         String resultSparql = sparqlQuery.executeSparqlQueryCurl(labelSprql);
         System.out.println(uri);
-    }
+    }*/
 
     /*@Test
     private static void answerTest() {

@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :series_of ;
+  lemon:entry    :series_of_form_preposition .
+
+:series_of a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :series_of_form ;
+  lemon:otherForm  :series_of_singular ;
+  lemon:otherForm  :series_of_plural ;
+  lemon:sense          :series_of_sense_1 ;
+  lemon:synBehavior    :series_of_nounpp .
+
+:series_of_form a lemon:Form ;
+  lemon:writtenRep "series"@en .
+
+:series_of_singular a    lemon:Form ;
+  lemon:writtenRep "series"@en ;
+  lexinfo:number   lexinfo:singular .
+
+:series_of_plural a   lemon:Form ;
+  lemon:writtenRep "XX"@en ;
+  lexinfo:number    lexinfo:plural .
+
+:series_of_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:series_of_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :series_of_sense_1 ;
+  lemon:reference           <http://swrc.ontoware.org/ontology#series> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :series_of_sense_1_condition .
+
+:series_of_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://swrc.ontoware.org/ontology#Book> ;
+  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#string> .
+
+:arg2 lemon:marker :series_of_form_preposition .
+## Prepositions ##
+:series_of_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "of"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

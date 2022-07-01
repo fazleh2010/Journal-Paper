@@ -43,24 +43,14 @@ public class ReferenceManagement implements ReadWriteConstants {
     private Collection<String> notAddressedProperties = new TreeSet<String>();
     private String propertyFile = null;
     
-    
-    public ReferenceManagement(String offLinePropertyDir) {
-        String[] file = new File(offLinePropertyDir).list();
-        for (String fileString : file) {
-            if (fileString.contains("dbo_") || fileString.contains("dbp_")) {
-                this.offlineGeneratedEntities.add(FilenameUtils.removeExtension(new File(fileString).getName()));
-            }
 
-        }
-
-    }
 
     public ReferenceManagement(String propertyDir, String entityDir, List<File> protoSimpleQFiles, String type) {
         this.propertyFile = propertyDir + File.separator + "property.txt";
         if (type.contains(GENERATED)) {
             String[] file = new File(propertyDir).list();
             for (String fileString : file) {
-                if (fileString.contains("dbo_") || fileString.contains("dbp_")) {
+                if ((fileString.contains("dbo_") || fileString.contains("dbp_"))) {
                     this.offlineGeneratedProperties.add(FilenameUtils.removeExtension(new File(fileString).getName()));
                 }
 
@@ -90,10 +80,9 @@ public class ReferenceManagement implements ReadWriteConstants {
             GrammarEntries grammarEntries;
             try {
                 grammarEntries = mapper.readValue(jsonFile, GrammarEntries.class);
-                Set<String> queggProperties = new TreeSet<String>();
                 for (GrammarEntryUnit grammarEntryUnit : grammarEntries.getGrammarEntries()) {
                     String property = getProperty(grammarEntryUnit.getSparqlQuery());
-                    if (isMatched(property)) {
+                    if (offlineGeneratedProperties.contains(property)) {
                         matchedProperties.add(property);
                     } else {
                         notMatchedProperties.add(property);
@@ -165,21 +154,20 @@ public class ReferenceManagement implements ReadWriteConstants {
         return property;
     }
 
-    private boolean isMatched(String property) {
+    /*private boolean isMatched(String property) {
 
         for (String offlineProp : this.offlineGeneratedProperties) {
             property = property.toLowerCase().strip().stripLeading().stripTrailing().trim();
             offlineProp = offlineProp.toLowerCase().strip().stripLeading().stripTrailing().trim();
+
             if (offlineProp.contains(property)) {
                 return true;
             }
-            // if(property.contains("capital"))
-            //System.out.println("property::"+property+" "+"offlineProp::"+offlineProp);
 
         }
 
         return false;
-    }
+    }*/
 
     public static void setToFile(Set<String> properties, String fileName) throws IOException, Exception {
         if(properties.isEmpty()){

@@ -1,0 +1,87 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :Staatsangeh�rigkeit_of ;
+  lemon:entry    :Staatsangeh�rigkeit_of_form_preposition .
+
+:Staatsangeh�rigkeit_of a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :Staatsangeh�rigkeit_of_form ;
+  lemon:otherForm      :Staatsangeh�rigkeit_of_plural_form ;
+  lemon:otherForm      :Staatsangeh�rigkeit_of_accusative_form ;
+  lemon:otherForm      :Staatsangeh�rigkeit_of_dative_form ;
+  lemon:otherForm      :Staatsangeh�rigkeit_of_genitive_form ;
+  lemon:otherForm      :Staatsangeh�rigkeit_of_plural_form ;
+  lemon:sense          :Staatsangeh�rigkeit_of_sense_1 ;
+  lemon:sense          :Staatsangeh�rigkeit_of_sense_2 ;
+  lemon:synBehavior    :Staatsangeh�rigkeit_of_nounpp .
+
+:Staatsangeh�rigkeit_of_form a lemon:Form ;
+  lemon:writtenRep "Staatsangeh�rigkeit"@de ;
+  lexinfo:gender   lexinfo:feminine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:nominativeCase .
+
+:Staatsangeh�rigkeit_of_plural_form a lemon:Form ;
+  lemon:writtenRep "Staatsangeh�rigkeit"@de ;
+  lexinfo:gender   lexinfo:feminine ;
+  lexinfo:number   lexinfo:plural ;
+  lexinfo:case     lexinfo:nominativeCase .
+
+:Staatsangeh�rigkeit_of_accusative_form a lemon:Form ;
+  lemon:writtenRep "Staatsangeh�rigkeit"@de ;
+  lexinfo:gender   lexinfo:feminine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:accusativeCase .
+
+:Staatsangeh�rigkeit_of_dative_form a lemon:Form ;
+  lemon:writtenRep "Staatsangeh�rigkeit"@de ;
+  lexinfo:gender   lexinfo:feminine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:dativeCase .
+
+:Staatsangeh�rigkeit_of_genitive_form a lemon:Form ;
+  lemon:writtenRep "Staatsangeh�rigkeit"@de ;
+  lexinfo:gender   lexinfo:feminine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:genitiveCase .
+
+:Staatsangeh�rigkeit_of_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:Staatsangeh�rigkeit_of_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :Staatsangeh�rigkeit_of_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/nationality> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :Staatsangeh�rigkeit_of_sense_1_condition .
+
+:Staatsangeh�rigkeit_of_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Person> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Country> .
+
+:Staatsangeh�rigkeit_of_sense_2 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :Staatsangeh�rigkeit_of_sense_2 ;
+  lemon:reference           <http://dbpedia.org/ontology/nationality> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :Staatsangeh�rigkeit_of_sense_2_condition .
+
+:Staatsangeh�rigkeit_of_sense_2_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Person> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Country> .
+
+:arg2 lemon:marker :Staatsangeh�rigkeit_of_form_preposition .
+
+## Prepositions ##
+
+:Staatsangeh�rigkeit_of_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "von"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

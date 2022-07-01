@@ -1,0 +1,2 @@
+lemon,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingularForm,domainWrittenPluralForm,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
+abstract_of,noun,abstract,abstracts,of,NounPPFrame,range,domain,1,:abstract,:Publication,xsd:string,Proceeding,Proceedings,-,-

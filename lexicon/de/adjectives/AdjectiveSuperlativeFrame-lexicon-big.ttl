@@ -1,0 +1,47 @@
+@prefix :        <http://localhost:8080/#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+@prefix oils:     <http://lemon-model.net/oils#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :big ;
+  lemon:entry    :form_big_preposition ;
+  lemon:entry    :big_res .
+
+:big a             lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm  :form_big ;
+  lemon:otherForm      :form_big_comperative ;
+  lemon:otherForm      :form_big_superlative ;
+  lemon:sense          :big_sense_1 ;
+  lemon:synBehavior    :big_predFrame .
+
+:form_big lemon:writtenRep "gr��"@de .
+
+:form_big_comperative lemon:writtenRep "gr��er"@de .
+
+:form_big_superlative lemon:writtenRep "gr��te"@de .
+
+:big_predFrame a        lexinfo:AdjectiveSuperlativeFrame ;
+  lexinfo:copulativeSubject :big_PredSynArg .
+
+:big_sense_1 a  lemon:LexicalSense ;
+  lemon:reference :big_res ;
+  lemon:isA       :big_PredSynArg ;
+  lemon:condition :big_sense_1_condition .
+
+:big_res a   oils:CovariantScalar ;
+  oils:boundTo  <http://dbpedia.org/ontology/seatingCapacity> ;
+  oils:degree   <http://lemon-model.net/oils/high> .
+
+:big_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain   <http://dbpedia.org/ontology/Country> ;
+  lemon:propertyRange    <http://dbpedia.org/ontology/Stadium> .## Prepositions ##
+:form_big_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "in"@de ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

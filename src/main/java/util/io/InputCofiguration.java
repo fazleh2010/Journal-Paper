@@ -59,7 +59,8 @@ public class InputCofiguration {
     private Boolean singleFlag;
     @JsonProperty("online")
     private Boolean online;
-    
+    @JsonProperty("externalEntittyList")
+    private Boolean externalEntittyList;    
     
      
     private LinkedData linkedData = null;
@@ -165,6 +166,9 @@ public class InputCofiguration {
         return online;
     }
 
+    public Boolean getExternalEntittyList() {
+        return externalEntittyList;
+    }
     
     @Override
     public String toString() {

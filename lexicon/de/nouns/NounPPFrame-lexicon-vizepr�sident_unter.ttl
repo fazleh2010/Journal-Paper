@@ -1,0 +1,75 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "de" ;
+  lemon:entry    :vizepr�sident_unter ;
+  lemon:entry    :vizepr�sident_unter_form_preposition .
+
+:vizepr�sident_unter a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :vizepr�sident_unter_form ;
+  lemon:otherForm      :vizepr�sident_unter_plural_form ;
+  lemon:otherForm      :vizepr�sident_unter_accusative_form ;
+  lemon:otherForm      :vizepr�sident_unter_dative_form ;
+  lemon:otherForm      :vizepr�sident_unter_genitive_form ;
+  lemon:otherForm      :vizepr�sident_unter_plural_form ;
+  lemon:sense          :vizepr�sident_unter_sense_1 ;
+  lemon:synBehavior    :vizepr�sident_unter_nounpp .
+
+:vizepr�sident_unter_form a lemon:Form ;
+  lemon:writtenRep "Vizepr�sident"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:nominativeCase .
+
+:vizepr�sident_unter_plural_form a lemon:Form ;
+  lemon:writtenRep "Vizepr�sidenten"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:plural ;
+  lexinfo:case     lexinfo:nominativeCase .
+
+:vizepr�sident_unter_accusative_form a lemon:Form ;
+  lemon:writtenRep "Vizepr�sident"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:accusativeCase .
+
+:vizepr�sident_unter_dative_form a lemon:Form ;
+  lemon:writtenRep "Vizepr�sident"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:dativeCase .
+
+:vizepr�sident_unter_genitive_form a lemon:Form ;
+  lemon:writtenRep "Vizepr�sident"@de ;
+  lexinfo:gender   lexinfo:masculine ;
+  lexinfo:number   lexinfo:singular ;
+  lexinfo:case     lexinfo:genitiveCase .
+
+:vizepr�sident_unter_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:vizepr�sident_unter_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :vizepr�sident_unter_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/vicePresident> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :vizepr�sident_unter_sense_1_condition .
+
+:vizepr�sident_unter_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Politician> ;
+  lemon:propertyRange   <http://dbpedia.org/ontology/Person> .
+
+:arg2 lemon:marker :vizepr�sident_unter_form_preposition .
+
+## Prepositions ##
+
+:vizepr�sident_unter_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "unter"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

@@ -1,5 +1,6 @@
 package grammar.structure.component;
 
+import static grammar.sparql.Prefix.AIFD;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.stream.Stream;
 import static grammar.sparql.Prefix.DBO;
 import static grammar.sparql.Prefix.DBP;
 import static grammar.sparql.Prefix.DBR;
+import static java.lang.System.exit;
 
 public enum DomainOrRangeType {
     Person(List.of(URI.create(DBO.getUri() + "Person"))),
@@ -226,6 +228,30 @@ public enum DomainOrRangeType {
     Genre(List.of(URI.create(DBO.getUri() + "Genre"))),
     MountainRange(List.of(URI.create(DBO.getUri() + "MountainRange"))),
     MilitaryUnit(List.of(URI.create(DBO.getUri() + "MilitaryUnit"))),
+    
+    
+    //biblography
+    Publication(List.of(URI.create(AIFD.getUri() + "Publication"))),
+    AssistantProfessor(List.of(URI.create(AIFD.getUri() + "AssistantProfessor"))),
+    FullProfessor(List.of(URI.create(AIFD.getUri() + "FullProfessor"))),
+    Graduate(List.of(URI.create(AIFD.getUri() + "Graduate"))),
+    InCollection(List.of(URI.create(AIFD.getUri() + "InCollection"))),
+    InProceedings(List.of(URI.create(AIFD.getUri() + "InProceedings"))),
+    Lecturer(List.of(URI.create(AIFD.getUri() + "Lecturer"))),
+    Manager(List.of(URI.create(AIFD.getUri() + "Manager"))),
+    Misc(List.of(URI.create(AIFD.getUri() + "Misc"))),
+    Organization(List.of(URI.create(AIFD.getUri() + "Organization"))),
+    PhDStudent(List.of(URI.create(AIFD.getUri() + "PhDStudent"))),
+    Proceedings(List.of(URI.create(AIFD.getUri() + "Proceedings"))),
+    Project(List.of(URI.create(AIFD.getUri() + "Project"))),
+    ResearchGroup(List.of(URI.create(AIFD.getUri() + "ResearchGroup"))),
+    ResearchTopic(List.of(URI.create(AIFD.getUri() + "ResearchTopic"))),
+    TechnicalReport(List.of(URI.create(AIFD.getUri() + "TechnicalReport"))),
+    TechnicalStaff(List.of(URI.create(AIFD.getUri() + "TechnicalStaff"))),
+    Undergraduate(List.of(URI.create(AIFD.getUri() + "Undergraduate"))),
+
+
+    
     Thing(List.of(URI.create("http://www.w3.org/2002/07/owl#Thing"))); // default if no other matches
 
     public static final List<URI> MISSING_TYPES = new ArrayList<>();

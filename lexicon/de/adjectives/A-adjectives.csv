@@ -1,0 +1,10 @@
+LemonEntry,partOfSpeech,writtenForm,comparative,superlative_singular,superlative_plural,SyntacticFrame,predFrame,sense,reference,oils:boundTo,oils:degree,domain,range,preposition,domainArticleIndex,domainWrittenSingularForm,domainWrittenPluralForm,rangeArticleIndex,rangeWrittenSingularForm,rangeWrittenPluralForm
+hoch_1,adjective,hoch,hîher,hîchste,hîchsten,AdjectiveSuperlativeFrame,PredSynArg,1,oils:CovariantScalar,dbo:elevation,oils:high,dbo:Country,dbo:Mountain,in,neuter,Land,LÑnder,masculine,Berg,Berge
+hoch_2,adjective,hoch,hîher,hîchste,hîchsten,AdjectiveSuperlativeFrame,PredSynArg,1,oils:CovariantScalar,dbo:height,oils:high,dbo:Country,dbo:Colombo_Lighthouse,in,neuter,Land,LÑnder,masculine,Leuchtturm,LeuchttÅrme
+Tall_1,adjective,grî·,grî·er,grî·te,grî·ten,AdjectiveSuperlativeFrame,PredSynArg,1,oils:CovariantScalar,dbo:height,oils:high,owl:Thing,dbo:BasketballPlayer,in,feminine,Welt,Welten,masculine,Basketballspieler,Basketballspieler
+Tall_2,adjective,grî·,grî·er,grî·te,grî·ten,AdjectiveSuperlativeFrame,PredSynArg,1,oils:CovariantScalar,dbo:height,oils:high,owl:Thing,dbo:Model,in,feminine,Welt,Welten,neuter,Modell,Modelle
+large_1,adjective,grî·,grî·er,grî·te,grî·ten,AdjectiveSuperlativeFrame,PredSynArg,1,oils:CovariantScalar,dbo:areaTotal,oils:high,owl:Thing,dbo:Country,in,feminine,Welt,Welten,neuter,Land,LÑnder
+Young_1,adjective,jÅng,jÅnger,jÅngsten,jÅngsten,AdjectiveSuperlativeFrame,PredSynArg,1,oils:CovariantScalar,dbo:birthDate,oils:high,owl:Thing,dbo:DartsPlayer,in,feminine,Welt,Welten,masculine,Dartspieler,Dartspieler
+Young_2,adjective,jÅng,jÅnger,jÅngsten,jÅngsten,AdjectiveSuperlativeFrame,PredSynArg,1,oils:CovariantScalar,dbo:birthDate,oils:high,owl:Thing,dbo:Politician,in,feminine,Welt,Welten,masculine,Politiker,Politiker
+old,adjective,Ñlt,Ñlter,Ñlteste,Ñltesten,AdjectiveSuperlativeFrame,PredSynArg,1,oils:CovariantScalar,dbo:birthDate,oils:low,dbo:Person,dbo:Person,of,person,Person,Personen,neuter,Kind,Kinder
+big,adjective,grî·,grî·er,grî·te,grî·ten,AdjectiveSuperlativeFrame,PredSynArg,1,oils:CovariantScalar,dbo:seatingCapacity,oils:high,dbo:Country,dbo:Stadium,in,neuter,Land,LÑnder,neuter,Stadion,Stadien

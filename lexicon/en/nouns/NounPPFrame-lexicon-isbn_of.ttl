@@ -1,0 +1,52 @@
+@prefix :        <http://localhost:8080/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://lemon-model.net/lemon#> .
+
+@base            <http://localhost:8080#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :isbn_of ;
+  lemon:entry    :isbn_of_form_preposition .
+
+:isbn_of a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :isbn_of_form ;
+  lemon:otherForm  :isbn_of_singular ;
+  lemon:otherForm  :isbn_of_plural ;
+  lemon:sense          :isbn_of_sense_1 ;
+  lemon:synBehavior    :isbn_of_nounpp .
+
+:isbn_of_form a lemon:Form ;
+  lemon:writtenRep "isbn"@en .
+
+:isbn_of_singular a    lemon:Form ;
+  lemon:writtenRep "isbn"@en ;
+  lexinfo:number   lexinfo:singular .
+
+:isbn_of_plural a   lemon:Form ;
+  lemon:writtenRep "XX"@en ;
+  lexinfo:number    lexinfo:plural .
+
+:isbn_of_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1 ;
+  lexinfo:prepositionalAdjunct :arg2 .
+
+:isbn_of_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :isbn_of_sense_1 ;
+  lemon:reference           <http://swrc.ontoware.org/ontology#isbn> ;
+  lemon:subjOfProp          :arg2 ;
+  lemon:objOfProp           :arg1 ;
+  lemon:condition           :isbn_of_sense_1_condition .
+
+:isbn_of_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://swrc.ontoware.org/ontology#Book> ;
+  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#string> .
+
+:arg2 lemon:marker :isbn_of_form_preposition .
+## Prepositions ##
+:isbn_of_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "of"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

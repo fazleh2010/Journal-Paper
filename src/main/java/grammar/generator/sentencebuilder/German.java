@@ -19,7 +19,6 @@ import grammar.datasets.annotated.AnnotatedVerb;
 import grammar.datasets.questionword.QuestionWordFactoryIT;
 import grammar.datasets.sentencetemplates.TempConstants;
 import static grammar.generator.BindingConstants.BINDING_TOKEN_TEMPLATE;
-import grammar.generator.SentenceBuilderTransitiveVPEN;
 import grammar.generator.SubjectType;
 import grammar.sparql.SelectVariable;
 import grammar.structure.component.DomainOrRangeType;

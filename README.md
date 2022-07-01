@@ -69,8 +69,11 @@ java -jar target/QuestionGrammarGenerator.jar inputConf_es.json dataset/dbpedia.
 italain
 java -jar target/QuestionGrammarGenerator.jar inputConf_it.json dataset/dbpedia.json  
 
-english
-java -jar target/QuestionGrammarGenerator.jar inputConf_en.json dataset/dbpedia.json                                  
+english and dbpedia
+java -jar target/QuestionGrammarGenerator.jar inputConf_en.json dataset/dbpedia.json 
+english and aifd
+java -jar target/QuestionGrammarGenerator.jar inputConf_en.json dataset/aifd.json 
+                                 
 ````  
 
 

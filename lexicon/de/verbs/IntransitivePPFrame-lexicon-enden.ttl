@@ -58,12 +58,12 @@
   lemon:propertyRange  <http://www.w3.org/2001/XMLSchema#date> .
 
 
-:enden_obj lemon:marker :in .
+:enden_obj lemon:marker :am .
 
 :arg2 lemon:marker :form_enden_present_preposition .
 
 ## Prepositions ##
 
 :form_enden_present_preposition a                  lemon:SynRoleMarker ;
-  lemon:canonicalForm  [ lemon:writtenRep "in"@en ] ;
+  lemon:canonicalForm  [ lemon:writtenRep "am"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .

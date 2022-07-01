@@ -37,6 +37,7 @@ import util.io.FileUtils;
 import static grammar.datasets.sentencetemplates.TempConstants.superlativeCountry;
 import static grammar.datasets.sentencetemplates.TempConstants.superlativeLocation;
 import static java.lang.System.exit;
+import linkeddata.LinkedData;
 import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
@@ -64,30 +65,40 @@ public class SparqlQuery {
     public static String VARIABLE = "VARIABLE";
     public static String QUESTION_MARK = "?";
     private String resultSparql = null;
+    private  LinkedData linkedData=null;
+
     private String command = null;
 
     private String type = null;
     private List<Binding> bindingList=new ArrayList<Binding>();
-
     private Boolean online=false;
-    //private Model model =null;
-    private  Map<String, OffLineResult> offLineResults =new TreeMap<String, OffLineResult> ();
+    
+    public SparqlQuery(LinkedData linkedData, String classSparql) {
+        this.endpoint = linkedData.getEndpoint();
+        this.linkedData = linkedData;
+        this.sparqlQuery=classSparql;
+        this.resultSparql = executeSparqlQueryCurl(sparqlQuery);
+        this.parseResult(resultSparql);
+    }
+
 
     
-    public SparqlQuery(String template, String rdfProperty, String className, String domainEntityUrl, String sparqlQueryOrg, String rangeEntityUrl, String type, String returnType, String language, String endpoint, Boolean online, QueryType queryType) {
-        this.endpoint = endpoint;
+    public SparqlQuery(String template, String rdfPropertyClass, String className, String domainEntityUrl, String sparqlQueryOrg, String rangeEntityUrl, String type, String returnType, String language, String endpoint, Boolean online, QueryType queryType,LinkedData linkedData) {
+        this.endpoint = linkedData.getEndpoint();
+        this.linkedData=linkedData;
         this.type = type;
-        this.offLineResults = offLineResults;
         Integer index = isSimpleOrComposite(sparqlQueryOrg);
         /*LinkedDataFragmentGraph ldfg = new LinkedDataFragmentGraph("http://data.linkeddatafragments.org/dbpedia2014");
         model = ModelFactory.createModelForGraph(ldfg);*/
         String property = null;
+       
+     
 
-        if (endpoint.contains("dbpedia")) {
+        //if (this.linkedData.getEndpoint().contains("dbpedia")) {
             if (type.contains(FIND_ANY_ANSWER) && index == 1) {
                 property = StringUtils.substringBetween(sparqlQueryOrg, "<", ">");
                 if (queryType.equals(QueryType.SELECT)) {
-                    this.sparqlQuery = setSingleSelect(template, rdfProperty, className, domainEntityUrl, sparqlQueryOrg, rangeEntityUrl, type, returnType, language, endpoint, online, queryType);
+                    this.sparqlQuery = setSingleSelect(template, rdfPropertyClass, className, domainEntityUrl, sparqlQueryOrg, rangeEntityUrl, type, returnType, language, endpoint, online, queryType);
                 } else if (queryType.equals(QueryType.ASK)) {
                     this.sparqlQuery = PrepareSparqlQuery.setBooleanWikiPedia(domainEntityUrl, property, rangeEntityUrl);
                     this.sparqlQueryID = this.getSparqlID(property, domainEntityUrl, rangeEntityUrl);
@@ -114,21 +125,16 @@ public class SparqlQuery {
                 } else if (queryType.equals(QueryType.ASK)) {
                 }
             } else if (type.contains(FIND_LABEL)) {
-                sparqlQuery = PrepareSparqlQuery.setLabelWikipedia(domainEntityUrl, language);
+                String rdfsLabel=getClassOfInstance(domainEntityUrl, linkedData);
+                
+                sparqlQuery = PrepareSparqlQuery.setLabelWikipedia(domainEntityUrl, language,rdfsLabel);
             }
 
             if (sparqlQuery != null) {
                 if (online) {
                     if (queryType.equals(QueryType.SELECT) || queryType.equals(QueryType.ASK)) {
-                        if (this.endpoint.contains("https://dbpedia.org/")) {
                             this.resultSparql = executeSparqlQueryCurl(sparqlQuery);
                             this.parseResult(resultSparql);
-                        }
-                        /*else if (this.endpoint.contains("http://data.linkeddatafragments.org")) {
-                           LinkedSparqlExecution main=  new LinkedSparqlExecution(model,endpoint,sparqlQuery); 
-                           List<String> results=main.sparqlObjectAsVariable(sparqlQuery);
-                           this.parseResultSingle(results);
-                        }*/
 
                     }
 
@@ -158,8 +164,16 @@ public class SparqlQuery {
                 System.out.println("sparql query is wrong!!!");
             }
 
-        }
+        //}
 
+    }
+
+   
+
+    private String getClassOfInstance(String domainEntityUrl, LinkedData linkedData) {
+        String classNameOfInstances = PrepareSparqlQuery.findClassGivenInstance(domainEntityUrl,linkedData.getClassProperty());
+        String rdfsLabel =linkedData.getRdfPropertyLabel(classNameOfInstances);
+        return rdfsLabel;
     }
 
 
@@ -354,7 +368,8 @@ public class SparqlQuery {
     public String setSubjectLabelWikipedia(String entityUrl, String property, String language) {
         String sparql = null;
         if (isEntity(entityUrl)) {
-            sparql = PrepareSparqlQuery.setLabelWikipedia(entityUrl, language);
+            String rdfsLabel=getClassOfInstance( entityUrl,  this.linkedData);
+            sparql = PrepareSparqlQuery.setLabelWikipedia(entityUrl, language,rdfsLabel);
             String resultSparql = executeSparqlQueryCurl(sparql);
             this.parseResult(resultSparql);
             entityUrl = this.objectOfProperty;
@@ -582,6 +597,10 @@ SELECT DISTINCT ?uri WHERE {
         }
         return null;
     }*/
+
+    private String getClassName() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
    
 

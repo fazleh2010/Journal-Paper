@@ -58,7 +58,7 @@ public class QueGG {
     private static String summaryFile = "summary";
     public static String propertyReport = "propertyReport";
 
-    private static Boolean externalEntittyListflag = true;
+    private static Boolean externalEntittyListflag = false;
     private static String grammar_FULL_DATASET = "grammar_FULL_DATASET";
     private static String grammar_COMBINATIONS = "grammar_COMBINATIONS";
     private static Boolean online = false;
@@ -76,8 +76,9 @@ public class QueGG {
             } else if (args.length == 2) {
                 configFile = args[0];
                 InputCofiguration inputCofiguration = FileUtils.getInputConfig(new File(configFile));
-                inputCofiguration.setLinkedData(args[1]);
+                inputCofiguration.setLinkedData(args[1]);                
                 online=inputCofiguration.getOnline();
+                externalEntittyListflag=inputCofiguration.getExternalEntittyList();
                 if (inputCofiguration.isCsvToTurtle()) {
                     if (queGG.csvToProto(inputCofiguration)) {
                         queGG.turtleToProto(inputCofiguration);
@@ -218,8 +219,11 @@ public class QueGG {
         String langCode = language.name().toLowerCase().trim();
         String questionAnswerFile = questionDir + File.separator + questionsFile + "_" + langCode + ".csv";
         String questionSummaryFile = questionDir + File.separator + summaryFile + "_" + langCode + ".csv";
-        ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile,maxNumberOfEntities, langCode, linkedData.getEndpoint(), online,entityDir,classDir);
-        readAndWriteQuestions.readQuestionAnswers(linkedData, protoToQuestions,  externalEntittyListflag);
+        ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile,maxNumberOfEntities, langCode, linkedData.getEndpoint(), online,externalEntittyListflag,entityDir,classDir,linkedData);
+        if(online)
+         readAndWriteQuestions.generateFullQuestionOnline(protoToQuestions);
+        else
+         readAndWriteQuestions.readQuestionAnswersOffline(protoToQuestions);
 
     }
 

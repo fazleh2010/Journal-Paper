@@ -11,6 +11,9 @@ import static grammar.sparql.SparqlQuery.RETURN_TYPE_SUBJECT;
 import grammar.structure.component.DomainOrRangeTypeCheck;
 import grammar.structure.component.Language;
 import static java.lang.System.exit;
+import java.util.Map;
+import java.util.TreeMap;
+import linkeddata.LinkedData;
 import util.io.UrlUtils;
 
 /**
@@ -19,7 +22,16 @@ import util.io.UrlUtils;
  */
 public class PrepareSparqlQuery {
 
+   
+   
+    
     private String rdfType = "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>";
+    private LinkedData linkedData=null;
+    //"<http://www.w3.org/2000/01/rdf-schema#label>"
+    
+    public PrepareSparqlQuery(LinkedData linkedData){
+       this.linkedData=linkedData;
+    }
 
     public static String setSubjectWikipedia(String objectUri, String property, String rdfProperty, String objectClassUri) {
         String sparql = null;
@@ -263,20 +275,26 @@ public class PrepareSparqlQuery {
 
     }
 
-    public static String setLabelWikipedia(String entityUrl, String language) {
-        String sparql = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n"
-                + "   PREFIX dbo: <http://dbpedia.org/ontology/>\n"
-                + "   PREFIX dbpedia: <http://dbpedia.org/resource/>\n"
-                + "\n"
-                + "   SELECT DISTINCT ?label \n"
+    public static String setLabelWikipedia(String entityUrl, String language,String rdfsLabel) {
+
+        /*System.out.println(entityUrl);
+        String classNameOfInstances = findClassName(entityUrl);
+        classNameOfInstances = "Publication";
+        String rdfsLabel = this.linkedData.getRdfPropertyLabel(classNameOfInstances);
+        System.out.println("rdfsPropertyLabel::" + rdfsLabel);
+        exit(1);*/
+
+        String sparql
+                = "   SELECT DISTINCT ?label \n"
                 + "   WHERE {  \n"
-                + "       <" + entityUrl + "> rdfs:label ?label .     \n"
+                + "       <" + entityUrl + "> " + rdfsLabel + " ?label .     \n"
                 + "       filter(langMatches(lang(?label),\"" + language + "\"))         \n"
                 + "   }";
 
         return sparql;
 
     }
+
 
     public static String setLabelWikiData(String entityUrl, String language) {
         String sparql = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n"
@@ -455,5 +473,17 @@ public class PrepareSparqlQuery {
                 + "}";
 
     }
+    
+    
+
+    public static String findClassGivenInstance(String uri,String classProperty) {
+        String classSparql = "select  ?class {     \n"
+                + " " + "<" + uri + ">" + " " + "<" + classProperty + ">" + "   " + "?class" + ".\n"
+                + "}";
+        System.out.println(classSparql);
+        return classSparql;
+    }
+
+
 
 }

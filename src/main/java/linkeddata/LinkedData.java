@@ -22,12 +22,19 @@ public class LinkedData {
 
     @JsonProperty("endpoint")
     private String endpoint = null;
+    @JsonProperty("linkedDataName")
+    private String linkedDataName = null;
     @JsonProperty("prefix")
     private LinkedHashMap<String, String> prefix = new LinkedHashMap<String, String>();
     @JsonProperty("gradablePrefix")
     private LinkedHashMap<String, String> gradablePrefix = new LinkedHashMap<String, String>();
     @JsonProperty("bindingLimit")
     private long bindingLimit;
+    @JsonProperty("classLabels")
+    private LinkedHashMap<String, String> classLabels = new LinkedHashMap<String, String>();
+    @JsonProperty("classProperty")
+    private String classProperty = null;
+    
 
     @JsonIgnore
     public static String dbpedia = "dbpedia";
@@ -81,6 +88,18 @@ public class LinkedData {
             return this.prefix.get("dbo")+className;
         }
         return null;
+    }
+    
+    public String getRdfPropertyLabel(String className) {
+        return this.classLabels.get(className);
+    }
+
+    public String getLinkedDataName() {
+        return linkedDataName;
+    }
+
+    public String getClassProperty() {
+        return classProperty;
     }
     
     
