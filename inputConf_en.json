@@ -1,6 +1,6 @@
 {
   "languageCode" : "en",
-   "online" : "true",
+   "online" : "false",
    "externalEntittyList" : "false",
   "inputDir"     : "lexicon",
   "outputDir"    : "../resources/",

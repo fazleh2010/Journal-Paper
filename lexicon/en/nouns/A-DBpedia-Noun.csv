@@ -1,0 +1,2 @@
+lemon,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingularForm,domainWrittenPluralForm,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
+capital-of,noun,capital,-,of,NounPPFrame,range,domain,1,dbo:capital,dbo:Country,dbo:City,country,countries,city,cities

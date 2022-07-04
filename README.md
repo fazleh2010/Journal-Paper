@@ -61,16 +61,17 @@ Run the system:
 java -jar <jar file> <input_configuration_file> <linked_data_configuration_file>
 
 german
-java -jar target/QuestionGrammarGenerator.jar inputConf_de.json dataset/dbpedia.json   
+java -jar target/QuestionGrammarGenerator.jar inputConf_de.json dataset/dbpedia_de.json   
 
 spanish
-java -jar target/QuestionGrammarGenerator.jar inputConf_es.json dataset/dbpedia.json        
+java -jar target/QuestionGrammarGenerator.jar inputConf_es.json dataset/dbpedia_es.json        
 
 italain
-java -jar target/QuestionGrammarGenerator.jar inputConf_it.json dataset/dbpedia.json  
+java -jar target/QuestionGrammarGenerator.jar inputConf_it.json dataset/dbpedia_it.json  
 
 english and dbpedia
-java -jar target/QuestionGrammarGenerator.jar inputConf_en.json dataset/dbpedia.json 
+java -jar target/QuestionGrammarGenerator.jar inputConf_en.json dataset/dbpedia_en.json 
+
 english and aifd
 java -jar target/QuestionGrammarGenerator.jar inputConf_en.json dataset/aifd.json 
                                  

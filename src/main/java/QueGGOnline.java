@@ -223,7 +223,7 @@ public class QueGGOnline {
         if (online)
             readAndWriteQuestions.generateFullQuestionOnline(protoToQuestions);
         else
-            readAndWriteQuestions.readQuestionAnswersOffline(protoToQuestions);
+            readAndWriteQuestions.offline(protoToQuestions);
 
     }
 

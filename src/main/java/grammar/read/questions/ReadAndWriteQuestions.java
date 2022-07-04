@@ -60,23 +60,23 @@ public class ReadAndWriteQuestions implements ReadWriteConstants {
     private String endpoint = null;
     private static final org.apache.logging.log4j.Logger LOG = LogManager.getLogger(ReadAndWriteQuestions.class);
     private Boolean online = false;
-    private  Boolean externalEntittyListflag = false;
-    private  LinkedData linkedData = null;
+    private Boolean externalEntittyListflag = false;
+    private LinkedData linkedData = null;
     private Map<String, OffLineResult> entityLabels = new TreeMap<String, OffLineResult>();
 
-    public ReadAndWriteQuestions(String questionAnswerFile, String questionSummaryFile, Integer maxNumberOfEntities, String language, String endpoint, Boolean online,Boolean externalEntittyListflag, String entityDir, String classDir,LinkedData linkedData) {
+    public ReadAndWriteQuestions(String questionAnswerFile, String questionSummaryFile, Integer maxNumberOfEntities, String language, String endpoint, Boolean online, Boolean externalEntittyListflag, String entityDir, String classDir, LinkedData linkedData) {
         this.endpoint = endpoint;
         this.language = language;
         this.questionAnswerFile = questionAnswerFile;
         this.questionSummaryFile = questionSummaryFile;
         this.maxNumberOfEntities = maxNumberOfEntities;
         this.online = online;
-        this.externalEntittyListflag=externalEntittyListflag;
+        this.externalEntittyListflag = externalEntittyListflag;
         this.propertyDir = entityDir;
         this.classDir = classDir;
-        this.linkedData=linkedData;
+        this.linkedData = linkedData;
     }
-    
+
     public void generateFullQuestionOnline(List<File> protoSimpleQFiles) throws Exception {
         Integer index = 0;
 
@@ -109,7 +109,7 @@ public class ReadAndWriteQuestions implements ReadWriteConstants {
         List<String> questions;
         for (GrammarEntryUnit grammarEntryUnit : grammarEntries.getGrammarEntries()) {
             String uri = null, className;
-       
+
             if (grammarEntryUnit.getLexicalEntryUri() != null) {
                 uri = grammarEntryUnit.getLexicalEntryUri().toString();
                 if (existingEntries.isEmpty() && existingEntries.contains(uri)) {
@@ -118,12 +118,12 @@ public class ReadAndWriteQuestions implements ReadWriteConstants {
             } else {
                 continue;
             }
-            questions=this.validQuestion(grammarEntryUnit);
-            
-            if(questions.isEmpty())
-                 continue;
+            questions = this.validQuestion(grammarEntryUnit);
 
-         
+            if (questions.isEmpty()) {
+                continue;
+            }
+
             List<UriLabel> bindingList = this.getBindingList(grammarEntryUnit);
             String sparql = this.getSparql(grammarEntryUnit);
 
@@ -146,7 +146,6 @@ public class ReadAndWriteQuestions implements ReadWriteConstants {
             }
         }
     }
-
 
     private Integer replaceVariablesOnline(String uri, String sparqlQuery, List<UriLabel> uriLabels, List<String> questions, Integer rowIndex, String lexicalEntry, GrammarEntryUnit grammarEntryUnit, Map<String, OffLineResult> entityLabels) throws IOException {
         Integer index = 0;
@@ -171,8 +170,11 @@ public class ReadAndWriteQuestions implements ReadWriteConstants {
                 questionLabel = uriLabel.getLabel().replaceAll("\'", "").replaceAll("\"", "");
 
             } else if (questionLabel.isEmpty()) {
-                String classType = this.linkedData.getClassProperty();
-                questionLabel = getUriLabel(questionUri, classType);
+                //find labels for the specific database
+                if (this.online) {
+                    String classType = this.linkedData.getClassProperty();
+                    questionLabel = getUriLabel(questionUri, classType);
+                }
             }
 
             if (!isKbValid(uriLabel)) {
@@ -197,7 +199,7 @@ public class ReadAndWriteQuestions implements ReadWriteConstants {
 
             }
             System.out.println(lexicalEntry + " questionForShow:" + questionForShow + " questionUri::" + questionUri + " questionLabel:" + questionLabel + " answerUri:" + answerUri + " answerLabel" + answerLabel);
-            exit(1);
+
             index = index + 1;
             sparql = this.modifySparql(sparql);
 
@@ -263,15 +265,6 @@ public class ReadAndWriteQuestions implements ReadWriteConstants {
         }
 
         return rowIndex;
-    }
-
-    private String getUriLabel(String uri, String property) {
-        String classSparql = PrepareSparqlQuery.findClassGivenInstance(uri, property);
-        SparqlQuery sparqlQueryForClass = new SparqlQuery(this.linkedData, classSparql);
-        String labelProperty = this.linkedData.getRdfPropertyLabel(sparqlQueryForClass.getObject());
-        String labelSparql = PrepareSparqlQuery.findClassGivenInstance(uri, labelProperty);
-        sparqlQueryForClass =  new SparqlQuery(this.linkedData, labelSparql);
-        return sparqlQueryForClass.getObject();
     }
 
     private Integer replaceVariables(String template, String rdfPropertyType, String className, String uri, String sparqlQuery, List<UriLabel> domainList, List<UriLabel> rangeList, String returnSubjOrObj, List<String> questions, String syntacticFrame, Integer rowIndex, String lexicalEntry, QueryType queryType, Map<String, OffLineResult> entityLabels) throws IOException {
@@ -476,9 +469,9 @@ public class ReadAndWriteQuestions implements ReadWriteConstants {
         property = property.replace("http://dbpedia.org/property/", "dbp_");
         return entityDir + property + ".txt";
     }
-    
-     private String getEntity(String entityDir,String bindingType) {
-        return entityDir +bindingType+ ".txt";
+
+    private String getEntity(String entityDir, String bindingType) {
+        return entityDir + bindingType + ".txt";
     }
 
     private String getProperty(String sparqlQueryOrg) {
@@ -521,28 +514,24 @@ public class ReadAndWriteQuestions implements ReadWriteConstants {
         }
         return urlLabels;
     }
-    
-     public void readQuestionAnswersOffline( List<File> protoSimpleQFiles) throws Exception {
+
+    public void offline(List<File> protoSimpleQFiles) throws Exception {
         Integer index = 0;
 
         if (protoSimpleQFiles.isEmpty()) {
             throw new Exception("No proto file found to process!!");
         }
-        if(online)
-          this.csvWriterQuestions = new CSVWriter(new FileWriter(this.questionAnswerFile, true));
-        
         this.csvWriterSummary = new CSVWriter(new FileWriter(questionSummaryFile, true));
         this.writeInCSV();
 
         Set<String> existingEntries = this.getExistingLexicalEntries(questionSummaryFile);
-        ReferenceManagement referenceManagement = new ReferenceManagement(this.propertyDir, this.classDir,protoSimpleQFiles, GENERATED);
+        ReferenceManagement referenceManagement = new ReferenceManagement(this.propertyDir, this.classDir, protoSimpleQFiles, GENERATED);
         Set<String> offlineMatchedProperties = referenceManagement.getMatchedProperties();
         Set<String> offlineEntities = referenceManagement.getOfflineGeneratedEntities();
-        
+
         if (offlineMatchedProperties.isEmpty()) {
             throw new Exception("No off line properties to process!!");
         }
-
 
         for (File file : protoSimpleQFiles) {
             index = index + 1;
@@ -568,7 +557,6 @@ public class ReadAndWriteQuestions implements ReadWriteConstants {
                     continue;
                 }
 
-
                 questions = grammarEntryUnit.getSentences();
                 if (questions.contains("Where is $x located?")) {
                     continue;
@@ -583,65 +571,32 @@ public class ReadAndWriteQuestions implements ReadWriteConstants {
                 //String fileId = grammarEntryUnit.getLexicalEntryUri().toString().replace("http://localhost:8080#", "") + "-" + "dbo_" + bindingType + "-" + property + "-" + "dbo_" + returnType + "-";
                 //fileId = fileId + grammarEntryUnit.getFrameType() + "-" + grammarEntryUnit.getReturnVariable();
                 //String questionAnswerFileTemp = this.questionAnswerFile.replace(".csv", "") + "-" + fileId + "-" + (fileIndex++).toString() + ".csv";
-                if (this.online) {
-                    String matchItem=null;
-                    if(bindingType.contains("Thing"))
-                       // matchItem= "owl_" + bindingType;
-                        continue;
-                    else {
-                        matchItem= "dbo_" + bindingType;
-                    }
-                    if (offlineEntities.contains(matchItem)) {
-                        String propertyFile = this.getEntity(this.classDir, matchItem);
-                        this.entityLabels = FileUtils.getEntityLabels(propertyFile, this.classDir, returnSubjOrObj, bindingType, returnType);
- 
 
-                    }
-                    else{
-                        //continue;
-                        //throw new Exception("no file for the class!!"+bindingType);
-                    }
-                   
+                if (!offlineMatchedProperties.contains(property)) {
+                    continue;
                 }
-
-                if (!this.online) {
-                    if (!offlineMatchedProperties.contains(property)) {
-                        continue;
-                    }
-                    try {
-                        //String fileId = bindingType + "_" + grammarEntryUnit.getLexicalEntryUri().toString().replace("http://localhost:8080#", "") + "_" + returnType + "_";
-                        String fileId = grammarEntryUnit.getLexicalEntryUri().toString().replace("http://localhost:8080#", "")+"-"+"dbo_" + bindingType + "-" + property + "-" + "dbo_" + returnType + "-";
-                        fileId = fileId + grammarEntryUnit.getFrameType() + "-" + grammarEntryUnit.getReturnVariable();
-                        String questionAnswerFileTemp = this.questionAnswerFile.replace(".csv", "") + "-" + fileId + "-" + (fileIndex++).toString() + ".csv";
-                        this.csvWriterQuestions = new CSVWriter(new FileWriter(questionAnswerFileTemp, true));
-                        String propertyFile = this.getProperty(this.propertyDir, grammarEntryUnit.getSparqlQuery());
-                        this.entityLabels = FileUtils.getEntityLabels(propertyFile, this.classDir, returnSubjOrObj, bindingType, returnType);
-                        //System.out.println("entityLabels::" + entityLabels.size());
-                        //System.out.println("property::" + property);
-                        //System.out.println("offlineProperties::" + offlineMatchedProperties);
-                    } catch (Exception ex) {
-                        continue;
-                    }
+                try {
+                    //String fileId = bindingType + "_" + grammarEntryUnit.getLexicalEntryUri().toString().replace("http://localhost:8080#", "") + "_" + returnType + "_";
+                    String fileId = grammarEntryUnit.getLexicalEntryUri().toString().replace("http://localhost:8080#", "") + "-" + "dbo_" + bindingType + "-" + property + "-" + "dbo_" + returnType + "-";
+                    fileId = fileId + grammarEntryUnit.getFrameType() + "-" + grammarEntryUnit.getReturnVariable();
+                    String questionAnswerFileTemp = this.questionAnswerFile.replace(".csv", "") + "-" + fileId + "-" + (fileIndex++).toString() + ".csv";
+                    this.csvWriterQuestions = new CSVWriter(new FileWriter(questionAnswerFileTemp, true));
+                    String propertyFile = this.getProperty(this.propertyDir, grammarEntryUnit.getSparqlQuery());
+                    this.entityLabels = FileUtils.getEntityLabels(propertyFile, this.classDir, returnSubjOrObj, bindingType, returnType);
+                    /*System.out.println("entityLabels::" + entityLabels.size());
+                    System.out.println("property::" + property);
+                    System.out.println("offlineProperties::" + offlineMatchedProperties);
+                    exit(1);*/
+                } catch (Exception ex) {
+                    continue;
                 }
 
                 if (grammarEntryUnit.getQueryType().equals(QueryType.ASK)) {
                     continue;
                 }
 
-                //If it is an external binding list
-                if (externalEntittyListflag) {
-                    if (!online) {
-                        bindingList = this.getOffLineBindingList(entityLabels, returnSubjOrObj);
+                bindingList = this.getOffLineBindingList(entityLabels, returnSubjOrObj);
 
-                    } else {
-                        bindingList = this.getBIndingList(this.entityLabels);
-
-                    }
-                } else {
-                    bindingList = grammarEntryUnit.getBindingList();
-
-                }
-                
                 if (grammarEntryUnit.getBindingType().contains("date")) {
                     bindingList = grammarEntryUnit.getBindingList();
                 }
@@ -658,11 +613,10 @@ public class ReadAndWriteQuestions implements ReadWriteConstants {
                 }
 
                 if (grammarEntryUnit.getQueryType().equals(QueryType.SELECT)) {
-                    noIndex = this.replaceVariablesOnline( uri, sparql, bindingList, questions,  noIndex, "", grammarEntryUnit, entityLabels);
+                    noIndex = this.replaceVariablesOnline(uri, sparql, bindingList, questions, noIndex, "", grammarEntryUnit, entityLabels);
                     noIndex = noIndex + 1;
                     idIndex = idIndex + 1;
                 }
-              
 
                 if (grammarEntryUnit.getLexicalEntryUri() != null) {
                     uri = grammarEntryUnit.getLexicalEntryUri().toString();
@@ -675,38 +629,34 @@ public class ReadAndWriteQuestions implements ReadWriteConstants {
                         this.summary.put(uri, summary);
                     }
                 }
-               if (!this.online) {
-                   this.csvWriterQuestions.close(); 
-               }
+                if (!this.online) {
+                    this.csvWriterQuestions.close();
+                }
 
             }
             questions = new ArrayList<String>();
-        }
-        if (this.online) {
-            this.csvWriterQuestions.close();
         }
         this.writeSummary(this.summary);
         this.csvWriterSummary.close();
 
     }
-     
-      private Integer replaceVariablesOffline(String template,  String className, String uri, String sparqlQuery, List<UriLabel> uriLabels,  List<String> questions, Integer rowIndex, String lexicalEntry, GrammarEntryUnit grammarEntryUnit, Map<String, OffLineResult> entityLabels) throws IOException {
+
+    /*private Integer replaceVariablesOffline(String template, String className, String uri, String sparqlQuery, List<UriLabel> uriLabels, List<String> questions, Integer rowIndex, String lexicalEntry, GrammarEntryUnit grammarEntryUnit, Map<String, OffLineResult> entityLabels) throws IOException {
         Integer index = 0;
         String returnSubjOrObj = grammarEntryUnit.getReturnVariable();
         String syntacticFrame = grammarEntryUnit.getFrameType();
-        QueryType queryType=grammarEntryUnit.getQueryType();
+        QueryType queryType = grammarEntryUnit.getQueryType();
         String rdfTypeProperty = linkedData.getRdfPropertyType();
 
-        
         List< String[]> rows = new ArrayList<String[]>();
 
         if (questions.isEmpty()) {
             return rowIndex;
         }
-      
+
         for (UriLabel uriLabel : uriLabels) {
             String questionUri = uriLabel.getUri(), questionLabel = uriLabel.getLabel();
-            
+
             if (questionUri != null && questionLabel != null) {
                 questionUri = questionUri.trim().strip().stripLeading().stripTrailing();
                 questionLabel = uriLabel.getLabel().replaceAll("\'", "").replaceAll("\"", "");
@@ -736,24 +686,16 @@ public class ReadAndWriteQuestions implements ReadWriteConstants {
                 answerLabel = uriLabel.getAnswerLabel();
 
             }
-            System.out.println(lexicalEntry+" questionForShow:"+questionForShow+" questionUri::"+questionUri+" questionLabel:"+questionLabel+" answerUri:"+answerUri+" answerLabel"+answerLabel);
-
+            System.out.println(lexicalEntry + " questionForShow:" + questionForShow + " questionUri::" + questionUri + " questionLabel:" + questionLabel + " answerUri:" + answerUri + " answerLabel" + answerLabel);
 
             index = index + 1;
             sparql = this.modifySparql(sparql);
 
             try {
-                /*if (answer.isEmpty() || answer.contains("no answer found")) {
-                    continue;
-                } else*/ {
-                    /*if (index >= this.maxNumberOfEntities) {
-                        break;
-                    }*/
+             {
 
                     if (online) {
-                        /*if (answerUri.isEmpty() || answerUri.length() < 2) {
-                            continue;
-                        }*/
+                       
                     }
 
                     for (String question : questions) {
@@ -777,9 +719,9 @@ public class ReadAndWriteQuestions implements ReadWriteConstants {
                         }
 
                         String[] record = {id, questionT, sparql, answerUri, answerLabel, syntacticFrame};
-                            String[] newRecord = doubleQuote(record);
-                        System.out.println("index::" + index + " questionT::" + questionT );
-                      
+                        String[] newRecord = doubleQuote(record);
+                        System.out.println("index::" + index + " questionT::" + questionT);
+
                         if (this.online) {
                             if (answerUri != null) {
                                 this.csvWriterQuestions.writeNext(newRecord);
@@ -793,11 +735,8 @@ public class ReadAndWriteQuestions implements ReadWriteConstants {
                             this.csvWriterQuestions.writeNext(newRecord);
                             rowIndex = rowIndex + 1;
                         }
-                            
-                           
-                           
+
                         //}
-                       
                     }
                 }
 
@@ -807,7 +746,7 @@ public class ReadAndWriteQuestions implements ReadWriteConstants {
         }
 
         return rowIndex;
-    }
+    }*/
 
     private List<UriLabel> getBindingList(GrammarEntryUnit grammarEntryUnit) {
         List<UriLabel> bindingList = grammarEntryUnit.getBindingList();
@@ -853,7 +792,13 @@ public class ReadAndWriteQuestions implements ReadWriteConstants {
         return new ArrayList<String>();
     }
 
-
-  
+    private String getUriLabel(String uri, String property) {
+        String classSparql = PrepareSparqlQuery.findClassGivenInstance(uri, property);
+        SparqlQuery sparqlQueryForClass = new SparqlQuery(this.linkedData, classSparql);
+        String labelProperty = this.linkedData.getRdfPropertyLabel(sparqlQueryForClass.getObject());
+        String labelSparql = PrepareSparqlQuery.findClassGivenInstance(uri, labelProperty);
+        sparqlQueryForClass = new SparqlQuery(this.linkedData, labelSparql);
+        return sparqlQueryForClass.getObject();
+    }
 
 }
