@@ -2,6 +2,7 @@ package evaluation;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.opencsv.CSVWriter;
+import evaluation.QALD.QALDQuestions;
 import java.io.File;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,31 +12,37 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-
+import util.io.LcQuad;
+import util.io.LcQuadElement;
 
 public class QALDImporter {
-   //public static final String QALD_FILE = "QALD-2017/qald-7-train-multilingual.json";
-   //public static final String QALD_FILE_MODIFIED = "QALD-2017/qald-7-train-multilingual_modified.json";
-    
-    /*public static final String RESOURCE = "/home/elahi/AHack/italian/question-grammar-generator/src/main/resources/";
-    public static final String QALD_FILE = RESOURCE + "QALD-2017/qald-7-train-multilingual.json";
-    public static final String QALD_FILE_MODIFIED = RESOURCE + "QALD-2017/qald-7-train-multilingual_modified.json";*/
-
-    
     private static final Logger LOG = LogManager.getLogger(QALDImporter.class);
 
-  public QALDImporter() {}
+    public QALDImporter() {
+    }
 
-  public void qaldToCSV(String qaldFile, String outputFile,String languageCode) throws IOException {
-    QALD qald = readQald(qaldFile);
-    writeToCSV(qaldJsonToCSVTemplate(qald,languageCode), outputFile);
-  }
+    public void qaldToCSV(String qaldFile, String outputFile, String languageCode) throws IOException {
+        QALD qald = null;
+        if (qaldFile.contains("qald")) {
+            qald = readQald(qaldFile);
+        } else {
+            qald = lcQuad(qaldFile);
+        }
+        writeToCSV(qaldJsonToCSVTemplate(qald, languageCode), outputFile);
+    }
 
-  public QALD readQald(String file) throws IOException {
-    ObjectMapper objectMapper = new ObjectMapper();
-    //URL qaldFile = loadResource(file, this.getClass());
-    return objectMapper.readValue(new File(file), QALD.class);
-  }
+    public QALD readQald(String qaldFile) throws IOException {
+        if (qaldFile.contains("qald")) {
+            return new ObjectMapper().readValue(new File(qaldFile), QALD.class);
+        } else {
+            return lcQuad(qaldFile);
+        }
+    }
+
+    public QALD lcQuad(String file) throws IOException {
+        LcQuad lcQuad=new LcQuad(file);
+        return  new QALD(lcQuad.getDatasetName(),lcQuad.getLcQuadElements());
+    }
 
     public void writeToCSV(List<String[]> dataLines, String fileName) throws IOException {
         CSVWriter writer = new CSVWriter(new FileWriter(fileName), '\t', '"', '"', "\n");
@@ -43,35 +50,34 @@ public class QALDImporter {
         writer.close();
     }
 
-  private List<String[]> qaldJsonToCSVTemplate(QALD qaldFile,String languageCode) {
-    List<String[]> list = new ArrayList<>();
-    list.add(new String[]{"id", "answertype", "question", "sparql"});
-    qaldFile.questions.forEach(qaldQuestions -> {
-      list.add(new String[]{qaldQuestions.id, qaldQuestions.answertype, getQaldQuestionString(qaldQuestions,
-                                                                                              "en"
-      ), qaldQuestions.query.sparql});
-    });
-    return list;
-  }
+    private List<String[]> qaldJsonToCSVTemplate(QALD qaldFile, String languageCode) {
+        List<String[]> list = new ArrayList<>();
+        list.add(new String[]{"id", "answertype", "question", "sparql"});
+        qaldFile.questions.forEach(qaldQuestions -> {
+            list.add(new String[]{qaldQuestions.id, qaldQuestions.answertype, getQaldQuestionString(qaldQuestions,
+                languageCode
+                ), qaldQuestions.query.sparql});
+        });
+        return list;
+    }
 
-  public static String getQaldQuestionString(QALD.QALDQuestions qaldQuestions, String languageAbbreviation) {
-    return qaldQuestions.question.stream()
-                                 .filter(qaldQuestion -> qaldQuestion.language.startsWith(languageAbbreviation))
-                                 .findFirst()
-                                 .orElseThrow().string;
-  }
-  
-  public static String getQaldSparqlQuery(QALD.QALDQuestions qaldQuestions) {
-      String sparql=qaldQuestions.query.sparql;
-      return sparql;
-    
-  }
-  
-  public static void main(String []args) throws IOException {
-      
-      QALDImporter qaldImporter=new QALDImporter();
-      
-      
-  }
-  
+    public static String getQaldQuestionString(QALD.QALDQuestions qaldQuestions, String languageAbbreviation) {
+        return qaldQuestions.question.stream()
+                .filter(qaldQuestion -> qaldQuestion.language.startsWith(languageAbbreviation))
+                .findFirst()
+                .orElseThrow().string;
+    }
+
+    public static String getQaldSparqlQuery(QALD.QALDQuestions qaldQuestions) {
+        String sparql = qaldQuestions.query.sparql;
+        return sparql;
+
+    }
+
+    public static void main(String[] args) throws IOException {
+
+        QALDImporter qaldImporter = new QALDImporter();
+
+    }
+
 }

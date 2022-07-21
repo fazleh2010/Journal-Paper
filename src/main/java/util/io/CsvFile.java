@@ -276,23 +276,14 @@ public class CsvFile implements CsvConstants {
         String line = null;
         Integer index = 0;
         List<String[]> rows = this.getRows(this.filename);
-        
+
         for (String[] data : rows) {
             String key = data[keyIndex];
-            //System.out.println("key:"+key);
             String className = data[classIindex];
-            if (index == 0) {
-                index = index + 1;
-                continue;
-
-            } else {
-                if (this.isClassMatched(className, givenClassName)) {
-                    map.put(key, data);
-                }
-                index = index + 1;
+            if (this.isClassMatched(className, givenClassName)) {
+                map.put(key, data);
             }
-           
-          
+
         }
         return map;
     }

@@ -47,7 +47,7 @@ import static util.io.FileFolderUtils.getHash;
  *
  * @author elahi
  */
-public class FileUtils {
+public class FileProcessUtils {
     
 
     public static void stringToFile(String content, String fileName)
@@ -75,7 +75,7 @@ public class FileUtils {
             fileAsString = sb.toString();
             //System.out.println("Contents : " + fileAsString);
         } catch (Exception ex) {
-            Logger.getLogger(FileUtils.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FileProcessUtils.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         return fileAsString;
@@ -157,17 +157,19 @@ public class FileUtils {
         return mapper.readValue(file, InputCofiguration.class);
     }
 
-    public static Map<String, String> tripleFileToHash(String fileName) {
+    public static Map<String, String> tripleFileToHash(String fileName,Integer limit) {
         Map<String, String> results = new TreeMap<String, String>();
         BufferedReader reader;
         String line = "";
         File file = new File(fileName);
+        Integer number=0;
 
         try {
             reader = new BufferedReader(new FileReader(fileName));
             line = reader.readLine();
             while (line != null) {
                 line = reader.readLine();
+                number=number+1;
                 String subject = null;
                 String object = null, property = null;
                 if (line != null) {
@@ -185,6 +187,10 @@ public class FileUtils {
                             object = clean(value);
                         }
                     }
+                    if (limit == -1)
+                        ; else if (number > limit)
+                        break;
+                    
                     System.out.println("subject:" + subject + " " + "object:" + object);
                     results.put(subject, object);
 
@@ -199,13 +205,14 @@ public class FileUtils {
 
     }
  
-    public static void matchLabelsWithEntities(String propertyFile, String labelFileName,Integer numberOfTriples) {
+    /*public static void matchLabelsWithEntities(String propertyFile, String labelFileName,Integer numberOfTriples) {
         BufferedReader reader;
         String line = "";
         File file = new File(labelFileName);
-        Map<String, String> propertySubObjEntities = tripleFileToHash(propertyFile);
+        Map<String, String> propertySubObjEntities = tripleFileToHash(propertyFile,-1);
         Map<String, String> propertyObjSubjEntities=reverseHash(propertySubObjEntities);
         Map<String, String> objectLabelHash = new  TreeMap<String, String> ();
+       
 
         List<OffLineResult> offLineResults=new ArrayList<OffLineResult>();
         String content = "";
@@ -247,7 +254,8 @@ public class FileUtils {
                     
                     if (subjectUri != null) {
                         lineNumber=lineNumber+1;
-                        OffLineResult offLineResult = new OffLineResult(subjectUri, subjectLabel, objectUri, objectLabel);
+                        OffLineResult offLineResult = new OffLineResult(subjectUri, subjectLabel, objectUri, objectLabel,null,null,null,null,null,null);
+                       
                         offLineResults.add(offLineResult);
                         
                         if(numberOfTriples==-1)
@@ -285,15 +293,16 @@ public class FileUtils {
             e.printStackTrace();
         }
 
-    }
+    }*/
     
-    public static Map<String, OffLineResult> getEntityLabels(String propertyFile,String classDir,String returnSubjOrObj,String bindingType,String returnType) {
+    public static Map<String, OffLineResult> getEntityLabels(String propertyFile, String classDir, String returnSubjOrObj, String bindingType, String returnType) {
         Map<String, OffLineResult> entityLabels = new TreeMap<String, OffLineResult>();
-         BufferedReader reader;
+        BufferedReader reader;
         String line = "";
         File file = new File(propertyFile);
         String content = "";
         Integer lineNumber = 0;
+
         /*Set<String> subjectClass=new TreeSet<String>();
         Set<String> objectClass=new TreeSet<String>();
 
@@ -304,55 +313,68 @@ public class FileUtils {
             objectClass = FileUtils.getClassHash(getClass(classDir, returnType, ".txt"));
             subjectClass = FileUtils.getClassHash(getClass(classDir, bindingType, ".txt"));
         }*/
-
         try {
             reader = new BufferedReader(new FileReader(propertyFile));
             line = reader.readLine();
             while (line != null) {
                 line = reader.readLine();
-                String subjectUri = null;
-                String subjectLabel = null, objectUri = null,objectLabel=null;
+                String subjectUri = null,subjectLabel = null, objectUri = null, objectLabel = null;
+                String subjectWiki=null,subjectThum=null,subjectAbstract=null,objectWiki=null,objectThum=null,objectAbstract=null;
+
                 if (line != null) {
-                    String[] lines=line.split("=");
-                
+                    String[] lines = line.split("=");
+
                     Integer index = 0;
                     Boolean flag = false;
                     for (String value : lines) {
                         index = index + 1;
-                        value=value.replace("<", "");
-                        value=value.replace(">", "");
-                        value=value.replace("\"", "");
+                        value = value.replace("<", "");
+                        value = value.replace(">", "");
+                        value = value.replace("\"", "");
                         if (index == 1) {
                             subjectUri = clean(value);
                         } else if (index == 2) {
                             subjectLabel = clean(value);
-                        }
-                        else if (index == 2) {
-                            subjectLabel = clean(value);
-                        }
-                        else if (index == 3) {
+                        }  else if (index == 3) {
                             objectUri = clean(value);
-                        }
-                         else if (index == 4) {
+                        } else if (index == 4) {
                             objectLabel = clean(value);
                         }
-                        
+
                     }
 
-                        lineNumber=lineNumber+1;
-                        
-                       
-                      
-                       //if (match(subjectClass,subjectUri) && match(objectClass,objectUri)) {
-                        OffLineResult offLineResult = new OffLineResult(subjectUri, subjectLabel, objectUri, objectLabel);
-                        /*System.out.println(lineNumber+" subject:" + subjectUri + " subjectLabel:" + subjectLabel
-                                + " " + " objectUri:" + objectUri + " " + " objectLabel:" + objectLabel);*/
-                        entityLabels.put(line, offLineResult);
-                        
-                    //}
-                        //System.out.println(lineNumber+" subject:" + subjectUri + " subjectLabel:" + subjectLabel
-                        //        + " " + " objectUri:" + objectUri + " " + " objectLabel:" + objectLabel);
+                    lineNumber = lineNumber + 1;
                     
+                    System.out.println(lineNumber+" subject:" + subjectUri + " subjectLabel:" + subjectLabel);
+                    //        + " " + " objectUri:" + objectUri + " " + " objectLabel:" + objectLabel);
+
+                    //if (match(subjectClass,subjectUri) && match(objectClass,objectUri)) {
+                    
+                    /*if (wikilink.containsKey(subjectUri)) {
+                        subjectWiki = wikilink.get(subjectUri);
+                    } else if (thumbnail.containsKey(subjectUri)) {
+                        subjectThum = thumbnail.get(subjectUri);
+                    } else if (thumbnail.containsKey(subjectUri)) {
+                        subjectAbstract = thumbnail.get(subjectUri);
+                    }
+
+                    if (wikilink.containsKey(objectUri)) {
+                        objectWiki = wikilink.get(objectUri);
+                    } else if (thumbnail.containsKey(objectUri)) {
+                         objectThum = thumbnail.get(objectUri);
+                    } else if (thumbnail.containsKey(objectUri)) {
+                         objectAbstract = thumbnail.get(objectUri);
+                    }*/
+                    
+                        
+                    OffLineResult offLineResult = new OffLineResult(subjectUri, subjectLabel, objectUri, objectLabel, subjectWiki, subjectThum, subjectAbstract, objectWiki, objectThum, objectAbstract);
+                    /*System.out.println(lineNumber+" subject:" + subjectUri + " subjectLabel:" + subjectLabel
+                                + " " + " objectUri:" + objectUri + " " + " objectLabel:" + objectLabel);*/
+                    entityLabels.put(line, offLineResult);
+
+                    //}
+                    //System.out.println(lineNumber+" subject:" + subjectUri + " subjectLabel:" + subjectLabel
+                    //        + " " + " objectUri:" + objectUri + " " + " objectLabel:" + objectLabel);
                 }
             }
             reader.close();
@@ -362,8 +384,8 @@ public class FileUtils {
         }
         return entityLabels;
     }
-    
-     private static String getClass(String classDir, String entity, String extension) {
+
+    private static String getClass(String classDir, String entity, String extension) {
         return classDir + "dbo_" + entity + extension;
     }
 
@@ -437,8 +459,8 @@ public class FileUtils {
     }*/
 
     private static String clean(String value) {
-        //value = value.replace("<", "");
-        //value = value.replace(">", "");
+        value = value.replace("<", "");
+        value = value.replace(">", "");
         //value = value.replace("http://dbpedia.org/resource/", "");
         //value = value.replace("http://dbpedia.org/ontology/", "");
         //value = value.replace("^^<http://www.w3.org/2001/XMLSchema#date>", "");
@@ -666,10 +688,13 @@ public class FileUtils {
         return common;
     }
 
-   
+    private static Map<String, String> getWikiLinks(String wikilinkFile) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
+    private static Map<String, String> getAbstract(String abstractFile) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
- 
-  
 
 }

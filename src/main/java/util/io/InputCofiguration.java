@@ -39,7 +39,10 @@ public class InputCofiguration {
     private String questionDir = null;
     @JsonProperty("classDir")
     private String classDir = null;
-    @JsonProperty("qaldDir")
+    @JsonProperty("wikiFile")
+    private String wikiFile = null;
+    @JsonProperty("abstractFile")
+    private String abstractFile = null;
     private String qaldDir = null;
     @JsonProperty("numberOfEntities")
     private Integer numberOfEntities;
@@ -60,9 +63,14 @@ public class InputCofiguration {
     @JsonProperty("online")
     private Boolean online;
     @JsonProperty("externalEntittyList")
-    private Boolean externalEntittyList;    
-    
-     
+    private Boolean externalEntittyList;
+    @JsonProperty("evalutionQuestion")
+    private Boolean evalutionQuestion = false;
+    @JsonProperty("offlineQuestion")
+    private Boolean offlineQuestion = false;
+    @JsonProperty("evalutionBindingFile")
+    private String evalutionBindingFile;
+
     private LinkedData linkedData = null;
 
     public InputCofiguration() {
@@ -118,8 +126,12 @@ public class InputCofiguration {
         return similarityThresold;
     }
 
+    public Boolean getOfflineQuestion() {
+        return offlineQuestion;
+    }
+
     public void setLinkedData(String fileName) throws Exception {
-        this.linkedData = FileUtils.getLinkedDataConf(new File(fileName));
+        this.linkedData = FileProcessUtils.getLinkedDataConf(new File(fileName));
     }
 
     public LinkedData getLinkedData() {
@@ -153,11 +165,11 @@ public class InputCofiguration {
     public String getEntityDir() {
         return entityDir;
     }
-    
-    public String getQuestionDir(){
+
+    public String getQuestionDir() {
         return questionDir;
     }
-    
+
     public String getClassDir() {
         return classDir;
     }
@@ -169,12 +181,26 @@ public class InputCofiguration {
     public Boolean getExternalEntittyList() {
         return externalEntittyList;
     }
-    
+
+    public String getWikiFile() {
+        return wikiFile;
+    }
+
+    public String getAbstractFile() {
+        return abstractFile;
+    }
+
+    public String getEvalutionBindingFile() {
+        return evalutionBindingFile;
+    }
+
+    public Boolean getEvalutionQuestion() {
+        return evalutionQuestion;
+    }
+
     @Override
     public String toString() {
         return "InputCofiguration{" + "language=" + languageCode + ", inputDir=" + getInputDir() + ", outputDir=" + getOutputDir() + ", numberOfEntities=" + numberOfEntities + ", similarityThresold=" + similarityThresold + ", csvToTurtle=" + csvToTurtle + ", turtleToProtoType=" + turtleToProtoType + ", protoTypeToQuestion=" + protoTypeToQuestion + ", evalution=" + evalution + '}';
     }
-
-    
 
 }

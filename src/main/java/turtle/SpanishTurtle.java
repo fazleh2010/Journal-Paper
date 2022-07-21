@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import util.io.CsvFile;
-import util.io.FileUtils;
+import util.io.FileProcessUtils;
 import linkeddata.LinkedData;
 import util.io.Tupples;
 
@@ -77,7 +77,7 @@ public class SpanishTurtle extends TurtleCreation implements TutleConverter {
                         count = count + 1;
                         List<String[]> values = keyRows.get(key);
                         setSyntacticFrame(key, values);
-                        FileUtils.stringToFile(this.turtleString, directory + this.tutleFileName);
+                        FileProcessUtils.stringToFile(this.turtleString, directory + this.tutleFileName);
                         if (this.turtleString != null) {
                             this.conversionFlag = true;
                         }

@@ -10,7 +10,7 @@ import evaluation.QALDImporter;
 import grammar.generator.BindingResolver;
 import grammar.generator.GrammarRuleGeneratorRoot;
 import grammar.generator.GrammarRuleGeneratorRootImpl;
-import grammar.read.questions.ReadAndWriteQuestions;
+import grammar.read.questions.ProtoToRealQuesrion;
 import grammar.structure.component.DomainOrRangeType;
 import grammar.structure.component.FrameType;
 import grammar.structure.component.GrammarEntry;
@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import static java.util.Objects.isNull;
 import util.io.CsvFile;
-import util.io.FileUtils;
+import util.io.FileProcessUtils;
 import turtle.GermanTurtle;
 import java.io.File;
 import java.io.IOException;
@@ -75,7 +75,7 @@ public class QueGG {
                 throw new IllegalArgumentException(String.format("Too few parameters (%s/%s)", args.length));
             } else if (args.length == 2) {
                 configFile = args[0];
-                InputCofiguration inputCofiguration = FileUtils.getInputConfig(new File(configFile));
+                InputCofiguration inputCofiguration = FileProcessUtils.getInputConfig(new File(configFile));
                 inputCofiguration.setLinkedData(args[1]);                
                 online=inputCofiguration.getOnline();
                 externalEntittyListflag=inputCofiguration.getExternalEntittyList();
@@ -93,7 +93,7 @@ public class QueGG {
                     String outputDir = inputCofiguration.getOutputDir();
                     LinkedData linkedData = inputCofiguration.getLinkedData();
                     Double similarity = inputCofiguration.getSimilarityThresold();
-                    queGG.evalution(qaldDir, outputDir, language, linkedData.getEndpoint(), EvaluateAgainstQALD.REAL_QUESTION, similarity);
+                    queGG.evalution(qaldDir, outputDir, inputCofiguration,language, linkedData.getEndpoint(), EvaluateAgainstQALD.REAL_QUESTION, similarity);
                 }
 
             }
@@ -105,7 +105,7 @@ public class QueGG {
 
     }
 
-    public void evalution(String qaldDir, String outputDir, Language language, String endpoint, String questionType, Double similarityMeasure) throws IOException, Exception {
+    public void evalution(String qaldDir, String outputDir, InputCofiguration inputCofiguration,Language language, String endpoint, String questionType, Double similarityMeasure) {
         ObjectMapper objectMapper = new ObjectMapper();
         String queGGJson = null, queGGJsonCombined = null, qaldFile = null, qaldModifiedFile = null;
         String languageCode = language.name().toLowerCase();
@@ -121,13 +121,18 @@ public class QueGG {
                     qaldFile = qaldDir + File.separator + fileName;
                 }
             }
+            else if(fileName.contains("lcquad")){
+                qaldFile=qaldModifiedFile = qaldDir + File.separator + fileName;
+            }
+            
         }
+        
 
         //temporary code for qald entity creation...
         //System.out.println(entityLabelDir+File.separator+"qaldEntities.txt");
         //FileUtils.stringToFile(string, entityLabelDir+File.separator+"qaldEntities.txt");
         
-        if (questionType.contains(PROTOTYPE_QUESTION)) {
+        /*if (questionType.contains(PROTOTYPE_QUESTION)) {
             EvaluateAgainstQALD_1 evaluateAgainstQALD_1 = new EvaluateAgainstQALD_1(languageCode, endpoint);
             for (String fileName : new File(outputDir).list()) {
                 if (fileName.contains("grammar_FULL_DATASET") && fileName.contains(language.name())) {
@@ -145,14 +150,16 @@ public class QueGG {
         
             evaluateAgainstQALD_1.evaluateAndOutput(grammarWrapper, qaldFile, qaldModifiedFile, resultFileName, qaldRaw, languageCode, questionType, similarityMeasure);
 
-        } else if (questionType.contains(REAL_QUESTION)) {
+        } else*/ 
+        if (questionType.contains(REAL_QUESTION)) {
              
             Map<String, String[]> queGGQuestions = new HashMap<String, String[]>();
             List<String[]> rows = new ArrayList<String[]>();
-            String[] files = new File(outputDir).list();
+            String questionDir=inputCofiguration.getQuestionDir();
+            String[] files = new File(questionDir).list();
             for (String fileName : files) {
                 if (fileName.contains(questionsFile) && fileName.contains(".csv")) {
-                    File file = new File(outputDir + File.separator + fileName);
+                    File file = new File(questionDir + File.separator + fileName);
                     CsvFile csvFile = new CsvFile(file);
                     rows = csvFile.getRows(file);
                     for (String[] row : rows) {
@@ -162,8 +169,13 @@ public class QueGG {
                     }
                 }
             }
-
-            evaluateAgainstQALD.evaluateAndOutput(queGGQuestions, qaldFile, qaldModifiedFile, resultFileName, qaldRaw, languageCode, questionType, similarityMeasure);
+           
+            try {
+                evaluateAgainstQALD.evaluateAndOutput(queGGQuestions, qaldFile, qaldModifiedFile, resultFileName, qaldRaw, languageCode, questionType, similarityMeasure);
+            } catch (Exception ex) {
+                System.out.println("error in reading gold standard::"+ex.getMessage());
+                java.util.logging.Logger.getLogger(QueGG.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
 
     }
@@ -210,20 +222,20 @@ public class QueGG {
         setDataSet(linkedData);
 
         if (singleFlag) {
-            protoToQuestions.addAll(FileUtils.getFiles(inputDir + "/", grammar_FULL_DATASET + "_" + language.name(), ".json"));
+            protoToQuestions.addAll(FileProcessUtils.getFiles(inputDir + "/", grammar_FULL_DATASET + "_" + language.name(), ".json"));
         }
         if (combinedFlag) {
-            protoToQuestions.addAll(FileUtils.getFiles(inputDir + "/", grammar_COMBINATIONS + "_" + language.name(), ".json"));
+            protoToQuestions.addAll(FileProcessUtils.getFiles(inputDir + "/", grammar_COMBINATIONS + "_" + language.name(), ".json"));
         }
 
         String langCode = language.name().toLowerCase().trim();
-        String questionAnswerFile = questionDir + File.separator + questionsFile + "_" + langCode + ".csv";
-        String questionSummaryFile = questionDir + File.separator + summaryFile + "_" + langCode + ".csv";
-        ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile,maxNumberOfEntities, langCode, linkedData.getEndpoint(), online,externalEntittyListflag,entityDir,classDir,linkedData);
+        //String questionAnswerFile = questionDir + File.separator + questionsFile + "_" + langCode + ".csv";
+        //String questionSummaryFile = questionDir + File.separator + summaryFile + "_" + langCode + ".csv";
+        ProtoToRealQuesrion readAndWriteQuestions = new ProtoToRealQuesrion(linkedData,inputCofiguration);
         if(online)
-         readAndWriteQuestions.generateFullQuestionOnline(protoToQuestions);
+         readAndWriteQuestions.onlineQaGeneration(protoToQuestions);
         else
-         readAndWriteQuestions.offline(protoToQuestions);
+         readAndWriteQuestions.offlineQaGeneration(protoToQuestions);
 
     }
 
@@ -234,7 +246,7 @@ public class QueGG {
         LinkedData linkedData = inputCofiguration.getLinkedData();
         Double similarityMeasure = inputCofiguration.getSimilarityThresold();
         Boolean combinedFlag=inputCofiguration.getCompositeFlag();
-        evalution(qaldDir, outputDir, language, linkedData.getEndpoint(), EvaluateAgainstQALD.REAL_QUESTION, similarityMeasure);
+        evalution(qaldDir, outputDir, inputCofiguration,language, linkedData.getEndpoint(), EvaluateAgainstQALD.REAL_QUESTION, similarityMeasure);
 
     }
 

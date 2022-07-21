@@ -63,7 +63,7 @@ public class ReferenceManagement implements ReadWriteConstants {
 
             }
         } else if (type.contains(ALL)) {
-            this.offlineGeneratedProperties = FileUtils.getSetFromFile(propertyFile);
+            this.offlineGeneratedProperties = FileProcessUtils.getSetFromFile(propertyFile);
 
         }
 
@@ -225,7 +225,7 @@ public class ReferenceManagement implements ReadWriteConstants {
         String inputDir = "../resources/";
         List<File> protoSimpleQFiles = new ArrayList<File>();
         
-        protoSimpleQFiles.addAll(FileUtils.getFiles(inputDir + language + "/", grammar_FULL_DATASET, ".json"));
+        protoSimpleQFiles.addAll(FileProcessUtils.getFiles(inputDir + language + "/", grammar_FULL_DATASET, ".json"));
 
         if (protoSimpleQFiles.isEmpty()) {
             throw new Exception("No proto file found to process!!");

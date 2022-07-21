@@ -10,7 +10,7 @@ import evaluation.QALDImporter;
 import grammar.generator.BindingResolver;
 import grammar.generator.GrammarRuleGeneratorRoot;
 import grammar.generator.GrammarRuleGeneratorRootImpl;
-import grammar.read.questions.ReadAndWriteQuestions;
+import grammar.read.questions.ProtoToRealQuesrion;
 import grammar.structure.component.DomainOrRangeType;
 import grammar.structure.component.FrameType;
 import grammar.structure.component.GrammarEntry;
@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import static java.util.Objects.isNull;
 import util.io.CsvFile;
-import util.io.FileUtils;
+import util.io.FileProcessUtils;
 import turtle.GermanTurtle;
 import java.io.File;
 import java.io.IOException;
@@ -75,7 +75,7 @@ public class QueGGOnline {
                 throw new IllegalArgumentException(String.format("Too few parameters (%s/%s)", args.length));
             } else if (args.length == 2) {
                 configFile = args[0];
-                InputCofiguration inputCofiguration = FileUtils.getInputConfig(new File(configFile));
+                InputCofiguration inputCofiguration = FileProcessUtils.getInputConfig(new File(configFile));
                 inputCofiguration.setLinkedData(args[1]);
                 online=inputCofiguration.getOnline();
                 if (inputCofiguration.isCsvToTurtle()) {
@@ -209,21 +209,19 @@ public class QueGGOnline {
         setDataSet(linkedData);
 
         if (singleFlag) {
-            protoToQuestions.addAll(FileUtils.getFiles(inputDir + "/", grammar_FULL_DATASET + "_" + language.name(), ".json"));
+            protoToQuestions.addAll(FileProcessUtils.getFiles(inputDir + "/", grammar_FULL_DATASET + "_" + language.name(), ".json"));
         }
         if (combinedFlag) {
-            protoToQuestions.addAll(FileUtils.getFiles(inputDir + "/", grammar_COMBINATIONS + "_" + language.name(), ".json"));
+            protoToQuestions.addAll(FileProcessUtils.getFiles(inputDir + "/", grammar_COMBINATIONS + "_" + language.name(), ".json"));
         }
 
         String langCode = language.name().toLowerCase().trim();
-        String questionAnswerFile = questionDir + File.separator + questionsFile + "_" + langCode + ".csv";
-        String questionSummaryFile = questionDir + File.separator + summaryFile + "_" + langCode + ".csv";
-        ReadAndWriteQuestions readAndWriteQuestions = new ReadAndWriteQuestions(questionAnswerFile, questionSummaryFile,maxNumberOfEntities, langCode, linkedData.getEndpoint(), online,externalEntittyListflag,entityDir,classDir,linkedData);
+        ProtoToRealQuesrion readAndWriteQuestions = new ProtoToRealQuesrion(linkedData,inputCofiguration);
         
         if (online)
-            readAndWriteQuestions.generateFullQuestionOnline(protoToQuestions);
+            readAndWriteQuestions.onlineQaGeneration(protoToQuestions);
         else
-            readAndWriteQuestions.offline(protoToQuestions);
+            readAndWriteQuestions.offlineQaGeneration(protoToQuestions);
 
     }
 
