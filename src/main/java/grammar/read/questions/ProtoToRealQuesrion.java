@@ -29,6 +29,7 @@ import org.apache.jena.query.QueryType;
 import org.apache.logging.log4j.LogManager;
 import util.io.CsvFile;
 import linkeddata.LinkedData;
+import util.io.AddQuote;
 import static util.io.BashScript.FIND_ABSTRACT;
 import static util.io.BashScript.FIND_IMAGE_LINK;
 import static util.io.BashScript.FIND_WIKI_LINK;
@@ -50,7 +51,6 @@ public class ProtoToRealQuesrion implements ReadWriteConstants {
     public CSVWriter csvWriterSummary;
     public String questionAnswerFile = null;
     public String questionSummaryFile = null;
-    private Set<String> excludes = new HashSet<String>();
     private Map<String, Statistics> summary = new TreeMap<String, Statistics>();
     private Integer maxNumberOfEntities = 100;
     private String endpoint = null;
@@ -67,7 +67,7 @@ public class ProtoToRealQuesrion implements ReadWriteConstants {
         this.inputCofiguration = inputCofiguration;
         this.online = this.inputCofiguration.getOnline();
         this.language = this.inputCofiguration.getLanguageCode();
-        this.propertyDir =this.inputCofiguration.getEntityDir();
+        this.propertyDir = this.inputCofiguration.getEntityDir();
         this.endpoint = this.linkedData.getEndpoint();
         this.questionAnswerFile = this.inputCofiguration.getQuestionDir() + File.separator + questionsFile + "_" + language + ".csv";
         this.questionSummaryFile = this.inputCofiguration.getQuestionDir() + File.separator + summaryFile + "_" + language + ".csv";
@@ -92,7 +92,6 @@ public class ProtoToRealQuesrion implements ReadWriteConstants {
             GrammarEntries grammarEntries = mapper.readValue(file, GrammarEntries.class);
             Integer total = grammarEntries.getGrammarEntries().size();
             Integer idIndex = 0, noIndex = 0;
-            Integer fileIndex = 1;
             processEachGrammarUnit(grammarEntries, existingEntries, noIndex, idIndex);
         }
 
@@ -100,6 +99,128 @@ public class ProtoToRealQuesrion implements ReadWriteConstants {
         this.writeSummary(this.summary);
         this.csvWriterSummary.close();
 
+    }
+    
+     private Integer onlineQaGeneration(String uri, String sparqlQuery, List<UriLabel> uriLabels, List<String> questions, Integer rowIndex, String lexicalEntry, GrammarEntryUnit grammarEntryUnit, Map<String, OffLineResult> entityLabels) throws IOException {
+        Integer index = 0;
+        String returnSubjOrObj = grammarEntryUnit.getReturnVariable();
+        String syntacticFrame = grammarEntryUnit.getFrameType();
+        QueryType queryType = grammarEntryUnit.getQueryType();
+        String rdfTypeProperty = linkedData.getRdfPropertyType();
+        String className = linkedData.getRdfPropertyClass(grammarEntryUnit.getReturnType());
+        String template = grammarEntryUnit.getSentenceTemplate();
+        List< String[]> rows = new ArrayList<String[]>();
+
+        if (questions.isEmpty()) {
+            return rowIndex;
+        }
+
+        for (UriLabel uriLabel : uriLabels) {
+            String questionUri = uriLabel.getUri(), questionLabel = uriLabel.getLabel();
+            String answerWiki = null, answerThumb = null, answerAbstract = null;
+
+            if (questionUri != null && !questionLabel.isEmpty()) {
+                questionUri = questionUri.trim().strip().stripLeading().stripTrailing();
+                questionLabel = uriLabel.getLabel().replaceAll("\'", "").replaceAll("\"", "");
+                //bashScript=  new BashScript(menus, inputCofiguration.getWikiFile(), inputCofiguration.getAbstractFile(),inputCofiguration.getWikiFile(),  questionUri);
+
+            } else if (questionLabel.isEmpty()) {
+                //find labels for the specific database
+                if (this.online) {
+                    String classType = this.linkedData.getClassProperty();
+                    questionLabel = getUriLabel(questionUri, classType);
+                }
+            }
+
+            if (!AddQuote.isKbValid(uriLabel)) {
+                continue;
+            }
+            String questionForShow = questions.iterator().next();
+
+            if (questionForShow.contains("Where is $x located?")) {
+                continue;
+            }
+            String[] wikipediaAnswer = new String[3];
+            String sparql = null, answerUri = null, answerLabel = null;
+            wikipediaAnswer = this.getAnswerFromWikipedia(template, rdfTypeProperty, className, questionUri, sparqlQuery, null, returnSubjOrObj, endpoint, queryType);
+            sparql = wikipediaAnswer[0];
+
+            if (this.online) {
+                answerUri = wikipediaAnswer[1];
+                answerLabel = wikipediaAnswer[2];
+            } else {
+                answerUri = uriLabel.getAnswerUri();
+                answerLabel = uriLabel.getAnswerLabel();
+                /*answerWiki =bashScript.getWikiLink();
+                answerThumb =bashScript.getImageLink();
+                answerAbstract = bashScript.getAbstractText();*/
+                //System.out.println(lexicalEntry + " questionForShow:" + questionForShow + " questionUri::" + questionUri + " questionLabel:" + questionLabel + " answerUri:" + answerUri + " answerLabel" + answerLabel);
+            }
+
+            index = index + 1;
+
+            sparql = AddQuote.modifySparql(sparql);
+
+            try {
+                /*if (answer.isEmpty() || answer.contains("no answer found")) {
+                    continue;
+                } else*/ {
+                    /*if (index >= this.maxNumberOfEntities) {
+                        break;
+                    }*/
+
+                    if (this.online) {
+                        /*if (answerUri.isEmpty() || answerUri.length() < 2) {
+                            continue;
+                        }*/
+                    }
+
+                    for (String question : questions) {
+                        if (question.contains("(") && question.contains(")")) {
+                            String result = StringUtils.substringBetween(question, "(", ")");
+                            question = question.replace(result, "X");
+                        } else if (question.contains("$x")) {
+
+                        }
+
+                        String id = uri + "_" + rowIndex.toString();
+                        String questionT = getQuestion(question, questionLabel);
+
+                        if (questionLabel.isEmpty()) {
+                            continue;
+                        }
+
+                        String[] record = {id, questionT, sparql, answerUri, answerLabel, syntacticFrame, "single"};
+                        String[] newRecord = AddQuote.doubleQuote(record);
+                        System.out.println("index::" + index + " questionT::" + questionT + " answerUri:" + answerUri + " answerLabel:" + answerLabel + " sparql:" + sparql);
+                        //System.out.println("answerWiki::" + answerWiki + " answerThumb::" + answerThumb+" answerAbstract::"+answerAbstract);
+
+                        if (this.online) {
+                            if (answerUri != null) {
+                                this.csvWriterQuestions.writeNext(newRecord);
+                                System.out.println("index::" + index + " questionT::" + questionT + " sparql::" + sparql + " answerUri::" + answerUri + " answerLabel::" + answerLabel + " syntacticFrame:" + syntacticFrame);
+                                rowIndex = rowIndex + 1;
+                            } else {
+                                continue;
+                            }
+                        }
+                        if (!this.online) {
+                            this.csvWriterQuestions.writeNext(newRecord);
+                            rowIndex = rowIndex + 1;
+                        }
+
+                        //if(rowIndex>100)
+                        //  return rowIndex;
+                        //}
+                    }
+                }
+
+            } catch (Exception ex) {
+                System.err.println(ex.getMessage() + " " + sparql + " " + answerLabel);
+            }
+        }
+
+        return rowIndex;
     }
 
     public void offlineQaGeneration(List<File> protoSimpleQFiles) throws Exception {
@@ -145,7 +266,13 @@ public class ProtoToRealQuesrion implements ReadWriteConstants {
             for (GrammarEntryUnit grammarEntryUnit : grammarEntries.getGrammarEntries()) {
                 String uri = null, className;
                 className = linkedData.getRdfPropertyClass(grammarEntryUnit.getReturnType());
-                String template = grammarEntryUnit.getSentenceTemplate();
+                questions = grammarEntryUnit.getSentences();
+                String sparql = grammarEntryUnit.getSparqlQuery();
+                String returnSubjOrObj = grammarEntryUnit.getReturnVariable();
+                String bindingType = grammarEntryUnit.getBindingType();
+                String returnType = grammarEntryUnit.getReturnType();
+                List<UriLabel> bindingList = grammarEntryUnit.getBindingList();
+                String property = AddQuote.getProperty(grammarEntryUnit.getSparqlQuery());
 
                 if (grammarEntryUnit.getLexicalEntryUri() != null) {
                     uri = grammarEntryUnit.getLexicalEntryUri().toString();
@@ -156,16 +283,9 @@ public class ProtoToRealQuesrion implements ReadWriteConstants {
                     continue;
                 }
 
-                questions = grammarEntryUnit.getSentences();
                 if (questions.contains("Where is $x located?")) {
                     continue;
                 }
-                String sparql = grammarEntryUnit.getSparqlQuery();
-                String returnSubjOrObj = grammarEntryUnit.getReturnVariable();
-                String bindingType = grammarEntryUnit.getBindingType();
-                String returnType = grammarEntryUnit.getReturnType();
-                List<UriLabel> bindingList = grammarEntryUnit.getBindingList();
-                String property = this.getProperty(grammarEntryUnit.getSparqlQuery());
 
                 if (!offlineMatchedProperties.contains(property) && this.inputCofiguration.getOfflineQuestion()) {
                     continue;
@@ -176,7 +296,7 @@ public class ProtoToRealQuesrion implements ReadWriteConstants {
                         fileId = fileId + grammarEntryUnit.getFrameType() + "-" + grammarEntryUnit.getReturnVariable();
                         String questionAnswerFileTemp = this.questionAnswerFile.replace(".csv", "") + "-" + fileId + "-" + (fileIndex++).toString() + ".csv";
                         this.csvWriterQuestions = new CSVWriter(new FileWriter(questionAnswerFileTemp, true));
-                        String propertyFile = this.getProperty(this.propertyDir, grammarEntryUnit.getSparqlQuery());
+                        String propertyFile = AddQuote.getProperty(this.propertyDir, grammarEntryUnit.getSparqlQuery());
                         this.entityLabels = FileProcessUtils.getEntityLabels(propertyFile, classDir, returnSubjOrObj, bindingType, returnType);
                         bindingList = this.getOffLineBindingList(entityLabels, returnSubjOrObj);
                     } catch (Exception ex) {
@@ -282,127 +402,7 @@ public class ProtoToRealQuesrion implements ReadWriteConstants {
         }
     }
 
-    private Integer onlineQaGeneration(String uri, String sparqlQuery, List<UriLabel> uriLabels, List<String> questions, Integer rowIndex, String lexicalEntry, GrammarEntryUnit grammarEntryUnit, Map<String, OffLineResult> entityLabels) throws IOException {
-        Integer index = 0;
-        String returnSubjOrObj = grammarEntryUnit.getReturnVariable();
-        String syntacticFrame = grammarEntryUnit.getFrameType();
-        QueryType queryType = grammarEntryUnit.getQueryType();
-        String rdfTypeProperty = linkedData.getRdfPropertyType();
-        String className = linkedData.getRdfPropertyClass(grammarEntryUnit.getReturnType());
-        String template = grammarEntryUnit.getSentenceTemplate();
-        List< String[]> rows = new ArrayList<String[]>();
-
-        if (questions.isEmpty()) {
-            return rowIndex;
-        }
-
-        for (UriLabel uriLabel : uriLabels) {
-            String questionUri = uriLabel.getUri(), questionLabel = uriLabel.getLabel();
-            String answerWiki = null, answerThumb = null, answerAbstract = null;
-
-            if (questionUri != null && !questionLabel.isEmpty()) {
-                questionUri = questionUri.trim().strip().stripLeading().stripTrailing();
-                questionLabel = uriLabel.getLabel().replaceAll("\'", "").replaceAll("\"", "");
-                //bashScript=  new BashScript(menus, inputCofiguration.getWikiFile(), inputCofiguration.getAbstractFile(),inputCofiguration.getWikiFile(),  questionUri);
-
-            } else if (questionLabel.isEmpty()) {
-                //find labels for the specific database
-                if (this.online) {
-                    String classType = this.linkedData.getClassProperty();
-                    questionLabel = getUriLabel(questionUri, classType);
-                }
-            }
-
-            if (!isKbValid(uriLabel)) {
-                continue;
-            }
-            String questionForShow = questions.iterator().next();
-
-            if (questionForShow.contains("Where is $x located?")) {
-                continue;
-            }
-            String[] wikipediaAnswer = new String[3];
-            String sparql = null, answerUri = null, answerLabel = null;
-            wikipediaAnswer = this.getAnswerFromWikipedia(template, rdfTypeProperty, className, questionUri, sparqlQuery, null, returnSubjOrObj, endpoint, queryType);
-            sparql = wikipediaAnswer[0];
-
-            if (this.online) {
-                answerUri = wikipediaAnswer[1];
-                answerLabel = wikipediaAnswer[2];
-            } else {
-                answerUri = uriLabel.getAnswerUri();
-                answerLabel = uriLabel.getAnswerLabel();
-                /*answerWiki =bashScript.getWikiLink();
-                answerThumb =bashScript.getImageLink();
-                answerAbstract = bashScript.getAbstractText();*/
-                //System.out.println(lexicalEntry + " questionForShow:" + questionForShow + " questionUri::" + questionUri + " questionLabel:" + questionLabel + " answerUri:" + answerUri + " answerLabel" + answerLabel);
-            }
-
-            index = index + 1;
-
-            sparql = this.modifySparql(sparql);
-
-            try {
-                /*if (answer.isEmpty() || answer.contains("no answer found")) {
-                    continue;
-                } else*/ {
-                    /*if (index >= this.maxNumberOfEntities) {
-                        break;
-                    }*/
-
-                    if (this.online) {
-                        /*if (answerUri.isEmpty() || answerUri.length() < 2) {
-                            continue;
-                        }*/
-                    }
-
-                    for (String question : questions) {
-                        if (question.contains("(") && question.contains(")")) {
-                            String result = StringUtils.substringBetween(question, "(", ")");
-                            question = question.replace(result, "X");
-                        } else if (question.contains("$x")) {
-
-                        }
-
-                        String id = uri + "_" + rowIndex.toString();
-                        String questionT = getQuestion(question, questionLabel);
-
-                        if (questionLabel.isEmpty()) {
-                            continue;
-                        }
-
-                        String[] record = {id, questionT, sparql, answerUri, answerLabel, syntacticFrame, "single"};
-                        String[] newRecord = doubleQuote(record);
-                        System.out.println("index::" + index + " questionT::" + questionT + " answerUri:" + answerUri + " answerLabel:" + answerLabel + " sparql:" + sparql);
-                        //System.out.println("answerWiki::" + answerWiki + " answerThumb::" + answerThumb+" answerAbstract::"+answerAbstract);
-
-                        if (this.online) {
-                            if (answerUri != null) {
-                                this.csvWriterQuestions.writeNext(newRecord);
-                                System.out.println("index::" + index + " questionT::" + questionT + " sparql::" + sparql + " answerUri::" + answerUri + " answerLabel::" + answerLabel + " syntacticFrame:" + syntacticFrame);
-                                rowIndex = rowIndex + 1;
-                            } else {
-                                continue;
-                            }
-                        }
-                        if (!this.online) {
-                            this.csvWriterQuestions.writeNext(newRecord);
-                            rowIndex = rowIndex + 1;
-                        }
-
-                        //if(rowIndex>100)
-                        //  return rowIndex;
-                        //}
-                    }
-                }
-
-            } catch (Exception ex) {
-                System.err.println(ex.getMessage() + " " + sparql + " " + answerLabel);
-            }
-        }
-
-        return rowIndex;
-    }
+   
 
     public String[] getAnswerFromWikipedia(String template, String rdfPropertyType, String className, String domainEntityUri,
             String sparql, String rangeEntityUri, String returnSubjOrObj, String endpoint,
@@ -427,25 +427,11 @@ public class ProtoToRealQuesrion implements ReadWriteConstants {
 
     }
 
-    private boolean isKbValid(UriLabel uriLabel) {
-        if (uriLabel.getLabel() != null)
-            ; else {
-            return false;
-        }
-
-        String kb = uriLabel.getUri().replace("http://dbpedia.org/resource/", "");
-        if (this.excludes.contains(kb)) {
-            return false;
-        }
-
-        return true;
-    }
-
     private List<UriLabel> getExtendedOnline(List<UriLabel> bindingList, File classFile, Integer keyindex, Integer classIntex, String bindingType) throws IOException {
         List<UriLabel> modifyLabels = new ArrayList<UriLabel>();
         Map<String, String> map = new TreeMap<String, String>();
         for (UriLabel uriLabel : bindingList) {
-            if (isKbValid(uriLabel)) {
+            if (AddQuote.isKbValid(uriLabel)) {
                 map.put(uriLabel.getUri(), uriLabel.getLabel());
             }
         }
@@ -463,7 +449,7 @@ public class ProtoToRealQuesrion implements ReadWriteConstants {
         List<UriLabel> modifyLabels = new ArrayList<UriLabel>();
         Map<String, String> map = new TreeMap<String, String>();
         for (UriLabel uriLabel : bindingList) {
-            if (isKbValid(uriLabel)) {
+            if (AddQuote.isKbValid(uriLabel)) {
                 map.put(uriLabel.getUri(), uriLabel.getLabel());
             }
         }
@@ -480,14 +466,6 @@ public class ProtoToRealQuesrion implements ReadWriteConstants {
             modifyLabels.add(uriLabel);
         }
         return modifyLabels;
-    }
-
-    private String modifySparql(String sparql) {
-        sparql = sparql.stripLeading().trim();
-        sparql = sparql.replace("\n", "");
-        sparql = sparql.replace(" ", "+");
-        sparql = sparql.replace("+", " ");
-        return sparql;
     }
 
     private void writeSummary(Map<String, Statistics> summary) {
@@ -513,39 +491,6 @@ public class ProtoToRealQuesrion implements ReadWriteConstants {
             lexicalEntries.add(column);
         }
         return lexicalEntries;
-    }
-
-    private String[] doubleQuote(String[] row) {
-        String[] newRow = new String[row.length];
-        Integer index = 0;
-        for (String string : row) {
-            string = doubleQuote(string);
-            newRow[index] = string;
-            index = index + 1;
-        }
-        return newRow;
-    }
-
-    private String doubleQuote(String string) {
-        return "\"" + string + "\"";
-    }
-
-    private String getProperty(String entityDir, String sparqlQueryOrg) {
-        String property = StringUtils.substringBetween(sparqlQueryOrg, "<", ">");
-        property = property.replace("http://dbpedia.org/ontology/", "dbo_");
-        property = property.replace("http://dbpedia.org/property/", "dbp_");
-        return entityDir + property + ".txt";
-    }
-
-    private String getEntity(String entityDir, String bindingType) {
-        return entityDir + bindingType + ".txt";
-    }
-
-    private String getProperty(String sparqlQueryOrg) {
-        String property = StringUtils.substringBetween(sparqlQueryOrg, "<", ">");
-        property = property.replace("http://dbpedia.org/ontology/", "dbo_");
-        property = property.replace("http://dbpedia.org/property/", "dbp_");
-        return property;
     }
 
     private List<UriLabel> getOffLineBindingList(Map<String, OffLineResult> entityLabels, String returnType) {

@@ -1,6 +1,5 @@
 {
   "endpoint" : "https://dbpedia.org/sparql",
-  "endpointFragment" : "http://data.linkeddatafragments.org/dbpedia2014",
   "gradablePrefix" : {
     "oils" : "http://lemon-model.net/oils/"
       },

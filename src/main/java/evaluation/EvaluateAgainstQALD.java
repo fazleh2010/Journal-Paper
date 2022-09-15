@@ -27,8 +27,6 @@ import org.apache.commons.text.similarity.CosineDistance;
 import org.apache.jena.query.QueryType;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
-import org.linkeddatafragments.client.LinkedSparqlExecution;
-import org.linkeddatafragments.model.LinkedDataFragmentGraph;
 
 public class EvaluateAgainstQALD {
 
@@ -47,9 +45,6 @@ public class EvaluateAgainstQALD {
     public EvaluateAgainstQALD(String language,String endpoint) {
         this.language = language;
         this.endpoint=endpoint;
-        if (this.endpoint.contains("http://data.linkeddatafragments.org")) {
-           this.model = ModelFactory.createModelForGraph(new LinkedDataFragmentGraph(this.endpoint));   
-        }
     }
     
    
@@ -151,15 +146,12 @@ public class EvaluateAgainstQALD {
     
     private void realQuestionComparision(EntryComparison entryComparison) {
         String qaldQuestion = entryComparison.getQaldEntry().getQuestions();
-        String cleanQaldQuestion = cleanQALDString(qaldQuestion); //  make lower case
         String qaldSparql = entryComparison.getQaldEntry().getSparql();
         String queGGSparql = !isNull(entryComparison.getQueGGEntry()) ? entryComparison.getQueGGEntry().getSparql() : "";
-        Boolean tpFlag = false;
-        Query qaldPARQLQuery = new Query();
-        System.out.println("qaldPARQLQuery::"+entryComparison.getQaldEntry().getId());
-         System.out.println("qaldPARQLQuery::"+entryComparison.getQaldEntry().getSparql());
-        System.out.println("qaldPARQLQuery::"+qaldPARQLQuery);
-        SPARQLParser.createParser(Syntax.syntaxSPARQL_11).parse(qaldPARQLQuery, qaldSparql);
+        //Query qaldPARQLQuery = new Query();
+        System.out.println("qaldID::"+entryComparison.getQaldEntry().getId());
+        System.out.println("qaldSparql::"+entryComparison.getQaldEntry().getSparql());
+        //SPARQLParser.createParser(Syntax.syntaxSPARQL_11).parse(qaldPARQLQuery, qaldSparql);
         List<String> uriResultListQueGG = new ArrayList<String>();
         List<String> uriResultListQALD;  
         uriResultListQALD = this.getResultForQaldSparqlQuery(qaldSparql);            
@@ -480,7 +472,6 @@ public class EvaluateAgainstQALD {
     private List<String> getResultForQaldSparqlQuery(String qaldSparql) {
         LOG.debug("Executing QALD SPARQL Query:\n{}", qaldSparql);
         List<String> uriResultList = new ArrayList<String>();
-         System.out.println("qaldSparql::"+qaldSparql);
          
          if(qaldSparql.contains("ASK")){
             return new ArrayList<String>(); 
@@ -490,12 +481,20 @@ public class EvaluateAgainstQALD {
             if (qaldSparql.length() >= 2 && qaldSparql.charAt(0) == '"' && qaldSparql.charAt(qaldSparql.length() - 1) == '"') {
                 qaldSparql = qaldSparql.substring(1, qaldSparql.length() - 1);
             }
+            System.out.println("qaldSparql::"+qaldSparql);
+            if(qaldSparql.contains("count")||qaldSparql.contains("COUNT")){
+               uriResultList = new  ArrayList<String>();
+            }
+          
+            else{
             SPARQLRequest sparqlRequest = SPARQLRequest.fromString(qaldSparql);
-            uriResultList = sparqlRequest.getSparqlResultList();
-        } else if (this.endpoint.contains("http://data.linkeddatafragments.org")) {
-            LinkedSparqlExecution main = new LinkedSparqlExecution(model, endpoint, qaldSparql);
-            uriResultList= main.sparqlObjectAsVariable(qaldSparql);
-        }
+            uriResultList = sparqlRequest.getSparqlResultList();     
+            if(uriResultList.size()>0){
+                System.out.println("uriResultList::"+uriResultList); 
+            }
+            }
+           
+        } 
         System.out.println("uriResultList::"+uriResultList);
         return uriResultList;
     }
