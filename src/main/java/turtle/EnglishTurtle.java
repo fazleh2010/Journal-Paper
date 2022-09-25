@@ -64,15 +64,21 @@ public class EnglishTurtle extends TurtleCreation implements TutleConverter {
 
                 CsvFile csvFile = new CsvFile();
                 String directory = inputDir + "/" + pathname + "/";
-                List<String[]> rows = csvFile.getRows(new File(directory + fileName));
+                List<String[]> rows = csvFile.getRowsManual(new File(directory + fileName));
                 Integer index = 0;
                 Map<String, List<String[]>> keyRows = new HashMap<String, List<String[]>>();
                 for (String[] row : rows) {
+                    
                     if (index == 0) {
                         index = index + 1;
                         continue;
                     }
+                    if(row.length<2){
+                       throw new Exception("the format of CSV file is wrong!!!!");
+                    }
                     String key = row[0];
+                    System.out.println(row[0]);
+
                     List<String[]> values = new ArrayList<String[]>();
                     if (keyRows.containsKey(key)) {
                         values = keyRows.get(key);

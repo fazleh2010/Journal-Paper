@@ -1,0 +1,91 @@
+lemon	partOfSpeech	writtenForm (singular)	writtenForm (plural)	preposition	SyntacticFrame	copulativeArg	prepositionalAdjunct	sense	reference	domain	range
+height_of	noun	height	-	of	NounPPFrame	range	domain	1	dbo:height	dbo:Model/dbo:Tower/dbo:BasketballPlayer	xsd:double
+cost-of	noun	cost	costs	of	NounPPFrame	range	domain	1	dbo:budget	dbo:Film	xsd:double
+Creator-of	noun	creator	creators	of	NounPPFrame	range	domain	1	dbo:creator	dbo:FictionalCharacter	dbo:Person
+population-of	noun	population	-	of	NounPPFrame	range	domain	1	dbo:populationTotal	dbo:PopulatedPlace	xsd:nonNegativeInteger
+causeOfDeath_of	noun	cause of death	causes of death	of	NounPPFrame	range	domain	1	dbo:deathCause	dbo:Person	xsd:String
+birthYear_of	noun	birth year	-	of	NounPPFrame	range	domain	1	dbo:birthYear	dbo:Person	xsd:gYear
+ingredient_of	noun	ingredient	ingredients	of	NounPPFrame	range	domain	1	dbo:ingredient	dbo:Food	owl:Thing
+dissolutionDate_of	noun	dissolution date	-	of	NounPPFrame	range	domain	1	dbo:dissolutionDate	dbo:AdministrativeRegion	xsd:date
+firstSeason_of	noun	first season	first seasons	of	NounPPFrame	range	domain	1	dbo:seasonNumber	dbo:TelevisionShow	xsd:nonNegativeInteger
+number_of	noun	number of locations	-	of	NounPPFrame	range	domain	1	dbo:numberOfLocations	dbo:Company	xsd:nonNegativeInteger
+DeathDate-of	noun	death date	-	of	NounPPFrame	range	domain	1	dbo:deathDate	dbo:Person	xsd:date
+recordLabel_of	noun	record label	record labels	of	NounPPFrame	range	domain	1	dbo:RecordLabel	dbo:Genre	xsd:string
+completionDate-of	noun	completion date	-	of	NounPPFrame	range	domain	1	dbo:completionDate	dbo:Ship	xsd:date
+numberOfPages-of	noun	number of pages	-	of	NounPPFrame	range	domain	1	dbo:numberOfPages	dbo:WrittenWork	xsd:positiveInteger
+timeZone-of	noun	time zone	time zones	of	NounPPFrame	range	domain	1	dbo:timeZone	dbo:City	xsd:string
+areaCode_of	noun	area code	-	of	NounPPFrame	range	domain	1	dbo:areaCode	dbo:City	xsd:string
+nickname_of	noun	nickname	nicknames	of	NounPPFrame	range	domain	1	dbp:nickname	dbo:City	xsd:string
+party-of	noun	party	parties	of	NounPPFrame	range	domain	1	dbo:party	dbo:Politician	xsd:string
+President-of	noun	president	-	of	NounPPFrame	range	domain	1	dbo:office	dbo:Country	xsd:string
+elevation-of	noun	elevation	-	of	NounPPFrame	range	domain	1	dbo:elevation	dbo:Mountain	xsd:double
+foundingYear_of	noun	founding year	-	of	NounPPFrame	range	domain	1	dbo:foundingYear	dbo:Company	xsd:gYear
+restingPlace-of	noun	resting place	-	of	NounPPFrame	range	domain	1	dbo:restingPlace	dbo:Person	xsd:string
+artisticMovement_of	noun	artistic movement	artistic movements	of	NounPPFrame	range	fqald	1	dbo:movement	dbo:Artist	owl:Thing
+first_to_climb	noun	first to climb	-	X	NounPPFrame	range	domain	1	dbo:firstAscentPerson	dbo:Mountain	dbo:Person
+music_by	noun	music	musics	by	NounPPFrame	domain	range	1	dbo:musicBy	dbo:Person	dbo:Musical
+wife-of	noun	wife	wives	of	NounPPFrame	range	domain	1	dbo:spouse	dbo:Person	dbo:Person
+host_of	noun	host	hosts	of	NounPPFrame	range	domain	1	dbo:presenter	dbo:TelevisionShow	dbo:Person
+largest_country_in	noun	largest country	-	of	NounPPFrame	range	domain	1	dbo:areaTotal	dbo:Country	dbo:Country
+mayor_of_1	noun	mayor	-	of	NounPPFrame	range	domain	1	dbo:mayor	dbo:Settlement/dbo:City	dbo:Person
+mayor_of_2	noun	mayor	-	of	NounPPFrame	range	domain	1	dbo:leaderName	dbo:City	dbo:Person
+coach_of	noun	coach	-	of	NounPPFrame	range	domain	1	dbo:coach	dbo:IceHockeyLeague	dbo:Person
+birthPlace_of	noun	birth place	-	of	NounPPFrame	range	domain	1	dbo:birthPlace	dbo:Person	dbo:Country
+Location-of_1	noun	location	-	of	NounPPFrame	range	domain	1	dbo:location	dbo:Place	dbo:Place
+Location-of_2	noun	location	-	of	NounPPFrame	range	domain	1	dbo:locatedInArea	dbo:Mountain	dbo:Country
+officialLanguage-of	noun	official language	official languages	of	NounPPFrame	range	domain	1	dbo:officialLanguage	dbo:Country	dbo:Language
+ingredient_of	noun	ingredient	ingredients	of	NounPPFrame	range	domain	1	dbo:ingredient	dbo:Food	owl:Thing
+largestCity_of	noun	largest city	-	of	NounPPFrame	range	domain	1	dbo:largestCity	dbo:Country	dbo:City
+programmingLanguage_of	noun	programming language	programming languages	of	NounPPFrame	range	domain	1	dbo:programmingLanguage	dbo:Work	dbo:Language
+editor_of	noun	editor	editors	of	NounPPFrame	range	domain	1	dbo:editor	dbo:Work	dbo:Person
+capital-of	noun	capital	-	of	NounPPFrame	range	domain	1	dbo:capital	dbo:Country	dbo:City
+child_of	noun	child	children	of	NounPPFrame	range	domain	1	dbo:child	dbo:Person	dbo:Person
+nationality_of	noun	nationality	-	of	NounPPFrame	range	domain	1	dbo:nationality	dbo:Person	dbo:Country
+AlterEgo-of	noun	alter ego	-	of	NounPPFrame	range	domain	1	dbp:alterEgo	dbo:ComicsCharacter	dbo:Person/xsd:string
+formOfGovernment-of	noun	form of government	-	of	NounPPFrame	range	domain	1	dbo:governmentType	dbo:Country	dbo:Country
+wine_region_of	noun	wine region	wine regions	of	NounPPFrame	range	domain	1	dbo:wineRegion	dbo:Grape	dbo:Place
+loyalty	noun	loyalty	loyalties	X	NounPPFrame	range	domain	1	dbo:connotation	dbo:Loyalty	dbo:Color
+Leader-of-1	noun	leader	leaders	of	NounPPFrame	range	domain	1	dbo:leader	dbo:Legislature	dbo:Organisation/dbo:Royalty
+vice_president_of	noun	vice president	vice president	of	NounPPFrame	range	domain	1	dbo:vicePresident	dbo:Politician	dbo:Politician
+musicComposer-of	noun	music composer	music composers	of	NounPPFrame	range	domain	1	dbo:musicComposer	dbo:TelevisionShow	dbo:Person
+currency_of	noun	currency	currencies	of	NounPPFrame	range	domain	1	dbo:currency	dbo:Country	dbo:Currency
+developer_of	noun	developer	developers	of	NounPPFrame	range	domain	1	dbo:developer	dbo:Work	dbo:Agent
+deathPlace	noun	death place	-	of	NounPPFrame	range	domain	1	dbo:deathPlace	dbo:Politician	dbo:Place
+father_of	noun	father	-	of	NounPPFrame	range	domain	1	dbp:father	dbo:Royalty	dbo:Person
+producer-of	noun	producer	producers	of	NounPPFrame	range	domain	1	dbo:producer	dbo:Film	dbo:Company
+foundationPlace_of	noun	foundation place	-	of	NounPPFrame	range	domain	1	dbo:foundationPlace	dbo:Company	dbo:City
+influencer_of	noun	influencer	influencers	of	NounPPFrame	range	domain	1	dbo:influenced	dbo:Person	dbo:Person
+doctoralSupervisor_of	noun	doctoral supervisor	doctoral supervisors	of	NounPPFrame	range	domain	1	dbo:doctoralAdvisor	dbo:Scientist	dbo:Person
+residence-of	noun	residence	residences	of	NounPPFrame	range	domain	1	dbo:residence	dbo:Place	dbo:Person
+currency_of	noun	currency	currencies	of	NounPPFrame	range	domain	1	dbo:currency	dbo:Country	dbo:Currency
+son_of	noun	son	sons	of	NounPPFrame	range	domain	1	dbo:child	dbo:Person	dbo:Person
+headquarter_of	noun	headquarter	-	of	NounPPFrame	range	domain	1	dbo:headquarter	dbo:Organisation	dbo:PopulatedPlace
+Founder-of_1	noun	founder	founders	of	NounPPFrame	range	domain	1	dbo:founder	dbo:Publisher	dbo:Agent
+Founder-of_2	noun	founder	founders	of	NounPPFrame	range	domain	1	dbo:foundedBy	dbo:Organisation	dbo:Pope
+autobiography-of	noun	autobiography	-	of	NounPPFrame	range	domain	1	dbo:literaryGenre	dbo:Autobiography	dbo:Author
+parent-of	noun	parent	parents	of	NounPPFrame	range	domain	1	dbo:parent	dbo:Person	dbo:Person
+artisticMovement_of	noun	artistic movement	artistic movements	of	NounPPFrame	range	domain	1	dbo:movement	dbo:Artist	owl:Thing
+author_of	noun	author	authors	of	NounPPFrame	range	domain	1	dbo:author	dbo:Work	dbo:Person
+foundation_series_of	noun	foundation series	foundation series	of	NounPPFrame	range	domain	1	dbo:series	dbo:Foundation_series	dbo:Person
+city-of	noun	city	cities	of	NounPPFrame	range	domain	1	dbo:isPartOf	dbo:AdministrativeRegion	dbo:City
+founder_of	noun	founder	founders	of	NounPPFrame	range	domain	1	dbo:foundedBy	dbo:BroadcastNetwork	dbo:Company
+wine_production-of	noun	wine production	wine productions	of	NounPPFrame	range	domain	1	dbo:wineProduced	dbo:Company	dbo:Location
+residence_of	noun	residence	residences	of	NounPPFrame	range	domain	1	dbo:residence	dbo:Person	dbo:City
+resting_place_of	noun	resting place	resting places	of	NounPPFrame	range	domain	1	dbo:restingPlace	dbo:Person	dbo:Country
+Composer-of	noun	music composer	music composers	of	NounPPFrame	range	domain	1	dbo:composer	dbo:TelevisionShow	dbo:Person
+timeZone-of	noun	time zone	time zones	of	NounPPFrame	range	domain	1	dbo:timeZone	dbo:City/dbo:Town	xsd:string
+Borough-of	noun	borough	borough	of	NounPPFrame	domain	range	1	dbo:governmentType	dbo:Town	owl:Thing
+membership-of	noun	member	members	of	NounPPFrame	range	domain	1	dbo:bandMember	dbo:Band	dbo:MusicalArtist
+Book-in	noun	book	books	in	NounPPFrame	domain	range	1	dbo:series	dbo:Book	dbo:TelevisionShow
+book_by	noun	book	books	by	NounPPFrame	domain	range	1	dbo:author	dbo:Book	dbo:Writer
+king-of	noun	king	kings	of	NounPPFrame	range	domain	1	dbo:leader	dbo:Legislature/dbo:Place	dbo:Person
+successor_of	noun	successor	-	of	NounPPFrame	range	domain	1	dbo:successor	dbo:Politician	dbo:Person
+game_by	noun	game	games	by	NounPPFrame	domain	range	1	dbo:publisher	dbo:VideoGame	dbo:Company/dbo:Publisher
+city-in	noun	city	cities	in	NounPPFrame	range	domain	1	dbo:isPartOf	dbo:AdministrativeRegion	dbo:City
+headquarter_of	noun	headquarter	-	of	NounPPFrame	range	domain	1	dbo:location	dbo:Building	dbo:City
+party-of	noun	party	parties	of	NounPPFrame	range	domain	1	dbo:party	dbo:Politician	xsd:string
+son_of	noun	son	sons	of	NounPPFrame	range	domain	1	dbo:child	dbo:Person	dbo:Person
+daughter_of	noun	daughter	daughters	of	NounPPFrame	range	domain	1	dbo:child	dbo:Person	dbo:Person
+coach_of	noun	coach	coaches	of	NounPPFrame	range	domain	1	dbo:coach	dbo:HockeyTeam	dbo:Person
+team_of	noun	team	teams	of	NounPPFrame	domain	range	1	dbo:league	dbo:HockeyTeam	dbo:IceHockeyLeague
+home_stadium_of	noun	home stadium	home stadiums	of	NounPPFrame	range	domain	1	dbo:ground	dbo:SportsClub	dbo:Stadium

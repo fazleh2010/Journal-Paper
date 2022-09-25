@@ -154,13 +154,10 @@ public class CsvFile implements CsvConstants {
         Stack<String> stack = new Stack<String>();
         CSVReader reader;
         try {
-            /*if (!FileFolderUtils.isFileBig(qaldFile, 100.0)) {
-                rows = generateLinebyLine(qaldFile);
-                 //System.out.println("@@@@@@@@@@@@@@@@@@@@@@" + qaldFile.getName()+" size:"+rows.size());
-            } else*/ {
-                reader = new CSVReader(new FileReader(qaldFile));
-                rows = reader.readAll();
-            }
+
+            reader = new CSVReader(new FileReader(qaldFile));
+            rows = reader.readAll();
+
         } catch (FileNotFoundException ex) {
             Logger.getLogger(CsvFile.class.getName()).log(Level.SEVERE, null, ex);
             LOGGER.log(Level.SEVERE, "CSV File not found:!!!" + ex.getMessage());
@@ -169,8 +166,35 @@ public class CsvFile implements CsvConstants {
             LOGGER.log(Level.SEVERE, "CSV File not found:!!!" + ex.getMessage());
         } catch (CsvException ex) {
             Logger.getLogger(CsvFile.class.getName()).log(Level.SEVERE, null, ex);
-            LOGGER.log(Level.SEVERE, "CSV problems:!!!" + ex.getMessage());
         }
+
+        return rows;
+    }
+
+     public List<String[]> getRowsManual(File qaldFile) {
+        List<String[]> rows = new ArrayList<String[]>();
+
+        /*if (FileFolderUtils.isFileSizeManageable(qaldFile, 40.0)) {
+            //System.out.println("..........." + qaldFile.getName());
+            return rows;
+        }*/
+        Stack<String> stack = new Stack<String>();
+        CSVReader reader;
+        try {
+            //if (!FileFolderUtils.isFileBig(qaldFile, 100.0)) {
+                rows = generateLinebyLine(qaldFile,100000);
+                 //System.out.println("@@@@@@@@@@@@@@@@@@@@@@" + qaldFile.getName()+" size:"+rows.size());
+            /*} else {
+                reader = new CSVReader(new FileReader(qaldFile));
+                rows = reader.readAll();
+            }*/
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(CsvFile.class.getName()).log(Level.SEVERE, null, ex);
+            LOGGER.log(Level.SEVERE, "CSV File not found:!!!" + ex.getMessage());
+        } catch (IOException ex) {
+            Logger.getLogger(CsvFile.class.getName()).log(Level.SEVERE, null, ex);
+            LOGGER.log(Level.SEVERE, "CSV File not found:!!!" + ex.getMessage());
+        } 
 
         return rows;
     }
@@ -231,7 +255,10 @@ public class CsvFile implements CsvConstants {
         Integer index = 0;
         while ((line = csvReader.readLine()) != null) {
             try {
+                line = line.replace("\"", "");
+
                 String[] data = line.split(",");
+                
                 rows.add(data);
 
             } catch (Exception ex) {

@@ -34,8 +34,9 @@ public class LexiconImporter {
         LemonModel model = null;
         try ( Stream<Path> paths = Files.walk(Paths.get(dir))) {
             List<Path> list = filterFiles(paths);
-            //System.out.println("turtle file size!!" + list.size());
             for (Path file : list) {
+                 System.out.println("file!!" + file.toString());
+
                 try {
                     if (model == null) {
                         model = serializer.read(new FileReader(file.toString()));

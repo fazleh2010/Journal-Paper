@@ -10,6 +10,7 @@ import grammar.datasets.sentencetemplates.TempConstants;
 import grammar.structure.component.Language;
 import java.io.File;
 import java.io.IOException;
+import static java.lang.System.exit;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -64,7 +65,9 @@ public class TurtleCreation implements TempConstants {
     }
 
     public String findSyntacticFrame(String[] row) throws Exception {
+        System.out.println("row.length::"+row.length);
         String nounPPFrame = row[nounPPIndex];
+       
     
         try {
             if (nounPPFrame.equals(NounPPFrame)) {
@@ -83,6 +86,10 @@ public class TurtleCreation implements TempConstants {
         } catch (NullPointerException ex) {
             throw new Exception("no lexical entries found in csv file" + ex.getMessage().toString()); //To change body of generated methods, choose Tools | Templates.   
         } catch (Exception ex) {
+             System.out.println("nounPPIndex::"+nounPPIndex);
+         System.out.println("row::"+row.length);
+         System.out.println("nounPPFrame::"+nounPPFrame);
+         exit(1);
             throw new Exception("invalid entry." + ex.getMessage().toString()); //To change body of generated methods, choose Tools | Templates.   
         }
     }
