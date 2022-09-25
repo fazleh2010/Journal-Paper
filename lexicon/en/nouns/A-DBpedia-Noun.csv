@@ -1,0 +1,6 @@
+lemon,partOfSpeech,writtenForm (singular),writtenForm (plural),preposition,SyntacticFrame,copulativeArg,prepositionalAdjunct,sense,reference,domain,range,domainWrittenSingularForm,domainWrittenPluralForm,rangeWrittenSingularForm,rangeWrittenPluralFormIndex
+height_of_1,noun,height,-,of,NounPPFrame,range,domain,1,dbo:height,dbo:Model/,xsd:double,model,models,-,-
+height_of_2,noun,height,-,of,NounPPFrame,range,domain,1,dbo:height,dbo:Tower,xsd:double,tower,towers,-,-
+height_of_3,noun,height,-,of,NounPPFrame,range,domain,1,dbo:height,dbo:BasketballPlayer,xsd:double,basketball player,basketball player,-,-
+cost-of,noun,cost,costs,of,NounPPFrame,range,domain,1,dbo:budget,dbo:Film,xsd:double,film,films,-,-
+Creator-of-1,noun,creator,creators,of,NounPPFrame,range,domain,1,dbo:creator,dbo:FictionalCharacter,dbo:Person,fictional character,fictional characters,person,persons

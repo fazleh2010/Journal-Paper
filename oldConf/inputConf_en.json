@@ -13,15 +13,15 @@
   "wikiFile"     : "../resources/en/turtle/wikipedia_links_en_filter.ttl",
   "abstractFile" : "../resources/en/turtle/short_abstracts_sorted_en_filter.ttl",
   "evalutionBindingFile" : "src/main/resources/en/LcQuad/lcquad1_test_en_de.csv",
-  "qaldDir"      : "qald7Modified/",
+  "qaldDir"      : "src/main/resources/en/LcQuad/",
   "numberOfEntities" : 100,
   "similarityThresold" : 0.7,
   "csvToTurtle" : true,
   "turtleToProtoType" : true,
   "single": true,
   "composite": false,
-  "protoTypeToQuestion" : true,
-  "evalution" : false
+  "protoTypeToQuestion" : false,
+  "evalution" : true
 }
 
 
