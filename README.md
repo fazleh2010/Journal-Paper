@@ -12,8 +12,8 @@ build the jar file
 mvn clean install
 mvn clean package
 
-inputConf.json: The file contains input parameter for the system
 ```
+inputConf.json: The file contains input parameter for the system
 - languageCode: `en` (English), `de` (German), `it` (Italian)
 - inputDir: The input directory that contains lemon csv files  that will be processed by QueGG. 
 - outputDir: The output directory for the json grammar entry files that are produced by QueGG.
@@ -66,8 +66,8 @@ java -jar target/QuestionGrammarGenerator.jar inputConf_de.json dataset/dbpedia_
 spanish
 java -jar target/QuestionGrammarGenerator.jar inputConf_es.json dataset/dbpedia_es.json        
 
-italain
-java -jar target/QuestionGrammarGenerator.jar inputConf_it.json dataset/dbpedia_it.json  
+italian
+java -jar target/QuestionGrammarGenerator.jar inputConf_it.json dataset/beniculturali.json  
 
 english and dbpedia
 java -jar target/QuestionGrammarGenerator.jar inputConf_en.json dataset/dbpedia_en.json 
