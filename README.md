@@ -1,6 +1,7 @@
-# Resource and software description
-This page contains links to the resources and software:
+# Multilingual Question Answering over Linked Data building on a model of the lexicon-ontology interface
+The approach builds on a declarative model of the lexicon ontology interface, OntoLex lemon, which enables the specification of the meaning of lexical entries with respect to the vocabulary of a particular dataset. From such a lexicon, in our approach, a QA grammar is automatically generated that can be used to parse questions into SPARQL queries. It is shown that this approach outperforms current QA approaches on the QALD benchmarks. 
 
+# Resource and software description
 
 ### Resource: lexicon and grammar
 
