@@ -40,16 +40,19 @@ schedule: [Hackathon Plan](https://docs.google.com/document/d/14FRDHF-9kxpyOvBQK
 | FrankGrimm | University of Bielefeld | multilingual web interface | Italian, German | any dataset|[result](https://github.com/ag-sc/QueGG-web/tree/main) |
 
 
-Authors:
-    Mohammad Fazleh Elahi<sup>d,*</sup> (📧 mohammad.elahi@uni-marburg.de)
-    Basil Ell<sup>a,c</sup> (📧 bell@techfak.uni-bielefeld.de / basile@ifi.uio.no)
-    Gennaro Nolano<sup>b</sup> (📧 nolanogenn@gmail.com)
-    Philipp Cimiano<sup>a</sup> (📧 cimiano@techfak.uni-bielefeld.de)
+@inproceedings{Elahi2025MultilingualQA,
+  title     = {Multilingual Question Answering over Linked Data building on a model of the lexicon-ontology interface},
+  author    = {Elahi, Mohammad Fazleh and Ell, Basil and Nolano, Gennaro and Cimiano, Philipp},
+  year      = {2025},
+  booktitle = {Proceedings of Semantic Web Journal (accepted)},
+  address   = {[Location]},
+  publisher = {[Publisher]},
+  note      = {Affiliations: 
+    (a) Cognitive Interaction Technology Center (CITEC), Universität Bielefeld, Germany;
+    (b) UniOr NLP Research Group, University of Naples "L’Orientale", Italy;
+    (c) Department of Informatics, University of Oslo, Norway;
+    (d) Kunstgeschichte und Digital Humanities, Philipps-Universität Marburg, Germany},
+}
 
-Affiliations:
-    <sup>a</sup> Cognitive Interaction Technology Center (CITEC), Universität Bielefeld, Bielefeld, Germany
-    <sup>b</sup> UniOr NLP Research Group, University of Naples "L’Orientale", Naples, Italy
-    <sup>c</sup> Department of Informatics, University of Oslo, Norway
-    <sup>d</sup> Kunstgeschichte und Digital Humanities, Philipps-Universität Marburg, Germany
 
 	
