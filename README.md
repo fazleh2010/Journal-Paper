@@ -8,13 +8,13 @@ Furthermore, we demonstrate the extensibility of the approach to different langu
 
 ### Resource: lexicon and grammar
 
-**A. Lexical Entries:** To create a QA system for a given dataset and a specific language,the language expert of that language needs to create lexical entries.
+**A. Lexical Entries:** a lexical entry represents a unit of analysis in a lexicon. It consists of a set of grammatically related forms and a set of associated meanings or senses.
+
 **B. Lemon:** Lemon is a model for the declarative specification of multilingual, machine-readable lexicons in RDF that capture both syntactic and semantic aspects of lexical items in relation to some ontology. 
 
 **C. Grammar Rule Templates:** A grammar rule template consists of pre-terminals and non-terminals. The proto-terminals are replaced with content specific to the lexical entry, while the non-terminals are replaced by retrieving the corresponding URI labels using a SPARQL query.
 
-
-**D. Grammar Rules:** IThis repository provides a web interface for question answering over linked data. Given a natural language question, it returns an answer along with relevant Wikipedia pages. Below are instructions for installing and running the web interface.
+**D. Grammar Rules:** A grammar rule is created by instantiating the grammar rule template with lexical entries.
 
 | Language      |                |       |      |      |      | 
 | :------------ |:---------------| :-----|:-----|:-----|:-----|
