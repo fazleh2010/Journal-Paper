@@ -53,7 +53,7 @@ Please use the following citation:
     (b) UniOr NLP Research Group, University of Naples "L’Orientale", Italy;
     (c) Department of Informatics, University of Oslo, Norway;
     (d) Kunstgeschichte und Digital Humanities, Philipps-Universität Marburg, Germany},
-  link = {[Insert URL or DOI if available]}
+  link = {[[Insert URL or DOI if available](https://www.semantic-web-journal.net/system/files/swj3619.pdf)]}
 }
 
 ```
