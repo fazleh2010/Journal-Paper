@@ -57,17 +57,11 @@ Access the web interface to interact with the system. It uses the parser to answ
 
 ### Evaluation Procedure
 
-**Step 1**: Create Lexical Entries
-Manually write the lexical entries for a specific language and linked data source (e.g., DBpedia, Wikidata). These entries define how natural language terms map to ontology elements.
+**QALD Benchmark**: 
 
-**Step 2**: Run the Grammar Generator
-Use the grammar generator to process the lexical entries. This will produce lexicalized grammar rules based on predefined templates.
+**Chat GPT o shot**: 
 
-**Step 3**: Run the Parser
-Execute the parser using the generated grammar rules. The parser takes natural language questions as input and converts them into SPARQL queries.
-
-**Step 4**: Use the Web Interface
-Access the web interface to interact with the system. It uses the parser to answer questions and displays the result along with relevant Wikipedia page links.
+**Chat GPT few shot**: 
 
 ### Hackathon on Question Answering based on automatically generated grammars (5-9 July 2021)
 schedule: [Hackathon Plan](https://docs.google.com/document/d/14FRDHF-9kxpyOvBQKJX1KTubmxvLdfLli1UQ7L8wGYo/edit?usp=sharing) 
