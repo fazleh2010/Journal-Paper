@@ -27,9 +27,9 @@ The implementation consists of three repositories: grammar generator, parser, an
 
 | System         | Type           | Input          |  Output        | Code     | Docker           | 
 | :------------ |:--------------- |:---------------|:---------------| :---------------|:---------------|
-| grammar generator |command line| lexical entries and sentence templates| grammar rules |[github](https://github.com/fazleh2010/multilingual-grammar-generator)| - |
-| parser      |command line| natural language question| SPARQL query|[github](https://github.com/ag-sc/grammar-rules.git)|- | 
-| question-answering system |user interface| natural language question| answer from RDF Data |[github](https://github.com/ag-sc/QueGG-web/tree/extension)| [dockerhub](https://hub.docker.com/repository/docker/elahi/quegg-web/general)|
+| ** grammar generator |command line| lexical entries and sentence templates| grammar rules |[github](https://github.com/fazleh2010/multilingual-grammar-generator)| - |
+| ** parser      |command line| natural language question| SPARQL query|[github](https://github.com/ag-sc/grammar-rules.git)|- | 
+| ** question-answering system |user interface| natural language question| answer from RDF Data |[github](https://github.com/ag-sc/QueGG-web/tree/extension)| [dockerhub](https://hub.docker.com/repository/docker/elahi/quegg-web/general)|
 
 ### Hackathon on Question Answering based on automatically generated grammars (5-9 July 2021)
 schedule: [Hackathon Plan](https://docs.google.com/document/d/14FRDHF-9kxpyOvBQKJX1KTubmxvLdfLli1UQ7L8wGYo/edit?usp=sharing) 
