@@ -18,7 +18,7 @@ Furthermore, we demonstrate the extensibility of the approach to different langu
 ### System: source code
 The implementation consists of three repositories: grammar generator, parser, and question-answering system. Detailed instructions for these projects are shown in the following table.
 
-A. Grammar Generator: This repository provides precise commands to run the grammar generator, along with the lexical entries and sentence templates, as well as examples of input and output.
+A. grammar generator: This repository provides precise commands to run the grammar generator, along with the lexical entries and sentence templates, as well as examples of input and output.
 
 | System         | Type           | Input          |  Output        | Code     | Docker           | 
 | :------------ |:--------------- |:---------------|:---------------| :---------------|:---------------|
