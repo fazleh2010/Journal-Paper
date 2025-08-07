@@ -39,20 +39,17 @@ schedule: [Hackathon Plan](https://docs.google.com/document/d/14FRDHF-9kxpyOvBQK
 | Mohammad Fazleh Elahi | University of Bielefeld | create lexical entries | German | [AIFB](https://raw.githubusercontent.com/fazleh2010/question-grammar-generator/general2/dataset/aifbfixed_complete.ttl)|[result](https://github.com/fazleh2010/Journal-Paper/tree/general2) |
 | FrankGrimm | University of Bielefeld | multilingual web interface | Italian, German | any dataset|[result](https://github.com/ag-sc/QueGG-web/tree/main) |
 
-
-@inproceedings{Elahi2025MultilingualQA,
-  title     = {Multilingual Question Answering over Linked Data building on a model of the lexicon-ontology interface},
-  author    = {Elahi, Mohammad Fazleh and Ell, Basil and Nolano, Gennaro and Cimiano, Philipp},
-  year      = {2025},
-  booktitle = {Proceedings of Semantic Web Journal (accepted)},
-  address   = {[Location]},
-  publisher = {[Publisher]},
-  note      = {Affiliations: 
-    (a) Cognitive Interaction Technology Center (CITEC), Universität Bielefeld, Germany;
-    (b) UniOr NLP Research Group, University of Naples "L’Orientale", Italy;
-    (c) Department of Informatics, University of Oslo, Norway;
-    (d) Kunstgeschichte und Digital Humanities, Philipps-Universität Marburg, Germany},
+Please use the following citation:
+```
+@inproceedings{Buono-LREC2020,
+	title = {{Terme-`a-LLOD: Simplifying the Conversion and Hosting of TerminologicalResources as Linked Data}},
+	author = {Maria Pia Di Buono, Philipp Cimiano, Mohammad Fazleh Elahi, Frank Grimm},
+	booktitle = {Proceedings of the 7th Workshop on Linked Data in Linguistics (LDL-2020) at Language Resources and Evaluation Conference (LREC 2020)},
+	pages = {28–35},
+	year = {2020},
+	location = {Marseille, France},
+	publisher = {Association for Computational Linguistics},
+	link = {https://lrec2020.lrec-conf.org/media/proceedings/Workshops/Books/LDL2020book.pdf}
 }
-
-
+```
 	
