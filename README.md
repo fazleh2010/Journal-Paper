@@ -8,6 +8,14 @@ Furthermore, we demonstrate the extensibility of the approach to different langu
 
 ### Resource: lexicon and grammar
 
+**A. Lexical Entries:** This repository provides precise commands to run the grammar generator, along with the lexical entries and sentence templates, as well as examples of input and output.
+
+**B. Lemon:** Instructions on how to install and run the parser, including examples of input questions and the expected SPARQL output. Also includes details on how to connect the parser to the grammar generator.
+
+**C. Grammar Rule Templates:** IThis repository provides a web interface for question answering over linked data. Given a natural language question, it returns an answer along with relevant Wikipedia pages. Below are instructions for installing and running the web interface.
+
+**D. Grammar Rules:** IThis repository provides a web interface for question answering over linked data. Given a natural language question, it returns an answer along with relevant Wikipedia pages. Below are instructions for installing and running the web interface.
+
 | Language      |                |       |      |      |      | 
 | :------------ |:---------------| :-----|:-----|:-----|:-----|
 | English       |[Lexical Entries](https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/en/lexicalEntries)| [Lemon](https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/en/lemon)|[Grammar Rule Templates](https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/en/sentenceTemplates)|[Grammar Rules](https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/en/grammar)|[Evaluation](https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/en/evaluation)|
