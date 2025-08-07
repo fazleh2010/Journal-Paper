@@ -42,6 +42,7 @@ The implementation consists of three repositories: grammar generator, parser, an
 ### How the System Works
 
 Follow the steps below to generate SPARQL queries from natural language questions using lexicalized grammars:
+
 **Step 1**: Create Lexical Entries
 Manually write the lexical entries for a specific language and linked data source (e.g., DBpedia, Wikidata). These entries define how natural language terms map to ontology elements.
 
