@@ -1,7 +1,8 @@
 # Multilingual Question Answering over Linked Data building on a model of the lexicon-ontology interface
 The approach builds on a declarative model of the lexicon ontology interface, OntoLex lemon, which enables the specification of the meaning of lexical entries with respect to the vocabulary of a particular dataset. From such a lexicon, in our approach, a QA grammar is automatically generated that can be used to parse questions into SPARQL queries. It is shown that this approach outperforms current QA approaches on the QALD benchmarks. 
 
-[<img src="[https://github.com/fazleh2010/term-a-llod-demo/blob/master/term-a-llod.png](https://github.com/fazleh2010/Journal-Paper/blob/master/HighLevelQA_4.pdf)" width="50%">]
+[<img src="[(https://github.com/fazleh2010/Journal-Paper/blob/master/HighLevelQA_4.pdf)" width="50%">]
+![Project Logo]([assets/logo.png](https://github.com/fazleh2010/Journal-Paper/blob/master/HighLevelQA_4.pdf))
 
 Furthermore, we demonstrate the extensibility of the approach to different languages by adapting it to German, Italian, and Spanish. We evaluate the approach with respect to the QALD benchmarks on five editions (i.e., QALD-8, QALD-7, QALD-6, QALD-5, and QALD-3) and show that our approach outperforms the state-of-the-art on all these datasets in an incremental evaluation mode in which additional lexical entries for test data are added. 
 
