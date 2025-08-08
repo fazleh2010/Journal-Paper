@@ -73,12 +73,14 @@ We used **ChatGPT-4** in both **zero-shot** and **few-shot** scenarios.
 
 You can use any version of ChatGPT to evaluate the system yourself. The prompt for English is shown below:
 
-```Zero-shot scenario
+Zero-shot scenario
+```
 Generate a SPARQL query for DBpedia to answer the following question: "QUESTION".
 Ensure the query retrieves relevant information efficiently, using appropriate
 filters, properties, and namespaces. Do not explain anything.
 ```
-```Few-shot scenario
+Few-shot scenario
+```
 You are an assistant that has the task to generate a SPARQL query for DBpedia to 
 answer a given question. Before I show you the question, I show you a couple of 
 examples of questions and the corresponding SPARQL queries.
