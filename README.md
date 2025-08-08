@@ -73,12 +73,42 @@ We used **ChatGPT-4** in both **zero-shot** and **few-shot** scenarios.
 
 You can use any version of ChatGPT to evaluate the system yourself. The prompt for English is shown below:
 
-\begin{verbatim}
+```Zero-shot scenario
 Generate a SPARQL query for DBpedia to answer the following question: "QUESTION".
 Ensure the query retrieves relevant information efficiently, using appropriate
 filters, properties, and namespaces. Do not explain anything.
-\end{verbatim}
+```
+```Few-shot scenario
+You are an assistant that has the task to generate a SPARQL query for DBpedia to 
+answer a given question. Before I show you the question, I show you a couple of 
+examples of questions and the corresponding SPARQL queries.
 
+Question: Who is the mayor of New York City? 
+SPARQL: SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/New_York_City>
+<http://dbpedia.org/ontology/leaderName> ?uri }
+
+Question: Give all swimmers that were born in Moscow.
+SPARQL: SELECT DISTINCT ?uri WHERE { ?uri a <http://dbpedia.org/ontology/Swimmer> ;
+<http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Moscow> }
+
+Question: Who created Goofy?
+SPARQL: SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Goofy>
+<http://dbpedia.org/ontology/creator> ?uri }
+
+Question: Give me all Danish films.
+SPARQL: SELECT DISTINCT ?uri WHERE { ?uri
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film> 
+; <http://dbpedia.org/ontology/country>  <http://dbpedia.org/resource/Denmark> }
+
+Question: What is the highest mountain?
+SPARQL: SELECT DISTINCT ?uri WHERE { ?uri a <http://dbpedia.org/ontology/Mountain> 
+; <http://dbpedia.org/ontology/elevation> ?elevation } ORDER BY DESC(?elevation)
+OFFSET 0 LIMIT 1
+
+Now generate a SPARQL query for DBpedia to answer the following question: 
+"QUESTION". Ensure the query retrieves relevant information efficiently, 
+using appropriate filters, properties, and namespaces. Do not explain anything.
+```
 
 # Hackathon on Question Answering based on automatically generated grammars (5-9 July 2021)
 schedule: [Hackathon Plan](https://docs.google.com/document/d/14FRDHF-9kxpyOvBQKJX1KTubmxvLdfLli1UQ7L8wGYo/edit?usp=sharing) 
