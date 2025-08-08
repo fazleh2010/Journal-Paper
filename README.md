@@ -58,7 +58,7 @@ Access the web interface to interact with the system. It uses the parser to answ
 # Evaluation Procedure
 
 **QALD Benchmark**: 
-This approach is tested on the QALD challenge series (QALD-9, QALD-7, QALD-6, QALD-5, and QALD-3) using standard evaluation metrics — precision, recall, and F₁ — on the DBpedia dataset.
+This approach is tested on the [QALD challenge series](https://www.semantic-web-journal.net/system/files/swj3357.pdf) (QALD-9, QALD-7, QALD-6, QALD-5, and QALD-3) using standard evaluation metrics — precision, recall, and F₁ — on the DBpedia dataset.
 The QALD benchmarks provide a way to measure performance across multiple languages and natural language questions over DBpedia knowledge base elements.
 
 
