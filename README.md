@@ -60,18 +60,17 @@ Access the web interface to interact with the system. It uses the parser to answ
 ### Evaluation Against Benchmark 
 This approach is tested on the [QALD challenge series](https://www.semantic-web-journal.net/system/files/swj3357.pdf) (QALD-9, QALD-7, QALD-6, QALD-5, and QALD-3) using standard evaluation metrics — precision, recall, and F₁ — on the DBpedia dataset. The QALD benchmarks provide a way to measure performance across multiple languages and natural language questions over DBpedia knowledge base elements.
 
-- **Inductive evaluation**: The goal of the inductive evaluation mode is to evaluate our approach's ability to generalize to unseen data or tasks. For the inductive evaluation, we used only the training data to create lexical entries.  
-- **Incremental evaluation**: In an incremental evaluation, we start with the lexicon created for the inductive evaluation and then add lexical entries incrementally until the questions in the test data are covered.
+- **Inductive evaluation**: The goal of the inductive evaluation mode is to evaluate our approach's ability to generalize to unseen data or tasks. Manually write the lexical entries for English, German, Italian, and Spanish for QALD training dataset. Then, perform an inductive evaluation and calculate the evaluation metrics — precision, recall, and F₁ .
+- **Incremental evaluation**: In an incremental evaluation, start with the lexicon created for the inductive evaluation and then add lexical entries incrementally until the questions in the QALD test data are covered. Then, perform again an inductive evaluation and calculate the evaluation metrics — precision, recall, and F₁ 
 
 ### Evaluation Against ChatGPT
 
 In the paper, the approach is evaluated against ChatGPT using the well-known [QALD-9 benchmark](https://www.semantic-web-journal.net/system/files/swj3357.pdf) on **September 5, 2024**.  
-We used **ChatGPT-4** in both **zero-shot** and **few-shot** scenarios.
+We used **ChatGPT-4** in both **zero-shot** and **few-shot** scenarios. You can use any version of ChatGPT to evaluate the system yourself. 
 
 - **Zero-shot scenario**: The model was prompted with an instruction to generate a SPARQL query for a given question with respect to DBpedia, without providing any examples.  
 - **Few-shot scenario**: The model was given example question–SPARQL pairs before answering the test questions.
-
-You can use any version of ChatGPT to evaluate the system yourself. The prompt for English is shown below:
+  Then, perform both inductive and incremental evaluations by calculating the metrics — precision, recall, and F₁. The prompt for English is shown below:
 
 Zero-shot scenario
 ```
