@@ -55,7 +55,7 @@ Execute the parser using the generated grammar rules. The parser takes natural l
 **Step 4**: Use the Web Interface
 Access the web interface to interact with the system. It uses the parser to answer questions and displays the result along with relevant Wikipedia page links.
 
-### Evaluation Procedure
+# Evaluation Procedure
 
 **QALD Benchmark**: 
 
