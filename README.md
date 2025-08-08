@@ -73,6 +73,12 @@ We used **ChatGPT-4** in both **zero-shot** and **few-shot** scenarios.
 
 You can use any version of ChatGPT to evaluate the system yourself. The prompt for English is shown below:
 
+\begin{verbatim}
+Generate a SPARQL query for DBpedia to answer the following question: "QUESTION".
+Ensure the query retrieves relevant information efficiently, using appropriate
+filters, properties, and namespaces. Do not explain anything.
+\end{verbatim}
+
 
 # Hackathon on Question Answering based on automatically generated grammars (5-9 July 2021)
 schedule: [Hackathon Plan](https://docs.google.com/document/d/14FRDHF-9kxpyOvBQKJX1KTubmxvLdfLli1UQ7L8wGYo/edit?usp=sharing) 
